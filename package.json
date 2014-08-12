@@ -1,6 +1,6 @@
 {
   "name": "read-package-tree",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Read the contents of node_modules.",
   "main": "rpt.js",
   "directories": {

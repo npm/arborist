@@ -29,7 +29,7 @@ test ('setup symlinks', function (t) {
 
   Object . keys (symlinks) . forEach (function (s) {
     var p = path . resolve (cwd, 'test/fixtures', s)
-    fs . symlinkSync (symlinks [ s ], p)
+    fs . symlinkSync (symlinks [ s ], p, 'dir')
   })
 
   t . end ()

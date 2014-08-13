@@ -14,20 +14,61 @@ function dpath (p) {
 
 module . exports = rpt
 
-function Node (package, path) {
-  if (! (this instanceof Node))
-    return new Node (package, path)
+rpt . Node = Node
+rpt . Link = Link
 
-  debug ('Node', dpath (path), package && package . _id)
+var ID = 0
+function Node (package, path, cache) {
+  if (cache [path])
+    return cache [path]
+
+  if (! (this instanceof Node))
+    return new Node (package, path, cache)
+
+  cache [path] = this
+
+  debug (this . constructor . name, dpath (path), package && package . _id)
+
+  this . id = ID ++
   this . package = package
   this . path = path
+  this . realpath = path
   this . children = []
 }
 Node . prototype . package = null
 Node . prototype . path = ''
+Node . prototype . realpath = ''
 Node . prototype . children = null
 
-function loadNode (p, cb) {
+
+
+function Link (package, path, realpath, cache) {
+  if (cache [path])
+    return cache [path]
+
+  if (! (this instanceof Link))
+    return new Link (package, path, realpath)
+
+  cache [path] = this
+
+  debug (this . constructor . name, dpath (path), package && package . _id)
+
+  this . id = ID ++
+  this . path = path
+  this . realpath = realpath
+  this . package = package
+  this . target = new Node (package, realpath, cache)
+  this . children = this . target . children
+}
+Link . prototype = Object . create (Node . prototype, {
+  constructor : { value : Link }
+})
+Link . prototype . target = null
+Link . prototype . realpath = ''
+
+
+
+function loadNode (p, cache, cb) {
   debug ('loadNode', dpath (p))
   fs . realpath (p, function (er, real) {
     if (er)
@@ -35,12 +76,19 @@ function loadNode (p, cb) {
     debug ('realpath p=%j real=%j', dpath (p), dpath (real))
     var pj = path . resolve (real, 'package.json')
     rpj (pj, function (er, package) {
-      cb (er, new Node (package || null, real))
+      package = package || null
+      var n
+      if (p === real)
+        n = new Node (package, real, cache)
+      else
+        n = new Link (package, p, real, cache)
+
+      cb (er, n)
     })
   })
 }
 
-function loadChildren (node, cb) {
+function loadChildren (node, cache, cb) {
   debug ('loadChildren', dpath(node . path))
   // don't let it be called more than once
   cb = once (cb)
@@ -60,7 +108,7 @@ function loadChildren (node, cb) {
 
     kids . forEach (function (kid) {
       var p = path . resolve (nm, kid)
-      loadNode (p, then)
+      loadNode (p, cache, then)
     })
 
     function then (er, kid) {
@@ -83,28 +131,30 @@ function sortChildren (node) {
   })
 }
 
-function loadTree (node, cb, did) {
-  did = did || Object . create (null)
-  debug ('loadTree', dpath (node . path), !! did [ node . path ])
-  if (did [ node . path ])
-    return dz (cb) (null, node)
+function loadTree (node, did, cache, cb) {
+  debug ('loadTree', dpath (node . path), !! cache [ node . path ])
 
-  did [ node . path ] = true
+  if (did [ node . realpath ]) {
+    return dz (cb) (null, node)
+  }
+
+  did [ node . realpath ] = true
 
   cb = once (cb)
-  loadChildren (node, function (er, node) {
+  loadChildren (node, cache, function (er, node) {
     if (er)
       return cb (er)
 
     var kids = node . children . filter (function (kid) {
-      return ! did [ kid . path ]
+      return !did [ kid . realpath ]
     })
+
     var l = kids . length
     if (l === 0)
       return cb (null, node)
 
-    kids . forEach (function (kid) {
-      loadTree (kid, then, did)
+    kids . forEach (function (kid, index) {
+      loadTree (kid, did, cache, then)
     })
 
     function then (er, kid) {
@@ -118,11 +168,13 @@ function loadTree (node, cb, did) {
 }
 
 function rpt (root, cb) {
+  root = path . resolve (root)
   debug ('rpt', dpath (root))
-  loadNode (root, function (er, node) {
+  var cache = Object . create (null)
+  loadNode (root, cache, function (er, node) {
     // if there's an error, it's fine, as long as we got a node
     if (!node)
       return cb (er)
-    loadTree (node, cb)
+    loadTree (node, {}, cache, cb)
   })
 }

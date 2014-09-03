@@ -9,7 +9,7 @@ var cwd = path . resolve (__dirname, '..')
 var fs = require ('fs')
 
 var symlinks = {
-  'selflink/node_modules/@scope/x/node_modules/glob':
+  'selflink/node_modules/@scope/z/node_modules/glob':
     '../../../foo/node_modules/glob',
   'other/node_modules/glob':
     '../../root/node_modules/@scope/x/node_modules/glob'
@@ -45,7 +45,10 @@ roots . forEach (function (root) {
         throw er
       var actual = archy (archyize (d)) . trim ()
       // console . log ('----', dir)
-      // console . log (actual)
+      console . log (actual)
+      // console . log (require ('util') . inspect (d, {
+      //   depth: Infinity
+      // }))
       var expect = fs . readFileSync (out, 'utf8') . trim ()
       t . equal (actual, expect)
       t . end()
@@ -53,12 +56,24 @@ roots . forEach (function (root) {
   })
 })
 
-function archyize (d) {
+
+function archyize (d, seen) {
+  seen = seen || {}
+  var path = d . path
+  if (d . target)
+    path = d . target . path
+
   var label = d . package ? d . package . _id + ' ' : ''
-  label += d . path . substr (cwd . length + 1)
+  label += path . substr (cwd . length + 1)
+
+  if (d . target)
+    return { label: label + ' (symlink)', nodes: [] }
+
   return {
     label : label,
-    nodes : d . children . map (archyize)
+    nodes : d . children . map (function (kid) {
+      return archyize (kid, seen)
+    })
   }
 }
 

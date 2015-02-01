@@ -33,6 +33,7 @@ function Node (package, path, cache) {
   this . package = package
   this . path = path
   this . realpath = path
+  this . parent = null
   this . children = []
 }
 Node . prototype . package = null
@@ -57,6 +58,7 @@ function Link (package, path, realpath, cache) {
   this . path = path
   this . realpath = realpath
   this . package = package
+  this . parent = null
   this . target = new Node (package, realpath, cache)
   this . children = this . target . children
 }
@@ -115,6 +117,7 @@ function loadChildren (node, cache, cb) {
       if (er)
         return cb (er)
       node . children . push (kid)
+      kid . parent = node
       if (-- l === 0) {
         sortChildren (node)
         return cb (null, node)

@@ -12,6 +12,7 @@ rpt('/path/to/pkg/root', function (er, data) {
   // {
   //   package: <package.json data, or null>
   //   children: [ <more things like this> ]
+  //   parent: <thing that has this in its children property, or null>
   //   path: <path loaded>
   //   realpath: <the real path on disk>
   //   target: <if a Link, then this is the actual Node>

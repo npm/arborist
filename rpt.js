@@ -101,7 +101,7 @@ function loadChildren (node, cache, cb) {
       return cb (null, node)
 
     kids = kids . filter (function (kid) {
-      return kid !== '.bin'
+      return kid[0] !== '.'
     })
 
     var l = kids . length

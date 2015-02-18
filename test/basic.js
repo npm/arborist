@@ -41,7 +41,7 @@ roots . forEach (function (root) {
 
   test (root, function (t) {
     rpt (dir, function (er, d) {
-      if (er)
+      if (er && er.code !== "ENOENT")
         throw er
       var actual = archy (archyize (d)) . trim ()
       // console . log ('----', dir)
@@ -56,6 +56,23 @@ roots . forEach (function (root) {
   })
 })
 
+test ('broken json', function (t) {
+  rpt(path . resolve (fixtures, "bad"), function (er, d) {
+    t . ok (er, "Got an error object")
+    t . equal (er && er.code, "EJSONPARSE")
+    t . ok (d, "Got a tree")
+    t . end()
+  })
+})
+
+test('missing json does not obscure deeper errors', function (t) {
+  rpt(path . resolve (fixtures, "empty"), function (er, d) {
+    t . ok (er, "Got an error object")
+    t . equal (er && er.code, "EJSONPARSE")
+    t . ok (!d, "No tree on internal error")
+    t . end()
+  })
+})
 
 function archyize (d, seen) {
   seen = seen || {}

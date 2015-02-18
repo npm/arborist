@@ -45,3 +45,12 @@ correspond to a single object, and a specific `realpath` will always
 correspond to a single `Node` object.  This means that you may not be
 able to pass the resulting data object to `JSON.stringify`, because it
 may contain cycles.
+
+## Errors
+
+Errors parsing or finding a package.json in node_modules will call back with
+an error object and no tree.
+
+A missing or invalid top level package.json will call back with an error
+object AND a tree, so that you may, at your discretion, choose to ignore
+the error.

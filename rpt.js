@@ -178,6 +178,8 @@ function rpt (root, cb) {
     // if there's an error, it's fine, as long as we got a node
     if (!node)
       return cb (er)
-    loadTree (node, {}, cache, cb)
+    loadTree (node, {}, cache, function (lter, tree) {
+      cb(er && er.code !== "ENOENT" ? er : lter, tree)
+    })
   })
 }

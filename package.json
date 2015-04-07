@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "debuglog": "^1.0.1",
-    "once": "^1.3.0",
     "dezalgo": "^1.0.0",
+    "normalize-package-data": "^2.0.0",
+    "once": "^1.3.0",
     "read-package-json": "^1.2.6",
     "readdir-scoped-modules": "^1.0.0"
   },

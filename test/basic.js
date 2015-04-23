@@ -4,14 +4,18 @@ var path = require('path')
 var fs = require('fs')
 var archy = require('archy')
 var fixtures = path.resolve(__dirname, 'fixtures')
-var roots = [ 'root', 'other', 'selflink' ]
+var roots = [ 'root', 'other', 'selflink', 'linkedroot', 'deep/root' ]
 var cwd = path.resolve(__dirname, '..')
 
 var symlinks = {
   'selflink/node_modules/@scope/z/node_modules/glob':
     '../../../foo/node_modules/glob',
   'other/node_modules/glob':
-    '../../root/node_modules/@scope/x/node_modules/glob'
+    '../../root/node_modules/@scope/x/node_modules/glob',
+  'linkedroot':
+    'root',
+  'deep/root':
+    '../root'
 }
 
 function cleanup () {
@@ -49,7 +53,7 @@ roots.forEach(function (root) {
       //   depth: Infinity
       // }))
       var expect = fs.readFileSync(out, 'utf8').trim()
-      t.equal(actual, expect)
+      t.equal(actual, expect, root + ' tree')
       t.end()
     })
   })

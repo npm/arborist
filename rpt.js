@@ -164,14 +164,16 @@ function loadTree (node, did, cache, cb) {
 }
 
 function rpt (root, cb) {
-  root = path.resolve(root)
-  debug('rpt', dpath(root))
-  var cache = Object.create(null)
-  loadNode(root, cache, function (er, node) {
-    // if there's an error, it's fine, as long as we got a node
-    if (!node) return cb(er)
-    loadTree(node, {}, cache, function (lter, tree) {
-      cb(er && er.code !== 'ENOENT' ? er : lter, tree)
+  fs.realpath(root, function (er, root) {
+    if (er) return cb(er)
+    debug('rpt', dpath(root))
+    var cache = Object.create(null)
+    loadNode(root, cache, function (er, node) {
+      // if there's an error, it's fine, as long as we got a node
+      if (!node) return cb(er)
+      loadTree(node, {}, cache, function (lter, tree) {
+        cb(er && er.code !== 'ENOENT' ? er : lter, tree)
+      })
     })
   })
 }

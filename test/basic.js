@@ -4,7 +4,7 @@ var path = require('path')
 var fs = require('fs')
 var archy = require('archy')
 var fixtures = path.resolve(__dirname, 'fixtures')
-var roots = [ 'root', 'other', 'selflink', 'linkedroot', 'deep/root' ]
+var roots = [ 'root', 'other', 'selflink' ]
 var cwd = path.resolve(__dirname, '..')
 
 var symlinks = {
@@ -15,7 +15,9 @@ var symlinks = {
   'linkedroot':
     'root',
   'deep/root':
-    '../root'
+    '../root',
+  'deeproot':
+    'deep'
 }
 
 function cleanup () {
@@ -56,6 +58,34 @@ roots.forEach(function (root) {
       t.equal(actual, expect, root + ' tree')
       t.end()
     })
+  })
+})
+
+test('linkedroot', function (t) {
+  var dir = path.resolve(fixtures, 'linkedroot')
+  var out = dir + '-archy.txt'
+  rpt(dir, function (er, d) {
+    if (er && er.code !== 'ENOENT') throw er
+
+    var actual = archy(archyize(d)).trim()
+    console.log(actual)
+    var expect = fs.readFileSync(out, 'utf8').trim()
+    t.equal(actual, expect, 'linkedroot tree')
+    t.end()
+  })
+})
+
+test('deeproot', function (t) {
+  var dir = path.resolve(fixtures, 'deeproot/root')
+  var out = path.resolve(fixtures, 'deep') + '-archy.txt'
+  rpt(dir, function (er, d) {
+    if (er && er.code !== 'ENOENT') throw er
+
+    var actual = archy(archyize(d)).trim()
+    console.log(actual)
+    var expect = fs.readFileSync(out, 'utf8').trim()
+    t.equal(actual, expect, 'deeproot tree')
+    t.end()
   })
 })
 

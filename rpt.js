@@ -7,6 +7,7 @@ var readdir = require('readdir-scoped-modules')
 var debug = require('debuglog')('rpt')
 
 function dpath (p) {
+  if (!p) return ''
   if (p.indexOf(process.cwd()) === 0) {
     p = p.substr(process.cwd().length + 1)
   }
@@ -19,22 +20,23 @@ rpt.Node = Node
 rpt.Link = Link
 
 var ID = 0
-function Node (pkg, path, cache) {
-  if (cache[path]) return cache[path]
+function Node (pkg, logical, physical, cache) {
+  if (cache[physical]) return cache[physical]
 
   if (!(this instanceof Node)) {
-    return new Node(pkg, path, cache)
+    return new Node(pkg, logical, physical, cache)
   }
 
-  cache[path] = this
+  cache[physical] = this
 
-  debug(this.constructor.name, dpath(path), pkg && pkg._id)
+  debug(this.constructor.name, dpath(physical), pkg && pkg._id)
 
   this.id = ID++
   this.package = pkg
-  this.path = path
-  this.realpath = path
+  this.path = logical
+  this.realpath = physical
   this.parent = null
+  this.isLink = false
   this.children = []
 }
 
@@ -43,23 +45,24 @@ Node.prototype.path = ''
 Node.prototype.realpath = ''
 Node.prototype.children = null
 
-function Link (pkg, path, realpath, cache) {
-  if (cache[path]) return cache[path]
+function Link (pkg, logical, physical, realpath, cache) {
+  if (cache[physical]) return cache[physical]
 
   if (!(this instanceof Link)) {
-    return new Link(pkg, path, realpath)
+    return new Link(pkg, logical, physical, realpath, cache)
   }
 
-  cache[path] = this
+  cache[physical] = this
 
-  debug(this.constructor.name, dpath(path), pkg && pkg._id)
+  debug(this.constructor.name, dpath(physical), pkg && pkg._id)
 
   this.id = ID++
-  this.path = path
+  this.path = logical
   this.realpath = realpath
   this.package = pkg
   this.parent = null
-  this.target = new Node(pkg, realpath, cache)
+  this.target = new Node(pkg, logical, realpath, cache)
+  this.isLink = true
   this.children = this.target.children
 }
 
@@ -69,22 +72,22 @@ Link.prototype = Object.create(Node.prototype, {
 Link.prototype.target = null
 Link.prototype.realpath = ''
 
-function loadNode (p, cache, cb) {
-  debug('loadNode', dpath(p))
-  fs.realpath(p, function (er, real) {
+function loadNode (logical, physical, cache, cb) {
+  debug('loadNode', dpath(logical))
+  fs.realpath(physical, function (er, real) {
     if (er) return cb(er)
-    debug('realpath p=%j real=%j', dpath(p), dpath(real))
+    debug('realpath l=%j p=%j real=%j', dpath(logical), dpath(physical), dpath(real))
     var pj = path.resolve(real, 'package.json')
     rpj(pj, function (er, pkg) {
       pkg = pkg || null
-      var n
-      if (p === real) {
-        n = new Node(pkg, real, cache)
+      var node
+      if (physical === real) {
+        node = new Node(pkg, logical, physical, cache)
       } else {
-        n = new Link(pkg, p, real, cache)
+        node = new Link(pkg, logical, physical, real, cache)
       }
 
-      cb(er, n)
+      cb(er, node)
     })
   })
 }
@@ -106,8 +109,9 @@ function loadChildren (node, cache, cb) {
     if (l === 0) return cb(null, node)
 
     kids.forEach(function (kid) {
-      var p = path.resolve(nm, kid)
-      loadNode(p, cache, then)
+      var kidPath = path.resolve(nm, kid)
+      var kidRealPath = path.resolve(node.realpath,'node_modules',kid)
+      loadNode(kidPath, kidRealPath, cache, then)
     })
 
     function then (er, kid) {
@@ -164,11 +168,11 @@ function loadTree (node, did, cache, cb) {
 }
 
 function rpt (root, cb) {
-  fs.realpath(root, function (er, root) {
+  fs.realpath(root, function (er, realRoot) {
     if (er) return cb(er)
-    debug('rpt', dpath(root))
+    debug('rpt', dpath(realRoot))
     var cache = Object.create(null)
-    loadNode(root, cache, function (er, node) {
+    loadNode(root, realRoot, cache, function (er, node) {
       // if there's an error, it's fine, as long as we got a node
       if (!node) return cb(er)
       loadTree(node, {}, cache, function (lter, tree) {

@@ -42,7 +42,8 @@ test('setup symlinks', function (t) {
 
 roots.forEach(function (root) {
   var dir = path.resolve(fixtures, root)
-  var out = path.resolve(dir, 'archy.txt')
+  var expectedtxt = path.resolve(dir, 'archy.txt')
+  var expectedre  = path.resolve(dir, 'archy.re')
 
   test(root, function (t) {
     rpt(dir, function (er, d) {
@@ -54,8 +55,13 @@ roots.forEach(function (root) {
       // console . log (require ('util') . inspect (d, {
       //   depth: Infinity
       // }))
-      var expect = fs.readFileSync(out, 'utf8').trim()
-      t.equal(actual, expect, root + ' tree')
+      try {
+        var expect = fs.readFileSync(expectedtxt, 'utf8').trim()
+        t.equal(actual, expect, root + ' tree')
+      } catch (e) {
+        var expect = new RegExp(fs.readFileSync(expectedre, 'utf8').trim())
+        t.like(actual, expect, root + ' tree')
+      }
       t.end()
     })
   })

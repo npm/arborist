@@ -17,7 +17,11 @@ var symlinks = {
   'deep/root':
     '../root',
   'deeproot':
-    'deep'
+    'deep',
+  'badlink/node_modules/foo':
+    'foo',
+  'badlink/node_modules/bar':
+    'baz'
 }
 
 function cleanup () {
@@ -120,6 +124,16 @@ test('missing folder', function (t) {
     t.ok(er, 'Got an error object')
     t.equal(er && er.code, 'ENOENT')
     t.ok(!d, 'No tree on top level error')
+    t.end()
+  })
+})
+test('missing symlinks', function (t) {
+  rpt(path.resolve(fixtures, 'badlink'), function (er, d) {
+    if (er && er.code !== 'ENOENT') throw er
+    t.is(d.children.length, 2, 'both broken children are included')
+    d.children.forEach(function (child) {
+      t.ok(child.error, 'Child node has an error')
+    })
     t.end()
   })
 })

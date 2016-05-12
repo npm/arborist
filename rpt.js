@@ -80,7 +80,7 @@ function loadNode (logical, physical, cache, cb) {
   fs.realpath(physical, function (er, real) {
     if (er) return cb(er)
     debug('realpath l=%j p=%j real=%j', dpath(logical), dpath(physical), dpath(real))
-    var pj = path.resolve(real, 'package.json')
+    var pj = path.join(real, 'package.json')
     rpj(pj, function (er, pkg) {
       pkg = pkg || null
       var node
@@ -99,7 +99,7 @@ function loadChildren (node, cache, filterWith, cb) {
   debug('loadChildren', dpath(node.path))
   // don't let it be called more than once
   cb = once(cb)
-  var nm = path.resolve(node.path, 'node_modules')
+  var nm = path.join(node.path, 'node_modules')
   readdir(nm, function (er, kids) {
     // If there are no children, that's fine, just return
     if (er) return cb(null, node)
@@ -112,8 +112,8 @@ function loadChildren (node, cache, filterWith, cb) {
     if (l === 0) return cb(null, node)
 
     kids.forEach(function (kid) {
-      var kidPath = path.resolve(nm, kid)
-      var kidRealPath = path.resolve(node.realpath,'node_modules',kid)
+      var kidPath = path.join(nm, kid)
+      var kidRealPath = path.join(node.realpath,'node_modules',kid)
       loadNode(kidPath, kidRealPath, cache, then)
     })
 

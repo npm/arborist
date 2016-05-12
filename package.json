@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "archy": "0",
+    "tacks": "^1.2.1",
     "tap": "^1.2.0"
   },
   "scripts": {

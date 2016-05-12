@@ -125,7 +125,14 @@ function loadChildren (node, cache, filterWith, cb) {
   // (or more) time.
   cb = once(cb)
   var nm = path.join(node.path, 'node_modules')
-  return readdir(nm, thenLoadKids)
+  var rm
+  return fs.realpath(path.join(node.path, 'node_modules'), thenReaddir)
+
+  function thenReaddir (er, real_nm) {
+    if (er) return cb(null, node)
+    rm = real_nm
+    readdir(nm, thenLoadKids)
+  }
 
   function thenLoadKids (er, kids) {
     // If there are no children, that's fine, just return
@@ -139,7 +146,7 @@ function loadChildren (node, cache, filterWith, cb) {
   }
   function thenLoadNode (kid, done) {
     var kidPath = path.join(nm, kid)
-    var kidRealPath = path.join(node.realpath,'node_modules',kid)
+    var kidRealPath = path.join(rm, kid)
     loadNode(kidPath, kidRealPath, cache, andAddNode(done))
   }
   function andAddNode (done) {

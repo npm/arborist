@@ -153,6 +153,7 @@ function loadChildren (node, cache, filterWith, cb) {
     return function (er, kid) {
       if (er) return done(er)
       node.children.push(kid)
+      kid.parent = node
       done()
     }
   }

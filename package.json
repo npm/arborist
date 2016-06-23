@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/npm/read-package-tree/issues"
   },
-  "homepage": "https://github.com/npm/read-package-tree"
+  "homepage": "https://github.com/npm/read-package-tree",
+  "files": [
+    "rpt.js"
+  ]
 }

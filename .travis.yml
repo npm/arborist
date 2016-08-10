@@ -1,7 +1,16 @@
+sudo: false
 language: node_js
-before_script: npm install -g npm@latest
+before_install: npm install -g npm@latest
 node_js:
-  - '0.8'
+  # LTS is our most important target
+  - '4'
+  # next LTS and master is next most important
+  - '6'
+  # still in LTS maintenance until fall 2016 (also still in wide use)
   - '0.10'
+  # will be unsupported as soon as 6 becomes LTS and 7 released
+  - '5'
+  # technically in LTS / distros, unbeloved
   - '0.12'
-  - 'iojs'
+notifications:
+    slack: npm-inc:kRqQjto7YbINqHPb1X6nS3g8

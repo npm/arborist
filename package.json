@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "archy": "^1.0.0",
+    "mkdirp": "^0.5.1",
     "tacks": "^1.2.1",
     "tap": "^6.3.0"
   },

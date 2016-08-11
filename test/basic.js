@@ -3,6 +3,7 @@ var rpt = require('../rpt.js')
 var path = require('path')
 var fs = require('fs')
 var archy = require('archy')
+var mkdirp = require('mkdirp')
 var fixtures = path.resolve(__dirname, 'fixtures')
 var roots = [ 'root', 'other', 'selflink', 'noname' ]
 var cwd = path.resolve(__dirname, '..')
@@ -38,6 +39,7 @@ test('setup symlinks', function (t) {
 
   Object.keys(symlinks).forEach(function (s) {
     var p = path.resolve(cwd, 'test/fixtures', s)
+    mkdirp.sync(path.dirname(p))
     fs.symlinkSync(symlinks [ s ], p, 'dir')
   })
 

@@ -14,9 +14,9 @@
     "readdir-scoped-modules": "^1.0.0"
   },
   "devDependencies": {
-    "archy": "0",
+    "archy": "^1.0.0",
     "tacks": "^1.2.1",
-    "tap": "^1.2.0"
+    "tap": "^6.3.0"
   },
   "scripts": {
     "test": "tap test/*.js"

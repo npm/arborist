@@ -8,8 +8,6 @@ node_js:
   - '6'
   # still in LTS maintenance until fall 2016 (also still in wide use)
   - '0.10'
-  # will be unsupported as soon as 6 becomes LTS and 7 released
-  - '5'
   # technically in LTS / distros, unbeloved
   - '0.12'
 notifications:

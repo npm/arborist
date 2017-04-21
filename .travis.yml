@@ -1,14 +1,6 @@
 sudo: false
 language: node_js
-before_install: npm install -g npm@latest
 node_js:
-  # LTS is our most important target
-  - '4'
-  # next LTS and master is next most important
   - '6'
-  # still in LTS maintenance until fall 2016 (also still in wide use)
-  - '0.10'
-  # technically in LTS / distros, unbeloved
-  - '0.12'
-notifications:
-    slack: npm-inc:kRqQjto7YbINqHPb1X6nS3g8
+  - '4'
+  - '7'

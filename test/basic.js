@@ -148,7 +148,9 @@ function archyize (d, seen) {
     path = d.target.path
   }
 
-  var label = d.package._id ? d.package._id + ' ' :
+  var label = !Object.keys(d.package).length ? '' :
+              d.package._id ? d.package._id + ' ' :
+              d.name ? d.name + (d.package.version ? '@' + d.package.version : '') + ' ' :
               d.package.name ? d.package.name + (d.package.version ? '@' + d.package.version : '') + ' ' :
               ''
   label += path.substr(cwd.length + 1)

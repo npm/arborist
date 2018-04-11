@@ -47,12 +47,11 @@ function Node (pkg, logical, physical, er, cache, fromLink) {
 
   debug(node.constructor.name, dpath(physical), pkg && pkg._id)
 
-  const dir = path.dirname(logical)
-  const parent = path.dirname(dir)
+  const parent = path.dirname(logical)
   if (parent[0] === '@') {
-    node.name = path.basename(parent) + '/' + path.basename(dir)
+    node.name = path.basename(parent) + '/' + path.basename(logical)
   } else {
-    node.name = path.basename(dir)
+    node.name = path.basename(logical)
   }
   node.path = logical
   node.realpath = physical

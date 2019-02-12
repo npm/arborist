@@ -17,7 +17,7 @@
     "archy": "^1.0.0",
     "mkdirp": "^0.5.1",
     "tacks": "^1.2.1",
-    "tap": "^6.3.0"
+    "tap": "^12.5.2"
   },
   "scripts": {
     "test": "tap test/*.js"

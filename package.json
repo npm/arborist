@@ -17,10 +17,11 @@
     "archy": "^1.0.0",
     "mkdirp": "^0.5.1",
     "tacks": "^1.2.1",
-    "tap": "^12.5.2"
+    "tap": "^14.2.1"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap",
+    "snap": "tap"
   },
   "repository": {
     "type": "git",

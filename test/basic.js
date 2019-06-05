@@ -48,26 +48,13 @@ test('setup symlinks', function (t) {
 
 roots.forEach(function (root) {
   var dir = path.resolve(fixtures, root)
-  var expectedtxt = path.resolve(dir, 'archy.txt')
-  var expectedre  = path.resolve(dir, 'archy.re')
 
   test(root, function (t) {
     rpt(dir, function (er, d) {
       if (er && er.code !== 'ENOENT') throw er
 
       var actual = archy(archyize(d)).trim()
-      // console . log ('----', dir)
-      console.log(actual)
-      // console . log (require ('util') . inspect (d, {
-      //   depth: Infinity
-      // }))
-      try {
-        var expect = fs.readFileSync(expectedtxt, 'utf8').trim()
-        t.equal(actual, expect, root + ' tree')
-      } catch (e) {
-        var expect = new RegExp(fs.readFileSync(expectedre, 'utf8').trim())
-        t.like(actual, expect, root + ' tree')
-      }
+      t.matchSnapshot(actual, root + ' tree')
       t.end()
     })
   })
@@ -75,28 +62,22 @@ roots.forEach(function (root) {
 
 test('linkedroot', function (t) {
   var dir = path.resolve(fixtures, 'linkedroot')
-  var out = dir + '-archy.txt'
   rpt(dir, function (er, d) {
     if (er && er.code !== 'ENOENT') throw er
 
     var actual = archy(archyize(d)).trim()
-    console.log(actual)
-    var expect = fs.readFileSync(out, 'utf8').trim()
-    t.equal(actual, expect, 'linkedroot tree')
+    t.matchSnapshot(actual, 'linkedroot tree')
     t.end()
   })
 })
 
 test('deeproot', function (t) {
   var dir = path.resolve(fixtures, 'deeproot/root')
-  var out = path.resolve(fixtures, 'deep') + '-archy.txt'
   rpt(dir, function (er, d) {
     if (er && er.code !== 'ENOENT') throw er
 
     var actual = archy(archyize(d)).trim()
-    console.log(actual)
-    var expect = fs.readFileSync(out, 'utf8').trim()
-    t.equal(actual, expect, 'deeproot tree')
+    t.matchSnapshot(actual, 'deeproot tree')
     t.end()
   })
 })
@@ -121,6 +102,7 @@ test('missing json does not obscure deeper errors', function (t) {
     t.end()
   })
 })
+
 test('missing folder', function (t) {
   rpt(path.resolve(fixtures, 'does-not-exist'), function (er, d) {
     t.ok(er, 'Got an error object')
@@ -129,6 +111,7 @@ test('missing folder', function (t) {
     t.end()
   })
 })
+
 test('missing symlinks', function (t) {
   rpt(path.resolve(fixtures, 'badlink'), function (er, d) {
     if (er && er.code !== 'ENOENT') throw er
@@ -139,7 +122,6 @@ test('missing symlinks', function (t) {
     t.end()
   })
 })
-
 
 function archyize (d, seen) {
   seen = seen || {}

@@ -19,6 +19,13 @@ root@1.2.3 test/fixtures/deeproot/root
 └── foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo
 `
 
+exports[`test/basic.js TAP filterWith > must match snapshot 1`] = `
+root@1.2.3 test/fixtures/root
+├── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
+├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+└── foo@1.2.3 test/fixtures/root/node_modules/foo
+`
+
 exports[`test/basic.js TAP linkedroot > linkedroot tree 1`] = `
 root@1.2.3 test/fixtures/linkedroot
 ├─┬ @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x

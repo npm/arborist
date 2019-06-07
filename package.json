@@ -7,9 +7,6 @@
     "test": "test"
   },
   "dependencies": {
-    "debuglog": "^1.0.1",
-    "dezalgo": "^1.0.0",
-    "once": "^1.3.0",
     "read-package-json": "^2.0.0",
     "readdir-scoped-modules": "^1.0.0"
   },
@@ -35,5 +32,8 @@
   "homepage": "https://github.com/npm/read-package-tree",
   "files": [
     "rpt.js"
-  ]
+  ],
+  "tap": {
+    "100": true
+  }
 }

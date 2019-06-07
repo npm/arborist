@@ -49,19 +49,14 @@ test('setup symlinks', function (t) {
 roots.forEach(function (root) {
   var dir = path.resolve(fixtures, root)
 
-  test(root, function (t) {
-    rpt(dir, function (er, d) {
-      if (er && er.code !== 'ENOENT') throw er
-
-      var actual = archy(archyize(d)).trim()
-      t.matchSnapshot(actual, root + ' tree')
-      t.end()
-    })
-  })
+  // test promisey nature
+  test(root, t => rpt(dir).then(d =>
+    t.matchSnapshot(archy(archyize(d)).trim(), root + ' tree')))
 })
 
 test('linkedroot', function (t) {
   var dir = path.resolve(fixtures, 'linkedroot')
+  // test legacy cb nature
   rpt(dir, function (er, d) {
     if (er && er.code !== 'ENOENT') throw er
 
@@ -81,6 +76,14 @@ test('deeproot', function (t) {
     t.end()
   })
 })
+
+test('filterWith', t =>
+  rpt(
+    path.join(fixtures, 'root'),
+    (node, kid) => !node.parent,
+    true
+  ).then(d => t.matchSnapshot(archy(archyize(d)).trim()), 'only 1 level deep')
+)
 
 test('broken json', function (t) {
   rpt(path.resolve(fixtures, 'bad'), function (er, d) {

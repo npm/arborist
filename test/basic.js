@@ -85,6 +85,22 @@ test('filterWith', t =>
   ).then(d => t.matchSnapshot(archy(archyize(d)).trim()), 'only 1 level deep')
 )
 
+test('looking outside of cwd', t => {
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  process.chdir('test/fixtures/selflink')
+  return rpt('../root').then(d =>
+    t.matchSnapshot(archy(archyize(d)).trim()))
+})
+
+test('shake out Link target timing issue', t => {
+  process.env._TEST_RPT_SLOW_LINK_TARGET_ = '1'
+  const cwd = process.cwd()
+  t.teardown(() => process.env._TEST_RPT_SLOW_LINK_TARGET_ = '')
+  return rpt(path.resolve(fixtures, 'selflink')).then(d =>
+    t.matchSnapshot(archy(archyize(d)).trim()))
+})
+
 test('broken json', function (t) {
   rpt(path.resolve(fixtures, 'bad'), function (er, d) {
     t.ok(d.error, 'Got an error object')
@@ -151,6 +167,23 @@ function archyize (d, seen) {
     })
   }
 }
+
+test('realpath gutchecks', t => {
+  const d = path.resolve(cwd, 'test/fixtures')
+  const realpath = require('../realpath.js')
+  const {realpathSync} = fs
+  Object.keys(symlinks).map(link => t.test(link, t =>
+    realpath(
+      path.resolve(d, link),
+      new Map(),
+      new Map(),
+      0
+    ).then(
+      real => t.equal(real, realpathSync(path.resolve(d, link))),
+      er => t.throws(()=> realpathSync(path.resolve(d, link)))
+    )))
+  t.end()
+})
 
 test('cleanup', function (t) {
   cleanup()

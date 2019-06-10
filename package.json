@@ -31,7 +31,8 @@
   },
   "homepage": "https://github.com/npm/read-package-tree",
   "files": [
-    "rpt.js"
+    "rpt.js",
+    "realpath.js"
   ],
   "tap": {
     "100": true

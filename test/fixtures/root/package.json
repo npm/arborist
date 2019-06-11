@@ -1,2 +1,14 @@
-{"name":"root",
- "version":"1.2.3"}
+{
+  "name": "root",
+  "version": "1.2.3",
+  "dependencies": {
+    "@scope/x": "1",
+    "@scope/y": ">0.99.0"
+  },
+  "optionalDependencies": {
+    "notinstalledhere": ""
+  },
+  "devDependencies": {
+    "foo": "*"
+  }
+}

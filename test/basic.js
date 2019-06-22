@@ -35,31 +35,38 @@ function cleanup () {
   })
 }
 
-const archyize = { exit (d, nodes) {
-  const path = d.target ? d.target.path : d.path
-  const {_id, version, name} = d.package
-  const label = (
-    !Object.keys(d.package).length ? '' :
-    _id ? _id + ' ' :
-    d.name ? d.name + (version ? '@' + version : '') + ' ' :
-    name ? name + (version ? '@' + version : '') + ' ' :
-    ''
-  ) + path.substr(cwd.length + 1)
-  + (d.target ? ' (symlink)' : '')
-  + (d.invalidTo.size ? (' (invalid for ' + [...d.invalidTo].map(node =>
-    (node.target || node).path.substr(cwd.length + 1)).join(' ') + ')') : '')
+const archyize = {
+  enter (d) {
+    const path = d.target ? d.target.path : d.path
+    const {_id, version, name} = d.package
+    const label = (
+      !Object.keys(d.package).length ? '' :
+      _id ? _id + ' ' :
+      d.name ? d.name + (version ? '@' + version : '') + ' ' :
+      name ? name + (version ? '@' + version : '') + ' ' :
+      ''
+    ) + path.substr(cwd.length + 1)
+    + (d.target ? ' (symlink)' : '')
+    + (d.invalidTo.size ? (' (invalid for ' + [...d.invalidTo].map(node =>
+      (node.target || node).path.substr(cwd.length + 1)).join(' ') + ')') : '')
 
-
-  return {
-    label,
-    target: d.target,
-    tree: d,
-    parent: d.parent,
-    nodes: d.target ? [] : nodes.map(node =>
-      node.parent === d ? node
-      : { ...node, label: node.label + ' (deduped)' })
+    return {
+      label,
+      target: d.target,
+      tree: d,
+      parent: d.parent,
+      node: d,
+    }
+  },
+  exit (d, nodes) {
+    return {
+      ...d,
+      nodes: d.target ? [] : nodes.map(node =>
+        node.parent === d.node ? node
+        : { ...node, label: node.label + ' (deduped)' })
+    }
   }
-}}
+}
 
 const archyPhysical = d => archy(d.walkPhysical(archyize)).trim()
 const archyLogical = d => archy(d.walkLogical(archyize)).trim()
@@ -205,12 +212,13 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkLogical({
       enter (node) {
-        log.push(['ENTER', node.path.substr(cwd.length + 1)])
-        return Promise.resolve(true)
+        const p = node.name
+        log.push(['ENTER', p])
+        return Promise.resolve(p)
       },
-      exit (node, kids) {
-        log.push(['EXIT', node.path.substr(cwd.length + 1)])
-        return Promise.resolve([node.name, kids])
+      exit (p, kids) {
+        log.push(['EXIT', p])
+        return Promise.resolve([p, kids])
       }
     })
     t.isa(p, Promise)
@@ -224,12 +232,13 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkLogical({
       enter (node) {
-        log.push(['ENTER', node.path.substr(cwd.length + 1)])
-        return true
+        const p = node.name
+        log.push(['ENTER', p])
+        return p
       },
-      exit (node, kids) {
-        log.push(['EXIT', node.path.substr(cwd.length + 1)])
-        return [node.name, kids]
+      exit (p, kids) {
+        log.push(['EXIT', p])
+        return [p, kids]
       }
     })
     t.notOk(p.then, 'not a promise')
@@ -248,12 +257,13 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkPhysical({
       enter (node) {
-        log.push(['ENTER', node.path.substr(cwd.length + 1)])
-        return Promise.resolve(true)
+        const p = node.name
+        log.push(['ENTER', p])
+        return Promise.resolve(p)
       },
-      exit (node, kids) {
-        log.push(['EXIT', node.path.substr(cwd.length + 1)])
-        return Promise.resolve([node.name, kids])
+      exit (p, kids) {
+        log.push(['EXIT', p])
+        return Promise.resolve([p, kids])
       }
     })
     t.isa(p, Promise)
@@ -267,12 +277,13 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkPhysical({
       enter (node) {
-        log.push(['ENTER', node.path.substr(cwd.length + 1)])
-        return true
+        const p = node.name
+        log.push(['ENTER', p])
+        return p
       },
-      exit (node, kids) {
-        log.push(['EXIT', node.path.substr(cwd.length + 1)])
-        return [node.name, kids]
+      exit (p, kids) {
+        log.push(['EXIT', p])
+        return [p, kids]
       }
     })
     t.notOk(p.then, 'not a promise')
@@ -292,7 +303,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     d.walkPhysical({
       enter (node) {
         log.push(['ENTER', node.path.substr(cwd.length + 1)])
-        return Promise.resolve(true)
+        return Promise.resolve(node)
       }
     })
     t.matchSnapshot(log, 'no exit walk log')

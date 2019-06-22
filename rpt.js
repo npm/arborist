@@ -76,7 +76,7 @@ class Node {
     seen.set(this, null)
 
     const enterNode = () => {
-      const res = enter ? enter(this) : null
+      const res = enter ? enter(this) : this
       if (res && res.then) {
         const fullResult = res.then(res => {
           seen.set(this, res)
@@ -101,7 +101,7 @@ class Node {
     const exitNode = kids => {
       if (!exit)
         return seen.get(this)
-      const res = exit(this, kids)
+      const res = exit(seen.get(this), kids)
       seen.set(this, res)
       // if it's a promise at this point, the caller deals with it
       return res

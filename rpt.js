@@ -44,8 +44,8 @@ class Node {
     this.requiredBy = new Set()
     this.missingDeps = new Map()
     this.dependencies = new Map()
-    this.devDependencies = new Map()
     this.dev = true
+    this.optional = true
   }
 
   get isLink () {
@@ -108,6 +108,31 @@ class Node {
     return this[walk]({enter, exit}, new Map(), node => node.children)
   }
 
+  undev () {
+    this[walk]({ enter (node) {
+      node.dev = false
+    }}, new Map(), node =>
+      Object.keys(node.package.dependencies || {}).concat(
+        Object.keys(node.package.optionalDependencies || {}))
+        .map(name => node.resolveDep(name))
+        .filter(dep => dep)
+    )
+  }
+
+  unoptional () {
+    this[walk]({ enter (node) {
+      node.optional = false
+    }}, new Map(), node => {
+      const deps = Object.keys(node.package.dependencies || {})
+      const devDeps = Object.keys(node.package.devDependencies || {})
+      const optDeps = Object.keys(node.package.optionalDependencies || {})
+      if (node.isTop)
+        deps.push(...devDeps)
+      const d = deps.filter(d => optDeps.indexOf(d) === -1)
+      return d.map(d => node.resolveDep(d)).filter(d => d)
+    })
+  }
+
   addChildren (nodes) {
     nodes.forEach(node => node.parent = this)
     this.children = nodes.sort(nodesort)
@@ -134,18 +159,18 @@ class Node {
 
     for (const [name, spec] of Object.entries(deps))  {
       const dep = this.resolveDep(name)
+
+      if (!dev && !optional) {
+        this.requires.set(name, spec)
+      }
+
       if (!dep) {
-        if (!dev && !optional) {
+        if (!dev && !optional)
           this.missingDeps.set(name, spec)
-          this.requires.set(name, spec)
-        }
         continue
       }
 
-      this.requires.set(name, spec)
       this.dependencies.set(name, dep)
-      if (!dev && (this.isTop || !this.dev))
-        dep.dev = false
       dep.requiredBy.add(this)
       dep.loadDepinfo()
     }
@@ -154,17 +179,23 @@ class Node {
   loadDepinfo () {
     if (this[depinfoLoaded])
       return
+
     this[depinfoLoaded] = true
 
     this[loadDepinfo]({})
     this[loadDepinfo]({dev: true})
     this[loadDepinfo]({optional: true})
 
+    if (this.isTop) {
+      this.unoptional()
+      this.undev()
+    }
+
     return this
   }
 
   get sortName () {
-    return this.package.name ? this.package.name.toLowerCase() : this.path
+    return this.package.name ? this.package.name.toLowerCase() : this.name
   }
 }
 
@@ -213,7 +244,14 @@ class Link extends Node {
   }
 }
 
-const nodesort = (a, b) => a.sortName.localeCompare(b.sortName)
+const nodesort = (a, b) => {
+  const aname = a.sortName
+  const bname = b.sortName
+  /* istanbul ignore next */
+  return aname === bname ? 0
+    : aname > bname ? 1
+    : -1
+}
 
 // this is the way it is to expose a timing issue which is difficult to
 // test otherwise.  The creation of a Node may take slightly longer than

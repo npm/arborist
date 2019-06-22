@@ -16,8 +16,9 @@ root@1.2.3 test/fixtures/deeproot/root
 │   │ ├── lru-cache@2.5.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
 │   │ └── once@1.3.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
 │   └── once@1.3.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once
-├── @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo
+├─┬ @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
+│ └── foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y) (deduped)
+└── foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y)
 `
 
 exports[`test/basic.js TAP deeproot > physical 1`] = `
@@ -31,22 +32,23 @@ root@1.2.3 test/fixtures/deeproot/root
 │   │ └── sigmund@1.0.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
-└─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y)
   └── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
 `
 
 exports[`test/basic.js TAP filterWith > logical 1`] = `
 root@1.2.3 test/fixtures/root
 ├── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
-├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/root/node_modules/foo
+├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+│ └── foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+└── foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
 `
 
 exports[`test/basic.js TAP filterWith > physical 1`] = `
 root@1.2.3 test/fixtures/root
 ├── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
 ├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/root/node_modules/foo
+└── foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
 `
 
 exports[`test/basic.js TAP linkedroot > logical 1`] = `
@@ -60,8 +62,9 @@ root@1.2.3 test/fixtures/linkedroot
 │   │ ├── lru-cache@2.5.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
 │   │ └── once@1.3.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
 │   └── once@1.3.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once
-├── @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/linkedroot/node_modules/foo
+├─┬ @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
+│ └── foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y) (deduped)
+└── foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y)
 `
 
 exports[`test/basic.js TAP linkedroot > physical 1`] = `
@@ -75,7 +78,7 @@ root@1.2.3 test/fixtures/linkedroot
 │   │ └── sigmund@1.0.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
-└─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y)
   └── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
 `
 
@@ -90,8 +93,9 @@ root@1.2.3
 │   │ ├── lru-cache@2.5.0 es/glob/node_modules/minimatch/node_modules/lru-cache
 │   │ └── once@1.3.0 es/glob/node_modules/once (deduped)
 │   └── once@1.3.0 es/glob/node_modules/once
-├── @scope/y@1.2.3 
-└── foo@1.2.3
+├─┬ @scope/y@1.2.3 
+│ └── foo@1.2.3  (invalid for ) (deduped)
+└── foo@1.2.3  (invalid for )
 `
 
 exports[`test/basic.js TAP looking outside of cwd > physical 1`] = `
@@ -105,7 +109,7 @@ root@1.2.3
 │   │ └── sigmund@1.0.0 es/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 es/glob/node_modules/once
 ├── @scope/y@1.2.3 
-└─┬ foo@1.2.3 
+└─┬ foo@1.2.3  (invalid for )
   └── abbrev@1.1.1 press
 `
 
@@ -138,8 +142,9 @@ root@1.2.3 test/fixtures/root
 │   │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
 │   │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
 │   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
-├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/root/node_modules/foo
+├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+│ └── foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+└── foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
 `
 
 exports[`test/basic.js TAP root > physical 1`] = `
@@ -153,7 +158,7 @@ root@1.2.3 test/fixtures/root
 │   │ └── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
   └── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
 `
 
@@ -200,317 +205,727 @@ selflink@1.2.3 test/fixtures/selflink
 `
 
 exports[`test/basic.js TAP walking through trees logical sprint > logical walk log 1`] = `
-[
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '/node_modules/glob' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/inherits' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/inherits' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/minimatch' ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+Array [
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+  Array [
+    "ENTER",
+    "/node_modules/glob",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/graceful-fs",
   ],
-  [ 'ENTER', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'EXIT', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'ENTER', '' ],
-  [ 'EXIT', '' ],
-  [ 'ENTER', '' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ]
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees logical sprint > logical walk result 1`] = `
-[
-  'root',
-  [
-    [
-      '@scope/x',
-      [
-        [
-          'glob',
-          [
-            [ 'graceful-fs', [] ],
-            [ 'inherits', [] ],
-            [
-              'minimatch',
-              [
-                [ 'sigmund', [] ],
-                [ 'lru-cache', [] ],
-                [ 'once', [] ]
-              ]
+Array [
+  "root",
+  Array [
+    Array [
+      "@scope/x",
+      Array [
+        Array [
+          "glob",
+          Array [
+            Array [
+              "graceful-fs",
+              Array [],
             ],
-            [ 'once', [] ]
-          ]
-        ]
-      ]
+            Array [
+              "inherits",
+              Array [],
+            ],
+            Array [
+              "minimatch",
+              Array [
+                Array [
+                  "sigmund",
+                  Array [],
+                ],
+                Array [
+                  "lru-cache",
+                  Array [],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+      ],
     ],
-    [ '@scope/y', [] ],
-    [ 'foo', [] ]
-  ]
+    Array [
+      "@scope/y",
+      Array [
+        Array [
+          "foo",
+          Array [],
+        ],
+      ],
+    ],
+    Array [
+      "foo",
+      Array [],
+    ],
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees logical stroll > logical walk log 1`] = `
-[
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/inherits' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/inherits' ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+Array [
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+  Array [
+    "ENTER",
+    "",
   ],
-  [ 'EXIT', '/node_modules/glob/node_modules/once' ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+  Array [
+    "ENTER",
+    "",
   ],
-  [ 'EXIT', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'EXIT', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ]
+  Array [
+    "ENTER",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees logical stroll > logical walk result 1`] = `
-[
-  'root',
-  [
-    [
-      '@scope/x',
-      [
-        [
-          'glob',
-          [
-            [ 'graceful-fs', [] ],
-            [ 'inherits', [] ],
-            [
-              'minimatch',
-              [
-                [ 'sigmund', [] ],
-                [ 'lru-cache', [] ],
-                [ 'once', [] ]
-              ]
+Array [
+  "root",
+  Array [
+    Array [
+      "@scope/x",
+      Array [
+        Array [
+          "glob",
+          Array [
+            Array [
+              "graceful-fs",
+              Array [],
             ],
-            [ 'once', [] ]
-          ]
-        ]
-      ]
+            Array [
+              "inherits",
+              Array [],
+            ],
+            Array [
+              "minimatch",
+              Array [
+                Array [
+                  "sigmund",
+                  Array [],
+                ],
+                Array [
+                  "lru-cache",
+                  Array [],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+      ],
     ],
-    [ '@scope/y', [] ],
-    [ 'foo', [] ]
-  ]
+    Array [
+      "@scope/y",
+      Array [
+        Array [
+          "foo",
+          Array [],
+        ],
+      ],
+    ],
+    Array [
+      "foo",
+      Array [],
+    ],
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees no entry > no entry walk log 1`] = `
-[
-  [ 'EXIT', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/inherits' ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+Array [
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/graceful-fs",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/inherits",
   ],
-  [ 'EXIT', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '_modules/express' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ]
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "_modules/express",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees no exit > no exit walk log 1`] = `
-[
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '/node_modules/glob' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/inherits' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/minimatch' ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+Array [
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "",
   ],
-  [ 'ENTER', '/node_modules/glob/node_modules/once' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '_modules/express' ]
+  Array [
+    "ENTER",
+    "/node_modules/glob",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "ENTER",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "_modules/express",
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees physical sprint > physical walk log 1`] = `
-[
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '/node_modules/glob' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/inherits' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/inherits' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/minimatch' ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+Array [
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "/node_modules/glob",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/graceful-fs",
   ],
-  [ 'EXIT', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'ENTER', '' ],
-  [ 'EXIT', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '_modules/express' ],
-  [ 'EXIT', '_modules/express' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ]
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "_modules/express",
+  ],
+  Array [
+    "EXIT",
+    "_modules/express",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees physical sprint > physical walk result 1`] = `
-[
-  'root',
-  [
-    [
-      '@scope/x',
-      [
-        [
-          'glob',
-          [
-            [ 'graceful-fs', [] ],
-            [ 'inherits', [] ],
-            [ 'minimatch', [ [ 'lru-cache', [] ], [ 'sigmund', [] ] ] ],
-            [ 'once', [] ]
-          ]
-        ]
-      ]
+Array [
+  "root",
+  Array [
+    Array [
+      "@scope/x",
+      Array [
+        Array [
+          "glob",
+          Array [
+            Array [
+              "graceful-fs",
+              Array [],
+            ],
+            Array [
+              "inherits",
+              Array [],
+            ],
+            Array [
+              "minimatch",
+              Array [
+                Array [
+                  "lru-cache",
+                  Array [],
+                ],
+                Array [
+                  "sigmund",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+      ],
     ],
-    [ '@scope/y', [] ],
-    [ 'foo', [ [ 'express', [] ] ] ]
-  ]
+    Array [
+      "@scope/y",
+      Array [],
+    ],
+    Array [
+      "foo",
+      Array [
+        Array [
+          "express",
+          Array [],
+        ],
+      ],
+    ],
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees physical stroll > physical walk log 1`] = `
-[
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '' ],
-  [ 'ENTER', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'ENTER', '_modules/express' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/inherits' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'ENTER', '/node_modules/glob/node_modules/once' ],
-  [ 'EXIT', '_modules/express' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/graceful-fs' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/inherits' ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+Array [
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'ENTER',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "",
   ],
-  [ 'EXIT', '/node_modules/glob/node_modules/once' ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/lru-cache'
+  Array [
+    "ENTER",
+    "",
   ],
-  [
-    'EXIT',
-    '/node_modules/glob/node_modules/minimatch/node_modules/sigmund'
+  Array [
+    "ENTER",
+    "",
   ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '/node_modules/glob/node_modules/minimatch' ],
-  [ 'EXIT', '/node_modules/glob' ],
-  [ 'EXIT', '' ],
-  [ 'EXIT', '' ]
+  Array [
+    "ENTER",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "ENTER",
+    "_modules/express",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "_modules/express",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/graceful-fs",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/inherits",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "ENTER",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/once",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob/node_modules/minimatch",
+  ],
+  Array [
+    "EXIT",
+    "/node_modules/glob",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
+  Array [
+    "EXIT",
+    "",
+  ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees physical stroll > physical walk result 1`] = `
-[
-  'root',
-  [
-    [
-      '@scope/x',
-      [
-        [
-          'glob',
-          [
-            [ 'graceful-fs', [] ],
-            [ 'inherits', [] ],
-            [ 'minimatch', [ [ 'lru-cache', [] ], [ 'sigmund', [] ] ] ],
-            [ 'once', [] ]
-          ]
-        ]
-      ]
+Array [
+  "root",
+  Array [
+    Array [
+      "@scope/x",
+      Array [
+        Array [
+          "glob",
+          Array [
+            Array [
+              "graceful-fs",
+              Array [],
+            ],
+            Array [
+              "inherits",
+              Array [],
+            ],
+            Array [
+              "minimatch",
+              Array [
+                Array [
+                  "lru-cache",
+                  Array [],
+                ],
+                Array [
+                  "sigmund",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+      ],
     ],
-    [ '@scope/y', [] ],
-    [ 'foo', [ [ 'express', [] ] ] ]
-  ]
+    Array [
+      "@scope/y",
+      Array [],
+    ],
+    Array [
+      "foo",
+      Array [
+        Array [
+          "express",
+          Array [],
+        ],
+      ],
+    ],
+  ],
 ]
 `

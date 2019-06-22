@@ -46,6 +46,9 @@ const archyize = { exit (d, nodes) {
     ''
   ) + path.substr(cwd.length + 1)
   + (d.target ? ' (symlink)' : '')
+  + (d.invalidTo.size ? (' (invalid for ' + [...d.invalidTo].map(node =>
+    (node.target || node).path.substr(cwd.length + 1)).join(' ') + ')') : '')
+
 
   return {
     label,

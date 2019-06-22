@@ -8,6 +8,7 @@ const realpath = require('./realpath.js')
 const depinfoLoaded = Symbol('depinfoLoaded')
 const loadDepinfo = Symbol('loadDepinfo')
 const walk = Symbol('walk')
+const semver = require('semver')
 
 let ID = 0
 class Node {
@@ -43,6 +44,8 @@ class Node {
     this.requires = new Map()
     this.requiredBy = new Set()
     this.missingDeps = new Map()
+    this.invalidDeps = new Map()
+    this.invalidTo = new Set()
     this.dependencies = new Map()
     this.dev = true
     this.optional = true
@@ -168,6 +171,19 @@ class Node {
         if (!dev && !optional)
           this.missingDeps.set(name, spec)
         continue
+      }
+
+      // TODO(isaacs)
+      // Use npm-package-arg and verify that the dep actually came from
+      // the location in question.
+      // - If it's a file: url, then it should be a symbolic link
+      // - If it's git/tgz url, it should have a _resolved pointing to that url
+      // - If it's a semver range, then do this bit here
+      // - If it's a dist-tag, then hope for the best
+      if (semver.validRange(spec) &&
+          !semver.satisfies(dep.package.version, spec, { loose: true })) {
+        dep.invalidTo.add(this)
+        this.invalidDeps.set(`${name}@${spec}`, dep)
       }
 
       this.dependencies.set(name, dep)

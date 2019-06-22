@@ -47,6 +47,10 @@ class Node {
     this.invalidDeps = new Map()
     this.invalidTo = new Set()
     this.dependencies = new Map()
+
+    this.peerDependencies = new Map()
+    this.missingPeerDeps = new Map()
+
     this.dev = true
     this.optional = true
   }
@@ -60,7 +64,11 @@ class Node {
   // promise to the caller which is resolved on completion to the return
   // value of the initial node.
   // if both enter and exit are provided, then the return value of exit
-  // takes precedence in the return of the function.
+  // takes precedence in the return of the function.  However, if the enter
+  // function returns a promise, and there is a dependency cycle, and an exit
+  // function is provided, then it is possible that the exit() function will
+  // be called with the return value from enter() called on one of its
+  // children, rather than exit().
   [walk] ({enter, exit}, seen, getChildren) {
     if (seen.has(this))
       return seen.get(this)
@@ -111,31 +119,6 @@ class Node {
     return this[walk]({enter, exit}, new Map(), node => node.children)
   }
 
-  undev () {
-    this[walk]({ enter (node) {
-      node.dev = false
-    }}, new Map(), node =>
-      Object.keys(node.package.dependencies || {}).concat(
-        Object.keys(node.package.optionalDependencies || {}))
-        .map(name => node.resolveDep(name))
-        .filter(dep => dep)
-    )
-  }
-
-  unoptional () {
-    this[walk]({ enter (node) {
-      node.optional = false
-    }}, new Map(), node => {
-      const deps = Object.keys(node.package.dependencies || {})
-      const devDeps = Object.keys(node.package.devDependencies || {})
-      const optDeps = Object.keys(node.package.optionalDependencies || {})
-      if (node.isTop)
-        deps.push(...devDeps)
-      const d = deps.filter(d => optDeps.indexOf(d) === -1)
-      return d.map(d => node.resolveDep(d)).filter(d => d)
-    })
-  }
-
   addChildren (nodes) {
     nodes.forEach(node => node.parent = this)
     this.children = nodes.sort(nodesort)
@@ -153,25 +136,62 @@ class Node {
       : this.parent.resolveDep(name)
   }
 
-  [loadDepinfo] ({optional, dev}) {
-    const deps = this.package[
-      dev ? 'devDependencies'
-      : optional ? 'optionalDependencies'
-      : 'dependencies'
-    ] || {}
+  loadDepinfo () {
+    if (this[depinfoLoaded])
+      return
 
-    for (const [name, spec] of Object.entries(deps))  {
-      const dep = this.resolveDep(name)
+    this[depinfoLoaded] = true
 
-      if (!dev && !optional) {
+    if (this.isTop) {
+      this.dev = false
+      this.optional = false
+    }
+    const optionals = new Set(
+      Object.keys(this.package.optionalDependencies || {})
+    )
+    const devs = new Set(
+      Object.keys(this.package.devDependencies || {})
+    )
+    const peers = new Set(
+      Object.keys(this.package.peerDependencies || {})
+    )
+    const reqs = new Set(
+      Object.keys(this.package.dependencies || {})
+    )
+
+    const depEntries = Object.entries({
+      ...(this.package.dependencies || {}),
+      ...(this.isTop ? this.package.devDependencies || {} : {}),
+      ...(this.package.optionalDependencies || {}),
+      ...(this.package.peerDependencies || {}),
+    })
+
+    // do this as a breadth-first walk so that we can accurately
+    // set dev and optional flags in a single pass, rather than
+    // having to walk the tree again later.
+    const depNodes = []
+    for (const [name, spec] of depEntries)  {
+      // the top node needs its peer deps locally.
+      // everyone else starts resolving peerdeps at their parent's level
+      // ie, in the same node_modules folder where they themselves live
+      const resolver = peers.has(name) ? this.parent || this : this
+      const dep = resolver.resolveDep(name)
+      const inReq = reqs.has(name)
+      const inPeer = !inReq && peers.has(name)
+      const inOptional = optionals.has(name)
+
+      if (inReq && !inOptional)
         this.requires.set(name, spec)
-      }
 
       if (!dep) {
-        if (!dev && !optional)
-          this.missingDeps.set(name, spec)
+        if ((inReq || inPeer) && !inOptional)
+          this[inPeer ? 'missingPeerDeps' : 'missingDeps'].set(name, spec)
         continue
       }
+
+      // optional deps are only listed in requires when they exist
+      if (inOptional)
+        this.requires.set(name, spec)
 
       // TODO(isaacs)
       // Use npm-package-arg and verify that the dep actually came from
@@ -186,26 +206,20 @@ class Node {
         this.invalidDeps.set(`${name}@${spec}`, dep)
       }
 
+      if (!this.dev && !devs.has(name)) {
+        dep.dev = false
+      }
+
+      if (!this.optional && !optionals.has(name)) {
+        dep.optional = false
+      }
+
       this.dependencies.set(name, dep)
       dep.requiredBy.add(this)
-      dep.loadDepinfo()
+      depNodes.push(dep)
     }
-  }
 
-  loadDepinfo () {
-    if (this[depinfoLoaded])
-      return
-
-    this[depinfoLoaded] = true
-
-    this[loadDepinfo]({})
-    this[loadDepinfo]({dev: true})
-    this[loadDepinfo]({optional: true})
-
-    if (this.isTop) {
-      this.unoptional()
-      this.undev()
-    }
+    depNodes.forEach(dep => dep.loadDepinfo())
 
     return this
   }

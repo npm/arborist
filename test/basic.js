@@ -292,6 +292,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     d.walkPhysical({
       enter (node) {
         log.push(['ENTER', node.path.substr(cwd.length + 1)])
+        return Promise.resolve(true)
       }
     })
     t.matchSnapshot(log, 'no exit walk log')

@@ -1,7 +1,7 @@
 const fs = require('fs')
 /* istanbul ignore next */
 const promisify = require('util').promisify || require('util-promisify')
-const { resolve, basename, dirname, join } = require('path')
+const { relative, resolve, basename, dirname, join } = require('path')
 const rpj = promisify(require('read-package-json'))
 const readdir = promisify(require('readdir-scoped-modules'))
 const realpath = require('./realpath.js')
@@ -226,6 +226,66 @@ class Node {
 
   get sortName () {
     return this.package.name ? this.package.name.toLowerCase() : this.name
+  }
+
+  get packageLock () {
+    return this.walkPhysical({
+      enter: tree => ({
+        // stash this here, will remove later
+        _target: tree.target,
+        _tree: tree,
+        _isTop: tree.isTop,
+
+        ...(tree.isTop && !tree.target
+          ? { name: tree.package.name || tree.name }
+          : {}),
+        version: (
+          tree.target ? 'file:' + relative('.', tree.realpath)
+          : tree.package.version
+        ),
+        ...(tree.package._inBundle ? { bundled: true } : {
+          ...(tree.package._resolved ? { resolved: tree.package._resolved } : {}),
+          ...(
+            tree.package._integrity ? { integrity: tree.package._integrity }
+            : tree.package._shasum ? {
+              integrity: `sha1-${
+                Buffer.from(tree.package._shasum, 'hex').toString('base64')
+              }`
+            }
+            : {}
+          ),
+        }),
+        ...(tree.dev ? { dev: true } : {}),
+        ...(tree.optional ? { optional: true } : {}),
+        ...(tree.isTop && !tree.target ? { lockfileVersion: 1, requires: true }
+          : tree.requires.size ? {
+            requires: [...tree.requires.entries()].reduce((set, [k, v]) => {
+              set[k] = v
+              return set
+            }, {})
+          }
+          : {}),
+      }),
+      exit: (tree, children) => {
+        if (!tree._target && children.length) {
+          tree.dependencies = children.reduce((set, kid) => {
+            if (kid._tree) {
+              set[kid._tree.name] = kid
+              delete kid._tree
+              delete kid._target
+              delete kid._isTop
+            }
+            return set
+          }, {})
+        }
+        if (tree._isTop) {
+          delete tree._target
+          delete tree._tree
+          delete tree._isTop
+        }
+        return tree
+      }
+    })
   }
 }
 

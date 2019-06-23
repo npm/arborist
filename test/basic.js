@@ -90,6 +90,7 @@ roots.forEach(function (root) {
   test(root, t => rpt(dir).then(d => {
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   }))
 })
 
@@ -101,6 +102,7 @@ test('linkedroot', function (t) {
 
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   })
 })
 
@@ -111,6 +113,7 @@ test('deeproot', function (t) {
 
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   })
 })
 
@@ -122,6 +125,7 @@ test('filterWith', t =>
   ).then(d => {
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   })
 )
 
@@ -132,6 +136,7 @@ test('looking outside of cwd', t => {
   return rpt('../root').then(d => {
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   })
 })
 
@@ -142,6 +147,7 @@ test('shake out Link target timing issue', t => {
   return rpt(path.resolve(fixtures, 'selflink')).then(d => {
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   })
 })
 
@@ -321,6 +327,13 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     t.end()
   })
 }))
+
+test(`rpt's own package-lock.json`, t =>
+  rpt(cwd).then(d => {
+    const rptlock = d.packageLock
+    const npmlock = JSON.parse(fs.readFileSync(cwd + '/package-lock.json', 'utf8'))
+    t.same(rptlock, npmlock)
+  }))
 
 test('cleanup', function (t) {
   cleanup()

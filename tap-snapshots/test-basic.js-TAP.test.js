@@ -27,6 +27,75 @@ root@1.2.3 test/fixtures/deeproot/root
     └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 `
 
+exports[`test/basic.js TAP deeproot > package lock 1`] = `
+{
+  "name": "root",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/x": {
+      "version": "1.2.3",
+      "requires": {
+        "glob": "4",
+        "@scope/y": ""
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
+          "requires": {
+            "graceful-fs": "",
+            "inherits": "",
+            "minimatch": "",
+            "once": ""
+          },
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2"
+            },
+            "inherits": {
+              "version": "2.0.1"
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "requires": {
+                "sigmund": "",
+                "lru-cache": "",
+                "once": ""
+              },
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0"
+                },
+                "sigmund": {
+                  "version": "1.0.0"
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0"
+            }
+          }
+        }
+      }
+    },
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "99.x"
+      }
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "@scope/x": ""
+      }
+    }
+  }
+}
+`
+
 exports[`test/basic.js TAP deeproot > physical 1`] = `
 root@1.2.3 test/fixtures/deeproot/root
 ├─┬ @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x
@@ -56,6 +125,36 @@ root@1.2.3 test/fixtures/root
     └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 `
 
+exports[`test/basic.js TAP filterWith > package lock 1`] = `
+{
+  "name": "root",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/x": {
+      "version": "1.2.3",
+      "requires": {
+        "glob": "4",
+        "@scope/y": ""
+      }
+    },
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "99.x"
+      }
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "@scope/x": ""
+      }
+    }
+  }
+}
+`
+
 exports[`test/basic.js TAP filterWith > physical 1`] = `
 root@1.2.3 test/fixtures/root
 ├── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
@@ -83,6 +182,75 @@ root@1.2.3 test/fixtures/linkedroot
 └─┬ @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
   └─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y) (deduped)
     └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
+`
+
+exports[`test/basic.js TAP linkedroot > package lock 1`] = `
+{
+  "name": "root",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/x": {
+      "version": "1.2.3",
+      "requires": {
+        "glob": "4",
+        "@scope/y": ""
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
+          "requires": {
+            "graceful-fs": "",
+            "inherits": "",
+            "minimatch": "",
+            "once": ""
+          },
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2"
+            },
+            "inherits": {
+              "version": "2.0.1"
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "requires": {
+                "sigmund": "",
+                "lru-cache": "",
+                "once": ""
+              },
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0"
+                },
+                "sigmund": {
+                  "version": "1.0.0"
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0"
+            }
+          }
+        }
+      }
+    },
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "99.x"
+      }
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "@scope/x": ""
+      }
+    }
+  }
+}
 `
 
 exports[`test/basic.js TAP linkedroot > physical 1`] = `
@@ -122,6 +290,75 @@ root@1.2.3
     └── @scope/x@1.2.3  (deduped)
 `
 
+exports[`test/basic.js TAP looking outside of cwd > package lock 1`] = `
+{
+  "name": "root",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/x": {
+      "version": "1.2.3",
+      "requires": {
+        "glob": "4",
+        "@scope/y": ""
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
+          "requires": {
+            "graceful-fs": "",
+            "inherits": "",
+            "minimatch": "",
+            "once": ""
+          },
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2"
+            },
+            "inherits": {
+              "version": "2.0.1"
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "requires": {
+                "sigmund": "",
+                "lru-cache": "",
+                "once": ""
+              },
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0"
+                },
+                "sigmund": {
+                  "version": "1.0.0"
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0"
+            }
+          }
+        }
+      }
+    },
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "99.x"
+      }
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "@scope/x": ""
+      }
+    }
+  }
+}
+`
+
 exports[`test/basic.js TAP looking outside of cwd > physical 1`] = `
 root@1.2.3 
 ├─┬ @scope/x@1.2.3 
@@ -141,6 +378,20 @@ exports[`test/basic.js TAP noname > logical 1`] = `
 test/fixtures/noname
 `
 
+exports[`test/basic.js TAP noname > package lock 1`] = `
+{
+  "name": "noname",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "foo": {
+      "dev": true,
+      "optional": true
+    }
+  }
+}
+`
+
 exports[`test/basic.js TAP noname > physical 1`] = `
 test/fixtures/noname
 └── test/fixtures/noname/node_modules/foo
@@ -148,6 +399,15 @@ test/fixtures/noname
 
 exports[`test/basic.js TAP other > logical 1`] = `
 test/fixtures/other
+`
+
+exports[`test/basic.js TAP other > package lock 1`] = `
+{
+  "name": "other",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {}
+}
 `
 
 exports[`test/basic.js TAP other > physical 1`] = `
@@ -177,6 +437,75 @@ root@1.2.3 test/fixtures/root
     └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 `
 
+exports[`test/basic.js TAP root > package lock 1`] = `
+{
+  "name": "root",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/x": {
+      "version": "1.2.3",
+      "requires": {
+        "glob": "4",
+        "@scope/y": ""
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
+          "requires": {
+            "graceful-fs": "",
+            "inherits": "",
+            "minimatch": "",
+            "once": ""
+          },
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2"
+            },
+            "inherits": {
+              "version": "2.0.1"
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "requires": {
+                "sigmund": "",
+                "lru-cache": "",
+                "once": ""
+              },
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0"
+                },
+                "sigmund": {
+                  "version": "1.0.0"
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0"
+            }
+          }
+        }
+      }
+    },
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "99.x"
+      }
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "@scope/x": ""
+      }
+    }
+  }
+}
+`
+
 exports[`test/basic.js TAP root > physical 1`] = `
 root@1.2.3 test/fixtures/root
 ├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
@@ -203,6 +532,75 @@ selflink@1.2.3 test/fixtures/selflink
     └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
 `
 
+exports[`test/basic.js TAP selflink > package lock 1`] = `
+{
+  "name": "selflink",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "*"
+      }
+    },
+    "@scope/z": {
+      "version": "1.2.3",
+      "dev": true,
+      "optional": true,
+      "dependencies": {}
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "selflink": "*",
+        "glob": "4"
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2",
+              "dev": true,
+              "optional": true
+            },
+            "inherits": {
+              "version": "2.0.1",
+              "dev": true,
+              "optional": true
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "dev": true,
+              "optional": true,
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0",
+                  "dev": true,
+                  "optional": true
+                },
+                "sigmund": {
+                  "version": "1.0.0",
+                  "dev": true,
+                  "optional": true
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0",
+              "dev": true,
+              "optional": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 exports[`test/basic.js TAP selflink > physical 1`] = `
 selflink@1.2.3 test/fixtures/selflink
 ├── @scope/y@1.2.3 test/fixtures/selflink/node_modules/@scope/y
@@ -222,6 +620,75 @@ selflink@1.2.3 test/fixtures/selflink
   └─┬ foo@1.2.3 test/fixtures/selflink/node_modules/foo (deduped)
     ├── selflink@1.2.3 test/fixtures/selflink (symlink)
     └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+`
+
+exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`] = `
+{
+  "name": "selflink",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "*"
+      }
+    },
+    "@scope/z": {
+      "version": "1.2.3",
+      "dev": true,
+      "optional": true,
+      "dependencies": {}
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "selflink": "*",
+        "glob": "4"
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2",
+              "dev": true,
+              "optional": true
+            },
+            "inherits": {
+              "version": "2.0.1",
+              "dev": true,
+              "optional": true
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "dev": true,
+              "optional": true,
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0",
+                  "dev": true,
+                  "optional": true
+                },
+                "sigmund": {
+                  "version": "1.0.0",
+                  "dev": true,
+                  "optional": true
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0",
+              "dev": true,
+              "optional": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
 `
 
 exports[`test/basic.js TAP shake out Link target timing issue > physical 1`] = `

@@ -235,10 +235,8 @@ class Node {
         _target: tree.target,
         _tree: tree,
         _isTop: tree.isTop,
+        name: tree.package && tree.package.name || tree.name,
 
-        ...(tree.isTop && !tree.target
-          ? { name: tree.package.name || tree.name }
-          : {}),
         version: (
           tree.target ? 'file:' + relative('.', tree.realpath)
           : tree.package.version
@@ -269,12 +267,17 @@ class Node {
       exit: (tree, children) => {
         if (!tree._target && children.length) {
           tree.dependencies = children.reduce((set, kid) => {
-            if (kid._tree) {
-              set[kid._tree.name] = kid
-              delete kid._tree
-              delete kid._target
-              delete kid._isTop
-            }
+            // If a child node is a link to another spot shallower
+            // in the tree, then it can have already been visited,
+            // so we can't delete the name entirely.
+            set[kid.name] = kid
+            delete kid._tree
+            delete kid._target
+            delete kid._isTop
+            Object.defineProperty(kid, 'name', {
+              value: kid.name,
+              enumerable: false,
+            })
             return set
           }, {})
         }

@@ -406,7 +406,14 @@ exports[`test/basic.js TAP other > package lock 1`] = `
   "name": "other",
   "lockfileVersion": 1,
   "requires": true,
-  "dependencies": {}
+  "dependencies": {
+    "glob": {
+      "version": "file:test/fixtures/root/node_modules/@scope/x/node_modules/glob",
+      "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
+      "dev": true,
+      "optional": true
+    }
+  }
 }
 `
 
@@ -549,7 +556,13 @@ exports[`test/basic.js TAP selflink > package lock 1`] = `
       "version": "1.2.3",
       "dev": true,
       "optional": true,
-      "dependencies": {}
+      "dependencies": {
+        "glob": {
+          "version": "file:test/fixtures/selflink/node_modules/foo/node_modules/glob",
+          "dev": true,
+          "optional": true
+        }
+      }
     },
     "foo": {
       "version": "1.2.3",
@@ -594,6 +607,9 @@ exports[`test/basic.js TAP selflink > package lock 1`] = `
               "optional": true
             }
           }
+        },
+        "selflink": {
+          "version": "file:test/fixtures/selflink"
         }
       }
     }
@@ -639,7 +655,13 @@ exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`]
       "version": "1.2.3",
       "dev": true,
       "optional": true,
-      "dependencies": {}
+      "dependencies": {
+        "glob": {
+          "version": "file:test/fixtures/selflink/node_modules/foo/node_modules/glob",
+          "dev": true,
+          "optional": true
+        }
+      }
     },
     "foo": {
       "version": "1.2.3",
@@ -684,6 +706,9 @@ exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`]
               "optional": true
             }
           }
+        },
+        "selflink": {
+          "version": "file:test/fixtures/selflink"
         }
       }
     }

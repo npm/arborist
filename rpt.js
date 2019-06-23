@@ -64,11 +64,9 @@ class Node {
   // promise to the caller which is resolved on completion to the return
   // value of the initial node.
   // if both enter and exit are provided, then the return value of exit
-  // takes precedence in the return of the function.  However, if the enter
-  // function returns a promise, and there is a dependency cycle, and an exit
-  // function is provided, then it is possible that the exit() function will
-  // be called with the return value from enter() called on one of its
-  // children, rather than exit().
+  // takes precedence in the return of the function.
+  // Note that in the case of loops, the children passed to the exit
+  // function may be the result of the enter() function, not exit().
   [walk] ({enter, exit}, seen, getChildren) {
     if (seen.has(this))
       return seen.get(this)
@@ -193,13 +191,16 @@ class Node {
       if (inOptional)
         this.requires.set(name, spec)
 
-      // TODO(isaacs)
+      // XXX(isaacs)
+      // This is just a placeholder.
       // Use npm-package-arg and verify that the dep actually came from
       // the location in question.
       // - If it's a file: url, then it should be a symbolic link
+      // - if it's a npm: alias, then it should match that spec
       // - If it's git/tgz url, it should have a _resolved pointing to that url
-      // - If it's a semver range, then do this bit here
-      // - If it's a dist-tag, then hope for the best
+      // - If it's a semver range, then do this bit here, and also check name
+      // - If it's a dist-tag, then just check name and assume the best
+      // See doesChildVersionMatch in npm/lib/install/deps.js
       if (semver.validRange(spec) &&
           !semver.satisfies(dep.package.version, spec, { loose: true })) {
         dep.invalidTo.add(this)
@@ -224,10 +225,6 @@ class Node {
     return this
   }
 
-  get sortName () {
-    return this.package.name ? this.package.name.toLowerCase() : this.name
-  }
-
   get packageLock () {
     return this.walkPhysical({
       enter: tree => ({
@@ -235,10 +232,13 @@ class Node {
         _target: tree.target,
         _tree: tree,
         _isTop: tree.isTop,
-        name: tree.package && tree.package.name || tree.name,
+        name: tree.isTop && tree.package && tree.package.name || tree.name,
 
         version: (
           tree.target ? 'file:' + relative('.', tree.realpath)
+          : tree.package._id &&
+            !tree.isTop &&
+            tree.package.name !== tree.name ? `npm:${tree.package._id}`
           : tree.package.version
         ),
         ...(tree.package._inBundle ? { bundled: true } : {
@@ -338,8 +338,8 @@ class Link extends Node {
 }
 
 const nodesort = (a, b) => {
-  const aname = a.sortName
-  const bname = b.sortName
+  const aname = a.name.toLowerCase()
+  const bname = b.name.toLowerCase()
   /* istanbul ignore next */
   return aname === bname ? 0
     : aname > bname ? 1

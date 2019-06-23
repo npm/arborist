@@ -18,12 +18,15 @@ root@1.2.3 test/fixtures/deeproot/root
 │ │ └── once@1.3.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 │ ├─┬ @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y (deduped)
 │ │ └─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y) (deduped)
+│ │   ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
 │ │   └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 ├─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y)
+│ ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
 │ └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 └─┬ @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
   └─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y) (deduped)
+    ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
     └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 `
 
@@ -89,7 +92,15 @@ exports[`test/basic.js TAP deeproot > package lock 1`] = `
     "foo": {
       "version": "1.2.3",
       "requires": {
+        "express": "npm:abbrev@*",
         "@scope/x": ""
+      },
+      "dependencies": {
+        "express": {
+          "version": "npm:abbrev@1.1.1",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+        }
       }
     }
   }
@@ -148,6 +159,7 @@ exports[`test/basic.js TAP filterWith > package lock 1`] = `
     "foo": {
       "version": "1.2.3",
       "requires": {
+        "express": "npm:abbrev@*",
         "@scope/x": ""
       }
     }
@@ -175,12 +187,15 @@ root@1.2.3 test/fixtures/linkedroot
 │ │ └── once@1.3.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once
 │ ├─┬ @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y (deduped)
 │ │ └─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y) (deduped)
+│ │   ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
 │ │   └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
 ├─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y)
+│ ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
 │ └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
 └─┬ @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
   └─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y) (deduped)
+    ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
     └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
 `
 
@@ -246,7 +261,15 @@ exports[`test/basic.js TAP linkedroot > package lock 1`] = `
     "foo": {
       "version": "1.2.3",
       "requires": {
+        "express": "npm:abbrev@*",
         "@scope/x": ""
+      },
+      "dependencies": {
+        "express": {
+          "version": "npm:abbrev@1.1.1",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+        }
       }
     }
   }
@@ -281,12 +304,15 @@ root@1.2.3
 │ │ └── once@1.3.0 es/glob/node_modules/once
 │ ├─┬ @scope/y@1.2.3  (deduped)
 │ │ └─┬ foo@1.2.3  (invalid for ) (deduped)
+│ │   ├── abbrev@1.1.1 press
 │ │   └── @scope/x@1.2.3  (deduped)
 │ └── @scope/x@1.2.3  (deduped)
 ├─┬ foo@1.2.3  (invalid for )
+│ ├── abbrev@1.1.1 press
 │ └── @scope/x@1.2.3  (deduped)
 └─┬ @scope/y@1.2.3 
   └─┬ foo@1.2.3  (invalid for ) (deduped)
+    ├── abbrev@1.1.1 press
     └── @scope/x@1.2.3  (deduped)
 `
 
@@ -352,7 +378,15 @@ exports[`test/basic.js TAP looking outside of cwd > package lock 1`] = `
     "foo": {
       "version": "1.2.3",
       "requires": {
+        "express": "npm:abbrev@*",
         "@scope/x": ""
+      },
+      "dependencies": {
+        "express": {
+          "version": "npm:abbrev@1.1.1",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+        }
       }
     }
   }
@@ -435,12 +469,15 @@ root@1.2.3 test/fixtures/root
 │ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 │ ├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y (deduped)
 │ │ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│ │   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
 │ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 ├─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+│ ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
 │ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 └─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
   └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+    ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
     └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 `
 
@@ -506,7 +543,15 @@ exports[`test/basic.js TAP root > package lock 1`] = `
     "foo": {
       "version": "1.2.3",
       "requires": {
+        "express": "npm:abbrev@*",
         "@scope/x": ""
+      },
+      "dependencies": {
+        "express": {
+          "version": "npm:abbrev@1.1.1",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+        }
       }
     }
   }
@@ -572,41 +617,7 @@ exports[`test/basic.js TAP selflink > package lock 1`] = `
       },
       "dependencies": {
         "glob": {
-          "version": "4.0.5",
-          "dependencies": {
-            "graceful-fs": {
-              "version": "3.0.2",
-              "dev": true,
-              "optional": true
-            },
-            "inherits": {
-              "version": "2.0.1",
-              "dev": true,
-              "optional": true
-            },
-            "minimatch": {
-              "version": "1.0.0",
-              "dev": true,
-              "optional": true,
-              "dependencies": {
-                "lru-cache": {
-                  "version": "2.5.0",
-                  "dev": true,
-                  "optional": true
-                },
-                "sigmund": {
-                  "version": "1.0.0",
-                  "dev": true,
-                  "optional": true
-                }
-              }
-            },
-            "once": {
-              "version": "1.3.0",
-              "dev": true,
-              "optional": true
-            }
-          }
+          "version": "4.0.5"
         },
         "selflink": {
           "version": "file:test/fixtures/selflink"
@@ -671,41 +682,7 @@ exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`]
       },
       "dependencies": {
         "glob": {
-          "version": "4.0.5",
-          "dependencies": {
-            "graceful-fs": {
-              "version": "3.0.2",
-              "dev": true,
-              "optional": true
-            },
-            "inherits": {
-              "version": "2.0.1",
-              "dev": true,
-              "optional": true
-            },
-            "minimatch": {
-              "version": "1.0.0",
-              "dev": true,
-              "optional": true,
-              "dependencies": {
-                "lru-cache": {
-                  "version": "2.5.0",
-                  "dev": true,
-                  "optional": true
-                },
-                "sigmund": {
-                  "version": "1.0.0",
-                  "dev": true,
-                  "optional": true
-                }
-              }
-            },
-            "once": {
-              "version": "1.3.0",
-              "dev": true,
-              "optional": true
-            }
-          }
+          "version": "4.0.5"
         },
         "selflink": {
           "version": "file:test/fixtures/selflink"
@@ -746,84 +723,254 @@ Array [
   ],
   Array [
     "EXIT",
-    "graceful-fs",
-  ],
-  Array [
-    "ENTER",
-    "inherits",
-  ],
-  Array [
-    "EXIT",
-    "inherits",
-  ],
-  Array [
-    "ENTER",
-    "minimatch",
-  ],
-  Array [
-    "ENTER",
-    "sigmund",
-  ],
-  Array [
-    "EXIT",
-    "sigmund",
-  ],
-  Array [
-    "ENTER",
-    "lru-cache",
-  ],
-  Array [
-    "EXIT",
-    "lru-cache",
-  ],
-  Array [
-    "ENTER",
-    "once",
-  ],
-  Array [
-    "EXIT",
-    "once",
-  ],
-  Array [
-    "EXIT",
-    "minimatch",
-  ],
-  Array [
-    "EXIT",
-    "glob",
-  ],
-  Array [
-    "ENTER",
-    "@scope/y",
-  ],
-  Array [
-    "ENTER",
-    "foo",
-  ],
-  Array [
-    "EXIT",
-    "foo",
-  ],
-  Array [
-    "EXIT",
-    "@scope/y",
-  ],
-  Array [
-    "EXIT",
-    "@scope/x",
-  ],
-  Array [
-    "EXIT",
-    "root",
-  ],
-]
-`
-
-exports[`test/basic.js TAP walking through trees logical sprint > logical walk result 1`] = `
-Array [
-  "root",
-  Array [
     Array [
+      "graceful-fs",
+      Array [],
+    ],
+  ],
+  Array [
+    "ENTER",
+    "inherits",
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "inherits",
+      Array [],
+    ],
+  ],
+  Array [
+    "ENTER",
+    "minimatch",
+  ],
+  Array [
+    "ENTER",
+    "sigmund",
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "sigmund",
+      Array [],
+    ],
+  ],
+  Array [
+    "ENTER",
+    "lru-cache",
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "lru-cache",
+      Array [],
+    ],
+  ],
+  Array [
+    "ENTER",
+    "once",
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "once",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "minimatch",
+      Array [
+        Array [
+          "sigmund",
+          Array [],
+        ],
+        Array [
+          "lru-cache",
+          Array [],
+        ],
+        Array [
+          "once",
+          Array [],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "glob",
+      Array [
+        Array [
+          "graceful-fs",
+          Array [],
+        ],
+        Array [
+          "inherits",
+          Array [],
+        ],
+        Array [
+          "minimatch",
+          Array [
+            Array [
+              "sigmund",
+              Array [],
+            ],
+            Array [
+              "lru-cache",
+              Array [],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+        Array [
+          "once",
+          Array [],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "ENTER",
+    "@scope/y",
+  ],
+  Array [
+    "ENTER",
+    "foo",
+  ],
+  Array [
+    "ENTER",
+    "express",
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "express",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    &ref_1 Array [
+      "foo",
+      Array [
+        Array [
+          "express",
+          Array [],
+        ],
+        &ref_2 Array [
+          "@scope/x",
+          Array [
+            Array [
+              "glob",
+              Array [
+                Array [
+                  "graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "inherits",
+                  Array [],
+                ],
+                Array [
+                  "minimatch",
+                  Array [
+                    Array [
+                      "sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "@scope/y",
+              Array [
+                <*ref_1>,
+              ],
+            ],
+            <*ref_2>,
+          ],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    &ref_3 Array [
+      "@scope/y",
+      Array [
+        Array [
+          "foo",
+          Array [
+            Array [
+              "express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "@scope/x",
+              Array [
+                Array [
+                  "glob",
+                  Array [
+                    Array [
+                      "graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "minimatch",
+                      Array [
+                        Array [
+                          "sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                <*ref_3>,
+                <*ref_2>,
+              ],
+            ],
+          ],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    &ref_2 Array [
       "@scope/x",
       Array [
         Array [
@@ -866,27 +1013,360 @@ Array [
             Array [
               "foo",
               Array [
-                "@scope/x",
+                Array [
+                  "express",
+                  Array [],
+                ],
+                <*ref_2>,
               ],
             ],
           ],
         ],
-        "@scope/x",
+        <*ref_2>,
       ],
     ],
+  ],
+  Array [
+    "EXIT",
     Array [
+      "root",
+      Array [
+        &ref_2 Array [
+          "@scope/x",
+          Array [
+            Array [
+              "glob",
+              Array [
+                Array [
+                  "graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "inherits",
+                  Array [],
+                ],
+                Array [
+                  "minimatch",
+                  Array [
+                    Array [
+                      "sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "@scope/y",
+              Array [
+                Array [
+                  "foo",
+                  Array [
+                    Array [
+                      "express",
+                      Array [],
+                    ],
+                    <*ref_2>,
+                  ],
+                ],
+              ],
+            ],
+            <*ref_2>,
+          ],
+        ],
+        &ref_1 Array [
+          "foo",
+          Array [
+            Array [
+              "express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "@scope/x",
+              Array [
+                Array [
+                  "glob",
+                  Array [
+                    Array [
+                      "graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "minimatch",
+                      Array [
+                        Array [
+                          "sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "@scope/y",
+                  Array [
+                    <*ref_1>,
+                  ],
+                ],
+                <*ref_2>,
+              ],
+            ],
+          ],
+        ],
+        &ref_3 Array [
+          "@scope/y",
+          Array [
+            Array [
+              "foo",
+              Array [
+                Array [
+                  "express",
+                  Array [],
+                ],
+                &ref_2 Array [
+                  "@scope/x",
+                  Array [
+                    Array [
+                      "glob",
+                      Array [
+                        Array [
+                          "graceful-fs",
+                          Array [],
+                        ],
+                        Array [
+                          "inherits",
+                          Array [],
+                        ],
+                        Array [
+                          "minimatch",
+                          Array [
+                            Array [
+                              "sigmund",
+                              Array [],
+                            ],
+                            Array [
+                              "lru-cache",
+                              Array [],
+                            ],
+                            Array [
+                              "once",
+                              Array [],
+                            ],
+                          ],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    <*ref_3>,
+                    <*ref_2>,
+                  ],
+                ],
+              ],
+            ],
+          ],
+        ],
+      ],
+    ],
+  ],
+]
+`
+
+exports[`test/basic.js TAP walking through trees logical sprint > logical walk result 1`] = `
+Array [
+  "root",
+  Array [
+    &ref_1 Array [
+      "@scope/x",
+      Array [
+        Array [
+          "glob",
+          Array [
+            Array [
+              "graceful-fs",
+              Array [],
+            ],
+            Array [
+              "inherits",
+              Array [],
+            ],
+            Array [
+              "minimatch",
+              Array [
+                Array [
+                  "sigmund",
+                  Array [],
+                ],
+                Array [
+                  "lru-cache",
+                  Array [],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+        Array [
+          "@scope/y",
+          Array [
+            Array [
+              "foo",
+              Array [
+                Array [
+                  "express",
+                  Array [],
+                ],
+                <*ref_1>,
+              ],
+            ],
+          ],
+        ],
+        <*ref_1>,
+      ],
+    ],
+    &ref_2 Array [
       "foo",
       Array [
-        "@scope/x",
+        Array [
+          "express",
+          Array [],
+        ],
+        &ref_1 Array [
+          "@scope/x",
+          Array [
+            Array [
+              "glob",
+              Array [
+                Array [
+                  "graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "inherits",
+                  Array [],
+                ],
+                Array [
+                  "minimatch",
+                  Array [
+                    Array [
+                      "sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "@scope/y",
+              Array [
+                <*ref_2>,
+              ],
+            ],
+            <*ref_1>,
+          ],
+        ],
       ],
     ],
-    Array [
+    &ref_3 Array [
       "@scope/y",
       Array [
         Array [
           "foo",
           Array [
-            "@scope/x",
+            Array [
+              "express",
+              Array [],
+            ],
+            &ref_1 Array [
+              "@scope/x",
+              Array [
+                Array [
+                  "glob",
+                  Array [
+                    Array [
+                      "graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "minimatch",
+                      Array [
+                        Array [
+                          "sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                <*ref_3>,
+                <*ref_1>,
+              ],
+            ],
           ],
         ],
       ],
@@ -918,8 +1398,66 @@ Array [
     "glob",
   ],
   Array [
+    "ENTER",
+    "express",
+  ],
+  Array [
     "EXIT",
-    "foo",
+    &ref_1 Array [
+      "@scope/y",
+      Array [
+        Array [
+          "foo",
+          Array [
+            Array [
+              "express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "@scope/x",
+              Array [
+                Array [
+                  "glob",
+                  Array [
+                    Array [
+                      "graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "minimatch",
+                      Array [
+                        Array [
+                          "sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                <*ref_1>,
+                <*ref_2>,
+              ],
+            ],
+          ],
+        ],
+      ],
+    ],
   ],
   Array [
     "ENTER",
@@ -939,60 +1477,172 @@ Array [
   ],
   Array [
     "EXIT",
-    "graceful-fs",
-  ],
-  Array [
-    "EXIT",
-    "inherits",
-  ],
-  Array [
-    "ENTER",
-    "sigmund",
-  ],
-  Array [
-    "ENTER",
-    "lru-cache",
-  ],
-  Array [
-    "EXIT",
-    "once",
-  ],
-  Array [
-    "EXIT",
-    "@scope/y",
-  ],
-  Array [
-    "EXIT",
-    "sigmund",
-  ],
-  Array [
-    "EXIT",
-    "lru-cache",
-  ],
-  Array [
-    "EXIT",
-    "minimatch",
-  ],
-  Array [
-    "EXIT",
-    "glob",
-  ],
-  Array [
-    "EXIT",
-    "@scope/x",
-  ],
-  Array [
-    "EXIT",
-    "root",
-  ],
-]
-`
-
-exports[`test/basic.js TAP walking through trees logical stroll > logical walk result 1`] = `
-Array [
-  "root",
-  Array [
     Array [
+      "express",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "graceful-fs",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "inherits",
+      Array [],
+    ],
+  ],
+  Array [
+    "ENTER",
+    "sigmund",
+  ],
+  Array [
+    "ENTER",
+    "lru-cache",
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "once",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "sigmund",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "lru-cache",
+      Array [],
+    ],
+  ],
+  Array [
+    "EXIT",
+    &ref_3 Array [
+      "foo",
+      Array [
+        Array [
+          "express",
+          Array [],
+        ],
+        &ref_2 Array [
+          "@scope/x",
+          Array [
+            Array [
+              "glob",
+              Array [
+                Array [
+                  "graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "inherits",
+                  Array [],
+                ],
+                Array [
+                  "minimatch",
+                  Array [
+                    Array [
+                      "sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "@scope/y",
+              Array [
+                <*ref_3>,
+              ],
+            ],
+            <*ref_2>,
+          ],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "minimatch",
+      Array [
+        Array [
+          "sigmund",
+          Array [],
+        ],
+        Array [
+          "lru-cache",
+          Array [],
+        ],
+        Array [
+          "once",
+          Array [],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    Array [
+      "glob",
+      Array [
+        Array [
+          "graceful-fs",
+          Array [],
+        ],
+        Array [
+          "inherits",
+          Array [],
+        ],
+        Array [
+          "minimatch",
+          Array [
+            Array [
+              "sigmund",
+              Array [],
+            ],
+            Array [
+              "lru-cache",
+              Array [],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+        Array [
+          "once",
+          Array [],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    &ref_2 Array [
       "@scope/x",
       Array [
         Array [
@@ -1035,27 +1685,360 @@ Array [
             Array [
               "foo",
               Array [
-                "@scope/x",
+                Array [
+                  "express",
+                  Array [],
+                ],
+                <*ref_2>,
               ],
             ],
           ],
         ],
-        "@scope/x",
+        <*ref_2>,
       ],
     ],
+  ],
+  Array [
+    "EXIT",
     Array [
+      "root",
+      Array [
+        &ref_2 Array [
+          "@scope/x",
+          Array [
+            Array [
+              "glob",
+              Array [
+                Array [
+                  "graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "inherits",
+                  Array [],
+                ],
+                Array [
+                  "minimatch",
+                  Array [
+                    Array [
+                      "sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "@scope/y",
+              Array [
+                Array [
+                  "foo",
+                  Array [
+                    Array [
+                      "express",
+                      Array [],
+                    ],
+                    <*ref_2>,
+                  ],
+                ],
+              ],
+            ],
+            <*ref_2>,
+          ],
+        ],
+        &ref_3 Array [
+          "foo",
+          Array [
+            Array [
+              "express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "@scope/x",
+              Array [
+                Array [
+                  "glob",
+                  Array [
+                    Array [
+                      "graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "minimatch",
+                      Array [
+                        Array [
+                          "sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "@scope/y",
+                  Array [
+                    <*ref_3>,
+                  ],
+                ],
+                <*ref_2>,
+              ],
+            ],
+          ],
+        ],
+        &ref_1 Array [
+          "@scope/y",
+          Array [
+            Array [
+              "foo",
+              Array [
+                Array [
+                  "express",
+                  Array [],
+                ],
+                &ref_2 Array [
+                  "@scope/x",
+                  Array [
+                    Array [
+                      "glob",
+                      Array [
+                        Array [
+                          "graceful-fs",
+                          Array [],
+                        ],
+                        Array [
+                          "inherits",
+                          Array [],
+                        ],
+                        Array [
+                          "minimatch",
+                          Array [
+                            Array [
+                              "sigmund",
+                              Array [],
+                            ],
+                            Array [
+                              "lru-cache",
+                              Array [],
+                            ],
+                            Array [
+                              "once",
+                              Array [],
+                            ],
+                          ],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    <*ref_1>,
+                    <*ref_2>,
+                  ],
+                ],
+              ],
+            ],
+          ],
+        ],
+      ],
+    ],
+  ],
+]
+`
+
+exports[`test/basic.js TAP walking through trees logical stroll > logical walk result 1`] = `
+Array [
+  "root",
+  Array [
+    &ref_1 Array [
+      "@scope/x",
+      Array [
+        Array [
+          "glob",
+          Array [
+            Array [
+              "graceful-fs",
+              Array [],
+            ],
+            Array [
+              "inherits",
+              Array [],
+            ],
+            Array [
+              "minimatch",
+              Array [
+                Array [
+                  "sigmund",
+                  Array [],
+                ],
+                Array [
+                  "lru-cache",
+                  Array [],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "once",
+              Array [],
+            ],
+          ],
+        ],
+        Array [
+          "@scope/y",
+          Array [
+            Array [
+              "foo",
+              Array [
+                Array [
+                  "express",
+                  Array [],
+                ],
+                <*ref_1>,
+              ],
+            ],
+          ],
+        ],
+        <*ref_1>,
+      ],
+    ],
+    &ref_2 Array [
       "foo",
       Array [
-        "@scope/x",
+        Array [
+          "express",
+          Array [],
+        ],
+        &ref_1 Array [
+          "@scope/x",
+          Array [
+            Array [
+              "glob",
+              Array [
+                Array [
+                  "graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "inherits",
+                  Array [],
+                ],
+                Array [
+                  "minimatch",
+                  Array [
+                    Array [
+                      "sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "@scope/y",
+              Array [
+                <*ref_2>,
+              ],
+            ],
+            <*ref_1>,
+          ],
+        ],
       ],
     ],
-    Array [
+    &ref_3 Array [
       "@scope/y",
       Array [
         Array [
           "foo",
           Array [
-            "@scope/x",
+            Array [
+              "express",
+              Array [],
+            ],
+            &ref_1 Array [
+              "@scope/x",
+              Array [
+                Array [
+                  "glob",
+                  Array [
+                    Array [
+                      "graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "minimatch",
+                      Array [
+                        Array [
+                          "sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                <*ref_3>,
+                <*ref_1>,
+              ],
+            ],
           ],
         ],
       ],

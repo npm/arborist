@@ -59,12 +59,11 @@ const archyize = {
     }
   },
   exit (d, nodes) {
-    return {
-      ...d,
+    return Object.assign({}, d, {
       nodes: d.target ? [] : nodes.map(node =>
         node.parent === d.node ? node
-        : { ...node, label: node.label + ' (deduped)' })
-    }
+        : Object.assign({}, node, { label: node.label + ' (deduped)' }))
+    })
   }
 }
 
@@ -216,15 +215,27 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
   let physicalSprintResult
   t.test('logical stroll', t => {
     const log = []
+    // NB: because logical trees can have loops, this can result in
+    // a node being exited before all of its children have exited.
+    // To get the same result while sync or async, we need to use a
+    // result object that will be updated along the way, so that
+    // child nodes will eventually update the parent reference.
+    // That's why we're returning an array object and updating it
+    // in-place, to verify that the same result eventually is produced,
+    // whether it's done asynchronously or synchronously, or else we'll
+    // get the enter value instead of the exit value in the kids array,
+    // and because this is order-dependent, the sync and async runs will
+    // get different results.
     const p = d.walkLogical({
       enter (node) {
         const p = node.name
         log.push(['ENTER', p])
-        return Promise.resolve(p)
+        return Promise.resolve([p])
       },
       exit (p, kids) {
         log.push(['EXIT', p])
-        return Promise.resolve([p, kids])
+        p.push(kids)
+        return Promise.resolve(p)
       }
     })
     t.isa(p, Promise)
@@ -240,11 +251,12 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
       enter (node) {
         const p = node.name
         log.push(['ENTER', p])
-        return p
+        return [p]
       },
       exit (p, kids) {
         log.push(['EXIT', p])
-        return [p, kids]
+        p.push(kids)
+        return p
       }
     })
     t.notOk(p.then, 'not a promise')

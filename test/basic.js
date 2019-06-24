@@ -1,5 +1,5 @@
 var test = require('tap').test
-var rpt = require('../rpt.js')
+var rpt = require('../')
 var path = require('path')
 var resolve = path.resolve
 var fs = require('fs')
@@ -193,7 +193,7 @@ test('missing symlinks', function (t) {
 
 test('realpath gutchecks', t => {
   const d = path.resolve(cwd, 'test/fixtures')
-  const realpath = require('../realpath.js')
+  const realpath = require('../lib/realpath.js')
   const {realpathSync} = fs
   Object.keys(symlinks).map(link => t.test(link, t =>
     realpath(

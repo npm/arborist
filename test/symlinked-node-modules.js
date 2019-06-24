@@ -1,7 +1,7 @@
 'use strict'
 var path = require('path')
 var test = require('tap').test
-var rpt = require('../rpt.js')
+var rpt = require('../')
 var Tacks = require('tacks')
 var File = Tacks.File
 var Symlink = Tacks.Symlink

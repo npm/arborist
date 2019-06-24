@@ -36,7 +36,7 @@
   "homepage": "https://github.com/npm/read-package-tree",
   "files": [
     "index.js",
-    "realpath.js"
+    "lib/*.js"
   ],
   "tap": {
     "100": true

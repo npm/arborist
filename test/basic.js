@@ -228,7 +228,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     // get different results.
     const p = d.walkLogical({
       enter (node) {
-        const p = node.name
+        const p = node.location
         log.push(['ENTER', p])
         return Promise.resolve([p])
       },
@@ -249,7 +249,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkLogical({
       enter (node) {
-        const p = node.name
+        const p = node.location
         log.push(['ENTER', p])
         return [p]
       },
@@ -275,7 +275,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkPhysical({
       enter (node) {
-        const p = node.name
+        const p = node.location
         log.push(['ENTER', p])
         return Promise.resolve(p)
       },
@@ -295,7 +295,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     const p = d.walkPhysical({
       enter (node) {
-        const p = node.name
+        const p = node.location
         log.push(['ENTER', p])
         return p
       },

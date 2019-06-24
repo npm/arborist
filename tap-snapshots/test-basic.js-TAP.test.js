@@ -707,90 +707,90 @@ exports[`test/basic.js TAP walking through trees logical sprint > logical walk l
 Array [
   Array [
     "ENTER",
-    "root",
+    "/",
   ],
   Array [
     "ENTER",
-    "@scope/x",
+    "/@scope/x",
   ],
   Array [
     "ENTER",
-    "glob",
+    "/@scope/x/glob",
   ],
   Array [
     "ENTER",
-    "graceful-fs",
+    "/@scope/x/glob/graceful-fs",
   ],
   Array [
     "EXIT",
     Array [
-      "graceful-fs",
+      "/@scope/x/glob/graceful-fs",
       Array [],
     ],
   ],
   Array [
     "ENTER",
-    "inherits",
+    "/@scope/x/glob/inherits",
   ],
   Array [
     "EXIT",
     Array [
-      "inherits",
+      "/@scope/x/glob/inherits",
       Array [],
     ],
   ],
   Array [
     "ENTER",
-    "minimatch",
+    "/@scope/x/glob/minimatch",
   ],
   Array [
     "ENTER",
-    "sigmund",
+    "/@scope/x/glob/minimatch/sigmund",
   ],
   Array [
     "EXIT",
     Array [
-      "sigmund",
+      "/@scope/x/glob/minimatch/sigmund",
       Array [],
     ],
   ],
   Array [
     "ENTER",
-    "lru-cache",
+    "/@scope/x/glob/minimatch/lru-cache",
   ],
   Array [
     "EXIT",
     Array [
-      "lru-cache",
+      "/@scope/x/glob/minimatch/lru-cache",
       Array [],
     ],
   ],
   Array [
     "ENTER",
-    "once",
+    "/@scope/x/glob/once",
   ],
   Array [
     "EXIT",
     Array [
-      "once",
+      "/@scope/x/glob/once",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     Array [
-      "minimatch",
+      "/@scope/x/glob/minimatch",
       Array [
         Array [
-          "sigmund",
+          "/@scope/x/glob/minimatch/sigmund",
           Array [],
         ],
         Array [
-          "lru-cache",
+          "/@scope/x/glob/minimatch/lru-cache",
           Array [],
         ],
         Array [
-          "once",
+          "/@scope/x/glob/once",
           Array [],
         ],
       ],
@@ -799,35 +799,35 @@ Array [
   Array [
     "EXIT",
     Array [
-      "glob",
+      "/@scope/x/glob",
       Array [
         Array [
-          "graceful-fs",
+          "/@scope/x/glob/graceful-fs",
           Array [],
         ],
         Array [
-          "inherits",
+          "/@scope/x/glob/inherits",
           Array [],
         ],
         Array [
-          "minimatch",
+          "/@scope/x/glob/minimatch",
           Array [
             Array [
-              "sigmund",
+              "/@scope/x/glob/minimatch/sigmund",
               Array [],
             ],
             Array [
-              "lru-cache",
+              "/@scope/x/glob/minimatch/lru-cache",
               Array [],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
         ],
         Array [
-          "once",
+          "/@scope/x/glob/once",
           Array [],
         ],
       ],
@@ -835,71 +835,71 @@ Array [
   ],
   Array [
     "ENTER",
-    "@scope/y",
+    "/@scope/y",
   ],
   Array [
     "ENTER",
-    "foo",
+    "/foo",
   ],
   Array [
     "ENTER",
-    "express",
+    "/foo/express",
   ],
   Array [
     "EXIT",
     Array [
-      "express",
+      "/foo/express",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     &ref_1 Array [
-      "foo",
+      "/foo",
       Array [
         Array [
-          "express",
+          "/foo/express",
           Array [],
         ],
         &ref_2 Array [
-          "@scope/x",
+          "/@scope/x",
           Array [
             Array [
-              "glob",
+              "/@scope/x/glob",
               Array [
                 Array [
-                  "graceful-fs",
+                  "/@scope/x/glob/graceful-fs",
                   Array [],
                 ],
                 Array [
-                  "inherits",
+                  "/@scope/x/glob/inherits",
                   Array [],
                 ],
                 Array [
-                  "minimatch",
+                  "/@scope/x/glob/minimatch",
                   Array [
                     Array [
-                      "sigmund",
+                      "/@scope/x/glob/minimatch/sigmund",
                       Array [],
                     ],
                     Array [
-                      "lru-cache",
+                      "/@scope/x/glob/minimatch/lru-cache",
                       Array [],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "@scope/y",
+              "/@scope/y",
               Array [
                 <*ref_1>,
               ],
@@ -913,48 +913,48 @@ Array [
   Array [
     "EXIT",
     &ref_3 Array [
-      "@scope/y",
+      "/@scope/y",
       Array [
         Array [
-          "foo",
+          "/foo",
           Array [
             Array [
-              "express",
+              "/foo/express",
               Array [],
             ],
             &ref_2 Array [
-              "@scope/x",
+              "/@scope/x",
               Array [
                 Array [
-                  "glob",
+                  "/@scope/x/glob",
                   Array [
                     Array [
-                      "graceful-fs",
+                      "/@scope/x/glob/graceful-fs",
                       Array [],
                     ],
                     Array [
-                      "inherits",
+                      "/@scope/x/glob/inherits",
                       Array [],
                     ],
                     Array [
-                      "minimatch",
+                      "/@scope/x/glob/minimatch",
                       Array [
                         Array [
-                          "sigmund",
+                          "/@scope/x/glob/minimatch/sigmund",
                           Array [],
                         ],
                         Array [
-                          "lru-cache",
+                          "/@scope/x/glob/minimatch/lru-cache",
                           Array [],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
@@ -971,50 +971,50 @@ Array [
   Array [
     "EXIT",
     &ref_2 Array [
-      "@scope/x",
+      "/@scope/x",
       Array [
         Array [
-          "glob",
+          "/@scope/x/glob",
           Array [
             Array [
-              "graceful-fs",
+              "/@scope/x/glob/graceful-fs",
               Array [],
             ],
             Array [
-              "inherits",
+              "/@scope/x/glob/inherits",
               Array [],
             ],
             Array [
-              "minimatch",
+              "/@scope/x/glob/minimatch",
               Array [
                 Array [
-                  "sigmund",
+                  "/@scope/x/glob/minimatch/sigmund",
                   Array [],
                 ],
                 Array [
-                  "lru-cache",
+                  "/@scope/x/glob/minimatch/lru-cache",
                   Array [],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
         ],
         Array [
-          "@scope/y",
+          "/@scope/y",
           Array [
             Array [
-              "foo",
+              "/foo",
               Array [
                 Array [
-                  "express",
+                  "/foo/express",
                   Array [],
                 ],
                 <*ref_2>,
@@ -1029,53 +1029,53 @@ Array [
   Array [
     "EXIT",
     Array [
-      "root",
+      "/",
       Array [
         &ref_2 Array [
-          "@scope/x",
+          "/@scope/x",
           Array [
             Array [
-              "glob",
+              "/@scope/x/glob",
               Array [
                 Array [
-                  "graceful-fs",
+                  "/@scope/x/glob/graceful-fs",
                   Array [],
                 ],
                 Array [
-                  "inherits",
+                  "/@scope/x/glob/inherits",
                   Array [],
                 ],
                 Array [
-                  "minimatch",
+                  "/@scope/x/glob/minimatch",
                   Array [
                     Array [
-                      "sigmund",
+                      "/@scope/x/glob/minimatch/sigmund",
                       Array [],
                     ],
                     Array [
-                      "lru-cache",
+                      "/@scope/x/glob/minimatch/lru-cache",
                       Array [],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "@scope/y",
+              "/@scope/y",
               Array [
                 Array [
-                  "foo",
+                  "/foo",
                   Array [
                     Array [
-                      "express",
+                      "/foo/express",
                       Array [],
                     ],
                     <*ref_2>,
@@ -1087,51 +1087,51 @@ Array [
           ],
         ],
         &ref_1 Array [
-          "foo",
+          "/foo",
           Array [
             Array [
-              "express",
+              "/foo/express",
               Array [],
             ],
             &ref_2 Array [
-              "@scope/x",
+              "/@scope/x",
               Array [
                 Array [
-                  "glob",
+                  "/@scope/x/glob",
                   Array [
                     Array [
-                      "graceful-fs",
+                      "/@scope/x/glob/graceful-fs",
                       Array [],
                     ],
                     Array [
-                      "inherits",
+                      "/@scope/x/glob/inherits",
                       Array [],
                     ],
                     Array [
-                      "minimatch",
+                      "/@scope/x/glob/minimatch",
                       Array [
                         Array [
-                          "sigmund",
+                          "/@scope/x/glob/minimatch/sigmund",
                           Array [],
                         ],
                         Array [
-                          "lru-cache",
+                          "/@scope/x/glob/minimatch/lru-cache",
                           Array [],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "@scope/y",
+                  "/@scope/y",
                   Array [
                     <*ref_1>,
                   ],
@@ -1142,48 +1142,48 @@ Array [
           ],
         ],
         &ref_3 Array [
-          "@scope/y",
+          "/@scope/y",
           Array [
             Array [
-              "foo",
+              "/foo",
               Array [
                 Array [
-                  "express",
+                  "/foo/express",
                   Array [],
                 ],
                 &ref_2 Array [
-                  "@scope/x",
+                  "/@scope/x",
                   Array [
                     Array [
-                      "glob",
+                      "/@scope/x/glob",
                       Array [
                         Array [
-                          "graceful-fs",
+                          "/@scope/x/glob/graceful-fs",
                           Array [],
                         ],
                         Array [
-                          "inherits",
+                          "/@scope/x/glob/inherits",
                           Array [],
                         ],
                         Array [
-                          "minimatch",
+                          "/@scope/x/glob/minimatch",
                           Array [
                             Array [
-                              "sigmund",
+                              "/@scope/x/glob/minimatch/sigmund",
                               Array [],
                             ],
                             Array [
-                              "lru-cache",
+                              "/@scope/x/glob/minimatch/lru-cache",
                               Array [],
                             ],
                             Array [
-                              "once",
+                              "/@scope/x/glob/once",
                               Array [],
                             ],
                           ],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
@@ -1204,53 +1204,53 @@ Array [
 
 exports[`test/basic.js TAP walking through trees logical sprint > logical walk result 1`] = `
 Array [
-  "root",
+  "/",
   Array [
     &ref_1 Array [
-      "@scope/x",
+      "/@scope/x",
       Array [
         Array [
-          "glob",
+          "/@scope/x/glob",
           Array [
             Array [
-              "graceful-fs",
+              "/@scope/x/glob/graceful-fs",
               Array [],
             ],
             Array [
-              "inherits",
+              "/@scope/x/glob/inherits",
               Array [],
             ],
             Array [
-              "minimatch",
+              "/@scope/x/glob/minimatch",
               Array [
                 Array [
-                  "sigmund",
+                  "/@scope/x/glob/minimatch/sigmund",
                   Array [],
                 ],
                 Array [
-                  "lru-cache",
+                  "/@scope/x/glob/minimatch/lru-cache",
                   Array [],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
         ],
         Array [
-          "@scope/y",
+          "/@scope/y",
           Array [
             Array [
-              "foo",
+              "/foo",
               Array [
                 Array [
-                  "express",
+                  "/foo/express",
                   Array [],
                 ],
                 <*ref_1>,
@@ -1262,51 +1262,51 @@ Array [
       ],
     ],
     &ref_2 Array [
-      "foo",
+      "/foo",
       Array [
         Array [
-          "express",
+          "/foo/express",
           Array [],
         ],
         &ref_1 Array [
-          "@scope/x",
+          "/@scope/x",
           Array [
             Array [
-              "glob",
+              "/@scope/x/glob",
               Array [
                 Array [
-                  "graceful-fs",
+                  "/@scope/x/glob/graceful-fs",
                   Array [],
                 ],
                 Array [
-                  "inherits",
+                  "/@scope/x/glob/inherits",
                   Array [],
                 ],
                 Array [
-                  "minimatch",
+                  "/@scope/x/glob/minimatch",
                   Array [
                     Array [
-                      "sigmund",
+                      "/@scope/x/glob/minimatch/sigmund",
                       Array [],
                     ],
                     Array [
-                      "lru-cache",
+                      "/@scope/x/glob/minimatch/lru-cache",
                       Array [],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "@scope/y",
+              "/@scope/y",
               Array [
                 <*ref_2>,
               ],
@@ -1317,48 +1317,48 @@ Array [
       ],
     ],
     &ref_3 Array [
-      "@scope/y",
+      "/@scope/y",
       Array [
         Array [
-          "foo",
+          "/foo",
           Array [
             Array [
-              "express",
+              "/foo/express",
               Array [],
             ],
             &ref_1 Array [
-              "@scope/x",
+              "/@scope/x",
               Array [
                 Array [
-                  "glob",
+                  "/@scope/x/glob",
                   Array [
                     Array [
-                      "graceful-fs",
+                      "/@scope/x/glob/graceful-fs",
                       Array [],
                     ],
                     Array [
-                      "inherits",
+                      "/@scope/x/glob/inherits",
                       Array [],
                     ],
                     Array [
-                      "minimatch",
+                      "/@scope/x/glob/minimatch",
                       Array [
                         Array [
-                          "sigmund",
+                          "/@scope/x/glob/minimatch/sigmund",
                           Array [],
                         ],
                         Array [
-                          "lru-cache",
+                          "/@scope/x/glob/minimatch/lru-cache",
                           Array [],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
@@ -1379,73 +1379,73 @@ exports[`test/basic.js TAP walking through trees logical stroll > logical walk l
 Array [
   Array [
     "ENTER",
-    "root",
+    "/",
   ],
   Array [
     "ENTER",
-    "@scope/x",
+    "/@scope/x",
   ],
   Array [
     "ENTER",
-    "foo",
+    "/foo",
   ],
   Array [
     "ENTER",
-    "@scope/y",
+    "/@scope/y",
   ],
   Array [
     "ENTER",
-    "glob",
+    "/@scope/x/glob",
   ],
   Array [
     "ENTER",
-    "express",
+    "/foo/express",
   ],
   Array [
     "EXIT",
     &ref_1 Array [
-      "@scope/y",
+      "/@scope/y",
       Array [
         Array [
-          "foo",
+          "/foo",
           Array [
             Array [
-              "express",
+              "/foo/express",
               Array [],
             ],
             &ref_2 Array [
-              "@scope/x",
+              "/@scope/x",
               Array [
                 Array [
-                  "glob",
+                  "/@scope/x/glob",
                   Array [
                     Array [
-                      "graceful-fs",
+                      "/@scope/x/glob/graceful-fs",
                       Array [],
                     ],
                     Array [
-                      "inherits",
+                      "/@scope/x/glob/inherits",
                       Array [],
                     ],
                     Array [
-                      "minimatch",
+                      "/@scope/x/glob/minimatch",
                       Array [
                         Array [
-                          "sigmund",
+                          "/@scope/x/glob/minimatch/sigmund",
                           Array [],
                         ],
                         Array [
-                          "lru-cache",
+                          "/@scope/x/glob/minimatch/lru-cache",
                           Array [],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
@@ -1461,118 +1461,118 @@ Array [
   ],
   Array [
     "ENTER",
-    "graceful-fs",
+    "/@scope/x/glob/graceful-fs",
   ],
   Array [
     "ENTER",
-    "inherits",
+    "/@scope/x/glob/inherits",
   ],
   Array [
     "ENTER",
-    "minimatch",
+    "/@scope/x/glob/minimatch",
   ],
   Array [
     "ENTER",
-    "once",
+    "/@scope/x/glob/once",
   ],
   Array [
     "EXIT",
     Array [
-      "express",
+      "/foo/express",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     Array [
-      "graceful-fs",
+      "/@scope/x/glob/graceful-fs",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     Array [
-      "inherits",
+      "/@scope/x/glob/inherits",
       Array [],
     ],
   ],
   Array [
     "ENTER",
-    "sigmund",
+    "/@scope/x/glob/minimatch/sigmund",
   ],
   Array [
     "ENTER",
-    "lru-cache",
+    "/@scope/x/glob/minimatch/lru-cache",
   ],
   Array [
     "EXIT",
     Array [
-      "once",
+      "/@scope/x/glob/once",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     Array [
-      "sigmund",
+      "/@scope/x/glob/minimatch/sigmund",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     Array [
-      "lru-cache",
+      "/@scope/x/glob/minimatch/lru-cache",
       Array [],
     ],
   ],
   Array [
     "EXIT",
     &ref_3 Array [
-      "foo",
+      "/foo",
       Array [
         Array [
-          "express",
+          "/foo/express",
           Array [],
         ],
         &ref_2 Array [
-          "@scope/x",
+          "/@scope/x",
           Array [
             Array [
-              "glob",
+              "/@scope/x/glob",
               Array [
                 Array [
-                  "graceful-fs",
+                  "/@scope/x/glob/graceful-fs",
                   Array [],
                 ],
                 Array [
-                  "inherits",
+                  "/@scope/x/glob/inherits",
                   Array [],
                 ],
                 Array [
-                  "minimatch",
+                  "/@scope/x/glob/minimatch",
                   Array [
                     Array [
-                      "sigmund",
+                      "/@scope/x/glob/minimatch/sigmund",
                       Array [],
                     ],
                     Array [
-                      "lru-cache",
+                      "/@scope/x/glob/minimatch/lru-cache",
                       Array [],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "@scope/y",
+              "/@scope/y",
               Array [
                 <*ref_3>,
               ],
@@ -1586,18 +1586,18 @@ Array [
   Array [
     "EXIT",
     Array [
-      "minimatch",
+      "/@scope/x/glob/minimatch",
       Array [
         Array [
-          "sigmund",
+          "/@scope/x/glob/minimatch/sigmund",
           Array [],
         ],
         Array [
-          "lru-cache",
+          "/@scope/x/glob/minimatch/lru-cache",
           Array [],
         ],
         Array [
-          "once",
+          "/@scope/x/glob/once",
           Array [],
         ],
       ],
@@ -1606,35 +1606,35 @@ Array [
   Array [
     "EXIT",
     Array [
-      "glob",
+      "/@scope/x/glob",
       Array [
         Array [
-          "graceful-fs",
+          "/@scope/x/glob/graceful-fs",
           Array [],
         ],
         Array [
-          "inherits",
+          "/@scope/x/glob/inherits",
           Array [],
         ],
         Array [
-          "minimatch",
+          "/@scope/x/glob/minimatch",
           Array [
             Array [
-              "sigmund",
+              "/@scope/x/glob/minimatch/sigmund",
               Array [],
             ],
             Array [
-              "lru-cache",
+              "/@scope/x/glob/minimatch/lru-cache",
               Array [],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
         ],
         Array [
-          "once",
+          "/@scope/x/glob/once",
           Array [],
         ],
       ],
@@ -1643,50 +1643,50 @@ Array [
   Array [
     "EXIT",
     &ref_2 Array [
-      "@scope/x",
+      "/@scope/x",
       Array [
         Array [
-          "glob",
+          "/@scope/x/glob",
           Array [
             Array [
-              "graceful-fs",
+              "/@scope/x/glob/graceful-fs",
               Array [],
             ],
             Array [
-              "inherits",
+              "/@scope/x/glob/inherits",
               Array [],
             ],
             Array [
-              "minimatch",
+              "/@scope/x/glob/minimatch",
               Array [
                 Array [
-                  "sigmund",
+                  "/@scope/x/glob/minimatch/sigmund",
                   Array [],
                 ],
                 Array [
-                  "lru-cache",
+                  "/@scope/x/glob/minimatch/lru-cache",
                   Array [],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
         ],
         Array [
-          "@scope/y",
+          "/@scope/y",
           Array [
             Array [
-              "foo",
+              "/foo",
               Array [
                 Array [
-                  "express",
+                  "/foo/express",
                   Array [],
                 ],
                 <*ref_2>,
@@ -1701,53 +1701,53 @@ Array [
   Array [
     "EXIT",
     Array [
-      "root",
+      "/",
       Array [
         &ref_2 Array [
-          "@scope/x",
+          "/@scope/x",
           Array [
             Array [
-              "glob",
+              "/@scope/x/glob",
               Array [
                 Array [
-                  "graceful-fs",
+                  "/@scope/x/glob/graceful-fs",
                   Array [],
                 ],
                 Array [
-                  "inherits",
+                  "/@scope/x/glob/inherits",
                   Array [],
                 ],
                 Array [
-                  "minimatch",
+                  "/@scope/x/glob/minimatch",
                   Array [
                     Array [
-                      "sigmund",
+                      "/@scope/x/glob/minimatch/sigmund",
                       Array [],
                     ],
                     Array [
-                      "lru-cache",
+                      "/@scope/x/glob/minimatch/lru-cache",
                       Array [],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "@scope/y",
+              "/@scope/y",
               Array [
                 Array [
-                  "foo",
+                  "/foo",
                   Array [
                     Array [
-                      "express",
+                      "/foo/express",
                       Array [],
                     ],
                     <*ref_2>,
@@ -1759,51 +1759,51 @@ Array [
           ],
         ],
         &ref_3 Array [
-          "foo",
+          "/foo",
           Array [
             Array [
-              "express",
+              "/foo/express",
               Array [],
             ],
             &ref_2 Array [
-              "@scope/x",
+              "/@scope/x",
               Array [
                 Array [
-                  "glob",
+                  "/@scope/x/glob",
                   Array [
                     Array [
-                      "graceful-fs",
+                      "/@scope/x/glob/graceful-fs",
                       Array [],
                     ],
                     Array [
-                      "inherits",
+                      "/@scope/x/glob/inherits",
                       Array [],
                     ],
                     Array [
-                      "minimatch",
+                      "/@scope/x/glob/minimatch",
                       Array [
                         Array [
-                          "sigmund",
+                          "/@scope/x/glob/minimatch/sigmund",
                           Array [],
                         ],
                         Array [
-                          "lru-cache",
+                          "/@scope/x/glob/minimatch/lru-cache",
                           Array [],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "@scope/y",
+                  "/@scope/y",
                   Array [
                     <*ref_3>,
                   ],
@@ -1814,48 +1814,48 @@ Array [
           ],
         ],
         &ref_1 Array [
-          "@scope/y",
+          "/@scope/y",
           Array [
             Array [
-              "foo",
+              "/foo",
               Array [
                 Array [
-                  "express",
+                  "/foo/express",
                   Array [],
                 ],
                 &ref_2 Array [
-                  "@scope/x",
+                  "/@scope/x",
                   Array [
                     Array [
-                      "glob",
+                      "/@scope/x/glob",
                       Array [
                         Array [
-                          "graceful-fs",
+                          "/@scope/x/glob/graceful-fs",
                           Array [],
                         ],
                         Array [
-                          "inherits",
+                          "/@scope/x/glob/inherits",
                           Array [],
                         ],
                         Array [
-                          "minimatch",
+                          "/@scope/x/glob/minimatch",
                           Array [
                             Array [
-                              "sigmund",
+                              "/@scope/x/glob/minimatch/sigmund",
                               Array [],
                             ],
                             Array [
-                              "lru-cache",
+                              "/@scope/x/glob/minimatch/lru-cache",
                               Array [],
                             ],
                             Array [
-                              "once",
+                              "/@scope/x/glob/once",
                               Array [],
                             ],
                           ],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
@@ -1876,53 +1876,53 @@ Array [
 
 exports[`test/basic.js TAP walking through trees logical stroll > logical walk result 1`] = `
 Array [
-  "root",
+  "/",
   Array [
     &ref_1 Array [
-      "@scope/x",
+      "/@scope/x",
       Array [
         Array [
-          "glob",
+          "/@scope/x/glob",
           Array [
             Array [
-              "graceful-fs",
+              "/@scope/x/glob/graceful-fs",
               Array [],
             ],
             Array [
-              "inherits",
+              "/@scope/x/glob/inherits",
               Array [],
             ],
             Array [
-              "minimatch",
+              "/@scope/x/glob/minimatch",
               Array [
                 Array [
-                  "sigmund",
+                  "/@scope/x/glob/minimatch/sigmund",
                   Array [],
                 ],
                 Array [
-                  "lru-cache",
+                  "/@scope/x/glob/minimatch/lru-cache",
                   Array [],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
         ],
         Array [
-          "@scope/y",
+          "/@scope/y",
           Array [
             Array [
-              "foo",
+              "/foo",
               Array [
                 Array [
-                  "express",
+                  "/foo/express",
                   Array [],
                 ],
                 <*ref_1>,
@@ -1934,51 +1934,51 @@ Array [
       ],
     ],
     &ref_2 Array [
-      "foo",
+      "/foo",
       Array [
         Array [
-          "express",
+          "/foo/express",
           Array [],
         ],
         &ref_1 Array [
-          "@scope/x",
+          "/@scope/x",
           Array [
             Array [
-              "glob",
+              "/@scope/x/glob",
               Array [
                 Array [
-                  "graceful-fs",
+                  "/@scope/x/glob/graceful-fs",
                   Array [],
                 ],
                 Array [
-                  "inherits",
+                  "/@scope/x/glob/inherits",
                   Array [],
                 ],
                 Array [
-                  "minimatch",
+                  "/@scope/x/glob/minimatch",
                   Array [
                     Array [
-                      "sigmund",
+                      "/@scope/x/glob/minimatch/sigmund",
                       Array [],
                     ],
                     Array [
-                      "lru-cache",
+                      "/@scope/x/glob/minimatch/lru-cache",
                       Array [],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
                 ],
                 Array [
-                  "once",
+                  "/@scope/x/glob/once",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "@scope/y",
+              "/@scope/y",
               Array [
                 <*ref_2>,
               ],
@@ -1989,48 +1989,48 @@ Array [
       ],
     ],
     &ref_3 Array [
-      "@scope/y",
+      "/@scope/y",
       Array [
         Array [
-          "foo",
+          "/foo",
           Array [
             Array [
-              "express",
+              "/foo/express",
               Array [],
             ],
             &ref_1 Array [
-              "@scope/x",
+              "/@scope/x",
               Array [
                 Array [
-                  "glob",
+                  "/@scope/x/glob",
                   Array [
                     Array [
-                      "graceful-fs",
+                      "/@scope/x/glob/graceful-fs",
                       Array [],
                     ],
                     Array [
-                      "inherits",
+                      "/@scope/x/glob/inherits",
                       Array [],
                     ],
                     Array [
-                      "minimatch",
+                      "/@scope/x/glob/minimatch",
                       Array [
                         Array [
-                          "sigmund",
+                          "/@scope/x/glob/minimatch/sigmund",
                           Array [],
                         ],
                         Array [
-                          "lru-cache",
+                          "/@scope/x/glob/minimatch/lru-cache",
                           Array [],
                         ],
                         Array [
-                          "once",
+                          "/@scope/x/glob/once",
                           Array [],
                         ],
                       ],
                     ],
                     Array [
-                      "once",
+                      "/@scope/x/glob/once",
                       Array [],
                     ],
                   ],
@@ -2113,136 +2113,136 @@ exports[`test/basic.js TAP walking through trees physical sprint > physical walk
 Array [
   Array [
     "ENTER",
-    "root",
+    "/",
   ],
   Array [
     "ENTER",
-    "@scope/x",
+    "/@scope/x",
   ],
   Array [
     "ENTER",
-    "glob",
+    "/@scope/x/glob",
   ],
   Array [
     "ENTER",
-    "graceful-fs",
+    "/@scope/x/glob/graceful-fs",
   ],
   Array [
     "EXIT",
-    "graceful-fs",
+    "/@scope/x/glob/graceful-fs",
   ],
   Array [
     "ENTER",
-    "inherits",
+    "/@scope/x/glob/inherits",
   ],
   Array [
     "EXIT",
-    "inherits",
+    "/@scope/x/glob/inherits",
   ],
   Array [
     "ENTER",
-    "minimatch",
+    "/@scope/x/glob/minimatch",
   ],
   Array [
     "ENTER",
-    "lru-cache",
+    "/@scope/x/glob/minimatch/lru-cache",
   ],
   Array [
     "EXIT",
-    "lru-cache",
+    "/@scope/x/glob/minimatch/lru-cache",
   ],
   Array [
     "ENTER",
-    "sigmund",
+    "/@scope/x/glob/minimatch/sigmund",
   ],
   Array [
     "EXIT",
-    "sigmund",
+    "/@scope/x/glob/minimatch/sigmund",
   ],
   Array [
     "EXIT",
-    "minimatch",
+    "/@scope/x/glob/minimatch",
   ],
   Array [
     "ENTER",
-    "once",
+    "/@scope/x/glob/once",
   ],
   Array [
     "EXIT",
-    "once",
+    "/@scope/x/glob/once",
   ],
   Array [
     "EXIT",
-    "glob",
+    "/@scope/x/glob",
   ],
   Array [
     "EXIT",
-    "@scope/x",
+    "/@scope/x",
   ],
   Array [
     "ENTER",
-    "@scope/y",
+    "/@scope/y",
   ],
   Array [
     "EXIT",
-    "@scope/y",
+    "/@scope/y",
   ],
   Array [
     "ENTER",
-    "foo",
+    "/foo",
   ],
   Array [
     "ENTER",
-    "express",
+    "/foo/express",
   ],
   Array [
     "EXIT",
-    "express",
+    "/foo/express",
   ],
   Array [
     "EXIT",
-    "foo",
+    "/foo",
   ],
   Array [
     "EXIT",
-    "root",
+    "/",
   ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees physical sprint > physical walk result 1`] = `
 Array [
-  "root",
+  "/",
   Array [
     Array [
-      "@scope/x",
+      "/@scope/x",
       Array [
         Array [
-          "glob",
+          "/@scope/x/glob",
           Array [
             Array [
-              "graceful-fs",
+              "/@scope/x/glob/graceful-fs",
               Array [],
             ],
             Array [
-              "inherits",
+              "/@scope/x/glob/inherits",
               Array [],
             ],
             Array [
-              "minimatch",
+              "/@scope/x/glob/minimatch",
               Array [
                 Array [
-                  "lru-cache",
+                  "/@scope/x/glob/minimatch/lru-cache",
                   Array [],
                 ],
                 Array [
-                  "sigmund",
+                  "/@scope/x/glob/minimatch/sigmund",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
@@ -2250,14 +2250,14 @@ Array [
       ],
     ],
     Array [
-      "@scope/y",
+      "/@scope/y",
       Array [],
     ],
     Array [
-      "foo",
+      "/foo",
       Array [
         Array [
-          "express",
+          "/foo/express",
           Array [],
         ],
       ],
@@ -2270,136 +2270,136 @@ exports[`test/basic.js TAP walking through trees physical stroll > physical walk
 Array [
   Array [
     "ENTER",
-    "root",
+    "/",
   ],
   Array [
     "ENTER",
-    "@scope/x",
+    "/@scope/x",
   ],
   Array [
     "ENTER",
-    "@scope/y",
+    "/@scope/y",
   ],
   Array [
     "ENTER",
-    "foo",
+    "/foo",
   ],
   Array [
     "ENTER",
-    "glob",
+    "/@scope/x/glob",
   ],
   Array [
     "EXIT",
-    "@scope/y",
+    "/@scope/y",
   ],
   Array [
     "ENTER",
-    "express",
+    "/foo/express",
   ],
   Array [
     "ENTER",
-    "graceful-fs",
+    "/@scope/x/glob/graceful-fs",
   ],
   Array [
     "ENTER",
-    "inherits",
+    "/@scope/x/glob/inherits",
   ],
   Array [
     "ENTER",
-    "minimatch",
+    "/@scope/x/glob/minimatch",
   ],
   Array [
     "ENTER",
-    "once",
+    "/@scope/x/glob/once",
   ],
   Array [
     "EXIT",
-    "express",
+    "/foo/express",
   ],
   Array [
     "EXIT",
-    "graceful-fs",
+    "/@scope/x/glob/graceful-fs",
   ],
   Array [
     "EXIT",
-    "inherits",
+    "/@scope/x/glob/inherits",
   ],
   Array [
     "ENTER",
-    "lru-cache",
+    "/@scope/x/glob/minimatch/lru-cache",
   ],
   Array [
     "ENTER",
-    "sigmund",
+    "/@scope/x/glob/minimatch/sigmund",
   ],
   Array [
     "EXIT",
-    "once",
+    "/@scope/x/glob/once",
   ],
   Array [
     "EXIT",
-    "lru-cache",
+    "/@scope/x/glob/minimatch/lru-cache",
   ],
   Array [
     "EXIT",
-    "sigmund",
+    "/@scope/x/glob/minimatch/sigmund",
   ],
   Array [
     "EXIT",
-    "foo",
+    "/foo",
   ],
   Array [
     "EXIT",
-    "minimatch",
+    "/@scope/x/glob/minimatch",
   ],
   Array [
     "EXIT",
-    "glob",
+    "/@scope/x/glob",
   ],
   Array [
     "EXIT",
-    "@scope/x",
+    "/@scope/x",
   ],
   Array [
     "EXIT",
-    "root",
+    "/",
   ],
 ]
 `
 
 exports[`test/basic.js TAP walking through trees physical stroll > physical walk result 1`] = `
 Array [
-  "root",
+  "/",
   Array [
     Array [
-      "@scope/x",
+      "/@scope/x",
       Array [
         Array [
-          "glob",
+          "/@scope/x/glob",
           Array [
             Array [
-              "graceful-fs",
+              "/@scope/x/glob/graceful-fs",
               Array [],
             ],
             Array [
-              "inherits",
+              "/@scope/x/glob/inherits",
               Array [],
             ],
             Array [
-              "minimatch",
+              "/@scope/x/glob/minimatch",
               Array [
                 Array [
-                  "lru-cache",
+                  "/@scope/x/glob/minimatch/lru-cache",
                   Array [],
                 ],
                 Array [
-                  "sigmund",
+                  "/@scope/x/glob/minimatch/sigmund",
                   Array [],
                 ],
               ],
             ],
             Array [
-              "once",
+              "/@scope/x/glob/once",
               Array [],
             ],
           ],
@@ -2407,14 +2407,14 @@ Array [
       ],
     ],
     Array [
-      "@scope/y",
+      "/@scope/y",
       Array [],
     ],
     Array [
-      "foo",
+      "/foo",
       Array [
         Array [
-          "express",
+          "/foo/express",
           Array [],
         ],
       ],

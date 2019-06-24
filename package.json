@@ -2,7 +2,6 @@
   "name": "read-package-tree",
   "version": "5.3.1",
   "description": "Read the contents of node_modules.",
-  "main": "rpt.js",
   "directories": {
     "test": "test"
   },
@@ -36,7 +35,7 @@
   },
   "homepage": "https://github.com/npm/read-package-tree",
   "files": [
-    "rpt.js",
+    "index.js",
     "realpath.js"
   ],
   "tap": {

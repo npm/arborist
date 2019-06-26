@@ -1,5 +1,6 @@
 const fs = require('fs')
-const { promisify } = require('util')
+/* istanbul ignore next */
+const promisify = require('util').promisify || require('util-promisify')
 const { resolve, basename, dirname, join } = require('path')
 const rpj = promisify(require('read-package-json'))
 const readdir = promisify(require('readdir-scoped-modules'))

@@ -16,10 +16,11 @@ root@1.2.3 test/fixtures/deeproot/root
 │   │ └── sigmund@1.0.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo
+  └── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
 `
 
-exports[`test/basic.js TAP filterWith > must match snapshot 1`] = `
+exports[`test/basic.js TAP filterWith > undefined 1`] = `
 root@1.2.3 test/fixtures/root
 ├── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
 ├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
@@ -37,10 +38,11 @@ root@1.2.3 test/fixtures/linkedroot
 │   │ └── sigmund@1.0.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/linkedroot/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo
+  └── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
 `
 
-exports[`test/basic.js TAP looking outside of cwd > must match snapshot 1`] = `
+exports[`test/basic.js TAP looking outside of cwd > undefined 1`] = `
 root@1.2.3 test/fixtures/root
 ├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
 │ └─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
@@ -51,7 +53,8 @@ root@1.2.3 test/fixtures/root
 │   │ └── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/root/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo
+  └── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
 `
 
 exports[`test/basic.js TAP noname > noname tree 1`] = `
@@ -75,7 +78,8 @@ root@1.2.3 test/fixtures/root
 │   │ └── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
 │   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
 ├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/root/node_modules/foo
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo
+  └── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
 `
 
 exports[`test/basic.js TAP selflink > selflink tree 1`] = `
@@ -94,7 +98,7 @@ selflink@1.2.3 test/fixtures/selflink
   └── selflink@1.2.3 test/fixtures/selflink (symlink)
 `
 
-exports[`test/basic.js TAP shake out Link target timing issue > must match snapshot 1`] = `
+exports[`test/basic.js TAP shake out Link target timing issue > undefined 1`] = `
 selflink@1.2.3 test/fixtures/selflink
 ├── @scope/y@1.2.3 test/fixtures/selflink/node_modules/@scope/y
 ├─┬ @scope/z@1.2.3 test/fixtures/selflink/node_modules/@scope/z

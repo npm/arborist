@@ -18,6 +18,7 @@ const realpathCached = (path, rpcache, stcache, depth) => {
   if (depth > 2000)
     throw eloop(path)
 
+  path = resolve(path)
   if (rpcache.has(path))
     return Promise.resolve(rpcache.get(path))
 

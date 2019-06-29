@@ -41,23 +41,16 @@ class Link extends Node {
     // a Promise will be in the cache to indicate this.
     const cachedTarget = cache.get(realpath)
     if (cachedTarget && cachedTarget.then)
-      cachedTarget.then(node => this.target = node)
+      cachedTarget.then(node => {
+        this.target = node
+        this.children = node.children
+      })
 
     this.target = cachedTarget || new Node(pkg, logical, realpath, er, cache)
     this.realpath = realpath
     this.isLink = true
     this.error = er
-    // convenience method only
-    /* istanbul ignore next */
-    Object.defineProperty(this, 'children', {
-      get () {
-        return this.target.children
-      },
-      set (c) {
-        this.target.children = c
-      },
-      enumerable: true
-    })
+    this.children = this.target.children
   }
 }
 
@@ -104,8 +97,14 @@ const loadNode = (logical, physical, cache, rpcache, stcache) => {
 const loadChildren = (node, cache, filterWith, rpcache, stcache) => {
   // if a Link target has started, but not completed, then
   // a Promise will be in the cache to indicate this.
-  if (node.then)
-    return node.then(node => loadChildren(node, cache, filterWith, rpcache, stcache))
+  //
+  // XXX When we can one day loadChildren on the link *target* instead of
+  // the link itself, to match real dep resolution, then we may end up with
+  // a node target in the cache that isn't yet done resolving when we get
+  // here.  For now, though, this line will never be reached, so it's hidden
+  //
+  // if (node.then)
+  //   return node.then(node => loadChildren(node, cache, filterWith, rpcache, stcache))
 
   const nm = join(node.path, 'node_modules')
   return realpath(nm, rpcache, stcache, 0)
@@ -116,11 +115,11 @@ const loadChildren = (node, cache, filterWith, rpcache, stcache) => {
       .map(kid => loadNode(join(nm, kid), join(rm, kid), cache, rpcache, stcache)))
     ).then(kidNodes => {
       kidNodes.forEach(k => k.parent = node)
-      node.children = kidNodes.sort((a, b) =>
+      node.children.push.apply(node.children, kidNodes.sort((a, b) =>
         (a.package.name ? a.package.name.toLowerCase() : a.path)
         .localeCompare(
           (b.package.name ? b.package.name.toLowerCase() : b.path)
-        ))
+        )))
       return node
     })
     .catch(() => node)
@@ -135,7 +134,7 @@ const loadTree = (node, did, cache, filterWith, rpcache, stcache) => {
   did.add(node.realpath)
 
   // load children on the target, not the link
-  return loadChildren(node.target || node, cache, filterWith, rpcache, stcache)
+  return loadChildren(node, cache, filterWith, rpcache, stcache)
     .then(node => Promise.all(
       node.children
         .filter(kid => !did.has(kid.realpath))
@@ -150,7 +149,6 @@ const rpt = (root, filterWith, cb) => {
     filterWith = null
   }
 
-  root = resolve(root)
   const cache = new Map()
   // we can assume that the cwd is real enough
   const cwd = process.cwd()

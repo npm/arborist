@@ -1,6 +1,7 @@
 var test = require('tap').test
 var rpt = require('../rpt.js')
 var path = require('path')
+var resolve = path.resolve
 var fs = require('fs')
 var archy = require('archy')
 var mkdirp = require('mkdirp')
@@ -144,10 +145,7 @@ test('missing symlinks', function (t) {
 
 function archyize (d, seen) {
   seen = seen || {}
-  var path = d.path
-  if (d.target) {
-    path = d.target.path
-  }
+  var path = d.realpath
 
   var label = !Object.keys(d.package).length ? '' :
               d.package._id ? d.package._id + ' ' :

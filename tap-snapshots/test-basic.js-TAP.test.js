@@ -5,6 +5,115 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/basic.js TAP deepmixedloop > logical 1`] = `
+root@ test/fixtures/deepmixedloop
+├─┬ x@ test/fixtures/deepmixedloop/node_modules/x
+│ └─┬ y@ test/fixtures/deepmixedloop/node_modules/y (deduped)
+│   └─┬ z@ test/fixtures/deepmixedloop/node_modules/z (deduped)
+│     └─┬ a@1.2.3 test/fixtures/deepmixedloop/node_modules/a (deduped)
+│       └─┬ b@1.2.3 test/fixtures/deepmixedloop/node_modules/b (deduped)
+│         └─┬ c@1.2.3 test/fixtures/deepmixedloop/node_modules/c (deduped)
+│           └─┬ d@1.2.3 test/fixtures/deepmixedloop/node_modules/d (deduped)
+│             └── e@1.2.3 test/fixtures/deepmixedloop/node_modules/e (deduped)
+└─┬ i@ test/fixtures/deepmixedloop/node_modules/i
+  └─┬ j@ test/fixtures/deepmixedloop/node_modules/j (deduped)
+    └── k@ test/fixtures/deepmixedloop/node_modules/k (deduped)
+`
+
+exports[`test/basic.js TAP deepmixedloop > package lock 1`] = `
+{
+  "name": "root",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "b": ""
+      }
+    },
+    "b": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "c": ""
+      }
+    },
+    "c": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "d": ""
+      }
+    },
+    "d": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "e": ""
+      }
+    },
+    "e": {
+      "version": "1.2.3",
+      "optional": true
+    },
+    "i": {
+      "version": "",
+      "dev": true,
+      "requires": {
+        "j": ""
+      }
+    },
+    "j": {
+      "version": "",
+      "dev": true,
+      "requires": {
+        "k": ""
+      }
+    },
+    "k": {
+      "version": "",
+      "dev": true
+    },
+    "x": {
+      "version": "",
+      "requires": {
+        "y": ""
+      }
+    },
+    "y": {
+      "version": "",
+      "requires": {
+        "z": ""
+      }
+    },
+    "z": {
+      "version": "",
+      "requires": {
+        "a": ""
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP deepmixedloop > physical 1`] = `
+root@ test/fixtures/deepmixedloop
+├── a@1.2.3 test/fixtures/deepmixedloop/node_modules/a
+├── b@1.2.3 test/fixtures/deepmixedloop/node_modules/b
+├── c@1.2.3 test/fixtures/deepmixedloop/node_modules/c
+├── d@1.2.3 test/fixtures/deepmixedloop/node_modules/d
+├── e@1.2.3 test/fixtures/deepmixedloop/node_modules/e
+├── i@ test/fixtures/deepmixedloop/node_modules/i
+├── j@ test/fixtures/deepmixedloop/node_modules/j
+├── k@ test/fixtures/deepmixedloop/node_modules/k
+├── x@ test/fixtures/deepmixedloop/node_modules/x
+├── y@ test/fixtures/deepmixedloop/node_modules/y
+└── z@ test/fixtures/deepmixedloop/node_modules/z
+`
+
 exports[`test/basic.js TAP deeproot > logical 1`] = `
 root@1.2.3 test/fixtures/deeproot/root
 ├─┬ @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x
@@ -21,13 +130,13 @@ root@1.2.3 test/fixtures/deeproot/root
 │ │   ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
 │ │   └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
-├─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y)
-│ ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
-│ └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
-└─┬ @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
-  └─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y) (deduped)
-    ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
-    └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/y
+│ └─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y) (deduped)
+│   ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
+│   └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 test/fixtures/deeproot/root/node_modules/foo (invalid for test/fixtures/deeproot/root/node_modules/@scope/y)
+  ├── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
+  └── @scope/x@1.2.3 test/fixtures/deeproot/root/node_modules/@scope/x (deduped)
 `
 
 exports[`test/basic.js TAP deeproot > package lock 1`] = `
@@ -122,6 +231,59 @@ root@1.2.3 test/fixtures/deeproot/root
   └── abbrev@1.1.1 test/fixtures/deeproot/root/node_modules/foo/node_modules/express
 `
 
+exports[`test/basic.js TAP devloop > logical 1`] = `
+devloop@ test/fixtures/devloop
+├─┬ c@1.2.3 test/fixtures/devloop/node_modules/c
+│ └─┬ d@1.2.3 test/fixtures/devloop/node_modules/d (deduped)
+│   └── b@1.2.3 test/fixtures/devloop/node_modules/b (deduped)
+└─┬ a@1.2.3 test/fixtures/devloop/node_modules/a
+  ├── b@1.2.3 test/fixtures/devloop/node_modules/b (deduped)
+  └─┬ d@1.2.3 test/fixtures/devloop/node_modules/d (deduped)
+    └── b@1.2.3 test/fixtures/devloop/node_modules/b (deduped)
+`
+
+exports[`test/basic.js TAP devloop > package lock 1`] = `
+{
+  "name": "devloop",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "1.2.3",
+      "dev": true,
+      "requires": {
+        "b": "",
+        "d": ""
+      }
+    },
+    "b": {
+      "version": "1.2.3"
+    },
+    "c": {
+      "version": "1.2.3",
+      "requires": {
+        "d": ""
+      }
+    },
+    "d": {
+      "version": "1.2.3",
+      "requires": {
+        "b": ""
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP devloop > physical 1`] = `
+devloop@ test/fixtures/devloop
+├── a@1.2.3 test/fixtures/devloop/node_modules/a
+├── b@1.2.3 test/fixtures/devloop/node_modules/b
+├── c@1.2.3 test/fixtures/devloop/node_modules/c
+└── d@1.2.3 test/fixtures/devloop/node_modules/d
+`
+
 exports[`test/basic.js TAP filterWith > logical 1`] = `
 root@1.2.3 test/fixtures/root
 ├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
@@ -129,11 +291,11 @@ root@1.2.3 test/fixtures/root
 │ │ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
 │ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-├─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
-│ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-└─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-  └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
-    └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+│ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+  └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 `
 
 exports[`test/basic.js TAP filterWith > package lock 1`] = `
@@ -190,13 +352,13 @@ root@1.2.3 test/fixtures/linkedroot
 │ │   ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
 │ │   └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
-├─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y)
-│ ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
-│ └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
-└─┬ @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
-  └─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y) (deduped)
-    ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
-    └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 test/fixtures/linkedroot/node_modules/@scope/y
+│ └─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y) (deduped)
+│   ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
+│   └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 test/fixtures/linkedroot/node_modules/foo (invalid for test/fixtures/linkedroot/node_modules/@scope/y)
+  ├── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
+  └── @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x (deduped)
 `
 
 exports[`test/basic.js TAP linkedroot > package lock 1`] = `
@@ -292,28 +454,28 @@ root@1.2.3 test/fixtures/linkedroot
 `
 
 exports[`test/basic.js TAP looking outside of cwd > logical 1`] = `
-root@1.2.3 
-├─┬ @scope/x@1.2.3 
-│ ├─┬ glob@4.0.5 es/glob
-│ │ ├── graceful-fs@3.0.2 es/glob/node_modules/graceful-fs
-│ │ ├── inherits@2.0.1 es/glob/node_modules/inherits
-│ │ ├─┬ minimatch@1.0.0 es/glob/node_modules/minimatch
-│ │ │ ├── sigmund@1.0.0 es/glob/node_modules/minimatch/node_modules/sigmund
-│ │ │ ├── lru-cache@2.5.0 es/glob/node_modules/minimatch/node_modules/lru-cache
-│ │ │ └── once@1.3.0 es/glob/node_modules/once (deduped)
-│ │ └── once@1.3.0 es/glob/node_modules/once
-│ ├─┬ @scope/y@1.2.3  (deduped)
-│ │ └─┬ foo@1.2.3  (invalid for ) (deduped)
-│ │   ├── abbrev@1.1.1 press
-│ │   └── @scope/x@1.2.3  (deduped)
-│ └── @scope/x@1.2.3  (deduped)
-├─┬ foo@1.2.3  (invalid for )
-│ ├── abbrev@1.1.1 press
-│ └── @scope/x@1.2.3  (deduped)
-└─┬ @scope/y@1.2.3 
-  └─┬ foo@1.2.3  (invalid for ) (deduped)
-    ├── abbrev@1.1.1 press
-    └── @scope/x@1.2.3  (deduped)
+root@1.2.3 test/fixtures/root
+├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
+│ ├─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
+│ │ ├── graceful-fs@3.0.2 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
+│ │ ├── inherits@2.0.1 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
+│ │ ├─┬ minimatch@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
+│ │ │ ├── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+│ │ │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+│ │ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
+│ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
+│ ├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y (deduped)
+│ │ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│ │   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+│ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+│ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+│ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+│   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+  ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+  └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 `
 
 exports[`test/basic.js TAP looking outside of cwd > package lock 1`] = `
@@ -394,18 +556,208 @@ exports[`test/basic.js TAP looking outside of cwd > package lock 1`] = `
 `
 
 exports[`test/basic.js TAP looking outside of cwd > physical 1`] = `
-root@1.2.3 
-├─┬ @scope/x@1.2.3 
-│ └─┬ glob@4.0.5 es/glob
-│   ├── graceful-fs@3.0.2 es/glob/node_modules/graceful-fs
-│   ├── inherits@2.0.1 es/glob/node_modules/inherits
-│   ├─┬ minimatch@1.0.0 es/glob/node_modules/minimatch
-│   │ ├── lru-cache@2.5.0 es/glob/node_modules/minimatch/node_modules/lru-cache
-│   │ └── sigmund@1.0.0 es/glob/node_modules/minimatch/node_modules/sigmund
-│   └── once@1.3.0 es/glob/node_modules/once
-├── @scope/y@1.2.3 
-└─┬ foo@1.2.3  (invalid for )
-  └── abbrev@1.1.1 press
+root@1.2.3 test/fixtures/root
+├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
+│ └─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
+│   ├── graceful-fs@3.0.2 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
+│   ├── inherits@2.0.1 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
+│   ├─┬ minimatch@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
+│   │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+│   │ └── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+│   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
+├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+  └── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+`
+
+exports[`test/basic.js TAP mixedloop > logical 1`] = `
+root@ test/fixtures/mixedloop
+├─┬ a@1.1.1 test/fixtures/mixedloop/node_modules/a
+│ └─┬ b@1.2.3 test/fixtures/mixedloop/node_modules/b (deduped)
+│   └─┬ c@1.2.3 test/fixtures/mixedloop/node_modules/c (deduped)
+│     └─┬ d@1.2.3 test/fixtures/mixedloop/node_modules/d (deduped)
+│       └── e@1.2.3 test/fixtures/mixedloop/node_modules/e (deduped)
+└─┬ c@1.2.3 test/fixtures/mixedloop/node_modules/c
+  └─┬ d@1.2.3 test/fixtures/mixedloop/node_modules/d (deduped)
+    └── e@1.2.3 test/fixtures/mixedloop/node_modules/e (deduped)
+`
+
+exports[`test/basic.js TAP mixedloop > package lock 1`] = `
+{
+  "name": "root",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "https://registry.npmjs.org/a/-/a-1.1.1.tgz",
+      "optional": true,
+      "requires": {
+        "b": ""
+      }
+    },
+    "b": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "c": ""
+      }
+    },
+    "c": {
+      "version": "1.2.3",
+      "requires": {
+        "d": ""
+      }
+    },
+    "d": {
+      "version": "1.2.3",
+      "requires": {
+        "e": ""
+      }
+    },
+    "e": {
+      "version": "1.2.3"
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP mixedloop > physical 1`] = `
+root@ test/fixtures/mixedloop
+├── a@1.1.1 test/fixtures/mixedloop/node_modules/a
+├── b@1.2.3 test/fixtures/mixedloop/node_modules/b
+├── c@1.2.3 test/fixtures/mixedloop/node_modules/c
+├── d@1.2.3 test/fixtures/mixedloop/node_modules/d
+└── e@1.2.3 test/fixtures/mixedloop/node_modules/e
+`
+
+exports[`test/basic.js TAP mixedmidway > logical 1`] = `
+root@ test/fixtures/mixedmidway
+├─┬ x@ test/fixtures/mixedmidway/node_modules/x
+│ └─┬ y@ test/fixtures/mixedmidway/node_modules/y (deduped)
+│   └─┬ z@ test/fixtures/mixedmidway/node_modules/z (deduped)
+│     └─┬ l@ test/fixtures/mixedmidway/node_modules/l (deduped)
+│       └── m@ test/fixtures/mixedmidway/node_modules/m (deduped)
+├─┬ a@1.2.3 test/fixtures/mixedmidway/node_modules/a
+│ └─┬ b@1.2.3 test/fixtures/mixedmidway/node_modules/b (deduped)
+│   ├── c@1.2.3 test/fixtures/mixedmidway/node_modules/c (deduped)
+│   └─┬ j@ test/fixtures/mixedmidway/node_modules/j (deduped)
+│     └─┬ k@ test/fixtures/mixedmidway/node_modules/k (deduped)
+│       └── c@1.2.3 test/fixtures/mixedmidway/node_modules/c (deduped)
+├─┬ b@1.2.3 test/fixtures/mixedmidway/node_modules/b
+│ ├── c@1.2.3 test/fixtures/mixedmidway/node_modules/c (deduped)
+│ └─┬ j@ test/fixtures/mixedmidway/node_modules/j (deduped)
+│   └─┬ k@ test/fixtures/mixedmidway/node_modules/k (deduped)
+│     └── c@1.2.3 test/fixtures/mixedmidway/node_modules/c (deduped)
+├── c@1.2.3 test/fixtures/mixedmidway/node_modules/c
+├─┬ k@ test/fixtures/mixedmidway/node_modules/k
+│ └── c@1.2.3 test/fixtures/mixedmidway/node_modules/c (deduped)
+├─┬ l@ test/fixtures/mixedmidway/node_modules/l
+│ └── m@ test/fixtures/mixedmidway/node_modules/m (deduped)
+├── m@ test/fixtures/mixedmidway/node_modules/m
+├─┬ y@ test/fixtures/mixedmidway/node_modules/y
+│ └─┬ z@ test/fixtures/mixedmidway/node_modules/z (deduped)
+│   └─┬ l@ test/fixtures/mixedmidway/node_modules/l (deduped)
+│     └── m@ test/fixtures/mixedmidway/node_modules/m (deduped)
+└─┬ i@ test/fixtures/mixedmidway/node_modules/i
+  └─┬ j@ test/fixtures/mixedmidway/node_modules/j (deduped)
+    └─┬ k@ test/fixtures/mixedmidway/node_modules/k (deduped)
+      └── c@1.2.3 test/fixtures/mixedmidway/node_modules/c (deduped)
+`
+
+exports[`test/basic.js TAP mixedmidway > package lock 1`] = `
+{
+  "name": "root",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "b": ""
+      }
+    },
+    "b": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "c": "",
+        "j": ""
+      }
+    },
+    "c": {
+      "version": "1.2.3"
+    },
+    "i": {
+      "version": "",
+      "dev": true,
+      "requires": {
+        "j": ""
+      }
+    },
+    "j": {
+      "version": "",
+      "requires": {
+        "k": ""
+      }
+    },
+    "k": {
+      "version": "",
+      "requires": {
+        "c": ""
+      }
+    },
+    "l": {
+      "version": "",
+      "requires": {
+        "m": ""
+      }
+    },
+    "m": {
+      "version": ""
+    },
+    "n": {
+      "version": "",
+      "extraneous": true
+    },
+    "x": {
+      "version": "",
+      "requires": {
+        "y": ""
+      }
+    },
+    "y": {
+      "version": "",
+      "requires": {
+        "z": ""
+      }
+    },
+    "z": {
+      "version": "",
+      "requires": {
+        "l": ""
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP mixedmidway > physical 1`] = `
+root@ test/fixtures/mixedmidway
+├── a@1.2.3 test/fixtures/mixedmidway/node_modules/a
+├── b@1.2.3 test/fixtures/mixedmidway/node_modules/b
+├── c@1.2.3 test/fixtures/mixedmidway/node_modules/c
+├── i@ test/fixtures/mixedmidway/node_modules/i
+├── j@ test/fixtures/mixedmidway/node_modules/j
+├── k@ test/fixtures/mixedmidway/node_modules/k
+├── l@ test/fixtures/mixedmidway/node_modules/l
+├── m@ test/fixtures/mixedmidway/node_modules/m
+├── n@ test/fixtures/mixedmidway/node_modules/n
+├── x@ test/fixtures/mixedmidway/node_modules/x
+├── y@ test/fixtures/mixedmidway/node_modules/y
+└── z@ test/fixtures/mixedmidway/node_modules/z
 `
 
 exports[`test/basic.js TAP noname > logical 1`] = `
@@ -419,8 +771,7 @@ exports[`test/basic.js TAP noname > package lock 1`] = `
   "requires": true,
   "dependencies": {
     "foo": {
-      "dev": true,
-      "optional": true
+      "extraneous": true
     }
   }
 }
@@ -429,6 +780,59 @@ exports[`test/basic.js TAP noname > package lock 1`] = `
 exports[`test/basic.js TAP noname > physical 1`] = `
 test/fixtures/noname
 └── test/fixtures/noname/node_modules/foo
+`
+
+exports[`test/basic.js TAP optionalloop > logical 1`] = `
+optionalloop@ test/fixtures/optionalloop
+├─┬ c@1.2.3 test/fixtures/optionalloop/node_modules/c
+│ └─┬ d@1.2.3 test/fixtures/optionalloop/node_modules/d (deduped)
+│   └── b@1.2.3 test/fixtures/optionalloop/node_modules/b (deduped)
+└─┬ a@1.2.3 test/fixtures/optionalloop/node_modules/a
+  ├── b@1.2.3 test/fixtures/optionalloop/node_modules/b (deduped)
+  └─┬ d@1.2.3 test/fixtures/optionalloop/node_modules/d (deduped)
+    └── b@1.2.3 test/fixtures/optionalloop/node_modules/b (deduped)
+`
+
+exports[`test/basic.js TAP optionalloop > package lock 1`] = `
+{
+  "name": "optionalloop",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "1.2.3",
+      "optional": true,
+      "requires": {
+        "b": "",
+        "d": ""
+      }
+    },
+    "b": {
+      "version": "1.2.3"
+    },
+    "c": {
+      "version": "1.2.3",
+      "requires": {
+        "d": ""
+      }
+    },
+    "d": {
+      "version": "1.2.3",
+      "requires": {
+        "b": ""
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP optionalloop > physical 1`] = `
+optionalloop@ test/fixtures/optionalloop
+├── a@1.2.3 test/fixtures/optionalloop/node_modules/a
+├── b@1.2.3 test/fixtures/optionalloop/node_modules/b
+├── c@1.2.3 test/fixtures/optionalloop/node_modules/c
+└── d@1.2.3 test/fixtures/optionalloop/node_modules/d
 `
 
 exports[`test/basic.js TAP other > logical 1`] = `
@@ -444,8 +848,7 @@ exports[`test/basic.js TAP other > package lock 1`] = `
     "glob": {
       "version": "file:test/fixtures/root/node_modules/@scope/x/node_modules/glob",
       "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
-      "dev": true,
-      "optional": true
+      "extraneous": true
     }
   }
 }
@@ -472,13 +875,13 @@ root@1.2.3 test/fixtures/root
 │ │   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
 │ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 │ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-├─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
-│ ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
-│ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-└─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-  └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
-    ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
-    └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+│ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+│   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+  ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+  └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
 `
 
 exports[`test/basic.js TAP root > package lock 1`] = `
@@ -579,9 +982,7 @@ selflink@1.2.3 test/fixtures/selflink
 │ ├── selflink@1.2.3 test/fixtures/selflink (symlink)
 │ └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
 └─┬ @scope/y@1.2.3 test/fixtures/selflink/node_modules/@scope/y
-  └─┬ foo@1.2.3 test/fixtures/selflink/node_modules/foo (deduped)
-    ├── selflink@1.2.3 test/fixtures/selflink (symlink)
-    └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+  └── foo@1.2.3 test/fixtures/selflink/node_modules/foo (deduped)
 `
 
 exports[`test/basic.js TAP selflink > package lock 1`] = `
@@ -599,13 +1000,11 @@ exports[`test/basic.js TAP selflink > package lock 1`] = `
     },
     "@scope/z": {
       "version": "1.2.3",
-      "dev": true,
-      "optional": true,
+      "extraneous": true,
       "dependencies": {
         "glob": {
           "version": "file:test/fixtures/selflink/node_modules/foo/node_modules/glob",
-          "dev": true,
-          "optional": true
+          "extraneous": true
         }
       }
     },
@@ -617,10 +1016,43 @@ exports[`test/basic.js TAP selflink > package lock 1`] = `
       },
       "dependencies": {
         "glob": {
-          "version": "4.0.5"
+          "version": "4.0.5",
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2",
+              "extraneous": true
+            },
+            "inherits": {
+              "version": "2.0.1",
+              "extraneous": true
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "extraneous": true,
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0",
+                  "extraneous": true
+                },
+                "sigmund": {
+                  "version": "1.0.0",
+                  "extraneous": true
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0",
+              "extraneous": true
+            }
+          }
         },
         "selflink": {
-          "version": "file:test/fixtures/selflink"
+          "version": "file:test/fixtures/selflink",
+          "requires": {
+            "foo": "",
+            "@scope/x": "",
+            "@scope/y": ""
+          }
         }
       }
     }
@@ -634,7 +1066,13 @@ selflink@1.2.3 test/fixtures/selflink
 ├─┬ @scope/z@1.2.3 test/fixtures/selflink/node_modules/@scope/z
 │ └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob (symlink)
 └─┬ foo@1.2.3 test/fixtures/selflink/node_modules/foo
-  ├── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+  ├─┬ glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+  │ ├── graceful-fs@3.0.2 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs
+  │ ├── inherits@2.0.1 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/inherits
+  │ ├─┬ minimatch@1.0.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/minimatch
+  │ │ ├── lru-cache@2.5.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+  │ │ └── sigmund@1.0.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+  │ └── once@1.3.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/once
   └── selflink@1.2.3 test/fixtures/selflink (symlink)
 `
 
@@ -644,9 +1082,7 @@ selflink@1.2.3 test/fixtures/selflink
 │ ├── selflink@1.2.3 test/fixtures/selflink (symlink)
 │ └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
 └─┬ @scope/y@1.2.3 test/fixtures/selflink/node_modules/@scope/y
-  └─┬ foo@1.2.3 test/fixtures/selflink/node_modules/foo (deduped)
-    ├── selflink@1.2.3 test/fixtures/selflink (symlink)
-    └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+  └── foo@1.2.3 test/fixtures/selflink/node_modules/foo (deduped)
 `
 
 exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`] = `
@@ -664,13 +1100,11 @@ exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`]
     },
     "@scope/z": {
       "version": "1.2.3",
-      "dev": true,
-      "optional": true,
+      "extraneous": true,
       "dependencies": {
         "glob": {
           "version": "file:test/fixtures/selflink/node_modules/foo/node_modules/glob",
-          "dev": true,
-          "optional": true
+          "extraneous": true
         }
       }
     },
@@ -682,10 +1116,43 @@ exports[`test/basic.js TAP shake out Link target timing issue > package lock 1`]
       },
       "dependencies": {
         "glob": {
-          "version": "4.0.5"
+          "version": "4.0.5",
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2",
+              "extraneous": true
+            },
+            "inherits": {
+              "version": "2.0.1",
+              "extraneous": true
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "extraneous": true,
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0",
+                  "extraneous": true
+                },
+                "sigmund": {
+                  "version": "1.0.0",
+                  "extraneous": true
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0",
+              "extraneous": true
+            }
+          }
         },
         "selflink": {
-          "version": "file:test/fixtures/selflink"
+          "version": "file:test/fixtures/selflink",
+          "requires": {
+            "foo": "",
+            "@scope/x": "",
+            "@scope/y": ""
+          }
         }
       }
     }
@@ -699,7 +1166,13 @@ selflink@1.2.3 test/fixtures/selflink
 ├─┬ @scope/z@1.2.3 test/fixtures/selflink/node_modules/@scope/z
 │ └── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob (symlink)
 └─┬ foo@1.2.3 test/fixtures/selflink/node_modules/foo
-  ├── glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+  ├─┬ glob@4.0.5 test/fixtures/selflink/node_modules/foo/node_modules/glob
+  │ ├── graceful-fs@3.0.2 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs
+  │ ├── inherits@2.0.1 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/inherits
+  │ ├─┬ minimatch@1.0.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/minimatch
+  │ │ ├── lru-cache@2.5.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+  │ │ └── sigmund@1.0.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+  │ └── once@1.3.0 test/fixtures/selflink/node_modules/foo/node_modules/glob/node_modules/once
   └── selflink@1.2.3 test/fixtures/selflink (symlink)
 `
 
@@ -1086,61 +1559,6 @@ Array [
             <*ref_2>,
           ],
         ],
-        &ref_1 Array [
-          "/foo",
-          Array [
-            Array [
-              "/foo/express",
-              Array [],
-            ],
-            &ref_2 Array [
-              "/@scope/x",
-              Array [
-                Array [
-                  "/@scope/x/glob",
-                  Array [
-                    Array [
-                      "/@scope/x/glob/graceful-fs",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/inherits",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/minimatch",
-                      Array [
-                        Array [
-                          "/@scope/x/glob/minimatch/sigmund",
-                          Array [],
-                        ],
-                        Array [
-                          "/@scope/x/glob/minimatch/lru-cache",
-                          Array [],
-                        ],
-                        Array [
-                          "/@scope/x/glob/once",
-                          Array [],
-                        ],
-                      ],
-                    ],
-                    Array [
-                      "/@scope/x/glob/once",
-                      Array [],
-                    ],
-                  ],
-                ],
-                Array [
-                  "/@scope/y",
-                  Array [
-                    <*ref_1>,
-                  ],
-                ],
-                <*ref_2>,
-              ],
-            ],
-          ],
-        ],
         &ref_3 Array [
           "/@scope/y",
           Array [
@@ -1192,6 +1610,61 @@ Array [
                     <*ref_2>,
                   ],
                 ],
+              ],
+            ],
+          ],
+        ],
+        &ref_1 Array [
+          "/foo",
+          Array [
+            Array [
+              "/foo/express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "/@scope/x",
+              Array [
+                Array [
+                  "/@scope/x/glob",
+                  Array [
+                    Array [
+                      "/@scope/x/glob/graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/minimatch",
+                      Array [
+                        Array [
+                          "/@scope/x/glob/minimatch/sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "/@scope/x/glob/minimatch/lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "/@scope/x/glob/once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "/@scope/x/glob/once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "/@scope/y",
+                  Array [
+                    <*ref_1>,
+                  ],
+                ],
+                <*ref_2>,
               ],
             ],
           ],
@@ -1262,61 +1735,6 @@ Array [
       ],
     ],
     &ref_2 Array [
-      "/foo",
-      Array [
-        Array [
-          "/foo/express",
-          Array [],
-        ],
-        &ref_1 Array [
-          "/@scope/x",
-          Array [
-            Array [
-              "/@scope/x/glob",
-              Array [
-                Array [
-                  "/@scope/x/glob/graceful-fs",
-                  Array [],
-                ],
-                Array [
-                  "/@scope/x/glob/inherits",
-                  Array [],
-                ],
-                Array [
-                  "/@scope/x/glob/minimatch",
-                  Array [
-                    Array [
-                      "/@scope/x/glob/minimatch/sigmund",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/minimatch/lru-cache",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/once",
-                      Array [],
-                    ],
-                  ],
-                ],
-                Array [
-                  "/@scope/x/glob/once",
-                  Array [],
-                ],
-              ],
-            ],
-            Array [
-              "/@scope/y",
-              Array [
-                <*ref_2>,
-              ],
-            ],
-            <*ref_1>,
-          ],
-        ],
-      ],
-    ],
-    &ref_3 Array [
       "/@scope/y",
       Array [
         Array [
@@ -1363,10 +1781,65 @@ Array [
                     ],
                   ],
                 ],
-                <*ref_3>,
+                <*ref_2>,
                 <*ref_1>,
               ],
             ],
+          ],
+        ],
+      ],
+    ],
+    &ref_3 Array [
+      "/foo",
+      Array [
+        Array [
+          "/foo/express",
+          Array [],
+        ],
+        &ref_1 Array [
+          "/@scope/x",
+          Array [
+            Array [
+              "/@scope/x/glob",
+              Array [
+                Array [
+                  "/@scope/x/glob/graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "/@scope/x/glob/inherits",
+                  Array [],
+                ],
+                Array [
+                  "/@scope/x/glob/minimatch",
+                  Array [
+                    Array [
+                      "/@scope/x/glob/minimatch/sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/minimatch/lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "/@scope/x/glob/once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "/@scope/y",
+              Array [
+                <*ref_3>,
+              ],
+            ],
+            <*ref_1>,
           ],
         ],
       ],
@@ -1387,11 +1860,11 @@ Array [
   ],
   Array [
     "ENTER",
-    "/foo",
+    "/@scope/y",
   ],
   Array [
     "ENTER",
-    "/@scope/y",
+    "/foo",
   ],
   Array [
     "ENTER",
@@ -1400,64 +1873,6 @@ Array [
   Array [
     "ENTER",
     "/foo/express",
-  ],
-  Array [
-    "EXIT",
-    &ref_1 Array [
-      "/@scope/y",
-      Array [
-        Array [
-          "/foo",
-          Array [
-            Array [
-              "/foo/express",
-              Array [],
-            ],
-            &ref_2 Array [
-              "/@scope/x",
-              Array [
-                Array [
-                  "/@scope/x/glob",
-                  Array [
-                    Array [
-                      "/@scope/x/glob/graceful-fs",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/inherits",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/minimatch",
-                      Array [
-                        Array [
-                          "/@scope/x/glob/minimatch/sigmund",
-                          Array [],
-                        ],
-                        Array [
-                          "/@scope/x/glob/minimatch/lru-cache",
-                          Array [],
-                        ],
-                        Array [
-                          "/@scope/x/glob/once",
-                          Array [],
-                        ],
-                      ],
-                    ],
-                    Array [
-                      "/@scope/x/glob/once",
-                      Array [],
-                    ],
-                  ],
-                ],
-                <*ref_1>,
-                <*ref_2>,
-              ],
-            ],
-          ],
-        ],
-      ],
-    ],
   ],
   Array [
     "ENTER",
@@ -1527,7 +1942,7 @@ Array [
   ],
   Array [
     "EXIT",
-    &ref_3 Array [
+    &ref_1 Array [
       "/foo",
       Array [
         Array [
@@ -1574,7 +1989,7 @@ Array [
             Array [
               "/@scope/y",
               Array [
-                <*ref_3>,
+                <*ref_1>,
               ],
             ],
             <*ref_2>,
@@ -1599,6 +2014,64 @@ Array [
         Array [
           "/@scope/x/glob/once",
           Array [],
+        ],
+      ],
+    ],
+  ],
+  Array [
+    "EXIT",
+    &ref_3 Array [
+      "/@scope/y",
+      Array [
+        Array [
+          "/foo",
+          Array [
+            Array [
+              "/foo/express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "/@scope/x",
+              Array [
+                Array [
+                  "/@scope/x/glob",
+                  Array [
+                    Array [
+                      "/@scope/x/glob/graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/minimatch",
+                      Array [
+                        Array [
+                          "/@scope/x/glob/minimatch/sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "/@scope/x/glob/minimatch/lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "/@scope/x/glob/once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "/@scope/x/glob/once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                <*ref_3>,
+                <*ref_2>,
+              ],
+            ],
+          ],
         ],
       ],
     ],
@@ -1759,61 +2232,6 @@ Array [
           ],
         ],
         &ref_3 Array [
-          "/foo",
-          Array [
-            Array [
-              "/foo/express",
-              Array [],
-            ],
-            &ref_2 Array [
-              "/@scope/x",
-              Array [
-                Array [
-                  "/@scope/x/glob",
-                  Array [
-                    Array [
-                      "/@scope/x/glob/graceful-fs",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/inherits",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/minimatch",
-                      Array [
-                        Array [
-                          "/@scope/x/glob/minimatch/sigmund",
-                          Array [],
-                        ],
-                        Array [
-                          "/@scope/x/glob/minimatch/lru-cache",
-                          Array [],
-                        ],
-                        Array [
-                          "/@scope/x/glob/once",
-                          Array [],
-                        ],
-                      ],
-                    ],
-                    Array [
-                      "/@scope/x/glob/once",
-                      Array [],
-                    ],
-                  ],
-                ],
-                Array [
-                  "/@scope/y",
-                  Array [
-                    <*ref_3>,
-                  ],
-                ],
-                <*ref_2>,
-              ],
-            ],
-          ],
-        ],
-        &ref_1 Array [
           "/@scope/y",
           Array [
             Array [
@@ -1860,10 +2278,65 @@ Array [
                         ],
                       ],
                     ],
-                    <*ref_1>,
+                    <*ref_3>,
                     <*ref_2>,
                   ],
                 ],
+              ],
+            ],
+          ],
+        ],
+        &ref_1 Array [
+          "/foo",
+          Array [
+            Array [
+              "/foo/express",
+              Array [],
+            ],
+            &ref_2 Array [
+              "/@scope/x",
+              Array [
+                Array [
+                  "/@scope/x/glob",
+                  Array [
+                    Array [
+                      "/@scope/x/glob/graceful-fs",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/inherits",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/minimatch",
+                      Array [
+                        Array [
+                          "/@scope/x/glob/minimatch/sigmund",
+                          Array [],
+                        ],
+                        Array [
+                          "/@scope/x/glob/minimatch/lru-cache",
+                          Array [],
+                        ],
+                        Array [
+                          "/@scope/x/glob/once",
+                          Array [],
+                        ],
+                      ],
+                    ],
+                    Array [
+                      "/@scope/x/glob/once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "/@scope/y",
+                  Array [
+                    <*ref_1>,
+                  ],
+                ],
+                <*ref_2>,
               ],
             ],
           ],
@@ -1934,61 +2407,6 @@ Array [
       ],
     ],
     &ref_2 Array [
-      "/foo",
-      Array [
-        Array [
-          "/foo/express",
-          Array [],
-        ],
-        &ref_1 Array [
-          "/@scope/x",
-          Array [
-            Array [
-              "/@scope/x/glob",
-              Array [
-                Array [
-                  "/@scope/x/glob/graceful-fs",
-                  Array [],
-                ],
-                Array [
-                  "/@scope/x/glob/inherits",
-                  Array [],
-                ],
-                Array [
-                  "/@scope/x/glob/minimatch",
-                  Array [
-                    Array [
-                      "/@scope/x/glob/minimatch/sigmund",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/minimatch/lru-cache",
-                      Array [],
-                    ],
-                    Array [
-                      "/@scope/x/glob/once",
-                      Array [],
-                    ],
-                  ],
-                ],
-                Array [
-                  "/@scope/x/glob/once",
-                  Array [],
-                ],
-              ],
-            ],
-            Array [
-              "/@scope/y",
-              Array [
-                <*ref_2>,
-              ],
-            ],
-            <*ref_1>,
-          ],
-        ],
-      ],
-    ],
-    &ref_3 Array [
       "/@scope/y",
       Array [
         Array [
@@ -2035,10 +2453,65 @@ Array [
                     ],
                   ],
                 ],
-                <*ref_3>,
+                <*ref_2>,
                 <*ref_1>,
               ],
             ],
+          ],
+        ],
+      ],
+    ],
+    &ref_3 Array [
+      "/foo",
+      Array [
+        Array [
+          "/foo/express",
+          Array [],
+        ],
+        &ref_1 Array [
+          "/@scope/x",
+          Array [
+            Array [
+              "/@scope/x/glob",
+              Array [
+                Array [
+                  "/@scope/x/glob/graceful-fs",
+                  Array [],
+                ],
+                Array [
+                  "/@scope/x/glob/inherits",
+                  Array [],
+                ],
+                Array [
+                  "/@scope/x/glob/minimatch",
+                  Array [
+                    Array [
+                      "/@scope/x/glob/minimatch/sigmund",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/minimatch/lru-cache",
+                      Array [],
+                    ],
+                    Array [
+                      "/@scope/x/glob/once",
+                      Array [],
+                    ],
+                  ],
+                ],
+                Array [
+                  "/@scope/x/glob/once",
+                  Array [],
+                ],
+              ],
+            ],
+            Array [
+              "/@scope/y",
+              Array [
+                <*ref_3>,
+              ],
+            ],
+            <*ref_1>,
           ],
         ],
       ],
@@ -2051,51 +2524,51 @@ exports[`test/basic.js TAP walking through trees no entry > no entry walk log 1`
 Array [
   Array [
     "EXIT",
-    "/node_modules/glob/node_modules/graceful-fs",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
   ],
   Array [
     "EXIT",
-    "/node_modules/glob/node_modules/inherits",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
   ],
   Array [
     "EXIT",
-    "/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
   ],
   Array [
     "EXIT",
-    "/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
   ],
   Array [
     "EXIT",
-    "/node_modules/glob/node_modules/minimatch",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
   ],
   Array [
     "EXIT",
-    "/node_modules/glob/node_modules/once",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once",
   ],
   Array [
     "EXIT",
-    "/node_modules/glob",
+    "test/fixtures/root/node_modules/@scope/x/node_modules/glob",
   ],
   Array [
     "EXIT",
-    "",
+    "test/fixtures/root/node_modules/@scope/x",
   ],
   Array [
     "EXIT",
-    "",
+    "test/fixtures/root/node_modules/@scope/y",
   ],
   Array [
     "EXIT",
-    "_modules/express",
+    "test/fixtures/root/node_modules/foo/node_modules/express",
   ],
   Array [
     "EXIT",
-    "",
+    "test/fixtures/root/node_modules/foo",
   ],
   Array [
     "EXIT",
-    "",
+    "test/fixtures/root",
   ],
 ]
 `
@@ -2104,7 +2577,7 @@ exports[`test/basic.js TAP walking through trees no exit > no exit walk log 1`] 
 Array [
   Array [
     "ENTER",
-    "",
+    "test/fixtures/root",
   ],
 ]
 `

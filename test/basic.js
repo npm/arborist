@@ -6,7 +6,18 @@ var fs = require('fs')
 var archy = require('archy')
 var mkdirp = require('mkdirp')
 var fixtures = path.resolve(__dirname, 'fixtures')
-var roots = [ 'root', 'other', 'selflink', 'noname' ]
+var roots = [
+  'root',
+  'other',
+  'selflink',
+  'noname',
+  'devloop',
+  'optionalloop',
+  'mixedloop',
+  'deepmixedloop',
+  'mixedmidway',
+]
+
 var cwd = path.resolve(__dirname, '..')
 
 var symlinks = {
@@ -347,7 +358,12 @@ test(`rpt's own package-lock.json`, t =>
     t.same(rptlock, npmlock)
   }))
 
-test('cleanup', function (t) {
+const skipCleanup = {
+  skip: process.env.NO_CLEANUP === '1'
+    ? 'skip cleanup'
+    : false
+}
+test('cleanup', skipCleanup, function (t) {
   cleanup()
   t.end()
 })

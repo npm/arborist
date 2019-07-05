@@ -6,6 +6,7 @@
     "test": "test"
   },
   "dependencies": {
+    "npm-package-arg": "^6.1.0",
     "read-package-json": "^2.0.0",
     "readdir-scoped-modules": "^1.0.0",
     "util-promisify": "^2.1.0",

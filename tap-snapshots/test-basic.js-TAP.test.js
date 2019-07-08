@@ -402,28 +402,28 @@ root@1.2.3 test/fixtures/linkedroot
 `
 
 exports[`test/basic.js TAP looking outside of cwd > logical 1`] = `
-root@1.2.3 test/fixtures/root
-├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
-│ ├─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
-│ │ ├── graceful-fs@3.0.2 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
-│ │ ├── inherits@2.0.1 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
-│ │ ├─┬ minimatch@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
-│ │ │ ├── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
-│ │ │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
-│ │ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
-│ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
-│ ├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y (deduped)
-│ │ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
-│ │   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
-│ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-│ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-│ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
-│   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
-│   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
-  ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
-  └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+root@1.2.3 ../root
+├─┬ @scope/x@1.2.3 ../root/node_modules/@scope/x
+│ ├─┬ glob@4.0.5 ../root/node_modules/@scope/x/node_modules/glob
+│ │ ├── graceful-fs@3.0.2 ../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
+│ │ ├── inherits@2.0.1 ../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
+│ │ ├─┬ minimatch@1.0.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
+│ │ │ ├── sigmund@1.0.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+│ │ │ ├── lru-cache@2.5.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+│ │ │ └── once@1.3.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
+│ │ └── once@1.3.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/once
+│ ├─┬ @scope/y@1.2.3 ../root/node_modules/@scope/y (deduped)
+│ │ └─┬ foo@1.2.3 ../root/node_modules/foo (invalid for ../root/node_modules/@scope/y) (deduped)
+│ │   ├── abbrev@1.1.1 ../root/node_modules/foo/node_modules/express
+│ │   └── @scope/x@1.2.3 ../root/node_modules/@scope/x (deduped)
+│ └── @scope/x@1.2.3 ../root/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 ../root/node_modules/@scope/y
+│ └─┬ foo@1.2.3 ../root/node_modules/foo (invalid for ../root/node_modules/@scope/y) (deduped)
+│   ├── abbrev@1.1.1 ../root/node_modules/foo/node_modules/express
+│   └── @scope/x@1.2.3 ../root/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 ../root/node_modules/foo (invalid for ../root/node_modules/@scope/y)
+  ├── abbrev@1.1.1 ../root/node_modules/foo/node_modules/express
+  └── @scope/x@1.2.3 ../root/node_modules/@scope/x (deduped)
 `
 
 exports[`test/basic.js TAP looking outside of cwd > package lock 1`] = `
@@ -504,18 +504,18 @@ exports[`test/basic.js TAP looking outside of cwd > package lock 1`] = `
 `
 
 exports[`test/basic.js TAP looking outside of cwd > physical 1`] = `
-root@1.2.3 test/fixtures/root
-├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
-│ └─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
-│   ├── graceful-fs@3.0.2 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
-│   ├── inherits@2.0.1 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
-│   ├─┬ minimatch@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
-│   │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
-│   │ └── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
-│   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
-├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
-  └── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+root@1.2.3 ../root
+├─┬ @scope/x@1.2.3 ../root/node_modules/@scope/x
+│ └─┬ glob@4.0.5 ../root/node_modules/@scope/x/node_modules/glob
+│   ├── graceful-fs@3.0.2 ../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
+│   ├── inherits@2.0.1 ../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
+│   ├─┬ minimatch@1.0.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
+│   │ ├── lru-cache@2.5.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+│   │ └── sigmund@1.0.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+│   └── once@1.3.0 ../root/node_modules/@scope/x/node_modules/glob/node_modules/once
+├── @scope/y@1.2.3 ../root/node_modules/@scope/y
+└─┬ foo@1.2.3 ../root/node_modules/foo (invalid for ../root/node_modules/@scope/y)
+  └── abbrev@1.1.1 ../root/node_modules/foo/node_modules/express
 `
 
 exports[`test/basic.js TAP mixedloop > logical 1`] = `
@@ -2842,4 +2842,50 @@ Array [
     ],
   ],
 ]
+`
+
+exports[`test/basic.js TAP workspace > logical 1`] = `
+workspace@ test/fixtures/workspace
+├── a@ test/fixtures/workspace/node_modules/a (symlink)
+├── b@ test/fixtures/workspace/node_modules/b (symlink)
+└── c@ test/fixtures/workspace/node_modules/c (symlink)
+`
+
+exports[`test/basic.js TAP workspace > package lock 1`] = `
+{
+  "name": "workspace",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "file:test/fixtures/workspace/packages/a",
+      "requires": {
+        "b": "",
+        "c": ""
+      }
+    },
+    "b": {
+      "version": "file:test/fixtures/workspace/packages/b",
+      "requires": {
+        "a": "",
+        "c": ""
+      }
+    },
+    "c": {
+      "version": "file:test/fixtures/workspace/packages/c",
+      "requires": {
+        "a": "",
+        "b": ""
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP workspace > physical 1`] = `
+workspace@ test/fixtures/workspace
+├── a@ test/fixtures/workspace/node_modules/a (symlink)
+├── b@ test/fixtures/workspace/node_modules/b (symlink)
+└── c@ test/fixtures/workspace/node_modules/c (symlink)
 `

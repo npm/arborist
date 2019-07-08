@@ -16,6 +16,7 @@ var roots = [
   'mixedloop',
   'deepmixedloop',
   'mixedmidway',
+  'workspace',
 ]
 
 var cwd = path.resolve(__dirname, '..')
@@ -25,16 +26,20 @@ var symlinks = {
     '../../../foo/node_modules/glob',
   'other/node_modules/glob':
     '../../root/node_modules/@scope/x/node_modules/glob',
-  'linkedroot':
-    'root',
-  'deep/root':
-    '../root',
-  'deeproot':
-    'deep',
-  'badlink/node_modules/foo':
-    'foo',
-  'badlink/node_modules/bar':
-    'baz'
+  'linkedroot': 'root',
+  'deep/root': '../root',
+  'deeproot': 'deep',
+  'badlink/node_modules/foo': 'foo',
+  'badlink/node_modules/bar': 'baz',
+  'workspace/node_modules/a': '../packages/a',
+  'workspace/node_modules/b': '../packages/b',
+  'workspace/node_modules/c': '../packages/c',
+  'workspace/packages/a/node_modules/b': '../../../packages/b',
+  'workspace/packages/a/node_modules/c': '../../../packages/c',
+  'workspace/packages/b/node_modules/a': '../../../packages/a',
+  'workspace/packages/b/node_modules/c': '../../../packages/c',
+  'workspace/packages/c/node_modules/a': '../../../packages/a',
+  'workspace/packages/c/node_modules/b': '../../../packages/b',
 }
 
 function cleanup () {
@@ -46,6 +51,9 @@ function cleanup () {
   })
 }
 
+const dpath = path =>
+  path.indexOf(cwd) === 0 ? path.substr(cwd.length + 1) : path
+
 const archyize = {
   enter (d) {
     const path = d.target ? d.target.path : d.path
@@ -56,10 +64,10 @@ const archyize = {
       d.name ? d.name + (version ? '@' + version : '') + ' ' :
       name ? name + (version ? '@' + version : '') + ' ' :
       ''
-    ) + path.substr(cwd.length + 1)
+    ) + dpath(path)
     + (d.target ? ' (symlink)' : '')
     + (d.invalidTo.size ? (' (invalid for ' + [...d.invalidTo].map(node =>
-      (node.target || node).path.substr(cwd.length + 1)).join(' ') + ')') : '')
+      dpath((node.target || node).path)).join(' ') + ')') : '')
 
     return {
       label,
@@ -319,7 +327,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     d.walkPhysical({
       enter (node) {
-        log.push(['ENTER', node.path.substr(cwd.length + 1)])
+        log.push(['ENTER', dpath(node.path)])
         return Promise.resolve(node)
       }
     })
@@ -331,7 +339,7 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     const log = []
     d.walkPhysical({
       exit (node) {
-        log.push(['EXIT', node.path.substr(cwd.length + 1)])
+        log.push(['EXIT', dpath(node.path)])
       }
     })
     t.matchSnapshot(log, 'no entry walk log')

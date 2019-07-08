@@ -284,58 +284,6 @@ devloop@ test/fixtures/devloop
 └── d@1.2.3 test/fixtures/devloop/node_modules/d
 `
 
-exports[`test/basic.js TAP filterWith > logical 1`] = `
-root@1.2.3 test/fixtures/root
-├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
-│ ├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y (deduped)
-│ │ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
-│ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-│ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-│ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
-│   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
-  └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
-`
-
-exports[`test/basic.js TAP filterWith > package lock 1`] = `
-{
-  "name": "root",
-  "version": "1.2.3",
-  "lockfileVersion": 1,
-  "requires": true,
-  "dependencies": {
-    "@scope/x": {
-      "version": "1.2.3",
-      "requires": {
-        "glob": "4",
-        "@scope/y": ""
-      }
-    },
-    "@scope/y": {
-      "version": "1.2.3",
-      "requires": {
-        "foo": "99.x"
-      }
-    },
-    "foo": {
-      "version": "1.2.3",
-      "requires": {
-        "express": "npm:abbrev@*",
-        "@scope/x": ""
-      }
-    }
-  }
-}
-`
-
-exports[`test/basic.js TAP filterWith > physical 1`] = `
-root@1.2.3 test/fixtures/root
-├── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
-├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
-└── foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
-`
-
 exports[`test/basic.js TAP linkedroot > logical 1`] = `
 root@1.2.3 test/fixtures/linkedroot
 ├─┬ @scope/x@1.2.3 test/fixtures/linkedroot/node_modules/@scope/x

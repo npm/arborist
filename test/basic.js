@@ -127,18 +127,6 @@ test('deeproot', function (t) {
   })
 })
 
-test('filterWith', t =>
-  rpt(
-    path.join(fixtures, 'root'),
-    (node, kid) => !node.parent,
-    true
-  ).then(d => {
-    t.matchSnapshot(archyPhysical(d), 'physical')
-    t.matchSnapshot(archyLogical(d), 'logical')
-    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
-  })
-)
-
 test('looking outside of cwd', t => {
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))

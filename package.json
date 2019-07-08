@@ -1,10 +1,7 @@
 {
-  "name": "read-package-tree",
-  "version": "5.3.1",
-  "description": "Read the contents of node_modules.",
-  "directories": {
-    "test": "test"
-  },
+  "name": "@npmcli/arborist",
+  "version": "0.0.0",
+  "description": "Manage node_modules trees",
   "dependencies": {
     "npm-package-arg": "^6.1.0",
     "read-package-json": "^2.0.13",
@@ -18,22 +15,18 @@
     "tap": "^14.4.1"
   },
   "scripts": {
-    "test": "tap test/*.js --100",
-    "snap": "TAP_SNAPSHOT=1 tap test/*.js --100",
+    "test": "tap",
+    "snap": "tap",
     "preversion": "npm test",
     "postversion": "npm publish",
     "postpublish": "git push origin --follow-tags"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/read-package-tree"
+    "url": "https://github.com/npm/arborist"
   },
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/npm/read-package-tree/issues"
-  },
-  "homepage": "https://github.com/npm/read-package-tree",
   "files": [
     "index.js",
     "lib/*.js"

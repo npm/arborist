@@ -112,23 +112,19 @@ roots.forEach(function (root) {
   }))
 })
 
-test('linkedroot', function (t) {
+test('linkedroot', t => {
   var dir = path.resolve(fixtures, 'linkedroot')
   // test legacy cb nature
-  return rpt(dir, function (er, d) {
-    if (er && er.code !== 'ENOENT') throw er
-
+  return rpt(dir).then(d => {
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
     t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
   })
 })
 
-test('deeproot', function (t) {
+test('deeproot', t => {
   var dir = path.resolve(fixtures, 'deeproot/root')
-  return rpt(dir, function (er, d) {
-    if (er && er.code !== 'ENOENT') throw er
-
+  return rpt(dir).then(d => {
     t.matchSnapshot(archyPhysical(d), 'physical')
     t.matchSnapshot(archyLogical(d), 'logical')
     t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
@@ -146,6 +142,17 @@ test('looking outside of cwd', t => {
   })
 })
 
+test('cwd is default root', t => {
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  process.chdir('test/fixtures/root')
+  return rpt().then(d => {
+    t.matchSnapshot(archyPhysical(d), 'physical')
+    t.matchSnapshot(archyLogical(d), 'logical')
+    t.matchSnapshot(JSON.stringify(d.packageLock, null, 2), 'package lock')
+  })
+})
+
 test('shake out Link target timing issue', t => {
   process.env._TEST_RPT_SLOW_LINK_TARGET_ = '1'
   const cwd = process.cwd()
@@ -157,17 +164,15 @@ test('shake out Link target timing issue', t => {
   })
 })
 
-test('broken json', function (t) {
-  rpt(path.resolve(fixtures, 'bad'), function (er, d) {
+test('broken json', t =>
+  rpt(path.resolve(fixtures, 'bad')).then(d => {
     t.ok(d.error, 'Got an error object')
     t.equal(d.error && d.error.code, 'EJSONPARSE')
     t.ok(d, 'Got a tree')
-    t.end()
-  })
-})
+  }))
 
-test('missing json does not obscure deeper errors', function (t) {
-  rpt(path.resolve(fixtures, 'empty'), function (er, d) {
+test('missing json does not obscure deeper errors', t =>
+  rpt(path.resolve(fixtures, 'empty')).then(d => {
     var error = d.error
     t.ok(error, 'Error reading json of top level')
     t.equal(error && error.code, 'ENOENT')
@@ -175,28 +180,20 @@ test('missing json does not obscure deeper errors', function (t) {
     t.ok(childError, 'Error parsing JSON of child node')
     t.equal(childError && childError.code, 'EJSONPARSE')
     t.end()
-  })
-})
+  }))
 
-test('missing folder', function (t) {
-  rpt(path.resolve(fixtures, 'does-not-exist'), function (er, d) {
-    t.ok(er, 'Got an error object')
-    t.equal(er && er.code, 'ENOENT')
-    t.ok(!d, 'No tree on top level error')
-    t.end()
-  })
-})
+test('missing folder', t =>
+  t.rejects(rpt(path.resolve(fixtures, 'does-not-exist')), {
+    code: 'ENOENT'
+  }))
 
-test('missing symlinks', function (t) {
-  rpt(path.resolve(fixtures, 'badlink'), function (er, d) {
-    if (er && er.code !== 'ENOENT') throw er
+test('missing symlinks', t =>
+  rpt(path.resolve(fixtures, 'badlink')).then(d => {
     t.is(d.children.length, 2, 'both broken children are included')
     d.children.forEach(function (child) {
       t.ok(child.error, 'Child node has an error')
     })
-    t.end()
-  })
-})
+  }))
 
 test('realpath gutchecks', t => {
   const d = path.resolve(cwd, 'test/fixtures')

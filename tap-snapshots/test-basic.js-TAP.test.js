@@ -5,6 +5,123 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/basic.js TAP cwd is default root > logical 1`] = `
+root@1.2.3 test/fixtures/root
+├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
+│ ├─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
+│ │ ├── graceful-fs@3.0.2 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
+│ │ ├── inherits@2.0.1 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
+│ │ ├─┬ minimatch@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
+│ │ │ ├── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+│ │ │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+│ │ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once (deduped)
+│ │ └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
+│ ├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y (deduped)
+│ │ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│ │   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+│ │   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+│ └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+├─┬ @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+│ └─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y) (deduped)
+│   ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+│   └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+  ├── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+  └── @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x (deduped)
+`
+
+exports[`test/basic.js TAP cwd is default root > package lock 1`] = `
+{
+  "name": "root",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@scope/x": {
+      "version": "1.2.3",
+      "requires": {
+        "glob": "4",
+        "@scope/y": ""
+      },
+      "dependencies": {
+        "glob": {
+          "version": "4.0.5",
+          "integrity": "sha1-qmCKL2xXetNX4a5aXCbZqNGWklU=",
+          "requires": {
+            "graceful-fs": "",
+            "inherits": "",
+            "minimatch": "",
+            "once": ""
+          },
+          "dependencies": {
+            "graceful-fs": {
+              "version": "3.0.2"
+            },
+            "inherits": {
+              "version": "2.0.1"
+            },
+            "minimatch": {
+              "version": "1.0.0",
+              "requires": {
+                "sigmund": "",
+                "lru-cache": "",
+                "once": ""
+              },
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.5.0"
+                },
+                "sigmund": {
+                  "version": "1.0.0"
+                }
+              }
+            },
+            "once": {
+              "version": "1.3.0"
+            }
+          }
+        }
+      }
+    },
+    "@scope/y": {
+      "version": "1.2.3",
+      "requires": {
+        "foo": "99.x"
+      }
+    },
+    "foo": {
+      "version": "1.2.3",
+      "requires": {
+        "express": "npm:abbrev@*",
+        "@scope/x": ""
+      },
+      "dependencies": {
+        "express": {
+          "version": "npm:abbrev@1.1.1",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+        }
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP cwd is default root > physical 1`] = `
+root@1.2.3 test/fixtures/root
+├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x
+│ └─┬ glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob
+│   ├── graceful-fs@3.0.2 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs
+│   ├── inherits@2.0.1 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits
+│   ├─┬ minimatch@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch
+│   │ ├── lru-cache@2.5.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache
+│   │ └── sigmund@1.0.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund
+│   └── once@1.3.0 test/fixtures/root/node_modules/@scope/x/node_modules/glob/node_modules/once
+├── @scope/y@1.2.3 test/fixtures/root/node_modules/@scope/y
+└─┬ foo@1.2.3 test/fixtures/root/node_modules/foo (invalid for test/fixtures/root/node_modules/@scope/y)
+  └── abbrev@1.1.1 test/fixtures/root/node_modules/foo/node_modules/express
+`
+
 exports[`test/basic.js TAP deepmixedloop > logical 1`] = `
 root@ test/fixtures/deepmixedloop
 ├─┬ x@ test/fixtures/deepmixedloop/node_modules/x

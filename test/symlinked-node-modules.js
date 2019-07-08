@@ -33,22 +33,14 @@ var fixture = new Tacks(Dir({
   })
 }))
 
-function setup () {
-  cleanup()
-  fixture.create(workdir)
-}
+const setup = () => cleanup().then(() => fixture.create(workdir))
 
-function cleanup () {
-  fixture.remove(workdir)
-}
+const cleanup = () => Promise.resolve(fixture.remove(workdir))
 
-test('setup', function (t) {
-  setup()
-  t.done()
-})
-test('symlinked-node-modules', function (t) {
-  rpt(path.join(workdir, 'example'), function (err, tree) {
-    t.ifError(err)
+test('setup', t => setup())
+
+test('symlinked-node-modules', t =>
+  rpt(path.join(workdir, 'example')).then(tree => {
     t.is(tree.children.length, 2)
     var childrenShouldBe = {
       'foo': {isLink: false},
@@ -61,10 +53,6 @@ test('symlinked-node-modules', function (t) {
         path.relative(workdir, child.path) + " + " +
         path.relative(workdir, child.realpath))
     })
-    t.done()
-  })
-})
-test('cleanup', function (t) {
-  cleanup()
-  t.done()
-})
+  }))
+
+test('cleanup', t => cleanup())

@@ -344,7 +344,8 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
   })
 }))
 
-test(`rpt's own package-lock.json`, t =>
+const skipCI = process.env.CI ? 'npm ci does not match npm i' : false
+test(`rpt's own package-lock.json`, { skip: skipCI }, t =>
   rpt(cwd).then(d => {
     const rptlock = d.packageLock
     const npmlock = JSON.parse(fs.readFileSync(cwd + '/package-lock.json', 'utf8'))

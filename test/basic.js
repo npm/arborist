@@ -17,6 +17,7 @@ var roots = [
   'deepmixedloop',
   'mixedmidway',
   'workspace',
+  'optofdev',
 ]
 
 var cwd = path.resolve(__dirname, '..')
@@ -349,7 +350,7 @@ test(`rpt's own package-lock.json`, { skip: skipCI }, t =>
   rpt(cwd).then(d => {
     const rptlock = d.packageLock
     const npmlock = JSON.parse(fs.readFileSync(cwd + '/package-lock.json', 'utf8'))
-    t.same(rptlock, npmlock)
+    t.has(rptlock, npmlock)
   }))
 
 const skipCleanup = {

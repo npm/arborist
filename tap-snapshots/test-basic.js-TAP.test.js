@@ -670,18 +670,21 @@ exports[`test/basic.js TAP mixedloop > package lock 1`] = `
     },
     "c": {
       "version": "1.2.3",
+      "devOptional": true,
       "requires": {
         "d": ""
       }
     },
     "d": {
       "version": "1.2.3",
+      "devOptional": true,
       "requires": {
         "e": ""
       }
     },
     "e": {
-      "version": "1.2.3"
+      "version": "1.2.3",
+      "devOptional": true
     }
   }
 }
@@ -753,7 +756,8 @@ exports[`test/basic.js TAP mixedmidway > package lock 1`] = `
       }
     },
     "c": {
-      "version": "1.2.3"
+      "version": "1.2.3",
+      "devOptional": true
     },
     "i": {
       "version": "",
@@ -764,12 +768,14 @@ exports[`test/basic.js TAP mixedmidway > package lock 1`] = `
     },
     "j": {
       "version": "",
+      "devOptional": true,
       "requires": {
         "k": ""
       }
     },
     "k": {
       "version": "",
+      "devOptional": true,
       "requires": {
         "c": ""
       }
@@ -898,6 +904,71 @@ optionalloop@ test/fixtures/optionalloop
 ├── b@1.2.3 test/fixtures/optionalloop/node_modules/b
 ├── c@1.2.3 test/fixtures/optionalloop/node_modules/c
 └── d@1.2.3 test/fixtures/optionalloop/node_modules/d
+`
+
+exports[`test/basic.js TAP optofdev > logical 1`] = `
+optofdev@ test/fixtures/optofdev
+└─┬ a@ test/fixtures/optofdev/node_modules/a
+  ├─┬ d@ test/fixtures/optofdev/node_modules/d (deduped)
+  │ └── e@ test/fixtures/optofdev/node_modules/e (deduped)
+  └─┬ b@ test/fixtures/optofdev/node_modules/b (deduped)
+    └─┬ c@ test/fixtures/optofdev/node_modules/c (deduped)
+      └── e@ test/fixtures/optofdev/node_modules/e (deduped)
+`
+
+exports[`test/basic.js TAP optofdev > package lock 1`] = `
+{
+  "name": "optofdev",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "a": {
+      "version": "",
+      "dev": true,
+      "requires": {
+        "d": "",
+        "b": ""
+      }
+    },
+    "b": {
+      "version": "",
+      "dev": true,
+      "optional": true,
+      "requires": {
+        "c": ""
+      }
+    },
+    "c": {
+      "version": "",
+      "dev": true,
+      "optional": true,
+      "requires": {
+        "e": ""
+      }
+    },
+    "d": {
+      "version": "",
+      "dev": true,
+      "requires": {
+        "e": ""
+      }
+    },
+    "e": {
+      "version": "",
+      "dev": true
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP optofdev > physical 1`] = `
+optofdev@ test/fixtures/optofdev
+├── a@ test/fixtures/optofdev/node_modules/a
+├── b@ test/fixtures/optofdev/node_modules/b
+├── c@ test/fixtures/optofdev/node_modules/c
+├── d@ test/fixtures/optofdev/node_modules/d
+└── e@ test/fixtures/optofdev/node_modules/e
 `
 
 exports[`test/basic.js TAP other > logical 1`] = `

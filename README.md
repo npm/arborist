@@ -119,6 +119,26 @@ to a package folder, which may have children in `node_modules`.
   objects, always `true` for Link objects.
 * `node.isTop` True if this node is the top of its tree, false otherwise.
 * `node.top` The top node in this node's tree.
+* `node.dev`, `node.optional`, `node.devOptional` Indicators as to whether
+  this node is a dev dependency and/or optional dependency.  These flags
+  are relevant when pruning optional and/or dev dependencies out of the
+  tree.
+  * If none of these flags are set, then the node is required by the
+    dependency and/or peerDependency hierarchy.  It should not be pruned.
+  * If _both_ `node.dev` and `node.optional` are set, then the node is an
+    optional dependency of one of the packages in the devDependency
+    hierarchy.  It should be pruned if _either_ dev or optional deps are
+    being removed.
+  * If `node.dev` is set, but `node.optional` is not, then the node is
+    required in the devDependency hierarchy.  It should be pruned if dev
+    dependencies are being removed.
+  * If `node.optional` is set, but `node.dev` is not, then the node is
+    required in the optionalDependency hierarchy.  It should be pruned if
+    optional dependencies are being removed.
+  * If `node.devOptional` is set, then the node is a (non-optional)
+    dependency within the devDependency hierarchy, _and_ a dependency
+    within the `optionalDependency` hierarchy.  It should be pruned if
+    _both_ dev and optional dependencies are being removed.
 * `node.warnings` A list of warnings pertaining to this package.
 * `node.dependencies` Nodes that this one depends on, which resolve its
   dependencies.

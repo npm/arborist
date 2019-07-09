@@ -5,13 +5,13 @@
   "dependencies": {
     "npm-package-arg": "^6.1.0",
     "read-package-json": "^2.0.13",
-    "readdir-scoped-modules": "^1.0.0",
+    "readdir-scoped-modules": "^1.1.0",
     "semver": "^6.1.2"
   },
   "devDependencies": {
     "archy": "^1.0.0",
     "mkdirp": "^0.5.1",
-    "tacks": "^1.2.1",
+    "tacks": "^1.3.0",
     "tap": "^14.4.1"
   },
   "scripts": {

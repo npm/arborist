@@ -5,6 +5,31 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/basic.js TAP bundle > logical 1`] = `
+bundle@ test/fixtures/bundle
+└── dep@ test/fixtures/bundle/node_modules/dep
+`
+
+exports[`test/basic.js TAP bundle > package lock 1`] = `
+{
+  "name": "bundle",
+  "version": "",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "dep": {
+      "version": "",
+      "bundled": true
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP bundle > physical 1`] = `
+bundle@ test/fixtures/bundle
+└── dep@ test/fixtures/bundle/node_modules/dep
+`
+
 exports[`test/basic.js TAP cwd is default root > logical 1`] = `
 root@1.2.3 test/fixtures/root
 ├─┬ @scope/x@1.2.3 test/fixtures/root/node_modules/@scope/x

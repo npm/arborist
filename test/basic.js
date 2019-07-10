@@ -18,6 +18,7 @@ var roots = [
   'mixedmidway',
   'workspace',
   'optofdev',
+  'bundle',
 ]
 
 var cwd = path.resolve(__dirname, '..')
@@ -344,14 +345,6 @@ test('walking through trees', t => rpt('test/fixtures/root').then(d => {
     t.end()
   })
 }))
-
-const skipCI = process.env.CI ? 'npm ci does not match npm i' : false
-test(`rpt's own package-lock.json`, { skip: skipCI }, t =>
-  rpt(cwd).then(d => {
-    const rptlock = d.packageLock
-    const npmlock = JSON.parse(fs.readFileSync(cwd + '/package-lock.json', 'utf8'))
-    t.has(rptlock, npmlock)
-  }))
 
 const skipCleanup = {
   skip: process.env.NO_CLEANUP === '1'

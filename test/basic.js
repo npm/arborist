@@ -19,6 +19,7 @@ var roots = [
   'workspace',
   'optofdev',
   'bundle',
+  'links-all-over',
 ]
 
 var cwd = path.resolve(__dirname, '..')
@@ -42,6 +43,14 @@ var symlinks = {
   'workspace/packages/b/node_modules/c': '../../../packages/c',
   'workspace/packages/c/node_modules/a': '../../../packages/a',
   'workspace/packages/c/node_modules/b': '../../../packages/b',
+
+  'test/fixtures/links-all-over/node_modules/link-outside-nest':
+    '../real',
+  'test/fixtures/links-all-over/node_modules/link-deep':
+    'nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep',
+  'test/fixtures/links-all-over/node_modules/link-link': 'link-deep',
+  'test/fixtures/links-all-over/node_modules/nest/node_modules/link-in-nest':
+    '../../../real',
 }
 
 function cleanup () {
@@ -54,11 +63,11 @@ function cleanup () {
 }
 
 const dpath = path =>
-  path.indexOf(cwd) === 0 ? path.substr(cwd.length + 1) : path
+  path && path.indexOf(cwd) === 0 ? path.substr(cwd.length + 1) : path
 
 const archyize = {
   enter (d) {
-    const path = d.target ? d.target.path : d.path
+    const path = d.target ? d.target.path || d.target.realpath : d.path || d.realpath
     const {_id, version, name} = d.package
     const label = (
       !Object.keys(d.package).length ? '' :
@@ -68,8 +77,10 @@ const archyize = {
       ''
     ) + dpath(path)
     + (d.target ? ' (symlink)' : '')
-    + (d.invalidTo.size ? (' (invalid for ' + [...d.invalidTo].map(node =>
-      dpath((node.target || node).path)).join(' ') + ')') : '')
+    + (d.invalidTo.size ? (' (invalid for ' + [...d.invalidTo].map(node => {
+      node = node.target || node
+      return dpath(node.path || node.realpath)
+    }).join(' ') + ')') : '')
 
     return {
       label,

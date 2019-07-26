@@ -543,6 +543,99 @@ root@1.2.3 test/fixtures/linkedroot
   └── abbrev@1.1.1 test/fixtures/linkedroot/node_modules/foo/node_modules/express
 `
 
+exports[`test/basic.js TAP links-all-over > logical 1`] = `
+links-all-over@1.2.3 test/fixtures/links-all-over
+├─┬ nest@1.2.3 test/fixtures/links-all-over/node_modules/nest
+│ ├─┬ a@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a
+│ │ └── test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b
+│ └── real@1.2.3 test/fixtures/links-all-over/real (symlink)
+├── real@1.2.3 test/fixtures/links-all-over/real (symlink)
+├── deep@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep (symlink)
+└── deep@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep (symlink)
+`
+
+exports[`test/basic.js TAP links-all-over > package lock 1`] = `
+{
+  "name": "links-all-over",
+  "version": "1.2.3",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "deep": {
+      "version": "file:test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "requires": {
+        "deep-a": ""
+      }
+    },
+    "real": {
+      "version": "file:test/fixtures/links-all-over/real"
+    },
+    "nest": {
+      "version": "1.2.3",
+      "requires": {
+        "a": "",
+        "link-in-nest": ""
+      },
+      "dependencies": {
+        "a": {
+          "version": "1.2.3",
+          "requires": {
+            "b": ""
+          },
+          "dependencies": {
+            "b": {
+              "dependencies": {
+                "c": {
+                  "version": "1.2.3",
+                  "extraneous": true,
+                  "dependencies": {
+                    "d": {
+                      "version": "1.2.3",
+                      "extraneous": true,
+                      "dependencies": {
+                        "deep": {
+                          "version": "1.2.3",
+                          "requires": {
+                            "deep-a": ""
+                          },
+                          "dependencies": {
+                            "deep-a": {
+                              "version": "1.2.3"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "real": {
+          "version": "file:test/fixtures/links-all-over/real"
+        }
+      }
+    }
+  }
+}
+`
+
+exports[`test/basic.js TAP links-all-over > physical 1`] = `
+links-all-over@1.2.3 test/fixtures/links-all-over
+├── deep@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep (symlink)
+├── deep@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep (symlink)
+├── real@1.2.3 test/fixtures/links-all-over/real (symlink)
+└─┬ nest@1.2.3 test/fixtures/links-all-over/node_modules/nest
+  ├─┬ a@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a
+  │ └─┬ test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b
+  │   └─┬ c@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c
+  │     └─┬ d@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d
+  │       └─┬ deep@1.2.3 test/fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep
+  │         └── deep-a@1.2.3 null/node_modules/deep-a
+  └── real@1.2.3 test/fixtures/links-all-over/real (symlink)
+`
+
 exports[`test/basic.js TAP looking outside of cwd > logical 1`] = `
 root@1.2.3 ../root
 ├─┬ @scope/x@1.2.3 ../root/node_modules/@scope/x
@@ -1017,7 +1110,7 @@ exports[`test/basic.js TAP other > package lock 1`] = `
 
 exports[`test/basic.js TAP other > physical 1`] = `
 test/fixtures/other
-└── glob@4.0.5 test/fixtures/other/node_modules/glob (symlink)
+└── glob@4.0.5 test/fixtures/root/node_modules/@scope/x/node_modules/glob (symlink)
 `
 
 exports[`test/basic.js TAP root > logical 1`] = `
@@ -3059,9 +3152,9 @@ Array [
 
 exports[`test/basic.js TAP workspace > logical 1`] = `
 workspace@ test/fixtures/workspace
-├── a@ test/fixtures/workspace/node_modules/a (symlink)
-├── b@ test/fixtures/workspace/node_modules/b (symlink)
-└── c@ test/fixtures/workspace/node_modules/c (symlink)
+├── a@ test/fixtures/workspace/packages/a (symlink)
+├── b@ test/fixtures/workspace/packages/b (symlink)
+└── c@ test/fixtures/workspace/packages/c (symlink)
 `
 
 exports[`test/basic.js TAP workspace > package lock 1`] = `
@@ -3098,7 +3191,7 @@ exports[`test/basic.js TAP workspace > package lock 1`] = `
 
 exports[`test/basic.js TAP workspace > physical 1`] = `
 workspace@ test/fixtures/workspace
-├── a@ test/fixtures/workspace/node_modules/a (symlink)
-├── b@ test/fixtures/workspace/node_modules/b (symlink)
-└── c@ test/fixtures/workspace/node_modules/c (symlink)
+├── a@ test/fixtures/workspace/packages/a (symlink)
+├── b@ test/fixtures/workspace/packages/b (symlink)
+└── c@ test/fixtures/workspace/packages/c (symlink)
 `

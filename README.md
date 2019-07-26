@@ -108,9 +108,15 @@ to a package folder, which may have children in `node_modules`.
 * `node.name` The name of this node's folder in `node_modules`.
 * `node.parent` Physical parent node in the tree.  The package in whose
   `node_modules` folder this package lives.  Null if node is top of tree.
+
+    Setting `node.parent` will automatically update `node.location` for
+    this node and all of its children.
+
 * `node.children` The packages located in the node's `node_modules` folder.
 * `node.package` The contents of this node's `package.json` file.
-* `node.path` Full real file path to this package.
+* `node.path` File path to this package.  If a node is a link target, and
+  lives outside of the tree, then `node.path` will be null.
+* `node.realpath` The full real filepath on disk where this node lives.
 * `node.location` A logical unix-style `/package/package/...` style path
   indicating where this package lives in its tree.  Note that link targets
   typically always have a location of `/`, as they are the root of their

@@ -40,13 +40,6 @@ Node {
   "name": "root",
   "location": "/",
   "edgesOut": Map {
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-      "error": "MISSING",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -65,6 +58,13 @@ Node {
       "spec": "*",
       "to": "/foo",
     },
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+      "error": "MISSING",
+    },
   },
   "children": Map {
     "@scope/x" => Node {
@@ -73,15 +73,15 @@ Node {
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "prod",
           "spec": "1",
           "from": "/",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "from": "/@scope/x",
         },
         Edge {
           "name": "@scope/x",
@@ -91,18 +91,17 @@ Node {
         },
       },
       "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "/@scope/x",
+        },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "/@scope/y",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": null,
-          "error": "MISSING",
         },
         "express" => Edge {
           "name": "express",
@@ -111,11 +110,39 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "@scope/x" => Edge {
-          "name": "@scope/x",
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": null,
+          "error": "MISSING",
+        },
+      },
+    },
+    "@scope/y" => Node {
+      "name": "@scope/y",
+      "location": "/@scope/y",
+      "edgesIn": Set {
+        Edge {
+          "name": "@scope/y",
           "type": "peer",
+          "spec": ">0.99.0",
+          "from": "/",
+        },
+        Edge {
+          "name": "@scope/y",
+          "type": "optional",
           "spec": "",
-          "to": "/@scope/x",
+          "from": "/@scope/x",
+        },
+      },
+      "edgesOut": Map {
+        "foo" => Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "to": "/foo",
+          "error": "INVALID",
         },
       },
     },
@@ -153,33 +180,6 @@ Node {
         },
       },
     },
-    "@scope/y" => Node {
-      "name": "@scope/y",
-      "location": "/@scope/y",
-      "edgesIn": Set {
-        Edge {
-          "name": "@scope/y",
-          "type": "peer",
-          "spec": ">0.99.0",
-          "from": "/",
-        },
-        Edge {
-          "name": "@scope/y",
-          "type": "optional",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-      },
-      "edgesOut": Map {
-        "foo" => Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "to": "/foo",
-          "error": "INVALID",
-        },
-      },
-    },
   },
 }
 `
@@ -189,17 +189,17 @@ Node {
   "name": "deepmixedloop",
   "location": "/",
   "edgesOut": Map {
-    "x" => Edge {
-      "name": "x",
-      "type": "prod",
-      "spec": "",
-      "to": "/x",
-    },
     "i" => Edge {
       "name": "i",
       "type": "dev",
       "spec": "",
       "to": "/i",
+    },
+    "x" => Edge {
+      "name": "x",
+      "type": "prod",
+      "spec": "",
+      "to": "/x",
     },
   },
   "children": Map {
@@ -428,13 +428,6 @@ Node {
   "name": "root",
   "location": "/",
   "edgesOut": Map {
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-      "error": "MISSING",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -453,6 +446,13 @@ Node {
       "spec": "*",
       "to": "/foo",
     },
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+      "error": "MISSING",
+    },
   },
   "children": Map {
     "@scope/x" => Node {
@@ -461,15 +461,15 @@ Node {
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "prod",
           "spec": "1",
           "from": "/",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "from": "/@scope/x",
         },
         Edge {
           "name": "@scope/x",
@@ -479,17 +479,17 @@ Node {
         },
       },
       "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "/@scope/x",
+        },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "/@scope/y",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "/@scope/x/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -498,11 +498,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "to": "/@scope/x",
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "/@scope/x/glob",
         },
       },
       "children": Map {
@@ -580,12 +580,6 @@ Node {
                 },
               },
               "edgesOut": Map {
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "/@scope/x/glob/minimatch/sigmund",
-                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -597,6 +591,12 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "/@scope/x/glob/once",
+                },
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/minimatch/sigmund",
                 },
               },
               "children": Map {
@@ -645,6 +645,33 @@ Node {
               },
             },
           },
+        },
+      },
+    },
+    "@scope/y" => Node {
+      "name": "@scope/y",
+      "location": "/@scope/y",
+      "edgesIn": Set {
+        Edge {
+          "name": "@scope/y",
+          "type": "peer",
+          "spec": ">0.99.0",
+          "from": "/",
+        },
+        Edge {
+          "name": "@scope/y",
+          "type": "optional",
+          "spec": "",
+          "from": "/@scope/x",
+        },
+      },
+      "edgesOut": Map {
+        "foo" => Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "to": "/foo",
+          "error": "INVALID",
         },
       },
     },
@@ -704,33 +731,6 @@ Node {
         },
       },
     },
-    "@scope/y" => Node {
-      "name": "@scope/y",
-      "location": "/@scope/y",
-      "edgesIn": Set {
-        Edge {
-          "name": "@scope/y",
-          "type": "peer",
-          "spec": ">0.99.0",
-          "from": "/",
-        },
-        Edge {
-          "name": "@scope/y",
-          "type": "optional",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-      },
-      "edgesOut": Map {
-        "foo" => Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "to": "/foo",
-          "error": "INVALID",
-        },
-      },
-    },
   },
 }
 `
@@ -740,17 +740,17 @@ Node {
   "name": "devloop",
   "location": "/",
   "edgesOut": Map {
-    "c" => Edge {
-      "name": "c",
-      "type": "prod",
-      "spec": "",
-      "to": "/c",
-    },
     "a" => Edge {
       "name": "a",
       "type": "dev",
       "spec": "",
       "to": "/a",
+    },
+    "c" => Edge {
+      "name": "c",
+      "type": "prod",
+      "spec": "",
+      "to": "/c",
     },
   },
   "children": Map {
@@ -853,13 +853,6 @@ Node {
   "name": "linkedroot",
   "location": "/",
   "edgesOut": Map {
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-      "error": "MISSING",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -878,79 +871,30 @@ Node {
       "spec": "*",
       "to": "/foo",
     },
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+      "error": "MISSING",
+    },
   },
   "children": Map {
-    "foo" => Node {
-      "name": "foo",
-      "location": "/foo",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "/",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "/@scope/y",
-          "error": "INVALID",
-        },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "optional",
-          "spec": "",
-          "to": "/@scope/x",
-        },
-        "express" => Edge {
-          "name": "express",
-          "type": "prod",
-          "spec": "npm:abbrev@*",
-          "to": "/foo/express",
-        },
-      },
-      "children": Map {
-        "express" => Node {
-          "name": "express",
-          "location": "/foo/express",
-          "edgesIn": Set {
-            Edge {
-              "name": "express",
-              "type": "prod",
-              "spec": "npm:abbrev@*",
-              "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
-            },
-          },
-        },
-      },
-    },
     "@scope/x" => Node {
       "name": "@scope/x",
       "location": "/@scope/x",
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "prod",
           "spec": "1",
           "from": "/",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "from": "/@scope/x",
         },
         Edge {
           "name": "@scope/x",
@@ -960,17 +904,17 @@ Node {
         },
       },
       "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "/@scope/x",
+        },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "/@scope/y",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "/@scope/x/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -979,11 +923,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "to": "/@scope/x",
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "/@scope/x/glob",
         },
       },
       "children": Map {
@@ -1049,24 +993,6 @@ Node {
                 },
               },
             },
-            "once" => Node {
-              "name": "once",
-              "location": "/@scope/x/glob/once",
-              "edgesIn": Set {
-                Edge {
-                  "name": "once",
-                  "type": "prod",
-                  "spec": "",
-                  "from": "/@scope/x/glob",
-                },
-                Edge {
-                  "name": "once",
-                  "type": "prod",
-                  "spec": "",
-                  "from": "/@scope/x/glob/minimatch",
-                },
-              },
-            },
             "minimatch" => Node {
               "name": "minimatch",
               "location": "/@scope/x/glob/minimatch",
@@ -1079,12 +1005,6 @@ Node {
                 },
               },
               "edgesOut": Map {
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "/@scope/x/glob/minimatch/sigmund",
-                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -1096,6 +1016,12 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "/@scope/x/glob/once",
+                },
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/minimatch/sigmund",
                 },
               },
               "children": Map {
@@ -1122,6 +1048,24 @@ Node {
                       "from": "/@scope/x/glob/minimatch",
                     },
                   },
+                },
+              },
+            },
+            "once" => Node {
+              "name": "once",
+              "location": "/@scope/x/glob/once",
+              "edgesIn": Set {
+                Edge {
+                  "name": "once",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob",
+                },
+                Edge {
+                  "name": "once",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob/minimatch",
                 },
               },
             },
@@ -1156,6 +1100,62 @@ Node {
         },
       },
     },
+    "foo" => Node {
+      "name": "foo",
+      "location": "/foo",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "/",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "/@scope/y",
+          "error": "INVALID",
+        },
+      },
+      "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "optional",
+          "spec": "",
+          "to": "/@scope/x",
+        },
+        "express" => Edge {
+          "name": "express",
+          "type": "prod",
+          "spec": "npm:abbrev@*",
+          "to": "/foo/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "/foo/express",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "/foo",
+            },
+          },
+          "edgesOut": Map {
+            "tap" => Edge {
+              "name": "tap",
+              "type": "dev",
+              "spec": "^10.1",
+              "to": null,
+              "error": "MISSING",
+            },
+          },
+        },
+      },
+    },
   },
 }
 `
@@ -1165,18 +1165,6 @@ Node {
   "name": "links-all-over",
   "location": "/",
   "edgesOut": Map {
-    "nest" => Edge {
-      "name": "nest",
-      "type": "prod",
-      "spec": "",
-      "to": "/nest",
-    },
-    "link-outside-nest" => Edge {
-      "name": "link-outside-nest",
-      "type": "prod",
-      "spec": "",
-      "to": "/link-outside-nest",
-    },
     "link-deep" => Edge {
       "name": "link-deep",
       "type": "prod",
@@ -1189,8 +1177,68 @@ Node {
       "spec": "",
       "to": "/link-link",
     },
+    "link-outside-nest" => Edge {
+      "name": "link-outside-nest",
+      "type": "prod",
+      "spec": "",
+      "to": "/link-outside-nest",
+    },
+    "nest" => Edge {
+      "name": "nest",
+      "type": "prod",
+      "spec": "",
+      "to": "/nest",
+    },
   },
   "children": Map {
+    "link-deep" => Link {
+      "name": "link-deep",
+      "location": "/link-deep",
+      "target": Object {
+        "name": "deep",
+        "parent": "/nest/a/b/c/d",
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "link-deep",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+    "link-link" => Link {
+      "name": "link-link",
+      "location": "/link-link",
+      "target": Object {
+        "name": "deep",
+        "parent": "/nest/a/b/c/d",
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "link-link",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+    "link-outside-nest" => Link {
+      "name": "link-outside-nest",
+      "location": "/link-outside-nest",
+      "target": Object {
+        "name": "real",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "link-outside-nest",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
     "nest" => Node {
       "name": "nest",
       "location": "/nest",
@@ -1341,54 +1389,6 @@ Node {
         },
       },
     },
-    "link-outside-nest" => Link {
-      "name": "link-outside-nest",
-      "location": "/link-outside-nest",
-      "target": Object {
-        "name": "real",
-        "parent": null,
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "link-outside-nest",
-          "type": "prod",
-          "spec": "",
-          "from": "/",
-        },
-      },
-    },
-    "link-link" => Link {
-      "name": "link-link",
-      "location": "/link-link",
-      "target": Object {
-        "name": "deep",
-        "parent": "/nest/a/b/c/d",
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "link-link",
-          "type": "prod",
-          "spec": "",
-          "from": "/",
-        },
-      },
-    },
-    "link-deep" => Link {
-      "name": "link-deep",
-      "location": "/link-deep",
-      "target": Object {
-        "name": "deep",
-        "parent": "/nest/a/b/c/d",
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "link-deep",
-          "type": "prod",
-          "spec": "",
-          "from": "/",
-        },
-      },
-    },
   },
 }
 `
@@ -1398,13 +1398,6 @@ Node {
   "name": "root",
   "location": "/",
   "edgesOut": Map {
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-      "error": "MISSING",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -1423,79 +1416,30 @@ Node {
       "spec": "*",
       "to": "/foo",
     },
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+      "error": "MISSING",
+    },
   },
   "children": Map {
-    "foo" => Node {
-      "name": "foo",
-      "location": "/foo",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "/",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "/@scope/y",
-          "error": "INVALID",
-        },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "optional",
-          "spec": "",
-          "to": "/@scope/x",
-        },
-        "express" => Edge {
-          "name": "express",
-          "type": "prod",
-          "spec": "npm:abbrev@*",
-          "to": "/foo/express",
-        },
-      },
-      "children": Map {
-        "express" => Node {
-          "name": "express",
-          "location": "/foo/express",
-          "edgesIn": Set {
-            Edge {
-              "name": "express",
-              "type": "prod",
-              "spec": "npm:abbrev@*",
-              "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
-            },
-          },
-        },
-      },
-    },
     "@scope/x" => Node {
       "name": "@scope/x",
       "location": "/@scope/x",
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "prod",
           "spec": "1",
           "from": "/",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "from": "/@scope/x",
         },
         Edge {
           "name": "@scope/x",
@@ -1505,17 +1449,17 @@ Node {
         },
       },
       "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "/@scope/x",
+        },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "/@scope/y",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "/@scope/x/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -1524,11 +1468,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "to": "/@scope/x",
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "/@scope/x/glob",
         },
       },
       "children": Map {
@@ -1606,12 +1550,6 @@ Node {
                 },
               },
               "edgesOut": Map {
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "/@scope/x/glob/minimatch/sigmund",
-                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -1623,6 +1561,12 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "/@scope/x/glob/once",
+                },
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/minimatch/sigmund",
                 },
               },
               "children": Map {
@@ -1698,6 +1642,62 @@ Node {
           "spec": "99.x",
           "to": "/foo",
           "error": "INVALID",
+        },
+      },
+    },
+    "foo" => Node {
+      "name": "foo",
+      "location": "/foo",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "/",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "/@scope/y",
+          "error": "INVALID",
+        },
+      },
+      "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "optional",
+          "spec": "",
+          "to": "/@scope/x",
+        },
+        "express" => Edge {
+          "name": "express",
+          "type": "prod",
+          "spec": "npm:abbrev@*",
+          "to": "/foo/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "/foo/express",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "/foo",
+            },
+          },
+          "edgesOut": Map {
+            "tap" => Edge {
+              "name": "tap",
+              "type": "dev",
+              "spec": "^10.1",
+              "to": null,
+              "error": "MISSING",
+            },
+          },
         },
       },
     },
@@ -1849,6 +1849,12 @@ Node {
       "spec": "",
       "to": "/c",
     },
+    "i" => Edge {
+      "name": "i",
+      "type": "dev",
+      "spec": "",
+      "to": "/i",
+    },
     "k" => Edge {
       "name": "k",
       "type": "optional",
@@ -1867,23 +1873,17 @@ Node {
       "spec": "",
       "to": "/m",
     },
-    "y" => Edge {
-      "name": "y",
-      "type": "optional",
-      "spec": "",
-      "to": "/y",
-    },
     "x" => Edge {
       "name": "x",
       "type": "prod",
       "spec": "",
       "to": "/x",
     },
-    "i" => Edge {
-      "name": "i",
-      "type": "dev",
+    "y" => Edge {
+      "name": "y",
+      "type": "optional",
       "spec": "",
-      "to": "/i",
+      "to": "/y",
     },
   },
   "children": Map {
@@ -2448,13 +2448,6 @@ Node {
   "name": "root",
   "location": "/",
   "edgesOut": Map {
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-      "error": "MISSING",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -2473,79 +2466,30 @@ Node {
       "spec": "*",
       "to": "/foo",
     },
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+      "error": "MISSING",
+    },
   },
   "children": Map {
-    "foo" => Node {
-      "name": "foo",
-      "location": "/foo",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "/",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "/@scope/y",
-          "error": "INVALID",
-        },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "optional",
-          "spec": "",
-          "to": "/@scope/x",
-        },
-        "express" => Edge {
-          "name": "express",
-          "type": "prod",
-          "spec": "npm:abbrev@*",
-          "to": "/foo/express",
-        },
-      },
-      "children": Map {
-        "express" => Node {
-          "name": "express",
-          "location": "/foo/express",
-          "edgesIn": Set {
-            Edge {
-              "name": "express",
-              "type": "prod",
-              "spec": "npm:abbrev@*",
-              "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
-            },
-          },
-        },
-      },
-    },
     "@scope/x" => Node {
       "name": "@scope/x",
       "location": "/@scope/x",
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "prod",
           "spec": "1",
           "from": "/",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "from": "/@scope/x",
         },
         Edge {
           "name": "@scope/x",
@@ -2555,17 +2499,17 @@ Node {
         },
       },
       "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "/@scope/x",
+        },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "/@scope/y",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "/@scope/x/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -2574,11 +2518,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "to": "/@scope/x",
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "/@scope/x/glob",
         },
       },
       "children": Map {
@@ -2656,12 +2600,6 @@ Node {
                 },
               },
               "edgesOut": Map {
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "/@scope/x/glob/minimatch/sigmund",
-                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -2673,6 +2611,12 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "/@scope/x/glob/once",
+                },
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/minimatch/sigmund",
                 },
               },
               "children": Map {
@@ -2751,6 +2695,62 @@ Node {
         },
       },
     },
+    "foo" => Node {
+      "name": "foo",
+      "location": "/foo",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "/",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "/@scope/y",
+          "error": "INVALID",
+        },
+      },
+      "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "optional",
+          "spec": "",
+          "to": "/@scope/x",
+        },
+        "express" => Edge {
+          "name": "express",
+          "type": "prod",
+          "spec": "npm:abbrev@*",
+          "to": "/foo/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "/foo/express",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "/foo",
+            },
+          },
+          "edgesOut": Map {
+            "tap" => Edge {
+              "name": "tap",
+              "type": "dev",
+              "spec": "^10.1",
+              "to": null,
+              "error": "MISSING",
+            },
+          },
+        },
+      },
+    },
   },
 }
 `
@@ -2760,12 +2760,6 @@ Node {
   "name": "selflink",
   "location": "/",
   "edgesOut": Map {
-    "foo" => Edge {
-      "name": "foo",
-      "type": "prod",
-      "spec": "",
-      "to": "/foo",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -2778,6 +2772,12 @@ Node {
       "type": "prod",
       "spec": "",
       "to": "/@scope/y",
+    },
+    "foo" => Edge {
+      "name": "foo",
+      "type": "prod",
+      "spec": "",
+      "to": "/foo",
     },
   },
   "children": Map {
@@ -2798,96 +2798,6 @@ Node {
           "type": "prod",
           "spec": "*",
           "to": "/foo",
-        },
-      },
-    },
-    "foo" => Node {
-      "name": "foo",
-      "location": "/foo",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "",
-          "from": "/",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "*",
-          "from": "/@scope/y",
-        },
-      },
-      "edgesOut": Map {
-        "selflink" => Edge {
-          "name": "selflink",
-          "type": "prod",
-          "spec": "*",
-          "to": "/foo/selflink",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "/foo/glob",
-        },
-      },
-      "children": Map {
-        "glob" => Node {
-          "name": "glob",
-          "location": "/foo/glob",
-          "edgesIn": Set {
-            Edge {
-              "name": "glob",
-              "type": "prod",
-              "spec": "4",
-              "from": "/foo",
-            },
-          },
-          "children": Map {
-            "inherits" => Node {
-              "name": "inherits",
-              "location": "/foo/glob/inherits",
-            },
-            "graceful-fs" => Node {
-              "name": "graceful-fs",
-              "location": "/foo/glob/graceful-fs",
-            },
-            "minimatch" => Node {
-              "name": "minimatch",
-              "location": "/foo/glob/minimatch",
-              "children": Map {
-                "sigmund" => Node {
-                  "name": "sigmund",
-                  "location": "/foo/glob/minimatch/sigmund",
-                },
-                "lru-cache" => Node {
-                  "name": "lru-cache",
-                  "location": "/foo/glob/minimatch/lru-cache",
-                },
-              },
-            },
-            "once" => Node {
-              "name": "once",
-              "location": "/foo/glob/once",
-            },
-          },
-        },
-        "selflink" => Link {
-          "name": "selflink",
-          "location": "/foo/selflink",
-          "target": Object {
-            "name": "selflink",
-            "parent": undefined,
-          },
-          "edgesIn": Set {
-            Edge {
-              "name": "selflink",
-              "type": "prod",
-              "spec": "*",
-              "from": "/foo",
-            },
-          },
         },
       },
     },
@@ -2916,6 +2826,96 @@ Node {
               "type": "prod",
               "spec": "4",
               "from": "/@scope/z",
+            },
+          },
+        },
+      },
+    },
+    "foo" => Node {
+      "name": "foo",
+      "location": "/foo",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "*",
+          "from": "/@scope/y",
+        },
+      },
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "/foo/glob",
+        },
+        "selflink" => Edge {
+          "name": "selflink",
+          "type": "prod",
+          "spec": "*",
+          "to": "/foo/selflink",
+        },
+      },
+      "children": Map {
+        "glob" => Node {
+          "name": "glob",
+          "location": "/foo/glob",
+          "edgesIn": Set {
+            Edge {
+              "name": "glob",
+              "type": "prod",
+              "spec": "4",
+              "from": "/foo",
+            },
+          },
+          "children": Map {
+            "graceful-fs" => Node {
+              "name": "graceful-fs",
+              "location": "/foo/glob/graceful-fs",
+            },
+            "inherits" => Node {
+              "name": "inherits",
+              "location": "/foo/glob/inherits",
+            },
+            "minimatch" => Node {
+              "name": "minimatch",
+              "location": "/foo/glob/minimatch",
+              "children": Map {
+                "lru-cache" => Node {
+                  "name": "lru-cache",
+                  "location": "/foo/glob/minimatch/lru-cache",
+                },
+                "sigmund" => Node {
+                  "name": "sigmund",
+                  "location": "/foo/glob/minimatch/sigmund",
+                },
+              },
+            },
+            "once" => Node {
+              "name": "once",
+              "location": "/foo/glob/once",
+            },
+          },
+        },
+        "selflink" => Link {
+          "name": "selflink",
+          "location": "/foo/selflink",
+          "target": Object {
+            "name": "selflink",
+            "parent": undefined,
+          },
+          "edgesIn": Set {
+            Edge {
+              "name": "selflink",
+              "type": "prod",
+              "spec": "*",
+              "from": "/foo",
             },
           },
         },
@@ -2930,12 +2930,6 @@ Node {
   "name": "selflink",
   "location": "/",
   "edgesOut": Map {
-    "foo" => Edge {
-      "name": "foo",
-      "type": "prod",
-      "spec": "",
-      "to": "/foo",
-    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -2949,98 +2943,14 @@ Node {
       "spec": "",
       "to": "/@scope/y",
     },
+    "foo" => Edge {
+      "name": "foo",
+      "type": "prod",
+      "spec": "",
+      "to": "/foo",
+    },
   },
   "children": Map {
-    "foo" => Node {
-      "name": "foo",
-      "location": "/foo",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "",
-          "from": "/",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "*",
-          "from": "/@scope/y",
-        },
-      },
-      "edgesOut": Map {
-        "selflink" => Edge {
-          "name": "selflink",
-          "type": "prod",
-          "spec": "*",
-          "to": "/foo/selflink",
-        },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "/foo/glob",
-        },
-      },
-      "children": Map {
-        "selflink" => Link {
-          "name": "selflink",
-          "location": "/foo/selflink",
-          "target": Object {
-            "name": "selflink",
-            "parent": undefined,
-          },
-          "edgesIn": Set {
-            Edge {
-              "name": "selflink",
-              "type": "prod",
-              "spec": "*",
-              "from": "/foo",
-            },
-          },
-        },
-        "glob" => Node {
-          "name": "glob",
-          "location": "/foo/glob",
-          "edgesIn": Set {
-            Edge {
-              "name": "glob",
-              "type": "prod",
-              "spec": "4",
-              "from": "/foo",
-            },
-          },
-          "children": Map {
-            "graceful-fs" => Node {
-              "name": "graceful-fs",
-              "location": "/foo/glob/graceful-fs",
-            },
-            "minimatch" => Node {
-              "name": "minimatch",
-              "location": "/foo/glob/minimatch",
-              "children": Map {
-                "lru-cache" => Node {
-                  "name": "lru-cache",
-                  "location": "/foo/glob/minimatch/lru-cache",
-                },
-                "sigmund" => Node {
-                  "name": "sigmund",
-                  "location": "/foo/glob/minimatch/sigmund",
-                },
-              },
-            },
-            "inherits" => Node {
-              "name": "inherits",
-              "location": "/foo/glob/inherits",
-            },
-            "once" => Node {
-              "name": "once",
-              "location": "/foo/glob/once",
-            },
-          },
-        },
-      },
-    },
     "@scope/y" => Node {
       "name": "@scope/y",
       "location": "/@scope/y",
@@ -3091,6 +3001,96 @@ Node {
         },
       },
     },
+    "foo" => Node {
+      "name": "foo",
+      "location": "/foo",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "*",
+          "from": "/@scope/y",
+        },
+      },
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "/foo/glob",
+        },
+        "selflink" => Edge {
+          "name": "selflink",
+          "type": "prod",
+          "spec": "*",
+          "to": "/foo/selflink",
+        },
+      },
+      "children": Map {
+        "glob" => Node {
+          "name": "glob",
+          "location": "/foo/glob",
+          "edgesIn": Set {
+            Edge {
+              "name": "glob",
+              "type": "prod",
+              "spec": "4",
+              "from": "/foo",
+            },
+          },
+          "children": Map {
+            "graceful-fs" => Node {
+              "name": "graceful-fs",
+              "location": "/foo/glob/graceful-fs",
+            },
+            "inherits" => Node {
+              "name": "inherits",
+              "location": "/foo/glob/inherits",
+            },
+            "minimatch" => Node {
+              "name": "minimatch",
+              "location": "/foo/glob/minimatch",
+              "children": Map {
+                "lru-cache" => Node {
+                  "name": "lru-cache",
+                  "location": "/foo/glob/minimatch/lru-cache",
+                },
+                "sigmund" => Node {
+                  "name": "sigmund",
+                  "location": "/foo/glob/minimatch/sigmund",
+                },
+              },
+            },
+            "once" => Node {
+              "name": "once",
+              "location": "/foo/glob/once",
+            },
+          },
+        },
+        "selflink" => Link {
+          "name": "selflink",
+          "location": "/foo/selflink",
+          "target": Object {
+            "name": "selflink",
+            "parent": undefined,
+          },
+          "edgesIn": Set {
+            Edge {
+              "name": "selflink",
+              "type": "prod",
+              "spec": "*",
+              "from": "/foo",
+            },
+          },
+        },
+      },
+    },
   },
 }
 `
@@ -3100,10 +3100,6 @@ Node {
   "name": "example",
   "location": "/",
   "children": Map {
-    "foo" => Node {
-      "name": "foo",
-      "location": "/foo",
-    },
     "bar" => Link {
       "name": "bar",
       "location": "/bar",
@@ -3111,6 +3107,10 @@ Node {
         "name": "bar",
         "parent": null,
       },
+    },
+    "foo" => Node {
+      "name": "foo",
+      "location": "/foo",
     },
   },
 }

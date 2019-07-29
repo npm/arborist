@@ -2,87 +2,13 @@ const t = require('tap')
 const { format } = require('tcompare')
 const loadActual = require('../lib/load-actual.js')
 const { resolve, dirname } = require('path')
-const { symlinkSync, unlinkSync, realpathSync } = require('fs')
-const mkdirp = require('mkdirp').sync
-const fixtures = resolve(__dirname, 'fixtures')
+const { realpathSync } = require('fs')
 
-const roots = [
-  'bundle',
-  'deepmixedloop',
-  'deeproot/root',
-  'devloop',
-  'linkedroot',
-  'links-all-over',
-  'mixedloop',
-  'mixedmidway',
-  'noname',
-  'optionalloop',
-  'optofdev',
-  'other',
-  'root',
-  'selflink',
-  'symlinked-node-modules/example',
-  'workspace',
-]
-
-const symlinks = {
-  'selflink/node_modules/@scope/z/node_modules/glob':
-    '../../../foo/node_modules/glob',
-  'selflink/node_modules/foo/node_modules/selflink':
-    '../../..',
-  'other/node_modules/glob':
-    '../../root/node_modules/@scope/x/node_modules/glob',
-  'linkedroot': 'root',
-  'deep/root': '../root',
-  'deeproot': 'deep',
-  'badlink/node_modules/foo': 'foo',
-  'badlink/node_modules/bar': 'baz',
-
-  'workspace/node_modules/a': '../packages/a',
-  'workspace/node_modules/b': '../packages/b',
-  'workspace/node_modules/c': '../packages/c',
-  'workspace/packages/a/node_modules/b': '../../../packages/b',
-  'workspace/packages/a/node_modules/c': '../../../packages/c',
-  'workspace/packages/b/node_modules/a': '../../../packages/a',
-  'workspace/packages/b/node_modules/c': '../../../packages/c',
-  'workspace/packages/c/node_modules/a': '../../../packages/a',
-  'workspace/packages/c/node_modules/b': '../../../packages/b',
-
-  'links-all-over/node_modules/link-outside-nest':
-    '../real',
-  'links-all-over/node_modules/link-deep':
-    'nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep',
-  'links-all-over/node_modules/link-link': 'link-deep',
-  'links-all-over/node_modules/nest/node_modules/link-in-nest':
-    '../../../real',
-
-  'symlinked-node-modules/example/node_modules':
-    '../linked-node-modules/',
-  'symlinked-node-modules/linked-node-modules/bar': '../bar',
-}
-
-const cwd = resolve(__dirname, '..')
-
-const cleanup = () => Object.keys(symlinks).forEach(s => {
-  try {
-    unlinkSync(resolve(cwd, 'test/fixtures', s))
-  } catch (er) {}
-})
-
-if (process.env.NO_CLEANUP !== '1')
-  t.teardown(cleanup)
-
-t.test('setup symlinks', function (t) {
-  cleanup()
-
-  Object.keys(symlinks).forEach(s => {
-    const p = resolve(cwd, 'test/fixtures', s)
-    mkdirp(dirname(p))
-    symlinkSync(symlinks[s], p, 'dir')
-  })
-
-  t.end()
-})
+const {
+  fixtures,
+  roots,
+  symlinks,
+} = require('./fixtures/index.js')
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -110,15 +36,19 @@ const printTree = tree => ({
   } : {}),
   ...(tree.inBundle ? { bundled: true } : {}),
   ...(tree.edgesIn.size ? {
-    edgesIn: new Set([...tree.edgesIn].map(edge => printEdge(edge, 'in'))),
+    edgesIn: new Set([...tree.edgesIn]
+      .sort((a, b) => a.from.location.localeCompare(b.from.location))
+      .map(edge => printEdge(edge, 'in'))),
   } : {}),
   ...(tree.edgesOut.size ? {
     edgesOut: new Map([...tree.edgesOut.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0]))
       .map(([name, edge]) => [name, printEdge(edge, 'out')]))
   } : {}),
   ...( tree.target || !tree.children.size ? {}
     : {
       children: new Map([...tree.children.entries()]
+        .sort((a, b) => a[0].localeCompare(b[0]))
         .map(([name, tree]) => [name, printTree(tree)]))
     }),
   __proto__: { constructor: tree.constructor },
@@ -190,7 +120,7 @@ t.test('realpath gutchecks', t => {
   // the realpath module is tested pretty thoroughly, but
   // while we've got a bunch of symlinks being created, may as well
   // give it a quick integration pass.
-  const d = resolve(cwd, 'test/fixtures')
+  const d = resolve(__dirname, 'fixtures')
   const realpath = require('../lib/realpath.js')
   Object.keys(symlinks).map(link => t.test(link, t =>
     realpath(

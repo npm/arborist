@@ -200,13 +200,18 @@ Node {
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "error": undefined,
       "inBundle": false,
       "location": "/meta",
       "name": "meta",
       "optional": undefined,
       "package": Object {
+        "devDependencies": Object {
+          "missing": "",
+        },
         "name": "meta",
         "version": "1.2.3",
       },
@@ -220,6 +225,7 @@ Node {
   "edgesOut": Map {
     "optional" => Edge {},
     "overlap" => Edge {},
+    "optMissing" => Edge {},
     "prod" => Edge {},
     "bundled" => Edge {},
     "missing" => Edge {},
@@ -246,6 +252,7 @@ Node {
     "name": "root",
     "optionalDependencies": Object {
       "optional": "",
+      "optMissing": "",
       "overlap": "",
     },
   },
@@ -266,13 +273,18 @@ Node {
           "edgesIn": Set {
             Edge {},
           },
-          "edgesOut": Map {},
+          "edgesOut": Map {
+            "missing" => Edge {},
+          },
           "error": undefined,
           "inBundle": false,
           "location": "/prod/meta",
           "name": "meta",
           "optional": undefined,
           "package": Object {
+            "devDependencies": Object {
+              "missing": "",
+            },
             "name": "meta",
             "version": "1.2.3",
           },
@@ -412,6 +424,7 @@ Node {
   "edgesOut": Map {
     "optional" => Edge {},
     "overlap" => Edge {},
+    "optMissing" => Edge {},
     "prod" => Edge {},
     "bundled" => Edge {},
     "missing" => Edge {},
@@ -438,6 +451,7 @@ Node {
     "name": "root",
     "optionalDependencies": Object {
       "optional": "",
+      "optMissing": "",
       "overlap": "",
     },
   },
@@ -583,13 +597,18 @@ Node {
       "edgesIn": Set {
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "error": undefined,
       "inBundle": false,
       "location": "/meta",
       "name": "meta",
       "optional": undefined,
       "package": Object {
+        "devDependencies": Object {
+          "missing": "",
+        },
         "name": "meta",
         "version": "1.2.3",
       },
@@ -603,6 +622,7 @@ Node {
   "edgesOut": Map {
     "optional" => Edge {},
     "overlap" => Edge {},
+    "optMissing" => Edge {},
     "prod" => Edge {},
     "bundled" => Edge {},
     "missing" => Edge {},
@@ -629,6 +649,7 @@ Node {
     "name": "root",
     "optionalDependencies": Object {
       "optional": "",
+      "optMissing": "",
       "overlap": "",
     },
   },
@@ -813,6 +834,7 @@ Node {
   "edgesOut": Map {
     "optional" => Edge {},
     "overlap" => Edge {},
+    "optMissing" => Edge {},
     "prod" => Edge {},
     "bundled" => Edge {},
     "missing" => Edge {},
@@ -839,6 +861,7 @@ Node {
     "name": "root",
     "optionalDependencies": Object {
       "optional": "",
+      "optMissing": "",
       "overlap": "",
     },
   },
@@ -1023,6 +1046,7 @@ Node {
   "edgesOut": Map {
     "optional" => Edge {},
     "overlap" => Edge {},
+    "optMissing" => Edge {},
     "prod" => Edge {},
     "bundled" => Edge {},
     "missing" => Edge {},
@@ -1049,6 +1073,7 @@ Node {
     "name": "root",
     "optionalDependencies": Object {
       "optional": "",
+      "optMissing": "",
       "overlap": "",
     },
   },

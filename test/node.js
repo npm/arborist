@@ -22,7 +22,7 @@ t.test('testing with dep tree', t => {
       bundleDependencies: [ 'bundled' ],
       dependencies: { prod: '', bundled: '', missing: '' },
       devDependencies: { dev: '', overlap: '' },
-      optionalDependencies: { optional: '', overlap: '' },
+      optionalDependencies: { optional: '', overlap: '', optMissing: '' },
     },
     path: '.',
     realpath: '/home/user/projects/root',
@@ -42,6 +42,7 @@ t.test('testing with dep tree', t => {
     pkg: {
       name: 'meta',
       version: '1.2.3',
+      devDependencies: { missing: '' },
     },
     path: './node_modules/prod/node_modules/meta',
     realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',

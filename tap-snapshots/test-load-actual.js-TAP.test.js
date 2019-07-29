@@ -52,12 +52,6 @@ Node {
       "spec": ">0.99.0",
       "to": "/@scope/y",
     },
-    "foo" => Edge {
-      "name": "foo",
-      "type": "dev",
-      "spec": "*",
-      "to": "/foo",
-    },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
       "type": "optional",
@@ -149,12 +143,6 @@ Node {
       "name": "foo",
       "location": "/foo",
       "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "/",
-        },
         Edge {
           "name": "foo",
           "type": "prod",

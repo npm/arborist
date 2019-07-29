@@ -135,3 +135,15 @@ t.test('edge cases for branch coverage', t => {
 
   t.end()
 })
+
+t.test('tracks the loading error encountered', t => {
+  const error = new Error('this is fine')
+  const root = new Node({
+    pkg: { name: 'root' },
+    path: '.',
+    realpath: '/home/user/projects/root',
+    error,
+  })
+  t.equal(root.error, error, 'keeps ahold of the error')
+  t.end()
+})

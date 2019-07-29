@@ -100,6 +100,34 @@ arb.reify({
 
 ## DATA STRUCTURES
 
+A `node_modules` tree is a logical graph of dependencies overlaid on a
+physical tree of folders.
+
+A `Node` represents a package folder on disk, either at the root of the
+package, or within a `node_modules` folder.  The physical structure of the
+folder tree is represented by the `node.parent` reference to the containing
+folder, and `node.children` map of nodes within its `node_modules`
+folder, where the key in the map is the name of the folder in
+`node_modules`, and the value is the child node.
+
+A node without a parent is a top of tree.
+
+A `Link` represents a symbolic link to a package on disk.  This can be a
+symbolic link to a package folder within the current tree, or elsewhere on
+disk.  The `link.target` is a reference to the actual node.  Links differ
+from Nodes in that dependencies are resolved from the _target_ location,
+rather than from the link location.
+
+An `Edge` represents a dependency relationship.  Each node has an `edgesIn`
+set, and an `edgesOut` map.  Each edge has a `type` which specifies what
+kind of dependency it represents: `'req'` for regular dependencies,
+`'peer'` for peerDependencies, `'dev'` for devDependencies, and
+`'optional'` for optionalDependencies.  `edge.from` is a reference to the
+node that has the dependency, and `edge.to` is a reference to the node that 
+
+As nodes are moved around in the tree, the graph edges are automatically
+updated to point at the new module resolution targets.
+
 ### class Node
 
 Both `arb.tree` and `arb.targetTree` are `Node` objects.  A `Node` refers
@@ -109,10 +137,10 @@ to a package folder, which may have children in `node_modules`.
 * `node.parent` Physical parent node in the tree.  The package in whose
   `node_modules` folder this package lives.  Null if node is top of tree.
 
-    Setting `node.parent` will automatically update `node.location` for
-    this node and all of its children.
+    Setting `node.parent` will automatically update `node.location` and all
+    graph edges affected by the move.
 
-* `node.children` The packages located in the node's `node_modules` folder.
+* `node.children` Map of packages located in the node's `node_modules` folder.
 * `node.package` The contents of this node's `package.json` file.
 * `node.path` File path to this package.  If a node is a link target, and
   lives outside of the tree, then `node.path` will be null.
@@ -145,77 +173,16 @@ to a package folder, which may have children in `node_modules`.
     dependency within the devDependency hierarchy, _and_ a dependency
     within the `optionalDependency` hierarchy.  It should be pruned if
     _both_ dev and optional dependencies are being removed.
-* `node.warnings` A list of warnings pertaining to this package.
-* `node.dependencies` Nodes that this one depends on, which resolve its
-  dependencies.
-* `node.requires` A map of `name => spec` for all the packages this package
-  requires.  Dev dependencies are included at the top level.  Optional
-  dependencies are included only if the dependency is resolved.
-* `node.requiredBy` A `Set` of packages in the tree that require this one.
-* `node.missingDeps` A `Map` of `name => spec` of dependencies that are
-  missing.  Optional deps are not included in this list.
-* `invalidDeps` A `Map` of `name => node` of dependencies that this package
-  will resolve, but which are invalid according to its stated dependency
-  list.
-* `invalidTo` A `Set` of packages within the tree for which this package is
-  an invalid dependency.
-* `missingPeerDeps` Like `missingDeps`, but for peer dependencies.
+* `node.edgesOut` Edges in the dependency graph indicating nodes that this
+  node depends on, which resolve its dependencies.
+* `node.edgesIn` Edges in the dependency graph indicating nodes that depend
+  on this node.
+
 * `extraneous` True if this package is not required by any other for any
   reason.  False for top of tree.
-* `dev` True if this package is only required as a dev dependency, or a
-  dependency of a dev dependency.
-* `optional` True if this package is only required as an optional
-  dependency, or a dependency of an optional dependency.
-  Note that packages which are loaded as part of both the `devDependency`
-  tree _and_ the `optionalDependency` tree will have _neither_ flag set, as
-  they are neither "only dev" nor "only optional".
-  XXX: This will be changed to set both flags instead of neither flag prior
-  to release.
-* `packageLock` The `package-lock.json` data for this tree.  Typically only
-  relevant at the top level.
-* `node.walkLogical({ enter(node), exit(node, children), filter(node) })`
-  Perform a depth-first traversal through the logical dependency graph,
-  visiting each node once.
 
-  The `enter()` function is called prior to visiting dependencies.  The
-  `enter()` function's return value is used as the arguments to `exit()`,
-  allowing a map-reduce style transform.
-
-  The method return value is the return value of `exit()` called on the
-  initial node at the end of the traversal.  If `enter()` or `exit()` ever
-  return a Promise, then this function will return a Promise that resolves
-  to that value.
-
-  When there are loops in the logical dependency graph, each node is
-  visited only one time.  As a result, it is _not_ guaranteed that `exit()`
-  has already been called on the child nodes, as this would create deadlock
-  await cycles.  Therefor, it is safest to return an object from `enter()`
-  and then mutate the object on `exit()`, so that the `children` array is
-  consistent.
-
-* `node.walkPhysical({ enter(node), exit(node, children), fitler(node) })`
-  Perform a depth-first traversal of the physical `node_modules` tree,
-  visiting each node once.
-
-  The `enter()` function is called prior to visiting dependencies.  The
-  `enter()` function's return value is used as the arguments to `exit()`,
-  allowing a map-reduce style transform.
-
-  The method return value is the return value of `exit()` called on the
-  initial node at the end of the traversal.  If `enter()` or `exit()` ever
-  return a Promise, then this function will return a Promise that resolves
-  to that value.
-
-  There can be loops in the physical graph when there are symbolic links
-  within a `node_modules` tree.  When this happens, each node is visited
-  only one time.  As a result, it is _not_ guaranteed that `exit()` has
-  already been called on the child nodes, as this would create deadlock
-  await cycles.  Therefor, it is safest to return an object from `enter()`
-  and then mutate the object on `exit()`, so that the `children` array is
-  consistent.
-
-* `node.resolveDep(name)`  Identify the node that will be returned when
-  code in this package runs `require(name)`
+* `node.resolve(name)`  Identify the node that will be returned when code
+  in this package runs `require(name)`
 
 ### class Link
 
@@ -228,13 +195,17 @@ few differences.
   will be the same object.  If it's outside of the tree, then it will be
   treated as the top of its own tree.
 * `link.isLink` Always true.
-* `link.children` This is a reference to `link.target.children`, since
-  links don't have their own children directly.
+* `link.children` This is always an empty map, since links don't have their
+  own children directly.
+
+### class Edge
+
+* TODO: document this
 
 ## Errors
 
-Errors parsing or finding a package.json in node_modules will result in a
-node with the error property set.  We will still find deeper node_modules
+Errors parsing or finding a package.json in `node_modules` will result in a
+node with the error property set.  We will still find deeper `node_modules`
 if any exist. *Prior to `5.0.0` these aborted tree reading with an error
 callback.*
 

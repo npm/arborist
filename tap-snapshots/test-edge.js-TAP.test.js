@@ -44,7 +44,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -69,7 +71,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -100,7 +104,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -125,7 +131,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -138,6 +146,30 @@ Edge {
   },
   "type": "optional",
   "valid": false,
+}
+`
+
+exports[`test/edge.js TAP > missing optional dep is fine 1`] = `
+Edge {
+  "error": null,
+  "from": Object {
+    "edgesIn": Set {},
+    "edgesOut": Map {
+      "missing" => Edge {},
+    },
+    "isTop": true,
+    "package": Object {
+      "name": "top",
+      "version": "1.2.3",
+    },
+    "parent": null,
+    "resolve": Function resolve(n),
+  },
+  "name": "missing",
+  "spec": "",
+  "to": null,
+  "type": "optional",
+  "valid": true,
 }
 `
 
@@ -166,7 +198,9 @@ Edge {
       },
       "parent": Object {
         "edgesIn": Set {},
-        "edgesOut": Map {},
+        "edgesOut": Map {
+          "missing" => Edge {},
+        },
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -203,7 +237,9 @@ Edge {
       },
       "parent": Object {
         "edgesIn": Set {},
-        "edgesOut": Map {},
+        "edgesOut": Map {
+          "missing" => Edge {},
+        },
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -236,7 +272,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -280,7 +318,9 @@ Edge {
       },
       "parent": Object {
         "edgesIn": Set {},
-        "edgesOut": Map {},
+        "edgesOut": Map {
+          "missing" => Edge {},
+        },
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -317,7 +357,9 @@ Edge {
       },
       "parent": Object {
         "edgesIn": Set {},
-        "edgesOut": Map {},
+        "edgesOut": Map {
+          "missing" => Edge {},
+        },
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -398,7 +440,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -433,7 +477,9 @@ Edge {
       },
       "parent": Object {
         "edgesIn": Set {},
-        "edgesOut": Map {},
+        "edgesOut": Map {
+          "missing" => Edge {},
+        },
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -466,7 +512,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -491,7 +539,9 @@ Edge {
     },
     "parent": Object {
       "edgesIn": Set {},
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "missing" => Edge {},
+      },
       "isTop": true,
       "package": Object {
         "name": "top",

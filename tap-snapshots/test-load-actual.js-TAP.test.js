@@ -63,7 +63,6 @@ Node {
       "type": "optional",
       "spec": "",
       "to": null,
-      "error": "MISSING",
     },
   },
   "children": Map {
@@ -451,7 +450,6 @@ Node {
       "type": "optional",
       "spec": "",
       "to": null,
-      "error": "MISSING",
     },
   },
   "children": Map {
@@ -876,7 +874,6 @@ Node {
       "type": "optional",
       "spec": "",
       "to": null,
-      "error": "MISSING",
     },
   },
   "children": Map {
@@ -1421,7 +1418,6 @@ Node {
       "type": "optional",
       "spec": "",
       "to": null,
-      "error": "MISSING",
     },
   },
   "children": Map {
@@ -2471,7 +2467,6 @@ Node {
       "type": "optional",
       "spec": "",
       "to": null,
-      "error": "MISSING",
     },
   },
   "children": Map {

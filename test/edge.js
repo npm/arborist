@@ -92,6 +92,14 @@ reset(top)
 reset(a)
 
 t.matchSnapshot(new Edge({
+  from: top,
+  type: 'optional',
+  name: 'missing',
+  spec: '',
+}), 'missing optional dep is fine')
+reset(a)
+
+t.matchSnapshot(new Edge({
   from: a,
   type: 'peer',
   name: 'aa',

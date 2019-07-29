@@ -22,7 +22,7 @@ Link {
   "path": "some/kind/of/path",
   "realpath": "/home/user/projects/some/kind/of/path",
   "target": Node {
-    "children": Array [],
+    "children": Map {},
     "dev": undefined,
     "devOptional": undefined,
     "edgesIn": Set {},
@@ -58,7 +58,7 @@ Link {
   "path": "some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
   "target": Node {
-    "children": Array [],
+    "children": Map {},
     "dev": undefined,
     "devOptional": undefined,
     "edgesIn": Set {},

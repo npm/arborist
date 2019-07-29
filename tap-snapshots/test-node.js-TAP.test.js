@@ -7,7 +7,7 @@
 'use strict'
 exports[`test/node.js TAP basic instantiation > just a lone root node 1`] = `
 Node {
-  "children": Array [],
+  "children": Map {},
   "dev": undefined,
   "devOptional": undefined,
   "edgesIn": Set {},
@@ -27,13 +27,13 @@ Node {
 
 exports[`test/node.js TAP testing with dep tree > add new meta under prod 1`] = `
 Node {
-  "children": Array [
-    Node {
-      "children": Array [
-        Node {
-          "children": Array [
-            Node {
-              "children": Array [],
+  "children": Map {
+    "prod" => Node {
+      "children": Map {
+        "meta" => Node {
+          "children": Map {
+            "metameta" => Node {
+              "children": Map {},
               "dev": undefined,
               "devOptional": undefined,
               "edgesIn": Set {},
@@ -50,7 +50,7 @@ Node {
               "path": "./node_modules/prod/node_modules/meta/node_modules/metameta",
               "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
             },
-          ],
+          },
           "dev": undefined,
           "devOptional": undefined,
           "edgesIn": Set {
@@ -69,7 +69,7 @@ Node {
           "path": "./node_modules/prod/node_modules/meta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
         },
-      ],
+      },
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -97,8 +97,8 @@ Node {
       "path": "./node_modules/prod",
       "realpath": "/home/user/projects/root/node_modules/prod",
     },
-    Node {
-      "children": Array [],
+    "bundled" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -117,8 +117,8 @@ Node {
       "path": "./node_modules/bundled",
       "realpath": "/home/user/projects/root/node_modules/bundled",
     },
-    Node {
-      "children": Array [],
+    "dev" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -137,8 +137,8 @@ Node {
       "path": "./node_modules/dev",
       "realpath": "/home/user/projects/root/node_modules/dev",
     },
-    Node {
-      "children": Array [],
+    "optional" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -157,8 +157,8 @@ Node {
       "path": "./node_modules/optional",
       "realpath": "/home/user/projects/root/node_modules/optional",
     },
-    Node {
-      "children": Array [],
+    "peer" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -177,8 +177,8 @@ Node {
       "path": "./node_modules/peer",
       "realpath": "/home/user/projects/root/node_modules/peer",
     },
-    Node {
-      "children": Array [],
+    "extraneous" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
@@ -195,8 +195,8 @@ Node {
       "path": "./node_modules/extraneous",
       "realpath": "/home/user/projects/root/node_modules/extraneous",
     },
-    Node {
-      "children": Array [],
+    "meta" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
@@ -213,7 +213,7 @@ Node {
       "path": "./node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
     },
-  ],
+  },
   "dev": undefined,
   "devOptional": undefined,
   "edgesIn": Set {},
@@ -256,11 +256,11 @@ Node {
 
 exports[`test/node.js TAP testing with dep tree > initial load with some deps 1`] = `
 Node {
-  "children": Array [
-    Node {
-      "children": Array [
-        Node {
-          "children": Array [],
+  "children": Map {
+    "prod" => Node {
+      "children": Map {
+        "meta" => Node {
+          "children": Map {},
           "dev": undefined,
           "devOptional": undefined,
           "edgesIn": Set {
@@ -279,7 +279,7 @@ Node {
           "path": "./node_modules/prod/node_modules/meta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
         },
-      ],
+      },
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -307,8 +307,8 @@ Node {
       "path": "./node_modules/prod",
       "realpath": "/home/user/projects/root/node_modules/prod",
     },
-    Node {
-      "children": Array [],
+    "bundled" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -327,8 +327,8 @@ Node {
       "path": "./node_modules/bundled",
       "realpath": "/home/user/projects/root/node_modules/bundled",
     },
-    Node {
-      "children": Array [],
+    "dev" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -347,8 +347,8 @@ Node {
       "path": "./node_modules/dev",
       "realpath": "/home/user/projects/root/node_modules/dev",
     },
-    Node {
-      "children": Array [],
+    "optional" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -367,8 +367,8 @@ Node {
       "path": "./node_modules/optional",
       "realpath": "/home/user/projects/root/node_modules/optional",
     },
-    Node {
-      "children": Array [],
+    "peer" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -387,8 +387,8 @@ Node {
       "path": "./node_modules/peer",
       "realpath": "/home/user/projects/root/node_modules/peer",
     },
-    Node {
-      "children": Array [],
+    "extraneous" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
@@ -405,7 +405,7 @@ Node {
       "path": "./node_modules/extraneous",
       "realpath": "/home/user/projects/root/node_modules/extraneous",
     },
-  ],
+  },
   "dev": undefined,
   "devOptional": undefined,
   "edgesIn": Set {},
@@ -448,9 +448,9 @@ Node {
 
 exports[`test/node.js TAP testing with dep tree > move meta to top level 1`] = `
 Node {
-  "children": Array [
-    Node {
-      "children": Array [],
+  "children": Map {
+    "prod" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -478,8 +478,8 @@ Node {
       "path": "./node_modules/prod",
       "realpath": "/home/user/projects/root/node_modules/prod",
     },
-    Node {
-      "children": Array [],
+    "bundled" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -498,8 +498,8 @@ Node {
       "path": "./node_modules/bundled",
       "realpath": "/home/user/projects/root/node_modules/bundled",
     },
-    Node {
-      "children": Array [],
+    "dev" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -518,8 +518,8 @@ Node {
       "path": "./node_modules/dev",
       "realpath": "/home/user/projects/root/node_modules/dev",
     },
-    Node {
-      "children": Array [],
+    "optional" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -538,8 +538,8 @@ Node {
       "path": "./node_modules/optional",
       "realpath": "/home/user/projects/root/node_modules/optional",
     },
-    Node {
-      "children": Array [],
+    "peer" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -558,8 +558,8 @@ Node {
       "path": "./node_modules/peer",
       "realpath": "/home/user/projects/root/node_modules/peer",
     },
-    Node {
-      "children": Array [],
+    "extraneous" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
@@ -576,8 +576,8 @@ Node {
       "path": "./node_modules/extraneous",
       "realpath": "/home/user/projects/root/node_modules/extraneous",
     },
-    Node {
-      "children": Array [],
+    "meta" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -596,7 +596,7 @@ Node {
       "path": "./node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
     },
-  ],
+  },
   "dev": undefined,
   "devOptional": undefined,
   "edgesIn": Set {},
@@ -639,9 +639,9 @@ Node {
 
 exports[`test/node.js TAP testing with dep tree > move new meta to top level 1`] = `
 Node {
-  "children": Array [
-    Node {
-      "children": Array [],
+  "children": Map {
+    "prod" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -669,8 +669,8 @@ Node {
       "path": "./node_modules/prod",
       "realpath": "/home/user/projects/root/node_modules/prod",
     },
-    Node {
-      "children": Array [],
+    "bundled" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -689,8 +689,8 @@ Node {
       "path": "./node_modules/bundled",
       "realpath": "/home/user/projects/root/node_modules/bundled",
     },
-    Node {
-      "children": Array [],
+    "dev" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -709,8 +709,8 @@ Node {
       "path": "./node_modules/dev",
       "realpath": "/home/user/projects/root/node_modules/dev",
     },
-    Node {
-      "children": Array [],
+    "optional" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -729,8 +729,8 @@ Node {
       "path": "./node_modules/optional",
       "realpath": "/home/user/projects/root/node_modules/optional",
     },
-    Node {
-      "children": Array [],
+    "peer" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -749,8 +749,8 @@ Node {
       "path": "./node_modules/peer",
       "realpath": "/home/user/projects/root/node_modules/peer",
     },
-    Node {
-      "children": Array [],
+    "extraneous" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
@@ -767,10 +767,10 @@ Node {
       "path": "./node_modules/extraneous",
       "realpath": "/home/user/projects/root/node_modules/extraneous",
     },
-    Node {
-      "children": Array [
-        Node {
-          "children": Array [],
+    "meta" => Node {
+      "children": Map {
+        "metameta" => Node {
+          "children": Map {},
           "dev": undefined,
           "devOptional": undefined,
           "edgesIn": Set {},
@@ -787,7 +787,7 @@ Node {
           "path": "./node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
         },
-      ],
+      },
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -806,7 +806,7 @@ Node {
       "path": "./node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
     },
-  ],
+  },
   "dev": undefined,
   "devOptional": undefined,
   "edgesIn": Set {},
@@ -849,9 +849,9 @@ Node {
 
 exports[`test/node.js TAP testing with dep tree > move new meta to top level second time (no-op) 1`] = `
 Node {
-  "children": Array [
-    Node {
-      "children": Array [],
+  "children": Map {
+    "prod" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -879,8 +879,8 @@ Node {
       "path": "./node_modules/prod",
       "realpath": "/home/user/projects/root/node_modules/prod",
     },
-    Node {
-      "children": Array [],
+    "bundled" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -899,8 +899,8 @@ Node {
       "path": "./node_modules/bundled",
       "realpath": "/home/user/projects/root/node_modules/bundled",
     },
-    Node {
-      "children": Array [],
+    "dev" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -919,8 +919,8 @@ Node {
       "path": "./node_modules/dev",
       "realpath": "/home/user/projects/root/node_modules/dev",
     },
-    Node {
-      "children": Array [],
+    "optional" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -939,8 +939,8 @@ Node {
       "path": "./node_modules/optional",
       "realpath": "/home/user/projects/root/node_modules/optional",
     },
-    Node {
-      "children": Array [],
+    "peer" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -959,8 +959,8 @@ Node {
       "path": "./node_modules/peer",
       "realpath": "/home/user/projects/root/node_modules/peer",
     },
-    Node {
-      "children": Array [],
+    "extraneous" => Node {
+      "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {},
@@ -977,10 +977,10 @@ Node {
       "path": "./node_modules/extraneous",
       "realpath": "/home/user/projects/root/node_modules/extraneous",
     },
-    Node {
-      "children": Array [
-        Node {
-          "children": Array [],
+    "meta" => Node {
+      "children": Map {
+        "metameta" => Node {
+          "children": Map {},
           "dev": undefined,
           "devOptional": undefined,
           "edgesIn": Set {},
@@ -997,7 +997,7 @@ Node {
           "path": "./node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
         },
-      ],
+      },
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
@@ -1016,7 +1016,7 @@ Node {
       "path": "./node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
     },
-  ],
+  },
   "dev": undefined,
   "devOptional": undefined,
   "edgesIn": Set {},

@@ -15,11 +15,11 @@ const l1 = new Link({
 })
 t.matchSnapshot(l1, 'instantiate without providing target')
 t.equal(l1.isLink, true, 'link is a link')
-t.same(l1.children, [], 'children is empty')
-l1.children = [1,2,3]
-t.same(l1.children, [], 'children still empty after being set')
-l1.children.push('asdf')
-t.same(l1.children, [], 'children still empty after being set')
+t.same(l1.children.size, 0, 'children is empty')
+l1.children = new Map([[1,2],[3,4]])
+t.same(l1.children.size, 0, 'children still empty after being sasigned')
+l1.children.set('asdf', 'foo')
+t.same(l1.children.size, 0, 'children still empty after setting value')
 
 t.matchSnapshot(new Link({
   pkg: { name: 'root' },

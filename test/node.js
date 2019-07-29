@@ -111,7 +111,8 @@ t.test('testing with dep tree', t => {
 
   newMeta.parent = root
   t.equal(meta.parent, null, 'old meta parent removed')
-  t.equal(root.children.indexOf(meta), -1, 'root.children no longer has old meta')
+  t.notEqual(root.children.get('meta'), meta,
+    'root.children no longer has old meta')
   t.matchSnapshot(root, 'move new meta to top level')
 
   newMeta.parent = root

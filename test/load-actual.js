@@ -116,8 +116,11 @@ const printTree = tree => ({
     edgesOut: new Map([...tree.edgesOut.entries()]
       .map(([name, edge]) => [name, printEdge(edge, 'out')]))
   } : {}),
-  ...( tree.target || !tree.children.length ? {}
-    : { children: tree.children.map(printTree) }),
+  ...( tree.target || !tree.children.size ? {}
+    : {
+      children: new Map([...tree.children.entries()]
+        .map(([name, tree]) => [name, printTree(tree)]))
+    }),
   __proto__: { constructor: tree.constructor },
 })
 
@@ -163,12 +166,10 @@ t.test('broken json', t =>
 
 t.test('missing json does not obscure deeper errors', t =>
   loadActual(resolve(fixtures, 'empty')).then(d => {
-    const error = d.error
-    t.ok(error, 'Error reading json of top level')
-    t.equal(error && error.code, 'ENOENT')
-    const childError = d.children.length === 1 && d.children[0].error
-    t.ok(childError, 'Error parsing JSON of child node')
-    t.equal(childError && childError.code, 'EJSONPARSE')
+    t.match(d, { error: { code: 'ENOENT' } },
+      'Error reading json of top level')
+    t.match(d.children.get('foo'), { error: { code: 'EJSONPARSE' } },
+      'Error parsing JSON of child node')
   }))
 
 t.test('missing folder', t =>
@@ -178,9 +179,11 @@ t.test('missing folder', t =>
 
 t.test('missing symlinks', t =>
   loadActual(resolve(fixtures, 'badlink')).then(d => {
-    t.is(d.children.length, 2, 'both broken children are included')
-    d.children.forEach(child =>
-      t.ok(child.error, 'Child node has an error'))
+    t.is(d.children.size, 2, 'both broken children are included')
+    t.match(d.children.get('foo'), { error: { code: 'ELOOP' } },
+      'foo has error')
+    t.match(d.children.get('bar'), { error: { code: 'ENOENT' } },
+      'bar has error')
   }))
 
 t.test('realpath gutchecks', t => {

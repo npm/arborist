@@ -9,6 +9,7 @@ const fixtures = resolve(__dirname, 'fixtures')
 const roots = [
   'bundle',
   'deepmixedloop',
+  'deeproot/root',
   'devloop',
   'linkedroot',
   'links-all-over',
@@ -20,13 +21,15 @@ const roots = [
   'other',
   'root',
   'selflink',
+  'symlinked-node-modules/example',
   'workspace',
-  'deeproot/root',
 ]
 
 const symlinks = {
   'selflink/node_modules/@scope/z/node_modules/glob':
     '../../../foo/node_modules/glob',
+  'selflink/node_modules/foo/node_modules/selflink':
+    '../../..',
   'other/node_modules/glob':
     '../../root/node_modules/@scope/x/node_modules/glob',
   'linkedroot': 'root',
@@ -45,13 +48,17 @@ const symlinks = {
   'workspace/packages/c/node_modules/a': '../../../packages/a',
   'workspace/packages/c/node_modules/b': '../../../packages/b',
 
-  'test/fixtures/links-all-over/node_modules/link-outside-nest':
+  'links-all-over/node_modules/link-outside-nest':
     '../real',
-  'test/fixtures/links-all-over/node_modules/link-deep':
+  'links-all-over/node_modules/link-deep':
     'nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep',
-  'test/fixtures/links-all-over/node_modules/link-link': 'link-deep',
-  'test/fixtures/links-all-over/node_modules/nest/node_modules/link-in-nest':
+  'links-all-over/node_modules/link-link': 'link-deep',
+  'links-all-over/node_modules/nest/node_modules/link-in-nest':
     '../../../real',
+
+  'symlinked-node-modules/example/node_modules':
+    '../linked-node-modules/',
+  'symlinked-node-modules/linked-node-modules/bar': '../bar',
 }
 
 const cwd = resolve(__dirname, '..')
@@ -103,22 +110,18 @@ const printTree = tree => ({
   } : {}),
   ...(tree.inBundle ? { bundled: true } : {}),
   ...(tree.edgesIn.size ? {
-    edgesIn: [...tree.edgesIn].map(edge => printEdge(edge, 'in')),
+    edgesIn: new Set([...tree.edgesIn].map(edge => printEdge(edge, 'in'))),
   } : {}),
   ...(tree.edgesOut.size ? {
-    edgesOut: [...tree.edgesOut.entries()]
-      .map(([name, edge]) => [name, printEdge(edge, 'out')])
-      .reduce((set, [name, edge]) => (set[name] = edge, set), {})
+    edgesOut: new Map([...tree.edgesOut.entries()]
+      .map(([name, edge]) => [name, printEdge(edge, 'out')]))
   } : {}),
   ...( tree.target || !tree.children.length ? {}
     : { children: tree.children.map(printTree) }),
   __proto__: { constructor: tree.constructor },
 })
 
-t.formatSnapshot = tree => format(printTree(tree), {
-  style: 'js',
-  sort: false
-})
+t.formatSnapshot = tree => format(printTree(tree), { sort: false })
 
 roots.forEach(root => {
   const dir = resolve(fixtures, root)

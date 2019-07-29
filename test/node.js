@@ -43,6 +43,7 @@ t.test('testing with dep tree', t => {
       name: 'meta',
       version: '1.2.3',
       devDependencies: { missing: '' },
+      dependencies: { bundled: '' },
     },
     path: './node_modules/prod/node_modules/meta',
     realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
@@ -52,6 +53,7 @@ t.test('testing with dep tree', t => {
     pkg: {
       name: 'bundled',
       version: '1.2.3',
+      dependencies: { meta: '' },
     },
     path: './node_modules/bundled',
     realpath: '/home/user/projects/root/node_modules/bundled',

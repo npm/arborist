@@ -103,14 +103,20 @@ Node {
       "devOptional": undefined,
       "edgesIn": Set {
         Edge {},
+        Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
       "error": undefined,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "meta": "",
+        },
         "name": "bundled",
         "version": "1.2.3",
       },
@@ -199,9 +205,11 @@ Node {
       "children": Map {},
       "dev": undefined,
       "devOptional": undefined,
-      "edgesIn": Set {},
+      "edgesIn": Set {
+        Edge {},
+      },
       "edgesOut": Map {
-        "missing" => Edge {},
+        "bundled" => Edge {},
       },
       "error": undefined,
       "inBundle": false,
@@ -209,6 +217,9 @@ Node {
       "name": "meta",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "bundled": "",
+        },
         "devDependencies": Object {
           "missing": "",
         },
@@ -274,7 +285,7 @@ Node {
             Edge {},
           },
           "edgesOut": Map {
-            "missing" => Edge {},
+            "bundled" => Edge {},
           },
           "error": undefined,
           "inBundle": false,
@@ -282,6 +293,9 @@ Node {
           "name": "meta",
           "optional": undefined,
           "package": Object {
+            "dependencies": Object {
+              "bundled": "",
+            },
             "devDependencies": Object {
               "missing": "",
             },
@@ -325,14 +339,20 @@ Node {
       "devOptional": undefined,
       "edgesIn": Set {
         Edge {},
+        Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
       "error": undefined,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "meta": "",
+        },
         "name": "bundled",
         "version": "1.2.3",
       },
@@ -498,14 +518,20 @@ Node {
       "devOptional": undefined,
       "edgesIn": Set {
         Edge {},
+        Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
       "error": undefined,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "meta": "",
+        },
         "name": "bundled",
         "version": "1.2.3",
       },
@@ -596,9 +622,10 @@ Node {
       "devOptional": undefined,
       "edgesIn": Set {
         Edge {},
+        Edge {},
       },
       "edgesOut": Map {
-        "missing" => Edge {},
+        "bundled" => Edge {},
       },
       "error": undefined,
       "inBundle": false,
@@ -606,6 +633,9 @@ Node {
       "name": "meta",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "bundled": "",
+        },
         "devDependencies": Object {
           "missing": "",
         },
@@ -697,13 +727,18 @@ Node {
       "edgesIn": Set {
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
       "error": undefined,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "meta": "",
+        },
         "name": "bundled",
         "version": "1.2.3",
       },
@@ -812,6 +847,7 @@ Node {
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
+        Edge {},
         Edge {},
       },
       "edgesOut": Map {},
@@ -909,13 +945,18 @@ Node {
       "edgesIn": Set {
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
       "error": undefined,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
       "optional": undefined,
       "package": Object {
+        "dependencies": Object {
+          "meta": "",
+        },
         "name": "bundled",
         "version": "1.2.3",
       },
@@ -1024,6 +1065,7 @@ Node {
       "dev": undefined,
       "devOptional": undefined,
       "edgesIn": Set {
+        Edge {},
         Edge {},
       },
       "edgesOut": Map {},

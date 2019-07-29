@@ -240,12 +240,6 @@ Node {
           "spec": "",
           "from": "/b",
         },
-        Edge {
-          "name": "c",
-          "type": "dev",
-          "spec": "",
-          "from": "/z",
-        },
       },
       "edgesOut": Map {
         "d" => Edge {
@@ -397,12 +391,6 @@ Node {
           "type": "optional",
           "spec": "",
           "to": "/a",
-        },
-        "c" => Edge {
-          "name": "c",
-          "type": "dev",
-          "spec": "",
-          "to": "/c",
         },
       },
     },
@@ -703,15 +691,6 @@ Node {
               "type": "prod",
               "spec": "npm:abbrev@*",
               "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
             },
           },
         },
@@ -1127,15 +1106,6 @@ Node {
               "type": "prod",
               "spec": "npm:abbrev@*",
               "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
             },
           },
         },
@@ -1671,15 +1641,6 @@ Node {
               "type": "prod",
               "spec": "npm:abbrev@*",
               "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
             },
           },
         },
@@ -2720,15 +2681,6 @@ Node {
               "type": "prod",
               "spec": "npm:abbrev@*",
               "from": "/foo",
-            },
-          },
-          "edgesOut": Map {
-            "tap" => Edge {
-              "name": "tap",
-              "type": "dev",
-              "spec": "^10.1",
-              "to": null,
-              "error": "MISSING",
             },
           },
         },

@@ -33,6 +33,7 @@
     "lib/*.js"
   ],
   "tap": {
-    "100": true
+    "100": true,
+    "coverage-map": "map.js"
   }
 }

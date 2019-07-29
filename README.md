@@ -120,7 +120,7 @@ rather than from the link location.
 
 An `Edge` represents a dependency relationship.  Each node has an `edgesIn`
 set, and an `edgesOut` map.  Each edge has a `type` which specifies what
-kind of dependency it represents: `'req'` for regular dependencies,
+kind of dependency it represents: `'prod'` for regular dependencies,
 `'peer'` for peerDependencies, `'dev'` for devDependencies, and
 `'optional'` for optionalDependencies.  `edge.from` is a reference to the
 node that has the dependency, and `edge.to` is a reference to the node that 

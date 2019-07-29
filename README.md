@@ -123,10 +123,13 @@ set, and an `edgesOut` map.  Each edge has a `type` which specifies what
 kind of dependency it represents: `'prod'` for regular dependencies,
 `'peer'` for peerDependencies, `'dev'` for devDependencies, and
 `'optional'` for optionalDependencies.  `edge.from` is a reference to the
-node that has the dependency, and `edge.to` is a reference to the node that 
+node that has the dependency, and `edge.to` is a reference to the node that
+requires the dependency.
 
 As nodes are moved around in the tree, the graph edges are automatically
-updated to point at the new module resolution targets.
+updated to point at the new module resolution targets.  In other words,
+`edge.from`, `edge.name`, and `edge.spec` are immutable; `edge.to` is
+updated automatically when a node's parent changes.
 
 ### class Node
 
@@ -184,6 +187,9 @@ to a package folder, which may have children in `node_modules`.
 * `node.resolve(name)`  Identify the node that will be returned when code
   in this package runs `require(name)`
 
+* `node.error` Errors parsing or finding a package.json in `node_modules`
+  will result in a node with the error property set.
+
 ### class Link
 
 Link objects represent a symbolic link within the `node_modules` folder.
@@ -200,16 +206,36 @@ few differences.
 
 ### class Edge
 
-* TODO: document this
+Edge objects represent a dependency relationship a package node to the
+point in the tree where the dependency will be loaded.  As nodes are moved
+within the tree, Edges automatically update to point to the appropriate
+location.
 
-## Errors
-
-Errors parsing or finding a package.json in `node_modules` will result in a
-node with the error property set.  We will still find deeper `node_modules`
-if any exist. *Prior to `5.0.0` these aborted tree reading with an error
-callback.*
-
-Only a few classes of errors are fatal (result in an error callback):
-
-* If the top level location is entirely missing, that will error.
-* If `fs.realpath` returns an error for any path it's trying to resolve.
+* `new Edge({ from, type, name, spec })`  Creates a new edge with the
+  specified fields.  After instantiation, none of the fields can be
+  changed directly.
+* `edge.from` The node that has the dependency.
+* `edge.type` The type of dependency.  One of `'prod'`, `'dev'`, `'peer'`,
+  or `'optional'`.
+* `edge.name` The name of the dependency.  Ie, the key in the
+  relevant `package.json` dependencies object.
+* `edge.spec` The specifier that is required.  This can be a version,
+  range, tag name, git url, or tarball URL.  Any specifier allowed by npm
+  is supported.
+* `edge.to` Automatically set to the node in the tree that matches the
+  `name` field.
+* `edge.valid` True if `edge.to` satisfies the specifier.
+* `edge.error` A string indicating the type of error if there is a problem,
+  or `null` if it's valid.  Values, in order of precedence:
+    * `DETACHED` Indicates that the edge has been detached from its
+      `edge.from` node, typically because a new edge was created when a
+      dependency specifier was modified.
+    * `MISSING` Indicates that the dependency is unmet.  Note that this is
+      _not_ set for unmet dependencies of the `optional` type.
+    * `PEER LOCAL` Indicates that a `peerDependency` is found in the
+      node's local `node_modules` folder, and the node is not the top of
+      the tree.  This violates the `peerDependency` contract, because it
+      means that the dependency is not a peer.
+    * `INVALID` Indicates that the dependency does not satisfy `edge.spec`.
+* `edge.reload()` Re-resolve to find the appropriate value for `edge.to`.
+  Called automatically from the `Node` class when the tree is mutated.

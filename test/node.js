@@ -34,8 +34,6 @@ t.test('testing with dep tree', t => {
       dependencies: { meta: '' },
       peerDependencies: { peer: '' },
     },
-    path: './node_modules/prod',
-    realpath: '/home/user/projects/root/node_modules/prod',
     parent: root,
   })
   const meta = new Node({
@@ -89,7 +87,7 @@ t.test('testing with dep tree', t => {
 
   // move dep to top level
   meta.parent = root
-  t.matchSnapshot(root, 'move meta to top level')
+  t.matchSnapshot(root, 'move meta to top level, update stuff')
 
   const newMeta = new Node({
     pkg: {
@@ -100,15 +98,18 @@ t.test('testing with dep tree', t => {
     realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
     parent: prod,
   })
+
+  // test that reparenting a link _doesn't_ update realpath
   const metaMeta = new Node({
     pkg: {
       name: 'metameta',
       version: '1.2.3',
     },
     path: newMeta.path + '/node_modules/metameta',
-    realpath: newMeta.realpath + '/node_modules/metameta',
-    parent: newMeta,
+    realpath: meta.realpath
   })
+  metaMeta.parent = newMeta
+  metaMeta.target = meta
 
   t.matchSnapshot(root, 'add new meta under prod')
 
@@ -151,3 +152,6 @@ t.test('tracks the loading error encountered', t => {
   t.equal(root.error, error, 'keeps ahold of the error')
   t.end()
 })
+
+t.throws(() => new Node({pkg: {}}), TypeError(
+  'could not detect node name from path or package'))

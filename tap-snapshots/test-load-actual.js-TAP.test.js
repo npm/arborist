@@ -52,6 +52,12 @@ Node {
       "spec": ">0.99.0",
       "to": "/@scope/y",
     },
+    "foo" => Edge {
+      "name": "foo",
+      "type": "dev",
+      "spec": "*",
+      "to": "/foo",
+    },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
       "type": "optional",
@@ -107,8 +113,149 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": null,
-          "error": "MISSING",
+          "to": "/@scope/x/glob",
+        },
+      },
+      "children": Map {
+        "glob" => Node {
+          "name": "glob",
+          "location": "/@scope/x/glob",
+          "edgesIn": Set {
+            Edge {
+              "name": "glob",
+              "type": "prod",
+              "spec": "4",
+              "from": "/@scope/x",
+            },
+          },
+          "edgesOut": Map {
+            "graceful-fs" => Edge {
+              "name": "graceful-fs",
+              "type": "prod",
+              "spec": "",
+              "to": "/@scope/x/glob/graceful-fs",
+            },
+            "inherits" => Edge {
+              "name": "inherits",
+              "type": "prod",
+              "spec": "",
+              "to": "/@scope/x/glob/inherits",
+            },
+            "minimatch" => Edge {
+              "name": "minimatch",
+              "type": "prod",
+              "spec": "",
+              "to": "/@scope/x/glob/minimatch",
+            },
+            "once" => Edge {
+              "name": "once",
+              "type": "prod",
+              "spec": "",
+              "to": "/@scope/x/glob/once",
+            },
+          },
+          "children": Map {
+            "graceful-fs" => Node {
+              "name": "graceful-fs",
+              "location": "/@scope/x/glob/graceful-fs",
+              "edgesIn": Set {
+                Edge {
+                  "name": "graceful-fs",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob",
+                },
+              },
+            },
+            "inherits" => Node {
+              "name": "inherits",
+              "location": "/@scope/x/glob/inherits",
+              "edgesIn": Set {
+                Edge {
+                  "name": "inherits",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob",
+                },
+              },
+            },
+            "minimatch" => Node {
+              "name": "minimatch",
+              "location": "/@scope/x/glob/minimatch",
+              "edgesIn": Set {
+                Edge {
+                  "name": "minimatch",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob",
+                },
+              },
+              "edgesOut": Map {
+                "lru-cache" => Edge {
+                  "name": "lru-cache",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/minimatch/lru-cache",
+                },
+                "once" => Edge {
+                  "name": "once",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/once",
+                },
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "/@scope/x/glob/minimatch/sigmund",
+                },
+              },
+              "children": Map {
+                "lru-cache" => Node {
+                  "name": "lru-cache",
+                  "location": "/@scope/x/glob/minimatch/lru-cache",
+                  "edgesIn": Set {
+                    Edge {
+                      "name": "lru-cache",
+                      "type": "prod",
+                      "spec": "",
+                      "from": "/@scope/x/glob/minimatch",
+                    },
+                  },
+                },
+                "sigmund" => Node {
+                  "name": "sigmund",
+                  "location": "/@scope/x/glob/minimatch/sigmund",
+                  "edgesIn": Set {
+                    Edge {
+                      "name": "sigmund",
+                      "type": "prod",
+                      "spec": "",
+                      "from": "/@scope/x/glob/minimatch",
+                    },
+                  },
+                },
+              },
+            },
+            "once" => Node {
+              "name": "once",
+              "location": "/@scope/x/glob/once",
+              "edgesIn": Set {
+                Edge {
+                  "name": "once",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob",
+                },
+                Edge {
+                  "name": "once",
+                  "type": "prod",
+                  "spec": "",
+                  "from": "/@scope/x/glob/minimatch",
+                },
+              },
+            },
+          },
         },
       },
     },
@@ -145,6 +292,12 @@ Node {
       "edgesIn": Set {
         Edge {
           "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "/",
+        },
+        Edge {
+          "name": "foo",
           "type": "prod",
           "spec": "99.x",
           "from": "/@scope/y",
@@ -162,8 +315,21 @@ Node {
           "name": "express",
           "type": "prod",
           "spec": "npm:abbrev@*",
-          "to": null,
-          "error": "MISSING",
+          "to": "/foo/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "/foo/express",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "/foo",
+            },
+          },
         },
       },
     },
@@ -193,6 +359,7 @@ Node {
     "a" => Node {
       "name": "a",
       "location": "/a",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "a",
@@ -213,6 +380,7 @@ Node {
     "b" => Node {
       "name": "b",
       "location": "/b",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "b",
@@ -233,6 +401,7 @@ Node {
     "c" => Node {
       "name": "c",
       "location": "/c",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "c",
@@ -253,6 +422,7 @@ Node {
     "d" => Node {
       "name": "d",
       "location": "/d",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "d",
@@ -273,6 +443,7 @@ Node {
     "e" => Node {
       "name": "e",
       "location": "/e",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "e",
@@ -285,6 +456,7 @@ Node {
     "i" => Node {
       "name": "i",
       "location": "/i",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "i",
@@ -305,6 +477,7 @@ Node {
     "j" => Node {
       "name": "j",
       "location": "/j",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "j",
@@ -325,6 +498,7 @@ Node {
     "k" => Node {
       "name": "k",
       "location": "/k",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "k",
@@ -722,6 +896,7 @@ Node {
     "a" => Node {
       "name": "a",
       "location": "/a",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "a",
@@ -1243,6 +1418,9 @@ Node {
             "b" => Node {
               "name": "b",
               "location": "/nest/a/b",
+              "error": Object {
+                "code": "EJSONPARSE",
+              },
               "edgesIn": Set {
                 Edge {
                   "name": "b",
@@ -1255,6 +1433,7 @@ Node {
                 "c" => Node {
                   "name": "c",
                   "location": "/nest/a/b/c",
+                  "extraneous": true,
                   "edgesOut": Map {
                     "d" => Edge {
                       "name": "d",
@@ -1267,6 +1446,7 @@ Node {
                     "d" => Node {
                       "name": "d",
                       "location": "/nest/a/b/c/d",
+                      "extraneous": true,
                       "edgesIn": Set {
                         Edge {
                           "name": "d",
@@ -1672,6 +1852,7 @@ Node {
     "a" => Node {
       "name": "a",
       "location": "/a",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "a",
@@ -1692,6 +1873,7 @@ Node {
     "b" => Node {
       "name": "b",
       "location": "/b",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "b",
@@ -1712,6 +1894,7 @@ Node {
     "c" => Node {
       "name": "c",
       "location": "/c",
+      "devOptional": true,
       "edgesIn": Set {
         Edge {
           "name": "c",
@@ -1738,6 +1921,7 @@ Node {
     "d" => Node {
       "name": "d",
       "location": "/d",
+      "devOptional": true,
       "edgesIn": Set {
         Edge {
           "name": "d",
@@ -1758,6 +1942,7 @@ Node {
     "e" => Node {
       "name": "e",
       "location": "/e",
+      "devOptional": true,
       "edgesIn": Set {
         Edge {
           "name": "e",
@@ -1835,6 +2020,7 @@ Node {
     "a" => Node {
       "name": "a",
       "location": "/a",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "a",
@@ -1855,6 +2041,7 @@ Node {
     "b" => Node {
       "name": "b",
       "location": "/b",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "b",
@@ -1893,6 +2080,7 @@ Node {
     "c" => Node {
       "name": "c",
       "location": "/c",
+      "devOptional": true,
       "edgesIn": Set {
         Edge {
           "name": "c",
@@ -1917,6 +2105,7 @@ Node {
     "i" => Node {
       "name": "i",
       "location": "/i",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "i",
@@ -1937,6 +2126,7 @@ Node {
     "j" => Node {
       "name": "j",
       "location": "/j",
+      "devOptional": true,
       "edgesIn": Set {
         Edge {
           "name": "j",
@@ -1969,6 +2159,7 @@ Node {
     "k" => Node {
       "name": "k",
       "location": "/k",
+      "devOptional": true,
       "edgesIn": Set {
         Edge {
           "name": "k",
@@ -2039,6 +2230,7 @@ Node {
     "n" => Node {
       "name": "n",
       "location": "/n",
+      "extraneous": true,
       "edgesOut": Map {
         "b" => Edge {
           "name": "b",
@@ -2128,10 +2320,19 @@ exports[`test/load-actual.js TAP noname > loaded tree 1`] = `
 Node {
   "name": "noname",
   "location": "/",
+  "error": Object {
+    "code": "ENOENT",
+    "path": "fixtures/noname/package.json",
+  },
   "children": Map {
     "foo" => Node {
       "name": "foo",
       "location": "/foo",
+      "extraneous": true,
+      "error": Object {
+        "code": "ENOENT",
+        "path": "fixtures/noname/node_modules/foo/package.json",
+      },
     },
   },
 }
@@ -2159,6 +2360,7 @@ Node {
     "a" => Node {
       "name": "a",
       "location": "/a",
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "a",
@@ -2266,6 +2468,7 @@ Node {
     "a" => Node {
       "name": "a",
       "location": "/a",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "a",
@@ -2292,6 +2495,8 @@ Node {
     "b" => Node {
       "name": "b",
       "location": "/b",
+      "dev": true,
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "b",
@@ -2312,6 +2517,8 @@ Node {
     "c" => Node {
       "name": "c",
       "location": "/c",
+      "dev": true,
+      "optional": true,
       "edgesIn": Set {
         Edge {
           "name": "c",
@@ -2332,6 +2539,7 @@ Node {
     "d" => Node {
       "name": "d",
       "location": "/d",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "d",
@@ -2352,6 +2560,7 @@ Node {
     "e" => Node {
       "name": "e",
       "location": "/e",
+      "dev": true,
       "edgesIn": Set {
         Edge {
           "name": "e",
@@ -2375,10 +2584,15 @@ exports[`test/load-actual.js TAP other > loaded tree 1`] = `
 Node {
   "name": "other",
   "location": "/",
+  "error": Object {
+    "code": "ENOENT",
+    "path": "fixtures/other/package.json",
+  },
   "children": Map {
     "glob" => Link {
       "name": "glob",
       "location": "/glob",
+      "extraneous": true,
       "target": Object {
         "name": "glob",
         "parent": null,
@@ -2739,6 +2953,7 @@ Node {
     "@scope/z" => Node {
       "name": "@scope/z",
       "location": "/@scope/z",
+      "extraneous": true,
       "edgesOut": Map {
         "glob" => Edge {
           "name": "glob",
@@ -2751,6 +2966,7 @@ Node {
         "glob" => Link {
           "name": "glob",
           "location": "/@scope/z/glob",
+          "extraneous": true,
           "target": Object {
             "name": "glob",
             "parent": "/foo",
@@ -2813,28 +3029,34 @@ Node {
             "graceful-fs" => Node {
               "name": "graceful-fs",
               "location": "/foo/glob/graceful-fs",
+              "extraneous": true,
             },
             "inherits" => Node {
               "name": "inherits",
               "location": "/foo/glob/inherits",
+              "extraneous": true,
             },
             "minimatch" => Node {
               "name": "minimatch",
               "location": "/foo/glob/minimatch",
+              "extraneous": true,
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
                   "location": "/foo/glob/minimatch/lru-cache",
+                  "extraneous": true,
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
                   "location": "/foo/glob/minimatch/sigmund",
+                  "extraneous": true,
                 },
               },
             },
             "once" => Node {
               "name": "once",
               "location": "/foo/glob/once",
+              "extraneous": true,
             },
           },
         },
@@ -2909,6 +3131,7 @@ Node {
     "@scope/z" => Node {
       "name": "@scope/z",
       "location": "/@scope/z",
+      "extraneous": true,
       "edgesOut": Map {
         "glob" => Edge {
           "name": "glob",
@@ -2921,6 +3144,7 @@ Node {
         "glob" => Link {
           "name": "glob",
           "location": "/@scope/z/glob",
+          "extraneous": true,
           "target": Object {
             "name": "glob",
             "parent": "/foo",
@@ -2983,28 +3207,34 @@ Node {
             "graceful-fs" => Node {
               "name": "graceful-fs",
               "location": "/foo/glob/graceful-fs",
+              "extraneous": true,
             },
             "inherits" => Node {
               "name": "inherits",
               "location": "/foo/glob/inherits",
+              "extraneous": true,
             },
             "minimatch" => Node {
               "name": "minimatch",
               "location": "/foo/glob/minimatch",
+              "extraneous": true,
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
                   "location": "/foo/glob/minimatch/lru-cache",
+                  "extraneous": true,
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
                   "location": "/foo/glob/minimatch/sigmund",
+                  "extraneous": true,
                 },
               },
             },
             "once" => Node {
               "name": "once",
               "location": "/foo/glob/once",
+              "extraneous": true,
             },
           },
         },
@@ -3038,6 +3268,7 @@ Node {
     "bar" => Link {
       "name": "bar",
       "location": "/bar",
+      "extraneous": true,
       "target": Object {
         "name": "bar",
         "parent": null,
@@ -3046,6 +3277,7 @@ Node {
     "foo" => Node {
       "name": "foo",
       "location": "/foo",
+      "extraneous": true,
     },
   },
 }

@@ -8,15 +8,16 @@
 exports[`test/node.js TAP basic instantiation > just a lone root node 1`] = `
 Node {
   "children": Map {},
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "root",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "name": "root",
   },
@@ -34,34 +35,65 @@ Node {
           "children": Map {
             "metameta" => Node {
               "children": Map {},
-              "dev": undefined,
-              "devOptional": undefined,
+              "dev": true,
+              "devOptional": true,
               "edgesIn": Set {},
               "edgesOut": Map {},
               "error": undefined,
+              "extraneous": true,
               "inBundle": false,
               "location": "/prod/meta/metameta",
               "name": "metameta",
-              "optional": undefined,
+              "optional": true,
               "package": Object {
                 "name": "metameta",
                 "version": "1.2.3",
               },
               "path": "./node_modules/prod/node_modules/meta/node_modules/metameta",
               "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
+              "target": Node {
+                "children": Map {},
+                "dev": true,
+                "devOptional": true,
+                "edgesIn": Set {
+                  Edge {},
+                },
+                "edgesOut": Map {
+                  "bundled" => Edge {},
+                },
+                "error": undefined,
+                "extraneous": true,
+                "inBundle": false,
+                "location": "/meta",
+                "name": "meta",
+                "optional": true,
+                "package": Object {
+                  "dependencies": Object {
+                    "bundled": "",
+                  },
+                  "devDependencies": Object {
+                    "missing": "",
+                  },
+                  "name": "meta",
+                  "version": "1.2.3",
+                },
+                "path": "./node_modules/meta",
+                "realpath": "/home/user/projects/root/node_modules/meta",
+              },
             },
           },
-          "dev": undefined,
-          "devOptional": undefined,
+          "dev": true,
+          "devOptional": true,
           "edgesIn": Set {
             Edge {},
           },
           "edgesOut": Map {},
           "error": undefined,
+          "extraneous": true,
           "inBundle": false,
           "location": "/prod/meta",
           "name": "meta",
-          "optional": undefined,
+          "optional": true,
           "package": Object {
             "name": "meta",
             "version": "2.3.4",
@@ -70,8 +102,8 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
         },
       },
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -80,10 +112,11 @@ Node {
         "peer" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/prod",
       "name": "prod",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -99,8 +132,8 @@ Node {
     },
     "bundled" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
         Edge {},
@@ -109,10 +142,11 @@ Node {
         "meta" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -125,17 +159,18 @@ Node {
     },
     "dev" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/dev",
       "name": "dev",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "dev",
         "version": "1.2.3",
@@ -145,17 +180,18 @@ Node {
     },
     "optional" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/optional",
       "name": "optional",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "optional",
         "version": "1.2.3",
@@ -165,17 +201,18 @@ Node {
     },
     "peer" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/peer",
       "name": "peer",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "peer",
         "version": "1.2.3",
@@ -185,15 +222,16 @@ Node {
     },
     "extraneous" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/extraneous",
       "name": "extraneous",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "extraneous",
         "version": "1.2.3",
@@ -203,8 +241,8 @@ Node {
     },
     "meta" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -212,10 +250,11 @@ Node {
         "bundled" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/meta",
       "name": "meta",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "bundled": "",
@@ -227,11 +266,11 @@ Node {
         "version": "1.2.3",
       },
       "path": "./node_modules/meta",
-      "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {
     "optional" => Edge {},
@@ -243,10 +282,11 @@ Node {
     "dev" => Edge {},
   },
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "root",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "bundleDependencies": Array [
       "bundled",
@@ -279,8 +319,8 @@ Node {
       "children": Map {
         "meta" => Node {
           "children": Map {},
-          "dev": undefined,
-          "devOptional": undefined,
+          "dev": true,
+          "devOptional": true,
           "edgesIn": Set {
             Edge {},
           },
@@ -288,10 +328,11 @@ Node {
             "bundled" => Edge {},
           },
           "error": undefined,
+          "extraneous": true,
           "inBundle": false,
           "location": "/prod/meta",
           "name": "meta",
-          "optional": undefined,
+          "optional": true,
           "package": Object {
             "dependencies": Object {
               "bundled": "",
@@ -306,8 +347,8 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
         },
       },
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -316,10 +357,11 @@ Node {
         "peer" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/prod",
       "name": "prod",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -335,8 +377,8 @@ Node {
     },
     "bundled" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
         Edge {},
@@ -345,10 +387,11 @@ Node {
         "meta" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -361,17 +404,18 @@ Node {
     },
     "dev" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/dev",
       "name": "dev",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "dev",
         "version": "1.2.3",
@@ -381,17 +425,18 @@ Node {
     },
     "optional" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/optional",
       "name": "optional",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "optional",
         "version": "1.2.3",
@@ -401,17 +446,18 @@ Node {
     },
     "peer" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/peer",
       "name": "peer",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "peer",
         "version": "1.2.3",
@@ -421,15 +467,16 @@ Node {
     },
     "extraneous" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/extraneous",
       "name": "extraneous",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "extraneous",
         "version": "1.2.3",
@@ -438,8 +485,8 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
     },
   },
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {
     "optional" => Edge {},
@@ -451,10 +498,11 @@ Node {
     "dev" => Edge {},
   },
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "root",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "bundleDependencies": Array [
       "bundled",
@@ -480,13 +528,13 @@ Node {
 }
 `
 
-exports[`test/node.js TAP testing with dep tree > move meta to top level 1`] = `
+exports[`test/node.js TAP testing with dep tree > move meta to top level, update stuff 1`] = `
 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -495,10 +543,11 @@ Node {
         "peer" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/prod",
       "name": "prod",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -514,8 +563,8 @@ Node {
     },
     "bundled" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
         Edge {},
@@ -524,10 +573,11 @@ Node {
         "meta" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -540,17 +590,18 @@ Node {
     },
     "dev" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/dev",
       "name": "dev",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "dev",
         "version": "1.2.3",
@@ -560,17 +611,18 @@ Node {
     },
     "optional" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/optional",
       "name": "optional",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "optional",
         "version": "1.2.3",
@@ -580,17 +632,18 @@ Node {
     },
     "peer" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/peer",
       "name": "peer",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "peer",
         "version": "1.2.3",
@@ -600,15 +653,16 @@ Node {
     },
     "extraneous" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/extraneous",
       "name": "extraneous",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "extraneous",
         "version": "1.2.3",
@@ -618,8 +672,8 @@ Node {
     },
     "meta" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
         Edge {},
@@ -628,10 +682,11 @@ Node {
         "bundled" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/meta",
       "name": "meta",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "bundled": "",
@@ -643,11 +698,11 @@ Node {
         "version": "1.2.3",
       },
       "path": "./node_modules/meta",
-      "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {
     "optional" => Edge {},
@@ -659,10 +714,11 @@ Node {
     "dev" => Edge {},
   },
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "root",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "bundleDependencies": Array [
       "bundled",
@@ -693,8 +749,8 @@ Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -703,10 +759,11 @@ Node {
         "peer" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/prod",
       "name": "prod",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -722,8 +779,8 @@ Node {
     },
     "bundled" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -731,10 +788,11 @@ Node {
         "meta" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -747,17 +805,18 @@ Node {
     },
     "dev" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/dev",
       "name": "dev",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "dev",
         "version": "1.2.3",
@@ -767,17 +826,18 @@ Node {
     },
     "optional" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/optional",
       "name": "optional",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "optional",
         "version": "1.2.3",
@@ -787,17 +847,18 @@ Node {
     },
     "peer" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/peer",
       "name": "peer",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "peer",
         "version": "1.2.3",
@@ -807,15 +868,16 @@ Node {
     },
     "extraneous" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/extraneous",
       "name": "extraneous",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "extraneous",
         "version": "1.2.3",
@@ -827,45 +889,74 @@ Node {
       "children": Map {
         "metameta" => Node {
           "children": Map {},
-          "dev": undefined,
-          "devOptional": undefined,
+          "dev": true,
+          "devOptional": true,
           "edgesIn": Set {},
           "edgesOut": Map {},
           "error": undefined,
+          "extraneous": true,
           "inBundle": false,
           "location": "/meta/metameta",
           "name": "metameta",
-          "optional": undefined,
+          "optional": true,
           "package": Object {
             "name": "metameta",
             "version": "1.2.3",
           },
           "path": "./node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
+          "target": Node {
+            "children": Map {},
+            "dev": true,
+            "devOptional": true,
+            "edgesIn": Set {},
+            "edgesOut": Map {
+              "bundled" => Edge {},
+            },
+            "error": undefined,
+            "extraneous": true,
+            "inBundle": false,
+            "location": "/",
+            "name": "meta",
+            "optional": true,
+            "package": Object {
+              "dependencies": Object {
+                "bundled": "",
+              },
+              "devDependencies": Object {
+                "missing": "",
+              },
+              "name": "meta",
+              "version": "1.2.3",
+            },
+            "path": "./node_modules/meta",
+            "realpath": "/home/user/projects/root/node_modules/meta",
+          },
         },
       },
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/meta",
       "name": "meta",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "meta",
         "version": "2.3.4",
       },
       "path": "./node_modules/meta",
-      "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {
     "optional" => Edge {},
@@ -877,10 +968,11 @@ Node {
     "dev" => Edge {},
   },
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "root",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "bundleDependencies": Array [
       "bundled",
@@ -911,8 +1003,8 @@ Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -921,10 +1013,11 @@ Node {
         "peer" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/prod",
       "name": "prod",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -940,8 +1033,8 @@ Node {
     },
     "bundled" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
@@ -949,10 +1042,11 @@ Node {
         "meta" => Edge {},
       },
       "error": undefined,
+      "extraneous": true,
       "inBundle": true,
       "location": "/bundled",
       "name": "bundled",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "dependencies": Object {
           "meta": "",
@@ -965,17 +1059,18 @@ Node {
     },
     "dev" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/dev",
       "name": "dev",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "dev",
         "version": "1.2.3",
@@ -985,17 +1080,18 @@ Node {
     },
     "optional" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/optional",
       "name": "optional",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "optional",
         "version": "1.2.3",
@@ -1005,17 +1101,18 @@ Node {
     },
     "peer" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/peer",
       "name": "peer",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "peer",
         "version": "1.2.3",
@@ -1025,15 +1122,16 @@ Node {
     },
     "extraneous" => Node {
       "children": Map {},
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/extraneous",
       "name": "extraneous",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "extraneous",
         "version": "1.2.3",
@@ -1045,45 +1143,74 @@ Node {
       "children": Map {
         "metameta" => Node {
           "children": Map {},
-          "dev": undefined,
-          "devOptional": undefined,
+          "dev": true,
+          "devOptional": true,
           "edgesIn": Set {},
           "edgesOut": Map {},
           "error": undefined,
+          "extraneous": true,
           "inBundle": false,
           "location": "/meta/metameta",
           "name": "metameta",
-          "optional": undefined,
+          "optional": true,
           "package": Object {
             "name": "metameta",
             "version": "1.2.3",
           },
           "path": "./node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
+          "target": Node {
+            "children": Map {},
+            "dev": true,
+            "devOptional": true,
+            "edgesIn": Set {},
+            "edgesOut": Map {
+              "bundled" => Edge {},
+            },
+            "error": undefined,
+            "extraneous": true,
+            "inBundle": false,
+            "location": "/",
+            "name": "meta",
+            "optional": true,
+            "package": Object {
+              "dependencies": Object {
+                "bundled": "",
+              },
+              "devDependencies": Object {
+                "missing": "",
+              },
+              "name": "meta",
+              "version": "1.2.3",
+            },
+            "path": "./node_modules/meta",
+            "realpath": "/home/user/projects/root/node_modules/meta",
+          },
         },
       },
-      "dev": undefined,
-      "devOptional": undefined,
+      "dev": true,
+      "devOptional": true,
       "edgesIn": Set {
         Edge {},
         Edge {},
       },
       "edgesOut": Map {},
       "error": undefined,
+      "extraneous": true,
       "inBundle": false,
       "location": "/meta",
       "name": "meta",
-      "optional": undefined,
+      "optional": true,
       "package": Object {
         "name": "meta",
         "version": "2.3.4",
       },
       "path": "./node_modules/meta",
-      "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {
     "optional" => Edge {},
@@ -1095,10 +1222,11 @@ Node {
     "dev" => Edge {},
   },
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "root",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "bundleDependencies": Array [
       "bundled",

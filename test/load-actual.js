@@ -1,7 +1,7 @@
 const t = require('tap')
 const { format } = require('tcompare')
 const loadActual = require('../lib/load-actual.js')
-const { resolve, dirname } = require('path')
+const { resolve, dirname, relative } = require('path')
 const { realpathSync } = require('fs')
 
 const {
@@ -28,6 +28,20 @@ const printEdge = (edge, inout) => ({
 const printTree = tree => ({
   name: tree.name,
   location: tree.location,
+  ...(tree.extraneous ? { extraneous: true } : {
+    ...(tree.dev ? { dev: true } : {}),
+    ...(tree.optional ? { optional: true } : {}),
+    ...(tree.devOptional && !tree.dev && !tree.optional
+      ? { devOptional: true } : {}),
+  }),
+  ...(tree.error
+    ? {
+      error: {
+        code: tree.error.code,
+        ...(tree.error.path ? { path: relative(__dirname, tree.error.path) }
+          : {}),
+      }
+    } : {}),
   ...(tree.isLink ? {
     target: {
       name: tree.target.name,

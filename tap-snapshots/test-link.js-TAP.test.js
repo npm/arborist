@@ -7,15 +7,16 @@
 'use strict'
 exports[`test/link.js TAP > instantiate with target specified 1`] = `
 Link {
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "path",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "name": "root",
   },
@@ -23,15 +24,16 @@ Link {
   "realpath": "/home/user/projects/some/kind/of/path",
   "target": Node {
     "children": Map {},
-    "dev": undefined,
-    "devOptional": undefined,
+    "dev": true,
+    "devOptional": true,
     "edgesIn": Set {},
     "edgesOut": Map {},
     "error": undefined,
+    "extraneous": true,
     "inBundle": false,
     "location": "/",
     "name": "path",
-    "optional": undefined,
+    "optional": true,
     "package": Object {
       "name": "root",
     },
@@ -43,15 +45,16 @@ Link {
 
 exports[`test/link.js TAP > instantiate without providing target 1`] = `
 Link {
-  "dev": undefined,
-  "devOptional": undefined,
+  "dev": true,
+  "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "error": undefined,
+  "extraneous": true,
   "inBundle": false,
   "location": "/",
   "name": "path",
-  "optional": undefined,
+  "optional": true,
   "package": Object {
     "name": "root",
   },
@@ -59,15 +62,16 @@ Link {
   "realpath": "/home/user/projects/some/kind/of/path",
   "target": Node {
     "children": Map {},
-    "dev": undefined,
-    "devOptional": undefined,
+    "dev": true,
+    "devOptional": true,
     "edgesIn": Set {},
     "edgesOut": Map {},
     "error": undefined,
+    "extraneous": true,
     "inBundle": false,
     "location": "/",
     "name": "path",
-    "optional": undefined,
+    "optional": true,
     "package": Object {
       "name": "root",
     },

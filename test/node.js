@@ -155,3 +155,30 @@ t.test('tracks the loading error encountered', t => {
 
 t.throws(() => new Node({pkg: {}}), TypeError(
   'could not detect node name from path or package'))
+
+t.test('load with integrity and resolved values', t => {
+  const node = new Node({
+    pkg: { name: 'mything' },
+    parent: new Node({
+      path: '.',
+      realpath: '/home/user/projects/root',
+    }),
+    meta: {
+      get: node =>
+        node.location === '/' ? null : {
+          resolved: 'resolved',
+          integrity: 'integrity',
+        }
+    },
+  })
+
+  t.match(node, {
+    resolved: 'resolved',
+    integrity: 'integrity',
+    parent: {
+      resolved: null,
+      integrity: null,
+    },
+  })
+  t.end()
+})

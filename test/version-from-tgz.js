@@ -1,0 +1,8 @@
+const ver = require('../lib/version-from-tgz.js')
+const t = require('tap')
+t.equal(ver('asdf-foo', 'asdf-foo-1.2.3.tgz'), '1.2.3')
+t.equal(ver('asdf-foo', '/path/to/asdf-foo-1.2.3.tgz'), '1.2.3')
+t.equal(ver('asdf-foo', 'https://x.y/p/a/t/h/asdf-foo-1.2.3.tgz'), '1.2.3')
+t.equal(ver('x', 'https://host.com/api/v1/tar.gz/master'), null)
+t.equal(ver('x', '/path/to/x.tgz'), null)
+t.equal(ver('x', '/path/to/x-a3wasf.tgz'), null)

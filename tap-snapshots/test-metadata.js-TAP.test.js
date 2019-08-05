@@ -5,6 +5,10 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/metadata.js TAP look up from locks and such > fall off the dep tree 1`] = `
+Object {}
+`
+
 exports[`test/metadata.js TAP look up from locks and such > from arbmeta 1`] = `
 Object {
   "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
@@ -21,8 +25,41 @@ Object {
 
 exports[`test/metadata.js TAP look up from locks and such > from shrinkwrap 1`] = `
 Object {
-  "integrity": undefined,
-  "resolved": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+  "resolved": "git+ssh://git@github.com:isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > get from basic package.json 1`] = `
+Object {
+  "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+  "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > get from gh shorthand package.json 1`] = `
+Object {
+  "integrity": null,
+  "resolved": "git+ssh://git@github.com:isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > get from gh shorthand package.json 2`] = `
+Object {
+  "integrity": null,
+  "resolved": "git+ssh://git@github.com:isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > get from pinned-version package.json 1`] = `
+Object {
+  "integrity": "sha1-qgScln+ZkiKqQuFENPDFYu9GgkE=",
+  "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
+}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > get from symlinked package.json 1`] = `
+Object {
+  "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
 }
 `
 
@@ -61,4 +98,21 @@ Object {}
 
 exports[`test/metadata.js TAP look up from locks and such > not found sw 1`] = `
 Object {}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > package with no metas 1`] = `
+Object {}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > symlink from sw 1`] = `
+Object {
+  "integrity": undefined,
+  "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
+}
+`
+
+exports[`test/metadata.js TAP look up from locks and such > unhosted git from sw 1`] = `
+Object {
+  "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+}
 `

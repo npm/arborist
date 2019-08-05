@@ -187,8 +187,8 @@ to a package folder, which may have children in `node_modules`.
 * `node.resolve(name)`  Identify the node that will be returned when code
   in this package runs `require(name)`
 
-* `node.error` Errors parsing or finding a package.json in `node_modules`
-  will result in a node with the error property set.
+* `node.errors` Array of errors encountered while parsing package.json or
+  version specifiers.
 
 ### class Link
 

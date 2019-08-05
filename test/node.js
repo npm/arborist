@@ -1,5 +1,6 @@
 const t = require('tap')
 const Node = require('../lib/node.js')
+const Link = require('../lib/link.js')
 
 t.test('basic instantiation', t => {
   const root = new Node({
@@ -100,16 +101,16 @@ t.test('testing with dep tree', t => {
   })
 
   // test that reparenting a link _doesn't_ update realpath
-  const metaMeta = new Node({
+  const metaMeta = new Link({
     pkg: {
       name: 'metameta',
       version: '1.2.3',
     },
     path: newMeta.path + '/node_modules/metameta',
-    realpath: meta.realpath
+    realpath: meta.realpath,
+    target: meta,
   })
   metaMeta.parent = newMeta
-  metaMeta.target = meta
 
   t.matchSnapshot(root, 'add new meta under prod')
 
@@ -149,7 +150,7 @@ t.test('tracks the loading error encountered', t => {
     realpath: '/home/user/projects/root',
     error,
   })
-  t.equal(root.error, error, 'keeps ahold of the error')
+  t.equal(root.errors[0], error, 'keeps ahold of the error')
   t.end()
 })
 

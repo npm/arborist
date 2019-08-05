@@ -34,13 +34,13 @@ const printTree = tree => ({
     ...(tree.devOptional && !tree.dev && !tree.optional
       ? { devOptional: true } : {}),
   }),
-  ...(tree.error
+  ...(tree.errors.length
     ? {
-      error: {
-        code: tree.error.code,
-        ...(tree.error.path ? { path: relative(__dirname, tree.error.path) }
+      errors: tree.errors.map(error => ({
+        code: error.code,
+        ...(error.path ? { path: relative(__dirname, error.path) }
           : {}),
-      }
+      })),
     } : {}),
   ...(tree.isLink ? {
     target: {
@@ -103,16 +103,16 @@ t.test('shake out Link target timing issue', t => {
 
 t.test('broken json', t =>
   loadActual(resolve(fixtures, 'bad')).then(d => {
-    t.ok(d.error, 'Got an error object')
-    t.equal(d.error && d.error.code, 'EJSONPARSE')
+    t.ok(d.errors.length, 'Got an error object')
+    t.equal(d.errors[0] && d.errors[0].code, 'EJSONPARSE')
     t.ok(d, 'Got a tree')
   }))
 
 t.test('missing json does not obscure deeper errors', t =>
   loadActual(resolve(fixtures, 'empty')).then(d => {
-    t.match(d, { error: { code: 'ENOENT' } },
+    t.match(d, { errors: [{ code: 'ENOENT' }] },
       'Error reading json of top level')
-    t.match(d.children.get('foo'), { error: { code: 'EJSONPARSE' } },
+    t.match(d.children.get('foo'), { errors: [{ code: 'EJSONPARSE' }] },
       'Error parsing JSON of child node')
   }))
 
@@ -124,9 +124,9 @@ t.test('missing folder', t =>
 t.test('missing symlinks', t =>
   loadActual(resolve(fixtures, 'badlink')).then(d => {
     t.is(d.children.size, 2, 'both broken children are included')
-    t.match(d.children.get('foo'), { error: { code: 'ELOOP' } },
+    t.match(d.children.get('foo'), { errors: [{ code: 'ELOOP' }] },
       'foo has error')
-    t.match(d.children.get('bar'), { error: { code: 'ENOENT' } },
+    t.match(d.children.get('bar'), { errors: [{ code: 'ENOENT' }] },
       'bar has error')
   }))
 

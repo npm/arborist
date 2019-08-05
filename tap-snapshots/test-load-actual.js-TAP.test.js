@@ -1418,9 +1418,11 @@ Node {
             "b" => Node {
               "name": "b",
               "location": "/nest/a/b",
-              "error": Object {
-                "code": "EJSONPARSE",
-              },
+              "errors": Array [
+                Object {
+                  "code": "EJSONPARSE",
+                },
+              ],
               "edgesIn": Set {
                 Edge {
                   "name": "b",
@@ -2320,19 +2322,23 @@ exports[`test/load-actual.js TAP noname > loaded tree 1`] = `
 Node {
   "name": "noname",
   "location": "/",
-  "error": Object {
-    "code": "ENOENT",
-    "path": "fixtures/noname/package.json",
-  },
+  "errors": Array [
+    Object {
+      "code": "ENOENT",
+      "path": "fixtures/noname/package.json",
+    },
+  ],
   "children": Map {
     "foo" => Node {
       "name": "foo",
       "location": "/foo",
       "extraneous": true,
-      "error": Object {
-        "code": "ENOENT",
-        "path": "fixtures/noname/node_modules/foo/package.json",
-      },
+      "errors": Array [
+        Object {
+          "code": "ENOENT",
+          "path": "fixtures/noname/node_modules/foo/package.json",
+        },
+      ],
     },
   },
 }
@@ -2584,10 +2590,12 @@ exports[`test/load-actual.js TAP other > loaded tree 1`] = `
 Node {
   "name": "other",
   "location": "/",
-  "error": Object {
-    "code": "ENOENT",
-    "path": "fixtures/other/package.json",
-  },
+  "errors": Array [
+    Object {
+      "code": "ENOENT",
+      "path": "fixtures/other/package.json",
+    },
+  ],
   "children": Map {
     "glob" => Link {
       "name": "glob",

@@ -79,16 +79,47 @@ t.notOk(depValid({
 t.notOk(depValid({}, 'latest', {}),
   'tagged registry version needs remote tarball resolution')
 
-t.throws(() => depValid({}, { type: 'not a type' }),
-  Error('Unknown dependency type: not a type'))
+t.test('unsupported dependency type', t => {
+  const requestor = { errors: [] }
+  const child = {name: 'kid'}
+  const request = { type: 'not a type' }
+  t.notOk(depValid(child, request, requestor))
+  t.match(requestor, {
+    errors: [{
+      message: 'Unsupported dependency type',
+      dependency: 'kid',
+      requested: { type: 'not a type' },
+    }],
+  }, 'parent got an error for their unsupported request')
+  t.end()
+})
 
 t.test('invalid tag name', t => {
   const requestor = { errors: [] }
-  const child = {}
+  const child = { name: 'kid' }
   const request = '!!@#$%!#@$!'
   t.notOk(depValid(child, request, requestor))
   t.match(requestor, {
-    errors: [ { message: 'Invalid tag name "!!@#$%!#@$!"' } ],
+    errors: [{
+      message: 'Invalid tag name "!!@#$%!#@$!"',
+      dependency: 'kid',
+      requested: '!!@#$%!#@$!',
+    }],
+  }, 'parent got an error for their invalid request')
+  t.end()
+})
+
+t.test('invalid request all together', t => {
+  const requestor = { errors: [] }
+  const child = { name: 'kid' }
+  const request = null
+  t.notOk(depValid(child, request, requestor))
+  t.match(requestor, {
+    errors: [{
+      message: 'Invalid dependency specifier',
+      requested: null,
+      dependency: 'kid',
+    }],
   }, 'parent got an error for their invalid request')
   t.end()
 })

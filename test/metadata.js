@@ -13,7 +13,7 @@ t.test('root defaults to .', t => {
 })
 
 t.test('loading in bad dir fails to get lock files', t =>
-  new Metadata('path/which/does/not/exist').load().then(m =>
+  Metadata.load('path/which/does/not/exist').then(m =>
     t.match(m.data, {arbmeta: {}, lockfile: null, shrinkwrap: null})))
 
 t.test('look up from locks and such', t =>

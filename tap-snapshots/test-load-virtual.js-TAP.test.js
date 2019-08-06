@@ -405,7 +405,7 @@ Node {
       },
       "location": "/once",
       "name": "once",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/once/once-1.4.0.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -471,7 +471,7 @@ Node {
       },
       "location": "/rimraf",
       "name": "rimraf",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/rimraf/rimraf-2.6.3.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -484,7 +484,7 @@ Node {
       },
       "location": "/symlink",
       "name": "symlink",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-link-target",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -502,7 +502,7 @@ Node {
       },
       "location": "/tarball",
       "name": "tarball",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-1.1.1.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "/unhosted-git",
@@ -997,7 +997,7 @@ Node {
       },
       "location": "/once",
       "name": "once",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/once/once-1.4.0.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -1063,7 +1063,7 @@ Node {
       },
       "location": "/rimraf",
       "name": "rimraf",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/rimraf/rimraf-2.6.3.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -1076,7 +1076,7 @@ Node {
       },
       "location": "/symlink",
       "name": "symlink",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-link-target",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -1094,7 +1094,7 @@ Node {
       },
       "location": "/tarball",
       "name": "tarball",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-1.1.1.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "/unhosted-git",
@@ -1589,7 +1589,7 @@ Node {
       },
       "location": "/once",
       "name": "once",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/once/once-1.4.0.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -1655,7 +1655,7 @@ Node {
       },
       "location": "/rimraf",
       "name": "rimraf",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/rimraf/rimraf-2.6.3.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -1668,7 +1668,7 @@ Node {
       },
       "location": "/symlink",
       "name": "symlink",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-link-target",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -1686,7 +1686,7 @@ Node {
       },
       "location": "/tarball",
       "name": "tarball",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-1.1.1.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "/unhosted-git",
@@ -2217,7 +2217,7 @@ Node {
         Edge {
           "from": "/",
           "name": "once",
-          "spec": "file:../../../js/once/once-1.4.0.tgz",
+          "spec": "file:once-1.4.0.tgz",
           "type": "prod",
         },
         Edge {
@@ -2243,7 +2243,7 @@ Node {
       },
       "location": "/once",
       "name": "once",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/once/once-1.4.0.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -2309,7 +2309,7 @@ Node {
         Edge {
           "from": "/",
           "name": "rimraf",
-          "spec": "file:../../../js/rimraf/rimraf-2.6.3.tgz",
+          "spec": "file:rimraf-2.6.3.tgz",
           "type": "prod",
         },
       },
@@ -2323,7 +2323,7 @@ Node {
       },
       "location": "/rimraf",
       "name": "rimraf",
-      "resolved": "/Users/isaacs/dev/npm/arborist/js/rimraf/rimraf-2.6.3.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -2336,7 +2336,7 @@ Node {
       },
       "location": "/symlink",
       "name": "symlink",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-link-target",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -2354,7 +2354,7 @@ Node {
       },
       "location": "/tarball",
       "name": "tarball",
-      "resolved": "/Users/isaacs/dev/npm/arborist/test/fixtures/install-types/abbrev-1.1.1.tgz",
+      "resolved": "{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "edgesIn": Set {
@@ -2482,7 +2482,7 @@ Node {
     },
     "once" => Edge {
       "name": "once",
-      "spec": "file:../../../js/once/once-1.4.0.tgz",
+      "spec": "file:once-1.4.0.tgz",
       "to": "/once",
       "type": "prod",
     },
@@ -2512,7 +2512,7 @@ Node {
     },
     "rimraf" => Edge {
       "name": "rimraf",
-      "spec": "file:../../../js/rimraf/rimraf-2.6.3.tgz",
+      "spec": "file:rimraf-2.6.3.tgz",
       "to": "/rimraf",
       "type": "prod",
     },

@@ -65,6 +65,9 @@ const printTree = tree => ({
 
 const { format } = require('tcompare')
 
+const cwd = process.cwd()
+t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
+
 t.test('load from fixture', t =>
   loadVirtual(fixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'loaded virtual tree from fixture')))

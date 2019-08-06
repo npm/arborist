@@ -8,7 +8,7 @@
 exports[`test/spec-from-lock.js TAP > directory symlink 1`] = `
 Object {
   "escapedName": "x",
-  "fetchSpec": "/Users/isaacs/dev/npm/some/path",
+  "fetchSpec": "{..}/some/path",
   "gitCommittish": undefined,
   "gitRange": undefined,
   "hosted": undefined,
@@ -19,14 +19,14 @@ Object {
   "saveSpec": "file:../some/path",
   "scope": undefined,
   "type": "directory",
-  "where": "/Users/isaacs/dev/npm/arborist",
+  "where": "{CWD}",
 }
 `
 
 exports[`test/spec-from-lock.js TAP > file with from, no integrity 1`] = `
 Object {
   "escapedName": "x",
-  "fetchSpec": "/Users/isaacs/dev/npm/arborist/x-1.2.3.tgz",
+  "fetchSpec": "{CWD}/x-1.2.3.tgz",
   "gitCommittish": undefined,
   "gitRange": undefined,
   "hosted": undefined,
@@ -37,7 +37,7 @@ Object {
   "saveSpec": "file:x-1.2.3.tgz",
   "scope": undefined,
   "type": "file",
-  "where": "/Users/isaacs/dev/npm/arborist",
+  "where": "{CWD}",
 }
 `
 
@@ -55,7 +55,7 @@ Object {
   "saveSpec": "file:/path/to/x-1.2.3.tgz",
   "scope": undefined,
   "type": "file",
-  "where": "/Users/isaacs/dev/npm/arborist",
+  "where": "{CWD}",
 }
 `
 
@@ -73,14 +73,14 @@ Object {
   "saveSpec": "file:/path/to/x-1.2.3.tgz",
   "scope": undefined,
   "type": "file",
-  "where": "/Users/isaacs/dev/npm/arborist",
+  "where": "{CWD}",
 }
 `
 
 exports[`test/spec-from-lock.js TAP > version (file) and integrity set 1`] = `
 Object {
   "escapedName": "x",
-  "fetchSpec": "/Users/isaacs/dev/npm/arborist/foo.tgz",
+  "fetchSpec": "{CWD}/foo.tgz",
   "gitCommittish": undefined,
   "gitRange": undefined,
   "hosted": undefined,
@@ -91,7 +91,7 @@ Object {
   "saveSpec": "file:foo.tgz",
   "scope": undefined,
   "type": "file",
-  "where": "/Users/isaacs/dev/npm/arborist",
+  "where": "{CWD}",
 }
 `
 

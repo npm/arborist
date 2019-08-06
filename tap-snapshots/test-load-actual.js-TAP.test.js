@@ -988,6 +988,519 @@ Node {
 }
 `
 
+exports[`test/load-actual.js TAP install-types > loaded tree 1`] = `
+Node {
+  "name": "install-types",
+  "location": "/",
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "type": "prod",
+      "spec": "^1.1.1",
+      "to": "/abbrev",
+    },
+    "bundler" => Edge {
+      "name": "bundler",
+      "type": "prod",
+      "spec": "1.2.3",
+      "to": "/bundler",
+    },
+    "full-git-url" => Edge {
+      "name": "full-git-url",
+      "type": "prod",
+      "spec": "git+https://github.com/isaacs/abbrev-js.git",
+      "to": "/full-git-url",
+    },
+    "ghshort" => Edge {
+      "name": "ghshort",
+      "type": "prod",
+      "spec": "github:isaacs/abbrev-js",
+      "to": "/ghshort",
+    },
+    "old" => Edge {
+      "name": "old",
+      "type": "prod",
+      "spec": "npm:abbrev@^1.0.3",
+      "to": "/old",
+    },
+    "pinned" => Edge {
+      "name": "pinned",
+      "type": "prod",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "/pinned",
+    },
+    "reg" => Edge {
+      "name": "reg",
+      "type": "prod",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "/reg",
+    },
+    "remote" => Edge {
+      "name": "remote",
+      "type": "prod",
+      "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "to": "/remote",
+    },
+    "symlink" => Edge {
+      "name": "symlink",
+      "type": "prod",
+      "spec": "file:./abbrev-link-target",
+      "to": "/symlink",
+    },
+    "tarball" => Edge {
+      "name": "tarball",
+      "type": "prod",
+      "spec": "file:abbrev-1.1.1.tgz",
+      "to": "/tarball",
+    },
+  },
+  "children": Map {
+    "abbrev" => Node {
+      "name": "abbrev",
+      "location": "/abbrev",
+      "edgesIn": Set {
+        Edge {
+          "name": "abbrev",
+          "type": "prod",
+          "spec": "^1.1.1",
+          "from": "/",
+        },
+      },
+    },
+    "balanced-match" => Node {
+      "name": "balanced-match",
+      "location": "/balanced-match",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "balanced-match",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "from": "/brace-expansion",
+        },
+      },
+    },
+    "brace-expansion" => Node {
+      "name": "brace-expansion",
+      "location": "/brace-expansion",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "brace-expansion",
+          "type": "prod",
+          "spec": "^1.1.7",
+          "from": "/minimatch",
+        },
+      },
+      "edgesOut": Map {
+        "balanced-match" => Edge {
+          "name": "balanced-match",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "to": "/balanced-match",
+        },
+        "concat-map" => Edge {
+          "name": "concat-map",
+          "type": "prod",
+          "spec": "0.0.1",
+          "to": "/concat-map",
+        },
+      },
+    },
+    "bundler" => Node {
+      "name": "bundler",
+      "location": "/bundler",
+      "edgesIn": Set {
+        Edge {
+          "name": "bundler",
+          "type": "prod",
+          "spec": "1.2.3",
+          "from": "/",
+        },
+      },
+      "edgesOut": Map {
+        "a" => Edge {
+          "name": "a",
+          "type": "prod",
+          "spec": "",
+          "to": "/bundler/a",
+        },
+      },
+      "children": Map {
+        "a" => Node {
+          "name": "a",
+          "location": "/bundler/a",
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "name": "a",
+              "type": "prod",
+              "spec": "",
+              "from": "/bundler",
+            },
+          },
+          "edgesOut": Map {
+            "b" => Edge {
+              "name": "b",
+              "type": "prod",
+              "spec": "",
+              "to": "/bundler/b",
+            },
+          },
+        },
+        "b" => Node {
+          "name": "b",
+          "location": "/bundler/b",
+          "edgesIn": Set {
+            Edge {
+              "name": "b",
+              "type": "prod",
+              "spec": "",
+              "from": "/bundler/a",
+            },
+          },
+          "edgesOut": Map {
+            "c" => Edge {
+              "name": "c",
+              "type": "prod",
+              "spec": "",
+              "to": "/bundler/c",
+            },
+          },
+        },
+        "c" => Node {
+          "name": "c",
+          "location": "/bundler/c",
+          "edgesIn": Set {
+            Edge {
+              "name": "c",
+              "type": "prod",
+              "spec": "",
+              "from": "/bundler/b",
+            },
+          },
+        },
+      },
+    },
+    "concat-map" => Node {
+      "name": "concat-map",
+      "location": "/concat-map",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "concat-map",
+          "type": "prod",
+          "spec": "0.0.1",
+          "from": "/brace-expansion",
+        },
+      },
+    },
+    "fs.realpath" => Node {
+      "name": "fs.realpath",
+      "location": "/fs.realpath",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "fs.realpath",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "from": "/glob",
+        },
+      },
+    },
+    "full-git-url" => Node {
+      "name": "full-git-url",
+      "location": "/full-git-url",
+      "edgesIn": Set {
+        Edge {
+          "name": "full-git-url",
+          "type": "prod",
+          "spec": "git+https://github.com/isaacs/abbrev-js.git",
+          "from": "/",
+        },
+      },
+    },
+    "ghshort" => Node {
+      "name": "ghshort",
+      "location": "/ghshort",
+      "edgesIn": Set {
+        Edge {
+          "name": "ghshort",
+          "type": "prod",
+          "spec": "github:isaacs/abbrev-js",
+          "from": "/",
+        },
+      },
+    },
+    "ghtgz" => Node {
+      "name": "ghtgz",
+      "location": "/ghtgz",
+      "extraneous": true,
+    },
+    "glob" => Node {
+      "name": "glob",
+      "location": "/glob",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "glob",
+          "type": "optional",
+          "spec": "^7.1.3",
+          "from": "/rimraf",
+        },
+      },
+      "edgesOut": Map {
+        "fs.realpath" => Edge {
+          "name": "fs.realpath",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "to": "/fs.realpath",
+        },
+        "inflight" => Edge {
+          "name": "inflight",
+          "type": "prod",
+          "spec": "^1.0.4",
+          "to": "/inflight",
+        },
+        "inherits" => Edge {
+          "name": "inherits",
+          "type": "prod",
+          "spec": "2",
+          "to": "/inherits",
+        },
+        "minimatch" => Edge {
+          "name": "minimatch",
+          "type": "prod",
+          "spec": "^3.0.4",
+          "to": "/minimatch",
+        },
+        "once" => Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "to": "/once",
+        },
+        "path-is-absolute" => Edge {
+          "name": "path-is-absolute",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "to": "/path-is-absolute",
+        },
+      },
+    },
+    "inflight" => Node {
+      "name": "inflight",
+      "location": "/inflight",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "inflight",
+          "type": "prod",
+          "spec": "^1.0.4",
+          "from": "/glob",
+        },
+      },
+      "edgesOut": Map {
+        "once" => Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "to": "/once",
+        },
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "type": "prod",
+          "spec": "1",
+          "to": "/wrappy",
+        },
+      },
+    },
+    "inherits" => Node {
+      "name": "inherits",
+      "location": "/inherits",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "inherits",
+          "type": "prod",
+          "spec": "2",
+          "from": "/glob",
+        },
+      },
+    },
+    "minimatch" => Node {
+      "name": "minimatch",
+      "location": "/minimatch",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "minimatch",
+          "type": "prod",
+          "spec": "^3.0.4",
+          "from": "/glob",
+        },
+      },
+      "edgesOut": Map {
+        "brace-expansion" => Edge {
+          "name": "brace-expansion",
+          "type": "prod",
+          "spec": "^1.1.7",
+          "to": "/brace-expansion",
+        },
+      },
+    },
+    "old" => Node {
+      "name": "old",
+      "location": "/old",
+      "edgesIn": Set {
+        Edge {
+          "name": "old",
+          "type": "prod",
+          "spec": "npm:abbrev@^1.0.3",
+          "from": "/",
+        },
+      },
+    },
+    "once" => Node {
+      "name": "once",
+      "location": "/once",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "from": "/glob",
+        },
+        Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "from": "/inflight",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "type": "prod",
+          "spec": "1",
+          "to": "/wrappy",
+        },
+      },
+    },
+    "path-is-absolute" => Node {
+      "name": "path-is-absolute",
+      "location": "/path-is-absolute",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "path-is-absolute",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "from": "/glob",
+        },
+      },
+    },
+    "pinned" => Node {
+      "name": "pinned",
+      "location": "/pinned",
+      "edgesIn": Set {
+        Edge {
+          "name": "pinned",
+          "type": "prod",
+          "spec": "npm:abbrev@^1.1.1",
+          "from": "/",
+        },
+      },
+    },
+    "reg" => Node {
+      "name": "reg",
+      "location": "/reg",
+      "edgesIn": Set {
+        Edge {
+          "name": "reg",
+          "type": "prod",
+          "spec": "npm:abbrev@^1.1.1",
+          "from": "/",
+        },
+      },
+    },
+    "remote" => Node {
+      "name": "remote",
+      "location": "/remote",
+      "edgesIn": Set {
+        Edge {
+          "name": "remote",
+          "type": "prod",
+          "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "from": "/",
+        },
+      },
+    },
+    "rimraf" => Node {
+      "name": "rimraf",
+      "location": "/rimraf",
+      "extraneous": true,
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "type": "optional",
+          "spec": "^7.1.3",
+          "to": "/glob",
+        },
+      },
+    },
+    "symlink" => Link {
+      "name": "symlink",
+      "location": "/symlink",
+      "target": Object {
+        "name": "abbrev-link-target",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "symlink",
+          "type": "prod",
+          "spec": "file:./abbrev-link-target",
+          "from": "/",
+        },
+      },
+    },
+    "tarball" => Node {
+      "name": "tarball",
+      "location": "/tarball",
+      "edgesIn": Set {
+        Edge {
+          "name": "tarball",
+          "type": "prod",
+          "spec": "file:abbrev-1.1.1.tgz",
+          "from": "/",
+        },
+      },
+    },
+    "wrappy" => Node {
+      "name": "wrappy",
+      "location": "/wrappy",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "wrappy",
+          "type": "prod",
+          "spec": "1",
+          "from": "/inflight",
+        },
+        Edge {
+          "name": "wrappy",
+          "type": "prod",
+          "spec": "1",
+          "from": "/once",
+        },
+      },
+    },
+  },
+}
+`
+
 exports[`test/load-actual.js TAP linkedroot > loaded tree 1`] = `
 Node {
   "name": "linkedroot",

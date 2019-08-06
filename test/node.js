@@ -17,111 +17,168 @@ t.test('basic instantiation', t => {
 })
 
 t.test('testing with dep tree', t => {
-  const root = new Node({
-    pkg: {
-      name: 'root',
-      bundleDependencies: [ 'bundled' ],
-      dependencies: { prod: '', bundled: '', missing: '' },
-      devDependencies: { dev: '', overlap: '' },
-      optionalDependencies: { optional: '', overlap: '', optMissing: '' },
-    },
-    path: '.',
-    realpath: '/home/user/projects/root',
-  })
-  const prod = new Node({
-    pkg: {
-      name: 'prod',
-      version: '1.2.3',
-      dependencies: { meta: '' },
-      peerDependencies: { peer: '' },
-    },
-    parent: root,
-  })
-  const meta = new Node({
-    pkg: {
-      name: 'meta',
-      version: '1.2.3',
-      devDependencies: { missing: '' },
-      dependencies: { bundled: '' },
-    },
-    path: './node_modules/prod/node_modules/meta',
-    realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
-    parent: prod,
-  })
-  const bundled = new Node({
-    pkg: {
-      name: 'bundled',
-      version: '1.2.3',
-      dependencies: { meta: '' },
-    },
-    path: './node_modules/bundled',
-    realpath: '/home/user/projects/root/node_modules/bundled',
-    parent: root,
-  })
-  const dev = new Node({
-    pkg: { name: 'dev', version: '1.2.3' },
-    path: './node_modules/dev',
-    realpath: '/home/user/projects/root/node_modules/dev',
-    parent: root,
-  })
-  const opt = new Node({
-    pkg: { name: 'optional', version: '1.2.3' },
-    path: './node_modules/optional',
-    realpath: '/home/user/projects/root/node_modules/optional',
-    parent: root,
-  })
-  const peer = new Node({
-    pkg: { name: 'peer', version: '1.2.3' },
-    path: './node_modules/peer',
-    realpath: '/home/user/projects/root/node_modules/peer',
-    parent: root,
-  })
-  const extraneous = new Node({
-    pkg: { name: 'extraneous', version: '1.2.3' },
-    path: './node_modules/extraneous',
-    realpath: '/home/user/projects/root/node_modules/extraneous',
-    parent: root,
-  })
-  t.equal(prod.top, root, 'root is top of tree')
-  t.equal(extraneous.extraneous, true, 'extraneous is extraneous')
-  t.matchSnapshot(root, 'initial load with some deps')
+  const runTest = rootMetadata => t => {
+    const root = new Node({
+      pkg: {
+        name: 'root',
+        bundleDependencies: [ 'bundled' ],
+        dependencies: { prod: '', bundled: '', missing: '' },
+        devDependencies: { dev: '', overlap: '' },
+        optionalDependencies: { optional: '', overlap: '', optMissing: '' },
+      },
+      path: '.',
+      realpath: '/home/user/projects/root',
+      meta: rootMetadata,
+    })
+    const prod = new Node({
+      pkg: {
+        name: 'prod',
+        resolved: 'prod',
+        integrity: 'prod',
+        version: '1.2.3',
+        dependencies: { meta: '' },
+        peerDependencies: { peer: '' },
+      },
+      parent: root,
+    })
+    const meta = new Node({
+      pkg: {
+        name: 'meta',
+        resolved: 'meta',
+        integrity: 'meta',
+        version: '1.2.3',
+        devDependencies: { missing: '' },
+        dependencies: { bundled: '' },
+      },
+      path: './node_modules/prod/node_modules/meta',
+      realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
+      parent: prod,
+    })
+    const bundled = new Node({
+      pkg: {
+        name: 'bundled',
+        resolved: 'bundled',
+        integrity: 'bundled',
+        version: '1.2.3',
+        dependencies: { meta: '' },
+      },
+      path: './node_modules/bundled',
+      realpath: '/home/user/projects/root/node_modules/bundled',
+      parent: root,
+    })
+    const dev = new Node({
+      pkg: {
+        name: 'dev',
+        version: '1.2.3',
+        resolved: 'dev',
+        integrity: 'dev',
+      },
+      path: './node_modules/dev',
+      realpath: '/home/user/projects/root/node_modules/dev',
+      parent: root,
+    })
+    const opt = new Node({
+      pkg: {
+        name: 'optional',
+        version: '1.2.3',
+        resolved: 'opt',
+        integrity: 'opt',
+      },
+      path: './node_modules/optional',
+      realpath: '/home/user/projects/root/node_modules/optional',
+      parent: root,
+    })
+    const peer = new Node({
+      pkg: {
+        name: 'peer',
+        version: '1.2.3',
+        resolved: 'peer',
+        integrity: 'peer',
+      },
+      path: './node_modules/peer',
+      realpath: '/home/user/projects/root/node_modules/peer',
+      parent: root,
+    })
+    const extraneous = new Node({
+      pkg: {
+        name: 'extraneous',
+        version: '1.2.3',
+        resolved: 'extraneous',
+        integrity: 'extraneous',
+      },
+      path: './node_modules/extraneous',
+      realpath: '/home/user/projects/root/node_modules/extraneous',
+      parent: root,
+    })
+    t.equal(prod.top, root, 'root is top of tree')
+    t.equal(extraneous.extraneous, true, 'extraneous is extraneous')
+    t.matchSnapshot(root, 'initial load with some deps')
 
-  // move dep to top level
-  meta.parent = root
-  t.matchSnapshot(root, 'move meta to top level, update stuff')
+    // move dep to top level
+    meta.parent = root
+    t.matchSnapshot(root, 'move meta to top level, update stuff')
 
-  const newMeta = new Node({
-    pkg: {
-      name: 'meta',
-      version: '2.3.4'
+    const newMeta = new Node({
+      pkg: {
+        name: 'meta',
+        version: '2.3.4',
+        resolved: 'newMeta',
+        integrity: 'newMeta',
+      },
+      path: './node_modules/prod/node_modules/meta',
+      realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
+      parent: prod,
+    })
+
+    // test that reparenting a link _doesn't_ update realpath
+    const metaMeta = new Link({
+      pkg: {
+        name: 'metameta',
+        version: '1.2.3',
+        resolved: 'metameta',
+        integrity: 'metameta',
+      },
+      path: newMeta.path + '/node_modules/metameta',
+      realpath: meta.realpath,
+      target: meta,
+    })
+    metaMeta.parent = newMeta
+
+    t.matchSnapshot(root, 'add new meta under prod')
+
+    t.equal(meta.parent, root, 'old meta parent is root before assigning')
+    newMeta.parent = root
+    t.equal(meta.parent, null, 'old meta parent removed')
+    t.notEqual(root.children.get('meta'), meta,
+      'root.children no longer has old meta')
+    t.matchSnapshot(root, 'move new meta to top level')
+
+    newMeta.parent = root
+    t.matchSnapshot(root, 'move new meta to top level second time (no-op)')
+
+    t.end()
+  }
+
+  t.test('without meta', runTest())
+  t.test('with meta', runTest({
+    data: {},
+    get (node) {
+      return this.memo(node, {
+        resolved: node.package.resolved,
+        integrity: node.package.integrity,
+      })
     },
-    path: './node_modules/prod/node_modules/meta',
-    realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
-    parent: prod,
-  })
-
-  // test that reparenting a link _doesn't_ update realpath
-  const metaMeta = new Link({
-    pkg: {
-      name: 'metameta',
-      version: '1.2.3',
+    memo (node, data) {
+      if (!data) {
+        const {resolved, integrity} = node.package
+        data = {resolved, integrity}
+      }
+      return this.data[node.location] = data
     },
-    path: newMeta.path + '/node_modules/metameta',
-    realpath: meta.realpath,
-    target: meta,
-  })
-  metaMeta.parent = newMeta
-
-  t.matchSnapshot(root, 'add new meta under prod')
-
-  newMeta.parent = root
-  t.equal(meta.parent, null, 'old meta parent removed')
-  t.notEqual(root.children.get('meta'), meta,
-    'root.children no longer has old meta')
-  t.matchSnapshot(root, 'move new meta to top level')
-
-  newMeta.parent = root
-  t.matchSnapshot(root, 'move new meta to top level second time (no-op)')
+    dememo (node) {
+      delete this.data[node.location]
+    },
+  }))
 
   t.end()
 })
@@ -163,14 +220,16 @@ t.test('load with integrity and resolved values', t => {
     parent: new Node({
       path: '.',
       realpath: '/home/user/projects/root',
+      meta: {
+        dememo: () => {},
+        memo: () => {},
+        get: node =>
+          node.location === '/' ? null : {
+            resolved: 'resolved',
+            integrity: 'integrity',
+          }
+      },
     }),
-    meta: {
-      get: node =>
-        node.location === '/' ? null : {
-          resolved: 'resolved',
-          integrity: 'integrity',
-        }
-    },
   })
 
   t.match(node, {

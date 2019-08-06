@@ -21,6 +21,7 @@ const roots = [
   'selflink',
   'symlinked-node-modules/example',
   'workspace',
+  'install-types',
 ]
 
 const symlinks = {
@@ -57,6 +58,8 @@ const symlinks = {
   'symlinked-node-modules/example/node_modules':
     '../linked-node-modules/',
   'symlinked-node-modules/linked-node-modules/bar': '../bar',
+
+  'install-types/node_modules/symlink': '../abbrev-link-target',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

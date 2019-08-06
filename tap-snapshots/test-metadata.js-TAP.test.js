@@ -116,3 +116,29 @@ Object {
   "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
 }
 `
+
+exports[`test/metadata.js TAP memoize and dememoize > dememoized locationless node, no-op 1`] = `
+Object {
+  "/asdf": Object {
+    "integrity": "integral",
+    "resolved": "resolute",
+  },
+}
+`
+
+exports[`test/metadata.js TAP memoize and dememoize > dememoized node 1`] = `
+Object {}
+`
+
+exports[`test/metadata.js TAP memoize and dememoize > memoized empty node, no-op 1`] = `
+Object {}
+`
+
+exports[`test/metadata.js TAP memoize and dememoize > memoized node 1`] = `
+Object {
+  "/asdf": Object {
+    "integrity": "integral",
+    "resolved": "resolute",
+  },
+}
+`

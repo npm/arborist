@@ -78,3 +78,27 @@ t.test('look up from locks and such', t =>
 
 t.throws(() =>
   new Metadata().get(), Error('attemping to read metadata before loading'))
+
+t.test('memoize and dememoize', t => {
+  const n = {
+    location: '/asdf',
+    integrity: 'integral',
+    resolved: 'resolute',
+  }
+  const m = new Metadata()
+  m.data = { arbmeta: {}, shrinkwrap: null, lockfile: null }
+  m.memo(n)
+  t.matchSnapshot(m.data.arbmeta, 'memoized node')
+  m.dememo(n)
+  t.matchSnapshot(m.data.arbmeta, 'dememoized node')
+
+  const empty = { location: '/whatever' }
+  m.memo(empty)
+  t.matchSnapshot(m.data.arbmeta, 'memoized empty node, no-op')
+
+  m.memo(n)
+  m.dememo({ ...n, location: null })
+  t.matchSnapshot(m.data.arbmeta, 'dememoized locationless node, no-op')
+
+  t.end()
+})

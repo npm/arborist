@@ -143,6 +143,10 @@ to a package folder, which may have children in `node_modules`.
     Setting `node.parent` will automatically update `node.location` and all
     graph edges affected by the move.
 
+* `node.meta` A `Metadata` object which looks up `resolved` and `integrity`
+  values for all modules in this tree.  Set to parent's `meta` object and
+  updated when parentage changes.
+
 * `node.children` Map of packages located in the node's `node_modules` folder.
 * `node.package` The contents of this node's `package.json` file.
 * `node.path` File path to this package.  If a node is a link target, and

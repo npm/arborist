@@ -16,6 +16,7 @@ Link {
   "inBundle": false,
   "integrity": null,
   "location": "/",
+  "meta": undefined,
   "name": "path",
   "optional": true,
   "package": Object {
@@ -35,6 +36,7 @@ Link {
     "inBundle": false,
     "integrity": null,
     "location": "/",
+    "meta": undefined,
     "name": "path",
     "optional": true,
     "package": Object {
@@ -58,6 +60,7 @@ Link {
   "inBundle": false,
   "integrity": null,
   "location": "/",
+  "meta": undefined,
   "name": "path",
   "optional": true,
   "package": Object {
@@ -77,6 +80,7 @@ Link {
     "inBundle": false,
     "integrity": null,
     "location": "/",
+    "meta": null,
     "name": "path",
     "optional": true,
     "package": Object {

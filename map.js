@@ -1,2 +1,4 @@
 const {basename} = require('path')
-module.exports = test => 'lib/' + basename(test)
+module.exports = test =>
+  basename(test) === 'index.js' ? 'index.js'
+  : 'lib/' + basename(test)

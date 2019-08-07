@@ -4,6 +4,7 @@
   "description": "Manage node_modules trees",
   "dependencies": {
     "npm-package-arg": "^6.1.0",
+    "parse-conflict-json": "^1.0.0",
     "read-package-json": "^2.0.13",
     "readdir-scoped-modules": "^1.1.0",
     "semver": "^6.1.2",

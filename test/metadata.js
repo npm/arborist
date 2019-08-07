@@ -14,12 +14,12 @@ t.test('root defaults to .', t => {
 
 t.test('loading in bad dir fails to get lock files', t =>
   Metadata.load('path/which/does/not/exist').then(m =>
-    t.match(m.data, {arbmeta: {}, lockfile: null, shrinkwrap: null})))
+    t.match(m.data, {arbmeta: {}, lockfile: null})))
 
 t.test('look up from locks and such', t =>
   new Metadata(fixture).load().then(m => {
     t.strictSame(m.get({location:'/'}), {}, 'root has no integrity')
-    t.match(m.data, { arbmeta: Object, lockfile: Object, shrinkwrap: null })
+    t.match(m.data, { arbmeta: Object, lockfile: Object })
     t.matchSnapshot(m.get({location: '/abbrev'}), 'from arbmeta')
     t.matchSnapshot(m.get({
       location: '/abbrev/@scope/name/@otherscope/othername',
@@ -28,52 +28,49 @@ t.test('look up from locks and such', t =>
 
     t.matchSnapshot(m.get({ location: '/old/notfound' }), 'fall off the dep tree')
 
-    const arbmeta = m.data.arbmeta
-    m.data.arbmeta = {}
-    t.matchSnapshot(m.get({location: '/abbrev'}), 'from lockfile')
-    t.matchSnapshot(m.get({
-      location: '/abbrev/@scope/name/@otherscope/othername',
-    }, 'scoped name from lockfile'))
-    t.matchSnapshot(m.get({ location: '/package/not/found' }), 'not found lock')
-    m.data.arbmeta = {}
-    m.data.shrinkwrap = m.data.lockfile
-    m.data.lockfile = null
-    t.matchSnapshot(m.get({location: '/full-git-url'}), 'from shrinkwrap')
-    m.data.arbmeta = {}
-    t.matchSnapshot(m.get({
-      location: '/abbrev/@scope/name/@otherscope/othername',
-    }, 'scoped name from shrinkwrap'))
-    t.matchSnapshot(m.get({ location: '/package/not/found' }), 'not found sw')
-    t.matchSnapshot(m.get({ location: '/symlink' }), 'symlink from sw')
-    t.matchSnapshot(m.get({ location: '/unhosted-git' }), 'unhosted git from sw')
+    t.test('lockfile', t => {
+      m.data.arbmeta = {}
+      t.matchSnapshot(m.get({location: '/abbrev'}), 'basic pkg')
+      t.matchSnapshot(m.get({
+        location: '/abbrev/@scope/name/@otherscope/othername',
+      }, 'scoped name'))
+      t.matchSnapshot(m.get({ location: '/package/not/found' }), 'not found')
+      t.matchSnapshot(m.get({location: '/full-git-url'}), 'full git')
+      t.matchSnapshot(m.get({ location: '/symlink' }), 'symlink')
+      t.matchSnapshot(m.get({ location: '/unhosted-git' }), 'unhosted git')
+      t.end()
+    })
 
-    m.data.arbmeta = {}
-    m.data.shrinkwrap = null
-    t.matchSnapshot(m.get({
-      package: require(fixture + '/node_modules/abbrev/package.json'),
-    }), 'get from basic package.json')
-    t.matchSnapshot(m.get({
-      location: '/symlink',
-      path: './node_modules/symlink',
-      realpath: fixture + '/abbrev-link-target',
-      isLink: true,
-      package: require(fixture + '/abbrev-link-target/package.json'),
-    }), 'get from symlinked package.json')
-    t.matchSnapshot(m.get({
-      package: require(fixture + '/node_modules/old/package.json'),
-    }), 'get from pinned-version package.json')
-    t.matchSnapshot(m.get({
-      package: require(fixture + '/node_modules/ghshort/package.json'),
-    }), 'get from gh shorthand package.json')
-    t.matchSnapshot(m.get({
-      package: require(fixture + '/node_modules/full-git-url/package.json'),
-    }), 'get from gh shorthand package.json')
+    t.test('package', t => {
+      m.data.arbmeta = {}
+      m.data.lockfile = null
+      t.matchSnapshot(m.get({
+        package: require(fixture + '/node_modules/abbrev/package.json'),
+      }), 'get from basic package.json')
+      t.matchSnapshot(m.get({
+        location: '/symlink',
+        path: './node_modules/symlink',
+        realpath: fixture + '/abbrev-link-target',
+        isLink: true,
+        package: require(fixture + '/abbrev-link-target/package.json'),
+      }), 'get from symlinked package.json')
+      t.matchSnapshot(m.get({
+        package: require(fixture + '/node_modules/old/package.json'),
+      }), 'get from pinned-version package.json')
+      t.matchSnapshot(m.get({
+        package: require(fixture + '/node_modules/ghshort/package.json'),
+      }), 'get from gh shorthand package.json')
+      t.matchSnapshot(m.get({
+        package: require(fixture + '/node_modules/full-git-url/package.json'),
+      }), 'get from gh shorthand package.json')
 
-    t.matchSnapshot(m.get({
-      package: {nothing: 'here'},
-    }), 'package with no metas')
+      t.matchSnapshot(m.get({
+        package: {nothing: 'here'},
+      }), 'package with no metas')
 
-    t.matchSnapshot(m.get({ location: '/package/not/found' }), 'not found pkg')
+      t.matchSnapshot(m.get({ location: '/package/not/found' }), 'not found pkg')
+      t.end()
+    })
   }))
 
 t.throws(() =>
@@ -86,7 +83,7 @@ t.test('memoize and dememoize', t => {
     resolved: 'resolute',
   }
   const m = new Metadata()
-  m.data = { arbmeta: {}, shrinkwrap: null, lockfile: null }
+  m.data = { arbmeta: {}, lockfile: null }
   m.memo(n)
   t.matchSnapshot(m.data.arbmeta, 'memoized node')
   m.dememo(n)

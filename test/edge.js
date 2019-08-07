@@ -167,7 +167,7 @@ t.throws(() => new Edge({
   from: top,
   type: 'not a valid type',
   name: 'yoinks',
-}), new TypeError('invalid type: not a valid type\n(valid types are: prod, dev, optional, peer)'))
+}), new TypeError('invalid type: not a valid type\n(valid types are: '))
 
 t.throws(() => new Edge({
   type: 'prod',

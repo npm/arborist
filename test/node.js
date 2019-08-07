@@ -124,6 +124,10 @@ t.test('testing with dep tree', t => {
         version: '2.3.4',
         resolved: 'newMeta',
         integrity: 'newMeta',
+        peerDependencies: { asdf: '' },
+        peerDependenciesMeta: {
+          asdf: { optional: true },
+        },
       },
       path: './node_modules/prod/node_modules/meta',
       realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',

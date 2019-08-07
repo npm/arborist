@@ -191,7 +191,9 @@ Node {
           "edgesIn": Set {
             Edge {},
           },
-          "edgesOut": Map {},
+          "edgesOut": Map {
+            "asdf" => Edge {},
+          },
           "errors": Array [],
           "extraneous": true,
           "inBundle": false,
@@ -249,6 +251,14 @@ Node {
           "package": Object {
             "integrity": "newMeta",
             "name": "meta",
+            "peerDependencies": Object {
+              "asdf": "",
+            },
+            "peerDependenciesMeta": Object {
+              "asdf": Object {
+                "optional": true,
+              },
+            },
             "resolved": "newMeta",
             "version": "2.3.4",
           },
@@ -2518,7 +2528,9 @@ Node {
         Edge {},
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "asdf" => Edge {},
+      },
       "errors": Array [],
       "extraneous": true,
       "inBundle": false,
@@ -2572,6 +2584,14 @@ Node {
       "package": Object {
         "integrity": "newMeta",
         "name": "meta",
+        "peerDependencies": Object {
+          "asdf": "",
+        },
+        "peerDependenciesMeta": Object {
+          "asdf": Object {
+            "optional": true,
+          },
+        },
         "resolved": "newMeta",
         "version": "2.3.4",
       },
@@ -3197,7 +3217,9 @@ Node {
         Edge {},
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "asdf" => Edge {},
+      },
       "errors": Array [],
       "extraneous": true,
       "inBundle": false,
@@ -3251,6 +3273,14 @@ Node {
       "package": Object {
         "integrity": "newMeta",
         "name": "meta",
+        "peerDependencies": Object {
+          "asdf": "",
+        },
+        "peerDependenciesMeta": Object {
+          "asdf": Object {
+            "optional": true,
+          },
+        },
         "resolved": "newMeta",
         "version": "2.3.4",
       },
@@ -3417,7 +3447,9 @@ Node {
           "edgesIn": Set {
             Edge {},
           },
-          "edgesOut": Map {},
+          "edgesOut": Map {
+            "asdf" => Edge {},
+          },
           "errors": Array [],
           "extraneous": true,
           "inBundle": false,
@@ -3429,6 +3461,14 @@ Node {
           "package": Object {
             "integrity": "newMeta",
             "name": "meta",
+            "peerDependencies": Object {
+              "asdf": "",
+            },
+            "peerDependenciesMeta": Object {
+              "asdf": Object {
+                "optional": true,
+              },
+            },
             "resolved": "newMeta",
             "version": "2.3.4",
           },
@@ -4428,7 +4468,9 @@ Node {
         Edge {},
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "asdf" => Edge {},
+      },
       "errors": Array [],
       "extraneous": true,
       "inBundle": false,
@@ -4440,6 +4482,14 @@ Node {
       "package": Object {
         "integrity": "newMeta",
         "name": "meta",
+        "peerDependencies": Object {
+          "asdf": "",
+        },
+        "peerDependenciesMeta": Object {
+          "asdf": Object {
+            "optional": true,
+          },
+        },
         "resolved": "newMeta",
         "version": "2.3.4",
       },
@@ -4729,7 +4779,9 @@ Node {
         Edge {},
         Edge {},
       },
-      "edgesOut": Map {},
+      "edgesOut": Map {
+        "asdf" => Edge {},
+      },
       "errors": Array [],
       "extraneous": true,
       "inBundle": false,
@@ -4741,6 +4793,14 @@ Node {
       "package": Object {
         "integrity": "newMeta",
         "name": "meta",
+        "peerDependencies": Object {
+          "asdf": "",
+        },
+        "peerDependenciesMeta": Object {
+          "asdf": Object {
+            "optional": true,
+          },
+        },
         "resolved": "newMeta",
         "version": "2.3.4",
       },

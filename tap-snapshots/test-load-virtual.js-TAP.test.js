@@ -223,6 +223,7 @@ Node {
     "full-git-url" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "full-git-url",
           "spec": "git+https://github.com/isaacs/abbrev-js.git",
@@ -236,6 +237,7 @@ Node {
     "ghshort" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "ghshort",
           "spec": "github:isaacs/abbrev-js",
@@ -450,6 +452,7 @@ Node {
     "remote" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "remote",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -494,6 +497,7 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "tarball",
           "spec": "file:abbrev-1.1.1.tgz",
@@ -543,12 +547,14 @@ Node {
       "type": "prod",
     },
     "full-git-url" => Edge {
+      "error": "INVALID",
       "name": "full-git-url",
       "spec": "git+https://github.com/isaacs/abbrev-js.git",
       "to": "/full-git-url",
       "type": "prod",
     },
     "ghshort" => Edge {
+      "error": "INVALID",
       "name": "ghshort",
       "spec": "github:isaacs/abbrev-js",
       "to": "/ghshort",
@@ -573,6 +579,7 @@ Node {
       "type": "prod",
     },
     "remote" => Edge {
+      "error": "INVALID",
       "name": "remote",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "to": "/remote",
@@ -585,6 +592,7 @@ Node {
       "type": "prod",
     },
     "tarball" => Edge {
+      "error": "INVALID",
       "name": "tarball",
       "spec": "file:abbrev-1.1.1.tgz",
       "to": "/tarball",
@@ -815,6 +823,7 @@ Node {
     "full-git-url" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "full-git-url",
           "spec": "git+https://github.com/isaacs/abbrev-js.git",
@@ -828,6 +837,7 @@ Node {
     "ghshort" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "ghshort",
           "spec": "github:isaacs/abbrev-js",
@@ -1042,6 +1052,7 @@ Node {
     "remote" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "remote",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -1086,6 +1097,7 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "tarball",
           "spec": "file:abbrev-1.1.1.tgz",
@@ -1135,12 +1147,14 @@ Node {
       "type": "prod",
     },
     "full-git-url" => Edge {
+      "error": "INVALID",
       "name": "full-git-url",
       "spec": "git+https://github.com/isaacs/abbrev-js.git",
       "to": "/full-git-url",
       "type": "prod",
     },
     "ghshort" => Edge {
+      "error": "INVALID",
       "name": "ghshort",
       "spec": "github:isaacs/abbrev-js",
       "to": "/ghshort",
@@ -1165,6 +1179,7 @@ Node {
       "type": "prod",
     },
     "remote" => Edge {
+      "error": "INVALID",
       "name": "remote",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "to": "/remote",
@@ -1177,6 +1192,7 @@ Node {
       "type": "prod",
     },
     "tarball" => Edge {
+      "error": "INVALID",
       "name": "tarball",
       "spec": "file:abbrev-1.1.1.tgz",
       "to": "/tarball",
@@ -1407,6 +1423,7 @@ Node {
     "full-git-url" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "full-git-url",
           "spec": "git+https://github.com/isaacs/abbrev-js.git",
@@ -1420,6 +1437,7 @@ Node {
     "ghshort" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "ghshort",
           "spec": "github:isaacs/abbrev-js",
@@ -1634,6 +1652,7 @@ Node {
     "remote" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "remote",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -1678,6 +1697,7 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "tarball",
           "spec": "file:abbrev-1.1.1.tgz",
@@ -1727,12 +1747,14 @@ Node {
       "type": "prod",
     },
     "full-git-url" => Edge {
+      "error": "INVALID",
       "name": "full-git-url",
       "spec": "git+https://github.com/isaacs/abbrev-js.git",
       "to": "/full-git-url",
       "type": "prod",
     },
     "ghshort" => Edge {
+      "error": "INVALID",
       "name": "ghshort",
       "spec": "github:isaacs/abbrev-js",
       "to": "/ghshort",
@@ -1757,6 +1779,7 @@ Node {
       "type": "prod",
     },
     "remote" => Edge {
+      "error": "INVALID",
       "name": "remote",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "to": "/remote",
@@ -1769,6 +1792,7 @@ Node {
       "type": "prod",
     },
     "tarball" => Edge {
+      "error": "INVALID",
       "name": "tarball",
       "spec": "file:abbrev-1.1.1.tgz",
       "to": "/tarball",
@@ -2023,6 +2047,7 @@ Node {
     "full-git-url" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "full-git-url",
           "spec": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -2036,6 +2061,7 @@ Node {
     "ghshort" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "ghshort",
           "spec": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -2049,6 +2075,7 @@ Node {
     "ghtgz" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "ghtgz",
           "spec": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -2215,6 +2242,7 @@ Node {
     "once" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "once",
           "spec": "file:once-1.4.0.tgz",
@@ -2294,6 +2322,7 @@ Node {
     "remote" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "remote",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -2307,6 +2336,7 @@ Node {
     "rimraf" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "rimraf",
           "spec": "file:rimraf-2.6.3.tgz",
@@ -2346,6 +2376,7 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "tarball",
           "spec": "file:abbrev-1.1.1.tgz",
@@ -2359,6 +2390,7 @@ Node {
     "unhosted-git" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "/",
           "name": "unhosted-git",
           "spec": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -2433,18 +2465,21 @@ Node {
       "type": "prod",
     },
     "full-git-url" => Edge {
+      "error": "INVALID",
       "name": "full-git-url",
       "spec": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       "to": "/full-git-url",
       "type": "prod",
     },
     "ghshort" => Edge {
+      "error": "INVALID",
       "name": "ghshort",
       "spec": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       "to": "/ghshort",
       "type": "prod",
     },
     "ghtgz" => Edge {
+      "error": "INVALID",
       "name": "ghtgz",
       "spec": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       "to": "/ghtgz",
@@ -2481,6 +2516,7 @@ Node {
       "type": "prod",
     },
     "once" => Edge {
+      "error": "INVALID",
       "name": "once",
       "spec": "file:once-1.4.0.tgz",
       "to": "/once",
@@ -2505,12 +2541,14 @@ Node {
       "type": "prod",
     },
     "remote" => Edge {
+      "error": "INVALID",
       "name": "remote",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "to": "/remote",
       "type": "prod",
     },
     "rimraf" => Edge {
+      "error": "INVALID",
       "name": "rimraf",
       "spec": "file:rimraf-2.6.3.tgz",
       "to": "/rimraf",
@@ -2523,12 +2561,14 @@ Node {
       "type": "prod",
     },
     "tarball" => Edge {
+      "error": "INVALID",
       "name": "tarball",
       "spec": "file:abbrev-1.1.1.tgz",
       "to": "/tarball",
       "type": "prod",
     },
     "unhosted-git" => Edge {
+      "error": "INVALID",
       "name": "unhosted-git",
       "spec": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       "to": "/unhosted-git",

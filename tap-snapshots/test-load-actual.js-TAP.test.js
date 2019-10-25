@@ -1010,12 +1010,14 @@ Node {
       "type": "prod",
       "spec": "git+https://github.com/isaacs/abbrev-js.git",
       "to": "/full-git-url",
+      "error": "INVALID",
     },
     "ghshort" => Edge {
       "name": "ghshort",
       "type": "prod",
       "spec": "github:isaacs/abbrev-js",
       "to": "/ghshort",
+      "error": "INVALID",
     },
     "old" => Edge {
       "name": "old",
@@ -1040,6 +1042,7 @@ Node {
       "type": "prod",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "to": "/remote",
+      "error": "INVALID",
     },
     "symlink" => Edge {
       "name": "symlink",
@@ -1052,6 +1055,7 @@ Node {
       "type": "prod",
       "spec": "file:abbrev-1.1.1.tgz",
       "to": "/tarball",
+      "error": "INVALID",
     },
   },
   "children": Map {
@@ -1217,6 +1221,7 @@ Node {
           "type": "prod",
           "spec": "git+https://github.com/isaacs/abbrev-js.git",
           "from": "/",
+          "error": "INVALID",
         },
       },
     },
@@ -1229,6 +1234,7 @@ Node {
           "type": "prod",
           "spec": "github:isaacs/abbrev-js",
           "from": "/",
+          "error": "INVALID",
         },
       },
     },
@@ -1434,6 +1440,7 @@ Node {
           "type": "prod",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
           "from": "/",
+          "error": "INVALID",
         },
       },
     },
@@ -1475,6 +1482,7 @@ Node {
           "type": "prod",
           "spec": "file:abbrev-1.1.1.tgz",
           "from": "/",
+          "error": "INVALID",
         },
       },
     },
@@ -1864,6 +1872,12 @@ Node {
           "spec": "",
           "from": "/",
         },
+        Edge {
+          "name": "link-link",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
       },
     },
     "link-outside-nest" => Link {
@@ -1917,6 +1931,12 @@ Node {
               "type": "prod",
               "spec": "",
               "from": "/nest",
+            },
+            Edge {
+              "name": "a",
+              "type": "prod",
+              "spec": "",
+              "from": "/nest/a/b/c/d/deep",
             },
           },
           "edgesOut": Map {
@@ -1991,6 +2011,12 @@ Node {
                             },
                           },
                           "edgesOut": Map {
+                            "a" => Edge {
+                              "name": "a",
+                              "type": "prod",
+                              "spec": "",
+                              "to": "/nest/a",
+                            },
                             "deep-a" => Edge {
                               "name": "deep-a",
                               "type": "prod",
@@ -3123,6 +3149,67 @@ Node {
 }
 `
 
+exports[`test/load-actual.js TAP pnpm > loaded tree 1`] = `
+Node {
+  "name": "pnpm",
+  "location": "/",
+  "edgesOut": Map {
+    "@scope/x" => Edge {
+      "name": "@scope/x",
+      "type": "prod",
+      "spec": "",
+      "to": "/@scope/x",
+    },
+    "a" => Edge {
+      "name": "a",
+      "type": "prod",
+      "spec": "",
+      "to": "/a",
+    },
+  },
+  "children": Map {
+    "@scope/x" => Link {
+      "name": "@scope/x",
+      "location": "/@scope/x",
+      "target": Object {
+        "name": "@scope/x",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "@scope/x",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+    "a" => Link {
+      "name": "a",
+      "location": "/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "a",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "a",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+  },
+}
+`
+
 exports[`test/load-actual.js TAP root > loaded tree 1`] = `
 Node {
   "name": "root",
@@ -3869,6 +3956,248 @@ Node {
         "parent": null,
       },
       "edgesIn": Set {
+        Edge {
+          "name": "c",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+  },
+}
+`
+
+exports[`test/load-actual.js TAP workspace2 > loaded tree 1`] = `
+Node {
+  "name": "workspace2",
+  "location": "/",
+  "edgesOut": Map {
+    "b" => Edge {
+      "name": "b",
+      "type": "prod",
+      "spec": "",
+      "to": "/b",
+    },
+    "c" => Edge {
+      "name": "c",
+      "type": "prod",
+      "spec": "",
+      "to": "/c",
+    },
+  },
+  "children": Map {
+    "b" => Node {
+      "name": "b",
+      "location": "/b",
+      "edgesIn": Set {
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "/b/d",
+        },
+      },
+      "edgesOut": Map {
+        "d" => Edge {
+          "name": "d",
+          "type": "prod",
+          "spec": "",
+          "to": "/b/d",
+        },
+      },
+      "children": Map {
+        "d" => Node {
+          "name": "d",
+          "location": "/b/d",
+          "edgesIn": Set {
+            Edge {
+              "name": "d",
+              "type": "prod",
+              "spec": "",
+              "from": "/b",
+            },
+          },
+          "edgesOut": Map {
+            "b" => Edge {
+              "name": "b",
+              "type": "prod",
+              "spec": "",
+              "to": "/b",
+            },
+          },
+        },
+      },
+    },
+    "c" => Node {
+      "name": "c",
+      "location": "/c",
+      "edgesIn": Set {
+        Edge {
+          "name": "c",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+      "edgesOut": Map {
+        "d" => Edge {
+          "name": "d",
+          "type": "prod",
+          "spec": "",
+          "to": "/c/d",
+        },
+        "x" => Edge {
+          "name": "x",
+          "type": "prod",
+          "spec": "",
+          "to": "/c/x",
+        },
+      },
+      "children": Map {
+        "d" => Link {
+          "name": "d",
+          "location": "/c/d",
+          "target": Object {
+            "name": "d",
+            "parent": "/b",
+          },
+          "edgesIn": Set {
+            Edge {
+              "name": "d",
+              "type": "prod",
+              "spec": "",
+              "from": "/c",
+            },
+          },
+        },
+        "x" => Link {
+          "name": "x",
+          "location": "/c/x",
+          "target": Object {
+            "name": "x",
+            "parent": null,
+          },
+          "edgesIn": Set {
+            Edge {
+              "name": "x",
+              "type": "prod",
+              "spec": "",
+              "from": "/c",
+            },
+          },
+        },
+      },
+    },
+  },
+}
+`
+
+exports[`test/load-actual.js TAP workspace3 > loaded tree 1`] = `
+Node {
+  "name": "workspace3",
+  "location": "/",
+  "children": Map {
+    "a" => Link {
+      "name": "a",
+      "location": "/a",
+      "extraneous": true,
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "a",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "a",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "a",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+    "app" => Link {
+      "name": "app",
+      "location": "/app",
+      "extraneous": true,
+      "target": Object {
+        "name": "app",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "name": "b",
+      "location": "/b",
+      "extraneous": true,
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+      },
+    },
+    "c" => Link {
+      "name": "c",
+      "location": "/c",
+      "extraneous": true,
+      "target": Object {
+        "name": "c",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "c",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
+        Edge {
+          "name": "c",
+          "type": "prod",
+          "spec": "",
+          "from": "/",
+        },
         Edge {
           "name": "c",
           "type": "prod",

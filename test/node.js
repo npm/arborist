@@ -246,3 +246,81 @@ t.test('load with integrity and resolved values', t => {
   })
   t.end()
 })
+
+t.test('load with a virtual filesystem parent', t => {
+  const root = new Node({
+    pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
+    path: '.',
+    realpath: '/home/user/projects/root',
+  })
+  const a = new Node({
+    pkg: { name: 'a', version: '1.2.3' },
+    parent: root,
+    name: 'a',
+  })
+  const link = new Link({
+    pkg: { name: 'link', version: '1.2.3', dependencies: { a: '', kid: '' }},
+    realpath: root.realpath + '/link-target',
+    parent: root,
+  })
+  const linkKid = new Node({
+    pkg: { name: 'kid', dependencies: {'a': ''} },
+    parent: link.target,
+  })
+
+  const link2 = new Link({
+    pkg: { name: 'link2', version: '1.2.3', dependencies: { link: '' }},
+    realpath: a.realpath + '/node_modules/link2-target',
+    parent: root,
+    fsParent: a,
+  })
+
+  t.equal(link2.target.parent, a, 'fsParent=parent sets parent')
+  t.equal(link2.target.fsParent, null, 'fsParent=parent does not set fsParent')
+
+  t.equal(link.target.edgesOut.get('a').error, 'MISSING')
+  t.equal(linkKid.edgesOut.get('a').error, 'MISSING')
+  link.target.fsParent = root
+  t.equal(link.target.edgesOut.get('a').error, null)
+  t.equal(linkKid.edgesOut.get('a').error, null)
+  link.target.fsParent = null
+  t.equal(link.target.fsParent, null)
+  t.equal(link.target.edgesOut.get('a').error, 'MISSING')
+  t.equal(linkKid.edgesOut.get('a').error, 'MISSING')
+  link.target.fsParent = root
+  t.equal(link.target.fsParent, root)
+  t.equal(link.target.edgesOut.get('a').error, null)
+  t.equal(linkKid.edgesOut.get('a').error, null)
+  // move it under this other one for some reason
+  link.target.fsParent = link2.target
+  t.equal(link.target.fsParent, link2.target)
+  t.equal(link.target.edgesOut.get('a').error, null)
+  t.equal(linkKid.edgesOut.get('a').error, null)
+
+  t.end()
+})
+
+t.test('child of link target doesnt have path, like parent', t => {
+  const root = new Node({
+    pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
+    path: '.',
+    realpath: '/home/user/projects/root',
+  })
+  const a = new Node({
+    pkg: { name: 'a', version: '1.2.3' },
+    parent: root,
+    name: 'a',
+  })
+  const link = new Link({
+    pkg: { name: 'link', version: '1.2.3', dependencies: { a: '', kid: '' }},
+    realpath: root.realpath + '/link-target',
+    parent: root,
+    fsParent: root,
+  })
+  const linkKid = new Node({
+    pkg: { name: 'kid' },
+    parent: link.target,
+  })
+  t.equal(linkKid.path, null, 'child of link target does not have path')
+  t.end()
+})

@@ -24,6 +24,7 @@ const roots = [
   'workspace2',
   'workspace3',
   'install-types',
+  'pnpm',
 ]
 
 const symlinks = {
@@ -70,6 +71,24 @@ const symlinks = {
   'symlinked-node-modules/linked-node-modules/bar': '../bar',
 
   'install-types/node_modules/symlink': '../abbrev-link-target',
+
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a':
+    '../../../../a/1.0.0/node_modules/a',
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b':
+    '../../../../b/1.0.0/node_modules/b',
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c':
+    '../../../../c/1.0.0/node_modules/c',
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b':
+    '../../../b/1.0.0/node_modules/b',
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c':
+    '../../../c/1.0.0/node_modules/c',
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c':
+    '../../../c/1.0.0/node_modules/c',
+  'pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x':
+    '../../../../@scope/x/1.0.0/node_modules/@scope/x',
+  'pnpm/node_modules/@scope/x':
+    '../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x',
+  'pnpm/node_modules/a': '.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

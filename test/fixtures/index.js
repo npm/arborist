@@ -21,6 +21,8 @@ const roots = [
   'selflink',
   'symlinked-node-modules/example',
   'workspace',
+  'workspace2',
+  'workspace3',
   'install-types',
 ]
 
@@ -46,6 +48,14 @@ const symlinks = {
   'workspace/packages/b/node_modules/c': '../../../packages/c',
   'workspace/packages/c/node_modules/a': '../../../packages/a',
   'workspace/packages/c/node_modules/b': '../../../packages/b',
+
+  'workspace2/node_modules/c/node_modules/d': '../../b/node_modules/d',
+  'workspace2/node_modules/c/node_modules/x': '../../../x',
+
+  'workspace3/node_modules/app': '../app',
+  'workspace3/node_modules/a': '../packages/a',
+  'workspace3/node_modules/b': '../packages/b',
+  'workspace3/node_modules/c': '../packages/c',
 
   'links-all-over/node_modules/link-outside-nest':
     '../real',

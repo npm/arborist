@@ -10,16 +10,19 @@ const {
   symlinks,
 } = require('./fixtures/index.js')
 
-// two little helper functions to make the loaded trees
+// little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
+const pp = path => path && path.substr(fixtures.length + 1)
+  .replace(/\\/g, '/')
+  .replace(/\/node_modules\//g, ' : ')
 const printEdge = (edge, inout) => ({
   name: edge.name,
   type: edge.type,
   spec: edge.spec,
   ...(inout === 'in' ? {
-    from: edge.from && edge.from.location,
+    from: edge.from && pp(edge.from.realpath),
   } : {
-    to: edge.to && edge.to.location,
+    to: edge.to && pp(edge.to.realpath),
   }),
   ...(edge.error ? { error: edge.error } : {}),
   __proto__: { constructor: edge.constructor },
@@ -28,6 +31,8 @@ const printEdge = (edge, inout) => ({
 const printTree = tree => ({
   name: tree.name,
   location: tree.location,
+  realpath: pp(tree.realpath),
+  top: pp(tree.top.realpath),
   ...(tree.extraneous ? { extraneous: true } : {
     ...(tree.dev ? { dev: true } : {}),
     ...(tree.optional ? { optional: true } : {}),
@@ -45,13 +50,13 @@ const printTree = tree => ({
   ...(tree.isLink ? {
     target: {
       name: tree.target.name,
-      parent: tree.target.parent && tree.target.parent.location
+      parent: tree.target.parent && pp(tree.target.parent.realpath)
     }
   } : {}),
   ...(tree.inBundle ? { bundled: true } : {}),
   ...(tree.edgesIn.size ? {
     edgesIn: new Set([...tree.edgesIn]
-      .sort((a, b) => a.from.location.localeCompare(b.from.location))
+      .sort((a, b) => pp(a.from.realpath).localeCompare(pp(b.from.realpath)))
       .map(edge => printEdge(edge, 'in'))),
   } : {}),
   ...(tree.edgesOut.size ? {

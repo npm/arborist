@@ -14,7 +14,6 @@ const {
 // easier to look at in the snapshot results.
 const pp = path => path && path.substr(fixtures.length + 1)
   .replace(/\\/g, '/')
-  .replace(/\/node_modules\//g, ' : ')
 const printEdge = (edge, inout) => ({
   name: edge.name,
   type: edge.type,

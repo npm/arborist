@@ -1,11 +1,15 @@
 const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
+const Metadata = require('../lib/metadata.js')
+
+t.cleanSnapshot = str =>
+  str.split(process.cwd()).join('{CWD}').replace('\\', '/')
 
 t.test('basic instantiation', t => {
   const root = new Node({
     pkg: { name: 'root' },
-    path: '.',
+    path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
   })
 
@@ -26,8 +30,8 @@ t.test('testing with dep tree', t => {
         devDependencies: { dev: '', overlap: '' },
         optionalDependencies: { optional: '', overlap: '', optMissing: '' },
       },
-      path: '.',
       realpath: '/home/user/projects/root',
+      path: '/home/user/projects/root',
       meta: rootMetadata,
     })
     const prod = new Node({
@@ -111,6 +115,9 @@ t.test('testing with dep tree', t => {
       parent: root,
     })
     t.equal(prod.top, root, 'root is top of tree')
+    t.equal(prod.root, root, 'root is root of tree')
+    t.equal(root.isRoot, true, 'root is root of tree')
+    t.equal(prod.isRoot, false, 'prod is not root of tree')
     t.equal(extraneous.extraneous, true, 'extraneous is extraneous')
     t.matchSnapshot(root, 'initial load with some deps')
 
@@ -189,8 +196,8 @@ t.test('testing with dep tree', t => {
 
 t.test('edge cases for branch coverage', t => {
   const noPkg = new Node({
-    path: '.',
     realpath: '/home/user/projects/root',
+    path: '/home/user/projects/root',
   })
   t.same(noPkg.package, {}, 'default package is empty object')
   t.equal(noPkg.name, 'root', 'root default name is . if package empty')
@@ -207,7 +214,7 @@ t.test('tracks the loading error encountered', t => {
   const error = new Error('this is fine')
   const root = new Node({
     pkg: { name: 'root' },
-    path: '.',
+    path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
     error,
   })
@@ -222,13 +229,13 @@ t.test('load with integrity and resolved values', t => {
   const node = new Node({
     pkg: { name: 'mything' },
     parent: new Node({
-      path: '.',
+      path: '/home/user/projects/root',
       realpath: '/home/user/projects/root',
       meta: {
         dememo: () => {},
         memo: () => {},
         get: node =>
-          node.location === '/' ? null : {
+          node.location === '' ? {} : {
             resolved: 'resolved',
             integrity: 'integrity',
           }
@@ -250,7 +257,7 @@ t.test('load with integrity and resolved values', t => {
 t.test('load with a virtual filesystem parent', t => {
   const root = new Node({
     pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
-    path: '.',
+    path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
   })
   const a = new Node({
@@ -300,10 +307,10 @@ t.test('load with a virtual filesystem parent', t => {
   t.end()
 })
 
-t.test('child of link target doesnt have path, like parent', t => {
+t.test('child of link target has path, like parent', t => {
   const root = new Node({
     pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
-    path: '.',
+    path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
   })
   const a = new Node({
@@ -319,8 +326,116 @@ t.test('child of link target doesnt have path, like parent', t => {
   })
   const linkKid = new Node({
     pkg: { name: 'kid' },
-    parent: link.target,
+    parent: link,
   })
-  t.equal(linkKid.path, null, 'child of link target does not have path')
+  t.equal(linkKid.parent, link.target, 'setting link as parent sets target instead')
+  t.equal(linkKid.path, linkKid.realpath, 'child of link target path is realpath')
+  t.end()
+})
+
+t.test('changing root', t => {
+  const meta = new Metadata('/home/user/projects/root')
+  meta.data = { arblock: { packages: {}}}
+  const root = new Node({
+    pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
+    path: '/home/user/projects/root',
+    realpath: '/home/user/projects/root',
+    meta,
+  })
+  const a = new Node({
+    pkg: { name: 'a', version: '1.2.3' },
+    parent: root,
+    name: 'a',
+    resolved: 'https://example.com/a-1.2.3.tgz',
+    integrity: 'sha512-asdfasdfasdf'
+  })
+  const b = new Node({
+    pkg: { name: 'b', version: '1.2.3' },
+    parent: a,
+    name: 'b',
+  })
+  const meta2 = new Metadata('/home/user/projects/root2')
+  meta2.data = { arblock: { packages: {}}}
+  const root2 = new Node({
+    pkg: { name: 'root2', dependencies: { a: '', link: '', link2: '' }},
+    path: '/home/user/projects/root2',
+    realpath: '/home/user/projects/root2',
+    meta: meta2,
+  })
+  t.equal(a.root, root, 'root is root of tree from a')
+  t.equal(b.root, root, 'root is root of tree from b')
+  a.parent = root2
+  t.equal(a.root, root2, 'root is set when parent is changed')
+  t.equal(b.root, root2, 'root is set on children when parent is changed')
+  t.end()
+})
+
+t.test('bundled dependencies logic', t => {
+  const root = new Node({
+    pkg: {
+      name: 'root',
+      dependencies: { a: '', b: '', d: '', e: '', f: '' },
+      bundleDependencies: ['a'],
+    },
+    path: '/path/to/root',
+    realpath: '/path/to/root',
+  })
+  const a = new Node({
+    pkg: { name: 'a', version: '1.2.3', dependencies: { b: '', aa: '' }},
+    parent: root,
+  })
+  const aa = new Node({
+    pkg: { name: 'aa', version: '1.2.3' },
+    parent: a,
+  })
+  const b = new Node({
+    pkg: { name: 'b', version: '1.2.3', dependencies: { c: '' }},
+    parent: root,
+  })
+  const c = new Node({
+    pkg: { name: 'c', version: '1.2.3', dependencies: { cc: '' }},
+    parent: root,
+  })
+  const cc = new Node({
+    pkg: { name: 'cc', version: '1.2.3', dependencies: { d: '' }},
+    parent: c,
+  })
+  const d = new Node({
+    pkg: { name: 'd', version: '1.2.3' },
+    parent: root,
+  })
+  const e = new Node({
+    pkg: { name: 'e', version: '1.2.3' },
+    parent: root,
+  })
+  const f = new Node({
+    pkg: {
+      name: 'f',
+      version: '1.2.3',
+      dependencies: { fa: '', fb: '' },
+      bundleDependencies: ['fb'],
+    },
+    parent: root,
+  })
+  const fa = new Node({
+    pkg: { name: 'fa', version: '1.2.3' },
+    parent: f,
+  })
+  const fb = new Node({
+    pkg: { name: 'fb', version: '1.2.3', dependencies: { e: '', fc: '' }},
+    parent: f,
+  })
+  const fc = new Node({
+    pkg: { name: 'fc', version: '1.2.3', dependencies: { fb: '' }},
+    parent: f,
+  })
+
+  t.equal(a.inBundle, true, 'bundled dep is bundled')
+  t.equal(aa.inBundle, true, 'child of bundled dep is bundled')
+  t.equal(b.inBundle, true, 'dep of bundled dep at peer level is bundled')
+  t.equal(c.inBundle, true, 'metadep of bundled dep at peer level is bundled')
+  t.equal(d.inBundle, true, 'deduped metadep of bundled metadep is bundled')
+  t.equal(e.inBundle, false, 'deduped dep of bundled dep of metadep is not bundled')
+  t.equal(fb.inBundle, true, 'bundled dep of dep is bundled')
   t.end()
 })

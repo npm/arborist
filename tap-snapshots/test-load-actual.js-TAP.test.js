@@ -8,7 +8,7 @@
 exports[`test/load-actual.js TAP bundle > loaded tree 1`] = `
 Node {
   "name": "bundle",
-  "location": "/",
+  "location": "",
   "realpath": "bundle",
   "top": "bundle",
   "edgesOut": Map {
@@ -16,14 +16,14 @@ Node {
       "name": "dep",
       "type": "prod",
       "spec": "",
-      "to": "bundle : dep",
+      "to": "bundle/node_modules/dep",
     },
   },
   "children": Map {
     "dep" => Node {
       "name": "dep",
-      "location": "/dep",
-      "realpath": "bundle : dep",
+      "location": "node_modules/dep",
+      "realpath": "bundle/node_modules/dep",
       "top": "bundle",
       "bundled": true,
       "edgesIn": Set {
@@ -42,7 +42,7 @@ Node {
 exports[`test/load-actual.js TAP cwd is default root > loaded tree 1`] = `
 Node {
   "name": "root",
-  "location": "/",
+  "location": "",
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
@@ -50,19 +50,19 @@ Node {
       "name": "@scope/x",
       "type": "prod",
       "spec": "1",
-      "to": "root : @scope/x",
+      "to": "root/node_modules/@scope/x",
     },
     "@scope/y" => Edge {
       "name": "@scope/y",
       "type": "peer",
       "spec": ">0.99.0",
-      "to": "root : @scope/y",
+      "to": "root/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "dev",
       "spec": "*",
-      "to": "root : foo",
+      "to": "root/node_modules/foo",
     },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
@@ -74,8 +74,8 @@ Node {
   "children": Map {
     "@scope/x" => Node {
       "name": "@scope/x",
-      "location": "/@scope/x",
-      "realpath": "root : @scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "root/node_modules/@scope/x",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -88,13 +88,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "root/node_modules/@scope/x",
         },
         Edge {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "from": "root : foo",
+          "from": "root/node_modules/foo",
         },
       },
       "edgesOut": Map {
@@ -102,13 +102,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "root/node_modules/@scope/x",
         },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/y",
+          "to": "root/node_modules/@scope/y",
         },
         "express" => Edge {
           "name": "express",
@@ -121,21 +121,21 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "root : @scope/x : glob",
+          "to": "root/node_modules/@scope/x/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/@scope/x/glob",
-          "realpath": "root : @scope/x : glob",
+          "location": "node_modules/@scope/x/node_modules/glob",
+          "realpath": "root/node_modules/@scope/x/node_modules/glob",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "root : @scope/x",
+              "from": "root/node_modules/@scope/x",
             },
           },
           "edgesOut": Map {
@@ -143,67 +143,67 @@ Node {
               "name": "graceful-fs",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : graceful-fs",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
             },
             "inherits" => Edge {
               "name": "inherits",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : inherits",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
             },
             "minimatch" => Edge {
               "name": "minimatch",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : minimatch",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
             },
             "once" => Edge {
               "name": "once",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : once",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/@scope/x/glob/graceful-fs",
-              "realpath": "root : @scope/x : glob : graceful-fs",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "graceful-fs",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/@scope/x/glob/inherits",
-              "realpath": "root : @scope/x : glob : inherits",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "inherits",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/@scope/x/glob/minimatch",
-              "realpath": "root : @scope/x : glob : minimatch",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "minimatch",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
               "edgesOut": Map {
@@ -211,47 +211,47 @@ Node {
                   "name": "lru-cache",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : lru-cache",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                 },
                 "once" => Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : once",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 },
                 "sigmund" => Edge {
                   "name": "sigmund",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : sigmund",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/@scope/x/glob/minimatch/lru-cache",
-                  "realpath": "root : @scope/x : glob : minimatch : lru-cache",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "lru-cache",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/@scope/x/glob/minimatch/sigmund",
-                  "realpath": "root : @scope/x : glob : minimatch : sigmund",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "sigmund",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
@@ -259,21 +259,21 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/@scope/x/glob/once",
-              "realpath": "root : @scope/x : glob : once",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob : minimatch",
+                  "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 },
               },
             },
@@ -283,8 +283,8 @@ Node {
     },
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "root : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "root/node_modules/@scope/y",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -297,7 +297,7 @@ Node {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "root/node_modules/@scope/x",
         },
       },
       "edgesOut": Map {
@@ -305,15 +305,15 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "to": "root : foo",
+          "to": "root/node_modules/foo",
           "error": "INVALID",
         },
       },
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "root : foo",
+      "location": "node_modules/foo",
+      "realpath": "root/node_modules/foo",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -326,7 +326,7 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "from": "root : @scope/y",
+          "from": "root/node_modules/@scope/y",
           "error": "INVALID",
         },
       },
@@ -335,27 +335,27 @@ Node {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "root/node_modules/@scope/x",
         },
         "express" => Edge {
           "name": "express",
           "type": "prod",
           "spec": "npm:abbrev@*",
-          "to": "root : foo : express",
+          "to": "root/node_modules/foo/node_modules/express",
         },
       },
       "children": Map {
         "express" => Node {
           "name": "express",
-          "location": "/foo/express",
-          "realpath": "root : foo : express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "root/node_modules/foo/node_modules/express",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "express",
               "type": "prod",
               "spec": "npm:abbrev@*",
-              "from": "root : foo",
+              "from": "root/node_modules/foo",
             },
           },
         },
@@ -368,7 +368,7 @@ Node {
 exports[`test/load-actual.js TAP deepmixedloop > loaded tree 1`] = `
 Node {
   "name": "deepmixedloop",
-  "location": "/",
+  "location": "",
   "realpath": "deepmixedloop",
   "top": "deepmixedloop",
   "edgesOut": Map {
@@ -376,20 +376,20 @@ Node {
       "name": "i",
       "type": "dev",
       "spec": "",
-      "to": "deepmixedloop : i",
+      "to": "deepmixedloop/node_modules/i",
     },
     "x" => Edge {
       "name": "x",
       "type": "prod",
       "spec": "",
-      "to": "deepmixedloop : x",
+      "to": "deepmixedloop/node_modules/x",
     },
   },
   "children": Map {
     "a" => Node {
       "name": "a",
-      "location": "/a",
-      "realpath": "deepmixedloop : a",
+      "location": "node_modules/a",
+      "realpath": "deepmixedloop/node_modules/a",
       "top": "deepmixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -397,7 +397,7 @@ Node {
           "name": "a",
           "type": "optional",
           "spec": "",
-          "from": "deepmixedloop : z",
+          "from": "deepmixedloop/node_modules/z",
         },
       },
       "edgesOut": Map {
@@ -405,14 +405,14 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : b",
+          "to": "deepmixedloop/node_modules/b",
         },
       },
     },
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "deepmixedloop : b",
+      "location": "node_modules/b",
+      "realpath": "deepmixedloop/node_modules/b",
       "top": "deepmixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -420,7 +420,7 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : a",
+          "from": "deepmixedloop/node_modules/a",
         },
       },
       "edgesOut": Map {
@@ -428,14 +428,14 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : c",
+          "to": "deepmixedloop/node_modules/c",
         },
       },
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "deepmixedloop : c",
+      "location": "node_modules/c",
+      "realpath": "deepmixedloop/node_modules/c",
       "top": "deepmixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -443,7 +443,7 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : b",
+          "from": "deepmixedloop/node_modules/b",
         },
       },
       "edgesOut": Map {
@@ -451,14 +451,14 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : d",
+          "to": "deepmixedloop/node_modules/d",
         },
       },
     },
     "d" => Node {
       "name": "d",
-      "location": "/d",
-      "realpath": "deepmixedloop : d",
+      "location": "node_modules/d",
+      "realpath": "deepmixedloop/node_modules/d",
       "top": "deepmixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -466,7 +466,7 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : c",
+          "from": "deepmixedloop/node_modules/c",
         },
       },
       "edgesOut": Map {
@@ -474,14 +474,14 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : e",
+          "to": "deepmixedloop/node_modules/e",
         },
       },
     },
     "e" => Node {
       "name": "e",
-      "location": "/e",
-      "realpath": "deepmixedloop : e",
+      "location": "node_modules/e",
+      "realpath": "deepmixedloop/node_modules/e",
       "top": "deepmixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -489,14 +489,14 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : d",
+          "from": "deepmixedloop/node_modules/d",
         },
       },
     },
     "i" => Node {
       "name": "i",
-      "location": "/i",
-      "realpath": "deepmixedloop : i",
+      "location": "node_modules/i",
+      "realpath": "deepmixedloop/node_modules/i",
       "top": "deepmixedloop",
       "dev": true,
       "edgesIn": Set {
@@ -512,14 +512,14 @@ Node {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : j",
+          "to": "deepmixedloop/node_modules/j",
         },
       },
     },
     "j" => Node {
       "name": "j",
-      "location": "/j",
-      "realpath": "deepmixedloop : j",
+      "location": "node_modules/j",
+      "realpath": "deepmixedloop/node_modules/j",
       "top": "deepmixedloop",
       "dev": true,
       "edgesIn": Set {
@@ -527,7 +527,7 @@ Node {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : i",
+          "from": "deepmixedloop/node_modules/i",
         },
       },
       "edgesOut": Map {
@@ -535,14 +535,14 @@ Node {
           "name": "k",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : k",
+          "to": "deepmixedloop/node_modules/k",
         },
       },
     },
     "k" => Node {
       "name": "k",
-      "location": "/k",
-      "realpath": "deepmixedloop : k",
+      "location": "node_modules/k",
+      "realpath": "deepmixedloop/node_modules/k",
       "top": "deepmixedloop",
       "dev": true,
       "edgesIn": Set {
@@ -550,14 +550,14 @@ Node {
           "name": "k",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : j",
+          "from": "deepmixedloop/node_modules/j",
         },
       },
     },
     "x" => Node {
       "name": "x",
-      "location": "/x",
-      "realpath": "deepmixedloop : x",
+      "location": "node_modules/x",
+      "realpath": "deepmixedloop/node_modules/x",
       "top": "deepmixedloop",
       "edgesIn": Set {
         Edge {
@@ -572,21 +572,21 @@ Node {
           "name": "y",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : y",
+          "to": "deepmixedloop/node_modules/y",
         },
       },
     },
     "y" => Node {
       "name": "y",
-      "location": "/y",
-      "realpath": "deepmixedloop : y",
+      "location": "node_modules/y",
+      "realpath": "deepmixedloop/node_modules/y",
       "top": "deepmixedloop",
       "edgesIn": Set {
         Edge {
           "name": "y",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : x",
+          "from": "deepmixedloop/node_modules/x",
         },
       },
       "edgesOut": Map {
@@ -594,21 +594,21 @@ Node {
           "name": "z",
           "type": "prod",
           "spec": "",
-          "to": "deepmixedloop : z",
+          "to": "deepmixedloop/node_modules/z",
         },
       },
     },
     "z" => Node {
       "name": "z",
-      "location": "/z",
-      "realpath": "deepmixedloop : z",
+      "location": "node_modules/z",
+      "realpath": "deepmixedloop/node_modules/z",
       "top": "deepmixedloop",
       "edgesIn": Set {
         Edge {
           "name": "z",
           "type": "prod",
           "spec": "",
-          "from": "deepmixedloop : y",
+          "from": "deepmixedloop/node_modules/y",
         },
       },
       "edgesOut": Map {
@@ -616,7 +616,7 @@ Node {
           "name": "a",
           "type": "optional",
           "spec": "",
-          "to": "deepmixedloop : a",
+          "to": "deepmixedloop/node_modules/a",
         },
       },
     },
@@ -627,7 +627,7 @@ Node {
 exports[`test/load-actual.js TAP deeproot/root > loaded tree 1`] = `
 Node {
   "name": "root",
-  "location": "/",
+  "location": "",
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
@@ -635,19 +635,19 @@ Node {
       "name": "@scope/x",
       "type": "prod",
       "spec": "1",
-      "to": "root : @scope/x",
+      "to": "deeproot/root/node_modules/@scope/x",
     },
     "@scope/y" => Edge {
       "name": "@scope/y",
       "type": "peer",
       "spec": ">0.99.0",
-      "to": "root : @scope/y",
+      "to": "deeproot/root/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "dev",
       "spec": "*",
-      "to": "root : foo",
+      "to": "deeproot/root/node_modules/foo",
     },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
@@ -659,27 +659,27 @@ Node {
   "children": Map {
     "@scope/x" => Node {
       "name": "@scope/x",
-      "location": "/@scope/x",
-      "realpath": "root : @scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "deeproot/root/node_modules/@scope/x",
       "top": "root",
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "prod",
-          "spec": "1",
-          "from": "root",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "deeproot/root/node_modules/@scope/x",
         },
         Edge {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "from": "root : foo",
+          "from": "deeproot/root/node_modules/foo",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "prod",
+          "spec": "1",
+          "from": "root",
         },
       },
       "edgesOut": Map {
@@ -687,13 +687,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "deeproot/root/node_modules/@scope/x",
         },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/y",
+          "to": "deeproot/root/node_modules/@scope/y",
         },
         "express" => Edge {
           "name": "express",
@@ -706,21 +706,21 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "root : @scope/x : glob",
+          "to": "deeproot/root/node_modules/@scope/x/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/@scope/x/glob",
-          "realpath": "root : @scope/x : glob",
+          "location": "node_modules/@scope/x/node_modules/glob",
+          "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "root : @scope/x",
+              "from": "deeproot/root/node_modules/@scope/x",
             },
           },
           "edgesOut": Map {
@@ -728,67 +728,67 @@ Node {
               "name": "graceful-fs",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : graceful-fs",
+              "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
             },
             "inherits" => Edge {
               "name": "inherits",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : inherits",
+              "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
             },
             "minimatch" => Edge {
               "name": "minimatch",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : minimatch",
+              "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
             },
             "once" => Edge {
               "name": "once",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : once",
+              "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/@scope/x/glob/graceful-fs",
-              "realpath": "root : @scope/x : glob : graceful-fs",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "graceful-fs",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "deeproot/root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/@scope/x/glob/inherits",
-              "realpath": "root : @scope/x : glob : inherits",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "inherits",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "deeproot/root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/@scope/x/glob/minimatch",
-              "realpath": "root : @scope/x : glob : minimatch",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "minimatch",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "deeproot/root/node_modules/@scope/x/node_modules/glob",
                 },
               },
               "edgesOut": Map {
@@ -796,47 +796,47 @@ Node {
                   "name": "lru-cache",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : lru-cache",
+                  "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                 },
                 "once" => Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : once",
+                  "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 },
                 "sigmund" => Edge {
                   "name": "sigmund",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : sigmund",
+                  "to": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/@scope/x/glob/minimatch/lru-cache",
-                  "realpath": "root : @scope/x : glob : minimatch : lru-cache",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "lru-cache",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/@scope/x/glob/minimatch/sigmund",
-                  "realpath": "root : @scope/x : glob : minimatch : sigmund",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "sigmund",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
@@ -844,21 +844,21 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/@scope/x/glob/once",
-              "realpath": "root : @scope/x : glob : once",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "realpath": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/once",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "deeproot/root/node_modules/@scope/x/node_modules/glob",
                 },
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob : minimatch",
+                  "from": "deeproot/root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 },
               },
             },
@@ -868,21 +868,21 @@ Node {
     },
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "root : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "deeproot/root/node_modules/@scope/y",
       "top": "root",
       "edgesIn": Set {
+        Edge {
+          "name": "@scope/y",
+          "type": "optional",
+          "spec": "",
+          "from": "deeproot/root/node_modules/@scope/x",
+        },
         Edge {
           "name": "@scope/y",
           "type": "peer",
           "spec": ">0.99.0",
           "from": "root",
-        },
-        Edge {
-          "name": "@scope/y",
-          "type": "optional",
-          "spec": "",
-          "from": "root : @scope/x",
         },
       },
       "edgesOut": Map {
@@ -890,29 +890,29 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "to": "root : foo",
+          "to": "deeproot/root/node_modules/foo",
           "error": "INVALID",
         },
       },
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "root : foo",
+      "location": "node_modules/foo",
+      "realpath": "deeproot/root/node_modules/foo",
       "top": "root",
       "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "deeproot/root/node_modules/@scope/y",
+          "error": "INVALID",
+        },
         Edge {
           "name": "foo",
           "type": "dev",
           "spec": "*",
           "from": "root",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "root : @scope/y",
-          "error": "INVALID",
         },
       },
       "edgesOut": Map {
@@ -920,27 +920,27 @@ Node {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "deeproot/root/node_modules/@scope/x",
         },
         "express" => Edge {
           "name": "express",
           "type": "prod",
           "spec": "npm:abbrev@*",
-          "to": "root : foo : express",
+          "to": "deeproot/root/node_modules/foo/node_modules/express",
         },
       },
       "children": Map {
         "express" => Node {
           "name": "express",
-          "location": "/foo/express",
-          "realpath": "root : foo : express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "deeproot/root/node_modules/foo/node_modules/express",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "express",
               "type": "prod",
               "spec": "npm:abbrev@*",
-              "from": "root : foo",
+              "from": "deeproot/root/node_modules/foo",
             },
           },
         },
@@ -953,7 +953,7 @@ Node {
 exports[`test/load-actual.js TAP devloop > loaded tree 1`] = `
 Node {
   "name": "devloop",
-  "location": "/",
+  "location": "",
   "realpath": "devloop",
   "top": "devloop",
   "edgesOut": Map {
@@ -961,20 +961,20 @@ Node {
       "name": "a",
       "type": "dev",
       "spec": "",
-      "to": "devloop : a",
+      "to": "devloop/node_modules/a",
     },
     "c" => Edge {
       "name": "c",
       "type": "prod",
       "spec": "",
-      "to": "devloop : c",
+      "to": "devloop/node_modules/c",
     },
   },
   "children": Map {
     "a" => Node {
       "name": "a",
-      "location": "/a",
-      "realpath": "devloop : a",
+      "location": "node_modules/a",
+      "realpath": "devloop/node_modules/a",
       "top": "devloop",
       "dev": true,
       "edgesIn": Set {
@@ -990,40 +990,40 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "devloop : b",
+          "to": "devloop/node_modules/b",
         },
         "d" => Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "devloop : d",
+          "to": "devloop/node_modules/d",
         },
       },
     },
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "devloop : b",
+      "location": "node_modules/b",
+      "realpath": "devloop/node_modules/b",
       "top": "devloop",
       "edgesIn": Set {
         Edge {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "devloop : a",
+          "from": "devloop/node_modules/a",
         },
         Edge {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "devloop : d",
+          "from": "devloop/node_modules/d",
         },
       },
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "devloop : c",
+      "location": "node_modules/c",
+      "realpath": "devloop/node_modules/c",
       "top": "devloop",
       "edgesIn": Set {
         Edge {
@@ -1038,27 +1038,27 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "devloop : d",
+          "to": "devloop/node_modules/d",
         },
       },
     },
     "d" => Node {
       "name": "d",
-      "location": "/d",
-      "realpath": "devloop : d",
+      "location": "node_modules/d",
+      "realpath": "devloop/node_modules/d",
       "top": "devloop",
       "edgesIn": Set {
         Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "devloop : a",
+          "from": "devloop/node_modules/a",
         },
         Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "devloop : c",
+          "from": "devloop/node_modules/c",
         },
       },
       "edgesOut": Map {
@@ -1066,7 +1066,7 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "devloop : b",
+          "to": "devloop/node_modules/b",
         },
       },
     },
@@ -1077,7 +1077,7 @@ Node {
 exports[`test/load-actual.js TAP install-types > loaded tree 1`] = `
 Node {
   "name": "install-types",
-  "location": "/",
+  "location": "",
   "realpath": "install-types",
   "top": "install-types",
   "edgesOut": Map {
@@ -1085,52 +1085,49 @@ Node {
       "name": "abbrev",
       "type": "prod",
       "spec": "^1.1.1",
-      "to": "install-types : abbrev",
+      "to": "install-types/node_modules/abbrev",
     },
     "bundler" => Edge {
       "name": "bundler",
       "type": "prod",
       "spec": "1.2.3",
-      "to": "install-types : bundler",
+      "to": "install-types/node_modules/bundler",
     },
     "full-git-url" => Edge {
       "name": "full-git-url",
       "type": "prod",
       "spec": "git+https://github.com/isaacs/abbrev-js.git",
-      "to": "install-types : full-git-url",
-      "error": "INVALID",
+      "to": "install-types/node_modules/full-git-url",
     },
     "ghshort" => Edge {
       "name": "ghshort",
       "type": "prod",
       "spec": "github:isaacs/abbrev-js",
-      "to": "install-types : ghshort",
-      "error": "INVALID",
+      "to": "install-types/node_modules/ghshort",
     },
     "old" => Edge {
       "name": "old",
       "type": "prod",
       "spec": "npm:abbrev@^1.0.3",
-      "to": "install-types : old",
+      "to": "install-types/node_modules/old",
     },
     "pinned" => Edge {
       "name": "pinned",
       "type": "prod",
       "spec": "npm:abbrev@^1.1.1",
-      "to": "install-types : pinned",
+      "to": "install-types/node_modules/pinned",
     },
     "reg" => Edge {
       "name": "reg",
       "type": "prod",
       "spec": "npm:abbrev@^1.1.1",
-      "to": "install-types : reg",
+      "to": "install-types/node_modules/reg",
     },
     "remote" => Edge {
       "name": "remote",
       "type": "prod",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-      "to": "install-types : remote",
-      "error": "INVALID",
+      "to": "install-types/node_modules/remote",
     },
     "symlink" => Edge {
       "name": "symlink",
@@ -1142,15 +1139,14 @@ Node {
       "name": "tarball",
       "type": "prod",
       "spec": "file:abbrev-1.1.1.tgz",
-      "to": "install-types : tarball",
-      "error": "INVALID",
+      "to": "install-types/node_modules/tarball",
     },
   },
   "children": Map {
     "abbrev" => Node {
       "name": "abbrev",
-      "location": "/abbrev",
-      "realpath": "install-types : abbrev",
+      "location": "node_modules/abbrev",
+      "realpath": "install-types/node_modules/abbrev",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1163,8 +1159,8 @@ Node {
     },
     "balanced-match" => Node {
       "name": "balanced-match",
-      "location": "/balanced-match",
-      "realpath": "install-types : balanced-match",
+      "location": "node_modules/balanced-match",
+      "realpath": "install-types/node_modules/balanced-match",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1172,14 +1168,14 @@ Node {
           "name": "balanced-match",
           "type": "prod",
           "spec": "^1.0.0",
-          "from": "install-types : brace-expansion",
+          "from": "install-types/node_modules/brace-expansion",
         },
       },
     },
     "brace-expansion" => Node {
       "name": "brace-expansion",
-      "location": "/brace-expansion",
-      "realpath": "install-types : brace-expansion",
+      "location": "node_modules/brace-expansion",
+      "realpath": "install-types/node_modules/brace-expansion",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1187,7 +1183,7 @@ Node {
           "name": "brace-expansion",
           "type": "prod",
           "spec": "^1.1.7",
-          "from": "install-types : minimatch",
+          "from": "install-types/node_modules/minimatch",
         },
       },
       "edgesOut": Map {
@@ -1195,20 +1191,20 @@ Node {
           "name": "balanced-match",
           "type": "prod",
           "spec": "^1.0.0",
-          "to": "install-types : balanced-match",
+          "to": "install-types/node_modules/balanced-match",
         },
         "concat-map" => Edge {
           "name": "concat-map",
           "type": "prod",
           "spec": "0.0.1",
-          "to": "install-types : concat-map",
+          "to": "install-types/node_modules/concat-map",
         },
       },
     },
     "bundler" => Node {
       "name": "bundler",
-      "location": "/bundler",
-      "realpath": "install-types : bundler",
+      "location": "node_modules/bundler",
+      "realpath": "install-types/node_modules/bundler",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1223,14 +1219,14 @@ Node {
           "name": "a",
           "type": "prod",
           "spec": "",
-          "to": "install-types : bundler : a",
+          "to": "install-types/node_modules/bundler/node_modules/a",
         },
       },
       "children": Map {
         "a" => Node {
           "name": "a",
-          "location": "/bundler/a",
-          "realpath": "install-types : bundler : a",
+          "location": "node_modules/bundler/node_modules/a",
+          "realpath": "install-types/node_modules/bundler/node_modules/a",
           "top": "install-types",
           "bundled": true,
           "edgesIn": Set {
@@ -1238,7 +1234,7 @@ Node {
               "name": "a",
               "type": "prod",
               "spec": "",
-              "from": "install-types : bundler",
+              "from": "install-types/node_modules/bundler",
             },
           },
           "edgesOut": Map {
@@ -1246,21 +1242,22 @@ Node {
               "name": "b",
               "type": "prod",
               "spec": "",
-              "to": "install-types : bundler : b",
+              "to": "install-types/node_modules/bundler/node_modules/b",
             },
           },
         },
         "b" => Node {
           "name": "b",
-          "location": "/bundler/b",
-          "realpath": "install-types : bundler : b",
+          "location": "node_modules/bundler/node_modules/b",
+          "realpath": "install-types/node_modules/bundler/node_modules/b",
           "top": "install-types",
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "name": "b",
               "type": "prod",
               "spec": "",
-              "from": "install-types : bundler : a",
+              "from": "install-types/node_modules/bundler/node_modules/a",
             },
           },
           "edgesOut": Map {
@@ -1268,21 +1265,22 @@ Node {
               "name": "c",
               "type": "prod",
               "spec": "",
-              "to": "install-types : bundler : c",
+              "to": "install-types/node_modules/bundler/node_modules/c",
             },
           },
         },
         "c" => Node {
           "name": "c",
-          "location": "/bundler/c",
-          "realpath": "install-types : bundler : c",
+          "location": "node_modules/bundler/node_modules/c",
+          "realpath": "install-types/node_modules/bundler/node_modules/c",
           "top": "install-types",
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "name": "c",
               "type": "prod",
               "spec": "",
-              "from": "install-types : bundler : b",
+              "from": "install-types/node_modules/bundler/node_modules/b",
             },
           },
         },
@@ -1290,8 +1288,8 @@ Node {
     },
     "concat-map" => Node {
       "name": "concat-map",
-      "location": "/concat-map",
-      "realpath": "install-types : concat-map",
+      "location": "node_modules/concat-map",
+      "realpath": "install-types/node_modules/concat-map",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1299,14 +1297,14 @@ Node {
           "name": "concat-map",
           "type": "prod",
           "spec": "0.0.1",
-          "from": "install-types : brace-expansion",
+          "from": "install-types/node_modules/brace-expansion",
         },
       },
     },
     "fs.realpath" => Node {
       "name": "fs.realpath",
-      "location": "/fs.realpath",
-      "realpath": "install-types : fs.realpath",
+      "location": "node_modules/fs.realpath",
+      "realpath": "install-types/node_modules/fs.realpath",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1314,14 +1312,14 @@ Node {
           "name": "fs.realpath",
           "type": "prod",
           "spec": "^1.0.0",
-          "from": "install-types : glob",
+          "from": "install-types/node_modules/glob",
         },
       },
     },
     "full-git-url" => Node {
       "name": "full-git-url",
-      "location": "/full-git-url",
-      "realpath": "install-types : full-git-url",
+      "location": "node_modules/full-git-url",
+      "realpath": "install-types/node_modules/full-git-url",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1329,14 +1327,13 @@ Node {
           "type": "prod",
           "spec": "git+https://github.com/isaacs/abbrev-js.git",
           "from": "install-types",
-          "error": "INVALID",
         },
       },
     },
     "ghshort" => Node {
       "name": "ghshort",
-      "location": "/ghshort",
-      "realpath": "install-types : ghshort",
+      "location": "node_modules/ghshort",
+      "realpath": "install-types/node_modules/ghshort",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1344,21 +1341,20 @@ Node {
           "type": "prod",
           "spec": "github:isaacs/abbrev-js",
           "from": "install-types",
-          "error": "INVALID",
         },
       },
     },
     "ghtgz" => Node {
       "name": "ghtgz",
-      "location": "/ghtgz",
-      "realpath": "install-types : ghtgz",
+      "location": "node_modules/ghtgz",
+      "realpath": "install-types/node_modules/ghtgz",
       "top": "install-types",
       "extraneous": true,
     },
     "glob" => Node {
       "name": "glob",
-      "location": "/glob",
-      "realpath": "install-types : glob",
+      "location": "node_modules/glob",
+      "realpath": "install-types/node_modules/glob",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1366,7 +1362,7 @@ Node {
           "name": "glob",
           "type": "optional",
           "spec": "^7.1.3",
-          "from": "install-types : rimraf",
+          "from": "install-types/node_modules/rimraf",
         },
       },
       "edgesOut": Map {
@@ -1374,44 +1370,44 @@ Node {
           "name": "fs.realpath",
           "type": "prod",
           "spec": "^1.0.0",
-          "to": "install-types : fs.realpath",
+          "to": "install-types/node_modules/fs.realpath",
         },
         "inflight" => Edge {
           "name": "inflight",
           "type": "prod",
           "spec": "^1.0.4",
-          "to": "install-types : inflight",
+          "to": "install-types/node_modules/inflight",
         },
         "inherits" => Edge {
           "name": "inherits",
           "type": "prod",
           "spec": "2",
-          "to": "install-types : inherits",
+          "to": "install-types/node_modules/inherits",
         },
         "minimatch" => Edge {
           "name": "minimatch",
           "type": "prod",
           "spec": "^3.0.4",
-          "to": "install-types : minimatch",
+          "to": "install-types/node_modules/minimatch",
         },
         "once" => Edge {
           "name": "once",
           "type": "prod",
           "spec": "^1.3.0",
-          "to": "install-types : once",
+          "to": "install-types/node_modules/once",
         },
         "path-is-absolute" => Edge {
           "name": "path-is-absolute",
           "type": "prod",
           "spec": "^1.0.0",
-          "to": "install-types : path-is-absolute",
+          "to": "install-types/node_modules/path-is-absolute",
         },
       },
     },
     "inflight" => Node {
       "name": "inflight",
-      "location": "/inflight",
-      "realpath": "install-types : inflight",
+      "location": "node_modules/inflight",
+      "realpath": "install-types/node_modules/inflight",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1419,7 +1415,7 @@ Node {
           "name": "inflight",
           "type": "prod",
           "spec": "^1.0.4",
-          "from": "install-types : glob",
+          "from": "install-types/node_modules/glob",
         },
       },
       "edgesOut": Map {
@@ -1427,20 +1423,20 @@ Node {
           "name": "once",
           "type": "prod",
           "spec": "^1.3.0",
-          "to": "install-types : once",
+          "to": "install-types/node_modules/once",
         },
         "wrappy" => Edge {
           "name": "wrappy",
           "type": "prod",
           "spec": "1",
-          "to": "install-types : wrappy",
+          "to": "install-types/node_modules/wrappy",
         },
       },
     },
     "inherits" => Node {
       "name": "inherits",
-      "location": "/inherits",
-      "realpath": "install-types : inherits",
+      "location": "node_modules/inherits",
+      "realpath": "install-types/node_modules/inherits",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1448,14 +1444,14 @@ Node {
           "name": "inherits",
           "type": "prod",
           "spec": "2",
-          "from": "install-types : glob",
+          "from": "install-types/node_modules/glob",
         },
       },
     },
     "minimatch" => Node {
       "name": "minimatch",
-      "location": "/minimatch",
-      "realpath": "install-types : minimatch",
+      "location": "node_modules/minimatch",
+      "realpath": "install-types/node_modules/minimatch",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1463,7 +1459,7 @@ Node {
           "name": "minimatch",
           "type": "prod",
           "spec": "^3.0.4",
-          "from": "install-types : glob",
+          "from": "install-types/node_modules/glob",
         },
       },
       "edgesOut": Map {
@@ -1471,14 +1467,14 @@ Node {
           "name": "brace-expansion",
           "type": "prod",
           "spec": "^1.1.7",
-          "to": "install-types : brace-expansion",
+          "to": "install-types/node_modules/brace-expansion",
         },
       },
     },
     "old" => Node {
       "name": "old",
-      "location": "/old",
-      "realpath": "install-types : old",
+      "location": "node_modules/old",
+      "realpath": "install-types/node_modules/old",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1491,8 +1487,8 @@ Node {
     },
     "once" => Node {
       "name": "once",
-      "location": "/once",
-      "realpath": "install-types : once",
+      "location": "node_modules/once",
+      "realpath": "install-types/node_modules/once",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1500,13 +1496,13 @@ Node {
           "name": "once",
           "type": "prod",
           "spec": "^1.3.0",
-          "from": "install-types : glob",
+          "from": "install-types/node_modules/glob",
         },
         Edge {
           "name": "once",
           "type": "prod",
           "spec": "^1.3.0",
-          "from": "install-types : inflight",
+          "from": "install-types/node_modules/inflight",
         },
       },
       "edgesOut": Map {
@@ -1514,14 +1510,14 @@ Node {
           "name": "wrappy",
           "type": "prod",
           "spec": "1",
-          "to": "install-types : wrappy",
+          "to": "install-types/node_modules/wrappy",
         },
       },
     },
     "path-is-absolute" => Node {
       "name": "path-is-absolute",
-      "location": "/path-is-absolute",
-      "realpath": "install-types : path-is-absolute",
+      "location": "node_modules/path-is-absolute",
+      "realpath": "install-types/node_modules/path-is-absolute",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1529,14 +1525,14 @@ Node {
           "name": "path-is-absolute",
           "type": "prod",
           "spec": "^1.0.0",
-          "from": "install-types : glob",
+          "from": "install-types/node_modules/glob",
         },
       },
     },
     "pinned" => Node {
       "name": "pinned",
-      "location": "/pinned",
-      "realpath": "install-types : pinned",
+      "location": "node_modules/pinned",
+      "realpath": "install-types/node_modules/pinned",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1549,8 +1545,8 @@ Node {
     },
     "reg" => Node {
       "name": "reg",
-      "location": "/reg",
-      "realpath": "install-types : reg",
+      "location": "node_modules/reg",
+      "realpath": "install-types/node_modules/reg",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1563,8 +1559,8 @@ Node {
     },
     "remote" => Node {
       "name": "remote",
-      "location": "/remote",
-      "realpath": "install-types : remote",
+      "location": "node_modules/remote",
+      "realpath": "install-types/node_modules/remote",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1572,14 +1568,13 @@ Node {
           "type": "prod",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
           "from": "install-types",
-          "error": "INVALID",
         },
       },
     },
     "rimraf" => Node {
       "name": "rimraf",
-      "location": "/rimraf",
-      "realpath": "install-types : rimraf",
+      "location": "node_modules/rimraf",
+      "realpath": "install-types/node_modules/rimraf",
       "top": "install-types",
       "extraneous": true,
       "edgesOut": Map {
@@ -1587,13 +1582,13 @@ Node {
           "name": "glob",
           "type": "optional",
           "spec": "^7.1.3",
-          "to": "install-types : glob",
+          "to": "install-types/node_modules/glob",
         },
       },
     },
     "symlink" => Link {
       "name": "symlink",
-      "location": "/symlink",
+      "location": "node_modules/symlink",
       "realpath": "install-types/abbrev-link-target",
       "top": "install-types",
       "target": Object {
@@ -1611,8 +1606,8 @@ Node {
     },
     "tarball" => Node {
       "name": "tarball",
-      "location": "/tarball",
-      "realpath": "install-types : tarball",
+      "location": "node_modules/tarball",
+      "realpath": "install-types/node_modules/tarball",
       "top": "install-types",
       "edgesIn": Set {
         Edge {
@@ -1620,14 +1615,13 @@ Node {
           "type": "prod",
           "spec": "file:abbrev-1.1.1.tgz",
           "from": "install-types",
-          "error": "INVALID",
         },
       },
     },
     "wrappy" => Node {
       "name": "wrappy",
-      "location": "/wrappy",
-      "realpath": "install-types : wrappy",
+      "location": "node_modules/wrappy",
+      "realpath": "install-types/node_modules/wrappy",
       "top": "install-types",
       "extraneous": true,
       "edgesIn": Set {
@@ -1635,13 +1629,13 @@ Node {
           "name": "wrappy",
           "type": "prod",
           "spec": "1",
-          "from": "install-types : inflight",
+          "from": "install-types/node_modules/inflight",
         },
         Edge {
           "name": "wrappy",
           "type": "prod",
           "spec": "1",
-          "from": "install-types : once",
+          "from": "install-types/node_modules/once",
         },
       },
     },
@@ -1652,7 +1646,7 @@ Node {
 exports[`test/load-actual.js TAP linkedroot > loaded tree 1`] = `
 Node {
   "name": "linkedroot",
-  "location": "/",
+  "location": "",
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
@@ -1660,19 +1654,19 @@ Node {
       "name": "@scope/x",
       "type": "prod",
       "spec": "1",
-      "to": "root : @scope/x",
+      "to": "linkedroot/node_modules/@scope/x",
     },
     "@scope/y" => Edge {
       "name": "@scope/y",
       "type": "peer",
       "spec": ">0.99.0",
-      "to": "root : @scope/y",
+      "to": "linkedroot/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "dev",
       "spec": "*",
-      "to": "root : foo",
+      "to": "linkedroot/node_modules/foo",
     },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
@@ -1684,27 +1678,27 @@ Node {
   "children": Map {
     "@scope/x" => Node {
       "name": "@scope/x",
-      "location": "/@scope/x",
-      "realpath": "root : @scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "linkedroot/node_modules/@scope/x",
       "top": "root",
       "edgesIn": Set {
         Edge {
           "name": "@scope/x",
-          "type": "prod",
-          "spec": "1",
-          "from": "root",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "linkedroot/node_modules/@scope/x",
         },
         Edge {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "from": "root : foo",
+          "from": "linkedroot/node_modules/foo",
+        },
+        Edge {
+          "name": "@scope/x",
+          "type": "prod",
+          "spec": "1",
+          "from": "root",
         },
       },
       "edgesOut": Map {
@@ -1712,13 +1706,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "linkedroot/node_modules/@scope/x",
         },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/y",
+          "to": "linkedroot/node_modules/@scope/y",
         },
         "express" => Edge {
           "name": "express",
@@ -1731,21 +1725,21 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "root : @scope/x : glob",
+          "to": "linkedroot/node_modules/@scope/x/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/@scope/x/glob",
-          "realpath": "root : @scope/x : glob",
+          "location": "node_modules/@scope/x/node_modules/glob",
+          "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "root : @scope/x",
+              "from": "linkedroot/node_modules/@scope/x",
             },
           },
           "edgesOut": Map {
@@ -1753,67 +1747,67 @@ Node {
               "name": "graceful-fs",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : graceful-fs",
+              "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
             },
             "inherits" => Edge {
               "name": "inherits",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : inherits",
+              "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
             },
             "minimatch" => Edge {
               "name": "minimatch",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : minimatch",
+              "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
             },
             "once" => Edge {
               "name": "once",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : once",
+              "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/@scope/x/glob/graceful-fs",
-              "realpath": "root : @scope/x : glob : graceful-fs",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "graceful-fs",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "linkedroot/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/@scope/x/glob/inherits",
-              "realpath": "root : @scope/x : glob : inherits",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "inherits",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "linkedroot/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/@scope/x/glob/minimatch",
-              "realpath": "root : @scope/x : glob : minimatch",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "minimatch",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "linkedroot/node_modules/@scope/x/node_modules/glob",
                 },
               },
               "edgesOut": Map {
@@ -1821,47 +1815,47 @@ Node {
                   "name": "lru-cache",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : lru-cache",
+                  "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                 },
                 "once" => Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : once",
+                  "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 },
                 "sigmund" => Edge {
                   "name": "sigmund",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : sigmund",
+                  "to": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/@scope/x/glob/minimatch/lru-cache",
-                  "realpath": "root : @scope/x : glob : minimatch : lru-cache",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "lru-cache",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/@scope/x/glob/minimatch/sigmund",
-                  "realpath": "root : @scope/x : glob : minimatch : sigmund",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "sigmund",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
@@ -1869,21 +1863,21 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/@scope/x/glob/once",
-              "realpath": "root : @scope/x : glob : once",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "realpath": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/once",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "linkedroot/node_modules/@scope/x/node_modules/glob",
                 },
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob : minimatch",
+                  "from": "linkedroot/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 },
               },
             },
@@ -1893,21 +1887,21 @@ Node {
     },
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "root : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "linkedroot/node_modules/@scope/y",
       "top": "root",
       "edgesIn": Set {
+        Edge {
+          "name": "@scope/y",
+          "type": "optional",
+          "spec": "",
+          "from": "linkedroot/node_modules/@scope/x",
+        },
         Edge {
           "name": "@scope/y",
           "type": "peer",
           "spec": ">0.99.0",
           "from": "root",
-        },
-        Edge {
-          "name": "@scope/y",
-          "type": "optional",
-          "spec": "",
-          "from": "root : @scope/x",
         },
       },
       "edgesOut": Map {
@@ -1915,29 +1909,29 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "to": "root : foo",
+          "to": "linkedroot/node_modules/foo",
           "error": "INVALID",
         },
       },
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "root : foo",
+      "location": "node_modules/foo",
+      "realpath": "linkedroot/node_modules/foo",
       "top": "root",
       "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "linkedroot/node_modules/@scope/y",
+          "error": "INVALID",
+        },
         Edge {
           "name": "foo",
           "type": "dev",
           "spec": "*",
           "from": "root",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "root : @scope/y",
-          "error": "INVALID",
         },
       },
       "edgesOut": Map {
@@ -1945,27 +1939,27 @@ Node {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "linkedroot/node_modules/@scope/x",
         },
         "express" => Edge {
           "name": "express",
           "type": "prod",
           "spec": "npm:abbrev@*",
-          "to": "root : foo : express",
+          "to": "linkedroot/node_modules/foo/node_modules/express",
         },
       },
       "children": Map {
         "express" => Node {
           "name": "express",
-          "location": "/foo/express",
-          "realpath": "root : foo : express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "linkedroot/node_modules/foo/node_modules/express",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "express",
               "type": "prod",
               "spec": "npm:abbrev@*",
-              "from": "root : foo",
+              "from": "linkedroot/node_modules/foo",
             },
           },
         },
@@ -1978,7 +1972,7 @@ Node {
 exports[`test/load-actual.js TAP links-all-over > loaded tree 1`] = `
 Node {
   "name": "links-all-over",
-  "location": "/",
+  "location": "",
   "realpath": "links-all-over",
   "top": "links-all-over",
   "edgesOut": Map {
@@ -1986,13 +1980,13 @@ Node {
       "name": "link-deep",
       "type": "prod",
       "spec": "",
-      "to": "links-all-over : nest : a : b : c : d : deep",
+      "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
     },
     "link-link" => Edge {
       "name": "link-link",
       "type": "prod",
       "spec": "",
-      "to": "links-all-over : nest : a : b : c : d : deep",
+      "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
     },
     "link-outside-nest" => Edge {
       "name": "link-outside-nest",
@@ -2004,18 +1998,18 @@ Node {
       "name": "nest",
       "type": "prod",
       "spec": "",
-      "to": "links-all-over : nest",
+      "to": "links-all-over/node_modules/nest",
     },
   },
   "children": Map {
     "link-deep" => Link {
       "name": "link-deep",
-      "location": "/link-deep",
-      "realpath": "links-all-over : nest : a : b : c : d : deep",
+      "location": "node_modules/link-deep",
+      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       "top": "links-all-over",
       "target": Object {
         "name": "deep",
-        "parent": "links-all-over : nest : a : b : c : d",
+        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
       },
       "edgesIn": Set {
         Edge {
@@ -2028,12 +2022,12 @@ Node {
     },
     "link-link" => Link {
       "name": "link-link",
-      "location": "/link-link",
-      "realpath": "links-all-over : nest : a : b : c : d : deep",
+      "location": "node_modules/link-link",
+      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       "top": "links-all-over",
       "target": Object {
         "name": "deep",
-        "parent": "links-all-over : nest : a : b : c : d",
+        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
       },
       "edgesIn": Set {
         Edge {
@@ -2052,7 +2046,7 @@ Node {
     },
     "link-outside-nest" => Link {
       "name": "link-outside-nest",
-      "location": "/link-outside-nest",
+      "location": "node_modules/link-outside-nest",
       "realpath": "links-all-over/real",
       "top": "links-all-over",
       "target": Object {
@@ -2070,8 +2064,8 @@ Node {
     },
     "nest" => Node {
       "name": "nest",
-      "location": "/nest",
-      "realpath": "links-all-over : nest",
+      "location": "node_modules/nest",
+      "realpath": "links-all-over/node_modules/nest",
       "top": "links-all-over",
       "edgesIn": Set {
         Edge {
@@ -2086,7 +2080,7 @@ Node {
           "name": "a",
           "type": "prod",
           "spec": "",
-          "to": "links-all-over : nest : a",
+          "to": "links-all-over/node_modules/nest/node_modules/a",
         },
         "link-in-nest" => Edge {
           "name": "link-in-nest",
@@ -2098,21 +2092,21 @@ Node {
       "children": Map {
         "a" => Node {
           "name": "a",
-          "location": "/nest/a",
-          "realpath": "links-all-over : nest : a",
+          "location": "node_modules/nest/node_modules/a",
+          "realpath": "links-all-over/node_modules/nest/node_modules/a",
           "top": "links-all-over",
           "edgesIn": Set {
             Edge {
               "name": "a",
               "type": "prod",
               "spec": "",
-              "from": "links-all-over : nest",
+              "from": "links-all-over/node_modules/nest",
             },
             Edge {
               "name": "a",
               "type": "prod",
               "spec": "",
-              "from": "links-all-over : nest : a : b : c : d : deep",
+              "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
             },
           },
           "edgesOut": Map {
@@ -2120,14 +2114,14 @@ Node {
               "name": "b",
               "type": "prod",
               "spec": "",
-              "to": "links-all-over : nest : a : b",
+              "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
             },
           },
           "children": Map {
             "b" => Node {
               "name": "b",
-              "location": "/nest/a/b",
-              "realpath": "links-all-over : nest : a : b",
+              "location": "node_modules/nest/node_modules/a/node_modules/b",
+              "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
               "top": "links-all-over",
               "errors": Array [
                 Object {
@@ -2139,14 +2133,14 @@ Node {
                   "name": "b",
                   "type": "prod",
                   "spec": "",
-                  "from": "links-all-over : nest : a",
+                  "from": "links-all-over/node_modules/nest/node_modules/a",
                 },
               },
               "children": Map {
                 "c" => Node {
                   "name": "c",
-                  "location": "/nest/a/b/c",
-                  "realpath": "links-all-over : nest : a : b : c",
+                  "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
+                  "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
                   "top": "links-all-over",
                   "extraneous": true,
                   "edgesOut": Map {
@@ -2154,14 +2148,14 @@ Node {
                       "name": "d",
                       "type": "prod",
                       "spec": "",
-                      "to": "links-all-over : nest : a : b : c : d",
+                      "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                     },
                   },
                   "children": Map {
                     "d" => Node {
                       "name": "d",
-                      "location": "/nest/a/b/c/d",
-                      "realpath": "links-all-over : nest : a : b : c : d",
+                      "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+                      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                       "top": "links-all-over",
                       "extraneous": true,
                       "edgesIn": Set {
@@ -2169,7 +2163,7 @@ Node {
                           "name": "d",
                           "type": "prod",
                           "spec": "",
-                          "from": "links-all-over : nest : a : b : c",
+                          "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
                         },
                       },
                       "edgesOut": Map {
@@ -2177,21 +2171,21 @@ Node {
                           "name": "deep",
                           "type": "prod",
                           "spec": "",
-                          "to": "links-all-over : nest : a : b : c : d : deep",
+                          "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
                         },
                       },
                       "children": Map {
                         "deep" => Node {
                           "name": "deep",
-                          "location": "/nest/a/b/c/d/deep",
-                          "realpath": "links-all-over : nest : a : b : c : d : deep",
+                          "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                          "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
                           "top": "links-all-over",
                           "edgesIn": Set {
                             Edge {
                               "name": "deep",
                               "type": "prod",
                               "spec": "",
-                              "from": "links-all-over : nest : a : b : c : d",
+                              "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                             },
                           },
                           "edgesOut": Map {
@@ -2199,27 +2193,27 @@ Node {
                               "name": "a",
                               "type": "prod",
                               "spec": "",
-                              "to": "links-all-over : nest : a",
+                              "to": "links-all-over/node_modules/nest/node_modules/a",
                             },
                             "deep-a" => Edge {
                               "name": "deep-a",
                               "type": "prod",
                               "spec": "",
-                              "to": "links-all-over : nest : a : b : c : d : deep : deep-a",
+                              "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
                             },
                           },
                           "children": Map {
                             "deep-a" => Node {
                               "name": "deep-a",
-                              "location": "/nest/a/b/c/d/deep/deep-a",
-                              "realpath": "links-all-over : nest : a : b : c : d : deep : deep-a",
+                              "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+                              "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
                               "top": "links-all-over",
                               "edgesIn": Set {
                                 Edge {
                                   "name": "deep-a",
                                   "type": "prod",
                                   "spec": "",
-                                  "from": "links-all-over : nest : a : b : c : d : deep",
+                                  "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
                                 },
                               },
                             },
@@ -2235,7 +2229,7 @@ Node {
         },
         "link-in-nest" => Link {
           "name": "link-in-nest",
-          "location": "/nest/link-in-nest",
+          "location": "node_modules/nest/node_modules/link-in-nest",
           "realpath": "links-all-over/real",
           "top": "links-all-over",
           "target": Object {
@@ -2247,7 +2241,7 @@ Node {
               "name": "link-in-nest",
               "type": "prod",
               "spec": "",
-              "from": "links-all-over : nest",
+              "from": "links-all-over/node_modules/nest",
             },
           },
         },
@@ -2260,7 +2254,7 @@ Node {
 exports[`test/load-actual.js TAP looking outside of cwd > loaded tree 1`] = `
 Node {
   "name": "root",
-  "location": "/",
+  "location": "",
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
@@ -2268,19 +2262,19 @@ Node {
       "name": "@scope/x",
       "type": "prod",
       "spec": "1",
-      "to": "root : @scope/x",
+      "to": "root/node_modules/@scope/x",
     },
     "@scope/y" => Edge {
       "name": "@scope/y",
       "type": "peer",
       "spec": ">0.99.0",
-      "to": "root : @scope/y",
+      "to": "root/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "dev",
       "spec": "*",
-      "to": "root : foo",
+      "to": "root/node_modules/foo",
     },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
@@ -2292,8 +2286,8 @@ Node {
   "children": Map {
     "@scope/x" => Node {
       "name": "@scope/x",
-      "location": "/@scope/x",
-      "realpath": "root : @scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "root/node_modules/@scope/x",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -2306,13 +2300,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "root/node_modules/@scope/x",
         },
         Edge {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "from": "root : foo",
+          "from": "root/node_modules/foo",
         },
       },
       "edgesOut": Map {
@@ -2320,13 +2314,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "root/node_modules/@scope/x",
         },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/y",
+          "to": "root/node_modules/@scope/y",
         },
         "express" => Edge {
           "name": "express",
@@ -2339,21 +2333,21 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "root : @scope/x : glob",
+          "to": "root/node_modules/@scope/x/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/@scope/x/glob",
-          "realpath": "root : @scope/x : glob",
+          "location": "node_modules/@scope/x/node_modules/glob",
+          "realpath": "root/node_modules/@scope/x/node_modules/glob",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "root : @scope/x",
+              "from": "root/node_modules/@scope/x",
             },
           },
           "edgesOut": Map {
@@ -2361,67 +2355,67 @@ Node {
               "name": "graceful-fs",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : graceful-fs",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
             },
             "inherits" => Edge {
               "name": "inherits",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : inherits",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
             },
             "minimatch" => Edge {
               "name": "minimatch",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : minimatch",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
             },
             "once" => Edge {
               "name": "once",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : once",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/@scope/x/glob/graceful-fs",
-              "realpath": "root : @scope/x : glob : graceful-fs",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "graceful-fs",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/@scope/x/glob/inherits",
-              "realpath": "root : @scope/x : glob : inherits",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "inherits",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/@scope/x/glob/minimatch",
-              "realpath": "root : @scope/x : glob : minimatch",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "minimatch",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
               "edgesOut": Map {
@@ -2429,47 +2423,47 @@ Node {
                   "name": "lru-cache",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : lru-cache",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                 },
                 "once" => Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : once",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 },
                 "sigmund" => Edge {
                   "name": "sigmund",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : sigmund",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/@scope/x/glob/minimatch/lru-cache",
-                  "realpath": "root : @scope/x : glob : minimatch : lru-cache",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "lru-cache",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/@scope/x/glob/minimatch/sigmund",
-                  "realpath": "root : @scope/x : glob : minimatch : sigmund",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "sigmund",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
@@ -2477,21 +2471,21 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/@scope/x/glob/once",
-              "realpath": "root : @scope/x : glob : once",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob : minimatch",
+                  "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 },
               },
             },
@@ -2501,8 +2495,8 @@ Node {
     },
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "root : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "root/node_modules/@scope/y",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -2515,7 +2509,7 @@ Node {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "root/node_modules/@scope/x",
         },
       },
       "edgesOut": Map {
@@ -2523,15 +2517,15 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "to": "root : foo",
+          "to": "root/node_modules/foo",
           "error": "INVALID",
         },
       },
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "root : foo",
+      "location": "node_modules/foo",
+      "realpath": "root/node_modules/foo",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -2544,7 +2538,7 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "from": "root : @scope/y",
+          "from": "root/node_modules/@scope/y",
           "error": "INVALID",
         },
       },
@@ -2553,27 +2547,27 @@ Node {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "root/node_modules/@scope/x",
         },
         "express" => Edge {
           "name": "express",
           "type": "prod",
           "spec": "npm:abbrev@*",
-          "to": "root : foo : express",
+          "to": "root/node_modules/foo/node_modules/express",
         },
       },
       "children": Map {
         "express" => Node {
           "name": "express",
-          "location": "/foo/express",
-          "realpath": "root : foo : express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "root/node_modules/foo/node_modules/express",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "express",
               "type": "prod",
               "spec": "npm:abbrev@*",
-              "from": "root : foo",
+              "from": "root/node_modules/foo",
             },
           },
         },
@@ -2586,7 +2580,7 @@ Node {
 exports[`test/load-actual.js TAP mixedloop > loaded tree 1`] = `
 Node {
   "name": "mixedloop",
-  "location": "/",
+  "location": "",
   "realpath": "mixedloop",
   "top": "mixedloop",
   "edgesOut": Map {
@@ -2594,20 +2588,20 @@ Node {
       "name": "a",
       "type": "optional",
       "spec": "",
-      "to": "mixedloop : a",
+      "to": "mixedloop/node_modules/a",
     },
     "c" => Edge {
       "name": "c",
       "type": "dev",
       "spec": "",
-      "to": "mixedloop : c",
+      "to": "mixedloop/node_modules/c",
     },
   },
   "children": Map {
     "a" => Node {
       "name": "a",
-      "location": "/a",
-      "realpath": "mixedloop : a",
+      "location": "node_modules/a",
+      "realpath": "mixedloop/node_modules/a",
       "top": "mixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -2623,14 +2617,14 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "mixedloop : b",
+          "to": "mixedloop/node_modules/b",
         },
       },
     },
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "mixedloop : b",
+      "location": "node_modules/b",
+      "realpath": "mixedloop/node_modules/b",
       "top": "mixedloop",
       "optional": true,
       "edgesIn": Set {
@@ -2638,7 +2632,7 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "mixedloop : a",
+          "from": "mixedloop/node_modules/a",
         },
       },
       "edgesOut": Map {
@@ -2646,14 +2640,14 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "to": "mixedloop : c",
+          "to": "mixedloop/node_modules/c",
         },
       },
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "mixedloop : c",
+      "location": "node_modules/c",
+      "realpath": "mixedloop/node_modules/c",
       "top": "mixedloop",
       "devOptional": true,
       "edgesIn": Set {
@@ -2667,7 +2661,7 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "from": "mixedloop : b",
+          "from": "mixedloop/node_modules/b",
         },
       },
       "edgesOut": Map {
@@ -2675,14 +2669,14 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "mixedloop : d",
+          "to": "mixedloop/node_modules/d",
         },
       },
     },
     "d" => Node {
       "name": "d",
-      "location": "/d",
-      "realpath": "mixedloop : d",
+      "location": "node_modules/d",
+      "realpath": "mixedloop/node_modules/d",
       "top": "mixedloop",
       "devOptional": true,
       "edgesIn": Set {
@@ -2690,7 +2684,7 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "mixedloop : c",
+          "from": "mixedloop/node_modules/c",
         },
       },
       "edgesOut": Map {
@@ -2698,14 +2692,14 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "to": "mixedloop : e",
+          "to": "mixedloop/node_modules/e",
         },
       },
     },
     "e" => Node {
       "name": "e",
-      "location": "/e",
-      "realpath": "mixedloop : e",
+      "location": "node_modules/e",
+      "realpath": "mixedloop/node_modules/e",
       "top": "mixedloop",
       "devOptional": true,
       "edgesIn": Set {
@@ -2713,7 +2707,7 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "from": "mixedloop : d",
+          "from": "mixedloop/node_modules/d",
         },
       },
     },
@@ -2724,7 +2718,7 @@ Node {
 exports[`test/load-actual.js TAP mixedmidway > loaded tree 1`] = `
 Node {
   "name": "mixedmidway",
-  "location": "/",
+  "location": "",
   "realpath": "mixedmidway",
   "top": "mixedmidway",
   "edgesOut": Map {
@@ -2732,62 +2726,62 @@ Node {
       "name": "a",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : a",
+      "to": "mixedmidway/node_modules/a",
     },
     "b" => Edge {
       "name": "b",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : b",
+      "to": "mixedmidway/node_modules/b",
     },
     "c" => Edge {
       "name": "c",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : c",
+      "to": "mixedmidway/node_modules/c",
     },
     "i" => Edge {
       "name": "i",
       "type": "dev",
       "spec": "",
-      "to": "mixedmidway : i",
+      "to": "mixedmidway/node_modules/i",
     },
     "k" => Edge {
       "name": "k",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : k",
+      "to": "mixedmidway/node_modules/k",
     },
     "l" => Edge {
       "name": "l",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : l",
+      "to": "mixedmidway/node_modules/l",
     },
     "m" => Edge {
       "name": "m",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : m",
+      "to": "mixedmidway/node_modules/m",
     },
     "x" => Edge {
       "name": "x",
       "type": "prod",
       "spec": "",
-      "to": "mixedmidway : x",
+      "to": "mixedmidway/node_modules/x",
     },
     "y" => Edge {
       "name": "y",
       "type": "optional",
       "spec": "",
-      "to": "mixedmidway : y",
+      "to": "mixedmidway/node_modules/y",
     },
   },
   "children": Map {
     "a" => Node {
       "name": "a",
-      "location": "/a",
-      "realpath": "mixedmidway : a",
+      "location": "node_modules/a",
+      "realpath": "mixedmidway/node_modules/a",
       "top": "mixedmidway",
       "optional": true,
       "edgesIn": Set {
@@ -2803,14 +2797,14 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : b",
+          "to": "mixedmidway/node_modules/b",
         },
       },
     },
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "mixedmidway : b",
+      "location": "node_modules/b",
+      "realpath": "mixedmidway/node_modules/b",
       "top": "mixedmidway",
       "optional": true,
       "edgesIn": Set {
@@ -2824,13 +2818,13 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : a",
+          "from": "mixedmidway/node_modules/a",
         },
         Edge {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : n",
+          "from": "mixedmidway/node_modules/n",
         },
       },
       "edgesOut": Map {
@@ -2838,20 +2832,20 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : c",
+          "to": "mixedmidway/node_modules/c",
         },
         "j" => Edge {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : j",
+          "to": "mixedmidway/node_modules/j",
         },
       },
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "mixedmidway : c",
+      "location": "node_modules/c",
+      "realpath": "mixedmidway/node_modules/c",
       "top": "mixedmidway",
       "devOptional": true,
       "edgesIn": Set {
@@ -2865,20 +2859,20 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : b",
+          "from": "mixedmidway/node_modules/b",
         },
         Edge {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : k",
+          "from": "mixedmidway/node_modules/k",
         },
       },
     },
     "i" => Node {
       "name": "i",
-      "location": "/i",
-      "realpath": "mixedmidway : i",
+      "location": "node_modules/i",
+      "realpath": "mixedmidway/node_modules/i",
       "top": "mixedmidway",
       "dev": true,
       "edgesIn": Set {
@@ -2894,14 +2888,14 @@ Node {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : j",
+          "to": "mixedmidway/node_modules/j",
         },
       },
     },
     "j" => Node {
       "name": "j",
-      "location": "/j",
-      "realpath": "mixedmidway : j",
+      "location": "node_modules/j",
+      "realpath": "mixedmidway/node_modules/j",
       "top": "mixedmidway",
       "devOptional": true,
       "edgesIn": Set {
@@ -2909,19 +2903,19 @@ Node {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : b",
+          "from": "mixedmidway/node_modules/b",
         },
         Edge {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : i",
+          "from": "mixedmidway/node_modules/i",
         },
         Edge {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : n",
+          "from": "mixedmidway/node_modules/n",
         },
       },
       "edgesOut": Map {
@@ -2929,14 +2923,14 @@ Node {
           "name": "k",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : k",
+          "to": "mixedmidway/node_modules/k",
         },
       },
     },
     "k" => Node {
       "name": "k",
-      "location": "/k",
-      "realpath": "mixedmidway : k",
+      "location": "node_modules/k",
+      "realpath": "mixedmidway/node_modules/k",
       "top": "mixedmidway",
       "devOptional": true,
       "edgesIn": Set {
@@ -2950,7 +2944,7 @@ Node {
           "name": "k",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : j",
+          "from": "mixedmidway/node_modules/j",
         },
       },
       "edgesOut": Map {
@@ -2958,14 +2952,14 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : c",
+          "to": "mixedmidway/node_modules/c",
         },
       },
     },
     "l" => Node {
       "name": "l",
-      "location": "/l",
-      "realpath": "mixedmidway : l",
+      "location": "node_modules/l",
+      "realpath": "mixedmidway/node_modules/l",
       "top": "mixedmidway",
       "edgesIn": Set {
         Edge {
@@ -2978,7 +2972,7 @@ Node {
           "name": "l",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : z",
+          "from": "mixedmidway/node_modules/z",
         },
       },
       "edgesOut": Map {
@@ -2986,14 +2980,14 @@ Node {
           "name": "m",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : m",
+          "to": "mixedmidway/node_modules/m",
         },
       },
     },
     "m" => Node {
       "name": "m",
-      "location": "/m",
-      "realpath": "mixedmidway : m",
+      "location": "node_modules/m",
+      "realpath": "mixedmidway/node_modules/m",
       "top": "mixedmidway",
       "edgesIn": Set {
         Edge {
@@ -3006,14 +3000,14 @@ Node {
           "name": "m",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : l",
+          "from": "mixedmidway/node_modules/l",
         },
       },
     },
     "n" => Node {
       "name": "n",
-      "location": "/n",
-      "realpath": "mixedmidway : n",
+      "location": "node_modules/n",
+      "realpath": "mixedmidway/node_modules/n",
       "top": "mixedmidway",
       "extraneous": true,
       "edgesOut": Map {
@@ -3021,20 +3015,20 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : b",
+          "to": "mixedmidway/node_modules/b",
         },
         "j" => Edge {
           "name": "j",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : j",
+          "to": "mixedmidway/node_modules/j",
         },
       },
     },
     "x" => Node {
       "name": "x",
-      "location": "/x",
-      "realpath": "mixedmidway : x",
+      "location": "node_modules/x",
+      "realpath": "mixedmidway/node_modules/x",
       "top": "mixedmidway",
       "edgesIn": Set {
         Edge {
@@ -3049,14 +3043,14 @@ Node {
           "name": "y",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : y",
+          "to": "mixedmidway/node_modules/y",
         },
       },
     },
     "y" => Node {
       "name": "y",
-      "location": "/y",
-      "realpath": "mixedmidway : y",
+      "location": "node_modules/y",
+      "realpath": "mixedmidway/node_modules/y",
       "top": "mixedmidway",
       "edgesIn": Set {
         Edge {
@@ -3069,7 +3063,7 @@ Node {
           "name": "y",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : x",
+          "from": "mixedmidway/node_modules/x",
         },
       },
       "edgesOut": Map {
@@ -3077,21 +3071,21 @@ Node {
           "name": "z",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : z",
+          "to": "mixedmidway/node_modules/z",
         },
       },
     },
     "z" => Node {
       "name": "z",
-      "location": "/z",
-      "realpath": "mixedmidway : z",
+      "location": "node_modules/z",
+      "realpath": "mixedmidway/node_modules/z",
       "top": "mixedmidway",
       "edgesIn": Set {
         Edge {
           "name": "z",
           "type": "prod",
           "spec": "",
-          "from": "mixedmidway : y",
+          "from": "mixedmidway/node_modules/y",
         },
       },
       "edgesOut": Map {
@@ -3099,7 +3093,7 @@ Node {
           "name": "l",
           "type": "prod",
           "spec": "",
-          "to": "mixedmidway : l",
+          "to": "mixedmidway/node_modules/l",
         },
       },
     },
@@ -3110,7 +3104,7 @@ Node {
 exports[`test/load-actual.js TAP noname > loaded tree 1`] = `
 Node {
   "name": "noname",
-  "location": "/",
+  "location": "",
   "realpath": "noname",
   "top": "noname",
   "errors": Array [
@@ -3122,8 +3116,8 @@ Node {
   "children": Map {
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "noname : foo",
+      "location": "node_modules/foo",
+      "realpath": "noname/node_modules/foo",
       "top": "noname",
       "extraneous": true,
       "errors": Array [
@@ -3140,7 +3134,7 @@ Node {
 exports[`test/load-actual.js TAP optionalloop > loaded tree 1`] = `
 Node {
   "name": "optionalloop",
-  "location": "/",
+  "location": "",
   "realpath": "optionalloop",
   "top": "optionalloop",
   "edgesOut": Map {
@@ -3148,20 +3142,20 @@ Node {
       "name": "a",
       "type": "optional",
       "spec": "",
-      "to": "optionalloop : a",
+      "to": "optionalloop/node_modules/a",
     },
     "c" => Edge {
       "name": "c",
       "type": "prod",
       "spec": "",
-      "to": "optionalloop : c",
+      "to": "optionalloop/node_modules/c",
     },
   },
   "children": Map {
     "a" => Node {
       "name": "a",
-      "location": "/a",
-      "realpath": "optionalloop : a",
+      "location": "node_modules/a",
+      "realpath": "optionalloop/node_modules/a",
       "top": "optionalloop",
       "optional": true,
       "edgesIn": Set {
@@ -3177,40 +3171,40 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "optionalloop : b",
+          "to": "optionalloop/node_modules/b",
         },
         "d" => Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "optionalloop : d",
+          "to": "optionalloop/node_modules/d",
         },
       },
     },
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "optionalloop : b",
+      "location": "node_modules/b",
+      "realpath": "optionalloop/node_modules/b",
       "top": "optionalloop",
       "edgesIn": Set {
         Edge {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "optionalloop : a",
+          "from": "optionalloop/node_modules/a",
         },
         Edge {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "optionalloop : d",
+          "from": "optionalloop/node_modules/d",
         },
       },
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "optionalloop : c",
+      "location": "node_modules/c",
+      "realpath": "optionalloop/node_modules/c",
       "top": "optionalloop",
       "edgesIn": Set {
         Edge {
@@ -3225,27 +3219,27 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "optionalloop : d",
+          "to": "optionalloop/node_modules/d",
         },
       },
     },
     "d" => Node {
       "name": "d",
-      "location": "/d",
-      "realpath": "optionalloop : d",
+      "location": "node_modules/d",
+      "realpath": "optionalloop/node_modules/d",
       "top": "optionalloop",
       "edgesIn": Set {
         Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "optionalloop : a",
+          "from": "optionalloop/node_modules/a",
         },
         Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "optionalloop : c",
+          "from": "optionalloop/node_modules/c",
         },
       },
       "edgesOut": Map {
@@ -3253,7 +3247,7 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "to": "optionalloop : b",
+          "to": "optionalloop/node_modules/b",
         },
       },
     },
@@ -3264,7 +3258,7 @@ Node {
 exports[`test/load-actual.js TAP optofdev > loaded tree 1`] = `
 Node {
   "name": "optofdev",
-  "location": "/",
+  "location": "",
   "realpath": "optofdev",
   "top": "optofdev",
   "edgesOut": Map {
@@ -3272,14 +3266,14 @@ Node {
       "name": "a",
       "type": "dev",
       "spec": "",
-      "to": "optofdev : a",
+      "to": "optofdev/node_modules/a",
     },
   },
   "children": Map {
     "a" => Node {
       "name": "a",
-      "location": "/a",
-      "realpath": "optofdev : a",
+      "location": "node_modules/a",
+      "realpath": "optofdev/node_modules/a",
       "top": "optofdev",
       "dev": true,
       "edgesIn": Set {
@@ -3295,20 +3289,20 @@ Node {
           "name": "b",
           "type": "optional",
           "spec": "",
-          "to": "optofdev : b",
+          "to": "optofdev/node_modules/b",
         },
         "d" => Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "optofdev : d",
+          "to": "optofdev/node_modules/d",
         },
       },
     },
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "optofdev : b",
+      "location": "node_modules/b",
+      "realpath": "optofdev/node_modules/b",
       "top": "optofdev",
       "dev": true,
       "optional": true,
@@ -3317,7 +3311,7 @@ Node {
           "name": "b",
           "type": "optional",
           "spec": "",
-          "from": "optofdev : a",
+          "from": "optofdev/node_modules/a",
         },
       },
       "edgesOut": Map {
@@ -3325,14 +3319,14 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "to": "optofdev : c",
+          "to": "optofdev/node_modules/c",
         },
       },
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "optofdev : c",
+      "location": "node_modules/c",
+      "realpath": "optofdev/node_modules/c",
       "top": "optofdev",
       "dev": true,
       "optional": true,
@@ -3341,7 +3335,7 @@ Node {
           "name": "c",
           "type": "prod",
           "spec": "",
-          "from": "optofdev : b",
+          "from": "optofdev/node_modules/b",
         },
       },
       "edgesOut": Map {
@@ -3349,14 +3343,14 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "to": "optofdev : e",
+          "to": "optofdev/node_modules/e",
         },
       },
     },
     "d" => Node {
       "name": "d",
-      "location": "/d",
-      "realpath": "optofdev : d",
+      "location": "node_modules/d",
+      "realpath": "optofdev/node_modules/d",
       "top": "optofdev",
       "dev": true,
       "edgesIn": Set {
@@ -3364,7 +3358,7 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "optofdev : a",
+          "from": "optofdev/node_modules/a",
         },
       },
       "edgesOut": Map {
@@ -3372,14 +3366,14 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "to": "optofdev : e",
+          "to": "optofdev/node_modules/e",
         },
       },
     },
     "e" => Node {
       "name": "e",
-      "location": "/e",
-      "realpath": "optofdev : e",
+      "location": "node_modules/e",
+      "realpath": "optofdev/node_modules/e",
       "top": "optofdev",
       "dev": true,
       "edgesIn": Set {
@@ -3387,13 +3381,13 @@ Node {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "from": "optofdev : c",
+          "from": "optofdev/node_modules/c",
         },
         Edge {
           "name": "e",
           "type": "prod",
           "spec": "",
-          "from": "optofdev : d",
+          "from": "optofdev/node_modules/d",
         },
       },
     },
@@ -3404,7 +3398,7 @@ Node {
 exports[`test/load-actual.js TAP other > loaded tree 1`] = `
 Node {
   "name": "other",
-  "location": "/",
+  "location": "",
   "realpath": "other",
   "top": "other",
   "errors": Array [
@@ -3416,13 +3410,13 @@ Node {
   "children": Map {
     "glob" => Link {
       "name": "glob",
-      "location": "/glob",
-      "realpath": "root : @scope/x : glob",
+      "location": "node_modules/glob",
+      "realpath": "root/node_modules/@scope/x/node_modules/glob",
       "top": "other",
       "extraneous": true,
       "target": Object {
         "name": "glob",
-        "parent": "root : @scope/x",
+        "parent": "root/node_modules/@scope/x",
       },
     },
   },
@@ -3432,7 +3426,7 @@ Node {
 exports[`test/load-actual.js TAP pnpm > loaded tree 1`] = `
 Node {
   "name": "pnpm",
-  "location": "/",
+  "location": "",
   "realpath": "pnpm",
   "top": "pnpm",
   "edgesOut": Map {
@@ -3440,24 +3434,24 @@ Node {
       "name": "@scope/x",
       "type": "prod",
       "spec": "",
-      "to": "pnpm : .pnpm/registry.npmjs.org/@scope/x/1.0.0 : @scope/x",
+      "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
     },
     "a" => Edge {
       "name": "a",
       "type": "prod",
       "spec": "",
-      "to": "pnpm : .pnpm/registry.npmjs.org/a/1.0.0 : a",
+      "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
     },
   },
   "children": Map {
     "@scope/x" => Link {
       "name": "@scope/x",
-      "location": "/@scope/x",
-      "realpath": "pnpm : .pnpm/registry.npmjs.org/@scope/x/1.0.0 : @scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "top": "pnpm",
       "target": Object {
         "name": "@scope/x",
-        "parent": "pnpm : .pnpm/registry.npmjs.org/@scope/x/1.0.0",
+        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
       },
       "edgesIn": Set {
         Edge {
@@ -3470,12 +3464,12 @@ Node {
     },
     "a" => Link {
       "name": "a",
-      "location": "/a",
-      "realpath": "pnpm : .pnpm/registry.npmjs.org/a/1.0.0 : a",
+      "location": "node_modules/a",
+      "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "top": "pnpm",
       "target": Object {
         "name": "a",
-        "parent": "pnpm : .pnpm/registry.npmjs.org/a/1.0.0",
+        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
       },
       "edgesIn": Set {
         Edge {
@@ -3493,7 +3487,7 @@ Node {
 exports[`test/load-actual.js TAP root > loaded tree 1`] = `
 Node {
   "name": "root",
-  "location": "/",
+  "location": "",
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
@@ -3501,19 +3495,19 @@ Node {
       "name": "@scope/x",
       "type": "prod",
       "spec": "1",
-      "to": "root : @scope/x",
+      "to": "root/node_modules/@scope/x",
     },
     "@scope/y" => Edge {
       "name": "@scope/y",
       "type": "peer",
       "spec": ">0.99.0",
-      "to": "root : @scope/y",
+      "to": "root/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "dev",
       "spec": "*",
-      "to": "root : foo",
+      "to": "root/node_modules/foo",
     },
     "notinstalledhere" => Edge {
       "name": "notinstalledhere",
@@ -3525,8 +3519,8 @@ Node {
   "children": Map {
     "@scope/x" => Node {
       "name": "@scope/x",
-      "location": "/@scope/x",
-      "realpath": "root : @scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "root/node_modules/@scope/x",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -3539,13 +3533,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "root/node_modules/@scope/x",
         },
         Edge {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "from": "root : foo",
+          "from": "root/node_modules/foo",
         },
       },
       "edgesOut": Map {
@@ -3553,13 +3547,13 @@ Node {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "root/node_modules/@scope/x",
         },
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/y",
+          "to": "root/node_modules/@scope/y",
         },
         "express" => Edge {
           "name": "express",
@@ -3572,21 +3566,21 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "root : @scope/x : glob",
+          "to": "root/node_modules/@scope/x/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/@scope/x/glob",
-          "realpath": "root : @scope/x : glob",
+          "location": "node_modules/@scope/x/node_modules/glob",
+          "realpath": "root/node_modules/@scope/x/node_modules/glob",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "root : @scope/x",
+              "from": "root/node_modules/@scope/x",
             },
           },
           "edgesOut": Map {
@@ -3594,67 +3588,67 @@ Node {
               "name": "graceful-fs",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : graceful-fs",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
             },
             "inherits" => Edge {
               "name": "inherits",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : inherits",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
             },
             "minimatch" => Edge {
               "name": "minimatch",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : minimatch",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
             },
             "once" => Edge {
               "name": "once",
               "type": "prod",
               "spec": "",
-              "to": "root : @scope/x : glob : once",
+              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/@scope/x/glob/graceful-fs",
-              "realpath": "root : @scope/x : glob : graceful-fs",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "graceful-fs",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/@scope/x/glob/inherits",
-              "realpath": "root : @scope/x : glob : inherits",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "inherits",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/@scope/x/glob/minimatch",
-              "realpath": "root : @scope/x : glob : minimatch",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "minimatch",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
               },
               "edgesOut": Map {
@@ -3662,47 +3656,47 @@ Node {
                   "name": "lru-cache",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : lru-cache",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                 },
                 "once" => Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : once",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 },
                 "sigmund" => Edge {
                   "name": "sigmund",
                   "type": "prod",
                   "spec": "",
-                  "to": "root : @scope/x : glob : minimatch : sigmund",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/@scope/x/glob/minimatch/lru-cache",
-                  "realpath": "root : @scope/x : glob : minimatch : lru-cache",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "lru-cache",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/@scope/x/glob/minimatch/sigmund",
-                  "realpath": "root : @scope/x : glob : minimatch : sigmund",
+                  "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "root",
                   "edgesIn": Set {
                     Edge {
                       "name": "sigmund",
                       "type": "prod",
                       "spec": "",
-                      "from": "root : @scope/x : glob : minimatch",
+                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                     },
                   },
                 },
@@ -3710,21 +3704,21 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/@scope/x/glob/once",
-              "realpath": "root : @scope/x : glob : once",
+              "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
               "top": "root",
               "edgesIn": Set {
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob",
+                  "from": "root/node_modules/@scope/x/node_modules/glob",
                 },
                 Edge {
                   "name": "once",
                   "type": "prod",
                   "spec": "",
-                  "from": "root : @scope/x : glob : minimatch",
+                  "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 },
               },
             },
@@ -3734,8 +3728,8 @@ Node {
     },
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "root : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "root/node_modules/@scope/y",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -3748,7 +3742,7 @@ Node {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
-          "from": "root : @scope/x",
+          "from": "root/node_modules/@scope/x",
         },
       },
       "edgesOut": Map {
@@ -3756,15 +3750,15 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "to": "root : foo",
+          "to": "root/node_modules/foo",
           "error": "INVALID",
         },
       },
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "root : foo",
+      "location": "node_modules/foo",
+      "realpath": "root/node_modules/foo",
       "top": "root",
       "edgesIn": Set {
         Edge {
@@ -3777,7 +3771,7 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "99.x",
-          "from": "root : @scope/y",
+          "from": "root/node_modules/@scope/y",
           "error": "INVALID",
         },
       },
@@ -3786,27 +3780,27 @@ Node {
           "name": "@scope/x",
           "type": "optional",
           "spec": "",
-          "to": "root : @scope/x",
+          "to": "root/node_modules/@scope/x",
         },
         "express" => Edge {
           "name": "express",
           "type": "prod",
           "spec": "npm:abbrev@*",
-          "to": "root : foo : express",
+          "to": "root/node_modules/foo/node_modules/express",
         },
       },
       "children": Map {
         "express" => Node {
           "name": "express",
-          "location": "/foo/express",
-          "realpath": "root : foo : express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "root/node_modules/foo/node_modules/express",
           "top": "root",
           "edgesIn": Set {
             Edge {
               "name": "express",
               "type": "prod",
               "spec": "npm:abbrev@*",
-              "from": "root : foo",
+              "from": "root/node_modules/foo",
             },
           },
         },
@@ -3819,7 +3813,7 @@ Node {
 exports[`test/load-actual.js TAP selflink > loaded tree 1`] = `
 Node {
   "name": "selflink",
-  "location": "/",
+  "location": "",
   "realpath": "selflink",
   "top": "selflink",
   "edgesOut": Map {
@@ -3834,20 +3828,20 @@ Node {
       "name": "@scope/y",
       "type": "prod",
       "spec": "",
-      "to": "selflink : @scope/y",
+      "to": "selflink/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "prod",
       "spec": "",
-      "to": "selflink : foo",
+      "to": "selflink/node_modules/foo",
     },
   },
   "children": Map {
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "selflink : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "selflink/node_modules/@scope/y",
       "top": "selflink",
       "edgesIn": Set {
         Edge {
@@ -3862,14 +3856,14 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "*",
-          "to": "selflink : foo",
+          "to": "selflink/node_modules/foo",
         },
       },
     },
     "@scope/z" => Node {
       "name": "@scope/z",
-      "location": "/@scope/z",
-      "realpath": "selflink : @scope/z",
+      "location": "node_modules/@scope/z",
+      "realpath": "selflink/node_modules/@scope/z",
       "top": "selflink",
       "extraneous": true,
       "edgesOut": Map {
@@ -3877,26 +3871,26 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "selflink : foo : glob",
+          "to": "selflink/node_modules/foo/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Link {
           "name": "glob",
-          "location": "/@scope/z/glob",
-          "realpath": "selflink : foo : glob",
+          "location": "node_modules/@scope/z/node_modules/glob",
+          "realpath": "selflink/node_modules/foo/node_modules/glob",
           "top": "selflink",
           "extraneous": true,
           "target": Object {
             "name": "glob",
-            "parent": "selflink : foo",
+            "parent": "selflink/node_modules/foo",
           },
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "selflink : @scope/z",
+              "from": "selflink/node_modules/@scope/z",
             },
           },
         },
@@ -3904,8 +3898,8 @@ Node {
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "selflink : foo",
+      "location": "node_modules/foo",
+      "realpath": "selflink/node_modules/foo",
       "top": "selflink",
       "edgesIn": Set {
         Edge {
@@ -3918,7 +3912,7 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "*",
-          "from": "selflink : @scope/y",
+          "from": "selflink/node_modules/@scope/y",
         },
       },
       "edgesOut": Map {
@@ -3926,7 +3920,7 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "selflink : foo : glob",
+          "to": "selflink/node_modules/foo/node_modules/glob",
         },
         "selflink" => Edge {
           "name": "selflink",
@@ -3938,50 +3932,50 @@ Node {
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/foo/glob",
-          "realpath": "selflink : foo : glob",
+          "location": "node_modules/foo/node_modules/glob",
+          "realpath": "selflink/node_modules/foo/node_modules/glob",
           "top": "selflink",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "selflink : foo",
+              "from": "selflink/node_modules/foo",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/foo/glob/graceful-fs",
-              "realpath": "selflink : foo : glob : graceful-fs",
+              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
               "top": "selflink",
               "extraneous": true,
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/foo/glob/inherits",
-              "realpath": "selflink : foo : glob : inherits",
+              "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
               "top": "selflink",
               "extraneous": true,
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/foo/glob/minimatch",
-              "realpath": "selflink : foo : glob : minimatch",
+              "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
               "top": "selflink",
               "extraneous": true,
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/foo/glob/minimatch/lru-cache",
-                  "realpath": "selflink : foo : glob : minimatch : lru-cache",
+                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "selflink",
                   "extraneous": true,
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/foo/glob/minimatch/sigmund",
-                  "realpath": "selflink : foo : glob : minimatch : sigmund",
+                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "selflink",
                   "extraneous": true,
                 },
@@ -3989,8 +3983,8 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/foo/glob/once",
-              "realpath": "selflink : foo : glob : once",
+              "location": "node_modules/foo/node_modules/glob/node_modules/once",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
               "top": "selflink",
               "extraneous": true,
             },
@@ -3998,7 +3992,7 @@ Node {
         },
         "selflink" => Link {
           "name": "selflink",
-          "location": "/foo/selflink",
+          "location": "node_modules/foo/node_modules/selflink",
           "realpath": "selflink",
           "top": "selflink",
           "target": Object {
@@ -4010,7 +4004,7 @@ Node {
               "name": "selflink",
               "type": "prod",
               "spec": "*",
-              "from": "selflink : foo",
+              "from": "selflink/node_modules/foo",
             },
           },
         },
@@ -4023,7 +4017,7 @@ Node {
 exports[`test/load-actual.js TAP shake out Link target timing issue > loaded tree 1`] = `
 Node {
   "name": "selflink",
-  "location": "/",
+  "location": "",
   "realpath": "selflink",
   "top": "selflink",
   "edgesOut": Map {
@@ -4038,20 +4032,20 @@ Node {
       "name": "@scope/y",
       "type": "prod",
       "spec": "",
-      "to": "selflink : @scope/y",
+      "to": "selflink/node_modules/@scope/y",
     },
     "foo" => Edge {
       "name": "foo",
       "type": "prod",
       "spec": "",
-      "to": "selflink : foo",
+      "to": "selflink/node_modules/foo",
     },
   },
   "children": Map {
     "@scope/y" => Node {
       "name": "@scope/y",
-      "location": "/@scope/y",
-      "realpath": "selflink : @scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "selflink/node_modules/@scope/y",
       "top": "selflink",
       "edgesIn": Set {
         Edge {
@@ -4066,14 +4060,14 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "*",
-          "to": "selflink : foo",
+          "to": "selflink/node_modules/foo",
         },
       },
     },
     "@scope/z" => Node {
       "name": "@scope/z",
-      "location": "/@scope/z",
-      "realpath": "selflink : @scope/z",
+      "location": "node_modules/@scope/z",
+      "realpath": "selflink/node_modules/@scope/z",
       "top": "selflink",
       "extraneous": true,
       "edgesOut": Map {
@@ -4081,26 +4075,26 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "selflink : foo : glob",
+          "to": "selflink/node_modules/foo/node_modules/glob",
         },
       },
       "children": Map {
         "glob" => Link {
           "name": "glob",
-          "location": "/@scope/z/glob",
-          "realpath": "selflink : foo : glob",
+          "location": "node_modules/@scope/z/node_modules/glob",
+          "realpath": "selflink/node_modules/foo/node_modules/glob",
           "top": "selflink",
           "extraneous": true,
           "target": Object {
             "name": "glob",
-            "parent": "selflink : foo",
+            "parent": "selflink/node_modules/foo",
           },
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "selflink : @scope/z",
+              "from": "selflink/node_modules/@scope/z",
             },
           },
         },
@@ -4108,8 +4102,8 @@ Node {
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "selflink : foo",
+      "location": "node_modules/foo",
+      "realpath": "selflink/node_modules/foo",
       "top": "selflink",
       "edgesIn": Set {
         Edge {
@@ -4122,7 +4116,7 @@ Node {
           "name": "foo",
           "type": "prod",
           "spec": "*",
-          "from": "selflink : @scope/y",
+          "from": "selflink/node_modules/@scope/y",
         },
       },
       "edgesOut": Map {
@@ -4130,7 +4124,7 @@ Node {
           "name": "glob",
           "type": "prod",
           "spec": "4",
-          "to": "selflink : foo : glob",
+          "to": "selflink/node_modules/foo/node_modules/glob",
         },
         "selflink" => Edge {
           "name": "selflink",
@@ -4142,50 +4136,50 @@ Node {
       "children": Map {
         "glob" => Node {
           "name": "glob",
-          "location": "/foo/glob",
-          "realpath": "selflink : foo : glob",
+          "location": "node_modules/foo/node_modules/glob",
+          "realpath": "selflink/node_modules/foo/node_modules/glob",
           "top": "selflink",
           "edgesIn": Set {
             Edge {
               "name": "glob",
               "type": "prod",
               "spec": "4",
-              "from": "selflink : foo",
+              "from": "selflink/node_modules/foo",
             },
           },
           "children": Map {
             "graceful-fs" => Node {
               "name": "graceful-fs",
-              "location": "/foo/glob/graceful-fs",
-              "realpath": "selflink : foo : glob : graceful-fs",
+              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
               "top": "selflink",
               "extraneous": true,
             },
             "inherits" => Node {
               "name": "inherits",
-              "location": "/foo/glob/inherits",
-              "realpath": "selflink : foo : glob : inherits",
+              "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
               "top": "selflink",
               "extraneous": true,
             },
             "minimatch" => Node {
               "name": "minimatch",
-              "location": "/foo/glob/minimatch",
-              "realpath": "selflink : foo : glob : minimatch",
+              "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
               "top": "selflink",
               "extraneous": true,
               "children": Map {
                 "lru-cache" => Node {
                   "name": "lru-cache",
-                  "location": "/foo/glob/minimatch/lru-cache",
-                  "realpath": "selflink : foo : glob : minimatch : lru-cache",
+                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "top": "selflink",
                   "extraneous": true,
                 },
                 "sigmund" => Node {
                   "name": "sigmund",
-                  "location": "/foo/glob/minimatch/sigmund",
-                  "realpath": "selflink : foo : glob : minimatch : sigmund",
+                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "top": "selflink",
                   "extraneous": true,
                 },
@@ -4193,8 +4187,8 @@ Node {
             },
             "once" => Node {
               "name": "once",
-              "location": "/foo/glob/once",
-              "realpath": "selflink : foo : glob : once",
+              "location": "node_modules/foo/node_modules/glob/node_modules/once",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
               "top": "selflink",
               "extraneous": true,
             },
@@ -4202,7 +4196,7 @@ Node {
         },
         "selflink" => Link {
           "name": "selflink",
-          "location": "/foo/selflink",
+          "location": "node_modules/foo/node_modules/selflink",
           "realpath": "selflink",
           "top": "selflink",
           "target": Object {
@@ -4214,7 +4208,7 @@ Node {
               "name": "selflink",
               "type": "prod",
               "spec": "*",
-              "from": "selflink : foo",
+              "from": "selflink/node_modules/foo",
             },
           },
         },
@@ -4227,13 +4221,13 @@ Node {
 exports[`test/load-actual.js TAP symlinked-node-modules/example > loaded tree 1`] = `
 Node {
   "name": "example",
-  "location": "/",
+  "location": "",
   "realpath": "symlinked-node-modules/example",
   "top": "symlinked-node-modules/example",
   "children": Map {
     "bar" => Link {
       "name": "bar",
-      "location": "/bar",
+      "location": "node_modules/bar",
       "realpath": "symlinked-node-modules/bar",
       "top": "symlinked-node-modules/example",
       "extraneous": true,
@@ -4244,8 +4238,8 @@ Node {
     },
     "foo" => Node {
       "name": "foo",
-      "location": "/foo",
-      "realpath": "symlinked-node-modules/example : foo",
+      "location": "node_modules/foo",
+      "realpath": "symlinked-node-modules/example/node_modules/foo",
       "top": "symlinked-node-modules/example",
       "extraneous": true,
     },
@@ -4256,7 +4250,7 @@ Node {
 exports[`test/load-actual.js TAP workspace > loaded tree 1`] = `
 Node {
   "name": "workspace",
-  "location": "/",
+  "location": "",
   "realpath": "workspace",
   "top": "workspace",
   "edgesOut": Map {
@@ -4282,7 +4276,7 @@ Node {
   "children": Map {
     "a" => Link {
       "name": "a",
-      "location": "/a",
+      "location": "node_modules/a",
       "realpath": "workspace/packages/a",
       "top": "workspace",
       "target": Object {
@@ -4300,7 +4294,7 @@ Node {
     },
     "b" => Link {
       "name": "b",
-      "location": "/b",
+      "location": "node_modules/b",
       "realpath": "workspace/packages/b",
       "top": "workspace",
       "target": Object {
@@ -4318,7 +4312,7 @@ Node {
     },
     "c" => Link {
       "name": "c",
-      "location": "/c",
+      "location": "node_modules/c",
       "realpath": "workspace/packages/c",
       "top": "workspace",
       "target": Object {
@@ -4341,7 +4335,7 @@ Node {
 exports[`test/load-actual.js TAP workspace2 > loaded tree 1`] = `
 Node {
   "name": "workspace2",
-  "location": "/",
+  "location": "",
   "realpath": "workspace2",
   "top": "workspace2",
   "edgesOut": Map {
@@ -4349,20 +4343,20 @@ Node {
       "name": "b",
       "type": "prod",
       "spec": "",
-      "to": "workspace2 : b",
+      "to": "workspace2/node_modules/b",
     },
     "c" => Edge {
       "name": "c",
       "type": "prod",
       "spec": "",
-      "to": "workspace2 : c",
+      "to": "workspace2/node_modules/c",
     },
   },
   "children": Map {
     "b" => Node {
       "name": "b",
-      "location": "/b",
-      "realpath": "workspace2 : b",
+      "location": "node_modules/b",
+      "realpath": "workspace2/node_modules/b",
       "top": "workspace2",
       "edgesIn": Set {
         Edge {
@@ -4375,7 +4369,7 @@ Node {
           "name": "b",
           "type": "prod",
           "spec": "",
-          "from": "workspace2 : b : d",
+          "from": "workspace2/node_modules/b/node_modules/d",
         },
         Edge {
           "name": "b",
@@ -4389,21 +4383,21 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "workspace2 : b : d",
+          "to": "workspace2/node_modules/b/node_modules/d",
         },
       },
       "children": Map {
         "d" => Node {
           "name": "d",
-          "location": "/b/d",
-          "realpath": "workspace2 : b : d",
+          "location": "node_modules/b/node_modules/d",
+          "realpath": "workspace2/node_modules/b/node_modules/d",
           "top": "workspace2",
           "edgesIn": Set {
             Edge {
               "name": "d",
               "type": "prod",
               "spec": "",
-              "from": "workspace2 : b",
+              "from": "workspace2/node_modules/b",
             },
           },
           "edgesOut": Map {
@@ -4411,7 +4405,7 @@ Node {
               "name": "b",
               "type": "prod",
               "spec": "",
-              "to": "workspace2 : b",
+              "to": "workspace2/node_modules/b",
             },
           },
         },
@@ -4419,8 +4413,8 @@ Node {
     },
     "c" => Node {
       "name": "c",
-      "location": "/c",
-      "realpath": "workspace2 : c",
+      "location": "node_modules/c",
+      "realpath": "workspace2/node_modules/c",
       "top": "workspace2",
       "edgesIn": Set {
         Edge {
@@ -4435,7 +4429,7 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "to": "workspace2 : b : d",
+          "to": "workspace2/node_modules/b/node_modules/d",
         },
         "x" => Edge {
           "name": "x",
@@ -4447,25 +4441,25 @@ Node {
       "children": Map {
         "d" => Link {
           "name": "d",
-          "location": "/c/d",
-          "realpath": "workspace2 : b : d",
+          "location": "node_modules/c/node_modules/d",
+          "realpath": "workspace2/node_modules/b/node_modules/d",
           "top": "workspace2",
           "target": Object {
             "name": "d",
-            "parent": "workspace2 : b",
+            "parent": "workspace2/node_modules/b",
           },
           "edgesIn": Set {
             Edge {
               "name": "d",
               "type": "prod",
               "spec": "",
-              "from": "workspace2 : c",
+              "from": "workspace2/node_modules/c",
             },
           },
         },
         "x" => Link {
           "name": "x",
-          "location": "/c/x",
+          "location": "node_modules/c/node_modules/x",
           "realpath": "workspace2/x",
           "top": "workspace2",
           "target": Object {
@@ -4477,7 +4471,7 @@ Node {
               "name": "x",
               "type": "prod",
               "spec": "",
-              "from": "workspace2 : c",
+              "from": "workspace2/node_modules/c",
             },
           },
         },
@@ -4490,13 +4484,13 @@ Node {
 exports[`test/load-actual.js TAP workspace3 > loaded tree 1`] = `
 Node {
   "name": "workspace3",
-  "location": "/",
+  "location": "",
   "realpath": "workspace3",
   "top": "workspace3",
   "children": Map {
     "a" => Link {
       "name": "a",
-      "location": "/a",
+      "location": "node_modules/a",
       "realpath": "workspace3/packages/a",
       "top": "workspace3",
       "extraneous": true,
@@ -4527,7 +4521,7 @@ Node {
     },
     "app" => Link {
       "name": "app",
-      "location": "/app",
+      "location": "node_modules/app",
       "realpath": "workspace3/app",
       "top": "workspace3",
       "extraneous": true,
@@ -4538,7 +4532,7 @@ Node {
     },
     "b" => Link {
       "name": "b",
-      "location": "/b",
+      "location": "node_modules/b",
       "realpath": "workspace3/packages/b",
       "top": "workspace3",
       "extraneous": true,
@@ -4569,7 +4563,7 @@ Node {
     },
     "c" => Link {
       "name": "c",
-      "location": "/c",
+      "location": "node_modules/c",
       "realpath": "workspace3/packages/c",
       "top": "workspace3",
       "extraneous": true,

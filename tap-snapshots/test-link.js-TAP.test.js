@@ -6,16 +6,18 @@
  */
 'use strict'
 exports[`test/link.js TAP > instantiate with target specified 1`] = `
-Link {
+&ref_1 Link {
   "dev": true,
   "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "errors": Array [],
   "extraneous": true,
-  "inBundle": false,
-  "integrity": null,
-  "location": "/",
+  "integrity": undefined,
+  "inventory": Inventory {
+    "" => <*ref_1>,
+  },
+  "location": "",
   "meta": undefined,
   "name": "path",
   "optional": true,
@@ -24,8 +26,8 @@ Link {
   },
   "path": "some/kind/of/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": null,
-  "target": Node {
+  "resolved": undefined,
+  "target": &ref_2 Node {
     "children": Map {},
     "dev": true,
     "devOptional": true,
@@ -33,10 +35,28 @@ Link {
     "edgesOut": Map {},
     "errors": Array [],
     "extraneous": true,
-    "inBundle": false,
-    "integrity": null,
-    "location": "/",
-    "meta": undefined,
+    "integrity": undefined,
+    "inventory": Inventory {
+      "" => <*ref_2>,
+    },
+    "location": "",
+    "meta": Metadata {
+      "data": Object {
+        "arblock": Object {
+          "packages": Object {
+            ".": Object {
+              "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
+            },
+          },
+        },
+      },
+      "files": Object {
+        "arblock": "/home/user/projects/some/kind/of/path/node_modules/.arborist-lock.json",
+        "lockfile": "/home/user/projects/some/kind/of/path/package-lock.json",
+        "shrinkwrap": "/home/user/projects/some/kind/of/path/npm-shrinkwrap.json",
+      },
+      "root": "/home/user/projects/some/kind/of/path",
+    },
     "name": "path",
     "optional": true,
     "package": Object {
@@ -44,23 +64,62 @@ Link {
     },
     "path": "some/kind/of/path",
     "realpath": "/home/user/projects/some/kind/of/path",
-    "resolved": null,
+    "resolved": undefined,
   },
 }
 `
 
 exports[`test/link.js TAP > instantiate without providing target 1`] = `
-Link {
+&ref_1 Link {
   "dev": true,
   "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "errors": Array [],
   "extraneous": true,
-  "inBundle": false,
-  "integrity": null,
-  "location": "/",
-  "meta": undefined,
+  "integrity": undefined,
+  "inventory": Inventory {
+    "" => <*ref_1>,
+    "../../../../../../../../home/user/projects/some/kind/of/path" => Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "integrity": undefined,
+      "inventory": Inventory {},
+      "location": "../../../../../../../../home/user/projects/some/kind/of/path",
+      "meta": undefined,
+      "name": "path",
+      "optional": true,
+      "package": Object {
+        "name": "root",
+      },
+      "path": "/home/user/projects/some/kind/of/path",
+      "realpath": "/home/user/projects/some/kind/of/path",
+      "resolved": undefined,
+    },
+  },
+  "location": "",
+  "meta": Metadata {
+    "data": Object {
+      "arblock": Object {
+        "packages": Object {
+          ".": Object {
+            "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
+          },
+        },
+      },
+    },
+    "files": Object {
+      "arblock": "/home/user/projects/some/kind/of/path/node_modules/.arborist-lock.json",
+      "lockfile": "/home/user/projects/some/kind/of/path/package-lock.json",
+      "shrinkwrap": "/home/user/projects/some/kind/of/path/npm-shrinkwrap.json",
+    },
+    "root": "/home/user/projects/some/kind/of/path",
+  },
   "name": "path",
   "optional": true,
   "package": Object {
@@ -68,7 +127,7 @@ Link {
   },
   "path": "some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": null,
+  "resolved": "/home/user/projects/some/kind/of/path",
   "target": Node {
     "children": Map {},
     "dev": true,
@@ -77,18 +136,18 @@ Link {
     "edgesOut": Map {},
     "errors": Array [],
     "extraneous": true,
-    "inBundle": false,
-    "integrity": null,
-    "location": "/",
-    "meta": null,
+    "integrity": undefined,
+    "inventory": Inventory {},
+    "location": "../../../../../../../../home/user/projects/some/kind/of/path",
+    "meta": undefined,
     "name": "path",
     "optional": true,
     "package": Object {
       "name": "root",
     },
-    "path": null,
+    "path": "/home/user/projects/some/kind/of/path",
     "realpath": "/home/user/projects/some/kind/of/path",
-    "resolved": null,
+    "resolved": undefined,
   },
 }
 `

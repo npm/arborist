@@ -39,7 +39,7 @@ Node {
           "_": "linky",
           "_dev": true,
           "_target": Node {
-            "_": "linky",
+            "_": "z",
             "_dev": true,
           },
         },

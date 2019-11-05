@@ -109,10 +109,12 @@ t.test('flag stuff', t => {
       name: 'linky',
       version: '1.2.3',
     },
+    realpath: '/x/y/z',
     parent: devdep,
   })
 
   calcDepFlags(root)
+
   t.matchSnapshot(printTree(root), 'after')
   t.end()
 })

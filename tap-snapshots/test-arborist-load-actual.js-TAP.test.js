@@ -1383,7 +1383,7 @@ Node {
       "top": "links-all-over",
       "target": Object {
         "name": "deep",
-        "parent": null,
+        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
       },
       "edgesIn": Set {
         Edge {
@@ -1401,7 +1401,7 @@ Node {
       "top": "links-all-over",
       "target": Object {
         "name": "deep",
-        "parent": null,
+        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
       },
       "edgesIn": Set {
         Edge {
@@ -1476,6 +1476,12 @@ Node {
               "spec": "",
               "from": "links-all-over/node_modules/nest",
             },
+            Edge {
+              "name": "a",
+              "type": "prod",
+              "spec": "",
+              "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+            },
           },
           "edgesOut": Map {
             "b" => Edge {
@@ -1539,8 +1545,53 @@ Node {
                           "name": "deep",
                           "type": "prod",
                           "spec": "",
-                          "to": null,
-                          "error": "MISSING",
+                          "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                        },
+                      },
+                      "children": Map {
+                        "deep" => Node {
+                          "name": "deep",
+                          "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                          "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                          "top": "links-all-over",
+                          "edgesIn": Set {
+                            Edge {
+                              "name": "deep",
+                              "type": "prod",
+                              "spec": "",
+                              "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+                            },
+                          },
+                          "edgesOut": Map {
+                            "a" => Edge {
+                              "name": "a",
+                              "type": "prod",
+                              "spec": "",
+                              "to": "links-all-over/node_modules/nest/node_modules/a",
+                            },
+                            "deep-a" => Edge {
+                              "name": "deep-a",
+                              "type": "prod",
+                              "spec": "",
+                              "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+                            },
+                          },
+                          "children": Map {
+                            "deep-a" => Node {
+                              "name": "deep-a",
+                              "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+                              "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+                              "top": "links-all-over",
+                              "edgesIn": Set {
+                                Edge {
+                                  "name": "deep-a",
+                                  "type": "prod",
+                                  "spec": "",
+                                  "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                                },
+                              },
+                            },
+                          },
                         },
                       },
                     },
@@ -2739,7 +2790,7 @@ Node {
       "extraneous": true,
       "target": Object {
         "name": "glob",
-        "parent": null,
+        "parent": "root/node_modules/@scope/x",
       },
     },
   },
@@ -2774,7 +2825,7 @@ Node {
       "top": "pnpm",
       "target": Object {
         "name": "@scope/x",
-        "parent": null,
+        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
       },
       "edgesIn": Set {
         Edge {
@@ -2792,7 +2843,7 @@ Node {
       "top": "pnpm",
       "target": Object {
         "name": "a",
-        "parent": null,
+        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
       },
       "edgesIn": Set {
         Edge {

@@ -45,6 +45,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
         "arblock": Object {
           "packages": Object {
             ".": Object {
+              "link": true,
               "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
             },
           },
@@ -108,6 +109,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "arblock": Object {
         "packages": Object {
           ".": Object {
+            "link": true,
             "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
           },
         },
@@ -127,7 +129,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   },
   "path": "some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": "/home/user/projects/some/kind/of/path",
+  "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
   "target": Node {
     "children": Map {},
     "dev": true,

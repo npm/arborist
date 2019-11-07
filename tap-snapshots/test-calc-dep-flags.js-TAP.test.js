@@ -7,7 +7,7 @@
 'use strict'
 exports[`test/calc-dep-flags.js TAP flag stuff > after 1`] = `
 Node {
-  "_": "x",
+  "_": ".",
   "children": Array [
     Node {
       "_": "optional",

@@ -1,6 +1,6 @@
 const t = require('tap')
 const { format } = require('tcompare')
-const loadActual = require('../lib/load-actual.js')
+const Arborist = require('../../lib/arborist.js')
 const { resolve, dirname, relative } = require('path')
 const { realpathSync } = require('fs')
 
@@ -8,7 +8,7 @@ const {
   fixtures,
   roots,
   symlinks,
-} = require('./fixtures/index.js')
+} = require('../fixtures/index.js')
 
 // little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -73,6 +73,8 @@ const printTree = tree => ({
 })
 
 t.formatSnapshot = tree => format(printTree(tree), { sort: false })
+
+const loadActual = root => new Arborist({root}).loadActual()
 
 roots.forEach(root => {
   const dir = resolve(fixtures, root)
@@ -139,7 +141,7 @@ t.test('realpath gutchecks', t => {
   // while we've got a bunch of symlinks being created, may as well
   // give it a quick integration pass.
   const d = resolve(__dirname, 'fixtures')
-  const realpath = require('../lib/realpath.js')
+  const realpath = require('../../lib/realpath.js')
   Object.keys(symlinks).map(link => t.test(link, t =>
     realpath(
       resolve(d, link),

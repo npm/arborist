@@ -4,6 +4,7 @@
   "description": "Manage node_modules trees",
   "dependencies": {
     "npm-package-arg": "^6.1.0",
+    "pacote": "^10.1.1",
     "parse-conflict-json": "^1.0.0",
     "read-package-json": "^2.0.13",
     "readdir-scoped-modules": "^1.1.0",
@@ -12,7 +13,7 @@
   },
   "devDependencies": {
     "mkdirp": "^0.5.1",
-    "tap": "^14.5.0",
+    "tap": "^14.9.1",
     "tcompare": "^2.3.0"
   },
   "scripts": {

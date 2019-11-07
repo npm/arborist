@@ -439,3 +439,35 @@ t.test('bundled dependencies logic', t => {
   t.equal(fb.inBundle, true, 'bundled dep of dep is bundled')
   t.end()
 })
+
+t.test('check if a node is in a node_modules folder or not', t => {
+  const a = new Node({
+    path: '/path/to/foo/node_modules/a',
+    realpath: '/path/to/foo/node_modules/a',
+    pkg: { name: 'a' },
+  })
+  t.equal(a.inNodeModules(), '/path/to/foo', 'basic obvious case')
+
+  const b = new Node({
+    path: '/path/to/foo/node_modules/a',
+    realpath: '/path/to/foo/node_modules/a',
+    pkg: { name: 'b' },
+  })
+  t.equal(b.inNodeModules(), '/path/to/foo', 'based on path name, not pkg name')
+
+  const c = new Node({
+    path: '/path/to/foo/node_modules/a/b/c',
+    realpath: '/path/to/foo/node_modules/a/b/c',
+    pkg: { name: 'c' },
+  })
+  t.equal(c.inNodeModules(), false, 'not directly in node_modules')
+
+  const d = new Node({
+    path: '/path/to/foo/node_modules/@c/d',
+    realpath: '/path/to/foo/node_modules/@c/d',
+    pkg: { name: '@a/b/c/d/e' },
+  })
+  t.equal(d.inNodeModules(), '/path/to/foo', 'scoped package in node_modules')
+
+  t.end()
+})

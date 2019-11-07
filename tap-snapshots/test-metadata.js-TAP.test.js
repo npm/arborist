@@ -33,6 +33,7 @@ Object {
         "version": "1.2.3",
       },
       "node_modules/link": Object {
+        "link": true,
         "resolved": "../../target",
       },
       "target": Object {
@@ -56,6 +57,7 @@ Object {
 
 exports[`test/metadata.js TAP construct metadata from node and package data > link metadata 1`] = `
 Object {
+  "link": true,
   "resolved": "../../target",
 }
 `
@@ -177,7 +179,8 @@ Object {
 
 exports[`test/metadata.js TAP look up from locks and such package > get from symlinked package.json 1`] = `
 Object {
-  "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
+  "link": true,
+  "resolved": "../../test/fixtures/install-types/abbrev-link-target",
 }
 `
 

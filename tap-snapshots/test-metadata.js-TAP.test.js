@@ -121,7 +121,10 @@ Object {
 `
 
 exports[`test/metadata.js TAP look up from locks and such lockfile > must match snapshot 1`] = `
-Object {}
+Object {
+  "integrity": "the integrity is not valid, clearly",
+  "resolved": "fake resolved value",
+}
 `
 
 exports[`test/metadata.js TAP look up from locks and such lockfile > not found 1`] = `

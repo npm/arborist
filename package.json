@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "Manage node_modules trees",
   "dependencies": {
+    "json-stringify-nice": "^1.1.1",
     "npm-package-arg": "^6.1.0",
-    "pacote": "^10.1.1",
+    "pacote": "github:npm/pacote#isaacs/from-return-value",
     "parse-conflict-json": "^1.0.0",
     "read-package-json": "^2.0.13",
     "readdir-scoped-modules": "^1.1.0",

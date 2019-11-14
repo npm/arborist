@@ -48,6 +48,9 @@ Object {
     "e": Object {
       "dev": true,
       "devOptional": true,
+      "requires": Object {
+        "tgz": "",
+      },
       "version": "https://foo.com/e.tgz",
     },
     "link": Object {
@@ -61,6 +64,11 @@ Object {
     },
     "target": Object {
       "version": "github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
+    "tgz": Object {
+      "dev": true,
+      "devOptional": true,
+      "version": "1.2.3",
     },
   },
   "lockfileVersion": 2,
@@ -108,6 +116,9 @@ Object {
       "version": "1.2.3",
     },
     "node_modules/e": Object {
+      "dependencies": Object {
+        "tgz": "",
+      },
       "name": "e",
       "resolved": "https://foo.com/e.tgz",
       "version": "1.2.3",
@@ -117,6 +128,11 @@ Object {
       "resolved": "../../target",
     },
     "node_modules/nopkg": Object {},
+    "node_modules/tgz": Object {
+      "name": "tgz",
+      "resolved": "file:archives/tarball.tgz",
+      "version": "1.2.3",
+    },
     "target": Object {
       "name": "link",
       "resolved": "github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -154,6 +170,9 @@ Object {
 
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > dep e metadata 1`] = `
 Object {
+  "dependencies": Object {
+    "tgz": "",
+  },
   "name": "e",
   "resolved": "https://foo.com/e.tgz",
   "version": "1.2.3",
@@ -179,6 +198,14 @@ exports[`test/shrinkwrap.js TAP construct metadata from node and package data > 
 Object {
   "name": "link",
   "resolved": "github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > metadata for tarball file pkg 1`] = `
+Object {
+  "name": "tgz",
+  "resolved": "file:archives/tarball.tgz",
   "version": "1.2.3",
 }
 `

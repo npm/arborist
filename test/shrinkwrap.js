@@ -93,8 +93,13 @@ t.test('construct metadata from node and package data', t => {
     meta,
   })
   const e = new Node({
-    pkg: { name: 'e', version: '1.2.3' },
+    pkg: { name: 'e', version: '1.2.3', dependencies: { tgz: '' } },
     resolved: 'https://foo.com/e.tgz',
+    parent: root,
+  })
+  const tgz = new Node({
+    pkg: { name: 'tgz', version: '1.2.3' },
+    resolved: '/home/user/projects/root/archives/tarball.tgz',
     parent: root,
   })
   const link = new Link({
@@ -170,6 +175,7 @@ t.test('construct metadata from node and package data', t => {
   meta.add(root)
   t.matchSnapshot(meta.get(''), 'root metadata, with package version')
 
+  t.matchSnapshot(meta.get(tgz.location), 'metadata for tarball file pkg')
   t.matchSnapshot(meta.get(link.path), 'link metadata')
   t.matchSnapshot(meta.get(link.target.path), 'link target metadata')
   t.matchSnapshot(meta.get(a.location), 'dep a metadata')

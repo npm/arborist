@@ -1,7 +1,7 @@
 const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
-const Metadata = require('../lib/metadata.js')
+const Shrinkwrap = require('../lib/shrinkwrap.js')
 
 t.cleanSnapshot = str =>
   str.split(process.cwd()).join('{CWD}').replace('\\', '/')
@@ -37,22 +37,22 @@ t.test('testing with dep tree', t => {
     const prod = new Node({
       pkg: {
         name: 'prod',
-        resolved: 'prod',
-        integrity: 'prod',
         version: '1.2.3',
         dependencies: { meta: '' },
         peerDependencies: { peer: '' },
       },
+      resolved: 'prod',
+      integrity: 'prod',
       parent: root,
     })
     const meta = new Node({
       pkg: {
         name: 'meta',
-        resolved: 'meta',
-        integrity: 'meta',
         version: '1.2.3',
         devDependencies: { missing: '' },
         dependencies: { bundled: '' },
+        _resolved: 'meta',
+        _integrity: 'meta',
       },
       path: './node_modules/prod/node_modules/meta',
       realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
@@ -61,11 +61,11 @@ t.test('testing with dep tree', t => {
     const bundled = new Node({
       pkg: {
         name: 'bundled',
-        resolved: 'bundled',
-        integrity: 'bundled',
         version: '1.2.3',
         dependencies: { meta: '' },
       },
+      resolved: 'bundled',
+      integrity: 'bundled',
       path: './node_modules/bundled',
       realpath: '/home/user/projects/root/node_modules/bundled',
       parent: root,
@@ -74,9 +74,9 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'dev',
         version: '1.2.3',
-        resolved: 'dev',
-        integrity: 'dev',
       },
+      resolved: 'dev',
+      integrity: 'dev',
       path: './node_modules/dev',
       realpath: '/home/user/projects/root/node_modules/dev',
       parent: root,
@@ -85,9 +85,9 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'optional',
         version: '1.2.3',
-        resolved: 'opt',
-        integrity: 'opt',
       },
+      resolved: 'opt',
+      integrity: 'opt',
       path: './node_modules/optional',
       realpath: '/home/user/projects/root/node_modules/optional',
       parent: root,
@@ -96,9 +96,9 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'peer',
         version: '1.2.3',
-        resolved: 'peer',
-        integrity: 'peer',
       },
+      resolved: 'peer',
+      integrity: 'peer',
       path: './node_modules/peer',
       realpath: '/home/user/projects/root/node_modules/peer',
       parent: root,
@@ -107,9 +107,9 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'extraneous',
         version: '1.2.3',
-        resolved: 'extraneous',
-        integrity: 'extraneous',
       },
+      resolved: 'extraneous',
+      integrity: 'extraneous',
       path: './node_modules/extraneous',
       realpath: '/home/user/projects/root/node_modules/extraneous',
       parent: root,
@@ -129,13 +129,13 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'meta',
         version: '2.3.4',
-        resolved: 'newMeta',
-        integrity: 'newMeta',
         peerDependencies: { asdf: '' },
         peerDependenciesMeta: {
           asdf: { optional: true },
         },
       },
+      resolved: 'newMeta',
+      integrity: 'newMeta',
       path: './node_modules/prod/node_modules/meta',
       realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
       parent: prod,
@@ -146,8 +146,8 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'metameta',
         version: '1.2.3',
-        resolved: 'metameta',
-        integrity: 'metameta',
+        _resolved: 'metameta',
+        _integrity: 'metameta',
       },
       path: newMeta.path + '/node_modules/metameta',
       realpath: meta.realpath,
@@ -173,21 +173,14 @@ t.test('testing with dep tree', t => {
   t.test('without meta', runTest())
   t.test('with meta', runTest({
     data: {},
-    get (node) {
-      return this.memo(node, {
-        resolved: node.package.resolved,
-        integrity: node.package.integrity,
-      })
+    get (location) {
+      return this.data[location] || {}
     },
-    memo (node, data) {
-      if (!data) {
-        const {resolved, integrity} = node.package
-        data = {resolved, integrity}
-      }
-      return this.data[node.location] = data
+    add (node) {
+      return this.data[node.location] = node
     },
-    dememo (node) {
-      delete this.data[node.location]
+    delete (location) {
+      delete this.data[location]
     },
   }))
 
@@ -232,10 +225,10 @@ t.test('load with integrity and resolved values', t => {
       path: '/home/user/projects/root',
       realpath: '/home/user/projects/root',
       meta: {
-        dememo: () => {},
-        memo: () => {},
-        get: node =>
-          node.location === '' ? {} : {
+        delete: () => {},
+        add: () => {},
+        get: location =>
+          location === '' ? {} : {
             resolved: 'resolved',
             integrity: 'integrity',
           }
@@ -334,8 +327,8 @@ t.test('child of link target has path, like parent', t => {
 })
 
 t.test('changing root', t => {
-  const meta = new Metadata('/home/user/projects/root')
-  meta.data = { arblock: { packages: {}}}
+  const meta = new Shrinkwrap('/home/user/projects/root')
+  meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const root = new Node({
     pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
     path: '/home/user/projects/root',
@@ -354,8 +347,8 @@ t.test('changing root', t => {
     parent: a,
     name: 'b',
   })
-  const meta2 = new Metadata('/home/user/projects/root2')
-  meta2.data = { arblock: { packages: {}}}
+  const meta2 = new Shrinkwrap('/home/user/projects/root2')
+  meta2.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const root2 = new Node({
     pkg: { name: 'root2', dependencies: { a: '', link: '', link2: '' }},
     path: '/home/user/projects/root2',
@@ -470,4 +463,77 @@ t.test('check if a node is in a node_modules folder or not', t => {
   t.equal(d.inNodeModules(), '/path/to/foo', 'scoped package in node_modules')
 
   t.end()
+})
+
+t.test('update metadata when moving between linked top-of-tree parents', t => {
+  // this is a bit of a weird edge case, but covered for completeness.
+  // When moving the parent of a node, we update the metadata in the root,
+  // AND in the top-of-tree node, if it's not also the root (as that would be
+  // redundant).
+
+  const rootMeta = new Shrinkwrap('/home/user/projects/root')
+  rootMeta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
+  const root = new Node({
+    pkg: { name: 'root' },
+    path: rootMeta.root,
+    realpath: rootMeta.root,
+    meta: rootMeta,
+  })
+
+  const top1Meta = new Shrinkwrap('/path/to/top1')
+  top1Meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
+  const top1 = new Node({
+    pkg: { name: 'top', version: '1.1.1' },
+    path: top1Meta.root,
+    realpath: top1Meta.root,
+    meta: top1Meta,
+  })
+
+  const link1 = new Link({
+    name: 'link1',
+    parent: root,
+    realpath: top1.path,
+    target: top1,
+  })
+
+  const top2Meta = new Shrinkwrap('/path/to/top2')
+  top2Meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
+  const top2 = new Node({
+    pkg: { name: 'top', version: '1.1.1' },
+    path: top2Meta.root,
+    realpath: top2Meta.root,
+    meta: top2Meta,
+  })
+
+  const link2 = new Link({
+    name: 'link2',
+    parent: root,
+    realpath: top2.path,
+    target: top2,
+  })
+
+  const child = new Node({
+    parent: top1,
+    pkg: { name: 'child', version: '1.2.3' },
+    resolved: 'https://child.com/-/child-1.2.3.tgz',
+    integrity: 'sha512-blortzeyblartzeyfartz',
+  })
+  t.matchSnapshot(child.location, 'initial child location, pre-move')
+  t.equal(child.root, root, 'child root is the shared root node')
+  t.equal(child.top, top1, 'child top is top1')
+  t.matchSnapshot(root.meta.get(child.location), 'metadata from root')
+  t.matchSnapshot(top1.meta.get(child.location), 'metadata from top1')
+
+  // now move it over
+  const oldLocation = child.location
+  child.parent = link2
+  t.equal(child.top, top2, 'after move, top points at top2')
+  t.equal(child.parent, top2, 'parent assigned to link target')
+  t.matchSnapshot(child.location, 'new child location')
+  t.matchSnapshot(root.meta.get(child.location), 'root metadata updated')
+  t.matchSnapshot(root.meta.get(oldLocation), 'old location deleted from root')
+  t.matchSnapshot(top1.meta.get(oldLocation), 'old location deleted from top1')
+  t.matchSnapshot(top2.meta.get(child.location), 'new top metadata updated')
+
+  return t.end()
 })

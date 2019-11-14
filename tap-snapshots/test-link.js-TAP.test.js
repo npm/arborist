@@ -6,7 +6,7 @@
  */
 'use strict'
 exports[`test/link.js TAP > instantiate with target specified 1`] = `
-&ref_1 Link {
+Link {
   "dev": true,
   "devOptional": true,
   "edgesIn": Set {},
@@ -15,7 +15,38 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "extraneous": true,
   "integrity": undefined,
   "inventory": Inventory {
-    "" => <*ref_1>,
+    "" => Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "integrity": undefined,
+      "inventory": Inventory {},
+      "location": "",
+      "meta": Shrinkwrap {
+        "data": Object {
+          "dependencies": Object {},
+          "lockfileVersion": 2,
+          "packages": Object {},
+        },
+        "filename": null,
+        "indent": 2,
+        "loadedFromDisk": false,
+        "root": "/home/user/projects/some/kind/of/path",
+        "type": null,
+      },
+      "name": "path",
+      "optional": true,
+      "package": Object {
+        "name": "root",
+      },
+      "path": "some/kind/of/path",
+      "realpath": "/home/user/projects/some/kind/of/path",
+      "resolved": undefined,
+    },
   },
   "location": "",
   "meta": undefined,
@@ -27,7 +58,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "path": "some/kind/of/path",
   "realpath": "/home/user/projects/some/kind/of/path",
   "resolved": undefined,
-  "target": &ref_2 Node {
+  "target": Node {
     "children": Map {},
     "dev": true,
     "devOptional": true,
@@ -36,27 +67,19 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
     "errors": Array [],
     "extraneous": true,
     "integrity": undefined,
-    "inventory": Inventory {
-      "" => <*ref_2>,
-    },
+    "inventory": Inventory {},
     "location": "",
-    "meta": Metadata {
+    "meta": Shrinkwrap {
       "data": Object {
-        "arblock": Object {
-          "packages": Object {
-            ".": Object {
-              "link": true,
-              "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
-            },
-          },
-        },
+        "dependencies": Object {},
+        "lockfileVersion": 2,
+        "packages": Object {},
       },
-      "files": Object {
-        "arblock": "/home/user/projects/some/kind/of/path/node_modules/.arborist-lock.json",
-        "lockfile": "/home/user/projects/some/kind/of/path/package-lock.json",
-        "shrinkwrap": "/home/user/projects/some/kind/of/path/npm-shrinkwrap.json",
-      },
+      "filename": null,
+      "indent": 2,
+      "loadedFromDisk": false,
       "root": "/home/user/projects/some/kind/of/path",
+      "type": null,
     },
     "name": "path",
     "optional": true,
@@ -92,7 +115,22 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "integrity": undefined,
       "inventory": Inventory {},
       "location": "../../../../../../../../home/user/projects/some/kind/of/path",
-      "meta": undefined,
+      "meta": Shrinkwrap {
+        "data": Object {
+          "dependencies": Object {},
+          "lockfileVersion": 2,
+          "packages": Object {
+            "": Object {
+              "name": undefined,
+            },
+          },
+        },
+        "filename": null,
+        "indent": 2,
+        "loadedFromDisk": false,
+        "root": "/home/user/projects/some/kind/of/path",
+        "type": null,
+      },
       "name": "path",
       "optional": true,
       "package": Object {
@@ -104,23 +142,21 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     },
   },
   "location": "",
-  "meta": Metadata {
+  "meta": Shrinkwrap {
     "data": Object {
-      "arblock": Object {
-        "packages": Object {
-          ".": Object {
-            "link": true,
-            "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
-          },
+      "dependencies": Object {},
+      "lockfileVersion": 2,
+      "packages": Object {
+        "": Object {
+          "name": undefined,
         },
       },
     },
-    "files": Object {
-      "arblock": "/home/user/projects/some/kind/of/path/node_modules/.arborist-lock.json",
-      "lockfile": "/home/user/projects/some/kind/of/path/package-lock.json",
-      "shrinkwrap": "/home/user/projects/some/kind/of/path/npm-shrinkwrap.json",
-    },
+    "filename": null,
+    "indent": 2,
+    "loadedFromDisk": false,
     "root": "/home/user/projects/some/kind/of/path",
+    "type": null,
   },
   "name": "path",
   "optional": true,
@@ -141,7 +177,22 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "integrity": undefined,
     "inventory": Inventory {},
     "location": "../../../../../../../../home/user/projects/some/kind/of/path",
-    "meta": undefined,
+    "meta": Shrinkwrap {
+      "data": Object {
+        "dependencies": Object {},
+        "lockfileVersion": 2,
+        "packages": Object {
+          "": Object {
+            "name": undefined,
+          },
+        },
+      },
+      "filename": null,
+      "indent": 2,
+      "loadedFromDisk": false,
+      "root": "/home/user/projects/some/kind/of/path",
+      "type": null,
+    },
     "name": "path",
     "optional": true,
     "package": Object {

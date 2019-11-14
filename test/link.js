@@ -1,9 +1,13 @@
 const t = require('tap')
 const Link = require('../lib/link.js')
 const Node = require('../lib/node.js')
-const Metadata = require('../lib/metadata.js')
-const meta = new Metadata('/home/user/projects/some/kind/of/path')
-meta.data = { arblock: { packages: {}}}
+const Shrinkwrap = require('../lib/shrinkwrap.js')
+const meta = new Shrinkwrap('/home/user/projects/some/kind/of/path')
+meta.data = {
+  lockfileVersion: 2,
+  packages: {},
+  dependencies: {},
+}
 
 const root = new Node({
   pkg: { name: 'root' },

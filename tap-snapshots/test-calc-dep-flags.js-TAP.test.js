@@ -41,6 +41,16 @@ Node {
           "_target": Node {
             "_": "z",
             "_dev": true,
+            "children": Array [
+              Link {
+                "_": "linklink",
+                "_dev": true,
+                "_target": Node {
+                  "_": "link",
+                  "_dev": true,
+                },
+              },
+            ],
           },
         },
       ],

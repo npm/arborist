@@ -108,9 +108,20 @@ t.test('flag stuff', t => {
     pkg: {
       name: 'linky',
       version: '1.2.3',
+      dependencies: { linklink: '' },
     },
     realpath: '/x/y/z',
     parent: devdep,
+  })
+
+  // a link dep depended upon by the target of a linked dep
+  const linklink = new Link({
+    pkg: {
+      name: 'linklink',
+      version: '1.2.3',
+    },
+    realpath: '/l/i/n/k/link',
+    parent: linky.target,
   })
 
   calcDepFlags(root)

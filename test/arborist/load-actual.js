@@ -55,24 +55,22 @@ const printTree = tree => ({
   ...(tree.inBundle ? { bundled: true } : {}),
   ...(tree.edgesIn.size ? {
     edgesIn: new Set([...tree.edgesIn]
-      .sort((a, b) => pp(a.from.realpath).localeCompare(pp(b.from.realpath)))
       .map(edge => printEdge(edge, 'in'))),
   } : {}),
   ...(tree.edgesOut.size ? {
     edgesOut: new Map([...tree.edgesOut.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
       .map(([name, edge]) => [name, printEdge(edge, 'out')]))
   } : {}),
   ...( tree.target || !tree.children.size ? {}
     : {
       children: new Map([...tree.children.entries()]
-        .sort((a, b) => a[0].localeCompare(b[0]))
         .map(([name, tree]) => [name, printTree(tree)]))
     }),
   __proto__: { constructor: tree.constructor },
+  ...(tree.meta ? { meta: tree.meta.commit() } : {}),
 })
 
-t.formatSnapshot = tree => format(printTree(tree), { sort: false })
+t.formatSnapshot = tree => format(printTree(tree))
 
 const loadActual = root => new Arborist({root}).loadActual()
 

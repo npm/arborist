@@ -36,6 +36,31 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "bundle",
+        "dependencies": Object {
+          "dep": "",
+        },
+        "bundleDependencies": Array [
+          "dep",
+        ],
+      },
+      "node_modules/dep": Object {
+        "name": "dep",
+        "inBundle": true,
+      },
+    },
+    "dependencies": Object {
+      "dep": Object {
+        "inBundle": true,
+      },
+    },
+    "name": "bundle",
+  },
 }
 `
 
@@ -46,6 +71,12 @@ Node {
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -64,14 +95,59 @@ Node {
       "spec": "*",
       "to": "root/node_modules/foo",
     },
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-    },
   },
   "children": Map {
+    "foo" => Node {
+      "name": "foo",
+      "location": "node_modules/foo",
+      "realpath": "root/node_modules/foo",
+      "top": "root",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "root",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "root/node_modules/@scope/y",
+          "error": "INVALID",
+        },
+      },
+      "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "optional",
+          "spec": "",
+          "to": "root/node_modules/@scope/x",
+        },
+        "express" => Edge {
+          "name": "express",
+          "type": "prod",
+          "spec": "npm:abbrev@*",
+          "to": "root/node_modules/foo/node_modules/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "root/node_modules/foo/node_modules/express",
+          "top": "root",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "root/node_modules/foo",
+            },
+          },
+        },
+      },
+    },
     "@scope/x" => Node {
       "name": "@scope/x",
       "location": "node_modules/@scope/x",
@@ -86,29 +162,29 @@ Node {
         },
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "root/node_modules/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "optional",
           "spec": "",
           "from": "root/node_modules/foo",
         },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
+        Edge {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "from": "root/node_modules/@scope/x",
         },
+      },
+      "edgesOut": Map {
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "root/node_modules/@scope/y",
+        },
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "root/node_modules/@scope/x/node_modules/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -117,11 +193,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "root/node_modules/@scope/x/node_modules/glob",
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "root/node_modules/@scope/x",
         },
       },
       "children": Map {
@@ -207,6 +283,12 @@ Node {
                 },
               },
               "edgesOut": Map {
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -218,12 +300,6 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
-                },
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
@@ -310,57 +386,178 @@ Node {
         },
       },
     },
-    "foo" => Node {
-      "name": "foo",
-      "location": "node_modules/foo",
-      "realpath": "root/node_modules/foo",
-      "top": "root",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "root",
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "@scope/x": "1",
+          "notinstalledhere": "",
         },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "root/node_modules/@scope/y",
-          "error": "INVALID",
+        "peerDependencies": Object {
+          "@scope/y": ">0.99.0",
         },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "optional",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+        "optionalDependencies": Object {
+          "notinstalledhere": "",
         },
-        "express" => Edge {
-          "name": "express",
-          "type": "prod",
-          "spec": "npm:abbrev@*",
-          "to": "root/node_modules/foo/node_modules/express",
+        "devDependencies": Object {
+          "foo": "*",
         },
       },
-      "children": Map {
-        "express" => Node {
-          "name": "express",
-          "location": "node_modules/foo/node_modules/express",
-          "realpath": "root/node_modules/foo/node_modules/express",
-          "top": "root",
-          "edgesIn": Set {
-            Edge {
-              "name": "express",
-              "type": "prod",
-              "spec": "npm:abbrev@*",
-              "from": "root/node_modules/foo",
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "express": "npm:abbrev@*",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/x": "",
+        },
+      },
+      "node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+          "@scope/y": "",
+        },
+        "peerDependencies": Object {
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/y": "",
+        },
+      },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "99.x",
+        },
+      },
+      "node_modules/foo/node_modules/express": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/@scope/x/node_modules/glob": Object {
+        "name": "glob",
+        "version": "4.0.5",
+        "dependencies": Object {
+          "graceful-fs": "",
+          "inherits": "",
+          "minimatch": "",
+          "once": "",
+        },
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "sigmund": "",
+          "lru-cache": "",
+          "once": "",
+        },
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "name": "sigmund",
+        "version": "1.0.0",
+      },
+    },
+    "dependencies": Object {
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/x": "",
+          "express": "npm:abbrev@*",
+        },
+        "dependencies": Object {
+          "express": Object {
+            "version": "npm:abbrev@1.1.1",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+          },
+        },
+      },
+      "@scope/x": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/y": "",
+          "glob": "4",
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "dependencies": Object {
+          "glob": Object {
+            "version": "4.0.5",
+            "requires": Object {
+              "graceful-fs": "",
+              "inherits": "",
+              "minimatch": "",
+              "once": "",
+            },
+            "dependencies": Object {
+              "graceful-fs": Object {
+                "version": "3.0.2",
+              },
+              "inherits": Object {
+                "version": "2.0.1",
+              },
+              "minimatch": Object {
+                "version": "1.0.0",
+                "requires": Object {
+                  "sigmund": "",
+                  "lru-cache": "",
+                  "once": "",
+                },
+                "dependencies": Object {
+                  "lru-cache": Object {
+                    "version": "2.5.0",
+                  },
+                  "sigmund": Object {
+                    "version": "1.0.0",
+                  },
+                },
+              },
+              "once": Object {
+                "version": "1.3.0",
+              },
             },
           },
         },
       },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "99.x",
+        },
+      },
     },
+    "name": "root",
+    "version": "1.2.3",
   },
 }
 `
@@ -372,17 +569,17 @@ Node {
   "realpath": "deepmixedloop",
   "top": "deepmixedloop",
   "edgesOut": Map {
-    "i" => Edge {
-      "name": "i",
-      "type": "dev",
-      "spec": "",
-      "to": "deepmixedloop/node_modules/i",
-    },
     "x" => Edge {
       "name": "x",
       "type": "prod",
       "spec": "",
       "to": "deepmixedloop/node_modules/x",
+    },
+    "i" => Edge {
+      "name": "i",
+      "type": "dev",
+      "spec": "",
+      "to": "deepmixedloop/node_modules/i",
     },
   },
   "children": Map {
@@ -455,6 +652,21 @@ Node {
         },
       },
     },
+    "e" => Node {
+      "name": "e",
+      "location": "node_modules/e",
+      "realpath": "deepmixedloop/node_modules/e",
+      "top": "deepmixedloop",
+      "optional": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "e",
+          "type": "prod",
+          "spec": "",
+          "from": "deepmixedloop/node_modules/d",
+        },
+      },
+    },
     "d" => Node {
       "name": "d",
       "location": "node_modules/d",
@@ -475,21 +687,6 @@ Node {
           "type": "prod",
           "spec": "",
           "to": "deepmixedloop/node_modules/e",
-        },
-      },
-    },
-    "e" => Node {
-      "name": "e",
-      "location": "node_modules/e",
-      "realpath": "deepmixedloop/node_modules/e",
-      "top": "deepmixedloop",
-      "optional": true,
-      "edgesIn": Set {
-        Edge {
-          "name": "e",
-          "type": "prod",
-          "spec": "",
-          "from": "deepmixedloop/node_modules/d",
         },
       },
     },
@@ -621,6 +818,163 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "dependencies": Object {
+          "x": "",
+        },
+        "devDependencies": Object {
+          "i": "",
+        },
+      },
+      "node_modules/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "c": "",
+        },
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+        },
+      },
+      "node_modules/e": Object {
+        "name": "e",
+        "version": "1.2.3",
+      },
+      "node_modules/d": Object {
+        "name": "d",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "e": "",
+        },
+      },
+      "node_modules/i": Object {
+        "name": "i",
+        "dependencies": Object {
+          "j": "",
+        },
+      },
+      "node_modules/j": Object {
+        "name": "j",
+        "dependencies": Object {
+          "k": "",
+        },
+      },
+      "node_modules/k": Object {
+        "name": "k",
+      },
+      "node_modules/x": Object {
+        "name": "x",
+        "dependencies": Object {
+          "y": "",
+        },
+      },
+      "node_modules/y": Object {
+        "name": "y",
+        "dependencies": Object {
+          "z": "",
+        },
+      },
+      "node_modules/z": Object {
+        "name": "z",
+        "dependencies": Object {
+          "a": "",
+        },
+        "optionalDependencies": Object {
+          "a": "",
+        },
+      },
+    },
+    "dependencies": Object {
+      "a": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "b": "",
+        },
+      },
+      "b": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "c": "",
+        },
+      },
+      "c": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "d": "",
+        },
+      },
+      "e": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+      },
+      "d": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "e": "",
+        },
+      },
+      "i": Object {
+        "devOptional": true,
+        "dev": true,
+        "requires": Object {
+          "j": "",
+        },
+      },
+      "j": Object {
+        "devOptional": true,
+        "dev": true,
+        "requires": Object {
+          "k": "",
+        },
+      },
+      "k": Object {
+        "devOptional": true,
+        "dev": true,
+      },
+      "x": Object {
+        "requires": Object {
+          "y": "",
+        },
+      },
+      "y": Object {
+        "requires": Object {
+          "z": "",
+        },
+      },
+      "z": Object {
+        "requires": Object {
+          "a": "",
+        },
+      },
+    },
+    "name": "deepmixedloop",
+    "version": "npm:root@",
+  },
 }
 `
 
@@ -634,6 +988,95 @@ Link {
     "name": "root",
     "parent": null,
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "../deeproot/root": Object {
+        "resolved": "../../root",
+        "link": true,
+      },
+      "": Object {
+        "name": "root",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "@scope/x": "1",
+          "notinstalledhere": "",
+        },
+        "peerDependencies": Object {
+          "@scope/y": ">0.99.0",
+        },
+        "optionalDependencies": Object {
+          "notinstalledhere": "",
+        },
+        "devDependencies": Object {
+          "foo": "*",
+        },
+      },
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "express": "npm:abbrev@*",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/x": "",
+        },
+      },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "99.x",
+        },
+      },
+      "node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+          "@scope/y": "",
+        },
+        "peerDependencies": Object {
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/y": "",
+        },
+      },
+    },
+    "dependencies": Object {
+      "../deeproot/root": Object {
+        "version": "file:",
+      },
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/x": "",
+          "express": "npm:abbrev@*",
+        },
+      },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "99.x",
+        },
+      },
+      "@scope/x": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/y": "",
+          "glob": "4",
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+      },
+    },
+    "name": "root",
+    "version": "1.2.3",
+  },
 }
 `
 
@@ -644,17 +1087,17 @@ Node {
   "realpath": "devloop",
   "top": "devloop",
   "edgesOut": Map {
-    "a" => Edge {
-      "name": "a",
-      "type": "dev",
-      "spec": "",
-      "to": "devloop/node_modules/a",
-    },
     "c" => Edge {
       "name": "c",
       "type": "prod",
       "spec": "",
       "to": "devloop/node_modules/c",
+    },
+    "a" => Edge {
+      "name": "a",
+      "type": "dev",
+      "spec": "",
+      "to": "devloop/node_modules/a",
     },
   },
   "children": Map {
@@ -758,6 +1201,74 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "devloop",
+        "dependencies": Object {
+          "c": "",
+        },
+        "devDependencies": Object {
+          "a": "",
+        },
+      },
+      "node_modules/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+          "d": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+        },
+      },
+      "node_modules/d": Object {
+        "name": "d",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+    },
+    "dependencies": Object {
+      "a": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "dev": true,
+        "requires": Object {
+          "b": "",
+          "d": "",
+        },
+      },
+      "b": Object {
+        "version": "1.2.3",
+      },
+      "c": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "d": "",
+        },
+      },
+      "d": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "b": "",
+        },
+      },
+    },
+    "name": "devloop",
+  },
 }
 `
 
@@ -773,12 +1284,6 @@ Node {
       "type": "prod",
       "spec": "^1.1.1",
       "to": "install-types/node_modules/abbrev",
-    },
-    "bundler" => Edge {
-      "name": "bundler",
-      "type": "prod",
-      "spec": "1.2.3",
-      "to": "install-types/node_modules/bundler",
     },
     "full-git-url" => Edge {
       "name": "full-git-url",
@@ -828,6 +1333,12 @@ Node {
       "spec": "file:abbrev-1.1.1.tgz",
       "to": "install-types/node_modules/tarball",
     },
+    "bundler" => Edge {
+      "name": "bundler",
+      "type": "prod",
+      "spec": "1.2.3",
+      "to": "install-types/node_modules/bundler",
+    },
   },
   "children": Map {
     "abbrev" => Node {
@@ -841,21 +1352,6 @@ Node {
           "type": "prod",
           "spec": "^1.1.1",
           "from": "install-types",
-        },
-      },
-    },
-    "balanced-match" => Node {
-      "name": "balanced-match",
-      "location": "node_modules/balanced-match",
-      "realpath": "install-types/node_modules/balanced-match",
-      "top": "install-types",
-      "extraneous": true,
-      "edgesIn": Set {
-        Edge {
-          "name": "balanced-match",
-          "type": "prod",
-          "spec": "^1.0.0",
-          "from": "install-types/node_modules/brace-expansion",
         },
       },
     },
@@ -885,6 +1381,21 @@ Node {
           "type": "prod",
           "spec": "0.0.1",
           "to": "install-types/node_modules/concat-map",
+        },
+      },
+    },
+    "balanced-match" => Node {
+      "name": "balanced-match",
+      "location": "node_modules/balanced-match",
+      "realpath": "install-types/node_modules/balanced-match",
+      "top": "install-types",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "balanced-match",
+          "type": "prod",
+          "spec": "^1.0.0",
+          "from": "install-types/node_modules/brace-expansion",
         },
       },
     },
@@ -933,6 +1444,21 @@ Node {
             },
           },
         },
+        "c" => Node {
+          "name": "c",
+          "location": "node_modules/bundler/node_modules/c",
+          "realpath": "install-types/node_modules/bundler/node_modules/c",
+          "top": "install-types",
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "name": "c",
+              "type": "prod",
+              "spec": "",
+              "from": "install-types/node_modules/bundler/node_modules/b",
+            },
+          },
+        },
         "b" => Node {
           "name": "b",
           "location": "node_modules/bundler/node_modules/b",
@@ -953,21 +1479,6 @@ Node {
               "type": "prod",
               "spec": "",
               "to": "install-types/node_modules/bundler/node_modules/c",
-            },
-          },
-        },
-        "c" => Node {
-          "name": "c",
-          "location": "node_modules/bundler/node_modules/c",
-          "realpath": "install-types/node_modules/bundler/node_modules/c",
-          "top": "install-types",
-          "bundled": true,
-          "edgesIn": Set {
-            Edge {
-              "name": "c",
-              "type": "prod",
-              "spec": "",
-              "from": "install-types/node_modules/bundler/node_modules/b",
             },
           },
         },
@@ -1003,20 +1514,6 @@ Node {
         },
       },
     },
-    "full-git-url" => Node {
-      "name": "full-git-url",
-      "location": "node_modules/full-git-url",
-      "realpath": "install-types/node_modules/full-git-url",
-      "top": "install-types",
-      "edgesIn": Set {
-        Edge {
-          "name": "full-git-url",
-          "type": "prod",
-          "spec": "git+https://github.com/isaacs/abbrev-js.git",
-          "from": "install-types",
-        },
-      },
-    },
     "ghshort" => Node {
       "name": "ghshort",
       "location": "node_modules/ghshort",
@@ -1031,12 +1528,55 @@ Node {
         },
       },
     },
+    "full-git-url" => Node {
+      "name": "full-git-url",
+      "location": "node_modules/full-git-url",
+      "realpath": "install-types/node_modules/full-git-url",
+      "top": "install-types",
+      "edgesIn": Set {
+        Edge {
+          "name": "full-git-url",
+          "type": "prod",
+          "spec": "git+https://github.com/isaacs/abbrev-js.git",
+          "from": "install-types",
+        },
+      },
+    },
     "ghtgz" => Node {
       "name": "ghtgz",
       "location": "node_modules/ghtgz",
       "realpath": "install-types/node_modules/ghtgz",
       "top": "install-types",
       "extraneous": true,
+    },
+    "inflight" => Node {
+      "name": "inflight",
+      "location": "node_modules/inflight",
+      "realpath": "install-types/node_modules/inflight",
+      "top": "install-types",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "inflight",
+          "type": "prod",
+          "spec": "^1.0.4",
+          "from": "install-types/node_modules/glob",
+        },
+      },
+      "edgesOut": Map {
+        "once" => Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "to": "install-types/node_modules/once",
+        },
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "type": "prod",
+          "spec": "1",
+          "to": "install-types/node_modules/wrappy",
+        },
+      },
     },
     "glob" => Node {
       "name": "glob",
@@ -1091,35 +1631,6 @@ Node {
         },
       },
     },
-    "inflight" => Node {
-      "name": "inflight",
-      "location": "node_modules/inflight",
-      "realpath": "install-types/node_modules/inflight",
-      "top": "install-types",
-      "extraneous": true,
-      "edgesIn": Set {
-        Edge {
-          "name": "inflight",
-          "type": "prod",
-          "spec": "^1.0.4",
-          "from": "install-types/node_modules/glob",
-        },
-      },
-      "edgesOut": Map {
-        "once" => Edge {
-          "name": "once",
-          "type": "prod",
-          "spec": "^1.3.0",
-          "to": "install-types/node_modules/once",
-        },
-        "wrappy" => Edge {
-          "name": "wrappy",
-          "type": "prod",
-          "spec": "1",
-          "to": "install-types/node_modules/wrappy",
-        },
-      },
-    },
     "inherits" => Node {
       "name": "inherits",
       "location": "node_modules/inherits",
@@ -1158,49 +1669,6 @@ Node {
         },
       },
     },
-    "old" => Node {
-      "name": "old",
-      "location": "node_modules/old",
-      "realpath": "install-types/node_modules/old",
-      "top": "install-types",
-      "edgesIn": Set {
-        Edge {
-          "name": "old",
-          "type": "prod",
-          "spec": "npm:abbrev@^1.0.3",
-          "from": "install-types",
-        },
-      },
-    },
-    "once" => Node {
-      "name": "once",
-      "location": "node_modules/once",
-      "realpath": "install-types/node_modules/once",
-      "top": "install-types",
-      "extraneous": true,
-      "edgesIn": Set {
-        Edge {
-          "name": "once",
-          "type": "prod",
-          "spec": "^1.3.0",
-          "from": "install-types/node_modules/glob",
-        },
-        Edge {
-          "name": "once",
-          "type": "prod",
-          "spec": "^1.3.0",
-          "from": "install-types/node_modules/inflight",
-        },
-      },
-      "edgesOut": Map {
-        "wrappy" => Edge {
-          "name": "wrappy",
-          "type": "prod",
-          "spec": "1",
-          "to": "install-types/node_modules/wrappy",
-        },
-      },
-    },
     "path-is-absolute" => Node {
       "name": "path-is-absolute",
       "location": "node_modules/path-is-absolute",
@@ -1216,6 +1684,20 @@ Node {
         },
       },
     },
+    "old" => Node {
+      "name": "old",
+      "location": "node_modules/old",
+      "realpath": "install-types/node_modules/old",
+      "top": "install-types",
+      "edgesIn": Set {
+        Edge {
+          "name": "old",
+          "type": "prod",
+          "spec": "npm:abbrev@^1.0.3",
+          "from": "install-types",
+        },
+      },
+    },
     "pinned" => Node {
       "name": "pinned",
       "location": "node_modules/pinned",
@@ -1227,6 +1709,35 @@ Node {
           "type": "prod",
           "spec": "npm:abbrev@^1.1.1",
           "from": "install-types",
+        },
+      },
+    },
+    "once" => Node {
+      "name": "once",
+      "location": "node_modules/once",
+      "realpath": "install-types/node_modules/once",
+      "top": "install-types",
+      "extraneous": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "from": "install-types/node_modules/inflight",
+        },
+        Edge {
+          "name": "once",
+          "type": "prod",
+          "spec": "^1.3.0",
+          "from": "install-types/node_modules/glob",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "type": "prod",
+          "spec": "1",
+          "to": "install-types/node_modules/wrappy",
         },
       },
     },
@@ -1254,39 +1765,6 @@ Node {
           "name": "remote",
           "type": "prod",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-          "from": "install-types",
-        },
-      },
-    },
-    "rimraf" => Node {
-      "name": "rimraf",
-      "location": "node_modules/rimraf",
-      "realpath": "install-types/node_modules/rimraf",
-      "top": "install-types",
-      "extraneous": true,
-      "edgesOut": Map {
-        "glob" => Edge {
-          "name": "glob",
-          "type": "optional",
-          "spec": "^7.1.3",
-          "to": "install-types/node_modules/glob",
-        },
-      },
-    },
-    "symlink" => Link {
-      "name": "symlink",
-      "location": "node_modules/symlink",
-      "realpath": "install-types/abbrev-link-target",
-      "top": "install-types",
-      "target": Object {
-        "name": "abbrev-link-target",
-        "parent": null,
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "symlink",
-          "type": "prod",
-          "spec": "file:./abbrev-link-target",
           "from": "install-types",
         },
       },
@@ -1326,6 +1804,502 @@ Node {
         },
       },
     },
+    "rimraf" => Node {
+      "name": "rimraf",
+      "location": "node_modules/rimraf",
+      "realpath": "install-types/node_modules/rimraf",
+      "top": "install-types",
+      "extraneous": true,
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "type": "optional",
+          "spec": "^7.1.3",
+          "to": "install-types/node_modules/glob",
+        },
+      },
+    },
+    "symlink" => Link {
+      "name": "symlink",
+      "location": "node_modules/symlink",
+      "realpath": "install-types/abbrev-link-target",
+      "top": "install-types",
+      "target": Object {
+        "name": "abbrev-link-target",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "symlink",
+          "type": "prod",
+          "spec": "file:./abbrev-link-target",
+          "from": "install-types",
+        },
+      },
+    },
+  },
+  "meta": Object {
+    "name": "install-types",
+    "version": "npm:a@1.2.3",
+    "lockfileVersion": 2,
+    "requires": true,
+    "dependencies": Object {
+      "unhosted-git": Object {
+        "version": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "from": "git+https://mygit.com/isaacs/abbrev-js.git",
+      },
+      "abbrev": Object {
+        "version": "1.1.1",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      },
+      "brace-expansion": Object {
+        "version": "1.1.11",
+        "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+        "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "balanced-match": "^1.0.0",
+          "concat-map": "0.0.1",
+        },
+      },
+      "balanced-match": Object {
+        "version": "1.0.0",
+        "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+        "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "bundler": Object {
+        "version": "1.2.3",
+        "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
+        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "requires": Object {
+          "a": "",
+        },
+        "dependencies": Object {
+          "a": Object {
+            "version": "1.2.3",
+            "inBundle": true,
+            "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
+            "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
+            "requires": Object {
+              "b": "",
+            },
+          },
+          "c": Object {
+            "version": "1.2.3",
+            "inBundle": true,
+            "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
+            "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
+          },
+          "b": Object {
+            "version": "1.2.3",
+            "inBundle": true,
+            "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
+            "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
+            "requires": Object {
+              "c": "",
+            },
+          },
+        },
+      },
+      "concat-map": Object {
+        "version": "0.0.1",
+        "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "fs.realpath": Object {
+        "version": "1.0.0",
+        "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+        "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "ghshort": Object {
+        "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "from": "ghshort@github:isaacs/abbrev-js",
+      },
+      "full-git-url": Object {
+        "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "from": "full-git-url@git+https://github.com/isaacs/abbrev-js.git",
+      },
+      "ghtgz": Object {
+        "version": "npm:abbrev@1.1.1",
+        "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "inflight": Object {
+        "version": "1.0.6",
+        "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+        "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "once": "^1.3.0",
+          "wrappy": "1",
+        },
+      },
+      "glob": Object {
+        "version": "7.1.4",
+        "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
+        "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.4",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0",
+        },
+      },
+      "inherits": Object {
+        "version": "2.0.4",
+        "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "minimatch": Object {
+        "version": "3.0.4",
+        "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+        "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "brace-expansion": "^1.1.7",
+        },
+      },
+      "path-is-absolute": Object {
+        "version": "1.0.1",
+        "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+        "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "old": Object {
+        "version": "npm:abbrev@1.0.3",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
+        "integrity": "sha1-qgScln+ZkiKqQuFENPDFYu9GgkE=",
+      },
+      "pinned": Object {
+        "version": "npm:abbrev@1.1.1",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      },
+      "once": Object {
+        "version": "1.4.0",
+        "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "wrappy": "1",
+        },
+      },
+      "reg": Object {
+        "version": "npm:abbrev@1.1.1",
+        "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      },
+      "remote": Object {
+        "version": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      },
+      "tarball": Object {
+        "version": "file:abbrev-1.1.1.tgz",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      },
+      "wrappy": Object {
+        "version": "1.0.2",
+        "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
+        "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "rimraf": Object {
+        "version": "2.6.3",
+        "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "glob": "^7.1.3",
+        },
+      },
+      "symlink": Object {
+        "version": "file:abbrev-link-target",
+      },
+      "abbrev-link-target": Object {
+        "version": "npm:abbrev@1.1.1",
+        "requires": Object {
+          "tap": "^14.4.1",
+        },
+      },
+    },
+    "packages": Object {
+      "": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "abbrev": "^1.1.1",
+          "full-git-url": "git+https://github.com/isaacs/abbrev-js.git",
+          "ghshort": "github:isaacs/abbrev-js",
+          "old": "npm:abbrev@^1.0.3",
+          "pinned": "npm:abbrev@^1.1.1",
+          "reg": "npm:abbrev@^1.1.1",
+          "remote": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "symlink": "file:./abbrev-link-target",
+          "tarball": "file:abbrev-1.1.1.tgz",
+          "bundler": "1.2.3",
+        },
+      },
+      "node_modules/abbrev/node_modules/@scope/name": Object {
+        "name": "@scope/name",
+      },
+      "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername": Object {
+        "name": "@otherscope/othername",
+        "integrity": "the integrity is not valid, clearly",
+        "resolved": "fake resolved value",
+      },
+      "node_modules/unhosted-git": Object {
+        "name": "unhosted-git",
+        "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      },
+      "node_modules/abbrev": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/brace-expansion": Object {
+        "name": "brace-expansion",
+        "version": "1.1.11",
+        "dependencies": Object {
+          "balanced-match": "^1.0.0",
+          "concat-map": "0.0.1",
+        },
+        "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+        "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+      },
+      "node_modules/balanced-match": Object {
+        "name": "balanced-match",
+        "version": "1.0.0",
+        "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
+        "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+      },
+      "node_modules/bundler": Object {
+        "name": "bundler",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "a": "",
+        },
+        "bundleDependencies": Array [
+          "a",
+        ],
+        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
+      },
+      "node_modules/concat-map": Object {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+      },
+      "node_modules/fs.realpath": Object {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
+        "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+      },
+      "node_modules/ghshort": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      },
+      "node_modules/full-git-url": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      },
+      "node_modules/ghtgz": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
+        "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      },
+      "node_modules/inflight": Object {
+        "name": "inflight",
+        "version": "1.0.6",
+        "dependencies": Object {
+          "once": "^1.3.0",
+          "wrappy": "1",
+        },
+        "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
+        "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+      },
+      "node_modules/glob": Object {
+        "name": "glob",
+        "version": "7.1.4",
+        "dependencies": Object {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.4",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0",
+        },
+        "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
+        "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
+      },
+      "node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.4",
+        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+      },
+      "node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "3.0.4",
+        "dependencies": Object {
+          "brace-expansion": "^1.1.7",
+        },
+        "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+        "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+      },
+      "node_modules/path-is-absolute": Object {
+        "name": "path-is-absolute",
+        "version": "1.0.1",
+        "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
+        "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+      },
+      "node_modules/old": Object {
+        "name": "abbrev",
+        "version": "1.0.3",
+        "integrity": "sha1-qgScln+ZkiKqQuFENPDFYu9GgkE=",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
+      },
+      "node_modules/pinned": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/once": Object {
+        "name": "once",
+        "version": "1.4.0",
+        "dependencies": Object {
+          "wrappy": "1",
+        },
+        "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
+        "resolved": "file:once-1.4.0.tgz",
+      },
+      "node_modules/reg": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/remote": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/tarball": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "file:abbrev-1.1.1.tgz",
+      },
+      "node_modules/wrappy": Object {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
+        "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
+      },
+      "node_modules/rimraf": Object {
+        "name": "rimraf",
+        "version": "2.6.3",
+        "dependencies": Object {
+          "glob": "^7.1.3",
+        },
+        "optionalDependencies": Object {
+          "glob": "^7.1.3",
+        },
+        "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
+        "resolved": "file:rimraf-2.6.3.tgz",
+      },
+      "node_modules/symlink": Object {
+        "resolved": "../../abbrev-link-target",
+        "link": true,
+      },
+      "abbrev-link-target": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "devDependencies": Object {
+          "tap": "^14.4.1",
+        },
+      },
+      "node_modules/bundler/node_modules/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+        "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "inBundle": true,
+        "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
+      },
+      "node_modules/bundler/node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "inBundle": true,
+        "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
+      },
+      "node_modules/bundler/node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "c": "",
+        },
+        "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "inBundle": true,
+        "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
+      },
+    },
   },
 }
 `
@@ -1340,6 +2314,95 @@ Link {
     "name": "root",
     "parent": null,
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "@scope/x": "1",
+          "notinstalledhere": "",
+        },
+        "peerDependencies": Object {
+          "@scope/y": ">0.99.0",
+        },
+        "optionalDependencies": Object {
+          "notinstalledhere": "",
+        },
+        "devDependencies": Object {
+          "foo": "*",
+        },
+      },
+      "../linkedroot": Object {
+        "resolved": "../root",
+        "link": true,
+      },
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "express": "npm:abbrev@*",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/x": "",
+        },
+      },
+      "node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+          "@scope/y": "",
+        },
+        "peerDependencies": Object {
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/y": "",
+        },
+      },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "99.x",
+        },
+      },
+    },
+    "dependencies": Object {
+      "../linkedroot": Object {
+        "version": "file:",
+      },
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/x": "",
+          "express": "npm:abbrev@*",
+        },
+      },
+      "@scope/x": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/y": "",
+          "glob": "4",
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+      },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "99.x",
+        },
+      },
+    },
+    "name": "root",
+    "version": "1.2.3",
+  },
 }
 `
 
@@ -1350,6 +2413,18 @@ Node {
   "realpath": "links-all-over",
   "top": "links-all-over",
   "edgesOut": Map {
+    "nest" => Edge {
+      "name": "nest",
+      "type": "prod",
+      "spec": "",
+      "to": "links-all-over/node_modules/nest",
+    },
+    "link-outside-nest" => Edge {
+      "name": "link-outside-nest",
+      "type": "prod",
+      "spec": "",
+      "to": "links-all-over/real",
+    },
     "link-deep" => Edge {
       "name": "link-deep",
       "type": "prod",
@@ -1362,80 +2437,8 @@ Node {
       "spec": "",
       "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
     },
-    "link-outside-nest" => Edge {
-      "name": "link-outside-nest",
-      "type": "prod",
-      "spec": "",
-      "to": "links-all-over/real",
-    },
-    "nest" => Edge {
-      "name": "nest",
-      "type": "prod",
-      "spec": "",
-      "to": "links-all-over/node_modules/nest",
-    },
   },
   "children": Map {
-    "link-deep" => Link {
-      "name": "link-deep",
-      "location": "node_modules/link-deep",
-      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      "top": "links-all-over",
-      "target": Object {
-        "name": "deep",
-        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "link-deep",
-          "type": "prod",
-          "spec": "",
-          "from": "links-all-over",
-        },
-      },
-    },
-    "link-link" => Link {
-      "name": "link-link",
-      "location": "node_modules/link-link",
-      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      "top": "links-all-over",
-      "target": Object {
-        "name": "deep",
-        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "link-link",
-          "type": "prod",
-          "spec": "",
-          "from": "links-all-over",
-        },
-        Edge {
-          "name": "link-link",
-          "type": "prod",
-          "spec": "",
-          "from": "links-all-over/real",
-        },
-      },
-    },
-    "link-outside-nest" => Link {
-      "name": "link-outside-nest",
-      "location": "node_modules/link-outside-nest",
-      "realpath": "links-all-over/real",
-      "top": "links-all-over",
-      "target": Object {
-        "name": "real",
-        "parent": null,
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "link-outside-nest",
-          "type": "prod",
-          "spec": "",
-          "from": "links-all-over",
-        },
-      },
-    },
     "nest" => Node {
       "name": "nest",
       "location": "node_modules/nest",
@@ -1563,17 +2566,17 @@ Node {
                             },
                           },
                           "edgesOut": Map {
-                            "a" => Edge {
-                              "name": "a",
-                              "type": "prod",
-                              "spec": "",
-                              "to": "links-all-over/node_modules/nest/node_modules/a",
-                            },
                             "deep-a" => Edge {
                               "name": "deep-a",
                               "type": "prod",
                               "spec": "",
                               "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+                            },
+                            "a" => Edge {
+                              "name": "a",
+                              "type": "prod",
+                              "spec": "",
+                              "to": "links-all-over/node_modules/nest/node_modules/a",
                             },
                           },
                           "children": Map {
@@ -1621,6 +2624,226 @@ Node {
         },
       },
     },
+    "link-outside-nest" => Link {
+      "name": "link-outside-nest",
+      "location": "node_modules/link-outside-nest",
+      "realpath": "links-all-over/real",
+      "top": "links-all-over",
+      "target": Object {
+        "name": "real",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "link-outside-nest",
+          "type": "prod",
+          "spec": "",
+          "from": "links-all-over",
+        },
+      },
+    },
+    "link-deep" => Link {
+      "name": "link-deep",
+      "location": "node_modules/link-deep",
+      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "top": "links-all-over",
+      "target": Object {
+        "name": "deep",
+        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "link-deep",
+          "type": "prod",
+          "spec": "",
+          "from": "links-all-over",
+        },
+      },
+    },
+    "link-link" => Link {
+      "name": "link-link",
+      "location": "node_modules/link-link",
+      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "top": "links-all-over",
+      "target": Object {
+        "name": "deep",
+        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "link-link",
+          "type": "prod",
+          "spec": "",
+          "from": "links-all-over",
+        },
+        Edge {
+          "name": "link-link",
+          "type": "prod",
+          "spec": "",
+          "from": "links-all-over/real",
+        },
+      },
+    },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "links-all-over",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "nest": "",
+          "link-outside-nest": "",
+          "link-deep": "",
+          "link-link": "",
+        },
+      },
+      "node_modules/nest": Object {
+        "name": "nest",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "a": "",
+          "link-in-nest": "",
+        },
+      },
+      "node_modules/link-outside-nest": Object {
+        "resolved": "../../real",
+        "link": true,
+      },
+      "real": Object {
+        "name": "real",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "link-link": "",
+        },
+      },
+      "node_modules/link-deep": Object {
+        "resolved": "../nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+        "link": true,
+      },
+      "node_modules/link-link": Object {
+        "resolved": "../nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+        "link": true,
+      },
+      "node_modules/nest/node_modules/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+      "node_modules/nest/node_modules/link-in-nest": Object {
+        "resolved": "../../../../real",
+        "link": true,
+      },
+      "node_modules/nest/node_modules/a/node_modules/b": Object {},
+      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+        },
+      },
+      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d": Object {
+        "name": "d",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "deep": "",
+        },
+      },
+      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep": Object {
+        "name": "deep",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "deep-a": "",
+          "a": "",
+        },
+      },
+      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a": Object {
+        "name": "deep-a",
+        "version": "1.2.3",
+      },
+    },
+    "dependencies": Object {
+      "nest": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "a": "",
+          "link-in-nest": "",
+        },
+        "dependencies": Object {
+          "a": Object {
+            "version": "1.2.3",
+            "requires": Object {
+              "b": "",
+            },
+            "dependencies": Object {
+              "b": Object {
+                "dependencies": Object {
+                  "c": Object {
+                    "version": "1.2.3",
+                    "extraneous": true,
+                    "devOptional": true,
+                    "dev": true,
+                    "optional": true,
+                    "requires": Object {
+                      "d": "",
+                    },
+                    "dependencies": Object {
+                      "d": Object {
+                        "version": "1.2.3",
+                        "extraneous": true,
+                        "devOptional": true,
+                        "dev": true,
+                        "optional": true,
+                        "requires": Object {
+                          "deep": "",
+                        },
+                        "dependencies": Object {
+                          "deep": Object {
+                            "version": "1.2.3",
+                            "requires": Object {
+                              "deep-a": "",
+                              "a": "",
+                            },
+                            "dependencies": Object {
+                              "deep-a": Object {
+                                "version": "1.2.3",
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+          "link-in-nest": Object {
+            "version": "file:real",
+          },
+        },
+      },
+      "link-outside-nest": Object {
+        "version": "file:real",
+      },
+      "real": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "link-link": "",
+        },
+      },
+      "link-deep": Object {
+        "version": "file:node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      },
+      "link-link": Object {
+        "version": "file:node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      },
+    },
+    "name": "links-all-over",
+    "version": "1.2.3",
   },
 }
 `
@@ -1632,6 +2855,12 @@ Node {
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -1650,14 +2879,59 @@ Node {
       "spec": "*",
       "to": "root/node_modules/foo",
     },
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-    },
   },
   "children": Map {
+    "foo" => Node {
+      "name": "foo",
+      "location": "node_modules/foo",
+      "realpath": "root/node_modules/foo",
+      "top": "root",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "root",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "root/node_modules/@scope/y",
+          "error": "INVALID",
+        },
+      },
+      "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "optional",
+          "spec": "",
+          "to": "root/node_modules/@scope/x",
+        },
+        "express" => Edge {
+          "name": "express",
+          "type": "prod",
+          "spec": "npm:abbrev@*",
+          "to": "root/node_modules/foo/node_modules/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "root/node_modules/foo/node_modules/express",
+          "top": "root",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "root/node_modules/foo",
+            },
+          },
+        },
+      },
+    },
     "@scope/x" => Node {
       "name": "@scope/x",
       "location": "node_modules/@scope/x",
@@ -1672,29 +2946,29 @@ Node {
         },
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "root/node_modules/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "optional",
           "spec": "",
           "from": "root/node_modules/foo",
         },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
+        Edge {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "from": "root/node_modules/@scope/x",
         },
+      },
+      "edgesOut": Map {
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "root/node_modules/@scope/y",
+        },
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "root/node_modules/@scope/x/node_modules/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -1703,11 +2977,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "root/node_modules/@scope/x/node_modules/glob",
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "root/node_modules/@scope/x",
         },
       },
       "children": Map {
@@ -1793,6 +3067,12 @@ Node {
                 },
               },
               "edgesOut": Map {
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -1804,12 +3084,6 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
-                },
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
@@ -1896,57 +3170,178 @@ Node {
         },
       },
     },
-    "foo" => Node {
-      "name": "foo",
-      "location": "node_modules/foo",
-      "realpath": "root/node_modules/foo",
-      "top": "root",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "root",
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "@scope/x": "1",
+          "notinstalledhere": "",
         },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "root/node_modules/@scope/y",
-          "error": "INVALID",
+        "peerDependencies": Object {
+          "@scope/y": ">0.99.0",
         },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "optional",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+        "optionalDependencies": Object {
+          "notinstalledhere": "",
         },
-        "express" => Edge {
-          "name": "express",
-          "type": "prod",
-          "spec": "npm:abbrev@*",
-          "to": "root/node_modules/foo/node_modules/express",
+        "devDependencies": Object {
+          "foo": "*",
         },
       },
-      "children": Map {
-        "express" => Node {
-          "name": "express",
-          "location": "node_modules/foo/node_modules/express",
-          "realpath": "root/node_modules/foo/node_modules/express",
-          "top": "root",
-          "edgesIn": Set {
-            Edge {
-              "name": "express",
-              "type": "prod",
-              "spec": "npm:abbrev@*",
-              "from": "root/node_modules/foo",
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "express": "npm:abbrev@*",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/x": "",
+        },
+      },
+      "node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+          "@scope/y": "",
+        },
+        "peerDependencies": Object {
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/y": "",
+        },
+      },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "99.x",
+        },
+      },
+      "node_modules/foo/node_modules/express": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/@scope/x/node_modules/glob": Object {
+        "name": "glob",
+        "version": "4.0.5",
+        "dependencies": Object {
+          "graceful-fs": "",
+          "inherits": "",
+          "minimatch": "",
+          "once": "",
+        },
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "sigmund": "",
+          "lru-cache": "",
+          "once": "",
+        },
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "name": "sigmund",
+        "version": "1.0.0",
+      },
+    },
+    "dependencies": Object {
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/x": "",
+          "express": "npm:abbrev@*",
+        },
+        "dependencies": Object {
+          "express": Object {
+            "version": "npm:abbrev@1.1.1",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+          },
+        },
+      },
+      "@scope/x": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/y": "",
+          "glob": "4",
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "dependencies": Object {
+          "glob": Object {
+            "version": "4.0.5",
+            "requires": Object {
+              "graceful-fs": "",
+              "inherits": "",
+              "minimatch": "",
+              "once": "",
+            },
+            "dependencies": Object {
+              "graceful-fs": Object {
+                "version": "3.0.2",
+              },
+              "inherits": Object {
+                "version": "2.0.1",
+              },
+              "minimatch": Object {
+                "version": "1.0.0",
+                "requires": Object {
+                  "sigmund": "",
+                  "lru-cache": "",
+                  "once": "",
+                },
+                "dependencies": Object {
+                  "lru-cache": Object {
+                    "version": "2.5.0",
+                  },
+                  "sigmund": Object {
+                    "version": "1.0.0",
+                  },
+                },
+              },
+              "once": Object {
+                "version": "1.3.0",
+              },
             },
           },
         },
       },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "99.x",
+        },
+      },
     },
+    "name": "root",
+    "version": "1.2.3",
   },
 }
 `
@@ -2086,6 +3481,94 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "dependencies": Object {
+          "a": "",
+        },
+        "optionalDependencies": Object {
+          "a": "",
+        },
+        "devDependencies": Object {
+          "c": "",
+        },
+      },
+      "node_modules/a": Object {
+        "name": "a",
+        "version": "1.1.1",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "c": "",
+        },
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+        },
+      },
+      "node_modules/d": Object {
+        "name": "d",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "e": "",
+        },
+      },
+      "node_modules/e": Object {
+        "name": "e",
+        "version": "1.2.3",
+      },
+    },
+    "dependencies": Object {
+      "a": Object {
+        "version": "1.1.1",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "b": "",
+        },
+      },
+      "b": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "c": "",
+        },
+      },
+      "c": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "requires": Object {
+          "d": "",
+        },
+      },
+      "d": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "requires": Object {
+          "e": "",
+        },
+      },
+      "e": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+      },
+    },
+    "name": "mixedloop",
+    "version": "npm:root@",
+  },
 }
 `
 
@@ -2114,12 +3597,6 @@ Node {
       "spec": "",
       "to": "mixedmidway/node_modules/c",
     },
-    "i" => Edge {
-      "name": "i",
-      "type": "dev",
-      "spec": "",
-      "to": "mixedmidway/node_modules/i",
-    },
     "k" => Edge {
       "name": "k",
       "type": "optional",
@@ -2138,17 +3615,23 @@ Node {
       "spec": "",
       "to": "mixedmidway/node_modules/m",
     },
+    "y" => Edge {
+      "name": "y",
+      "type": "optional",
+      "spec": "",
+      "to": "mixedmidway/node_modules/y",
+    },
     "x" => Edge {
       "name": "x",
       "type": "prod",
       "spec": "",
       "to": "mixedmidway/node_modules/x",
     },
-    "y" => Edge {
-      "name": "y",
-      "type": "optional",
+    "i" => Edge {
+      "name": "i",
+      "type": "dev",
       "spec": "",
-      "to": "mixedmidway/node_modules/y",
+      "to": "mixedmidway/node_modules/i",
     },
   },
   "children": Map {
@@ -2472,6 +3955,183 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "dependencies": Object {
+          "x": "",
+          "a": "",
+          "b": "",
+          "c": "",
+          "k": "",
+          "l": "",
+          "m": "",
+          "y": "",
+        },
+        "optionalDependencies": Object {
+          "a": "",
+          "b": "",
+          "c": "",
+          "k": "",
+          "l": "",
+          "m": "",
+          "y": "",
+        },
+        "devDependencies": Object {
+          "i": "",
+        },
+      },
+      "node_modules/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "c": "",
+          "j": "",
+        },
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+      },
+      "node_modules/i": Object {
+        "name": "i",
+        "dependencies": Object {
+          "j": "",
+        },
+      },
+      "node_modules/j": Object {
+        "name": "j",
+        "dependencies": Object {
+          "k": "",
+        },
+      },
+      "node_modules/k": Object {
+        "name": "k",
+        "dependencies": Object {
+          "c": "",
+        },
+      },
+      "node_modules/l": Object {
+        "name": "l",
+        "dependencies": Object {
+          "m": "",
+        },
+      },
+      "node_modules/m": Object {
+        "name": "m",
+      },
+      "node_modules/n": Object {
+        "name": "n",
+        "dependencies": Object {
+          "b": "",
+          "j": "",
+        },
+      },
+      "node_modules/x": Object {
+        "name": "x",
+        "dependencies": Object {
+          "y": "",
+        },
+      },
+      "node_modules/y": Object {
+        "name": "y",
+        "dependencies": Object {
+          "z": "",
+        },
+      },
+      "node_modules/z": Object {
+        "name": "z",
+        "dependencies": Object {
+          "l": "",
+        },
+      },
+    },
+    "dependencies": Object {
+      "a": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "b": "",
+        },
+      },
+      "b": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "c": "",
+          "j": "",
+        },
+      },
+      "c": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+      },
+      "i": Object {
+        "devOptional": true,
+        "dev": true,
+        "requires": Object {
+          "j": "",
+        },
+      },
+      "j": Object {
+        "devOptional": true,
+        "requires": Object {
+          "k": "",
+        },
+      },
+      "k": Object {
+        "devOptional": true,
+        "requires": Object {
+          "c": "",
+        },
+      },
+      "l": Object {
+        "requires": Object {
+          "m": "",
+        },
+      },
+      "m": Object {},
+      "n": Object {
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "b": "",
+          "j": "",
+        },
+      },
+      "x": Object {
+        "requires": Object {
+          "y": "",
+        },
+      },
+      "y": Object {
+        "requires": Object {
+          "z": "",
+        },
+      },
+      "z": Object {
+        "requires": Object {
+          "l": "",
+        },
+      },
+    },
+    "name": "mixedmidway",
+    "version": "npm:root@",
+  },
 }
 `
 
@@ -2502,6 +4162,23 @@ Node {
       ],
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {},
+      "node_modules/foo": Object {},
+    },
+    "dependencies": Object {
+      "foo": Object {
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+    },
+    "name": "noname",
+  },
 }
 `
 
@@ -2526,6 +4203,48 @@ Node {
     },
   },
   "children": Map {
+    "c" => Node {
+      "name": "c",
+      "location": "node_modules/c",
+      "realpath": "optionalloop/node_modules/c",
+      "top": "optionalloop",
+      "edgesIn": Set {
+        Edge {
+          "name": "c",
+          "type": "prod",
+          "spec": "",
+          "from": "optionalloop",
+        },
+      },
+      "edgesOut": Map {
+        "d" => Edge {
+          "name": "d",
+          "type": "prod",
+          "spec": "",
+          "to": "optionalloop/node_modules/d",
+        },
+      },
+    },
+    "b" => Node {
+      "name": "b",
+      "location": "node_modules/b",
+      "realpath": "optionalloop/node_modules/b",
+      "top": "optionalloop",
+      "edgesIn": Set {
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "optionalloop/node_modules/a",
+        },
+        Edge {
+          "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "optionalloop/node_modules/d",
+        },
+      },
+    },
     "a" => Node {
       "name": "a",
       "location": "node_modules/a",
@@ -2555,48 +4274,6 @@ Node {
         },
       },
     },
-    "b" => Node {
-      "name": "b",
-      "location": "node_modules/b",
-      "realpath": "optionalloop/node_modules/b",
-      "top": "optionalloop",
-      "edgesIn": Set {
-        Edge {
-          "name": "b",
-          "type": "prod",
-          "spec": "",
-          "from": "optionalloop/node_modules/a",
-        },
-        Edge {
-          "name": "b",
-          "type": "prod",
-          "spec": "",
-          "from": "optionalloop/node_modules/d",
-        },
-      },
-    },
-    "c" => Node {
-      "name": "c",
-      "location": "node_modules/c",
-      "realpath": "optionalloop/node_modules/c",
-      "top": "optionalloop",
-      "edgesIn": Set {
-        Edge {
-          "name": "c",
-          "type": "prod",
-          "spec": "",
-          "from": "optionalloop",
-        },
-      },
-      "edgesOut": Map {
-        "d" => Edge {
-          "name": "d",
-          "type": "prod",
-          "spec": "",
-          "to": "optionalloop/node_modules/d",
-        },
-      },
-    },
     "d" => Node {
       "name": "d",
       "location": "node_modules/d",
@@ -2607,13 +4284,13 @@ Node {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "optionalloop/node_modules/a",
+          "from": "optionalloop/node_modules/c",
         },
         Edge {
           "name": "d",
           "type": "prod",
           "spec": "",
-          "from": "optionalloop/node_modules/c",
+          "from": "optionalloop/node_modules/a",
         },
       },
       "edgesOut": Map {
@@ -2625,6 +4302,75 @@ Node {
         },
       },
     },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "optionalloop",
+        "dependencies": Object {
+          "c": "",
+          "a": "",
+        },
+        "optionalDependencies": Object {
+          "a": "",
+        },
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+      },
+      "node_modules/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+          "d": "",
+        },
+      },
+      "node_modules/d": Object {
+        "name": "d",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+    },
+    "dependencies": Object {
+      "c": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "d": "",
+        },
+      },
+      "b": Object {
+        "version": "1.2.3",
+      },
+      "a": Object {
+        "version": "1.2.3",
+        "devOptional": true,
+        "optional": true,
+        "requires": Object {
+          "b": "",
+          "d": "",
+        },
+      },
+      "d": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "b": "",
+        },
+      },
+    },
+    "name": "optionalloop",
   },
 }
 `
@@ -2670,30 +4416,6 @@ Node {
           "type": "prod",
           "spec": "",
           "to": "optofdev/node_modules/d",
-        },
-      },
-    },
-    "b" => Node {
-      "name": "b",
-      "location": "node_modules/b",
-      "realpath": "optofdev/node_modules/b",
-      "top": "optofdev",
-      "dev": true,
-      "optional": true,
-      "edgesIn": Set {
-        Edge {
-          "name": "b",
-          "type": "optional",
-          "spec": "",
-          "from": "optofdev/node_modules/a",
-        },
-      },
-      "edgesOut": Map {
-        "c" => Edge {
-          "name": "c",
-          "type": "prod",
-          "spec": "",
-          "to": "optofdev/node_modules/c",
         },
       },
     },
@@ -2744,6 +4466,30 @@ Node {
         },
       },
     },
+    "b" => Node {
+      "name": "b",
+      "location": "node_modules/b",
+      "realpath": "optofdev/node_modules/b",
+      "top": "optofdev",
+      "dev": true,
+      "optional": true,
+      "edgesIn": Set {
+        Edge {
+          "name": "b",
+          "type": "optional",
+          "spec": "",
+          "from": "optofdev/node_modules/a",
+        },
+      },
+      "edgesOut": Map {
+        "c" => Edge {
+          "name": "c",
+          "type": "prod",
+          "spec": "",
+          "to": "optofdev/node_modules/c",
+        },
+      },
+    },
     "e" => Node {
       "name": "e",
       "location": "node_modules/e",
@@ -2765,6 +4511,87 @@ Node {
         },
       },
     },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "optofdev",
+        "devDependencies": Object {
+          "a": "",
+        },
+      },
+      "node_modules/a": Object {
+        "name": "a",
+        "dependencies": Object {
+          "d": "",
+          "b": "",
+        },
+        "optionalDependencies": Object {
+          "b": "",
+        },
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "dependencies": Object {
+          "e": "",
+        },
+      },
+      "node_modules/d": Object {
+        "name": "d",
+        "dependencies": Object {
+          "e": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "dependencies": Object {
+          "c": "",
+        },
+      },
+      "node_modules/e": Object {
+        "name": "e",
+      },
+    },
+    "dependencies": Object {
+      "a": Object {
+        "devOptional": true,
+        "dev": true,
+        "requires": Object {
+          "b": "",
+          "d": "",
+        },
+      },
+      "c": Object {
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "e": "",
+        },
+      },
+      "d": Object {
+        "devOptional": true,
+        "dev": true,
+        "requires": Object {
+          "e": "",
+        },
+      },
+      "b": Object {
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "c": "",
+        },
+      },
+      "e": Object {
+        "devOptional": true,
+        "dev": true,
+      },
+    },
+    "name": "optofdev",
   },
 }
 `
@@ -2794,6 +4621,164 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {},
+      "node_modules/glob": Object {
+        "resolved": "../../../root/node_modules/@scope/x/node_modules/glob",
+        "link": true,
+      },
+      "../root/node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+          "@scope/y": "",
+        },
+        "peerDependencies": Object {
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/y": "",
+        },
+      },
+      "../root/node_modules/@scope/x/node_modules/glob": Object {
+        "name": "glob",
+        "version": "4.0.5",
+        "dependencies": Object {
+          "graceful-fs": "",
+          "inherits": "",
+          "minimatch": "",
+          "once": "",
+        },
+      },
+      "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "../root/node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
+      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "sigmund": "",
+          "lru-cache": "",
+          "once": "",
+        },
+      },
+      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "name": "sigmund",
+        "version": "1.0.0",
+      },
+    },
+    "dependencies": Object {
+      "glob": Object {
+        "version": "file:../root/node_modules/@scope/x/node_modules/glob",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "../root": Object {
+        "dependencies": Object {
+          "@scope/x": Object {
+            "version": "1.2.3",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+            "requires": Object {
+              "@scope/y": "",
+              "glob": "4",
+              "express": "420.69.0-nice",
+              "@scope/x": "",
+            },
+            "dependencies": Object {
+              "glob": Object {
+                "version": "4.0.5",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+                "requires": Object {
+                  "graceful-fs": "",
+                  "inherits": "",
+                  "minimatch": "",
+                  "once": "",
+                },
+                "dependencies": Object {
+                  "graceful-fs": Object {
+                    "version": "3.0.2",
+                    "extraneous": true,
+                    "devOptional": true,
+                    "dev": true,
+                    "optional": true,
+                  },
+                  "inherits": Object {
+                    "version": "2.0.1",
+                    "extraneous": true,
+                    "devOptional": true,
+                    "dev": true,
+                    "optional": true,
+                  },
+                  "once": Object {
+                    "version": "1.3.0",
+                    "extraneous": true,
+                    "devOptional": true,
+                    "dev": true,
+                    "optional": true,
+                  },
+                  "minimatch": Object {
+                    "version": "1.0.0",
+                    "extraneous": true,
+                    "devOptional": true,
+                    "dev": true,
+                    "optional": true,
+                    "requires": Object {
+                      "sigmund": "",
+                      "lru-cache": "",
+                      "once": "",
+                    },
+                    "dependencies": Object {
+                      "lru-cache": Object {
+                        "version": "2.5.0",
+                        "extraneous": true,
+                        "devOptional": true,
+                        "dev": true,
+                        "optional": true,
+                      },
+                      "sigmund": Object {
+                        "version": "1.0.0",
+                        "extraneous": true,
+                        "devOptional": true,
+                        "dev": true,
+                        "optional": true,
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+    "name": "other",
+  },
 }
 `
 
@@ -2804,38 +4789,20 @@ Node {
   "realpath": "pnpm",
   "top": "pnpm",
   "edgesOut": Map {
-    "@scope/x" => Edge {
-      "name": "@scope/x",
-      "type": "prod",
-      "spec": "",
-      "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-    },
     "a" => Edge {
       "name": "a",
       "type": "prod",
       "spec": "",
       "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
     },
+    "@scope/x" => Edge {
+      "name": "@scope/x",
+      "type": "prod",
+      "spec": "",
+      "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+    },
   },
   "children": Map {
-    "@scope/x" => Link {
-      "name": "@scope/x",
-      "location": "node_modules/@scope/x",
-      "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-      "top": "pnpm",
-      "target": Object {
-        "name": "@scope/x",
-        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "@scope/x",
-          "type": "prod",
-          "spec": "",
-          "from": "pnpm",
-        },
-      },
-    },
     "a" => Link {
       "name": "a",
       "location": "node_modules/a",
@@ -2854,6 +4821,215 @@ Node {
         },
       },
     },
+    "@scope/x" => Link {
+      "name": "@scope/x",
+      "location": "node_modules/@scope/x",
+      "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      "top": "pnpm",
+      "target": Object {
+        "name": "@scope/x",
+        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "@scope/x",
+          "type": "prod",
+          "spec": "",
+          "from": "pnpm",
+        },
+      },
+    },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "pnpm-root",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "a": "",
+          "@scope/x": "",
+        },
+      },
+      "node_modules/a": Object {
+        "resolved": "../.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+        "link": true,
+      },
+      "node_modules/@scope/x": Object {
+        "resolved": "../../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a": Object {
+        "name": "a",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "b": "",
+          "c": "",
+        },
+      },
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "a": "",
+          "b": "",
+          "c": "",
+        },
+      },
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a": Object {
+        "resolved": "../../../../../a/1.0.0/node_modules/a",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b": Object {
+        "resolved": "../../../../../b/1.0.0/node_modules/b",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b": Object {
+        "resolved": "../../../../b/1.0.0/node_modules/b",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c": Object {
+        "resolved": "../../../../../c/1.0.0/node_modules/c",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c": Object {
+        "resolved": "../../../../c/1.0.0/node_modules/c",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b": Object {
+        "name": "b",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "c": "",
+        },
+      },
+      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c": Object {
+        "name": "c",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "@scope/x": "",
+        },
+      },
+      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c": Object {
+        "resolved": "../../../../c/1.0.0/node_modules/c",
+        "link": true,
+      },
+      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x": Object {
+        "resolved": "../../../../../@scope/x/1.0.0/node_modules/@scope/x",
+        "link": true,
+      },
+    },
+    "dependencies": Object {
+      "a": Object {
+        "version": "file:node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+      },
+      "@scope/x": Object {
+        "version": "file:node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      },
+      ".pnpm/registry.npmjs.org/a/1.0.0": Object {
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "dependencies": Object {
+          "a": Object {
+            "version": "1.0.0",
+            "requires": Object {
+              "b": "",
+              "c": "",
+            },
+          },
+          "b": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+          },
+          "c": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          },
+        },
+      },
+      ".pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "dependencies": Object {
+          "@scope/x": Object {
+            "version": "1.0.0",
+            "requires": Object {
+              "a": "",
+              "b": "",
+              "c": "",
+            },
+          },
+          "a": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+          },
+          "b": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+          },
+          "c": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          },
+        },
+      },
+      ".pnpm/registry.npmjs.org/b/1.0.0": Object {
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "dependencies": Object {
+          "b": Object {
+            "version": "1.0.0",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+            "requires": Object {
+              "c": "",
+            },
+          },
+          "c": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+          },
+        },
+      },
+      ".pnpm/registry.npmjs.org/c/1.0.0": Object {
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "dependencies": Object {
+          "c": Object {
+            "version": "1.0.0",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+            "requires": Object {
+              "@scope/x": "",
+            },
+          },
+          "@scope/x": Object {
+            "version": "file:node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+          },
+        },
+      },
+    },
+    "name": "pnpm",
+    "version": "npm:pnpm-root@1.0.0",
   },
 }
 `
@@ -2865,6 +5041,12 @@ Node {
   "realpath": "root",
   "top": "root",
   "edgesOut": Map {
+    "notinstalledhere" => Edge {
+      "name": "notinstalledhere",
+      "type": "optional",
+      "spec": "",
+      "to": null,
+    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -2883,14 +5065,59 @@ Node {
       "spec": "*",
       "to": "root/node_modules/foo",
     },
-    "notinstalledhere" => Edge {
-      "name": "notinstalledhere",
-      "type": "optional",
-      "spec": "",
-      "to": null,
-    },
   },
   "children": Map {
+    "foo" => Node {
+      "name": "foo",
+      "location": "node_modules/foo",
+      "realpath": "root/node_modules/foo",
+      "top": "root",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "dev",
+          "spec": "*",
+          "from": "root",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "99.x",
+          "from": "root/node_modules/@scope/y",
+          "error": "INVALID",
+        },
+      },
+      "edgesOut": Map {
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "optional",
+          "spec": "",
+          "to": "root/node_modules/@scope/x",
+        },
+        "express" => Edge {
+          "name": "express",
+          "type": "prod",
+          "spec": "npm:abbrev@*",
+          "to": "root/node_modules/foo/node_modules/express",
+        },
+      },
+      "children": Map {
+        "express" => Node {
+          "name": "express",
+          "location": "node_modules/foo/node_modules/express",
+          "realpath": "root/node_modules/foo/node_modules/express",
+          "top": "root",
+          "edgesIn": Set {
+            Edge {
+              "name": "express",
+              "type": "prod",
+              "spec": "npm:abbrev@*",
+              "from": "root/node_modules/foo",
+            },
+          },
+        },
+      },
+    },
     "@scope/x" => Node {
       "name": "@scope/x",
       "location": "node_modules/@scope/x",
@@ -2905,29 +5132,29 @@ Node {
         },
         Edge {
           "name": "@scope/x",
-          "type": "peer",
-          "spec": "",
-          "from": "root/node_modules/@scope/x",
-        },
-        Edge {
-          "name": "@scope/x",
           "type": "optional",
           "spec": "",
           "from": "root/node_modules/foo",
         },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
+        Edge {
           "name": "@scope/x",
           "type": "peer",
           "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "from": "root/node_modules/@scope/x",
         },
+      },
+      "edgesOut": Map {
         "@scope/y" => Edge {
           "name": "@scope/y",
           "type": "optional",
           "spec": "",
           "to": "root/node_modules/@scope/y",
+        },
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "root/node_modules/@scope/x/node_modules/glob",
         },
         "express" => Edge {
           "name": "express",
@@ -2936,11 +5163,11 @@ Node {
           "to": null,
           "error": "MISSING",
         },
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "root/node_modules/@scope/x/node_modules/glob",
+        "@scope/x" => Edge {
+          "name": "@scope/x",
+          "type": "peer",
+          "spec": "",
+          "to": "root/node_modules/@scope/x",
         },
       },
       "children": Map {
@@ -3026,6 +5253,12 @@ Node {
                 },
               },
               "edgesOut": Map {
+                "sigmund" => Edge {
+                  "name": "sigmund",
+                  "type": "prod",
+                  "spec": "",
+                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                },
                 "lru-cache" => Edge {
                   "name": "lru-cache",
                   "type": "prod",
@@ -3037,12 +5270,6 @@ Node {
                   "type": "prod",
                   "spec": "",
                   "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
-                },
-                "sigmund" => Edge {
-                  "name": "sigmund",
-                  "type": "prod",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                 },
               },
               "children": Map {
@@ -3129,57 +5356,178 @@ Node {
         },
       },
     },
-    "foo" => Node {
-      "name": "foo",
-      "location": "node_modules/foo",
-      "realpath": "root/node_modules/foo",
-      "top": "root",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "dev",
-          "spec": "*",
-          "from": "root",
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "root",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "@scope/x": "1",
+          "notinstalledhere": "",
         },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "99.x",
-          "from": "root/node_modules/@scope/y",
-          "error": "INVALID",
+        "peerDependencies": Object {
+          "@scope/y": ">0.99.0",
         },
-      },
-      "edgesOut": Map {
-        "@scope/x" => Edge {
-          "name": "@scope/x",
-          "type": "optional",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+        "optionalDependencies": Object {
+          "notinstalledhere": "",
         },
-        "express" => Edge {
-          "name": "express",
-          "type": "prod",
-          "spec": "npm:abbrev@*",
-          "to": "root/node_modules/foo/node_modules/express",
+        "devDependencies": Object {
+          "foo": "*",
         },
       },
-      "children": Map {
-        "express" => Node {
-          "name": "express",
-          "location": "node_modules/foo/node_modules/express",
-          "realpath": "root/node_modules/foo/node_modules/express",
-          "top": "root",
-          "edgesIn": Set {
-            Edge {
-              "name": "express",
-              "type": "prod",
-              "spec": "npm:abbrev@*",
-              "from": "root/node_modules/foo",
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "express": "npm:abbrev@*",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/x": "",
+        },
+      },
+      "node_modules/@scope/x": Object {
+        "name": "@scope/x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+          "@scope/y": "",
+        },
+        "peerDependencies": Object {
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "optionalDependencies": Object {
+          "@scope/y": "",
+        },
+      },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "99.x",
+        },
+      },
+      "node_modules/foo/node_modules/express": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      },
+      "node_modules/@scope/x/node_modules/glob": Object {
+        "name": "glob",
+        "version": "4.0.5",
+        "dependencies": Object {
+          "graceful-fs": "",
+          "inherits": "",
+          "minimatch": "",
+          "once": "",
+        },
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "1.0.0",
+        "dependencies": Object {
+          "sigmund": "",
+          "lru-cache": "",
+          "once": "",
+        },
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "name": "sigmund",
+        "version": "1.0.0",
+      },
+    },
+    "dependencies": Object {
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/x": "",
+          "express": "npm:abbrev@*",
+        },
+        "dependencies": Object {
+          "express": Object {
+            "version": "npm:abbrev@1.1.1",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+          },
+        },
+      },
+      "@scope/x": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "@scope/y": "",
+          "glob": "4",
+          "express": "420.69.0-nice",
+          "@scope/x": "",
+        },
+        "dependencies": Object {
+          "glob": Object {
+            "version": "4.0.5",
+            "requires": Object {
+              "graceful-fs": "",
+              "inherits": "",
+              "minimatch": "",
+              "once": "",
+            },
+            "dependencies": Object {
+              "graceful-fs": Object {
+                "version": "3.0.2",
+              },
+              "inherits": Object {
+                "version": "2.0.1",
+              },
+              "minimatch": Object {
+                "version": "1.0.0",
+                "requires": Object {
+                  "sigmund": "",
+                  "lru-cache": "",
+                  "once": "",
+                },
+                "dependencies": Object {
+                  "lru-cache": Object {
+                    "version": "2.5.0",
+                  },
+                  "sigmund": Object {
+                    "version": "1.0.0",
+                  },
+                },
+              },
+              "once": Object {
+                "version": "1.3.0",
+              },
             },
           },
         },
       },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "99.x",
+        },
+      },
     },
+    "name": "root",
+    "version": "1.2.3",
   },
 }
 `
@@ -3191,6 +5539,12 @@ Node {
   "realpath": "selflink",
   "top": "selflink",
   "edgesOut": Map {
+    "foo" => Edge {
+      "name": "foo",
+      "type": "prod",
+      "spec": "",
+      "to": "selflink/node_modules/foo",
+    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -3204,14 +5558,106 @@ Node {
       "spec": "",
       "to": "selflink/node_modules/@scope/y",
     },
-    "foo" => Edge {
-      "name": "foo",
-      "type": "prod",
-      "spec": "",
-      "to": "selflink/node_modules/foo",
-    },
   },
   "children": Map {
+    "foo" => Node {
+      "name": "foo",
+      "location": "node_modules/foo",
+      "realpath": "selflink/node_modules/foo",
+      "top": "selflink",
+      "edgesIn": Set {
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "",
+          "from": "selflink",
+        },
+        Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "*",
+          "from": "selflink/node_modules/@scope/y",
+        },
+      },
+      "edgesOut": Map {
+        "selflink" => Edge {
+          "name": "selflink",
+          "type": "prod",
+          "spec": "*",
+          "to": "selflink",
+        },
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "selflink/node_modules/foo/node_modules/glob",
+        },
+      },
+      "children": Map {
+        "glob" => Node {
+          "name": "glob",
+          "location": "node_modules/foo/node_modules/glob",
+          "realpath": "selflink/node_modules/foo/node_modules/glob",
+          "top": "selflink",
+          "edgesIn": Set {
+            Edge {
+              "name": "glob",
+              "type": "prod",
+              "spec": "4",
+              "from": "selflink/node_modules/foo",
+            },
+          },
+          "children": Map {
+            "graceful-fs" => Node {
+              "name": "graceful-fs",
+              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+              "top": "selflink",
+              "extraneous": true,
+            },
+            "inherits" => Node {
+              "name": "inherits",
+              "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
+              "top": "selflink",
+              "extraneous": true,
+            },
+            "minimatch" => Node {
+              "name": "minimatch",
+              "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
+              "top": "selflink",
+              "extraneous": true,
+            },
+            "once" => Node {
+              "name": "once",
+              "location": "node_modules/foo/node_modules/glob/node_modules/once",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
+              "top": "selflink",
+              "extraneous": true,
+            },
+          },
+        },
+        "selflink" => Link {
+          "name": "selflink",
+          "location": "node_modules/foo/node_modules/selflink",
+          "realpath": "selflink",
+          "top": "selflink",
+          "target": Object {
+            "name": "selflink",
+            "parent": undefined,
+          },
+          "edgesIn": Set {
+            Edge {
+              "name": "selflink",
+              "type": "prod",
+              "spec": "*",
+              "from": "selflink/node_modules/foo",
+            },
+          },
+        },
+      },
+    },
     "@scope/y" => Node {
       "name": "@scope/y",
       "location": "node_modules/@scope/y",
@@ -3270,120 +5716,145 @@ Node {
         },
       },
     },
-    "foo" => Node {
-      "name": "foo",
-      "location": "node_modules/foo",
-      "realpath": "selflink/node_modules/foo",
-      "top": "selflink",
-      "edgesIn": Set {
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "",
-          "from": "selflink",
-        },
-        Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "*",
-          "from": "selflink/node_modules/@scope/y",
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "selflink",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "",
+          "@scope/x": "",
+          "@scope/y": "",
         },
       },
-      "edgesOut": Map {
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "selflink/node_modules/foo/node_modules/glob",
-        },
-        "selflink" => Edge {
-          "name": "selflink",
-          "type": "prod",
-          "spec": "*",
-          "to": "selflink",
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "selflink": "*",
+          "glob": "4",
         },
       },
-      "children": Map {
-        "glob" => Node {
-          "name": "glob",
-          "location": "node_modules/foo/node_modules/glob",
-          "realpath": "selflink/node_modules/foo/node_modules/glob",
-          "top": "selflink",
-          "edgesIn": Set {
-            Edge {
-              "name": "glob",
-              "type": "prod",
-              "spec": "4",
-              "from": "selflink/node_modules/foo",
-            },
-          },
-          "children": Map {
-            "graceful-fs" => Node {
-              "name": "graceful-fs",
-              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "top": "selflink",
-              "extraneous": true,
-            },
-            "inherits" => Node {
-              "name": "inherits",
-              "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
-              "top": "selflink",
-              "extraneous": true,
-            },
-            "minimatch" => Node {
-              "name": "minimatch",
-              "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
-              "top": "selflink",
-              "extraneous": true,
-              "children": Map {
-                "lru-cache" => Node {
-                  "name": "lru-cache",
-                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "top": "selflink",
-                  "extraneous": true,
-                },
-                "sigmund" => Node {
-                  "name": "sigmund",
-                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "top": "selflink",
-                  "extraneous": true,
-                },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "*",
+        },
+      },
+      "node_modules/@scope/z": Object {
+        "name": "@scope/z",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+        },
+      },
+      "node_modules/foo/node_modules/glob": Object {
+        "name": "glob",
+        "version": "4.0.5",
+      },
+      "node_modules/@scope/z/node_modules/glob": Object {
+        "resolved": "../../../../foo/node_modules/glob",
+        "link": true,
+      },
+      "node_modules/foo/node_modules/selflink": Object {
+        "resolved": "../../../..",
+        "link": true,
+      },
+      "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "1.0.0",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
+    },
+    "dependencies": Object {
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "selflink": "*",
+          "glob": "4",
+        },
+        "dependencies": Object {
+          "glob": Object {
+            "version": "4.0.5",
+            "dependencies": Object {
+              "graceful-fs": Object {
+                "version": "3.0.2",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
+              "inherits": Object {
+                "version": "2.0.1",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
+              "minimatch": Object {
+                "version": "1.0.0",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
+              "once": Object {
+                "version": "1.3.0",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
               },
             },
-            "once" => Node {
-              "name": "once",
-              "location": "node_modules/foo/node_modules/glob/node_modules/once",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
-              "top": "selflink",
-              "extraneous": true,
-            },
+          },
+          "selflink": Object {
+            "version": "file:",
           },
         },
-        "selflink" => Link {
-          "name": "selflink",
-          "location": "node_modules/foo/node_modules/selflink",
-          "realpath": "selflink",
-          "top": "selflink",
-          "target": Object {
-            "name": "selflink",
-            "parent": undefined,
-          },
-          "edgesIn": Set {
-            Edge {
-              "name": "selflink",
-              "type": "prod",
-              "spec": "*",
-              "from": "selflink/node_modules/foo",
-            },
+      },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "*",
+        },
+      },
+      "@scope/z": Object {
+        "version": "1.2.3",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "glob": "4",
+        },
+        "dependencies": Object {
+          "glob": Object {
+            "version": "file:node_modules/foo/node_modules/glob",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
           },
         },
       },
     },
+    "name": "selflink",
+    "version": "1.2.3",
   },
 }
 `
@@ -3395,6 +5866,12 @@ Node {
   "realpath": "selflink",
   "top": "selflink",
   "edgesOut": Map {
+    "foo" => Edge {
+      "name": "foo",
+      "type": "prod",
+      "spec": "",
+      "to": "selflink/node_modules/foo",
+    },
     "@scope/x" => Edge {
       "name": "@scope/x",
       "type": "prod",
@@ -3408,36 +5885,8 @@ Node {
       "spec": "",
       "to": "selflink/node_modules/@scope/y",
     },
-    "foo" => Edge {
-      "name": "foo",
-      "type": "prod",
-      "spec": "",
-      "to": "selflink/node_modules/foo",
-    },
   },
   "children": Map {
-    "@scope/y" => Node {
-      "name": "@scope/y",
-      "location": "node_modules/@scope/y",
-      "realpath": "selflink/node_modules/@scope/y",
-      "top": "selflink",
-      "edgesIn": Set {
-        Edge {
-          "name": "@scope/y",
-          "type": "prod",
-          "spec": "",
-          "from": "selflink",
-        },
-      },
-      "edgesOut": Map {
-        "foo" => Edge {
-          "name": "foo",
-          "type": "prod",
-          "spec": "*",
-          "to": "selflink/node_modules/foo",
-        },
-      },
-    },
     "@scope/z" => Node {
       "name": "@scope/z",
       "location": "node_modules/@scope/z",
@@ -3494,20 +5943,38 @@ Node {
         },
       },
       "edgesOut": Map {
-        "glob" => Edge {
-          "name": "glob",
-          "type": "prod",
-          "spec": "4",
-          "to": "selflink/node_modules/foo/node_modules/glob",
-        },
         "selflink" => Edge {
           "name": "selflink",
           "type": "prod",
           "spec": "*",
           "to": "selflink",
         },
+        "glob" => Edge {
+          "name": "glob",
+          "type": "prod",
+          "spec": "4",
+          "to": "selflink/node_modules/foo/node_modules/glob",
+        },
       },
       "children": Map {
+        "selflink" => Link {
+          "name": "selflink",
+          "location": "node_modules/foo/node_modules/selflink",
+          "realpath": "selflink",
+          "top": "selflink",
+          "target": Object {
+            "name": "selflink",
+            "parent": undefined,
+          },
+          "edgesIn": Set {
+            Edge {
+              "name": "selflink",
+              "type": "prod",
+              "spec": "*",
+              "from": "selflink/node_modules/foo",
+            },
+          },
+        },
         "glob" => Node {
           "name": "glob",
           "location": "node_modules/foo/node_modules/glob",
@@ -3522,17 +5989,17 @@ Node {
             },
           },
           "children": Map {
-            "graceful-fs" => Node {
-              "name": "graceful-fs",
-              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "top": "selflink",
-              "extraneous": true,
-            },
             "inherits" => Node {
               "name": "inherits",
               "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
               "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
+              "top": "selflink",
+              "extraneous": true,
+            },
+            "graceful-fs" => Node {
+              "name": "graceful-fs",
+              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
               "top": "selflink",
               "extraneous": true,
             },
@@ -3552,26 +6019,169 @@ Node {
             },
           },
         },
-        "selflink" => Link {
-          "name": "selflink",
-          "location": "node_modules/foo/node_modules/selflink",
-          "realpath": "selflink",
-          "top": "selflink",
-          "target": Object {
-            "name": "selflink",
-            "parent": undefined,
+      },
+    },
+    "@scope/y" => Node {
+      "name": "@scope/y",
+      "location": "node_modules/@scope/y",
+      "realpath": "selflink/node_modules/@scope/y",
+      "top": "selflink",
+      "edgesIn": Set {
+        Edge {
+          "name": "@scope/y",
+          "type": "prod",
+          "spec": "",
+          "from": "selflink",
+        },
+      },
+      "edgesOut": Map {
+        "foo" => Edge {
+          "name": "foo",
+          "type": "prod",
+          "spec": "*",
+          "to": "selflink/node_modules/foo",
+        },
+      },
+    },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "selflink",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "",
+          "@scope/x": "",
+          "@scope/y": "",
+        },
+      },
+      "node_modules/@scope/z": Object {
+        "name": "@scope/z",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "glob": "4",
+        },
+      },
+      "node_modules/foo": Object {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "selflink": "*",
+          "glob": "4",
+        },
+      },
+      "node_modules/@scope/y": Object {
+        "name": "@scope/y",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "foo": "*",
+        },
+      },
+      "node_modules/@scope/z/node_modules/glob": Object {
+        "resolved": "../../../../foo/node_modules/glob",
+        "link": true,
+      },
+      "node_modules/foo/node_modules/selflink": Object {
+        "resolved": "../../../..",
+        "link": true,
+      },
+      "node_modules/foo/node_modules/glob": Object {
+        "name": "glob",
+        "version": "4.0.5",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
+        "name": "minimatch",
+        "version": "1.0.0",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
+    },
+    "dependencies": Object {
+      "@scope/z": Object {
+        "version": "1.2.3",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "glob": "4",
+        },
+        "dependencies": Object {
+          "glob": Object {
+            "version": "file:node_modules/foo/node_modules/glob",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
           },
-          "edgesIn": Set {
-            Edge {
-              "name": "selflink",
-              "type": "prod",
-              "spec": "*",
-              "from": "selflink/node_modules/foo",
+        },
+      },
+      "foo": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "selflink": "*",
+          "glob": "4",
+        },
+        "dependencies": Object {
+          "selflink": Object {
+            "version": "file:",
+          },
+          "glob": Object {
+            "version": "4.0.5",
+            "dependencies": Object {
+              "inherits": Object {
+                "version": "2.0.1",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
+              "graceful-fs": Object {
+                "version": "3.0.2",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
+              "minimatch": Object {
+                "version": "1.0.0",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
+              "once": Object {
+                "version": "1.3.0",
+                "extraneous": true,
+                "devOptional": true,
+                "dev": true,
+                "optional": true,
+              },
             },
           },
         },
       },
+      "@scope/y": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "foo": "*",
+        },
+      },
     },
+    "name": "selflink",
+    "version": "1.2.3",
   },
 }
 `
@@ -3583,17 +6193,6 @@ Node {
   "realpath": "symlinked-node-modules/example",
   "top": "symlinked-node-modules/example",
   "children": Map {
-    "bar" => Link {
-      "name": "bar",
-      "location": "node_modules/bar",
-      "realpath": "symlinked-node-modules/bar",
-      "top": "symlinked-node-modules/example",
-      "extraneous": true,
-      "target": Object {
-        "name": "bar",
-        "parent": null,
-      },
-    },
     "foo" => Link {
       "name": "foo",
       "location": "node_modules/foo",
@@ -3605,6 +6204,75 @@ Node {
         "parent": null,
       },
     },
+    "bar" => Link {
+      "name": "bar",
+      "location": "node_modules/bar",
+      "realpath": "symlinked-node-modules/bar",
+      "top": "symlinked-node-modules/example",
+      "extraneous": true,
+      "target": Object {
+        "name": "bar",
+        "parent": null,
+      },
+    },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "example",
+        "version": "1.0.0",
+      },
+      "node_modules/foo": Object {
+        "resolved": "../../../linked-node-modules/foo",
+        "link": true,
+      },
+      "../linked-node-modules/foo": Object {
+        "name": "foo",
+        "version": "1.0.0",
+      },
+      "node_modules/bar": Object {
+        "resolved": "../../../bar",
+        "link": true,
+      },
+      "../bar": Object {
+        "name": "bar",
+        "version": "1.0.0",
+      },
+    },
+    "dependencies": Object {
+      "foo": Object {
+        "version": "file:../linked-node-modules/foo",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "../linked-node-modules/foo": Object {
+        "version": "1.0.0",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "bar": Object {
+        "version": "file:../bar",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "../bar": Object {
+        "version": "1.0.0",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+    },
+    "name": "example",
+    "version": "1.0.0",
   },
 }
 `
@@ -3636,24 +6304,6 @@ Node {
     },
   },
   "children": Map {
-    "a" => Link {
-      "name": "a",
-      "location": "node_modules/a",
-      "realpath": "workspace/packages/a",
-      "top": "workspace",
-      "target": Object {
-        "name": "a",
-        "parent": null,
-      },
-      "edgesIn": Set {
-        Edge {
-          "name": "a",
-          "type": "prod",
-          "spec": "",
-          "from": "workspace",
-        },
-      },
-    },
     "b" => Link {
       "name": "b",
       "location": "node_modules/b",
@@ -3666,6 +6316,24 @@ Node {
       "edgesIn": Set {
         Edge {
           "name": "b",
+          "type": "prod",
+          "spec": "",
+          "from": "workspace",
+        },
+      },
+    },
+    "a" => Link {
+      "name": "a",
+      "location": "node_modules/a",
+      "realpath": "workspace/packages/a",
+      "top": "workspace",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+      "edgesIn": Set {
+        Edge {
+          "name": "a",
           "type": "prod",
           "spec": "",
           "from": "workspace",
@@ -3690,6 +6358,131 @@ Node {
         },
       },
     },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "workspace",
+        "dependencies": Object {
+          "a": "",
+          "b": "",
+          "c": "",
+        },
+      },
+      "node_modules/b": Object {
+        "resolved": "../../packages/b",
+        "link": true,
+      },
+      "packages/b": Object {
+        "name": "b",
+        "dependencies": Object {
+          "a": "",
+          "c": "",
+        },
+      },
+      "node_modules/a": Object {
+        "resolved": "../../packages/a",
+        "link": true,
+      },
+      "packages/a": Object {
+        "name": "a",
+        "dependencies": Object {
+          "b": "",
+          "c": "",
+        },
+      },
+      "node_modules/c": Object {
+        "resolved": "../../packages/c",
+        "link": true,
+      },
+      "packages/c": Object {
+        "name": "c",
+        "dependencies": Object {
+          "a": "",
+          "b": "",
+        },
+      },
+      "packages/b/node_modules/a": Object {
+        "resolved": "../../../a",
+        "link": true,
+      },
+      "packages/b/node_modules/c": Object {
+        "resolved": "../../../c",
+        "link": true,
+      },
+      "packages/a/node_modules/b": Object {
+        "resolved": "../../../b",
+        "link": true,
+      },
+      "packages/a/node_modules/c": Object {
+        "resolved": "../../../c",
+        "link": true,
+      },
+      "packages/c/node_modules/a": Object {
+        "resolved": "../../../a",
+        "link": true,
+      },
+      "packages/c/node_modules/b": Object {
+        "resolved": "../../../b",
+        "link": true,
+      },
+    },
+    "dependencies": Object {
+      "b": Object {
+        "version": "file:packages/b",
+      },
+      "packages/b": Object {
+        "requires": Object {
+          "a": "",
+          "c": "",
+        },
+        "dependencies": Object {
+          "a": Object {
+            "version": "file:packages/a",
+          },
+          "c": Object {
+            "version": "file:packages/c",
+          },
+        },
+      },
+      "a": Object {
+        "version": "file:packages/a",
+      },
+      "packages/a": Object {
+        "requires": Object {
+          "b": "",
+          "c": "",
+        },
+        "dependencies": Object {
+          "b": Object {
+            "version": "file:packages/b",
+          },
+          "c": Object {
+            "version": "file:packages/c",
+          },
+        },
+      },
+      "c": Object {
+        "version": "file:packages/c",
+      },
+      "packages/c": Object {
+        "requires": Object {
+          "a": "",
+          "b": "",
+        },
+        "dependencies": Object {
+          "a": Object {
+            "version": "file:packages/a",
+          },
+          "b": Object {
+            "version": "file:packages/b",
+          },
+        },
+      },
+    },
+    "name": "workspace",
   },
 }
 `
@@ -3840,6 +6633,96 @@ Node {
       },
     },
   },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+          "c": "",
+        },
+      },
+      "node_modules/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+        },
+      },
+      "node_modules/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "d": "",
+          "x": "",
+        },
+      },
+      "node_modules/b/node_modules/d": Object {
+        "name": "d",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+      "node_modules/c/node_modules/d": Object {
+        "resolved": "../../../b/node_modules/d",
+        "link": true,
+      },
+      "node_modules/c/node_modules/x": Object {
+        "resolved": "../../../../x",
+        "link": true,
+      },
+      "x": Object {
+        "name": "x",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+        },
+      },
+    },
+    "dependencies": Object {
+      "b": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "d": "",
+        },
+        "dependencies": Object {
+          "d": Object {
+            "version": "1.2.3",
+            "requires": Object {
+              "b": "",
+            },
+          },
+        },
+      },
+      "c": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "d": "",
+          "x": "",
+        },
+        "dependencies": Object {
+          "d": Object {
+            "version": "file:node_modules/b/node_modules/d",
+          },
+          "x": Object {
+            "version": "file:x",
+          },
+        },
+      },
+      "x": Object {
+        "version": "1.2.3",
+        "requires": Object {
+          "b": "",
+        },
+      },
+    },
+    "name": "workspace2",
+    "version": "npm:a@1.2.3",
+  },
 }
 `
 
@@ -3850,6 +6733,17 @@ Node {
   "realpath": "workspace3",
   "top": "workspace3",
   "children": Map {
+    "app" => Link {
+      "name": "app",
+      "location": "node_modules/app",
+      "realpath": "workspace3/app",
+      "top": "workspace3",
+      "extraneous": true,
+      "target": Object {
+        "name": "app",
+        "parent": null,
+      },
+    },
     "a" => Link {
       "name": "a",
       "location": "node_modules/a",
@@ -3879,17 +6773,6 @@ Node {
           "spec": "",
           "from": "workspace3/packages/c",
         },
-      },
-    },
-    "app" => Link {
-      "name": "app",
-      "location": "node_modules/app",
-      "realpath": "workspace3/app",
-      "top": "workspace3",
-      "extraneous": true,
-      "target": Object {
-        "name": "app",
-        "parent": null,
       },
     },
     "b" => Link {
@@ -3954,6 +6837,193 @@ Node {
         },
       },
     },
+  },
+  "meta": Object {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": Object {
+      "": Object {
+        "name": "workspace3",
+      },
+      "node_modules/app": Object {
+        "resolved": "../../app",
+        "link": true,
+      },
+      "app": Object {
+        "name": "app",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "a": "",
+          "b": "",
+          "c": "",
+          "i": "",
+        },
+      },
+      "node_modules/a": Object {
+        "resolved": "../../packages/a",
+        "link": true,
+      },
+      "packages/a": Object {
+        "name": "a",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "b": "",
+          "c": "",
+          "x": "",
+        },
+      },
+      "node_modules/b": Object {
+        "resolved": "../../packages/b",
+        "link": true,
+      },
+      "packages/b": Object {
+        "name": "b",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "a": "",
+          "c": "",
+          "y": "",
+        },
+      },
+      "node_modules/c": Object {
+        "resolved": "../../packages/c",
+        "link": true,
+      },
+      "packages/c": Object {
+        "name": "c",
+        "version": "1.2.3",
+        "dependencies": Object {
+          "a": "",
+          "b": "",
+          "z": "",
+        },
+      },
+      "packages/a/node_modules/x": Object {
+        "name": "x",
+        "version": "1.2.3",
+      },
+      "app/node_modules/i": Object {
+        "name": "i",
+        "version": "1.2.3",
+      },
+      "packages/b/node_modules/y": Object {
+        "name": "y",
+        "version": "1.2.3",
+      },
+      "packages/c/node_modules/z": Object {
+        "name": "z",
+        "version": "1.2.3",
+      },
+    },
+    "dependencies": Object {
+      "app": Object {
+        "version": "1.2.3",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "a": "",
+          "b": "",
+          "c": "",
+          "i": "",
+        },
+        "dependencies": Object {
+          "i": Object {
+            "version": "1.2.3",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+          },
+        },
+      },
+      "a": Object {
+        "version": "file:packages/a",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "packages/a": Object {
+        "version": "1.2.3",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "b": "",
+          "c": "",
+          "x": "",
+        },
+        "dependencies": Object {
+          "x": Object {
+            "version": "1.2.3",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+          },
+        },
+      },
+      "b": Object {
+        "version": "file:packages/b",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "packages/b": Object {
+        "version": "1.2.3",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "a": "",
+          "c": "",
+          "y": "",
+        },
+        "dependencies": Object {
+          "y": Object {
+            "version": "1.2.3",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+          },
+        },
+      },
+      "c": Object {
+        "version": "file:packages/c",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+      },
+      "packages/c": Object {
+        "version": "1.2.3",
+        "extraneous": true,
+        "devOptional": true,
+        "dev": true,
+        "optional": true,
+        "requires": Object {
+          "a": "",
+          "b": "",
+          "z": "",
+        },
+        "dependencies": Object {
+          "z": Object {
+            "version": "1.2.3",
+            "extraneous": true,
+            "devOptional": true,
+            "dev": true,
+            "optional": true,
+          },
+        },
+      },
+    },
+    "name": "workspace3",
   },
 }
 `

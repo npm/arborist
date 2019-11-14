@@ -292,10 +292,3 @@ Object {
   "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
 }
 `
-
-exports[`test/shrinkwrap.js TAP write the shrinkwrap back to disk write back with pending changes > committed changes to data 1`] = `
-Object {
-  "name": "newthing",
-  "version": "1.2.3",
-}
-`

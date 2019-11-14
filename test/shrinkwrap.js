@@ -165,14 +165,6 @@ t.test('construct metadata from node and package data', t => {
 
   calcDepFlags(root)
 
-  const addall = node => {
-    meta.add(node)
-    for (const kid of node.children.values()) {
-      addall(kid)
-    }
-  }
-  addall(root)
-
   t.matchSnapshot(meta.get(''), 'root metadata, no package version')
   root.package.version = '1.2.3'
   meta.add(root)
@@ -210,9 +202,15 @@ t.test('write the shrinkwrap back to disk', t => {
         },
       })
       s.add(node)
+      const preCommit = JSON.parse(JSON.stringify(s.data))
+      const postCommit = s.commit()
+      t.notSame(postCommit, preCommit, 'committing changes the data')
+      // delete and re-add to put us back in the pre-commit state
+      s.delete(node.location)
+      s.add(node)
       return s.save().then(() => {
         const loc = relative(fixture, node.path).replace(/\\/g, '/')
-        t.matchSnapshot(s.data.packages[loc], 'committed changes to data')
+        t.strictSame(s.data, postCommit, 'committed changes to data')
         t.strictSame(require(s.filename), s.data, 'saved json matches data')
       })
     }))

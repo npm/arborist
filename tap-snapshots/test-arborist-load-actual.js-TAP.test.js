@@ -825,7 +825,6 @@ Node {
     "version": "npm:root@",
     "dependencies": Object {
       "a": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -833,7 +832,6 @@ Node {
         },
       },
       "b": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -841,7 +839,6 @@ Node {
         },
       },
       "c": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -849,7 +846,6 @@ Node {
         },
       },
       "d": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -857,27 +853,23 @@ Node {
         },
       },
       "e": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
       },
       "i": Object {
         "dev": true,
-        "devOptional": true,
         "requires": Object {
           "j": "",
         },
       },
       "j": Object {
         "dev": true,
-        "devOptional": true,
         "requires": Object {
           "k": "",
         },
       },
       "k": Object {
         "dev": true,
-        "devOptional": true,
       },
       "x": Object {
         "requires": Object {
@@ -907,6 +899,7 @@ Node {
       },
       "node_modules/a": Object {
         "name": "a",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "b": "",
@@ -914,6 +907,7 @@ Node {
       },
       "node_modules/b": Object {
         "name": "b",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "c": "",
@@ -921,6 +915,7 @@ Node {
       },
       "node_modules/c": Object {
         "name": "c",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "d": "",
@@ -928,6 +923,7 @@ Node {
       },
       "node_modules/d": Object {
         "name": "d",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "e": "",
@@ -935,21 +931,25 @@ Node {
       },
       "node_modules/e": Object {
         "name": "e",
+        "optional": true,
         "version": "1.2.3",
       },
       "node_modules/i": Object {
+        "dev": true,
         "name": "i",
         "dependencies": Object {
           "j": "",
         },
       },
       "node_modules/j": Object {
+        "dev": true,
         "name": "j",
         "dependencies": Object {
           "k": "",
         },
       },
       "node_modules/k": Object {
+        "dev": true,
         "name": "k",
       },
       "node_modules/x": Object {
@@ -1208,7 +1208,6 @@ Node {
     "dependencies": Object {
       "a": Object {
         "dev": true,
-        "devOptional": true,
         "version": "1.2.3",
         "requires": Object {
           "b": "",
@@ -1242,6 +1241,7 @@ Node {
         },
       },
       "node_modules/a": Object {
+        "dev": true,
         "name": "a",
         "version": "1.2.3",
         "dependencies": Object {
@@ -1856,20 +1856,14 @@ Node {
         },
       },
       "balanced-match": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
         "version": "1.0.0",
       },
       "brace-expansion": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
         "version": "1.1.11",
         "requires": Object {
@@ -1912,20 +1906,14 @@ Node {
         },
       },
       "concat-map": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
         "version": "0.0.1",
       },
       "fs.realpath": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
         "version": "1.0.0",
       },
@@ -1938,20 +1926,14 @@ Node {
         "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "ghtgz": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
-        "optional": true,
         "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "npm:abbrev@1.1.1",
       },
       "glob": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
         "version": "7.1.4",
         "requires": Object {
@@ -1964,11 +1946,8 @@ Node {
         },
       },
       "inflight": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
         "version": "1.0.6",
         "requires": Object {
@@ -1977,20 +1956,14 @@ Node {
         },
       },
       "inherits": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
         "version": "2.0.4",
       },
       "minimatch": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
         "version": "3.0.4",
         "requires": Object {
@@ -2003,22 +1976,16 @@ Node {
         "version": "npm:abbrev@1.0.3",
       },
       "once": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
-        "optional": true,
         "version": "1.4.0",
         "requires": Object {
           "wrappy": "1",
         },
       },
       "path-is-absolute": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
-        "optional": true,
         "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
         "version": "1.0.1",
       },
@@ -2037,11 +2004,8 @@ Node {
         "version": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       },
       "rimraf": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
-        "optional": true,
         "version": "2.6.3",
         "requires": Object {
           "glob": "^7.1.3",
@@ -2059,11 +2023,8 @@ Node {
         "version": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "wrappy": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
         "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
-        "optional": true,
         "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
         "version": "1.0.2",
       },
@@ -2107,12 +2068,14 @@ Node {
         "resolved": "fake resolved value",
       },
       "node_modules/balanced-match": Object {
+        "extraneous": true,
         "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
         "name": "balanced-match",
         "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
         "version": "1.0.0",
       },
       "node_modules/brace-expansion": Object {
+        "extraneous": true,
         "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
         "name": "brace-expansion",
         "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -2162,12 +2125,14 @@ Node {
         "version": "1.2.3",
       },
       "node_modules/concat-map": Object {
+        "extraneous": true,
         "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
         "name": "concat-map",
         "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
         "version": "0.0.1",
       },
       "node_modules/fs.realpath": Object {
+        "extraneous": true,
         "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
         "name": "fs.realpath",
         "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
@@ -2184,12 +2149,14 @@ Node {
         "version": "1.1.1",
       },
       "node_modules/ghtgz": Object {
+        "extraneous": true,
         "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
         "name": "abbrev",
         "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "1.1.1",
       },
       "node_modules/glob": Object {
+        "extraneous": true,
         "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
         "name": "glob",
         "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
@@ -2204,6 +2171,7 @@ Node {
         },
       },
       "node_modules/inflight": Object {
+        "extraneous": true,
         "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
         "name": "inflight",
         "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -2214,12 +2182,14 @@ Node {
         },
       },
       "node_modules/inherits": Object {
+        "extraneous": true,
         "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
         "name": "inherits",
         "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
         "version": "2.0.4",
       },
       "node_modules/minimatch": Object {
+        "extraneous": true,
         "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
         "name": "minimatch",
         "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
@@ -2235,6 +2205,7 @@ Node {
         "version": "1.0.3",
       },
       "node_modules/once": Object {
+        "extraneous": true,
         "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
         "name": "once",
         "resolved": "file:../../../once-1.4.0.tgz",
@@ -2244,6 +2215,7 @@ Node {
         },
       },
       "node_modules/path-is-absolute": Object {
+        "extraneous": true,
         "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
         "name": "path-is-absolute",
         "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
@@ -2268,6 +2240,7 @@ Node {
         "version": "1.1.1",
       },
       "node_modules/rimraf": Object {
+        "extraneous": true,
         "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
         "name": "rimraf",
         "resolved": "file:../../../rimraf-2.6.3.tgz",
@@ -2294,6 +2267,7 @@ Node {
         "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "node_modules/wrappy": Object {
+        "extraneous": true,
         "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
         "name": "wrappy",
         "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
@@ -2709,17 +2683,11 @@ Node {
               "b": Object {
                 "dependencies": Object {
                   "c": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "1.2.3",
                     "dependencies": Object {
                       "d": Object {
-                        "dev": true,
-                        "devOptional": true,
                         "extraneous": true,
-                        "optional": true,
                         "version": "1.2.3",
                         "dependencies": Object {
                           "deep": Object {
@@ -2807,6 +2775,7 @@ Node {
       },
       "node_modules/nest/node_modules/a/node_modules/b": Object {},
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c": Object {
+        "extraneous": true,
         "name": "c",
         "version": "1.2.3",
         "dependencies": Object {
@@ -2814,6 +2783,7 @@ Node {
         },
       },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d": Object {
+        "extraneous": true,
         "name": "d",
         "version": "1.2.3",
         "dependencies": Object {
@@ -3488,7 +3458,6 @@ Node {
     "version": "npm:root@",
     "dependencies": Object {
       "a": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.1.1",
         "requires": Object {
@@ -3496,7 +3465,6 @@ Node {
         },
       },
       "b": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -3537,6 +3505,7 @@ Node {
       },
       "node_modules/a": Object {
         "name": "a",
+        "optional": true,
         "version": "1.1.1",
         "dependencies": Object {
           "b": "",
@@ -3544,12 +3513,14 @@ Node {
       },
       "node_modules/b": Object {
         "name": "b",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "c": "",
         },
       },
       "node_modules/c": Object {
+        "devOptional": true,
         "name": "c",
         "version": "1.2.3",
         "dependencies": Object {
@@ -3557,6 +3528,7 @@ Node {
         },
       },
       "node_modules/d": Object {
+        "devOptional": true,
         "name": "d",
         "version": "1.2.3",
         "dependencies": Object {
@@ -3564,6 +3536,7 @@ Node {
         },
       },
       "node_modules/e": Object {
+        "devOptional": true,
         "name": "e",
         "version": "1.2.3",
       },
@@ -3962,7 +3935,6 @@ Node {
     "version": "npm:root@",
     "dependencies": Object {
       "a": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -3970,7 +3942,6 @@ Node {
         },
       },
       "b": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -3984,7 +3955,6 @@ Node {
       },
       "i": Object {
         "dev": true,
-        "devOptional": true,
         "requires": Object {
           "j": "",
         },
@@ -4008,10 +3978,7 @@ Node {
       },
       "m": Object {},
       "n": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "requires": Object {
           "b": "",
           "j": "",
@@ -4061,6 +4028,7 @@ Node {
       },
       "node_modules/a": Object {
         "name": "a",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "b": "",
@@ -4068,6 +4036,7 @@ Node {
       },
       "node_modules/b": Object {
         "name": "b",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "c": "",
@@ -4075,22 +4044,26 @@ Node {
         },
       },
       "node_modules/c": Object {
+        "devOptional": true,
         "name": "c",
         "version": "1.2.3",
       },
       "node_modules/i": Object {
+        "dev": true,
         "name": "i",
         "dependencies": Object {
           "j": "",
         },
       },
       "node_modules/j": Object {
+        "devOptional": true,
         "name": "j",
         "dependencies": Object {
           "k": "",
         },
       },
       "node_modules/k": Object {
+        "devOptional": true,
         "name": "k",
         "dependencies": Object {
           "c": "",
@@ -4106,6 +4079,7 @@ Node {
         "name": "m",
       },
       "node_modules/n": Object {
+        "extraneous": true,
         "name": "n",
         "dependencies": Object {
           "b": "",
@@ -4168,15 +4142,14 @@ Node {
     "requires": true,
     "dependencies": Object {
       "foo": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
       },
     },
     "packages": Object {
       "": Object {},
-      "node_modules/foo": Object {},
+      "node_modules/foo": Object {
+        "extraneous": true,
+      },
     },
   },
 }
@@ -4309,7 +4282,6 @@ Node {
     "requires": true,
     "dependencies": Object {
       "a": Object {
-        "devOptional": true,
         "optional": true,
         "version": "1.2.3",
         "requires": Object {
@@ -4346,6 +4318,7 @@ Node {
       },
       "node_modules/a": Object {
         "name": "a",
+        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "b": "",
@@ -4519,7 +4492,6 @@ Node {
     "dependencies": Object {
       "a": Object {
         "dev": true,
-        "devOptional": true,
         "requires": Object {
           "b": "",
           "d": "",
@@ -4527,7 +4499,6 @@ Node {
       },
       "b": Object {
         "dev": true,
-        "devOptional": true,
         "optional": true,
         "requires": Object {
           "c": "",
@@ -4535,7 +4506,6 @@ Node {
       },
       "c": Object {
         "dev": true,
-        "devOptional": true,
         "optional": true,
         "requires": Object {
           "e": "",
@@ -4543,14 +4513,12 @@ Node {
       },
       "d": Object {
         "dev": true,
-        "devOptional": true,
         "requires": Object {
           "e": "",
         },
       },
       "e": Object {
         "dev": true,
-        "devOptional": true,
       },
     },
     "packages": Object {
@@ -4561,6 +4529,7 @@ Node {
         },
       },
       "node_modules/a": Object {
+        "dev": true,
         "name": "a",
         "dependencies": Object {
           "b": "",
@@ -4571,24 +4540,30 @@ Node {
         },
       },
       "node_modules/b": Object {
+        "dev": true,
         "name": "b",
+        "optional": true,
         "dependencies": Object {
           "c": "",
         },
       },
       "node_modules/c": Object {
+        "dev": true,
         "name": "c",
+        "optional": true,
         "dependencies": Object {
           "e": "",
         },
       },
       "node_modules/d": Object {
+        "dev": true,
         "name": "d",
         "dependencies": Object {
           "e": "",
         },
       },
       "node_modules/e": Object {
+        "dev": true,
         "name": "e",
       },
     },
@@ -4629,52 +4604,31 @@ Node {
       "../root": Object {
         "dependencies": Object {
           "@scope/x": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "1.2.3",
             "dependencies": Object {
               "glob": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "4.0.5",
                 "dependencies": Object {
                   "graceful-fs": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "3.0.2",
                   },
                   "inherits": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "2.0.1",
                   },
                   "minimatch": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "1.0.0",
                     "dependencies": Object {
                       "lru-cache": Object {
-                        "dev": true,
-                        "devOptional": true,
                         "extraneous": true,
-                        "optional": true,
                         "version": "2.5.0",
                       },
                       "sigmund": Object {
-                        "dev": true,
-                        "devOptional": true,
                         "extraneous": true,
-                        "optional": true,
                         "version": "1.0.0",
                       },
                     },
@@ -4685,10 +4639,7 @@ Node {
                     },
                   },
                   "once": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "1.3.0",
                   },
                 },
@@ -4710,16 +4661,14 @@ Node {
         },
       },
       "glob": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "file:../root/node_modules/@scope/x/node_modules/glob",
       },
     },
     "packages": Object {
       "": Object {},
       "../root/node_modules/@scope/x": Object {
+        "extraneous": true,
         "name": "@scope/x",
         "version": "1.2.3",
         "dependencies": Object {
@@ -4735,6 +4684,7 @@ Node {
         },
       },
       "../root/node_modules/@scope/x/node_modules/glob": Object {
+        "extraneous": true,
         "name": "glob",
         "version": "4.0.5",
         "dependencies": Object {
@@ -4745,14 +4695,17 @@ Node {
         },
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "extraneous": true,
         "name": "graceful-fs",
         "version": "3.0.2",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "extraneous": true,
         "name": "inherits",
         "version": "2.0.1",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "extraneous": true,
         "name": "minimatch",
         "version": "1.0.0",
         "dependencies": Object {
@@ -4762,14 +4715,17 @@ Node {
         },
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "extraneous": true,
         "name": "lru-cache",
         "version": "2.5.0",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "extraneous": true,
         "name": "sigmund",
         "version": "1.0.0",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "extraneous": true,
         "name": "once",
         "version": "1.3.0",
       },
@@ -4847,10 +4803,7 @@ Node {
     "version": "npm:pnpm-root@1.0.0",
     "dependencies": Object {
       ".pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "dependencies": Object {
           "@scope/x": Object {
             "version": "1.0.0",
@@ -4872,10 +4825,7 @@ Node {
         },
       },
       ".pnpm/registry.npmjs.org/a/1.0.0": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "dependencies": Object {
           "a": Object {
             "version": "1.0.0",
@@ -4893,48 +4843,26 @@ Node {
         },
       },
       ".pnpm/registry.npmjs.org/b/1.0.0": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "dependencies": Object {
           "b": Object {
-            "dev": true,
-            "devOptional": true,
-            "extraneous": true,
-            "optional": true,
             "version": "1.0.0",
             "requires": Object {
               "c": "",
             },
           },
           "c": Object {
-            "dev": true,
-            "devOptional": true,
-            "extraneous": true,
-            "optional": true,
             "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
         },
       },
       ".pnpm/registry.npmjs.org/c/1.0.0": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "dependencies": Object {
           "@scope/x": Object {
-            "dev": true,
-            "devOptional": true,
-            "extraneous": true,
-            "optional": true,
             "version": "file:node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
           },
           "c": Object {
-            "dev": true,
-            "devOptional": true,
-            "extraneous": true,
-            "optional": true,
             "version": "1.0.0",
             "requires": Object {
               "@scope/x": "",
@@ -4958,7 +4886,9 @@ Node {
           "a": "",
         },
       },
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {
+        "extraneous": true,
+      },
       "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x": Object {
         "name": "@scope/x",
         "version": "1.0.0",
@@ -4980,7 +4910,9 @@ Node {
         "link": true,
         "resolved": "../../../../../c/1.0.0/node_modules/c",
       },
-      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {
+        "extraneous": true,
+      },
       "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a": Object {
         "name": "a",
         "version": "1.0.0",
@@ -4997,7 +4929,9 @@ Node {
         "link": true,
         "resolved": "../../../../c/1.0.0/node_modules/c",
       },
-      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {
+        "extraneous": true,
+      },
       "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b": Object {
         "name": "b",
         "version": "1.0.0",
@@ -5009,7 +4943,9 @@ Node {
         "link": true,
         "resolved": "../../../../c/1.0.0/node_modules/c",
       },
-      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {},
+      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {
+        "extraneous": true,
+      },
       "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x": Object {
         "link": true,
         "resolved": "../../../../../@scope/x/1.0.0/node_modules/@scope/x",
@@ -5746,17 +5682,11 @@ Node {
         },
       },
       "@scope/z": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "glob": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "file:node_modules/foo/node_modules/glob",
           },
         },
@@ -5771,47 +5701,29 @@ Node {
             "version": "4.0.5",
             "dependencies": Object {
               "graceful-fs": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "3.0.2",
               },
               "inherits": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "2.0.1",
               },
               "minimatch": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "1.0.0",
                 "dependencies": Object {
                   "lru-cache": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "2.5.0",
                   },
                   "sigmund": Object {
-                    "dev": true,
-                    "devOptional": true,
                     "extraneous": true,
-                    "optional": true,
                     "version": "1.0.0",
                   },
                 },
               },
               "once": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "1.3.0",
               },
             },
@@ -5844,6 +5756,7 @@ Node {
         },
       },
       "node_modules/@scope/z": Object {
+        "extraneous": true,
         "name": "@scope/z",
         "version": "1.2.3",
         "dependencies": Object {
@@ -5867,26 +5780,32 @@ Node {
         "version": "4.0.5",
       },
       "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
+        "extraneous": true,
         "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
+        "extraneous": true,
         "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
+        "extraneous": true,
         "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "extraneous": true,
         "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "extraneous": true,
         "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/once": Object {
+        "extraneous": true,
         "name": "once",
         "version": "1.3.0",
       },
@@ -6097,17 +6016,11 @@ Node {
         },
       },
       "@scope/z": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "glob": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "file:node_modules/foo/node_modules/glob",
           },
         },
@@ -6122,31 +6035,19 @@ Node {
             "version": "4.0.5",
             "dependencies": Object {
               "graceful-fs": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "3.0.2",
               },
               "inherits": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "2.0.1",
               },
               "minimatch": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "1.0.0",
               },
               "once": Object {
-                "dev": true,
-                "devOptional": true,
                 "extraneous": true,
-                "optional": true,
                 "version": "1.3.0",
               },
             },
@@ -6179,6 +6080,7 @@ Node {
         },
       },
       "node_modules/@scope/z": Object {
+        "extraneous": true,
         "name": "@scope/z",
         "version": "1.2.3",
         "dependencies": Object {
@@ -6202,18 +6104,22 @@ Node {
         "version": "4.0.5",
       },
       "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
+        "extraneous": true,
         "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
+        "extraneous": true,
         "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
+        "extraneous": true,
         "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/once": Object {
+        "extraneous": true,
         "name": "once",
         "version": "1.3.0",
       },
@@ -6263,31 +6169,19 @@ Node {
     "version": "1.0.0",
     "dependencies": Object {
       "../bar": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.0.0",
       },
       "../linked-node-modules/foo": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.0.0",
       },
       "bar": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "file:../bar",
       },
       "foo": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "file:../linked-node-modules/foo",
       },
     },
@@ -6297,10 +6191,12 @@ Node {
         "version": "1.0.0",
       },
       "../bar": Object {
+        "extraneous": true,
         "name": "bar",
         "version": "1.0.0",
       },
       "../linked-node-modules/foo": Object {
+        "extraneous": true,
         "name": "foo",
         "version": "1.0.0",
       },
@@ -6884,24 +6780,15 @@ Node {
     "requires": true,
     "dependencies": Object {
       "a": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "file:packages/a",
       },
       "app": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "i": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "1.2.3",
           },
         },
@@ -6913,31 +6800,19 @@ Node {
         },
       },
       "b": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "file:packages/b",
       },
       "c": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "file:packages/c",
       },
       "packages/a": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "x": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "1.2.3",
           },
         },
@@ -6948,17 +6823,11 @@ Node {
         },
       },
       "packages/b": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "y": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "1.2.3",
           },
         },
@@ -6969,17 +6838,11 @@ Node {
         },
       },
       "packages/c": Object {
-        "dev": true,
-        "devOptional": true,
         "extraneous": true,
-        "optional": true,
         "version": "1.2.3",
         "dependencies": Object {
           "z": Object {
-            "dev": true,
-            "devOptional": true,
             "extraneous": true,
-            "optional": true,
             "version": "1.2.3",
           },
         },
@@ -6995,6 +6858,7 @@ Node {
         "name": "workspace3",
       },
       "app": Object {
+        "extraneous": true,
         "name": "app",
         "version": "1.2.3",
         "dependencies": Object {
@@ -7005,6 +6869,7 @@ Node {
         },
       },
       "app/node_modules/i": Object {
+        "extraneous": true,
         "name": "i",
         "version": "1.2.3",
       },
@@ -7025,6 +6890,7 @@ Node {
         "resolved": "../../packages/c",
       },
       "packages/a": Object {
+        "extraneous": true,
         "name": "a",
         "version": "1.2.3",
         "dependencies": Object {
@@ -7034,10 +6900,12 @@ Node {
         },
       },
       "packages/a/node_modules/x": Object {
+        "extraneous": true,
         "name": "x",
         "version": "1.2.3",
       },
       "packages/b": Object {
+        "extraneous": true,
         "name": "b",
         "version": "1.2.3",
         "dependencies": Object {
@@ -7047,10 +6915,12 @@ Node {
         },
       },
       "packages/b/node_modules/y": Object {
+        "extraneous": true,
         "name": "y",
         "version": "1.2.3",
       },
       "packages/c": Object {
+        "extraneous": true,
         "name": "c",
         "version": "1.2.3",
         "dependencies": Object {
@@ -7060,6 +6930,7 @@ Node {
         },
       },
       "packages/c/node_modules/z": Object {
+        "extraneous": true,
         "name": "z",
         "version": "1.2.3",
       },

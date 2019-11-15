@@ -7409,6 +7409,7 @@ exports[`test/node.js TAP update metadata when moving between linked top-of-tree
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > metadata from root 1`] = `
 Object {
+  "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
   "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
@@ -7418,6 +7419,7 @@ Object {
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > metadata from top1 1`] = `
 Object {
+  "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
   "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
@@ -7431,6 +7433,7 @@ exports[`test/node.js TAP update metadata when moving between linked top-of-tree
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new top metadata updated 1`] = `
 Object {
+  "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
   "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
@@ -7448,6 +7451,7 @@ Object {}
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > root metadata updated 1`] = `
 Object {
+  "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
   "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",

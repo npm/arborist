@@ -82,26 +82,31 @@ t.test('construct metadata from node and package data', t => {
     dependencies: {},
     packages: {},
   }
+
   const root = new Node({
     pkg: {
       name: 'root',
       dependencies: { a: '', link: '', link2: '' },
-      devDependencies: { d: '', e: 'https://foo.com/e.tgz' },
+      devDependencies: { d: '', e: 'https://foo.com/e.tgz', devit: '' },
+      optionalDependencies: { optin: '' },
     },
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
     meta,
   })
+
   const e = new Node({
     pkg: { name: 'e', version: '1.2.3', dependencies: { tgz: '' } },
     resolved: 'https://foo.com/e.tgz',
     parent: root,
   })
+
   const tgz = new Node({
     pkg: { name: 'tgz', version: '1.2.3' },
     resolved: '/home/user/projects/root/archives/tarball.tgz',
     parent: root,
   })
+
   const link = new Link({
     path: '/home/user/projects/root/node_modules/link',
     realpath: '/home/user/projects/root/target',
@@ -122,6 +127,7 @@ t.test('construct metadata from node and package data', t => {
       },
     }),
   })
+
   const a = new Node({
     resolved: 'https://example.com/a.tgz',
     integrity: 'sha512-helloyesthisisdog',
@@ -131,6 +137,33 @@ t.test('construct metadata from node and package data', t => {
     },
     parent: root,
   })
+
+  const optin = new Node({
+    pkg: {
+      name: 'optin',
+      version: '1.2.3',
+      dependencies: { devo: '' },
+    },
+    parent: root,
+  })
+
+  const devit = new Node({
+    pkg: {
+      name: 'devit',
+      version: '1.2.3',
+      dependencies: { devo: '' },
+    },
+    parent: root,
+  })
+
+  const devo = new Node({
+    pkg: {
+      name: 'devo',
+      version: '1.2.3',
+    },
+    parent: root,
+  })
+
   const d = new Node({
     pkg: {
       name: 'd',
@@ -174,6 +207,10 @@ t.test('construct metadata from node and package data', t => {
   root.package.version = '1.2.3'
   meta.add(root)
   t.matchSnapshot(meta.get(''), 'root metadata, with package version')
+
+  t.matchSnapshot(meta.get(optin.location), 'meta for optional dep')
+  t.matchSnapshot(meta.get(devit.location), 'meta for dev dep')
+  t.matchSnapshot(meta.get(devo.location), 'meta for devOptional dep')
 
   t.matchSnapshot(meta.get(tgz.location), 'metadata for tarball file pkg')
   t.matchSnapshot(meta.get(link.path), 'link metadata')

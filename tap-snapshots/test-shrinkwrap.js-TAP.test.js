@@ -7,6 +7,7 @@
 'use strict'
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > bundled pkg metadata 1`] = `
 Object {
+  "dev": true,
   "inBundle": true,
   "name": "not-bundled-tho",
   "version": "1.2.3",
@@ -25,19 +26,16 @@ Object {
       "dependencies": Object {
         "bundled": Object {
           "dev": true,
-          "devOptional": true,
           "inBundle": true,
           "version": "npm:not-bundled-tho@1.2.3",
         },
         "git-dep": Object {
           "dev": true,
-          "devOptional": true,
           "from": "git-dep@github:foo/bar",
           "version": "git+ssh://git@github.com/foo/bar.git#0000000000000000000000000000000000000000",
         },
       },
       "dev": true,
-      "devOptional": true,
       "requires": Object {
         "bundled": "npm:not-bundled-tho@*",
         "e": "1.2.3",
@@ -45,9 +43,19 @@ Object {
       },
       "version": "1.2.3",
     },
+    "devit": Object {
+      "dev": true,
+      "requires": Object {
+        "devo": "",
+      },
+      "version": "1.2.3",
+    },
+    "devo": Object {
+      "devOptional": true,
+      "version": "1.2.3",
+    },
     "e": Object {
       "dev": true,
-      "devOptional": true,
       "requires": Object {
         "tgz": "",
       },
@@ -57,17 +65,20 @@ Object {
       "version": "file:target",
     },
     "nopkg": Object {
-      "dev": true,
-      "devOptional": true,
       "extraneous": true,
+    },
+    "optin": Object {
       "optional": true,
+      "requires": Object {
+        "devo": "",
+      },
+      "version": "1.2.3",
     },
     "target": Object {
       "version": "github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     },
     "tgz": Object {
       "dev": true,
-      "devOptional": true,
       "version": "1.2.3",
     },
   },
@@ -82,9 +93,13 @@ Object {
       },
       "devDependencies": Object {
         "d": "",
+        "devit": "",
         "e": "https://foo.com/e.tgz",
       },
       "name": "root",
+      "optionalDependencies": Object {
+        "optin": "",
+      },
       "version": "1.2.3",
     },
     "node_modules/a": Object {
@@ -102,23 +117,40 @@ Object {
         "e": "1.2.3",
         "git-dep": "github:foo/bar",
       },
+      "dev": true,
       "name": "d",
       "version": "1.2.3",
     },
     "node_modules/d/node_modules/bundled": Object {
+      "dev": true,
       "inBundle": true,
       "name": "not-bundled-tho",
       "version": "1.2.3",
     },
     "node_modules/d/node_modules/git-dep": Object {
+      "dev": true,
       "name": "git-dep",
       "resolved": "git+ssh://git@github.com/foo/bar.git#0000000000000000000000000000000000000000",
+      "version": "1.2.3",
+    },
+    "node_modules/devit": Object {
+      "dependencies": Object {
+        "devo": "",
+      },
+      "dev": true,
+      "name": "devit",
+      "version": "1.2.3",
+    },
+    "node_modules/devo": Object {
+      "devOptional": true,
+      "name": "devo",
       "version": "1.2.3",
     },
     "node_modules/e": Object {
       "dependencies": Object {
         "tgz": "",
       },
+      "dev": true,
       "name": "e",
       "resolved": "https://foo.com/e.tgz",
       "version": "1.2.3",
@@ -127,8 +159,19 @@ Object {
       "link": true,
       "resolved": "../../target",
     },
-    "node_modules/nopkg": Object {},
+    "node_modules/nopkg": Object {
+      "extraneous": true,
+    },
+    "node_modules/optin": Object {
+      "dependencies": Object {
+        "devo": "",
+      },
+      "name": "optin",
+      "optional": true,
+      "version": "1.2.3",
+    },
     "node_modules/tgz": Object {
+      "dev": true,
       "name": "tgz",
       "resolved": "file:archives/tarball.tgz",
       "version": "1.2.3",
@@ -163,6 +206,7 @@ Object {
     "e": "1.2.3",
     "git-dep": "github:foo/bar",
   },
+  "dev": true,
   "name": "d",
   "version": "1.2.3",
 }
@@ -173,6 +217,7 @@ Object {
   "dependencies": Object {
     "tgz": "",
   },
+  "dev": true,
   "name": "e",
   "resolved": "https://foo.com/e.tgz",
   "version": "1.2.3",
@@ -181,6 +226,7 @@ Object {
 
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > git dep metadata 1`] = `
 Object {
+  "dev": true,
   "name": "git-dep",
   "resolved": "git+ssh://git@github.com/foo/bar.git#0000000000000000000000000000000000000000",
   "version": "1.2.3",
@@ -202,8 +248,39 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > meta for dev dep 1`] = `
+Object {
+  "dependencies": Object {
+    "devo": "",
+  },
+  "dev": true,
+  "name": "devit",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > meta for devOptional dep 1`] = `
+Object {
+  "devOptional": true,
+  "name": "devo",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > meta for optional dep 1`] = `
+Object {
+  "dependencies": Object {
+    "devo": "",
+  },
+  "name": "optin",
+  "optional": true,
+  "version": "1.2.3",
+}
+`
+
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > metadata for tarball file pkg 1`] = `
 Object {
+  "dev": true,
   "name": "tgz",
   "resolved": "file:archives/tarball.tgz",
   "version": "1.2.3",
@@ -211,7 +288,9 @@ Object {
 `
 
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > node without a package 1`] = `
-Object {}
+Object {
+  "extraneous": true,
+}
 `
 
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > root metadata, no package version 1`] = `
@@ -223,9 +302,13 @@ Object {
   },
   "devDependencies": Object {
     "d": "",
+    "devit": "",
     "e": "https://foo.com/e.tgz",
   },
   "name": "root",
+  "optionalDependencies": Object {
+    "optin": "",
+  },
 }
 `
 
@@ -238,9 +321,13 @@ Object {
   },
   "devDependencies": Object {
     "d": "",
+    "devit": "",
     "e": "https://foo.com/e.tgz",
   },
   "name": "root",
+  "optionalDependencies": Object {
+    "optin": "",
+  },
   "version": "1.2.3",
 }
 `

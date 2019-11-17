@@ -2,9 +2,11 @@ const sfl = require('../lib/spec-from-lock.js')
 const t = require('tap')
 const cwd = process.cwd()
 const dirname = require('path').dirname(cwd)
+
 t.cleanSnapshot = s => s
   .split(cwd).join('{CWD}')
   .split(dirname).join('{..}')
+  .split(/\s+"pathmatch": .*/g).join('\n{pathmatch regexp},')
 
 t.matchSnapshot(sfl('x', {
   version: '1.2.3',

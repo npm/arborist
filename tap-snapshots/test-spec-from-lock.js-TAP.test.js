@@ -104,7 +104,7 @@ Object {
       "noCommittish": true,
       "noGitPlus": true,
     },
-    "pathmatch": /^[/]([^/]+)[/]([^/]+?)(?:[.]git|[/])?$/,
+{pathmatch regexp},
     "pathtemplate": "{user}/{project}{#committish}",
     "project": "abbrev-js",
     "protocols": Array [

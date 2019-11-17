@@ -104,7 +104,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "integrity": undefined,
   "inventory": Inventory {
     "" => <*ref_1>,
-    "../../../../../../../../home/user/projects/some/kind/of/path" => Node {
+    "../../../projects/some/kind/of/path" => Node {
       "children": Map {},
       "dev": true,
       "devOptional": true,
@@ -114,16 +114,12 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "extraneous": true,
       "integrity": undefined,
       "inventory": Inventory {},
-      "location": "../../../../../../../../home/user/projects/some/kind/of/path",
+      "location": "../../../projects/some/kind/of/path",
       "meta": Shrinkwrap {
         "data": Object {
           "dependencies": Object {},
           "lockfileVersion": 2,
-          "packages": Object {
-            "": Object {
-              "name": undefined,
-            },
-          },
+          "packages": Object {},
         },
         "filename": null,
         "indent": 2,
@@ -146,11 +142,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {
-        "": Object {
-          "name": undefined,
-        },
-      },
+      "packages": Object {},
     },
     "filename": null,
     "indent": 2,
@@ -163,9 +155,9 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "package": Object {
     "name": "root",
   },
-  "path": "some/other/path",
+  "path": "/home/user/some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": "../../../../../../../../home/user/projects/some/kind/of/path",
+  "resolved": "../../../projects/some/kind/of/path",
   "target": Node {
     "children": Map {},
     "dev": true,
@@ -176,16 +168,12 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "extraneous": true,
     "integrity": undefined,
     "inventory": Inventory {},
-    "location": "../../../../../../../../home/user/projects/some/kind/of/path",
+    "location": "../../../projects/some/kind/of/path",
     "meta": Shrinkwrap {
       "data": Object {
         "dependencies": Object {},
         "lockfileVersion": 2,
-        "packages": Object {
-          "": Object {
-            "name": undefined,
-          },
-        },
+        "packages": Object {},
       },
       "filename": null,
       "indent": 2,

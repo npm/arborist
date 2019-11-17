@@ -18,7 +18,7 @@ const root = new Node({
 
 const l1 = new Link({
   pkg: { name: 'root' },
-  path: 'some/other/path',
+  path: '/home/user/some/other/path',
   realpath: '/home/user/projects/some/kind/of/path',
   meta,
 })

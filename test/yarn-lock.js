@@ -1,13 +1,13 @@
 const YarnLock = require('../lib/yarn-lock.js')
 const t = require('tap')
-const {resolve} = require('path')
+const {resolve, basename} = require('path')
 const fixtures = [
   resolve(__dirname, 'fixtures/tap-with-yarn-lock'),
   resolve(__dirname, 'fixtures/yarn-stuff'),
 ]
 const {readFileSync} = require('fs')
 
-fixtures.forEach(f => t.test(f, t => {
+fixtures.forEach(f => t.test(basename(f), t => {
   const lockdata = readFileSync(f + '/yarn.lock')
   const yarnLock = new YarnLock()
   // parse the data

@@ -77,7 +77,7 @@ const printTree = tree => ({
   })
 })
 
-t.formatSnapshot = tree => format(printTree(tree), { sort: false })
+t.formatSnapshot = tree => format(printTree(tree), { sort: true })
 
 const loadActual = root => new Arborist({root}).loadActual()
 

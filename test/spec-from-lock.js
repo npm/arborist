@@ -11,6 +11,15 @@ t.matchSnapshot(sfl('x', {
   integrity: 'integral',
 }), 'version and integrity')
 
+t.matchSnapshot(sfl('gitthing', {
+  version: 'git+ssh://git@github.com/isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb',
+  from: 'github:isaacs/abbrev-js#some-ref',
+}), 'git repo with resolved value')
+
+t.matchSnapshot(sfl('legacy', {
+  from: '1.2.3',
+}), 'legacy metadata with "from" and no integrity')
+
 t.matchSnapshot(sfl('x', {
   version: 'foo.tgz',
   integrity: 'integral',
@@ -42,3 +51,8 @@ t.matchSnapshot(sfl('x', {
 t.matchSnapshot(sfl('x', {
   version: 'file:../some/path',
 }), 'directory symlink')
+
+t.matchSnapshot(sfl('really bad and invalid', {
+  version: 'url:// not even close to a ! valid @ npm @ specifier',
+  resolved: 'this: is: also: not: valid!',
+}), 'completely invalid, return empty object')

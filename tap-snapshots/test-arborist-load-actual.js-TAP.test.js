@@ -1994,6 +1994,10 @@ Node {
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "npm:abbrev@1.1.1",
       },
+      "really-bad-invalid": Object {
+        "resolved": "this: is: also: not: valid!",
+        "version": "url:// not even close to a ! valid @ npm @ specifier",
+      },
       "reg": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
@@ -2014,8 +2018,15 @@ Node {
       "symlink": Object {
         "version": "file:abbrev-link-target",
       },
+      "symlink-in-tree": Object {
+        "version": "file:./node_modules/abbrev",
+      },
       "tarball": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "version": "file:abbrev-1.1.1.tgz",
+      },
+      "tarball-no-integrity": Object {
+        "dev": true,
         "version": "file:abbrev-1.1.1.tgz",
       },
       "unhosted-git": Object {
@@ -2059,12 +2070,9 @@ Node {
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
-      "node_modules/abbrev/node_modules/@scope/name": Object {
-        "name": "@scope/name",
-      },
+      "node_modules/abbrev/node_modules/@scope/name": Object {},
       "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername": Object {
         "integrity": "the integrity is not valid, clearly",
-        "name": "@otherscope/othername",
         "resolved": "fake resolved value",
       },
       "node_modules/balanced-match": Object {
@@ -2227,6 +2235,7 @@ Node {
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
+      "node_modules/really-bad-invalid": Object {},
       "node_modules/reg": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "name": "abbrev",
@@ -2256,14 +2265,20 @@ Node {
         "link": true,
         "resolved": "../../abbrev-link-target",
       },
+      "node_modules/symlink-in-tree": Object {
+        "link": true,
+        "resolved": "../abbrev",
+      },
       "node_modules/tarball": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "name": "abbrev",
         "resolved": "file:../../../abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
+      "node_modules/tarball-no-integrity": Object {
+        "resolved": "abbrev-1.1.1.tgz",
+      },
       "node_modules/unhosted-git": Object {
-        "name": "unhosted-git",
         "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "node_modules/wrappy": Object {

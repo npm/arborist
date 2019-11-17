@@ -5,6 +5,10 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/spec-from-lock.js TAP > completely invalid, return empty object 1`] = `
+Object {}
+`
+
 exports[`test/spec-from-lock.js TAP > directory symlink 1`] = `
 Object {
   "escapedName": "x",
@@ -74,6 +78,78 @@ Object {
   "scope": undefined,
   "type": "file",
   "where": "{CWD}",
+}
+`
+
+exports[`test/spec-from-lock.js TAP > git repo with resolved value 1`] = `
+Object {
+  "escapedName": "gitthing",
+  "fetchSpec": "ssh://git@github.com/isaacs/abbrev-js.git",
+  "gitCommittish": "a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+  "gitRange": undefined,
+  "hosted": GitHost {
+    "auth": null,
+    "browsefiletemplate": "https://{domain}/{user}/{project}/{treepath}/{committish}/{path}{#fragment}",
+    "browsetemplate": "https://{domain}/{user}/{project}{/tree/committish}",
+    "bugstemplate": "https://{domain}/{user}/{project}/issues",
+    "committish": "a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+    "default": "sshurl",
+    "docstemplate": "https://{domain}/{user}/{project}{/tree/committish}#readme",
+    "domain": "github.com",
+    "filetemplate": "https://{auth@}raw.githubusercontent.com/{user}/{project}/{committish}/{path}",
+    "gittemplate": "git://{auth@}{domain}/{user}/{project}.git{#committish}",
+    "hashformat": Function formatHashFragment(fragment),
+    "httpstemplate": "git+https://{auth@}{domain}/{user}/{project}.git{#committish}",
+    "opts": Object {
+      "noCommittish": true,
+      "noGitPlus": true,
+    },
+    "pathmatch": /^[/]([^/]+)[/]([^/]+?)(?:[.]git|[/])?$/,
+    "pathtemplate": "{user}/{project}{#committish}",
+    "project": "abbrev-js",
+    "protocols": Array [
+      "git",
+      "http",
+      "git+ssh",
+      "git+https",
+      "ssh",
+      "https",
+    ],
+    "protocols_re": /^(git|http|git\\+ssh|git\\+https|ssh|https):$/,
+    "shortcuttemplate": "{type}:{user}/{project}{#committish}",
+    "sshtemplate": "git@{domain}:{user}/{project}.git{#committish}",
+    "sshurltemplate": "git+ssh://git@{domain}/{user}/{project}.git{#committish}",
+    "tarballtemplate": "https://codeload.{domain}/{user}/{project}/tar.gz/{committish}",
+    "treepath": "tree",
+    "type": "github",
+    "user": "isaacs",
+  },
+  "name": "gitthing",
+  "raw": "gitthing@git+ssh://git@github.com/isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+  "rawSpec": "git+ssh://git@github.com/isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+  "registry": undefined,
+  "saveSpec": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+  "scope": undefined,
+  "type": "git",
+  "where": undefined,
+}
+`
+
+exports[`test/spec-from-lock.js TAP > legacy metadata with "from" and no integrity 1`] = `
+Object {
+  "escapedName": "legacy",
+  "fetchSpec": "1.2.3",
+  "gitCommittish": undefined,
+  "gitRange": undefined,
+  "hosted": undefined,
+  "name": "legacy",
+  "raw": "legacy@1.2.3",
+  "rawSpec": "1.2.3",
+  "registry": true,
+  "saveSpec": null,
+  "scope": undefined,
+  "type": "version",
+  "where": undefined,
 }
 `
 

@@ -335,8 +335,8 @@ Object {
 exports[`test/shrinkwrap.js TAP look up from locks and such > basic package 1`] = `
 Object {
   "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-  "name": "abbrev",
   "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+  "version": "1.1.1",
 }
 `
 
@@ -347,7 +347,6 @@ Object {}
 exports[`test/shrinkwrap.js TAP look up from locks and such > must match snapshot 1`] = `
 Object {
   "integrity": "the integrity is not valid, clearly",
-  "name": "@otherscope/othername",
   "resolved": "fake resolved value",
 }
 `
@@ -359,14 +358,13 @@ Object {}
 exports[`test/shrinkwrap.js TAP look up from locks and such lockfile > basic pkg, from lock 1`] = `
 Object {
   "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-  "name": "abbrev",
   "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+  "version": "1.1.1",
 }
 `
 
 exports[`test/shrinkwrap.js TAP look up from locks and such lockfile > full git 1`] = `
 Object {
-  "name": "full-git-url",
   "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
 }
 `
@@ -374,7 +372,6 @@ Object {
 exports[`test/shrinkwrap.js TAP look up from locks and such lockfile > must match snapshot 1`] = `
 Object {
   "integrity": "the integrity is not valid, clearly",
-  "name": "@otherscope/othername",
   "resolved": "fake resolved value",
 }
 `
@@ -387,22 +384,21 @@ exports[`test/shrinkwrap.js TAP look up from locks and such lockfile > saved fet
 Object {
   "node_modules/abbrev": Object {
     "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-    "name": "abbrev",
     "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    "version": "1.1.1",
   },
 }
 `
 
 exports[`test/shrinkwrap.js TAP look up from locks and such lockfile > symlink 1`] = `
 Object {
-  "name": "symlink",
-  "resolved": "{CWD}/test/fixtures/install-types/abbrev-link-target",
+  "link": true,
+  "resolved": "../../abbrev-link-target",
 }
 `
 
 exports[`test/shrinkwrap.js TAP look up from locks and such lockfile > unhosted git 1`] = `
 Object {
-  "name": "unhosted-git",
   "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
 }
 `

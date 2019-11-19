@@ -10,6 +10,9 @@ t.cleanSnapshot = s => s.split(process.cwd()).join('{CWD}')
 
 const {relative, resolve, basename} = require('path')
 const fixture = resolve(__dirname, 'fixtures/install-types')
+const YarnLock = require('../lib/yarn-lock.js')
+const yarnFixture = resolve(__dirname, 'fixtures/yarn-stuff')
+const emptyFixture = resolve(__dirname, 'fixtures/empty')
 
 t.test('root defaults to .', async t => {
   const sw = new Shrinkwrap()
@@ -17,15 +20,42 @@ t.test('root defaults to .', async t => {
 })
 
 t.test('loading in bad dir gets empty lockfile', t =>
- Shrinkwrap.load('path/which/does/not/exist').then(sw => {
-   t.strictSame(sw.data, {
-     lockfileVersion: 2,
-     requires: true,
-     dependencies: {},
-     packages: {},
-   })
-   t.equal(sw.loadedFromDisk, false)
- }))
+  Shrinkwrap.load('path/which/does/not/exist').then(sw => {
+    t.strictSame(sw.data, {
+      lockfileVersion: 2,
+      requires: true,
+      dependencies: {},
+      packages: {},
+    })
+    t.equal(sw.loadedFromDisk, false)
+  }))
+
+t.test('loading in empty dir gets empty lockfile', t =>
+  Shrinkwrap.load(emptyFixture).then(sw => {
+    t.strictSame(sw.data, {
+      lockfileVersion: 2,
+      requires: true,
+      dependencies: {},
+      packages: {},
+    })
+    t.equal(sw.loadedFromDisk, false)
+    // update with an empty node, set name to node name, not package name
+    const root = new Node({
+      path: emptyFixture,
+      realpath: emptyFixture,
+    })
+    root.dev = root.devOptional = root.optional = root.extraneous = false
+    sw.add(root)
+    t.strictSame(sw.commit(), {
+      name: 'empty',
+      lockfileVersion: 2,
+      requires: true,
+      dependencies: {},
+      packages: {
+        '': {},
+      },
+    })
+  }))
 
 t.test('look up from locks and such', t =>
   new Shrinkwrap(fixture).load().then(m => {
@@ -274,4 +304,20 @@ t.test('load shrinkwrap if no package-lock.json present', t => {
     Shrinkwrap.load(dir).then(s =>
       t.equal(s.type, 'npm-shrinkwrap.json', 'loaded without swonly')),
   ])
+})
+
+t.test('load yarn.lock file if present', t =>
+  Shrinkwrap.load(yarnFixture).then(s => {
+    t.isa(s.yarnLock, YarnLock, 'loaded a yarn lock file')
+    t.notEqual(s.yarnLock.entries.size, 0, 'got some entries')
+  }))
+
+t.test('ignore yarn lock file parse errors', t => {
+  const dir = t.testdir({
+    'yarn.lock': 'this is not a yarn lock file!',
+  })
+  return Shrinkwrap.load(dir).then(s => {
+    t.isa(s.yarnLock, YarnLock, 'got a yarn lock object because a yarn lock exists')
+    t.equal(s.yarnLock.entries.size, 0, 'did not get any entries out of it')
+  })
 })

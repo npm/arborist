@@ -1,6 +1,6 @@
 const mkdirp = require('mkdirp').sync
 const { unlinkSync, symlinkSync } = require('fs')
-const { resolve, dirname } = require('path')
+const { relative, resolve, dirname } = require('path')
 
 const fixtures = __dirname
 
@@ -97,23 +97,25 @@ const cleanup = () => Object.keys(symlinks).forEach(s => {
   } catch (er) {}
 })
 
-if (process.env.NO_CLEANUP !== '1')
-  require('tap').teardown(cleanup)
-
 const setup = () => {
-  cleanup()
   Object.keys(symlinks).forEach(s => {
     const p = resolve(__dirname, s)
     mkdirp(dirname(p))
-    symlinkSync(symlinks[s], p, 'dir')
+    // console.log(relative(process.cwd(), p))
+
+    // it's fine for this to throw, since it typically means
+    // that the links already exist.
+    try { symlinkSync(symlinks[s], p, 'dir') } catch (_) {}
   })
 }
 
-setup()
+if (process.argv[2] === 'cleanup' && require.main === module)
+  cleanup()
+else
+  setup()
 
 module.exports = {
   roots,
   symlinks,
-  cleanup,
   fixtures,
 }

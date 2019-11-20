@@ -1,4 +1,6 @@
 const YarnLock = require('../lib/yarn-lock.js')
+const Arborist = require('../lib/arborist.js')
+
 const t = require('tap')
 const {resolve, basename} = require('path')
 const fixtures = [
@@ -23,7 +25,7 @@ fixtures.forEach(f => t.test(basename(f), t => {
 }))
 
 t.test('invalid yarn lockfile data throws', t => {
-  t.throws(() => new YarnLock().parse(`
+  t.throws(() => YarnLock.parse(`
 asdf@foo:
   this !is not vlid
             i mean
@@ -35,7 +37,7 @@ what even is it??
  - NO
 `), {content: '  this !is not vlid\n', line: 3, position: 11}, 'just garbage')
 
-  t.throws(() => new YarnLock().parse(`
+  t.throws(() => YarnLock.parse(`
 asdf@foo:
   dependencies:
     foo bar baz blork
@@ -73,5 +75,18 @@ bar@foo:
 
 t.test('exports YarnLockEntry class', t => {
   t.isa(YarnLock.Entry, 'function')
+  t.end()
+})
+
+t.test('load a yarn lock from a tree', t => {
+  const fixtures = [
+    resolve(__dirname, 'fixtures/install-types'),
+    resolve(__dirname, 'fixtures/links-all-over'),
+  ]
+  fixtures.forEach(fixture => t.test(basename(fixture), t =>
+    new Arborist({root: fixture}).loadActual().then(tree => {
+      const y = YarnLock.fromTree(tree)
+      t.matchSnapshot(y.toString(), 'yarn.lock from a package tree')
+    })))
   t.end()
 })

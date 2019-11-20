@@ -35,7 +35,13 @@ const top = {
   parent: null,
   resolve (n) {
     return n === 'a' ? a : n === 'b' ? b : null
-  }
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
 }
 
 const a = {
@@ -46,7 +52,13 @@ const a = {
   parent: top,
   resolve (n) {
     return n === 'aa' ? aa : this.parent.resolve(n)
-  }
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
 }
 
 const b = {
@@ -57,7 +69,13 @@ const b = {
   parent: top,
   resolve (n) {
     return n === 'aa' ? aa : this.parent.resolve(n)
-  }
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
 }
 
 const bb = {
@@ -68,7 +86,13 @@ const bb = {
   parent: b,
   resolve (n) {
     return this.parent.resolve(n)
-  }
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
 }
 
 const aa = {
@@ -79,7 +103,13 @@ const aa = {
   parent: a,
   resolve (n) {
     return this.parent.resolve(n)
-  }
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
 }
 
 t.matchSnapshot(new Edge({

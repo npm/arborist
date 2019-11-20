@@ -321,3 +321,23 @@ t.test('ignore yarn lock file parse errors', t => {
     t.equal(s.yarnLock.entries.size, 0, 'did not get any entries out of it')
   })
 })
+
+t.test('handle missing dependencies object without borking', t => {
+  const s = new Shrinkwrap('/path/to/root')
+  s.data = {
+    packages: {
+      'node_modules/foo': {},
+      'node_modules/foo/node_modules/bar': {},
+    },
+    dependencies: {
+      foo: {
+        resolved: 'http://foo.com',
+        integrity: 'foo integrity',
+        // no dependencies object here!
+      },
+    },
+  }
+  s.delete('/path/to/root/node_modules/foo/node_modules/bar')
+  t.matchSnapshot(s.commit())
+  t.end()
+})

@@ -33,6 +33,8 @@ exports[`test/edge.js TAP > clobbering edge 1`] = `
 Edge {
   "error": null,
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "b" => Edge {},
@@ -43,6 +45,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -60,6 +64,8 @@ Edge {
   "name": "b",
   "spec": "*",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -70,6 +76,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -93,6 +101,8 @@ exports[`test/edge.js TAP > invalid dependency 1`] = `
 Edge {
   "error": "INVALID",
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "b" => Edge {},
@@ -103,6 +113,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -120,6 +132,8 @@ Edge {
   "name": "b",
   "spec": "1.69.420-nice",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -130,6 +144,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -153,6 +169,8 @@ exports[`test/edge.js TAP > missing optional dep is fine 1`] = `
 Edge {
   "error": null,
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "missing" => Edge {},
@@ -177,6 +195,8 @@ exports[`test/edge.js TAP > new location, found dep 1`] = `
 Edge {
   "error": null,
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {},
@@ -187,6 +207,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "b" => Edge {},
@@ -197,6 +219,8 @@ Edge {
         "version": "1.2.3",
       },
       "parent": Object {
+        "addEdgeIn": Function addEdgeIn(edge),
+        "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {},
@@ -216,6 +240,8 @@ Edge {
   "name": "aa",
   "spec": "",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -226,6 +252,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "b" => Edge {},
@@ -236,6 +264,8 @@ Edge {
         "version": "1.2.3",
       },
       "parent": Object {
+        "addEdgeIn": Function addEdgeIn(edge),
+        "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {},
@@ -261,6 +291,8 @@ exports[`test/edge.js TAP > new location, missing dep again 1`] = `
 Edge {
   "error": "MISSING",
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {},
@@ -271,6 +303,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -297,6 +331,8 @@ exports[`test/edge.js TAP > old location, missing dep 1`] = `
 Edge {
   "error": null,
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {},
@@ -307,6 +343,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {
         Edge {},
       },
@@ -317,6 +355,8 @@ Edge {
         "version": "1.2.3",
       },
       "parent": Object {
+        "addEdgeIn": Function addEdgeIn(edge),
+        "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {},
@@ -336,6 +376,8 @@ Edge {
   "name": "aa",
   "spec": "",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -346,6 +388,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "b" => Edge {},
@@ -356,6 +400,8 @@ Edge {
         "version": "1.2.3",
       },
       "parent": Object {
+        "addEdgeIn": Function addEdgeIn(edge),
+        "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {},
@@ -381,6 +427,8 @@ exports[`test/edge.js TAP > peer dep at top level, nesting is ok 1`] = `
 Edge {
   "error": null,
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "a" => Edge {},
@@ -396,6 +444,8 @@ Edge {
   "name": "a",
   "spec": "1.2.3",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -406,6 +456,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "a" => Edge {},
@@ -429,6 +481,8 @@ exports[`test/edge.js TAP > peer dep below top level, nesting not ok 1`] = `
 Edge {
   "error": "PEER LOCAL",
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {},
@@ -439,6 +493,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -456,6 +512,8 @@ Edge {
   "name": "aa",
   "spec": "1.2.3",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -466,6 +524,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "aa" => Edge {},
@@ -476,6 +536,8 @@ Edge {
         "version": "1.2.3",
       },
       "parent": Object {
+        "addEdgeIn": Function addEdgeIn(edge),
+        "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {},
@@ -501,6 +563,8 @@ exports[`test/edge.js TAP > peer dep below top level, parallel ok 1`] = `
 Edge {
   "error": null,
   "from": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
       "b" => Edge {},
@@ -511,6 +575,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},
@@ -528,6 +594,8 @@ Edge {
   "name": "b",
   "spec": "1.2.3",
   "to": Object {
+    "addEdgeIn": Function addEdgeIn(edge),
+    "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {},
     },
@@ -538,6 +606,8 @@ Edge {
       "version": "1.2.3",
     },
     "parent": Object {
+      "addEdgeIn": Function addEdgeIn(edge),
+      "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {},

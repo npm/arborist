@@ -34,6 +34,7 @@ t.test('testing with dep tree', t => {
       path: '/home/user/projects/root',
       meta: rootMetadata,
     })
+    t.equal(root.root, root, 'root is its own root node')
     const prod = new Node({
       pkg: {
         name: 'prod',
@@ -45,6 +46,7 @@ t.test('testing with dep tree', t => {
       integrity: 'prod',
       parent: root,
     })
+    t.equal(prod.root, root, 'prod rooted on root')
     const meta = new Node({
       pkg: {
         name: 'meta',
@@ -54,10 +56,12 @@ t.test('testing with dep tree', t => {
         _resolved: 'meta',
         _integrity: 'meta',
       },
-      path: './node_modules/prod/node_modules/meta',
+      path: '/home/user/projects/root/node_modules/prod/node_modules/meta',
       realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
       parent: prod,
     })
+    t.equal(meta.root, root, 'meta rooted in same tree via parent')
+
     const bundled = new Node({
       pkg: {
         name: 'bundled',
@@ -66,10 +70,12 @@ t.test('testing with dep tree', t => {
       },
       resolved: 'bundled',
       integrity: 'bundled',
-      path: './node_modules/bundled',
+      path: '/home/user/projects/root/node_modules/bundled',
       realpath: '/home/user/projects/root/node_modules/bundled',
       parent: root,
     })
+    t.equal(bundled.root, root, 'bundled root is project root')
+
     const dev = new Node({
       pkg: {
         name: 'dev',
@@ -77,10 +83,12 @@ t.test('testing with dep tree', t => {
       },
       resolved: 'dev',
       integrity: 'dev',
-      path: './node_modules/dev',
+      path: '/home/user/projects/root/node_modules/dev',
       realpath: '/home/user/projects/root/node_modules/dev',
       parent: root,
     })
+    t.equal(dev.root, root, 'dev root is project root')
+
     const opt = new Node({
       pkg: {
         name: 'optional',
@@ -88,10 +96,12 @@ t.test('testing with dep tree', t => {
       },
       resolved: 'opt',
       integrity: 'opt',
-      path: './node_modules/optional',
+      path: '/home/user/projects/root/node_modules/optional',
       realpath: '/home/user/projects/root/node_modules/optional',
       parent: root,
     })
+    t.equal(opt.root, root, 'opt root is project root')
+
     const peer = new Node({
       pkg: {
         name: 'peer',
@@ -99,10 +109,12 @@ t.test('testing with dep tree', t => {
       },
       resolved: 'peer',
       integrity: 'peer',
-      path: './node_modules/peer',
+      path: '/home/user/projects/root/node_modules/peer',
       realpath: '/home/user/projects/root/node_modules/peer',
       parent: root,
     })
+    t.equal(peer.root, root)
+
     const extraneous = new Node({
       pkg: {
         name: 'extraneous',
@@ -110,10 +122,12 @@ t.test('testing with dep tree', t => {
       },
       resolved: 'extraneous',
       integrity: 'extraneous',
-      path: './node_modules/extraneous',
+      path: '/home/user/projects/root/node_modules/extraneous',
       realpath: '/home/user/projects/root/node_modules/extraneous',
       parent: root,
     })
+    t.equal(extraneous.root, root, 'extraneous.root is project root')
+
     t.equal(prod.top, root, 'root is top of tree')
     t.equal(prod.root, root, 'root is root of tree')
     t.equal(root.isRoot, true, 'root is root of tree')
@@ -124,6 +138,9 @@ t.test('testing with dep tree', t => {
     // move dep to top level
     meta.parent = root
     t.matchSnapshot(root, 'move meta to top level, update stuff')
+    t.equal(meta.root, root, 'meta.root is root still')
+    t.equal(meta.parent, root, 'meta.parent is root')
+    t.equal(root.inventory.get(meta.location), meta)
 
     const newMeta = new Node({
       pkg: {
@@ -136,10 +153,15 @@ t.test('testing with dep tree', t => {
       },
       resolved: 'newMeta',
       integrity: 'newMeta',
-      path: './node_modules/prod/node_modules/meta',
-      realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
+      name: 'meta',
       parent: prod,
     })
+    t.equal(newMeta.root, root)
+    newMeta.root = prod
+    t.equal(newMeta.root, root, 'setting root to non-root crawls up root list')
+    t.equal(meta.parent, root)
+    t.equal(newMeta.parent, prod)
+    t.equal(root.inventory.get(meta.location), meta)
 
     // test that reparenting a link _doesn't_ update realpath
     const metaMeta = new Link({
@@ -154,6 +176,11 @@ t.test('testing with dep tree', t => {
       target: meta,
     })
     metaMeta.parent = newMeta
+    t.equal(metaMeta.root, root)
+    t.equal(meta.root, root)
+    t.equal(meta.parent, root)
+    t.equal(root.children.get('meta'), meta)
+    t.equal(root.inventory.get(meta.location), meta)
 
     t.matchSnapshot(root, 'add new meta under prod')
 
@@ -171,18 +198,13 @@ t.test('testing with dep tree', t => {
   }
 
   t.test('without meta', runTest())
-  t.test('with meta', runTest({
-    data: {},
-    get (location) {
-      return this.data[location] || {}
-    },
-    add (node) {
-      return this.data[node.location] = node
-    },
-    delete (location) {
-      delete this.data[location]
-    },
-  }))
+  const meta = new Shrinkwrap('/home/user/projects/root')
+  meta.data = {
+    lockfileVersion: 2,
+    packages: {},
+    dependencies: {},
+  }
+  t.test('with meta', runTest(meta))
 
   t.end()
 })
@@ -514,26 +536,286 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
 
   const child = new Node({
     parent: top1,
-    pkg: { name: 'child', version: '1.2.3' },
+    pkg: {
+      name: 'child',
+      version: '1.2.3',
+      dependencies: { child2: '2' },
+    },
     resolved: 'https://child.com/-/child-1.2.3.tgz',
     integrity: 'sha512-blortzeyblartzeyfartz',
   })
+  const child2 = new Node({
+    parent: child,
+    pkg: { name: 'child2', version: '2.3.4' },
+    resolved: 'https://child.com/-/child-2.3.4.tgz',
+    integrity: 'sha512-a childs child is a kidkid',
+  })
+
   t.matchSnapshot(child.location, 'initial child location, pre-move')
   t.equal(child.root, root, 'child root is the shared root node')
   t.equal(child.top, top1, 'child top is top1')
+  t.matchSnapshot(child2.location, 'initial child2 location, pre-move')
+  t.equal(child2.root, root, 'child2 root is the shared root node')
+  t.equal(child2.top, top1, 'child2 top is top1')
   t.matchSnapshot(root.meta.get(child.location), 'metadata from root')
   t.matchSnapshot(top1.meta.get(child.location), 'metadata from top1')
 
   // now move it over
   const oldLocation = child.location
+  const oldLocation2 = child2.location
   child.parent = link2
   t.equal(child.top, top2, 'after move, top points at top2')
   t.equal(child.parent, top2, 'parent assigned to link target')
   t.matchSnapshot(child.location, 'new child location')
+  t.equal(child2.top, top2, 'after move, top points at top2')
+  t.equal(child2.parent, child, 'parent assigned to link target')
+  t.matchSnapshot(child2.location, 'new child2 location')
   t.matchSnapshot(root.meta.get(child.location), 'root metadata updated')
+  t.matchSnapshot(root.meta.get(child2.location), 'root metadata updated')
   t.matchSnapshot(root.meta.get(oldLocation), 'old location deleted from root')
   t.matchSnapshot(top1.meta.get(oldLocation), 'old location deleted from top1')
+  t.matchSnapshot(root.meta.get(oldLocation2), 'old location2 deleted from root')
+  t.matchSnapshot(top1.meta.get(oldLocation2), 'old location2 deleted from top1')
   t.matchSnapshot(top2.meta.get(child.location), 'new top metadata updated')
+  t.matchSnapshot(top2.meta.get(child2.location), 'new top metadata updated')
 
   return t.end()
+})
+
+t.test('get meta from yarn.lock', t => {
+  const fooEntry = {
+    integrity: 'sha512-freebeerisworththeprice',
+    resolved: 'https://example.com/foo.tgz',
+    version: '1.2.3',
+    optionalDependencies: {
+      bar: '2.x',
+    },
+  }
+  const foo2Entry = {
+    integrity: 'the second coming of fooo',
+    resolved: 'https://example.com/foo-2.tgz',
+    version: '2.3.4',
+  }
+  const barEntry = {
+    integrity: 'sha512-integrity is allegiance to your truest self',
+    resolved: 'file:bar-2.3.4.tgz',
+    version: '2.3.4',
+  }
+  const yarnLock = {
+    entries: new Map([
+      ['foo@1.x', fooEntry],
+      ['foo@1.2.x', fooEntry],
+      ['bar@2.x', barEntry],
+      ['foo@2.x', foo2Entry],
+    ]),
+  }
+
+  const root = '/path/to/root'
+  const meta = new Shrinkwrap(root)
+  meta.data = {
+    lockfileVersion: 2,
+    packages: {},
+    dependencies: {},
+    requires: true,
+  }
+  meta.yarnLock = yarnLock
+
+  const tree = new Node({
+    meta,
+    path: root,
+    realpath: root,
+    pkg: {
+      name: 'root',
+      version: '4.5.6',
+      dependencies: {
+        foo: '1.x',
+      },
+      devDependencies: {
+        bar: '2.x',
+      }
+    }
+  })
+
+  const foo = new Node({
+    name: 'foo',
+    parent: tree,
+    pkg: {
+      name: 'foo',
+      version: '1.2.3',
+      optionalDependencies: { bar: '2.x' },
+    },
+  })
+
+  t.equal(foo.integrity, fooEntry.integrity, 'foo integrity from yarn.lock')
+  t.equal(foo.resolved, fooEntry.resolved, 'foo resolved from yarn.lock')
+
+  const bar = new Node({
+    name: 'bar',
+    parent: tree,
+    pkg: {
+      name: 'bar',
+      version: '2.3.4',
+    },
+  })
+  t.equal(bar.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
+  t.equal(bar.resolved, barEntry.resolved, 'bar resolved from yarn.lock')
+
+  bar.parent = null
+
+  const barDiffVersion = new Node({
+    name: 'bar',
+    parent: tree,
+    pkg: {
+      name: 'bar',
+      description: 'witaf',
+      version: '2.4.5',
+    },
+  })
+
+  t.equal(barDiffVersion.integrity, null, 'version mismatch, no integrity')
+  t.equal(barDiffVersion.resolved, null, 'version mismatch, no resolved')
+
+  const barDiffIntegrity = new Node({
+    integrity: 'sha512-a fundamental lack of commitment to ideals',
+    name: 'bar',
+    parent: tree,
+    pkg: {
+      name: 'bar',
+      version: '2.3.4',
+    },
+  })
+  t.equal(barDiffIntegrity.integrity,
+    'sha512-a fundamental lack of commitment to ideals',
+    'integrity not updated from yarn lock')
+  t.equal(barDiffIntegrity.resolved, null, 'integrity mismatch, no resolved')
+
+  const barDiffResolved = new Node({
+    resolved: 'https://x.com/b.tgz',
+    name: 'bar',
+    parent: tree,
+    pkg: {
+      name: 'bar',
+      version: '2.3.4',
+    },
+  })
+  t.equal(barDiffResolved.integrity, null, 'integrity not updated from yarn lock')
+  t.equal(barDiffResolved.resolved, 'https://x.com/b.tgz',
+    'resolved was not updated from yarn lock')
+
+  const barSameIntegrity = new Node({
+    integrity: barEntry.integrity,
+    name: 'bar',
+    parent: tree,
+    pkg: {
+      name: 'bar',
+      version: '2.3.4',
+    },
+  })
+  t.equal(barSameIntegrity.integrity, barEntry.integrity, 'bar integrity still matches')
+  t.equal(barSameIntegrity.resolved, barEntry.resolved, 'bar resolved from yarn.lock')
+
+  const barSameResolved = new Node({
+    resolved: barEntry.resolved,
+    name: 'bar',
+    parent: tree,
+    pkg: {
+      name: 'bar',
+      version: '2.3.4',
+    },
+  })
+  t.equal(barSameResolved.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
+  t.equal(barSameResolved.resolved, barEntry.resolved, 'bar resolved still matches')
+
+  // test that we sometimes might not get the resolved/integrity values
+  barEntry.resolved = barEntry.integrity = null
+  bar.package.description = 'new integrity, no resolved'
+  bar.integrity = 'new integrity'
+  bar.resolved = undefined
+  bar.parent = tree
+  t.equal(bar.integrity, 'new integrity', 'integrity unchanged by yarn lock')
+  t.equal(bar.resolved, null, 'resolved set to null, not in yarn entry')
+
+  bar.package.description = 'new resolved, no integrity'
+  bar.parent = null
+  bar.integrity = undefined
+  bar.resolved = 'new resolved'
+  bar.parent = tree
+  t.equal(bar.integrity, null, 'integrity set to null, not in yarn entry')
+  t.equal(bar.resolved, 'new resolved', 'resolved unchanged by yarn lock')
+
+  const foo2 = new Node({
+    name: 'foo',
+    package: {
+      name: 'foo',
+      version: '2.3.4',
+    },
+    parent: tree
+  })
+  t.equal(foo2.integrity, null, 'no integrity, entry invalid')
+  t.equal(foo2.resolved, null, 'no resolved, entry invalid')
+
+  t.end()
+})
+
+t.test('metadata that only has one of resolved/integrity', t => {
+  const root = '/path/to/root'
+  const meta = new Shrinkwrap(root)
+  meta.data = {
+    name: 'root',
+    version: '4.5.6',
+    lockfileVersion: 2,
+    packages: {
+      'node_modules/integrity': {
+        integrity: 'has integrity no resolved',
+      },
+      'node_modules/resolved': {
+        resolved: 'has resolved no integrity',
+      },
+      'node_modules/intalready': {
+        integrity: 'superceded by node integrity value',
+      },
+      'node_modules/resalready': {
+        resolved: 'superceded by node resolved value',
+      },
+    },
+    dependencies: {},
+  }
+
+  const tree = new Node({
+    path: root,
+    realpath: root,
+    meta,
+  })
+  const integrity = new Node({
+    name: 'integrity',
+    parent: tree,
+  })
+  const resolved = new Node({
+    name: 'resolved',
+    parent: tree,
+  })
+  const intalready = new Node({
+    name: 'intalready',
+    parent: tree,
+    integrity: 'pre-existing integrity',
+  })
+  const resalready = new Node({
+    name: 'resalready',
+    parent: tree,
+    resolved: 'pre-existing resolved',
+  })
+
+  t.equal(integrity.integrity, 'has integrity no resolved', 'integrity only')
+  t.equal(integrity.resolved, null, 'integrity only')
+
+  t.equal(resolved.resolved, 'has resolved no integrity', 'resolved only')
+  t.equal(resolved.integrity, null, 'resolved only')
+
+  t.equal(intalready.resolved, null, 'integrity only, from node settings')
+  t.equal(intalready.integrity, 'pre-existing integrity', 'integrity only, from node settings')
+
+  t.equal(resalready.resolved, 'pre-existing resolved', 'resolved only, from node settings')
+  t.equal(resalready.integrity, null, 'resolved only, from node settings')
+
+  t.end()
 })

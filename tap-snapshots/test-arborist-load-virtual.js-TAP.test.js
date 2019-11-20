@@ -5,6 +5,64 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/arborist/load-virtual.js TAP load a tree with some links to nodes outside of node_modules > loaded virtual tree with fsParents 1`] = `
+Node {
+  "children": Map {
+    "@scope/x" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@scope/x",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@scope/x",
+      "name": "@scope/x",
+      "resolved": "../../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      "target": Object {
+        "name": "@scope/x",
+        "parent": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
+      },
+    },
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "../.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+      "target": Object {
+        "name": "a",
+        "parent": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
+      },
+    },
+  },
+  "edgesOut": Map {
+    "@scope/x" => Edge {
+      "name": "@scope/x",
+      "spec": "",
+      "to": "node_modules/@scope/x",
+      "type": "prod",
+    },
+    "a" => Edge {
+      "name": "a",
+      "spec": "",
+      "to": "node_modules/a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "pnpm",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/load-virtual.js TAP load from cwd > loaded virtual tree from fixture 1`] = `
 Node {
   "children": Map {
@@ -20,7 +78,7 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
-          "resolved": undefined,
+          "resolved": null,
         },
       },
       "location": "node_modules/abbrev",
@@ -343,7 +401,7 @@ Node {
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
-      "resolved": undefined,
+      "resolved": null,
     },
     "reg" => Node {
       "location": "node_modules/reg",
@@ -424,7 +482,7 @@ Node {
   },
   "location": "",
   "name": "install-types",
-  "resolved": undefined,
+  "resolved": null,
 }
 `
 
@@ -443,7 +501,7 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
-          "resolved": undefined,
+          "resolved": null,
         },
       },
       "location": "node_modules/abbrev",
@@ -766,7 +824,7 @@ Node {
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
-      "resolved": undefined,
+      "resolved": null,
     },
     "reg" => Node {
       "location": "node_modules/reg",
@@ -847,7 +905,7 @@ Node {
   },
   "location": "",
   "name": "install-types",
-  "resolved": undefined,
+  "resolved": null,
 }
 `
 
@@ -866,7 +924,7 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
-          "resolved": undefined,
+          "resolved": null,
         },
       },
       "location": "node_modules/abbrev",
@@ -1189,7 +1247,7 @@ Node {
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
-      "resolved": undefined,
+      "resolved": null,
     },
     "reg" => Node {
       "location": "node_modules/reg",
@@ -1270,7 +1328,7 @@ Node {
   },
   "location": "",
   "name": "install-types",
-  "resolved": undefined,
+  "resolved": null,
 }
 `
 
@@ -1289,7 +1347,7 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
-          "resolved": undefined,
+          "resolved": null,
         },
       },
       "location": "node_modules/abbrev",
@@ -1612,7 +1670,7 @@ Node {
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
-      "resolved": undefined,
+      "resolved": null,
     },
     "reg" => Node {
       "location": "node_modules/reg",
@@ -1693,6 +1751,6 @@ Node {
   },
   "location": "",
   "name": "install-types",
-  "resolved": undefined,
+  "resolved": null,
 }
 `

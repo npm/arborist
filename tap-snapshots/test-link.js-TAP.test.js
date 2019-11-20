@@ -13,7 +13,7 @@ Link {
   "edgesOut": Map {},
   "errors": Array [],
   "extraneous": true,
-  "integrity": undefined,
+  "integrity": null,
   "inventory": Inventory {
     "" => Node {
       "children": Map {},
@@ -23,20 +23,25 @@ Link {
       "edgesOut": Map {},
       "errors": Array [],
       "extraneous": true,
-      "integrity": undefined,
+      "integrity": null,
       "inventory": Inventory {},
       "location": "",
       "meta": Shrinkwrap {
         "data": Object {
           "dependencies": Object {},
           "lockfileVersion": 2,
-          "packages": Object {},
+          "packages": Object {
+            "": Object {
+              "name": undefined,
+            },
+          },
         },
         "filename": null,
         "indent": 2,
         "loadedFromDisk": false,
         "root": "/home/user/projects/some/kind/of/path",
         "type": null,
+        "yarnLock": null,
       },
       "name": "path",
       "optional": true,
@@ -45,7 +50,7 @@ Link {
       },
       "path": "some/kind/of/path",
       "realpath": "/home/user/projects/some/kind/of/path",
-      "resolved": undefined,
+      "resolved": null,
     },
   },
   "location": "",
@@ -57,7 +62,7 @@ Link {
   },
   "path": "some/kind/of/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": undefined,
+  "resolved": null,
   "target": Node {
     "children": Map {},
     "dev": true,
@@ -66,20 +71,25 @@ Link {
     "edgesOut": Map {},
     "errors": Array [],
     "extraneous": true,
-    "integrity": undefined,
+    "integrity": null,
     "inventory": Inventory {},
     "location": "",
     "meta": Shrinkwrap {
       "data": Object {
         "dependencies": Object {},
         "lockfileVersion": 2,
-        "packages": Object {},
+        "packages": Object {
+          "": Object {
+            "name": undefined,
+          },
+        },
       },
       "filename": null,
       "indent": 2,
       "loadedFromDisk": false,
       "root": "/home/user/projects/some/kind/of/path",
       "type": null,
+      "yarnLock": null,
     },
     "name": "path",
     "optional": true,
@@ -88,22 +98,21 @@ Link {
     },
     "path": "some/kind/of/path",
     "realpath": "/home/user/projects/some/kind/of/path",
-    "resolved": undefined,
+    "resolved": null,
   },
 }
 `
 
 exports[`test/link.js TAP > instantiate without providing target 1`] = `
-&ref_1 Link {
+Link {
   "dev": true,
   "devOptional": true,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "errors": Array [],
   "extraneous": true,
-  "integrity": undefined,
+  "integrity": null,
   "inventory": Inventory {
-    "" => <*ref_1>,
     "../../../projects/some/kind/of/path" => Node {
       "children": Map {},
       "dev": true,
@@ -112,20 +121,25 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "edgesOut": Map {},
       "errors": Array [],
       "extraneous": true,
-      "integrity": undefined,
+      "integrity": null,
       "inventory": Inventory {},
       "location": "../../../projects/some/kind/of/path",
       "meta": Shrinkwrap {
         "data": Object {
           "dependencies": Object {},
           "lockfileVersion": 2,
-          "packages": Object {},
+          "packages": Object {
+            "": Object {
+              "name": undefined,
+            },
+          },
         },
         "filename": null,
         "indent": 2,
         "loadedFromDisk": false,
         "root": "/home/user/projects/some/kind/of/path",
         "type": null,
+        "yarnLock": null,
       },
       "name": "path",
       "optional": true,
@@ -134,7 +148,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       },
       "path": "/home/user/projects/some/kind/of/path",
       "realpath": "/home/user/projects/some/kind/of/path",
-      "resolved": undefined,
+      "resolved": null,
     },
   },
   "location": "",
@@ -142,13 +156,18 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {},
+      "packages": Object {
+        "": Object {
+          "name": undefined,
+        },
+      },
     },
     "filename": null,
     "indent": 2,
     "loadedFromDisk": false,
     "root": "/home/user/projects/some/kind/of/path",
     "type": null,
+    "yarnLock": null,
   },
   "name": "path",
   "optional": true,
@@ -157,7 +176,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   },
   "path": "/home/user/some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": "../../../projects/some/kind/of/path",
+  "resolved": null,
   "target": Node {
     "children": Map {},
     "dev": true,
@@ -166,20 +185,25 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "edgesOut": Map {},
     "errors": Array [],
     "extraneous": true,
-    "integrity": undefined,
+    "integrity": null,
     "inventory": Inventory {},
     "location": "../../../projects/some/kind/of/path",
     "meta": Shrinkwrap {
       "data": Object {
         "dependencies": Object {},
         "lockfileVersion": 2,
-        "packages": Object {},
+        "packages": Object {
+          "": Object {
+            "name": undefined,
+          },
+        },
       },
       "filename": null,
       "indent": 2,
       "loadedFromDisk": false,
       "root": "/home/user/projects/some/kind/of/path",
       "type": null,
+      "yarnLock": null,
     },
     "name": "path",
     "optional": true,
@@ -188,7 +212,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     },
     "path": "/home/user/projects/some/kind/of/path",
     "realpath": "/home/user/projects/some/kind/of/path",
-    "resolved": undefined,
+    "resolved": null,
   },
 }
 `

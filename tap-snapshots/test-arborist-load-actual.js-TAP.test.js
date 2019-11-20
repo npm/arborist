@@ -881,7 +881,7 @@ Node {
       },
     },
     "lockfileVersion": 2,
-    "name": "deepmixedloop",
+    "name": "root",
     "packages": Object {
       "": Object {
         "dependencies": Object {
@@ -970,7 +970,6 @@ Node {
       },
     },
     "requires": true,
-    "version": "npm:root@",
   },
   "name": "deepmixedloop",
   "realpath": "deepmixedloop",
@@ -987,6 +986,44 @@ Link {
         "version": "file:",
       },
       "@scope/x": Object {
+        "dependencies": Object {
+          "glob": Object {
+            "dependencies": Object {
+              "graceful-fs": Object {
+                "version": "3.0.2",
+              },
+              "inherits": Object {
+                "version": "2.0.1",
+              },
+              "minimatch": Object {
+                "dependencies": Object {
+                  "lru-cache": Object {
+                    "version": "2.5.0",
+                  },
+                  "sigmund": Object {
+                    "version": "1.0.0",
+                  },
+                },
+                "requires": Object {
+                  "lru-cache": "",
+                  "once": "",
+                  "sigmund": "",
+                },
+                "version": "1.0.0",
+              },
+              "once": Object {
+                "version": "1.3.0",
+              },
+            },
+            "requires": Object {
+              "graceful-fs": "",
+              "inherits": "",
+              "minimatch": "",
+              "once": "",
+            },
+            "version": "4.0.5",
+          },
+        },
         "requires": Object {
           "@scope/x": "",
           "@scope/y": "",
@@ -1002,6 +1039,13 @@ Link {
         "version": "1.2.3",
       },
       "foo": Object {
+        "dependencies": Object {
+          "express": Object {
+            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "version": "npm:abbrev@1.1.1",
+          },
+        },
         "requires": Object {
           "@scope/x": "",
           "express": "npm:abbrev@*",
@@ -1048,6 +1092,45 @@ Link {
         },
         "version": "1.2.3",
       },
+      "node_modules/@scope/x/node_modules/glob": Object {
+        "dependencies": Object {
+          "graceful-fs": "",
+          "inherits": "",
+          "minimatch": "",
+          "once": "",
+        },
+        "name": "glob",
+        "version": "4.0.5",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "dependencies": Object {
+          "lru-cache": "",
+          "once": "",
+          "sigmund": "",
+        },
+        "name": "minimatch",
+        "version": "1.0.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "name": "sigmund",
+        "version": "1.0.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
@@ -1065,6 +1148,12 @@ Link {
           "@scope/x": "",
         },
         "version": "1.2.3",
+      },
+      "node_modules/foo/node_modules/express": Object {
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "name": "abbrev",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "version": "1.1.1",
       },
     },
     "requires": true,
@@ -1838,6 +1927,16 @@ Node {
   "meta": Object {
     "dependencies": Object {
       "abbrev": Object {
+        "dependencies": Object {
+          "@scope/name": Object {
+            "dependencies": Object {
+              "@otherscope/othername": Object {
+                "integrity": "the integrity is not valid, clearly",
+                "resolved": "fake resolved value",
+              },
+            },
+          },
+        },
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -1851,12 +1950,14 @@ Node {
       "balanced-match": Object {
         "extraneous": true,
         "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
+        "optional": true,
         "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
         "version": "1.0.0",
       },
       "brace-expansion": Object {
         "extraneous": true,
         "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+        "optional": true,
         "requires": Object {
           "balanced-match": "^1.0.0",
           "concat-map": "0.0.1",
@@ -1867,6 +1968,7 @@ Node {
       "bundler": Object {
         "dependencies": Object {
           "a": Object {
+            "bundled": "true",
             "inBundle": true,
             "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
             "requires": Object {
@@ -1876,6 +1978,7 @@ Node {
             "version": "1.2.3",
           },
           "b": Object {
+            "bundled": "true",
             "inBundle": true,
             "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
             "requires": Object {
@@ -1885,6 +1988,7 @@ Node {
             "version": "1.2.3",
           },
           "c": Object {
+            "bundled": "true",
             "inBundle": true,
             "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
             "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
@@ -1901,12 +2005,14 @@ Node {
       "concat-map": Object {
         "extraneous": true,
         "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "optional": true,
         "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
         "version": "0.0.1",
       },
       "fs.realpath": Object {
         "extraneous": true,
         "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
+        "optional": true,
         "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
         "version": "1.0.0",
       },
@@ -1927,6 +2033,7 @@ Node {
       "glob": Object {
         "extraneous": true,
         "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
+        "optional": true,
         "requires": Object {
           "fs.realpath": "^1.0.0",
           "inflight": "^1.0.4",
@@ -1941,6 +2048,7 @@ Node {
       "inflight": Object {
         "extraneous": true,
         "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
+        "optional": true,
         "requires": Object {
           "once": "^1.3.0",
           "wrappy": "1",
@@ -1951,12 +2059,14 @@ Node {
       "inherits": Object {
         "extraneous": true,
         "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "optional": true,
         "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
         "version": "2.0.4",
       },
       "minimatch": Object {
         "extraneous": true,
         "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+        "optional": true,
         "requires": Object {
           "brace-expansion": "^1.1.7",
         },
@@ -1979,6 +2089,7 @@ Node {
       "path-is-absolute": Object {
         "extraneous": true,
         "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
+        "optional": true,
         "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
         "version": "1.0.1",
       },
@@ -2015,6 +2126,7 @@ Node {
         "version": "file:./node_modules/abbrev",
       },
       "tarball": Object {
+        "dev": true,
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "version": "file:abbrev-1.1.1.tgz",
       },
@@ -2034,7 +2146,7 @@ Node {
       },
     },
     "lockfileVersion": 2,
-    "name": "install-types",
+    "name": "a",
     "packages": Object {
       "": Object {
         "dependencies": Object {
@@ -2285,7 +2397,7 @@ Node {
       },
     },
     "requires": true,
-    "version": "npm:a@1.2.3",
+    "version": "1.2.3",
   },
   "name": "install-types",
   "realpath": "install-types",
@@ -2302,6 +2414,44 @@ Link {
         "version": "file:",
       },
       "@scope/x": Object {
+        "dependencies": Object {
+          "glob": Object {
+            "dependencies": Object {
+              "graceful-fs": Object {
+                "version": "3.0.2",
+              },
+              "inherits": Object {
+                "version": "2.0.1",
+              },
+              "minimatch": Object {
+                "dependencies": Object {
+                  "lru-cache": Object {
+                    "version": "2.5.0",
+                  },
+                  "sigmund": Object {
+                    "version": "1.0.0",
+                  },
+                },
+                "requires": Object {
+                  "lru-cache": "",
+                  "once": "",
+                  "sigmund": "",
+                },
+                "version": "1.0.0",
+              },
+              "once": Object {
+                "version": "1.3.0",
+              },
+            },
+            "requires": Object {
+              "graceful-fs": "",
+              "inherits": "",
+              "minimatch": "",
+              "once": "",
+            },
+            "version": "4.0.5",
+          },
+        },
         "requires": Object {
           "@scope/x": "",
           "@scope/y": "",
@@ -2317,6 +2467,13 @@ Link {
         "version": "1.2.3",
       },
       "foo": Object {
+        "dependencies": Object {
+          "express": Object {
+            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "version": "npm:abbrev@1.1.1",
+          },
+        },
         "requires": Object {
           "@scope/x": "",
           "express": "npm:abbrev@*",
@@ -2363,6 +2520,45 @@ Link {
         },
         "version": "1.2.3",
       },
+      "node_modules/@scope/x/node_modules/glob": Object {
+        "dependencies": Object {
+          "graceful-fs": "",
+          "inherits": "",
+          "minimatch": "",
+          "once": "",
+        },
+        "name": "glob",
+        "version": "4.0.5",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
+        "name": "graceful-fs",
+        "version": "3.0.2",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
+        "name": "inherits",
+        "version": "2.0.1",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
+        "dependencies": Object {
+          "lru-cache": "",
+          "once": "",
+          "sigmund": "",
+        },
+        "name": "minimatch",
+        "version": "1.0.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "name": "sigmund",
+        "version": "1.0.0",
+      },
+      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
+        "name": "once",
+        "version": "1.3.0",
+      },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
@@ -2380,6 +2576,12 @@ Link {
           "@scope/x": "",
         },
         "version": "1.2.3",
+      },
+      "node_modules/foo/node_modules/express": Object {
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "name": "abbrev",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "version": "1.1.1",
       },
     },
     "requires": true,
@@ -2691,20 +2893,6 @@ Node {
                   "c": Object {
                     "dependencies": Object {
                       "d": Object {
-                        "dependencies": Object {
-                          "deep": Object {
-                            "dependencies": Object {
-                              "deep-a": Object {
-                                "version": "1.2.3",
-                              },
-                            },
-                            "requires": Object {
-                              "a": "",
-                              "deep-a": "",
-                            },
-                            "version": "1.2.3",
-                          },
-                        },
                         "extraneous": true,
                         "requires": Object {
                           "deep": "",
@@ -2798,18 +2986,6 @@ Node {
         },
         "extraneous": true,
         "name": "d",
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep": Object {
-        "dependencies": Object {
-          "a": "",
-          "deep-a": "",
-        },
-        "name": "deep",
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a": Object {
-        "name": "deep-a",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/link-in-nest": Object {
@@ -3499,7 +3675,7 @@ Node {
       },
     },
     "lockfileVersion": 2,
-    "name": "mixedloop",
+    "name": "root",
     "packages": Object {
       "": Object {
         "dependencies": Object {
@@ -3552,7 +3728,6 @@ Node {
       },
     },
     "requires": true,
-    "version": "npm:root@",
   },
   "name": "mixedloop",
   "realpath": "mixedloop",
@@ -4009,7 +4184,7 @@ Node {
       },
     },
     "lockfileVersion": 2,
-    "name": "mixedmidway",
+    "name": "root",
     "packages": Object {
       "": Object {
         "dependencies": Object {
@@ -4116,7 +4291,6 @@ Node {
       },
     },
     "requires": true,
-    "version": "npm:root@",
   },
   "name": "mixedmidway",
   "realpath": "mixedmidway",
@@ -4886,7 +5060,7 @@ Node {
       },
     },
     "lockfileVersion": 2,
-    "name": "pnpm",
+    "name": "pnpm-root",
     "packages": Object {
       "": Object {
         "dependencies": Object {
@@ -4977,7 +5151,7 @@ Node {
       },
     },
     "requires": true,
-    "version": "npm:pnpm-root@1.0.0",
+    "version": "1.0.0",
   },
   "name": "pnpm",
   "realpath": "pnpm",
@@ -5913,6 +6087,22 @@ Node {
               "top": "selflink",
             },
             "minimatch" => Node {
+              "children": Map {
+                "lru-cache" => Node {
+                  "extraneous": true,
+                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "name": "lru-cache",
+                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "top": "selflink",
+                },
+                "sigmund" => Node {
+                  "extraneous": true,
+                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "name": "sigmund",
+                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "top": "selflink",
+                },
+              },
               "extraneous": true,
               "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
               "name": "minimatch",
@@ -6049,6 +6239,16 @@ Node {
                 "version": "2.0.1",
               },
               "minimatch": Object {
+                "dependencies": Object {
+                  "lru-cache": Object {
+                    "extraneous": true,
+                    "version": "2.5.0",
+                  },
+                  "sigmund": Object {
+                    "extraneous": true,
+                    "version": "1.0.0",
+                  },
+                },
                 "extraneous": true,
                 "version": "1.0.0",
               },
@@ -6126,6 +6326,16 @@ Node {
       "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
         "extraneous": true,
         "name": "minimatch",
+        "version": "1.0.0",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
+        "extraneous": true,
+        "name": "lru-cache",
+        "version": "2.5.0",
+      },
+      "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
+        "extraneous": true,
+        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/once": Object {
@@ -6620,7 +6830,7 @@ Node {
       },
     },
     "lockfileVersion": 2,
-    "name": "workspace2",
+    "name": "a",
     "packages": Object {
       "": Object {
         "dependencies": Object {
@@ -6669,7 +6879,7 @@ Node {
       },
     },
     "requires": true,
-    "version": "npm:a@1.2.3",
+    "version": "1.2.3",
   },
   "name": "workspace2",
   "realpath": "workspace2",

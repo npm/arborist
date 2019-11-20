@@ -332,6 +332,20 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP handle missing dependencies object without borking > must match snapshot 1`] = `
+Object {
+  "dependencies": Object {
+    "foo": Object {
+      "integrity": "foo integrity",
+      "resolved": "http://foo.com",
+    },
+  },
+  "packages": Object {
+    "node_modules/foo": Object {},
+  },
+}
+`
+
 exports[`test/shrinkwrap.js TAP look up from locks and such > basic package 1`] = `
 Object {
   "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",

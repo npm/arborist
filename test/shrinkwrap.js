@@ -102,7 +102,6 @@ t.test('throws when attempting to access data before loading', t => {
   t.end()
 })
 
-
 t.test('construct metadata from node and package data', t => {
   const meta = new Shrinkwrap('/home/user/projects/root')
   // fake load
@@ -310,6 +309,14 @@ t.test('load yarn.lock file if present', t =>
   Shrinkwrap.load(yarnFixture).then(s => {
     t.isa(s.yarnLock, YarnLock, 'loaded a yarn lock file')
     t.notEqual(s.yarnLock.entries.size, 0, 'got some entries')
+  }))
+
+t.test('save yarn lock if loaded', t =>
+  Shrinkwrap.load(yarnFixture).then(s => {
+    s.root = t.testdir()
+    return s.save()
+      .then(() => Shrinkwrap.load(s.root))
+      .then(ss => t.strictSame(s.yarnLock, ss.yarnLock))
   }))
 
 t.test('ignore yarn lock file parse errors', t => {

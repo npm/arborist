@@ -79,6 +79,8 @@ t.test('exports YarnLockEntry class', t => {
 })
 
 t.test('load a yarn lock from a tree', t => {
+  // make sure the symlinks are loaded
+  require('./fixtures/index.js')
   const fixtures = [
     resolve(__dirname, 'fixtures/install-types'),
     resolve(__dirname, 'fixtures/links-all-over'),

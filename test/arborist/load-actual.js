@@ -39,6 +39,7 @@ const printTree = tree => ({
     ...(tree.devOptional && !tree.dev && !tree.optional
       ? { devOptional: true } : {}),
   }),
+  ...(tree.fsParent ? { fsParent: pp(tree.fsParent) } : {}),
   ...(tree.errors.length
     ? {
       errors: tree.errors.map(error => ({
@@ -50,7 +51,8 @@ const printTree = tree => ({
   ...(tree.isLink ? {
     target: {
       name: tree.target.name,
-      parent: tree.target.parent && pp(tree.target.parent.realpath)
+      ...(tree.target.parent ? { parent: pp(tree.target.parent.realpath) } : {}),
+      ...(tree.target.fsParent ? { fsParent: pp(tree.target.fsParent.realpath) } : {}),
     }
   } : {}),
   ...(tree.inBundle ? { bundled: true } : {}),

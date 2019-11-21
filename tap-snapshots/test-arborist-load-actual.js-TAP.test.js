@@ -1163,7 +1163,6 @@ Link {
   "realpath": "root",
   "target": Object {
     "name": "root",
-    "parent": null,
   },
   "top": "root",
 }
@@ -1820,8 +1819,8 @@ Node {
       "name": "symlink",
       "realpath": "install-types/abbrev-link-target",
       "target": Object {
+        "fsParent": "install-types",
         "name": "abbrev-link-target",
-        "parent": null,
       },
       "top": "install-types",
     },
@@ -2591,7 +2590,6 @@ Link {
   "realpath": "root",
   "target": Object {
     "name": "root",
-    "parent": null,
   },
   "top": "root",
 }
@@ -2655,8 +2653,8 @@ Node {
       "name": "link-outside-nest",
       "realpath": "links-all-over/real",
       "target": Object {
+        "fsParent": "links-all-over",
         "name": "real",
-        "parent": null,
       },
       "top": "links-all-over",
     },
@@ -2812,8 +2810,8 @@ Node {
           "name": "link-in-nest",
           "realpath": "links-all-over/real",
           "target": Object {
+            "fsParent": "links-all-over",
             "name": "real",
-            "parent": null,
           },
           "top": "links-all-over",
         },
@@ -5794,7 +5792,6 @@ Node {
           "realpath": "selflink",
           "target": Object {
             "name": "selflink",
-            "parent": undefined,
           },
           "top": "selflink",
         },
@@ -6144,7 +6141,6 @@ Node {
           "realpath": "selflink",
           "target": Object {
             "name": "selflink",
-            "parent": undefined,
           },
           "top": "selflink",
         },
@@ -6367,7 +6363,6 @@ Node {
       "realpath": "symlinked-node-modules/bar",
       "target": Object {
         "name": "bar",
-        "parent": null,
       },
       "top": "symlinked-node-modules/example",
     },
@@ -6378,7 +6373,6 @@ Node {
       "realpath": "symlinked-node-modules/linked-node-modules/foo",
       "target": Object {
         "name": "foo",
-        "parent": null,
       },
       "top": "symlinked-node-modules/example",
     },
@@ -6454,8 +6448,8 @@ Node {
       "name": "a",
       "realpath": "workspace/packages/a",
       "target": Object {
+        "fsParent": "workspace",
         "name": "a",
-        "parent": null,
       },
       "top": "workspace",
     },
@@ -6472,8 +6466,8 @@ Node {
       "name": "b",
       "realpath": "workspace/packages/b",
       "target": Object {
+        "fsParent": "workspace",
         "name": "b",
-        "parent": null,
       },
       "top": "workspace",
     },
@@ -6490,8 +6484,8 @@ Node {
       "name": "c",
       "realpath": "workspace/packages/c",
       "target": Object {
+        "fsParent": "workspace",
         "name": "c",
-        "parent": null,
       },
       "top": "workspace",
     },
@@ -6742,8 +6736,8 @@ Node {
           "name": "x",
           "realpath": "workspace2/x",
           "target": Object {
+            "fsParent": "workspace2",
             "name": "x",
-            "parent": null,
           },
           "top": "workspace2",
         },
@@ -6916,8 +6910,8 @@ Node {
       "name": "a",
       "realpath": "workspace3/packages/a",
       "target": Object {
+        "fsParent": "workspace3",
         "name": "a",
-        "parent": null,
       },
       "top": "workspace3",
     },
@@ -6927,8 +6921,8 @@ Node {
       "name": "app",
       "realpath": "workspace3/app",
       "target": Object {
+        "fsParent": "workspace3",
         "name": "app",
-        "parent": null,
       },
       "top": "workspace3",
     },
@@ -6958,8 +6952,8 @@ Node {
       "name": "b",
       "realpath": "workspace3/packages/b",
       "target": Object {
+        "fsParent": "workspace3",
         "name": "b",
-        "parent": null,
       },
       "top": "workspace3",
     },
@@ -6989,8 +6983,8 @@ Node {
       "name": "c",
       "realpath": "workspace3/packages/c",
       "target": Object {
+        "fsParent": "workspace3",
         "name": "c",
-        "parent": null,
       },
       "top": "workspace3",
     },

@@ -172,11 +172,15 @@ Object {
     },
     "node_modules/tgz": Object {
       "dev": true,
+      "funding": Object {
+        "url": "https://example.com/",
+      },
       "name": "tgz",
       "resolved": "file:archives/tarball.tgz",
       "version": "1.2.3",
     },
     "target": Object {
+      "funding": "https://example.com/payme",
       "name": "link",
       "resolved": "github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "version": "1.2.3",
@@ -242,6 +246,7 @@ Object {
 
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > link target metadata 1`] = `
 Object {
+  "funding": "https://example.com/payme",
   "name": "link",
   "resolved": "github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
   "version": "1.2.3",
@@ -281,6 +286,9 @@ Object {
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > metadata for tarball file pkg 1`] = `
 Object {
   "dev": true,
+  "funding": Object {
+    "url": "https://example.com/",
+  },
   "name": "tgz",
   "resolved": "file:archives/tarball.tgz",
   "version": "1.2.3",

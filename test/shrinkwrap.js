@@ -131,7 +131,11 @@ t.test('construct metadata from node and package data', t => {
   })
 
   const tgz = new Node({
-    pkg: { name: 'tgz', version: '1.2.3' },
+    pkg: {
+      name: 'tgz',
+      version: '1.2.3',
+      funding: { url: 'https://example.com/' },
+    },
     resolved: '/home/user/projects/root/archives/tarball.tgz',
     parent: root,
   })
@@ -143,6 +147,7 @@ t.test('construct metadata from node and package data', t => {
     pkg: {
       name: 'link',
       version: '1.2.3',
+      funding: 'https://example.com/payme',
       _resolved: 'github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     },
     target: new Node({
@@ -152,6 +157,7 @@ t.test('construct metadata from node and package data', t => {
       pkg: {
         name: 'link',
         version: '1.2.3',
+        funding: 'https://example.com/payme',
         _resolved: 'github:isaacs/foobarbaz#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
       },
     }),

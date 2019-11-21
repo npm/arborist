@@ -15,8 +15,7 @@
   "devDependencies": {
     "mkdirp": "^0.5.1",
     "mutate-fs": "^2.1.1",
-    "tap": "^14.9.2",
-    "tcompare": "^2.3.0"
+    "tap": "^14.10.0"
   },
   "scripts": {
     "test": "tap",

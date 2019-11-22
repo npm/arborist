@@ -2891,6 +2891,15 @@ Node {
                   "c": Object {
                     "dependencies": Object {
                       "d": Object {
+                        "dependencies": Object {
+                          "deep": Object {
+                            "dependencies": Object {
+                              "deep-a": Object {
+                                "version": "1.2.3",
+                              },
+                            },
+                          },
+                        },
                         "extraneous": true,
                         "requires": Object {
                           "deep": "",
@@ -2984,6 +2993,10 @@ Node {
         },
         "extraneous": true,
         "name": "d",
+        "version": "1.2.3",
+      },
+      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a": Object {
+        "name": "deep-a",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/link-in-nest": Object {

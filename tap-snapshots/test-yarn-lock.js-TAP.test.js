@@ -169,6 +169,9 @@ exports[`test/yarn-lock.js TAP load a yarn lock from a tree links-all-over > yar
   dependencies:
     "deep" ""
 
+"deep-a@":
+  "version" "1.2.3"
+
 "link-deep@":
   "resolved" "file:node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep"
   "version" "1.2.3"

@@ -2762,6 +2762,7 @@ Node {
               "errors": Array [
                 Object {
                   "code": "EJSONPARSE",
+                  "path": "../fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/package.json",
                 },
               ],
               "location": "node_modules/nest/node_modules/a/node_modules/b",

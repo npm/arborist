@@ -2,7 +2,7 @@ const t = require('tap')
 const Link = require('../lib/link.js')
 const Node = require('../lib/node.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
-const meta = new Shrinkwrap('/home/user/projects/some/kind/of/path')
+const meta = new Shrinkwrap({ path: '/home/user/projects/some/kind/of/path' })
 meta.data = {
   lockfileVersion: 2,
   packages: {},

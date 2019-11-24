@@ -20,7 +20,7 @@ t.test('path defaults to .', async t => {
 })
 
 t.test('loading in bad dir gets empty lockfile', t =>
-  Shrinkwrap.load('path/which/does/not/exist').then(sw => {
+  Shrinkwrap.load({ path: 'path/which/does/not/exist' }).then(sw => {
     t.strictSame(sw.data, {
       lockfileVersion: 2,
       requires: true,
@@ -31,7 +31,7 @@ t.test('loading in bad dir gets empty lockfile', t =>
   }))
 
 t.test('loading in empty dir gets empty lockfile', t =>
-  Shrinkwrap.load(emptyFixture).then(sw => {
+  Shrinkwrap.load({ path: emptyFixture }).then(sw => {
     t.strictSame(sw.data, {
       lockfileVersion: 2,
       requires: true,
@@ -58,7 +58,7 @@ t.test('loading in empty dir gets empty lockfile', t =>
   }))
 
 t.test('look up from locks and such', t =>
-  new Shrinkwrap(fixture).load().then(m => {
+  new Shrinkwrap({ path: fixture }).load().then(m => {
     t.strictSame(m.get(''), { name: 'a', version: '1.2.3' }, 'root metadata')
     t.match(m.data, {
       lockfileVersion: 2,
@@ -103,7 +103,7 @@ t.test('throws when attempting to access data before loading', t => {
 })
 
 t.test('construct metadata from node and package data', t => {
-  const meta = new Shrinkwrap('/home/user/projects/root')
+  const meta = new Shrinkwrap({ path: '/home/user/projects/root' })
   // fake load
   meta.data = {
     lockfileVersion: 2,
@@ -263,13 +263,13 @@ t.test('construct metadata from node and package data', t => {
 t.test('write the shrinkwrap back to disk', t => {
   const dir = t.testdir({})
   t.test('just read and write back', t =>
-    Shrinkwrap.load(fixture).then(s => {
+    Shrinkwrap.load({ path: fixture }).then(s => {
       s.filename = dir + '/test-shrinkwrap.json'
       return s.save().then(() =>
         t.strictSame(require(s.filename), s.data, 'saved json matches data'))
     }))
   t.test('write back with pending changes', t =>
-    Shrinkwrap.load(fixture).then(s => {
+    Shrinkwrap.load({ path: fixture }).then(s => {
       const dir = t.testdir({})
       s.filename = dir + '/test-shrinkwrap-with-changes.json'
       const node = new Node({
@@ -304,24 +304,24 @@ t.test('load shrinkwrap if no package-lock.json present', t => {
     })
   })
   return Promise.all([
-    Shrinkwrap.load(dir, undefined, true).then(s =>
+    Shrinkwrap.load({ path: dir, shrinkwrapOnly: true }).then(s =>
       t.equal(s.type, 'npm-shrinkwrap.json', 'loaded with swonly')),
-    Shrinkwrap.load(dir).then(s =>
+    Shrinkwrap.load({ path: dir }).then(s =>
       t.equal(s.type, 'npm-shrinkwrap.json', 'loaded without swonly')),
   ])
 })
 
 t.test('load yarn.lock file if present', t =>
-  Shrinkwrap.load(yarnFixture).then(s => {
+  Shrinkwrap.load({ path: yarnFixture }).then(s => {
     t.isa(s.yarnLock, YarnLock, 'loaded a yarn lock file')
     t.notEqual(s.yarnLock.entries.size, 0, 'got some entries')
   }))
 
 t.test('save yarn lock if loaded', t =>
-  Shrinkwrap.load(yarnFixture).then(s => {
+  Shrinkwrap.load({ path: yarnFixture }).then(s => {
     s.path = t.testdir()
     return s.save()
-      .then(() => Shrinkwrap.load(s.path))
+      .then(() => Shrinkwrap.load({ path: s.path }))
       .then(ss => t.strictSame(s.yarnLock, ss.yarnLock))
   }))
 
@@ -329,14 +329,14 @@ t.test('ignore yarn lock file parse errors', t => {
   const dir = t.testdir({
     'yarn.lock': 'this is not a yarn lock file!',
   })
-  return Shrinkwrap.load(dir).then(s => {
+  return Shrinkwrap.load({ path: dir }).then(s => {
     t.isa(s.yarnLock, YarnLock, 'got a yarn lock object because a yarn lock exists')
     t.equal(s.yarnLock.entries.size, 0, 'did not get any entries out of it')
   })
 })
 
 t.test('handle missing dependencies object without borking', t => {
-  const s = new Shrinkwrap('/path/to/root')
+  const s = new Shrinkwrap({ path: '/path/to/root' })
   s.data = {
     packages: {
       'node_modules/foo': {},

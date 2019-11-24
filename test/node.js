@@ -198,7 +198,7 @@ t.test('testing with dep tree', t => {
   }
 
   t.test('without meta', runTest())
-  const meta = new Shrinkwrap('/home/user/projects/root')
+  const meta = new Shrinkwrap({ path: '/home/user/projects/root' })
   meta.data = {
     lockfileVersion: 2,
     packages: {},
@@ -349,7 +349,7 @@ t.test('child of link target has path, like parent', t => {
 })
 
 t.test('changing root', t => {
-  const meta = new Shrinkwrap('/home/user/projects/root')
+  const meta = new Shrinkwrap({ path: '/home/user/projects/root' })
   meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const root = new Node({
     pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
@@ -369,7 +369,7 @@ t.test('changing root', t => {
     parent: a,
     name: 'b',
   })
-  const meta2 = new Shrinkwrap('/home/user/projects/root2')
+  const meta2 = new Shrinkwrap({ path: '/home/user/projects/root2' })
   meta2.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const root2 = new Node({
     pkg: { name: 'root2', dependencies: { a: '', link: '', link2: '' }},
@@ -493,7 +493,7 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
   // AND in the top-of-tree node, if it's not also the root (as that would be
   // redundant).
 
-  const rootMeta = new Shrinkwrap('/home/user/projects/root')
+  const rootMeta = new Shrinkwrap({ path: '/home/user/projects/root' })
   rootMeta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const root = new Node({
     pkg: { name: 'root' },
@@ -502,7 +502,7 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
     meta: rootMeta,
   })
 
-  const top1Meta = new Shrinkwrap('/path/to/top1')
+  const top1Meta = new Shrinkwrap({ path: '/path/to/top1' })
   top1Meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const top1 = new Node({
     pkg: { name: 'top', version: '1.1.1' },
@@ -518,7 +518,7 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
     target: top1,
   })
 
-  const top2Meta = new Shrinkwrap('/path/to/top2')
+  const top2Meta = new Shrinkwrap({ path: '/path/to/top2' })
   top2Meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const top2 = new Node({
     pkg: { name: 'top', version: '1.1.1' },
@@ -611,7 +611,7 @@ t.test('get meta from yarn.lock', t => {
   }
 
   const root = '/path/to/root'
-  const meta = new Shrinkwrap(root)
+  const meta = new Shrinkwrap({ path: root })
   meta.data = {
     lockfileVersion: 2,
     packages: {},
@@ -759,7 +759,7 @@ t.test('get meta from yarn.lock', t => {
 
 t.test('metadata that only has one of resolved/integrity', t => {
   const root = '/path/to/root'
-  const meta = new Shrinkwrap(root)
+  const meta = new Shrinkwrap({ path: root })
   meta.data = {
     name: 'root',
     version: '4.5.6',

@@ -81,11 +81,11 @@ const printTree = tree => ({
 
 t.formatSnapshot = tree => format(printTree(tree), { sort: true })
 
-const loadActual = root => new Arborist({root}).loadActual()
+const loadActual = path => new Arborist({path}).loadActual()
 
-roots.forEach(root => {
-  const dir = resolve(fixtures, root)
-  t.test(root, t => loadActual(dir).then(tree =>
+roots.forEach(path => {
+  const dir = resolve(fixtures, path)
+  t.test(path, t => loadActual(dir).then(tree =>
     t.matchSnapshot(tree, 'loaded tree')))
 })
 

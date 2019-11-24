@@ -86,7 +86,7 @@ t.test('load a yarn lock from a tree', t => {
     resolve(__dirname, 'fixtures/links-all-over'),
   ]
   fixtures.forEach(fixture => t.test(basename(fixture), t =>
-    new Arborist({root: fixture}).loadActual().then(tree => {
+    new Arborist({path: fixture}).loadActual().then(tree => {
       const y = YarnLock.fromTree(tree)
       t.matchSnapshot(y.toString(), 'yarn.lock from a package tree')
     })))

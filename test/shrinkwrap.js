@@ -14,9 +14,9 @@ const YarnLock = require('../lib/yarn-lock.js')
 const yarnFixture = resolve(__dirname, 'fixtures/yarn-stuff')
 const emptyFixture = resolve(__dirname, 'fixtures/empty')
 
-t.test('root defaults to .', async t => {
+t.test('path defaults to .', async t => {
   const sw = new Shrinkwrap()
-  t.equal(sw.root, process.cwd())
+  t.equal(sw.path, process.cwd())
 })
 
 t.test('loading in bad dir gets empty lockfile', t =>
@@ -319,9 +319,9 @@ t.test('load yarn.lock file if present', t =>
 
 t.test('save yarn lock if loaded', t =>
   Shrinkwrap.load(yarnFixture).then(s => {
-    s.root = t.testdir()
+    s.path = t.testdir()
     return s.save()
-      .then(() => Shrinkwrap.load(s.root))
+      .then(() => Shrinkwrap.load(s.path))
       .then(ss => t.strictSame(s.yarnLock, ss.yarnLock))
   }))
 

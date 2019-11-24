@@ -497,8 +497,8 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
   rootMeta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const root = new Node({
     pkg: { name: 'root' },
-    path: rootMeta.root,
-    realpath: rootMeta.root,
+    path: rootMeta.path,
+    realpath: rootMeta.path,
     meta: rootMeta,
   })
 
@@ -506,8 +506,8 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
   top1Meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const top1 = new Node({
     pkg: { name: 'top', version: '1.1.1' },
-    path: top1Meta.root,
-    realpath: top1Meta.root,
+    path: top1Meta.path,
+    realpath: top1Meta.path,
     meta: top1Meta,
   })
 
@@ -522,8 +522,8 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
   top2Meta.data = { lockfileVersion: 2, dependencies: {}, packages: {} }
   const top2 = new Node({
     pkg: { name: 'top', version: '1.1.1' },
-    path: top2Meta.root,
-    realpath: top2Meta.root,
+    path: top2Meta.path,
+    realpath: top2Meta.path,
     meta: top2Meta,
   })
 

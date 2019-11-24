@@ -70,7 +70,7 @@ const { format } = require('tcompare')
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-const loadVirtual = root => new Arborist({root}).loadVirtual()
+const loadVirtual = path => new Arborist({path}).loadVirtual()
 
 t.test('load from fixture', t =>
   loadVirtual(fixture).then(tree =>

@@ -6,25 +6,28 @@ t.test('basic operations', t => {
   t.equal(i.primaryKey, 'location')
   t.same(i.indexes, ['name', 'license'])
 
-  i.add({ location: 'x', name: 'x', license: 'MIT' })
-  i.add({ location: 'y', name: 'x', license: 'ISC' })
-  i.add({ location: 'z', name: 'z', license: 'MIT' })
+  i.add({ location: 'x', name: 'x', 'package': { license: 'MIT' }})
+  i.add({ location: 'y', name: 'x', 'package': { license: 'ISC' }})
+  i.add({ location: 'z', name: 'z', 'package': { license: 'MIT' }})
   t.same([...i.query('license', 'MIT')], [
-    { location: 'x', name: 'x', license: 'MIT' },
-    { location: 'z', name: 'z', license: 'MIT' },
+    { location: 'x', name: 'x', 'package': { license: 'MIT' }},
+    { location: 'z', name: 'z', 'package': { license: 'MIT' }},
   ], 'can query by license')
   t.same([...i.query('name', 'x')], [
-    { location: 'x', name: 'x', license: 'MIT' },
-    { location: 'y', name: 'x', license: 'ISC' },
+    { location: 'x', name: 'x', 'package': { license: 'MIT' }},
+    { location: 'y', name: 'x', 'package': { license: 'ISC' }},
   ], 'can query by name')
 
+  t.same([...i.query('license')], [ 'MIT', 'ISC' ],
+    'can get the list of license values')
+
   const x = i.get('x')
-  t.same(x, { location: 'x', name: 'x', license: 'MIT' }, 'get by location')
+  t.same(x, { location: 'x', name: 'x', 'package': { license: 'MIT' }}, 'get by location')
   i.add(x)
   t.same(i.get('x'), x, 'adding a second time has no effect')
   t.equal(i.has(x), true, 'has a node')
-  i.add({ location: 'x', name: 'a', license: 'ABC' })
-  t.same(i.get('x'), { location: 'x', name: 'a', license: 'ABC' },
+  i.add({ location: 'x', name: 'a', 'package': { license: 'ABC' }})
+  t.same(i.get('x'), { location: 'x', name: 'a', 'package': { license: 'ABC' }},
     'new node at same location overwrites')
   t.equal(i.has(x), false, 'node has been overwritten')
 
@@ -37,6 +40,6 @@ t.test('basic operations', t => {
   i.delete(y)
   t.equal(i.has(y), false, 'no longer has the y node')
   t.equal(i.get('y'), undefined, 'get returns undefined')
-  
+
   t.end()
 })

@@ -5,9 +5,9 @@
   "dependencies": {
     "json-stringify-nice": "^1.1.1",
     "npm-package-arg": "^6.1.0",
-    "pacote": "^10.1.4",
+    "pacote": "^10.2.0",
     "parse-conflict-json": "^1.0.0",
-    "read-package-json-fast": "^1.0.3",
+    "read-package-json-fast": "^1.1.0",
     "readdir-scoped-modules": "^1.1.0",
     "semver": "^6.1.2",
     "treeverse": "^1.0.1"
@@ -15,8 +15,8 @@
   "devDependencies": {
     "mkdirp": "^0.5.1",
     "mutate-fs": "^2.1.1",
-    "tap": "^14.10.1",
-    "tcompare": "^3.0.0"
+    "tap": "^14.10.2",
+    "tcompare": "^3.0.4"
   },
   "scripts": {
     "test": "tap",

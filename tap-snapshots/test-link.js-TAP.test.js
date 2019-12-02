@@ -63,7 +63,6 @@ Link {
   },
   "path": "some/kind/of/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": null,
   "target": Node {
     "children": Map {},
     "dev": true,
@@ -180,7 +179,6 @@ Link {
   },
   "path": "/home/user/some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
-  "resolved": null,
   "target": Node {
     "children": Map {},
     "dev": true,

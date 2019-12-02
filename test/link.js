@@ -35,6 +35,17 @@ t.throws(() => new Link({ path: '/x' }), {
   message: 'must provide realpath for Link node',
 })
 
+const resolver = new Link({
+  path: '/x/y/z',
+  realpath: '/x/z/y/a/b/c',
+})
+t.equal(resolver.resolved,
+  'file:../../z/y/a/b/c', 'link resolved is relpath to realpath')
+resolver.path = null
+t.equal(resolver.resolved, null, 'link resolved depends on path')
+resolver.path = '/x/z/y/a/b/d'
+t.equal(resolver.resolved, 'file:../c', 'updates when path changes')
+
 t.matchSnapshot(new Link({
   pkg: { name: 'root' },
   path: 'some/kind/of/path',

@@ -58,6 +58,7 @@ Object {
       "dev": true,
       "requires": Object {
         "tgz": "",
+        "tgz-pkg-resolved": "",
       },
       "version": "https://foo.com/e.tgz",
     },
@@ -79,6 +80,11 @@ Object {
     },
     "tgz": Object {
       "dev": true,
+      "version": "1.2.3",
+    },
+    "tgz-pkg-resolved": Object {
+      "dev": true,
+      "integrity": "sha512-tarball/package/resolved/integrity",
       "version": "1.2.3",
     },
   },
@@ -150,6 +156,7 @@ Object {
     "node_modules/e": Object {
       "dependencies": Object {
         "tgz": "",
+        "tgz-pkg-resolved": "",
       },
       "dev": true,
       "name": "e",
@@ -178,6 +185,15 @@ Object {
       },
       "name": "tgz",
       "resolved": "file:archives/tarball.tgz",
+      "version": "1.2.3",
+    },
+    "node_modules/tgz-pkg-resolved": Object {
+      "dev": true,
+      "funding": Object {
+        "url": "https://example.com/",
+      },
+      "integrity": "sha512-tarball/package/resolved/integrity",
+      "name": "tgz-pkg-resolved",
       "version": "1.2.3",
     },
     "target": Object {
@@ -223,6 +239,7 @@ exports[`test/shrinkwrap.js TAP construct metadata from node and package data > 
 Object {
   "dependencies": Object {
     "tgz": "",
+    "tgz-pkg-resolved": "",
   },
   "dev": true,
   "name": "e",
@@ -296,6 +313,18 @@ Object {
   },
   "name": "tgz",
   "resolved": "file:archives/tarball.tgz",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > metadata for tarball file pkg with _resolved value 1`] = `
+Object {
+  "dev": true,
+  "funding": Object {
+    "url": "https://example.com/",
+  },
+  "integrity": "sha512-tarball/package/resolved/integrity",
+  "name": "tgz-pkg-resolved",
   "version": "1.2.3",
 }
 `

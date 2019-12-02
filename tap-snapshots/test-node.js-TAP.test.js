@@ -43,13 +43,14 @@ Node {
               "edgesOut": Map {},
               "errors": Array [],
               "extraneous": true,
-              "integrity": null,
+              "integrity": "metameta",
               "inventory": Inventory {},
               "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
               "meta": undefined,
               "name": "metameta",
               "optional": true,
               "package": Object {
+                "_id": "metameta@1.2.3",
                 "_integrity": "metameta",
                 "_resolved": "metameta",
                 "name": "metameta",
@@ -57,7 +58,6 @@ Node {
               },
               "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
               "realpath": "/home/user/projects/root/node_modules/meta",
-              "resolved": "../../../../../meta",
               "target": Node {
                 "children": Map {},
                 "dev": true,
@@ -77,6 +77,7 @@ Node {
                 "name": "meta",
                 "optional": true,
                 "package": Object {
+                  "_id": "meta@1.2.3",
                   "_integrity": "meta",
                   "_resolved": "meta",
                   "dependencies": Object {
@@ -111,6 +112,7 @@ Node {
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@2.3.4",
             "name": "meta",
             "peerDependencies": Object {
               "asdf": "",
@@ -145,6 +147,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -178,6 +181,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -205,6 +209,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -229,6 +234,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -253,6 +259,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -275,6 +282,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -301,6 +309,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -344,13 +353,14 @@ Node {
               "edgesOut": Map {},
               "errors": Array [],
               "extraneous": true,
-              "integrity": null,
+              "integrity": "metameta",
               "inventory": Inventory {},
               "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
               "meta": undefined,
               "name": "metameta",
               "optional": true,
               "package": Object {
+                "_id": "metameta@1.2.3",
                 "_integrity": "metameta",
                 "_resolved": "metameta",
                 "name": "metameta",
@@ -358,7 +368,6 @@ Node {
               },
               "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
               "realpath": "/home/user/projects/root/node_modules/meta",
-              "resolved": "../../../../../meta",
               "target": Node {
                 "children": Map {},
                 "dev": true,
@@ -378,6 +387,7 @@ Node {
                 "name": "meta",
                 "optional": true,
                 "package": Object {
+                  "_id": "meta@1.2.3",
                   "_integrity": "meta",
                   "_resolved": "meta",
                   "dependencies": Object {
@@ -412,6 +422,7 @@ Node {
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@2.3.4",
             "name": "meta",
             "peerDependencies": Object {
               "asdf": "",
@@ -446,6 +457,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -479,6 +491,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -506,6 +519,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -530,6 +544,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -554,6 +569,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -576,6 +592,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -602,6 +619,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -626,13 +644,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -640,7 +659,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": "../../../../../meta",
           "target": Node {
             "children": Map {},
             "dev": true,
@@ -660,6 +678,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -694,6 +713,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -716,13 +736,14 @@ Node {
       "edgesOut": Map {},
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "metameta",
       "inventory": Inventory {},
       "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
       "meta": undefined,
       "name": "metameta",
       "optional": true,
       "package": Object {
+        "_id": "metameta@1.2.3",
         "_integrity": "metameta",
         "_resolved": "metameta",
         "name": "metameta",
@@ -730,7 +751,6 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
       "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": "../../../../../meta",
       "target": Node {
         "children": Map {},
         "dev": true,
@@ -750,6 +770,7 @@ Node {
         "name": "meta",
         "optional": true,
         "package": Object {
+          "_id": "meta@1.2.3",
           "_integrity": "meta",
           "_resolved": "meta",
           "dependencies": Object {
@@ -791,7 +812,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -834,6 +858,7 @@ Node {
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@1.2.3",
             "_integrity": "meta",
             "_resolved": "meta",
             "dependencies": Object {
@@ -868,6 +893,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -901,6 +927,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -928,6 +955,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -952,6 +980,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -976,6 +1005,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -998,6 +1028,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -1043,6 +1074,7 @@ Node {
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@1.2.3",
             "_integrity": "meta",
             "_resolved": "meta",
             "dependencies": Object {
@@ -1077,6 +1109,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1109,6 +1142,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -1144,6 +1178,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1171,6 +1206,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -1195,6 +1231,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -1219,6 +1256,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -1241,6 +1279,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -1273,7 +1312,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -1315,6 +1357,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1348,6 +1391,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1375,6 +1419,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -1399,6 +1444,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -1423,6 +1469,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -1445,6 +1492,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -1472,6 +1520,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -1524,6 +1573,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1557,6 +1607,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1584,6 +1635,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -1608,6 +1660,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -1632,6 +1685,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -1654,6 +1708,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -1681,6 +1736,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -1721,7 +1777,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -1763,6 +1822,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1795,6 +1855,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -1822,6 +1883,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -1846,6 +1908,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -1870,6 +1933,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -1892,6 +1956,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -1908,13 +1973,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -1922,7 +1988,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": "../../../../../meta",
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -1942,6 +2007,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -1977,6 +2043,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -2029,6 +2096,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -2061,6 +2129,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -2088,6 +2157,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -2112,6 +2182,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -2136,6 +2207,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -2158,6 +2230,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -2174,13 +2247,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -2188,7 +2262,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": "../../../../../meta",
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -2208,6 +2281,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -2243,6 +2317,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -2283,7 +2358,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -2325,6 +2403,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -2357,6 +2436,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -2384,6 +2464,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -2408,6 +2489,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -2432,6 +2514,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -2454,6 +2537,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -2470,13 +2554,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -2484,7 +2569,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": "../../../../../meta",
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -2504,6 +2588,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -2539,6 +2624,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -2591,6 +2677,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -2623,6 +2710,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -2650,6 +2738,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -2674,6 +2763,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -2698,6 +2788,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -2720,6 +2811,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -2736,13 +2828,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -2750,7 +2843,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": "../../../../../meta",
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -2770,6 +2862,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -2805,6 +2898,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -2845,7 +2939,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -2878,13 +2975,14 @@ Node {
               "edgesOut": Map {},
               "errors": Array [],
               "extraneous": true,
-              "integrity": null,
+              "integrity": "metameta",
               "inventory": Inventory {},
               "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
               "meta": undefined,
               "name": "metameta",
               "optional": true,
               "package": Object {
+                "_id": "metameta@1.2.3",
                 "_integrity": "metameta",
                 "_resolved": "metameta",
                 "name": "metameta",
@@ -2892,7 +2990,6 @@ Node {
               },
               "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
               "realpath": "/home/user/projects/root/node_modules/meta",
-              "resolved": null,
               "target": Node {
                 "children": Map {},
                 "dev": true,
@@ -2905,13 +3002,14 @@ Node {
                 },
                 "errors": Array [],
                 "extraneous": true,
-                "integrity": null,
+                "integrity": "meta",
                 "inventory": Inventory {},
                 "location": "node_modules/meta",
                 "meta": undefined,
                 "name": "meta",
                 "optional": true,
                 "package": Object {
+                  "_id": "meta@1.2.3",
                   "_integrity": "meta",
                   "_resolved": "meta",
                   "dependencies": Object {
@@ -2925,7 +3023,7 @@ Node {
                 },
                 "path": "/home/user/projects/root/node_modules/meta",
                 "realpath": "/home/user/projects/root/node_modules/meta",
-                "resolved": null,
+                "resolved": "meta",
               },
             },
           },
@@ -2946,6 +3044,7 @@ Node {
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@2.3.4",
             "name": "meta",
             "peerDependencies": Object {
               "asdf": "",
@@ -2980,6 +3079,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3013,6 +3113,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3040,6 +3141,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -3064,6 +3166,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -3088,6 +3191,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -3110,6 +3214,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -3129,13 +3234,14 @@ Node {
       },
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "meta",
       "inventory": Inventory {},
       "location": "node_modules/meta",
       "meta": undefined,
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -3149,7 +3255,7 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": null,
+      "resolved": "meta",
     },
   },
   "dev": true,
@@ -3179,13 +3285,14 @@ Node {
               "edgesOut": Map {},
               "errors": Array [],
               "extraneous": true,
-              "integrity": null,
+              "integrity": "metameta",
               "inventory": Inventory {},
               "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
               "meta": undefined,
               "name": "metameta",
               "optional": true,
               "package": Object {
+                "_id": "metameta@1.2.3",
                 "_integrity": "metameta",
                 "_resolved": "metameta",
                 "name": "metameta",
@@ -3193,7 +3300,6 @@ Node {
               },
               "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
               "realpath": "/home/user/projects/root/node_modules/meta",
-              "resolved": null,
               "target": Node {
                 "children": Map {},
                 "dev": true,
@@ -3206,13 +3312,14 @@ Node {
                 },
                 "errors": Array [],
                 "extraneous": true,
-                "integrity": null,
+                "integrity": "meta",
                 "inventory": Inventory {},
                 "location": "node_modules/meta",
                 "meta": undefined,
                 "name": "meta",
                 "optional": true,
                 "package": Object {
+                  "_id": "meta@1.2.3",
                   "_integrity": "meta",
                   "_resolved": "meta",
                   "dependencies": Object {
@@ -3226,7 +3333,7 @@ Node {
                 },
                 "path": "/home/user/projects/root/node_modules/meta",
                 "realpath": "/home/user/projects/root/node_modules/meta",
-                "resolved": null,
+                "resolved": "meta",
               },
             },
           },
@@ -3247,6 +3354,7 @@ Node {
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@2.3.4",
             "name": "meta",
             "peerDependencies": Object {
               "asdf": "",
@@ -3281,6 +3389,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3314,6 +3423,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3341,6 +3451,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -3365,6 +3476,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -3389,6 +3501,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -3411,6 +3524,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -3430,13 +3544,14 @@ Node {
       },
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "meta",
       "inventory": Inventory {},
       "location": "node_modules/meta",
       "meta": undefined,
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -3450,7 +3565,7 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": null,
+      "resolved": "meta",
     },
     "node_modules/prod/node_modules/meta" => Node {
       "children": Map {
@@ -3461,13 +3576,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -3475,7 +3591,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": null,
           "target": Node {
             "children": Map {},
             "dev": true,
@@ -3488,13 +3603,14 @@ Node {
             },
             "errors": Array [],
             "extraneous": true,
-            "integrity": null,
+            "integrity": "meta",
             "inventory": Inventory {},
             "location": "node_modules/meta",
             "meta": undefined,
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -3508,7 +3624,7 @@ Node {
             },
             "path": "/home/user/projects/root/node_modules/meta",
             "realpath": "/home/user/projects/root/node_modules/meta",
-            "resolved": null,
+            "resolved": "meta",
           },
         },
       },
@@ -3529,6 +3645,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -3551,13 +3668,14 @@ Node {
       "edgesOut": Map {},
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "metameta",
       "inventory": Inventory {},
       "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
       "meta": undefined,
       "name": "metameta",
       "optional": true,
       "package": Object {
+        "_id": "metameta@1.2.3",
         "_integrity": "metameta",
         "_resolved": "metameta",
         "name": "metameta",
@@ -3565,7 +3683,6 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/prod/node_modules/meta/node_modules/metameta",
       "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": null,
       "target": Node {
         "children": Map {},
         "dev": true,
@@ -3578,13 +3695,14 @@ Node {
         },
         "errors": Array [],
         "extraneous": true,
-        "integrity": null,
+        "integrity": "meta",
         "inventory": Inventory {},
         "location": "node_modules/meta",
         "meta": undefined,
         "name": "meta",
         "optional": true,
         "package": Object {
+          "_id": "meta@1.2.3",
           "_integrity": "meta",
           "_resolved": "meta",
           "dependencies": Object {
@@ -3598,7 +3716,7 @@ Node {
         },
         "path": "/home/user/projects/root/node_modules/meta",
         "realpath": "/home/user/projects/root/node_modules/meta",
-        "resolved": null,
+        "resolved": "meta",
       },
     },
   },
@@ -3613,7 +3731,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -3649,13 +3770,14 @@ Node {
           },
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "meta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta",
           "meta": undefined,
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@1.2.3",
             "_integrity": "meta",
             "_resolved": "meta",
             "dependencies": Object {
@@ -3669,7 +3791,7 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
-          "resolved": null,
+          "resolved": "meta",
         },
       },
       "dev": true,
@@ -3690,6 +3812,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3723,6 +3846,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3750,6 +3874,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -3774,6 +3899,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -3798,6 +3924,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -3820,6 +3947,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -3858,13 +3986,14 @@ Node {
           },
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "meta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta",
           "meta": undefined,
           "name": "meta",
           "optional": true,
           "package": Object {
+            "_id": "meta@1.2.3",
             "_integrity": "meta",
             "_resolved": "meta",
             "dependencies": Object {
@@ -3878,7 +4007,7 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
-          "resolved": null,
+          "resolved": "meta",
         },
       },
       "dev": true,
@@ -3899,6 +4028,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3924,13 +4054,14 @@ Node {
       },
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "meta",
       "inventory": Inventory {},
       "location": "node_modules/prod/node_modules/meta",
       "meta": undefined,
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -3944,7 +4075,7 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/prod/node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
-      "resolved": null,
+      "resolved": "meta",
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -3966,6 +4097,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -3993,6 +4125,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -4017,6 +4150,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -4041,6 +4175,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -4063,6 +4198,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -4082,7 +4218,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -4124,6 +4263,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4157,6 +4297,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4184,6 +4325,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -4208,6 +4350,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -4232,6 +4375,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -4254,6 +4398,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -4274,13 +4419,14 @@ Node {
       },
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "meta",
       "inventory": Inventory {},
       "location": "node_modules/meta",
       "meta": undefined,
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -4294,7 +4440,7 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": null,
+      "resolved": "meta",
     },
   },
   "dev": true,
@@ -4333,6 +4479,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4366,6 +4513,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4393,6 +4541,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -4417,6 +4566,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -4441,6 +4591,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -4463,6 +4614,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -4483,13 +4635,14 @@ Node {
       },
       "errors": Array [],
       "extraneous": true,
-      "integrity": null,
+      "integrity": "meta",
       "inventory": Inventory {},
       "location": "node_modules/meta",
       "meta": undefined,
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@1.2.3",
         "_integrity": "meta",
         "_resolved": "meta",
         "dependencies": Object {
@@ -4503,7 +4656,7 @@ Node {
       },
       "path": "/home/user/projects/root/node_modules/meta",
       "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": null,
+      "resolved": "meta",
     },
   },
   "location": "",
@@ -4517,7 +4670,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -4559,6 +4715,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4591,6 +4748,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4618,6 +4776,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -4642,6 +4801,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -4666,6 +4826,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -4688,6 +4849,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -4704,13 +4866,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -4718,7 +4881,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": null,
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -4729,7 +4891,7 @@ Node {
             },
             "errors": Array [],
             "extraneous": true,
-            "integrity": null,
+            "integrity": "meta",
             "inventory": Inventory {
               "" => <*ref_1>,
             },
@@ -4738,6 +4900,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -4751,7 +4914,7 @@ Node {
             },
             "path": "/home/user/projects/root/node_modules/meta",
             "realpath": "/home/user/projects/root/node_modules/meta",
-            "resolved": null,
+            "resolved": "meta",
           },
         },
       },
@@ -4773,6 +4936,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -4825,6 +4989,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4857,6 +5022,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -4884,6 +5050,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -4908,6 +5075,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -4932,6 +5100,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -4954,6 +5123,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -4970,13 +5140,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -4984,7 +5155,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": null,
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -4995,7 +5165,7 @@ Node {
             },
             "errors": Array [],
             "extraneous": true,
-            "integrity": null,
+            "integrity": "meta",
             "inventory": Inventory {
               "" => <*ref_1>,
             },
@@ -5004,6 +5174,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -5017,7 +5188,7 @@ Node {
             },
             "path": "/home/user/projects/root/node_modules/meta",
             "realpath": "/home/user/projects/root/node_modules/meta",
-            "resolved": null,
+            "resolved": "meta",
           },
         },
       },
@@ -5039,6 +5210,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -5066,7 +5238,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",
@@ -5108,6 +5283,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -5140,6 +5316,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -5167,6 +5344,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -5191,6 +5369,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -5215,6 +5394,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -5237,6 +5417,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -5253,13 +5434,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -5267,7 +5449,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": null,
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -5278,7 +5459,7 @@ Node {
             },
             "errors": Array [],
             "extraneous": true,
-            "integrity": null,
+            "integrity": "meta",
             "inventory": Inventory {
               "" => <*ref_1>,
             },
@@ -5287,6 +5468,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -5300,7 +5482,7 @@ Node {
             },
             "path": "/home/user/projects/root/node_modules/meta",
             "realpath": "/home/user/projects/root/node_modules/meta",
-            "resolved": null,
+            "resolved": "meta",
           },
         },
       },
@@ -5322,6 +5504,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -5374,6 +5557,7 @@ Node {
       "name": "prod",
       "optional": true,
       "package": Object {
+        "_id": "prod@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -5406,6 +5590,7 @@ Node {
       "name": "bundled",
       "optional": true,
       "package": Object {
+        "_id": "bundled@1.2.3",
         "dependencies": Object {
           "meta": "",
         },
@@ -5433,6 +5618,7 @@ Node {
       "name": "dev",
       "optional": true,
       "package": Object {
+        "_id": "dev@1.2.3",
         "name": "dev",
         "version": "1.2.3",
       },
@@ -5457,6 +5643,7 @@ Node {
       "name": "optional",
       "optional": true,
       "package": Object {
+        "_id": "optional@1.2.3",
         "name": "optional",
         "version": "1.2.3",
       },
@@ -5481,6 +5668,7 @@ Node {
       "name": "peer",
       "optional": true,
       "package": Object {
+        "_id": "peer@1.2.3",
         "name": "peer",
         "version": "1.2.3",
       },
@@ -5503,6 +5691,7 @@ Node {
       "name": "extraneous",
       "optional": true,
       "package": Object {
+        "_id": "extraneous@1.2.3",
         "name": "extraneous",
         "version": "1.2.3",
       },
@@ -5519,13 +5708,14 @@ Node {
           "edgesOut": Map {},
           "errors": Array [],
           "extraneous": true,
-          "integrity": null,
+          "integrity": "metameta",
           "inventory": Inventory {},
           "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
           "package": Object {
+            "_id": "metameta@1.2.3",
             "_integrity": "metameta",
             "_resolved": "metameta",
             "name": "metameta",
@@ -5533,7 +5723,6 @@ Node {
           },
           "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
           "realpath": "/home/user/projects/root/node_modules/meta",
-          "resolved": null,
           "target": &ref_1 Node {
             "children": Map {},
             "dev": true,
@@ -5544,7 +5733,7 @@ Node {
             },
             "errors": Array [],
             "extraneous": true,
-            "integrity": null,
+            "integrity": "meta",
             "inventory": Inventory {
               "" => <*ref_1>,
             },
@@ -5553,6 +5742,7 @@ Node {
             "name": "meta",
             "optional": true,
             "package": Object {
+              "_id": "meta@1.2.3",
               "_integrity": "meta",
               "_resolved": "meta",
               "dependencies": Object {
@@ -5566,7 +5756,7 @@ Node {
             },
             "path": "/home/user/projects/root/node_modules/meta",
             "realpath": "/home/user/projects/root/node_modules/meta",
-            "resolved": null,
+            "resolved": "meta",
           },
         },
       },
@@ -5588,6 +5778,7 @@ Node {
       "name": "meta",
       "optional": true,
       "package": Object {
+        "_id": "meta@2.3.4",
         "name": "meta",
         "peerDependencies": Object {
           "asdf": "",
@@ -5615,7 +5806,10 @@ Node {
     "dependencies": Object {
       "bundled": "",
       "missing": "",
-      "prod": "",
+      "optional": "",
+      "optMissing": "",
+      "overlap": "",
+      "prod": "1.x",
     },
     "devDependencies": Object {
       "dev": "",

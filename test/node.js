@@ -13,6 +13,7 @@ t.test('basic instantiation', t => {
     realpath: '/home/user/projects/root',
   })
 
+  t.equal(root.depth, 0, 'root is depth 0')
   t.equal(root.isTop, true, 'root is top')
   t.equal(root.isLink, false, 'root is not a link')
 
@@ -26,7 +27,7 @@ t.test('testing with dep tree', t => {
       pkg: {
         name: 'root',
         bundleDependencies: [ 'bundled' ],
-        dependencies: { prod: '', bundled: '', missing: '' },
+        dependencies: { prod: '1.x', bundled: '', missing: '' },
         devDependencies: { dev: '', overlap: '' },
         optionalDependencies: { optional: '', overlap: '', optMissing: '' },
       },
@@ -47,6 +48,7 @@ t.test('testing with dep tree', t => {
       parent: root,
     })
     t.equal(prod.root, root, 'prod rooted on root')
+    t.equal(prod.depth, 1, 'prod is depth 1')
     const meta = new Node({
       pkg: {
         name: 'meta',
@@ -60,6 +62,7 @@ t.test('testing with dep tree', t => {
       realpath: '/home/user/projects/root/node_modules/prod/node_modules/meta',
       parent: prod,
     })
+    t.equal(meta.isDescendantOf(root), true, 'meta descends from root')
     t.equal(meta.root, root, 'meta rooted in same tree via parent')
 
     const bundled = new Node({
@@ -74,6 +77,7 @@ t.test('testing with dep tree', t => {
       realpath: '/home/user/projects/root/node_modules/bundled',
       parent: root,
     })
+    t.equal(meta.isDescendantOf(bundled), false, 'meta does not descend from bundled')
     t.equal(bundled.root, root, 'bundled root is project root')
 
     const dev = new Node({
@@ -193,6 +197,76 @@ t.test('testing with dep tree', t => {
 
     newMeta.parent = root
     t.matchSnapshot(root, 'move new meta to top level second time (no-op)')
+
+    t.test('replacement tests', t => {
+      const newProd = new Node({
+        pkg: {
+          name: 'prod',
+          version: '1.2.3',
+          dependencies: { meta: '' },
+          peerDependencies: { peer: '' },
+        },
+        resolved: 'prod',
+        integrity: 'prod',
+      })
+
+      t.equal(newProd.canReplace(prod), true, 'new prod can replace prod')
+      const kidCount = prod.children.size
+      newProd.replace(prod)
+      t.equal(newProd.children.size, kidCount, 'kids moved to newProd')
+      t.equal(prod.children.size, 0, 'kids moved to newProd')
+      t.equal(prod.root, prod, 'prod excised from tree')
+      t.equal(newProd.root, root, 'newProd in the tree')
+
+      const notProd = new Node({
+        pkg: {
+          name: 'notprod',
+          version: '1.2.3',
+        },
+      })
+      t.equal(notProd.canReplace(newProd), false, 'cannot replace with different name')
+
+      const prodV2 = new Node({
+        pkg: {
+          name: 'prod',
+          version: '2.3.4',
+        },
+      })
+      // also call the other alias for this function, from the other dir
+      t.equal(newProd.canReplaceWith(prodV2), false, 'cannot replace with 2.x')
+
+      const root2 = new Node({
+        pkg: {
+          name: 'root',
+          bundleDependencies: [ 'bundled' ],
+          dependencies: { prod: '1.x', bundled: '', missing: '' },
+          devDependencies: { dev: '', overlap: '' },
+          optionalDependencies: { optional: '', overlap: '', optMissing: '' },
+        },
+        realpath: '/home/user/projects/root',
+        path: '/home/user/projects/root',
+        meta: rootMetadata,
+      })
+      root2.replace(root)
+      t.equal(root2.root, root2, 'replacing root preserves self-rootedness')
+      root.replace(root2)
+
+      const prodLink = new Link({
+        pkg: prod.package,
+        realpath: '/some/other/path/entirely',
+        path: '/not/where/it/really/is',
+        name: 'prod',
+      })
+      t.equal(prodLink.canReplace(newProd), true, 'link can replace node')
+      prodLink.replace(newProd)
+      t.equal(newProd.parent, null, 'newProd removed from tree')
+      t.equal(prodLink.path, newProd.path, 'replaced link')
+      t.equal(newProd.children.size, 0, 'newProd kids moved over')
+      t.equal(prodLink.children.size, 0, 'links do not have child nodes')
+      t.equal(prodLink.target.children.size, kidCount, 'link target has children')
+
+      t.end()
+    })
 
     t.end()
   }
@@ -658,7 +732,7 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(bar.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
-  t.equal(bar.resolved, barEntry.resolved, 'bar resolved from yarn.lock')
+  t.equal(bar.resolved, 'file:../../bar-2.3.4.tgz', 'bar resolved from yarn.lock')
 
   bar.parent = null
 
@@ -712,10 +786,10 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(barSameIntegrity.integrity, barEntry.integrity, 'bar integrity still matches')
-  t.equal(barSameIntegrity.resolved, barEntry.resolved, 'bar resolved from yarn.lock')
+  t.equal(barSameIntegrity.resolved, 'file:../../bar-2.3.4.tgz', 'bar resolved from yarn.lock')
 
   const barSameResolved = new Node({
-    resolved: barEntry.resolved,
+    resolved: 'file:../../bar-2.3.4.tgz',
     name: 'bar',
     parent: tree,
     pkg: {
@@ -724,7 +798,7 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(barSameResolved.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
-  t.equal(barSameResolved.resolved, barEntry.resolved, 'bar resolved still matches')
+  t.equal(barSameResolved.resolved, 'file:../../bar-2.3.4.tgz', 'bar resolved still matches')
 
   // test that we sometimes might not get the resolved/integrity values
   barEntry.resolved = barEntry.integrity = null
@@ -769,7 +843,7 @@ t.test('metadata that only has one of resolved/integrity', t => {
         integrity: 'has integrity no resolved',
       },
       'node_modules/resolved': {
-        resolved: 'has resolved no integrity',
+        resolved: 'file:has-resolved-no-integrity.tgz',
       },
       'node_modules/intalready': {
         integrity: 'superceded by node integrity value',
@@ -808,7 +882,8 @@ t.test('metadata that only has one of resolved/integrity', t => {
   t.equal(integrity.integrity, 'has integrity no resolved', 'integrity only')
   t.equal(integrity.resolved, null, 'integrity only')
 
-  t.equal(resolved.resolved, 'has resolved no integrity', 'resolved only')
+  t.equal(resolved.resolved, 'file:../../has-resolved-no-integrity.tgz',
+    'resolved only, made relative to node path')
   t.equal(resolved.integrity, null, 'resolved only')
 
   t.equal(intalready.resolved, null, 'integrity only, from node settings')

@@ -150,7 +150,14 @@ t.test('construct metadata from node and package data', t => {
   })
 
   const e = new Node({
-    pkg: { name: 'e', version: '1.2.3', dependencies: { tgz: '' } },
+    pkg: {
+      name: 'e',
+      version: '1.2.3',
+      dependencies: {
+        tgz: '',
+        'tgz-pkg-resolved': '',
+      },
+    },
     resolved: 'https://foo.com/e.tgz',
     parent: root,
   })
@@ -162,6 +169,16 @@ t.test('construct metadata from node and package data', t => {
       funding: { url: 'https://example.com/' },
     },
     resolved: '/home/user/projects/root/archives/tarball.tgz',
+    parent: root,
+  })
+  const tgzPkgResolved = new Node({
+    pkg: {
+      name: 'tgz-pkg-resolved',
+      version: '1.2.3',
+      funding: { url: 'https://example.com/' },
+      _resolved: '/home/user/projects/root/archives/tarball-pkg-resolved.tgz',
+      _integrity: 'sha512-tarball/package/resolved/integrity',
+    },
     parent: root,
   })
 
@@ -273,6 +290,8 @@ t.test('construct metadata from node and package data', t => {
   t.matchSnapshot(meta.get(devo.location), 'meta for devOptional dep')
 
   t.matchSnapshot(meta.get(tgz.location), 'metadata for tarball file pkg')
+  t.matchSnapshot(meta.get(tgzPkgResolved.location),
+    'metadata for tarball file pkg with _resolved value')
   t.matchSnapshot(meta.get(link.path), 'link metadata')
   t.matchSnapshot(meta.get(link.target.path), 'link target metadata')
   t.matchSnapshot(meta.get(a.location), 'dep a metadata')

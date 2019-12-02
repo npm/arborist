@@ -1075,7 +1075,7 @@ Link {
       },
       "../deeproot/root": Object {
         "link": true,
-        "resolved": "../../root",
+        "resolved": "",
       },
       "node_modules/@scope/x": Object {
         "dependencies": Object {
@@ -1934,6 +1934,10 @@ Node {
                 "resolved": "fake resolved value",
               },
             },
+            "requires": Object {
+              "@otherscope/othername": "1.2.3",
+              "a-thing-which-is-not-here": "2.4.5",
+            },
           },
         },
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
@@ -2176,7 +2180,12 @@ Node {
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
-      "node_modules/abbrev/node_modules/@scope/name": Object {},
+      "node_modules/abbrev/node_modules/@scope/name": Object {
+        "dependencies": Object {
+          "@otherscope/othername": "1.2.3",
+          "a-thing-which-is-not-here": "2.4.5",
+        },
+      },
       "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername": Object {
         "integrity": "the integrity is not valid, clearly",
         "resolved": "fake resolved value",
@@ -2325,7 +2334,7 @@ Node {
         "extraneous": true,
         "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
         "name": "once",
-        "resolved": "file:../../../once-1.4.0.tgz",
+        "resolved": "file:once-1.4.0.tgz",
         "version": "1.4.0",
       },
       "node_modules/path-is-absolute": Object {
@@ -2364,25 +2373,26 @@ Node {
         "optionalDependencies": Object {
           "glob": "^7.1.3",
         },
-        "resolved": "file:../../../rimraf-2.6.3.tgz",
+        "resolved": "file:rimraf-2.6.3.tgz",
         "version": "2.6.3",
       },
       "node_modules/symlink": Object {
         "link": true,
-        "resolved": "../../abbrev-link-target",
+        "resolved": "abbrev-link-target",
       },
       "node_modules/symlink-in-tree": Object {
         "link": true,
-        "resolved": "../abbrev",
+        "resolved": "node_modules/abbrev",
       },
       "node_modules/tarball": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "name": "abbrev",
-        "resolved": "file:../../../abbrev-1.1.1.tgz",
+        "resolved": "file:abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
       "node_modules/tarball-no-integrity": Object {
-        "resolved": "abbrev-1.1.1.tgz",
+        "dev": true,
+        "resolved": "file:abbrev-1.1.1.tgz",
       },
       "node_modules/unhosted-git": Object {
         "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -2502,7 +2512,7 @@ Link {
       },
       "../linkedroot": Object {
         "link": true,
-        "resolved": "../root",
+        "resolved": "",
       },
       "node_modules/@scope/x": Object {
         "dependencies": Object {
@@ -2954,15 +2964,15 @@ Node {
       },
       "node_modules/link-deep": Object {
         "link": true,
-        "resolved": "../nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+        "resolved": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       },
       "node_modules/link-link": Object {
         "link": true,
-        "resolved": "../nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+        "resolved": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       },
       "node_modules/link-outside-nest": Object {
         "link": true,
-        "resolved": "../../real",
+        "resolved": "real",
       },
       "node_modules/nest": Object {
         "dependencies": Object {
@@ -3002,7 +3012,7 @@ Node {
       },
       "node_modules/nest/node_modules/link-in-nest": Object {
         "link": true,
-        "resolved": "../../../../real",
+        "resolved": "real",
       },
       "real": Object {
         "dependencies": Object {
@@ -4928,7 +4938,7 @@ Node {
       },
       "node_modules/glob": Object {
         "link": true,
-        "resolved": "../../../root/node_modules/@scope/x/node_modules/glob",
+        "resolved": "../root/node_modules/@scope/x/node_modules/glob",
       },
     },
     "requires": true,
@@ -5096,15 +5106,15 @@ Node {
       },
       "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a": Object {
         "link": true,
-        "resolved": "../../../../../a/1.0.0/node_modules/a",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       },
       "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b": Object {
         "link": true,
-        "resolved": "../../../../../b/1.0.0/node_modules/b",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
       },
       "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c": Object {
         "link": true,
-        "resolved": "../../../../../c/1.0.0/node_modules/c",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
       },
       "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {
         "extraneous": true,
@@ -5119,11 +5129,11 @@ Node {
       },
       "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b": Object {
         "link": true,
-        "resolved": "../../../../b/1.0.0/node_modules/b",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
       },
       "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c": Object {
         "link": true,
-        "resolved": "../../../../c/1.0.0/node_modules/c",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
       },
       "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {
         "extraneous": true,
@@ -5137,14 +5147,14 @@ Node {
       },
       "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c": Object {
         "link": true,
-        "resolved": "../../../../c/1.0.0/node_modules/c",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
       },
       "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {
         "extraneous": true,
       },
       "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x": Object {
         "link": true,
-        "resolved": "../../../../../@scope/x/1.0.0/node_modules/@scope/x",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       },
       "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c": Object {
         "dependencies": Object {
@@ -5155,11 +5165,11 @@ Node {
       },
       "node_modules/@scope/x": Object {
         "link": true,
-        "resolved": "../../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       },
       "node_modules/a": Object {
         "link": true,
-        "resolved": "../.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+        "resolved": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       },
     },
     "requires": true,
@@ -5960,7 +5970,7 @@ Node {
       },
       "node_modules/@scope/z/node_modules/glob": Object {
         "link": true,
-        "resolved": "../../../../foo/node_modules/glob",
+        "resolved": "node_modules/foo/node_modules/glob",
       },
       "node_modules/foo": Object {
         "dependencies": Object {
@@ -6006,7 +6016,7 @@ Node {
       },
       "node_modules/foo/node_modules/selflink": Object {
         "link": true,
-        "resolved": "../../../..",
+        "resolved": "",
       },
     },
     "requires": true,
@@ -6309,7 +6319,7 @@ Node {
       },
       "node_modules/@scope/z/node_modules/glob": Object {
         "link": true,
-        "resolved": "../../../../foo/node_modules/glob",
+        "resolved": "node_modules/foo/node_modules/glob",
       },
       "node_modules/foo": Object {
         "dependencies": Object {
@@ -6355,7 +6365,7 @@ Node {
       },
       "node_modules/foo/node_modules/selflink": Object {
         "link": true,
-        "resolved": "../../../..",
+        "resolved": "",
       },
     },
     "requires": true,
@@ -6430,11 +6440,11 @@ Node {
       },
       "node_modules/bar": Object {
         "link": true,
-        "resolved": "../../../bar",
+        "resolved": "../bar",
       },
       "node_modules/foo": Object {
         "link": true,
-        "resolved": "../../../linked-node-modules/foo",
+        "resolved": "../linked-node-modules/foo",
       },
     },
     "requires": true,
@@ -6592,15 +6602,15 @@ Node {
       },
       "node_modules/a": Object {
         "link": true,
-        "resolved": "../../packages/a",
+        "resolved": "packages/a",
       },
       "node_modules/b": Object {
         "link": true,
-        "resolved": "../../packages/b",
+        "resolved": "packages/b",
       },
       "node_modules/c": Object {
         "link": true,
-        "resolved": "../../packages/c",
+        "resolved": "packages/c",
       },
       "packages/a": Object {
         "dependencies": Object {
@@ -6611,11 +6621,11 @@ Node {
       },
       "packages/a/node_modules/b": Object {
         "link": true,
-        "resolved": "../../../b",
+        "resolved": "packages/b",
       },
       "packages/a/node_modules/c": Object {
         "link": true,
-        "resolved": "../../../c",
+        "resolved": "packages/c",
       },
       "packages/b": Object {
         "dependencies": Object {
@@ -6626,11 +6636,11 @@ Node {
       },
       "packages/b/node_modules/a": Object {
         "link": true,
-        "resolved": "../../../a",
+        "resolved": "packages/a",
       },
       "packages/b/node_modules/c": Object {
         "link": true,
-        "resolved": "../../../c",
+        "resolved": "packages/c",
       },
       "packages/c": Object {
         "dependencies": Object {
@@ -6641,11 +6651,11 @@ Node {
       },
       "packages/c/node_modules/a": Object {
         "link": true,
-        "resolved": "../../../a",
+        "resolved": "packages/a",
       },
       "packages/c/node_modules/b": Object {
         "link": true,
-        "resolved": "../../../b",
+        "resolved": "packages/b",
       },
     },
     "requires": true,
@@ -6872,11 +6882,11 @@ Node {
       },
       "node_modules/c/node_modules/d": Object {
         "link": true,
-        "resolved": "../../../b/node_modules/d",
+        "resolved": "node_modules/b/node_modules/d",
       },
       "node_modules/c/node_modules/x": Object {
         "link": true,
-        "resolved": "../../../../x",
+        "resolved": "x",
       },
       "x": Object {
         "dependencies": Object {
@@ -7104,19 +7114,19 @@ Node {
       },
       "node_modules/a": Object {
         "link": true,
-        "resolved": "../../packages/a",
+        "resolved": "packages/a",
       },
       "node_modules/app": Object {
         "link": true,
-        "resolved": "../../app",
+        "resolved": "app",
       },
       "node_modules/b": Object {
         "link": true,
-        "resolved": "../../packages/b",
+        "resolved": "packages/b",
       },
       "node_modules/c": Object {
         "link": true,
-        "resolved": "../../packages/c",
+        "resolved": "packages/c",
       },
       "packages/a": Object {
         "dependencies": Object {

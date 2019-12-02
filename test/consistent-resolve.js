@@ -73,6 +73,12 @@ t.test('remotes returned as-is', t => {
   t.end()
 })
 
+t.test('just a tag name interpreted as a tag name, not a name@', t => {
+  t.equal(cr('foo'), 'foo')
+  t.equal(cr('foo@'), '')
+  t.end()
+})
+
 t.test('falsey resolved returns null', t => {
   t.equal(cr(null), null)
   t.equal(cr(0), null)

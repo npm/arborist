@@ -111,7 +111,7 @@ exports[`test/yarn-lock.js TAP load a yarn lock from a tree install-types > yarn
 
 "once@^1.3.0":
   "integrity" "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ=="
-  "resolved" "file:node_modules/once/once-1.4.0.tgz"
+  "resolved" "file:../../../../../js/once/once-1.4.0.tgz"
   "version" "1.4.0"
   dependencies:
     "wrappy" "1"
@@ -142,7 +142,7 @@ exports[`test/yarn-lock.js TAP load a yarn lock from a tree install-types > yarn
 
 "tarball@file:abbrev-1.1.1.tgz":
   "integrity" "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
-  "resolved" "file:node_modules/tarball/abbrev-1.1.1.tgz"
+  "resolved" "file:abbrev-1.1.1.tgz"
   "version" "1.1.1"
 
 "wrappy@1":

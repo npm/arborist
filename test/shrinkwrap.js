@@ -10,9 +10,11 @@ t.cleanSnapshot = s => s.split(process.cwd()).join('{CWD}')
 
 const {relative, resolve, basename} = require('path')
 const fixture = resolve(__dirname, 'fixtures/install-types')
+const swonlyFixture = resolve(__dirname, 'fixtures/install-types-sw-only')
 const YarnLock = require('../lib/yarn-lock.js')
 const yarnFixture = resolve(__dirname, 'fixtures/yarn-stuff')
 const emptyFixture = resolve(__dirname, 'fixtures/empty')
+const depTypesFixture = resolve(__dirname, 'fixtures/dev-deps')
 
 t.test('path defaults to .', async t => {
   const sw = new Shrinkwrap()
@@ -59,7 +61,22 @@ t.test('loading in empty dir gets empty lockfile', t =>
 
 t.test('look up from locks and such', t =>
   new Shrinkwrap({ path: fixture }).load().then(m => {
-    t.strictSame(m.get(''), { name: 'a', version: '1.2.3' }, 'root metadata')
+    t.strictSame(m.get(''), {
+      name: 'a',
+      version: '1.2.3',
+      dependencies: {
+        "abbrev": "^1.1.1",
+        "full-git-url": "git+https://github.com/isaacs/abbrev-js.git",
+        "ghshort": "github:isaacs/abbrev-js",
+        "old": "npm:abbrev@^1.0.3",
+        "pinned": "npm:abbrev@^1.1.1",
+        "reg": "npm:abbrev@^1.1.1",
+        "remote": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "symlink": "file:./abbrev-link-target",
+        "tarball": "file:abbrev-1.1.1.tgz",
+        "bundler": "1.2.3",
+      },
+    }, 'root metadata')
     t.match(m.data, {
       lockfileVersion: 2,
       requires: true,
@@ -89,6 +106,14 @@ t.test('look up from locks and such', t =>
       t.end()
     })
   }))
+
+t.test('load a shrinkwrap with some dev and optional flags', t =>
+  Shrinkwrap.load({path: depTypesFixture}).then(m =>
+    t.matchSnapshot(m.data, 'got expected dependency types')))
+
+t.test('load a legacy shrinkwrap without a package.json', t =>
+  Shrinkwrap.load({path: swonlyFixture}).then(m =>
+    t.matchSnapshot(m.data, 'did our best with what we had')))
 
 t.test('throws when attempting to access data before loading', t => {
   t.throws(() =>
@@ -320,6 +345,7 @@ t.test('load yarn.lock file if present', t =>
 t.test('save yarn lock if loaded', t =>
   Shrinkwrap.load({ path: yarnFixture }).then(s => {
     s.path = t.testdir()
+    s.filename = s.path + '/package-lock.json'
     return s.save()
       .then(() => Shrinkwrap.load({ path: s.path }))
       .then(ss => t.strictSame(s.yarnLock, ss.yarnLock))

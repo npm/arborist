@@ -147,6 +147,15 @@ t.matchSnapshot(new Edge({
 reset(a)
 reset(b)
 
+t.ok(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'b',
+  spec: '1.x',
+}).satisfiedBy(b), 'b satisfies b@1.x')
+reset(a)
+reset(b)
+
 const old = new Edge({
   from: a,
   type: 'peer',

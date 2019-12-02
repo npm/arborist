@@ -5,6 +5,132 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/arborist/load-virtual.js TAP load a tree with optional and dev dependencies > loaded virtual tree with dev/optional deps 1`] = `
+Node {
+  "children": Map {
+    "diff-frag" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/tcompare",
+          "name": "diff-frag",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/diff-frag",
+      "name": "diff-frag",
+      "resolved": "https://registry.npmjs.org/diff-frag/-/diff-frag-1.0.1.tgz",
+    },
+    "inflight" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "inflight",
+          "spec": "^1.0.6",
+          "type": "optional",
+        },
+      },
+      "edgesOut": Map {
+        "once" => Edge {
+          "name": "once",
+          "spec": "^1.3.0",
+          "to": "node_modules/once",
+          "type": "prod",
+        },
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/inflight",
+      "name": "inflight",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+    },
+    "once" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "once",
+          "spec": "^1.4.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/inflight",
+          "name": "once",
+          "spec": "^1.3.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+    "tcompare" => Node {
+      "dev": true,
+      "edgesOut": Map {
+        "diff-frag" => Edge {
+          "name": "diff-frag",
+          "spec": "^1.0.1",
+          "to": "node_modules/diff-frag",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/tcompare",
+      "name": "tcompare",
+      "resolved": "https://registry.npmjs.org/tcompare/-/tcompare-4.0.1.tgz",
+    },
+    "wrappy" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/inflight",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "inflight" => Edge {
+      "name": "inflight",
+      "spec": "^1.0.6",
+      "to": "node_modules/inflight",
+      "type": "optional",
+    },
+    "once" => Edge {
+      "name": "once",
+      "spec": "^1.4.0",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "dev-deps",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/load-virtual.js TAP load a tree with some links to nodes outside of node_modules > loaded virtual tree with fsParents 1`] = `
 Node {
   "children": Map {
@@ -19,7 +145,7 @@ Node {
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
-      "resolved": "../../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      "resolved": "file:../../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "target": Object {
         "name": "@scope/x",
         "parent": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
@@ -36,7 +162,7 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
-      "resolved": "../.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+      "resolved": "file:../.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "target": Object {
         "name": "a",
         "parent": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
@@ -71,14 +197,47 @@ Node {
         "@scope/name" => Node {
           "children": Map {
             "@otherscope/othername" => Node {
+              "edgesIn": Set {
+                Edge {
+                  "error": "INVALID",
+                  "from": "node_modules/abbrev/node_modules/@scope/name",
+                  "name": "@otherscope/othername",
+                  "spec": "1.2.3",
+                  "type": "prod",
+                },
+              },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "resolved": "fake resolved value",
             },
           },
+          "edgesOut": Map {
+            "@otherscope/othername" => Edge {
+              "error": "INVALID",
+              "name": "@otherscope/othername",
+              "spec": "1.2.3",
+              "to": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
+              "type": "prod",
+            },
+            "a-thing-which-is-not-here" => Edge {
+              "error": "MISSING",
+              "name": "a-thing-which-is-not-here",
+              "spec": "2.4.5",
+              "to": null,
+              "type": "prod",
+            },
+          },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "resolved": null,
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
         },
       },
       "location": "node_modules/abbrev",
@@ -96,6 +255,7 @@ Node {
       },
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -123,6 +283,7 @@ Node {
       },
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -183,6 +344,14 @@ Node {
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "bundler",
+          "spec": "1.2.3",
+          "type": "prod",
+        },
+      },
       "edgesOut": Map {
         "a" => Edge {
           "name": "a",
@@ -206,6 +375,7 @@ Node {
       },
       "location": "node_modules/concat-map",
       "name": "concat-map",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -219,14 +389,31 @@ Node {
       },
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "full-git-url",
+          "spec": "git+https://github.com/isaacs/abbrev-js.git",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "ghshort",
+          "spec": "github:isaacs/abbrev-js",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -242,7 +429,7 @@ Node {
           "from": "node_modules/rimraf",
           "name": "glob",
           "spec": "^7.1.3",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "edgesOut": Map {
@@ -285,6 +472,7 @@ Node {
       },
       "location": "node_modules/glob",
       "name": "glob",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -312,6 +500,7 @@ Node {
       },
       "location": "node_modules/inflight",
       "name": "inflight",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -325,6 +514,7 @@ Node {
       },
       "location": "node_modules/inherits",
       "name": "inherits",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -346,9 +536,18 @@ Node {
       },
       "location": "node_modules/minimatch",
       "name": "minimatch",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "old",
+          "spec": "npm:abbrev@^1.0.3",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/old",
       "name": "old",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
@@ -378,7 +577,7 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
-      "resolved": "once-1.4.0.tgz",
+      "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -391,9 +590,18 @@ Node {
       },
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "pinned",
+          "spec": "npm:abbrev@^1.1.1",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/pinned",
       "name": "pinned",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -404,11 +612,27 @@ Node {
       "resolved": null,
     },
     "reg" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "reg",
+          "spec": "npm:abbrev@^1.1.1",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/reg",
       "name": "reg",
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "remote",
+          "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/remote",
       "name": "remote",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -419,18 +643,26 @@ Node {
           "name": "glob",
           "spec": "^7.1.3",
           "to": "node_modules/glob",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
-      "resolved": "rimraf-2.6.3.tgz",
+      "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "symlink",
+          "spec": "file:./abbrev-link-target",
+          "type": "prod",
+        },
+      },
       "extraneous": true,
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "../../abbrev-link-target",
+      "resolved": "file:../../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -439,21 +671,31 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "../abbrev",
+      "resolved": "file:../abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
       },
     },
     "tarball" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "tarball",
+          "spec": "file:abbrev-1.1.1.tgz",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/tarball",
       "name": "tarball",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
+      "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -478,6 +720,68 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "bundler" => Edge {
+      "name": "bundler",
+      "spec": "1.2.3",
+      "to": "node_modules/bundler",
+      "type": "prod",
+    },
+    "full-git-url" => Edge {
+      "name": "full-git-url",
+      "spec": "git+https://github.com/isaacs/abbrev-js.git",
+      "to": "node_modules/full-git-url",
+      "type": "prod",
+    },
+    "ghshort" => Edge {
+      "name": "ghshort",
+      "spec": "github:isaacs/abbrev-js",
+      "to": "node_modules/ghshort",
+      "type": "prod",
+    },
+    "old" => Edge {
+      "name": "old",
+      "spec": "npm:abbrev@^1.0.3",
+      "to": "node_modules/old",
+      "type": "prod",
+    },
+    "pinned" => Edge {
+      "name": "pinned",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "node_modules/pinned",
+      "type": "prod",
+    },
+    "reg" => Edge {
+      "name": "reg",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "node_modules/reg",
+      "type": "prod",
+    },
+    "remote" => Edge {
+      "name": "remote",
+      "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "to": "node_modules/remote",
+      "type": "prod",
+    },
+    "symlink" => Edge {
+      "name": "symlink",
+      "spec": "file:./abbrev-link-target",
+      "to": "node_modules/symlink",
+      "type": "prod",
+    },
+    "tarball" => Edge {
+      "name": "tarball",
+      "spec": "file:abbrev-1.1.1.tgz",
+      "to": "node_modules/tarball",
+      "type": "prod",
     },
   },
   "location": "",
@@ -494,14 +798,47 @@ Node {
         "@scope/name" => Node {
           "children": Map {
             "@otherscope/othername" => Node {
+              "edgesIn": Set {
+                Edge {
+                  "error": "INVALID",
+                  "from": "node_modules/abbrev/node_modules/@scope/name",
+                  "name": "@otherscope/othername",
+                  "spec": "1.2.3",
+                  "type": "prod",
+                },
+              },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "resolved": "fake resolved value",
             },
           },
+          "edgesOut": Map {
+            "@otherscope/othername" => Edge {
+              "error": "INVALID",
+              "name": "@otherscope/othername",
+              "spec": "1.2.3",
+              "to": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
+              "type": "prod",
+            },
+            "a-thing-which-is-not-here" => Edge {
+              "error": "MISSING",
+              "name": "a-thing-which-is-not-here",
+              "spec": "2.4.5",
+              "to": null,
+              "type": "prod",
+            },
+          },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "resolved": null,
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
         },
       },
       "location": "node_modules/abbrev",
@@ -519,6 +856,7 @@ Node {
       },
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -546,6 +884,7 @@ Node {
       },
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -606,6 +945,14 @@ Node {
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "bundler",
+          "spec": "1.2.3",
+          "type": "prod",
+        },
+      },
       "edgesOut": Map {
         "a" => Edge {
           "name": "a",
@@ -629,6 +976,7 @@ Node {
       },
       "location": "node_modules/concat-map",
       "name": "concat-map",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -642,14 +990,31 @@ Node {
       },
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "full-git-url",
+          "spec": "git+https://github.com/isaacs/abbrev-js.git",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "ghshort",
+          "spec": "github:isaacs/abbrev-js",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -665,7 +1030,7 @@ Node {
           "from": "node_modules/rimraf",
           "name": "glob",
           "spec": "^7.1.3",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "edgesOut": Map {
@@ -708,6 +1073,7 @@ Node {
       },
       "location": "node_modules/glob",
       "name": "glob",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -735,6 +1101,7 @@ Node {
       },
       "location": "node_modules/inflight",
       "name": "inflight",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -748,6 +1115,7 @@ Node {
       },
       "location": "node_modules/inherits",
       "name": "inherits",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -769,9 +1137,18 @@ Node {
       },
       "location": "node_modules/minimatch",
       "name": "minimatch",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "old",
+          "spec": "npm:abbrev@^1.0.3",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/old",
       "name": "old",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
@@ -801,7 +1178,7 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
-      "resolved": "once-1.4.0.tgz",
+      "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -814,9 +1191,18 @@ Node {
       },
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "pinned",
+          "spec": "npm:abbrev@^1.1.1",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/pinned",
       "name": "pinned",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -827,11 +1213,27 @@ Node {
       "resolved": null,
     },
     "reg" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "reg",
+          "spec": "npm:abbrev@^1.1.1",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/reg",
       "name": "reg",
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "remote",
+          "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/remote",
       "name": "remote",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -842,18 +1244,26 @@ Node {
           "name": "glob",
           "spec": "^7.1.3",
           "to": "node_modules/glob",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
-      "resolved": "rimraf-2.6.3.tgz",
+      "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "symlink",
+          "spec": "file:./abbrev-link-target",
+          "type": "prod",
+        },
+      },
       "extraneous": true,
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "../../abbrev-link-target",
+      "resolved": "file:../../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -862,21 +1272,31 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "../abbrev",
+      "resolved": "file:../abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
       },
     },
     "tarball" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "tarball",
+          "spec": "file:abbrev-1.1.1.tgz",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/tarball",
       "name": "tarball",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
+      "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -901,6 +1321,68 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "bundler" => Edge {
+      "name": "bundler",
+      "spec": "1.2.3",
+      "to": "node_modules/bundler",
+      "type": "prod",
+    },
+    "full-git-url" => Edge {
+      "name": "full-git-url",
+      "spec": "git+https://github.com/isaacs/abbrev-js.git",
+      "to": "node_modules/full-git-url",
+      "type": "prod",
+    },
+    "ghshort" => Edge {
+      "name": "ghshort",
+      "spec": "github:isaacs/abbrev-js",
+      "to": "node_modules/ghshort",
+      "type": "prod",
+    },
+    "old" => Edge {
+      "name": "old",
+      "spec": "npm:abbrev@^1.0.3",
+      "to": "node_modules/old",
+      "type": "prod",
+    },
+    "pinned" => Edge {
+      "name": "pinned",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "node_modules/pinned",
+      "type": "prod",
+    },
+    "reg" => Edge {
+      "name": "reg",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "node_modules/reg",
+      "type": "prod",
+    },
+    "remote" => Edge {
+      "name": "remote",
+      "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "to": "node_modules/remote",
+      "type": "prod",
+    },
+    "symlink" => Edge {
+      "name": "symlink",
+      "spec": "file:./abbrev-link-target",
+      "to": "node_modules/symlink",
+      "type": "prod",
+    },
+    "tarball" => Edge {
+      "name": "tarball",
+      "spec": "file:abbrev-1.1.1.tgz",
+      "to": "node_modules/tarball",
+      "type": "prod",
     },
   },
   "location": "",
@@ -917,14 +1399,47 @@ Node {
         "@scope/name" => Node {
           "children": Map {
             "@otherscope/othername" => Node {
+              "edgesIn": Set {
+                Edge {
+                  "error": "INVALID",
+                  "from": "node_modules/abbrev/node_modules/@scope/name",
+                  "name": "@otherscope/othername",
+                  "spec": "1.2.3",
+                  "type": "prod",
+                },
+              },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "resolved": "fake resolved value",
             },
           },
+          "edgesOut": Map {
+            "@otherscope/othername" => Edge {
+              "error": "INVALID",
+              "name": "@otherscope/othername",
+              "spec": "1.2.3",
+              "to": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
+              "type": "prod",
+            },
+            "a-thing-which-is-not-here" => Edge {
+              "error": "MISSING",
+              "name": "a-thing-which-is-not-here",
+              "spec": "2.4.5",
+              "to": null,
+              "type": "prod",
+            },
+          },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "resolved": null,
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
         },
       },
       "location": "node_modules/abbrev",
@@ -942,6 +1457,7 @@ Node {
       },
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -969,6 +1485,7 @@ Node {
       },
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -1029,6 +1546,14 @@ Node {
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "bundler",
+          "spec": "1.2.3",
+          "type": "prod",
+        },
+      },
       "edgesOut": Map {
         "a" => Edge {
           "name": "a",
@@ -1052,6 +1577,7 @@ Node {
       },
       "location": "node_modules/concat-map",
       "name": "concat-map",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -1065,14 +1591,31 @@ Node {
       },
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "full-git-url",
+          "spec": "git+https://github.com/isaacs/abbrev-js.git",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "ghshort",
+          "spec": "github:isaacs/abbrev-js",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -1088,7 +1631,7 @@ Node {
           "from": "node_modules/rimraf",
           "name": "glob",
           "spec": "^7.1.3",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "edgesOut": Map {
@@ -1131,6 +1674,7 @@ Node {
       },
       "location": "node_modules/glob",
       "name": "glob",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -1158,6 +1702,7 @@ Node {
       },
       "location": "node_modules/inflight",
       "name": "inflight",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -1171,6 +1716,7 @@ Node {
       },
       "location": "node_modules/inherits",
       "name": "inherits",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -1192,9 +1738,18 @@ Node {
       },
       "location": "node_modules/minimatch",
       "name": "minimatch",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "old",
+          "spec": "npm:abbrev@^1.0.3",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/old",
       "name": "old",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
@@ -1224,7 +1779,7 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
-      "resolved": "once-1.4.0.tgz",
+      "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -1237,9 +1792,18 @@ Node {
       },
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "pinned",
+          "spec": "npm:abbrev@^1.1.1",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/pinned",
       "name": "pinned",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -1250,11 +1814,27 @@ Node {
       "resolved": null,
     },
     "reg" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "reg",
+          "spec": "npm:abbrev@^1.1.1",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/reg",
       "name": "reg",
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "remote",
+          "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/remote",
       "name": "remote",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -1265,18 +1845,26 @@ Node {
           "name": "glob",
           "spec": "^7.1.3",
           "to": "node_modules/glob",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
-      "resolved": "rimraf-2.6.3.tgz",
+      "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "symlink",
+          "spec": "file:./abbrev-link-target",
+          "type": "prod",
+        },
+      },
       "extraneous": true,
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "../../abbrev-link-target",
+      "resolved": "file:../../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -1285,21 +1873,31 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "../abbrev",
+      "resolved": "file:../abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
       },
     },
     "tarball" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "tarball",
+          "spec": "file:abbrev-1.1.1.tgz",
+          "type": "prod",
+        },
+      },
       "location": "node_modules/tarball",
       "name": "tarball",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
+      "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -1324,6 +1922,68 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "bundler" => Edge {
+      "name": "bundler",
+      "spec": "1.2.3",
+      "to": "node_modules/bundler",
+      "type": "prod",
+    },
+    "full-git-url" => Edge {
+      "name": "full-git-url",
+      "spec": "git+https://github.com/isaacs/abbrev-js.git",
+      "to": "node_modules/full-git-url",
+      "type": "prod",
+    },
+    "ghshort" => Edge {
+      "name": "ghshort",
+      "spec": "github:isaacs/abbrev-js",
+      "to": "node_modules/ghshort",
+      "type": "prod",
+    },
+    "old" => Edge {
+      "name": "old",
+      "spec": "npm:abbrev@^1.0.3",
+      "to": "node_modules/old",
+      "type": "prod",
+    },
+    "pinned" => Edge {
+      "name": "pinned",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "node_modules/pinned",
+      "type": "prod",
+    },
+    "reg" => Edge {
+      "name": "reg",
+      "spec": "npm:abbrev@^1.1.1",
+      "to": "node_modules/reg",
+      "type": "prod",
+    },
+    "remote" => Edge {
+      "name": "remote",
+      "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "to": "node_modules/remote",
+      "type": "prod",
+    },
+    "symlink" => Edge {
+      "name": "symlink",
+      "spec": "file:./abbrev-link-target",
+      "to": "node_modules/symlink",
+      "type": "prod",
+    },
+    "tarball" => Edge {
+      "name": "tarball",
+      "spec": "file:abbrev-1.1.1.tgz",
+      "to": "node_modules/tarball",
+      "type": "prod",
     },
   },
   "location": "",
@@ -1340,9 +2000,34 @@ Node {
         "@scope/name" => Node {
           "children": Map {
             "@otherscope/othername" => Node {
+              "edgesIn": Set {
+                Edge {
+                  "error": "INVALID",
+                  "from": "node_modules/abbrev/node_modules/@scope/name",
+                  "name": "@otherscope/othername",
+                  "spec": "1.2.3",
+                  "type": "prod",
+                },
+              },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "resolved": "fake resolved value",
+            },
+          },
+          "edgesOut": Map {
+            "@otherscope/othername" => Edge {
+              "error": "INVALID",
+              "name": "@otherscope/othername",
+              "spec": "1.2.3",
+              "to": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
+              "type": "prod",
+            },
+            "a-thing-which-is-not-here" => Edge {
+              "error": "MISSING",
+              "name": "a-thing-which-is-not-here",
+              "spec": "2.4.5",
+              "to": null,
+              "type": "prod",
             },
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
@@ -1365,6 +2050,7 @@ Node {
       },
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -1392,6 +2078,7 @@ Node {
       },
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -1475,6 +2162,7 @@ Node {
       },
       "location": "node_modules/concat-map",
       "name": "concat-map",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -1488,6 +2176,7 @@ Node {
       },
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
@@ -1511,7 +2200,7 @@ Node {
           "from": "node_modules/rimraf",
           "name": "glob",
           "spec": "^7.1.3",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "edgesOut": Map {
@@ -1554,6 +2243,7 @@ Node {
       },
       "location": "node_modules/glob",
       "name": "glob",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -1581,6 +2271,7 @@ Node {
       },
       "location": "node_modules/inflight",
       "name": "inflight",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -1594,6 +2285,7 @@ Node {
       },
       "location": "node_modules/inherits",
       "name": "inherits",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -1615,6 +2307,7 @@ Node {
       },
       "location": "node_modules/minimatch",
       "name": "minimatch",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
@@ -1647,7 +2340,7 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
-      "resolved": "once-1.4.0.tgz",
+      "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -1660,6 +2353,7 @@ Node {
       },
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
+      "optional": true,
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
@@ -1688,18 +2382,18 @@ Node {
           "name": "glob",
           "spec": "^7.1.3",
           "to": "node_modules/glob",
-          "type": "prod",
+          "type": "optional",
         },
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
-      "resolved": "rimraf-2.6.3.tgz",
+      "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "extraneous": true,
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "../../abbrev-link-target",
+      "resolved": "file:../../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -1708,21 +2402,23 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "../abbrev",
+      "resolved": "file:../abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
       },
     },
     "tarball" => Node {
+      "dev": true,
       "location": "node_modules/tarball",
       "name": "tarball",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
+      "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
-      "resolved": "abbrev-1.1.1.tgz",
+      "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -1750,7 +2446,7 @@ Node {
     },
   },
   "location": "",
-  "name": "install-types",
+  "name": "install-types-sw-only",
   "resolved": null,
 }
 `

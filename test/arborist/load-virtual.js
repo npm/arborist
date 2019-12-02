@@ -2,8 +2,10 @@ const Arborist = require('../../lib/arborist.js')
 const t = require('tap')
 const {resolve} = require('path')
 const fixture = resolve(__dirname, '../fixtures/install-types')
+const swonlyfixture = resolve(__dirname, '../fixtures/install-types-sw-only')
 const badfixture = resolve(__dirname, '../fixtures/root')
 const pnpmFixture = resolve(__dirname, '../fixtures/pnpm')
+const depTypesFixture = resolve(__dirname, '../fixtures/dev-deps')
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -100,15 +102,14 @@ t.test('load from npm-shrinkwrap.json', t => {
 })
 
 t.test('load without a root package.json is fine', t => {
-  const bak = fixture + '/package.json-bak'
-  const pj = fixture + '/package.json'
-  const fs = require('fs')
-  fs.renameSync(pj, bak)
-  t.teardown(() => fs.renameSync(bak, pj))
-  return loadVirtual(fixture).then(tree =>
+  return loadVirtual(swonlyfixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'loaded virtual no package json'))
 })
 
 t.test('load a tree with some links to nodes outside of node_modules', t =>
   loadVirtual(pnpmFixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'loaded virtual tree with fsParents')))
+
+t.test('load a tree with optional and dev dependencies', t =>
+  loadVirtual(depTypesFixture).then(tree =>
+    t.matchSnapshot(printTree(tree), 'loaded virtual tree with dev/optional deps')))

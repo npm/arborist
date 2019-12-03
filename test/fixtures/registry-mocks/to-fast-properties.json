@@ -1,0 +1,107 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "to-fast-properties",
+      "version": "1.0.0",
+      "devDependencies": {
+        "ava": "0.0.4"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "4e944cc07ec1e263c27a46b3bd339716d8ed500a",
+        "tarball": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-1.0.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.1": {
+      "name": "to-fast-properties",
+      "version": "1.0.1",
+      "devDependencies": {
+        "ava": "0.0.4"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "4a41554d2b2f4bbe2d794060dc47396b10bb48a8",
+        "tarball": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-1.0.1.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.2": {
+      "name": "to-fast-properties",
+      "version": "1.0.2",
+      "devDependencies": {
+        "ava": "0.0.4"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f3f5c0c3ba7299a7ef99427e44633257ade43320",
+        "tarball": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-1.0.2.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.3": {
+      "name": "to-fast-properties",
+      "version": "1.0.3",
+      "devDependencies": {
+        "ava": "0.0.4"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "b83571fa4d8c25b82e231b06e3a3055de4ca1a47",
+        "tarball": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-1.0.3.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "2.0.0": {
+      "name": "to-fast-properties",
+      "version": "2.0.0",
+      "devDependencies": {
+        "ava": "0.0.4"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "dc5e698cbd079265bc73e0377681a4e4e83f616e",
+        "tarball": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz"
+      },
+      "engines": {
+        "node": ">=4"
+      }
+    },
+    "3.0.0": {
+      "name": "to-fast-properties",
+      "version": "3.0.0",
+      "devDependencies": {
+        "ava": "0.0.4",
+        "tsd": "^0.10.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-shaB4ZQoNr3c/TsiiTb/dLNPH6yJAkrjRh8T8VLWJ+hFveEBM++yTSx3nX4JrT4j7M76EQlWTnhnSDUw+8R1XQ==",
+        "shasum": "3c9de7c156e0d191aaf8e858d0efb232870ebb9b",
+        "tarball": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-3.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 4188,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdy4xuCRA9TVsSAnZWagAAxwsP/R5Bk5uPqcHvyOujUkxV\n5mRWkWQKKpNK9Qz0cGxkIwvADaeN2RVkOg//lfbmLsIgXRLtFl6wvy10OOSq\nnulxKQwbqRRYbylF3v24Rahl80p69kQmumRz4xqclBFWRoVlABQpUWvp0r+o\n2lBXGrK+iAZ+U+TOu8IXLjZW8OBdFsc5WRxCOvGRuWOjxm/obK+tZPtJwqFV\n3CFSEKrmiYpoIwS3x3stCD13zPzTizpgsCpo1c5zm9+9xX/X0/08MtDx8wKy\nKTjIFD7H0QeaXRsJnXEo2ZYotygy6VuL8clCGBaVtjOc+XwYqBM9eGZwXRAD\ncdmayilfokb28S2W/87NcB9zGioYw07XoXCr7AiJpznzly9Ljr3G9Q8bcM3A\nl/3dhupAFPJR0qZHvS+XO3jwxvjRjYVp+nSEqTGBW5iQPi2LxEE5+57dDG91\nOg8X3wMZG5IBnrZ90IlYpdQ1BGX29vqWafJq+jFVfmG4mpMf2TGaNo3hG+x2\nqyWOYjs/wlvy+HQs72MKI4HbQgaU/MYzIu95pyMw8dcF51x92Ik69klueuJY\nWjvJypzEX9mCEZHazZXOQTSL5MgLTNVkfriM4L8ADW11S5KEiSWdW+0OjU8E\nHRtzky/RoLVQIstFmIP0egwY/lcniDS/iOC9CUCK3ypJVPJ1rcyxqEH83zsg\n7d0w\r\n=ty0i\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    }
+  },
+  "name": "to-fast-properties",
+  "dist-tags": {
+    "latest": "3.0.0"
+  },
+  "modified": "2019-11-13T04:54:09.843Z",
+  "_cached": false,
+  "_contentLength": 2918
+}

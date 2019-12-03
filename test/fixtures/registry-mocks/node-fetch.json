@@ -1,0 +1,1489 @@
+{
+  "versions": {
+    "0.1.0": {
+      "name": "node-fetch",
+      "version": "0.1.0",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "26c6afcd56ff31a8de2643a4cba6438dfa844bf9",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-0.1.0.tgz"
+      }
+    },
+    "1.0.0": {
+      "name": "node-fetch",
+      "version": "1.0.0",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "342cc3ff90d200d6710ffcba132af37f385df2d8",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.0.tgz"
+      }
+    },
+    "1.0.1": {
+      "name": "node-fetch",
+      "version": "1.0.1",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "ecbccd80d52708f9c0bb6a900ba60672c743b243",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.1.tgz"
+      }
+    },
+    "1.0.2": {
+      "name": "node-fetch",
+      "version": "1.0.2",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "ead209298a4dbb0a0ea151745ff641db67747953",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.2.tgz"
+      }
+    },
+    "1.0.3": {
+      "name": "node-fetch",
+      "version": "1.0.3",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7c3bcc966ebaa5fbf9c650423f2bbf204abf0c52",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.3.tgz"
+      }
+    },
+    "1.0.4": {
+      "name": "node-fetch",
+      "version": "1.0.4",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "e324813be355fb832bdfce68b959f8d7707dbc9b",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.4.tgz"
+      }
+    },
+    "1.0.5": {
+      "name": "node-fetch",
+      "version": "1.0.5",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "320ca8a3e584267df3bd22bd10489b3868e4c8d8",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.5.tgz"
+      }
+    },
+    "1.0.6": {
+      "name": "node-fetch",
+      "version": "1.0.6",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2299d61ffd5ba0abc4440cd782ea9125ea96fd11",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.6.tgz"
+      }
+    },
+    "1.1.0": {
+      "name": "node-fetch",
+      "version": "1.1.0",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "92a8f0407e5d153494f45f8d05a0c1688f8986ab",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.1.0.tgz"
+      }
+    },
+    "1.1.1": {
+      "name": "node-fetch",
+      "version": "1.1.1",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "0f7ffe76f12bb386757ccd566ced04b7d6c3cc06",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.1.1.tgz"
+      }
+    },
+    "1.1.2": {
+      "name": "node-fetch",
+      "version": "1.1.2",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "cf369f6dd45415dcbebf9aaeb7d7e8ad18dec9ab",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.1.2.tgz"
+      }
+    },
+    "1.2.0": {
+      "name": "node-fetch",
+      "version": "1.2.0",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2051585c4f4ed0265805a0b783d15bb81634ca7c",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.2.0.tgz"
+      }
+    },
+    "1.2.1": {
+      "name": "node-fetch",
+      "version": "1.2.1",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "8404802c3346c1e8776e3699c0f32df9be13cbed",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.2.1.tgz"
+      }
+    },
+    "1.3.0": {
+      "name": "node-fetch",
+      "version": "1.3.0",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "655fd3a0c5d86bf452f63b5a959d15498678befe",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.0.tgz"
+      }
+    },
+    "1.3.1": {
+      "name": "node-fetch",
+      "version": "1.3.1",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "e95c3796272295061222ba67644577959bd4faab",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.1.tgz"
+      }
+    },
+    "1.3.2": {
+      "name": "node-fetch",
+      "version": "1.3.2",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "c0ef9fc0f86809349269cc8051a459d07c091412",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.2.tgz"
+      }
+    },
+    "1.3.3": {
+      "name": "node-fetch",
+      "version": "1.3.3",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "bluebird": "^2.9.1",
+        "chai": "^1.10.0",
+        "chai-as-promised": "^4.1.1",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.3.5",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^6.1.0",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "880228be75fd207a8a9baa2042ead437e6edaf84",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.3.tgz"
+      }
+    },
+    "1.4.0": {
+      "name": "node-fetch",
+      "version": "1.4.0",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "5c9f574ee1239838d8eb888a8f38ec4590903357",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.4.0.tgz"
+      }
+    },
+    "1.4.1": {
+      "name": "node-fetch",
+      "version": "1.4.1",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f50a3a98a586c434e9a63984c97127eb33c09145",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.4.1.tgz"
+      }
+    },
+    "1.5.0": {
+      "name": "node-fetch",
+      "version": "1.5.0",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "c1b82cda9579aa57ee05b838278183c6e997f642",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.0.tgz"
+      }
+    },
+    "1.5.1": {
+      "name": "node-fetch",
+      "version": "1.5.1",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "edc64350cc0bca48a5f79e038c1f7c5ff0869fef",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.1.tgz"
+      }
+    },
+    "1.5.2": {
+      "name": "node-fetch",
+      "version": "1.5.2",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7dfd59492766cafb6af198b8e954468497a44727",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.2.tgz"
+      }
+    },
+    "1.5.3": {
+      "name": "node-fetch",
+      "version": "1.5.3",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f28d8b95ca8d45b433745dd319361e36402baef0",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.3.tgz"
+      }
+    },
+    "1.6.0": {
+      "name": "node-fetch",
+      "version": "1.6.0",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "00ccd811c657aee9e2f0d79fd2256fbcffd733a2",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.0.tgz"
+      }
+    },
+    "1.6.1": {
+      "name": "node-fetch",
+      "version": "1.6.1",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2ac748594cc82610da9a7a32c530777dcfcb51ff",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.1.tgz"
+      }
+    },
+    "1.6.2": {
+      "name": "node-fetch",
+      "version": "1.6.2",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": "^1.0.0-rc1",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "6a605f52c6b77ce28ce24f131b97e73fe2ea9fa0",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.2.tgz"
+      }
+    },
+    "1.6.3": {
+      "name": "node-fetch",
+      "version": "1.6.3",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "coveralls": "^2.11.2",
+        "form-data": ">=1.0.0",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "dc234edd6489982d58e8f0db4f695029abcd8c04",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.3.tgz"
+      }
+    },
+    "2.0.0-alpha.1": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.1",
+      "dependencies": {
+        "babel-runtime": "^6.11.6",
+        "buffer-to-arraybuffer": "0.0.4",
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "babel-plugin-istanbul": "^3.0.0",
+        "babel-plugin-transform-runtime": "^6.15.0",
+        "babel-preset-es2015": "^6.16.0",
+        "babel-register": "^6.16.3",
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "2.0.1",
+        "form-data": ">=1.0.0",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.37.0",
+        "rollup-plugin-babel": "^2.6.1",
+        "rollup-plugin-node-resolve": "^2.0.0",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "28499a933f19adcf3ecf8b9fa39a6c79202d1072",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.1.tgz"
+      }
+    },
+    "2.0.0-alpha.3": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.3",
+      "dependencies": {
+        "babel-runtime": "^6.11.6",
+        "buffer-to-arraybuffer": "0.0.4",
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "babel-plugin-istanbul": "^3.0.0",
+        "babel-plugin-transform-runtime": "^6.15.0",
+        "babel-preset-env": "^1.1.8",
+        "babel-register": "^6.16.3",
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "2.0.1",
+        "form-data": ">=1.0.0",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.37.0",
+        "rollup-plugin-babel": "^2.6.1",
+        "rollup-plugin-node-resolve": "^2.0.0",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "8031bded671c806e4604c16b27ab1973b4fe88cc",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.3.tgz"
+      }
+    },
+    "2.0.0-alpha.4": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.4",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-preset-env": "^1.1.10",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "^3.1.4",
+        "form-data": ">=1.0.0",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.41.4",
+        "rollup-plugin-babel": "^2.6.1",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "ae3fe092fef710a7e565e68d5fcccefabad674b6",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.4.tgz"
+      },
+      "engines": {
+        "node": ">=4"
+      }
+    },
+    "1.7.0": {
+      "name": "node-fetch",
+      "version": "1.7.0",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "codecov": "^1.0.1",
+        "form-data": ">=1.0.0",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "3ff6c56544f9b7fb00682338bb55ee6f54a8a0ef",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.0.tgz"
+      }
+    },
+    "1.7.1": {
+      "name": "node-fetch",
+      "version": "1.7.1",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "codecov": "^1.0.1",
+        "form-data": ">=1.0.0",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-j8XsFGCLw79vWXkZtMSmmLaOk9z5SQ9bV/tkbZVCqvgwzrjAGq66igobLofHtF63NvMTp2WjytpsNTGKa+XRIQ==",
+        "shasum": "899cb3d0a3c92f952c47f1b876f4c8aeabd400d5",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.1.tgz"
+      }
+    },
+    "2.0.0-alpha.5": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.5",
+      "dependencies": {
+        "encoding": "^0.1.11"
+      },
+      "devDependencies": {
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-preset-env": "^1.1.10",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "^3.1.4",
+        "form-data": ">=1.0.0",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.41.4",
+        "rollup-plugin-babel": "^2.6.1",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-ricDvef3324E+SqaOFJWiVCrQVHbJqxDfeOBwn7LymV67MYxeljHkJXAYOCADlopy/Q9NpTjFxtwv3+xLubGbA==",
+        "shasum": "efe2816af7107bafd3d3cabd0f24deca4b408b64",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.5.tgz"
+      },
+      "engines": {
+        "node": ">=4"
+      }
+    },
+    "2.0.0-alpha.6": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.6",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-preset-env": "^1.1.10",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "^3.1.4",
+        "form-data": ">=1.0.0",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.41.4",
+        "rollup-plugin-babel": "^2.6.1",
+        "url-search-params": "^0.9.0",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2fafa63b4a248f8d6b67a239fc16299a35641161",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.6.tgz"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "deprecated": "it accidentally includes an older copy of node-fetch v2, do not use"
+    },
+    "2.0.0-alpha.7": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.7",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-preset-env": "^1.1.10",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "^3.1.4",
+        "form-data": ">=1.0.0",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.41.4",
+        "rollup-plugin-babel": "^2.6.1",
+        "url-search-params": "^0.9.0",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-jODLrTvE4jOCDkrxf6RDqhoShkMIfExOQ8XBaYZx+zo3u9UfzYxMWFlPONAlslPwWQNgM8WZ7Tpdo26VWDWS9A==",
+        "shasum": "78f61fc78c55a86674f071237a3f73de5ba4138b",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.7.tgz"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.0.0-alpha.8": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.8",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-preset-env": "^1.1.10",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^6.0.0",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^1.0.1",
+        "cross-env": "^3.1.4",
+        "form-data": ">=1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^10.0.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.41.4",
+        "rollup-plugin-babel": "^2.6.1",
+        "url-search-params": "^0.9.0",
+        "whatwg-url": "^4.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-cDokdqn6TD7LNpMqxgPsI1Iqu23sD4ihqbGELFn4YmMvJSiyJcAws2sm0qKo5hIPXwvc7vR2BDPK09UyyLSivw==",
+        "shasum": "f586cf6730ce30431c7d4528ce561d81add8ba90",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.8.tgz"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "1.7.2": {
+      "name": "node-fetch",
+      "version": "1.7.2",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "codecov": "^1.0.1",
+        "form-data": ">=1.0.0",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-xZZUq2yDhKMIn/UgG5q//IZSNLJIwW2QxS14CNH5spuiXkITM2pUitjdq58yLSaU7m4M0wBNaM2Gh/ggY4YJig==",
+        "shasum": "c54e9aac57e432875233525f3c891c4159ffefd7",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.2.tgz"
+      }
+    },
+    "1.7.3": {
+      "name": "node-fetch",
+      "version": "1.7.3",
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
+      },
+      "devDependencies": {
+        "bluebird": "^3.3.4",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.2.0",
+        "codecov": "^1.0.1",
+        "form-data": ">=1.0.0",
+        "istanbul": "^0.4.2",
+        "mocha": "^2.1.0",
+        "parted": "^0.1.1",
+        "promise": "^7.1.1",
+        "resumer": "0.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==",
+        "shasum": "980f6f72d85211a5347c6b2bc18c5b84c3eb47ef",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz"
+      }
+    },
+    "2.0.0-alpha.9": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.9",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-plugin-istanbul": "^4.0.0",
+        "babel-preset-env": "^1.1.10",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^2.2.0",
+        "cross-env": "^5.0.1",
+        "form-data": ">=1.0.0",
+        "mocha": "^3.1.2",
+        "nyc": "^11.1.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.45.2",
+        "rollup-plugin-babel": "^2.6.1",
+        "url-search-params": "^0.9.0",
+        "whatwg-url": "^5.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-I7wP1QkmBNX1mt4BS5zyLRTegl5Ii+MSalpfFefn+EZFrGVsdfCvLTKt9eHkNlU4phKgp3tqLWW8VXDcCm9m9w==",
+        "shasum": "990c0634f510f76449a0d6f6eaec96b22f273628",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.9.tgz"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.0.0": {
+      "name": "node-fetch",
+      "version": "2.0.0",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "mocha": "^5.0.0",
+        "nyc": "^11.4.1",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.55.1",
+        "rollup-plugin-babel": "^3.0.3",
+        "url-search-params": "^0.10.0",
+        "whatwg-url": "^5.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "982bba43ecd4f2922a29cc186a6bbb0bb73fcba6",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0.tgz"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.1.0": {
+      "name": "node-fetch",
+      "version": "2.1.0",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "mocha": "^5.0.0",
+        "nyc": "^11.4.1",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.55.1",
+        "rollup-plugin-babel": "^3.0.3",
+        "string-to-arraybuffer": "^1.0.0",
+        "url-search-params": "^0.10.0",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "9d96dde9fe1fcef6e4081226ba496b8d5950b647",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.0.tgz",
+        "fileCount": 9,
+        "unpackedSize": 98268
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.1.1": {
+      "name": "node-fetch",
+      "version": "2.1.1",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "mocha": "^5.0.0",
+        "nyc": "^11.4.1",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.55.1",
+        "rollup-plugin-babel": "^3.0.3",
+        "string-to-arraybuffer": "^1.0.0",
+        "url-search-params": "^0.10.0",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "369ca70b82f50c86496104a6c776d274f4e4a2d4",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.1.tgz",
+        "fileCount": 9,
+        "unpackedSize": 98310
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.1.2": {
+      "name": "node-fetch",
+      "version": "2.1.2",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "mocha": "^5.0.0",
+        "nyc": "^11.4.1",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.55.1",
+        "rollup-plugin-babel": "^3.0.3",
+        "string-to-arraybuffer": "^1.0.0",
+        "url-search-params": "^0.10.0",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "ab884e8e7e57e38a944753cec706f788d1768bb5",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.2.tgz",
+        "fileCount": 9,
+        "unpackedSize": 100225
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.2.0": {
+      "name": "node-fetch",
+      "version": "2.2.0",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "^1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.3",
+        "string-to-arraybuffer": "^1.0.0",
+        "url-search-params": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==",
+        "shasum": "4ee79bde909262f9775f731e3656d0db55ced5b5",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.2.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 137549,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbVPfVCRA9TVsSAnZWagAAGT4QAIfTvAj/5gAZdXkFjkhB\nIHrgwmJd/rhFyYwdaNHCeJ4qpUDBQ+/LaCh/2C95HgkVuOwX6xbRMauHve9I\n1N9eCingZfHyFoD+GF/tnkEI1133b7sgwPbl7OPzxw1XTrul2EnpSMdA/Gl3\nod3uiQngQCQm7uoB8GsvFvDQT0XN4YxsK3JK7PD3dvcHBQpH9FR5YxQxsKya\nABLfQ8z+WFR0ag8nZnhMFcuKeRJpddKPOyuhxNwjk9MHeJB2vA8JafjnTP9v\nfR2ErS1qUKL/3KMRvy9SvWNbq48+pxR4tHbVRLtlfdtsEorT2HumVnDcnAuX\nGFFpqFx8h3F4Z8UjXAKGMLRL/u70xYPLJBe4AP3DLjqOMWc6bOcUK4L0wMmG\neOyZMGiMBzenk3jShekXwNZYxBZEj0alvSKtrZpUM2Nw+YJyha7f3vm7Q1z1\n+uFBnkTZfv9smfyW3XimOkeS77tsgbkrs1+eSODIkEGHN6ceRNWzhIIV53Lc\nIqRcvFKXKA9eMDk8a+cO+Y+0SmgRJ8b9I1c+LXtSKqyQJs23CM+OY7o2YrEJ\nu9u3svnqLsJZIwbT7t9501H2rQsuzVCh64XBV9KCAGrF5f6le2Jg13yEZK0b\n3dEzPUe/rrujdpABHLpfighoVCF9aJn3QpyiglmXkyFEIu8xjt4aZr2kw7cs\nPoXK\r\n=71zf\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.2.1": {
+      "name": "node-fetch",
+      "version": "2.2.1",
+      "dependencies": {},
+      "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "~1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.3",
+        "string-to-arraybuffer": "^1.0.0",
+        "url-search-params": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-ObXBpNCD3A/vYQiQtEWl7DuqjAXjfptYFuGHLdPl5U19/6kJuZV+8uMHLrkj3wJrJoyfg4nhgyFixZdaZoAiEQ==",
+        "shasum": "1fe551e0ded6c45b3b3b937d0fb46f76df718d1e",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.2.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 142342,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb4BEKCRA9TVsSAnZWagAA5JQP/RoGvjtEglFV3OUDMLaq\nuvXp4bN3X+bJt3lFYgj4ydWU83WBTG9bJHrBjzvyOuCzjRpBJOCwKYwOxIgu\niFVveFI7iXGJaX/jnb1a6RCnnNBuojKChLN805rJmLvQFkqy4kYq3jxOCx+h\nVqklwLoohRaEGnOHeo2cny7KQUjq7BLhJg2MIjQvfOWGPnRKuu0MFhZwIuwV\nq9C6ABeWYTNgEvf5gf/acBgow91peRpSINm+pqx+IVGyNpWJE6jgFfpn4yh5\nOtofS7bM3sp5L0THxPQSmqjbqLDU5v3sZGoWfzS8+k0Q/KkaZtxgIJwB6XcP\nRrgt6s6zuE5vW6ongrEc219gHVC0dfzeMoGHcLVPKcBRRD1spkSH3ElIBJOm\nJnWKmx78yhzO++mGFyFzLphNn2985raBRuTb9pEsdjnI5L046ZK/DwRzYJXy\nQDlAcXx7YWljyir3hMZ4GJBo4fIjYTx9xLSSc/FtcQsZgycOaRRMm3HDNpLL\nleNJ9LSoioRFsG/6qVnEe0c7EDhwnQmTtbteF47sW63mXS7MxiSIt3lEHZdq\nBmbNOAIOWLHLaVw56pyN22nKjiI/xnSODu49zxkXJjAnJpFkprF1q9h37ie3\nuh3XJs1mvBASdlVD1PtomZals7ihCsUvkaZ2m4mxMsEWuqM4iOepWCxL1Mv0\nBDJI\r\n=khSH\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.3.0": {
+      "name": "node-fetch",
+      "version": "2.3.0",
+      "dependencies": {},
+      "devDependencies": {
+        "abort-controller": "^1.0.2",
+        "abortcontroller-polyfill": "^1.1.9",
+        "babel-core": "^6.26.0",
+        "babel-plugin-istanbul": "^4.1.5",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "~1.3.0",
+        "codecov": "^3.0.0",
+        "cross-env": "^5.1.3",
+        "form-data": "^2.3.1",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.1",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.3",
+        "string-to-arraybuffer": "^1.0.0",
+        "url-search-params": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==",
+        "shasum": "1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.3.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 152599,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb6nI1CRA9TVsSAnZWagAAr9cP/3EF/SdGNbAPQFxUGTiy\nNWmae4Y3lpoT/iFgvPfKKR9JZ9y6wbrQ57tzntIvNtu9ksGKWG0LW6qk90pm\nn2sxw9sKD7FeEZdmPorB0T+chP8LLbOJ6eJ/1o+TprqlrKvL+2eXTxAo+Ytq\nMerjorRst5DwFICkPWl+lgwH/YtVip/u1JKziaH0O3GgrI/3koDcTaY/EmjY\nbi8hT9pYwEt65sbD/MmF54rC3WaBNHnCxa3S1J56UnlZHc5JpVgpMQnSklmT\nO4f67qs83qQzA0YoONP0Pgi1tJiG1Wk+BLWLV8Oav7km9cuGwZRQZhFLLV0C\nsnFF91C5j4AXtbSqST92jH87Ij8hkSnbiBv3F+KTCAy+5UIlxEzMTGFmqytt\n0Kp5/3mNdJp/ZaANv9zo9yPa8DA4T3mDED0P0XjWRhRERGfGo5zWCa9tdtqO\n79Sy2SkhWYqgOdVwD11ao7qTkQymmI236DZekXAG/kZ7hOHUGfQ/sEGFMzTG\noD9tfMpSs68lNXbaZXNHBdp65Eq8nUe6R6oMMSrp8aEYl5LTuMqzyBvTkYVo\nWDrKB6bXhUqX3VOCiqE7VXETXtk+SCQG5Bze8L2rF1Q/4kSs8KojFjGOJV/v\nWPnhB2e4NnclH2r0zGI2Esw9Ay1/1VwTnNzgTgpV58k/LPh+6Ng2BWEwXXKa\nNcdV\r\n=2f2s\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.4.0": {
+      "name": "node-fetch",
+      "version": "2.4.0",
+      "dependencies": {},
+      "devDependencies": {
+        "abort-controller": "^1.1.0",
+        "abortcontroller-polyfill": "^1.3.0",
+        "babel-core": "^6.26.3",
+        "babel-plugin-istanbul": "^4.1.6",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "~1.3.0",
+        "codecov": "^3.3.0",
+        "cross-env": "^5.2.0",
+        "form-data": "^2.3.3",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.3",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.7",
+        "string-to-arraybuffer": "^1.0.2",
+        "url-search-params": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-1mt8bw5JQWWTcwUM1FGjFJLFo5lB/jz6zbm+qwdEh2iqYobKS4aHWgz1d+mvho5cqCaShFDF+hnpgraIi/5tqA==",
+        "shasum": "125ae2b0c2a75cb3b2ed141bf73e106cfe1f0ca8",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.4.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 151944,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcwz7FCRA9TVsSAnZWagAA2cEP/i69KaivNBODtsW1Rtgl\nPKRNpe6O/zmNNaFUI3bfYf2u/Mr441qCgc0cOiTMu5WXmc1BU5DpyL/3WS56\nGvAdem/1R0VKyX22LB9RlQOP/xIvSIxgYS5xgsvjuu/N5Ub9jgF55tsDBU1+\nUXa9E19dBkCtbEkVfsLE2rIb74wWxetkW9M/aaiMCyTDR8eX9ieZOc+MNr6W\nTBd5fHeUEDpKWJ1t0rf4zlc4Aj7CgRl/VzcOP2BUzFKiSb+J/uBannKdHyxJ\n3EPtMIS5QJCN9cAxx4+Oct2Np5fHI3D9ZnX350Mcf3sCRQZ00G256FynmP5F\nH77wjSnZd+DtQQ2fR8/W/ElR7AlXJY+kLwGJeEfZyODZdWXSycVqWykxAqwN\nDZ7YhiFKXOnzotNDU0htrih2xSXnBNh6o9Nx/omw6quiLOv7d8VFwsYbQAuU\nCiU7mLuKv8YZ6R/06CQMNFFyEZHfDmcscQf6qtfdxMeXLfqkBPrS3ILMNmBy\nrlYdM60Sxj+Cwl0KI+aMXYKsIAWRRNUxJHussogtb9CiTib3LyxKcrDtaSr5\n2C/88t3ziu4bGqoCAcQrqgQGtmaiK5ESHQ6abgPPKyYiPwt210+G3uM3zPC2\nOovnj1Q4Qa+zXDhuzZRgWWSqRbHu1rBoWXfdR0YQQToR+PtsX6LBuyA/fsY4\n720e\r\n=HVDL\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.4.1": {
+      "name": "node-fetch",
+      "version": "2.4.1",
+      "dependencies": {},
+      "devDependencies": {
+        "abort-controller": "^1.1.0",
+        "abortcontroller-polyfill": "^1.3.0",
+        "babel-core": "^6.26.3",
+        "babel-plugin-istanbul": "^4.1.6",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "~1.3.0",
+        "codecov": "^3.3.0",
+        "cross-env": "^5.2.0",
+        "form-data": "^2.3.3",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.3",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.7",
+        "string-to-arraybuffer": "^1.0.2",
+        "url-search-params": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-P9UbpFK87NyqBZzUuDBDz4f6Yiys8xm8j7ACDbi6usvFm6KItklQUKjeoqTrYS/S1k6I8oaOC2YLLDr/gg26Mw==",
+        "shasum": "b2e38f1117b8acbedbe0524f041fb3177188255d",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.4.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 152130,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcw/++CRA9TVsSAnZWagAApYkP/2bd4/6e2uAPz8LvxgPn\nBpXg/4lesRsTXdVeKQsScNe9HeS2kcH8Zk4Q5bvD+yO9KE8Xhr6Mw/mOhep+\nVoPZq/aVYHYcn62RUYPIsGdL6hyMzGrEaLaGNwKE9wBK6cd8gq+YZMDPWukJ\nzohhvgZyLUq73kQJwQv01GP7KzcRF18B8wtStDgbss20RBBnBa1etlg9bgom\nH6X7SLxt5S0geC3EE8ORgSxHC+e8h2LGk/MccGmXppGTCv9BFXwoNZvWwfQa\nzEvU2wkqFEgzoRdleJhUw12hcRKzw1dELrRFTrg2BNeT/grS1RorsMaAAujO\nDnjMiOXyDc5OZKa8ShUwncoe8Qx/u3oblDg8md+H2YDavSBTZST2RU8vKXIc\nKPw4h7yxH48Vs32TU0B7YuXDrOac/cAhNsWhZpmwtvrkqjjoI87RwIpr1jDv\nwA0mDZOjDEs82wck6Nu6IMaRX485hzpBsfzXz+LX/bvvRQsnbWwGqZ0oRMWd\nrepUwupTM35a2E/d02QJvtLFbp3ZEe7OjdYSZlGBsvI/Y7qPJ0UHZQAZBqon\nS/r/ClobXPAimqxSGLgw20tQHFn1lmC/EUzQ4f2n9Aw2qHJazqf0e2yisfge\ntARioB2JAkAuKRKnKl8vw1AvTGPlKaJ3J6A2LvC1gyB9usDzIEheARB0nzcF\nuQ+C\r\n=jpWB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.5.0": {
+      "name": "node-fetch",
+      "version": "2.5.0",
+      "dependencies": {},
+      "devDependencies": {
+        "@ungap/url-search-params": "^0.1.2",
+        "abort-controller": "^1.1.0",
+        "abortcontroller-polyfill": "^1.3.0",
+        "babel-core": "^6.26.3",
+        "babel-plugin-istanbul": "^4.1.6",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "~1.3.0",
+        "codecov": "^3.3.0",
+        "cross-env": "^5.2.0",
+        "form-data": "^2.3.3",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.3",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.7",
+        "string-to-arraybuffer": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-YuZKluhWGJwCcUu4RlZstdAxr8bFfOVHakc1mplwHkk8J+tqM1Y5yraYvIUpeX8aY7+crCwiELJq7Vl0o0LWXw==",
+        "shasum": "8028c49fc1191bba56a07adc6e2a954644a48501",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.5.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 154848,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcySm4CRA9TVsSAnZWagAASf4P/Rd7YpIG4OA1Kz+ANSsM\nDJaQIpaXPtU1bqqD05e72Dm0XTmjLxx0MUKtL2k8jcZJwvevNFX2q7e8CiSn\ngphwrvYoc8+nhwSrsArhnk+OSXMaujL3E2Bh7O29A1PLU/SL4ZtXl2JPD0HF\neTQpso9AKkZCrTRC1Ef5IIDKpMJhjJ54kZYpjeC3DncaYGfHFMRx3bRKwl19\nRXU6uHd3AUb23DeNMbJWd4pMogQ8KqoRRtHNaauL16FYiEjW8JYK//AzAX42\nvrjjWCjVIFio55YugOnzaCs43Thk0hYjVPWdXFPkn+JwiftqwD5BWzU5rv4V\nyuFNihuwlIHpt0gtg1z101EvWs0CZiK5gE5A3773K7e2PrBHZ2XtzQpKzhYv\nDtwsmdrBHrm0oba5lzrW3Lfd4XEy70usAEPQLBvqES77t3sW/y3Y5rHsIT0Y\ndN6Mh2V65sU9zFNHmmLUia1MxiyAP7RXkS3kp/vMBKx/NOJKuM0yeco1z9u7\ntrLbjQ2ZtVEV40N9S/GFn/c8g9mrdoaC/WjxBYjrg8FLY5XofGZY+C7tpyM3\nnj82+yDUIGdtUvwHfleOfkUz5y0rirUVqp+KcPTOKYQoOAJTN74chMRnDy2Q\nA9ULWPzHF6GyUZEE6M3+9r1/QC8HstqUPBP/sQJ/bLDsAIIduQ34KxY6cKjK\n/yAF\r\n=g+bJ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "2.6.0": {
+      "name": "node-fetch",
+      "version": "2.6.0",
+      "dependencies": {},
+      "devDependencies": {
+        "@ungap/url-search-params": "^0.1.2",
+        "abort-controller": "^1.1.0",
+        "abortcontroller-polyfill": "^1.3.0",
+        "babel-core": "^6.26.3",
+        "babel-plugin-istanbul": "^4.1.6",
+        "babel-preset-env": "^1.6.1",
+        "babel-register": "^6.16.3",
+        "chai": "^3.5.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^1.1.1",
+        "chai-string": "~1.3.0",
+        "codecov": "^3.3.0",
+        "cross-env": "^5.2.0",
+        "form-data": "^2.3.3",
+        "is-builtin-module": "^1.0.0",
+        "mocha": "^5.0.0",
+        "nyc": "11.9.0",
+        "parted": "^0.1.1",
+        "promise": "^8.0.3",
+        "resumer": "0.0.0",
+        "rollup": "^0.63.4",
+        "rollup-plugin-babel": "^3.0.7",
+        "string-to-arraybuffer": "^1.0.2",
+        "whatwg-url": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==",
+        "shasum": "e633456386d4aa55863f676a7ab0daa8fdecb0fd",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 156222,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc3QWtCRA9TVsSAnZWagAAIT4P/3aM/33tMjOx9vllJ/6G\nZOweEzEiRN9ZurrhD9phAVj0QV0iC5BLo+IvZMvLylIzwHQGFZT5P4ZCMucC\nUxNRR/Ckt55de+nG3A0wQ5JNApxHjuVYTBkg70+LbkRKYlFnsAHNH+b62kIG\nWETJV79q/lqryuqw0RjkOhjYm9p2162ThE9kp61YsGopD1a6WuWZD0iDyJTz\nlvK2bJztclYoyXNr4WkNu8QMm6XZVV++eX1xOLbQHeFBnqlstHDYaK8dgzPb\nGOmXjSRs1GvArlemBMHrVr4JlsSoz6lfNoiZ2j2kkkpAKwBvMkx7rikcDIle\n215JLJGySxdrehbTPdxi+A7tVAVK3F2X5n8PENYl7JVTHoTz86LMv0reRlvr\ndCBghHaEpenfR/FhV1z8r59D44hzPRODhaDtOVuDMEpIYIMHmhcGZivP9VHB\ny+uwy4YYYEzaOw0x4N7tPPMnUT9dKx/kGMEpS4XiwVCHrGGMeq+ntHEm03fD\nZ42i5rMjEwlBgRjnTwe4gb/8yGmT8y1hlyeZYpB2jZw+By5WL3vm5TBbaVHJ\n2TgPFJye9/YU/iaDuSAmEi1Fci+tNuOWOoqPWBWywD5paXoe87rQyjVrag4A\nEBdw4cbUFu3U6kWRcNxTmHT6Ba+T8LTQ68UvbI1jfXjVPepHbSSLtPetxvOQ\nEhAm\r\n=275P\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    }
+  },
+  "name": "node-fetch",
+  "dist-tags": {
+    "latest": "2.6.0",
+    "next": "2.1.2"
+  },
+  "modified": "2019-09-07T09:49:44.052Z",
+  "_cached": false,
+  "_contentLength": 37627
+}

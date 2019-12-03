@@ -1,0 +1,48 @@
+{
+  "versions": {
+    "0.0.0": {
+      "name": "concat-map",
+      "version": "0.0.0",
+      "dependencies": {},
+      "optionalDependencies": {},
+      "devDependencies": {
+        "tap": "~0.2.5"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {
+        "example": "example",
+        "test": "test"
+      },
+      "dist": {
+        "shasum": "604be9c2afb6dc9ba8182e3ff294fdd48e238e6d",
+        "tarball": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.4.0"
+      }
+    },
+    "0.0.1": {
+      "name": "concat-map",
+      "version": "0.0.1",
+      "devDependencies": {
+        "tape": "~2.4.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {
+        "example": "example",
+        "test": "test"
+      },
+      "dist": {
+        "shasum": "d8a96bd77fd68df7793a73036a3ba0d5405d477b",
+        "tarball": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
+      }
+    }
+  },
+  "name": "concat-map",
+  "dist-tags": {
+    "latest": "0.0.1"
+  },
+  "modified": "2014-01-30T03:06:35.982Z",
+  "_cached": false,
+  "_contentLength": 757
+}

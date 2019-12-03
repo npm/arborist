@@ -1,0 +1,1331 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "semver",
+      "version": "1.0.0",
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {
+        "bin": "./bin"
+      },
+      "dist": {
+        "shasum": "11f18a0c08ed21c988fc2b0257f1951969816615",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.0.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.1": {
+      "name": "semver",
+      "version": "1.0.1",
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {
+        "bin": "./bin"
+      },
+      "dist": {
+        "shasum": "93b90b9a3e00c7a143f2e49f6e2b32fd72237cdb",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.1.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.2": {
+      "name": "semver",
+      "version": "1.0.2",
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {
+        "bin": "./bin"
+      },
+      "dist": {
+        "shasum": "57e4e1460c0f1abc2c2c6273457abc04e309706c",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.2.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.3": {
+      "name": "semver",
+      "version": "1.0.3",
+      "dependencies": {},
+      "devDependencies": {},
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "453f40adadf8ce23ff4eb937972c6a007d52ef0d",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.3.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.4": {
+      "name": "semver",
+      "version": "1.0.4",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "41c0da40706d0defe763998281fc616a2a5d1e46",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.4.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.5": {
+      "name": "semver",
+      "version": "1.0.5",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7abca9337d64408ec2d42ffd974858c04dca3bdb",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.5.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.6": {
+      "name": "semver",
+      "version": "1.0.6",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "697b6bff4b3eca86f35dc037c9ab2f1eb7af1a9e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.6.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.7": {
+      "name": "semver",
+      "version": "1.0.7",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "668e127e81e81e0954d25a6d2c1cb20a1538b2e3",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.7.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.8": {
+      "name": "semver",
+      "version": "1.0.8",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "8a78a9bfad863a0660683c33c91f08b6cd2cfa98",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.8.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.9": {
+      "name": "semver",
+      "version": "1.0.9",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "d053046aea88e25b488ecbc0a8c9deda03db8a9c",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.9.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.10": {
+      "name": "semver",
+      "version": "1.0.10",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "cfa5a85d95888c75b4a9275bda7491568d8cfd20",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.10.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.11": {
+      "name": "semver",
+      "version": "1.0.11",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "1bd01c550d477cbf9a839b02269c4011ce147992",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.11.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.12": {
+      "name": "semver",
+      "version": "1.0.12",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "4686f056e5894a9cba708adeabc2c49dada90778",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.12.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.13": {
+      "name": "semver",
+      "version": "1.0.13",
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "9512ce1392105e72a0b739b27f39e0242913d07e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.13.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.0.14": {
+      "name": "semver",
+      "version": "1.0.14",
+      "dependencies": {},
+      "optionalDependencies": {},
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "cac5e2d55a6fbf958cb220ae844045071c78f676",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.0.14.tgz"
+      },
+      "engines": {
+        "node": "*"
+      }
+    },
+    "1.1.0": {
+      "name": "semver",
+      "version": "1.1.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "da9b9c837e31550a7c928622bc2381de7dd7a53e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.1.0.tgz"
+      }
+    },
+    "1.1.1": {
+      "name": "semver",
+      "version": "1.1.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "de7faba203f7cbb59ac16da64198df0c6cebca30",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.1.1.tgz"
+      }
+    },
+    "1.1.2": {
+      "name": "semver",
+      "version": "1.1.2",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f6c851dcb2776b0aa7af2294dadaf6ce20de897e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.1.2.tgz"
+      }
+    },
+    "1.1.3": {
+      "name": "semver",
+      "version": "1.1.3",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "a0f06f2fb23b64ef9c0ff714fa079082e0532633",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.1.3.tgz"
+      }
+    },
+    "1.1.4": {
+      "name": "semver",
+      "version": "1.1.4",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2e5a4e72bab03472cc97f72753b4508912ef5540",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-1.1.4.tgz"
+      }
+    },
+    "2.0.0-alpha": {
+      "name": "semver",
+      "version": "2.0.0-alpha",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "979de555a1bae1c781cc6b2907b576b59067706e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.0-alpha.tgz"
+      }
+    },
+    "2.0.0-beta": {
+      "name": "semver",
+      "version": "2.0.0-beta",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "5c3585c4eaa97879cc07de06aa6e75a44f5b249f",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.0-beta.tgz"
+      }
+    },
+    "2.0.1": {
+      "name": "semver",
+      "version": "2.0.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "92741b2bd09d9c53695cf116cd6de32cae925976",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.1.tgz"
+      }
+    },
+    "2.0.2": {
+      "name": "semver",
+      "version": "2.0.2",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "6697b743dafc38a9ae24d4f0183eb53f460b662a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.2.tgz"
+      }
+    },
+    "2.0.3": {
+      "name": "semver",
+      "version": "2.0.3",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "1778ae3b7d5f5f457a48b164320bf6e29c8e8fe1",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.3.tgz"
+      }
+    },
+    "2.0.4": {
+      "name": "semver",
+      "version": "2.0.4",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "1bb8e25f9a445b55f2d2ea5bc06742790b6a5ba7",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.4.tgz"
+      }
+    },
+    "2.0.5": {
+      "name": "semver",
+      "version": "2.0.5",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "601aebc1dbeedac222bb7e7b8882454f0c2a24c7",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.5.tgz"
+      }
+    },
+    "2.0.6": {
+      "name": "semver",
+      "version": "2.0.6",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "3febe96c89813fc299d8e67cbcd685101e07335a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.6.tgz"
+      }
+    },
+    "2.0.7": {
+      "name": "semver",
+      "version": "2.0.7",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7815c1a7ef647604646ecdabc95b90dfeb39174f",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.7.tgz"
+      }
+    },
+    "2.0.8": {
+      "name": "semver",
+      "version": "2.0.8",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f5c28ba4a6d56bd1d9dbe34aed288d69366a73c6",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.8.tgz"
+      }
+    },
+    "2.0.9": {
+      "name": "semver",
+      "version": "2.0.9",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "3c76b0f216bd62a95f5f03e9ec298da548632403",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.9.tgz"
+      }
+    },
+    "2.0.10": {
+      "name": "semver",
+      "version": "2.0.10",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "e3199263b1e9f1913dbc91efb4af559e8e4d3d31",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.10.tgz"
+      }
+    },
+    "2.0.11": {
+      "name": "semver",
+      "version": "2.0.11",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f51f07d03fa5af79beb537fc067a7e141786cced",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.0.11.tgz"
+      }
+    },
+    "2.1.0": {
+      "name": "semver",
+      "version": "2.1.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "356294a90690b698774d62cf35d7c91f983e728a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.1.0.tgz"
+      }
+    },
+    "2.2.0": {
+      "name": "semver",
+      "version": "2.2.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "290ec979d731b3dc6c08a15dbcffdeae420f4473",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.2.0.tgz"
+      }
+    },
+    "2.2.1": {
+      "name": "semver",
+      "version": "2.2.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7941182b3ffcc580bff1c17942acdf7951c0d213",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.2.1.tgz"
+      }
+    },
+    "2.3.0": {
+      "name": "semver",
+      "version": "2.3.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "d31b2903ebe2a1806c05b8e763916a7183108a15",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.3.0.tgz"
+      }
+    },
+    "2.3.1": {
+      "name": "semver",
+      "version": "2.3.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "6f65ee7d1aed753cdf9dda70e5631a3fb42a5bee",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.3.1.tgz"
+      }
+    },
+    "2.3.2": {
+      "name": "semver",
+      "version": "2.3.2",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "b9848f25d6cf36333073ec9ef8856d42f1233e52",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-2.3.2.tgz"
+      }
+    },
+    "3.0.0": {
+      "name": "semver",
+      "version": "3.0.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "994f634b9535a36b07fde690faa811a9ed35b4f3",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-3.0.0.tgz"
+      }
+    },
+    "3.0.1": {
+      "name": "semver",
+      "version": "3.0.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "720ac012515a252f91fb0dd2e99a56a70d6cf078",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-3.0.1.tgz"
+      }
+    },
+    "4.0.0": {
+      "name": "semver",
+      "version": "4.0.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7be868416a5e669923a8e3af8bafa5faf62a151a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.0.0.tgz"
+      }
+    },
+    "4.0.2": {
+      "name": "semver",
+      "version": "4.0.2",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "13f7293ca7d42886123963ca0b947a03f83f60c3",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.0.2.tgz"
+      }
+    },
+    "4.0.3": {
+      "name": "semver",
+      "version": "4.0.3",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f79c9ba670efccc029d98a5017def64b0ce1644e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.0.3.tgz"
+      }
+    },
+    "4.1.0": {
+      "name": "semver",
+      "version": "4.1.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "bc80a9ff68532814362cc3cfda3c7b75ed9c321c",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.1.0.tgz"
+      }
+    },
+    "4.1.1": {
+      "name": "semver",
+      "version": "4.1.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "8d63e2e90df847e626d48ae068cd65786b0ed3d3",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.1.1.tgz"
+      }
+    },
+    "4.2.0": {
+      "name": "semver",
+      "version": "4.2.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "a571fd4adbe974fe32bd9cb4c5e249606f498423",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.2.0.tgz"
+      }
+    },
+    "4.2.1": {
+      "name": "semver",
+      "version": "4.2.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "70828f545f40f49ffab91fef09c3cd3257937142",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.2.1.tgz"
+      }
+    },
+    "4.2.2": {
+      "name": "semver",
+      "version": "4.2.2",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "a6aa6ac6a63c0dc7aff7ea48d5455ae2b93a3062",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.2.2.tgz"
+      }
+    },
+    "4.3.0": {
+      "name": "semver",
+      "version": "4.3.0",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "3757ceed2b91afefe0ba2c3b6bda49c688b0257a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.0.tgz"
+      }
+    },
+    "4.3.1": {
+      "name": "semver",
+      "version": "4.3.1",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "beb0129575b95f76110b29af08d370fd9eeb34bf",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.1.tgz"
+      }
+    },
+    "4.3.2": {
+      "name": "semver",
+      "version": "4.3.2",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "c7a07158a80bedd052355b770d82d6640f803be7",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.2.tgz"
+      }
+    },
+    "4.3.3": {
+      "name": "semver",
+      "version": "4.3.3",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "15466b61220bc371cd8f0e666a9f785329ea8228",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.3.tgz"
+      }
+    },
+    "4.3.4": {
+      "name": "semver",
+      "version": "4.3.4",
+      "devDependencies": {
+        "tap": "0.x >=0.0.4",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "bf43a1aae304de040e12a13f84200ca7aeab7589",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.4.tgz"
+      }
+    },
+    "4.3.5": {
+      "name": "semver",
+      "version": "4.3.5",
+      "devDependencies": {
+        "tap": "^1.2.0",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "c20865a8bb8e1b6ac958a390c8e835538fa0c707",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.5.tgz"
+      }
+    },
+    "4.3.6": {
+      "name": "semver",
+      "version": "4.3.6",
+      "devDependencies": {
+        "tap": "^1.2.0",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "300bc6e0e86374f7ba61068b5b1ecd57fc6532da",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-4.3.6.tgz"
+      }
+    },
+    "5.0.0": {
+      "name": "semver",
+      "version": "5.0.0",
+      "devDependencies": {
+        "tap": "^1.2.0",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "f96fd0f81ea71ec131aceac26725cef2a255dc01",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.0.0.tgz"
+      }
+    },
+    "5.0.1": {
+      "name": "semver",
+      "version": "5.0.1",
+      "devDependencies": {
+        "tap": "^1.2.0",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "9fb3f4004f900d83c47968fe42f7583e05832cc9",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.0.1.tgz"
+      }
+    },
+    "5.0.2": {
+      "name": "semver",
+      "version": "5.0.2",
+      "devDependencies": {
+        "tap": "^1.2.0",
+        "uglify-js": "~2.3.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "19041bd286619344116c60bcc011a3a4cb4a14ef",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.0.2.tgz"
+      }
+    },
+    "5.0.3": {
+      "name": "semver",
+      "version": "5.0.3",
+      "devDependencies": {
+        "tap": "^1.3.4"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "77466de589cd5d3c95f138aa78bc569a3cb5d27a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.0.3.tgz"
+      }
+    },
+    "5.1.0": {
+      "name": "semver",
+      "version": "5.1.0",
+      "devDependencies": {
+        "tap": "^2.0.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "85f2cf8550465c4df000cf7d86f6b054106ab9e5",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.1.0.tgz"
+      }
+    },
+    "5.1.1": {
+      "name": "semver",
+      "version": "5.1.1",
+      "devDependencies": {
+        "tap": "^2.0.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "a3292a373e6f3e0798da0b20641b9a9c5bc47e19",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.1.1.tgz"
+      }
+    },
+    "5.2.0": {
+      "name": "semver",
+      "version": "5.2.0",
+      "devDependencies": {
+        "tap": "^2.0.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "281995b80c1448209415ddbc4cf50c269cef55c5",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.2.0.tgz"
+      }
+    },
+    "5.3.0": {
+      "name": "semver",
+      "version": "5.3.0",
+      "devDependencies": {
+        "tap": "^2.0.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.3.0.tgz"
+      }
+    },
+    "5.4.0": {
+      "name": "semver",
+      "version": "5.4.0",
+      "devDependencies": {
+        "tap": "^10.7.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-TBZ1MavfXEY92Ohe3vwQbXSSIUy7HRHuSayvV84i9/+BHzHxYZxtnam2FEdIMvkri17UmUD2iz5KzWI4MQpEyQ==",
+        "shasum": "4b753f9bc8dc4c0b30cf460124ed17ae65444ae8",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.4.0.tgz"
+      }
+    },
+    "5.4.1": {
+      "name": "semver",
+      "version": "5.4.1",
+      "devDependencies": {
+        "tap": "^10.7.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-WfG/X9+oATh81XtllIo/I8gOiY9EXRdv1cQdyykeXK17YcUW3EXUAi2To4pcH6nZtJPr7ZOpM5OMyWJZm+8Rsg==",
+        "shasum": "e059c09d8571f0540823733433505d3a2f00b18e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.4.1.tgz"
+      }
+    },
+    "5.5.0": {
+      "name": "semver",
+      "version": "5.5.0",
+      "devDependencies": {
+        "tap": "^10.7.0"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-4SJ3dm0WAwWy/NVeioZh5AntkdJoWKxHxcmyP622fOkgHa4z3R0TdBJICINyaSDE6uNwVc8gZr+ZinwZAH4xIA==",
+        "shasum": "dc4bbc7a6ca9d916dee5d43516f0092b58f7b8ab",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.5.0.tgz"
+      }
+    },
+    "5.5.1": {
+      "name": "semver",
+      "version": "5.5.1",
+      "devDependencies": {
+        "tap": "^12.0.1"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-PqpAxfrEhlSUWge8dwIp4tZnQ25DIOthpiaHNIthsjEFQD6EvqUKUDM7L8O2rShkFccYo1VjJR0coWfNkCubRw==",
+        "shasum": "7dfdd8814bdb7cabc7be0fb1d734cfb66c940477",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.5.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 57384,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbdzGjCRA9TVsSAnZWagAA9dkP/13iStlVBKH4BSsU2Lo6\n8ZPM5pOX5+ZLmF6cEsn16YEm+NVYXvYmw5Hy0Mcosgf4Wi6GZzKYup+t00D3\nkd5A9X5E0e+4l/bxmF6i/3qkRcxxXSUHjpLLw3wOc71H840Zdfmh0aT7+Foy\noVFgvAgJMueVsA0fgyks3q1SpssM3Gk1rsUDCLjIfLVViqfrdi952pI+Qwe0\n3hju+N7P8evmA5w1VwogT9uexMAQ61mlsibZMDUyPs9Bky6gMKcY/m3H9MNO\nlw5EoiQLid3Ca+AExrP+011dSAs+XE1tVo4pkzsSeAVMMe/xiH+FtFthetsv\nymDbzoVFCjSjlFJIeo4Ct3zS0Tsr3tJZmgx6BAGf/RGpMQUEUeuPUDLEHQ33\n3VQSBz9ANIrTfRmPep1iJHUN9odtfOAGEuZsFYdeP1m8Vf/5zcML5BAeqtVk\n/HVT76llGP44utxK6MeasJYJctHPT/E0ITf/ILhliATQgr6v/+UTVITtAJo1\nCnTc8GCzUdtxw+lqxDnQf9PJ2sHvfPwTshHiPnAFORRhWnFJCJV59j62yR4G\n4Miam6QnGcqe8BkgZ8w4yRC9L/hc3eezPrMcecTWaqxDNO67vE8GywxL5Xh5\nE0NqHNoabkwH2G0Gr+BgKeyi6tyBeoKIdrBFyRe8CnnELs2rcjs39b1TQ1je\nC/sz\r\n=OhAx\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "5.6.0": {
+      "name": "semver",
+      "version": "5.6.0",
+      "devDependencies": {
+        "tap": "^12.0.1"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==",
+        "shasum": "7e74256fbaa49c75aa7c7a205cc22799cac80004",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.6.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 59721,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbvpC6CRA9TVsSAnZWagAApbMP/3bk+fOFL1FLwS924EDm\nrwE9nR9Knp9+J6Gme1UH1HvMkNm92/ZSvrbMaW5Uzw3RhRJOEjdtDpQFpJ/N\n7SFdFf4RmrZKThr4EuVVi/Iuy2MwIpZ3UUbrDYWV1kTwfMeW6mDWqcNUOOIk\nHLW9icN0oyvbB4LfPwhr3SFDKlTi6TlyZseQHFGndSbw2/mS9wdLHaa6bz0x\nB85SW5PVPw7Y83RdzdPz59vrNmVytY0pEsepLR7IQkdyB+YU7cIxR7gLbzkY\nUV5F6FyvvOcrfEIiRZgprhH5a2RnYZ8Id/3/ca08yN1Q65SsjztKq4Bh7+JI\nO/pjNjRWKLYsRom9l4q4iAFhdy6fFHlqkUkM1Yy5jFmQNjSk5RnpuRrDUUXV\ntFbWGkEccYrXby5WOq1JZxJ/MfiUpxg22qlO3AcTHbKddhFZvYh/cQFIohV4\nbmV7TeWoodJ7KaF6MVhnwda1AWTBZTNSqrCmsmDSZZwNb6NQhVSrbkLXDbgu\ntN4RhRPjOE1mFYjuGJuN32oSdceOCT9x61Lr0uucw8JHZldVIe0o63Qb6/4t\ntl+wzR3JfbdkB1vGVo8oXm8KoghMhFwmpD+RKg4hPxJhxQTXRy4OUsSkU5+l\nRRK9JHTyBGXbpcyeVLtPAGYdsl42sYG9+lSqGI3at/HKDcJrnzp3KJ4fXcUB\nlkPD\r\n=LpzA\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "5.7.0": {
+      "name": "semver",
+      "version": "5.7.0",
+      "devDependencies": {
+        "tap": "^13.0.0-rc.18"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==",
+        "shasum": "790a7cf6fea5459bac96110b29b60412dc8ff96b",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.7.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 61574,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcmrT8CRA9TVsSAnZWagAARMMQAI415wi9qxabS351a5Wf\nFD71A8Ss13BZZJ/R1R6kGsSrGbM9d0cjrikxGnVc0nTyyG9cu4MZRQTQiAPn\norBKEUk7xtYzXXAseaQAJX3g1/iX+aGkZBEo14yABXfv615Xnmroe5yQ3m6h\n0HkHxXjdxRwBb2WEwNDCNrvmzTwxvkGg32Rqu+Ow+fbsnubgc7+q12ooq9lD\nscxvAqhMuDcHRFHEFoQFUpW5YO+N7/cY7GEdNkJnsDbd+yCfnJOJSUqDF0rz\nHiv+j9CkwiRMkliimBW1KXRiYz2S/HjEuOcfg+MwUk7l3pFIZH2cTyYoQBQC\n+nR241WcuWBX+BwOFmbvHiMWPcJGvYK8r9Ql7Pswzjxerbt/VIOiWAEFlVX1\nOaopM8d+exP8EEurYBFT1OF0FSD5LOjV96b7B3SuvlrooDVU4lKdF+wXWsPr\nkHR01hULTV/JG4BTvblo5T7x74lJ8tG5vIW/CQQXLDeAgVlHgJNdrmnX+nB4\nwBcWDw/bZYJ1AV3Zzb3VJKbSjw4GAgo8OevlGrAmyp8T7IhZzpX+V/BQs1V1\nW7AiEVUmptY89GWCBc5MPc+YwEeg+ti0LfLGcn15+CFFImIY1taytkuGpCMw\nA2+lsjXrW9+7RtUInZFjbFxsh/q1HRFng+C8dRhBBpPOmbHGRBUUtClHU9V4\nkbZh\r\n=hoZW\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.0.0": {
+      "name": "semver",
+      "version": "6.0.0",
+      "devDependencies": {
+        "tap": "^13.0.0-rc.18"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-0UewU+9rFapKFnlbirLi3byoOuhrSsli/z/ihNnvM24vgF+8sNBiI1LZPBSH9wJKUwaUbw+s3hToDLCXkrghrQ==",
+        "shasum": "05e359ee571e5ad7ed641a6eec1e547ba52dea65",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.0.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 62471,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcmrX+CRA9TVsSAnZWagAAoRwP/0YCCBFIfY3upqagUByQ\niSSXpONHBXU1EFnjbfTBfLyFWQR7P5O2fdSuGRLDBKKkT4S9w0cAsPAXGiPD\nHhRILVd+8JlnJl4W8bfVSC/DLZySWkUnJzkCcje6goCJDfM1FU8k8DUg2iQi\np2+4u1C5An2ALUNT15IbKye7bpHXnTkJppfyp65d3adcbpz29o1lnb5EvgkX\nnVSxRDla/JNl4e3bTUMINV//iCEd1M7J1em2rQ0jIuZo0sKiuVOprEtXd7OZ\n3UiOOnTOyl+qjw8ivfHvbvXY3FHtIWEKnBPkWZq7uI3Vdv6EKwb1/8xmnMMT\nqYfkanQ9ONh7TYWUOhgNLiJDYu1IJP2sabu/JC2LqYbZ8BCeuzNUatwoelxk\nGXexUfYE8DkdaeFprl8UJlPFScuXIf/zgu0uzmpodabp0K27j/y1A9jGpUC7\ntD0ehK11H90rGsbqXxHJUW4q87edMspLdk7pJFqE9qXTqovHN4gY9I4Mcan/\nzGuEViraahDlUxyMxUaQZ6dGBL6FG7M0viPC65J4yQrlkVl/BGL3ccHhEB3R\n8V2cszwskVjwdLXeYSoalaOtWg/MkoN+6ZkobVYrJcirws7i/y3OiXpUsofu\nNroA7knyguQt1bU6XTk78/T3/ihZFROSmP5sQkxRvjjdXC4MDXMgjlxzjrzf\nmWlI\r\n=KdhG\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.1.0": {
+      "name": "semver",
+      "version": "6.1.0",
+      "devDependencies": {
+        "tap": "^14.1.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-kCqEOOHoBcFs/2Ccuk4Xarm/KiWRSLEX9CAZF8xkJ6ZPlIoTZ8V5f7J16vYLJqDbR7KrxTJpR2lqjIEm2Qx9cQ==",
+        "shasum": "e95dc415d45ecf03f2f9f83b264a6b11f49c0cca",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.1.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 63544,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc5btRCRA9TVsSAnZWagAAgsEP/0Y2HJZpOn2psrflNRGf\nLxDBJgcXjtw7uvqhTfJ9FaNtSLO+7hRMf/DmysNlEOTvrHyxIbjuNQIxXE0+\nTwhQjUXinbVEPhojcuHpyfVHf/3Hpw6Y6w20njrSQSakIZ1LR0Ps2WRpHElI\nBeCUL2XztGkhBFI8X2sLbIapDb47lCsLz1yWQNu180y9y9ec2FId2UXZAhXX\nmzQRquZANcCli2up7fWssJgIGIWnhZopgOlUjSOtKHPf2whk115naEqiQQyy\niaGhGvtxPqZXQ0aADQJIHNIfG+PAweKdUa6/hocSf83EPMcbB3jNEQ3hvvxp\n0lyUy4l+M3TAWplMDBxb1OjZG0d/PM3ct6t3K0j5HeLBG20jDnNTkEHGTUpd\n3YveaIT6RiVYDYpNLJOE0EJeiB/57FZLZEZHM/2iOL3YN0kjANio/bMWJr44\nC0CX+KqOLUOYjlyFixWdQswgS4Rv0GiMjql54y2T3nrqmneQvs+BWjJ97H9v\n7RMkmRD8xdic7E7VkWD+uCGAEN/57Od4vCpAvcDfdgriEcIlBodItOgc+P9n\nBd1XIhiDf0VFFKI2Lnc3WOZ51yyBtQWmX/Wxl09VSqo9yv52PwHUMPVBIgY4\nr+he+TmSDHSHFIiL3AO8O62iuNJrZ4lljAE+/AmFDT85RMmCu5mQcBd/l/On\nKMRV\r\n=Ffwf\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.1.1": {
+      "name": "semver",
+      "version": "6.1.1",
+      "devDependencies": {
+        "tap": "^14.1.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==",
+        "shasum": "53f53da9b30b2103cd4f15eab3a18ecbcb210c9b",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.1.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 64174,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc7WycCRA9TVsSAnZWagAA8IcP/0R30XsRrUZQUA9MbxFV\niuIoMVb6ZsFMTbHRSPGmOKEfr5OOEwwhKZbpzqD97z8h0uxZB8yntwnjadaB\nJD/POnEdbX9QSzp9t1D9iEJTEOk5PPcQgwacEcQSa1R1m1QjAjeN+kQqrWq5\n1tRFxnPHOr2b+XYwkuH4tIkQgKEeBnAHT5+gFt2h4RVcTzS7hM5Z0sExgx3Z\nw2tFCCZcCtoReKM7ZgbCWk5HSA3ORD09bSJLKOEvOwVIqdfNvsh85/30ab3X\nos5vWEg6++twniVIuW+fLBa9Suyb6f/8LwPrVITustjWbUkakQZELs14K2dh\nIPmtRYMJe3Mv6WQhYxjftyBRHSn5rqybuFNY7Khscm4WM3YwexOhFZ6LCIj5\nt7b1y2l645LR2+tw2xv4Vg8w50xRWZdD/lM/b/lAAQCDc4nQ77HkBHT7fV+j\nrPwxheQJ3RLzPzNXFefJuPl9zjXw4Kxc85UDc83IQEM9wGqiyX5MSal5BcbL\nYWAJk0/fORhrEE49vaTlMepkiAwa6+SxMqnp/Yu1bIOqYPZhUxPaBTZNZDRU\nm3OL0c+rkS6GvaJ3U6wVqG9xBIRb3kWOO45llv5WNhXDnObsnfz2zMz8ciDE\nJAGmnQdOaYtEWAG05mWBSaY+n2WrwkE+u3+mf6ndNvkCt/lAWwjYH+FPC4oi\nkEvU\r\n=fBQu\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.1.2": {
+      "name": "semver",
+      "version": "6.1.2",
+      "devDependencies": {
+        "tap": "^14.1.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-z4PqiCpomGtWj8633oeAdXm1Kn1W++3T8epkZYnwiVgIYIJ0QHszhInYSJTYxebByQH7KVCEAn8R9duzZW2PhQ==",
+        "shasum": "079960381376a3db62eb2edc8a3bfb10c7cfe318",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.1.2.tgz",
+        "fileCount": 7,
+        "unpackedSize": 64286,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdECvTCRA9TVsSAnZWagAAUVwP/06WUedeMoHIjvX+ItO7\nXTCuNar3748Ue6x6zYIztkPCSENP8+wI/l1ctBEu6xOG0RKzXTes8wl+GHFL\nhUvImiKlu6SklcTIkNPpBfCJqYlZp5ANECPEq4zpPWQ0cynYC6NAHE7lU42p\nkEwpvHVeIM5FJlfqcKQhrFtpVXPSvTDPbvsg0+fQTUpOZ1M+iDhBTj074qvu\nfrRkeDVSZVpppOPYng6GgiAq9Pl5+snma0kJEtVQeTyx1Q7p5z52urv+9f+z\n3hSPi//fGhANj2ohoNng+hFNKVAAFgbLPzHrPKZYoIkwd+3Le5D1zNdPeggp\n4miRfPLWSSrOBvCQFXDVbyb6d2Zm2OEj2L+yGUr2Uk4SnAZ6kzz/UJm9msnh\n2k35zppLUCrjZ8UPkmbBrg91TF/WjpaXyzU1EUYHwbtx2JRS8HijXLVbmwxq\nmWFdfF3fQ02Z1VW7beFPBudYhGzMUz2DtBc5TL+iupIV1cWEnIVcPT3MQuBb\nOPvD+CXcRdzlieAPOKpvYpcbcD1CI+OeYD6AOl/P6nky6qpoNC4p9XwXHQYw\n8VsBpcq0xVP5bFKnr+T6KsH8ySvdXgKm/PgxPOf4qarHkKG5ZUgN83O9dwZU\nL3JdG+12MgKoQRjg8+oHHK87R9Lmdn6w3m80Y2ANMzUG3lI2L1Bvzxq58WSc\nZHco\r\n=M2gi\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.1.3": {
+      "name": "semver",
+      "version": "6.1.3",
+      "devDependencies": {
+        "tap": "^14.1.6"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-aymF+56WJJMyXQHcd4hlK4N75rwj5RQpfW8ePlQnJsTYOBLlLbcIErR/G1s9SkIvKBqOudR3KAx4wEqP+F1hNQ==",
+        "shasum": "ef997a1a024f67dd48a7f155df88bb7b5c6c3fc7",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.1.3.tgz",
+        "fileCount": 7,
+        "unpackedSize": 64507,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdGZ9NCRA9TVsSAnZWagAAcqkQAKCXi2se8vhb+QCyDmY+\nqo4/fLtzOYy5EliORLmQXvDKEIzI0pcaEW/Fg/dL+uEyBStyfbPj/h+XKjjg\nggc2/IrxFoBpz0FkrobRPXpQO6L2+DDUS5Ch93RaN4fUP+SzLajs30ZE7aJs\n0xZVb4ey7nhguroCStfVTgClMXAPTeWNb8ZOLxBRNQ6F4d8cOqvZLfreIt3z\nOry6a0vAxI4tft4/Ps97XIXWs1NV7vTBq5A2RBa7mEjYaVnM+wAi89DCXdrs\n+cMkZoCiOVi1uvp3hUditzDgZXec667VDY+19Q3ELJ1EUCkVdrklLT05X5ay\nY/z0H2G/4/OA1bn/yEFZQ/jMYIg8K3ZLa2N++laluCjrHhOJmVO/0SStx9+d\nvF23vdnTNdOPWxyho9OJabVVjjFqOYs+vkE65t/QhKcMyUX2O/a4EBc+Rpwm\nXzWy+CXf/aesXqpYpKQiTPLVzW20NZ25YzLn0iJcApRvlTbAQNTais9uLMNI\nCtgmnzSnK06Ue6O702HsBkrOpm8mJDTYnV15+fvcRIap4sCTbegStBMO3u8n\n9pTME9iJ82CZ2zvVyPnG1cks+vfGrcLyijnIDnfK7xiDl+oncD7zVmDdYxSj\nqAqmgiilbo+gGjDMue3zSY6/JFwg+xheUHFfBpgLovk7VyOWdz2DCpWqnqNU\n7xyb\r\n=2ohr\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.2.0": {
+      "name": "semver",
+      "version": "6.2.0",
+      "devDependencies": {
+        "tap": "^14.3.1"
+      },
+      "bin": {
+        "semver": "./bin/semver.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-jdFC1VdUGT/2Scgbimf7FSx9iJLXoqfglSF+gJeuNWVpiE37OIbc1jywR/GJyFdz3mnkz2/id0L0J/cr0izR5A==",
+        "shasum": "4d813d9590aaf8a9192693d6c85b9344de5901db",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.2.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 82741,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdGpFACRA9TVsSAnZWagAA0AsP/igqD2dT8oa7I6GXeoYh\nB4Q4NVEA7rU5la2rA9Pd0OFZJ3xmZoUwkCvN0HOdH33DxCcgV5v9ZExdMm1a\nW+lhz0ByojoX8xiRbLHtycS0FQElmsJzEWLfQziUyKy5whu7QQQ1jK0gKPka\nLvGt2o5DOAusE4cQIQMNPE7OQYIHRmgKfFp13UciJd1FC38LKENGbWsYBFPa\n5M2d4oB/odg0b5NNe+ufaAr0wIy+OFVE3z7I8bP4RD9Kvm0vCoGCpaVS2nxY\nbogq1F4nwhTnOPK9/3p/AUXUP7gK5A0MtzYHuteYPKtUX+/amvVN2k9eAV4Z\n+hQN5E1kkTs/YDg4561y1vS+ukSBY2J1NCnEI9fMZ/RVm2p4RZ5g5u+frxeO\nWdt2lIJ2CGC+Amwaf0+koHIyUeDfIlWE9paB6iBCcRBQuXxGjNdE/TUFQaYn\nBDlAj9q4efBLe9KVdIvSME3C7ztR0z9ouyule4jSviFqyAygKNem+inaeUs1\nVwvvG5fYtk5sx8F4f0Ns3TUyC3BjrTv3I1U6Eq8IaEc1jJft1OAl5fgcUqYe\nvbVT9I4TYo9uWeuABL1Vfgwl/eoXvE9ZxrXspO9rST7PRij//fYD2tYeJ6tT\nyIkavdL+N4WMc5nXrYhXkR8rqZYR0O0i9xhulHdFJ6DFkdCdjyc8Ei1j/ILD\ncFUf\r\n=YZPi\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "6.3.0": {
+      "name": "semver",
+      "version": "6.3.0",
+      "devDependencies": {
+        "tap": "^14.3.1"
+      },
+      "bin": {
+        "semver": "./bin/semver.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==",
+        "shasum": "ee0a64c8af5e8ceea67687b133761e1becbd1d3d",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 67071,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdN18nCRA9TVsSAnZWagAAw0AQAKBp2ynlIw1BNM6KtKKE\ndfzCM5T+p/uNU6uuHeHVNAtEaiaR49Yj02cZwyebsGABvo3shL91zUN4wHVR\nsnCDodrZ0MMUtSishHbUa+qnD5PzT0wfli2VgCHMHmMikt6ILdpGM50o2edX\ntEnMztR+NIHQ5URFR9gNyPn1zrNZ6axT1exx+Xw0We0dVb7jUqUh3xN3F3b+\n06tD10xoh64Lny3FZx+GoIgV/8XIFTPSPu7qw4xNpXuW08NR8a/5A6+AKFZe\nOAKFuXtMLoQVhb5Qu0grw2NrfBcQbo6YI8J+N+7KnE0dDGUJh6LQ29VRhNam\nTz/XR0g/TB7JQcZAFtVi/OUTcoYHnSLDYuImvlzTJTjvtmODBUVoMOBAaoxr\ncVeGUFjRUu5i8LmNkKvfQvCWZYACD/u5o8nFpv13aC9gKsIlfPc2SygHJ7/N\nG6EjJPXSFP9/VbB1hH7JRzy5e8ztbbRvxl/tJDIOj/wFKaL0mF9tuI/VvCtl\nbA6i3W8dhQORgfmJ1Y6HZSQtIu+mmE0FNcNiaFsnpU+Az5onPWHPhKwWfzri\naCH/KgIf8c9JQrgovaPKaADhao6RaWKh6ucmuCp9s+4OnPmSoIYKdIPTFHer\nBRAddBXV6dsPGj9tN4bfGTtISSQA0t/3Gvk5fqErENZafAKHLLQY7bIJtloe\nDy19\r\n=NlB3\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "5.7.1": {
+      "name": "semver",
+      "version": "5.7.1",
+      "devDependencies": {
+        "tap": "^13.0.0-rc.18"
+      },
+      "bin": {
+        "semver": "./bin/semver"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==",
+        "shasum": "a954f931aeba508d307bbf069eff0c01c96116f7",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 61578,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdUZOfCRA9TVsSAnZWagAALOoQAIryFFr3APbQy7JtFRVQ\nZWyRM6KerD0BuRsiDj8Z+krefX6/DJ4CghE3P3dYwSyJI3irUOLblY2Je6S3\nQPnQLOdT2R0uC/mOnZ5xfu5ok88KkXwc2UQdsot+u+FCMerbv+XPHnOi2T+Q\nhYYuOP26jX74MdZJr5LrXZsBppEeypVCGEi/k5B+L0AM2EPBVzrhfl7+OjqT\nIRao2JvxOBpF6D6p1Q+x48yGcPGWH5qnSeaXFBnH7lzJD64IJPb5c5oA57AX\ndy1NFbQ1bFLZ++7RwQ4dsZlC614/58fCrasdepTQkFxKGv6Glz0TxdrsEqyE\nRPuP0on337QcRwNRB7buoVkBE1gNTc3x9yisJRNBMzfOaPiEg1rQdnN9pr8o\nOvespmkE2SbTGU5zJA3cy7O/4IAK5epBzsWuqLSnA4aOXEb1zlmVW4Q7pSAY\nYXE1G2OB/LMMCcs947/6PR78q9sa7+Hw6nqg0GV4lrJhCFVYezRVCsY7GNay\nJ/GzPB/PaffK1fzLUG1eg1USItnh2QmDnnF2fYpqIN96IgaJ4YN3mlOzLnM8\nJ+/p1cyHeGZI1gT8HVq3XOZXgsl/gtF4zTyfwx2YNnM9E8FCKttKF9AYHH9p\n9EpwbiSSMREq4B19wt0Uy88NxZDgqHcz+MVgUNREWopxOXnD5Ka1M7TIxV3z\nkEbC\r\n=hYf4\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    }
+  },
+  "name": "semver",
+  "dist-tags": {
+    "latest": "6.3.0",
+    "legacy": "5.7.1"
+  },
+  "modified": "2019-09-10T19:05:06.060Z",
+  "_cached": false,
+  "_contentLength": 33753
+}

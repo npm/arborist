@@ -1,0 +1,46 @@
+{
+  "versions": {
+    "1.0.2": {
+      "name": "fast-json-stable-stringify",
+      "version": "1.0.2",
+      "devDependencies": {
+        "tape": "~1.0.4"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-VyS3a5AWnBZ9G3p9aA/EeB6V9QP+v0qObIFguuV0EbZcUiDTwv57Rofoz3FptA3/xtlFQXYpE/6SCrGl03mNcg==",
+        "shasum": "a5d6c355312bf4570d3368ceae891c56bdc0373f",
+        "tarball": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-1.0.2.tgz"
+      }
+    },
+    "2.0.0": {
+      "name": "fast-json-stable-stringify",
+      "version": "2.0.0",
+      "devDependencies": {
+        "benchmark": "^2.1.4",
+        "coveralls": "^3.0.0",
+        "eslint": "^4.9.0",
+        "fast-stable-stringify": "latest",
+        "faster-stable-stringify": "latest",
+        "json-stable-stringify": "latest",
+        "nyc": "^11.2.1",
+        "pre-commit": "^1.2.2",
+        "tape": "~1.0.4"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "d5142c0caee6b1189f87d3a76111064f86c8bbf2",
+        "tarball": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz"
+      }
+    }
+  },
+  "name": "fast-json-stable-stringify",
+  "dist-tags": {
+    "latest": "2.0.0"
+  },
+  "modified": "2017-10-24T17:44:01.875Z",
+  "_cached": false,
+  "_contentLength": 1040
+}

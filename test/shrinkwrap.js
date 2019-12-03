@@ -15,6 +15,7 @@ const YarnLock = require('../lib/yarn-lock.js')
 const yarnFixture = resolve(__dirname, 'fixtures/yarn-stuff')
 const emptyFixture = resolve(__dirname, 'fixtures/empty')
 const depTypesFixture = resolve(__dirname, 'fixtures/dev-deps')
+const badJsonFixture = resolve(__dirname, 'fixtures/testing-peer-deps-bad-sw')
 
 t.test('path defaults to .', async t => {
   const sw = new Shrinkwrap()
@@ -23,6 +24,17 @@ t.test('path defaults to .', async t => {
 
 t.test('loading in bad dir gets empty lockfile', t =>
   Shrinkwrap.load({ path: 'path/which/does/not/exist' }).then(sw => {
+    t.strictSame(sw.data, {
+      lockfileVersion: 2,
+      requires: true,
+      dependencies: {},
+      packages: {},
+    })
+    t.equal(sw.loadedFromDisk, false)
+  }))
+
+t.test('failure to parse json geets empty lockfile', t =>
+  Shrinkwrap.load({ path: badJsonFixture }).then(sw => {
     t.strictSame(sw.data, {
       lockfileVersion: 2,
       requires: true,

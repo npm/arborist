@@ -1,0 +1,190 @@
+{
+  "versions": {
+    "0.0.1": {
+      "name": "stack-utils",
+      "version": "0.0.1",
+      "dependencies": {},
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nyc": "^5.2.0",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "5c7f358e79d45dedff43e8affb9fd905b33bd65c",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-0.0.1.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.1.0": {
+      "name": "stack-utils",
+      "version": "0.1.0",
+      "dependencies": {},
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nyc": "^5.2.0",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "9b2de559f5d1940c3eb40b480ff8c6d9ff6a1b1b",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-0.1.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.2.0": {
+      "name": "stack-utils",
+      "version": "0.2.0",
+      "dependencies": {},
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nyc": "^5.2.0",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2e7a45dc67131a0e7bcf472caef3ff1f394b091d",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-0.2.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.3.0": {
+      "name": "stack-utils",
+      "version": "0.3.0",
+      "dependencies": {},
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "bluebird": "^3.1.1",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nested-error-stacks": "^1.0.2",
+        "nyc": "^5.2.0",
+        "pify": "^2.3.0",
+        "q": "^1.4.1",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "cddc6cec2ed9a5ce65f1ac05c90243b7a0ce325d",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-0.3.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.4.0": {
+      "name": "stack-utils",
+      "version": "0.4.0",
+      "dependencies": {},
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "bluebird": "^3.1.1",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nested-error-stacks": "^1.0.2",
+        "nyc": "^5.2.0",
+        "pify": "^2.3.0",
+        "q": "^1.4.1",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "940cb82fccfa84e8ff2f3fdf293fe78016beccd1",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-0.4.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.0": {
+      "name": "stack-utils",
+      "version": "1.0.0",
+      "dependencies": {},
+      "devDependencies": {
+        "bluebird": "^3.1.1",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nested-error-stacks": "^2.0.0",
+        "pify": "^2.3.0",
+        "q": "^1.4.1",
+        "tap": "^10.0.0"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2392cd8ddbd222492ed6c047960f7414b46c0f83",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.1": {
+      "name": "stack-utils",
+      "version": "1.0.1",
+      "dependencies": {},
+      "devDependencies": {
+        "bluebird": "^3.1.1",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nested-error-stacks": "^2.0.0",
+        "pify": "^2.3.0",
+        "q": "^1.4.1",
+        "tap": "^10.3.2"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "d4f33ab54e8e38778b0ca5cfd3b3afb12db68620",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.1.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.2": {
+      "name": "stack-utils",
+      "version": "1.0.2",
+      "dependencies": {},
+      "devDependencies": {
+        "bluebird": "^3.1.1",
+        "coveralls": "^2.11.6",
+        "flatten": "0.0.1",
+        "nested-error-stacks": "^2.0.0",
+        "pify": "^2.3.0",
+        "q": "^1.4.1",
+        "tap": "^10.3.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-MTX+MeG5U994cazkjd/9KNAapsHnibjMLnfXodlkXw76JEea0UiNzrqidzo1emMwk7w5Qhc9jd4Bn9TBb1MFwA==",
+        "shasum": "33eba3897788558bebfc2db059dc158ec36cebb8",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
+        "fileCount": 4,
+        "unpackedSize": 13721,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb7HAVCRA9TVsSAnZWagAA3ZkQAJ9+8f44fXIaG8+XPTW/\neyaJyPZ98COh665eiFo+9rzambeKm8CLZWlKuQDBEp5Y8bCGoF+ZEVuPzo5C\nz2G+4sVLaT9HzAedIYiXDzxN7LvICsDZhqj9lYdBk/PABZCfYNSQmQ4fzHXy\nkVmCaRmyg3E8nqnoiDf4IciuejRs70A3zN8OFk85ecAZ3p+8Q+aXAdV0UJKP\n0nzb5OgrdlZvL54de0NzxuGmiYPJRxej+J9x/9jLbkgRdG5K7x1BNA9qWbGW\nOybR9iBhrsv6qSr0WQqceVVHZn2naHjwAlYHftXp+uJ+gKoIY9iQW3s5cbIL\nkpG70/VJC/qkxATKygJaM2A5QUmB+3nLJ5JIE3b/QfaB6gvYfK329xcSLUG/\nR9UZBgrkm7n94NPq09bILMj9502zpsZyyMH4rIdGGaabqyyBHkQ7oR97Gqs/\nBh9/ilX/72KvAxnygZMcNorq30pEJ7n1qwvF9M9nEswhRx/he2CJgWL+7oRl\nzSUCBSKx1Uob/gHFyY7tjYuQ8J+nIKzHj1tcJHBzlbdQb9qcWGOKXlTDTULD\nkUjnlZCarjbjRducFB0WKbfnQn4W+8ifradXXec7R7u1zl8kTOyz7XhRKAFZ\ngfLYsP0ZJfFuM67V+d4qCq/39YYWqXyDNWtt839koivo8kg4TTY6PhJyiZ9z\nkGhB\r\n=3a8G\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    }
+  },
+  "name": "stack-utils",
+  "dist-tags": {
+    "latest": "1.0.2"
+  },
+  "modified": "2019-01-05T13:14:48.564Z",
+  "_cached": false,
+  "_contentLength": 4337
+}

@@ -1,0 +1,127 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "nice-try",
+      "version": "1.0.0",
+      "devDependencies": {
+        "chai": "^3.5.0",
+        "coveralls": "^2.11.9",
+        "istanbul": "^0.4.4",
+        "mocha": "^2.5.3"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "c9738a786bb1e85ec6a37ccd0ac65f8d7c34258e",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.0.tgz"
+      }
+    },
+    "1.0.1": {
+      "name": "nice-try",
+      "version": "1.0.1",
+      "devDependencies": {
+        "chai": "^3.5.0",
+        "coveralls": "^2.11.9",
+        "istanbul": "^0.4.4",
+        "mocha": "^2.5.3"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "60fe52ba3a451e24718ce665ee415d7098203423",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.1.tgz"
+      }
+    },
+    "1.0.2": {
+      "name": "nice-try",
+      "version": "1.0.2",
+      "devDependencies": {
+        "chai": "^3.5.0",
+        "coveralls": "^2.11.9",
+        "istanbul": "^0.4.4",
+        "mocha": "^3.0.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "2c597a35778809d58cb6c512ab562f0ace2605f5",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.2.tgz"
+      }
+    },
+    "1.0.3": {
+      "name": "nice-try",
+      "version": "1.0.3",
+      "devDependencies": {
+        "chai": "^4.0.1",
+        "coveralls": "^2.11.9",
+        "istanbul": "^0.4.4",
+        "mocha": "^3.0.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "8883491b1c030d32f652fff9c8e454d31f5168ba",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.3.tgz"
+      }
+    },
+    "1.0.4": {
+      "name": "nice-try",
+      "version": "1.0.4",
+      "devDependencies": {
+        "chai": "^4.1.1",
+        "coveralls": "^2.13.1",
+        "nyc": "^11.1.0",
+        "mocha": "^3.5.0"
+      },
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-2NpiFHqC87y/zFke0fC0spBXL3bBsoh/p5H1EFhshxjCR5+0g2d6BiXbUFz9v1sAcxsk2htp2eQnNIci2dIYcA==",
+        "shasum": "d93962f6c52f2c1558c0fbda6d512819f1efe1c4",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.4.tgz"
+      }
+    },
+    "1.0.5": {
+      "name": "nice-try",
+      "version": "1.0.5",
+      "devDependencies": {
+        "chai": "^4.1.2",
+        "coveralls": "^3.0.0",
+        "nyc": "^12.0.1",
+        "mocha": "^5.1.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==",
+        "shasum": "a3378a7696ce7d223e88fc9b764bd7ef1089e366",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz",
+        "fileCount": 5,
+        "unpackedSize": 3747,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbgafuCRA9TVsSAnZWagAA/IUP/iR0HhUogu5qXTvZuZPb\npV8xoa4uaDvMrhfGcRIBN4qyt3oPjFvNWrfJcT20cNXd4X8B5c6UQdU0cvQ3\nLvYheSMavUoxWmZZS1SWEW8pd6IB2qKx+E/WfF9/NbYeRxrf33ome9wy29SX\nKYeAazZYmP8d7Kgjqv2aCMlY53uFH/prHdhFjDd+MmWUXP7cgc8eLGKC7op3\nCVdIjG0fQVBL7m8x8+APy0M3MQryO1i5f30YvoxTnHkxOvrDWfD4ANgLPjMC\na8JqSDaJcCnTKdsLVeFPX/ZWi/FpFBMsqPSoPIOHGOzlopNFGBNrNivf6/mV\n5IMxYZKql09GLKpaQH4DuIjMLT2x2SvhUCrFPRY4lSZZMI02sYwf4CveVVP0\nMn86lsS1uLKQg7jteyn/CjqnyN3dlrph9lR2wfCGzMZp+WmhILJn2WSmoxf9\nb2cooLwlrEuDiULerS6KiufJr26yJ8tJIr3PPV7DXOgoGUg/XkWnne8x9hi3\nCO7a2VOyk6Wk1gv2U7RBW7dnG7MuZfZAou2IZN5evZYWHhPVrxh77Y+zfweQ\n5lX2ZMJE3jDsTU2+krA6zQsoSYarGixOrM7KC5Sku6BqGmz8xsp4dLgwoi50\nzWJNiGEbd+Lxqj9W9Hu1XqeRiuo0M1tCzUKtscHVcNzF8dSLwbIUq7AnZdCk\nl9kk\r\n=Vcyt\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "2.0.0": {
+      "name": "nice-try",
+      "version": "2.0.0",
+      "devDependencies": {
+        "chai": "^4.1.2",
+        "coveralls": "^3.0.0",
+        "nyc": "^12.0.1",
+        "mocha": "^5.1.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-/o4KoXbUkEjD2NDwvBCkSzEDOfMuHPmbzSD5Pp2Bb5U/69MnEvpc4YfW2Y1BJqJpcaam04+fR0kF8n5xm8b6MQ==",
+        "shasum": "0ccb36ce82be13528f0217334adcf870c8eb3356",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-2.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 3845,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb1dRuCRA9TVsSAnZWagAAJ9IP/06VtALBKUcG/fRdUT0X\nUnGpvzY/SXD/V0JFtdNYLBAVxwDMIfNKCEjHJ0dWuG++UnRThq4ZJnufYaLe\nJw3+IWX1wCs0h3h3llmAQTwuB241T7NnufLmSJumcgNIJChAYeAtXpxfB1aG\njahRNQ4Rx/6JijP4frtylkujVYMSU7gqluLK1ompZovict8koJ+xPfqJwP4b\nm9SwMlmNiIgKPHAZTL2AQ3zKXrtdX7o5ytahcWH3+g7gtaDPX+yYH/DQXSCe\nJTH7Ro+UJ1RyRwVoQVF//i7kBTPJyp2krfdkZSF+Q2HUcn+R2cy7y6qRtm4v\nGScSOEWB5fapgHblTtyVSBZx2DmvfBCEatdFLzyl0PCb0vskzkU3Z+UW9cjO\nekEUW1ipQjHVLnO0v5UD71VKK0Uu6ze20i+bKlW/qn50N6LsytNMgGVQUE6N\nKJClZozGOk+kW8UYeOYRlzKozxmBM3o/j1pDCJIB5s/yMyjU5YTp54i1hP2+\nLw7uKAwTq6cHNSZuocZF++7zbcgrV6l202C+7PobJMVvPq0UDcyih59O/PyZ\npUhjVhXq64x459V6/IeQ7gL5G+gXOO6FFF/UMjgLXiC+XwQpFs16NvT7JwhW\nd7j381LnmDuojlJ78zBhxj5jM9+erl+kScQTX+ZB8V3vSvp19hNbvO3u+bFM\nqyqV\r\n=DD28\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    }
+  },
+  "name": "nice-try",
+  "dist-tags": {
+    "latest": "2.0.0"
+  },
+  "modified": "2019-01-04T22:15:59.050Z",
+  "_cached": false,
+  "_contentLength": 4371
+}

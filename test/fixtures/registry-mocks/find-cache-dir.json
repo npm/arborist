@@ -1,0 +1,200 @@
+{
+  "versions": {
+    "0.1.0": {
+      "name": "find-cache-dir",
+      "version": "0.1.0",
+      "dependencies": {
+        "common-dir": "^0.1.4",
+        "commondir": "^1.0.1",
+        "mkdirp": "^0.5.1",
+        "pkg-dir": "^1.0.0"
+      },
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "coveralls": "^2.11.6",
+        "nyc": "^5.0.1",
+        "rimraf": "^2.5.0",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "7103acfca3abb52b02b0d2dc24a5c8611577c2d9",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-0.1.0.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.1.1": {
+      "name": "find-cache-dir",
+      "version": "0.1.1",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "mkdirp": "^0.5.1",
+        "pkg-dir": "^1.0.0"
+      },
+      "devDependencies": {
+        "ava": "^0.8.0",
+        "coveralls": "^2.11.6",
+        "nyc": "^5.0.1",
+        "rimraf": "^2.5.0",
+        "xo": "^0.12.1"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "c8defae57c8a52a8a784f9e31c57c742e993a0b9",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-0.1.1.tgz"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "1.0.0": {
+      "name": "find-cache-dir",
+      "version": "1.0.0",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^1.0.0",
+        "pkg-dir": "^2.0.0"
+      },
+      "devDependencies": {
+        "ava": "^0.19.1",
+        "coveralls": "^2.11.6",
+        "del": "^2.2.2",
+        "nyc": "^10.3.2",
+        "xo": "^0.18.2"
+      },
+      "directories": {},
+      "dist": {
+        "shasum": "9288e3e9e3cc3748717d39eade17cf71fc30ee6f",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-1.0.0.tgz"
+      },
+      "engines": {
+        "node": ">=4"
+      }
+    },
+    "2.0.0": {
+      "name": "find-cache-dir",
+      "version": "2.0.0",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^1.0.0",
+        "pkg-dir": "^3.0.0"
+      },
+      "devDependencies": {
+        "ava": "^0.25.0",
+        "coveralls": "^3.0.1",
+        "del": "^3.0.0",
+        "nyc": "^12.0.2",
+        "xo": "^0.21.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-LDUY6V1Xs5eFskUVYtIwatojt6+9xC9Chnlk/jYOOvn3FAFfSaWddxahDGyNHh0b2dMXa6YW2m0tk8TdVaXHlA==",
+        "shasum": "4c1faed59f45184530fb9d7fa123a4d04a98472d",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-2.0.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5279,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbJ7p9CRA9TVsSAnZWagAAJuMP/3tmZqpm2/+4Qi04e7n4\ng0fy/C70kMb25MSY5zGID+Yznb1O3qRRfE3sK8VdV1javvnHokUFDaWmmoxm\n9pzaP4CYjUT6P7GD+FZWGJLHnYiNRCuiUsrFSnSSROMvtqXqj6DWSB7UwuZp\nlnjSeVUoszRc1Tapb2L03KnU1EOlXrlRx3BPyFIjOa0VYyrSW+e0n6CtrC0V\niOVQOm/MfDpbyW19GiMhHJzjNUX3nppIlPj9VIh0ehIjBzZjIKIa7Uubw/IT\nXQ+JB8odtas8r18/QQvWzX3Ae8eSnnTcdXjD4l8zBP5LWztXdN+9zh42/p6w\nsKUgVWuxA+/ZZQceRoQr37Immd5FN8/zbXX859vI5PDskeGw6F85u4/+hf9I\nMzvR2BHcpGaqM0nCcCNXEUgnDG88658ZnTcctW9L6tY9WBqBGsfCY35Z/7hm\nvkSeOdHqgpectqoHw6fEtf4lsM9/EK1/Xj/9B8gCOIN6nmQqXjHClYbY9m60\nAMnVBm2JoSTFT5ph1jsByHHRAA7YahBOeLgmb0oCAdVdKZFINy9Cy614Vgvr\nLgrsMfeCjXYSoQH3HZRiN1iKxiX0texjEkHGGv8zOmhmaILQd8TbJAHDyh8u\n6cPiuWvEk3zDv1lAZ3uTg8xBeW9CpamOEU8+8Vs1D+SkVsaOGWGZae0rxFLf\no0x0\r\n=I3wn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=6"
+      }
+    },
+    "2.1.0": {
+      "name": "find-cache-dir",
+      "version": "2.1.0",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^2.0.0",
+        "pkg-dir": "^3.0.0"
+      },
+      "devDependencies": {
+        "ava": "^1.3.1",
+        "coveralls": "^3.0.3",
+        "del": "^4.0.0",
+        "nyc": "^13.3.0",
+        "xo": "^0.24.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==",
+        "shasum": "8d0f94cd13fe43c6c7c261a0d86115ca918c05f7",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-2.1.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5380,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJch1F1CRA9TVsSAnZWagAATiAP/RCy32iHKHH/Q1C2+DJW\nidom1adXDwWqtnfqqvamauUmnLlU78y3l/FfZFyR9WQUdblvlwpRHqgEXQBX\ngwoBCl7dvlI5qt83QpEyNUOR9V1Ez8CaJqUvkrqbGWC5fUVcyngPiSDSLcGC\n4tDZJhZegskZ+1iRdURPfD+WCXYHecJV0f86BoNB2Uz2rVhFdQdRgB0zLwzR\nr41XHA7DodUt/rrqja13pItbqMriwS95RErJrwXDEGgHmpOMIjnX+9oi0TI7\nvecpVnXHhLNvbl30WR1apep6EynHvmY93sbZ99xQhjrVAe0lNAKTsmw4zhbz\nueAnTm+KC+nke/D+lB8rbOl9asWOJfYHo/88PVj1j5JndLEy52RT0fzFZ3NS\nM10A5mWV4X0Upz/VKqmbTnvrDbOmnECBdAC8cftw9REtE1JYzy8QykvL+4Lu\n8rYn40GEhYY2liw6Z/GWVpuVu2L1Qd8r3FdkiwKKWE1zslMXBocKgU484ZeP\nd9csTU5YruEJigwCtMsW6pUfb7w+XkrDqQoQHNuI2/AKM+MaOrnqlcMqPPT0\nBWhKfZzt6WH6QVGxc7ZcjQBPk8IhEDroNvJfBwhHtIzhLZiX/XsM7UR0Bcf+\nPpI7fiTQ1F//8/tiH6+Rom4m56Tih0qulSzsx+2S8sjU7D/bb1ReG831CGwx\nLy+s\r\n=Kqyc\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=6"
+      }
+    },
+    "3.0.0": {
+      "name": "find-cache-dir",
+      "version": "3.0.0",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^3.0.0",
+        "pkg-dir": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^1.3.1",
+        "coveralls": "^3.0.3",
+        "del": "^4.0.0",
+        "nyc": "^13.3.0",
+        "xo": "^0.24.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-t7ulV1fmbxh5G9l/492O1p5+EBbr3uwpt6odhFTMc+nWyhmbloe+ja9BZ8pIBtqFWhOmCWVjx+pTW4zDkFoclw==",
+        "shasum": "cd4b7dd97b7185b7e17dbfe2d6e4115ee3eeb8fc",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-3.0.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 6012,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcrNZOCRA9TVsSAnZWagAArVQQAJJj+PECwKCMX19vlCah\nYd4DvfGhrsB40yjLZr5lmIpoKQHzjFn2dhcmIxgM7ES2XP0mknerToqXbj/A\nI5FX2aG9+LH8160P7M7ODn7tU/Dt69sCoHnPETiUfpoodr5ti7cXhYnGT+Or\nuJS6Gl1YBEA3J1u2W4Lm6jj5fGTxbdBIjtqFOPakFXprnbRySg+ShhJoF6a7\n3CIwHeWMnFyhaE2F8RZH/LmbgoPk4G7HfwCpDFhf5WYBekw9HCwZ0Acaf+Q/\nAOj8OPXFbUa4hJlAgduHsR8ictKXi6bMXQbPbMw5zXrsGiFDPRgQNQOsDbqZ\nLr6eFEUcBbcRbZUTneGi4LaG1cIcSucxx8YNCDXIDoRmkKK0GyidHaRKhCIC\nlZ9rbmDfA2d3dUsoQuktKVS/BkpGpDKHeQOidl/Rh1/jJDtpdB4Tjk+MdhiJ\nFoPDcmZir0G7aMXb+h4TrVyoZMoLbU4vXpXmlPf0ZQgK6ZdwHs2gNpcuJCjW\nPeKitHjYwq+CgJNWgyRCY2Hod0eo9uxxRxdbH3E9KC+Cle7AyoZMkk7DNfT9\n2FtxWQJI/U/C2KjSFTfLxOBfS8H9wEEumF28TpmasV323nyZlZ44A6Ft3RjX\nGO35Qu2du1jKVkNRikpS2N2jnMwyIt8lie4BXf1XlQvBvVcyrbsq3LGT1tXo\nkBJe\r\n=RmSY\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "3.1.0": {
+      "name": "find-cache-dir",
+      "version": "3.1.0",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^3.0.0",
+        "pkg-dir": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^1.3.1",
+        "coveralls": "^3.0.3",
+        "del": "^4.0.0",
+        "nyc": "^13.3.0",
+        "xo": "^0.24.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-zw+EFiNBNPgI2NTrKkDd1xd7q0cs6wr/iWnr/oUkI0yF9K9GqQ+riIt4aiyFaaqpaWbxPrJXHI+QvmNUQbX+0Q==",
+        "shasum": "9935894999debef4cf9f677fdf646d002c4cdecb",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-3.1.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 6104,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdxlBPCRA9TVsSAnZWagAAqpcP/3WnmP0qxN0Eo3vtG96i\newKyK0ZfEbXnLvCM9+DWINiHVerMuiC0gXsS4mjrWx3WxX9gUP0oK85lUfKo\nIVMuKGeGx31BIkpXguoP748emSXZQbhw5ZYJNmJXlnCb7evhkGb1QbqFozMS\nqhK17atHjwUb+DW1Crr4QXPsh25O5te5spAlM+XiwSIBXODTc6Iny3jU7aCt\nuBKeERDIN3wtwMyixpppNsAULmCa38ahj4laL8ZGZD5xtrENtrspy8kGdgTV\n5kjxWxMXqLwAmGpTOwXd+GkQx0Pp7nSOtzge20hQ1t73G9/cckA4vD/fuzuH\nY5e+GC6GZoUBjDo/V81aTpNlNOUlIUrcHtZs9FVsbdfIxN7D7i13jFCE1Djy\nrHbQPZHjkh5PpLDh5S+MxuJ4TNG5m81UjOa8TVSivIWRHKWwnZGhrAoytxaa\nRmaWMYq9tkEGMDwugEO5CHCRse2ZgWPSYVv/qnaDjtuY1Y9BFAjh1+CceVzv\noPblH7vok8YHRB1M9ewYJtk/oHJcNfzZniC+BmxCDxvwL/6OjGcomCqihYQY\ngP25mZZ/FEqXZyvThbNmHUziY6awPh+QHlTsatu6hPLQMAP0HNtxrw1AQesq\nATn8riF7JvW/l7tHJeEXBfV355Vk0VDv1eLnLaZfx9vVSiOHtWAF14XdcRa/\nigFi\r\n=xhaK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    }
+  },
+  "name": "find-cache-dir",
+  "dist-tags": {
+    "latest": "3.1.0"
+  },
+  "modified": "2019-11-09T05:36:17.451Z",
+  "_cached": false,
+  "_contentLength": 7365
+}

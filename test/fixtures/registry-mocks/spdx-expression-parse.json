@@ -1,0 +1,191 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "spdx-expression-parse",
+      "version": "1.0.0",
+      "dependencies": {
+        "spdx-exceptions": "^1.0.0",
+        "spdx-license-ids": "^1.0.0"
+      },
+      "devDependencies": {
+        "defence-cli": "^1.0.1",
+        "jison": "^0.4.15"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "4fbb7e738c9e98fa0b0914dfd961ac6629fbcdef",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.0.tgz"
+      }
+    },
+    "1.0.1": {
+      "name": "spdx-expression-parse",
+      "version": "1.0.1",
+      "dependencies": {
+        "spdx-exceptions": "^1.0.4",
+        "spdx-license-ids": "^1.0.0"
+      },
+      "devDependencies": {
+        "defence-cli": "^1.0.1",
+        "jison": "^0.4.15",
+        "replace-require-self": "^1.0.0",
+        "uglify-js": "^2.4.24"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "bb4f2ed00d50473a949f7a333d84ecc1ab6d483d",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.1.tgz"
+      }
+    },
+    "1.0.2": {
+      "name": "spdx-expression-parse",
+      "version": "1.0.2",
+      "dependencies": {
+        "spdx-exceptions": "^1.0.4",
+        "spdx-license-ids": "^1.0.0"
+      },
+      "devDependencies": {
+        "defence-cli": "^1.0.1",
+        "jison": "^0.4.15",
+        "replace-require-self": "^1.0.0",
+        "uglify-js": "^2.4.24"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "d52b14b5e9670771440af225bcb563122ac452f6",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.2.tgz"
+      }
+    },
+    "1.0.3": {
+      "name": "spdx-expression-parse",
+      "version": "1.0.3",
+      "devDependencies": {
+        "defence-cli": "^1.0.1",
+        "jison": "^0.4.15",
+        "replace-require-self": "^1.0.0",
+        "spdx-exceptions": "^1.0.4",
+        "spdx-license-ids": "^1.0.0",
+        "standard": "^8.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "ca3c3828c4fea8aa44997884b398fc5d67436442",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.3.tgz"
+      }
+    },
+    "1.0.4": {
+      "name": "spdx-expression-parse",
+      "version": "1.0.4",
+      "devDependencies": {
+        "defence-cli": "^1.0.1",
+        "jison": "^0.4.15",
+        "replace-require-self": "^1.0.0",
+        "spdx-exceptions": "^1.0.4",
+        "spdx-license-ids": "^1.0.0",
+        "standard": "^8.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "shasum": "9bdf2f20e1f40ed447fbe273266191fced51626c",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.4.tgz"
+      }
+    },
+    "2.0.0": {
+      "name": "spdx-expression-parse",
+      "version": "2.0.0",
+      "dependencies": {
+        "spdx-exceptions": "^2.0.0",
+        "spdx-license-ids": "^2.0.1"
+      },
+      "devDependencies": {
+        "defence-cli": "^2.0.1",
+        "jison": "^0.4.15",
+        "replace-require-self": "^1.0.0",
+        "standard": "^10.0.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-jbUCw8KGLTtZudkXDI2rTkWJ++O+nUZ/cD2GVgdFab36Smu7L1+5TIOHpPPtQU4hV5kiE+eh15cJk4vZxLPy/g==",
+        "shasum": "aedf74790de7f5c4cfc0b271a213e72d5e2896b9",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-2.0.0.tgz"
+      }
+    },
+    "2.0.1": {
+      "name": "spdx-expression-parse",
+      "version": "2.0.1",
+      "dependencies": {
+        "spdx-exceptions": "^2.0.0",
+        "spdx-license-ids": "^2.0.1"
+      },
+      "devDependencies": {
+        "defence-cli": "^2.0.1",
+        "jison": "^0.4.15",
+        "replace-require-self": "^1.0.0",
+        "standard": "^10.0.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-uwTOyZVJS8xcEMfPApWDw2ZstSfdjrNuqzrz57p0FYx3Fiom76qBQUpeytoq1PZkCW6LytvO6vW9lf9nb2fClw==",
+        "shasum": "b33c8458cb85b7166981264745012e741b257bc8",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-2.0.1.tgz"
+      }
+    },
+    "2.0.2": {
+      "name": "spdx-expression-parse",
+      "version": "2.0.2",
+      "dependencies": {
+        "spdx-exceptions": "^2.0.0",
+        "spdx-license-ids": "^2.0.1"
+      },
+      "devDependencies": {
+        "defence-cli": "^2.0.1",
+        "mocha": "^3.4.2",
+        "replace-require-self": "^1.0.0",
+        "standard": "^10.0.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-oFxOkWCfFS0ltNp0H66gXlU4NF6bxg7RkoTYR0413t+yTY9zyj+AIWsjtN8dcVp6703ijDYBWBIARlJ7DkyP9Q==",
+        "shasum": "e2e0f229c057eac704c5a6d1c687eed66aca034b",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-2.0.2.tgz"
+      }
+    },
+    "3.0.0": {
+      "name": "spdx-expression-parse",
+      "version": "3.0.0",
+      "dependencies": {
+        "spdx-exceptions": "^2.1.0",
+        "spdx-license-ids": "^3.0.0"
+      },
+      "devDependencies": {
+        "defence-cli": "^2.0.1",
+        "mocha": "^3.4.2",
+        "replace-require-self": "^1.0.0",
+        "standard": "^10.0.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Yg6D3XpRD4kkOmTpdgbUiEJFKghJH03fiC1OPll5h/0sO6neh2jqRDVHOQ4o/LMea0tgCkbMgea5ip/e+MkWyg==",
+        "shasum": "99e119b7a5da00e05491c9fa338b7904823b41d0",
+        "tarball": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 11871
+      }
+    }
+  },
+  "name": "spdx-expression-parse",
+  "dist-tags": {
+    "latest": "3.0.0"
+  },
+  "modified": "2018-02-27T00:14:19.654Z",
+  "_cached": false,
+  "_contentLength": 4469
+}

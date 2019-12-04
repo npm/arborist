@@ -1,35 +1,10 @@
-const {join, resolve} = require('path')
-const http = require('http')
-const regMocks = resolve(__dirname, '../fixtures/registry-mocks')
+const {resolve} = require('path')
 const t = require('tap')
-const {readFileSync, existsSync} = require('fs')
-const PORT = 12345 + (+process.env.TAP_CHILD_ID || 0)
-const registry = `http://localhost:${PORT}/`
 const Arborist = require('../..')
+const registryServer = require('../fixtures/registry-mocks/server.js')
+const {registry} = registryServer
 
-t.test('setup server', { bail: true }, t => {
-  const server = http.createServer((req, res) => {
-    res.setHeader('connection', 'close')
-    const f = join(regMocks, join('/', req.url.replace(/@/, '').replace(/%2f/i, '/')))
-    const file = f + (existsSync(`${f}.json`) ? '.json' : '')
-
-    try {
-      const body = readFileSync(file)
-      res.setHeader('content-length', body.length)
-      res.setHeader('content-type', /\.json$/.test(file)
-        ? 'application/json' : 'application/octet-stream')
-      res.end(body)
-    } catch (er) {
-      res.statusCode = er.code === 'ENOENT' ? 404 : 500
-      res.setHeader('content-type', 'text/plain')
-      res.end(er.stack)
-    }
-  })
-  server.listen(PORT, () => {
-    t.parent.teardown(() => server.close())
-    t.end()
-  })
-})
+t.test('setup server', { bail: true }, registryServer)
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -127,6 +102,20 @@ t.test('dedupe example - not deduped', t => {
 t.test('dedupe example - deduped', t => {
   const path = resolve(__dirname, '../fixtures/dedupe-tests-2')
   return t.resolveMatchSnapshot(buildIdeal(path), 'dedupe testing')
+})
+
+t.test('bundle deps example 1', t => {
+  // NB: this results in ignoring the bundled deps when building the
+  // ideal tree.  When we reify, we'll have to ignore the deps that
+  // got placed as part of the bundle.
+  const path = resolve(__dirname, '../fixtures/testing-bundledeps')
+  return t.resolveMatchSnapshot(buildIdeal(path), 'bundle deps testing')
+})
+
+t.test('bundle deps example 2', t => {
+  // bundled deps at the root level are NOT ignored when building ideal trees
+  const path = resolve(__dirname, '../fixtures/testing-bundledeps-2')
+  return t.resolveMatchSnapshot(buildIdeal(path), 'bundle deps testing')
 })
 
 t.test('unresolveable peer deps', t => {

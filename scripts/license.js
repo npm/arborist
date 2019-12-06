@@ -4,18 +4,25 @@ const a = new Arborist({ path })
 const query = process.argv[3]
 a.loadVirtual().then(tree => {
   // only load the actual tree if the virtual one doesn't have modern metadata
-  if (!tree.meta || !(tree.meta.originalLockfileVersion >= 2))
+  if (!tree.meta || !(tree.meta.originalLockfileVersion >= 2)) {
     throw 'load actual'
-  else
+  } else
     return tree
-}).catch(() => a.loadActual()).then(tree => {
+}).catch((er) => {
+  console.error('loading actual tree', er)
+  a.loadActual()
+}).then(tree => {
   if (!query) {
+    const set = []
     for (const license of tree.inventory.query('license')) {
-      console.log(license)
+      set.push([tree.inventory.query('license', license).size, license])
+    }
+    for (const [count, license] of set.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]))) {
+      console.log(count, license)
     }
   } else {
-    for (const node of tree.inventory.query('license', query)) {
-      console.log(`${node.name} ${node.location} ${node.package.description}`)
+    for (const node of tree.inventory.query('license', query === 'undefined' ? undefined : query)) {
+      console.log(`${node.name} ${node.location} ${node.package.description || ''}`)
     }
   }
 })

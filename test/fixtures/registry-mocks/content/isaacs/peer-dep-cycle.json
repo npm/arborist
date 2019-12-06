@@ -1,0 +1,28 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "@isaacs/peer-dep-cycle",
+      "version": "1.0.0",
+      "dependencies": {
+        "@isaacs/peer-dep-cycle-a": "1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-VpDmOiv9MGcPlt5F6x8mCqQvactg+BOufGTwyvQWxoqKoScZA5CimqjbWS8yDkGYXi5nKQNSgZ/zbWAo7lAxBQ==",
+        "shasum": "58503f7db09f0cbc9fdc585076de71cb4e480725",
+        "tarball": "https://registry.npmjs.org/@isaacs/peer-dep-cycle/-/peer-dep-cycle-1.0.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 734,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6GAyCRA9TVsSAnZWagAA5cwP/1vJaCs/2RxzlOyVLAGV\nOAv48uq8eCUlreEISb2PzB4yfEEzq6CrncSqLqoPDbjOV84S5MeOViFw9a6V\nSY1y9EMgnhs45Qno0/aT12yh1d6+S8d2MzcU5qDZQBpPOEEm7gztcya6RKPI\n0K/3T/5AhXmpJKElDk7gjUesn8OgUyDaP4ysr/S3DGfenslRuCaNGPcXNewa\nZIPgVwZDO7Tax/55srr4eXi5t6vAgXJAPSU/4YscEHZRDTn2SxWYh4e0qDqI\nDQoRBpyLeVU241368TfpPnwB/xF/yQMVmdLQ9uYeBxRTwPO3p0ui3H9YRNij\n+OIvl/H42JgSpnUWD6aBIJ+f396qjb//b6dPSi32BPzxN4mQ9XibAx4/cQR2\nRTBJKWSRIqGdtc2sOzKaNl+ksma5fSHQtRfV9TIviszpff12RLClgepmnw8z\nU/LhHoAqhvc0b6NLNNeoHdHxpyr+BEgB+h1qRnKORIlvd1r4ucjQaeHmYm49\nybv053qmuxtxevM0UDN8veqczu/T6aK0ukTVLNZy9sXNBFhtCEkuzlNuSO0G\nUUzzwXe8NOHqMx3PPmeQKiQXqVfIMiuMQGoEJATKl/KuBOfbRlY63MiU2zag\nP6jK1D/iPZxTbUr1giCFZd9ozpIVPOvyHA/+fykBgVKMotePKfWiqe09S/7K\ngTcH\r\n=xxi9\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    }
+  },
+  "name": "@isaacs/peer-dep-cycle",
+  "dist-tags": {
+    "latest": "1.0.0"
+  },
+  "modified": "2019-12-05T01:41:08.272Z",
+  "_cached": false,
+  "_contentLength": 1468
+}

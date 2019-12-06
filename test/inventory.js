@@ -9,7 +9,13 @@ t.test('basic operations', t => {
   i.add({ location: 'x', name: 'x', 'package': { license: 'MIT' }})
   i.add({ location: 'y', name: 'x', 'package': { license: 'ISC' }})
   i.add({ location: 'z', name: 'z', 'package': { license: 'MIT' }})
-  t.same([...i.query('license')].sort((a,b)=>a.localeCompare(b)),
+
+  t.same(i.filter(node => /[xy]/.test(node.name)), [
+    i.get('x'),
+    i.get('y'),
+  ], 'filter returns an iterable of all matching nodes')
+
+  t.same([...i.query('license')].sort((a,b) => a.localeCompare(b)),
     [ 'ISC', 'MIT'])
   t.same([...i.query('license', 'MIT')], [
     { location: 'x', name: 'x', 'package': { license: 'MIT' }},

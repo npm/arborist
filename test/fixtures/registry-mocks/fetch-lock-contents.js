@@ -4,6 +4,7 @@ const url = require('url')
 const mkdirp = require('mkdirp')
 const {dirname, resolve} = require('path')
 const {writeFileSync} = require('fs')
+const dir = resolve(__dirname, 'content')
 const main = async lock => {
   for (const [loc, meta] of Object.entries(lock.packages)) {
     if (!loc)
@@ -15,10 +16,11 @@ const main = async lock => {
     console.error('FETCHING', name)
 
     const paku = await pacote.packument(name)
-    const saveTo = name.replace(/^@/, '') + '.json'
+    const saveTo = resolve(dir, name.replace(/^@/, '') + '.json')
     mkdirp.sync(dirname(saveTo))
     writeFileSync(saveTo, JSON.stringify(paku, 0, 2))
-    const tgzFile = url.parse(meta.resolved).pathname.replace(/^\/@?/, '')
+    const path = url.parse(meta.resolved).pathname.replace(/^\/@?/, '')
+    const tgzFile = resolve(dir, path)
     await pacote.tarball.file(meta.resolved, tgzFile)
   }
   console.log('OK!')

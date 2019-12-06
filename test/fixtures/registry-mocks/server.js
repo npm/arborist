@@ -6,7 +6,7 @@ const http = require('http')
 module.exports = t => {
   const server = http.createServer((req, res) => {
     res.setHeader('connection', 'close')
-    const f = join(__dirname, join('/', req.url.replace(/@/, '').replace(/%2f/i, '/')))
+    const f = join(__dirname, 'content', join('/', req.url.replace(/@/, '').replace(/%2f/i, '/')))
     const file = f + (existsSync(`${f}.json`) ? '.json' : '')
 
     try {

@@ -548,6 +548,7 @@ Node {
       },
       "node_modules/foo/node_modules/express": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -1151,6 +1152,7 @@ Link {
       },
       "node_modules/foo/node_modules/express": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -2171,11 +2173,13 @@ Node {
         "devDependencies": Object {
           "tap": "^14.4.1",
         },
+        "license": "ISC",
         "name": "abbrev",
         "version": "1.1.1",
       },
       "node_modules/abbrev": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -2193,6 +2197,7 @@ Node {
       "node_modules/balanced-match": Object {
         "extraneous": true,
         "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
+        "license": "MIT",
         "name": "balanced-match",
         "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
         "version": "1.0.0",
@@ -2204,6 +2209,7 @@ Node {
         },
         "extraneous": true,
         "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
+        "license": "MIT",
         "name": "brace-expansion",
         "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
         "version": "1.1.11",
@@ -2250,6 +2256,7 @@ Node {
       "node_modules/concat-map": Object {
         "extraneous": true,
         "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
+        "license": "MIT",
         "name": "concat-map",
         "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
         "version": "0.0.1",
@@ -2257,16 +2264,19 @@ Node {
       "node_modules/fs.realpath": Object {
         "extraneous": true,
         "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
+        "license": "ISC",
         "name": "fs.realpath",
         "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
         "version": "1.0.0",
       },
       "node_modules/full-git-url": Object {
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "1.1.1",
       },
       "node_modules/ghshort": Object {
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "1.1.1",
@@ -2274,6 +2284,7 @@ Node {
       "node_modules/ghtgz": Object {
         "extraneous": true,
         "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "1.1.1",
@@ -2289,6 +2300,7 @@ Node {
         },
         "extraneous": true,
         "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
+        "license": "ISC",
         "name": "glob",
         "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
         "version": "7.1.4",
@@ -2300,6 +2312,7 @@ Node {
         },
         "extraneous": true,
         "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
+        "license": "ISC",
         "name": "inflight",
         "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
         "version": "1.0.6",
@@ -2307,6 +2320,7 @@ Node {
       "node_modules/inherits": Object {
         "extraneous": true,
         "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
+        "license": "ISC",
         "name": "inherits",
         "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
         "version": "2.0.4",
@@ -2317,6 +2331,7 @@ Node {
         },
         "extraneous": true,
         "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
+        "license": "ISC",
         "name": "minimatch",
         "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
         "version": "3.0.4",
@@ -2333,6 +2348,7 @@ Node {
         },
         "extraneous": true,
         "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
+        "license": "ISC",
         "name": "once",
         "resolved": "file:once-1.4.0.tgz",
         "version": "1.4.0",
@@ -2340,12 +2356,14 @@ Node {
       "node_modules/path-is-absolute": Object {
         "extraneous": true,
         "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
+        "license": "MIT",
         "name": "path-is-absolute",
         "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
         "version": "1.0.1",
       },
       "node_modules/pinned": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -2353,12 +2371,14 @@ Node {
       "node_modules/really-bad-invalid": Object {},
       "node_modules/reg": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
       "node_modules/remote": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -2369,6 +2389,7 @@ Node {
         },
         "extraneous": true,
         "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
+        "license": "ISC",
         "name": "rimraf",
         "optionalDependencies": Object {
           "glob": "^7.1.3",
@@ -2386,6 +2407,7 @@ Node {
       },
       "node_modules/tarball": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "file:abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -2400,6 +2422,7 @@ Node {
       "node_modules/wrappy": Object {
         "extraneous": true,
         "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
+        "license": "ISC",
         "name": "wrappy",
         "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
         "version": "1.0.2",
@@ -2588,6 +2611,7 @@ Link {
       },
       "node_modules/foo/node_modules/express": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -3515,6 +3539,7 @@ Node {
       },
       "node_modules/foo/node_modules/express": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
@@ -5665,6 +5690,7 @@ Node {
       },
       "node_modules/foo/node_modules/express": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "license": "ISC",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",

@@ -1,4 +1,4 @@
-const {resolve} = require('path')
+const {basename, resolve} = require('path')
 const t = require('tap')
 const Arborist = require('../..')
 const registryServer = require('../fixtures/registry-mocks/server.js')
@@ -25,6 +25,7 @@ const printTree = tree => ({
   name: tree.name,
   location: tree.location,
   resolved: tree.resolved,
+  // 'package': tree.package,
   ...(tree.extraneous ? { extraneous: true } : {
     ...(tree.dev ? { dev: true } : {}),
     ...(tree.optional ? { optional: true } : {}),
@@ -71,37 +72,122 @@ const { format } = require('tcompare')
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-const buildIdeal = path =>
-  new Arborist({registry, path}).buildIdealTree().then(printTree)
+const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
+
+const buildIdeal = (path, opt) =>
+  new Arborist({registry, path, ...(opt || {})}).buildIdealTree(opt)
 
 t.test('testing-peer-deps package', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'build ideal tree with peer deps')
+  return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree with peer deps')
 })
 
 t.test('tap vs react15', t => {
   const path = resolve(__dirname, '../fixtures/tap-react15-collision')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'build ideal tree with tap collision')
+  return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree with tap collision')
 })
 
 t.test('tap vs react15 with legacy shrinkwrap', t => {
   const path = resolve(__dirname, '../fixtures/tap-react15-collision-legacy-sw')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'tap collision with legacy sw file')
+  return t.resolveMatchSnapshot(printIdeal(path), 'tap collision with legacy sw file')
 })
 
 t.test('bad shrinkwrap file', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps-bad-sw')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'bad shrinkwrap')
+  return t.resolveMatchSnapshot(printIdeal(path), 'bad shrinkwrap')
+})
+
+t.test('cyclical peer deps', t => {
+  const paths = [
+    resolve(__dirname, '../fixtures/peer-dep-cycle'),
+    resolve(__dirname, '../fixtures/peer-dep-cycle-with-sw'),
+  ]
+
+  t.plan(paths.length)
+  paths.forEach(path => t.test(basename(path), t =>
+    t.resolveMatchSnapshot(printIdeal(path), 'cyclical peer deps')
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        add: {
+          dependencies: {
+            '@isaacs/peer-dep-cycle-a': '2.x'
+          }
+        },
+      }), 'cyclical peer deps - upgrade a package'))
+      .then(() => t.rejects(printIdeal(path, {
+        add: {
+          dependencies: {
+            // this conflicts with the direct dep on a@1 PEER-> b@1
+            '@isaacs/peer-dep-cycle-b': '2.x',
+          },
+        },
+      })))
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        add: {
+          dependencies: {
+            '@isaacs/peer-dep-cycle-b': '2.x',
+          },
+        },
+        rm: [ '@isaacs/peer-dep-cycle-a' ],
+      }), 'can add b@2 if we remove a@1 dep'))
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        rm: [ '@isaacs/peer-dep-cycle-a' ],
+      }), 'remove the dep, prune everything'))
+  ))
+})
+
+t.test('nested cyclical peer deps', t => {
+  const paths = [
+    resolve(__dirname, '../fixtures/peer-dep-cycle-nested'),
+    resolve(__dirname, '../fixtures/peer-dep-cycle-nested-with-sw'),
+  ]
+  t.plan(paths.length)
+  paths.forEach(path => t.test(basename(path), t =>
+    t.resolveMatchSnapshot(printIdeal(path), 'nested peer deps cycle')
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        add: {
+          dependencies: {
+            '@isaacs/peer-dep-cycle-a': '2.x',
+          },
+        },
+      }), 'upgrade a'))
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        add: {
+          dependencies: {
+            '@isaacs/peer-dep-cycle-b': '2.x',
+          },
+        },
+      }), 'upgrade b'))
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        add: {
+          dependencies: {
+            '@isaacs/peer-dep-cycle-c': '2.x',
+          },
+        },
+      }), 'upgrade c'))
+      .then(() => t.rejects(printIdeal(path, {
+        add: {
+          dependencies: {
+            '@isaacs/peer-dep-cycle-a': '1.x',
+            '@isaacs/peer-dep-cycle-c': '2.x',
+          },
+        },
+      }), 'try (and fail) to upgrade c and a incompatibly'))
+  ))
 })
 
 t.test('dedupe example - not deduped', t => {
   const path = resolve(__dirname, '../fixtures/dedupe-tests')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'dedupe testing')
+  return t.resolveMatchSnapshot(printIdeal(path), 'dedupe testing')
+})
+
+t.test('dedupe example - deduped because preferDedupe=true', t => {
+  const path = resolve(__dirname, '../fixtures/dedupe-tests')
+  return t.resolveMatchSnapshot(printIdeal(path, { preferDedupe: true }), 'dedupe testing')
 })
 
 t.test('dedupe example - deduped', t => {
   const path = resolve(__dirname, '../fixtures/dedupe-tests-2')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'dedupe testing')
+  return t.resolveMatchSnapshot(printIdeal(path), 'dedupe testing')
 })
 
 t.test('bundle deps example 1', t => {
@@ -109,18 +195,18 @@ t.test('bundle deps example 1', t => {
   // ideal tree.  When we reify, we'll have to ignore the deps that
   // got placed as part of the bundle.
   const path = resolve(__dirname, '../fixtures/testing-bundledeps')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'bundle deps testing')
+  return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
 })
 
 t.test('bundle deps example 2', t => {
   // bundled deps at the root level are NOT ignored when building ideal trees
   const path = resolve(__dirname, '../fixtures/testing-bundledeps-2')
-  return t.resolveMatchSnapshot(buildIdeal(path), 'bundle deps testing')
+  return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
 })
 
 t.test('unresolveable peer deps', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps-unresolvable')
-  return t.rejects(buildIdeal(path), {
+  return t.rejects(printIdeal(path), {
     message: 'unable to resolve dependency tree',
     package: '@isaacs/testing-peer-deps-c',
     spec: '2',

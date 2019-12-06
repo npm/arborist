@@ -174,12 +174,19 @@ t.matchSnapshot(neu, 'clobbering edge')
 reset(a)
 reset(b)
 
-t.matchSnapshot(new Edge({
+const abInvalid = new Edge({
   from: a,
   name: 'b',
   spec: '1.69.420-nice',
   type: 'optional',
-}), 'invalid dependency')
+})
+t.matchSnapshot(abInvalid, 'invalid dependency')
+// make it valid, and then reload
+b.package.version = '1.69.420-nice'
+abInvalid.reload(true)
+t.equal(abInvalid.valid, true, 'valid after updating target and hard reload')
+// put it back for other tests
+b.package.version = '1.2.3'
 
 const moving = new Edge({
   from: bb,

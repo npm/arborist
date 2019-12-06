@@ -894,3 +894,30 @@ t.test('metadata that only has one of resolved/integrity', t => {
 
   t.end()
 })
+
+t.test('setting package refreshes deps', t => {
+  const root = new Node({
+    pkg: {
+      dependencies: {
+        a: '1',
+      },
+    },
+    path: '/path/to/root',
+  })
+  const a = new Node({
+    pkg: {
+      name: 'a',
+      version: '1.2.3',
+    },
+    parent: root,
+  })
+  t.equal(root.edgesOut.get('a').valid, true,
+    'dep is valid before updating pkg')
+  root.package = { dependencies: { a: '2' } }
+  t.equal(root.edgesOut.get('a').valid, false,
+    'dep is invalid after updating pkg')
+  a.package = { name: 'a', version: '2.3.4' }
+  t.equal(root.edgesOut.get('a').valid, true,
+    'dep is valid again after updating dep pkg')
+  t.end()
+})

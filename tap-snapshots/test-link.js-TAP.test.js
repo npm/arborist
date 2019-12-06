@@ -46,9 +46,6 @@ Link {
       },
       "name": "path",
       "optional": true,
-      "package": Object {
-        "name": "root",
-      },
       "path": "some/kind/of/path",
       "realpath": "/home/user/projects/some/kind/of/path",
       "resolved": null,
@@ -58,9 +55,6 @@ Link {
   "meta": undefined,
   "name": "path",
   "optional": true,
-  "package": Object {
-    "name": "root",
-  },
   "path": "some/kind/of/path",
   "realpath": "/home/user/projects/some/kind/of/path",
   "target": Node {
@@ -94,9 +88,6 @@ Link {
     },
     "name": "path",
     "optional": true,
-    "package": Object {
-      "name": "root",
-    },
     "path": "some/kind/of/path",
     "realpath": "/home/user/projects/some/kind/of/path",
     "resolved": null,
@@ -145,9 +136,6 @@ Link {
       },
       "name": "path",
       "optional": true,
-      "package": Object {
-        "name": "root",
-      },
       "path": "/home/user/projects/some/kind/of/path",
       "realpath": "/home/user/projects/some/kind/of/path",
       "resolved": null,
@@ -174,9 +162,6 @@ Link {
   },
   "name": "path",
   "optional": true,
-  "package": Object {
-    "name": "root",
-  },
   "path": "/home/user/some/other/path",
   "realpath": "/home/user/projects/some/kind/of/path",
   "target": Node {
@@ -210,9 +195,6 @@ Link {
     },
     "name": "path",
     "optional": true,
-    "package": Object {
-      "name": "root",
-    },
     "path": "/home/user/projects/some/kind/of/path",
     "realpath": "/home/user/projects/some/kind/of/path",
     "resolved": null,

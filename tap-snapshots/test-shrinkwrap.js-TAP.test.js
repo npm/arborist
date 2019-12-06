@@ -159,6 +159,7 @@ Object {
         "tgz-pkg-resolved": "",
       },
       "dev": true,
+      "license": "blurb",
       "name": "e",
       "resolved": "https://foo.com/e.tgz",
       "version": "1.2.3",
@@ -242,6 +243,7 @@ Object {
     "tgz-pkg-resolved": "",
   },
   "dev": true,
+  "license": "blurb",
   "name": "e",
   "resolved": "https://foo.com/e.tgz",
   "version": "1.2.3",
@@ -849,6 +851,7 @@ Object {
         "inflight": "^1.0.6",
         "once": "^1.4.0",
       },
+      "license": "ISC",
       "name": "dev-deps",
       "optionalDependencies": Object {
         "inflight": "^1.0.6",

@@ -169,6 +169,11 @@ t.test('construct metadata from node and package data', t => {
         tgz: '',
         'tgz-pkg-resolved': '',
       },
+      // expect to get "license": "blurb" in the metadata, not an object
+      license: {
+        type: 'blurb',
+        url: 'http://example.com/',
+      },
     },
     resolved: 'https://foo.com/e.tgz',
     parent: root,

@@ -2,6 +2,8 @@
 
 Inspect and manage `node_modules` trees.
 
+![a tree with the word ARBORIST superimposed on it](logo.svg)
+
 ## USAGE
 
 ```javascript
@@ -11,10 +13,15 @@ const arb = new Arborist({
   // options object
 
   // where the packages are.  defaults to cwd.
-  root: '/path/to/package/root',
+  path: '/path/to/package/root',
 
   // url to the default registry.  defaults to npm's default registry
   registry: 'https://regisry.npmjs.org',
+
+  // prefer to deduplicate packages if possible, rather than choosing
+  // a newer version of a dependency.  Defaults to false, ie, always
+  // try to get the latest and greatest deps.
+  preferDedupe: true,
 
   // if not provided, registry requests are unauthenticated
   auth: {
@@ -28,73 +35,57 @@ const arb = new Arborist({
   },
 })
 
-// READING FUNCTIONS
+// READING
 
 // returns a promise.  reads the actual contents of node_modules
-arb.loadActual().then(() => {
-  // now arb.tree is loaded
+arb.loadActual().then(tree => {
+  // tree is also stored at arb.virtualTree
 })
 
-// read just what the package-lock.json says
-arb.loadLogical().then(() => {
-  // now arb.logicalTree is loaded
+// read just what the package-lock.json/npm-shrinkwrap says
+// This *also* loads the yarn.lock file, but that's only relevant
+// when building the ideal tree.
+arb.loadVirtual().then(tree => {
+  // tree is also stored at arb.virtualTree
+  // now arb.virtualTree is loaded
   // this fails if there's no package-lock.json or package.json in the folder
   // note that loading this way should only be done if there's no
   // node_modules folder
 })
 
-// trust package-lock.json, but fall back to loadActual if not found
-arb.loadFast().then(() => ...)
+// OPTIMIZING AND DESIGNING
 
-
-// OPTIMIZATION FUNCTIONS
-
-// These make changes to the objects in memory, but do not update
-// what's actually stored in `node_modules`.  They do add things
-// to the cache, however, using cacache to talk to the registry.
-
-// All of these return a promise, and update arb.targetTree and arb.actions
-
-// add a package at the root level.
-arb.add(spec).then(() => {
-  // arb.targetTree is updated
-  // arb.actions tracks a list of operations to be performed
+// build an ideal tree from the package.json and various lockfiles.
+arb.buildIdealTree(options).then(() => {
+  // next step is to reify that ideal tree onto disk.
+  // options can be:
+  // rm: array of package names to remove at top level
+  // add: object with the following potential properties:
+  //   - dependencies
+  //   - peerDependencies
+  //   - optionalDependencies
+  //   - devDependencies
+  //   - peerDependenciesMeta
+  //   Each matches what you'd find in a package.json file, but only
+  //   specifies additions/changes to the current set.  They're added
+  //   to the root node's requirements, and then the tree is built.
+  // update: Either `true` to just go ahead and update everything, or an
+  //   object with any or all of the following fields:
+  //   - names: names of packages update (like `npm update foo`)
+  //   - depth: maximum depth to traverse the tree seeking things to update
+  // At the end of this process, arb.idealTree is set.
 })
 
-// remove extraneous/dev/optional deps
-arb.prune({
-  // both of these default to true
-  dev: true, // include dev deps, at the top level
-  optional: true, // include optional deps
-}).then(() => ...)
+// WRITING
 
-// just calculate the target tree for installation
-// If a package-lock.json is present, then it generates the list of actions
-// required to bring the node_modules folder into sync with the lock
-arb.calculate({
-  dev: true, // include devDeps at the top level
-  optional: true, // include optional dependencies
-  deep: false, // install deps in linked trees as well
-}).then(() => ...)
-
-// upgrade one dependency, or all of them
-// effectively the same as calculate, but without a package-lock
-arb.update({
-  name: null, // update just one named dependency
-  depth: Infinity, // how deep to traverse the tree updating?
-  restrict: true, // limit to the semver requirements in package.json
-  deep: false, // whether to update the contents of linked trees as well
-}).then(() => ...)
-
-
-// WRITING ACTIONS
-
-// Make the targetTree be the thing that's on disk
-// This takes all the actions in arb.actions,
-// and writes package-lock.json and package.json appropriately
+// Make the idealTree be the thing that's on disk
 arb.reify({
-  save: true, // write package-lock.json and package.json files
-}).then(() => { /* node_modules is written */ })
+  // write the lockfile(s) back to disk, and package.json with any updates
+  // defaults to 'true'
+  save: true,
+}).then(() => {
+  // node modules has been written to match the idealTree
+})
 ```
 
 
@@ -133,7 +124,7 @@ updated automatically when a node's parent changes.
 
 ### class Node
 
-Both `arb.tree` and `arb.targetTree` are `Node` objects.  A `Node` refers
+All arborist trees are `Node` objects.  A `Node` refers
 to a package folder, which may have children in `node_modules`.
 
 * `node.name` The name of this node's folder in `node_modules`.
@@ -143,43 +134,35 @@ to a package folder, which may have children in `node_modules`.
     Setting `node.parent` will automatically update `node.location` and all
     graph edges affected by the move.
 
-* `node.meta` A `Metadata` object which looks up `resolved` and `integrity`
-  values for all modules in this tree.  Set to parent's `meta` object and
-  updated when parentage changes.
+* `node.meta` A `Shrinkwrap` object which looks up `resolved` and
+  `integrity` values for all modules in this tree.  Only relevant on `root`
+  nodes.
 
 * `node.children` Map of packages located in the node's `node_modules` folder.
 * `node.package` The contents of this node's `package.json` file.
-* `node.path` File path to this package.  If a node is a link target, and
-  lives outside of the tree, then `node.path` will be null.
+* `node.path` File path to this package.  If the node is a link, then this
+  is the path to the link, not to the link target.  If the node is _not_ a
+  link, then this matches `node.realpath`.
 * `node.realpath` The full real filepath on disk where this node lives.
-* `node.location` A logical unix-style `/package/package/...` style path
-  indicating where this package lives in its tree.  Note that link targets
-  typically always have a location of `/`, as they are the root of their
-  tree.
+* `node.location` A slash-normalized relative path from the root node
+  to this node's path.
 * `node.isLink` Whether this represents a symlink.  Always `false` for Node
   objects, always `true` for Link objects.
-* `node.isTop` True if this node is the top of its tree, false otherwise.
-* `node.top` The top node in this node's tree.
+* `node.isRoot` True if this node is a root node.  (Ie, if `node.root ===
+    node`.)
+* `node.root` The root node where we are working.  If not assigned to some
+    other value, resolves to the node itself.  (Ie, the root node's `root`
+    property refers to itself.)
+* `node.isTop` True if this node is the top of its tree (ie, has no
+    `parent`, false otherwise).
+* `node.top` The top node in this node's tree.  This will be equal to
+    `node.root` for simple trees, but link targets will frequently be
+    outside of (or nested somewhere within) a `node_modules` hierarchy, and
+    so will have a different `top`.
 * `node.dev`, `node.optional`, `node.devOptional` Indicators as to whether
   this node is a dev dependency and/or optional dependency.  These flags
   are relevant when pruning optional and/or dev dependencies out of the
-  tree.
-  * If none of these flags are set, then the node is required by the
-    dependency and/or peerDependency hierarchy.  It should not be pruned.
-  * If _both_ `node.dev` and `node.optional` are set, then the node is an
-    optional dependency of one of the packages in the devDependency
-    hierarchy.  It should be pruned if _either_ dev or optional deps are
-    being removed.
-  * If `node.dev` is set, but `node.optional` is not, then the node is
-    required in the devDependency hierarchy.  It should be pruned if dev
-    dependencies are being removed.
-  * If `node.optional` is set, but `node.dev` is not, then the node is
-    required in the optionalDependency hierarchy.  It should be pruned if
-    optional dependencies are being removed.
-  * If `node.devOptional` is set, then the node is a (non-optional)
-    dependency within the devDependency hierarchy, _and_ a dependency
-    within the `optionalDependency` hierarchy.  It should be pruned if
-    _both_ dev and optional dependencies are being removed.
+  tree.  See **Package Dependency Flags** below for explanations.
 * `node.edgesOut` Edges in the dependency graph indicating nodes that this
   node depends on, which resolve its dependencies.
 * `node.edgesIn` Edges in the dependency graph indicating nodes that depend
@@ -243,3 +226,59 @@ location.
     * `INVALID` Indicates that the dependency does not satisfy `edge.spec`.
 * `edge.reload()` Re-resolve to find the appropriate value for `edge.to`.
   Called automatically from the `Node` class when the tree is mutated.
+
+### Package Dependency Flags
+
+The dependency type of a node can be determined efficiently by looking at
+the `dev`, `optional`, and `devOptional` flags on the node object.  These
+are updated by arborist when necessary whenever the tree is modified in
+such a way that the dependency graph can change, and are relevant when
+pruning nodes from the tree.
+
+```
+| extraneous | dev | optional | devOptional | meaning             | prune?            |
+|------------+-----+----------+-------------+---------------------+-------------------|
+|            |     |          |             | production dep      | never             |
+|------------+-----+----------+-------------+---------------------+-------------------|
+|     X      | N/A |   N/A    |     N/A     | nothing depends on  | always            |
+|            |     |          |             | this, it is trash   |                   |
+|------------+-----+----------+-------------+---------------------+-------------------|
+|            |  X  |          |      X      | devDependency, or   | if pruning dev    |
+|            |     |          | not in lock | only depended upon  |                   |
+|            |     |          |             | by devDependencies  |                   |
+|------------+-----+----------+-------------+---------------------+-------------------|
+|            |     |    X     |      X      | optionalDependency, | if pruning        |
+|            |     |          | not in lock | or only depended on | optional          |
+|            |     |          |             | by optionalDeps     |                   |
+|------------+-----+----------+-------------+---------------------+-------------------|
+|            |  X  |    X     |      X      | Optional dependency | if pruning EITHER |
+|            |     |          | not in lock | of dep(s) in the    | dev OR optional   |
+|            |     |          |             | dev hierarchy       |                   |
+|------------+-----+----------+-------------+---------------------+-------------------|
+|            |     |          |      X      | BOTH a non-optional | if pruning BOTH   |
+|            |     |          |   in lock   | dep within the dev  | dev AND optional  |
+|            |     |          |             | hierarchy, AND a    |                   |
+|            |     |          |             | dep within the      |                   |
+|            |     |          |             | optional hierarchy  |                   |
++------------+-----+----------+-------------+---------------------+-------------------+
+```
+
+* If none of these flags are set, then the node is required by the
+  dependency and/or peerDependency hierarchy.  It should not be pruned.
+* If _both_ `node.dev` and `node.optional` are set, then the node is an
+  optional dependency of one of the packages in the devDependency
+  hierarchy.  It should be pruned if _either_ dev or optional deps are
+  being removed.
+* If `node.dev` is set, but `node.optional` is not, then the node is
+  required in the devDependency hierarchy.  It should be pruned if dev
+  dependencies are being removed.
+* If `node.optional` is set, but `node.dev` is not, then the node is
+  required in the optionalDependency hierarchy.  It should be pruned if
+  optional dependencies are being removed.
+* If `node.devOptional` is set, then the node is a (non-optional)
+  dependency within the devDependency hierarchy, _and_ a dependency
+  within the `optionalDependency` hierarchy.  It should be pruned if
+  _both_ dev and optional dependencies are being removed.
+
+Note: `devOptional` is only set in the shrinkwrap/package-lock file if
+_neither_ `dev` nor `optional` are set, as it would be redundant.

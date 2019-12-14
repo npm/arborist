@@ -22,6 +22,19 @@ t.test('path defaults to .', async t => {
   t.equal(sw.path, process.cwd())
 })
 
+t.test('load and then reset gets empty lockfile', t =>
+  Shrinkwrap.load({ path: fixture }).then(sw => {
+    sw.reset()
+    t.strictSame(sw.data, {
+      lockfileVersion: 2,
+      requires: true,
+      dependencies: {},
+      packages: {},
+    })
+    t.equal(sw.loadedFromDisk, true)
+    t.equal(sw.filename, resolve(fixture, 'package-lock.json'))
+  }))
+
 t.test('loading in bad dir gets empty lockfile', t =>
   Shrinkwrap.load({ path: 'path/which/does/not/exist' }).then(sw => {
     t.strictSame(sw.data, {

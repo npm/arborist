@@ -196,12 +196,25 @@ t.test('bundle deps example 1', t => {
   // got placed as part of the bundle.
   const path = resolve(__dirname, '../fixtures/testing-bundledeps')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
+    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+      add: {
+        bundleDependencies: ['@isaacs/testing-bundledeps'],
+      },
+    }), 'bundle the bundler'))
 })
 
 t.test('bundle deps example 2', t => {
   // bundled deps at the root level are NOT ignored when building ideal trees
   const path = resolve(__dirname, '../fixtures/testing-bundledeps-2')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
+    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+      add: {
+        bundleDependencies: [ '@isaacs/testing-bundledeps-c' ],
+      },
+    }), 'add new bundled dep c'))
+    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+      rm: ['@isaacs/testing-bundledeps-a'],
+    }), 'remove bundled dependency a'))
 })
 
 t.test('unresolveable peer deps', t => {

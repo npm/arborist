@@ -23,6 +23,17 @@ for (let i = 2; i < process.argv.length; i++) {
     options.save = true
   else if (arg === '--quiet')
     options.quiet = true
+  else if (arg === '--update-all') {
+    options.update = options.update || {}
+    options.update.all = true
+  } else if (/^--update-depth=/.test(arg)) {
+    options.update = options.update || {}
+    options.update.depth = +(arg.substr('--update-depth='.length))
+  } else if (/^--update=/.test(arg)) {
+    options.update = options.update || {}
+    options.update.names = options.update.names || []
+    options.update.names.push(arg.substr('--update='.length))
+  }
 }
 
 const start = process.hrtime()

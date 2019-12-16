@@ -373,10 +373,12 @@ t.test('load with a virtual filesystem parent', t => {
 
   t.equal(link2.target.parent, a, 'fsParent=parent sets parent')
   t.equal(link2.target.fsParent, null, 'fsParent=parent does not set fsParent')
+  t.equal(link2.target.resolveParent, a, 'resolveParent is parent')
 
   t.equal(link.target.edgesOut.get('a').error, 'MISSING')
   t.equal(linkKid.edgesOut.get('a').error, 'MISSING')
   link.target.fsParent = root
+  t.equal(link.target.resolveParent, root, 'resolveParent is fsParent')
   t.equal(link.target.edgesOut.get('a').error, null)
   t.equal(linkKid.edgesOut.get('a').error, null)
   link.target.fsParent = null

@@ -228,11 +228,42 @@ t.test('unresolveable peer deps', t => {
   }, 'unacceptable')
 })
 
+t.test('update', t => {
+  const flowOutdated = resolve(__dirname, '../fixtures/flow-outdated')
+
+  t.resolveMatchSnapshot(printIdeal(flowOutdated, {
+    update: {
+      names: [ 'flow-parser' ],
+    },
+  }), 'update flow parser')
+
+  t.resolveMatchSnapshot(printIdeal(flowOutdated, {
+    update: true,
+  }), 'update everything')
+
+  const tapAndFlow = resolve(__dirname, '../fixtures/tap-and-flow')
+  t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
+    update: {
+      all: true,
+      depth: 1,
+    }
+  }), 'update everything, depth of 1')
+  t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
+    update: {
+      names: ['ink'],
+      depth: 1,
+    }
+  }), 'update everything, depth of 1')
+
+  t.end()
+})
+
 // some cases that are hard to hit without very elaborate dep trees
 // and precise race conditions, so we just create some contrived
 // examples here.
 t.test('contrived dep placement tests', t => {
   const Node = require('../../lib/node.js')
+  const Link = require('../../lib/link.js')
   t.test('keep existing dep', t => {
     const root = new Node({
       path: '/x/y/z',
@@ -374,6 +405,182 @@ t.test('contrived dep placement tests', t => {
     t.match(a.canPlaceDep(tooNew, root, existingBar.edgesOut.get('foo')),
       Symbol('CONFLICT'), 'conflicts with root dependency')
 
+    t.test('shadow conflict', t => {
+      const a = new Arborist()
+      // test the case where we're trying to place a dep somewhere that will
+      // cause a conflict deeper in the tree.  The tree looks like this:
+      // root
+      // +-- b <-- conflict to place d@2 here on behalf of e
+      // |   +-- c (dep: d@1)
+      // |   +-- e (dep: d@2)
+      // +-- d@1
+      // If we place d@2 at b, then it'll shadow the d@1 that c is getting.
+      // In real life scenarios, the tree may be much more convoluted.
+      const shadowConflict = new Node({
+        path: '/path/to/project',
+        name: 'root',
+        pkg: {
+          name: 'root',
+          version: '1.0.0',
+          dependencies: { a: '' },
+        },
+        children: [
+          {
+            name: 'b',
+            pkg: { name: 'b', version: '1.0.0', dependencies: {c:''}},
+            children: [
+              // gets its d1 dep from a's child node
+              {
+                name: 'c',
+                pkg: { name: 'c', version: '1.0.0', dependencies: {d:'1'}},
+              },
+              // trying to place a d2 on behalf of this one
+              {
+                name: 'e',
+                pkg: { name: 'e', version: '1.0.0', dependencies: {d:'2'}},
+              },
+            ],
+          },
+          // the dep being shadowed
+          {
+            name: 'd',
+            pkg: {name:'d', version: '1.0.0'},
+          }
+        ],
+      })
+
+      const b = shadowConflict.children.get('b')
+      const e = b.children.get('e')
+      const edge = e.edgesOut.get('d')
+      // gut check
+      t.match(edge, {
+        valid: false,
+        name: 'd',
+        spec: '2',
+        type: 'prod',
+      }, 'gut check')
+      const d2 = new Node({
+        name: 'd',
+        pkg: {name:'d', version: '2.0.0'},
+        parent: new Node({ path: '/virtual-root' })
+      })
+
+      t.match(a.canPlaceDep(d2, b, edge, null), Symbol('CONFLICT'),
+        'cannot place dep where it shadows a dependency creating a conflict')
+
+      t.end()
+    })
+
+    t.test('update replacing with a better node, dedupe existing', t => {
+      const a = new Arborist()
+      // given a tree like this:
+      // root
+      // +-- b
+      //     +-- c@1
+      // and updating c to 1.1 by adding it at root, we should end up with
+      // a tree like this:
+      // root
+      // +-- b
+      // +-- c@1.1
+      // where c has been deduped, rather than leaving it in place:
+      // root
+      // +-- b
+      // |   +-- c@1
+      // +-- c@1.1
+      // when we place the c@1.1 dep on behalf of b and end up in root.
+      const dedupeUpdate = new Node({
+        name: 'root',
+        path: '/some/path',
+        pkg: { name: 'root', dependencies: { b: '' } },
+        children: [
+          {
+            name: 'b',
+            pkg: { name: 'b', version: '1.2.3', dependencies: { c: '1' } },
+            children: [{ name: 'c', pkg: { name: 'c', version: '1.0.0' } }],
+          },
+        ],
+      })
+      const c11 = new Node({
+        name: 'c',
+        pkg: { name: 'c', version: '1.1.0' },
+        parent: new Node({ path: '/virtual/root' }),
+      })
+      const b = dedupeUpdate.children.get('b')
+      const c1 = b.children.get('c')
+      const edge = b.edgesOut.get('c')
+      t.equal(edge.to, c1, 'gut check')
+      a.buildIdealTreeUpdateSettings.names = ['c']
+      a.placeIdealDep(c11, b, edge)
+      t.equal(c1.root, c1, 'c 1.0 removed from tree')
+      t.equal(c11.parent, dedupeUpdate, 'c 1.1 placed in root node_modules')
+      t.equal(edge.to, c11, 'b is resolved by c 1.1')
+      t.equal(edge.valid, true, 'b is happy about this')
+      t.equal(b.children.size, 0, 'b has no direct children now')
+      t.end()
+    })
+
+    t.end()
+  })
+
+  t.test('linked tops get their peer deps local if no other option', t => {
+    const a = new Arborist()
+    const root = new Node({
+      path: '/some/path',
+      pkg: { name: 'root', dependencies: { 'foo': '*' }},
+    })
+    const target = new Node({
+      path: '/some/other/path',
+      pkg: { name: 'foo', version: '1.2.3', peerDependencies: { bar: '' }},
+      root,
+    })
+    const link = new Link({
+      parent: root,
+      pkg: target.package,
+      realpath: target.path,
+      target,
+    })
+    const bar = new Node({
+      name: 'bar',
+      pkg: { name: 'bar', version:'1.2.3' },
+      parent: new Node({ path: '/virtual-root' }),
+    })
+    const edge = target.edgesOut.get('bar')
+    t.equal(edge.valid, false, 'gut check')
+    a.placeIdealDep(bar, target, edge)
+    t.equal(edge.valid, true, 'resolved')
+    t.equal(bar.parent, target, 'installed peer locally in target top node')
+    t.end()
+  })
+
+  t.test('linked tops use fsParent if possible', t => {
+    const a = new Arborist()
+    const root = new Node({
+      path: '/some/path',
+      realpath: '/some/path',
+      pkg: { name: 'root', dependencies: { 'foo': '*' }},
+    })
+    const target = new Node({
+      path: '/some/path/to/packages',
+      pkg: { name: 'foo', version: '1.2.3', peerDependencies: { bar: '' }},
+      fsParent: root,
+      root,
+    })
+    const link = new Link({
+      parent: root,
+      pkg: target.package,
+      realpath: target.path,
+      target,
+    })
+    const bar = new Node({
+      name: 'bar',
+      pkg: { name: 'bar', version:'1.2.3' },
+      parent: new Node({ path: '/virtual-root' }),
+    })
+    const edge = target.edgesOut.get('bar')
+    t.equal(edge.valid, false, 'gut check')
+    a.placeIdealDep(bar, target, edge)
+    t.equal(edge.valid, true, edge.error)
+    t.equal(bar.parent, root, 'installed peer in fsParent node')
     t.end()
   })
 

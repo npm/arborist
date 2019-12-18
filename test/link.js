@@ -52,3 +52,44 @@ t.matchSnapshot(new Link({
   realpath: '/home/user/projects/some/kind/of/path',
   target: root,
 }), 'instantiate with target specified')
+
+t.test('link.target setter', t => {
+  const link = new Link({
+    path: '/path/to/link',
+    realpath: '/node-a',
+    pkg: { name: 'node-a', version: '1.2.3' },
+  })
+  const oldTarget = link.target
+  t.equal(oldTarget.linksIn.has(link), true, 'target takes note of link')
+  t.equal(link.package, oldTarget.package, 'link has same package as target')
+
+  const newTarget = new Node({
+    path: '/node-b',
+    realpath: '/node-b',
+    pkg: { name: 'node-b', version: '1.2.3' },
+  })
+  link.target = newTarget
+  t.equal(oldTarget.linksIn.size, 0, 'old target has no links in now')
+  t.equal(link.target, newTarget, 'new target is target')
+  t.equal(newTarget.linksIn.has(link), true, 'new target notes the link')
+  t.equal(link.package, newTarget.package, 'link package is new target package')
+
+  link.target = null
+  t.equal(link.target, null, 'link has no target')
+  t.strictSame(link.package, {}, 'no package without link')
+  t.equal(oldTarget.linksIn.size, 0, 'old target still has no links')
+  t.equal(newTarget.linksIn.size, 0, 'new target has no links in now')
+
+  const laterTarget = new Promise((res) =>
+    setTimeout(() => res(new Node({
+      path: '/node-later',
+      realpath: '/node-later',
+      pkg: { name: 'node-later', version: '1.2.3' },
+    }))))
+  link.target = laterTarget
+  t.equal(link.target, laterTarget, 'waiting for a new target to resolve')
+  return laterTarget.then(node => {
+    t.equal(link.target, node, 'target resolved and assigned')
+    t.equal(link.package, node.package, 'took on new targets package')
+  })
+})

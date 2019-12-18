@@ -34,19 +34,28 @@ t.test('testing with dep tree', t => {
       realpath: '/home/user/projects/root',
       path: '/home/user/projects/root',
       meta: rootMetadata,
+      children: [{
+        pkg: {
+          name: 'prod',
+          version: '1.2.3',
+          dependencies: { meta: '' },
+          peerDependencies: { peer: '' },
+        },
+        fsChildren: [{
+          realpath: '/home/user/projects/root/node_modules/prod/foo',
+          path: '/home/user/projects/root/node_modules/prod/foo',
+          name: 'foo',
+          pkg: { name: 'foo', version: '1.2.3', dependencies: {meta:''}},
+        }],
+        resolved: 'prod',
+        integrity: 'prod',
+      }]
     })
     t.equal(root.root, root, 'root is its own root node')
-    const prod = new Node({
-      pkg: {
-        name: 'prod',
-        version: '1.2.3',
-        dependencies: { meta: '' },
-        peerDependencies: { peer: '' },
-      },
-      resolved: 'prod',
-      integrity: 'prod',
-      parent: root,
-    })
+    const prod = root.children.get('prod')
+    t.equal(prod.fsChildren.size, 1, 'prod has one fsChild')
+    const foo = [...prod.fsChildren][0]
+    t.equal(foo.fsParent, prod, 'foo has prod as fsParent')
     t.equal(prod.root, root, 'prod rooted on root')
     t.equal(prod.depth, 1, 'prod is depth 1')
     const meta = new Node({
@@ -209,7 +218,6 @@ t.test('testing with dep tree', t => {
         resolved: 'prod',
         integrity: 'prod',
       })
-
       t.equal(newProd.canReplace(prod), true, 'new prod can replace prod')
       const kidCount = prod.children.size
       newProd.replace(prod)
@@ -217,6 +225,11 @@ t.test('testing with dep tree', t => {
       t.equal(prod.children.size, 0, 'kids moved to newProd')
       t.equal(prod.root, prod, 'prod excised from tree')
       t.equal(newProd.root, root, 'newProd in the tree')
+      t.equal(newProd.fsChildren.size, 1, 'newProd takes over fsChildren')
+      t.equal(prod.fsChildren.size, 0, 'prod has no fsChildren now')
+      t.equal([...newProd.fsChildren][0], foo, 'foo in newProd fsChildren set')
+      t.notEqual(foo.fsParent, prod, 'prod is not foos fsParent')
+      t.equal(foo.fsParent, newProd, 'foo fsParent is now newProd')
 
       const notProd = new Node({
         pkg: {
@@ -345,7 +358,7 @@ t.test('load with integrity and resolved values', t => {
 
 t.test('load with a virtual filesystem parent', t => {
   const root = new Node({
-    pkg: { name: 'root', dependencies: { a: '', link: '', link2: '' }},
+    pkg: { name: 'root', dependencies: { a: '', link: '', link2: '', link3: '' }},
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
   })
@@ -374,6 +387,34 @@ t.test('load with a virtual filesystem parent', t => {
   t.equal(link2.target.parent, a, 'fsParent=parent sets parent')
   t.equal(link2.target.fsParent, null, 'fsParent=parent does not set fsParent')
   t.equal(link2.target.resolveParent, a, 'resolveParent is parent')
+
+  const target3 = new Node({
+    name: 'link3',
+    path: root.realpath + '/packages/link3',
+    realpath: root.realpath + '/packages/link3',
+    pkg: { name: 'link3', version: '1.2.3', dependencies: { link2: '' }},
+    fsParent: new Node({
+      path: root.realpath + '/packages',
+      realpath: root.realpath + '/packages',
+      pkg: { name: 'packages', version: '2.3.4', dependencies: { link: '' }},
+    })
+  })
+  const packages = target3.fsParent
+
+  const link3 = new Link({
+    pkg: { name: 'link3', version: '1.2.3', dependencies: { link2: '' }},
+    realpath: root.realpath + '/packages/link3',
+    target: target3,
+  })
+  // set initially
+  packages.fsParent = root
+  // XXX probably broken test on Windows
+  t.equal(target3.path, root.realpath + '/packages/link3')
+  // now move it
+  packages.fsParent = link.target
+  t.equal(packages.path, root.realpath + '/link-target/packages')
+  t.equal(target3.path, root.realpath + '/link-target/packages/link3')
+  t.equal(link3.realpath, target3.path, 'link realpath updated')
 
   t.equal(link.target.edgesOut.get('a').error, 'MISSING')
   t.equal(linkKid.edgesOut.get('a').error, 'MISSING')

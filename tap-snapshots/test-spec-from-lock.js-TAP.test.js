@@ -10,7 +10,7 @@ Object {}
 `
 
 exports[`test/spec-from-lock.js TAP > directory symlink 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "{..}/some/path",
   "gitCommittish": undefined,
@@ -28,7 +28,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > file with from, no integrity 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "{CWD}/x-1.2.3.tgz",
   "gitCommittish": undefined,
@@ -46,7 +46,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > file with resolved and from 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "/path/to/x-1.2.3.tgz",
   "gitCommittish": undefined,
@@ -64,7 +64,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > file with resolved, no integrity 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "/path/to/x-1.2.3.tgz",
   "gitCommittish": undefined,
@@ -82,7 +82,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > git repo with resolved value 1`] = `
-Object {
+Result {
   "escapedName": "gitthing",
   "fetchSpec": "ssh://git@github.com/isaacs/abbrev-js.git",
   "gitCommittish": "a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -136,7 +136,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > legacy metadata with "from" and no integrity 1`] = `
-Object {
+Result {
   "escapedName": "legacy",
   "fetchSpec": "1.2.3",
   "gitCommittish": undefined,
@@ -154,7 +154,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > version (file) and integrity set 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "{CWD}/foo.tgz",
   "gitCommittish": undefined,
@@ -172,7 +172,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > version and integrity 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "1.2.3",
   "gitCommittish": undefined,
@@ -190,7 +190,7 @@ Object {
 `
 
 exports[`test/spec-from-lock.js TAP > version and range, no integrity 1`] = `
-Object {
+Result {
   "escapedName": "x",
   "fetchSpec": "1.2.3",
   "gitCommittish": undefined,

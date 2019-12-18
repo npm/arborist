@@ -14,5 +14,7 @@ new Arborist({path}).loadVirtual().then(tree => {
   const end = process.hrtime(start)
   if (!process.argv.includes('--quiet'))
     print(tree)
+  if (process.argv.includes('--save'))
+    tree.meta.save()
   console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[0] / 1000}ms`)
 }).catch(er => console.error(er))

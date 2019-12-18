@@ -1989,14 +1989,53 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "4.0.0-alpha.3": {
+      "name": "istanbul-lib-instrument",
+      "version": "4.0.0-alpha.3",
+      "dependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/parser": "^7.7.5",
+        "@babel/template": "^7.7.4",
+        "@babel/traverse": "^7.7.4",
+        "@istanbuljs/schema": "^0.1.2",
+        "istanbul-lib-coverage": "^3.0.0-alpha.2",
+        "semver": "^6.3.0"
+      },
+      "devDependencies": {
+        "@babel/cli": "^7.7.5",
+        "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+        "@babel/register": "^7.7.4",
+        "chai": "^4.2.0",
+        "clone": "^2.1.2",
+        "debug": "^4.1.1",
+        "documentation": "^12.1.4",
+        "js-yaml": "^3.13.1",
+        "mocha": "^6.2.2",
+        "nopt": "^4.0.1",
+        "nyc": "^15.0.0-beta.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-zKkVmrXUT9wxeqsnPF4BiELXEkD0ImqM8IK9dcKpwnNQ1RhNpbCc512QnjhhA28SV0CL0ySptHookUt8dz7DDA==",
+        "shasum": "9dbacf1034501a02ed90a1ab290ee4a9027a7891",
+        "tarball": "https://registry.npmjs.org/istanbul-lib-instrument/-/istanbul-lib-instrument-4.0.0-alpha.3.tgz",
+        "fileCount": 10,
+        "unpackedSize": 56695,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd69ZWCRA9TVsSAnZWagAAJ5EP/RvW0nwE06Cf8z6+nFxc\nHStr3465qqkvGLQDg5ObMs3OkS2A92X/zNSX/Iu4GzUfWO1kEKkTSAUY3Z33\nXqpqwOA/wwoPfNfJEkjtn3FEPDCvCP+DhginGX6A2Q67r3PUTioAHxSZQXL2\nMgLyyVseX27zjuV4OTpw5TNjUghQCcXRf/0jOfWtoEH/yNUQZGxT4P11fv15\nkcmv2v+xgYSjCGRgOGa1UQzTZlzeA4wAV6Ww2c76Q1MjC2W56zRSG1/+5+4f\nu7fObmYwkvR4a7SZFcBDTKnCgRdrraOUQbKiBUlgDBtDQX3A7HeX0w8qEbX7\nrbeoJq93oMhegVla1HA+Q7vllbLKKIlSap9WCB8yehqyNNd7aBb7V121dOdF\nM87ehYnAylHsFtQCYOU1TOYo/bwKCaT46br28X5b1tsLYz/96ERlNjCFKGM4\nZ5Pa2X7JmG1O8Ket2xLFlJgLiHpwwZFdf8FXtUvzYnSZSvb3lS64fxvulyFY\nbEut8Kl55+aZ9zAXyxOUS7wF5vmpfF00wso9lAXooQ6OSgtFcIR0VHHFIbAt\nP8dpbkTQOjc1Ot0hseMMMQVul2BhQQBZZIFq1/oQYX/u8Z00GzR9FE5pRHWc\nvdsr8YGF2sjbAZQWbHoNhbYykTetLYqraZltRzSDtjGY5uyxSRHfOj2aDMMA\nWfMZ\r\n=3/Rp\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-lib-instrument",
   "dist-tags": {
     "latest": "3.3.0",
-    "next": "4.0.0-alpha.2"
+    "next": "4.0.0-alpha.3"
   },
-  "modified": "2019-11-01T20:14:24.490Z",
+  "modified": "2019-12-07T16:42:02.823Z",
   "_cached": false,
-  "_contentLength": 64908
+  "_contentLength": 66757
 }

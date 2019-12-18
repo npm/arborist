@@ -131,13 +131,36 @@
         "unpackedSize": 13222,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdpmlmCRA9TVsSAnZWagAAWN4QAIGmJJgTWEh5GhT1QZjd\nYNzXnZm3GhGQxlWA+Mtlfbl7K9HNM8Qhk0QY5gZrjD09/DSYRI/bax/dyzUb\nOCs6rk2WvvCJ/sd1Fxxx6SQURUpMHOeX9g9oJ44E1W1b86/tbsMAZ2HocaJC\nvUNsWw6cPLmZRsd6wWAuN1tx/F8U+mTxH8yg+jhepwvbtICqVjCwHBu47dvM\n3BxQqG6cCR7QthxG2irHD3K8lN5r7eWiua8bL82TGhT5dUXxKygS7AInuAdU\n1sMuclg4XnlNkazmXwwi7GuArrBy1FEwJk/raczqBBUQC/Lmqq9S5eUxo7U9\nPbef2DD19eEBhSYVkQu3XrcIRWnZ2ADwvWWvubJGhiPlPt/vxIkp0cVsnlE0\nZL4GjY8IscyD+XhNeNcGxEs7yTJDfEcyb/kvbvz01xlI1Fx9rDT0OgT03RqY\nLQRHSNCTE7y/60ZOh0ZXlEqkug/y0QR0/KgjOJyrlum2ATtBvuVF4jnyt6jn\nz9QSirBPJ+9LTQx+GuDaU673stuKm/2ZTiEeVuJ/ZrjyJsqMsH7gHd4rG0/Z\n0XvaY2b7i87KLjWdk00Vj7F5J0mRdD5BmHPv0ycn92VP6gGGZs/4A3X5BSGm\nZhkz2+xEoalIyId/KrnzHCQR+m63uurpnJ/aCXrVWEfasvHiFOZIaMzfSPhN\n+YTx\r\n=31A7\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "2.0.1": {
+      "name": "async-hook-domain",
+      "version": "2.0.1",
+      "devDependencies": {
+        "source-map-support": "^0.5.16",
+        "tap": "^14.10.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {
+        "test": "test"
+      },
+      "dist": {
+        "integrity": "sha512-6mTfx94ihRvLTFNvToIzjV/x84IhSNJhP13DDE1won25inefPBRx0DZAx74OMyXaGsmzFVsc9psDArfXomrSZA==",
+        "shasum": "92eb9fbb9988caa956fdc7947e6659078ff3c232",
+        "tarball": "https://registry.npmjs.org/async-hook-domain/-/async-hook-domain-2.0.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 13160,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd8zJvCRA9TVsSAnZWagAApu8P/iV3Q7Ygej9+nCSnwqKU\n6CH5Ypph8gURnC7KUzP1srGAj8917HzQJF0qm3UC8U2HgGLoiqa6xjSXkWmT\nLN5hxgN982b9z3qJcEspgPEkl0C9bH/EwAY+M+naT4ntbpMrjucLWKk6F6aN\nxy49Ml7PohPqpzev8rbChhV8bZwmOfey2Mv75KP2Xv/oFQEWcTfefkoBfNG1\n4fLttejFNaVwNC/J5JOFrJoFVJufFH21j3botWjUyuDayF8Ry24fERpSn/Xf\nU/T8KOpZWioCgjqitUJoWs4k8T7GgvlhZI2N9gMAIHJeqCUT18IJoMvbhIAf\nYkM3JzP/0bIE50/5M27z9oZHsRoXijsyXFulzuMV0pk9o0g8nUeYg2y0CptH\nTyn9iYG1V7PbyWRIFn2ZGrcmnHpQM9H3vQoU0xn3YbdsM9Ou9NV3srOEeMnv\nWfNF9V2zZ+H0FG0lDm1ahwKTrscnU8noh2N5zgCL1yLxuRHakgfKzMSUsISg\nDHHnKqYBFp/qOo+EY0CxnnE2uvKFSnnagwKpZZbRZvhrf82p6Ce5nMoiQDhZ\n1/2cM4m59qaN2wVxUI7kRehVnsnxSowSjlu0H+VZ6JTazuo7gyz52ASr/wto\nkVWgYStXtDNhah8sXeGlnh1Wmu/T0tD4ev/zzoIRkT/iDEd3JHKY55BHCQxQ\nAiJd\r\n=hf/B\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10"
+      }
     }
   },
   "name": "async-hook-domain",
   "dist-tags": {
-    "latest": "1.1.3"
+    "latest": "2.0.1"
   },
-  "modified": "2019-10-16T00:50:48.891Z",
+  "modified": "2019-12-13T06:40:49.973Z",
   "_cached": false,
-  "_contentLength": 8508
+  "_contentLength": 9915
 }

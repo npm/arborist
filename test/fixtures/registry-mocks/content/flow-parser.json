@@ -2655,13 +2655,37 @@
       "engines": {
         "node": ">=0.4.0"
       }
+    },
+    "0.114.0": {
+      "name": "flow-parser",
+      "version": "0.114.0",
+      "dependencies": {},
+      "devDependencies": {
+        "ast-types": "0.8.18",
+        "colors": ">=0.6.2",
+        "esprima-fb": "15001.1001.0-dev-harmony-fb",
+        "minimist": ">=0.2.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Qt9HT3v507bCerJfp4FX4N5E7ysinBzxjpK1rL7bJ/Bw12puF6lva2MAIXYS1d83bV7BT/F7EDk+faJQY5MpRA==",
+        "shasum": "c4cc7201f456c5fdfbb3bf3ea29282bd0386add6",
+        "tarball": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
+        "fileCount": 3,
+        "unpackedSize": 2598322,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd8787CRA9TVsSAnZWagAAkSsP/2QMHvMqUe2WG8rpXZyg\nnqR594RlI81aUps9DyuRKQxR4EgGxl7t560y8kjFi8Xq/Ui96BMFEeWy9ky2\nRngayy8jAXFfJY3l6eu3yH5Wegl+oiCNQHhWdzDtseV0HMSqC3UwbpcQZ6KL\nOLYZB0eCHIoPuUZEtaXpYyQHg2HBT1D1LfaxRWRvVJUxsYtK9cgSMfippNCF\nrgUsZxsuwk/KNF0ciTE5J3RrgybS3yPum+TBClRi8146YKDCjpnZ3pSeHfMB\nyiegg5ttIlEOuDoUMYF6aSEeJRs9rPElf5wKtUCJkl32Hci9T+5Jkplu/vjk\nIpIj8Dj8vYcee3g71Wrn3UsAGXNzN+TCeUR0ZlLpvLkXk+EDE3PxMWi+Xf99\nCUgz+tC00Op9cQcneaB6IG+m8hcD/OMFXyIMqv7hV4K7aJOZteA6zEIq04FQ\ntiq39hcDTPkTL4uCd9wPUDufdr3CZNMEyZNwF5Encm0rkgBgoTahL2sODwBD\nRVRWp+/OMyZTCaxXqNiFa9P+QFywL0SpbPs9E503qhWxWsRWOi9Bhp17G8pT\nWhsKtyRAScXG0joOxRwNvXQkPSPH+njhpXoN5IJ68cBeiIR/PodKazv6omKU\nsord9fe+vzUuHNLfxyI0Z9KpSUg9OAnXfTRtyu6rQR2jieoRHGz5voNAGsgX\nOnAN\r\n=Dju+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.4.0"
+      }
     }
   },
   "name": "flow-parser",
   "dist-tags": {
-    "latest": "0.113.0"
+    "latest": "0.114.0"
   },
-  "modified": "2019-12-02T17:11:17.631Z",
+  "modified": "2019-12-13T16:41:33.919Z",
   "_cached": false,
-  "_contentLength": 108426
+  "_contentLength": 109887
 }

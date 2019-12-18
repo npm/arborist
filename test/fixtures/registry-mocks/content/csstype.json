@@ -1406,14 +1406,89 @@
         "unpackedSize": 1019717,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd5BXVCRA9TVsSAnZWagAAioEP/iXj/DVQ/PhQ/toWDuTZ\nfq5B2c6uCfSt2Yts2J416e8eYsR6NYNQZ8s5dmRdZjcjkZjPlWOPAl6/MjMz\nZQVYfBZ/k5FMDh3FdqyMW+neSgr/hSnfwuIdcjg7pZfedKwGIkO3VvDqpJAY\n1DtZXyou+sw7Sio4My9cQbYKd9v82vMJLPB382uwQn3LcQfG0Ab0uG9jH+PV\nPav1c/q+2hvkMntHQoja6wQZsrEcRdZZihaScrO34Wwxjl6hoZ37gVeLLo5t\nSX1sNJoZ0sW/1ASBks7mMgHAFCiCDN3GM584LsGgRsFCXC6bMoR7vA+AREhp\n9iW3LyknWvu2Mmx1VNoMyWCFRL3yrEckkBo1HXh3QlO5m0X6LxnFGBzyZ0H7\nnUGw2q8pB7OPDaP0sZTwnQKKgkOsiSBU3ls4Q4d0pDOjXsah/p30rlC4FFS1\n8r8z/QM2WoE5wKM4pvLiYPkKsLMABVSyVugdjA8KnwNoGg/KTz6Zg5xSJeOS\n8q53aUNIY/jtH+28965n52N8hbCU37t9HOqrvKV7zIXazpnk3wXOk0gLWmS5\nPcBVUcwoT2RI06yH8NIdTa7ITnvn1DkuBofnIsxjE3/O4LkHHsPYO9HpxZwl\nx53k25ZWxqsfXwUgFH9D5V9SjVIOqs5qctKmx/fDxt0e4p3/AFUpG0b0mtlM\nGCPZ\r\n=M5yy\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "3.0.0-beta.1": {
+      "name": "csstype",
+      "version": "3.0.0-beta.1",
+      "devDependencies": {
+        "@types/chokidar": "^2.1.3",
+        "@types/jest": "^24.0.23",
+        "@types/jsdom": "^12.2.4",
+        "@types/node": "^12.12.8",
+        "@types/prettier": "^1.18.3",
+        "@types/request": "^2.48.3",
+        "@types/turndown": "^5.0.0",
+        "chalk": "^3.0.0",
+        "chokidar": "^3.3.0",
+        "fast-glob": "^3.1.0",
+        "flow-bin": "^0.112.0",
+        "jest": "^24.9.0",
+        "jsdom": "^15.2.1",
+        "mdn-browser-compat-data": "git+https://github.com/mdn/browser-compat-data.git#29c9fc4a532849aaff7807acff892a251c303d1e",
+        "mdn-data": "git+https://github.com/mdn/data.git#4b8d343b3e6e724ce58f1b156a3022ba54bc5e8a",
+        "prettier": "^1.19.1",
+        "request": "^2.88.0",
+        "ts-node": "^8.5.2",
+        "tslint": "^5.20.1",
+        "tslint-config-prettier": "^1.18.0",
+        "turndown": "^5.0.3",
+        "typescript": "~3.7.2",
+        "yarn": "^1.19.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Kydox1cFJz3Jm4sAf4gbnEvpmR8m0sGfN0T8KEdbaVVkn32lhTwsXLbJlUTlzX9AHmzYnRa1vplzWV9hN1PCBQ==",
+        "shasum": "7f184f2e70b135d1b102239698d9426b7689e819",
+        "tarball": "https://registry.npmjs.org/csstype/-/csstype-3.0.0-beta.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 1025379,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd57+XCRA9TVsSAnZWagAAZu0P+gJwI7JE/DPuFZVXDrB6\nN3UL3drS56dDb9e8HokEjoYONX5aFCmMdK6DKz+WqRReOaVCimHDL9dXFI+8\nk2+ak8NhzDL0ZAdEZIprVfBuYRz9T75LFboRAe+fTsdXBFg3vjoC6WjLZ1Zy\nLnrxOxrk+5c2dWiul95ePeCIgqIjEZ28czFIH72aH86bC7Vlspa2k4gzBZUC\nx/oBX4wuasZhUyofYcGdeJKulWq8IkgkgIYaLM+k3b2KmXPbF8s0m6WZHv+i\nkaWwjNAwDOGmrDQNzNPdNgtlkM0IZyieae/G2uqOQ15AyM34VyK2iar7uUf5\nKtuxn+aaeF5N7LCSOF+6MKFqzPAjhbqwi/wJra/GTqVWLy2tFYDhXOMw5hyV\nicY+fpZHvNPSBA69ePa6ZAl4od3SAIzBIVthQqyOvttjeS0UK5RaFNdNIHa4\ncmZ611zCjnJbGeGnD8Z5LwS5P0r3cEkUIWaAu1xXqj+z5DVPOATGh4AcLjWe\njcVZtsMmezjY3qvT4Lh/ZgPHINm37pULAv4zN+ZpNClfYTPyEClt2cO/P65a\ngxsh5p/KzKIB0bxnRvF38u3Jux1XHvlnT7qs0uf1CCuCF0rLSklGJtECnsbt\nE+rt2TfsJ/lOuKeckHQj/me3LkLL+W892nnhF6VmgyvSa4KZ8MxMuG7I1ifI\nFH3z\r\n=eDfH\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "2.6.8": {
+      "name": "csstype",
+      "version": "2.6.8",
+      "devDependencies": {
+        "@types/chokidar": "^2.1.3",
+        "@types/jest": "^24.0.21",
+        "@types/jsdom": "^12.2.4",
+        "@types/node": "^12.12.3",
+        "@types/prettier": "^1.18.3",
+        "chalk": "^2.4.2",
+        "chokidar": "^3.2.3",
+        "fast-glob": "^3.1.0",
+        "flow-bin": "^0.110.1",
+        "jest": "^24.9.0",
+        "jsdom": "^15.2.0",
+        "mdn-browser-compat-data": "git+https://github.com/mdn/browser-compat-data.git#240e1c930c5de4e632ed82a61d80a3c72dfc4d54",
+        "mdn-data": "git+https://github.com/mdn/data.git#4400f8133582f541ab72b2218ef2549df3e53c4d",
+        "prettier": "^1.18.2",
+        "sync-request": "^6.1.0",
+        "ts-node": "^8.4.1",
+        "tslint": "^5.20.0",
+        "tslint-config-prettier": "^1.18.0",
+        "turndown": "^5.0.3",
+        "typescript": "~3.6.4"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-msVS9qTuMT5zwAGCVm4mxfrZ18BNc6Csd0oJAtiFMZ1FAx1CCvy2+5MDmYoix63LM/6NDbNtodCiGYGmFgO0dA==",
+        "shasum": "0fb6fc2417ffd2816a418c9336da74d7f07db431",
+        "tarball": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
+        "fileCount": 5,
+        "unpackedSize": 1661408,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9y6kCRA9TVsSAnZWagAArO8P/juFAaEwJjxcstTlr0gn\nn7c7UJmPom+Drc9s7CTSA/eBsA+XF1ImlDsfGKiq8+Pqb9iGzSybJXxpoOhO\n++GoW4RYZWXNbiP0VrKGyj8mjnJNwzwTdL8xp0UoCEyov0U51aYcydsZ5DYP\nutVbx43rVZmQvgpAnwA0cHMR1j9uqpUzfhaVGl24c0Fl4X3pJsxoD5xkDk05\nXNFAGO89gW7Rr+2zrJOD3gnGqdWzMQvfFCi3+NMUdOVN+Pu91db5zn9pnKby\n1mN2pDiN/7gL/VKR/tSOdQJBYF4ifp3kzbiRw3fmTeL0ZxuhfwGOdZl1utwV\nNaTWFeW40aF09dL3BCXRvZiQrfnDjmezWoTnhnAMgo0o+059d1MsIrAWgAbs\nMxsY8H62qelht0bTJkRXfg2NLRbj2GQ5MP+NLx6+OCDOregL0l8Vu6C40fRM\nVN2YcxjtdFUCR6OaKjQF/gcDq/bLXofDw+bRHUhkEXpFxkt/60lAfjm5xopQ\n+1eaD+JblzG2TojO9hHnSl/r2lPGdmte+ZSH75678q/ZqAWk0ZJHnl6A1EKY\n14lMEKYblYKvoDrSTr2j3WvcDH2vF0Z8G/AwtJ0u3n5611rVnrZ3unnZillZ\n92pRigqcAc74b4hgry30Sv8ZGUiqxtXy5sBmsA5FjpolgLBH48tHVL+W9Lwy\nt1G+\r\n=U75h\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "csstype",
   "dist-tags": {
-    "latest": "2.6.7",
-    "next": "3.0.0-beta.0"
+    "latest": "2.6.8",
+    "next": "3.0.0-beta.1"
   },
-  "modified": "2019-12-01T19:39:01.839Z",
+  "modified": "2019-12-16T07:13:42.218Z",
   "_cached": false,
-  "_contentLength": 60964
+  "_contentLength": 64866
 }

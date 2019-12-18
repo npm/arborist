@@ -542,14 +542,42 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0-alpha.2": {
+      "name": "istanbul-lib-report",
+      "version": "3.0.0-alpha.2",
+      "dependencies": {
+        "istanbul-lib-coverage": "^3.0.0-alpha.2",
+        "make-dir": "^3.0.0",
+        "supports-color": "^7.1.0"
+      },
+      "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2",
+        "rimraf": "^3.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-dXMNi5B6EWYiYZNM5vcSw50JSwGTuAxMYw9dccrfI8QHkyiqvZXahGmUsBKplOvcQ4SK1G82JfMBpcASvn34gQ==",
+        "shasum": "e81ccd7e2e2cfca2f17bfa94ff8e6edebe5731a0",
+        "tarball": "https://registry.npmjs.org/istanbul-lib-report/-/istanbul-lib-report-3.0.0-alpha.2.tgz",
+        "fileCount": 13,
+        "unpackedSize": 37267,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd69ZVCRA9TVsSAnZWagAAXQ0P/1GJM3QhbBjnMqL+96dM\npcxoEKd1+Y+CNDy89dZiMTU9EC/I55c2m1zRtBgXQtiI3qVfjuG3z2UnFXQY\n7vn0cfpnLMY6kTjTztQDmlpA2s+q1eNBPzzln1+035i2sGuHnd3wSb0aV6iO\ng+s4+e+TWwePVWWwrOQMsJgJsvczBl6kpLLJdvYLoYdwINIfLHTaMI8ZeRUl\njg0A1Uswh9Bs6DpOB/S4X/vPfO4+DUAtsYxdVIZhGggbQEqwxh9a5mWxrjvD\nhgiV5KZXVhZIeLHrEmP1EIQS+ZtsALSVVhog4qJYByTm+5+gj74XVvXzsnhU\nLbijUH7uFG4GbG9aLzh63IMF0o664wWberPaFY8KcNI4+n0srBRx1YhUNIOz\nv0qAzVdVPxc4eCVbV6xd+w/OMjeO11G8AkSThciBM9POuKzpb4GhE22JEJDi\nnpycdjlf6Q4p6kAA8KYJQk6U0SWJrColLXQWplI25Rkpi+qJCQUaQXuBy2X9\nWTjuGcmFPMMRGUOITcFD9SSzbhYvllSQLZ8VxJ9Vcck3sSjuUH7ZBgvJnyxY\nHntrtoFrQUpqwKrpqE4YyuRsLfx5hIQ/cjttx5tGPagG4uyLL4AtaXEJEnSs\nKkOu7SFSmTrqi/hKDeO9nbpDWwy8O3MA2WYtNOcQJet7wJmV9FMmiolZDYB7\nt8m6\r\n=Nn2F\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-lib-report",
   "dist-tags": {
     "latest": "2.0.8",
-    "next": "3.0.0-alpha.1"
+    "next": "3.0.0-alpha.2"
   },
-  "modified": "2019-10-06T01:06:16.626Z",
+  "modified": "2019-12-07T16:41:59.827Z",
   "_cached": false,
-  "_contentLength": 23350
+  "_contentLength": 24904
 }

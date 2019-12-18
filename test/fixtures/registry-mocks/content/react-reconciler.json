@@ -2888,18 +2888,70 @@
       "engines": {
         "node": ">=0.10.0"
       }
+    },
+    "0.0.0-f42431abe": {
+      "name": "react-reconciler",
+      "version": "0.0.0-f42431abe",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "prop-types": "^15.6.2",
+        "scheduler": "0.0.0-f42431abe"
+      },
+      "peerDependencies": {
+        "react": "0.0.0-f42431abe"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Ll68ZQaoDMr9tcpFrtHKZfneWXxkgn4dt3nILyYGH6M9PuM37VZ3NFpOd2/4MclZvH+YnaPHiVLdogjezzUIAA==",
+        "shasum": "ae3eba7d60039a4426d85623642e55323f481ec0",
+        "tarball": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.0.0-f42431abe.tgz",
+        "fileCount": 13,
+        "unpackedSize": 1398612,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9+DSCRA9TVsSAnZWagAAfFcP/1oYWqveZtsFPf8vMTfF\nCaivvBtCoc1svYhZpS3wPsyj2zLbkAlki/2L8j8AX06alGbD7qhSDtM0h7ha\npSOms3YIcbJqnmNbHhL4Z60UHYKnOtPLLg6Mg4n90df953EXprrOJlb2G4TP\nO02ZJIJQ/WcbeKy8fcwYyVjvqFKBVtr0e7lSgUkCwAPnwzy+jFkVWUbJFjpx\nXhfFNcKaEX8WjqCf5PQx61fMn7ohbJOfjOlkECX7sOSSBI/V9ffi2rre968s\naM4kcY5vWBMi/4k5CjdS1hGmO/jAsqrOtb3nDnfXJRLpl0sAQjsZhPamaFo6\n2FGJd7N9lYkGFC5KY2vShE9BSm/0noJ0bb+NB78QkXF2VNC+HG2jGvBp5D69\nY4dB7ks+baqjUPPBQPtkBHXAAxr2nOwswqGiUcBGOOOkeqc57gOtFJZOyJiU\n3eGQV53HZrOQa6BKFkm/I1cAJERTkF1KBkuFaJOq8hRUT/y7CPeDAwoOYAck\n/V0vaeaFsCYoMVyS47YH3dnJvuHJTUPgmz0KQG81nKocB1GOcYWRbqT467ma\ncdwykc7JY33KOhfUjwY2KE8EyD9P6gSfvkBBuyZ8dW2gDZvi0uMf2xvWEtLc\nUo2CNa4C5C4/5qBjC0pNDBvgUfiWWnE2+hgf7QJ5qMX4z4IKv//gkI3OkTDr\nBzxi\r\n=ZI/5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.0.0-experimental-f42431abe": {
+      "name": "react-reconciler",
+      "version": "0.0.0-experimental-f42431abe",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "prop-types": "^15.6.2",
+        "scheduler": "0.0.0-experimental-f42431abe"
+      },
+      "peerDependencies": {
+        "react": "0.0.0-experimental-f42431abe"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Y/fXMrrcjn8ekc2oe3a+1MdUPJU1OBeZS19QhpaFNGTUMjA1r+uK+LlDcAi1m/afQ6F4p9A3f4QPN6WXcPVjIQ==",
+        "shasum": "4ee0429708346891faec18cbe6693c9fb0cd611f",
+        "tarball": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.0.0-experimental-f42431abe.tgz",
+        "fileCount": 13,
+        "unpackedSize": 1401021,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9+QyCRA9TVsSAnZWagAAj/IP/jr4TJaQKH4PID824y0V\nz0Zy57VmE8cyC/B9wA5ELpkoxLhq4DnfFPrdpwJIet74BMfZ//8KkvWypvar\ngfwTr7Haq7Ab+vjY6FHz7JHW8CYcolDvOvn+b5TpcKkF5hG+wacXY9KoEGDN\n1pSMKdteBJjkx/hb78TIlHY+Y9Ga6L/0YFVnekKDOxOVjEb6XrKxfgB+7X+V\nnuY5/nByaGfMVArfJQ9HwFkLZRfg2Nf367nLckx4pVTxUfCpQH+W7JHrC6G7\nc4JznHqRWZJDp+FIa8Exz51+QLILSX2RA+l2N/o6SLGoJeFsMYfysvwWxhRQ\nxqap4HLMtCqDmfM7N2cadRchWQvrWQtfAlEtBfjZQi6XKcI0HmhcAa+y1OsA\nT2kOsWQVp/KKwcJgx/9wfUDRq8R5vVT5sIiHTzNGtJxtkqHYL6A9+6w4aabx\n9Z3Y/bUewDaUTMhfRb3vqXNVDLf2tvoBeKT8SNT67Q7tIi4dghT/fYX8DITZ\ndEmRyoqMF+N8qPzTiUCDxZPi60B/bK7dxuo2ikOIbKvaZvH763INAF+zOmSf\nvoQcqPTvVT6ImBkgCUgP7dBf4GgUc6vft6xlJ9nY+waHqhBg5hSfXrO47n/q\nGJ0FnFxfTiQeRv/1MeaYy+CxeRuVASvGpZbpWalDnADbTQ4hkjw9KnnBPmiX\n37Be\r\n=HAY/\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
     }
   },
   "name": "react-reconciler",
   "dist-tags": {
     "next": "0.0.0-b53ea6ca0",
     "latest": "0.24.0",
-    "canary": "0.0.0-1022ee0ec",
+    "canary": "0.0.0-f42431abe",
     "unstable": "0.0.0-experimental-2c169a568",
     "alpha": "0.21.0-alpha.0",
-    "experimental": "0.0.0-experimental-b53ea6ca0"
+    "experimental": "0.0.0-experimental-f42431abe"
   },
-  "modified": "2019-11-21T08:05:51.059Z",
+  "modified": "2019-12-16T20:08:21.775Z",
   "_cached": false,
-  "_contentLength": 156020
+  "_contentLength": 159137
 }

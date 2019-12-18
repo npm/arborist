@@ -290,14 +290,40 @@
         "unpackedSize": 11400,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd5QoLCRA9TVsSAnZWagAAXQUQAJyyfWRbnMmyALKu1ko5\nSotuZ6OihKvz+NnJPh/XR+Y4j2lRXei0YaNdVVXOkhCrOfwE2krb2269SrMz\nQv8dR4ar45G40UZDT3Qtyuj8IAnujk27k9uWNdJ7CPGCsZIQ73P13IuXkets\nOp/v2olZLcrmxTbBYPRkH2sF7AUcuJEUkfqvSNKlMUbSu5hoknOimw6vZwZe\n+SPVuEeK+nGry25Z/L7XdYXSfXHxuW2tsvO9N1wJ0aKTDKm2ezEY7ioiFph9\nSVk8/naNNioqGuPjHpX15KjqFdDrl6Id0TVsq68KSVzf8cTN+qCd3WpgaVSZ\nHe53PYJuLYgVZ3Ce961VAfUM/YYB+WReJTxew3oU2ttjweHZej07+Mbp4A2M\nQCIEdwCWN4iQ0F2IXTnhQWgNwFHck1v2k7STbS19B33Q7AWQcLzxwQIjWIvu\nFH4lHqDaFd/jDHpHN8jc0tGdQct6y5Hu9LJT1p9Ef/Ar+Nm+9pz+e4iZVwFo\nmWV4tXTKfg7iq8nBTHXewlPj1os7x/34ttD7ExQJ2i3tHWC/vX3mdfqQXIuQ\nh9nBwunNjGgBUgNk5CZkSCK7YLjlPMVohjFPSzwJDs60ERYH0iEJaJXJI6QC\n/ydAj/+sVRFxwsJnFjbXc0uTaarfAkWuqgSLWiFGEPNdzQvSPq8FtfRr9DNl\nRR/7\r\n=DX3i\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "3.1.1": {
+      "name": "fast-deep-equal",
+      "version": "3.1.1",
+      "devDependencies": {
+        "coveralls": "^2.13.1",
+        "dot": "^1.1.2",
+        "eslint": "^4.0.0",
+        "mocha": "^3.4.2",
+        "nyc": "^11.0.2",
+        "pre-commit": "^1.2.2",
+        "react": "^16.12.0",
+        "react-test-renderer": "^16.12.0",
+        "sinon": "^7.5.0",
+        "typescript": "^2.6.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-8UEa58QDLauDNfpbrX55Q9jrGHThw2ZMdOky5Gl1CDtVeJDPVrG4Jxx1N8jw2gkWaff5UUuX1KJd+9zGe2B+ZA==",
+        "shasum": "545145077c501491e33b15ec408c294376e94ae4",
+        "tarball": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz",
+        "fileCount": 11,
+        "unpackedSize": 12943,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd5nF5CRA9TVsSAnZWagAAKoEP+gJ9E6MD1MP8F6qitV1M\nAw+0FsW5XIkFHLQR4zsf+PNDuEM4rjlz8vAslIMbD43XGzpE4tvfuMpISHUS\nkKvEStpWLpO3Iy5JD4FcWCLZdlPjHMI69/p7JNOPqovMGNLXPA3b/dzWpPgj\nq8muatLMmNq4uc8XIuTA9hQlXiuJXzuZc5fIfRqL0QMbfGs5u9yfXDyPpCPt\nFK+LVpZiVu6a/ILMyUNK61ueqce2FYqRs9GFwD8NvzpDxAfzRAGAMEKj3u+6\no9ToSgjbfzVpE3XX4/mA6sqX3JHWBwaKBgWz2qkMKwrdIKrqk+ZUTCrWcdOF\n2KiVvQAksmm20IxeHbsgNAW2wbFiGAC792UyQFtgDUCzoQcaB5AxZZ3Q6sn+\nOQmMzTghZPZwB2ZS45QPtWqDvjsgfF5rXgMbBXjuAVnp1b+BvMBNcczyxkZd\n2uCwWYp+Y4DObUdLxvUUszjosyxWZmAGD2RoEpi2tOrB8sgsGGR7zVxHudBy\nRPFgijEXDBPhBFg6avnBlltrH7kF28iapYffpYlURGwftILoCJjXBLtHC/6C\nrTIECFndV3USo+ct4vvKLqYWUkxfKu45M42XL8gsFf/COOByCEg/OuCGwhA7\n8Eg7vdxHfxlTIG/FBpnd5jND4cLKIiYoDrrqlm6qUaRv9uhhxD6aBRKLbFx7\nPNzd\r\n=Fsqp\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "fast-deep-equal",
   "dist-tags": {
-    "latest": "3.1.0",
+    "latest": "3.1.1",
     "beta": "3.0.0-beta.2"
   },
-  "modified": "2019-12-02T12:56:45.437Z",
+  "modified": "2019-12-03T14:30:19.046Z",
   "_cached": false,
-  "_contentLength": 13967
+  "_contentLength": 15483
 }

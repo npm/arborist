@@ -2720,14 +2720,56 @@
       "engines": {
         "node": ">= 8.10.0"
       }
+    },
+    "3.3.1": {
+      "name": "chokidar",
+      "version": "3.3.1",
+      "dependencies": {
+        "anymatch": "~3.1.1",
+        "braces": "~3.0.2",
+        "glob-parent": "~5.1.0",
+        "is-binary-path": "~2.1.0",
+        "is-glob": "~4.0.1",
+        "normalize-path": "~3.0.0",
+        "readdirp": "~3.3.0",
+        "fsevents": "~2.1.2"
+      },
+      "optionalDependencies": {
+        "fsevents": "~2.1.2"
+      },
+      "devDependencies": {
+        "@types/node": "^12",
+        "chai": "^4.2",
+        "dtslint": "^2.0.0",
+        "eslint": "^6.6.0",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "rimraf": "^3.0.0",
+        "sinon": "^7.5.0",
+        "sinon-chai": "^3.3.0",
+        "upath": "^1.2.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-4QYCEWOcK3OJrxwvyyAOxFuhpvOVCYkr33LPfFNBjAD/w3sEzWsp2BUOkI4l9bHvWioAd0rc6NlHUOEaWkTeqg==",
+        "shasum": "c84e5b3d18d9a4d77558fef466b1bf16bbeb3450",
+        "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-3.3.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 88037,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9nwkCRA9TVsSAnZWagAAWecQAJTV/2rFLSfg7hu6hPAJ\n05dq/71D1/SiO/auUV1NUK/txOj3cCEZ+7j5oj9/Qa+GjUPPRbpmY53GGp9G\nFQ1tXPHPganu3XLM8PX+DpsJOJAOHgE/EH5ODLZuOISidHvLJ9DQu/EJsrjo\nTlmC+pIABvJfGDdNFntwq+tES37vsWo9+fnYiJr8GqNeaWHEn4rpqU76MTeB\noYFxzhSRES1pqgqYU9dN9KMoOSFwVVOPTgY4hTgjWYAZfioDfiWHhpK5dpnI\nq4NFoUjTSeQU1smhklpqFqsd9P4M1tvWq+abBCrcb9mSOozjpF/EJmnPSjiH\necFyXBy17nDtZ1zUsJE+4Rubatv+6Xp//45xt0ATjGsJ91mGU+f15pPrztQv\ntQKX+dQ7/FYjzQCmQuO1rgcboCQ2Tzes8Gigr52UTsInggDjZ7sst30jybby\nu51TatZ7eip3MgkGROJuMQj4swJy1xQ+PmLVZ4b+gn3rNuxqSd+qCjR/HC8g\nBRhbNrZk7wLPHQcqlqnWxP/X8zVSykpgkwVbtVulTUV8Nxtcf2TW6ZGe62zr\nV5ifkXvVTW5d1lfjmrY4Pa2N2Gtdkn1IeYFfBWOivjUNPT0uOf5CTFGED80H\nICYQVZK6FtMB65K1r+pcoHjnfeaP1SGEevK4ddRRt6wkyeBgvenwYBWn05tW\nd93I\r\n=pIg2\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">= 8.10.0"
+      }
     }
   },
   "name": "chokidar",
   "dist-tags": {
-    "latest": "3.3.0",
+    "latest": "3.3.1",
     "node6": "2.1.8"
   },
-  "modified": "2019-11-02T08:55:47.727Z",
+  "modified": "2019-12-15T18:32:06.695Z",
   "_cached": false,
-  "_contentLength": 69985
+  "_contentLength": 71721
 }

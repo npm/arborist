@@ -14767,17 +14767,223 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "14.10.3": {
+      "name": "tap",
+      "version": "14.10.3",
+      "dependencies": {
+        "async-hook-domain": "^1.1.3",
+        "bind-obj-methods": "^2.0.0",
+        "browser-process-hrtime": "^1.0.0",
+        "chokidar": "^3.3.0",
+        "color-support": "^1.1.0",
+        "coveralls": "^3.0.8",
+        "diff": "^4.0.1",
+        "esm": "^3.2.25",
+        "findit": "^2.0.0",
+        "flow-remove-types": "^2.112.0",
+        "foreground-child": "^1.3.3",
+        "fs-exists-cached": "^1.0.0",
+        "function-loop": "^1.0.2",
+        "glob": "^7.1.6",
+        "import-jsx": "^3.0.0",
+        "ink": "^2.5.0",
+        "isexe": "^2.0.0",
+        "istanbul-lib-processinfo": "^1.0.0",
+        "jackspeak": "^1.4.0",
+        "minipass": "^3.1.1",
+        "mkdirp": "^0.5.1",
+        "nyc": "^14.1.1",
+        "opener": "^1.5.1",
+        "own-or": "^1.0.0",
+        "own-or-env": "^1.0.1",
+        "react": "^16.12.0",
+        "rimraf": "^2.7.1",
+        "signal-exit": "^3.0.0",
+        "source-map-support": "^0.5.16",
+        "stack-utils": "^1.0.2",
+        "tap-mocha-reporter": "^5.0.0",
+        "tap-parser": "^10.0.1",
+        "tap-yaml": "^1.0.0",
+        "tcompare": "^3.0.0",
+        "treport": "^1.0.0",
+        "trivial-deferred": "^1.0.1",
+        "ts-node": "^8.5.2",
+        "typescript": "^3.7.2",
+        "which": "^2.0.2",
+        "write-file-atomic": "^3.0.1",
+        "yaml": "^1.7.2",
+        "yapool": "^1.0.0"
+      },
+      "bundleDependencies": [
+        "ink",
+        "treport"
+      ],
+      "bin": {
+        "tap": "bin/run.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-7C6J04s+f5pkDtcqgrXkMNQrjeAkpuJLqU2RDqjMBZNLHxkS27XC2bnfsswW5R3vlapWNAHA7uoT5pVipD724g==",
+        "shasum": "296cb7a16e1a4b6a6daa16658503b5adbcb2e60d",
+        "tarball": "https://registry.npmjs.org/tap/-/tap-14.10.3.tgz",
+        "fileCount": 2537,
+        "unpackedSize": 11374116,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9/VACRA9TVsSAnZWagAAJBkP/1ncv/EheXNxckjrJEMV\n3CYyYb5e6slPOE23JWzlGvu7rJl3TXaduonfVSif3QAuoUKncWL4AhwCN3pP\naXYscv8rhpT6MhQ+56AsPlnnqowpk9UPcDgn0cwAjClIrQemceyCOKfzwKwP\nWdgoOYHXMcerO28p/TaOlagCAq6fQn4i7uSG6oKa9T5ZWlKbZR+vm2wHl4lr\nksYyi47U5zuMzLU5VJDj1xqn6hBX+5w3x0sj9vPIjh85RbRFhJ9vQSTuyr5O\n+zPzFI5qDs5lsEP1BwaEcuPwCvUYaE9Idk7fIEAaFLLudfWIVqeZCVGuLaIw\nXnIIw9fGFLfybF0c4QGUtfjkvNgnxMfwYTLTZywBX5wikErUTzblJxHbH6UK\nU1Fur4e92t035qFEZiotyNphqDYYST4SIq/v7angzGbXDxYS3dv8AtzYeYfk\nTp0FDCf97PO1AgEaTVGvhqen4CP2uVysc3imeTDv416tkXvEDemkECzospl0\nSJ7zBBLRd0+5bUE9f3qC9oSUsciA/rtUY4sYLW0ZhP7bbCdvRkFFVlrEMxRX\nECTikJp0g9tC0h/9tDBxrjyWsfhP4Kh82PdwrzLbMDhNvQyOpvPw5Sth4GoK\nIFqHPNoxRgH9/ipgVYuuKeSgMODBq2Av6V0d51+ciX5ZraDT3JPPAsTwkRi1\nw7kj\r\n=36+6\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "14.10.4": {
+      "name": "tap",
+      "version": "14.10.4",
+      "dependencies": {
+        "async-hook-domain": "^1.1.3",
+        "bind-obj-methods": "^2.0.0",
+        "browser-process-hrtime": "^1.0.0",
+        "chokidar": "^3.3.0",
+        "color-support": "^1.1.0",
+        "coveralls": "^3.0.8",
+        "diff": "^4.0.1",
+        "esm": "^3.2.25",
+        "findit": "^2.0.0",
+        "flow-remove-types": "^2.112.0",
+        "foreground-child": "^1.3.3",
+        "fs-exists-cached": "^1.0.0",
+        "function-loop": "^1.0.2",
+        "glob": "^7.1.6",
+        "import-jsx": "^3.0.0",
+        "ink": "^2.5.0",
+        "isexe": "^2.0.0",
+        "istanbul-lib-processinfo": "^1.0.0",
+        "jackspeak": "^1.4.0",
+        "minipass": "^3.1.1",
+        "mkdirp": "^0.5.1",
+        "nyc": "^14.1.1",
+        "opener": "^1.5.1",
+        "own-or": "^1.0.0",
+        "own-or-env": "^1.0.1",
+        "react": "^16.12.0",
+        "rimraf": "^2.7.1",
+        "signal-exit": "^3.0.0",
+        "source-map-support": "^0.5.16",
+        "stack-utils": "^1.0.2",
+        "tap-mocha-reporter": "^5.0.0",
+        "tap-parser": "^10.0.1",
+        "tap-yaml": "^1.0.0",
+        "tcompare": "^3.0.0",
+        "treport": "^1.0.1",
+        "trivial-deferred": "^1.0.1",
+        "ts-node": "^8.5.2",
+        "typescript": "^3.7.2",
+        "which": "^2.0.2",
+        "write-file-atomic": "^3.0.1",
+        "yaml": "^1.7.2",
+        "yapool": "^1.0.0"
+      },
+      "bundleDependencies": [
+        "ink",
+        "treport"
+      ],
+      "bin": {
+        "tap": "bin/run.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-vQZ7GqDNXx7oMhC1GLGhusSkF+ZlWKD9Xtte9cm7a7ZtrSlEm6p6Pa4WGxWeFPd8IeHK0IgXPmhOSRJkenRN8g==",
+        "shasum": "3585f8f3ca57e7ce7f42cbd3a82363cb570a7738",
+        "tarball": "https://registry.npmjs.org/tap/-/tap-14.10.4.tgz",
+        "fileCount": 2525,
+        "unpackedSize": 11332168,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9/n+CRA9TVsSAnZWagAAnoMP/AoJ/0uYQYJAfeBjhNPS\njoPCi5TFL/ZLkLavICg0ab6W3rBms4wGy/SEUdP6N74iUTGH9uaGSH+JO2wE\nGtzBB4OJ7AmO2PdOlZ5LTDlccvKJtgen22FGkEr22wGahe8ozo9MlW+l+jnu\nCUNfHdv8Z8aPqKrOE23NjnbluTVqFM+mAf3VuXAkPr1ayytMUHqF6uPoIFvp\nZNT8tRnkL68aHH5C/9t2YDeeSzDy3ti6PybQLg37CAnUSxqq0pjAyRQOkcCb\nSWMWgRj31LcAHmK+WO+LnBRSQCfZt11MJkddUMR2GLCjW0Nb+lvwTqyoD2Zh\nUH/JgwZdDgIcN65ndwIl5zDFLL3TPjmMT43qMZe+RruZo8X0qop55Q5uXakW\n06Li8sNb6MmuU+DLazLr3GY0z/hZ5Xq7Ngzh4S+1e8uKgkNU3PEDXRUTltSc\n1VOpfezgtKGm6595tyfqePWZZ5foR0R0wDS8zrviRXnf2v9awY9EPEKGM3Ou\nZYhcgjlRuviu6kE/x0lCIr8LPYS3nON81ePj6sMAYEcbkY1oAGUAVPEijhLZ\nrsgctLyGydsbqCpMQ75elJFqD/+tGjqd7yqTc4HCpwNSUly3oe9y7CVJxUfr\nWSJNfhKSoUA2sj254NbOPDdzMtGV1ac49NeBB9myS34tsRFr/Ys+7D9GW37B\nVtHk\r\n=CxRV\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "14.10.5": {
+      "name": "tap",
+      "version": "14.10.5",
+      "dependencies": {
+        "@types/react": "^16.9.16",
+        "async-hook-domain": "^1.1.3",
+        "bind-obj-methods": "^2.0.0",
+        "browser-process-hrtime": "^1.0.0",
+        "chokidar": "^3.3.0",
+        "color-support": "^1.1.0",
+        "coveralls": "^3.0.8",
+        "diff": "^4.0.1",
+        "esm": "^3.2.25",
+        "findit": "^2.0.0",
+        "flow-remove-types": "^2.112.0",
+        "foreground-child": "^1.3.3",
+        "fs-exists-cached": "^1.0.0",
+        "function-loop": "^1.0.2",
+        "glob": "^7.1.6",
+        "import-jsx": "^3.0.0",
+        "ink": "^2.5.0",
+        "isexe": "^2.0.0",
+        "istanbul-lib-processinfo": "^1.0.0",
+        "jackspeak": "^1.4.0",
+        "minipass": "^3.1.1",
+        "mkdirp": "^0.5.1",
+        "nyc": "^14.1.1",
+        "opener": "^1.5.1",
+        "own-or": "^1.0.0",
+        "own-or-env": "^1.0.1",
+        "react": "^16.12.0",
+        "rimraf": "^2.7.1",
+        "signal-exit": "^3.0.0",
+        "source-map-support": "^0.5.16",
+        "stack-utils": "^1.0.2",
+        "tap-mocha-reporter": "^5.0.0",
+        "tap-parser": "^10.0.1",
+        "tap-yaml": "^1.0.0",
+        "tcompare": "^3.0.0",
+        "treport": "^1.0.1",
+        "trivial-deferred": "^1.0.1",
+        "ts-node": "^8.5.2",
+        "typescript": "^3.7.2",
+        "which": "^2.0.2",
+        "write-file-atomic": "^3.0.1",
+        "yaml": "^1.7.2",
+        "yapool": "^1.0.0"
+      },
+      "bundleDependencies": [
+        "ink",
+        "treport",
+        "@types/react"
+      ],
+      "bin": {
+        "tap": "bin/run.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-8I8zMFEVu7e7RVcjK1GUNf1vW+6B9TRCZWGgif5siMBfvwTE9/EPN/7aH6W2r+WR2H2YHXcrCJ3XhRitYEVKfQ==",
+        "shasum": "59c625ee064fba229d87eab8badb27d46ebec169",
+        "tarball": "https://registry.npmjs.org/tap/-/tap-14.10.5.tgz",
+        "fileCount": 2519,
+        "unpackedSize": 13096052,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+XacCRA9TVsSAnZWagAAJv8P/iKd85aYnxJ9eBKq4+bq\n1Hr7WO5HDCvQw0kyWfehy5/Ef6LOow1oBYc7fid5E7gEOvfNA/yKQp3DeEwx\nNJ0wH6aXfc7ndof6O22KSMBVHpV6DzzVTTi052FnpwlwLxzm3uXXyexR4JRd\n64L3cAz/xjOqM4V8o8tuwjnM5ivQBZUQGqyvNYMzCNMuOqsnUVcFBDcTR/yf\nUKyzIY7g7EWdxQZJeyrIifF4FTE01SHH7Xv21V47ZU0t0CdQoa4OSG9QfnZN\nRe+8hJRKzywOby+rGPqIAxXPVMYuxcaaTduUEYMngIT/yMPtFAcGFHz46WO+\nvAWam+9WeKAPeJy6HJHlR36vxCJrYnEQM887VGB3eEZEsEkRKSFyFq0aiQq9\n4TBn4d7l1OW61Izlk+BksA9mENlYTc6vs8cAb0/60X+W1tzbUqDnd7IexGsq\nlfj+x0UDl/vGyOb80lazmpjeqHD+vbvjssrdTBae/1HIVETbtLm1fhOJHxfk\npwofcZRSAudiqB8fh5hFqJv0hPtv5BvIbx8fuJdq1PVzK+JJEV7dFEXxk/il\nECQcnvB5lsrBtNCBOhPA24nZIN52KCRMo2+V14k20mIWTE1hWySWQM2YNUq1\njvjAb9Moq9Agf87E94M5rsCjLlAgQZnERdZtyVLBU8Jc7WrhHPIyZl0Pjs2h\n8sXT\r\n=sPOU\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "tap",
   "dist-tags": {
-    "latest": "14.10.2",
+    "latest": "14.10.5",
     "next": "13.0.0-rc.30",
     "legacy": "12.7.0",
     "unbundled": "14.10.2-unbundled",
     "totally-bundled": "14.10.2-totally-bundled.1"
   },
-  "modified": "2019-11-27T01:02:16.908Z",
+  "modified": "2019-12-18T00:45:18.329Z",
   "_cached": false,
-  "_contentLength": 406942
+  "_contentLength": 413916
 }

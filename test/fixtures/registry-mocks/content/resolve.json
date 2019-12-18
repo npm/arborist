@@ -1192,14 +1192,40 @@
         "unpackedSize": 95222,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd3a1wCRA9TVsSAnZWagAA1y8P/ir4C14cmpf9qZ82Qe8G\nnoUeU3VVfjvfUsNyWCnC9GYrl/a+Nkn8KFgj5K4m8JzRQeqo2FjmeaVtM6BW\nmsQhI21Y8TLqFs92AliUQaDR4H1K7CN0h12FfcaNJWtBqmeQfH5oZA2eDsin\nsQLCV/VAzcRLLJ77qqaGbqEEc8M/e/6IPqpcahMr/+9k8wUXwNheyEsuoH2S\nXmZHIA/t+QKKlZb0d8nWV3zilZ31PUNtG6d7aAv+ByhFUWIwg/cfEctBz4K9\nDCzZpdxUFbFzEKYTydLZ0lG1QxAYPxlwF1vZhsYzLI5PNY+DdaV1dbZnuY2J\noPzC3Ek8HVHkEZLy2p5nyxJrODiG7Dem/1kw3dCsUVWv/O3QtNFR5qI2lp2D\nmbbPMzLKnVaYvjqiAO6cc3JJaIWmYzxsaEdHw7xbVntfBD1tAhEdo3IHw+7e\nc7R4iLAiNDmuXjJ/Z6+7NGQOw57kc//TWZ7oovzluDS8P3mtG1Xc92gNP/iC\nJN8guUDdJyUikjSRje45HZ7Z8AIVvY5bGs6FQNiveg2wN7yQqPvrmzazMREQ\nZgL8ICguwHa705yixBpAzNyx5Qu4P6I9FAl5nNXUMeLZq6mEdxi3ZhLoghQO\nOZow4oRLxwJqvAPWddwbD09BpVw+YdJQAznSqgXn/r7dBNYxe82pfH9AE7+g\nugpc\r\n=9szi\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "1.14.0": {
+      "name": "resolve",
+      "version": "1.14.0",
+      "dependencies": {
+        "path-parse": "^1.0.6"
+      },
+      "devDependencies": {
+        "@ljharb/eslint-config": "^15.0.2",
+        "array.prototype.map": "^1.0.2",
+        "eslint": "^6.7.2",
+        "object-keys": "^1.1.1",
+        "safe-publish-latest": "^1.1.4",
+        "tap": "0.4.13",
+        "tape": "^4.12.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-uviWSi5N67j3t3UKFxej1loCH0VZn5XuqdNxoLShPcYPw6cUZn74K1VRj+9myynRX03bxIBEkwlkob/ujLsJVw==",
+        "shasum": "6d14c6f9db9f8002071332b600039abf82053f64",
+        "tarball": "https://registry.npmjs.org/resolve/-/resolve-1.14.0.tgz",
+        "fileCount": 90,
+        "unpackedSize": 95406,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+XJqCRA9TVsSAnZWagAAjqQP/2fGHn90rvZLEzT5Z8dE\nbpOTaNo+rIohgtvYZzVFhjAVTJri1Nyj5ODQGmwRxlbXycZpk/kkG/maCPJh\nBNxVUxh/ZL0oXWwe3wZDTY2niuAOcc9bpwGejyurczoPvA9s0Jwp9Cq3cYkK\nUma+1MqrEDZ9xmtER2g/Lt4OyzUWYJ8OQKmGrrp6cxc/DoZ7hwMr85zjIOef\n7/x2dZ7DgzkAasRGWUsYq+LNPPP4AV6pbOn9sxk69O+lQKzai7ZEPViKn2kF\nQ18ptJ+V1Xp61VOsAQvzNOP/oU7o+KbCaK5IkaOYP7wA6PCehk4SWzlSU2o9\n2ZeViA/hmiMcdSphXPy0HNpgzVsMUfMYK7MeTZwdRpbgw9OlZU2obu5Wknln\nLOZeQShemSNHL2XO9kxgu16lo21iB7y5X7utk3px14UYLhPIs8fDii0vlTxg\n73nq2lMuQzyFiEmXLzUdKj87Rrm5Cix/YgMkzMrJsbn0zf0RdJgs/CG5s7kJ\n/l6qlur9MLhVhUpqBS5/Ytn+gy2SJfAtJY0hKlzUb0kb+U5hc/Vpcj2BiLjB\n4tgAV7fd9yoLRQu2m2u1BUMACYiIZmunqkfoV5bY3J+wgwHn2VyawBcGotq1\nfMWsZ7v9qID0hvf8Q5HjKkuTYI6BReA4QlJYGiwV9/NZ/IXEpQzDRLWTmrBF\nK6YT\r\n=aabR\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "resolve",
   "dist-tags": {
-    "latest": "1.13.1",
+    "latest": "1.14.0",
     "next": "1.13.1"
   },
-  "modified": "2019-11-26T22:58:20.585Z",
+  "modified": "2019-12-18T00:27:24.205Z",
   "_cached": false,
-  "_contentLength": 35156
+  "_contentLength": 36658
 }

@@ -1219,13 +1219,53 @@
         "unpackedSize": 91503,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd2HAICRA9TVsSAnZWagAAg+IP/0e/6InC5pOKbSUyF6rV\nZlTuaVJsM+EG4KKo3sepehjRJvj7nkrTjHAyASvAeg6CHWPjOLRRweAI82x7\nsuSHc3SlX3UCGIXliLFgUKCvoORIrFCXoTJr4YHj+f+cNzHL+2fhWR8MGcmV\nsYZ/MfQI3Gaj9HQUhp0ICPtS7XZLb4onP/7r6lEG9m5FEvPwTYJIp3DuOgDE\nU9XSZxvAchFmXTOutogvDSgmMe2+TfhIM4A5Hh/Dte2WJEa/qZCdmmXFPCqw\nh/Jh9gyiiLsQ94pqAB6616QYnzbNPt52P6VCf/cCMc0sL3hosr6KX/TX6eqV\nGx37y0W4FvzQBXOBtuxkFyDikUkpQJqyIF4xflitkEw0ZAnXrcRCTsiA6mOt\nyVd30mWERrWnSLPGFPqhUBRhP8s4KufoK7+eHt5IisiJV8D0HZ4n/3OqpXFg\nu9+eXC4G7zZkVeCodl9/rjdC3fgFwlIDtMm8q+H3qM/82vPwzIQuYyZ1kaxA\nGql51syJqZMImRVcFMwmQqllVLzeYFhrcVdtmzszmFSIwo5vWDNoow3YpkdR\nmTjl6/50yG76DWLHGotpNcb6LOt1qul+yUQqWLTQgVPCL6ldqj1WqZtv31Ht\nTpj6Iu1f+Zov5mbXbvQOK5DC/QgqLvdx4ZxleHSrrBbhXKqa9XU3qnm01V6c\nGsK6\r\n=m1Dv\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "7.7.5": {
+      "name": "@babel/runtime",
+      "version": "7.7.5",
+      "dependencies": {
+        "regenerator-runtime": "^0.13.2"
+      },
+      "devDependencies": {
+        "@babel/helpers": "^7.7.4"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-UXhClKWTL7/vlYX49kETXti6VbpPJK/pdsIOqUMhUUES/lqThpNTsmC/0aU/IW4uozDUx17axjeqel7SCYF6EQ==",
+        "shasum": "4b087f183f5d83647744d4157f66199081d17a00",
+        "tarball": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.5.tgz",
+        "fileCount": 151,
+        "unpackedSize": 90797,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6lT9CRA9TVsSAnZWagAAoQwP/jBjpMvf2X4zY8CB8fHF\nVlmmYF9zwkDh+8yudt1vfJuDqkvm30hiTlwoL02wSI6PT+AUZ0IPRjnRiRYF\nmvVy5WPOPLadU8vxrqnUeUYsKUPnrsO6XjN/kelO1ZDFNohfodBk9EEuU9AN\np6w26gPB2PZtfyZwlJlKEQ1+lJn/iYE5b6Ajle7lYaRZlIEAG+IGw278iRXV\nDeYboi3kuTn5Ht3O35HF/qvSpIsTf4pc6ErbTZU6dVDt2wjmuv+OQRmcTm62\nWeMjjyGOf4y8a0AT4ngoAKz7xt4BSYlYtqw8WutqnDDeVy+BwBq9Y0Zmlv9L\nFAeuOcRvg1WIQfm7pLWzHR34hhxRra7SvB3zCGqgJmRZoqb5j38Gmlx+C71L\n1+OCND0zRLXCUh9Af6bWPidbhoCOM1h6lJAfzrkdLnyFJblEEKrPylg1QMRl\n/EZbcdgyJuTbyeK/0cILC7WbPeJKe4i4lGj1FsMQkY1XoVXzlgD0bJT+ipNZ\nzWbRfgn0ZkCvxGinHeC2U+QGRhhdI1TR9/CFOEj7c+Tgym6QeahTOMIvcLSe\n2uFSwoX1dfeM7CzwlOBRJoxTycLdqB12/C0//JWOXV+MflnsVAUm7xIJTTzr\nQy2xJ52o+Dm7RicsKdEf9O0m/39aniuRy1C6rYpzsl6nd9/0uBqPwEdZxSNe\nObdW\r\n=w8pF\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.7.6": {
+      "name": "@babel/runtime",
+      "version": "7.7.6",
+      "dependencies": {
+        "regenerator-runtime": "^0.13.2"
+      },
+      "devDependencies": {
+        "@babel/helpers": "^7.7.4"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-BWAJxpNVa0QlE5gZdWjSxXtemZyZ9RmrmVozxt3NUXeZhVIJ5ANyqmMc0JDrivBZyxUuQvFxlvH4OWWOogGfUw==",
+        "shasum": "d18c511121aff1b4f2cd1d452f1bac9601dd830f",
+        "tarball": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.6.tgz",
+        "fileCount": 151,
+        "unpackedSize": 90767,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd7DX7CRA9TVsSAnZWagAAxQ0QAJNtFEeEkf3nY++Iaxrr\n8/bCDXwy6I5aJVmKeJ9cgn6ogJn7nxTlNv6nYlUEXA6SGjhDQyQ1WiPLRd/g\nXDvrAEnnZrSGsXvY6ippp/c5DhOFfPr62et4UYSj/kpB7k9Uqtpq3ZWsC6EY\nqIeEZWwC+acexqvZ96XEsyAITI3U3trHFlV4ZQ30M7n16mRjSgDEJsY8NMFv\ndiR2NeYKOxbrlb6xgY4F8IrORJ2J4FEPOdbPg4E2Cb74mXdqMhupu6nFy/Ce\nAcvF7SoXU5KPlVnoZzUIo5lwYz0H6V0DtvOz+zDPyeT8dqhwTvav0vHmWoTi\ngPki8iPkPbep9oxzTV2zhj/s3qSP3m7Wb1+B965CZGT8Um8OVk7/JClkeYDa\nS671kjXHx3pYi5DOPLSh/0kvD9UfeTFYwswHT040nVuDIDE0fv25pdqy1lxw\nWp0CABqA6/TaTDS/cjHn2f0P8ma9iknU8ea+L6kHuuMLY3PwWt9EXoeC5cGI\nJimdj+t26fQhlek6hR/QwENm1wCX/mshehr3TcxULFByuCUryLrh3TbmLVla\nB0mW+p/0JKngj8xSZhIa+pYpZ9KxICZ7eAQreiCgpW48zVSpIgrl1Y8UkL1v\nCLBUJWfPCUD4ZA7lVbDgt9wX/ZeE2TqDHUxYXb7jnVetdLS4X9AOdvXuD0yh\nepVt\r\n=sYTp\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "@babel/runtime",
   "dist-tags": {
-    "latest": "7.7.4"
+    "latest": "7.7.6"
   },
-  "modified": "2019-11-22T23:32:26.739Z",
+  "modified": "2019-12-07T23:30:06.603Z",
   "_cached": false,
-  "_contentLength": 65002
+  "_contentLength": 67764
 }

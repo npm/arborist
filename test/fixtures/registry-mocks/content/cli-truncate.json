@@ -126,13 +126,39 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "2.1.0": {
+      "name": "cli-truncate",
+      "version": "2.1.0",
+      "dependencies": {
+        "slice-ansi": "^3.0.0",
+        "string-width": "^4.2.0"
+      },
+      "devDependencies": {
+        "ava": "^2.1.0",
+        "tsd": "^0.11.0",
+        "xo": "^0.25.3"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-n8fOixwDD6b/ObinzTrp1ZKFzbgvKZvuz/TvejnLn1aQfC6r52XEx85FmuC+3HI+JM7coBRXUvNqEU2PHVrHpg==",
+        "shasum": "c39e28bf05edcde5be3b98992a22deed5a2b93c7",
+        "tarball": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 10357,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6gesCRA9TVsSAnZWagAAbm4QAIdYis7Se3KxP0KrxVV9\nItI7IF/Yzy+6M6FtovLkkimWLWOBZYso408GT0+6YCuQIqluLdg80Hh49m/7\nOFjH2iUPfIN4U/ogtf/OxnnxaTviJB2t72xSlIEE90pQuwOUv4D0+4G7GCQ0\nw93wXhmquyociDHxDaAhJEvI3Gf3tAfmAkBwD5D0lh7Zfz53mbOVU3a+ZtXA\n67M31rKlnrFwS2hU3ONa10k0USB6t+thHleSDt5DroDaZ8xEj01+RLxWLH1u\nrXi3ATRInJECu/hKCffWiAhIkdFaG5fHEuoh0pKsKdjQKP84ZjOQ1MPyeoeU\nEry4cNKYvp5BjeKhxUp4nkwR+VSPICMKPytd42FlEb+sQROhOorJOykSt09G\nUQDf0FgXND8Qdk+loncEfSDCh4Nqz7cnnytioWiHE0seOo5lOiSdLN5x1Zve\nxcH3wgHITMiWLjd4XFHddc52myEwswkzHli1QAJdnOt+9wTXs9Sd+jDYmIHV\nmyl5ifrP6EnI0itc5Nin4trkqgZQTURvGrFl/V7LK7w50hHc/xDQTygNHHhy\nH6sKzpWf6eJHmKc2HL00kBtFK/CcISXYHCEWFdBD+GcTS/nhfphjAlIxj+sb\n8m5fZSWoZPBlPa3rOIVEKI/nfhGvtO6+dyluOhzMuq0QfV+vTXrV5ZwMD5+B\njJgD\r\n=ogSx\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "cli-truncate",
   "dist-tags": {
-    "latest": "2.0.0"
+    "latest": "2.1.0"
   },
-  "modified": "2019-06-13T07:19:50.976Z",
+  "modified": "2019-12-06T07:47:58.056Z",
   "_cached": false,
-  "_contentLength": 3323
+  "_contentLength": 4762
 }

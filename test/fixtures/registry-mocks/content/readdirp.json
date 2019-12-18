@@ -860,13 +860,43 @@
       "engines": {
         "node": ">= 8"
       }
+    },
+    "3.3.0": {
+      "name": "readdirp",
+      "version": "3.3.0",
+      "dependencies": {
+        "picomatch": "^2.0.7"
+      },
+      "devDependencies": {
+        "@types/node": "^12",
+        "chai": "^4.2",
+        "chai-subset": "^1.6",
+        "dtslint": "^2.0.0",
+        "eslint": "^6.6.0",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "rimraf": "^3.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-zz0pAkSPOXXm1viEwygWIPSPkcBYjW1xU5j/JBh5t9bGCJwa6f9+BJa6VaB2g+b55yVrmXzqkyLf4xaWYM0IkQ==",
+        "shasum": "984458d13a1e42e2e9f5841b129e162f369aff17",
+        "tarball": "https://registry.npmjs.org/readdirp/-/readdirp-3.3.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 19047,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6jPnCRA9TVsSAnZWagAA1sYP/R1EmbDs2cTv7FR4DEy1\nbPQGtaKwDHT8kaNEj8L1SuyEs8KxzfoQbOejh2gURoMSLXz3QTIOhT/3rEP8\n/FUrvPaK9NSFUBvbjQzXOwiz1gfsdPhpYlhnhbM5Fl8fyUqpexpwGV0CXBVv\n6aw0vDGb6AccI9rLE6ClK3Kx3+kRXtQJSTMxD5HgoofXV5ZQEtamoWK/XSyN\nwyeKelyVYK+ADvNn7T7kbilKrZ6j3LSGx107/N8liQvxhR1AsN9nzFZWvXsl\nH+UKCkT66YTPUFnr3BkpsEt4BaHn61J1KiGIMxfwTbV636WMFAqBeVCNnG+Q\nNAMQZFS72z60Ck4KqqBdJWSNFq3twyt2750fmPJDx8cm16yuVYNGFlUVDi51\nqbDHw8bO00T25/QzUpKNAi1I9UT+jVat1YB8PNQpKdQN5yLgdPHYoNZ0l751\nneRghmEPogyrJZpD3qIHj83Rhl/lahNuPiDp3onuhow3SPFgALG2ogWaKFX4\nUr4EC/bQd5YyNnH3SOvy3mwK6LFS0NQDoDW5LYHNsvpS/9oVz5Gc2jDeV7M5\nTwj2ndLUTOQgJrZT57M/XDFAKzKVytcIFYnv7TZVBoUlK93wvHCC6DTtIQ/4\npkkl+19PzJrF6uY8xtvupapocUWS8c2GxvrcOvs+FCrpg2a9dOue3od0STuL\nz5Ts\r\n=A6up\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8.10.0"
+      }
     }
   },
   "name": "readdirp",
   "dist-tags": {
-    "latest": "3.2.0"
+    "latest": "3.3.0"
   },
-  "modified": "2019-10-14T00:04:55.443Z",
+  "modified": "2019-12-06T10:56:42.926Z",
   "_cached": false,
-  "_contentLength": 25969
+  "_contentLength": 27473
 }

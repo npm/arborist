@@ -4850,18 +4850,62 @@
       "engines": {
         "node": ">=0.10.0"
       }
+    },
+    "0.0.0-f42431abe": {
+      "name": "react",
+      "version": "0.0.0-f42431abe",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "prop-types": "^15.6.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-jU49Yzo7+r8edZWXiAN9Opf2fPQUEm5xczMK1kXMdaZG2T5OWR7/Xrq6ok6zA5zWztkNIVq20BU8m4dUb279cg==",
+        "shasum": "3e4c106467fa0a97afbad07a4f3b3111363641ee",
+        "tarball": "https://registry.npmjs.org/react/-/react-0.0.0-f42431abe.tgz",
+        "fileCount": 10,
+        "unpackedSize": 222858,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9+CzCRA9TVsSAnZWagAAtUkP/1OdoL2wg58/wqjyPgPJ\nz3POBvmhW/qNZC/rcE5tP0Fn0IEcTBjz8wUED2ESnwEvbpUY0Low4S79XqDu\ndC09A2h9b8hetOyIkeJ4/9SpQ/PEVmjRgBYa8ABV7Spw8be9M0P+Mot08kZW\nswDNsrJdBxQ8pkwuqiZjqRhKBlr3McMTZdBmm/2qsM4g/i/JzMS9+1MPCfyf\nVn7wwhYipRAG1YVpeAgZ+XFKHbm6JUdRFV3a2Acg36HbV0oWw72KwMlSRhJN\ncmxjToIDhiRAJigyyestV2t0rkHm46LMHp9x06x1sKF2/1PkrSSKWeWG8tfl\nAaBf16ETV4zxr3CwcCKOEMLZTVn92+40dmMisIRzPk71clzhcJU+SJW4Rxa/\nOIfPxwtFAS4N46gDDekIvpnqL/h+U6cmLKl+sGH4MqB+5PN2D3EN4utHjxxM\nn+WucIqwFP82ujSvDKDL0z6g7tZaEB6TolQ3/P8RpTQoBRdLH25ZJsv/xGE4\nyQGV9LWa8zl6nIe4KntzQgQmM5YnLUk8KrsHD7JPt+JOX8ea1gi4BC18/oIW\nRJRhQdYAMDG+7NYWDWwzcnvwyVjp0OWVDMESvVaXdgxKN2zf/B60C20QSfHl\n97dLKCQfjkgGEeFInHDL//slawddg1MqMEj2y4/H+dMtoL3iAX7Z7uut97/5\n66zS\r\n=ictF\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "0.0.0-experimental-f42431abe": {
+      "name": "react",
+      "version": "0.0.0-experimental-f42431abe",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "prop-types": "^15.6.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-uKx0z0+j6E9NU43cd8IwGM05dgAClJ0Sa3JVk7nx5k5S4yxNDVdVTw0/1ibS5Y7fRI6ZatBk4IYA6g49QdXApA==",
+        "shasum": "bacc0acb4722a2a4c92e4a33cce76978005b3f76",
+        "tarball": "https://registry.npmjs.org/react/-/react-0.0.0-experimental-f42431abe.tgz",
+        "fileCount": 10,
+        "unpackedSize": 223674,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9+QZCRA9TVsSAnZWagAAowoP/2lh+0BYfO4VRZ7gTJnP\nCUGVtKfLhnY0gmb/FqVi3CvLuqV32WJ4xjYCGCP1MVwUb/fTq+X2lsd6f3Qu\nTxV01H+FsQMVxGh8GHuae7tQpR0HissoUbG1wkDvKmu3MXqSqv1iv039PH5E\nLHCmOnPktO8Wr+CDlmWsj/Rwtk3H3DWt5bEyWcfyponoBpAZd3EZCdfjKwJ2\nwGQjhEnoM1hiCEso3fW6/hSMBXs+ubvzDtrcCS6PU05jM7O9o6vow+zmBACG\n1lnlPnj+SfSKD81Kn4gR5eVyfGakJZsWTM+j4idOU5ntM+BP9rNq74UU1FOs\nk54noiQYzNOLSy/WhCYihM64uUAavSzhBE8W61PU2APjclqIUFIQpzoMIk41\nYfe4+zu24HcGfLhqoxiki2b7OvRCiI83ZqB09UFbNk+qs3EwLP0FKTONHkS7\nRNPEfHG6fOD4q6qhGyKV+HNFFimLcm2BcBOXvJyF+7xmbwi/MVYSLf/x+CZC\nTcG2xdRNBzUWferTytuOgi4StCKhY5Ch9Et0eHNHudZ7L0pooG3VJmBwAyds\nZT2KucmD1wPM7Pf//fg7eQFJmxW3VEKiM6QX3dfc2r6M5G2U41Yu2GrMt0EM\nOzu5jOyjX0kcj7VrzbLD5p8RMh4An0GzsLU5HE0yPcLt7SCJ/pyxPW74hyje\nqJW/\r\n=EtX4\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      }
     }
   },
   "name": "react",
   "dist-tags": {
     "latest": "16.12.0",
     "next": "0.0.0-b53ea6ca0",
-    "canary": "0.0.0-1022ee0ec",
+    "canary": "0.0.0-f42431abe",
     "unstable": "0.0.0-experimental-2c169a568",
     "alpha": "16.9.0-alpha.0",
-    "experimental": "0.0.0-experimental-b53ea6ca0"
+    "experimental": "0.0.0-experimental-f42431abe"
   },
-  "modified": "2019-11-29T09:32:44.851Z",
+  "modified": "2019-12-16T20:07:55.631Z",
   "_cached": false,
-  "_contentLength": 189951
+  "_contentLength": 192820
 }

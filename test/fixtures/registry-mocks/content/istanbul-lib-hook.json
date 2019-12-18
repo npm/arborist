@@ -511,14 +511,39 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0-alpha.2": {
+      "name": "istanbul-lib-hook",
+      "version": "3.0.0-alpha.2",
+      "dependencies": {
+        "append-transform": "^2.0.0"
+      },
+      "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-XYKFz0LmdEZ1Imkrkrr3ENOeqCJLgnxqR8WFJ8Pe63XLvdrsLI+uCQOhyDm3zMV7FiH6ibnDKyzKqGndxJrHFg==",
+        "shasum": "1c6b16fa465d5fcd26f855e8b23401499253ab9e",
+        "tarball": "https://registry.npmjs.org/istanbul-lib-hook/-/istanbul-lib-hook-3.0.0-alpha.2.tgz",
+        "fileCount": 6,
+        "unpackedSize": 17666,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd69ZRCRA9TVsSAnZWagAAVQgP/03gsBoIm+X9NjGf/f1m\nEQJ8TOOq4MPCYLOsJljUw/4pJT7exrXSt7Ks5XKPHpx/noNlf+Mfr2AZ6np9\ntp0Q6jQ68rg/Iqt18ZsunCfQoNJH7oabKdIAwFKpaJ0ytIX97co9uzxPEZHa\nA3+2MEihT2gMPQY927xcKK9BBEAlN012VRdcOPiiqV4c362AFVw2Fx6jNOt1\nyRCRHEtNYSV/qdiY2LtQF5sk+NX5ck5knLpRN1YwxpJAVFeXu34w2hI+04pt\nQ0oEs9UM5Chey9JtHnjuFxlFJ8owmTJ58cqCklr/W/1dBaWLPMTNZEkIA7nc\nX2IrbG24ZfZ85DyeQREqnEnnAUDXXqmWrs0C7biD6nWwXtYh/ED7muaNzFjo\nqksCSxJv3E4YrJhq/WZph7rsA+2W1hZoTODMZDQ6KQv5SPBauZ/WQ7K439el\nF85S/xNDhvHoQdVNUwWH470KLCvfBtUM/wIJYptdBvgETSlpdckwCaiFwhTg\nU+OstjPQiAQy8KdRfFLzRnDi1HfEr0/ic1iQnjSMdie8Mwyk8r0Y/DHQ+GTC\ncEbguThjv34E51zdExz+ZceEVMcr7iksWV2iZ+zH5MddWWEa2EzWXHuS0e4p\nsv95WQvsuqkO9+7MVSY5Tc9Rf4vC3MpyyyVJqBW4KyJI8P5Imsdpmv6ovlT+\njsri\r\n=dalN\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-lib-hook",
   "dist-tags": {
     "latest": "2.0.7",
-    "next": "3.0.0-alpha.1"
+    "next": "3.0.0-alpha.2"
   },
-  "modified": "2019-10-06T01:06:09.672Z",
+  "modified": "2019-12-07T16:41:55.948Z",
   "_cached": false,
-  "_contentLength": 22451
+  "_contentLength": 23921
 }

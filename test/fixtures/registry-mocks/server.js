@@ -3,11 +3,15 @@ const {existsSync, readFileSync} = require('fs')
 const PORT = 12345 + (+process.env.TAP_CHILD_ID || 0)
 const http = require('http')
 
-module.exports = t => {
-  const server = http.createServer((req, res) => {
+const startServer = cb => {
+  const server = module.exports.server = http.createServer((req, res) => {
     res.setHeader('connection', 'close')
     const f = join(__dirname, 'content', join('/', req.url.replace(/@/, '').replace(/%2f/i, '/')))
-    const file = f + (existsSync(`${f}.json`) ? '.json' : '')
+    const file = f + (
+      existsSync(`${f}.json`) ? '.json'
+      : existsSync(`${f}/index.json`) ? 'index.json'
+      : ''
+    )
 
     try {
       const body = readFileSync(file)
@@ -21,9 +25,22 @@ module.exports = t => {
       res.end(er.stack)
     }
   })
-  server.listen(PORT, () => {
-    t.parent.teardown(() => server.close())
-    t.end()
-  })
+  server.listen(PORT, cb)
 }
+
+module.exports = t => startServer(() => {
+  t.parent.teardown(() => module.exports.server.close())
+  t.end()
+})
+
 module.exports.registry = `http://localhost:${PORT}/`
+
+if (require.main === module) {
+  startServer(() => {
+    console.log(`Mock registry live at:
+  ${module.exports.registry}
+Press ^D to close gracefully.`)
+  })
+  process.openStdin()
+  process.stdin.on('end', () => module.exports.server.close())
+}

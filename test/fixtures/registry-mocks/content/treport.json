@@ -560,13 +560,47 @@
         "unpackedSize": 43926,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd3GeeCRA9TVsSAnZWagAAM/QP/0Q12u6l3dxRvhb0c4Nl\nwuidKaAJ26H88+/pL7UqEkN9f+DFZL17lmzvJ9S8ay0JNi9BmbdS/otvcl8i\nXELjuGdCaD9/PNOEocwSQnP9Uivfw6quOfNuKKreRjZFdSGS03+cyIywTofj\n8Ev13s6ZmOnQyhi1IcfcgbRz333OmLnaz9I4LTD/1Lro0EAszJcCFSdiJRO/\niHZB0i9dtOYduWevMGaUa7xOQs/j2wbBfFCYxNUvwvd/hg6V1nSOk15+OJn3\n81BWMGAOHX+rwepKW+CcHeXBHpLqvW3CyS6i1CJR3hyszRlyJ7mdF5rqYm/v\nr77oj1q0+L0Qv9UjElZUWO+fcdjgqmMWWWZAnEES2eossYLyWbegISWBoeGo\nL3ASJgIGZNTAOVPJFPT6STRdRjW4UStsHGzi17NS8f6urpSY62mQLCyYh2JR\nUSWbLKvEvD14wU8oY06t+Ig7CbH81pQ00zUZ3UEoBNpcISzG++tDzwiWrk7C\nLnv3DI0J+yuILymYmCVEIUcQdhDIE57yCJH4q0dWNpmrf3UlJnbll84uFnXC\nw2IoryQIcuK4vGB7teXAve8YeOjHm6MYQnUjC8JiAcrSlcAuMPyrbEZ08U21\ny8On/MT5l5VVyW6NEbuj4e2F1kcZEq3OuuMhwXJn6Maea40vH+Ey+m6aV+44\ngetk\r\n=OSss\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "1.0.1": {
+      "name": "treport",
+      "version": "1.0.1",
+      "dependencies": {
+        "cardinal": "^2.1.1",
+        "chalk": "^3.0.0",
+        "import-jsx": "^3.0.0",
+        "ink": "^2.5.0",
+        "ms": "^2.1.2",
+        "string-length": "^3.1.0",
+        "tap-parser": "^10.0.1",
+        "unicode-length": "^2.0.2"
+      },
+      "devDependencies": {
+        "events-to-array": "^1.1.2",
+        "ink-testing-library": "^1.0.2",
+        "minipass": "^3.1.1",
+        "react": "^16.8.6",
+        "tap": "^14.10.1"
+      },
+      "peerDependencies": {
+        "react": "^16.8.6"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-JbmV0whGV0kcr4Mlzc95FtcFWOIltMthYcF5h/E+i6Nd0hh+vI7ZYxr9S3DR19LXFOtlDPHSd7rGvs+KCWAuzg==",
+        "shasum": "d8f26a9f20045d5c5a7080da246ebdb99dcf39f0",
+        "tarball": "https://registry.npmjs.org/treport/-/treport-1.0.1.tgz",
+        "fileCount": 33,
+        "unpackedSize": 43989,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9/lkCRA9TVsSAnZWagAAkn0P/1TYM3B5B/IrUn3KhBvP\n8ELw2JbQPNvEbtrOW8wW/xE0RicVINQ22+2U02JcYjq6iNnR5V3yJOUAqB9J\nuaerANmHotrqEDDjz0xhkHRZfK12xtdUWIz7JQ7GjTyYSl1Ye6JGUSt4rvwS\nlCROZowcANGtr92YiJdbgiPMW7UjYXBTV81/WDQX4WZuW1iRExjFMthnw79G\nZNfHhhkH/qjspZvug3AIOXcbbUQv+/udwdIExQWnRP+doAQNXT4I3Ipp2pNM\nAZYS7w13QcGMkrFA9BbgrNwB3WTAopU2us7CW+cuFPEkNTeH/8pkcJEif0tS\nuHFmY6hyWXMd78NeHCgcqtQUc+0Uu/GwkuscGOmmbzx7GoRwrLwo8rbU5LNc\n56QwbuDJzFuVIyoRsoMfCy0dBO8Uy2hbt6jbLkl81XLjn3tBBiWDhVqHhCqQ\ni/Tja5fmrBSVk1Lpj+DPVbjYDvIye4QUgVb/S8BBVO/XifMXjLe6gdrq0/3u\nkV7akXsNEV8OOwdTYjgFEH/Nnecg8E0YWdNLj5E7aTO3mbcUAMQ5PU5z4M9c\ndNYJ/18545cPD2eTWMF2O4UFX/XIWnC0C+PvtTjRdPlgIuf7vCQdwgiPaTCN\nEBL24lJi1Xh108FcLIG+b0QLhJY8xZ+F4RHltixDFcPtwMQdVfXn0flFVkGH\nkpDI\r\n=td+3\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "treport",
   "dist-tags": {
-    "latest": "1.0.0"
+    "latest": "1.0.1"
   },
-  "modified": "2019-11-25T23:45:36.616Z",
+  "modified": "2019-12-16T21:38:46.744Z",
   "_cached": false,
-  "_contentLength": 28708
+  "_contentLength": 30330
 }

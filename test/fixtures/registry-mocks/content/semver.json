@@ -1318,14 +1318,80 @@
         "unpackedSize": 61578,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdUZOfCRA9TVsSAnZWagAALOoQAIryFFr3APbQy7JtFRVQ\nZWyRM6KerD0BuRsiDj8Z+krefX6/DJ4CghE3P3dYwSyJI3irUOLblY2Je6S3\nQPnQLOdT2R0uC/mOnZ5xfu5ok88KkXwc2UQdsot+u+FCMerbv+XPHnOi2T+Q\nhYYuOP26jX74MdZJr5LrXZsBppEeypVCGEi/k5B+L0AM2EPBVzrhfl7+OjqT\nIRao2JvxOBpF6D6p1Q+x48yGcPGWH5qnSeaXFBnH7lzJD64IJPb5c5oA57AX\ndy1NFbQ1bFLZ++7RwQ4dsZlC614/58fCrasdepTQkFxKGv6Glz0TxdrsEqyE\nRPuP0on337QcRwNRB7buoVkBE1gNTc3x9yisJRNBMzfOaPiEg1rQdnN9pr8o\nOvespmkE2SbTGU5zJA3cy7O/4IAK5epBzsWuqLSnA4aOXEb1zlmVW4Q7pSAY\nYXE1G2OB/LMMCcs947/6PR78q9sa7+Hw6nqg0GV4lrJhCFVYezRVCsY7GNay\nJ/GzPB/PaffK1fzLUG1eg1USItnh2QmDnnF2fYpqIN96IgaJ4YN3mlOzLnM8\nJ+/p1cyHeGZI1gT8HVq3XOZXgsl/gtF4zTyfwx2YNnM9E8FCKttKF9AYHH9p\n9EpwbiSSMREq4B19wt0Uy88NxZDgqHcz+MVgUNREWopxOXnD5Ka1M7TIxV3z\nkEbC\r\n=hYf4\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "7.0.0": {
+      "name": "semver",
+      "version": "7.0.0",
+      "devDependencies": {
+        "tap": "^14.10.1"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==",
+        "shasum": "5f3ca35761e47e05b206c6daff2cf814f0316b8e",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.0.0.tgz",
+        "fileCount": 48,
+        "unpackedSize": 73171,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9TnXCRA9TVsSAnZWagAAZJUP/RwScknE8TPmm+2oKnU4\n5vKc7OFGQgETATjNhJmYiEoU+yi6QXvxWeER0djTvSR1b1WQTT/ad4WeZ48g\nW1u0egl0ctUhnMXqlQPA4pB3fCSvebKKWfLQZp1ElHnppGNlY3BYy7MNSY2+\nuF5lO8KOhTlrowjswOpFu6nqKxAhEsLg4NSwliHZL1iU9z+ozE9+9X3yjKFC\no7J+dxbw3As0C9doVR0q6sO/6Q9SQqMRcX25kvNUVLMb0EEX6KPZJlkBjV0D\nXC7VE5q3a6IMGMWeDCDFC1WG94mrMLrUpltriqqVnuDUl/WUs5mdXCWxpa+R\nODinRVD95RA2a/BgXLUEMBBcaC1YAY0BRy51cPzJ4b5o12zb6tbyGUdyYv3H\nr7zAzSz/hHr6VrVJbxV7deo56s4NjnEgs8qRGykvILskY8CTUE1xz1LfvUoo\ny22jD/KbtxY3kc/DVhAw7tlIRr+RXVtMU4fYGyXFOaZMjIdlGFvQRRc5wAsd\nKHPyn2cl204xS84nYf0UZ2d1Nx7mTUv7BW7W6/9dhPrut4Yy23JYFQGaX6yU\nhpDwz1KocHZb/ayvLCuE6F4USPFb/7CvV6a+/yt/2ISZYbYtPF46J1B+hhkr\nEeSnaexXgatoFANnR5TLWH0SYmqcavKzmhxGnd63hy0qhLLetIIrDpDBSuAx\njyob\r\n=GXHR\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.1.0": {
+      "name": "semver",
+      "version": "7.1.0",
+      "devDependencies": {
+        "tap": "^14.10.2"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-4P8Vc43MxQL6UKqSiEnf0jZNYx545R9W1HwXP6p65paPp86AUJiafZ8XG81hAbcldKMCUIbeykUTVYG19LB7Cw==",
+        "shasum": "e5870a302d6929a86a967c346e699e19154e38e0",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.1.0.tgz",
+        "fileCount": 48,
+        "unpackedSize": 73372,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+C9RCRA9TVsSAnZWagAA5rsP/1UdsGU+xP2QPmsjtY//\nzh/+x1qV+MND5YOtQNGx03Q4ar14i1VRbha5MEO7WscK7W4v4joTXSBkGj31\nNmHuWs1Q7gQ+rchl4/ONr0qrp1GnSxzXcKvQGWB9HFINfj2EaZveJCNSvXp/\nlb2USJdumtqsF3sChr+u2BpIvvB+5IXKFZIg3TS1CMrQ7CrxcxUVOPiNW64c\nmqZBiZfU6hLrbrBvRfqkUSI9KfXsXPkliSU2+uf1uPHuDC34WV1BcJ+GwIVY\nWK90dxSOf1HpJG79FINJ/jKA/X1gi+ThoDizLMDsUgeUca/OtgOoAhy+msF+\nsxR7vymNKnX37uCc/9We7fZLOKHepvtOBl/axDh2gQAwE+Mh1Iw5czQMQS9U\nthLMPQBRiGyR4KzYNo4Ayal1iT5yO56+9LK+6zESOGbkTj/WF7yO/7CnrX/1\nPEXsRdfEi9f0IbgkEvSpXMG1FvA0mGvubDqDkcAMxfAh4uaC0W8Hh7TMz6M2\nN9oc+iIOTp/UT2jZTitSzF6KXHIfAeuES+DMmGVx5moBJv8uTlI1qCSVorpr\nyK8xuJRRPxiuqDaGpD7QPObyjlko3jqRMfRc79I3U0tWr8fArgjSnyboQ6L8\nVPa4bTy+uQILoRJdZj6X7KyOB97TQK3hImNx0qlWmR7Mh9vf68BSHJsHNH0K\nOKhP\r\n=wceY\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+    },
+    "7.1.1": {
+      "name": "semver",
+      "version": "7.1.1",
+      "devDependencies": {
+        "tap": "^14.10.2"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-WfuG+fl6eh3eZ2qAf6goB7nhiCd7NPXhmyFxigB/TOkQyeLP8w8GsVehvtGNtnNmyboz4TgeK40B1Kbql/8c5A==",
+        "shasum": "29104598a197d6cbe4733eeecbe968f7b43a9667",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.1.1.tgz",
+        "fileCount": 49,
+        "unpackedSize": 75395,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+Qi9CRA9TVsSAnZWagAA/eUP/0pL5O+0HEZjbnXjmYZk\ndz6kfVHV4zXnNSxcLhGxIzs7H8J7bzWCu+7AT84dDW1KbYryVxwxUI5Aha7Q\nDeYBRnpG3cCYpH6KBe4CattmWT9iTAo8CVO8bIAYPFRa9vwzYLh2Z9MS57Z9\nwXpk4ED6W36fZrnDcwUc5cOXAthFwc8Im+OFuBotzWPrDRyDZVjFquXzpZ9t\npMadH3wVwUXEz0StuXYUSQWgYTnuA16KLSBXZWm8ofqYPMNpRTNj6+CJWLyd\najqKGhdpF+TMrFBedd/N1x0EMOUyPCYtSyIDehOy8xz16ZEFVDUOxx/Uub/E\ngvNV0qWvzcBc7rCJh0ofa/ZmRJuHY7ClvBTMRBKOAYNBYABxCncmGgvc9zD6\n+omakN7gggfjD0IThWkDi+x6uUVU38kKUnXjcfrVK3bL8HiSQdciuKHMGDAc\n/eG+4emkuA1muphWQzN7T5y1U2DIHIvXSwpWoSrx1F1jlBm+9Pg1RMlsklpC\nnBeCO6KnzIrr6FkWU7P3etUE/Er3a7708fZ294S0QhgRtXPEvINbsMuxMoLW\no5uzB2vpuUtWVW7oDaDHFOFMDrxej2IFTzT9XLFo7mSlHsUefOXE3rGr8zcD\nr3MTn7IA97ArS9PvNPurCbWp0XKFGbLBpmAT87Jx2xw6ABI3g4s1ErPxOKOz\n06ED\r\n=707S\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10"
+      }
     }
   },
   "name": "semver",
   "dist-tags": {
-    "latest": "6.3.0",
+    "latest": "7.1.1",
     "legacy": "5.7.1"
   },
-  "modified": "2019-09-10T19:05:06.060Z",
+  "modified": "2019-12-17T16:56:31.538Z",
   "_cached": false,
-  "_contentLength": 33753
+  "_contentLength": 37819
 }

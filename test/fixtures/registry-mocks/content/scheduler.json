@@ -1852,18 +1852,54 @@
         "unpackedSize": 126957,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd1kVqCRA9TVsSAnZWagAAFu0P/iOTmj7pbQVqq37Czesx\nO/evOzKw6tRJ7SxW1/L1e4bjDDeWqbzlpDpBodY5mEM5zKcUvLwEpui2G9dM\nZECS3xhSGGBVypVymfZAlfExrtkHkYHQOB2L47xOVT1tdsbZJTP5xh4JIgLS\nHvhKfcNYR/dh2kO/yM8Xv/25ckWGrizwrs4dbXtr4F7jfAq4siRzY3Pr5Xog\nzDqoYg5sd2bpOQ68sSVYk1cJsF35RZb3fx9IjFWCN/zf8MeuftUuJguzyLLY\n41ye+xdwe7E0BqTAEkCSDMEL0lWsJ/HBgVsQ4/B1hRpGtb7L30DTMOMmgMxw\nfSKaI381+ccZBb8HKYHzNeDV0xbtjyaPA/PaeZBfC+9pqo07HyNSN8X7r8EN\nCdiNwe9xSJQTgkU7hdcPcBYlhZgSS6y8QRrEa6yBTciKvPIWupMxnJAUsskn\nPtO2/kUjmccnG07cXyhDMhGe4GacnwR8hfKs2+6Qxrbz+jKCh5dOXvLV4mIl\nVS+nHRrkJ8A5X/F5H5qllz1ZWf2Wtwidk6vTrnllL8m0vCllvQw/yH7QOZPR\nxJj/hj1ruLsc93dlsXVVTjtwCPzWBArQaEfF4sSTrFb6I71I88n6WXnk6G2o\nQD5SPbVpNEXmM70SYP5KW/9Nf313TTVUhRyT5QvLeDGUSzlqDC+ezwfl0ZEc\nuz7r\r\n=tkeZ\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "0.0.0-f42431abe": {
+      "name": "scheduler",
+      "version": "0.0.0-f42431abe",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-T9hQ/pTAyYb0ewn/8HQeDiwQMGzGh03casoI8ED9XnLVja2z4K6hLspcfkjCU87X/rM7sPBteDHM7sdiM4VZqA==",
+        "shasum": "075560d2b7ebfefe90d9dd57853a3e9f5639a84d",
+        "tarball": "https://registry.npmjs.org/scheduler/-/scheduler-0.0.0-f42431abe.tgz",
+        "fileCount": 23,
+        "unpackedSize": 127183,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9+GKCRA9TVsSAnZWagAAVWoP/12ts+LCZ08O0l8gBZWW\n5A1HHhklDoQ0rr0/aYgVwImBVGSzN4+GFXhflekIDIWt69sCHfGDGMzYRYoJ\nq6ms/GI6FMaxrk+7IztKSCNR7V9noOEF+wVXf1OOQ6G5TnEx4mNVVpMLrcKm\n8ZEHArPCxfLFKcti7Ht8O34zFaMxLIOZWxf5PI1HvcCEwgWmBd3BM7BVSld8\nQYwLwqtSabOhkS/ED4OgbwW5s5aXeUIx4/ydKrgYIRYPEzVEdFZnB1kFgWM3\nRZVDIr8AY6bujwthmiUTJ/7h3ljhCXGWdcnyGS5f54B0L+T2LJi/HgkYIvQg\nvQpTcMTzujZYWSKeyQZoMn3ggLOifNdqsqsKitqItqbm4F7mm1JmZvQHHM5x\n2wyyJR5YFlziFOqh1ENVsOM+DpRpZ3SghyYHtojJ+fMteDEptQO7/o3Grk8L\n/OP+KlJfgFl3e00cqsgymT2xg4bpT7KazgGFwIah7qZpd/NK7oJ5YCNBvSXn\nzure9UxVIKqERe4j0QlMWFWNR5phSy99amEDW2KGRsd76DWcAQrlo8BDkaiH\nn8AHE8+EgD6FBdqI/mphfKfIL0u9eMkJouVysjaiFJ6KLak5qh4hThK8boPc\nbc8CZ8HG4PctlcjSliY9F1azM1iw+tmRMJ8ecFdUcXmsHN4ylBtsiadMRRLu\nyiSY\r\n=7Ynj\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "0.0.0-experimental-f42431abe": {
+      "name": "scheduler",
+      "version": "0.0.0-experimental-f42431abe",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Lhg9EIlp94fJ8ew6r1bEJEDm+HOvucrBNokjHBTjMMQmMJonuj1ytG+4/BtJiWVewKNMgJVoZgbamjVwnmVeFQ==",
+        "shasum": "4ab6329853c94f4680c51b7484137668d81ac772",
+        "tarball": "https://registry.npmjs.org/scheduler/-/scheduler-0.0.0-experimental-f42431abe.tgz",
+        "fileCount": 23,
+        "unpackedSize": 127326,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9+RCCRA9TVsSAnZWagAAZFoP/R5XE/IL+6Yt2AtSKzW+\nO+VEhwSmg9oTObyuh2VgHM1OuKm9B3DjbA9a9rOfJ1qnUZ9hKMCjAU1RzsBO\nXqg+vVatBj3TJYx8fyEVArUX+lKhNN0UuMI8UrYEO0gb3Sa4EI+hKu4gM2cM\nqXfgsIWynaYspE5hWUSuc+md++yq0Fp1nz7Jj+BBPnAxdBfZARn02OLGFbDd\naUsIaEPmOd/E3upcs23eTHfZIzDR8FZJ4LRQ0AIa4gUK+DVmD0WC5r+H/Eva\n5u75q8Z+r/SAX8VCbfIulE25lyo9IyAHbxLwnvy6VtvqkqfnMt84nbLtpNdT\nvEHyiobe2iUG5GpZyOGqgUr0/0ZoRRgNW3LvV2cJKui69Wk86jK1hon5brrN\niOopmItpRDCrHWiy7MV9vNEB1uGmO3L2En9eH/Me+aac1H7qY7H25a+/r77/\nVqsU1i37DAxufOZAkJ/hkQm38UvPD/7TxYBNzlfuZ0322qmJKAjDxyOJ2bVx\nt2uv2mrsVMR8ZCcGDruifcvjOrTRBd1gBwK02ZXYpy3O2bnxelLnop/81euv\nqz0uEmWj7IKSNc23ly3Wy1zmrfnFfekhMKHGb/5mGgYs1vN2OgJP7Kvc7K5k\nR7Xv5LMRk8cCeLA78U2YTiOGF1CjcQsqeVNKq2EPxI1SYrhNVq8EOMnK1In+\n2z4Y\r\n=sdAN\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "scheduler",
   "dist-tags": {
     "latest": "0.18.0",
-    "canary": "0.0.0-1022ee0ec",
+    "canary": "0.0.0-f42431abe",
     "next": "0.0.0-b53ea6ca0",
     "unstable": "0.0.0-experimental-2c169a568",
     "alpha": "0.14.0-alpha.0",
-    "experimental": "0.0.0-experimental-b53ea6ca0"
+    "experimental": "0.0.0-experimental-f42431abe"
   },
-  "modified": "2019-11-21T08:06:04.935Z",
+  "modified": "2019-12-16T20:08:36.200Z",
   "_cached": false,
-  "_contentLength": 133178
+  "_contentLength": 135965
 }

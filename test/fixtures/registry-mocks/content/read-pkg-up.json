@@ -163,13 +163,40 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "7.0.1": {
+      "name": "read-pkg-up",
+      "version": "7.0.1",
+      "dependencies": {
+        "find-up": "^4.1.0",
+        "read-pkg": "^5.2.0",
+        "type-fest": "^0.8.1"
+      },
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "tsd": "^0.9.0",
+        "xo": "^0.25.3"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==",
+        "shasum": "f3a6135758459733ae2b95638056e1854e7ef507",
+        "tarball": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-7.0.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 6727,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6g8QCRA9TVsSAnZWagAAluwP/13duxcxu3uiik8SYfVz\ngsnpE/jCC5jFbhzZPN0If8ZRZ64rGNEIDwbjDdAR2KFiHMb7pVFwdavaR1eR\nbEKTvCo1kb6S9F7dM6Ti2XLaiBBOwFDaOIk3ptwCuei3+YsapWD/URRWvuqF\nw7Ux7TeMyyog7BRTrgPuIyxZcVY8fUDSGgAp8DV1Rug6Hn22+jgVDnwxAI+y\nUsZAUFPoCLXCYQWcadyGKVO3DYd5H5lwCphy1aT0T7/f2fYGuEUtqumU6PAg\n6Lct3rqEG+EyK8x0Mcpz+9QHa2UyJLG/fbDu//zVAqr5IoMFD3KnYBpFDGga\nMC4zO+FdS1P2cewI/fbXyEbkyy5gxKEglWa/JF6tBEqxPju4A8Ee5hI9O0hc\nzaMomxmQ4cKOMj3uSlRtbgRm9sNap6NPeYyObAKyeK1JMjA9DDkdyP8bKzjH\nIR0GBAs2XqoJ1SN8rd2Avb/AvmW3WaDODNQ4E+ChpjJNWVEFvftHnIeeJ7Us\nOmpSyf0oZJimFmulu/aQA3tXEI0k8I6hEhzVoxwHxA+5gsPFrkg2csDxuRzq\nNv9xmU+EkP0lyFruH3BE01aJVzFBcO/MGRDzdR4wuW1YZAkt7p/ixqgCgFaC\n36RjqyiHUH5i1V0REHrLVQ3sYF+SOMS4HBdqyOVg3gda2d9aF2R2OCY2lJnZ\nR5JQ\r\n=ffto\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "read-pkg-up",
   "dist-tags": {
-    "latest": "7.0.0"
+    "latest": "7.0.1"
   },
-  "modified": "2019-09-27T06:05:17.379Z",
+  "modified": "2019-12-06T08:19:30.575Z",
   "_cached": false,
-  "_contentLength": 6784
+  "_contentLength": 8232
 }

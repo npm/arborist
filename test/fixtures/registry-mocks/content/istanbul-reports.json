@@ -1014,14 +1014,50 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0-alpha.6": {
+      "name": "istanbul-reports",
+      "version": "3.0.0-alpha.6",
+      "dependencies": {
+        "html-escaper": "^2.0.0",
+        "istanbul-lib-report": "^3.0.0-alpha.2"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.5",
+        "@babel/preset-react": "^7.7.4",
+        "babel-loader": "^8.0.6",
+        "chai": "^4.2.0",
+        "is-windows": "^1.0.2",
+        "istanbul-lib-coverage": "^3.0.0-alpha.2",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-JZpNKbc0xL/E5NP/ER7ox01bMw0NC01l5/h8YypGT/NaDPiI1/8AucNncDUxwdj/YhD8/cGD6bev3K6CAXXeKA==",
+        "shasum": "51b1d89e2f41ba60187001baadb7cb56b8988867",
+        "tarball": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-3.0.0-alpha.6.tgz",
+        "fileCount": 41,
+        "unpackedSize": 282012,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd69ZZCRA9TVsSAnZWagAAnrMP/0OsfFe4ldQ0nlDh/RNK\nOgaxTYpQPqKlLHU4IGTwMST1leMgJM6PPVNrmUdvSlMwkViMSG9cubbnD5VT\n2fvlZblEMR8EVsr61kW+QV7AVQzgO04v7QgP0rhcP/iE4y7z0W/PcSem6o1h\nokX/2jlgu6K7LKbjpoi3I8emkWdTWKMkq0TGUO9UM6xHRePPjq2gAdryHZHb\nvPYTEvwN9a+HpxPEwxFBhMRk3WZb2HvQFaYQRAJi8441xslQ5J3GIZoIrmjZ\nxScqgzNFINe2iUmLi438Ypw08qtS1hdZCgpvk03NimhAh9NcK7f7N0vkHIiG\n2HUgQvYFxfC10U80jCS3i3jaVb8PNFkxOzFOXzUTiTGxBNvsdd1u+KVgxcGv\nExmcdLVFydExNVuLJWe8n2CNQ//EyRVCMBFPIC28SwhVbxbekdul/vlczJFz\nUERUcVANQw870NtGXpRkMtLfrtaH8Bf8aZdXDKwM8HuuK6ysFWcWlF1Dexu9\nmP9o705PzZq1lJVYgbMyJCjbCsWeNPtLdZ7RF3gNp54h6242dDcNHjzvfyaZ\nQhrAtWXq//95btLNDYnalr2kvgrj3nQ6oih/CSDvUIXndTxzoSLXvXFmuOVd\nNfvNQ0YOGr3LcYSnuE4arRonu3eJAWIMh2pI4mwyUYR+P1xGc2g+YC+8t0oj\ndvkG\r\n=vHf4\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-reports",
   "dist-tags": {
     "latest": "2.2.6",
-    "next": "3.0.0-alpha.5"
+    "next": "3.0.0-alpha.6"
   },
-  "modified": "2019-11-22T18:20:57.907Z",
+  "modified": "2019-12-07T16:42:03.527Z",
   "_cached": false,
-  "_contentLength": 43900
+  "_contentLength": 45660
 }

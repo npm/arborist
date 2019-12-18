@@ -812,13 +812,39 @@
       "engines": {
         "node": ">=4"
       }
+    },
+    "2.114.0": {
+      "name": "flow-remove-types",
+      "version": "2.114.0",
+      "dependencies": {
+        "flow-parser": "^0.114.0",
+        "pirates": "^3.0.2",
+        "vlq": "^0.2.1"
+      },
+      "bin": {
+        "flow-remove-types": "./flow-remove-types",
+        "flow-node": "./flow-node"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-ckon8RO7tFcVGW3Ll0jAWgULVrNa/cEN0JXp2I7XmzWT/GCQghSb+0312NjtAb+y3W9iXpPxkVMI86+SDU0E0Q==",
+        "shasum": "693038a1217c8e922afe0612bade53d085d0a8d8",
+        "tarball": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 40110,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd878/CRA9TVsSAnZWagAAd3oP/0EEih2Zxolz/amWdsxs\nt0x3+TK102Q44kgsk1aoRegr4NL+sz8E7gSfHU8PYHsz58eDb2+BlEYDFW8Q\n+LDF05UjkeqsM+q1r3cU//QXRIWJKg8XBY6g/Hb7baVOsfQNVIzlC8+r/bpg\nG1DqWmN53LHwYkc3xKRHXlpiu+5Uw6Jf/U0arTq5zBoyc0zUXjmfjuCCRTwn\nCAhgSFwtwhWzZEvXw0FX4SspTr7g4ZVQWW/DPsOz3opJpyUxeKZxG1/RiirU\nc8XCu2bZSuuZnCMfqnFUzF4tvAaRnIQNy6yUbxu34bbQvodjk7BXktvuBCK6\nI2Yr1Vy/yh6xQk+LEAQE18gF5KrbarvkCum3ZDC0Ywk/FOOo90YzixTq3bI1\npELkbloJ+bKahw+B774fzis5hDTiUAnUCLe27gjtUC2KNAfR4ji32GsjMVBE\n7gLfzSj2zg8LOw4684TUbTtrroa+LGIei4Tsom/y5xvAUOSpkrha1+OKOSES\nP8qrpcjWpPyiDTOozLydbEwV9zCOh5QJAuY3vB+zl3ZGjwyp/3sl7M0GOwQJ\npGI7ISuDmWONp3niU29hfQPZsxGB2msZYKcc+BjyPFX+v/Df3yOi908Mbw0P\nN7CxkVdpL7snRG5qAmvvQvTeO8JC76Iov33+TODZjRguL/ChkBeHnW3Oyfe/\nWvHE\r\n=blxy\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=4"
+      }
     }
   },
   "name": "flow-remove-types",
   "dist-tags": {
-    "latest": "2.113.0"
+    "latest": "2.114.0"
   },
-  "modified": "2019-12-02T17:11:22.821Z",
+  "modified": "2019-12-13T16:41:37.563Z",
   "_cached": false,
-  "_contentLength": 38811
+  "_contentLength": 40294
 }

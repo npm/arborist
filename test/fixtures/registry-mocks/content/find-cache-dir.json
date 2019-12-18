@@ -188,13 +188,42 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.2.0": {
+      "name": "find-cache-dir",
+      "version": "3.2.0",
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^3.0.0",
+        "pkg-dir": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "coveralls": "^3.0.9",
+        "del": "^4.0.0",
+        "nyc": "^14.1.1",
+        "xo": "^0.25.3"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-1JKclkYYsf1q9WIJKLZa9S9muC+08RIjzAlLrK4QcYLJMS6mk9yombQ9qf+zJ7H9LS800k0s44L4sDq9VYzqyg==",
+        "shasum": "e7fe44c1abc1299f516146e563108fd1006c1874",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-3.2.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 6308,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd8i+xCRA9TVsSAnZWagAA3csP/iwQzrRQR9B/0NucEePa\n3Fhr1mbtGpBXhyTzmxWeaPkV5SiPETSFShGY3c58/WL3h7CwrKzMsI5MBF89\nDLRqEAVmmnjeFlR9wDRKxBK7FeAN1rJf4yyoGgFFc+lJ6c3MM23HUONP6+aN\nMI071MNeUnI7QgjlKLt55vjERGsLfHBsobv+kR3UWMXHUyLOzmV1MttOflKx\neJ1x3SapnO8E7JHZKxAIIhVMmR1p27HLVzIkIWOJI0YoA39WPe/M7gz2h+VA\nNvJr3w6BZgIDzfs00f5ZW1OjNXRIHd18BYGu7Y5mh55rJ56CC6ycsnbQ3xsC\njy6Wu2tMGOrRlnpYvP1qyMGI4p82f/SsLunVrzDEZvvQK9X2FDLt4EpeluNf\nqBmaJzup9iMTgncYEaLPvB4hmPYfqclH1vvo39gjf3vHhlk3xlYBIgnPuoiY\nMBQ46s6ZbE7lMAlBLZihpvnmUFyVKRZnj8COTSx6iI1dtKPz0BnobD1GKYjn\n1xVa9KVrJZ76gEu19MDL8N3oJSoMG6p5GOx8qkXvoYq4S081r90jT9KpWcbr\nRcAA7b3AirSOgyo7PmzGswYTkVHBgMT0IilXk8SBRf0hpXzHidlBZSMSuu9m\nM8aOiAGpJB/4ScGIqtJTEvJj4wbtta4sOTYMgCb2Jbmt+aT0lhzqt4aZmAbP\n7Cnx\r\n=hQlO\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "find-cache-dir",
   "dist-tags": {
-    "latest": "3.1.0"
+    "latest": "3.2.0"
   },
-  "modified": "2019-11-09T05:36:17.451Z",
+  "modified": "2019-12-12T12:16:51.043Z",
   "_cached": false,
-  "_contentLength": 7365
+  "_contentLength": 8859
 }

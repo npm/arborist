@@ -1163,15 +1163,64 @@
       "engines": {
         "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
       }
+    },
+    "1.2.10": {
+      "name": "fsevents",
+      "version": "1.2.10",
+      "dependencies": {
+        "nan": "^2.12.1",
+        "node-pre-gyp": "^0.12.0"
+      },
+      "bundleDependencies": [
+        "node-pre-gyp"
+      ],
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Dw5DScF/8AWhWzWRbnQrFJfeR/TOJZjRr9Du9kfmd8t234ICcVeDBlauFl/jVcE5ZewhlPoCFvIqp0SE3kAVxA==",
+        "shasum": "47252793be8a625a5f96dfaa1c88547f4b20595a",
+        "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.10.tgz",
+        "fileCount": 542,
+        "unpackedSize": 2067539,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd83UQCRA9TVsSAnZWagAA/fkP/22kRaioraDlC9DrEd2w\np2mjaT3SI/QucMikssKwt4WLJbV75bYgn1IWn60KT5WfSJmqj0BDDusxtHv1\n2sWZvI076sfm2buKvKLEJtUndcwo64EgwIYrJ3D1Rha5SdAqRiQJ1N5rQKt9\nN+89Bm2lNXThbe7NT0y2WNjNLGR2s39zw0It/rRr6xUAoQqQF+HrfoZGkkHY\n+23LzA/Dggw9Y9+RFbT9CtaRdiwxtNeJaeirheOGNDN+ZryACjkqVIP/Rz++\nKCvGacRWa3lNFO1qlvzWiI9mP5XNPz3zFcZywyL9c52X/+ZXrBzQ4rKKMz1G\n6kiakm8p7Zol4b12QeNjOgp0JGBo1TF8We6Pz7mSCsK/s/5rUF4f17dCNz9X\n7gDPe2GzbKs5npfzhwihBft3UhaAv90VjwtICqHeXjfrn+o1ESSTctGH6gMt\nd7g0ABQPxUMm0po+CwMD5SX85HCKgRgylKdaIVr0hzcVlrmy9bBBJoquTeRc\nsgmFStllaT3ad3LYBaAtI0cyJAdfpNsVAC6RJGMDFdWuuwSNv14zycEXI3Zw\naWcl68lxEoJqcu0E46fthmbp/x6tmAL1zbMKg+YM9OCE61q6YxhsuJquS3Ka\n1SZt3xU9f6StMzguJCV9S7q6/+c3EwD3uajYhrtQEbnozWdA7s0qre8GVfc2\nXJ3P\r\n=n/Vu\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=4.0"
+      }
+    },
+    "1.2.11": {
+      "name": "fsevents",
+      "version": "1.2.11",
+      "dependencies": {
+        "bindings": "^1.5.0",
+        "nan": "^2.12.1",
+        "node-pre-gyp": "*"
+      },
+      "bundleDependencies": [
+        "node-pre-gyp"
+      ],
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-+ux3lx6peh0BpvY0JebGyZoiR4D+oYzdPZMKJwkZ+sFkNJzpL7tXc/wehS49gUAxg3tmMHPHZkA8JU2rhhgDHw==",
+        "shasum": "67bf57f4758f02ede88fb2a1712fef4d15358be3",
+        "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.11.tgz",
+        "fileCount": 541,
+        "unpackedSize": 2071252,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd9MdTCRA9TVsSAnZWagAANjkP/2utmll/AVOWv0VH4jbX\nMKr9edbDwa8Nf2lJ1VMFFMrhwqE2ygf0+6eGbClDXprru7BR0X8YEhUEHgSj\nlBkRFlepLnEL/+B7MEULIzUxAVZLW4b3qVhE9bDtAkS1E90Kza31E2qA3E5W\nz3CwPdnr0w6K4Ej34I+dkf+iRDeR6IToOfpqRqu4rKuTarbPyWe31c+FyL+W\nNcqeikJgpI9UhJzkkKreENjAVUg2+W7bZMrzKrRVIDSF7/z7Xi1ctNnQPpnY\nyN3JkIwZWA81XWfrMJCd4QrMGiTSTedadG8BsDi/oKs8/86nFgm8mxqMYENP\nKZCh04CRK8rsOqko2BcqQu6lKJJtxAZsx9mi+2p55tHRFdN7eKA1kZcl1GXo\nLZGq1CaYuTTCCWuEIGtRxWUZGpLX03mpuEAdUpKKQCO3Fmne7zlesbjhtyyk\nJpOdWuq9n2ZxaJTFLPqdDksQWIkXFnYRvB4jCMK6UV4gqcRVXaq3gkdcfpS4\nMaPXVJW2ovLH4U9kQsLSUqsC0C0mtJprUgjTf+6r/57s9xA7nEMstCqNa5T2\ng1YSZF5PC4NBP0V1+/1SR9naKSIlk+ruIFOgDdehNVIpZVDZtt/qFR813YVk\n5h22r2Ch03o4JHiJvZJN6rPkRNJ5C+Me5cXZHrLKQSjUl8o7ZH3RRbp5JHM6\nT097\r\n=hCyW\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=4.0"
+      }
     }
   },
   "name": "fsevents",
   "dist-tags": {
     "latest": "2.1.2",
-    "napi": "2.0.7",
-    "nan": "1.2.9"
+    "napi": "2.1.2",
+    "nan": "1.2.11"
   },
-  "modified": "2019-11-09T17:08:32.871Z",
+  "modified": "2019-12-14T11:28:25.282Z",
   "_cached": false,
-  "_contentLength": 39507
+  "_contentLength": 42328
 }

@@ -964,3 +964,39 @@ t.test('setting package refreshes deps', t => {
     'dep is valid again after updating dep pkg')
   t.end()
 })
+
+t.test('nodes in shrinkwraps', t => {
+  const root = new Node({
+    pkg: { dependencies: { a: '' }},
+    path: '/path/to/root',
+    children: [
+      {
+        name: 'a',
+        pkg: {
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {b:''},
+          _hasShrinkwrap: true,
+        },
+        children: [
+          {
+            name: 'b',
+            pkg: {
+              version: '1.2.3',
+              name: 'b', dependencies: { c: '' },
+            },
+            children: [ {name: 'c', pkg: {name: 'c', version: '1.2.3' }} ],
+          },
+        ],
+      },
+    ],
+  })
+  const a = root.children.get('a')
+  const b = a.children.get('b')
+  const c = b.children.get('c')
+
+  t.equal(a.hasShrinkwrap, true, 'a has a shrinkwrap')
+  t.equal(b.inShrinkwrap, true, 'b is in shrinkwrap')
+  t.equal(c.inShrinkwrap, true, 'c is in shrinkwrap')
+  t.end()
+})

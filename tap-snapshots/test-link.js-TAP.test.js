@@ -14,6 +14,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "errors": Array [],
   "extraneous": true,
   "fsChildren": Set {},
+  "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
     "" => Node {
@@ -25,6 +26,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "errors": Array [],
       "extraneous": true,
       "fsChildren": Set {},
+      "hasShrinkwrap": false,
       "integrity": null,
       "inventory": Inventory {},
       "linksIn": Set {
@@ -75,6 +77,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "errors": Array [],
   "extraneous": true,
   "fsChildren": Set {},
+  "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
     "../../../projects/some/kind/of/path" => Node {
@@ -86,6 +89,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "errors": Array [],
       "extraneous": true,
       "fsChildren": Set {},
+      "hasShrinkwrap": false,
       "integrity": null,
       "inventory": Inventory {},
       "linksIn": Set {

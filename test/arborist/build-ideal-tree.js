@@ -228,6 +228,17 @@ t.test('unresolveable peer deps', t => {
   }, 'unacceptable')
 })
 
+t.test('do not add shrinkwrapped deps', t => {
+  const path = resolve(__dirname, '../fixtures/shrinkwrapped-dep-no-lock')
+  return t.resolveMatchSnapshot(printIdeal(path))
+})
+
+t.test('do not update shrinkwrapped deps', t => {
+  const path = resolve(__dirname, '../fixtures/shrinkwrapped-dep-with-lock')
+  return t.resolveMatchSnapshot(printIdeal(path,
+    { update: { names: ['abbrev']}}))
+})
+
 t.test('update', t => {
   t.test('flow outdated', t => {
     const flowOutdated = resolve(__dirname, '../fixtures/flow-outdated')

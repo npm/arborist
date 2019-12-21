@@ -71,8 +71,8 @@ arb.buildIdealTree(options).then(() => {
   //   to the root node's requirements, and then the tree is built.
   // update: Either `true` to just go ahead and update everything, or an
   //   object with any or all of the following fields:
+  //   - all: boolean.  set to true to just update everything
   //   - names: names of packages update (like `npm update foo`)
-  //   - depth: maximum depth to traverse the tree seeking things to update
   // At the end of this process, arb.idealTree is set.
 })
 

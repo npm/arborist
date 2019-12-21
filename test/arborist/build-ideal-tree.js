@@ -229,31 +229,37 @@ t.test('unresolveable peer deps', t => {
 })
 
 t.test('update', t => {
-  const flowOutdated = resolve(__dirname, '../fixtures/flow-outdated')
+  t.test('flow outdated', t => {
+    const flowOutdated = resolve(__dirname, '../fixtures/flow-outdated')
 
-  t.resolveMatchSnapshot(printIdeal(flowOutdated, {
-    update: {
-      names: [ 'flow-parser' ],
-    },
-  }), 'update flow parser')
+    t.resolveMatchSnapshot(printIdeal(flowOutdated, {
+      update: {
+        names: [ 'flow-parser' ],
+      },
+    }), 'update flow parser')
 
-  t.resolveMatchSnapshot(printIdeal(flowOutdated, {
-    update: true,
-  }), 'update everything')
+    t.resolveMatchSnapshot(printIdeal(flowOutdated, {
+      update: true,
+    }), 'update everything')
 
-  const tapAndFlow = resolve(__dirname, '../fixtures/tap-and-flow')
-  t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
-    update: {
-      all: true,
-      depth: 1,
-    }
-  }), 'update everything, depth of 1')
-  t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
-    update: {
-      names: ['ink'],
-      depth: 1,
-    }
-  }), 'update everything, depth of 1')
+    t.end()
+  })
+
+  t.test('tap and flow', t => {
+    const tapAndFlow = resolve(__dirname, '../fixtures/tap-and-flow')
+    t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
+      update: {
+        all: true,
+      }
+    }), 'update everything')
+    t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
+      update: {
+        names: ['ink'],
+      }
+    }), 'update ink')
+
+    t.end()
+  })
 
   t.end()
 })

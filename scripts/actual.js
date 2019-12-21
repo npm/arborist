@@ -18,7 +18,7 @@ new Arborist({path}).loadActual().then(tree => {
     y.fromTree(tree)
     console.log(y.toString())
   }
-  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[0] / 1000}ms`)
+  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 10e6}ms`)
   if (process.argv.includes('--save'))
     tree.meta.save()
 }).catch(er => console.error(er))

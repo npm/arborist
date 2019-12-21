@@ -36,12 +36,14 @@ for (let i = 2; i < process.argv.length; i++) {
   }
 }
 
+console.error(options)
+
 const start = process.hrtime()
 new Arborist(options).buildIdealTree(options).then(tree => {
   const end = process.hrtime(start)
   if (!options.quiet)
     print(tree)
-  console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[0] / 1000000}s`)
+  console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[1] / 10e9}s`)
   if (tree.meta && options.save)
     tree.meta.save()
 }).catch(er => console.error(er))

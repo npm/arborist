@@ -10,14 +10,18 @@ a.loadVirtual().then(tree => {
     return tree
 }).catch((er) => {
   console.error('loading actual tree', er)
-  a.loadActual()
+  return a.loadActual()
 }).then(tree => {
   if (!query) {
     const set = []
     for (const license of tree.inventory.query('license')) {
       set.push([tree.inventory.query('license', license).size, license])
     }
-    for (const [count, license] of set.sort((a, b) => b[0] - a[0] || a[1].localeCompare(b[1]))) {
+    for (const [count, license] of set.sort((a, b) =>
+        a[1] && b[1] ? b[0] - a[0] || a[1].localeCompare(b[1])
+        : a[1] ? -1
+        : b[1] ? 1
+        : 0)) {
       console.log(count, license)
     }
   } else {

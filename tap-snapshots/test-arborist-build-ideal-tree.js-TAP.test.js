@@ -23137,6 +23137,314 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP testing-peer-deps nested > build ideal tree 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-deps" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-deps",
+          "spec": "2 || 3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-a" => Edge {
+          "name": "@isaacs/testing-peer-deps-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-deps-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-peer-deps-d" => Edge {
+          "name": "@isaacs/testing-peer-deps-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-deps-d",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps",
+      "name": "@isaacs/testing-peer-deps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps/-/testing-peer-deps-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-deps-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps",
+          "name": "@isaacs/testing-peer-deps-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-b" => Edge {
+          "name": "@isaacs/testing-peer-deps-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-deps-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-a",
+      "name": "@isaacs/testing-peer-deps-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-a/-/testing-peer-deps-a-1.2.4.tgz",
+    },
+    "@isaacs/testing-peer-deps-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps-a",
+          "name": "@isaacs/testing-peer-deps-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-c" => Edge {
+          "name": "@isaacs/testing-peer-deps-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-deps-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-b",
+      "name": "@isaacs/testing-peer-deps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-1.2.4.tgz",
+    },
+    "@isaacs/testing-peer-deps-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps-b",
+          "name": "@isaacs/testing-peer-deps-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-c",
+      "name": "@isaacs/testing-peer-deps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-1.2.3.tgz",
+    },
+    "@isaacs/testing-peer-deps-d" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-deps-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-deps-d",
+              "name": "@isaacs/testing-peer-deps-a",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-deps-b" => Edge {
+              "name": "@isaacs/testing-peer-deps-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+          "name": "@isaacs/testing-peer-deps-a",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-a/-/testing-peer-deps-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-deps-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+              "name": "@isaacs/testing-peer-deps-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-deps-c" => Edge {
+              "name": "@isaacs/testing-peer-deps-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
+          "name": "@isaacs/testing-peer-deps-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
+        },
+        "@isaacs/testing-peer-deps-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
+              "name": "@isaacs/testing-peer-deps-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
+          "name": "@isaacs/testing-peer-deps-c",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps",
+          "name": "@isaacs/testing-peer-deps-d",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-a" => Edge {
+          "name": "@isaacs/testing-peer-deps-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-d",
+      "name": "@isaacs/testing-peer-deps-d",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-d/-/testing-peer-deps-d-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-deps" => Edge {
+      "name": "@isaacs/testing-peer-deps",
+      "spec": "2 || 3",
+      "to": "node_modules/@isaacs/testing-peer-deps",
+      "type": "prod",
+    },
+  },
+  "extraneous": true,
+  "location": "",
+  "name": "testing-peer-deps-nested",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP testing-peer-deps nested > can update a peer dep cycle 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-deps" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-deps",
+          "spec": "2 || 3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-b" => Edge {
+          "name": "@isaacs/testing-peer-deps-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-deps-b",
+          "type": "prod",
+        },
+        "@isaacs/testing-peer-deps-d" => Edge {
+          "name": "@isaacs/testing-peer-deps-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-deps-d",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps",
+      "name": "@isaacs/testing-peer-deps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps/-/testing-peer-deps-3.0.0.tgz",
+    },
+    "@isaacs/testing-peer-deps-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps",
+          "name": "@isaacs/testing-peer-deps-b",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+          "name": "@isaacs/testing-peer-deps-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-c" => Edge {
+          "name": "@isaacs/testing-peer-deps-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-deps-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-b",
+      "name": "@isaacs/testing-peer-deps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
+    },
+    "@isaacs/testing-peer-deps-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps-b",
+          "name": "@isaacs/testing-peer-deps-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-c",
+      "name": "@isaacs/testing-peer-deps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-deps-d" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-deps-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-deps-d",
+              "name": "@isaacs/testing-peer-deps-a",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-deps-b" => Edge {
+              "name": "@isaacs/testing-peer-deps-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-deps-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+          "name": "@isaacs/testing-peer-deps-a",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-a/-/testing-peer-deps-a-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-deps",
+          "name": "@isaacs/testing-peer-deps-d",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-deps-a" => Edge {
+          "name": "@isaacs/testing-peer-deps-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-deps-d",
+      "name": "@isaacs/testing-peer-deps-d",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-d/-/testing-peer-deps-d-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-deps" => Edge {
+      "name": "@isaacs/testing-peer-deps",
+      "spec": "2 || 3",
+      "to": "node_modules/@isaacs/testing-peer-deps",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "testing-peer-deps-nested",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP testing-peer-deps package > build ideal tree with peer deps 1`] = `
 Node {
   "children": Map {

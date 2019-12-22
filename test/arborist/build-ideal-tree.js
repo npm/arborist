@@ -82,6 +82,14 @@ t.test('testing-peer-deps package', t => {
   return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree with peer deps')
 })
 
+t.test('testing-peer-deps nested', t => {
+  const path = resolve(__dirname, '../fixtures/testing-peer-deps-nested')
+  return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree')
+    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+      update: { names: ['@isaacs/testing-peer-deps'] },
+    }), 'can update a peer dep cycle'))
+})
+
 t.test('tap vs react15', t => {
   const path = resolve(__dirname, '../fixtures/tap-react15-collision')
   return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree with tap collision')

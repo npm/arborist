@@ -5,7 +5,7 @@
   "dependencies": {
     "json-stringify-nice": "^1.1.1",
     "npm-package-arg": "^6.1.0",
-    "pacote": "^10.2.0",
+    "pacote": "^10.3.0",
     "parse-conflict-json": "^1.0.0",
     "read-package-json-fast": "^1.1.0",
     "readdir-scoped-modules": "^1.1.0",

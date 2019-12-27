@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "description": "Manage node_modules trees",
   "dependencies": {
+    "@npmcli/installed-package-contents": "^1.0.5",
     "json-stringify-nice": "^1.1.1",
     "npm-package-arg": "^6.1.0",
     "pacote": "^10.3.0",
     "parse-conflict-json": "^1.0.0",
+    "promise-all-reject-late": "^1.0.0",
     "read-package-json-fast": "^1.1.0",
     "readdir-scoped-modules": "^1.1.0",
     "semver": "^6.1.2",

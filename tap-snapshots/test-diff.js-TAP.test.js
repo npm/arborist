@@ -18,6 +18,19 @@ Diff {
     "path": "/path/to/root",
     "integrity": "sha512-aaa",
   },
+  "leaves": Array [
+    "c",
+    "e",
+    "y",
+    "q",
+    "j",
+  ],
+  "unchanged": Array [
+    "x",
+    "d",
+    "f",
+    "z",
+  ],
   "children": Array [
     Diff {
       "action": "CHANGE",
@@ -31,6 +44,14 @@ Diff {
         "path": "/path/to/root/node_modules/b",
         "integrity": "sha512-BBB",
       },
+      "leaves": Array [
+        "c",
+        "e",
+      ],
+      "unchanged": Array [
+        "d",
+        "f",
+      ],
       "children": Array [
         Diff {
           "action": "CHANGE",
@@ -44,6 +65,10 @@ Diff {
             "path": "/path/to/root/node_modules/b/node_modules/c",
             "integrity": "sha512-CCC",
           },
+          "leaves": Array [
+            "c",
+          ],
+          "unchanged": Array [],
           "children": Array [],
         },
         Diff {
@@ -58,6 +83,10 @@ Diff {
             "path": "/path/to/root/node_modules/b/node_modules/d/node_modules/e",
             "integrity": "sha512-EEE",
           },
+          "leaves": Array [
+            "e",
+          ],
+          "unchanged": Array [],
           "children": Array [],
         },
       ],
@@ -70,6 +99,10 @@ Diff {
         "path": "/path/to/root/node_modules/i",
         "integrity": "sha512-III",
       },
+      "leaves": Array [
+        "j",
+      ],
+      "unchanged": Array [],
       "children": Array [
         Diff {
           "action": "ADD",
@@ -79,6 +112,10 @@ Diff {
             "path": "/path/to/root/node_modules/i/node_modules/j",
             "integrity": "sha512-JJJ",
           },
+          "leaves": Array [
+            "j",
+          ],
+          "unchanged": Array [],
           "children": Array [],
         },
       ],
@@ -91,6 +128,10 @@ Diff {
         "integrity": "sha512-ppp",
       },
       "ideal": undefined,
+      "leaves": Array [
+        "q",
+      ],
+      "unchanged": Array [],
       "children": Array [
         Diff {
           "action": "REMOVE",
@@ -100,6 +141,10 @@ Diff {
             "integrity": "sha512-qqq",
           },
           "ideal": undefined,
+          "leaves": Array [
+            "q",
+          ],
+          "unchanged": Array [],
           "children": Array [],
         },
       ],
@@ -116,6 +161,12 @@ Diff {
         "path": "/path/to/root/node_modules/x/node_modules/y",
         "integrity": "sha512-YYY",
       },
+      "leaves": Array [
+        "y",
+      ],
+      "unchanged": Array [
+        "z",
+      ],
       "children": Array [],
     },
   ],

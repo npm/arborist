@@ -21,9 +21,11 @@ const formatDiff = obj =>
     action: obj.action,
     actual: formatNode(obj.actual),
     ideal: formatNode(obj.ideal),
+    leaves: obj.leaves.map(d => name(d)),
+    unchanged: obj.unchanged.map(d => d.name),
     children: [...obj.children]
       .map(formatDiff)
-      .sort((a, b) => name(a).localeCompare(name(b)))
+      .sort((a, b) => name(a).localeCompare(name(b))),
   })
 
 t.formatSnapshot = obj => format(formatDiff(obj), { sort: false })

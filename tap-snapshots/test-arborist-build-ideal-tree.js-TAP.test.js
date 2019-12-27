@@ -39832,6 +39832,7 @@ Node {
     "tap" => Node {
       "children": Map {
         "@babel/code-frame" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -39865,8 +39866,10 @@ Node {
           "resolved": null,
         },
         "@babel/core" => Node {
+          "bundled": true,
           "children": Map {
             "source-map" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/@babel/core",
@@ -39979,8 +39982,10 @@ Node {
           "resolved": null,
         },
         "@babel/generator" => Node {
+          "bundled": true,
           "children": Map {
             "source-map" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/@babel/generator",
@@ -40039,6 +40044,7 @@ Node {
           "resolved": null,
         },
         "@babel/helper-builder-react-jsx" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
@@ -40066,6 +40072,7 @@ Node {
           "resolved": null,
         },
         "@babel/helper-function-name" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/traverse",
@@ -40099,6 +40106,7 @@ Node {
           "resolved": null,
         },
         "@babel/helper-get-function-arity" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/helper-function-name",
@@ -40120,6 +40128,7 @@ Node {
           "resolved": null,
         },
         "@babel/helper-plugin-utils" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
@@ -40157,6 +40166,7 @@ Node {
           "resolved": null,
         },
         "@babel/helper-split-export-declaration" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/traverse",
@@ -40178,6 +40188,7 @@ Node {
           "resolved": null,
         },
         "@babel/helpers" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -40211,8 +40222,10 @@ Node {
           "resolved": null,
         },
         "@babel/highlight" => Node {
+          "bundled": true,
           "children": Map {
             "chalk" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/@babel/highlight",
@@ -40246,6 +40259,7 @@ Node {
               "resolved": null,
             },
             "supports-color" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
@@ -40300,6 +40314,7 @@ Node {
           "resolved": null,
         },
         "@babel/parser" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -40325,6 +40340,7 @@ Node {
           "resolved": null,
         },
         "@babel/plugin-proposal-object-rest-spread" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/import-jsx",
@@ -40352,6 +40368,7 @@ Node {
           "resolved": null,
         },
         "@babel/plugin-syntax-jsx" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
@@ -40373,6 +40390,7 @@ Node {
           "resolved": null,
         },
         "@babel/plugin-syntax-object-rest-spread" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
@@ -40394,6 +40412,7 @@ Node {
           "resolved": null,
         },
         "@babel/plugin-transform-destructuring" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/import-jsx",
@@ -40415,6 +40434,7 @@ Node {
           "resolved": null,
         },
         "@babel/plugin-transform-react-jsx" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/import-jsx",
@@ -40448,6 +40468,7 @@ Node {
           "resolved": null,
         },
         "@babel/runtime" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/yaml",
@@ -40469,6 +40490,7 @@ Node {
           "resolved": null,
         },
         "@babel/template" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -40514,6 +40536,7 @@ Node {
           "resolved": null,
         },
         "@babel/traverse" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -40589,6 +40612,7 @@ Node {
           "resolved": null,
         },
         "@babel/types" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -40670,6 +40694,7 @@ Node {
           "resolved": null,
         },
         "@types/color-name" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
@@ -40695,6 +40720,7 @@ Node {
           "resolved": null,
         },
         "@types/prop-types" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@types/react",
@@ -40708,6 +40734,7 @@ Node {
           "resolved": null,
         },
         "@types/react" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -40735,6 +40762,7 @@ Node {
           "resolved": null,
         },
         "ansi-escapes" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -40756,6 +40784,7 @@ Node {
           "resolved": null,
         },
         "ansi-regex" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/strip-ansi",
@@ -40769,6 +40798,7 @@ Node {
           "resolved": null,
         },
         "ansi-styles" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
@@ -40796,6 +40826,7 @@ Node {
           "resolved": null,
         },
         "ansicolors" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/cardinal",
@@ -40809,6 +40840,7 @@ Node {
           "resolved": null,
         },
         "arrify" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -40822,6 +40854,7 @@ Node {
           "resolved": null,
         },
         "astral-regex" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/slice-ansi",
@@ -40835,6 +40868,7 @@ Node {
           "resolved": null,
         },
         "auto-bind" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -40848,6 +40882,7 @@ Node {
           "resolved": null,
         },
         "caller-callsite" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/caller-path",
@@ -40869,6 +40904,7 @@ Node {
           "resolved": null,
         },
         "caller-path" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/import-jsx",
@@ -40890,6 +40926,7 @@ Node {
           "resolved": null,
         },
         "callsites" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/caller-callsite",
@@ -40903,6 +40940,7 @@ Node {
           "resolved": null,
         },
         "cardinal" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/treport",
@@ -40930,8 +40968,10 @@ Node {
           "resolved": null,
         },
         "chalk" => Node {
+          "bundled": true,
           "children": Map {
             "ansi-styles" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/chalk",
@@ -40959,6 +40999,7 @@ Node {
               "resolved": null,
             },
             "color-convert" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
@@ -40980,6 +41021,7 @@ Node {
               "resolved": null,
             },
             "color-name" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/chalk/node_modules/color-convert",
@@ -41026,6 +41068,7 @@ Node {
           "resolved": null,
         },
         "ci-info" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/is-ci",
@@ -41039,6 +41082,7 @@ Node {
           "resolved": null,
         },
         "cli-cursor" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -41060,6 +41104,7 @@ Node {
           "resolved": null,
         },
         "cli-truncate" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -41087,6 +41132,7 @@ Node {
           "resolved": null,
         },
         "color-convert" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ansi-styles",
@@ -41108,6 +41154,7 @@ Node {
           "resolved": null,
         },
         "color-name" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/color-convert",
@@ -41121,8 +41168,10 @@ Node {
           "resolved": null,
         },
         "convert-source-map" => Node {
+          "bundled": true,
           "children": Map {
             "safe-buffer" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/convert-source-map",
@@ -41157,6 +41206,7 @@ Node {
           "resolved": null,
         },
         "csstype" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@types/react",
@@ -41170,6 +41220,7 @@ Node {
           "resolved": null,
         },
         "debug" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -41197,6 +41248,7 @@ Node {
           "resolved": null,
         },
         "emoji-regex" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/string-width",
@@ -41210,6 +41262,7 @@ Node {
           "resolved": null,
         },
         "escape-string-regexp" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
@@ -41223,6 +41276,7 @@ Node {
           "resolved": null,
         },
         "esprima" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/redeyed",
@@ -41236,6 +41290,7 @@ Node {
           "resolved": null,
         },
         "esutils" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
@@ -41261,6 +41316,7 @@ Node {
           "resolved": null,
         },
         "events-to-array" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/tap-parser",
@@ -41274,6 +41330,7 @@ Node {
           "resolved": null,
         },
         "globals" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/traverse",
@@ -41287,6 +41344,7 @@ Node {
           "resolved": null,
         },
         "has-flag" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
@@ -41300,6 +41358,7 @@ Node {
           "resolved": null,
         },
         "import-jsx" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -41357,6 +41416,7 @@ Node {
           "resolved": null,
         },
         "ink" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -41486,6 +41546,7 @@ Node {
           "resolved": null,
         },
         "is-ci" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -41507,6 +41568,7 @@ Node {
           "resolved": null,
         },
         "is-fullwidth-code-point" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/slice-ansi",
@@ -41526,6 +41588,7 @@ Node {
           "resolved": null,
         },
         "js-tokens" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight",
@@ -41545,6 +41608,7 @@ Node {
           "resolved": null,
         },
         "jsesc" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/generator",
@@ -41558,6 +41622,7 @@ Node {
           "resolved": null,
         },
         "json5" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -41579,6 +41644,7 @@ Node {
           "resolved": null,
         },
         "lodash" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -41610,6 +41676,7 @@ Node {
           "resolved": null,
         },
         "lodash.throttle" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -41623,8 +41690,10 @@ Node {
           "resolved": null,
         },
         "log-update" => Node {
+          "bundled": true,
           "children": Map {
             "ansi-escapes" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update",
@@ -41638,6 +41707,7 @@ Node {
               "resolved": null,
             },
             "ansi-regex" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
@@ -41651,6 +41721,7 @@ Node {
               "resolved": null,
             },
             "cli-cursor" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update",
@@ -41672,6 +41743,7 @@ Node {
               "resolved": null,
             },
             "emoji-regex" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/string-width",
@@ -41685,6 +41757,7 @@ Node {
               "resolved": null,
             },
             "is-fullwidth-code-point" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/string-width",
@@ -41698,6 +41771,7 @@ Node {
               "resolved": null,
             },
             "mimic-fn" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/onetime",
@@ -41711,6 +41785,7 @@ Node {
               "resolved": null,
             },
             "onetime" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
@@ -41732,6 +41807,7 @@ Node {
               "resolved": null,
             },
             "restore-cursor" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
@@ -41759,6 +41835,7 @@ Node {
               "resolved": null,
             },
             "string-width" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
@@ -41792,6 +41869,7 @@ Node {
               "resolved": null,
             },
             "strip-ansi" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update/node_modules/string-width",
@@ -41819,6 +41897,7 @@ Node {
               "resolved": null,
             },
             "wrap-ansi" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/log-update",
@@ -41885,6 +41964,7 @@ Node {
           "resolved": null,
         },
         "loose-envify" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/prop-types",
@@ -41918,6 +41998,7 @@ Node {
           "resolved": null,
         },
         "mimic-fn" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/onetime",
@@ -41931,6 +42012,7 @@ Node {
           "resolved": null,
         },
         "minimist" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/json5",
@@ -41944,8 +42026,10 @@ Node {
           "resolved": null,
         },
         "minipass" => Node {
+          "bundled": true,
           "children": Map {
             "yallist" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/minipass",
@@ -41986,6 +42070,7 @@ Node {
           "resolved": null,
         },
         "ms" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/debug",
@@ -42005,6 +42090,7 @@ Node {
           "resolved": null,
         },
         "object-assign" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/prop-types",
@@ -42030,6 +42116,7 @@ Node {
           "resolved": null,
         },
         "onetime" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/restore-cursor",
@@ -42051,6 +42138,7 @@ Node {
           "resolved": null,
         },
         "path-parse" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/resolve",
@@ -42064,6 +42152,7 @@ Node {
           "resolved": null,
         },
         "prop-types" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -42103,6 +42192,7 @@ Node {
           "resolved": null,
         },
         "punycode" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
@@ -42116,6 +42206,7 @@ Node {
           "resolved": null,
         },
         "react-is" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/prop-types",
@@ -42129,6 +42220,7 @@ Node {
           "resolved": null,
         },
         "react-reconciler" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -42168,6 +42260,7 @@ Node {
           "resolved": null,
         },
         "redeyed" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/cardinal",
@@ -42189,6 +42282,7 @@ Node {
           "resolved": null,
         },
         "regenerator-runtime" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/runtime",
@@ -42202,6 +42296,7 @@ Node {
           "resolved": null,
         },
         "resolve" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -42223,6 +42318,7 @@ Node {
           "resolved": null,
         },
         "resolve-from" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/import-jsx",
@@ -42236,6 +42332,7 @@ Node {
           "resolved": null,
         },
         "restore-cursor" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/cli-cursor",
@@ -42263,6 +42360,7 @@ Node {
           "resolved": null,
         },
         "scheduler" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -42296,6 +42394,7 @@ Node {
           "resolved": null,
         },
         "semver" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/core",
@@ -42309,6 +42408,7 @@ Node {
           "resolved": null,
         },
         "signal-exit" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -42340,8 +42440,10 @@ Node {
           "resolved": null,
         },
         "slice-ansi" => Node {
+          "bundled": true,
           "children": Map {
             "ansi-styles" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/slice-ansi",
@@ -42369,6 +42471,7 @@ Node {
               "resolved": null,
             },
             "color-convert" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
@@ -42390,6 +42493,7 @@ Node {
               "resolved": null,
             },
             "color-name" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
@@ -42442,8 +42546,10 @@ Node {
           "resolved": null,
         },
         "string-length" => Node {
+          "bundled": true,
           "children": Map {
             "ansi-regex" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
@@ -42457,6 +42563,7 @@ Node {
               "resolved": null,
             },
             "astral-regex" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/string-length",
@@ -42470,6 +42577,7 @@ Node {
               "resolved": null,
             },
             "strip-ansi" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/string-length",
@@ -42524,6 +42632,7 @@ Node {
           "resolved": null,
         },
         "string-width" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/cli-truncate",
@@ -42569,6 +42678,7 @@ Node {
           "resolved": null,
         },
         "strip-ansi" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/string-width",
@@ -42596,8 +42706,10 @@ Node {
           "resolved": null,
         },
         "supports-color" => Node {
+          "bundled": true,
           "children": Map {
             "has-flag" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/supports-color",
@@ -42632,6 +42744,7 @@ Node {
           "resolved": null,
         },
         "tap-parser" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -42671,6 +42784,7 @@ Node {
           "resolved": null,
         },
         "tap-yaml" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -42698,6 +42812,7 @@ Node {
           "resolved": null,
         },
         "to-fast-properties" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/@babel/types",
@@ -42711,8 +42826,10 @@ Node {
           "resolved": null,
         },
         "treport" => Node {
+          "bundled": true,
           "children": Map {
             "ansi-regex" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/treport/node_modules/strip-ansi",
@@ -42726,6 +42843,7 @@ Node {
               "resolved": null,
             },
             "strip-ansi" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
@@ -42747,6 +42865,7 @@ Node {
               "resolved": null,
             },
             "unicode-length" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/treport",
@@ -42837,6 +42956,7 @@ Node {
           "resolved": null,
         },
         "type-fest" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ansi-escapes",
@@ -42850,6 +42970,7 @@ Node {
           "resolved": null,
         },
         "widest-line" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",
@@ -42871,8 +42992,10 @@ Node {
           "resolved": null,
         },
         "wrap-ansi" => Node {
+          "bundled": true,
           "children": Map {
             "ansi-styles" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/wrap-ansi",
@@ -42900,6 +43023,7 @@ Node {
               "resolved": null,
             },
             "color-convert" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
@@ -42921,6 +43045,7 @@ Node {
               "resolved": null,
             },
             "color-name" => Node {
+              "bundled": true,
               "edgesIn": Set {
                 Edge {
                   "from": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
@@ -42967,6 +43092,7 @@ Node {
           "resolved": null,
         },
         "yaml" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap",
@@ -42994,6 +43120,7 @@ Node {
           "resolved": null,
         },
         "yoga-layout-prebuilt" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/ink",

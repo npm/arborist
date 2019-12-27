@@ -25,8 +25,8 @@ Object {
     "d": Object {
       "dependencies": Object {
         "bundled": Object {
+          "bundled": true,
           "dev": true,
-          "inBundle": true,
           "version": "npm:not-bundled-tho@1.2.3",
         },
         "git-dep": Object {
@@ -645,6 +645,7 @@ Object {
       "dependencies": Object {
         "b": "",
       },
+      "inBundle": true,
       "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
       "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
       "version": "1.2.3",
@@ -653,11 +654,13 @@ Object {
       "dependencies": Object {
         "c": "",
       },
+      "inBundle": true,
       "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
       "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
       "version": "1.2.3",
     },
     "node_modules/bundler/node_modules/c": Object {
+      "inBundle": true,
       "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
       "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
       "version": "1.2.3",

@@ -289,6 +289,7 @@ Node {
     "bundler" => Node {
       "children": Map {
         "a" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler",
@@ -310,6 +311,7 @@ Node {
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/a",
@@ -331,6 +333,7 @@ Node {
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/b",
@@ -890,6 +893,7 @@ Node {
     "bundler" => Node {
       "children": Map {
         "a" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler",
@@ -911,6 +915,7 @@ Node {
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/a",
@@ -932,6 +937,7 @@ Node {
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/b",
@@ -1491,6 +1497,7 @@ Node {
     "bundler" => Node {
       "children": Map {
         "a" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler",
@@ -1512,6 +1519,7 @@ Node {
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/a",
@@ -1533,6 +1541,7 @@ Node {
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/b",
@@ -2084,6 +2093,7 @@ Node {
     "bundler" => Node {
       "children": Map {
         "a" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler",
@@ -2105,6 +2115,7 @@ Node {
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/a",
@@ -2126,6 +2137,7 @@ Node {
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/bundler/node_modules/b",

@@ -36,7 +36,7 @@ Node {
   "meta": Object {
     "dependencies": Object {
       "dep": Object {
-        "inBundle": true,
+        "bundled": true,
       },
     },
     "lockfileVersion": 2,
@@ -1973,8 +1973,7 @@ Node {
       "bundler": Object {
         "dependencies": Object {
           "a": Object {
-            "bundled": "true",
-            "inBundle": true,
+            "bundled": true,
             "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
             "requires": Object {
               "b": "",
@@ -1983,8 +1982,7 @@ Node {
             "version": "1.2.3",
           },
           "b": Object {
-            "bundled": "true",
-            "inBundle": true,
+            "bundled": true,
             "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
             "requires": Object {
               "c": "",
@@ -1993,8 +1991,7 @@ Node {
             "version": "1.2.3",
           },
           "c": Object {
-            "bundled": "true",
-            "inBundle": true,
+            "bundled": true,
             "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
             "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
             "version": "1.2.3",

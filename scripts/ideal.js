@@ -10,7 +10,12 @@ const options = {path}
 const npa = require('npm-package-arg')
 for (let i = 2; i < process.argv.length; i++) {
   const arg = process.argv[i]
-  if (/^--add=/.test(arg)) {
+  if (/^--add-dev=/.test(arg)) {
+    options.add = options.add || {}
+    options.add.devDependencies = options.add.devDependencies || {}
+    const spec = npa(arg.substr('--add-dev='.length))
+    options.add.devDependencies[spec.name] = spec.rawSpec
+  } else if (/^--add=/.test(arg)) {
     options.add = options.add || { dependencies: {} }
     const spec = npa(arg.substr('--add='.length))
     options.add.dependencies[spec.name] = spec.rawSpec

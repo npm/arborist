@@ -19,28 +19,29 @@ Options:
 1. Load the root node's package and (if present) shrinkwrap
 2. Add and remove deps to/from the root node's package if requested
 3. If any named updates specified, then for each name on the list:
-  1. Find all nodes in the tree by that name that are not in a shrinkwrap
-     or bundle
-  2. For each dependent in their edgesIn set, add the dependent to the
-     queue of packages to be checked for updates
+    1. Find all nodes in the tree by that name that are not in a shrinkwrap
+       or bundle
+    2. For each dependent in their edgesIn set, add the dependent to the
+       queue of packages to be checked for updates
 4. Add the root node to the queue of packages to be checked for updates
 5. Loop until queue is empty:
-  1. Sort the queue so that shallower nodes are in front, and then
-     alphabetical
-  2. Shift the next node off the list
-  3. If node has already been visited, continue to next node (already
-     visited)
-  4. If node has been moved out of the tree or replaced, continue to next
-     node (it's no longer relevant)
-  5. If node has a shrinkwrap, continue to next node (its deps are locked)
-  6. For each dependency in node.edgesOut:
-    1. If part of a bundle or shrinkwrap, continue to next dependency
-    2. If edge is invalid, or name is on the update.names list:
-      1. Fetch the manifest for the dependency, and create a new Node
-      2. Add Node to virtual root node, also load Node's peerDependencies
-         (and meta-peerDependencies)
-      3. Attempt to PLACE the dep in the tree
-    3. Add each placed node to the queue to be checked for updates
+    1. Sort the queue so that shallower nodes are in front, and then
+       alphabetical
+    2. Shift the next node off the list
+    3. If node has already been visited, continue to next node (already
+       visited)
+    4. If node has been moved out of the tree or replaced, continue to next
+       node (it's no longer relevant)
+    5. If node has a shrinkwrap, continue to next node (its deps are
+       locked)
+    6. For each dependency in node.edgesOut:
+        1. If part of a bundle or shrinkwrap, continue to next dependency
+        2. If edge is invalid, or name is on the update.names list:
+            1. Fetch the manifest for the dependency, and create a new Node
+            2. Add Node to virtual root node, also load Node's
+               peerDependencies (and meta-peerDependencies)
+            3. Attempt to PLACE the dep in the tree
+        3. Add each placed node to the queue to be checked for updates
 6. If the shrinkwrap was loaded from disk, and the tree was mutated, reset
    all dependency flags to true (dev, optional, devOptionl, extraneous)
 7. If the shrinkwrap was not loaded from disk, or the tree was mutated,
@@ -54,21 +55,21 @@ Options:
 2. If the node is not a top node, and the dep is a peer dep, then the
    starting TARGET is node.parent, otherwise it's node
 3. Do until CONFLICT:
-  1. CHECK if dep can be placed at TARGET
-  2. If not CONFLICT, set result in CAN PLACE
-  3. set TARGET to TARGET parent
+    1. CHECK if dep can be placed at TARGET
+    2. If not CONFLICT, set result in CAN PLACE
+    3. set TARGET to TARGET parent
 4. If no satisfying target found, throw Unresolvable Dep Tree error
 5. set TARGET to last non-conclict target checked
 6. If CAN PLACE is KEEP, do not place
 7. add dep to placed list
 8. If an existing child by that name at TARGET,
-  1. Prune any nodes that are only needed because of the node being
-     replaced.  (Ie, the set of dependencies that are not valid for the new
-     node being placed, and have no dependents outside of the set.)
+    1. Prune any nodes that are only needed because of the node being
+       replaced.  (Ie, the set of dependencies that are not valid for the
+       new node being placed, and have no dependents outside of the set.)
 
-       This is relevant because a cycle of peer deps can make it impossible
-       to update otherwise.
-  2. Replace the old child node with the new dep
+         This is relevant because a cycle of peer deps can make it
+         impossible to update otherwise.
+    2. Replace the old child node with the new dep
 9. Else, set dep.parent = TARGET
 10. If the original edge is valid, but does not resolve to the newly placed
     dep, and the newly placed dep could replace the node that the edge
@@ -77,29 +78,29 @@ Options:
 11. If the newly placed node has any invalid edges in, add their sources to
     the update queue
 12. For each peer dep in the virtual tree (the dep's former parent)
-  1. If the dep's current dependency on that peer is met, then continue to
-     next peer dep.
-  2. PLACE to satisfy the peer edge
+    1. If the dep's current dependency on that peer is met, then continue
+       to next peer dep.
+    2. PLACE to satisfy the peer edge
 13. Return list of all placed nodes
 
 ## to CHECK if a dep can be placed at a target to satisfy an edge for a node
 
 1. If a child by that name in target:
-  1. If integrity matches current dep in tree, KEEP
-  2. If node is root, REPLACE if peers can be placed
-  3. If current version is less than new version, REPLACE if peers can be
-     placed
-  4. If edge would be satisfied by the current node, then KEEP if peers can
-     be placed
-  5. If `preferDedupe` option is set, and current node can satisfy edge,
-     then KEEP if peers can be placed.
-  6. CONFLICT
+    1. If integrity matches current dep in tree, KEEP
+    2. If node is root, REPLACE if peers can be placed
+    3. If current version is less than new version, REPLACE if peers can be
+       placed
+    4. If edge would be satisfied by the current node, then KEEP if peers
+       can be placed
+    5. If `preferDedupe` option is set, and current node can satisfy edge,
+       then KEEP if peers can be placed.
+    6. CONFLICT
 2. Else, no child by that name in target
-  1. If target is not node, and target has a dependency on dep's
-     name, and dependency is not met by dep, then CONFLICT
-  2. Find any descendants of target with a dependency on dep's name, which
-     resolve to a node HIGHER in the dep tree than target, and which would
-     be made invalid if this dep took its place (ie, would be made invalid
-     if their deduped dependency was masked by dep).  IF any exist,
-     CONFLICT
-  3. OK to place dep in target
+    1. If target is not node, and target has a dependency on dep's name,
+       and dependency is not met by dep, then CONFLICT
+    2. Find any descendants of target with a dependency on dep's name,
+       which resolve to a node HIGHER in the dep tree than target, and
+       which would be made invalid if this dep took its place (ie, would be
+       made invalid if their deduped dependency was masked by dep).  IF any
+       exist, CONFLICT
+    3. OK to place dep in target

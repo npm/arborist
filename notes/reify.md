@@ -48,7 +48,7 @@ add i and j.
 - Users generally expect that a failed install should not make their app
   unusable.
 
-## Reify-A: Staged Rollback-able Process
+## Reify-A: Safe Rollback-able Process
 
 This algorithm avoids ever renaming a directory, or removing a directory
 with recent writes (except in the case of failure rollbacks), so as to
@@ -56,32 +56,43 @@ minimize the chances of hitting Windows file-locking EPERM issues.
 
 It is very safe, and somewhat disk-inefficient.
 
-### step 1: move shallowest nodes to be replaced out of the way
+### step 1: retire shallowest nodes to be replaced
+
+Move aside the nodes that will be replaced.  They'll be removed if all goes
+well, but if there's an error, we'll move them back.
+
+(Note: `.b-hash` is actually something like `.b-<8 chars of base64 sha1>`.
+We could probably do this _slightly_ faster if we didn't hash the folder,
+and instead used a name like `.b-retired`, but not sure if it's worth
+it?  Seems like it _should_ be safe from collisions?  If we're gonna hash
+it to defend against concurrent reification commands, then it ought to
+include the process id or something, which it currently doesn't, and limits
+our options in the future.)
 
 ```
 a
-+-- b (.b-original)
++-- b (.b-hash)
 |   +-- c
 |   +-- d
 |   |   +-- e
 |   +-- f
 +-- x
-|   +-- y (.y-original)
+|   +-- y (.y-hash)
 |       +-- z
-+-- p (.p-original)
++-- p (.p-hash)
     +-- q
 ```
 
-Fail: rename each `.${name}-original` back to `${name}`
+Fail: rename each retired `.${name}-hash` folder back to `${name}`
 
 ### step 2: create sparse tree
 
-Now that the shallowest changing nodes are moved aside, `mkdirp` all leaf
+Now that the shallowest changing nodes are retired, `mkdirp` all leaf
 nodes.
 
 ```
 a
-+-- b (.b-original)
++-- b (.b-hash)
 |   +-- c
 |   +-- d
 |   |   +-- e
@@ -91,10 +102,10 @@ a
 |   +-- d (empty)
 |       +-- e (empty)
 +-- x
-|   +-- y (.y-original)
+|   +-- y (.y-hash)
 |   |   +-- z
 |   +-- y (empty)
-+-- p (.p-original)
++-- p (.p-hash)
 |   +-- q
 +-- i (empty)
     +-- j (empty)
@@ -136,7 +147,7 @@ Fail: fail step 2
 
 ```
 a
-+-- b (.b-original)
++-- b (.b-hash)
 |   +-- c
 |   +-- d
 |   |   +-- e
@@ -146,10 +157,10 @@ a
 |   +-- d (empty)
 |       +-- e'
 +-- x
-|   +-- y (.y-original)
+|   +-- y (.y-hash)
 |   |   +-- z
 |   +-- y'
-+-- p (.p-original)
++-- p (.p-hash)
 |   +-- q
 +-- i
     +-- j
@@ -166,7 +177,7 @@ Fail: fail step 2
 
 ```
 a
-+-- b (.b-original)
++-- b (.b-hash)
 |   +-- c
 |   +-- d (empty)
 |       +-- e
@@ -176,10 +187,10 @@ a
 |   |   +-- e'
 |   +-- f
 +-- x
-|   +-- y (.y-original)
+|   +-- y (.y-hash)
 |   +-- y'
 |       +-- z
-+-- p (.p-original)
++-- p (.p-hash)
 |   +-- q
 +-- i
     +-- j
@@ -189,13 +200,13 @@ This actually means that we move each unchanging node's _contents_ (other
 than `node_mdules`) into the new location.  (Maybe we ought to _only_ ever
 move files, not directories?)
 
-Fail: move unchanging nodes back to staged tree, fail step 2
+Fail: move unchanging nodes back to retired tree, fail step 2
 
 **Windows Consideration!** Extremely easy for a failure in this step to
 lead to EPERM in the rollback, if we try to rimraf the sparse tree before
 we're fully moved out of it.
 
-### step 7: rimraf staged original (now sparse) nodes and removal nodes
+### step 7: rimraf retired original (now sparse) nodes and removal nodes
 
 ```
 a
@@ -217,7 +228,8 @@ directory.
 ## Reify-B: Fast and Dirty Approach
 
 This is the fastest and most efficient way to proceed, but does not admit
-any reasonable rollback approach.
+any reasonable rollback approach, since we fully delete existing packages
+_before_ unpacking the new ones.
 
 ### step 1: clear away excess
 

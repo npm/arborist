@@ -6,26 +6,27 @@ const Node = require('../lib/node.js')
 // don't print the full node objects because we don't need to track that
 // for this test and it makes the snapshot unnecessarily noisy.
 
-const formatNode = node => node && ({
-  name: node.name,
-  path: node.path,
-  integrity: node.integrity,
-})
+const formatNode = node =>
+  node && Object.assign(Object.create(node.constructor.prototype), {
+    name: node.name,
+    path: node.path,
+    integrity: node.integrity,
+  })
 
 const {format} = require('tcompare')
 
-const name = diff => (diff.actual || diff.ideal).name
+const path = diff => (diff.actual || diff.ideal).path
 
 const formatDiff = obj =>
   Object.assign(Object.create(obj.constructor.prototype), {
     action: obj.action,
     actual: formatNode(obj.actual),
     ideal: formatNode(obj.ideal),
-    leaves: obj.leaves.map(d => name(d)),
-    unchanged: obj.unchanged.map(d => d.name),
+    leaves: obj.leaves.map(d => path(d)),
+    unchanged: obj.unchanged.map(d => d.path),
     children: [...obj.children]
       .map(formatDiff)
-      .sort((a, b) => name(a).localeCompare(name(b))),
+      .sort((a, b) => path(a).localeCompare(path(b))),
   })
 
 t.formatSnapshot = obj => format(formatDiff(obj), { sort: false })
@@ -33,7 +34,18 @@ t.formatSnapshot = obj => format(formatDiff(obj), { sort: false })
 const actual = new Node({
   name: 'a',
   path: '/path/to/root',
+  realpath: '/path/to/root',
   integrity: 'sha512-aaa',
+  fsChildren: [
+    {
+      name: 'foo',
+      path: '/path/to/root/foo',
+      children: [
+        { name: 'bar', integrity: 'sha512-bar' },
+        { name: 'baz', integrity: 'sha512-baz' },
+      ],
+    },
+  ],
   children: [
     {
       name: 'b',
@@ -66,7 +78,19 @@ const actual = new Node({
 const ideal = new Node({
   name: 'a',
   path: '/path/to/root',
+  realpath: '/path/to/root',
   integrity: 'sha512-aaa',
+  fsChildren: [
+    {
+      name: 'foo',
+      path: '/path/to/root/foo',
+      children: [
+        { name: 'bar', integrity: 'sha512-bar' },
+        { name: 'baz', integrity: 'sha512-BAZ' },
+        { name: 'boo', integrity: 'sha512-BOO' },
+      ],
+    },
+  ],
   children: [
     {
       name: 'b',

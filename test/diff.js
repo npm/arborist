@@ -72,6 +72,32 @@ const actual = new Node({
       integrity: 'sha512-ppp',
       children: [{name: 'q', integrity: 'sha512-qqq'}],
     },
+    {
+      name: 'bundler',
+      integrity: 'sha512-bundler',
+      pkg: {
+        bundleDependencies: ['bundled-a'],
+      },
+      children: [
+        {
+          name: 'bundled-a',
+          pkg: {
+            dependencies: { metabundled: '' },
+          },
+        },
+        {
+          name: 'metabundled',
+          pkg: {
+            name: 'metabundled',
+            version: '1.2.3'
+          }
+        },
+        {
+          name: 'not-bundled',
+          integrity: 'sha512-not-bundled',
+        },
+      ],
+    },
   ],
 })
 
@@ -116,6 +142,19 @@ const ideal = new Node({
       name: 'i',
       integrity: 'sha512-III',
       children: [{name: 'j', integrity: 'sha512-JJJ'}],
+    },
+    {
+      name: 'bundler',
+      integrity: 'sha512-bundler',
+      pkg: {
+        bundleDependencies: ['bundled-a'],
+      },
+      children: [
+        {
+          name: 'not-bundled',
+          integrity: 'sha512-NOT-BUNDLED',
+        },
+      ],
     },
   ],
 })

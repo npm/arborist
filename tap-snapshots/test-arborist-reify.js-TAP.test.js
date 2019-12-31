@@ -25917,7 +25917,7 @@ Node {
               },
               "location": "node_modules/@isaacs/testing-bundledeps-parent/node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
               "name": "@isaacs/testing-bundledeps-b",
-              "resolved": null,
+              "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
             },
             "@isaacs/testing-bundledeps-c" => Node {
               "edgesIn": Set {

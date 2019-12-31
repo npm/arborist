@@ -6,7 +6,7 @@ const {registry} = registryServer
 
 // there's a lot of fs stuff in this test.
 // Parallelize as much as possible.
-//t.jobs = Infinity
+t.jobs = Infinity
 t.test('setup server', { bail: true, buffered: false }, registryServer)
 
 // two little helper functions to make the loaded trees
@@ -94,55 +94,13 @@ t.test('testing-peer-deps nested with update', t =>
     update: { names: ['@isaacs/testing-peer-deps'] },
   })))
 
-t.test('tap vs react15', t =>
-  t.resolveMatchSnapshot(printReified(fixture(t, 'tap-react15-collision'))))
-
-t.test('tap vs react15 with legacy shrinkwrap', t =>
-  t.resolveMatchSnapshot(printReified(
-    fixture(t, 'tap-react15-collision-legacy-sw'))))
-
-t.test('update a node without updating all of its deps', t =>
+t.test('update a bundling node without updating all of its deps', t =>
   t.resolveMatchSnapshot(printReified(
     fixture(t, 'tap-react15-collision-legacy-sw'),
     { add: { devDependencies: { tap: '14.10.5' } } })))
 
 t.test('bad shrinkwrap file', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-bad-sw'))))
-
-t.test('bundle deps example 1', t => {
-  // ignore the bundled deps when building the ideal tree.  When we reify,
-  // we'll have to ignore the deps that got placed as part of the bundle.
-  t.test('without update', t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, 'testing-bundledeps'))))
-  t.test('bundle the bundler', t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, 'testing-bundledeps'), {
-      add: {
-        bundleDependencies: ['@isaacs/testing-bundledeps'],
-      },
-    })))
-  t.end()
-})
-
-t.test('bundle deps example 2', t => {
-  // bundled deps at the root level are NOT ignored when building ideal trees
-  const path = 'testing-bundledeps-2'
-  t.test('bundle deps testing', t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, path))))
-
-  t.test('add new bundled dep c', t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, path), {
-      add: {
-        bundleDependencies: [ '@isaacs/testing-bundledeps-c' ],
-      },
-    })))
-
-  t.test('remove bundled dep a', t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, path), {
-      rm: ['@isaacs/testing-bundledeps-a'],
-    })))
-
-  t.end()
-})
 
 t.test('multiple bundles at the same level', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'two-bundled-deps'))))

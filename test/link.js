@@ -11,8 +11,7 @@ meta.data = {
 
 const root = new Node({
   pkg: { name: 'root' },
-  path: 'some/kind/of/path',
-  realpath: '/home/user/projects/some/kind/of/path',
+  path: '/home/user/projects/some/kind/of/path',
   meta,
 })
 
@@ -47,9 +46,7 @@ resolver.path = '/x/z/y/a/b/d'
 t.equal(resolver.resolved, 'file:../c', 'updates when path changes')
 
 t.matchSnapshot(new Link({
-  pkg: { name: 'root' },
-  path: 'some/kind/of/path',
-  realpath: '/home/user/projects/some/kind/of/path',
+  path: '/home/user/some/other/path',
   target: root,
 }), 'instantiate with target specified')
 

@@ -17,7 +17,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
-    "" => Node {
+    "../../../projects/some/kind/of/path" => Node {
       "children": Map {},
       "dev": true,
       "devOptional": true,
@@ -32,16 +32,12 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "linksIn": Set {
         <*ref_1>,
       },
-      "location": "",
+      "location": "../../../projects/some/kind/of/path",
       "meta": Shrinkwrap {
         "data": Object {
           "dependencies": Object {},
           "lockfileVersion": 2,
-          "packages": Object {
-            "": Object {
-              "name": undefined,
-            },
-          },
+          "packages": Object {},
         },
         "filename": null,
         "indent": 2,
@@ -53,7 +49,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       },
       "name": "path",
       "optional": true,
-      "path": "some/kind/of/path",
+      "path": "/home/user/projects/some/kind/of/path",
       "realpath": "/home/user/projects/some/kind/of/path",
       "resolved": null,
     },
@@ -63,8 +59,8 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "meta": undefined,
   "name": "path",
   "optional": true,
-  "path": "some/kind/of/path",
-  "realpath": "some/kind/of/path",
+  "path": "/home/user/some/other/path",
+  "realpath": "/home/user/projects/some/kind/of/path",
 }
 `
 

@@ -75,9 +75,6 @@ Object {
       },
       "version": "1.2.3",
     },
-    "target": Object {
-      "version": "git+ssh://git@github.com/isaacs/foobarbaz.git#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    },
     "tgz": Object {
       "dev": true,
       "version": "1.2.3",

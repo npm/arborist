@@ -86,7 +86,8 @@ t.test('testing-peer-deps nested', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps-nested')
   return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-      update: { names: ['@isaacs/testing-peer-deps'] },
+      // hit the branch where update is just a list of names
+      update: ['@isaacs/testing-peer-deps'],
     }), 'can update a peer dep cycle'))
 })
 
@@ -116,6 +117,11 @@ t.test('cyclical peer deps', t => {
     t.resolveMatchSnapshot(printIdeal(path), 'cyclical peer deps')
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
+          // also add a devDep just to verify it works when adding
+          // a type that isn't already in the root's package
+          devDependencies: {
+            abbrev: '',
+          },
           dependencies: {
             '@isaacs/peer-dep-cycle-a': '2.x'
           }
@@ -190,7 +196,15 @@ t.test('dedupe example - not deduped', t => {
 
 t.test('dedupe example - deduped because preferDedupe=true', t => {
   const path = resolve(__dirname, '../fixtures/dedupe-tests')
-  return t.resolveMatchSnapshot(printIdeal(path, { preferDedupe: true }), 'dedupe testing')
+  return t.resolveMatchSnapshot(printIdeal(path, { preferDedupe: true }))
+})
+
+t.test('dedupe example - nested because legacyBundling=true', t => {
+  const path = resolve(__dirname, '../fixtures/dedupe-tests')
+  return t.resolveMatchSnapshot(printIdeal(path, {
+    legacyBundling: true,
+    preferDedupe: true,
+  }))
 })
 
 t.test('dedupe example - deduped', t => {
@@ -496,6 +510,69 @@ t.test('contrived dep placement tests', t => {
       t.end()
     })
 
+    t.test('shadow no conflict', t => {
+      const a = new Arborist()
+      // just like the shadow conflict test above, except it is ok to place
+      // root
+      // +-- b <-- ok place d@2 here on behalf of e
+      // |   +-- c (dep: d@1||2)
+      // |   +-- e (dep: d@2)
+      // +-- d@1
+      const shadowConflict = new Node({
+        path: '/path/to/project',
+        name: 'root',
+        pkg: {
+          name: 'root',
+          version: '1.0.0',
+          dependencies: { b: '' },
+        },
+        children: [
+          {
+            name: 'b',
+            pkg: { name: 'b', version: '1.0.0', dependencies: {c:''}},
+            children: [
+              // gets its d1 dep from a's child node
+              {
+                name: 'c',
+                pkg: { name: 'c', version: '1.0.0', dependencies: {d:'1||2'}},
+              },
+              // trying to place a d2 on behalf of this one
+              {
+                name: 'e',
+                pkg: { name: 'e', version: '1.0.0', dependencies: {d:'2'}},
+              },
+            ],
+          },
+          // the dep being shadowed
+          {
+            name: 'd',
+            pkg: {name:'d', version: '1.0.0'},
+          }
+        ],
+      })
+
+      const b = shadowConflict.children.get('b')
+      const e = b.children.get('e')
+      const edge = e.edgesOut.get('d')
+      // gut check
+      t.match(edge, {
+        valid: false,
+        name: 'd',
+        spec: '2',
+        type: 'prod',
+      }, 'gut check')
+      const d2 = new Node({
+        name: 'd',
+        pkg: {name:'d', version: '2.0.0'},
+        parent: new Node({ path: '/virtual-root' })
+      })
+
+      t.match(a.canPlaceDep(d2, b, edge, null), Symbol('OK'),
+        'can place dep where it shadows a dependency creating no conflict')
+
+      t.end()
+    })
+
     t.test('update replacing with a better node, dedupe existing', t => {
       const a = new Arborist()
       // given a tree like this:
@@ -513,7 +590,7 @@ t.test('contrived dep placement tests', t => {
       // |   +-- c@1
       // +-- c@1.1
       // when we place the c@1.1 dep on behalf of b and end up in root.
-      const dedupeUpdate = new Node({
+      const dedupeUpdate = a.idealTree = new Node({
         name: 'root',
         path: '/some/path',
         pkg: { name: 'root', dependencies: { b: '' } },
@@ -541,6 +618,108 @@ t.test('contrived dep placement tests', t => {
       t.equal(edge.to, c11, 'b is resolved by c 1.1')
       t.equal(edge.valid, true, 'b is happy about this')
       t.equal(b.children.size, 0, 'b has no direct children now')
+      t.end()
+    })
+
+    t.test('update replacing with better node, keep needed dupe', t => {
+      const a = new Arborist()
+      // root (a, d, d*)
+      // +-- a (b, c2)
+      // |   +-- b (c2) <-- place c2 for b, lands at root
+      // +-- d (e)
+      //     +-- e (c1, d)
+      //         +-- c1
+      //         +-- f (c2)
+      //             +-- c2 <-- pruning this would be bad
+      const root = a.idealTree = new Node({
+        name: 'root',
+        path: '/some/path',
+        pkg: {
+          name: 'root',
+          dependencies: {
+            a: '',
+            d: '',
+          },
+        },
+        children: [
+          {
+            name: 'a',
+            pkg: {
+              name: 'a',
+              version: '1.2.3',
+              dependencies: { b: '', c: '2' },
+            },
+            children: [
+              {
+                name: 'b',
+                pkg: {
+                  name: 'b',
+                  version: '1.2.3',
+                  dependencies: { c: '2' },
+                },
+              },
+            ],
+          },
+          {
+            name: 'd',
+            pkg: {
+              name: 'd',
+              version: '1.2.3',
+              dependencies: { e: '' },
+            },
+            children: [
+              {
+                name: 'e',
+                pkg: { name: 'e', dependencies: {
+                  c: '1',
+                  f: '',
+                }},
+                children: [
+                  { name: 'c', pkg: { name: 'c', version: '1.2.3' } },
+                  {
+                    name: 'f',
+                    pkg: {
+                      name: 'f',
+                      dependencies: { c: '2' },
+                    },
+                    children: [
+                      {
+                        name: 'c',
+                        pkg: {
+                          name: 'c',
+                          version: '2.3.4',
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      })
+
+      const c2 = new Node({
+        name: 'c',
+        pkg: { name: 'c', version: '2.3.4' },
+        parent: new Node({ path: '/virtual/root' }),
+      })
+
+      const d = root.children.get('d')
+      t.ok(d, 'have d node')
+
+      const e = d.children.get('e')
+      t.ok(e, 'have e node')
+
+      const oldc = e.children.get('c')
+      const f = e.children.get('f')
+      const dupe = f.children.get('c')
+      const b = root.children.get('a').children.get('b')
+      const edge = b.edgesOut.get('c')
+      a.placeIdealDep(c2, b, edge)
+      t.equal(c2.parent, root, 'new node landed at the root')
+      t.equal(oldc.parent, e, 'old c still in the tree')
+      t.equal(dupe.parent, f, 'dupe still in tree')
       t.end()
     })
 

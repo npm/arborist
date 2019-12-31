@@ -204,7 +204,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -287,7 +287,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -369,7 +369,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -456,7 +456,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -514,7 +514,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -690,6 +690,20 @@ Node {
       "name": "@isaacs/peer-dep-cycle-c",
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
+    "abbrev" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
   },
   "edgesOut": Map {
     "@isaacs/peer-dep-cycle-a" => Edge {
@@ -697,6 +711,12 @@ Node {
       "spec": "2.x",
       "to": "node_modules/@isaacs/peer-dep-cycle-a",
       "type": "prod",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "",
+      "to": "node_modules/abbrev",
+      "type": "dev",
     },
   },
   "location": "",
@@ -959,6 +979,20 @@ Node {
       "name": "@isaacs/peer-dep-cycle-c",
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
+    "abbrev" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
   },
   "edgesOut": Map {
     "@isaacs/peer-dep-cycle-a" => Edge {
@@ -966,6 +1000,12 @@ Node {
       "spec": "2.x",
       "to": "node_modules/@isaacs/peer-dep-cycle-a",
       "type": "prod",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "",
+      "to": "node_modules/abbrev",
+      "type": "dev",
     },
   },
   "location": "",
@@ -1055,7 +1095,6 @@ Node {
       "type": "prod",
     },
   },
-  "extraneous": true,
   "location": "",
   "name": "peer-dep-cycle-with-sw",
   "resolved": null,
@@ -1134,7 +1173,7 @@ Node {
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP dedupe example - deduped because preferDedupe=true > dedupe testing 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP dedupe example - deduped because preferDedupe=true > expect resolving Promise 1`] = `
 Node {
   "children": Map {
     "@isaacs/dedupe-tests-a" => Node {
@@ -1176,6 +1215,79 @@ Node {
       "location": "node_modules/@isaacs/dedupe-tests-b",
       "name": "@isaacs/dedupe-tests-b",
       "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-b/-/dedupe-tests-b-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/dedupe-tests-a" => Edge {
+      "name": "@isaacs/dedupe-tests-a",
+      "spec": "1.0.1",
+      "to": "node_modules/@isaacs/dedupe-tests-a",
+      "type": "prod",
+    },
+    "@isaacs/dedupe-tests-b" => Edge {
+      "name": "@isaacs/dedupe-tests-b",
+      "spec": "1||2",
+      "to": "node_modules/@isaacs/dedupe-tests-b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "dedupe-tests",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP dedupe example - nested because legacyBundling=true > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/dedupe-tests-a" => Node {
+      "children": Map {
+        "@isaacs/dedupe-tests-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/dedupe-tests-a",
+              "name": "@isaacs/dedupe-tests-b",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/dedupe-tests-a/node_modules/@isaacs/dedupe-tests-b",
+          "name": "@isaacs/dedupe-tests-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-b/-/dedupe-tests-b-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/dedupe-tests-a",
+          "spec": "1.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/dedupe-tests-b" => Edge {
+          "name": "@isaacs/dedupe-tests-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/dedupe-tests-a/node_modules/@isaacs/dedupe-tests-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/dedupe-tests-a",
+      "name": "@isaacs/dedupe-tests-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-a/-/dedupe-tests-a-1.0.1.tgz",
+    },
+    "@isaacs/dedupe-tests-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/dedupe-tests-b",
+          "spec": "1||2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/dedupe-tests-b",
+      "name": "@isaacs/dedupe-tests-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-b/-/dedupe-tests-b-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -2130,7 +2242,6 @@ Node {
       "type": "prod",
     },
   },
-  "extraneous": true,
   "location": "",
   "name": "peer-dep-cycle-nested-with-sw",
   "resolved": null,
@@ -2778,7 +2889,7 @@ Node {
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
@@ -2790,7 +2901,7 @@ Node {
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.5",
+          "spec": "^7.7.7",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
@@ -2857,7 +2968,7 @@ Node {
       },
       "location": "node_modules/@babel/core",
       "name": "@babel/core",
-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.5.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.7.tgz",
     },
     "@babel/generator" => Node {
       "dev": true,
@@ -2865,7 +2976,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "type": "prod",
         },
         Edge {
@@ -2909,7 +3020,7 @@ Node {
       },
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
-      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
     },
     "@babel/helper-builder-react-jsx" => Node {
       "dev": true,
@@ -3129,7 +3240,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/parser",
-          "spec": "^7.7.5",
+          "spec": "^7.7.7",
           "type": "prod",
         },
         Edge {
@@ -3153,7 +3264,7 @@ Node {
       },
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
-      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.5.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
     },
     "@babel/plugin-proposal-object-rest-spread" => Node {
       "dev": true,
@@ -3187,7 +3298,7 @@ Node {
       },
       "location": "node_modules/@babel/plugin-proposal-object-rest-spread",
       "name": "@babel/plugin-proposal-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.7.tgz",
     },
     "@babel/plugin-syntax-jsx" => Node {
       "dev": true,
@@ -3311,7 +3422,7 @@ Node {
       },
       "location": "node_modules/@babel/plugin-transform-react-jsx",
       "name": "@babel/plugin-transform-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.7.tgz",
     },
     "@babel/runtime" => Node {
       "dev": true,
@@ -3333,7 +3444,7 @@ Node {
       },
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
-      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.6.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
     },
     "@babel/template" => Node {
       "dev": true,
@@ -3623,7 +3734,7 @@ Node {
       },
       "location": "node_modules/@types/react",
       "name": "@types/react",
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.16.tgz",
+      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.17.tgz",
     },
     "ajv" => Node {
       "dev": true,
@@ -9011,7 +9122,7 @@ Node {
       },
       "location": "node_modules/psl",
       "name": "psl",
-      "resolved": "https://registry.npmjs.org/psl/-/psl-1.6.0.tgz",
+      "resolved": "https://registry.npmjs.org/psl/-/psl-1.7.0.tgz",
     },
     "punycode" => Node {
       "dev": true,
@@ -9443,7 +9554,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.0.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
     },
     "resolve-from" => Node {
       "dev": true,
@@ -11883,7 +11994,7 @@ Node {
       },
       "location": "node_modules/typescript",
       "name": "typescript",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.3.tgz",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
     },
     "ua-parser-js" => Node {
       "edgesIn": Set {
@@ -11896,7 +12007,7 @@ Node {
       },
       "location": "node_modules/ua-parser-js",
       "name": "ua-parser-js",
-      "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.20.tgz",
+      "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.21.tgz",
     },
     "unicode-length" => Node {
       "children": Map {
@@ -12942,7 +13053,7 @@ Node {
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
@@ -12954,7 +13065,7 @@ Node {
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
@@ -13021,7 +13132,7 @@ Node {
       },
       "location": "node_modules/@babel/core",
       "name": "@babel/core",
-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.7.tgz",
     },
     "@babel/generator" => Node {
       "children": Map {
@@ -13045,7 +13156,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "type": "prod",
         },
         Edge {
@@ -13089,7 +13200,7 @@ Node {
       },
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
-      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
     },
     "@babel/helper-builder-react-jsx" => Node {
       "dev": true,
@@ -13309,7 +13420,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "type": "prod",
         },
         Edge {
@@ -13333,7 +13444,7 @@ Node {
       },
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
-      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
     },
     "@babel/plugin-proposal-object-rest-spread" => Node {
       "dev": true,
@@ -13361,7 +13472,7 @@ Node {
       },
       "location": "node_modules/@babel/plugin-proposal-object-rest-spread",
       "name": "@babel/plugin-proposal-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.7.tgz",
     },
     "@babel/plugin-syntax-jsx" => Node {
       "dev": true,
@@ -13461,7 +13572,7 @@ Node {
       },
       "location": "node_modules/@babel/plugin-transform-react-jsx",
       "name": "@babel/plugin-transform-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.7.tgz",
     },
     "@babel/runtime" => Node {
       "dev": true,
@@ -13483,7 +13594,7 @@ Node {
       },
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
-      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
     },
     "@babel/template" => Node {
       "dev": true,
@@ -13825,12 +13936,6 @@ Node {
           "type": "prod",
         },
         Edge {
-          "from": "node_modules/cli-truncate/node_modules/slice-ansi",
-          "name": "ansi-styles",
-          "spec": "^3.2.0",
-          "type": "prod",
-        },
-        Edge {
           "from": "node_modules/log-update/node_modules/wrap-ansi",
           "name": "ansi-styles",
           "spec": "^3.2.0",
@@ -14072,21 +14177,15 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/cli-truncate/node_modules/slice-ansi",
+          "from": "node_modules/slice-ansi",
           "name": "astral-regex",
-          "spec": "^1.0.0",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/string-length",
-          "name": "astral-regex",
-          "spec": "^1.0.0",
+          "spec": "^2.0.0",
           "type": "prod",
         },
       },
       "location": "node_modules/astral-regex",
       "name": "astral-regex",
-      "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz",
     },
     "async-hook-domain" => Node {
       "dev": true,
@@ -14557,7 +14656,7 @@ Node {
         },
         "fsevents" => Edge {
           "name": "fsevents",
-          "spec": "~2.1.1",
+          "spec": "~2.1.2",
           "to": "node_modules/fsevents",
           "type": "optional",
         },
@@ -14587,14 +14686,14 @@ Node {
         },
         "readdirp" => Edge {
           "name": "readdirp",
-          "spec": "~3.2.0",
+          "spec": "~3.3.0",
           "to": "node_modules/readdirp",
           "type": "prod",
         },
       },
       "location": "node_modules/chokidar",
       "name": "chokidar",
-      "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-3.3.0.tgz",
+      "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-3.3.1.tgz",
     },
     "ci-info" => Node {
       "dev": true,
@@ -14633,42 +14732,6 @@ Node {
       "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz",
     },
     "cli-truncate" => Node {
-      "children": Map {
-        "slice-ansi" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/cli-truncate",
-              "name": "slice-ansi",
-              "spec": "^2.1.0",
-              "type": "prod",
-            },
-          },
-          "edgesOut": Map {
-            "ansi-styles" => Edge {
-              "name": "ansi-styles",
-              "spec": "^3.2.0",
-              "to": "node_modules/ansi-styles",
-              "type": "prod",
-            },
-            "astral-regex" => Edge {
-              "name": "astral-regex",
-              "spec": "^1.0.0",
-              "to": "node_modules/astral-regex",
-              "type": "prod",
-            },
-            "is-fullwidth-code-point" => Edge {
-              "name": "is-fullwidth-code-point",
-              "spec": "^2.0.0",
-              "to": "node_modules/is-fullwidth-code-point",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/cli-truncate/node_modules/slice-ansi",
-          "name": "slice-ansi",
-          "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-2.1.0.tgz",
-        },
-      },
       "dev": true,
       "edgesIn": Set {
         Edge {
@@ -14681,20 +14744,20 @@ Node {
       "edgesOut": Map {
         "slice-ansi" => Edge {
           "name": "slice-ansi",
-          "spec": "^2.1.0",
-          "to": "node_modules/cli-truncate/node_modules/slice-ansi",
+          "spec": "^3.0.0",
+          "to": "node_modules/slice-ansi",
           "type": "prod",
         },
         "string-width" => Edge {
           "name": "string-width",
-          "spec": "^4.1.0",
+          "spec": "^4.2.0",
           "to": "node_modules/string-width",
           "type": "prod",
         },
       },
       "location": "node_modules/cli-truncate",
       "name": "cli-truncate",
-      "resolved": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz",
     },
     "cliui" => Node {
       "children": Map {
@@ -14712,6 +14775,20 @@ Node {
           "name": "ansi-regex",
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
         },
+        "is-fullwidth-code-point" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/cliui/node_modules/string-width",
+              "name": "is-fullwidth-code-point",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/cliui/node_modules/is-fullwidth-code-point",
+          "name": "is-fullwidth-code-point",
+          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
+        },
         "string-width" => Node {
           "dev": true,
           "edgesIn": Set {
@@ -14726,7 +14803,7 @@ Node {
             "is-fullwidth-code-point" => Edge {
               "name": "is-fullwidth-code-point",
               "spec": "^2.0.0",
-              "to": "node_modules/is-fullwidth-code-point",
+              "to": "node_modules/cliui/node_modules/is-fullwidth-code-point",
               "type": "prod",
             },
             "strip-ansi" => Edge {
@@ -15718,7 +15795,7 @@ Node {
       },
       "location": "node_modules/fast-json-stable-stringify",
       "name": "fast-json-stable-stringify",
-      "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
     },
     "fbjs" => Node {
       "edgesIn": Set {
@@ -15899,13 +15976,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.113.0",
+          "spec": "^0.114.0",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.113.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
     },
     "flow-remove-types" => Node {
       "dev": true,
@@ -15920,7 +15997,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.113.0",
+          "spec": "^0.114.0",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -15939,7 +16016,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.113.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
     },
     "foreground-child" => Node {
       "dev": true,
@@ -16063,7 +16140,7 @@ Node {
         Edge {
           "from": "node_modules/chokidar",
           "name": "fsevents",
-          "spec": "~2.1.1",
+          "spec": "~2.1.2",
           "type": "optional",
         },
       },
@@ -16927,33 +17004,21 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/cli-truncate/node_modules/slice-ansi",
+          "from": "node_modules/slice-ansi",
           "name": "is-fullwidth-code-point",
-          "spec": "^2.0.0",
+          "spec": "^3.0.0",
           "type": "prod",
         },
         Edge {
-          "from": "node_modules/cliui/node_modules/string-width",
+          "from": "node_modules/string-width",
           "name": "is-fullwidth-code-point",
-          "spec": "^2.0.0",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/log-update/node_modules/string-width",
-          "name": "is-fullwidth-code-point",
-          "spec": "^2.0.0",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/yargs/node_modules/string-width",
-          "name": "is-fullwidth-code-point",
-          "spec": "^2.0.0",
+          "spec": "^3.0.0",
           "type": "prod",
         },
       },
       "location": "node_modules/is-fullwidth-code-point",
       "name": "is-fullwidth-code-point",
-      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
     },
     "is-glob" => Node {
       "dev": true,
@@ -17977,6 +18042,20 @@ Node {
           "name": "emoji-regex",
           "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
         },
+        "is-fullwidth-code-point" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/log-update/node_modules/string-width",
+              "name": "is-fullwidth-code-point",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/log-update/node_modules/is-fullwidth-code-point",
+          "name": "is-fullwidth-code-point",
+          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
+        },
         "mimic-fn" => Node {
           "dev": true,
           "edgesIn": Set {
@@ -18061,7 +18140,7 @@ Node {
             "is-fullwidth-code-point" => Edge {
               "name": "is-fullwidth-code-point",
               "spec": "^2.0.0",
-              "to": "node_modules/is-fullwidth-code-point",
+              "to": "node_modules/log-update/node_modules/is-fullwidth-code-point",
               "type": "prod",
             },
             "strip-ansi" => Edge {
@@ -19374,7 +19453,7 @@ Node {
         Edge {
           "from": "node_modules/readdirp",
           "name": "picomatch",
-          "spec": "^2.0.4",
+          "spec": "^2.0.7",
           "type": "prod",
         },
       },
@@ -19559,7 +19638,7 @@ Node {
       },
       "location": "node_modules/psl",
       "name": "psl",
-      "resolved": "https://registry.npmjs.org/psl/-/psl-1.5.0.tgz",
+      "resolved": "https://registry.npmjs.org/psl/-/psl-1.7.0.tgz",
     },
     "punycode" => Node {
       "dev": true,
@@ -19837,21 +19916,21 @@ Node {
         Edge {
           "from": "node_modules/chokidar",
           "name": "readdirp",
-          "spec": "~3.2.0",
+          "spec": "~3.3.0",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "picomatch" => Edge {
           "name": "picomatch",
-          "spec": "^2.0.4",
+          "spec": "^2.0.7",
           "to": "node_modules/picomatch",
           "type": "prod",
         },
       },
       "location": "node_modules/readdirp",
       "name": "readdirp",
-      "resolved": "https://registry.npmjs.org/readdirp/-/readdirp-3.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/readdirp/-/readdirp-3.3.0.tgz",
     },
     "redeyed" => Node {
       "dev": true,
@@ -20107,7 +20186,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.13.1.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
     },
     "resolve-from" => Node {
       "dev": true,
@@ -20475,20 +20554,6 @@ Node {
           "name": "ansi-styles",
           "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
         },
-        "astral-regex" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/slice-ansi",
-              "name": "astral-regex",
-              "spec": "^2.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/slice-ansi/node_modules/astral-regex",
-          "name": "astral-regex",
-          "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz",
-        },
         "color-convert" => Node {
           "dev": true,
           "edgesIn": Set {
@@ -20525,23 +20590,15 @@ Node {
           "name": "color-name",
           "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
         },
-        "is-fullwidth-code-point" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/slice-ansi",
-              "name": "is-fullwidth-code-point",
-              "spec": "^3.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/slice-ansi/node_modules/is-fullwidth-code-point",
-          "name": "is-fullwidth-code-point",
-          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
-        },
       },
       "dev": true,
       "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cli-truncate",
+          "name": "slice-ansi",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
         Edge {
           "from": "node_modules/ink",
           "name": "slice-ansi",
@@ -20559,13 +20616,13 @@ Node {
         "astral-regex" => Edge {
           "name": "astral-regex",
           "spec": "^2.0.0",
-          "to": "node_modules/slice-ansi/node_modules/astral-regex",
+          "to": "node_modules/astral-regex",
           "type": "prod",
         },
         "is-fullwidth-code-point" => Edge {
           "name": "is-fullwidth-code-point",
           "spec": "^3.0.0",
-          "to": "node_modules/slice-ansi/node_modules/is-fullwidth-code-point",
+          "to": "node_modules/is-fullwidth-code-point",
           "type": "prod",
         },
       },
@@ -20977,6 +21034,20 @@ Node {
           "name": "ansi-regex",
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
         },
+        "astral-regex" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/string-length",
+              "name": "astral-regex",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/string-length/node_modules/astral-regex",
+          "name": "astral-regex",
+          "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz",
+        },
         "strip-ansi" => Node {
           "dev": true,
           "edgesIn": Set {
@@ -21019,7 +21090,7 @@ Node {
         "astral-regex" => Edge {
           "name": "astral-regex",
           "spec": "^1.0.0",
-          "to": "node_modules/astral-regex",
+          "to": "node_modules/string-length/node_modules/astral-regex",
           "type": "prod",
         },
         "strip-ansi" => Edge {
@@ -21034,28 +21105,12 @@ Node {
       "resolved": "https://registry.npmjs.org/string-length/-/string-length-3.1.0.tgz",
     },
     "string-width" => Node {
-      "children": Map {
-        "is-fullwidth-code-point" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/string-width",
-              "name": "is-fullwidth-code-point",
-              "spec": "^3.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/string-width/node_modules/is-fullwidth-code-point",
-          "name": "is-fullwidth-code-point",
-          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
-        },
-      },
       "dev": true,
       "edgesIn": Set {
         Edge {
           "from": "node_modules/cli-truncate",
           "name": "string-width",
-          "spec": "^4.1.0",
+          "spec": "^4.2.0",
           "type": "prod",
         },
         Edge {
@@ -21081,7 +21136,7 @@ Node {
         "is-fullwidth-code-point" => Edge {
           "name": "is-fullwidth-code-point",
           "spec": "^3.0.0",
-          "to": "node_modules/string-width/node_modules/is-fullwidth-code-point",
+          "to": "node_modules/is-fullwidth-code-point",
           "type": "prod",
         },
         "strip-ansi" => Edge {
@@ -22069,7 +22124,7 @@ Node {
       },
       "location": "node_modules/treport",
       "name": "treport",
-      "resolved": "https://registry.npmjs.org/treport/-/treport-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/treport/-/treport-1.0.1.tgz",
     },
     "trivial-deferred" => Node {
       "dev": true,
@@ -22221,7 +22276,7 @@ Node {
       },
       "location": "node_modules/typescript",
       "name": "typescript",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.2.tgz",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
     },
     "ua-parser-js" => Node {
       "edgesIn": Set {
@@ -22263,7 +22318,7 @@ Node {
       "location": "node_modules/uglify-js",
       "name": "uglify-js",
       "optional": true,
-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.1.tgz",
+      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
     },
     "unicode-length" => Node {
       "children": Map {
@@ -22863,6 +22918,20 @@ Node {
           "name": "emoji-regex",
           "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
         },
+        "is-fullwidth-code-point" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/yargs/node_modules/string-width",
+              "name": "is-fullwidth-code-point",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/yargs/node_modules/is-fullwidth-code-point",
+          "name": "is-fullwidth-code-point",
+          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
+        },
         "string-width" => Node {
           "dev": true,
           "edgesIn": Set {
@@ -22895,7 +22964,7 @@ Node {
             "is-fullwidth-code-point" => Edge {
               "name": "is-fullwidth-code-point",
               "spec": "^2.0.0",
-              "to": "node_modules/is-fullwidth-code-point",
+              "to": "node_modules/yargs/node_modules/is-fullwidth-code-point",
               "type": "prod",
             },
             "strip-ansi" => Edge {
@@ -23130,7 +23199,6 @@ Node {
       "type": "dev",
     },
   },
-  "extraneous": true,
   "location": "",
   "name": "tap-react15-collision-legacy-sw",
   "resolved": null,
@@ -23309,7 +23377,6 @@ Node {
       "type": "prod",
     },
   },
-  "extraneous": true,
   "location": "",
   "name": "testing-peer-deps-nested",
   "resolved": null,
@@ -23920,7 +23987,7 @@ Node {
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
@@ -23932,7 +23999,7 @@ Node {
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.5",
+          "spec": "^7.7.7",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
@@ -23999,14 +24066,14 @@ Node {
       },
       "location": "node_modules/@babel/core",
       "name": "@babel/core",
-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.5.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.7.tgz",
     },
     "@babel/generator" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.7.7",
           "type": "prod",
         },
         Edge {
@@ -24050,7 +24117,7 @@ Node {
       },
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
-      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
     },
     "@babel/helper-builder-react-jsx" => Node {
       "edgesIn": Set {
@@ -24386,7 +24453,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/parser",
-          "spec": "^7.7.5",
+          "spec": "^7.7.7",
           "type": "prod",
         },
         Edge {
@@ -24410,7 +24477,7 @@ Node {
       },
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
-      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.5.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
     },
     "@babel/plugin-proposal-object-rest-spread" => Node {
       "edgesIn": Set {
@@ -24443,7 +24510,7 @@ Node {
       },
       "location": "node_modules/@babel/plugin-proposal-object-rest-spread",
       "name": "@babel/plugin-proposal-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.7.tgz",
     },
     "@babel/plugin-syntax-jsx" => Node {
       "edgesIn": Set {
@@ -24563,7 +24630,7 @@ Node {
       },
       "location": "node_modules/@babel/plugin-transform-react-jsx",
       "name": "@babel/plugin-transform-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.7.tgz",
     },
     "@babel/runtime" => Node {
       "edgesIn": Set {
@@ -24584,7 +24651,7 @@ Node {
       },
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
-      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.6.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
     },
     "@babel/template" => Node {
       "edgesIn": Set {
@@ -24868,7 +24935,7 @@ Node {
       },
       "location": "node_modules/@types/react",
       "name": "@types/react",
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.16.tgz",
+      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.17.tgz",
     },
     "ajv" => Node {
       "edgesIn": Set {
@@ -29993,7 +30060,7 @@ Node {
       },
       "location": "node_modules/psl",
       "name": "psl",
-      "resolved": "https://registry.npmjs.org/psl/-/psl-1.6.0.tgz",
+      "resolved": "https://registry.npmjs.org/psl/-/psl-1.7.0.tgz",
     },
     "punycode" => Node {
       "edgesIn": Set {
@@ -30437,7 +30504,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.0.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
     },
     "resolve-from" => Node {
       "edgesIn": Set {
@@ -32079,7 +32146,7 @@ Node {
       },
       "location": "node_modules/typescript",
       "name": "typescript",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.3.tgz",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
     },
     "unicode-length" => Node {
       "children": Map {

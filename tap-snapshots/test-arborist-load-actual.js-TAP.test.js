@@ -983,9 +983,6 @@ Link {
   "location": "",
   "meta": Object {
     "dependencies": Object {
-      "../deeproot/root": Object {
-        "version": "file:",
-      },
       "@scope/x": Object {
         "dependencies": Object {
           "glob": Object {
@@ -1946,12 +1943,6 @@ Node {
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
-      "abbrev-link-target": Object {
-        "requires": Object {
-          "tap": "^14.4.1",
-        },
-        "version": "npm:abbrev@1.1.1",
-      },
       "balanced-match": Object {
         "extraneous": true,
         "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
@@ -2439,9 +2430,6 @@ Link {
   "location": "",
   "meta": Object {
     "dependencies": Object {
-      "../linkedroot": Object {
-        "version": "file:",
-      },
       "@scope/x": Object {
         "dependencies": Object {
           "glob": Object {
@@ -2960,12 +2948,6 @@ Node {
         "requires": Object {
           "a": "",
           "link-in-nest": "",
-        },
-        "version": "1.2.3",
-      },
-      "real": Object {
-        "requires": Object {
-          "link-link": "",
         },
         "version": "1.2.3",
       },
@@ -4876,14 +4858,6 @@ Node {
                 "version": "4.0.5",
               },
             },
-            "extraneous": true,
-            "requires": Object {
-              "@scope/x": "",
-              "@scope/y": "",
-              "express": "420.69.0-nice",
-              "glob": "4",
-            },
-            "version": "1.2.3",
           },
         },
       },
@@ -6427,14 +6401,6 @@ Node {
   "location": "",
   "meta": Object {
     "dependencies": Object {
-      "../bar": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "../linked-node-modules/foo": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
       "bar": Object {
         "extraneous": true,
         "version": "file:../bar",
@@ -6578,10 +6544,6 @@ Node {
             "version": "file:packages/c",
           },
         },
-        "requires": Object {
-          "b": "",
-          "c": "",
-        },
       },
       "packages/b": Object {
         "dependencies": Object {
@@ -6592,10 +6554,6 @@ Node {
             "version": "file:packages/c",
           },
         },
-        "requires": Object {
-          "a": "",
-          "c": "",
-        },
       },
       "packages/c": Object {
         "dependencies": Object {
@@ -6605,10 +6563,6 @@ Node {
           "b": Object {
             "version": "file:packages/b",
           },
-        },
-        "requires": Object {
-          "a": "",
-          "b": "",
         },
       },
     },
@@ -6863,12 +6817,6 @@ Node {
         },
         "version": "1.2.3",
       },
-      "x": Object {
-        "requires": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
     },
     "lockfileVersion": 2,
     "name": "a",
@@ -7051,13 +6999,7 @@ Node {
           },
         },
         "extraneous": true,
-        "requires": Object {
-          "a": "",
-          "b": "",
-          "c": "",
-          "i": "",
-        },
-        "version": "1.2.3",
+        "version": "file:app",
       },
       "b": Object {
         "extraneous": true,
@@ -7074,13 +7016,6 @@ Node {
             "version": "1.2.3",
           },
         },
-        "extraneous": true,
-        "requires": Object {
-          "b": "",
-          "c": "",
-          "x": "",
-        },
-        "version": "1.2.3",
       },
       "packages/b": Object {
         "dependencies": Object {
@@ -7089,13 +7024,6 @@ Node {
             "version": "1.2.3",
           },
         },
-        "extraneous": true,
-        "requires": Object {
-          "a": "",
-          "c": "",
-          "y": "",
-        },
-        "version": "1.2.3",
       },
       "packages/c": Object {
         "dependencies": Object {
@@ -7104,13 +7032,6 @@ Node {
             "version": "1.2.3",
           },
         },
-        "extraneous": true,
-        "requires": Object {
-          "a": "",
-          "b": "",
-          "z": "",
-        },
-        "version": "1.2.3",
       },
     },
     "lockfileVersion": 2,

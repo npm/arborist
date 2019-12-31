@@ -40,6 +40,7 @@
   "tap": {
     "100": true,
     "coverage-map": "map.js",
-    "esm": false
+    "esm": false,
+    "timeout": "60"
   }
 }

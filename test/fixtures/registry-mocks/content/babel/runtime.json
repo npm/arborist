@@ -1259,13 +1259,33 @@
         "unpackedSize": 90767,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd7DX7CRA9TVsSAnZWagAAxQ0QAJNtFEeEkf3nY++Iaxrr\n8/bCDXwy6I5aJVmKeJ9cgn6ogJn7nxTlNv6nYlUEXA6SGjhDQyQ1WiPLRd/g\nXDvrAEnnZrSGsXvY6ippp/c5DhOFfPr62et4UYSj/kpB7k9Uqtpq3ZWsC6EY\nqIeEZWwC+acexqvZ96XEsyAITI3U3trHFlV4ZQ30M7n16mRjSgDEJsY8NMFv\ndiR2NeYKOxbrlb6xgY4F8IrORJ2J4FEPOdbPg4E2Cb74mXdqMhupu6nFy/Ce\nAcvF7SoXU5KPlVnoZzUIo5lwYz0H6V0DtvOz+zDPyeT8dqhwTvav0vHmWoTi\ngPki8iPkPbep9oxzTV2zhj/s3qSP3m7Wb1+B965CZGT8Um8OVk7/JClkeYDa\nS671kjXHx3pYi5DOPLSh/0kvD9UfeTFYwswHT040nVuDIDE0fv25pdqy1lxw\nWp0CABqA6/TaTDS/cjHn2f0P8ma9iknU8ea+L6kHuuMLY3PwWt9EXoeC5cGI\nJimdj+t26fQhlek6hR/QwENm1wCX/mshehr3TcxULFByuCUryLrh3TbmLVla\nB0mW+p/0JKngj8xSZhIa+pYpZ9KxICZ7eAQreiCgpW48zVSpIgrl1Y8UkL1v\nCLBUJWfPCUD4ZA7lVbDgt9wX/ZeE2TqDHUxYXb7jnVetdLS4X9AOdvXuD0yh\nepVt\r\n=sYTp\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "7.7.7": {
+      "name": "@babel/runtime",
+      "version": "7.7.7",
+      "dependencies": {
+        "regenerator-runtime": "^0.13.2"
+      },
+      "devDependencies": {
+        "@babel/helpers": "^7.7.4"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-uCnC2JEVAu8AKB5do1WRIsvrdJ0flYx/A/9f/6chdacnEZ7LmavjdsDXr5ksYBegxtuTPR5Va9/+13QF/kFkCA==",
+        "shasum": "194769ca8d6d7790ec23605af9ee3e42a0aa79cf",
+        "tarball": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
+        "fileCount": 151,
+        "unpackedSize": 90767,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+sn6CRA9TVsSAnZWagAAKRkP/jSzJQ7dFNeg2GehwUHx\njJ7nBDX913R+9asy9OfRcgMZ8teSHR7tZ9zxdhbCFhPs5Bz7IvtBK9Uet95t\n7FD6kmZp/TgrZHrNZn7El6rjTQYZIiVAYTQ9SABAj0g81y/F00uNLCFTv1DW\nZtUXvstq7lSZqWqAjvH6xDPEboqB8ROS8LOqECZ76SxegsteGEpouQpkZIF1\njF7r2NChhZtTI+w3fad5kQ19Oq6QKBbl+CXIuRsBnvobsuNcaDPVEIsgYxtq\nBMnf+Y9SFGZ5lIA6sSMV4M5tCneWX/LaQ+dnLGqH1XnboZK0ZP733EZAfw3e\nJLPd/mkXKW+jNubASKXV6VWKnqH9/ObEljnORplgxBTd62rZ5337xEtYTsIw\ng3x38LcNFugpa1qvYbaLFIKKCWKj+aC/UKV0IBcje24MKx+mG7rphpDGO4JL\nwyN3t9ZfX3RhWFyf3kiZgzKj3YX00chSmwVzTiG97RurS/u7/ew9VGFSK1nL\nK+lSd4j+z3diFGfVGfkBqHb+ZoLpL1H4Lz1WiysMvLJ+lijtIB+QvQ4MoU0N\nsL4L7INWvVtFiyFPLeXYoTzTCXK09lpiScF1tpChIrN33cssC4CKG1/MA6Rk\nMXBKsCKydof7lgF5zdvYMFdIg8Mk5XLyiugF7mR2B8Vus53txTXjwoxUtHeA\nSxBQ\r\n=Doz4\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "@babel/runtime",
   "dist-tags": {
-    "latest": "7.7.6"
+    "latest": "7.7.7"
   },
-  "modified": "2019-12-07T23:30:06.603Z",
+  "modified": "2019-12-19T00:53:21.269Z",
   "_cached": false,
-  "_contentLength": 67764
+  "_contentLength": 69145
 }

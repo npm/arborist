@@ -1244,13 +1244,45 @@
         "unpackedSize": 431783,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6aA6CRA9TVsSAnZWagAAjrEP/1lp//Y4duI82lYqQ5is\naYNAFVom/ZSphsOQE26eLJ9t5SZHuLBtmlYaK3CIWbVfvyigjguB31PxUvMy\nkuDAUtj4xM6hTOo0VMkKUDnTb9PVbOdEGFLnsEo7MfFJSaTCaWXXoPFzCDY5\nQfMdsZ+4c2xzdtCxELqNnnyo+WBFlmglu5NebtlP1qh09GwfPU8Iz8+WF+BV\nekMX0rkUpu7/xixxV5RW43dTeIYN3OToT9R/3pujzV7OjywZt4qEsJDUuGVJ\nlVq52iyulRLw+e2wtWTibz7jRYPsIflAeboKC83sMzy+/EdKA7d6rBN/2VBQ\n5jvdoCzNChzCR0CeafqL4FQrT3WIVBrcoyHRfjU9FvV0mNR9jJRUXxIIEMQx\niewIP4GMyOmWavQyfz0X0yj+kX+ye7CQ3lIpHFYotXK5tlU+ds3QJzXK1VWW\nptiZjulQHWgHUw2pYpFhLWWt+rS5TCYFditYt8IDnsgHp32pBpRCgkT3NHGT\niTITiTHms8jA0o2FEdIWX+z9O9WS2UqXWEcjmyDT6fYmxWLTsRhCjYiYCSAP\nQXE/J4XPSFW7j4S+4aAFpPvTRqP81FOlZ5su3hDSqJ76GdcfRib7D4YwtkdJ\nf2V9qppeYjRExv/MzVSVN5gtP6MLYDDXYT9MFn3PnPh+xu+T0aG9ctj91fCL\nVq5Y\r\n=bx86\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "1.7.0": {
+      "name": "psl",
+      "version": "1.7.0",
+      "devDependencies": {
+        "JSONStream": "^1.3.5",
+        "browserify": "^16.5.0",
+        "commit-and-pr": "^1.0.4",
+        "eslint": "^6.8.0",
+        "eslint-config-hapi": "^12.0.0",
+        "eslint-plugin-hapi": "^4.1.0",
+        "karma": "^4.4.1",
+        "karma-browserify": "^6.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.5",
+        "karma-phantomjs-launcher": "^1.0.4",
+        "mocha": "^6.2.2",
+        "phantomjs-prebuilt": "^2.1.16",
+        "request": "^2.88.0",
+        "uglify-js": "^3.7.3",
+        "watchify": "^3.11.1"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-5NsSEDv8zY70ScRnOTn7bK7eanl2MvFrOrS/R6x+dBt5g1ghnj9Zv90kO8GwT8gxcu2ANyFprnFYB85IogIJOQ==",
+        "shasum": "f1c4c47a8ef97167dea5d6bbf4816d736e884a3c",
+        "tarball": "https://registry.npmjs.org/psl/-/psl-1.7.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 432117,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeB1N5CRA9TVsSAnZWagAAlFgQAI2LZnmL/HhTm9qDwXMD\n+Kv0N3C8TG75w/c/YTVec9bE7ODTjPHehp+4PKvEu3F5HRwqxpf3X+TL/Jrx\nuva890sppA9ysGXgzqgs24oTjAqmDumJD81oPzyed46azM5vramWge24r6eE\nBRlS0pbHQ2DPgG6/1QaLrM6Kzl1gxEYFL+aFoUlb/3DdFEKlARxri7uatOkd\nRsDWYqK2Tg08mnC4HbKZUclju80otDrN/1ydpedAzh/9OKWPq0qpXLACxFzQ\nZdDlx5J2H669vbx4IKwv/ms1xALALKUuJKxOsWddmhsCk8vMkE7FC73yQb7q\nZ8BZ4DcLmY8z1s6I12MMemEgXHWacyFsm8MSeNnD98EErZKYfxa5GESZcRRL\nqYLys99nT6I967rCgFedmemQGzCpUWPaOrDqqop3RzxApEoE29uKQQbu9XAt\nbW78e0XAsLaketouWiNZQdAHNrdqEm4yslWDNvemPBKFKnexWu7YdWys4gLO\n3h8LUR21fkXXqALnYv8q77rW8ZkO6ZQFRA9+1fLKRHqVSs5H7b+JlzJJOswf\nEwajBj3kDJbzBXakIUd8a1fgqsrhLS2TQi7MdiuyVUxu0GgsxVKSdqeGcS7q\nQ3VqlimA4PXcxjAQyEuV4HVCJvY+DX4gGMkfvDDHMeAKEO5yKdQcwz7+51lM\nOdZU\r\n=E3HF\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "psl",
   "dist-tags": {
-    "latest": "1.6.0"
+    "latest": "1.7.0"
   },
-  "modified": "2019-12-06T00:26:37.031Z",
+  "modified": "2019-12-28T13:07:07.450Z",
   "_cached": false,
-  "_contentLength": 41496
+  "_contentLength": 43170
 }

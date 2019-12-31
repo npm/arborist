@@ -16,7 +16,7 @@
         "shasum": "f4e1c0cf19c8c5b287d9b53f91efe0bedecb0c0b",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.0.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.0.4": {
       "name": "core-js",
@@ -34,7 +34,7 @@
         "shasum": "a91325d6a70d70130d7ab69e7dea8bd38fad9426",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.0.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.0.5": {
       "name": "core-js",
@@ -52,7 +52,7 @@
         "shasum": "dbb38b5db672b4e2608e6696e5d3bf3a1bd34623",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.0.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.0.7": {
       "name": "core-js",
@@ -76,7 +76,7 @@
         "shasum": "6cf89eb404a465daf7a87126c2ce984ca49b06dc",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.0.7.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.0.8": {
       "name": "core-js",
@@ -101,7 +101,7 @@
         "shasum": "536814a9fbc04690dbd9ceafb6a6eabf5dc9c8b1",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.0.8.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.0.9": {
       "name": "core-js",
@@ -126,7 +126,7 @@
         "shasum": "2399247cbf247536d7b3383380d93930f4a09afb",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.0.9.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.1.1": {
       "name": "core-js",
@@ -151,7 +151,7 @@
         "shasum": "114590095d45e4eb514397cde679eae5d76b9f4d",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.1.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.1.2": {
       "name": "core-js",
@@ -176,7 +176,7 @@
         "shasum": "1bfd6e8d4e6a93e273340e76c5e80d656ca6c0c0",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.1.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.1.3": {
       "name": "core-js",
@@ -201,7 +201,7 @@
         "shasum": "4965597610e68baf59c431b332fbd7d3d1074acc",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.1.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.1.4": {
       "name": "core-js",
@@ -226,7 +226,7 @@
         "shasum": "3e8bcb90d6d34746d3c434ff37afdecc18ad1271",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.1.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.1.5": {
       "name": "core-js",
@@ -251,7 +251,7 @@
         "shasum": "24fc7d9a08aa333057e8668454371e6b90713d2a",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.1.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.2.0": {
       "name": "core-js",
@@ -276,7 +276,7 @@
         "shasum": "8710e0cd5a898f5a118ae627729f0c4ddf92c600",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.2.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.2.1": {
       "name": "core-js",
@@ -301,7 +301,7 @@
         "shasum": "f5d5ecf3065d4083dded402629834cd5c7630669",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.2.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.2.2": {
       "name": "core-js",
@@ -326,7 +326,7 @@
         "shasum": "b95ffd5dde7b1b17c861909485e691503859744e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.2.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.2.3": {
       "name": "core-js",
@@ -351,7 +351,7 @@
         "shasum": "ac2f3255f53fc6fb16709e1deebd0247c90b93f8",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.2.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.2.4": {
       "name": "core-js",
@@ -376,7 +376,7 @@
         "shasum": "54f05951c9e33b16275a6be2da48258910baa012",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.2.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.2.5": {
       "name": "core-js",
@@ -401,7 +401,7 @@
         "shasum": "35f880367ebb2c4e6b0ceb1f7e34eec30a28e947",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.2.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.3.0": {
       "name": "core-js",
@@ -426,7 +426,7 @@
         "shasum": "82009e91a14b4266c58f81a5be9499d9d958f29b",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.3.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.3.1": {
       "name": "core-js",
@@ -451,7 +451,7 @@
         "shasum": "cd89200e0402bd8900bbc515b56f160b18a34b4b",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.3.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.3.2": {
       "name": "core-js",
@@ -476,7 +476,7 @@
         "shasum": "a36ed7cdf516288fa6a331da6bbff2b0d56615f7",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.3.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.3.3": {
       "name": "core-js",
@@ -501,7 +501,7 @@
         "shasum": "b1c88a674186598c664fb0dbf7afe9e33bc8556c",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.3.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.0": {
       "name": "core-js",
@@ -526,7 +526,7 @@
         "shasum": "f9be410adb5b53f200752d0c918e0d7191e3f4cf",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.1": {
       "name": "core-js",
@@ -551,7 +551,7 @@
         "shasum": "dd86d304a366f892f7651a26868a3154449abc96",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.2": {
       "name": "core-js",
@@ -576,7 +576,7 @@
         "shasum": "2831457113f89e4672aa215c93b2d1bf1d6df505",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.3": {
       "name": "core-js",
@@ -601,7 +601,7 @@
         "shasum": "8fb8f386d58ea31364f1bfd01167377d224a7f0b",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.4": {
       "name": "core-js",
@@ -626,7 +626,7 @@
         "shasum": "ae713589e18c569cf71dbc172efd2779e4034ebc",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.5": {
       "name": "core-js",
@@ -651,7 +651,7 @@
         "shasum": "b6702b018de4691c1f1c04dcdf9742f8d9cd346c",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.6": {
       "name": "core-js",
@@ -676,7 +676,7 @@
         "shasum": "b5517f6e64cdce74487f5bc2916fdb14a19178d6",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.6.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.7": {
       "name": "core-js",
@@ -701,7 +701,7 @@
         "shasum": "fb093880aa229e90e365f141bc2b7b733a7091bf",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.7.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.8": {
       "name": "core-js",
@@ -726,7 +726,7 @@
         "shasum": "aa9207a661aebc4f102cc9334ac50ce94fd29718",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.8.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.9": {
       "name": "core-js",
@@ -751,7 +751,7 @@
         "shasum": "e1721aa812e5d64f29fa7a5ad3cdea7de6d93f2e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.9.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.4.10": {
       "name": "core-js",
@@ -776,7 +776,7 @@
         "shasum": "4fa7adc298d1c716371e639694e261761a24074f",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.4.10.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.5.0": {
       "name": "core-js",
@@ -801,7 +801,7 @@
         "shasum": "e92e960b82a10a19b5d0896290f33d64242abe01",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.5.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.5.1": {
       "name": "core-js",
@@ -826,7 +826,7 @@
         "shasum": "f9f12c7990aee671b8d69356e06217877d505a83",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.5.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.5.2": {
       "name": "core-js",
@@ -851,7 +851,7 @@
         "shasum": "37cee659e183e3f09f997434650ac1b60cf0ea1e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.5.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.5.3": {
       "name": "core-js",
@@ -876,7 +876,7 @@
         "shasum": "d4b329871a8bc025c481cdd2570dabc51abb5345",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.5.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.5.4": {
       "name": "core-js",
@@ -901,7 +901,7 @@
         "shasum": "04a9f2a0bb21946d98164634b4a7b990a3881296",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.5.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.6.0": {
       "name": "core-js",
@@ -926,7 +926,7 @@
         "shasum": "49dcd01ca323c5fd475b1826d96cb5ff49b631ec",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.6.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.6.1": {
       "name": "core-js",
@@ -951,7 +951,7 @@
         "shasum": "1b4970873e8101bf8c435af095faa9024f4b9b58",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.6.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.7.0": {
       "name": "core-js",
@@ -977,7 +977,7 @@
         "shasum": "6ddd1387bda9e36e8ab07c3023d36e49fcf246c7",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.7.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.7.1": {
       "name": "core-js",
@@ -1003,7 +1003,7 @@
         "shasum": "9e96488059e787134fc08f2c8f928e07551428e4",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.7.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.7.2": {
       "name": "core-js",
@@ -1029,7 +1029,7 @@
         "shasum": "132c4f67f0c4721ef9ff891b88db8d6dc743a7e8",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.7.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.8.0": {
       "name": "core-js",
@@ -1057,7 +1057,7 @@
         "shasum": "f369c3a4b89b00c59d92f3e07765900f082a1d25",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.8.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.8.1": {
       "name": "core-js",
@@ -1085,7 +1085,7 @@
         "shasum": "15d81691a7f391b20a6eab693ffe84def62f80c2",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.8.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.8.2": {
       "name": "core-js",
@@ -1113,7 +1113,7 @@
         "shasum": "e1757e8472988be3f38e8289c8a582060e016503",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.8.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.8.3": {
       "name": "core-js",
@@ -1141,7 +1141,7 @@
         "shasum": "3053499af01864221395ce9ab5743d9850b7b943",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.8.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.8.4": {
       "name": "core-js",
@@ -1169,7 +1169,7 @@
         "shasum": "c22665f1e0d1b9c3c5e1b08dabd1f108695e4fcf",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.8.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.0": {
       "name": "core-js",
@@ -1199,7 +1199,7 @@
         "shasum": "8e08ef8c7cc54722a56967e0053c126f5771e7f4",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.1": {
       "name": "core-js",
@@ -1229,7 +1229,7 @@
         "shasum": "f3093629e411dd8e2441d687582d50a78ab1fe48",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.2": {
       "name": "core-js",
@@ -1259,7 +1259,7 @@
         "shasum": "8fb07c81170269e431f7e378b5a39106297b1dcd",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.3": {
       "name": "core-js",
@@ -1289,7 +1289,7 @@
         "shasum": "d699e05d0814ec39eab844e2ffafb41cfd3ecc44",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.4": {
       "name": "core-js",
@@ -1319,7 +1319,7 @@
         "shasum": "8dd2f6707662e94bccb2373f88deb9371d67cb59",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.5": {
       "name": "core-js",
@@ -1349,7 +1349,7 @@
         "shasum": "6382dccfcd8e40d1d505e6dc6dcc0838b4a4ec5a",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.6": {
       "name": "core-js",
@@ -1379,7 +1379,7 @@
         "shasum": "cde6fcf07f2ed4e6b6841152836e3872feee73db",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.6.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.7": {
       "name": "core-js",
@@ -1409,7 +1409,7 @@
         "shasum": "8b7da390cd0c0bf120cabd6a64e1243fbc0596e0",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.7.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.8": {
       "name": "core-js",
@@ -1439,7 +1439,7 @@
         "shasum": "c584308ffd747964218d9a1b581ae06c8e3010ed",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.8.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.9": {
       "name": "core-js",
@@ -1469,7 +1469,7 @@
         "shasum": "14747a751c4305cb9baef31ced7ac0f29db292b0",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.9.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.10": {
       "name": "core-js",
@@ -1499,7 +1499,7 @@
         "shasum": "961bec2ab11cc30eb45d5a0ede9a021df0a0fb4a",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.10.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.11": {
       "name": "core-js",
@@ -1530,7 +1530,7 @@
         "shasum": "0333c30c0bd85a4b2fff1da6578663775b3045d3",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.11.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.12": {
       "name": "core-js",
@@ -1561,7 +1561,7 @@
         "shasum": "de9ab51243467698d6b7abe45420c2accc23474e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.12.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.13": {
       "name": "core-js",
@@ -1592,7 +1592,7 @@
         "shasum": "16eec125ae9427b6b647d0adbaa12e92963ecb62",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.13.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.14": {
       "name": "core-js",
@@ -1623,7 +1623,7 @@
         "shasum": "a079a4dabc8da7a2a28146d0efed248d86cbee47",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.14.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.15": {
       "name": "core-js",
@@ -1654,7 +1654,7 @@
         "shasum": "b2b75ba45ebba790fd2c2a3dd6e4c90d6f3977a1",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.15.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.16": {
       "name": "core-js",
@@ -1685,7 +1685,7 @@
         "shasum": "c62751204bd830ecb596b90744adefa58aab5df0",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.16.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.17": {
       "name": "core-js",
@@ -1716,7 +1716,7 @@
         "shasum": "4b846cb8c0dbba85a8cc93da3338f440906ccf8d",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.17.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "0.9.18": {
       "name": "core-js",
@@ -1747,7 +1747,7 @@
         "shasum": "13f458e430232b0f4ec1f480da7c2f5288e9d095",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-0.9.18.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.0.0": {
       "name": "core-js",
@@ -1777,7 +1777,7 @@
         "shasum": "5f871c64bf47c5e80bbbf9f07fdd9dab0608fd69",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.0.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.0.1": {
       "name": "core-js",
@@ -1807,7 +1807,7 @@
         "shasum": "82d2284b718a03bf8bf2813d5c17177c6adacf08",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.0.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.1.0": {
       "name": "core-js",
@@ -1838,7 +1838,7 @@
         "shasum": "8e6cc5e4799c11855951300c282c1c88f52f2b9d",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.1.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.1.1": {
       "name": "core-js",
@@ -1869,7 +1869,7 @@
         "shasum": "3ea0867d9bcd2076ef619e44075d3e7239453060",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.1.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.1.2": {
       "name": "core-js",
@@ -1900,7 +1900,7 @@
         "shasum": "05a009ad3abbd44895f32f03ba77062297f5cc7e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.1.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.1.3": {
       "name": "core-js",
@@ -1931,7 +1931,7 @@
         "shasum": "01b32e3266048d120c3b061756948b285700f970",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.1.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.1.4": {
       "name": "core-js",
@@ -1962,7 +1962,7 @@
         "shasum": "e0c75b4505ac3d2119db508b9a9ebabb368bfea3",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.1.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.0": {
       "name": "core-js",
@@ -1993,7 +1993,7 @@
         "shasum": "62b37f6ee0e6f991df0c1bc6c1abfe834319dc9e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.1": {
       "name": "core-js",
@@ -2024,7 +2024,7 @@
         "shasum": "9b73151ce01498da09f75629810718065d06b700",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.2": {
       "name": "core-js",
@@ -2055,7 +2055,7 @@
         "shasum": "f45eede52485579b6026c8a8628472b9f7960cae",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.3": {
       "name": "core-js",
@@ -2086,7 +2086,7 @@
         "shasum": "4cf03d1c84f9cf6cc94a37dac67f345f6ea9209a",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.4": {
       "name": "core-js",
@@ -2116,7 +2116,7 @@
         "shasum": "b4cf44d4dc7f906d3c2d7ba12ce8c067de4d47df",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.5": {
       "name": "core-js",
@@ -2146,7 +2146,7 @@
         "shasum": "020ac0f22d85045d6877c2010284236cf117a606",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.6": {
       "name": "core-js",
@@ -2176,7 +2176,7 @@
         "shasum": "e2351f6cae764f8c34e5d839acb6a60cef8b4a45",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.6.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.0.0-alpha": {
       "name": "core-js",
@@ -2297,7 +2297,7 @@
         "shasum": "bc834a8c48dd62a176145f4866ba8a93e2e3ddbf",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.0.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.0.1": {
       "name": "core-js",
@@ -2328,7 +2328,7 @@
         "shasum": "b780faf79e9b00482cedea30414766f4d910cc44",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.0.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.0.2": {
       "name": "core-js",
@@ -2359,7 +2359,7 @@
         "shasum": "585e02db59551d41c81ee1fd0d0e9312c36beb80",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.0.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.0.3": {
       "name": "core-js",
@@ -2392,7 +2392,7 @@
         "shasum": "50875bfd128723373b8400f6bfcfe75134548cd2",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.0.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.1.0": {
       "name": "core-js",
@@ -2425,7 +2425,7 @@
         "shasum": "61ccc74db6358a5e311cb5757f8511838b4f356f",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.1.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.1.1": {
       "name": "core-js",
@@ -2458,7 +2458,7 @@
         "shasum": "2cb9efb834cb04f56bb0d8e521b0540a5aef528f",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.1.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.1.2": {
       "name": "core-js",
@@ -2491,7 +2491,7 @@
         "shasum": "6604594580096db09897dcfaa52c2a4d9243a420",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.1.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.1.3": {
       "name": "core-js",
@@ -2524,7 +2524,7 @@
         "shasum": "1bb16b99bf8e01aa7bfd06d1a6c402b5b61154a8",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.1.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.1.4": {
       "name": "core-js",
@@ -2557,7 +2557,7 @@
         "shasum": "44195220d94914aaf9987c7599afab263a51f75a",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.1.4.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.1.5": {
       "name": "core-js",
@@ -2590,7 +2590,7 @@
         "shasum": "9610a059abc2624e5be18b6e624dcb6a4ed4b46d",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.1.5.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.2.0": {
       "name": "core-js",
@@ -2623,7 +2623,7 @@
         "shasum": "72d4ba20c0011999d3a343cbf1c1b1d4ca5e53d7",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.2.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.2.1": {
       "name": "core-js",
@@ -2656,7 +2656,7 @@
         "shasum": "e809840c0650ccae87209b4b2f13ed2d2f9e4005",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.2.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.2.2": {
       "name": "core-js",
@@ -2689,7 +2689,7 @@
         "shasum": "79a0f3a9495507641a5bf7ce275fa494649180bf",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.2.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.3.0": {
       "name": "core-js",
@@ -2722,7 +2722,7 @@
         "shasum": "fab83fbb0b2d8dc85fa636c4b9d34c75420c6d65",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.3.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.4.0": {
       "name": "core-js",
@@ -2756,7 +2756,7 @@
         "shasum": "df408ab46d01aff91c01c3e7971935d422c54f81",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.4.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "1.2.7": {
       "name": "core-js",
@@ -2788,7 +2788,7 @@
         "shasum": "652294c14651db28fa93bd2d5ff2983a4f08c636",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-1.2.7.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.4.1": {
       "name": "core-js",
@@ -2822,7 +2822,7 @@
         "shasum": "4de911e667b0eae9124e34254b53aea6fc618d3e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.4.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.5.0": {
       "name": "core-js",
@@ -2857,7 +2857,7 @@
         "shasum": "569c050918be6486b3837552028ae0466b717086",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.5.0.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.5.1": {
       "name": "core-js",
@@ -2892,7 +2892,7 @@
         "shasum": "ae6874dc66937789b80754ff5428df66819ca50b",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.5.1.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.5.2": {
       "name": "core-js",
@@ -2927,7 +2927,7 @@
         "shasum": "bc4648656e7dc9dc80d7d3c7bbc172d96e744e63",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.5.2.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.5.3": {
       "name": "core-js",
@@ -2962,7 +2962,7 @@
         "shasum": "8acc38345824f16d8365b7c9b4259168e8ed603e",
         "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.5.3.tgz"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-alpha.1": {
       "name": "core-js",
@@ -3012,7 +3012,7 @@
         "fileCount": 1473,
         "unpackedSize": 2168837
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-alpha.2": {
       "name": "core-js",
@@ -3086,7 +3086,7 @@
         "fileCount": 1473,
         "unpackedSize": 2175992
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "2.5.6": {
       "name": "core-js",
@@ -3126,7 +3126,7 @@
         "unpackedSize": 2181757,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa8FtlCRA9TVsSAnZWagAAdaQP/2FCDRwxhLrwfvA1X7jh\nIR8zOHu5nE6eKDrbIjUjxmIuVLVX6ea0+S35STx/+aPIjpFcCcI2CLX79EKV\n/3ABwnXB6HBSBIZ46HXITUFsOPWmCQsLkEvjtuT049uE4B+dbpHSkJzHUQEW\nTrtrZymgSptch5xNNtR8rRAz2dlUVxMbACs2B80wuLXV0jp3cIurPWTFY8LY\noHFTRLYC5E70agsDxuyd8/06Ef5y5sIO6Lwe/ypNQBAFneney3Q6FeHOygWo\nY7DOtPNafeFrjm78TPJ8d6r09ruBkx0R/qhX9utNydAvnhiY8WTxwQmBuGID\nyDz5qXPAB0MPpmZ/B4sq6kZlZxnZsucUnhugdBhBtP6/kMbmpaDnm3kpYLyY\nPk7Ux6RhPZCpg+4pV9a6XFrR8dCZxzaNPAwCfxOhWswhmqnoXWavPvG1Hc4r\naJnzwe+jR1N6qsKUGnjxumFu0WTL7vfNdGMP5K8Lna5asSy4ak0zhYKaQ4G7\n3Pyr7uCzW2piwQE8aJarDIg0Uc7F2ttnzw5FcqCCVQekdOrWInXBhNgJPObo\nNB3nshzliVptFSMJnPUn4OC63ordcMHO/GX8EtZlDamD9Qf7NKkR+hzvewID\n9AupIZHqMCBMUZU3LHqMh/LLebDYnKRfjOh6eKX9X1pHo94TE3YYCcuCXq3B\ndhZ3\r\n=apiM\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.1": {
       "name": "core-js",
@@ -3180,7 +3180,7 @@
         "unpackedSize": 2181855,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbCUfxCRA9TVsSAnZWagAAhJ8P/3cptN/Jlktr+0cTcg/e\n/kpz8uidHUzCWgGH8X0qISGtEmtPOu6xFQi75Xg4a21OXXtQ0WS1AtIXWfqo\nNXLcMnZaHjT2QfYn5MewC7/+nIfjmNwy0Bv1cOZgglH7omCIsvGqPLdNZ3B5\nrFqjg3q7FJPXPC8NIkikWkQsVva1vphcCed66pAgBz4FXminpf2Yy8cLAlGM\n64szWKFk6GEV0c+Yb+8bxsL5jysy2mwp0PEl7fgGcjex0pbvGA0w4ozNB7u3\nZQfjh0lDZPo5dFZg73m69fVvF9IzAVw3pUTEEHeEZGvQRdLH1M/CRhVE81JS\n8RC3t9AOvgS/45R4XG3Y5CIBvulPwNoHeg+3sFCfSBBj5pP6Do1G3nu/qBjx\nNBXRvfspvKhwu4uL9Zw7kAp84JwFxF1eJdYLFSgSLmRf+HC44XtWwob3kuFz\nrXxB6/wBqKkDLAXw5gGIPyETnoRWhPWnc+sJMUkVPvJqKfAUUS5gfHNWV2sy\n1G4ulWQ/Vcdn0ezjSNIKni+fH9WjsyKrBUChrHVMNTxYiijPhBUav9Yl9yEv\nOsnfelubPRKRciVFjWiwVoO0ZB25cUM6EX8+movWAE35xk6Eveb60/T501xD\n6YPiFKR7fUliJEx6qu8UkhXNTnRVxXxOQVCiyiMrGV/LOlztbn8cQk7GG1QI\nONvk\r\n=c9bs\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.2": {
       "name": "core-js",
@@ -3262,7 +3262,7 @@
         "unpackedSize": 2242795,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcB64ZCRA9TVsSAnZWagAAgv0P/ioT1FA6s859gfOOX8Jj\nG2BLY76CeuP/P4YJwHdHDzBJXCheHI55hzeba1hut6Lsfc+AlbCDqrqvD+8t\nkQggQdoRIZS4Azgjk9xTChdyzPUZmkVLTo1ncUFHkbtfga0jwRGkq/H8Cp9N\nPOfUkubn/ZjAN3ME9KzWXRWW8BZ6BXXXDXlOicRc2gNAx96kwV0EpbiLYcJ/\n3vbGO9MWwV01AEX1TumEYegl/4gUUqk32BVkFIv2aJUTLL3OuFWbfqsRK67L\nS256HZ3bnLjgOs/xfpV1tNQSJbfQVXACLm4+CZoJ3bARUF5iey1cCl9BbmtU\n0F4GPcCEgak30991+TrR4VTKNv2IghKdauUYxQSWVteXN1QEQVe+VjE2zs49\nnFb+PQ33k4pWyjMOql9lQpiLOqhZuEpF6gmVxtrMXbUqH/TzqxcjqmB8zbu1\nUOK84hx1X4+86ZVHsCe5rCYd6VQ8Yn4CafPpebl8P7IvyKZApN+pCbkl71G7\n1fv0Q691qTw+P5jCpr3wfb/WBSLGWrzpJ0jgD0z1a6xZ86pWZOYb5mrn+m8x\nayOt7wCdh44wTVkWJZMOFkm6OKJnDHcCTqq/6wj/OWKvf5nf2gOOrW3BewKQ\nZIDhnryMIYAoICuSK7NsNOixEoiUY2PTBI6jMhKd0h+o5CzmYkAArBdiEKJG\nNMe4\r\n=MTUF\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.5": {
       "name": "core-js",
@@ -3316,7 +3316,7 @@
         "unpackedSize": 2247929,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcGMUCCRA9TVsSAnZWagAAGPMP+QD/SvoAzJ7F0PovsKRj\neLOIcsZypyutFGwVtHhwKD8uRwIm/36GdqJCApS9OH0EOVFH7SVCvdzwB/qU\n/cd9kwNAy2OtikydS9hyQ5dDrVr9LEcRJrxtcK4fJha1Qtk8QSC/dLunI9LE\n/dG1tHg8DjxMm4Qc9eVViaohg5t+zV8iZebA0NNhVn75n+9FcBC1MRK0vLmW\nQEUTQSByj/2WGHnhNZew3O984Ky8Yf5r5KjNKORG089bFAgRNWsx79Ij+E/y\nlcKiqP0STcMd7vy6q2z2uNefZ8Rpl/7Yh12Pam4EEARxD3GoasmTldXB9JKN\n/iVz3kaWcjvgmDeTmqlXkyoyEP2HLSeMDNVL5u7I1+WdXpBPhxbk1AOTJ/Bo\nseDZmFjZUTAI3f2GO6v+79G5PzesRzWe3W+6bH8rib6OOVFN+yOvdqxy96UB\nhYzwHGP6e0fyOEG/DUKhxBfbK12Id4lBY8Azmy0Y4JBXdcwSpbCJTmIomaN8\n+oEzH83aRkGm9bg6/DYRrWWWKoY5De8qNfd6VKGoHa2aAmnslV0cNoAKNbkp\n9yeVXNYHmt/8SXjK/dIlZk2ykcjTYPHCOfWZr0yyV9JxB9bLGh8GJFne7YLB\nsCRnB99PgV8nRtEEGrNUEKCqEhqFWQ4bJw/yld6N3ki0/Kh2tiRpca71XZT5\nJlRH\r\n=wMbm\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.6": {
       "name": "core-js",
@@ -3384,7 +3384,7 @@
         "unpackedSize": 2248070,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcNvDwCRA9TVsSAnZWagAA4xEP/j0bsxL+L1o8Ljm5ubAF\nJWMPgwlHad7WOiipB56MAAOtHMtdB34b4YOMIxjdQbHEnYaqSRDJfANnVQMk\nOfQApgBl3Lh8t2rY4kFIwDW4W0d3WTOSnETeNTw6S+X4s8KxVsiXd1dGHMuy\n0WiuUxjL03PG8+LCYkw2lQvVMKE7o+DT0UmOb7GgTrrPyyEniz+sILr9VcQX\ncswxgxl9y4YiibthFOegtT8eLt3F8Bxp8utbC/2R3h4TH7pQAJ/zXk/R+ink\nIVJxmO8HPaPiMWh0n1QToMozh3pfsJkvkJflTQ7uqSPaqrFg3GE8+XMuj9pq\nQkjrUur3yQApGFbEYW0crJNDkN8zEtE1iU/gT2bytCy/w+/8kuWFQV226y3c\nVxjPBjbH9cMRPlK4AzCh4XiW9RRu20zk3EAi7AvEQxFR1USZVjj38LFc3szt\n9J6oD4t3RkQudv5WIp+OEWEBcfWP2j5/G+ASTN5J6eve1EUrpzzwywMLr4Wd\n3sRmDePvID7KOB0cl+xAqo6k+mExKR5S5XTDhnVke5LNv9gZMvyzRO0K51FQ\noHYhcOfkGoQIlHq2ILMRIIIH/hhlaksTJ8StVCNpBRQaXAz8CCWPwqglBwe4\nRRGSFH+D+VsUYkzEA8hmh5j0iVVu8kB+QkAg9UZXBN+QDsUyYPXjsIlxmSSx\nPXsl\r\n=OmL5\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.8": {
       "name": "core-js",
@@ -3466,7 +3466,7 @@
         "unpackedSize": 2248431,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcRwR4CRA9TVsSAnZWagAAXVcP/0iuu6vt0xPNrnlHfd2e\nxzsWzPE7UZumPTOhIYiFexeUvW6Jsqo2kPEcMqqD88RSa7XMabv6gtQp5G7i\nWfbrhoOV1cUaUaAhCPUPy1BPa5xqOqCmD8oIcIz2VWtD7f2E6Re63nPbnUeh\nvTZEd/k/7zSShawOo0IV0UyEPif1chR/1fvOrit2LnI4FSfaLEGmEcLcWulK\nfY4jRfWzSaBUdZwgGw9aj+96xXDv+cnCTUmHY3JCKCmlc8onLCIT8WoO0fh9\nZqgTTwiPHnBNnJNkN4NoiqGTacxWzNx5k1q1VwPPvnKczrw+jTfS7VminbFt\n653lj5Z9jI/Jh1c4jvQwcTtnGY85vEBKP5eGidMdJrRZSLaXo+74nANGEm8a\n0v/AFnuI+rVrfx85MCaBrUzhbogJgIRUifNoJrRBZkmQ/O1z4GbdEj+9/cOX\n5lxByY1l/wefChYa3pb2U6D4LkQoBFjJ4lEEjE5ufQwOVo59so8HRa+APS1E\nQoWb2sG51STolfS3VWoCFUCsFgfKKVMY9OiiUr8jFaM0lloUgPv08gO+WTwF\npbYD30Jq1gt4OdCEfWLjso3zueO0a3nEH0b9KC9UBDHr4JC3Bc+A4JlgqjX7\ncnU0r4Ba4dxbhbBCRSLlj3xAcDIOAkHsV6plf4Px1W03a/LdjGE/qJ/7T7fs\nSzf7\r\n=85VY\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.11": {
       "name": "core-js",
@@ -3562,7 +3562,7 @@
         "unpackedSize": 2249969,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcW+/rCRA9TVsSAnZWagAAsN8P/0gwi8epnBTDgKsS83GI\nT7JH8DemkK4ESxkZ3lk9f1KpmPKJ0EchFcM7VhVR8HwAyiBjuBhMnWqQGs7I\nJXlq1Qg7rcZbE+UfS3t8kuswBSgfuxsHgcoo4WOx2MX4zQK4vcMzEL+j7jBe\n/lu5zo9iefCs8aqApSNoETd0xsnYXfgk8p22an12EGVyd2gc21sVevW/EVJe\n1cLMAUKzkckubxVKwyAz8xsknc3nRPSqBzdAPl7czMh752vYfR969Rcdm8+A\nz6ieW9onJ4CK3Vx1va3CFQjHhxyxtf2nSezi8pg/hXOLfhgEZXBF+1J9fhsz\nR7Y7brGmwgqM75lOzkhT7+/5kHefYJuCOiQVEabZ56hU9y11ZzKOEwWoFJga\nGR9AlfXQH7I1Ga8/Ghaeil8v/NhDi3AKZ6hLEKKgPGDo/G8w2EDBY8ArnxRj\ncj4SfbUxZe1+7pBG7MyS3d5Ref7N8Y+H0t676fEFNkIYKhRq2ms+h8pDlUgu\nmk01LnBxKGHSt6TAnm2zDbXMJe4c2yLSd9ROTJvGkA9R8dIHiC3F9/SqXDfA\nu2vSsv6MNVCgUz7E0FMI7C4MGHqYBbsFgPSQFl1+QczDSpidyRbuF0QOQwTl\nrFiCCGL9TQxexJTB1/XZ8/VaOijpxm3LGUkl+tIXe05gCL6sYW8PVJfuBg04\nZ68F\r\n=zxeo\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.15": {
       "name": "core-js",
@@ -3616,7 +3616,7 @@
         "unpackedSize": 2250833,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcZpAaCRA9TVsSAnZWagAAyAYP/0Qp0TZZJh2JBithey7C\nlbzTfcdhv5V/UGGTCUu8WjO2oR1t4S4asibKfbEb4i7NHNWVjH1kW5Quc8bq\n0ePdCWwMpAfBw2MAHxmtxKHdvUWemUc+BI6iZkz7gFHd63buNUYqgCRaNKOZ\nl8f7597lNa2Cceaw/ad10snjtZl8aQp1WFzbVUQYo5JgfU9ksJDr0UnSr6HJ\nkejBPp5tTiNMgz/KQDNMrTPF9+2PH0B++++Zpl+DI/kw/U+HMEReQIvFEIRy\nkBjLZx+iXnJ/q5MJM7PGJCgToXGEf67fO1DLqDXjC6AGQCNRNbgE6XBRobRO\nFCbcEYX1XaP9RMCtTQRyTYCv9Hu5le1K0RDUTDeXvDyyTVRY2J7e5DHh2MFi\n85UJu4rvab/mtGg7/w8Jz+yZKYEFbj9QNDtGCDGGjz0InOXAOdXKkPtT55/h\nkT57kQnqa9aWdQEgEY5PoNz4A/iLA+RtJvEBZFIVJhc/glgUqE390tyDKauY\nK2ZAJ1hpDwAiIiKRcLQCSO2wlCm1Q7SMLptNAEcQ0h3jUXQAum+pvXJuQkyd\nuJHLcsVoM+TT3GdpgkV9yK4Rjgdjhl+MZ/jx6k9CMErtJ/Tom5SEhHYZmNIZ\n8RQ6A3PFvx7Ims9YtI8uG+pJL4YjCc8jMsFbIZQwpybV5Lf1+hDqFbt34vPv\nwz3T\r\n=st+q\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.0.0-beta.16": {
       "name": "core-js",
@@ -3754,7 +3754,7 @@
         "unpackedSize": 2258866,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc4aadCRA9TVsSAnZWagAAjJQP/1qritG6KW4HzLCHA7Ce\nHvqAbzJD+FC8FYMkZ8oSHeMTtSMoegJkxQHlM3kW4D27F2/NbCOH/8foHlOn\n/0i4mmjmUhN8bGcLeh1Ns2GAP3tcIlT2ZbNhBYLGmH2GOD2o37BBsAPOPgoa\nQEO/efOUThRskpjIYwjKg5yEi85wYy6FCA1HVV/jGLFhlg5zBX4IsckZ/56B\noWKrgUipqvkPqghN/LQzmRI3AEWRdgbKolp++uHinEaxd4sxrliNDXlVF8E3\nR0EM2C2wiv3H/Jfp2cT7XqXGdf+qsSRuRyEq3Zknr0ZT9PaOBQ8Zr2sQGju2\n643aw0KSDMwsS4laKshr8qaWqfZphYYqrBqi4BXcYWIJ5XqTmnRtfshCoFMO\n3NhYw+tJ9+txjFcXDv1iloSgCxgm+M5gRneJR/UbTQjZhml7w1CuuHlGrqur\nSJgJF+bEd0DX0H7SbHNS5d7LkMEY0AC+CCSQ+yDV1LiQVs6Lrmg1b8wgD/VL\nroqPkJA665FQLCX5VVvpma05vWod6bltD8HxG8AnC31AOFNNinMYaNykP6L+\nQOx2SXgTql9Nqe9Q6AEX8+2PgAt+CPjgNshiAJLjYisCr9mSC0aYL7FIk19B\n69ixYJ/oJXzkhTPk0PZE6uZ7HrXcqitlOvxkC3oTs9KFsBw+QnZ5Y8ylHs92\np+4b\r\n=m+3X\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.1.0": {
       "name": "core-js",
@@ -3808,7 +3808,7 @@
         "unpackedSize": 2259253,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc4wxCCRA9TVsSAnZWagAAHvgP/2mSJUgHGpPmnY+599s+\nPRXOE4KQzfX39Q6nQbCR3NiMXURevr1IDAn8ZkxMGBGBFbnE8hGHHkoWLRyX\n5kYi53Meniudv0JUX5erBPEJSBEP7nQmIoISjacLzyeH+/OO8PmP3xTZ4hxS\njCDCWi+2tRJGwJnHpgnHh3WI+2TjJLzLx9sBH1hCJslWE/RKrhrDfrzZVvsG\n6XRYYq7ih4rucaOQ+h5hihMWwC/kpMcOZ+46l1l9MX7NzYYWv8JSrB5VZD1M\nY3r+txbQXlc7S4peubwAmH556Ooi74eAl0goqYlhvBF+rVDncEzIWbuTPOqr\nKG7Cvj8f/Eaoke7yatpZL+J8nAZCvnKl2AGpm5oX1GCELIpBBRNiAQzB8bed\nU28APpH7W/9vZXGjRJCET6nHoeWRNSsmwSQco3ovaG9GrSISfOM8JD3pFT0A\nFtK1dtcOx6LQBQs51XdFJDetIksQYd6RZMCn8m/OleSetO0vd8do6EbON9Gs\nlgdjB80oO2vznV4YyXLuh9edd+j4nF/Tc5NJp+SXrjGF8cVM9k/bzP1qH794\nNAVsWd/7fGI5ZfgzNaPrwGIr/xMFYhXmxnf2ToOdjxzSG6+B0LeR7FuiNr8Q\nyTVKHcylTXz8js4g4B5j7TlTYoHjDoy+otrSFk62z7tDRZ/+k391K4EmvRnW\n9BUU\r\n=fvJw\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.1.1": {
       "name": "core-js",
@@ -3862,7 +3862,7 @@
         "unpackedSize": 2259460,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc5HjQCRA9TVsSAnZWagAATb8P/Aou0HbZdzqHcHB7P40R\nlPDM3kcs1CY0uLThRxNPoonz6KGfzLcmPmaKF2n66ISeIKjQAXt6Z3YCpYit\nx0OmmmOQsbr6lMNOeWWkfKWC/jaMBjZHqbQ2GWLlwpx2xxoO8TGjk0YGalEM\nhUZCFKnSAo3Vp0vb1TbtAj7ttYtX5Nwd0TNz/3jA6VjlbWIKCOz0ZzQtA7rB\nJEYQ5EBC8J+KIJm9W3439rznhe8jasS1G4TS3DzqpzKEn/zl/OOt1JhHpwZc\nbaQ6bp4AOwxhMhC5R1sbEsxmt3vbLOz3+XTZ67XJx3FWrYDwYxYGWH4iNFn8\nptpNkm3crG8+lnlf3sgvHlw/dLPurKbjXQ+QDu1KyZdmaPQjzAfxfuLZNzUj\nOsZ77ObsGpIPobNZu/CCCfTLiVz3AVIPEimidiHzZc/ESRK51sb6UMfW4036\nmeZcnigqZBVDkybh4Ne6c5CyBSOGJxa9UZJdufhqjHT1KXqNI1gQgGSA87Ed\nW50/efQATv61LSQtRxpIPcrvacuHduObn0I0/pbfN29dAJYmyRklC9SSvFr6\neArNJg6bSwd8I3YquqHvGGD4Ld4r3JvP8aMfo0KQOIU8cP/8x1Jf3Jub9gWC\nhbLhWVK2H/qTTDrtAhodFWVQrlT6cMKhiAROYp7lsMpB9qITi6w1Vqxx/Wzm\nqYM7\r\n=rO52\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.1.2": {
       "name": "core-js",
@@ -3916,7 +3916,7 @@
         "unpackedSize": 2259924,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc694FCRA9TVsSAnZWagAASNUQAJm05aYOXuRaPztHACgA\nXShT9cULAtCEWOzx2epzL/2RqDSN3SapXxEho1+emnKJ1wfNDUDDSbz0WNF3\nOCRuTAJByifBLFTCyv7IBdis4TVlKiiWBsTmMribMIBAFRqanDo5QfdaRDJn\nLbe8iIa80SCcAl2A4mTjIePybAzGeMr1ro6/ZAs8pBJUkzDWqcUNKLDH1IDx\n8LWGew87mv1SE2qYd6OBKcLwLJhDQMFeLTuyKV3LNnpig8Ptw20JU8xvmBeh\nL99SqjUcaqsytKnOgxfDVsEUd0MUSbBllRqGZnFRXan0hP0DzaJ4Z9ihTJhY\nr6MWnvA2CFhJIMmtqORPM9aS/nqdHaU4LFDRBDbZNwFk5ve+8FjHDPL13ZNG\ndnHGPZABxoTNxKoqXw5DhhgqBZlmSYxMg5txNDJVrLGCXBXLYTlGoqTegWfS\nDy4j5zGc7iJodgmbXh0zz6A4rkltNc3vH90AeSeDeLwGVDuPNGKMoB+kJKLW\nWN27lkMybv51xNJbtQ8hV6q1g4i0/pzKGpObSFYtGX60M6AxOIGwFEGqQJVb\nilVcIROOmWcL3BH7pIQDvw95dDdWf68vD8ilfklZV0834ZUIiH1mFpEe0V2c\nZknqQCq3GES+7SNFc/Bber6BAf4iNXSWkCkdJ19kJo8BGvM6YQLBucU8V3y7\nEUYT\r\n=dsSH\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.1.3": {
       "name": "core-js",
@@ -4012,7 +4012,7 @@
         "unpackedSize": 2261112,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdozerCRA9TVsSAnZWagAADccP/3/3xTCq6Cc/zkSY58sa\nll3tgQAAwjZRYYUAmR3eeW/2XniBg5FvsDxl/WF03rgZ4j9oqt4Gj4QloF7U\ncji18ly/BP6nVLnf4zoM1q6RQG0eJ858KADTtkyh5x+DFjxvk9O8iFO3Gid8\nH2uUuARRST6h95rYgOkXt2AIn+imE2fwkNIhC+Ur8MZiz/2jY2nPoQVXIZ9J\n7oUVtzphmw4Tal9HyhyW6TyPqq8o3ByToHMozLSujQ6yswa345lWVdbozKw7\nA2yEpqB6jK6V2pbtvK9uR+mTBmIwv8klq5OQVINkIV13mGoPnIHdEOaueo9X\nq4gxBmmErqFUr1PAKk+WMvZuOBTETGkYViRiVvigZwkxL9BV425yy1qY0sgv\nfNbwa1TCX0YwNroF4C3JuHrgLRY4c4Vg2rHdDV4gLbKij+A93AX6gdIgpLJ4\nezB9T/U1KicYaoGcfBAaayjex7e/8lApuaASs9qVaKveRgYaQxEgG0wg6KMK\nb+vRpoZMctHOM36YnbBV/DmUD2RMIMl1dGdQtt0R+14YzBRvjNwHWeLlZhnl\nanq5DQOgBRHMI6P1Lt+cifgkTbBYQ3OmoEMPVzxdNJLtsxZZo1tvPU/MBjf6\nz7Ah70a1Q63qZUAjYJNe+asHESSMW4LW7wpFQhqXmnwbTorJPAJZJGh61Ffw\nKlJ8\r\n=g20o\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "deprecated": "core-js@<3.0 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
     },
     "3.3.0": {
       "name": "core-js",
@@ -4223,15 +4223,111 @@
         "unpackedSize": 648900,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd5VCUCRA9TVsSAnZWagAA7ZEP/RQs6ivkdlY4l6Ej9y48\nnZRlXWJp3TeNzhHLaZvyQ17KcTjx8eKBVP42hJI2xMHvcvLkKsXN97Mrvz40\nIM6GunVDu/SptXdy28K04Uf7dG5JWwFxSfhSW0ivfIxApjUcpbUDN7Iu0Eyu\ncNPsI9O/6vcvKYkVF6vZCVhKSTCYsa45OSGgONlfiaJVGn91ijfQKDOmPArm\n+geYslGwFXKZMo7eV25zf0YpRYQAVOKgZWLAY/IIVe/K5JjQRQ0idZUD+oE2\nI8H12CCK0qU2DxAHLH0YMUAEMKxHb5SIKesgTvbzlcY7TeyczeuE28LMRALZ\nv/sSs6o+u8yict48OGL6i2RdukR7Ql1iHg0UInrp0p3OvSGPZ5uNkpdm8bK9\nuo3nwgRAbxVB78BQB+355q/DLCklGG7QWmorQJ1ktitDnvdV901qLu0o0iPO\nABXPgBjsRPTR8vQfWEOgQKBScyOa9VOJMOI25J4AG0NHsdy5XX1LLe0UePj0\nKHfQjpG1OoqoQSETsvefbCfl1oQqIJ9wijndFGDQ+d83v4LGT18Vi8Tfi6EW\nRYrhVfaLVHXEnStDYNh3AzfhTu9bESKLsP8MV9jCzDccH/PRE7eb3+/jYVxZ\niwSffAaUIDV5RR1+SyPKo8E/ONQ/NA10RjxzhEPQBAaKkkMjNfH/R6pwPF+/\n3iDQ\r\n=Hgfs\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "2.6.11": {
+      "name": "core-js",
+      "version": "2.6.11",
+      "devDependencies": {
+        "LiveScript": "1.3.x",
+        "es-observable-tests": "0.2.x",
+        "eslint": "4.19.x",
+        "eslint-plugin-import": "2.12.x",
+        "grunt": "^1.0.2",
+        "grunt-cli": "^1.2.0",
+        "grunt-contrib-clean": "^1.1.0",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-uglify": "3.3.x",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-karma": "^2.0.0",
+        "grunt-livescript": "0.6.x",
+        "karma": "^2.0.0",
+        "karma-qunit": "^2.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-firefox-launcher": "^1.0.1",
+        "karma-ie-launcher": "^1.0.0",
+        "karma-phantomjs-launcher": "1.0.x",
+        "phantomjs-prebuilt": "2.1.x",
+        "promises-aplus-tests": "^2.1.2",
+        "qunit": "2.6.x",
+        "temp": "^0.8.3",
+        "webpack": "^3.11.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==",
+        "shasum": "38831469f9922bded8ee21c9dc46985e0399308c",
+        "tarball": "https://registry.npmjs.org/core-js/-/core-js-2.6.11.tgz",
+        "fileCount": 1489,
+        "unpackedSize": 2261591,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd7WT7CRA9TVsSAnZWagAAhkYP/30sVphDQQn8D9uA+zBU\n0Z+g5AxurpkK2m/tQLf23gbwJbdRNCnGkzgrSCy2/NGNUxERc3JpwDWXKd+e\nK42+SQkzEFiTH01M0OGejHKbZk2E7SLkNWiw4zg5/PypggzpyakVKekEfmo3\nFMaQA5bflvMSpH8voUkzqw0sMTjYbz5tNdTae/58Y5m936eKbotGp2/a0x7B\nEERqFDJcbso/cMAun6dLJT6ANCli3JPyS4OANh4FjLkPXYzZ8sBqAukqqUH2\nDkbnkPzvbhfDk99tKTs23jphCqEvhdkkApOVYsnYSdbEuvfwcLHFW99llBF/\nA8UlKwxnvTkKi5UkrmYkba9O4Cb2Qoo5x0kv/jUqKLXgEJ9SUF1NotkiRUNp\ngIRukaKUq9c7d5ZODJhwTGj+uOk2YnxxuBf89EgOSLSlQtzn2CxSqfuucfpI\nG5I4Cpft5hUoYGDvqJ9LhO9uMfOZEuZHgpHJMtUHi3L5DlvVXYKCNby7EBWO\nZFtyi3kaDltTq07l2gq1dHXKEzRdWPX7hWrDmh2KKBoYUe03mXULkDYq5KbS\ncnYYRuPjwIAUm2BWuawuG+ctKkO9ELUXPVNOYfkBs7na9ME+hjP+AYTZ0geO\ndwupQLTrqNqjXz9/4fYzpkvgt6se4hwVy9zP3CvHQqCXP9U5UHjHrXuS/MGG\nf2qW\r\n=CNIl\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3."
+    },
+    "3.4.8": {
+      "name": "core-js",
+      "version": "3.4.8",
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-b+BBmCZmVgho8KnBUOXpvlqEMguko+0P+kXCwD4vIprsXC6ht1qgPxtb1OK6XgSlrySF71wkwBQ0Hv695bk9gQ==",
+        "shasum": "e0fc0c61f2ef90cbc10c531dbffaa46dfb7152dd",
+        "tarball": "https://registry.npmjs.org/core-js/-/core-js-3.4.8.tgz",
+        "fileCount": 1682,
+        "unpackedSize": 649052,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd7WeKCRA9TVsSAnZWagAAdRwQAINWa+NyloZedaZjj6eS\nkVBCFOi/Cr0S29AEl7SSBlx2QQUD9LbZsbeIh4xsZeCD9i/qfABvNKFp9kKY\nf+LFEOvzsaPDdWY6NT9UX62Tju1AWCzCZs5VOUprBP+8JBJBzZzfaFp3gXKy\nBIKIxvXe615Nsy8fwlisCmHAItR3+T+TUKvniN0vR35bEl6F4NEPEVDU5XO1\n3rd4pxU30ltDQSUhk/yPSO+rR3efoztt+GTIFYFSDbowrlBRH5ClR7pdZs+A\npwvdhmA8LXXFqIQQfNP4Ck0Gd4+ayHWKmhVn8lh87v/QzFCRZ4D2dw2JBHTR\nUrgzQBj4plcDPyNlpRwUXzG17eeLrXRwzeqkmhkcNfv+lY7gAyX6AhDtcbyq\ncPMekf0N8wDduBkEWSCDfmFDIfXCFL2s2urAlWjPpQi7zkAJLocEVQZZFD1y\nw1uUA3a28bLEymTdVwX9vFcf8KkBTKp8FquLCw2arj6JmVBsIFiyj/yWvKik\n2i7Ndcn+QHRXTXEiinKcfrXP9CDw5iLn1AOU8g+QAHHbgCIzEO28DGAtliEJ\nxOtnfNMVZAjVIxi38McswRP7uFcryMJmlrwS+txlELtK63OCAvPclu69blTJ\nk5LaOPkWHtOtcU59Iv+NclBMvREwxKv3a5/ENwNJmtjWe7G5/0aOlvzIjuVI\nOzpb\r\n=JocE\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "3.5.0": {
+      "name": "core-js",
+      "version": "3.5.0",
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Ifh3kj78gzQ7NAoJXeTu+XwzDld0QRIwjBLRqAMhuLhP3d2Av5wmgE9ycfnvK6NAEjTkQ1sDPeoEZAWO3Hx1Uw==",
+        "shasum": "66df8e49be4bd775e6f952a9d083b756ad41c1ed",
+        "tarball": "https://registry.npmjs.org/core-js/-/core-js-3.5.0.tgz",
+        "fileCount": 1690,
+        "unpackedSize": 652195,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd8ZDMCRA9TVsSAnZWagAAnJUP/i1fsipGYrAuIn2hQZlJ\nmPY2Ui1Et75sV6qc4uvRQVGzdYT4zQktRaCvPBX+3N8NLdoc7ZfNxOJ/A0m+\n8NzG7Mew9Yc4lvmgaC1ndlD4iS9gIBE5uB944znIM78EmW79BsqtAfge3MuZ\nrCnI7hMQO6UT9KrlyJhH3P16SkaBVZckPlSv8SeT7lT8OY/agoYOWlZ+oa81\nzzELFcKjsVyvG1ovBTxLygX00XLNhtMwKPuVJB4AkLaqNXuvKBnDCYh0RtlH\nDy/j1VGWrPg5iPJOwnBzG6BJ5oawTBOlCr72y+RBRkqNSXUU8sxNCRJ+uacT\ncg1LHOnkr8CldWOdU9wSujl9WNIWdHi68Ns8skH1gkcdpLgWsdoDjhxLUdZU\nFfAQg2lYyILp7NOnsmLfxX794rxZLVC+68LsUrComsXpOweMxrenhPRGzJfC\nHdda3JiTk6gXpRkHVB3d2QrpzKusxvAU5fU3fxnNWeiDA5TYtWQPM9HUPxnm\nwMtenju7/PEyh90xosxN130BfFou/RnzN7hfQIW0fKORbVxGGCDmkUyQ54WH\nwdkTEOhwb0AzP7F7Qq+tqyu327f7qUPBoeGlQ403ZPJFXFxngs87VNM99Ovj\nFSQZ+5k7I/c/SGavFagPMrLK4fmbiAi8zixjxpymi3sXANB5ktQThB6asWaG\ne+Q7\r\n=fU/l\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "3.6.0": {
+      "name": "core-js",
+      "version": "3.6.0",
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-AHPTNKzyB+YwgDWoSOCaid9PUSEF6781vsfiK8qUz62zRR448/XgK2NtCbpiUGizbep8Lrpt0Du19PpGGZvw3Q==",
+        "shasum": "2b854e451de1967d1e29896025cdc13a2518d9ea",
+        "tarball": "https://registry.npmjs.org/core-js/-/core-js-3.6.0.tgz",
+        "fileCount": 1699,
+        "unpackedSize": 658505,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+rYVCRA9TVsSAnZWagAAF+YP/0/8yrqS5H0Qxl0gaAIR\n/qg+ehCBUMZo1cxFnPyn4b+dj9xNcbOvTAETDVhXYUzE8cmdKzmnO8FWoB5+\n2Tw28W0CWRthBc1TeJfuwlB4cI0oNAi9H3kI9B2WR2ZLJpUxS0Gr9zO52OC9\nNvC+IIaEELlvPreFw4Tfi873UJx5CvZYzAt76HZoRo+pUaVwSkbFxy3YK/lX\nKmzrnZxcbB5lfgCQwVLXTvB94sBa+ZB6q/RdDlpIdx/CaSH3Ej8Ch9w2EhLZ\nmvFa61W9V7XhKek9EfGGneR/oYR6OQCN2491JEbK+Gw21hyv6eL7RpoGOh61\n6q8HosciUea7CVuhqR+OA8jwKVwHJnHksPQshVomWIHqofD36iyvt776nFoy\nF8gvrgT8WmNqGDaVYD9co0cAnpxb13ullTvxfZddnSqSV1OKI+TwDzZUFU67\n7u51VXwKV1jPLASwsYUJ4i/MiYFynmNFBw6OW1tFKJLLrIPpYpf5GI+tCqui\nDgQ4+Fg1xu5wQ2rSsw94ZFlf+VDkRN7astjThaLgLaKE4OuYdb8yPLRbiCxg\nLsVJbWKAKUI0o38jj8Xyg149htuCwpwdR/NHcPcWBUeqfXiNfAxhJE3JWxs5\n1zqMo2mIuazKV12Xyz9lutAbIUue+FkhjNccRdutwyiiHs5iBfkY8lF/jWr0\nVw13\r\n=I2Wj\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "3.6.1": {
+      "name": "core-js",
+      "version": "3.6.1",
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-186WjSik2iTGfDjfdCZAxv2ormxtKgemjC3SI6PL31qOA0j5LhTDVjHChccoc7brwLvpvLPiMyRlcO88C4l1QQ==",
+        "shasum": "39d5e2e346258cc01eb7d44345b1c3c014ca3f05",
+        "tarball": "https://registry.npmjs.org/core-js/-/core-js-3.6.1.tgz",
+        "fileCount": 1699,
+        "unpackedSize": 658600,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeAvwgCRA9TVsSAnZWagAA0cwP/RIwDhnSUIhA9afMuT5B\nqOS3Cn/QSqP/5frh0SUMjUqjeETc5cLAW4b/coVt+BHyPhe+VTtq9ySeza3N\nlao3arYFZF5AmzwCVqFMxZw/8mK+1c8DgNYN7qm3JJwU0lTJWGQMf8EgaM4v\n5V9+5SBJ6GpOHB3OCEwMXJrz0jZyyTdD7njNn/FxKKa+P7KakIHkQPwAyPJl\n58bNP/mwWiM+woAyY+z1asFdUPlcYNCoqDlDI0BwGYScVQAPxx0gbXKtpfLy\nEBmDnPrjwBSRn/hTkEUawPPvJh+L48avP+NuYWF9dtz1UHByKSyCy3GKOJCX\nebMjbkMfA1OXAfHuCw2q7gubh8Vhf01+bRU7o35c275szUg83YNaxtik5S35\nZBnhTDUN/FKLY0OctxGpJLc1xpX8rBtjnCjDTkB5qZtQ/togpf62HgAtyfrz\nRm7VODYJU5PSedww6YH3QpZpCLFiNQu8cUbdTUrj6B41l+sgVzuZCKt0Hd15\nPE70OAqpAuaftQS2xQPDABPUGl1h4wtNCvB4v91DvCXiby43jik8pKwHLCyU\nKmXRq0sGsY41IZ+R5/BqXrBM84dQ+ZmQavU/hiwW8T5j9KLDfd+A0yvZDghw\n6Sfchek1xL+ungj9/8poG85cHxvtOAi0icP+uEXL4hxjrAlnif6Lnf346UTo\ngtvK\r\n=X/3U\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "core-js",
   "dist-tags": {
-    "latest": "3.4.7",
+    "latest": "3.6.1",
     "alpha": "3.0.0-alpha.4",
     "beta": "3.0.0-beta.20"
   },
-  "modified": "2019-12-02T17:57:42.251Z",
+  "modified": "2019-12-25T06:05:22.756Z",
   "_cached": false,
-  "_contentLength": 170416
+  "_contentLength": 177353
 }

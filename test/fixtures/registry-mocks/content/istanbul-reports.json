@@ -1050,14 +1050,49 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0": {
+      "name": "istanbul-reports",
+      "version": "3.0.0",
+      "dependencies": {
+        "html-escaper": "^2.0.0",
+        "istanbul-lib-report": "^3.0.0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.5",
+        "@babel/preset-react": "^7.7.4",
+        "babel-loader": "^8.0.6",
+        "chai": "^4.2.0",
+        "is-windows": "^1.0.2",
+        "istanbul-lib-coverage": "^3.0.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-2osTcC8zcOSUkImzN2EWQta3Vdi4WjjKw99P2yWx5mLnigAM0Rd5uYFn1cf2i/Ois45GkNjaoTqc5CxgMSX80A==",
+        "shasum": "d4d16d035db99581b6194e119bbf36c963c5eb70",
+        "tarball": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-3.0.0.tgz",
+        "fileCount": 41,
+        "unpackedSize": 282839,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd/TUTCRA9TVsSAnZWagAAvBoP/3iT6D5pAx82f00YGdoG\nUpWiVgW/BY5q5VAIofeh5IYp9L7vfGetUnjrFNuwZFg3c+112SPXrEH/rSHu\n0gvjLR4E6lESKKNO6g1TvDpkYrouHKD5VSeq4gAI1AVZ6MefiubPFFXxZ5Ro\n6dOV4Hkevy7Tt3HdRMub7jJD8xyQDAstDHHYtDjjhZFnDaYzepH80lKDGd0s\nNbWk8F4BZ4Gd50hBaH71Ok9WmbdAv91FAEArSUKfwfTzzKLY8UO1pWUZI/Gu\nJXd5Isxz0AogppF57kSSyCCRCk0Jy1wh2SyO0h+Uk0dUe+92v81TyTFlvkyu\nAxaUHu2oDl1MfM0yLWy5NqcZY21e8o67yMFUOCd1sYbR2CZultfI8JIV01o9\n0NCfPZvlXA57MHDYiPYGGwQH37gXM8gRn1u0onmBXwGNtWpK32cFyolY2Naf\n15XR3HSf3RcfB+bE2paXT1gCvrAhw+XpZ1qbYzK6hiUp1pF35PkDtxGXpNU3\nu7NlWRWlrZn/t9L6hzVio0SLeRmnks34bYu1x81WZExcCFj4CvF5Y3hspgML\njTx8br1BWiUP9SaDevqGPxZ5CqaXI3ZWYn/1H44vX9qWlnRC/6q3+XSTP2BX\n7aSihVEg8L7Fj9NmsY31/V2zBtnJeXL3+aPHfkvCPwp2ODhZ879JP61RIW45\nXV/1\r\n=UUYs\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-reports",
   "dist-tags": {
-    "latest": "2.2.6",
-    "next": "3.0.0-alpha.6"
+    "latest": "3.0.0"
   },
-  "modified": "2019-12-07T16:42:03.527Z",
+  "modified": "2019-12-23T00:53:12.860Z",
   "_cached": false,
-  "_contentLength": 45660
+  "_contentLength": 47357
 }

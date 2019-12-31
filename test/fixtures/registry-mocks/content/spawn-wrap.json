@@ -655,14 +655,42 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "2.0.0": {
+      "name": "spawn-wrap",
+      "version": "2.0.0",
+      "dependencies": {
+        "foreground-child": "^2.0.0",
+        "is-windows": "^1.0.2",
+        "make-dir": "^3.0.0",
+        "rimraf": "^3.0.0",
+        "signal-exit": "^3.0.2",
+        "which": "^2.0.1"
+      },
+      "devDependencies": {
+        "standard-version": "^7.1.0",
+        "tap": "^14.10.5"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-EeajNjfN9zMnULLwhZZQU3GWBoFNkbngTUPfaawT4RkMiviTxcX0qfhVbGey39mfctfDHkWtuecgQ8NJcyQWHg==",
+        "shasum": "103685b8b8f9b79771318827aa78650a610d457e",
+        "tarball": "https://registry.npmjs.org/spawn-wrap/-/spawn-wrap-2.0.0.tgz",
+        "fileCount": 17,
+        "unpackedSize": 34123,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd/OgVCRA9TVsSAnZWagAAiMwQAJ40E27iNnK7SqsWc7JH\n6cgzKJOFjjeQluj/G3mEd3LwXMh1ZI9PhhOiUxBfX+5z0E6vTnp3twlUkKaY\nBd08dtOKsj1a0Sw751hizW2vzJCK+WdZ28eB44RrZMaKLsE9h0D3uW7W9Kdd\n4lMRAYnFqpWWNy2Qt2trfF4MBJ4+zlyKXZJ7BTp3RHu5VGlku2NEIJaILaEO\nUeH8Fc4zB+RNudzQYY6QT1W6Ka/9ddoLJDUJDPdwna0yXuG8kCTe7PoenVao\nupUAUhNAnYx9R4M7S8+1UtSSk3oE40QfKF/fxYDITGEfgB8ENCj8epIZLowz\naqbbi7+ZenITK4DhCI2Qan3ta4IBXsNqvPkvI0C6KA9oIDj96ZpR5VX60it1\nb1I3P3NQrTxBsr1zyYjfGpj2PuzxK64+/RNk/E369HFYrDiGH0Pz/VBihduG\nLZqqJEJRzNwO9Sr+mMNxlWGQkrMQXU3sxtfeR+kP1FGeSCJS4ajwd8T2jNCF\nauCfegeoceY4CSbKGmiKMTaV5WK5UvojoxaH+XmRjt4bcD798nYdtTQ8WN7o\nvqwVLjKzEQtaVbQ8CxgRFbyAjp2qE3g0ADiyRqNPunqGJA1fKbHqsocnFvHi\nzkXMbIKOHvxShKlAfXqHNLVx6BfC4YWbhbHMhNehlgmrun5X+U8MJN3MjYef\npDTE\r\n=Xxm6\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "spawn-wrap",
   "dist-tags": {
-    "latest": "1.4.3",
-    "next": "2.0.0-beta.0"
+    "latest": "2.0.0"
   },
-  "modified": "2019-10-07T02:13:41.184Z",
+  "modified": "2019-12-20T15:27:26.802Z",
   "_cached": false,
-  "_contentLength": 15230
+  "_contentLength": 16723
 }

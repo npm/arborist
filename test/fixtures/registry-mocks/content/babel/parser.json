@@ -1129,13 +1129,39 @@
       "engines": {
         "node": ">=6.0.0"
       }
+    },
+    "7.7.7": {
+      "name": "@babel/parser",
+      "version": "7.7.7",
+      "devDependencies": {
+        "@babel/code-frame": "^7.5.5",
+        "@babel/helper-fixtures": "^7.6.3",
+        "charcodes": "^0.2.0",
+        "unicode-12.0.0": "^0.7.9"
+      },
+      "bin": {
+        "parser": "./bin/babel-parser.js"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-WtTZMZAZLbeymhkd/sEaPD8IQyGAhmuTuvTzLiCFM7iXiVdY0gc0IaI+cW0fh1BnSMbJSzXX6/fHllgHKwHhXw==",
+        "shasum": "1b886595419cf92d811316d5b715a53ff38b4937",
+        "tarball": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
+        "fileCount": 37,
+        "unpackedSize": 1703156,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+sn2CRA9TVsSAnZWagAAjZoP/i6BR8jehKZo45lFdLdX\nri6fGyNAJ3g0+JTgJTaXoUgax2KmJJuW1OMfZjvVjMNEBt398fpZunLZjHVY\nFsnCT7Gf77V8qa2qLpUcBk4P46ZLbWAxf/yw3yKi0klOvQ7YQ9zPD39Pv2b9\n3ZDQg34fQ0aUNiMAPs/RZk2SCYVhr99aN2cl4pKr13xmPKGDherLcJQCKxD4\nTV0C85NNnpNhYJllA1jSKJdxeFaX6/+uWOlbR34JTjUl9RIg+OQEorJT6xfC\nmBPmWSwH+N1m9aLyzzhD8W45vtE9mCE9SeYckzEG8km+Atcx8B3SqB5VJLHb\nJubY1AeZO/NuETXLikok9dDxcLn9W32DqPWQCU3Jz/1Wv7K3tjxJScCnDg0B\npPN5Irf3DUYUZ0Nxq56cTMG2/x+52gG02g7PA6z485BpktPhbJBmGFQdCK8u\ne4IgBNoHJA5S2zuhJ1UlL2VaXgUoUKB8C93Kx2Cb/KdwaNAcewGq7yaP/aQh\npcfu4Jcb/JPc9RkNsaY0q4iirtrQr2EXYSdkvuhIcTsFVP4ezSLey+BidrlR\nWguU5GL50etjeDkBv6K1tQYa2uakDuWvFHOvgo2FbR08WE/13Id8Obe+WYel\nlt3OULKgc7ggoyUWBeAcdJZMVHWbAKvstp0sAFDj6hSKXBd1UiHINQzt7iEJ\n90ps\r\n=1mcD\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=6.0.0"
+      }
     }
   },
   "name": "@babel/parser",
   "dist-tags": {
-    "latest": "7.7.5"
+    "latest": "7.7.7"
   },
-  "modified": "2019-12-06T13:17:56.919Z",
+  "modified": "2019-12-19T00:53:12.930Z",
   "_cached": false,
-  "_contentLength": 60127
+  "_contentLength": 61611
 }

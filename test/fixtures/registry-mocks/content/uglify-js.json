@@ -5447,14 +5447,42 @@
       "engines": {
         "node": ">=0.8.0"
       }
+    },
+    "3.7.3": {
+      "name": "uglify-js",
+      "version": "3.7.3",
+      "dependencies": {
+        "commander": "~2.20.3",
+        "source-map": "~0.6.1"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-7tINm46/3puUA4hCkKYo4Xdts+JDaVC9ZPRcG8Xw9R4nhO/gZgUM3TENq8IF4Vatk8qCig4MzP/c8G4u2BkVQg==",
+        "shasum": "f918fce9182f466d5140f24bb0ff35c2d32dcc6a",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
+        "fileCount": 20,
+        "unpackedSize": 781857,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeBVWgCRA9TVsSAnZWagAAyUgP/j//wHeVYfkFVIfnbTx5\n7ITvl1v7nQInuIqooh57ZiDuzs1hjun1jI9p6HEqWSlgip3Z3vIbHBS8LsXV\nXBPsXlltFROt8TTJs5VVmENHog/V5zbDMjyuhz2eMjStUZHILXvCoBHXGt6Y\naLN9EDcVkSqOWlet0CZHPSp4ErBtct4YO1CYvQc7NBT1wu8Z8eT8cKnL2lz6\nendigUTthfWUzqfuSHf8g58ctvcZ2G4pS4epJJ/BrBggWGMeY1K+Dj+6PGXt\njS5inuq6vMJFNaAD+IVp54KgMKaZegPKX4Cc5S308OUYFevlc+gpZDXrS/3K\n300jvKPDhWKxXzwQmcxVayovBEfUfBIwJXZo93StrLxzYmCWnjZ37dpg96IH\nu3w9mXSuOkHsTs6FNocF0csax610bZ6LR7Q1ZyI1AvxBo7xKILisE/AVbB6E\n3Wy5wQ2DJquu8upqFfjPITe95MVIiFDGjwdSmjPzWfD0RrTYCARs07YSebNI\nRtEQ3EIm5e0AvDpsj7EVXn4nUcaBpH9T4S+tgKpV+KcZ58txNpLflbR/sN3W\n4v6iF+tr7Yy6V8BHo+bvr83EeI5qYbbJasVnFasWl7PD5b74mgR3CXqHmIgt\n6CAoynY6haZyTwwLdxEE+oHV4NPoXfQU4HZul6zBke0Nfrnr3kLBqx4+bccz\nVe5c\r\n=t3fl\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=0.8.0"
+      }
     }
   },
   "name": "uglify-js",
   "dist-tags": {
-    "latest": "3.7.2",
+    "latest": "3.7.3",
     "backports": "2.8.29"
   },
-  "modified": "2019-12-08T16:52:28.179Z",
+  "modified": "2019-12-27T00:51:46.140Z",
   "_cached": false,
-  "_contentLength": 143551
+  "_contentLength": 145008
 }

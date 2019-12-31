@@ -1173,13 +1173,38 @@
         "unpackedSize": 15767,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd2HArCRA9TVsSAnZWagAALxEP/j0GGr/M9GcAcS+KDxVV\nm2C0I4mM2rlzMcSZLyrKbr134Dpw5GD/DkWRqb6oIukdKx2gpF9jXlV3mokm\nUTRU277QYgDiiAE2tw33cEAwL+HKEWewMnANsRBUfMz4YTZ2KS8ds8by45od\nc0QLvc4iOJ+EZkpDWEJJgdquCEc1yM08KNcA/liXFbbCoft5HHYmvZHete9b\nETRto8TlOSepq+hpxnWB1928siIOoQwUI09TyUDlrBMZXRKYg5pCg0IYr/v9\n+bQYPC29jw3PwNSlA+TCkSJGAcztyGKZgpdkJPGxQN++mmq25R3xcsr42wT7\nj1cPSp5fxfJr/y4V1wudnfNfAqrijHNZ2Nek3G1Ag0/6i6f6WxVZuTWSwsTp\nbYn7JiYzIuG11R35zGaZhM5hNkGS+mAgvVAZASRyCFnHoANRJI+XNIfrNI0w\nsNNScLUleZf7CESd0FioA3CrCI+R6f3WKAOHYdCqVJWg8+x+isnTFMOB9kyw\nTvdSNgwpiw3TsArrnRiaen7ncOkyMiZwMOj6Di5qEd/k+C5RArwSGMFTly4v\nhKAVAaCon0XowR1HPMI9HKLfJnFTIDeHuMDL1fwwl7sgkzL+scCyAPEBbyCI\nznzhemH1VFARp+eVJSjxt5m76JHx+e16lbvy8QKvFWUiNxK5GwpjyzWmBp/b\njLFA\r\n=HZnM\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "7.7.7": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.7.7",
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.0.0",
+        "@babel/plugin-syntax-object-rest-spread": "^7.7.4"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.7.7",
+        "@babel/helper-plugin-test-runner": "^7.7.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-3qp9I8lelgzNedI3hrhkvhaEYree6+WHnyA/q4Dza9z7iEIs1eyhWyJnetk3jJ69RT0AT4G0UhEGwyGFJ7GUuQ==",
+        "shasum": "9f27075004ab99be08c5c1bd653a2985813cb370",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.7.tgz",
+        "fileCount": 4,
+        "unpackedSize": 15975,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+snyCRA9TVsSAnZWagAANnUP/0mzBRZrMicRtAg/ZYQw\nLDREG7dgQyJZuZIsRTxW0vCu8xQ+B7ZSlJ3+7U52OiKivam5Ma+knuAxa55v\ncMffEBuvs3y/YnOcMhT10ML3F70szug1JKnXUfM72V6RIfPcQJtMPUmBWYzc\n+nDMjzx7SfYusRdX+chpuP5BjgNZLwBoyf81gfJjXtvRSW0rYzwk9/Od5USn\n6+6VHANkG3ozN/xHAxyXnGYGwxev5dN0nAET2fFmChjNHhtE43V8gTbfewcv\nj0XokAaT6eXiQf1NdRBQQwCeZCtwW9yjBPBQnfuJImuwRdtbs/S2/nZdn6se\nb6/fh/hVaXSaNZaAABHB2mpVObKk9+b167PFaVR/xiu2I/XMIXhcjeWg+Rfi\ng7hmMfDvtkfd0MfGwp3VKcaX4jYOmLs3eSdr/SYAlehIBvyCD5A/wDIKx16G\nebxV0f/5SU4Zs02Eb9sElonzJ1WPcRrYvfm/bqrDIhRBbrEN+1YqjqHcIn2S\nDbV+dWkMXkj3d0MUfOAVIuLz+im6wA2LkPCD87xZIJGKsDof4hlX7B88AqmW\nfFT1NdsgHPbI4zRYEeNxPsgMkzLTR5IfZNTs3w1q7jdjSRJjhqySF0iYcHs3\n14dnM2p0uEkMETv3O+2woJQt8qx8f+Auj9er6M7t0ohckamXy55DKNCY6T35\nRNNW\r\n=x+Ly\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "@babel/plugin-proposal-object-rest-spread",
   "dist-tags": {
-    "latest": "7.7.4"
+    "latest": "7.7.7"
   },
-  "modified": "2019-11-22T23:33:01.948Z",
+  "modified": "2019-12-19T00:53:13.718Z",
   "_cached": false,
-  "_contentLength": 60122
+  "_contentLength": 61726
 }

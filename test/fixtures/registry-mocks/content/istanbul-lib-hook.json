@@ -536,14 +536,38 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0": {
+      "name": "istanbul-lib-hook",
+      "version": "3.0.0",
+      "dependencies": {
+        "append-transform": "^2.0.0"
+      },
+      "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-Pt/uge1Q9s+5VAZ+pCo16TYMWPBIl+oaNIjgLQxcX0itS6ueeaA+pEfThZpH8WxhFgCiEb8sAJY6MdUKgiIWaQ==",
+        "shasum": "8f84c9434888cc6b1d0a9d7092a76d239ebf0cc6",
+        "tarball": "https://registry.npmjs.org/istanbul-lib-hook/-/istanbul-lib-hook-3.0.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 17853,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd/TUKCRA9TVsSAnZWagAAe6EP/izpd6Fa5ZDObFmVRlub\nijy4CRL1SADGVxQB0Hso9yLxNSHGJxoHCua7UuFfqUa2iFQYzgQgUaImpXeo\nBUv1FJ6QMCt4dUzvUAy7Nv3qu9uHRJcy8yJnF1/ipq7laQ5I+MpcnSe56x/z\no8pFW1loSoRxq35/BR5ihffAif9hThJb8HTEv5y172kRLuralJgdKcRD5fjA\nrq45drqzFXk/6PguOkVQNaoIVg/y8nMSJeUP3QCE18yn864jUvkDcsxTtIfn\nhGHq83b1dSNubLe1hoVr5ZPTeHvkaUeyTYXp5lWRxBFaqaCFpVLOj3ATnbu/\n4+qRl+AqK6IjfF5fKfAtcXFsFcARoL0SH5Hjnp7IP2Ttb0Hn7xJWkJ2l4M+S\nssAUta0CDrtd4iqEOojLprKiH+fuadg3n5pEfRcyOefZqQawh6kRAR2rMUS+\nSc16NUpfmZ/Bi7ZeOPHKw0seCazlegpJpYgGxgLY9yLtVf0Lpl5MUSDLtVAv\nOaDCHGe3kVfud53RqpkmELZUaDf3XPCtNgwfAkX76TMAu2Fw0V1h3fNJIsZt\nlAI4DVhhJvY4ca+7wvRwpMqFtvAFUSUlb424SEepjs7Lw6/4HXFRi0YkWPBr\nBw67ZR/uumAOp5QU1Z40X6WPULrD1J6EgSpOPTx63QMOuP0+AuDEe7p3Iecu\nTZCc\r\n=Uhcs\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-lib-hook",
   "dist-tags": {
-    "latest": "2.0.7",
-    "next": "3.0.0-alpha.2"
+    "latest": "3.0.0"
   },
-  "modified": "2019-12-07T16:41:55.948Z",
+  "modified": "2019-12-23T00:53:07.345Z",
   "_cached": false,
-  "_contentLength": 23921
+  "_contentLength": 25344
 }

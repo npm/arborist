@@ -570,14 +570,41 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0": {
+      "name": "istanbul-lib-report",
+      "version": "3.0.0",
+      "dependencies": {
+        "istanbul-lib-coverage": "^3.0.0",
+        "make-dir": "^3.0.0",
+        "supports-color": "^7.1.0"
+      },
+      "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2",
+        "rimraf": "^3.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-wcdi+uAKzfiGT2abPpKZ0hSU1rGQjUQnLvtY5MpQ7QCTahD3VODhcu4wcfY1YtkGaDD5yuydOLINXsfbus9ROw==",
+        "shasum": "7518fe52ea44de372f460a76b5ecda9ffb73d8a6",
+        "tarball": "https://registry.npmjs.org/istanbul-lib-report/-/istanbul-lib-report-3.0.0.tgz",
+        "fileCount": 13,
+        "unpackedSize": 37452,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd/TUOCRA9TVsSAnZWagAA8L8P/jSX2cPk2QXmgQlWk63z\nVmf33Hou1Rb+1TJSpj9yJENy8X7nuU3ui4GBP4SrX+2fRkye3wPJS3n4a52G\nEkfewi23yv2U8D9zBhggeOCtw72hFa5AJLHi2IBLWOmca9bwrONLG5Dy9EOS\n4vEY4Cffe7mXe6siYXJ+2HHZ7tAs9cvHBSTXuiOIKIoTjhyPBXBHNxdNk9Pl\njV675lb/NQM3RPnZm0MEL2VaMtE6RBSHsovM4eqeayl3wSb0KjwEyMOmUD0J\n/dTcuxTkenQ31rG+gd0KgMiP1ShLVCSVdyrNRHS5tbloOpnG2owHmwThWkEh\nHte4ZQh+rygJDUY+cqFcwLPGd2ulk9Uz/zw4WUD2P7fiDYRJLuDrANMrqaAb\n8ztdTXmmhqOAGztVPssf9zUeIon4nlVO6/97SejhSms31FYbfdvfpNGBWw37\n40vPsyNQ86oe+sMSGLCvVpoVIeylMJ+eCAqK/AsIm/FEWSXQV/GO8vv8lEi0\nYCP0bWvvf2KtPRuy+qWadsl+zDE2Ra9QXmPVRZwsbT+b92zM2w//F/g2r44E\nWc9g0FuhAV/eHdl5HPfA0ZjmO3WOKuwtvcybavK1QhklMBbxV0HdJtVti6Qm\n1DIqNe0SHy23qM7io+o6y3JjZKMSnKlS4a4w5vOlccOMgD/+2tPiEXSElfdy\nFk7h\r\n=3SWy\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-lib-report",
   "dist-tags": {
-    "latest": "2.0.8",
-    "next": "3.0.0-alpha.2"
+    "latest": "3.0.0"
   },
-  "modified": "2019-12-07T16:41:59.827Z",
+  "modified": "2019-12-23T00:53:10.112Z",
   "_cached": false,
-  "_contentLength": 24904
+  "_contentLength": 26403
 }

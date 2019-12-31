@@ -118,10 +118,9 @@
   },
   "name": "istanbul-lib-processinfo",
   "dist-tags": {
-    "latest": "1.0.0",
-    "next": "2.0.2"
+    "latest": "2.0.2"
   },
-  "modified": "2019-10-08T00:20:24.397Z",
+  "modified": "2019-12-21T02:15:21.978Z",
   "_cached": false,
-  "_contentLength": 6384
+  "_contentLength": 6369
 }

@@ -1526,12 +1526,9 @@
   "dist-tags": {
     "latest": "16.12.0",
     "next": "0.0.0-b53ea6ca0",
-    "canary": "0.0.0-f42431abe",
-    "unstable": "0.0.0-experimental-2c169a568",
-    "alpha": "16.9.0-alpha.0",
     "experimental": "0.0.0-experimental-f42431abe"
   },
-  "modified": "2019-12-16T20:08:14.849Z",
+  "modified": "2019-12-18T15:02:30.954Z",
   "_cached": false,
-  "_contentLength": 132855
+  "_contentLength": 132761
 }

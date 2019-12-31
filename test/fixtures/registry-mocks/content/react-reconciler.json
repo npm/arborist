@@ -2946,12 +2946,9 @@
   "dist-tags": {
     "next": "0.0.0-b53ea6ca0",
     "latest": "0.24.0",
-    "canary": "0.0.0-f42431abe",
-    "unstable": "0.0.0-experimental-2c169a568",
-    "alpha": "0.21.0-alpha.0",
     "experimental": "0.0.0-experimental-f42431abe"
   },
-  "modified": "2019-12-16T20:08:21.775Z",
+  "modified": "2019-12-18T15:00:09.574Z",
   "_cached": false,
-  "_contentLength": 159137
+  "_contentLength": 159043
 }

@@ -390,14 +390,35 @@
       "engines": {
         "node": ">=8"
       }
+    },
+    "3.0.0": {
+      "name": "istanbul-lib-coverage",
+      "version": "3.0.0",
+      "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-UiUIqxMgRDET6eR+o5HbfRYP1l0hqkWOs7vNxC/mggutCMUIhWMm8gAHb8tHlyfD3/l6rlgNA5cKdDzEAf6hEg==",
+        "shasum": "f5944a37c70b550b02a78a5c3b2055b280cec8ec",
+        "tarball": "https://registry.npmjs.org/istanbul-lib-coverage/-/istanbul-lib-coverage-3.0.0.tgz",
+        "fileCount": 10,
+        "unpackedSize": 25259,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd/TUKCRA9TVsSAnZWagAAUI4P/AqEovVMHuccY2hdin09\nn9eVo6i43K3dOZ5APQycRwNRCSZZPYwW503vruekUtZtEBkhypXo4DHu2Z88\nY1CfCoCF83UnoNNd1SsxUFjllDB9t61DvYwIjJ9xGG6P8sFBOZwjw+feTwcP\nNF/f9v3hJXfFXJBBsJXS8Wr8cJNrjdOXVaFaPus2q7QuDXf6msEFG/rjrras\nSw+k33s6kD3U9sZw3J6LAWSYn6CNlA4JPVQL1fU0BKW1gYvddW6BuWre2ky7\noaGlisXeccVkqgRbH/aoxGrR4FX9j/uX0hduGm8IQaCtNCJTxmy6oYK/jSKE\n7hbsdPryNJbT2chytKiQ1gH6UBrHS723GIY2HJdNlMSS54q1D1WJKxG2xgQe\niZ1t1mfhqYdaj3/4FCYR/c44YiWzC7lXuSx/Fr6P2zzYAZl4WPmaTkyTHzLg\n4Ypj9tjWhRepjdIVJc81lvU4V0wEaLTaVFO+pJPAFa7B7uHv5STlOtEH8jLu\nWiGR+fu4GqXjFBuxdpwvMQ/9TNVOa8jirNixtH97AetSP4DqhBhCFAyO596i\nf75/DuxJd8sVz0l0LY5pKvrEPnUR2nrhtPa/WRB2XMJwfrYysUWOpSEwN+Sz\nigoR1YsT5w+HYiMka101VJs/agOTpJnAyOBUq/shzBIJ4HvjCUs6TLwoks6D\n98Pb\r\n=Xi5X\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
   "name": "istanbul-lib-coverage",
   "dist-tags": {
-    "latest": "2.0.5",
-    "next": "3.0.0-alpha.2"
+    "latest": "3.0.0"
   },
-  "modified": "2019-12-07T16:41:56.814Z",
+  "modified": "2019-12-23T00:53:06.278Z",
   "_cached": false,
-  "_contentLength": 18563
+  "_contentLength": 19954
 }

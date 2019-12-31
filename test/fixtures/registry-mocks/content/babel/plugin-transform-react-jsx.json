@@ -937,13 +937,39 @@
         "unpackedSize": 5410,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd2HBECRA9TVsSAnZWagAAg7MP/iJC6Lku9QeOFNtsCygt\ngyxpNPSvyMqUW0uIdYgjZuAQIcq9+G4rQmQgJ//Rcy438D33OQ6h1UNPW8qP\nN0kO7eFkmFBJqHBaMeLQieX4EOosQWc/9fVEjfg37M0o5HhjO0xVXnr850NS\nNx725zotacAb7M1gQAuXJkmuQ2z6lPKNdVmevYyK09snO1eDcghIGHTb67W8\nslks9RXvyolZNR88i9zc3LeaK6AchyIPgXiUo0Fzk+HfXBoe9j6gMladS+AC\nk2+tZIpwHxb+xEiDALxZCISINbA6rz0i4ho7dFQHz47RCbHPQYO+UjWwLBan\nHSvQ6r0r5yJ8C0yEUidJQaJav85lqYNF2b5nAidcxPRcd4CER2leeVut9tbi\nE9hktZLCJ7kv/yh7BR3bYGoJWvLoVxtUwy3MYCOMYWuPLvY7gzj7luAgTq15\nK+CfYJsOomPS0NcpPfYpV8NmKQmvy2F3o8iomcq668lD5qmGqO7PtVXLsvTK\n+WTM0A3vX7225JDaXywm6UwSy2fLFTAmcBGhJvYbw433SnWGT1d0twVDkybW\ndOaZ0C4a69syWOrI/GdTNstt3ANJhPt5zQxtF/XRjsl3k/MuMQ8kTdTyQZZF\n87qqrQY1xPCWQ32qmbjSKJsHCx5QDY7N5abFM5FZ/GZsRRokMRqAnMcpH/3U\nu1rF\r\n=7mtA\r\n-----END PGP SIGNATURE-----\r\n"
       }
+    },
+    "7.7.7": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.7.7",
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.7.4",
+        "@babel/helper-plugin-utils": "^7.0.0",
+        "@babel/plugin-syntax-jsx": "^7.7.4"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.7.7",
+        "@babel/helper-plugin-test-runner": "^7.7.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-SlPjWPbva2+7/ZJbGcoqjl4LsQaLpKEzxW9hcxU7675s24JmdotJOSJ4cgAbV82W3FcZpHIGmRZIlUL8ayMvjw==",
+        "shasum": "5cbaa7445b4a09f774029f3cc7bb448ff3122a5d",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.7.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5410,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+snyCRA9TVsSAnZWagAA9ScP/2wDNsi8ZWkGVQKsQZMc\nWYc4kAw2Fk8ukEedauN3EuXsYD5wNsZz24mM4FOwgJ35nhBeraq3zoeJYNkA\nccRmFytjDLp5xc7UdR12XzH4wuLz+JKVeXB1Up5QbNOGpWfAehaMC/NJ3Wow\nMLAVvPq1o4/YQgN/1i1/m39B3eTMCgrGXYnbQVGMzBNuuOHbgSj5a7bcu1Ev\nzLNKMC2vF4Tp1jyNGF3Wm7CwJTrYJQEkqj8bzpEne9v1e7d7wA7TRFaRVzVm\nFXDz/vj7PtNRof9C5yOE3ArjiFzv47kcOAZdHmSAsj8mnA31Gr9Bw+iyVu37\nbbm6jRQw+G9RHGmG/oLlD5hVNfYV0qoIiSkMZuttOPfvwolzGXqY+dfGNy97\n/mOTbk0T8OWILnPhxHFfOt7L3yy/Qx67/QOf1vCDkNa/JEXmCFhE58LI/hDH\nxD6RHf7UDcAO8sISzMrJ4uwNTkt0qHn+TZFlaXYtPXM3OSXGGW0B56XWjuR/\nuxMILEJzbcfBGvCpVBtdP2F9lCnY8wZCLFugLF0YKT80aTLU9hE3hzhlgbL/\nX88EVcFuBqNPoVpdqI40nl3UpoDjIy0gCiPAxbscr72rGbu03IbJBEmYLo1Q\nUzaZd9qdBqtkmSnbCIEU27iWcV9gQEOBCUuHqeC9AcP/xScrk0hmh0NhmogM\nH9et\r\n=8O46\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
   "name": "@babel/plugin-transform-react-jsx",
   "dist-tags": {
-    "latest": "7.7.4"
+    "latest": "7.7.7"
   },
-  "modified": "2019-11-22T23:33:29.971Z",
+  "modified": "2019-12-19T00:53:12.983Z",
   "_cached": false,
-  "_contentLength": 42813
+  "_contentLength": 44420
 }

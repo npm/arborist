@@ -846,13 +846,41 @@
       "engines": {
         "node": "*"
       }
+    },
+    "0.7.21": {
+      "name": "ua-parser-js",
+      "version": "0.7.21",
+      "devDependencies": {
+        "jshint": "~1.1.0",
+        "mocha": "~1.8.0",
+        "requirejs": "^2.3.2",
+        "uglify-js": "~2.7.5",
+        "verup": "^1.3.x"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {
+        "dist": "dist",
+        "src": "src",
+        "test": "test"
+      },
+      "dist": {
+        "shasum": "853cf9ce93f642f67174273cc34565ae6f308777",
+        "tarball": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.21.tgz",
+        "integrity": "sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==",
+        "fileCount": 18,
+        "unpackedSize": 216084,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+75uCRA9TVsSAnZWagAAEYMP/0n0XN4T08vwbw9Mk3ug\nKTTJHcYwwYKvj8HT8D9JiXm52FzrUfweKUmPC2UKIlIc+of2dFbY9Cutfphb\nHzMv9OE4ICAAID/5wVDPLuL5lF22plnHh9EPUWRBM/1OR/4P7lFaixOy3AZ0\ndugDN67IIlLFOEWdLFGGaqytsdQA1EThKujOC+E2Hgk4kEEUHDq4CUR0zqah\n0PCXmOmS69xh+KsLGtRx0Kn8erBTgyJGTdRcftSMD7DlSmC9NmhJt9n0MYe/\nj7JeIESoxV1SQ4uSoizYxr+95GAzpC+/xoGzMlOvdeu6tt7URejjdQiP9Lle\n1A6QnDlS66zZnwn+RE3tUZ2WMUKxghnucekHrwTYV+MbFAsIxtzd/8yP8pmc\ncRrk6f6KKQTQVzDKyNUmU+QQTf3v6+X82GePAOO/0vc1HA8DUmhf3m4cxhSz\n4bCNBMQ83rpNk9vGTsr2POJd/GzDmlCPQVeZGMwnBmQwhNc/AjyoR+R4FHyp\ndwDAeebFgCg4dm91aaLpBaKShMcVpWUO2VYPGxHZU4TGngHuv1Za897S3oUr\nFyL6Hvb0I7HquHZ5uVmK/QdUac91Et/7EPd1aQImq9xMxbGY8PD88zLQxmTR\n4QXlzgLZiz62CbRRfyuq4xf7ji4i1/MN3DmdcW/JIuvb+UIluNQVv6GdMLTH\nSP4g\r\n=dodZ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": "*"
+      }
     }
   },
   "name": "ua-parser-js",
   "dist-tags": {
-    "latest": "0.7.20"
+    "latest": "0.7.21"
   },
-  "modified": "2019-06-08T14:53:32.152Z",
+  "modified": "2019-12-19T18:16:16.676Z",
   "_cached": false,
-  "_contentLength": 17701
+  "_contentLength": 19167
 }

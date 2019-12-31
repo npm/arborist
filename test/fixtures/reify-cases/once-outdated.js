@@ -1,4 +1,4 @@
-// generated from 
+// generated from test/fixtures/once-outdated
 module.exports = t => ({
   "node_modules": {
     "once": {

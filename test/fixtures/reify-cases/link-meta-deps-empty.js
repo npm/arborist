@@ -1,4 +1,4 @@
-// generated from 
+// generated from test/fixtures/link-meta-deps-empty
 module.exports = t => ({
   "package.json": JSON.stringify({
     "dependencies": {

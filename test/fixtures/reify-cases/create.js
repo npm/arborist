@@ -12,7 +12,7 @@ if (!process.argv[2]) {
 }
 
 const fixture = resolve(process.argv[2])
-const rel = relative(process.cwd(), fixture)
+const rel = relative(resolve(__dirname, '../../..'), fixture)
 const outFile = resolve(__dirname, basename(fixture)) + '.js'
 
 // we build up an object and then JSON.stringify it, and string replace

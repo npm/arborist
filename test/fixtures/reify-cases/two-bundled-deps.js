@@ -1,4 +1,4 @@
-// generated from 
+// generated from test/fixtures/two-bundled-deps
 module.exports = t => ({
   "package-lock.json": JSON.stringify({
     "name": "two-bundled-deps",

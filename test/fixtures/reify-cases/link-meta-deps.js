@@ -1,4 +1,4 @@
-// generated from 
+// generated from test/fixtures/link-meta-deps
 module.exports = t => ({
   "node_modules": {
     "@isaacs": {

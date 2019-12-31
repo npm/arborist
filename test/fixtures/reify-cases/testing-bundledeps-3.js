@@ -1,4 +1,4 @@
-// generated from 
+// generated from test/fixtures/testing-bundledeps-3
 module.exports = t => ({
   "node_modules": {
     "@isaacs": {

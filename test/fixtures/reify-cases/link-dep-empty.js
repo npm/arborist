@@ -1,8 +1,10 @@
 // generated from test/fixtures/link-dep-empty
 module.exports = t => ({
   "package-lock.json": JSON.stringify({
-    "requires": true,
+    "name": "@isaacs/testing-link-dep",
+    "version": "1.0.0",
     "lockfileVersion": 1,
+    "requires": true,
     "dependencies": {
       "linked-dep": {
         "version": "file:target"
@@ -10,6 +12,8 @@ module.exports = t => ({
     }
   }),
   "package.json": JSON.stringify({
+    "name": "@isaacs/testing-link-dep",
+    "version": "1.0.0",
     "dependencies": {
       "linked-dep": "file:target"
     }

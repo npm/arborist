@@ -3,6 +3,7 @@ const t = require('tap')
 const Arborist = require('../..')
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry} = registryServer
+const fs = require('fs')
 
 // there's a lot of fs stuff in this test.
 // Parallelize as much as possible.
@@ -164,4 +165,130 @@ t.test('update a node without updating a child that has bundle deps', t => {
   }))
 })
 
-t.test('rollbacks')
+t.test('rollbacks', t => {
+  t.test('fail retiring shallow nodes', t => {
+    const path = fixture(t, 'testing-bundledeps-3')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const renamePath = a.renamePath
+    a.renamePath = () => {
+      a.renamePath = renamePath
+      return Promise.reject(new Error('poop'))
+    }
+    const rollbackRetireShallowNodes = a.rollbackRetireShallowNodes
+    a.rollbackRetireShallowNodes = er => {
+      t.match(er, new Error('poop'))
+      a.rollbackRetireShallowNodes = rollbackRetireShallowNodes
+      return a.rollbackRetireShallowNodes(er)
+    }
+
+    return t.rejects(a.reify({
+      update: ['@isaacs/testing-bundledeps-parent'],
+    }), new Error('poop'))
+  })
+
+  t.test('fail creating sparse tree', t => {
+    const path = fixture(t, 'testing-bundledeps-3')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const createSparseTree = a.createSparseTree
+    a.createSparseTree = () => {
+      a.createSparseTree = createSparseTree
+      const mkdir = fs.mkdir
+      fs.mkdir = (...args) => {
+        fs.mkdir = mkdir
+        Promise.resolve().then(() => args.pop()(new Error('poop')))
+      }
+      return a.createSparseTree()
+    }
+    const rollbackCreateSparseTree = a.rollbackCreateSparseTree
+    a.rollbackCreateSparseTree = er => {
+      t.match(er, new Error('poop'))
+      a.rollbackCreateSparseTree = rollbackCreateSparseTree
+      return a.rollbackCreateSparseTree(er)
+    }
+
+    return t.rejects(a.reify({
+      update: ['@isaacs/testing-bundledeps-parent'],
+    }), new Error('poop'))
+  })
+
+  t.test('fail loading shrinkwraps and updating trees', t => {
+    const path = fixture(t, 'shrinkwrapped-dep-no-lock-empty')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const loadShrinkwrapsAndUpdateTrees = a.loadShrinkwrapsAndUpdateTrees
+    a.loadShrinkwrapsAndUpdateTrees = seen => {
+      a.loadShrinkwrapsAndUpdateTrees = loadShrinkwrapsAndUpdateTrees
+      const diffTrees = a.diffTrees
+      a.diffTrees = () => {
+        a.diffTrees = diffTrees
+        return Promise.reject(new Error('poop'))
+      }
+      return a.loadShrinkwrapsAndUpdateTrees(seen)
+    }
+    const rollbackCreateSparseTree = a.rollbackCreateSparseTree
+    a.rollbackCreateSparseTree = er => {
+      t.match(er, new Error('poop'))
+      a.rollbackCreateSparseTree = rollbackCreateSparseTree
+      return a.rollbackCreateSparseTree(er)
+    }
+
+    return t.rejects(a.reify(), new Error('poop'))
+  })
+
+  t.test('fail loading bundles and updating trees', t => {
+    const path = fixture(t, 'two-bundled-deps')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const loadBundlesAndUpdateTrees = a.loadBundlesAndUpdateTrees
+    a.loadBundlesAndUpdateTrees = (depth, bundlesByDepth) => {
+      const reifyNode = a.reifyNode
+      a.reifyNode = node => {
+        a.reifyNode = reifyNode
+        return Promise.reject(new Error('poop'))
+      }
+      a.loadBundlesAndUpdateTrees = loadBundlesAndUpdateTrees
+      return a.loadBundlesAndUpdateTrees(depth, bundlesByDepth)
+    }
+    return t.rejects(a.reify(), new Error('poop'))
+  })
+
+  t.test('fail unpacking new modules', t => {
+    const path = fixture(t, 'two-bundled-deps')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const unpackNewModules = a.unpackNewModules
+    a.unpackNewModules = () => {
+      const reifyNode = a.reifyNode
+      a.reifyNode = node => {
+        a.reifyNode = reifyNode
+        return Promise.reject(new Error('poop'))
+      }
+      a.unpackNewModules = unpackNewModules
+      return a.unpackNewModules()
+    }
+    return t.rejects(a.reify(), new Error('poop'))
+  })
+
+  t.test('fail moving back retired unchanged', t => {
+    const path = fixture(t, 'testing-bundledeps-3')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const moveBackRetiredUnchanged = a.moveBackRetiredUnchanged
+    a.moveBackRetiredUnchanged = () => {
+      a.moveBackRetiredUnchanged = moveBackRetiredUnchanged
+      const moveContents = a.moveContents
+      a.moveContents = () => {
+        a.moveContents = moveContents
+        return Promise.reject(new Error('poop'))
+      }
+      return a.moveBackRetiredUnchanged()
+    }
+    const rollbackMoveBackRetiredUnchanged = a.rollbackMoveBackRetiredUnchanged
+    a.rollbackMoveBackRetiredUnchanged = er => {
+      t.match(er, new Error('poop'))
+      a.rollbackMoveBackRetiredUnchanged = rollbackMoveBackRetiredUnchanged
+      return a.rollbackMoveBackRetiredUnchanged(er)
+    }
+    return t.rejects(a.reify({
+      update: ['@isaacs/testing-bundledeps-parent'],
+    }), new Error('poop'))
+  })
+
+  t.end()
+})

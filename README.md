@@ -2,7 +2,7 @@
 
 Inspect and manage `node_modules` trees.
 
-![a tree with the word ARBORIST superimposed on it](logo.svg)
+![a tree with the word ARBORIST superimposed on it](https://raw.githubusercontent.com/npm/arborist/master/logo.svg?sanitize=true)
 
 ## USAGE
 

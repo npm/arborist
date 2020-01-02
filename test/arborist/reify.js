@@ -376,7 +376,7 @@ t.test('rollbacks', t => {
     a.on('warn', (...warning) => warnings.push(warning))
     return t.resolveMatchSnapshot(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
-    })).then(() => {
+    }).then(tree => printTree(tree))).then(() => {
       t.equal(warnings.length, 1)
       t.match(warnings, [[
         'Failed to clean up some directories',

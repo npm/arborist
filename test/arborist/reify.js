@@ -121,8 +121,27 @@ t.test('update a bundling node without updating all of its deps', t =>
 t.test('bad shrinkwrap file', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-bad-sw'))))
 
-t.test('multiple bundles at the same level', t =>
-  t.resolveMatchSnapshot(printReified(fixture(t, 'two-bundled-deps'))))
+t.test('multiple bundles at the same level', t => {
+  const path = fixture(t, 'two-bundled-deps')
+  const a = new Arborist({ path, registry })
+  return a.reify().then(tree => {
+    const root = tree.root
+    const p = printTree(tree)
+    // just fail on the failures, we don't need a zillion tap lines here
+    for (const n of tree.inventory.values()) {
+      if (n.root !== root)
+        t.equal(n.root, root, 'in same tree')
+      else {
+        for (const e of n.edgesIn) {
+          if (e.from.root !== root)
+            t.equal(e.from.root, root,
+              `edge in same tree ${e.from.location} -> ${n.location}`)
+        }
+      }
+    }
+    return t.matchSnapshot(p)
+  })
+})
 
 t.test('update a node without updating its children', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'once-outdated'),

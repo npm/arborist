@@ -457,7 +457,7 @@ Node {
 }
 `
 
-exports[`test/arborist/reify.js TAP multiple bundles at the same level > expect resolving Promise 1`] = `
+exports[`test/arborist/reify.js TAP multiple bundles at the same level > must match snapshot 1`] = `
 Node {
   "children": Map {
     "@babel/code-frame" => Node {
@@ -7515,12 +7515,6 @@ Node {
           "bundled": true,
           "edgesIn": Set {
             Edge {
-              "from": "node_modules/chalk",
-              "name": "ansi-styles",
-              "spec": "^3.2.1",
-              "type": "prod",
-            },
-            Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
               "name": "ansi-styles",
               "spec": "^3.2.1",
@@ -7528,12 +7522,6 @@ Node {
             },
             Edge {
               "from": "node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
-              "name": "ansi-styles",
-              "spec": "^3.2.0",
-              "type": "prod",
-            },
-            Edge {
-              "from": "node_modules/wrap-ansi",
               "name": "ansi-styles",
               "spec": "^3.2.0",
               "type": "prod",
@@ -7999,12 +7987,6 @@ Node {
           "bundled": true,
           "edgesIn": Set {
             Edge {
-              "from": "node_modules/chalk",
-              "name": "escape-string-regexp",
-              "spec": "^1.0.5",
-              "type": "prod",
-            },
-            Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
               "name": "escape-string-regexp",
               "spec": "^1.0.5",
@@ -8086,12 +8068,6 @@ Node {
         "has-flag" => Node {
           "bundled": true,
           "edgesIn": Set {
-            Edge {
-              "from": "node_modules/supports-color",
-              "name": "has-flag",
-              "spec": "^3.0.0",
-              "type": "prod",
-            },
             Edge {
               "from": "node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
               "name": "has-flag",
@@ -8954,12 +8930,6 @@ Node {
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
-              "name": "punycode",
-              "spec": "^2.0.0",
-              "type": "prod",
-            },
-            Edge {
-              "from": "node_modules/unicode-length",
               "name": "punycode",
               "spec": "^2.0.0",
               "type": "prod",

@@ -4,6 +4,9 @@ Inspect and manage `node_modules` trees.
 
 ![a tree with the word ARBORIST superimposed on it](https://raw.githubusercontent.com/npm/arborist/master/logo.svg?sanitize=true)
 
+There's more documentation [in the notes
+folder](https://github.com/npm/arborist/tree/master/notes).
+
 ## USAGE
 
 ```javascript

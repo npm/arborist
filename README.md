@@ -18,11 +18,6 @@ const arb = new Arborist({
   // url to the default registry.  defaults to npm's default registry
   registry: 'https://regisry.npmjs.org',
 
-  // prefer to deduplicate packages if possible, rather than choosing
-  // a newer version of a dependency.  Defaults to false, ie, always
-  // try to get the latest and greatest deps.
-  preferDedupe: true,
-
   // if not provided, registry requests are unauthenticated
   auth: {
     'registry.npmjs.org': 'deadbeefcafebad',
@@ -73,6 +68,13 @@ arb.buildIdealTree(options).then(() => {
   //   object with any or all of the following fields:
   //   - all: boolean.  set to true to just update everything
   //   - names: names of packages update (like `npm update foo`)
+  // prune: boolean, default true.  Prune extraneous nodes from the tree.
+  // preferDedupe: prefer to deduplicate packages if possible, rather than
+  //   choosing a newer version of a dependency.  Defaults to false, ie,
+  //   always try to get the latest and greatest deps.
+  // legacyBundling: Nest every dep under the node requiring it, npm v2 style.
+  //   No unnecessary deduplication.  Default false.
+
   // At the end of this process, arb.idealTree is set.
 })
 

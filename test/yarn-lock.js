@@ -1,5 +1,5 @@
 const YarnLock = require('../lib/yarn-lock.js')
-const Arborist = require('../lib/arborist.js')
+const Arborist = require('../lib/arborist')
 
 const t = require('tap')
 const {resolve, basename} = require('path')

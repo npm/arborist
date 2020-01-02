@@ -1477,6 +1477,81 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP link meta deps > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-link-dep" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-link-dep",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "linked-dep" => Edge {
+          "name": "linked-dep",
+          "spec": "file:target",
+          "to": "node_modules/linked-dep",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-link-dep",
+      "name": "@isaacs/testing-link-dep",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-link-dep/-/testing-link-dep-1.0.0.tgz",
+    },
+    "@isaacs/testing-link-dev-dep" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-link-dev-dep",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-link-dev-dep",
+      "name": "@isaacs/testing-link-dev-dep",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-link-dev-dep/-/testing-link-dev-dep-1.0.1.tgz",
+    },
+    "linked-dep" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-link-dep",
+          "name": "linked-dep",
+          "spec": "file:target",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/linked-dep",
+      "name": "linked-dep",
+      "resolved": "file:../@isaacs/testing-link-dep/target",
+      "target": Object {
+        "name": "linked-dep",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-link-dep" => Edge {
+      "name": "@isaacs/testing-link-dep",
+      "spec": "^1.0.0",
+      "to": "node_modules/@isaacs/testing-link-dep",
+      "type": "prod",
+    },
+    "@isaacs/testing-link-dev-dep" => Edge {
+      "name": "@isaacs/testing-link-dev-dep",
+      "spec": "^1.0.1",
+      "to": "node_modules/@isaacs/testing-link-dev-dep",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "link-meta-deps-empty",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP nested cyclical peer deps peer-dep-cycle-nested > nested peer deps cycle 1`] = `
 Node {
   "children": Map {

@@ -1,6 +1,6 @@
 const t = require('tap')
 const { format } = require('tcompare')
-const Arborist = require('../../lib/arborist.js')
+const Arborist = require('../../lib/arborist')
 const { resolve, dirname, relative } = require('path')
 const { realpathSync } = require('fs')
 

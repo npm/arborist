@@ -17,6 +17,7 @@
   "devDependencies": {
     "mkdirp": "^0.5.1",
     "mutate-fs": "^2.1.1",
+    "require-inject": "^1.4.4",
     "tap": "^14.10.5",
     "tcompare": "^3.0.4"
   },
@@ -34,9 +35,9 @@
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
   "license": "ISC",
   "files": [
-    "index.js",
-    "lib/*.js"
+    "lib/"
   ],
+  "main": "lib/index.js",
   "tap": {
     "100": true,
     "coverage-map": "map.js",

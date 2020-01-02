@@ -297,10 +297,18 @@ t.test('update', t => {
   t.end()
 })
 
+t.test('link meta deps', t =>
+  t.resolveMatchSnapshot(printIdeal(
+    resolve(__dirname, '../fixtures/link-meta-deps-empty'))))
+
 // some cases that are hard to hit without very elaborate dep trees
 // and precise race conditions, so we just create some contrived
 // examples here.
 t.test('contrived dep placement tests', t => {
+  const kCanPlaceDep = Symbol.for('canPlaceDep')
+  const kPlaceDep = Symbol.for('placeDep')
+  const kUpdateNames = Symbol.for('updateNames')
+
   const Node = require('../../lib/node.js')
   const Link = require('../../lib/link.js')
   t.test('keep existing dep', t => {
@@ -345,10 +353,10 @@ t.test('contrived dep placement tests', t => {
       integrity: 'sha512-foofoofoo',
     })
     const a = new Arborist()
-    t.match(a.canPlaceDep(sameFoo, root, root.edgesOut.get('foo')),
+    t.match(a[kCanPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
       Symbol('KEEP'), 'same integrity, keep the one we have')
 
-    t.strictSame(a.placeIdealDep(sameFoo, root, root.edgesOut.get('foo')),
+    t.strictSame(a[kPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
       [], 'nothing placed, keep whats already there')
 
     const tooNew = new Node({
@@ -359,9 +367,9 @@ t.test('contrived dep placement tests', t => {
       },
       integrity: 'sha512-oofoofoof',
     })
-    t.match(a.canPlaceDep(tooNew, root, existingBar.edgesOut.get('foo')),
+    t.match(a[kCanPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
       Symbol('KEEP'), 'keep existing, satisfies the dep anyway')
-    t.strictSame(a.placeIdealDep(tooNew, root, existingBar.edgesOut.get('foo')),
+    t.strictSame(a[kPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
       [], 'nothing placed, keep whats already there')
 
     const newFoo = new Node({
@@ -375,7 +383,7 @@ t.test('contrived dep placement tests', t => {
     // note: it'll actually not bother replacing in this case, because
     // the original edge is not an error, but the canPlace result is still
     // REPLACE because it's newer.
-    t.match(a.canPlaceDep(newFoo, root, existingBar.edgesOut.get('foo')),
+    t.match(a[kCanPlaceDep](newFoo, root, existingBar.edgesOut.get('foo')),
       Symbol('REPLACE'), 'replace with newer dependency if allowed')
     t.end()
   })
@@ -424,9 +432,9 @@ t.test('contrived dep placement tests', t => {
       integrity: 'sha512-oofoofoof',
     })
 
-    t.match(a.canPlaceDep(newFoo, root, existingBar.edgesOut.get('foo')),
+    t.match(a[kCanPlaceDep](newFoo, root, existingBar.edgesOut.get('foo')),
       Symbol('REPLACE'), 'replace with newer node')
-    const placed = a.placeIdealDep(newFoo, existingBar, existingBar.edgesOut.get('foo'))
+    const placed = a[kPlaceDep](newFoo, existingBar, existingBar.edgesOut.get('foo'))
     t.equal(placed.length, 1, 'placed one node')
     t.equal(placed[0], newFoo, 'placed newFoo node')
     t.equal(newFoo.parent, root, 'placed newFoo in root')
@@ -441,7 +449,7 @@ t.test('contrived dep placement tests', t => {
       },
       integrity: 'sha512-oofoofoof',
     })
-    t.match(a.canPlaceDep(tooNew, root, existingBar.edgesOut.get('foo')),
+    t.match(a[kCanPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
       Symbol('CONFLICT'), 'conflicts with root dependency')
 
     t.test('shadow conflict', t => {
@@ -504,7 +512,7 @@ t.test('contrived dep placement tests', t => {
         parent: new Node({ path: '/virtual-root' })
       })
 
-      t.match(a.canPlaceDep(d2, b, edge, null), Symbol('CONFLICT'),
+      t.match(a[kCanPlaceDep](d2, b, edge, null), Symbol('CONFLICT'),
         'cannot place dep where it shadows a dependency creating a conflict')
 
       t.end()
@@ -567,7 +575,7 @@ t.test('contrived dep placement tests', t => {
         parent: new Node({ path: '/virtual-root' })
       })
 
-      t.match(a.canPlaceDep(d2, b, edge, null), Symbol('OK'),
+      t.match(a[kCanPlaceDep](d2, b, edge, null), Symbol('OK'),
         'can place dep where it shadows a dependency creating no conflict')
 
       t.end()
@@ -611,8 +619,8 @@ t.test('contrived dep placement tests', t => {
       const c1 = b.children.get('c')
       const edge = b.edgesOut.get('c')
       t.equal(edge.to, c1, 'gut check')
-      a.buildIdealTreeUpdateSettings.names = ['c']
-      a.placeIdealDep(c11, b, edge)
+      a[kUpdateNames] = ['c']
+      a[kPlaceDep](c11, b, edge)
       t.equal(c1.root, c1, 'c 1.0 removed from tree')
       t.equal(c11.parent, dedupeUpdate, 'c 1.1 placed in root node_modules')
       t.equal(edge.to, c11, 'b is resolved by c 1.1')
@@ -716,7 +724,7 @@ t.test('contrived dep placement tests', t => {
       const dupe = f.children.get('c')
       const b = root.children.get('a').children.get('b')
       const edge = b.edgesOut.get('c')
-      a.placeIdealDep(c2, b, edge)
+      a[kPlaceDep](c2, b, edge)
       t.equal(c2.parent, root, 'new node landed at the root')
       t.equal(oldc.parent, e, 'old c still in the tree')
       t.equal(dupe.parent, f, 'dupe still in tree')
@@ -750,7 +758,7 @@ t.test('contrived dep placement tests', t => {
     })
     const edge = target.edgesOut.get('bar')
     t.equal(edge.valid, false, 'gut check')
-    a.placeIdealDep(bar, target, edge)
+    a[kPlaceDep](bar, target, edge)
     t.equal(edge.valid, true, 'resolved')
     t.equal(bar.parent, target, 'installed peer locally in target top node')
     t.end()
@@ -782,7 +790,7 @@ t.test('contrived dep placement tests', t => {
     })
     const edge = target.edgesOut.get('bar')
     t.equal(edge.valid, false, 'gut check')
-    a.placeIdealDep(bar, target, edge)
+    a[kPlaceDep](bar, target, edge)
     t.equal(edge.valid, true, edge.error)
     t.equal(bar.parent, root, 'installed peer in fsParent node')
     t.end()

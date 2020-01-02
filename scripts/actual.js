@@ -1,4 +1,4 @@
-const Arborist = require('../lib/arborist.js')
+const Arborist = require('../')
 const {format} = require('tcompare')
 
 const print = tree => console.log(format(printTree(tree), { style: 'js' }))

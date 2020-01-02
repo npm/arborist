@@ -1,4 +1,4 @@
-const Arborist = require('../../lib/arborist.js')
+const Arborist = require('../../lib/arborist')
 const t = require('tap')
 const {resolve} = require('path')
 const fixture = resolve(__dirname, '../fixtures/install-types')
@@ -6,6 +6,7 @@ const swonlyfixture = resolve(__dirname, '../fixtures/install-types-sw-only')
 const badfixture = resolve(__dirname, '../fixtures/root')
 const pnpmFixture = resolve(__dirname, '../fixtures/pnpm')
 const depTypesFixture = resolve(__dirname, '../fixtures/dev-deps')
+const bundleFixture = resolve(__dirname, '../fixtures/two-bundled-deps')
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -92,12 +93,14 @@ t.test('loading without a package-lock fails', t =>
   }))
 
 t.test('load from npm-shrinkwrap.json', t => {
-  const sw = fixture + '/npm-shrinkwrap.json'
-  const lock = fixture + '/package-lock.json'
   const fs = require('fs')
-  fs.renameSync(lock, sw)
-  t.teardown(() => fs.renameSync(sw, lock))
-  return loadVirtual(fixture).then(tree =>
+  const lock = require(fixture + '/package-lock.json')
+  const pkg = require(fixture + '/package.json')
+  const path = t.testdir({
+    'npm-shrinkwrap.json': JSON.stringify(lock),
+    'package.json': JSON.stringify(pkg),
+  })
+  return loadVirtual(path).then(tree =>
     t.matchSnapshot(printTree(tree), 'loaded virtual tree from fixture'))
 })
 
@@ -113,3 +116,7 @@ t.test('load a tree with some links to nodes outside of node_modules', t =>
 t.test('load a tree with optional and dev dependencies', t =>
   loadVirtual(depTypesFixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'loaded virtual tree with dev/optional deps')))
+
+t.test('load a tree with a bunch of bundles', t =>
+  loadVirtual(bundleFixture).then(tree =>
+    t.matchSnapshot(printTree(tree), 'virtual tree with multiple bundles')))

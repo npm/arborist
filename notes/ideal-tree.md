@@ -13,6 +13,15 @@ Options:
   objects.
 - prune: Boolean, default true.  Remove extraneous nodes from the tree
   after building the ideal tree.
+- preferDedupe: Boolean, default false.  Prefer to deduplicate packages if
+  possible, rather than choosing a newer version of a dependency.  Default
+  is to always try to get the highest possible version dependency, even if
+  that causes more duplication.
+- legacyBundling: Boolean, default false.  Always nest packages in their
+  dependent's `node_modules` folder, even if they could be moved further up
+  the tree, deduplicating only when the dependency is already met by a
+  shallower node in the tree.  This is the layout algorithm of npm v1 and
+  v2.
 
 ## to BUILD IDEAL TREE:
 

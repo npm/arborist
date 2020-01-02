@@ -60,6 +60,10 @@ Options:
 
 ## to PLACE a dep in the tree to satisfy an edge for a node:
 
+Starting from the original thing depending on the dep, walk up the tree
+checking each spot until we find the shallowest spot in the tree where the
+dependency can go without causing conflicts.
+
 1. If edge is valid, and dep name is not on the update list, do not place
 2. If the node is not a top node, and the dep is a peer dep, then the
    starting TARGET is node.parent, otherwise it's node
@@ -94,16 +98,29 @@ Options:
 
 ## to CHECK if a dep can be placed at a target to satisfy an edge for a node
 
+At each level walking up the tree, try to determine whether it's acceptable
+to place the dependency at that point in the tree.
+
+This can return:
+
+- CONFLICT: it is incorrect to place that dependency here.  Note that there
+  _are_ cases where we allow a dependency to be placed such that it causes
+  problems, but only because we then clean up those problems.
+- OK: no problem putting the dep here.
+- KEEP: there is already a version at this spot that satisfies the
+  dependency as well (or better) than the dep being placed.
+- REPLACE: there is already a version at this spot, but the dep being
+  placed is better, so put that here instead.
+
 1. If a child by that name in target:
     1. If integrity matches current dep in tree, KEEP
     2. If node is root, REPLACE if peers can be placed
+    3. If target has edge not met by dep, CONFLICT
     3. If current version is less than new version, REPLACE if peers can be
        placed
-    4. If edge would be satisfied by the current node, then KEEP if peers
-       can be placed
-    5. If `preferDedupe` option is set, and current node can satisfy edge,
+    4. If `preferDedupe` option is set, and current node can satisfy edge,
        then KEEP if peers can be placed.
-    6. CONFLICT
+    5. CONFLICT
 2. Else, no child by that name in target
     1. If target is not node, and target has a dependency on dep's name,
        and dependency is not met by dep, then CONFLICT

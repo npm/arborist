@@ -116,6 +116,10 @@ t.test('cyclical peer deps', t => {
   paths.forEach(path => t.test(basename(path), t =>
     t.resolveMatchSnapshot(printIdeal(path), 'cyclical peer deps')
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        // just reload the dep at its current required version
+        add: { dependencies: { '@isaacs/peer-dep-cycle-a': '' } },
+      }), 'cyclical peer deps - reload a dependency'))
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
           // also add a devDep just to verify it works when adding
           // a type that isn't already in the root's package

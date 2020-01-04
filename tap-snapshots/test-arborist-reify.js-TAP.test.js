@@ -407,7 +407,7 @@ Node {
         Edge {
           "from": "",
           "name": "@isaacs/testing-link-dep",
-          "spec": "2",
+          "spec": "^2.0.0",
           "type": "prod",
         },
       },
@@ -428,7 +428,7 @@ Node {
         Edge {
           "from": "",
           "name": "@isaacs/testing-link-dev-dep",
-          "spec": "2",
+          "spec": "^2.0.1",
           "type": "prod",
         },
       },
@@ -440,13 +440,13 @@ Node {
   "edgesOut": Map {
     "@isaacs/testing-link-dep" => Edge {
       "name": "@isaacs/testing-link-dep",
-      "spec": "2",
+      "spec": "^2.0.0",
       "to": "node_modules/@isaacs/testing-link-dep",
       "type": "prod",
     },
     "@isaacs/testing-link-dev-dep" => Edge {
       "name": "@isaacs/testing-link-dev-dep",
-      "spec": "2",
+      "spec": "^2.0.1",
       "to": "node_modules/@isaacs/testing-link-dev-dep",
       "type": "prod",
     },
@@ -11814,6 +11814,79 @@ Node {
   "location": "",
   "name": "reify-rollbacks-fail-removing-retired-and-deleted-nodes",
   "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP saving the ideal tree save some stuff > lock after save 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "bundled": true,
+      "extraneous": true,
+      "from": "a@github:foo/bar#baz",
+      "version": "git+ssh://git@github.com:foo/bar#71f3ccfefba85d2048484569dba8c1829f6f41d7",
+    },
+    "b": Object {
+      "bundled": true,
+      "extraneous": true,
+      "resolved": "https://registry.npmjs.org/b/-/b-1.2.3.tgz",
+      "version": "1.2.3",
+    },
+    "c": Object {
+      "bundled": true,
+      "extraneous": true,
+      "from": "c@git+ssh://git@githost.com:a/b/c.git#master",
+      "version": "git+ssh://git@githost.com:a/b/c.git#71f3ccfefba85d2048484569dba8c1829f6f41d7",
+    },
+    "d": Object {
+      "extraneous": true,
+      "resolved": "https://registry.npmjs.org/c/-/c-1.2.3.tgz",
+      "version": "npm:c@1.2.3",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "reify-saving-the-ideal-tree-save-some-stuff",
+  "packages": Object {
+    "": Object {
+      "bundleDependencies": Array [
+        "a",
+        "b",
+        "c",
+      ],
+      "dependencies": Object {
+        "a": "github:foo/bar#baz",
+        "b": "^1.2.3",
+        "d": "npm:c@^1.2.3",
+      },
+      "devDependencies": Object {
+        "c": "git+ssh://git@githost.com:a/b/c.git#master",
+      },
+    },
+    "node_modules/a": Object {
+      "extraneous": true,
+      "inBundle": true,
+      "resolved": "git+ssh://git@github.com/foo/bar.git#71f3ccfefba85d2048484569dba8c1829f6f41d7",
+    },
+    "node_modules/b": Object {
+      "extraneous": true,
+      "inBundle": true,
+      "name": "b",
+      "resolved": "https://registry.npmjs.org/b/-/b-1.2.3.tgz",
+      "version": "1.2.3",
+    },
+    "node_modules/c": Object {
+      "extraneous": true,
+      "inBundle": true,
+      "resolved": "git+ssh://git@githost.com:a/b/c.git#71f3ccfefba85d2048484569dba8c1829f6f41d7",
+    },
+    "node_modules/d": Object {
+      "extraneous": true,
+      "name": "c",
+      "resolved": "https://registry.npmjs.org/c/-/c-1.2.3.tgz",
+      "version": "1.2.3",
+    },
+  },
+  "requires": true,
 }
 `
 
@@ -23942,7 +24015,7 @@ Node {
         Edge {
           "from": "",
           "name": "tap",
-          "spec": "14.10.5",
+          "spec": "^14.10.5",
           "type": "dev",
         },
       },
@@ -25854,7 +25927,7 @@ Node {
     },
     "tap" => Edge {
       "name": "tap",
-      "spec": "14.10.5",
+      "spec": "^14.10.5",
       "to": "node_modules/tap",
       "type": "dev",
     },

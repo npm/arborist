@@ -1,6 +1,7 @@
 const {basename, resolve} = require('path')
 const t = require('tap')
 const requireInject = require('require-inject')
+const Node = require('../../lib/node.js')
 
 // mock rimraf so we can make it fail in rollback tests
 const realRimraf = require('rimraf')
@@ -402,6 +403,91 @@ t.test('rollbacks', t => {
         [[String, new Error('rimraf fail')]],
       ]])
     }).then(() => failRimraf = false)
+  })
+
+  t.end()
+})
+
+t.test('saving the ideal tree', t => {
+  const kSaveIdealTree = Symbol.for('saveIdealTree')
+  t.test('save=false', t => {
+    // doesn't actually do anything, just for coverage.
+    // if it wasn't an early exit, it'd blow up and throw
+    // an error though.
+    const path = t.testdir()
+    const a = new Arborist({ path })
+    t.notOk(a[kSaveIdealTree]({ save: false }))
+    t.end()
+  })
+
+  t.test('save some stuff', t => {
+    const pkg = {
+      bundleDependencies: ['a', 'b', 'c'],
+      dependencies: {
+        a: 'git+ssh://git@github.com:foo/bar#baz',
+        b: '',
+        d: 'd@npm:c@1.x',
+      },
+      devDependencies: {
+        c: `git+ssh://git@githost.com:a/b/c.git#master`,
+      },
+    }
+    const path = t.testdir({
+      'package.json': JSON.stringify(pkg)
+    })
+    const a = new Arborist({ path })
+    const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
+    return a.loadActual().then(tree => {
+      // saving swaps the ideal tree onto the actual tree
+      a.idealTree = tree
+
+      // simulated child nodes
+      new Node({
+        name: 'a',
+        resolved: `git+ssh://git@github.com:foo/bar#${hash}`,
+        parent: a.actualTree,
+        pkg: {},
+      })
+      new Node({
+        name: 'b',
+        resolved: 'https://registry.npmjs.org/b/-/b-1.2.3.tgz',
+        pkg: { version: '1.2.3', name: 'b' },
+        parent: a.actualTree,
+      })
+      new Node({
+        name: 'c',
+        resolved: `git+ssh://git@githost.com:a/b/c.git#${hash}`,
+        parent: a.actualTree,
+        pkg: {},
+      })
+      new Node({
+        name: 'd',
+        resolved: 'https://registry.npmjs.org/c/-/c-1.2.3.tgz',
+        pkg: {
+          name: 'c',
+          version: '1.2.3',
+        },
+        parent: a.actualTree,
+      })
+
+      return a[kSaveIdealTree]({
+        savePrefix: '~',
+        add: pkg,
+      })
+    }).then(() => {
+      t.matchSnapshot(require(path + '/package-lock.json'), 'lock after save')
+      t.strictSame(require(path + '/package.json'), {
+        bundleDependencies: [ 'a', 'b', 'c' ],
+        dependencies: {
+          a: 'github:foo/bar#baz',
+          b: '^1.2.3',
+          d: 'npm:c@^1.2.3',
+        },
+        devDependencies: {
+          c: 'git+ssh://git@githost.com:a/b/c.git#master',
+        },
+      })
+    })
   })
 
   t.end()

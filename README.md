@@ -15,22 +15,40 @@ const Arborist = require('@npmcli/arborist')
 const arb = new Arborist({
   // options object
 
-  // where the packages are.  defaults to cwd.
+  // where we're doing stuff.  defaults to cwd.
   path: '/path/to/package/root',
 
   // url to the default registry.  defaults to npm's default registry
-  registry: 'https://regisry.npmjs.org',
+  registry: 'https://registry.npmjs.org',
 
-  // if not provided, registry requests are unauthenticated
-  auth: {
-    'registry.npmjs.org': 'deadbeefcafebad',
-    'npm.internal.acme.com': 'correcthorsebatterystaple',
-  },
+  // scopes can be mapped to a different registry
+  '@foo:registry': 'https://registry.foo.com/',
 
-  // map scopes to specific registries
-  scopes: {
-    '@acme-internal': 'npm.internal.acme.com'
-  },
+  // Auth can be provided in a couple of different ways.  If none are
+  // provided, then requests are anonymous, and private packages will 404.
+  // Arborist doesn't do anything with these, it just passes them down
+  // the chain to pacote and npm-registry-fetch.
+
+  // Safest: a bearer token provided by a registry:
+  // 1. an npm auth token, used with the default registry
+  token: 'deadbeefcafebad',
+  // 2. an alias for the same thing:
+  _authToken: 'deadbeefcafebad',
+
+  // insecure options:
+  // 3. basic auth, username:password, base64 encoded
+  auth: 'aXNhYWNzOm5vdCBteSByZWFsIHBhc3N3b3Jk',
+  // 4. username and base64 encoded password
+  username: 'isaacs',
+  password: 'bm90IG15IHJlYWwgcGFzc3dvcmQ=',
+
+  // auth configs can also be scoped to a given registry with this
+  // rather unusual pattern:
+  '//registry.foo.com:token': 'blahblahblah',
+  '//basic.auth.only.foo.com:_auth': 'aXNhYWNzOm5vdCBteSByZWFsIHBhc3N3b3Jk',
+
+  // in fact, ANY config can be scoped to a registry...
+  '//registry.foo.com:always-auth': true,
 })
 
 // READING
@@ -92,7 +110,6 @@ arb.reify({
   // node modules has been written to match the idealTree
 })
 ```
-
 
 ## DATA STRUCTURES
 

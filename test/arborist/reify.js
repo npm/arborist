@@ -18,11 +18,30 @@ rimrafMock.sync = (...args) => {
   else
     throw new Error('rimraf fail')
 }
+const fs = require('fs')
+let failRename = null
+let failRenameOnce = null
+const {rename: realRename} = fs
 
-const Arborist = requireInject('../../lib/arborist', { rimraf: rimrafMock })
+const Arborist = requireInject('../../lib/arborist', {
+  rimraf: rimrafMock,
+  fs: {
+    ...fs,
+    rename (...args) {
+      if (failRename)
+        process.nextTick(() => args.pop()(failRename))
+      else if (failRenameOnce) {
+        const er = failRenameOnce
+        failRenameOnce = null
+        process.nextTick(() => args.pop()(er))
+      } else
+        realRename(...args)
+    },
+  }
+})
+
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry} = registryServer
-const fs = require('fs')
 
 // there's a lot of fs stuff in this test.
 // Parallelize as much as possible.
@@ -207,23 +226,85 @@ t.test('rollbacks', t => {
   t.test('fail retiring shallow nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')
     const a = new Arborist({ path, registry, legacyBundling: true })
-    const kRename = Symbol.for('renamePath')
-    const renamePath = a[kRename]
-    a[kRename] = () => {
-      a[kRename] = renamePath
-      return Promise.reject(new Error('poop'))
+    const expect = new Error('rename fail')
+    const kRenamePath = Symbol.for('renamePath')
+    const renamePath = a[kRenamePath]
+    a[kRenamePath] = (from, to) => {
+      a[kRenamePath] = renamePath
+      failRename = expect
+      return a[kRenamePath](from, to)
     }
     const kRollback = Symbol.for('rollbackRetireShallowNodes')
     const rollbackRetireShallowNodes = a[kRollback]
+    let rolledBack = false
     a[kRollback] = er => {
-      t.match(er, new Error('poop'))
+      rolledBack = true
+      failRename = null
+      t.equal(er, expect)
       a[kRollback] = rollbackRetireShallowNodes
       return a[kRollback](er)
     }
 
     return t.rejects(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
-    }), new Error('poop'))
+    }), expect).then(() => t.equal(rolledBack, true, 'rolled back'))
+  })
+
+  t.test('fail retiring nodes because rimraf fails after eexist', t => {
+    const path = fixture(t, 'testing-bundledeps-3')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const eexist = new Error('rename fail')
+    eexist.code = 'EEXIST'
+    const kRenamePath = Symbol.for('renamePath')
+    const renamePath = a[kRenamePath]
+    a[kRenamePath] = (from, to) => {
+      a[kRenamePath] = renamePath
+      failRename = eexist
+      failRimraf = true
+      return a[kRenamePath](from, to)
+    }
+    const kRollback = Symbol.for('rollbackRetireShallowNodes')
+    const rollbackRetireShallowNodes = a[kRollback]
+    let rolledBack = false
+    a[kRollback] = er => {
+      rolledBack = true
+      failRename = null
+      failRimraf = false
+      t.match(er, new Error('rimraf fail'))
+      a[kRollback] = rollbackRetireShallowNodes
+      return a[kRollback](er)
+    }
+
+    return t.rejects(a.reify({
+      update: ['@isaacs/testing-bundledeps-parent'],
+    }), new Error('rimraf fail'))
+      .then(() => t.equal(rolledBack, true, 'rolled back'))
+  })
+
+  t.test('fail retiring node, but then rimraf fixes it', t => {
+    const path = fixture(t, 'testing-bundledeps-3')
+    const a = new Arborist({ path, registry, legacyBundling: true })
+    const eexist = new Error('rename fail')
+    eexist.code = 'EEXIST'
+    const kRenamePath = Symbol.for('renamePath')
+    const renamePath = a[kRenamePath]
+    a[kRenamePath] = (from, to) => {
+      a[kRenamePath] = renamePath
+      failRenameOnce = eexist
+      return a[kRenamePath](from, to)
+    }
+    const kRollback = Symbol.for('rollbackRetireShallowNodes')
+    const rollbackRetireShallowNodes = a[kRollback]
+    let rolledBack = false
+    a[kRollback] = er => {
+      t.fail('should not roll back!')
+      a[kRollback] = rollbackRetireShallowNodes
+      return a[kRollback](er)
+    }
+
+    return t.resolveMatchSnapshot(a.reify({
+      update: ['@isaacs/testing-bundledeps-parent'],
+    }))
   })
 
   t.test('fail creating sparse tree', t => {

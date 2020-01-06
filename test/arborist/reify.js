@@ -133,10 +133,18 @@ t.test('testing-peer-deps nested with update', t =>
     update: { names: ['@isaacs/testing-peer-deps'] },
   })))
 
-t.test('update a bundling node without updating all of its deps', t =>
-  t.resolveMatchSnapshot(printReified(
-    fixture(t, 'tap-react15-collision-legacy-sw'),
-    { add: { devDependencies: { tap: '14.10.5' } } })))
+t.test('update a bundling node without updating all of its deps', t => {
+  const path = fixture(t, 'tap-react15-collision-legacy-sw')
+
+  // check that it links the bin
+  const bin = resolve(path, 'node_modules/.bin/tap')
+  const check = process.platform === 'win32'
+    ? () => t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
+    : () => t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+
+  return t.resolveMatchSnapshot(printReified(path,
+    { add: { devDependencies: { tap: '14.10.5' } } })).then(check)
+})
 
 t.test('bad shrinkwrap file', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-bad-sw'))))

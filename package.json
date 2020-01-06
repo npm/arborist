@@ -4,6 +4,7 @@
   "description": "Manage node_modules trees",
   "dependencies": {
     "@npmcli/installed-package-contents": "^1.0.5",
+    "bin-links": "github:npm/bin-links#v2",
     "json-stringify-nice": "^1.1.1",
     "npm-package-arg": "^6.1.0",
     "pacote": "^10.3.0",

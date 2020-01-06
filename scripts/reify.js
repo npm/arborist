@@ -6,7 +6,7 @@ const print = tree => console.log(format(printTree(tree), { style: 'js' }))
 const printEdge = require('./lib/print-edge.js')
 const printTree = require('./lib/print-tree.js')
 
-const options = {path}
+const options = {path, cache: process.env.HOME + '/.npm/_cacache'}
 const npa = require('npm-package-arg')
 for (let i = 2; i < process.argv.length; i++) {
   const arg = process.argv[i]
@@ -45,7 +45,9 @@ for (let i = 2; i < process.argv.length; i++) {
 console.error(options)
 
 const start = process.hrtime()
-new Arborist(options).reify(options).then(tree => {
+new Arborist(options)
+  .on('log', console.error)
+  .reify(options).then(tree => {
   const end = process.hrtime(start)
   if (!options.quiet)
     print(tree)

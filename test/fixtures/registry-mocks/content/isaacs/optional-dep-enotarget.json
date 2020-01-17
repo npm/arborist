@@ -1,0 +1,31 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "@isaacs/optional-dep-enotarget",
+      "version": "1.0.0",
+      "dependencies": {
+        "tap": "9999.0000.9999"
+      },
+      "optionalDependencies": {
+        "tap": "9999.0000.9999"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-zgwdI1S0qOtsg4XZ4aeigeX5NhojpUrpsjlThVa/jHh8IGUW12VSKso5ro4PB/0Ah6HRAAk4V20AL2orFWgKAA==",
+        "shasum": "3b0d32cab9274dfda6b25ef546a1be689718fb11",
+        "tarball": "https://registry.npmjs.org/@isaacs/optional-dep-enotarget/-/optional-dep-enotarget-1.0.0.tgz",
+        "fileCount": 1,
+        "unpackedSize": 190,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeHR5FCRA9TVsSAnZWagAAmlUP/0uRLD6pl+tjDNEe0Rh2\nvOk18o8lH8+Tt7YLbNRRbCexX/XdCrSUUN4yGuE6Wu2BaTuaq170f0kwnZK6\nn7SSIjf3Y1te471epX0M7rD5vk7G958PJT/hCaPHcjqKKzM7qvmr+5MH5sdc\n4HFKmHn+2w/FjcPUwHTWn+8qQ6Pvk0LY6yVkGD70kN8yMrwM/ypY3MNACVCp\nuBoF49EWv1NVFKb9Xqs3kaCdSDL2zQhLWEty2DW4mJ0DHyCt1VFdN55OrQqo\n1Xcw9k1nVM35/2UImqpGKP2gcx/1ueSIZQh66X7dWYyfFi6JwBIrGC8xvaJh\nLlvsFMELW8xHz8c2SZeGDJI2i4bwiROgSp+Pdh8STcky1NECfss0QpDdZ2ca\n/IMxLhx6L0sn2iWckdvmZ7G8YOSO3NX6PZYHfzBDc4FKzdf6V7U1rOCF30/c\nDHAWoGgCTkjb5QeIgZDc8fBFLfImrZq6YsRJT92u6NTdMRoqtiUR2gp3eLzr\nPqpxwkWBJheB1icQWwxuKWHi/8ykiKkGmrP2Lzl9UY7W+WgrIume0EEfWMw4\nbYb3mKw+p/XWpheCyThC921bYpM/YkAJBqbpT2HwxuM0y7bNlY6YsFPifjY9\nZJTfO03FIiei43tIFGPT4MrWry0jleASHURbUkUBfOJBnYrbKo0Fv8AMkLfH\nDXep\r\n=Uu5J\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    }
+  },
+  "name": "@isaacs/optional-dep-enotarget",
+  "dist-tags": {
+    "latest": "1.0.0"
+  },
+  "modified": "2020-01-14T01:49:59.499Z",
+  "_cached": true,
+  "_contentLength": 1540
+}

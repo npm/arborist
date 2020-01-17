@@ -1,0 +1,31 @@
+{
+  "versions": {
+    "1.0.0": {
+      "name": "@isaacs/testing-optional-dep-metadata-missing",
+      "version": "1.0.0",
+      "dependencies": {
+        "@isaacs/this-does-not-exist-at-all": "*"
+      },
+      "optionalDependencies": {
+        "@isaacs/this-does-not-exist-at-all": "*"
+      },
+      "_hasShrinkwrap": false,
+      "directories": {},
+      "dist": {
+        "integrity": "sha512-+UsVXhIWxqZgs10nLlcE8yuUOm632L1U5Z29j6kYE1uY2IKiisiPkqolAY1Lxi04eW90S/fL6LovJTwpiiBWbA==",
+        "shasum": "ac457408fb82b452f0ce173287fe4919790dba1f",
+        "tarball": "https://registry.npmjs.org/@isaacs/testing-optional-dep-metadata-missing/-/testing-optional-dep-metadata-missing-1.0.0.tgz",
+        "fileCount": 1,
+        "unpackedSize": 254,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeFkUHCRA9TVsSAnZWagAABxAP/jt1M6oFkhRS3vzLzBgq\n7KTe6qzzPWEu6D9yYxA4VdkWv8QvGT/psIDmRJnQR0zGPs4v6HTdeePSOl5A\nZCLUXB3ohTdZwOMKaKvuJlfg4rbl59mR6PnNW4DV3djRfBRU35WyYXpVj97c\nmOJP56OwFCKoZTy0SnSX8JjttDpU9n3n890MzVM2lEm+iGytlAptbMOopO5o\ncpO6oHOaChMaFp8PBMmtBHA/N0699AIx6YX9mE4TtqyeUzmg2nrrQjXPpYuX\n4UjZdWgJ6evg0Hi14uOEsgtyG6/Ft3vzEPRp5hF9lQsqsLEgRjUA2Jgcg16g\nn10QY5hTbDZkPy/XGqOHHHKYs9rRtPlc/emU7XVinRkm33oEdi4KG2HjVEpH\nN0RQ8dkSQ2+a4jfZYOIBoJEH6nNNhGZ/1u+UjDsCBNTMlfKeCFF9skiQaJb5\nF7lUTlkdARqqk/ZpynVuzJobfEdVB6GmalGHllQ5x6HvwZv/Suow/ppP5ZVZ\nBSjbfnqUsvQ9QBlIfC77T71sTRT57zQ5S6YUwShHAj0wrvJtcIP2jhhAGpkk\nYXCG91rKKOA9hB+wb+N2TwDie5mb3qgUJZv5qfz5XrYvzM7oijPMZd9+pPdF\nf+B4NmORs3OV8u7asaOvTFgWdH/B54IhKHMUD6YyY0piNo9W5kU1AiNOhfot\nClwi\r\n=ILFc\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    }
+  },
+  "name": "@isaacs/testing-optional-dep-metadata-missing",
+  "dist-tags": {
+    "latest": "1.0.0"
+  },
+  "modified": "2020-01-08T21:09:32.693Z",
+  "_cached": false,
+  "_contentLength": 1636
+}

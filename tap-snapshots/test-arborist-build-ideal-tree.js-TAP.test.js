@@ -3052,6 +3052,102 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP optional dependency failures > optional-dep-enotarget 1`] = `
+Node {
+  "edgesOut": Map {
+    "tap" => Edge {
+      "name": "tap",
+      "spec": "9999.0000.9999",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "optional-dep-enotarget",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP optional dependency failures > optional-dep-missing 1`] = `
+Node {
+  "edgesOut": Map {
+    "@isaacs/this-does-not-exist-at-all" => Edge {
+      "name": "@isaacs/this-does-not-exist-at-all",
+      "spec": "*",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "optional-dep-missing",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP optional dependency failures > optional-metadep-enotarget 1`] = `
+Node {
+  "edgesOut": Map {
+    "@isaacs/prod-dep-enotarget" => Edge {
+      "name": "@isaacs/prod-dep-enotarget",
+      "spec": "",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "optional-metadep-enotarget",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP optional dependency failures > optional-metadep-missing 1`] = `
+Node {
+  "edgesOut": Map {
+    "@isaacs/testing-prod-dep-metadata-missing" => Edge {
+      "name": "@isaacs/testing-prod-dep-metadata-missing",
+      "spec": "*",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "optional-metadep-missing",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP optional dependency failures > optional-ok 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "optional-ok",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP tap vs react15 > build ideal tree with tap collision 1`] = `
 Node {
   "children": Map {

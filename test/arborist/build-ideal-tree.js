@@ -305,6 +305,29 @@ t.test('link meta deps', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(__dirname, '../fixtures/link-meta-deps-empty'))))
 
+t.test('optional dependency failures', t => {
+  const cases = [
+    'optional-ok',
+    'optional-dep-enotarget',
+    'optional-dep-missing',
+    'optional-metadep-enotarget',
+    'optional-metadep-missing',
+  ]
+  t.plan(cases.length)
+  cases.forEach(c => t.resolveMatchSnapshot(printIdeal(
+    resolve(__dirname, `../fixtures/${c}`)), c))
+})
+
+t.test('prod dependency failures', t => {
+  const cases = [
+    'prod-dep-enotarget',
+    'prod-dep-missing',
+  ]
+  t.plan(cases.length)
+  cases.forEach(c => t.rejects(printIdeal(
+    resolve(__dirname, `../fixtures/${c}`)), c))
+})
+
 // some cases that are hard to hit without very elaborate dep trees
 // and precise race conditions, so we just create some contrived
 // examples here.

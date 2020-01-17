@@ -4800,7 +4800,7 @@ Node {
         "fsevents" => Edge {
           "name": "fsevents",
           "spec": "~2.1.2",
-          "to": null,
+          "to": "node_modules/fsevents",
           "type": "optional",
         },
         "glob-parent" => Edge {
@@ -5120,6 +5120,21 @@ Node {
       "name": "combined-stream",
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
     },
+    "commander" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/uglify-js",
+          "name": "commander",
+          "spec": "~2.20.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/commander",
+      "name": "commander",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+    },
     "commondir" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -5192,6 +5207,12 @@ Node {
     "core-util-is" => Node {
       "dev": true,
       "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "core-util-is",
+          "spec": "~1.0.0",
+          "type": "prod",
+        },
         Edge {
           "from": "node_modules/verror",
           "name": "core-util-is",
@@ -6138,6 +6159,21 @@ Node {
       "name": "fs.realpath",
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
+    "fsevents" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chokidar",
+          "name": "fsevents",
+          "spec": "~2.1.2",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/fsevents",
+      "name": "fsevents",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.1.2.tgz",
+    },
     "function-loop" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -6380,7 +6416,7 @@ Node {
         "uglify-js" => Edge {
           "name": "uglify-js",
           "spec": "^3.1.4",
-          "to": null,
+          "to": "node_modules/uglify-js",
           "type": "optional",
         },
       },
@@ -6662,6 +6698,12 @@ Node {
           "spec": "2",
           "type": "prod",
         },
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "inherits",
+          "spec": "~2.0.3",
+          "type": "prod",
+        },
       },
       "location": "node_modules/inherits",
       "name": "inherits",
@@ -6851,6 +6893,21 @@ Node {
       "location": "node_modules/is-typedarray",
       "name": "is-typedarray",
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
+    },
+    "isarray" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "isarray",
+          "spec": "~1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/isarray",
+      "name": "isarray",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
     },
     "isexe" => Node {
       "dev": true,
@@ -9273,6 +9330,21 @@ Node {
       "name": "pkg-dir",
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
     },
+    "process-nextick-args" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "process-nextick-args",
+          "spec": "~2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/process-nextick-args",
+      "name": "process-nextick-args",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+    },
     "promise" => Node {
       "edgesIn": Set {
         Edge {
@@ -9526,6 +9598,65 @@ Node {
       "location": "node_modules/read-pkg-up",
       "name": "read-pkg-up",
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
+    },
+    "readable-stream" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/tap-mocha-reporter",
+          "name": "readable-stream",
+          "spec": "^2.1.5",
+          "type": "optional",
+        },
+      },
+      "edgesOut": Map {
+        "core-util-is" => Edge {
+          "name": "core-util-is",
+          "spec": "~1.0.0",
+          "to": "node_modules/core-util-is",
+          "type": "prod",
+        },
+        "inherits" => Edge {
+          "name": "inherits",
+          "spec": "~2.0.3",
+          "to": "node_modules/inherits",
+          "type": "prod",
+        },
+        "isarray" => Edge {
+          "name": "isarray",
+          "spec": "~1.0.0",
+          "to": "node_modules/isarray",
+          "type": "prod",
+        },
+        "process-nextick-args" => Edge {
+          "name": "process-nextick-args",
+          "spec": "~2.0.0",
+          "to": "node_modules/process-nextick-args",
+          "type": "prod",
+        },
+        "safe-buffer" => Edge {
+          "name": "safe-buffer",
+          "spec": "~5.1.1",
+          "to": "node_modules/safe-buffer",
+          "type": "prod",
+        },
+        "string_decoder" => Edge {
+          "name": "string_decoder",
+          "spec": "~1.1.1",
+          "to": "node_modules/string_decoder",
+          "type": "prod",
+        },
+        "util-deprecate" => Edge {
+          "name": "util-deprecate",
+          "spec": "~1.0.1",
+          "to": "node_modules/util-deprecate",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/readable-stream",
+      "name": "readable-stream",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
     },
     "readdirp" => Node {
       "dev": true,
@@ -9909,9 +10040,21 @@ Node {
           "type": "prod",
         },
         Edge {
+          "from": "node_modules/readable-stream",
+          "name": "safe-buffer",
+          "spec": "~5.1.1",
+          "type": "prod",
+        },
+        Edge {
           "from": "node_modules/request",
           "name": "safe-buffer",
           "spec": "^5.1.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/string_decoder",
+          "name": "safe-buffer",
+          "spec": "~5.1.0",
           "type": "prod",
         },
         Edge {
@@ -10612,6 +10755,29 @@ Node {
       "location": "node_modules/stack-utils",
       "name": "stack-utils",
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
+    },
+    "string_decoder" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "string_decoder",
+          "spec": "~1.1.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "safe-buffer" => Edge {
+          "name": "safe-buffer",
+          "spec": "~5.1.0",
+          "to": "node_modules/safe-buffer",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/string_decoder",
+      "name": "string_decoder",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
     },
     "string-length" => Node {
       "children": Map {
@@ -11849,7 +12015,7 @@ Node {
         "readable-stream" => Edge {
           "name": "readable-stream",
           "spec": "^2.1.5",
-          "to": null,
+          "to": "node_modules/readable-stream",
           "type": "optional",
         },
         "tap-parser" => Edge {
@@ -12258,6 +12424,52 @@ Node {
       "name": "ua-parser-js",
       "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.21.tgz",
     },
+    "uglify-js" => Node {
+      "children": Map {
+        "source-map" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/uglify-js",
+              "name": "source-map",
+              "spec": "~0.6.1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/uglify-js/node_modules/source-map",
+          "name": "source-map",
+          "optional": true,
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/handlebars",
+          "name": "uglify-js",
+          "spec": "^3.1.4",
+          "type": "optional",
+        },
+      },
+      "edgesOut": Map {
+        "commander" => Edge {
+          "name": "commander",
+          "spec": "~2.20.3",
+          "to": "node_modules/commander",
+          "type": "prod",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "~0.6.1",
+          "to": "node_modules/uglify-js/node_modules/source-map",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/uglify-js",
+      "name": "uglify-js",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
+    },
     "unicode-length" => Node {
       "children": Map {
         "ansi-regex" => Node {
@@ -12361,6 +12573,21 @@ Node {
       "location": "node_modules/uri-js",
       "name": "uri-js",
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
+    },
+    "util-deprecate" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "util-deprecate",
+          "spec": "~1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/util-deprecate",
+      "name": "util-deprecate",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
     },
     "uuid" => Node {
       "dev": true,
@@ -25911,7 +26138,7 @@ Node {
         "fsevents" => Edge {
           "name": "fsevents",
           "spec": "~2.1.2",
-          "to": null,
+          "to": "node_modules/fsevents",
           "type": "optional",
         },
         "glob-parent" => Edge {
@@ -26341,6 +26568,20 @@ Node {
       "name": "combined-stream",
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
     },
+    "commander" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/uglify-js",
+          "name": "commander",
+          "spec": "~2.20.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/commander",
+      "name": "commander",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+    },
     "commondir" => Node {
       "edgesIn": Set {
         Edge {
@@ -26396,6 +26637,12 @@ Node {
     },
     "core-util-is" => Node {
       "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "core-util-is",
+          "spec": "~1.0.0",
+          "type": "prod",
+        },
         Edge {
           "from": "node_modules/verror",
           "name": "core-util-is",
@@ -27183,6 +27430,20 @@ Node {
       "name": "fs.realpath",
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
+    "fsevents" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chokidar",
+          "name": "fsevents",
+          "spec": "~2.1.2",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/fsevents",
+      "name": "fsevents",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.1.2.tgz",
+    },
     "function-loop" => Node {
       "edgesIn": Set {
         Edge {
@@ -27416,7 +27677,7 @@ Node {
         "uglify-js" => Edge {
           "name": "uglify-js",
           "spec": "^3.1.4",
-          "to": null,
+          "to": "node_modules/uglify-js",
           "type": "optional",
         },
       },
@@ -27653,6 +27914,12 @@ Node {
           "from": "node_modules/glob",
           "name": "inherits",
           "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "inherits",
+          "spec": "~2.0.3",
           "type": "prod",
         },
       },
@@ -27965,6 +28232,20 @@ Node {
       "location": "node_modules/is-typedarray",
       "name": "is-typedarray",
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
+    },
+    "isarray" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "isarray",
+          "spec": "~1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/isarray",
+      "name": "isarray",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
     },
     "isexe" => Node {
       "edgesIn": Set {
@@ -30240,6 +30521,20 @@ Node {
       "name": "pkg-dir",
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
     },
+    "process-nextick-args" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "process-nextick-args",
+          "spec": "~2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/process-nextick-args",
+      "name": "process-nextick-args",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+    },
     "prop-types" => Node {
       "edgesIn": Set {
         Edge {
@@ -30505,6 +30800,64 @@ Node {
       "location": "node_modules/read-pkg-up",
       "name": "read-pkg-up",
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
+    },
+    "readable-stream" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/tap-mocha-reporter",
+          "name": "readable-stream",
+          "spec": "^2.1.5",
+          "type": "optional",
+        },
+      },
+      "edgesOut": Map {
+        "core-util-is" => Edge {
+          "name": "core-util-is",
+          "spec": "~1.0.0",
+          "to": "node_modules/core-util-is",
+          "type": "prod",
+        },
+        "inherits" => Edge {
+          "name": "inherits",
+          "spec": "~2.0.3",
+          "to": "node_modules/inherits",
+          "type": "prod",
+        },
+        "isarray" => Edge {
+          "name": "isarray",
+          "spec": "~1.0.0",
+          "to": "node_modules/isarray",
+          "type": "prod",
+        },
+        "process-nextick-args" => Edge {
+          "name": "process-nextick-args",
+          "spec": "~2.0.0",
+          "to": "node_modules/process-nextick-args",
+          "type": "prod",
+        },
+        "safe-buffer" => Edge {
+          "name": "safe-buffer",
+          "spec": "~5.1.1",
+          "to": "node_modules/safe-buffer",
+          "type": "prod",
+        },
+        "string_decoder" => Edge {
+          "name": "string_decoder",
+          "spec": "~1.1.1",
+          "to": "node_modules/string_decoder",
+          "type": "prod",
+        },
+        "util-deprecate" => Edge {
+          "name": "util-deprecate",
+          "spec": "~1.0.1",
+          "to": "node_modules/util-deprecate",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/readable-stream",
+      "name": "readable-stream",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
     },
     "readdirp" => Node {
       "edgesIn": Set {
@@ -30855,9 +31208,21 @@ Node {
           "type": "prod",
         },
         Edge {
+          "from": "node_modules/readable-stream",
+          "name": "safe-buffer",
+          "spec": "~5.1.1",
+          "type": "prod",
+        },
+        Edge {
           "from": "node_modules/request",
           "name": "safe-buffer",
           "spec": "^5.1.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/string_decoder",
+          "name": "safe-buffer",
+          "spec": "~5.1.0",
           "type": "prod",
         },
         Edge {
@@ -31441,6 +31806,28 @@ Node {
       "name": "stack-utils",
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
     },
+    "string_decoder" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "string_decoder",
+          "spec": "~1.1.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "safe-buffer" => Edge {
+          "name": "safe-buffer",
+          "spec": "~5.1.0",
+          "to": "node_modules/safe-buffer",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/string_decoder",
+      "name": "string_decoder",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
+    },
     "string-length" => Node {
       "children": Map {
         "astral-regex" => Node {
@@ -32021,7 +32408,7 @@ Node {
         "readable-stream" => Edge {
           "name": "readable-stream",
           "spec": "^2.1.5",
-          "to": null,
+          "to": "node_modules/readable-stream",
           "type": "optional",
         },
         "tap-parser" => Edge {
@@ -32397,6 +32784,50 @@ Node {
       "name": "typescript",
       "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
     },
+    "uglify-js" => Node {
+      "children": Map {
+        "source-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/uglify-js",
+              "name": "source-map",
+              "spec": "~0.6.1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/uglify-js/node_modules/source-map",
+          "name": "source-map",
+          "optional": true,
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/handlebars",
+          "name": "uglify-js",
+          "spec": "^3.1.4",
+          "type": "optional",
+        },
+      },
+      "edgesOut": Map {
+        "commander" => Edge {
+          "name": "commander",
+          "spec": "~2.20.3",
+          "to": "node_modules/commander",
+          "type": "prod",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "~0.6.1",
+          "to": "node_modules/uglify-js/node_modules/source-map",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/uglify-js",
+      "name": "uglify-js",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
+    },
     "unicode-length" => Node {
       "children": Map {
         "ansi-regex" => Node {
@@ -32495,6 +32926,20 @@ Node {
       "location": "node_modules/uri-js",
       "name": "uri-js",
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
+    },
+    "util-deprecate" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/readable-stream",
+          "name": "util-deprecate",
+          "spec": "~1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/util-deprecate",
+      "name": "util-deprecate",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
     },
     "uuid" => Node {
       "edgesIn": Set {

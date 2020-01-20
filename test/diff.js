@@ -24,6 +24,7 @@ const formatDiff = obj =>
     ideal: formatNode(obj.ideal),
     leaves: obj.leaves.map(d => path(d)),
     unchanged: obj.unchanged.map(d => d.path),
+    removed: obj.removed.map(d => d.path),
     children: [...obj.children]
       .map(formatDiff)
       .sort((a, b) => path(a).localeCompare(path(b))),

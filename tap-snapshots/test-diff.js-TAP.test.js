@@ -35,6 +35,11 @@ Diff {
     "/path/to/root/node_modules/b/node_modules/f",
     "/path/to/root/node_modules/x/node_modules/y/node_modules/z",
   ],
+  "removed": Array [
+    "/path/to/root/node_modules/p",
+    "/path/to/root/node_modules/bundler/node_modules/metabundled",
+    "/path/to/root/node_modules/p/node_modules/q",
+  ],
   "children": Array [
     Diff {
       "action": "CHANGE",
@@ -56,6 +61,7 @@ Diff {
         "/path/to/root/node_modules/b/node_modules/d",
         "/path/to/root/node_modules/b/node_modules/f",
       ],
+      "removed": Array [],
       "children": Array [
         Diff {
           "action": "CHANGE",
@@ -73,6 +79,7 @@ Diff {
             "/path/to/root/node_modules/b/node_modules/c",
           ],
           "unchanged": Array [],
+          "removed": Array [],
           "children": Array [],
         },
         Diff {
@@ -91,6 +98,7 @@ Diff {
             "/path/to/root/node_modules/b/node_modules/d/node_modules/e",
           ],
           "unchanged": Array [],
+          "removed": Array [],
           "children": Array [],
         },
       ],
@@ -107,6 +115,7 @@ Diff {
         "/path/to/root/node_modules/bundler/node_modules/metabundled",
       ],
       "unchanged": Array [],
+      "removed": Array [],
       "children": Array [],
     },
     Diff {
@@ -125,6 +134,7 @@ Diff {
         "/path/to/root/node_modules/bundler/node_modules/not-bundled",
       ],
       "unchanged": Array [],
+      "removed": Array [],
       "children": Array [],
     },
     Diff {
@@ -139,6 +149,7 @@ Diff {
         "/path/to/root/node_modules/i/node_modules/j",
       ],
       "unchanged": Array [],
+      "removed": Array [],
       "children": Array [
         Diff {
           "action": "ADD",
@@ -152,6 +163,7 @@ Diff {
             "/path/to/root/node_modules/i/node_modules/j",
           ],
           "unchanged": Array [],
+          "removed": Array [],
           "children": Array [],
         },
       ],
@@ -168,6 +180,9 @@ Diff {
         "/path/to/root/node_modules/p/node_modules/q",
       ],
       "unchanged": Array [],
+      "removed": Array [
+        "/path/to/root/node_modules/p/node_modules/q",
+      ],
       "children": Array [
         Diff {
           "action": "REMOVE",
@@ -181,6 +196,7 @@ Diff {
             "/path/to/root/node_modules/p/node_modules/q",
           ],
           "unchanged": Array [],
+          "removed": Array [],
           "children": Array [],
         },
       ],
@@ -203,6 +219,7 @@ Diff {
       "unchanged": Array [
         "/path/to/root/node_modules/x/node_modules/y/node_modules/z",
       ],
+      "removed": Array [],
       "children": Array [],
     },
   ],

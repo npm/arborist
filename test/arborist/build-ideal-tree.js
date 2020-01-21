@@ -6,6 +6,8 @@ const {registry} = registryServer
 
 t.test('setup server', { bail: true }, registryServer)
 
+const cache = t.testdir()
+
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
 const printEdge = (edge, inout) => ({
@@ -75,7 +77,7 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 
 const buildIdeal = (path, opt) =>
-  new Arborist({registry, path, ...(opt || {})}).buildIdealTree(opt)
+  new Arborist({cache, registry, path, ...(opt || {})}).buildIdealTree(opt)
 
 t.test('testing-peer-deps package', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps')

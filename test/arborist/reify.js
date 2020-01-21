@@ -43,6 +43,8 @@ const Arborist = requireInject('../../lib/arborist', {
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry} = registryServer
 
+const cache = t.testdir()
+
 // there's a lot of fs stuff in this test.
 // Parallelize as much as possible.
 t.jobs = Infinity
@@ -120,7 +122,7 @@ const fixture = (t, p) =>
 const printReified = (path, opt) => reify(path, opt).then(printTree)
 
 const reify = (path, opt) =>
-  new Arborist({registry, path, ...(opt || {})}).reify(opt)
+  new Arborist({cache, registry, path, ...(opt || {})}).reify(opt)
 
 t.test('testing-peer-deps package', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps'))))
@@ -590,4 +592,15 @@ t.test('saving the ideal tree', t => {
   })
 
   t.end()
+})
+
+t.test('bin links adding and removing', t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({}),
+  })
+  const rbin = resolve(path, 'node_modules/.bin/rimraf')
+  return reify(path, { add: { dependencies: { rimraf: '2.7.1' }}})
+    .then(() => fs.statSync(rbin)) // should be there
+    .then(() => reify(path, { rm: ['rimraf'] }))
+    .then(() => t.throws(() => fs.statSync(rbin))) // should be gone
 })

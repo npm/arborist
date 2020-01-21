@@ -1000,3 +1000,52 @@ t.test('nodes in shrinkwraps', t => {
   t.equal(c.inShrinkwrap, true, 'c is in shrinkwrap')
   t.end()
 })
+
+t.test('bin paths', t => {
+  const root = new Node({
+    path: '/a/b/c',
+    pkg: { bin: { c: 'blorp' }},
+    children: [
+      { pkg: { name: '@foo/bar', bin: { bar: 'foo' }}},
+      { pkg: { name: 'foo', bin: { foo: 'bloo' }},
+        children: [{ pkg: { name: 'bar', bin: { bar: 'noscope' }}}]},
+      { pkg: { name: 'nobin' } },
+    ],
+  })
+
+  const link = new Link({
+    parent: root,
+    name: 'linkfoo',
+    pkg: { bin: { d: 'from-link' } },
+    realpath: root.path + '/d/e/f',
+  })
+
+  t.strictSame(root.binPaths, [])
+  t.strictSame(link.binPaths, [
+    '/a/b/c/node_modules/.bin/d',
+    '/a/b/c/node_modules/.bin/d.cmd',
+    '/a/b/c/node_modules/.bin/d.ps1',
+  ])
+  t.strictSame(link.target.binPaths, [])
+  const scoped = root.children.get('@foo/bar')
+  t.strictSame(scoped.binPaths, [
+    '/a/b/c/node_modules/.bin/bar',
+    '/a/b/c/node_modules/.bin/bar.cmd',
+    '/a/b/c/node_modules/.bin/bar.ps1',
+  ])
+  const unscoped = root.children.get('foo')
+  t.strictSame(unscoped.binPaths, [
+    '/a/b/c/node_modules/.bin/foo',
+    '/a/b/c/node_modules/.bin/foo.cmd',
+    '/a/b/c/node_modules/.bin/foo.ps1',
+  ])
+  const nested = unscoped.children.get('bar')
+  t.strictSame(nested.binPaths, [
+    '/a/b/c/node_modules/foo/node_modules/.bin/bar',
+    '/a/b/c/node_modules/foo/node_modules/.bin/bar.cmd',
+    '/a/b/c/node_modules/foo/node_modules/.bin/bar.ps1',
+  ])
+  const nobin = root.children.get('nobin')
+  t.strictSame(nobin.binPaths, [])
+  t.end()
+})

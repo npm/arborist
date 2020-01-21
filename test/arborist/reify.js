@@ -230,6 +230,16 @@ t.test('update a node without updating a child that has bundle deps', t => {
   }))
 })
 
+t.test('optional dependency failures', t => {
+  const cases = [
+    'optional-dep-tgz-missing',
+    'optional-metadep-tgz-missing',
+  ]
+  t.plan(cases.length)
+  cases.forEach(c => t.test(c, t =>
+    t.resolveMatchSnapshot(printReified(fixture(t, c)))))
+})
+
 t.test('rollbacks', t => {
   t.test('fail retiring shallow nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')
@@ -474,7 +484,7 @@ t.test('rollbacks', t => {
   t.test('fail removing retired and deleted nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')
     const a = new Arborist({ path, registry, legacyBundling: true })
-    const kRemove = Symbol.for('removeRetiredAndDeletedNodes')
+    const kRemove = Symbol.for('removeTrash')
     const removeRetiredAndDeletedNodes = a[kRemove]
     a[kRemove] = () => {
       failRimraf = true

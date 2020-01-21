@@ -11482,6 +11482,92 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP optional dependency failures optional-dep-tgz-missing > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-missing-tgz" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-missing-tgz",
+          "spec": "*",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-missing-tgz",
+      "name": "@isaacs/testing-missing-tgz",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-missing-tgz/-/testing-missing-tgz-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-missing-tgz" => Edge {
+      "name": "@isaacs/testing-missing-tgz",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-missing-tgz",
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-optional-dependency-failures-optional-dep-tgz-missing",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP optional dependency failures optional-metadep-tgz-missing > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-missing-tgz" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-prod-dep-tgz-missing",
+          "name": "@isaacs/testing-missing-tgz",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-missing-tgz",
+      "name": "@isaacs/testing-missing-tgz",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-missing-tgz/-/testing-missing-tgz-1.0.0.tgz",
+    },
+    "@isaacs/testing-prod-dep-tgz-missing" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-prod-dep-tgz-missing",
+          "spec": "*",
+          "type": "optional",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-missing-tgz" => Edge {
+          "name": "@isaacs/testing-missing-tgz",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-missing-tgz",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-prod-dep-tgz-missing",
+      "name": "@isaacs/testing-prod-dep-tgz-missing",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-prod-dep-tgz-missing/-/testing-prod-dep-tgz-missing-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-prod-dep-tgz-missing" => Edge {
+      "name": "@isaacs/testing-prod-dep-tgz-missing",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-prod-dep-tgz-missing",
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-optional-dependency-failures-optional-metadep-tgz-missing",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-no-lock > expect resolving Promise 1`] = `
 Node {
   "children": Map {

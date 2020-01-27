@@ -21,12 +21,18 @@ rimrafMock.sync = (...args) => {
 const fs = require('fs')
 let failRename = null
 let failRenameOnce = null
-const {rename: realRename} = fs
+let failMkdir = null
+const {rename: realRename, mkdir: realMkdir} = fs
 
 const Arborist = requireInject('../../lib/arborist', {
   rimraf: rimrafMock,
   fs: {
     ...fs,
+    mkdir (...args) {
+      if (failMkdir)
+        process.nextTick(() => args.pop()(failMkdir))
+      realMkdir(...args)
+    },
     rename (...args) {
       if (failRename)
         process.nextTick(() => args.pop()(failRename))
@@ -242,7 +248,7 @@ t.test('optional dependency failures', t => {
     t.resolveMatchSnapshot(printReified(fixture(t, c)))))
 })
 
-t.test('rollbacks', t => {
+t.test('rollbacks', { buffered: false }, t => {
   t.test('fail retiring shallow nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')
     const a = new Arborist({ path, registry, legacyBundling: true })
@@ -328,17 +334,14 @@ t.test('rollbacks', t => {
   })
 
   t.test('fail creating sparse tree', t => {
+    t.teardown(() => failMkdir = null)
     const path = fixture(t, 'testing-bundledeps-3')
     const a = new Arborist({ path, registry, legacyBundling: true })
     const kCreateST = Symbol.for('createSparseTree')
     const createSparseTree = a[kCreateST]
     a[kCreateST] = () => {
       a[kCreateST] = createSparseTree
-      const mkdir = fs.mkdir
-      fs.mkdir = (...args) => {
-        fs.mkdir = mkdir
-        Promise.resolve().then(() => args.pop()(new Error('poop')))
-      }
+      failMkdir = new Error('poop')
       return a[kCreateST]()
     }
     const kRollback = Symbol.for('rollbackCreateSparseTree')
@@ -359,13 +362,10 @@ t.test('rollbacks', t => {
     const a = new Arborist({ path, registry, legacyBundling: true })
     const kCreateST = Symbol.for('createSparseTree')
     const createSparseTree = a[kCreateST]
+    t.teardown(() => failMkdir = null)
     a[kCreateST] = () => {
       a[kCreateST] = createSparseTree
-      const mkdir = fs.mkdir
-      fs.mkdir = (...args) => {
-        fs.mkdir = mkdir
-        Promise.resolve().then(() => args.pop()(new Error('poop')))
-      }
+      failMkdir = new Error('poop')
       return a[kCreateST]()
     }
     const kRollback = Symbol.for('rollbackCreateSparseTree')

@@ -6,6 +6,7 @@
     "@npmcli/installed-package-contents": "^1.0.5",
     "bin-links": "github:npm/bin-links#v2",
     "json-stringify-nice": "^1.1.1",
+    "mkdirp-infer-owner": "^1.0.2",
     "npm-package-arg": "^6.1.0",
     "pacote": "^10.3.0",
     "parse-conflict-json": "^1.0.0",
@@ -16,7 +17,6 @@
     "treeverse": "^1.0.1"
   },
   "devDependencies": {
-    "mkdirp": "^0.5.1",
     "mutate-fs": "^2.1.1",
     "require-inject": "^1.4.4",
     "tap": "^14.10.5",

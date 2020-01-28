@@ -4,5 +4,8 @@
   "description": "a package with an prod dependency on a package that does not exist",
   "dependencies": {
     "@isaacs/this-does-not-exist-at-all": "*"
+  },
+  "scripts": {
+    "preinstall": "this will never run"
   }
 }

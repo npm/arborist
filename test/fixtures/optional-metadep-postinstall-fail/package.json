@@ -2,6 +2,6 @@
   "name": "optional-metadep-postinstall-fail",
   "version": "1.0.0",
   "optionalDependencies": {
-    "@isaacs/testing-prod-dep-postinstall-fail": "1.0.0"
+    "@isaacs/testing-prod-dep-postinstall-fail": "*"
   }
 }

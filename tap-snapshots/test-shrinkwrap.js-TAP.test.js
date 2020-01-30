@@ -177,11 +177,21 @@ Object {
       "version": "1.2.3",
     },
     "node_modules/tgz": Object {
+      "cpu": Array [
+        "x64",
+      ],
       "dev": true,
+      "engines": Object {
+        "node": ">=10",
+      },
       "funding": Object {
         "url": "https://example.com/",
       },
       "name": "tgz",
+      "os": Array [
+        "any",
+        "!win32",
+      ],
       "resolved": "file:archives/tarball.tgz",
       "version": "1.2.3",
     },
@@ -306,11 +316,21 @@ Object {
 
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > metadata for tarball file pkg 1`] = `
 Object {
+  "cpu": Array [
+    "x64",
+  ],
   "dev": true,
+  "engines": Object {
+    "node": ">=10",
+  },
   "funding": Object {
     "url": "https://example.com/",
   },
   "name": "tgz",
+  "os": Array [
+    "any",
+    "!win32",
+  ],
   "resolved": "file:archives/tarball.tgz",
   "version": "1.2.3",
 }

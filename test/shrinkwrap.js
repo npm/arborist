@@ -197,6 +197,11 @@ t.test('construct metadata from node and package data', t => {
       name: 'tgz',
       version: '1.2.3',
       funding: { url: 'https://example.com/' },
+      engines: {
+        node: '>=10',
+      },
+      os: ['any', '!win32'],
+      cpu: ['x64'],
     },
     resolved: '/home/user/projects/root/archives/tarball.tgz',
     parent: root,

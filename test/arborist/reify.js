@@ -242,10 +242,40 @@ t.test('optional dependency failures', t => {
   const cases = [
     'optional-dep-tgz-missing',
     'optional-metadep-tgz-missing',
+    'optional-dep-preinstall-fail',
+    'optional-dep-install-fail',
+    'optional-dep-postinstall-fail',
+    'optional-dep-allinstall-fail',
+    'optional-metadep-preinstall-fail',
+    'optional-metadep-install-fail',
+    'optional-metadep-postinstall-fail',
+    'optional-metadep-allinstall-fail',
   ]
   t.plan(cases.length)
   cases.forEach(c => t.test(c, t =>
     t.resolveMatchSnapshot(printReified(fixture(t, c)))))
+})
+
+t.test('failure to fetch prod dep is failure', t =>
+  t.rejects(printReified(fixture(t, 'prod-dep-tgz-missing'))))
+
+t.test('failing script means install failure, unless ignoreScripts', t => {
+  const cases = [
+    'prod-dep-preinstall-fail',
+    'prod-dep-install-fail',
+    'prod-dep-postinstall-fail',
+    'prod-dep-allinstall-fail',
+  ]
+
+  t.plan(cases.length * 2)
+
+  cases.forEach(c => {
+    t.test(c, t =>
+      t.rejects(printReified(fixture(t, c))))
+    t.test(c + ' --ignore-scripts', t =>
+      t.resolveMatchSnapshot(printReified(
+        fixture(t, c), { ignoreScripts: true })))
+  })
 })
 
 t.test('rollbacks', { buffered: false }, t => {

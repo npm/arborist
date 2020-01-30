@@ -8,6 +8,7 @@
     "bin-links": "github:npm/bin-links#v2",
     "json-stringify-nice": "^1.1.1",
     "mkdirp-infer-owner": "^1.0.2",
+    "npm-install-checks": "github:npm/npm-install-checks#v4",
     "npm-package-arg": "^8.0.0",
     "pacote": "^10.3.1",
     "parse-conflict-json": "^1.0.0",

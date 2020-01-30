@@ -1049,3 +1049,18 @@ t.test('bin paths', t => {
   t.strictSame(nobin.binPaths, [])
   t.end()
 })
+
+t.test('has install script', t => {
+  const node = new Node({
+    pkg: {},
+    path: '/a/b/c',
+  })
+  t.equal(node.hasInstallScript, false)
+  node.package = { scripts: { postinstall: 'hello' } }
+  t.equal(node.hasInstallScript, true)
+  node.package = { scripts: { nothing: 'of interest' } }
+  t.equal(node.hasInstallScript, false)
+  node.package = { hasInstallScript: true }
+  t.equal(node.hasInstallScript, true)
+  t.end()
+})

@@ -100,6 +100,7 @@ Object {
         "devit": "",
         "e": "https://foo.com/e.tgz",
       },
+      "hasInstallScript": true,
       "name": "root",
       "optionalDependencies": Object {
         "optin": "",
@@ -367,6 +368,7 @@ Object {
     "devit": "",
     "e": "https://foo.com/e.tgz",
   },
+  "hasInstallScript": true,
   "name": "root",
   "optionalDependencies": Object {
     "optin": "",
@@ -387,6 +389,7 @@ Object {
     "devit": "",
     "e": "https://foo.com/e.tgz",
   },
+  "hasInstallScript": true,
   "name": "root",
   "optionalDependencies": Object {
     "optin": "",

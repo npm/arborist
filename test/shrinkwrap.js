@@ -168,6 +168,9 @@ t.test('construct metadata from node and package data', t => {
       dependencies: { a: '', link: '', link2: '' },
       devDependencies: { d: '', e: 'https://foo.com/e.tgz', devit: '' },
       optionalDependencies: { optin: '' },
+      scripts: {
+        install: 'true',
+      },
     },
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',

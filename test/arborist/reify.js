@@ -312,7 +312,7 @@ t.test('rollbacks', t => {
 
     return t.resolveMatchSnapshot(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
-    }))
+    }).then(printTree))
   })
 
   t.test('fail creating sparse tree', t => {

@@ -1,15 +1,58 @@
 {
+  "_id": "yoga-layout-prebuilt",
+  "name": "yoga-layout-prebuilt",
+  "dist-tags": {
+    "latest": "1.9.3"
+  },
   "versions": {
     "1.9.3": {
       "name": "yoga-layout-prebuilt",
       "version": "1.9.3",
-      "dependencies": {},
+      "description": "Prebuilt yoga-layout package",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vadimdemedes/yoga-layout-prebuilt.git"
+      },
+      "author": {
+        "name": "Vadim Demedes",
+        "email": "vdemedes@gmail.com",
+        "url": "github.com/vadimdemedes"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava",
+        "prepublishOnly": "./build.sh"
+      },
+      "main": "yoga-layout/dist/entry-browser",
+      "keywords": [
+        "yoga",
+        "yoga-layout"
+      ],
       "devDependencies": {
         "ava": "^0.25.0",
         "xo": "^0.21.0"
       },
-      "_hasShrinkwrap": false,
-      "directories": {},
+      "xo": {
+        "ignores": [
+          "yoga-layout"
+        ]
+      },
+      "dependencies": {},
+      "gitHead": "92496860031cedf502e1469f047d7ea3798d40f7",
+      "bugs": {
+        "url": "https://github.com/vadimdemedes/yoga-layout-prebuilt/issues"
+      },
+      "homepage": "https://github.com/vadimdemedes/yoga-layout-prebuilt#readme",
+      "_id": "yoga-layout-prebuilt@1.9.3",
+      "_npmVersion": "5.6.0",
+      "_nodeVersion": "8.11.2",
+      "_npmUser": {
+        "name": "vdemedes",
+        "email": "vdemedes@gmail.com"
+      },
       "dist": {
         "integrity": "sha512-9SNQpwuEh2NucU83i2KMZnONVudZ86YNcFk9tq74YaqrQfgJWO3yB9uzH1tAg8iqh5c9F5j0wuyJ2z72wcum2w==",
         "shasum": "11e3be29096afe3c284e5d963cc2d628148c1372",
@@ -18,16 +61,50 @@
         "unpackedSize": 616796,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbsT6XCRA9TVsSAnZWagAAjMEP+gIzquIqh4i56l3WzGZc\nHUGH72PfB2ZJXgPHe5lEHTsW1QznWYf4XXfHb6AdpuzOKUtQDhBssWLhL1UG\nwBwVCi+gDrNEYbOV5Ds67XMn5CRBkDdo/r/TwytS1HK3gHqRU+vlYVoGAWj0\nvBCr7VqjXA4urOr/8DkecjNjompXeGInkXL35NF5olJREk1pfNu3Dpw3uvX/\n8M5khHo+ktZrQtWBOk/OZm/ylI2XRbOnEaTtfwy4uOzcKBSvW6psxrDd3qek\n5joGmdIQDq0wU7H/kutAL90PnfUYna8TJwIHQ97UNyuNWTctgJpKRemF4vKV\nIYegL9KQHroFwkBnNQnOQKA/NQNO5Aj1OGI8dEpF0xJkJI+0SqBvYmSeKZ3y\n/MA9DqdJR546f/OGvJWxbTfMcST+F7d4CD27Ux5sVQ7ksEYRgUep/3J1rPFj\nYlopCy/IkdsTUQuf0/7hwF4zaitCVqjwWycZJxUIptHhQWuF+Ug/MZrpafZ0\nd/9lpBD0U6wvnwqFT9GkR47UYzonEHkxRk1qOzw2juMetL7cjDeu6yDmGa9f\n1+33OoijL15rYOvh1cXsqkgZjnIF7iXahb+gjGd/MEpjwQKCV15H5MtaF94G\nOWS0FzbtZVnbnNPvqP3KslbodrjbLdCCpr3MPZ0HdZu7R2P/nvQke9T4VMQD\nzvqv\r\n=uzbu\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "engines": {
-        "node": ">=8"
-      }
+      "maintainers": [
+        {
+          "name": "vdemedes",
+          "email": "vdemedes@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/yoga-layout-prebuilt_1.9.3_1538342551287_0.6524635558629936"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "name": "yoga-layout-prebuilt",
-  "dist-tags": {
-    "latest": "1.9.3"
+  "time": {
+    "created": "2018-09-30T21:22:31.286Z",
+    "1.9.3": "2018-09-30T21:22:31.524Z",
+    "modified": "2018-09-30T21:22:34.377Z"
   },
-  "modified": "2018-09-30T21:22:34.377Z",
-  "_cached": false,
-  "_contentLength": 1518
+  "maintainers": [
+    {
+      "name": "vdemedes",
+      "email": "vdemedes@gmail.com"
+    }
+  ],
+  "description": "Prebuilt yoga-layout package",
+  "homepage": "https://github.com/vadimdemedes/yoga-layout-prebuilt#readme",
+  "keywords": [
+    "yoga",
+    "yoga-layout"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadimdemedes/yoga-layout-prebuilt.git"
+  },
+  "author": {
+    "name": "Vadim Demedes",
+    "email": "vdemedes@gmail.com",
+    "url": "github.com/vadimdemedes"
+  },
+  "bugs": {
+    "url": "https://github.com/vadimdemedes/yoga-layout-prebuilt/issues"
+  },
+  "license": "MIT",
+  "readme": "# yoga-layout-prebuilt [![Build Status](https://travis-ci.org/vadimdemedes/yoga-layout-prebuilt.svg?branch=master)](https://travis-ci.org/vadimdemedes/yoga-layout-prebuilt)\n\n> Prebuilt [yoga-layout](https://github.com/facebook/yoga) package\n\n\n## Install\n\n```\n$ npm install yoga-layout-prebuilt\n```\n\n\n## Usage\n\n```js\nimport Yoga from 'yoga-layout-prebuilt';\n// Same as if imported from yoga-layout\n```\n\n\n## License\n\nMIT © [Vadim Demedes](https://github.com/vadimdemedes/yoga-layout-prebuilt)\n",
+  "readmeFilename": "readme.md"
 }

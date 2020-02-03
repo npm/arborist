@@ -81,7 +81,9 @@ const buildIdeal = (path, opt) =>
 
 t.test('testing-peer-deps package', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps')
-  return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree with peer deps')
+  return buildIdeal(path).then(idealTree => new Arborist({path, idealTree})
+    .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
+    .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')))
 })
 
 t.test('testing-peer-deps nested', t => {

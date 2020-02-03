@@ -76,8 +76,11 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 const loadVirtual = path => new Arborist({path}).loadVirtual()
 
 t.test('load from fixture', t =>
-  loadVirtual(fixture).then(tree =>
-    t.matchSnapshot(printTree(tree), 'loaded virtual tree from fixture')))
+  loadVirtual(fixture).then(virtualTree => {
+    t.matchSnapshot(printTree(virtualTree), 'loaded virtual tree from fixture')
+    return new Arborist({ path: fixture, virtualTree}).loadVirtual()
+      .then(tree2 => t.equal(tree2, virtualTree, 'same tree reused'))
+  }))
 
 t.test('load from cwd', t => {
   const cwd = process.cwd()

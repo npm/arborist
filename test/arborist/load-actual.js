@@ -89,10 +89,17 @@ roots.forEach(path => {
     t.matchSnapshot(tree, 'loaded tree')))
 })
 
+t.test('already loaded', t => new Arborist({
+  path: resolve(__dirname, '../fixtures/selflink'),
+}).loadActual().then(actualTree => new Arborist({
+  path: resolve(__dirname, '../fixtures/selflink'),
+  actualTree,
+}).loadActual().then(tree2 => t.equal(tree2, actualTree))))
+
 t.test('looking outside of cwd', t => {
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))
-  process.chdir('test/fixtures/selflink')
+  process.chdir(resolve(__dirname, '../fixtures/selflink'))
   const dir = '../root'
   return loadActual(dir).then(tree =>
     t.matchSnapshot(tree, 'loaded tree'))
@@ -147,7 +154,7 @@ t.test('realpath gutchecks', t => {
   // the realpath module is tested pretty thoroughly, but
   // while we've got a bunch of symlinks being created, may as well
   // give it a quick integration pass.
-  const d = resolve(__dirname, 'fixtures')
+  const d = resolve(__dirname, '../fixtures')
   const realpath = require('../../lib/realpath.js')
   Object.keys(symlinks).map(link => t.test(link, t =>
     realpath(

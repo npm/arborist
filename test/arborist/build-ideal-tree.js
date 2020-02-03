@@ -760,6 +760,36 @@ t.test('contrived dep placement tests', t => {
       t.end()
     })
 
+    t.test('update, but already up to date and fine', t => {
+      // this hits the canPlace === KEEP branch in _placeDep,
+      // given a tree like this:
+      // root (b@1||2)
+      // +-- a (b@2)
+      // +-- b@2
+      // attempting to place b@2 at root on behalf of a is a no-op, because
+      // it's already there and fine.
+      const root = new Node({
+        pkg: { dependencies: {a:'', b:'2'}},
+        path: '/root',
+        children: [
+          { pkg: { name: 'a', version: '1.2.3', dependencies: {b:'2'}}},
+          { pkg: { name: 'b', version: '2.3.4'}},
+        ],
+      })
+      const newb = new Node({
+        path: '/virtual-root/b',
+        pkg: { name: 'b', version: '2.3.3' },
+      })
+      const anode = root.children.get('a')
+      const edge = anode.edgesOut.get('b')
+      const arb = new Arborist({ path: root.path })
+      arb[kUpdateNames] = ['b']
+      arb.idealTree = root
+      const placed = arb[kPlaceDep](newb, anode, edge)
+      t.strictSame(placed, [])
+      t.end()
+    })
+
     t.end()
   })
 

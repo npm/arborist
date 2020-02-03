@@ -2286,6 +2286,9 @@ Node {
           "once": "^1.3.0",
           "path-is-absolute": "^1.0.0",
         },
+        "engines": Object {
+          "node": "*",
+        },
         "extraneous": true,
         "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
         "license": "ISC",
@@ -2317,6 +2320,9 @@ Node {
         "dependencies": Object {
           "brace-expansion": "^1.1.7",
         },
+        "engines": Object {
+          "node": "*",
+        },
         "extraneous": true,
         "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
         "license": "ISC",
@@ -2325,6 +2331,9 @@ Node {
         "version": "3.0.4",
       },
       "node_modules/old": Object {
+        "engines": Object {
+          "node": "*",
+        },
         "integrity": "sha1-qgScln+ZkiKqQuFENPDFYu9GgkE=",
         "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
@@ -2342,6 +2351,9 @@ Node {
         "version": "1.4.0",
       },
       "node_modules/path-is-absolute": Object {
+        "engines": Object {
+          "node": ">=0.10.0",
+        },
         "extraneous": true,
         "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
         "license": "MIT",

@@ -3157,33 +3157,33 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/template",
           "name": "@babel/code-frame",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/highlight" => Edge {
           "name": "@babel/highlight",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/highlight",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/code-frame",
       "name": "@babel/code-frame",
-      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.5.5.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.8.3.tgz",
     },
     "@babel/core" => Node {
       "dev": true,
@@ -3228,43 +3228,43 @@ Node {
       "edgesOut": Map {
         "@babel/code-frame" => Edge {
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/code-frame",
           "type": "prod",
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
         "@babel/helpers" => Edge {
           "name": "@babel/helpers",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/helpers",
           "type": "prod",
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
         "@babel/template" => Edge {
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/template",
           "type": "prod",
         },
         "@babel/traverse" => Edge {
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/traverse",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -3278,6 +3278,12 @@ Node {
           "name": "debug",
           "spec": "^4.1.0",
           "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "gensync" => Edge {
+          "name": "gensync",
+          "spec": "^1.0.0-beta.1",
+          "to": "node_modules/gensync",
           "type": "prod",
         },
         "json5" => Edge {
@@ -3313,7 +3319,7 @@ Node {
       },
       "location": "node_modules/@babel/core",
       "name": "@babel/core",
-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.8.4.tgz",
     },
     "@babel/generator" => Node {
       "dev": true,
@@ -3321,13 +3327,13 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/generator",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
@@ -3340,7 +3346,7 @@ Node {
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -3365,7 +3371,7 @@ Node {
       },
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
-      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.8.4.tgz",
     },
     "@babel/helper-builder-react-jsx" => Node {
       "dev": true,
@@ -3373,14 +3379,14 @@ Node {
         Edge {
           "from": "node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/helper-builder-react-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -3393,7 +3399,7 @@ Node {
       },
       "location": "node_modules/@babel/helper-builder-react-jsx",
       "name": "@babel/helper-builder-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.8.3.tgz",
     },
     "@babel/helper-function-name" => Node {
       "dev": true,
@@ -3401,33 +3407,33 @@ Node {
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/helper-function-name",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/helper-get-function-arity" => Edge {
           "name": "@babel/helper-get-function-arity",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-get-function-arity",
           "type": "prod",
         },
         "@babel/template" => Edge {
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/template",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-function-name",
       "name": "@babel/helper-function-name",
-      "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.8.3.tgz",
     },
     "@babel/helper-get-function-arity" => Node {
       "dev": true,
@@ -3435,21 +3441,21 @@ Node {
         Edge {
           "from": "node_modules/@babel/helper-function-name",
           "name": "@babel/helper-get-function-arity",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-get-function-arity",
       "name": "@babel/helper-get-function-arity",
-      "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.8.3.tgz",
     },
     "@babel/helper-plugin-utils" => Node {
       "dev": true,
@@ -3457,37 +3463,37 @@ Node {
         Edge {
           "from": "node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-syntax-jsx",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-syntax-object-rest-spread",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.0",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-transform-destructuring",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-plugin-utils",
       "name": "@babel/helper-plugin-utils",
-      "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.8.3.tgz",
     },
     "@babel/helper-split-export-declaration" => Node {
       "dev": true,
@@ -3495,21 +3501,21 @@ Node {
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/helper-split-export-declaration",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-split-export-declaration",
       "name": "@babel/helper-split-export-declaration",
-      "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.8.3.tgz",
     },
     "@babel/helpers" => Node {
       "dev": true,
@@ -3517,33 +3523,33 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/helpers",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/template" => Edge {
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/template",
           "type": "prod",
         },
         "@babel/traverse" => Edge {
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/traverse",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helpers",
       "name": "@babel/helpers",
-      "resolved": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.8.4.tgz",
     },
     "@babel/highlight" => Node {
       "dev": true,
@@ -3551,7 +3557,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/code-frame",
           "name": "@babel/highlight",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
@@ -3577,7 +3583,7 @@ Node {
       },
       "location": "node_modules/@babel/highlight",
       "name": "@babel/highlight",
-      "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.5.0.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.8.3.tgz",
     },
     "@babel/parser" => Node {
       "dev": true,
@@ -3585,19 +3591,19 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/parser",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/template",
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
@@ -3609,7 +3615,7 @@ Node {
       },
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
-      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.8.4.tgz",
     },
     "@babel/plugin-proposal-object-rest-spread" => Node {
       "dev": true,
@@ -3630,20 +3636,20 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
         "@babel/plugin-syntax-object-rest-spread" => Edge {
           "name": "@babel/plugin-syntax-object-rest-spread",
-          "spec": "^7.7.4",
+          "spec": "^7.8.0",
           "to": "node_modules/@babel/plugin-syntax-object-rest-spread",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-proposal-object-rest-spread",
       "name": "@babel/plugin-proposal-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.8.3.tgz",
     },
     "@babel/plugin-syntax-jsx" => Node {
       "dev": true,
@@ -3651,7 +3657,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/plugin-syntax-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
@@ -3664,14 +3670,14 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-syntax-jsx",
       "name": "@babel/plugin-syntax-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.8.3.tgz",
     },
     "@babel/plugin-syntax-object-rest-spread" => Node {
       "dev": true,
@@ -3679,7 +3685,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/plugin-syntax-object-rest-spread",
-          "spec": "^7.7.4",
+          "spec": "^7.8.0",
           "type": "prod",
         },
       },
@@ -3692,14 +3698,14 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.0",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-syntax-object-rest-spread",
       "name": "@babel/plugin-syntax-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.8.3.tgz",
     },
     "@babel/plugin-transform-destructuring" => Node {
       "dev": true,
@@ -3720,14 +3726,14 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-transform-destructuring",
       "name": "@babel/plugin-transform-destructuring",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.8.3.tgz",
     },
     "@babel/plugin-transform-react-jsx" => Node {
       "dev": true,
@@ -3748,26 +3754,26 @@ Node {
         },
         "@babel/helper-builder-react-jsx" => Edge {
           "name": "@babel/helper-builder-react-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-builder-react-jsx",
           "type": "prod",
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
         "@babel/plugin-syntax-jsx" => Edge {
           "name": "@babel/plugin-syntax-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/plugin-syntax-jsx",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-transform-react-jsx",
       "name": "@babel/plugin-transform-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.8.3.tgz",
     },
     "@babel/runtime" => Node {
       "dev": true,
@@ -3789,7 +3795,7 @@ Node {
       },
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
-      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.8.4.tgz",
     },
     "@babel/template" => Node {
       "dev": true,
@@ -3797,19 +3803,19 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-function-name",
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helpers",
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
@@ -3822,26 +3828,26 @@ Node {
       "edgesOut": Map {
         "@babel/code-frame" => Edge {
           "name": "@babel/code-frame",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/code-frame",
           "type": "prod",
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/template",
       "name": "@babel/template",
-      "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.8.3.tgz",
     },
     "@babel/traverse" => Node {
       "dev": true,
@@ -3849,13 +3855,13 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helpers",
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
@@ -3868,37 +3874,37 @@ Node {
       "edgesOut": Map {
         "@babel/code-frame" => Edge {
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/code-frame",
           "type": "prod",
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
         "@babel/helper-function-name" => Edge {
           "name": "@babel/helper-function-name",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-function-name",
           "type": "prod",
         },
         "@babel/helper-split-export-declaration" => Edge {
           "name": "@babel/helper-split-export-declaration",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-split-export-declaration",
           "type": "prod",
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -3923,7 +3929,7 @@ Node {
       },
       "location": "node_modules/@babel/traverse",
       "name": "@babel/traverse",
-      "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.8.4.tgz",
     },
     "@babel/types" => Node {
       "dev": true,
@@ -3931,55 +3937,55 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/generator",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-builder-react-jsx",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-function-name",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-get-function-arity",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-split-export-declaration",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helpers",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/template",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
@@ -4011,7 +4017,7 @@ Node {
       },
       "location": "node_modules/@babel/types",
       "name": "@babel/types",
-      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.8.3.tgz",
     },
     "@types/color-name" => Node {
       "dev": true,
@@ -4051,16 +4057,10 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/auto-bind",
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "type": "peerOptional",
-        },
-        Edge {
           "from": "node_modules/tap/node_modules/ink",
           "name": "@types/react",
           "spec": ">=16.8.0",
-          "type": "peer",
+          "type": "peerOptional",
         },
       },
       "edgesOut": Map {
@@ -4079,7 +4079,7 @@ Node {
       },
       "location": "node_modules/@types/react",
       "name": "@types/react",
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.17.tgz",
+      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
     },
     "ajv" => Node {
       "dev": true,
@@ -4094,7 +4094,7 @@ Node {
       "edgesOut": Map {
         "fast-deep-equal" => Edge {
           "name": "fast-deep-equal",
-          "spec": "^2.0.1",
+          "spec": "^3.1.1",
           "to": "node_modules/fast-deep-equal",
           "type": "prod",
         },
@@ -4119,7 +4119,7 @@ Node {
       },
       "location": "node_modules/ajv",
       "name": "ajv",
-      "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",
+      "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.11.0.tgz",
     },
     "ansi-escapes" => Node {
       "dev": true,
@@ -4287,7 +4287,7 @@ Node {
       },
       "location": "node_modules/arg",
       "name": "arg",
-      "resolved": "https://registry.npmjs.org/arg/-/arg-4.1.2.tgz",
+      "resolved": "https://registry.npmjs.org/arg/-/arg-4.1.3.tgz",
     },
     "argparse" => Node {
       "dev": true,
@@ -4460,21 +4460,13 @@ Node {
         Edge {
           "from": "node_modules/tap/node_modules/ink",
           "name": "auto-bind",
-          "spec": "^3.0.0",
+          "spec": "^4.0.0",
           "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@types/react" => Edge {
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "to": "node_modules/@types/react",
-          "type": "peerOptional",
         },
       },
       "location": "node_modules/auto-bind",
       "name": "auto-bind",
-      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-3.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-4.0.0.tgz",
     },
     "aws-sign2" => Node {
       "dev": true,
@@ -4502,7 +4494,7 @@ Node {
       },
       "location": "node_modules/aws4",
       "name": "aws4",
-      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.9.0.tgz",
+      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.9.1.tgz",
     },
     "balanced-match" => Node {
       "dev": true,
@@ -5062,7 +5054,7 @@ Node {
         Edge {
           "from": "node_modules/tap/node_modules/ink",
           "name": "cli-truncate",
-          "spec": "^2.0.0",
+          "spec": "^2.1.0",
           "type": "prod",
         },
       },
@@ -5216,21 +5208,6 @@ Node {
       "name": "combined-stream",
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
     },
-    "commander" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/uglify-js",
-          "name": "commander",
-          "spec": "~2.20.3",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/commander",
-      "name": "commander",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
-    },
     "commondir" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -5303,12 +5280,6 @@ Node {
     "core-util-is" => Node {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "core-util-is",
-          "spec": "~1.0.0",
-          "type": "prod",
-        },
         Edge {
           "from": "node_modules/verror",
           "name": "core-util-is",
@@ -5554,6 +5525,12 @@ Node {
           "spec": "^4.1.1",
           "type": "prod",
         },
+        Edge {
+          "from": "node_modules/tap-mocha-reporter",
+          "name": "debug",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
       },
       "edgesOut": Map {
         "ms" => Edge {
@@ -5627,6 +5604,12 @@ Node {
           "type": "prod",
         },
         Edge {
+          "from": "node_modules/tap-mocha-reporter",
+          "name": "diff",
+          "spec": "^4.0.1",
+          "type": "prod",
+        },
+        Edge {
           "from": "node_modules/ts-node",
           "name": "diff",
           "spec": "^4.0.1",
@@ -5635,7 +5618,7 @@ Node {
       },
       "location": "node_modules/diff",
       "name": "diff",
-      "resolved": "https://registry.npmjs.org/diff/-/diff-4.0.1.tgz",
+      "resolved": "https://registry.npmjs.org/diff/-/diff-4.0.2.tgz",
     },
     "diff-frag" => Node {
       "dev": true,
@@ -5771,12 +5754,6 @@ Node {
           "spec": "^1.0.5",
           "type": "prod",
         },
-        Edge {
-          "from": "node_modules/tap-mocha-reporter",
-          "name": "escape-string-regexp",
-          "spec": "^1.0.3",
-          "type": "prod",
-        },
       },
       "location": "node_modules/escape-string-regexp",
       "name": "escape-string-regexp",
@@ -5896,13 +5873,13 @@ Node {
         Edge {
           "from": "node_modules/ajv",
           "name": "fast-deep-equal",
-          "spec": "^2.0.1",
+          "spec": "^3.1.1",
           "type": "prod",
         },
       },
       "location": "node_modules/fast-deep-equal",
       "name": "fast-deep-equal",
-      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz",
+      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz",
     },
     "fast-json-stable-stringify" => Node {
       "dev": true,
@@ -6097,13 +6074,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.114.0",
+          "spec": "^0.117.1",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
     },
     "flow-remove-types" => Node {
       "dev": true,
@@ -6118,7 +6095,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.114.0",
+          "spec": "^0.117.1",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -6137,7 +6114,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.117.1.tgz",
     },
     "foreground-child" => Node {
       "dev": true,
@@ -6283,6 +6260,20 @@ Node {
       "location": "node_modules/function-loop",
       "name": "function-loop",
       "resolved": "https://registry.npmjs.org/function-loop/-/function-loop-1.0.2.tgz",
+    },
+    "gensync" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@babel/core",
+          "name": "gensync",
+          "spec": "^1.0.0-beta.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/gensync",
+      "name": "gensync",
+      "resolved": "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.1.tgz",
     },
     "get-caller-file" => Node {
       "dev": true,
@@ -6464,62 +6455,6 @@ Node {
       "name": "graceful-fs",
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.3.tgz",
     },
-    "handlebars" => Node {
-      "children": Map {
-        "source-map" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/handlebars",
-              "name": "source-map",
-              "spec": "^0.6.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/handlebars/node_modules/source-map",
-          "name": "source-map",
-          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
-        },
-      },
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/istanbul-reports",
-          "name": "handlebars",
-          "spec": "^4.1.2",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "neo-async" => Edge {
-          "name": "neo-async",
-          "spec": "^2.6.0",
-          "to": "node_modules/neo-async",
-          "type": "prod",
-        },
-        "optimist" => Edge {
-          "name": "optimist",
-          "spec": "^0.6.1",
-          "to": "node_modules/optimist",
-          "type": "prod",
-        },
-        "source-map" => Edge {
-          "name": "source-map",
-          "spec": "^0.6.1",
-          "to": "node_modules/handlebars/node_modules/source-map",
-          "type": "prod",
-        },
-        "uglify-js" => Edge {
-          "name": "uglify-js",
-          "spec": "^3.1.4",
-          "to": "node_modules/uglify-js",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/handlebars",
-      "name": "handlebars",
-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
-    },
     "har-schema" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -6624,6 +6559,20 @@ Node {
       "name": "hosted-git-info",
       "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.5.tgz",
     },
+    "html-escaper" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/istanbul-reports",
+          "name": "html-escaper",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/html-escaper",
+      "name": "html-escaper",
+      "resolved": "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.0.tgz",
+    },
     "http-signature" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -6691,7 +6640,7 @@ Node {
         Edge {
           "from": "node_modules/tap/node_modules/treport",
           "name": "import-jsx",
-          "spec": "^3.0.0",
+          "spec": "^3.1.0",
           "type": "prod",
         },
       },
@@ -6735,7 +6684,7 @@ Node {
       },
       "location": "node_modules/import-jsx",
       "name": "import-jsx",
-      "resolved": "https://registry.npmjs.org/import-jsx/-/import-jsx-3.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/import-jsx/-/import-jsx-3.1.0.tgz",
     },
     "imurmurhash" => Node {
       "dev": true,
@@ -6792,12 +6741,6 @@ Node {
           "from": "node_modules/glob",
           "name": "inherits",
           "spec": "2",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "inherits",
-          "spec": "~2.0.3",
           "type": "prod",
         },
       },
@@ -6989,21 +6932,6 @@ Node {
       "location": "node_modules/is-typedarray",
       "name": "is-typedarray",
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
-    },
-    "isarray" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "isarray",
-          "spec": "~1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/isarray",
-      "name": "isarray",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
     },
     "isexe" => Node {
       "dev": true,
@@ -7465,16 +7393,16 @@ Node {
         },
       },
       "edgesOut": Map {
-        "handlebars" => Edge {
-          "name": "handlebars",
-          "spec": "^4.1.2",
-          "to": "node_modules/handlebars",
+        "html-escaper" => Edge {
+          "name": "html-escaper",
+          "spec": "^2.0.0",
+          "to": "node_modules/html-escaper",
           "type": "prod",
         },
       },
       "location": "node_modules/istanbul-reports",
       "name": "istanbul-reports",
-      "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-2.2.6.tgz",
+      "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-2.2.7.tgz",
     },
     "jackspeak" => Node {
       "dev": true,
@@ -8133,7 +8061,7 @@ Node {
       },
       "location": "node_modules/log-update",
       "name": "log-update",
-      "resolved": "https://registry.npmjs.org/log-update/-/log-update-3.3.0.tgz",
+      "resolved": "https://registry.npmjs.org/log-update/-/log-update-3.4.0.tgz",
     },
     "loose-envify" => Node {
       "edgesIn": Set {
@@ -8336,13 +8264,13 @@ Node {
         Edge {
           "from": "node_modules/mime-types",
           "name": "mime-db",
-          "spec": "1.42.0",
+          "spec": "1.43.0",
           "type": "prod",
         },
       },
       "location": "node_modules/mime-db",
       "name": "mime-db",
-      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.42.0.tgz",
+      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.43.0.tgz",
     },
     "mime-types" => Node {
       "dev": true,
@@ -8363,14 +8291,14 @@ Node {
       "edgesOut": Map {
         "mime-db" => Edge {
           "name": "mime-db",
-          "spec": "1.42.0",
+          "spec": "1.43.0",
           "to": "node_modules/mime-db",
           "type": "prod",
         },
       },
       "location": "node_modules/mime-types",
       "name": "mime-types",
-      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.25.tgz",
+      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.26.tgz",
     },
     "mimic-fn" => Node {
       "dev": true,
@@ -8541,20 +8469,6 @@ Node {
       "location": "node_modules/ms",
       "name": "ms",
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
-    },
-    "neo-async" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/handlebars",
-          "name": "neo-async",
-          "spec": "^2.6.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/neo-async",
-      "name": "neo-async",
-      "resolved": "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz",
     },
     "nested-error-stacks" => Node {
       "dev": true,
@@ -9008,50 +8922,6 @@ Node {
       "name": "opener",
       "resolved": "https://registry.npmjs.org/opener/-/opener-1.5.1.tgz",
     },
-    "optimist" => Node {
-      "children": Map {
-        "minimist" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/optimist",
-              "name": "minimist",
-              "spec": "~0.0.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/optimist/node_modules/minimist",
-          "name": "minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz",
-        },
-      },
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/handlebars",
-          "name": "optimist",
-          "spec": "^0.6.1",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "minimist" => Edge {
-          "name": "minimist",
-          "spec": "~0.0.1",
-          "to": "node_modules/optimist/node_modules/minimist",
-          "type": "prod",
-        },
-        "wordwrap" => Edge {
-          "name": "wordwrap",
-          "spec": "~0.0.2",
-          "to": "node_modules/wordwrap",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/optimist",
-      "name": "optimist",
-      "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
-    },
     "os-homedir" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -9128,7 +8998,7 @@ Node {
       },
       "location": "node_modules/p-limit",
       "name": "p-limit",
-      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.1.tgz",
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.2.tgz",
     },
     "p-locate" => Node {
       "dev": true,
@@ -9360,7 +9230,7 @@ Node {
       },
       "location": "node_modules/picomatch",
       "name": "picomatch",
-      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.1.1.tgz",
+      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.2.1.tgz",
     },
     "pify" => Node {
       "dev": true,
@@ -9425,21 +9295,6 @@ Node {
       "location": "node_modules/pkg-dir",
       "name": "pkg-dir",
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
-    },
-    "process-nextick-args" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "process-nextick-args",
-          "spec": "~2.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/process-nextick-args",
-      "name": "process-nextick-args",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
     },
     "promise" => Node {
       "edgesIn": Set {
@@ -9548,12 +9403,6 @@ Node {
           "from": "node_modules/tough-cookie",
           "name": "punycode",
           "spec": "^1.4.1",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/unicode-length",
-          "name": "punycode",
-          "spec": "^1.3.2",
           "type": "prod",
         },
       },
@@ -9694,65 +9543,6 @@ Node {
       "location": "node_modules/read-pkg-up",
       "name": "read-pkg-up",
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
-    },
-    "readable-stream" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/tap-mocha-reporter",
-          "name": "readable-stream",
-          "spec": "^2.1.5",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "core-util-is" => Edge {
-          "name": "core-util-is",
-          "spec": "~1.0.0",
-          "to": "node_modules/core-util-is",
-          "type": "prod",
-        },
-        "inherits" => Edge {
-          "name": "inherits",
-          "spec": "~2.0.3",
-          "to": "node_modules/inherits",
-          "type": "prod",
-        },
-        "isarray" => Edge {
-          "name": "isarray",
-          "spec": "~1.0.0",
-          "to": "node_modules/isarray",
-          "type": "prod",
-        },
-        "process-nextick-args" => Edge {
-          "name": "process-nextick-args",
-          "spec": "~2.0.0",
-          "to": "node_modules/process-nextick-args",
-          "type": "prod",
-        },
-        "safe-buffer" => Edge {
-          "name": "safe-buffer",
-          "spec": "~5.1.1",
-          "to": "node_modules/safe-buffer",
-          "type": "prod",
-        },
-        "string_decoder" => Edge {
-          "name": "string_decoder",
-          "spec": "~1.1.1",
-          "to": "node_modules/string_decoder",
-          "type": "prod",
-        },
-        "util-deprecate" => Edge {
-          "name": "util-deprecate",
-          "spec": "~1.0.1",
-          "to": "node_modules/util-deprecate",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/readable-stream",
-      "name": "readable-stream",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
     },
     "readdirp" => Node {
       "dev": true,
@@ -10030,7 +9820,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.15.0.tgz",
     },
     "resolve-from" => Node {
       "dev": true,
@@ -10136,21 +9926,9 @@ Node {
           "type": "prod",
         },
         Edge {
-          "from": "node_modules/readable-stream",
-          "name": "safe-buffer",
-          "spec": "~5.1.1",
-          "type": "prod",
-        },
-        Edge {
           "from": "node_modules/request",
           "name": "safe-buffer",
           "spec": "^5.1.2",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/string_decoder",
-          "name": "safe-buffer",
-          "spec": "~5.1.0",
           "type": "prod",
         },
         Edge {
@@ -10414,7 +10192,7 @@ Node {
           },
           "location": "node_modules/slice-ansi/node_modules/ansi-styles",
           "name": "ansi-styles",
-          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
+          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.1.tgz",
         },
         "color-convert" => Node {
           "dev": true,
@@ -10852,29 +10630,6 @@ Node {
       "name": "stack-utils",
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
     },
-    "string_decoder" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "string_decoder",
-          "spec": "~1.1.1",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "safe-buffer" => Edge {
-          "name": "safe-buffer",
-          "spec": "~5.1.0",
-          "to": "node_modules/safe-buffer",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/string_decoder",
-      "name": "string_decoder",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
-    },
     "string-length" => Node {
       "children": Map {
         "ansi-regex" => Node {
@@ -11067,13 +10822,13 @@ Node {
             Edge {
               "from": "node_modules/tap/node_modules/strip-ansi",
               "name": "ansi-regex",
-              "spec": "^2.0.0",
+              "spec": "^5.0.0",
               "type": "prod",
             },
           },
           "location": "node_modules/tap/node_modules/ansi-regex",
           "name": "ansi-regex",
-          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
         },
         "ansi-styles" => Node {
           "dev": true,
@@ -11107,7 +10862,7 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ansi-styles",
           "name": "ansi-styles",
-          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
+          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.1.tgz",
         },
         "chalk" => Node {
           "dev": true,
@@ -11205,7 +10960,7 @@ Node {
             Edge {
               "from": "node_modules/tap/node_modules/treport",
               "name": "ink",
-              "spec": "^2.5.0",
+              "spec": "^2.6.0",
               "type": "prod",
             },
           },
@@ -11214,7 +10969,7 @@ Node {
               "name": "@types/react",
               "spec": ">=16.8.0",
               "to": "node_modules/@types/react",
-              "type": "peer",
+              "type": "peerOptional",
             },
             "ansi-escapes" => Edge {
               "name": "ansi-escapes",
@@ -11230,7 +10985,7 @@ Node {
             },
             "auto-bind" => Edge {
               "name": "auto-bind",
-              "spec": "^3.0.0",
+              "spec": "^4.0.0",
               "to": "node_modules/auto-bind",
               "type": "prod",
             },
@@ -11248,7 +11003,7 @@ Node {
             },
             "cli-truncate" => Edge {
               "name": "cli-truncate",
-              "spec": "^2.0.0",
+              "spec": "^2.1.0",
               "to": "node_modules/cli-truncate",
               "type": "prod",
             },
@@ -11333,7 +11088,7 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ink",
           "name": "ink",
-          "resolved": "https://registry.npmjs.org/ink/-/ink-2.6.0.tgz",
+          "resolved": "https://registry.npmjs.org/ink/-/ink-2.7.0.tgz",
         },
         "is-fullwidth-code-point" => Node {
           "dev": true,
@@ -11348,20 +11103,6 @@ Node {
           "location": "node_modules/tap/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
           "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
-        },
-        "punycode" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap/node_modules/unicode-length",
-              "name": "punycode",
-              "spec": "^2.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap/node_modules/punycode",
-          "name": "punycode",
-          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
         },
         "react" => Node {
           "dev": true,
@@ -11462,44 +11203,6 @@ Node {
           "resolved": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.24.0.tgz",
         },
         "string-width" => Node {
-          "children": Map {
-            "ansi-regex" => Node {
-              "dev": true,
-              "edgesIn": Set {
-                Edge {
-                  "from": "node_modules/tap/node_modules/string-width/node_modules/strip-ansi",
-                  "name": "ansi-regex",
-                  "spec": "^5.0.0",
-                  "type": "prod",
-                },
-              },
-              "location": "node_modules/tap/node_modules/string-width/node_modules/ansi-regex",
-              "name": "ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
-            },
-            "strip-ansi" => Node {
-              "dev": true,
-              "edgesIn": Set {
-                Edge {
-                  "from": "node_modules/tap/node_modules/string-width",
-                  "name": "strip-ansi",
-                  "spec": "^6.0.0",
-                  "type": "prod",
-                },
-              },
-              "edgesOut": Map {
-                "ansi-regex" => Edge {
-                  "name": "ansi-regex",
-                  "spec": "^5.0.0",
-                  "to": "node_modules/tap/node_modules/string-width/node_modules/ansi-regex",
-                  "type": "prod",
-                },
-              },
-              "location": "node_modules/tap/node_modules/string-width/node_modules/strip-ansi",
-              "name": "strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
-            },
-          },
           "dev": true,
           "edgesIn": Set {
             Edge {
@@ -11525,7 +11228,7 @@ Node {
             "strip-ansi" => Edge {
               "name": "strip-ansi",
               "spec": "^6.0.0",
-              "to": "node_modules/tap/node_modules/string-width/node_modules/strip-ansi",
+              "to": "node_modules/tap/node_modules/strip-ansi",
               "type": "prod",
             },
           },
@@ -11537,23 +11240,29 @@ Node {
           "dev": true,
           "edgesIn": Set {
             Edge {
-              "from": "node_modules/tap/node_modules/unicode-length",
+              "from": "node_modules/tap/node_modules/string-width",
               "name": "strip-ansi",
-              "spec": "^3.0.1",
+              "spec": "^6.0.0",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/tap/node_modules/wrap-ansi",
+              "name": "strip-ansi",
+              "spec": "^6.0.0",
               "type": "prod",
             },
           },
           "edgesOut": Map {
             "ansi-regex" => Edge {
               "name": "ansi-regex",
-              "spec": "^2.0.0",
+              "spec": "^5.0.0",
               "to": "node_modules/tap/node_modules/ansi-regex",
               "type": "prod",
             },
           },
           "location": "node_modules/tap/node_modules/strip-ansi",
           "name": "strip-ansi",
-          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
         },
         "supports-color" => Node {
           "dev": true,
@@ -11602,13 +11311,13 @@ Node {
             },
             "import-jsx" => Edge {
               "name": "import-jsx",
-              "spec": "^3.0.0",
+              "spec": "^3.1.0",
               "to": "node_modules/import-jsx",
               "type": "prod",
             },
             "ink" => Edge {
               "name": "ink",
-              "spec": "^2.5.0",
+              "spec": "^2.6.0",
               "to": "node_modules/tap/node_modules/ink",
               "type": "prod",
             },
@@ -11639,81 +11348,15 @@ Node {
             "unicode-length" => Edge {
               "name": "unicode-length",
               "spec": "^2.0.2",
-              "to": "node_modules/tap/node_modules/unicode-length",
+              "to": "node_modules/unicode-length",
               "type": "prod",
             },
           },
           "location": "node_modules/tap/node_modules/treport",
           "name": "treport",
-          "resolved": "https://registry.npmjs.org/treport/-/treport-1.0.1.tgz",
-        },
-        "unicode-length" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap/node_modules/treport",
-              "name": "unicode-length",
-              "spec": "^2.0.2",
-              "type": "prod",
-            },
-          },
-          "edgesOut": Map {
-            "punycode" => Edge {
-              "name": "punycode",
-              "spec": "^2.0.0",
-              "to": "node_modules/tap/node_modules/punycode",
-              "type": "prod",
-            },
-            "strip-ansi" => Edge {
-              "name": "strip-ansi",
-              "spec": "^3.0.1",
-              "to": "node_modules/tap/node_modules/strip-ansi",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap/node_modules/unicode-length",
-          "name": "unicode-length",
-          "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-2.0.2.tgz",
+          "resolved": "https://registry.npmjs.org/treport/-/treport-1.0.2.tgz",
         },
         "wrap-ansi" => Node {
-          "children": Map {
-            "ansi-regex" => Node {
-              "dev": true,
-              "edgesIn": Set {
-                Edge {
-                  "from": "node_modules/tap/node_modules/wrap-ansi/node_modules/strip-ansi",
-                  "name": "ansi-regex",
-                  "spec": "^5.0.0",
-                  "type": "prod",
-                },
-              },
-              "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-regex",
-              "name": "ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
-            },
-            "strip-ansi" => Node {
-              "dev": true,
-              "edgesIn": Set {
-                Edge {
-                  "from": "node_modules/tap/node_modules/wrap-ansi",
-                  "name": "strip-ansi",
-                  "spec": "^6.0.0",
-                  "type": "prod",
-                },
-              },
-              "edgesOut": Map {
-                "ansi-regex" => Edge {
-                  "name": "ansi-regex",
-                  "spec": "^5.0.0",
-                  "to": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-regex",
-                  "type": "prod",
-                },
-              },
-              "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/strip-ansi",
-              "name": "strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
-            },
-          },
           "dev": true,
           "edgesIn": Set {
             Edge {
@@ -11739,7 +11382,7 @@ Node {
             "strip-ansi" => Edge {
               "name": "strip-ansi",
               "spec": "^6.0.0",
-              "to": "node_modules/tap/node_modules/wrap-ansi/node_modules/strip-ansi",
+              "to": "node_modules/tap/node_modules/strip-ansi",
               "type": "prod",
             },
           },
@@ -12017,55 +11660,19 @@ Node {
     },
     "tap-mocha-reporter" => Node {
       "children": Map {
-        "debug" => Node {
+        "escape-string-regexp" => Node {
           "dev": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/tap-mocha-reporter",
-              "name": "debug",
-              "spec": "^2.1.3",
+              "name": "escape-string-regexp",
+              "spec": "^2.0.0",
               "type": "prod",
             },
           },
-          "edgesOut": Map {
-            "ms" => Edge {
-              "name": "ms",
-              "spec": "2.0.0",
-              "to": "node_modules/tap-mocha-reporter/node_modules/ms",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap-mocha-reporter/node_modules/debug",
-          "name": "debug",
-          "resolved": "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz",
-        },
-        "diff" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap-mocha-reporter",
-              "name": "diff",
-              "spec": "^1.3.2",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap-mocha-reporter/node_modules/diff",
-          "name": "diff",
-          "resolved": "https://registry.npmjs.org/diff/-/diff-1.4.0.tgz",
-        },
-        "ms" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap-mocha-reporter/node_modules/debug",
-              "name": "ms",
-              "spec": "2.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap-mocha-reporter/node_modules/ms",
-          "name": "ms",
-          "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
+          "location": "node_modules/tap-mocha-reporter/node_modules/escape-string-regexp",
+          "name": "escape-string-regexp",
+          "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz",
         },
       },
       "dev": true,
@@ -12086,20 +11693,20 @@ Node {
         },
         "debug" => Edge {
           "name": "debug",
-          "spec": "^2.1.3",
-          "to": "node_modules/tap-mocha-reporter/node_modules/debug",
+          "spec": "^4.1.1",
+          "to": "node_modules/debug",
           "type": "prod",
         },
         "diff" => Edge {
           "name": "diff",
-          "spec": "^1.3.2",
-          "to": "node_modules/tap-mocha-reporter/node_modules/diff",
+          "spec": "^4.0.1",
+          "to": "node_modules/diff",
           "type": "prod",
         },
         "escape-string-regexp" => Edge {
           "name": "escape-string-regexp",
-          "spec": "^1.0.3",
-          "to": "node_modules/escape-string-regexp",
+          "spec": "^2.0.0",
+          "to": "node_modules/tap-mocha-reporter/node_modules/escape-string-regexp",
           "type": "prod",
         },
         "glob" => Edge {
@@ -12107,12 +11714,6 @@ Node {
           "spec": "^7.0.5",
           "to": "node_modules/glob",
           "type": "prod",
-        },
-        "readable-stream" => Edge {
-          "name": "readable-stream",
-          "spec": "^2.1.5",
-          "to": "node_modules/readable-stream",
-          "type": "optional",
         },
         "tap-parser" => Edge {
           "name": "tap-parser",
@@ -12128,14 +11729,14 @@ Node {
         },
         "unicode-length" => Edge {
           "name": "unicode-length",
-          "spec": "^1.0.0",
+          "spec": "^2.0.2",
           "to": "node_modules/unicode-length",
           "type": "prod",
         },
       },
       "location": "node_modules/tap-mocha-reporter",
       "name": "tap-mocha-reporter",
-      "resolved": "https://registry.npmjs.org/tap-mocha-reporter/-/tap-mocha-reporter-5.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/tap-mocha-reporter/-/tap-mocha-reporter-5.0.1.tgz",
     },
     "tap-parser" => Node {
       "dev": true,
@@ -12394,20 +11995,20 @@ Node {
         },
         "typescript" => Edge {
           "name": "typescript",
-          "spec": ">=2.0",
+          "spec": ">=2.7",
           "to": "node_modules/typescript",
           "type": "peer",
         },
         "yn" => Edge {
           "name": "yn",
-          "spec": "^3.0.0",
+          "spec": "3.1.1",
           "to": "node_modules/yn",
           "type": "prod",
         },
       },
       "location": "node_modules/ts-node",
       "name": "ts-node",
-      "resolved": "https://registry.npmjs.org/ts-node/-/ts-node-8.5.4.tgz",
+      "resolved": "https://registry.npmjs.org/ts-node/-/ts-node-8.6.2.tgz",
     },
     "tunnel-agent" => Node {
       "dev": true,
@@ -12499,13 +12100,13 @@ Node {
         Edge {
           "from": "node_modules/ts-node",
           "name": "typescript",
-          "spec": ">=2.0",
+          "spec": ">=2.7",
           "type": "peer",
         },
       },
       "location": "node_modules/typescript",
       "name": "typescript",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.5.tgz",
     },
     "ua-parser-js" => Node {
       "edgesIn": Set {
@@ -12519,52 +12120,6 @@ Node {
       "location": "node_modules/ua-parser-js",
       "name": "ua-parser-js",
       "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.21.tgz",
-    },
-    "uglify-js" => Node {
-      "children": Map {
-        "source-map" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/uglify-js",
-              "name": "source-map",
-              "spec": "~0.6.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/uglify-js/node_modules/source-map",
-          "name": "source-map",
-          "optional": true,
-          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
-        },
-      },
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/handlebars",
-          "name": "uglify-js",
-          "spec": "^3.1.4",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "commander" => Edge {
-          "name": "commander",
-          "spec": "~2.20.3",
-          "to": "node_modules/commander",
-          "type": "prod",
-        },
-        "source-map" => Edge {
-          "name": "source-map",
-          "spec": "~0.6.1",
-          "to": "node_modules/uglify-js/node_modules/source-map",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/uglify-js",
-      "name": "uglify-js",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
     },
     "unicode-length" => Node {
       "children": Map {
@@ -12581,6 +12136,20 @@ Node {
           "location": "node_modules/unicode-length/node_modules/ansi-regex",
           "name": "ansi-regex",
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
+        },
+        "punycode" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/unicode-length",
+              "name": "punycode",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/unicode-length/node_modules/punycode",
+          "name": "punycode",
+          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
         },
         "strip-ansi" => Node {
           "dev": true,
@@ -12610,15 +12179,21 @@ Node {
         Edge {
           "from": "node_modules/tap-mocha-reporter",
           "name": "unicode-length",
-          "spec": "^1.0.0",
+          "spec": "^2.0.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/tap/node_modules/treport",
+          "name": "unicode-length",
+          "spec": "^2.0.2",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "punycode" => Edge {
           "name": "punycode",
-          "spec": "^1.3.2",
-          "to": "node_modules/punycode",
+          "spec": "^2.0.0",
+          "to": "node_modules/unicode-length/node_modules/punycode",
           "type": "prod",
         },
         "strip-ansi" => Edge {
@@ -12630,7 +12205,7 @@ Node {
       },
       "location": "node_modules/unicode-length",
       "name": "unicode-length",
-      "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-1.0.3.tgz",
+      "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-2.0.2.tgz",
     },
     "uri-js" => Node {
       "children": Map {
@@ -12670,21 +12245,6 @@ Node {
       "name": "uri-js",
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
     },
-    "util-deprecate" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "util-deprecate",
-          "spec": "~1.0.1",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/util-deprecate",
-      "name": "util-deprecate",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
-    },
     "uuid" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -12709,7 +12269,7 @@ Node {
       },
       "location": "node_modules/uuid",
       "name": "uuid",
-      "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz",
     },
     "validate-npm-package-license" => Node {
       "dev": true,
@@ -12943,20 +12503,6 @@ Node {
       "location": "node_modules/widest-line",
       "name": "widest-line",
       "resolved": "https://registry.npmjs.org/widest-line/-/widest-line-3.1.0.tgz",
-    },
-    "wordwrap" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/optimist",
-          "name": "wordwrap",
-          "spec": "~0.0.2",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/wordwrap",
-      "name": "wordwrap",
-      "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
     },
     "wrap-ansi" => Node {
       "children": Map {
@@ -13510,7 +13056,7 @@ Node {
         Edge {
           "from": "node_modules/ts-node",
           "name": "yn",
-          "spec": "^3.0.0",
+          "spec": "3.1.1",
           "type": "prod",
         },
       },
@@ -24234,13 +23780,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.114.0",
+          "spec": "^0.117.1",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
     },
     "flow-remove-types" => Node {
       "edgesIn": Set {
@@ -24254,7 +23800,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.114.0",
+          "spec": "^0.117.1",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -24273,7 +23819,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.117.1.tgz",
     },
     "node-modules-regexp" => Node {
       "edgesIn": Set {
@@ -24357,7 +23903,7 @@ Node {
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
     },
     "flow-remove-types" => Node {
       "children": Map {
@@ -24483,33 +24029,33 @@ Node {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/template",
           "name": "@babel/code-frame",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/highlight" => Edge {
           "name": "@babel/highlight",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/highlight",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/code-frame",
       "name": "@babel/code-frame",
-      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.5.5.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.8.3.tgz",
     },
     "@babel/core" => Node {
       "edgesIn": Set {
@@ -24553,43 +24099,43 @@ Node {
       "edgesOut": Map {
         "@babel/code-frame" => Edge {
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/code-frame",
           "type": "prod",
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
         "@babel/helpers" => Edge {
           "name": "@babel/helpers",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/helpers",
           "type": "prod",
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
         "@babel/template" => Edge {
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/template",
           "type": "prod",
         },
         "@babel/traverse" => Edge {
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/traverse",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -24603,6 +24149,12 @@ Node {
           "name": "debug",
           "spec": "^4.1.0",
           "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "gensync" => Edge {
+          "name": "gensync",
+          "spec": "^1.0.0-beta.1",
+          "to": "node_modules/gensync",
           "type": "prod",
         },
         "json5" => Edge {
@@ -24638,20 +24190,20 @@ Node {
       },
       "location": "node_modules/@babel/core",
       "name": "@babel/core",
-      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.8.4.tgz",
     },
     "@babel/generator" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/generator",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
@@ -24664,7 +24216,7 @@ Node {
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -24689,21 +24241,21 @@ Node {
       },
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
-      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.8.4.tgz",
     },
     "@babel/helper-builder-react-jsx" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/helper-builder-react-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -24716,152 +24268,152 @@ Node {
       },
       "location": "node_modules/@babel/helper-builder-react-jsx",
       "name": "@babel/helper-builder-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.8.3.tgz",
     },
     "@babel/helper-function-name" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/helper-function-name",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/helper-get-function-arity" => Edge {
           "name": "@babel/helper-get-function-arity",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-get-function-arity",
           "type": "prod",
         },
         "@babel/template" => Edge {
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/template",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-function-name",
       "name": "@babel/helper-function-name",
-      "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.8.3.tgz",
     },
     "@babel/helper-get-function-arity" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/helper-function-name",
           "name": "@babel/helper-get-function-arity",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-get-function-arity",
       "name": "@babel/helper-get-function-arity",
-      "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.8.3.tgz",
     },
     "@babel/helper-plugin-utils" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-syntax-jsx",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-syntax-object-rest-spread",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.0",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-transform-destructuring",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-plugin-utils",
       "name": "@babel/helper-plugin-utils",
-      "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.8.3.tgz",
     },
     "@babel/helper-split-export-declaration" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/helper-split-export-declaration",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helper-split-export-declaration",
       "name": "@babel/helper-split-export-declaration",
-      "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.8.3.tgz",
     },
     "@babel/helpers" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/helpers",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@babel/template" => Edge {
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/template",
           "type": "prod",
         },
         "@babel/traverse" => Edge {
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/traverse",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/helpers",
       "name": "@babel/helpers",
-      "resolved": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.8.4.tgz",
     },
     "@babel/highlight" => Node {
       "children": Map {
@@ -24905,7 +24457,7 @@ Node {
             "escape-string-regexp" => Edge {
               "name": "escape-string-regexp",
               "spec": "^1.0.5",
-              "to": "node_modules/escape-string-regexp",
+              "to": "node_modules/@babel/highlight/node_modules/escape-string-regexp",
               "type": "prod",
             },
             "supports-color" => Edge {
@@ -24953,6 +24505,19 @@ Node {
           "name": "color-name",
           "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
         },
+        "escape-string-regexp" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight/node_modules/chalk",
+              "name": "escape-string-regexp",
+              "spec": "^1.0.5",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/escape-string-regexp",
+          "name": "escape-string-regexp",
+          "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+        },
         "has-flag" => Node {
           "edgesIn": Set {
             Edge {
@@ -24992,7 +24557,7 @@ Node {
         Edge {
           "from": "node_modules/@babel/code-frame",
           "name": "@babel/highlight",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
@@ -25018,26 +24583,26 @@ Node {
       },
       "location": "node_modules/@babel/highlight",
       "name": "@babel/highlight",
-      "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.5.0.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.8.3.tgz",
     },
     "@babel/parser" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/parser",
-          "spec": "^7.7.7",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/template",
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
@@ -25049,7 +24614,7 @@ Node {
       },
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
-      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.8.4.tgz",
     },
     "@babel/plugin-proposal-object-rest-spread" => Node {
       "edgesIn": Set {
@@ -25069,27 +24634,27 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
         "@babel/plugin-syntax-object-rest-spread" => Edge {
           "name": "@babel/plugin-syntax-object-rest-spread",
-          "spec": "^7.7.4",
+          "spec": "^7.8.0",
           "to": "node_modules/@babel/plugin-syntax-object-rest-spread",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-proposal-object-rest-spread",
       "name": "@babel/plugin-proposal-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.8.3.tgz",
     },
     "@babel/plugin-syntax-jsx" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/plugin-syntax-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
       },
@@ -25102,21 +24667,21 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-syntax-jsx",
       "name": "@babel/plugin-syntax-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.8.3.tgz",
     },
     "@babel/plugin-syntax-object-rest-spread" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/plugin-syntax-object-rest-spread",
-          "spec": "^7.7.4",
+          "spec": "^7.8.0",
           "type": "prod",
         },
       },
@@ -25129,14 +24694,14 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.0",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-syntax-object-rest-spread",
       "name": "@babel/plugin-syntax-object-rest-spread",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.8.3.tgz",
     },
     "@babel/plugin-transform-destructuring" => Node {
       "edgesIn": Set {
@@ -25156,14 +24721,14 @@ Node {
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-transform-destructuring",
       "name": "@babel/plugin-transform-destructuring",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.8.3.tgz",
     },
     "@babel/plugin-transform-react-jsx" => Node {
       "edgesIn": Set {
@@ -25183,26 +24748,26 @@ Node {
         },
         "@babel/helper-builder-react-jsx" => Edge {
           "name": "@babel/helper-builder-react-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-builder-react-jsx",
           "type": "prod",
         },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-plugin-utils",
           "type": "prod",
         },
         "@babel/plugin-syntax-jsx" => Edge {
           "name": "@babel/plugin-syntax-jsx",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/plugin-syntax-jsx",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/plugin-transform-react-jsx",
       "name": "@babel/plugin-transform-react-jsx",
-      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.8.3.tgz",
     },
     "@babel/runtime" => Node {
       "edgesIn": Set {
@@ -25223,26 +24788,26 @@ Node {
       },
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
-      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.8.4.tgz",
     },
     "@babel/template" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-function-name",
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helpers",
           "name": "@babel/template",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
@@ -25255,39 +24820,39 @@ Node {
       "edgesOut": Map {
         "@babel/code-frame" => Edge {
           "name": "@babel/code-frame",
-          "spec": "^7.0.0",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/code-frame",
           "type": "prod",
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
       },
       "location": "node_modules/@babel/template",
       "name": "@babel/template",
-      "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.8.3.tgz",
     },
     "@babel/traverse" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helpers",
           "name": "@babel/traverse",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "type": "prod",
         },
         Edge {
@@ -25300,37 +24865,37 @@ Node {
       "edgesOut": Map {
         "@babel/code-frame" => Edge {
           "name": "@babel/code-frame",
-          "spec": "^7.5.5",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/code-frame",
           "type": "prod",
         },
         "@babel/generator" => Edge {
           "name": "@babel/generator",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/generator",
           "type": "prod",
         },
         "@babel/helper-function-name" => Edge {
           "name": "@babel/helper-function-name",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-function-name",
           "type": "prod",
         },
         "@babel/helper-split-export-declaration" => Edge {
           "name": "@babel/helper-split-export-declaration",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/helper-split-export-declaration",
           "type": "prod",
         },
         "@babel/parser" => Edge {
           "name": "@babel/parser",
-          "spec": "^7.7.4",
+          "spec": "^7.8.4",
           "to": "node_modules/@babel/parser",
           "type": "prod",
         },
         "@babel/types" => Edge {
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "to": "node_modules/@babel/types",
           "type": "prod",
         },
@@ -25355,62 +24920,62 @@ Node {
       },
       "location": "node_modules/@babel/traverse",
       "name": "@babel/traverse",
-      "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.8.4.tgz",
     },
     "@babel/types" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@babel/core",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/generator",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-builder-react-jsx",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-function-name",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-get-function-arity",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helper-split-export-declaration",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/helpers",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/template",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/@babel/traverse",
           "name": "@babel/types",
-          "spec": "^7.7.4",
+          "spec": "^7.8.3",
           "type": "prod",
         },
         Edge {
@@ -25442,7 +25007,7 @@ Node {
       },
       "location": "node_modules/@babel/types",
       "name": "@babel/types",
-      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
+      "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.8.3.tgz",
     },
     "@types/color-name" => Node {
       "edgesIn": Set {
@@ -25473,16 +25038,10 @@ Node {
     "@types/react" => Node {
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/auto-bind",
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "type": "peerOptional",
-        },
-        Edge {
           "from": "node_modules/ink",
           "name": "@types/react",
           "spec": ">=16.8.0",
-          "type": "peer",
+          "type": "peerOptional",
         },
         Edge {
           "from": "node_modules/tap",
@@ -25507,7 +25066,7 @@ Node {
       },
       "location": "node_modules/@types/react",
       "name": "@types/react",
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.17.tgz",
+      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
     },
     "ajv" => Node {
       "edgesIn": Set {
@@ -25521,7 +25080,7 @@ Node {
       "edgesOut": Map {
         "fast-deep-equal" => Edge {
           "name": "fast-deep-equal",
-          "spec": "^2.0.1",
+          "spec": "^3.1.1",
           "to": "node_modules/fast-deep-equal",
           "type": "prod",
         },
@@ -25546,7 +25105,7 @@ Node {
       },
       "location": "node_modules/ajv",
       "name": "ajv",
-      "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",
+      "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.11.0.tgz",
     },
     "ansi-escapes" => Node {
       "edgesIn": Set {
@@ -25619,7 +25178,7 @@ Node {
       },
       "location": "node_modules/ansi-styles",
       "name": "ansi-styles",
-      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.1.tgz",
     },
     "anymatch" => Node {
       "edgesIn": Set {
@@ -25699,7 +25258,7 @@ Node {
       },
       "location": "node_modules/arg",
       "name": "arg",
-      "resolved": "https://registry.npmjs.org/arg/-/arg-4.1.2.tgz",
+      "resolved": "https://registry.npmjs.org/arg/-/arg-4.1.3.tgz",
     },
     "argparse" => Node {
       "edgesIn": Set {
@@ -25851,21 +25410,13 @@ Node {
         Edge {
           "from": "node_modules/ink",
           "name": "auto-bind",
-          "spec": "^3.0.0",
+          "spec": "^4.0.0",
           "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@types/react" => Edge {
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "to": "node_modules/@types/react",
-          "type": "peerOptional",
         },
       },
       "location": "node_modules/auto-bind",
       "name": "auto-bind",
-      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-3.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-4.0.0.tgz",
     },
     "aws-sign2" => Node {
       "edgesIn": Set {
@@ -25891,7 +25442,7 @@ Node {
       },
       "location": "node_modules/aws4",
       "name": "aws4",
-      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.9.0.tgz",
+      "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.9.1.tgz",
     },
     "balanced-match" => Node {
       "edgesIn": Set {
@@ -26311,7 +25862,7 @@ Node {
         Edge {
           "from": "node_modules/ink",
           "name": "cli-truncate",
-          "spec": "^2.0.0",
+          "spec": "^2.1.0",
           "type": "prod",
         },
       },
@@ -26664,20 +26215,6 @@ Node {
       "name": "combined-stream",
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
     },
-    "commander" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/uglify-js",
-          "name": "commander",
-          "spec": "~2.20.3",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/commander",
-      "name": "commander",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
-    },
     "commondir" => Node {
       "edgesIn": Set {
         Edge {
@@ -26733,12 +26270,6 @@ Node {
     },
     "core-util-is" => Node {
       "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "core-util-is",
-          "spec": "~1.0.0",
-          "type": "prod",
-        },
         Edge {
           "from": "node_modules/verror",
           "name": "core-util-is",
@@ -26944,6 +26475,12 @@ Node {
           "spec": "^4.1.1",
           "type": "prod",
         },
+        Edge {
+          "from": "node_modules/tap-mocha-reporter",
+          "name": "debug",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
       },
       "edgesOut": Map {
         "ms" => Edge {
@@ -27013,6 +26550,12 @@ Node {
           "type": "prod",
         },
         Edge {
+          "from": "node_modules/tap-mocha-reporter",
+          "name": "diff",
+          "spec": "^4.0.1",
+          "type": "prod",
+        },
+        Edge {
           "from": "node_modules/ts-node",
           "name": "diff",
           "spec": "^4.0.1",
@@ -27021,7 +26564,7 @@ Node {
       },
       "location": "node_modules/diff",
       "name": "diff",
-      "resolved": "https://registry.npmjs.org/diff/-/diff-4.0.1.tgz",
+      "resolved": "https://registry.npmjs.org/diff/-/diff-4.0.2.tgz",
     },
     "diff-frag" => Node {
       "edgesIn": Set {
@@ -27113,21 +26656,15 @@ Node {
     "escape-string-regexp" => Node {
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/@babel/highlight/node_modules/chalk",
-          "name": "escape-string-regexp",
-          "spec": "^1.0.5",
-          "type": "prod",
-        },
-        Edge {
           "from": "node_modules/tap-mocha-reporter",
           "name": "escape-string-regexp",
-          "spec": "^1.0.3",
+          "spec": "^2.0.0",
           "type": "prod",
         },
       },
       "location": "node_modules/escape-string-regexp",
       "name": "escape-string-regexp",
-      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz",
     },
     "esm" => Node {
       "edgesIn": Set {
@@ -27230,13 +26767,13 @@ Node {
         Edge {
           "from": "node_modules/ajv",
           "name": "fast-deep-equal",
-          "spec": "^2.0.1",
+          "spec": "^3.1.1",
           "type": "prod",
         },
       },
       "location": "node_modules/fast-deep-equal",
       "name": "fast-deep-equal",
-      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz",
+      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz",
     },
     "fast-json-stable-stringify" => Node {
       "edgesIn": Set {
@@ -27368,13 +26905,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.114.0",
+          "spec": "^0.117.1",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
     },
     "flow-remove-types" => Node {
       "edgesIn": Set {
@@ -27394,7 +26931,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.114.0",
+          "spec": "^0.117.1",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -27413,7 +26950,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.117.1.tgz",
     },
     "foreground-child" => Node {
       "edgesIn": Set {
@@ -27552,6 +27089,19 @@ Node {
       "location": "node_modules/function-loop",
       "name": "function-loop",
       "resolved": "https://registry.npmjs.org/function-loop/-/function-loop-1.0.2.tgz",
+    },
+    "gensync" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@babel/core",
+          "name": "gensync",
+          "spec": "^1.0.0-beta.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/gensync",
+      "name": "gensync",
+      "resolved": "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.1.tgz",
     },
     "get-caller-file" => Node {
       "edgesIn": Set {
@@ -27727,60 +27277,6 @@ Node {
       "name": "graceful-fs",
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.3.tgz",
     },
-    "handlebars" => Node {
-      "children": Map {
-        "source-map" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/handlebars",
-              "name": "source-map",
-              "spec": "^0.6.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/handlebars/node_modules/source-map",
-          "name": "source-map",
-          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
-        },
-      },
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/istanbul-reports",
-          "name": "handlebars",
-          "spec": "^4.1.2",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "neo-async" => Edge {
-          "name": "neo-async",
-          "spec": "^2.6.0",
-          "to": "node_modules/neo-async",
-          "type": "prod",
-        },
-        "optimist" => Edge {
-          "name": "optimist",
-          "spec": "^0.6.1",
-          "to": "node_modules/optimist",
-          "type": "prod",
-        },
-        "source-map" => Edge {
-          "name": "source-map",
-          "spec": "^0.6.1",
-          "to": "node_modules/handlebars/node_modules/source-map",
-          "type": "prod",
-        },
-        "uglify-js" => Edge {
-          "name": "uglify-js",
-          "spec": "^3.1.4",
-          "to": "node_modules/uglify-js",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/handlebars",
-      "name": "handlebars",
-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
-    },
     "har-schema" => Node {
       "edgesIn": Set {
         Edge {
@@ -27874,6 +27370,19 @@ Node {
       "name": "hosted-git-info",
       "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.5.tgz",
     },
+    "html-escaper" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/istanbul-reports",
+          "name": "html-escaper",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/html-escaper",
+      "name": "html-escaper",
+      "resolved": "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.0.tgz",
+    },
     "http-signature" => Node {
       "edgesIn": Set {
         Edge {
@@ -27912,7 +27421,7 @@ Node {
         Edge {
           "from": "node_modules/tap",
           "name": "import-jsx",
-          "spec": "^3.0.0",
+          "spec": "^3.1.0",
           "type": "prod",
         },
       },
@@ -27956,7 +27465,7 @@ Node {
       },
       "location": "node_modules/import-jsx",
       "name": "import-jsx",
-      "resolved": "https://registry.npmjs.org/import-jsx/-/import-jsx-3.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/import-jsx/-/import-jsx-3.1.0.tgz",
     },
     "imurmurhash" => Node {
       "edgesIn": Set {
@@ -28012,12 +27521,6 @@ Node {
           "spec": "2",
           "type": "prod",
         },
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "inherits",
-          "spec": "~2.0.3",
-          "type": "prod",
-        },
       },
       "location": "node_modules/inherits",
       "name": "inherits",
@@ -28034,7 +27537,7 @@ Node {
         Edge {
           "from": "node_modules/tap",
           "name": "ink",
-          "spec": "^2.5.0",
+          "spec": "^2.6.0",
           "type": "prod",
         },
       },
@@ -28043,7 +27546,7 @@ Node {
           "name": "@types/react",
           "spec": ">=16.8.0",
           "to": "node_modules/@types/react",
-          "type": "peer",
+          "type": "peerOptional",
         },
         "ansi-escapes" => Edge {
           "name": "ansi-escapes",
@@ -28059,7 +27562,7 @@ Node {
         },
         "auto-bind" => Edge {
           "name": "auto-bind",
-          "spec": "^3.0.0",
+          "spec": "^4.0.0",
           "to": "node_modules/auto-bind",
           "type": "prod",
         },
@@ -28077,7 +27580,7 @@ Node {
         },
         "cli-truncate" => Edge {
           "name": "cli-truncate",
-          "spec": "^2.0.0",
+          "spec": "^2.1.0",
           "to": "node_modules/cli-truncate",
           "type": "prod",
         },
@@ -28162,7 +27665,7 @@ Node {
       },
       "location": "node_modules/ink",
       "name": "ink",
-      "resolved": "https://registry.npmjs.org/ink/-/ink-2.6.0.tgz",
+      "resolved": "https://registry.npmjs.org/ink/-/ink-2.7.0.tgz",
     },
     "is-arrayish" => Node {
       "edgesIn": Set {
@@ -28328,20 +27831,6 @@ Node {
       "location": "node_modules/is-typedarray",
       "name": "is-typedarray",
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
-    },
-    "isarray" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "isarray",
-          "spec": "~1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/isarray",
-      "name": "isarray",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
     },
     "isexe" => Node {
       "edgesIn": Set {
@@ -28775,16 +28264,16 @@ Node {
         },
       },
       "edgesOut": Map {
-        "handlebars" => Edge {
-          "name": "handlebars",
-          "spec": "^4.1.2",
-          "to": "node_modules/handlebars",
+        "html-escaper" => Edge {
+          "name": "html-escaper",
+          "spec": "^2.0.0",
+          "to": "node_modules/html-escaper",
           "type": "prod",
         },
       },
       "location": "node_modules/istanbul-reports",
       "name": "istanbul-reports",
-      "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-2.2.6.tgz",
+      "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-2.2.7.tgz",
     },
     "jackspeak" => Node {
       "edgesIn": Set {
@@ -29442,7 +28931,7 @@ Node {
       },
       "location": "node_modules/log-update",
       "name": "log-update",
-      "resolved": "https://registry.npmjs.org/log-update/-/log-update-3.3.0.tgz",
+      "resolved": "https://registry.npmjs.org/log-update/-/log-update-3.4.0.tgz",
     },
     "loose-envify" => Node {
       "edgesIn": Set {
@@ -29621,13 +29110,13 @@ Node {
         Edge {
           "from": "node_modules/mime-types",
           "name": "mime-db",
-          "spec": "1.42.0",
+          "spec": "1.43.0",
           "type": "prod",
         },
       },
       "location": "node_modules/mime-db",
       "name": "mime-db",
-      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.42.0.tgz",
+      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.43.0.tgz",
     },
     "mime-types" => Node {
       "edgesIn": Set {
@@ -29647,14 +29136,14 @@ Node {
       "edgesOut": Map {
         "mime-db" => Edge {
           "name": "mime-db",
-          "spec": "1.42.0",
+          "spec": "1.43.0",
           "to": "node_modules/mime-db",
           "type": "prod",
         },
       },
       "location": "node_modules/mime-types",
       "name": "mime-types",
-      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.25.tgz",
+      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.26.tgz",
     },
     "mimic-fn" => Node {
       "edgesIn": Set {
@@ -29811,19 +29300,6 @@ Node {
       "location": "node_modules/ms",
       "name": "ms",
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
-    },
-    "neo-async" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/handlebars",
-          "name": "neo-async",
-          "spec": "^2.6.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/neo-async",
-      "name": "neo-async",
-      "resolved": "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz",
     },
     "nested-error-stacks" => Node {
       "edgesIn": Set {
@@ -30220,48 +29696,6 @@ Node {
       "name": "opener",
       "resolved": "https://registry.npmjs.org/opener/-/opener-1.5.1.tgz",
     },
-    "optimist" => Node {
-      "children": Map {
-        "minimist" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/optimist",
-              "name": "minimist",
-              "spec": "~0.0.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/optimist/node_modules/minimist",
-          "name": "minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz",
-        },
-      },
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/handlebars",
-          "name": "optimist",
-          "spec": "^0.6.1",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "minimist" => Edge {
-          "name": "minimist",
-          "spec": "~0.0.1",
-          "to": "node_modules/optimist/node_modules/minimist",
-          "type": "prod",
-        },
-        "wordwrap" => Edge {
-          "name": "wordwrap",
-          "spec": "~0.0.2",
-          "to": "node_modules/wordwrap",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/optimist",
-      "name": "optimist",
-      "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
-    },
     "os-homedir" => Node {
       "edgesIn": Set {
         Edge {
@@ -30334,7 +29768,7 @@ Node {
       },
       "location": "node_modules/p-limit",
       "name": "p-limit",
-      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.1.tgz",
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.2.tgz",
     },
     "p-locate" => Node {
       "edgesIn": Set {
@@ -30554,7 +29988,7 @@ Node {
       },
       "location": "node_modules/picomatch",
       "name": "picomatch",
-      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.1.1.tgz",
+      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.2.1.tgz",
     },
     "pify" => Node {
       "edgesIn": Set {
@@ -30616,20 +30050,6 @@ Node {
       "location": "node_modules/pkg-dir",
       "name": "pkg-dir",
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
-    },
-    "process-nextick-args" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "process-nextick-args",
-          "spec": "~2.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/process-nextick-args",
-      "name": "process-nextick-args",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
     },
     "prop-types" => Node {
       "edgesIn": Set {
@@ -30708,12 +30128,6 @@ Node {
           "from": "node_modules/tough-cookie",
           "name": "punycode",
           "spec": "^1.4.1",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/unicode-length",
-          "name": "punycode",
-          "spec": "^1.3.2",
           "type": "prod",
         },
       },
@@ -30896,64 +30310,6 @@ Node {
       "location": "node_modules/read-pkg-up",
       "name": "read-pkg-up",
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
-    },
-    "readable-stream" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/tap-mocha-reporter",
-          "name": "readable-stream",
-          "spec": "^2.1.5",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "core-util-is" => Edge {
-          "name": "core-util-is",
-          "spec": "~1.0.0",
-          "to": "node_modules/core-util-is",
-          "type": "prod",
-        },
-        "inherits" => Edge {
-          "name": "inherits",
-          "spec": "~2.0.3",
-          "to": "node_modules/inherits",
-          "type": "prod",
-        },
-        "isarray" => Edge {
-          "name": "isarray",
-          "spec": "~1.0.0",
-          "to": "node_modules/isarray",
-          "type": "prod",
-        },
-        "process-nextick-args" => Edge {
-          "name": "process-nextick-args",
-          "spec": "~2.0.0",
-          "to": "node_modules/process-nextick-args",
-          "type": "prod",
-        },
-        "safe-buffer" => Edge {
-          "name": "safe-buffer",
-          "spec": "~5.1.1",
-          "to": "node_modules/safe-buffer",
-          "type": "prod",
-        },
-        "string_decoder" => Edge {
-          "name": "string_decoder",
-          "spec": "~1.1.1",
-          "to": "node_modules/string_decoder",
-          "type": "prod",
-        },
-        "util-deprecate" => Edge {
-          "name": "util-deprecate",
-          "spec": "~1.0.1",
-          "to": "node_modules/util-deprecate",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/readable-stream",
-      "name": "readable-stream",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
     },
     "readdirp" => Node {
       "edgesIn": Set {
@@ -31202,7 +30558,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.15.0.tgz",
     },
     "resolve-from" => Node {
       "edgesIn": Set {
@@ -31304,21 +30660,9 @@ Node {
           "type": "prod",
         },
         Edge {
-          "from": "node_modules/readable-stream",
-          "name": "safe-buffer",
-          "spec": "~5.1.1",
-          "type": "prod",
-        },
-        Edge {
           "from": "node_modules/request",
           "name": "safe-buffer",
           "spec": "^5.1.2",
-          "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/string_decoder",
-          "name": "safe-buffer",
-          "spec": "~5.1.0",
           "type": "prod",
         },
         Edge {
@@ -31902,28 +31246,6 @@ Node {
       "name": "stack-utils",
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
     },
-    "string_decoder" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "string_decoder",
-          "spec": "~1.1.1",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "safe-buffer" => Edge {
-          "name": "safe-buffer",
-          "spec": "~5.1.0",
-          "to": "node_modules/safe-buffer",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/string_decoder",
-      "name": "string_decoder",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
-    },
     "string-length" => Node {
       "children": Map {
         "astral-regex" => Node {
@@ -32240,13 +31562,13 @@ Node {
         },
         "import-jsx" => Edge {
           "name": "import-jsx",
-          "spec": "^3.0.0",
+          "spec": "^3.1.0",
           "to": "node_modules/import-jsx",
           "type": "prod",
         },
         "ink" => Edge {
           "name": "ink",
-          "spec": "^2.5.0",
+          "spec": "^2.6.0",
           "to": "node_modules/ink",
           "type": "prod",
         },
@@ -32361,7 +31683,7 @@ Node {
         "treport" => Edge {
           "error": "MISSING",
           "name": "treport",
-          "spec": "^1.0.1",
+          "spec": "^1.0.2",
           "to": null,
           "type": "prod",
         },
@@ -32410,58 +31732,9 @@ Node {
       },
       "location": "node_modules/tap",
       "name": "tap",
-      "resolved": "https://registry.npmjs.org/tap/-/tap-14.10.5.tgz",
+      "resolved": "https://registry.npmjs.org/tap/-/tap-14.10.6.tgz",
     },
     "tap-mocha-reporter" => Node {
-      "children": Map {
-        "debug" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap-mocha-reporter",
-              "name": "debug",
-              "spec": "^2.1.3",
-              "type": "prod",
-            },
-          },
-          "edgesOut": Map {
-            "ms" => Edge {
-              "name": "ms",
-              "spec": "2.0.0",
-              "to": "node_modules/tap-mocha-reporter/node_modules/ms",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap-mocha-reporter/node_modules/debug",
-          "name": "debug",
-          "resolved": "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz",
-        },
-        "diff" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap-mocha-reporter",
-              "name": "diff",
-              "spec": "^1.3.2",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap-mocha-reporter/node_modules/diff",
-          "name": "diff",
-          "resolved": "https://registry.npmjs.org/diff/-/diff-1.4.0.tgz",
-        },
-        "ms" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/tap-mocha-reporter/node_modules/debug",
-              "name": "ms",
-              "spec": "2.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/tap-mocha-reporter/node_modules/ms",
-          "name": "ms",
-          "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
-        },
-      },
       "edgesIn": Set {
         Edge {
           "from": "node_modules/tap",
@@ -32479,19 +31752,19 @@ Node {
         },
         "debug" => Edge {
           "name": "debug",
-          "spec": "^2.1.3",
-          "to": "node_modules/tap-mocha-reporter/node_modules/debug",
+          "spec": "^4.1.1",
+          "to": "node_modules/debug",
           "type": "prod",
         },
         "diff" => Edge {
           "name": "diff",
-          "spec": "^1.3.2",
-          "to": "node_modules/tap-mocha-reporter/node_modules/diff",
+          "spec": "^4.0.1",
+          "to": "node_modules/diff",
           "type": "prod",
         },
         "escape-string-regexp" => Edge {
           "name": "escape-string-regexp",
-          "spec": "^1.0.3",
+          "spec": "^2.0.0",
           "to": "node_modules/escape-string-regexp",
           "type": "prod",
         },
@@ -32500,12 +31773,6 @@ Node {
           "spec": "^7.0.5",
           "to": "node_modules/glob",
           "type": "prod",
-        },
-        "readable-stream" => Edge {
-          "name": "readable-stream",
-          "spec": "^2.1.5",
-          "to": "node_modules/readable-stream",
-          "type": "optional",
         },
         "tap-parser" => Edge {
           "name": "tap-parser",
@@ -32521,14 +31788,14 @@ Node {
         },
         "unicode-length" => Edge {
           "name": "unicode-length",
-          "spec": "^1.0.0",
+          "spec": "^2.0.2",
           "to": "node_modules/unicode-length",
           "type": "prod",
         },
       },
       "location": "node_modules/tap-mocha-reporter",
       "name": "tap-mocha-reporter",
-      "resolved": "https://registry.npmjs.org/tap-mocha-reporter/-/tap-mocha-reporter-5.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/tap-mocha-reporter/-/tap-mocha-reporter-5.0.1.tgz",
     },
     "tap-parser" => Node {
       "edgesIn": Set {
@@ -32772,20 +32039,20 @@ Node {
         },
         "typescript" => Edge {
           "name": "typescript",
-          "spec": ">=2.0",
+          "spec": ">=2.7",
           "to": "node_modules/typescript",
           "type": "peer",
         },
         "yn" => Edge {
           "name": "yn",
-          "spec": "^3.0.0",
+          "spec": "3.1.1",
           "to": "node_modules/yn",
           "type": "prod",
         },
       },
       "location": "node_modules/ts-node",
       "name": "ts-node",
-      "resolved": "https://registry.npmjs.org/ts-node/-/ts-node-8.5.4.tgz",
+      "resolved": "https://registry.npmjs.org/ts-node/-/ts-node-8.6.2.tgz",
     },
     "tunnel-agent" => Node {
       "edgesIn": Set {
@@ -32872,57 +32139,13 @@ Node {
         Edge {
           "from": "node_modules/ts-node",
           "name": "typescript",
-          "spec": ">=2.0",
+          "spec": ">=2.7",
           "type": "peer",
         },
       },
       "location": "node_modules/typescript",
       "name": "typescript",
-      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
-    },
-    "uglify-js" => Node {
-      "children": Map {
-        "source-map" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/uglify-js",
-              "name": "source-map",
-              "spec": "~0.6.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/uglify-js/node_modules/source-map",
-          "name": "source-map",
-          "optional": true,
-          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
-        },
-      },
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/handlebars",
-          "name": "uglify-js",
-          "spec": "^3.1.4",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "commander" => Edge {
-          "name": "commander",
-          "spec": "~2.20.3",
-          "to": "node_modules/commander",
-          "type": "prod",
-        },
-        "source-map" => Edge {
-          "name": "source-map",
-          "spec": "~0.6.1",
-          "to": "node_modules/uglify-js/node_modules/source-map",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/uglify-js",
-      "name": "uglify-js",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.5.tgz",
     },
     "unicode-length" => Node {
       "children": Map {
@@ -32938,6 +32161,19 @@ Node {
           "location": "node_modules/unicode-length/node_modules/ansi-regex",
           "name": "ansi-regex",
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
+        },
+        "punycode" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/unicode-length",
+              "name": "punycode",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/unicode-length/node_modules/punycode",
+          "name": "punycode",
+          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
         },
         "strip-ansi" => Node {
           "edgesIn": Set {
@@ -32965,15 +32201,15 @@ Node {
         Edge {
           "from": "node_modules/tap-mocha-reporter",
           "name": "unicode-length",
-          "spec": "^1.0.0",
+          "spec": "^2.0.2",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "punycode" => Edge {
           "name": "punycode",
-          "spec": "^1.3.2",
-          "to": "node_modules/punycode",
+          "spec": "^2.0.0",
+          "to": "node_modules/unicode-length/node_modules/punycode",
           "type": "prod",
         },
         "strip-ansi" => Edge {
@@ -32985,7 +32221,7 @@ Node {
       },
       "location": "node_modules/unicode-length",
       "name": "unicode-length",
-      "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-1.0.3.tgz",
+      "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-2.0.2.tgz",
     },
     "uri-js" => Node {
       "children": Map {
@@ -33023,20 +32259,6 @@ Node {
       "name": "uri-js",
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
     },
-    "util-deprecate" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/readable-stream",
-          "name": "util-deprecate",
-          "spec": "~1.0.1",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/util-deprecate",
-      "name": "util-deprecate",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
-    },
     "uuid" => Node {
       "edgesIn": Set {
         Edge {
@@ -33060,7 +32282,7 @@ Node {
       },
       "location": "node_modules/uuid",
       "name": "uuid",
-      "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz",
     },
     "validate-npm-package-license" => Node {
       "edgesIn": Set {
@@ -33189,19 +32411,6 @@ Node {
       "location": "node_modules/widest-line",
       "name": "widest-line",
       "resolved": "https://registry.npmjs.org/widest-line/-/widest-line-3.1.0.tgz",
-    },
-    "wordwrap" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/optimist",
-          "name": "wordwrap",
-          "spec": "~0.0.2",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/wordwrap",
-      "name": "wordwrap",
-      "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
     },
     "wrap-ansi" => Node {
       "children": Map {
@@ -33703,7 +32912,7 @@ Node {
         Edge {
           "from": "node_modules/ts-node",
           "name": "yn",
-          "spec": "^3.0.0",
+          "spec": "3.1.1",
           "type": "prod",
         },
       },
@@ -34315,6 +33524,46 @@ Node {
       "name": "@types/color-name",
       "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
     },
+    "@types/prop-types" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@types/react",
+          "name": "@types/prop-types",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/prop-types",
+      "name": "@types/prop-types",
+      "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
+    },
+    "@types/react" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "@types/react",
+          "spec": ">=16.8.0",
+          "type": "peerOptional",
+        },
+      },
+      "edgesOut": Map {
+        "@types/prop-types" => Edge {
+          "name": "@types/prop-types",
+          "spec": "*",
+          "to": "node_modules/@types/prop-types",
+          "type": "prod",
+        },
+        "csstype" => Edge {
+          "name": "csstype",
+          "spec": "^2.2.0",
+          "to": "node_modules/csstype",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/react",
+      "name": "@types/react",
+      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
+    },
     "ajv" => Node {
       "edgesIn": Set {
         Edge {
@@ -34657,13 +33906,13 @@ Node {
         Edge {
           "from": "node_modules/ink",
           "name": "auto-bind",
-          "spec": "^3.0.0",
+          "spec": "^4.0.0",
           "type": "prod",
         },
       },
       "location": "node_modules/auto-bind",
       "name": "auto-bind",
-      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-3.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-4.0.0.tgz",
     },
     "aws-sign2" => Node {
       "edgesIn": Set {
@@ -35054,7 +34303,7 @@ Node {
         Edge {
           "from": "node_modules/ink",
           "name": "cli-truncate",
-          "spec": "^2.0.0",
+          "spec": "^2.1.0",
           "type": "prod",
         },
       },
@@ -35641,6 +34890,19 @@ Node {
       "location": "node_modules/cross-spawn",
       "name": "cross-spawn",
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
+    },
+    "csstype" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@types/react",
+          "name": "csstype",
+          "spec": "^2.2.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/csstype",
+      "name": "csstype",
+      "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
     },
     "dashdash" => Node {
       "edgesIn": Set {
@@ -36694,6 +35956,12 @@ Node {
         },
       },
       "edgesOut": Map {
+        "@types/react" => Edge {
+          "name": "@types/react",
+          "spec": ">=16.8.0",
+          "to": "node_modules/@types/react",
+          "type": "peerOptional",
+        },
         "ansi-escapes" => Edge {
           "name": "ansi-escapes",
           "spec": "^4.2.1",
@@ -36708,7 +35976,7 @@ Node {
         },
         "auto-bind" => Edge {
           "name": "auto-bind",
-          "spec": "^3.0.0",
+          "spec": "^4.0.0",
           "to": "node_modules/auto-bind",
           "type": "prod",
         },
@@ -36726,7 +35994,7 @@ Node {
         },
         "cli-truncate" => Edge {
           "name": "cli-truncate",
-          "spec": "^2.0.0",
+          "spec": "^2.1.0",
           "to": "node_modules/cli-truncate",
           "type": "prod",
         },
@@ -36753,6 +36021,12 @@ Node {
           "spec": "^15.6.2",
           "to": "node_modules/prop-types",
           "type": "prod",
+        },
+        "react" => Edge {
+          "name": "react",
+          "spec": ">=16.8.0",
+          "to": "node_modules/react",
+          "type": "peer",
         },
         "react-reconciler" => Edge {
           "name": "react-reconciler",
@@ -36805,7 +36079,7 @@ Node {
       },
       "location": "node_modules/ink",
       "name": "ink",
-      "resolved": "https://registry.npmjs.org/ink/-/ink-2.6.0.tgz",
+      "resolved": "https://registry.npmjs.org/ink/-/ink-2.7.0.tgz",
     },
     "is-arrayish" => Node {
       "edgesIn": Set {
@@ -39329,6 +38603,12 @@ Node {
     },
     "react" => Node {
       "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "react",
+          "spec": ">=16.8.0",
+          "type": "peer",
+        },
         Edge {
           "from": "node_modules/tap",
           "name": "react",

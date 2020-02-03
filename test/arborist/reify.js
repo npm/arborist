@@ -53,7 +53,6 @@ const cache = t.testdir()
 
 // there's a lot of fs stuff in this test.
 // Parallelize as much as possible.
-t.jobs = Infinity
 t.test('setup server', { bail: true, buffered: false }, registryServer)
 
 // two little helper functions to make the loaded trees
@@ -276,6 +275,26 @@ t.test('failing script means install failure, unless ignoreScripts', t => {
       t.resolveMatchSnapshot(printReified(
         fixture(t, c), { ignoreScripts: true })))
   })
+})
+
+t.test('fail on mismatched engine when engineStrict is set', t =>
+  t.rejects(printReified(fixture(t, 'tap-and-flow'), {
+    nodeVersion: '1.2.3',
+    engineStrict: true,
+  }).then(() => { throw new Error('failed to fail') }), { code: 'EBADENGINE' }))
+
+t.test('warn on mismatched engine when engineStrict is false', t => {
+  const a = new Arborist({
+    path: fixture(t, 'tap-and-flow'),
+    engineStrict: false,
+    nodeVersion: '1.2.3',
+  })
+  const logs = []
+  a.on('log', (...msg) => logs.push(msg))
+  return t.resolveMatchSnapshot(a.reify().then(printTree))
+    .then(() => t.match(logs, [
+      ['warn', { code: 'EBADENGINE' }],
+    ]))
 })
 
 t.test('rollbacks', { buffered: false }, t => {

@@ -11608,27 +11608,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-dep-allinstall-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-allinstall" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-fail-allinstall",
-          "spec": "^1.0.0",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-allinstall",
-      "name": "@isaacs/testing-fail-allinstall",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-allinstall/-/testing-fail-allinstall-1.0.0.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-fail-allinstall" => Edge {
       "name": "@isaacs/testing-fail-allinstall",
       "spec": "^1.0.0",
-      "to": "node_modules/@isaacs/testing-fail-allinstall",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11640,27 +11624,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-dep-install-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-install" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-fail-install",
-          "spec": "^1.0.0",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-install",
-      "name": "@isaacs/testing-fail-install",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-install/-/testing-fail-install-1.0.0.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-fail-install" => Edge {
       "name": "@isaacs/testing-fail-install",
       "spec": "^1.0.0",
-      "to": "node_modules/@isaacs/testing-fail-install",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11704,27 +11672,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-dep-preinstall-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-preinstall" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-fail-preinstall",
-          "spec": "^1.0.0",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-preinstall",
-      "name": "@isaacs/testing-fail-preinstall",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-preinstall/-/testing-fail-preinstall-1.0.0.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-fail-preinstall" => Edge {
       "name": "@isaacs/testing-fail-preinstall",
       "spec": "^1.0.0",
-      "to": "node_modules/@isaacs/testing-fail-preinstall",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11736,27 +11688,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-dep-tgz-missing > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-missing-tgz" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-missing-tgz",
-          "spec": "*",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-missing-tgz",
-      "name": "@isaacs/testing-missing-tgz",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-missing-tgz/-/testing-missing-tgz-1.0.1.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-missing-tgz" => Edge {
       "name": "@isaacs/testing-missing-tgz",
       "spec": "*",
-      "to": "node_modules/@isaacs/testing-missing-tgz",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11768,49 +11704,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-metadep-allinstall-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-allinstall" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-prod-dep-allinstall-fail",
-          "name": "@isaacs/testing-fail-allinstall",
-          "spec": "^1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-allinstall",
-      "name": "@isaacs/testing-fail-allinstall",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-allinstall/-/testing-fail-allinstall-1.0.0.tgz",
-    },
-    "@isaacs/testing-prod-dep-allinstall-fail" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-prod-dep-allinstall-fail",
-          "spec": "*",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-fail-allinstall" => Edge {
-          "name": "@isaacs/testing-fail-allinstall",
-          "spec": "^1.0.0",
-          "to": "node_modules/@isaacs/testing-fail-allinstall",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-prod-dep-allinstall-fail",
-      "name": "@isaacs/testing-prod-dep-allinstall-fail",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-prod-dep-allinstall-fail/-/testing-prod-dep-allinstall-fail-1.0.1.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-prod-dep-allinstall-fail" => Edge {
       "name": "@isaacs/testing-prod-dep-allinstall-fail",
       "spec": "*",
-      "to": "node_modules/@isaacs/testing-prod-dep-allinstall-fail",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11822,49 +11720,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-metadep-install-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-install" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-prod-dep-install-fail",
-          "name": "@isaacs/testing-fail-install",
-          "spec": "^1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-install",
-      "name": "@isaacs/testing-fail-install",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-install/-/testing-fail-install-1.0.0.tgz",
-    },
-    "@isaacs/testing-prod-dep-install-fail" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-prod-dep-install-fail",
-          "spec": "*",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-fail-install" => Edge {
-          "name": "@isaacs/testing-fail-install",
-          "spec": "^1.0.0",
-          "to": "node_modules/@isaacs/testing-fail-install",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-prod-dep-install-fail",
-      "name": "@isaacs/testing-prod-dep-install-fail",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-prod-dep-install-fail/-/testing-prod-dep-install-fail-1.0.1.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-prod-dep-install-fail" => Edge {
       "name": "@isaacs/testing-prod-dep-install-fail",
       "spec": "*",
-      "to": "node_modules/@isaacs/testing-prod-dep-install-fail",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11876,49 +11736,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-metadep-postinstall-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-postinstall" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-prod-dep-postinstall-fail",
-          "name": "@isaacs/testing-fail-postinstall",
-          "spec": "^1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-postinstall",
-      "name": "@isaacs/testing-fail-postinstall",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-postinstall/-/testing-fail-postinstall-1.0.0.tgz",
-    },
-    "@isaacs/testing-prod-dep-postinstall-fail" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-prod-dep-postinstall-fail",
-          "spec": "*",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-fail-postinstall" => Edge {
-          "name": "@isaacs/testing-fail-postinstall",
-          "spec": "^1.0.0",
-          "to": "node_modules/@isaacs/testing-fail-postinstall",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-prod-dep-postinstall-fail",
-      "name": "@isaacs/testing-prod-dep-postinstall-fail",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-prod-dep-postinstall-fail/-/testing-prod-dep-postinstall-fail-1.0.1.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-prod-dep-postinstall-fail" => Edge {
       "name": "@isaacs/testing-prod-dep-postinstall-fail",
       "spec": "*",
-      "to": "node_modules/@isaacs/testing-prod-dep-postinstall-fail",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11930,49 +11752,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-metadep-preinstall-fail > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-fail-preinstall" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-prod-dep-preinstall-fail",
-          "name": "@isaacs/testing-fail-preinstall",
-          "spec": "^1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-fail-preinstall",
-      "name": "@isaacs/testing-fail-preinstall",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-fail-preinstall/-/testing-fail-preinstall-1.0.0.tgz",
-    },
-    "@isaacs/testing-prod-dep-preinstall-fail" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-prod-dep-preinstall-fail",
-          "spec": "*",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-fail-preinstall" => Edge {
-          "name": "@isaacs/testing-fail-preinstall",
-          "spec": "^1.0.0",
-          "to": "node_modules/@isaacs/testing-fail-preinstall",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-prod-dep-preinstall-fail",
-      "name": "@isaacs/testing-prod-dep-preinstall-fail",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-prod-dep-preinstall-fail/-/testing-prod-dep-preinstall-fail-1.0.1.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-prod-dep-preinstall-fail" => Edge {
       "name": "@isaacs/testing-prod-dep-preinstall-fail",
       "spec": "*",
-      "to": "node_modules/@isaacs/testing-prod-dep-preinstall-fail",
+      "to": null,
       "type": "optional",
     },
   },
@@ -11984,49 +11768,11 @@ Node {
 
 exports[`test/arborist/reify.js TAP optional dependency failures optional-metadep-tgz-missing > expect resolving Promise 1`] = `
 Node {
-  "children": Map {
-    "@isaacs/testing-missing-tgz" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-prod-dep-tgz-missing",
-          "name": "@isaacs/testing-missing-tgz",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-missing-tgz",
-      "name": "@isaacs/testing-missing-tgz",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-missing-tgz/-/testing-missing-tgz-1.0.1.tgz",
-    },
-    "@isaacs/testing-prod-dep-tgz-missing" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-prod-dep-tgz-missing",
-          "spec": "*",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-missing-tgz" => Edge {
-          "name": "@isaacs/testing-missing-tgz",
-          "spec": "*",
-          "to": "node_modules/@isaacs/testing-missing-tgz",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-prod-dep-tgz-missing",
-      "name": "@isaacs/testing-prod-dep-tgz-missing",
-      "optional": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-prod-dep-tgz-missing/-/testing-prod-dep-tgz-missing-1.0.1.tgz",
-    },
-  },
   "edgesOut": Map {
     "@isaacs/testing-prod-dep-tgz-missing" => Edge {
       "name": "@isaacs/testing-prod-dep-tgz-missing",
       "spec": "*",
-      "to": "node_modules/@isaacs/testing-prod-dep-tgz-missing",
+      "to": null,
       "type": "optional",
     },
   },

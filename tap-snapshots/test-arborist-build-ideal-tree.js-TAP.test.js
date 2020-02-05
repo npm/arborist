@@ -1665,7 +1665,7 @@ Node {
       },
       "location": "node_modules/app",
       "name": "app",
-      "resolved": "file:../../app",
+      "resolved": "file:../app",
       "target": Object {
         "name": "app",
         "parent": undefined,
@@ -1682,7 +1682,7 @@ Node {
       },
       "location": "node_modules/lib",
       "name": "lib",
-      "resolved": "file:../../lib",
+      "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
         "parent": undefined,
@@ -1717,7 +1717,7 @@ Node {
       },
       "location": "node_modules/app",
       "name": "app",
-      "resolved": "file:../../app",
+      "resolved": "file:../app",
       "target": Object {
         "name": "app",
         "parent": null,
@@ -1734,7 +1734,7 @@ Node {
       },
       "location": "node_modules/lib",
       "name": "lib",
-      "resolved": "file:../../lib",
+      "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
         "parent": null,
@@ -1769,7 +1769,7 @@ Node {
       },
       "location": "node_modules/aaaaaa",
       "name": "aaaaaa",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
@@ -1799,7 +1799,7 @@ Node {
       },
       "location": "node_modules/monorepo",
       "name": "monorepo",
-      "resolved": "file:../../../cli-750",
+      "resolved": "file:../../cli-750",
       "target": Object {
         "name": "cli-750",
         "parent": undefined,
@@ -1816,7 +1816,7 @@ Node {
       },
       "location": "node_modules/zzzzzz",
       "name": "zzzzzz",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
@@ -1869,7 +1869,7 @@ Node {
       },
       "location": "node_modules/aaaaaa",
       "name": "aaaaaa",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "zzzzzz",
         "parent": null,
@@ -1899,7 +1899,7 @@ Node {
       },
       "location": "node_modules/monorepo",
       "name": "monorepo",
-      "resolved": "file:../../../cli-750",
+      "resolved": "file:../../cli-750",
       "target": Object {
         "name": "monorepo",
         "parent": null,
@@ -1916,7 +1916,7 @@ Node {
       },
       "location": "node_modules/zzzzzz",
       "name": "zzzzzz",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "zzzzzz",
         "parent": null,
@@ -2003,7 +2003,7 @@ Node {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "resolved": "file:../@isaacs/testing-link-dep/target",
+      "resolved": "file:@isaacs/testing-link-dep/target",
       "target": Object {
         "name": "linked-dep",
         "parent": null,

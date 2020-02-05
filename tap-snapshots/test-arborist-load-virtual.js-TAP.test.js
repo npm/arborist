@@ -11161,7 +11161,7 @@ Node {
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
-      "resolved": "file:../../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      "resolved": "file:../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "target": Object {
         "name": "@scope/x",
         "parent": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
@@ -11178,7 +11178,7 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
-      "resolved": "file:../.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+      "resolved": "file:.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "target": Object {
         "name": "a",
         "parent": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
@@ -11680,7 +11680,7 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "file:../../abbrev-link-target",
+      "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -11689,7 +11689,7 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
@@ -12283,7 +12283,7 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "file:../../abbrev-link-target",
+      "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -12292,7 +12292,7 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
@@ -12886,7 +12886,7 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "file:../../abbrev-link-target",
+      "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -12895,7 +12895,7 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
@@ -13417,7 +13417,7 @@ Node {
     "symlink" => Link {
       "location": "node_modules/symlink",
       "name": "symlink",
-      "resolved": "file:../../abbrev-link-target",
+      "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
         "parent": null,
@@ -13426,7 +13426,7 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
-      "resolved": "file:../abbrev",
+      "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
         "parent": "",
@@ -13489,7 +13489,7 @@ Node {
       },
       "location": "node_modules/app",
       "name": "app",
-      "resolved": "file:../../app",
+      "resolved": "file:../app",
       "target": Object {
         "name": "app",
         "parent": undefined,
@@ -13506,7 +13506,7 @@ Node {
       },
       "location": "node_modules/lib",
       "name": "lib",
-      "resolved": "file:../../lib",
+      "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
         "parent": undefined,

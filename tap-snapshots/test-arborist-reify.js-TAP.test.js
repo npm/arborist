@@ -155,7 +155,7 @@ Node {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "resolved": "file:../../target",
+      "resolved": "file:../target",
       "target": Object {
         "name": "target",
         "parent": null,
@@ -408,7 +408,7 @@ Node {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "resolved": "file:../../target",
+      "resolved": "file:../target",
       "target": Object {
         "name": "target",
         "parent": null,
@@ -477,7 +477,7 @@ Node {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "resolved": "file:../@isaacs/testing-link-dep/target",
+      "resolved": "file:@isaacs/testing-link-dep/target",
       "target": Object {
         "name": "linked-dep",
         "parent": null,
@@ -520,7 +520,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-link-dep/node_modules/linked-dep",
           "name": "linked-dep",
-          "resolved": "file:../../target",
+          "resolved": "file:../target",
           "target": Object {
             "name": "target",
             "parent": null,
@@ -595,7 +595,7 @@ Node {
       },
       "location": "node_modules/app",
       "name": "app",
-      "resolved": "file:../../app",
+      "resolved": "file:../app",
       "target": Object {
         "name": "app",
         "parent": undefined,
@@ -612,7 +612,7 @@ Node {
       },
       "location": "node_modules/lib",
       "name": "lib",
-      "resolved": "file:../../lib",
+      "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
         "parent": undefined,
@@ -647,7 +647,7 @@ Node {
       },
       "location": "node_modules/app",
       "name": "app",
-      "resolved": "file:../../app",
+      "resolved": "file:../app",
       "target": Object {
         "name": "app",
         "parent": null,
@@ -664,7 +664,7 @@ Node {
       },
       "location": "node_modules/lib",
       "name": "lib",
-      "resolved": "file:../../lib",
+      "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
         "parent": null,

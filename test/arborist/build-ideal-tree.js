@@ -332,6 +332,22 @@ t.test('prod dependency failures', t => {
     resolve(__dirname, `../fixtures/${c}`)), c))
 })
 
+t.test('link dep with a link dep', t => {
+  const path = resolve(__dirname, '../fixtures/cli-750')
+  return Promise.all([
+    t.resolveMatchSnapshot(printIdeal(path), 'link metadeps with lockfile'),
+    t.resolveMatchSnapshot(printIdeal(path, { update: true }), 'link metadeps without lockfile'),
+  ])
+})
+
+t.test('link dep within node_modules and outside root', t => {
+  const path = resolve(__dirname, '../fixtures/external-link-dep')
+  return Promise.all([
+    t.resolveMatchSnapshot(printIdeal(path), 'linky deps with lockfile'),
+    t.resolveMatchSnapshot(printIdeal(path, { update: true }), 'linky deps without lockfile'),
+  ])
+})
+
 // some cases that are hard to hit without very elaborate dep trees
 // and precise race conditions, so we just create some contrived
 // examples here.

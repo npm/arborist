@@ -7,6 +7,7 @@ const badfixture = resolve(__dirname, '../fixtures/root')
 const pnpmFixture = resolve(__dirname, '../fixtures/pnpm')
 const depTypesFixture = resolve(__dirname, '../fixtures/dev-deps')
 const bundleFixture = resolve(__dirname, '../fixtures/two-bundled-deps')
+const linkedMeta = resolve(__dirname, '../fixtures/cli-750')
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -81,6 +82,9 @@ t.test('load from fixture', t =>
     return new Arborist({ path: fixture, virtualTree}).loadVirtual()
       .then(tree2 => t.equal(tree2, virtualTree, 'same tree reused'))
   }))
+
+t.test('tree with link deps of link deps', t =>
+  t.resolveMatchSnapshot(loadVirtual(linkedMeta).then(printTree)))
 
 t.test('load from cwd', t => {
   const cwd = process.cwd()

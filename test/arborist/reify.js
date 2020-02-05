@@ -277,6 +277,16 @@ t.test('failing script means install failure, unless ignoreScripts', t => {
   })
 })
 
+t.test('link metadep', t => {
+  const cases = [
+    'cli-750',
+    'cli-750-fresh',
+  ]
+  t.plan(cases.length)
+  cases.forEach(c => t.test(c, t =>
+    t.resolveMatchSnapshot(printReified(fixture(t, c)))))
+})
+
 t.test('fail on mismatched engine when engineStrict is set', t =>
   t.rejects(printReified(fixture(t, 'tap-and-flow'), {
     nodeVersion: '1.2.3',

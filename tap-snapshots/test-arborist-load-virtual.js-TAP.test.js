@@ -13474,3 +13474,55 @@ Node {
   "resolved": null,
 }
 `
+
+exports[`test/arborist/load-virtual.js TAP tree with link deps of link deps > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "app" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "app",
+          "spec": "file:./app",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/app",
+      "name": "app",
+      "resolved": "file:../../app",
+      "target": Object {
+        "name": "app",
+        "parent": undefined,
+      },
+    },
+    "lib" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "app",
+          "name": "lib",
+          "spec": "file:../lib",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/lib",
+      "name": "lib",
+      "resolved": "file:../../lib",
+      "target": Object {
+        "name": "lib",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "app" => Edge {
+      "name": "app",
+      "spec": "file:./app",
+      "to": "node_modules/app",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "cli-750",
+  "resolved": null,
+}
+`

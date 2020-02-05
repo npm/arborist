@@ -581,6 +581,110 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP link metadep cli-750 > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "app" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "app",
+          "spec": "file:./app",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/app",
+      "name": "app",
+      "resolved": "file:../../app",
+      "target": Object {
+        "name": "app",
+        "parent": undefined,
+      },
+    },
+    "lib" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "app",
+          "name": "lib",
+          "spec": "file:../lib",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/lib",
+      "name": "lib",
+      "resolved": "file:../../lib",
+      "target": Object {
+        "name": "lib",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "app" => Edge {
+      "name": "app",
+      "spec": "file:./app",
+      "to": "node_modules/app",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-link-metadep-cli-750",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP link metadep cli-750-fresh > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "app" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "app",
+          "spec": "file:./app",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/app",
+      "name": "app",
+      "resolved": "file:../../app",
+      "target": Object {
+        "name": "app",
+        "parent": null,
+      },
+    },
+    "lib" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "app",
+          "name": "lib",
+          "spec": "file:../lib",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/lib",
+      "name": "lib",
+      "resolved": "file:../../lib",
+      "target": Object {
+        "name": "lib",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "app" => Edge {
+      "name": "app",
+      "spec": "file:./app",
+      "to": "node_modules/app",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-link-metadep-cli-750-fresh",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP multiple bundles at the same level > must match snapshot 1`] = `
 Node {
   "children": Map {

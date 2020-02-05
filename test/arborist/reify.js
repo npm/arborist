@@ -64,7 +64,8 @@ const printEdge = (edge, inout) => ({
   ...(inout === 'in' ? {
     from: edge.from && edge.from.location,
   } : {
-    to: edge.to && edge.to.location,
+    to: !edge.to || edge.to.name === 'fsevents' ? null
+      : edge.to.location,
   }),
   ...(edge.error ? { error: edge.error } : {}),
   __proto__: { constructor: edge.constructor },
@@ -110,6 +111,8 @@ const printTree = tree => ({
   ...( tree.target || !tree.children.size ? {}
     : {
       children: new Map([...tree.children.entries()]
+        // this one is specific to darwin, filter it out so CI doesn't fail
+        .filter(([name, node]) => name !== 'fsevents')
         .sort((a, b) => a[0].localeCompare(b[0]))
         .map(([name, tree]) => [name, printTree(tree)]))
     }),
@@ -145,12 +148,19 @@ t.test('update a bundling node without updating all of its deps', t => {
 
   // check that it links the bin
   const bin = resolve(path, 'node_modules/.bin/tap')
-  const check = process.platform === 'win32'
+  const checkBin = process.platform === 'win32'
     ? () => t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
     : () => t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
 
+  const checkPackageLock = () => {
+    t.matchSnapshot(require(path + '/package-lock.json').dependencies.fsevents,
+      'contains fsevents in lockfile')
+  }
+
   return t.resolveMatchSnapshot(printReified(path,
-    { add: { devDependencies: { tap: '14.10.5' } } })).then(check)
+    { add: { devDependencies: { tap: '14.10.5' } } }))
+    .then(checkBin)
+    .then(checkPackageLock)
 })
 
 t.test('bad shrinkwrap file', t =>
@@ -301,10 +311,9 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
   })
   const logs = []
   a.on('log', (...msg) => logs.push(msg))
-  return t.resolveMatchSnapshot(a.reify().then(printTree))
-    .then(() => t.match(logs, [
-      ['warn', { code: 'EBADENGINE' }],
-    ]))
+  return a.reify().then(() => t.match(logs, [
+    ['warn', { code: 'EBADENGINE' }],
+  ]))
 })
 
 t.test('rollbacks', { buffered: false }, t => {

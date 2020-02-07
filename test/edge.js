@@ -211,6 +211,13 @@ t.matchSnapshot(moving, 'clobbered and detached')
 
 t.throws(() => new Edge({
   from: top,
+  type: 'prod',
+  name: 'yoinks',
+  spec: { yoinks: '1.2.3' },
+}), new TypeError('must provide string spec'))
+
+t.throws(() => new Edge({
+  from: top,
   type: 'not a valid type',
   name: 'yoinks',
   spec: '*',

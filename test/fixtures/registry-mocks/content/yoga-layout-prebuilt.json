@@ -105,6 +105,5 @@
     "url": "https://github.com/vadimdemedes/yoga-layout-prebuilt/issues"
   },
   "license": "MIT",
-  "readme": "# yoga-layout-prebuilt [![Build Status](https://travis-ci.org/vadimdemedes/yoga-layout-prebuilt.svg?branch=master)](https://travis-ci.org/vadimdemedes/yoga-layout-prebuilt)\n\n> Prebuilt [yoga-layout](https://github.com/facebook/yoga) package\n\n\n## Install\n\n```\n$ npm install yoga-layout-prebuilt\n```\n\n\n## Usage\n\n```js\nimport Yoga from 'yoga-layout-prebuilt';\n// Same as if imported from yoga-layout\n```\n\n\n## License\n\nMIT © [Vadim Demedes](https://github.com/vadimdemedes/yoga-layout-prebuilt)\n",
   "readmeFilename": "readme.md"
 }

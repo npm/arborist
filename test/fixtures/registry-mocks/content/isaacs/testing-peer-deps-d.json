@@ -53,6 +53,5 @@
     }
   ],
   "description": "depends on a v2, which has a peer dep on b v2, which has a peer dep on c",
-  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

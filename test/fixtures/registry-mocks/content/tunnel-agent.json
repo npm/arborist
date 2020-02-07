@@ -447,7 +447,6 @@
       "directories": {}
     }
   },
-  "readme": "tunnel-agent\n============\n\nHTTP proxy tunneling agent. Formerly part of mikeal/request, now a standalone module.\n",
   "maintainers": [
     {
       "name": "mikeal",

@@ -114,7 +114,6 @@
       "directories": {}
     }
   },
-  "readme": "# trivial-deferred\n\nThe most dead-simple trivial Deferred implementation\n\nUses bluebird if available, otherwise native promises.\n\n## USAGE\n\n```js\nvar Deferred = require('trivial-deferred')\nvar d = new Deferred\n// promise is d.promise\n// to make the promise reject, do d.reject(error)\n// to make the promise resolve, do d.resolve(value)\n```\n",
   "maintainers": [
     {
       "name": "isaacs",

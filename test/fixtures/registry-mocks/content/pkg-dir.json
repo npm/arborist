@@ -522,7 +522,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# pkg-dir [![Build Status](https://travis-ci.org/sindresorhus/pkg-dir.svg?branch=master)](https://travis-ci.org/sindresorhus/pkg-dir)\n\n> Find the root directory of a Node.js project or npm package\n\n\n## Install\n\n```\n$ npm install pkg-dir\n```\n\n\n## Usage\n\n```\n/\n└── Users\n    └── sindresorhus\n        └── foo\n            ├── package.json\n            └── bar\n                ├── baz\n                └── example.js\n```\n\n```js\n// example.js\nconst pkgDir = require('pkg-dir');\n\n(async () => {\n\tconst rootDir = await pkgDir(__dirname);\n\n\tconsole.log(rootDir);\n\t//=> '/Users/sindresorhus/foo'\n})();\n```\n\n\n## API\n\n### pkgDir([cwd])\n\nReturns a `Promise` for either the project root path or `undefined` if it couldn't be found.\n\n### pkgDir.sync([cwd])\n\nReturns the project root path or `undefined` if it couldn't be found.\n\n#### cwd\n\nType: `string`<br>\nDefault: `process.cwd()`\n\nDirectory to start from.\n\n\n## Related\n\n- [pkg-dir-cli](https://github.com/sindresorhus/pkg-dir-cli) - CLI for this module\n- [pkg-up](https://github.com/sindresorhus/pkg-up) - Find the closest package.json file\n- [find-up](https://github.com/sindresorhus/find-up) - Find a file by walking up parent directories\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",

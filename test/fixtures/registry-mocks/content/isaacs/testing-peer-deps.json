@@ -92,6 +92,5 @@
     }
   ],
   "description": "depends on b, which has a peer dep on c, and d, which has a regular dep on a, which has a peer dep on b which has a peer dep on c",
-  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

@@ -1,10 +1,10 @@
 {
   "_id": "resolve",
-  "_rev": "168-d9687788c0322e6223110bd0386703a8",
+  "_rev": "169-95c7fd267d54317492d5da986272b99d",
   "name": "resolve",
   "description": "resolve like require.resolve() on behalf of files asynchronously and synchronously",
   "dist-tags": {
-    "latest": "1.15.0",
+    "latest": "1.15.1",
     "next": "2.0.0-next.1"
   },
   "versions": {
@@ -5749,7 +5749,6 @@
         "path-parse": "^1.0.6"
       },
       "gitHead": "7967adc031d7298e5707ef6569dacc9c7a9955ba",
-      "readme": "# resolve\n\nimplements the [node `require.resolve()`\nalgorithm](https://nodejs.org/api/modules.html#modules_all_together)\nsuch that you can `require.resolve()` on behalf of a file asynchronously and\nsynchronously\n\n[![build status](https://secure.travis-ci.org/browserify/resolve.png)](http://travis-ci.org/browserify/resolve)\n\n# example\n\nasynchronously resolve:\n\n```js\nvar resolve = require('resolve');\nresolve('tap', { basedir: __dirname }, function (err, res) {\n    if (err) console.error(err);\n    else console.log(res);\n});\n```\n\n```\n$ node example/async.js\n/home/substack/projects/node-resolve/node_modules/tap/lib/main.js\n```\n\nsynchronously resolve:\n\n```js\nvar resolve = require('resolve');\nvar res = resolve.sync('tap', { basedir: __dirname });\nconsole.log(res);\n```\n\n```\n$ node example/sync.js\n/home/substack/projects/node-resolve/node_modules/tap/lib/main.js\n```\n\n# methods\n\n```js\nvar resolve = require('resolve');\n```\n\n## resolve(id, opts={}, cb)\n\nAsynchronously resolve the module path string `id` into `cb(err, res [, pkg])`, where `pkg` (if defined) is the data from `package.json`.\n\noptions are:\n\n* opts.basedir - directory to begin resolving from\n\n* opts.package - `package.json` data applicable to the module being loaded\n\n* opts.extensions - array of file extensions to search in order\n\n* opts.readFile - how to read files asynchronously\n\n* opts.isFile - function to asynchronously test whether a file exists\n\n* opts.isDirectory - function to asynchronously test whether a directory exists\n\n* `opts.packageFilter(pkg, pkgfile, dir)` - transform the parsed package.json contents before looking at the \"main\" field\n  * pkg - package data\n  * pkgfile - path to package.json\n  * dir - directory for package.json\n\n* `opts.pathFilter(pkg, path, relativePath)` - transform a path within a package\n  * pkg - package data\n  * path - the path being resolved\n  * relativePath - the path relative from the package.json location\n  * returns - a relative path that will be joined from the package.json location\n\n* opts.paths - require.paths array to use if nothing is found on the normal `node_modules` recursive walk (probably don't use this)\n\n  For advanced users, `paths` can also be a `opts.paths(request, start, opts)` function\n    * request - the import specifier being resolved\n    * start - lookup path\n    * getNodeModulesDirs - a thunk (no-argument function) that returns the paths using standard `node_modules` resolution\n    * opts - the resolution options\n\n* opts.moduleDirectory - directory (or directories) in which to recursively look for modules. default: `\"node_modules\"`\n\n* opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.\nThis is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.\n**Note:** this property is currently `true` by default but it will be changed to\n`false` in the next major version because *Node's resolution algorithm does not preserve symlinks by default*.\n\ndefault `opts` values:\n\n```js\n{\n    paths: [],\n    basedir: __dirname,\n    extensions: ['.js'],\n    readFile: fs.readFile,\n    isFile: function isFile(file, cb) {\n        fs.stat(file, function (err, stat) {\n            if (!err) {\n                return cb(null, stat.isFile() || stat.isFIFO());\n            }\n            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);\n            return cb(err);\n        });\n    },\n    isDirectory: function isDirectory(dir, cb) {\n        fs.stat(dir, function (err, stat) {\n            if (!err) {\n                return cb(null, stat.isDirectory());\n            }\n            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);\n            return cb(err);\n        });\n    },\n    moduleDirectory: 'node_modules',\n    preserveSymlinks: true\n}\n```\n\n## resolve.sync(id, opts)\n\nSynchronously resolve the module path string `id`, returning the result and\nthrowing an error when `id` can't be resolved.\n\noptions are:\n\n* opts.basedir - directory to begin resolving from\n\n* opts.extensions - array of file extensions to search in order\n\n* opts.readFile - how to read files synchronously\n\n* opts.isFile - function to synchronously test whether a file exists\n\n* opts.isDirectory - function to synchronously test whether a directory exists\n\n* `opts.packageFilter(pkg, dir)` - transform the parsed package.json contents before looking at the \"main\" field\n  * pkg - package data\n  * dir - directory for package.json (Note: the second argument will change to \"pkgfile\" in v2)\n\n* `opts.pathFilter(pkg, path, relativePath)` - transform a path within a package\n  * pkg - package data\n  * path - the path being resolved\n  * relativePath - the path relative from the package.json location\n  * returns - a relative path that will be joined from the package.json location\n\n* opts.paths - require.paths array to use if nothing is found on the normal `node_modules` recursive walk (probably don't use this)\n\n* opts.moduleDirectory - directory (or directories) in which to recursively look for modules. default: `\"node_modules\"`\n\n* opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.\nThis is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.\n**Note:** this property is currently `true` by default but it will be changed to\n`false` in the next major version because *Node's resolution algorithm does not preserve symlinks by default*.\n\ndefault `opts` values:\n\n```js\n{\n    paths: [],\n    basedir: __dirname,\n    extensions: ['.js'],\n    readFileSync: fs.readFileSync,\n    isFile: function isFile(file) {\n        try {\n            var stat = fs.statSync(file);\n        } catch (e) {\n            if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return false;\n            throw e;\n        }\n        return stat.isFile() || stat.isFIFO();\n    },\n    isDirectory: function isDirectory(dir) {\n        try {\n            var stat = fs.statSync(dir);\n        } catch (e) {\n            if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return false;\n            throw e;\n        }\n        return stat.isDirectory();\n    },\n    moduleDirectory: 'node_modules',\n    preserveSymlinks: true\n}\n```\n\n## resolve.isCore(pkg)\n\nReturn whether a package is in core.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```sh\nnpm install resolve\n```\n\n# license\n\nMIT\n",
       "readmeFilename": "readme.markdown",
       "bugs": {
         "url": "https://github.com/browserify/resolve/issues"
@@ -5999,7 +5998,6 @@
       "dependencies": {
         "path-parse": "^1.0.6"
       },
-      "readme": "# resolve\n\nimplements the [node `require.resolve()`\nalgorithm](https://nodejs.org/api/modules.html#modules_all_together)\nsuch that you can `require.resolve()` on behalf of a file asynchronously and\nsynchronously\n\n[![build status](https://secure.travis-ci.org/browserify/resolve.png)](http://travis-ci.org/browserify/resolve)\n\n# example\n\nasynchronously resolve:\n\n```js\nvar resolve = require('resolve');\nresolve('tap', { basedir: __dirname }, function (err, res) {\n    if (err) console.error(err);\n    else console.log(res);\n});\n```\n\n```\n$ node example/async.js\n/home/substack/projects/node-resolve/node_modules/tap/lib/main.js\n```\n\nsynchronously resolve:\n\n```js\nvar resolve = require('resolve');\nvar res = resolve.sync('tap', { basedir: __dirname });\nconsole.log(res);\n```\n\n```\n$ node example/sync.js\n/home/substack/projects/node-resolve/node_modules/tap/lib/main.js\n```\n\n# methods\n\n```js\nvar resolve = require('resolve');\n```\n\n## resolve(id, opts={}, cb)\n\nAsynchronously resolve the module path string `id` into `cb(err, res [, pkg])`, where `pkg` (if defined) is the data from `package.json`.\n\noptions are:\n\n* opts.basedir - directory to begin resolving from\n\n* opts.package - `package.json` data applicable to the module being loaded\n\n* opts.extensions - array of file extensions to search in order\n\n* opts.readFile - how to read files asynchronously\n\n* opts.isFile - function to asynchronously test whether a file exists\n\n* opts.isDirectory - function to asynchronously test whether a file exists and is a directory\n\n* `opts.packageFilter(pkg, pkgfile, dir)` - transform the parsed package.json contents before looking at the \"main\" field\n  * pkg - package data\n  * pkgfile - path to package.json\n  * dir - directory that contains package.json\n\n* `opts.pathFilter(pkg, path, relativePath)` - transform a path within a package\n  * pkg - package data\n  * path - the path being resolved\n  * relativePath - the path relative from the package.json location\n  * returns - a relative path that will be joined from the package.json location\n\n* opts.paths - require.paths array to use if nothing is found on the normal `node_modules` recursive walk (probably don't use this)\n\n  For advanced users, `paths` can also be a `opts.paths(request, start, opts)` function\n    * request - the import specifier being resolved\n    * start - lookup path\n    * getNodeModulesDirs - a thunk (no-argument function) that returns the paths using standard `node_modules` resolution\n    * opts - the resolution options\n\n* opts.moduleDirectory - directory (or directories) in which to recursively look for modules. default: `\"node_modules\"`\n\n* opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.\nThis is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.\n\ndefault `opts` values:\n\n```js\n{\n    paths: [],\n    basedir: __dirname,\n    extensions: ['.js'],\n    readFile: fs.readFile,\n    isFile: function isFile(file, cb) {\n        fs.stat(file, function (err, stat) {\n            if (!err) {\n                return cb(null, stat.isFile() || stat.isFIFO());\n            }\n            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);\n            return cb(err);\n        });\n    },\n    isDirectory: function isDirectory(dir, cb) {\n        fs.stat(dir, function (err, stat) {\n            if (!err) {\n                return cb(null, stat.isDirectory());\n            }\n            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);\n            return cb(err);\n        });\n    },\n    moduleDirectory: 'node_modules',\n    preserveSymlinks: false\n}\n```\n\n## resolve.sync(id, opts)\n\nSynchronously resolve the module path string `id`, returning the result and\nthrowing an error when `id` can't be resolved.\n\noptions are:\n\n* opts.basedir - directory to begin resolving from\n\n* opts.extensions - array of file extensions to search in order\n\n* opts.readFile - how to read files synchronously\n\n* opts.isFile - function to synchronously test whether a file exists\n\n* opts.isDirectory - function to synchronously test whether a file exists and is a directory\n\n* `opts.packageFilter(pkg, pkgfile, dir)` - transform the parsed package.json contents before looking at the \"main\" field\n  * pkg - package data\n  * pkgfile - path to package.json\n  * dir - directory that contains package.json\n\n* `opts.pathFilter(pkg, path, relativePath)` - transform a path within a package\n  * pkg - package data\n  * path - the path being resolved\n  * relativePath - the path relative from the package.json location\n  * returns - a relative path that will be joined from the package.json location\n\n* opts.paths - require.paths array to use if nothing is found on the normal `node_modules` recursive walk (probably don't use this)\n\n* opts.moduleDirectory - directory (or directories) in which to recursively look for modules. default: `\"node_modules\"`\n\n* opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.\nThis is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.\n\ndefault `opts` values:\n\n```js\n{\n    paths: [],\n    basedir: __dirname,\n    extensions: ['.js'],\n    readFileSync: fs.readFileSync,\n    isFile: function isFile(file) {\n        try {\n            var stat = fs.statSync(file);\n        } catch (e) {\n            if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return false;\n            throw e;\n        }\n        return stat.isFile() || stat.isFIFO();\n    },\n    isDirectory: function isDirectory(dir) {\n        try {\n            var stat = fs.statSync(dir);\n        } catch (e) {\n            if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return false;\n            throw e;\n        }\n        return stat.isDirectory();\n    },\n    moduleDirectory: 'node_modules',\n    preserveSymlinks: false\n}\n```\n\n## resolve.isCore(pkg)\n\nReturn whether a package is in core.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```sh\nnpm install resolve\n```\n\n# license\n\nMIT\n",
       "readmeFilename": "readme.markdown",
       "gitHead": "6f57476ac1b1a3a23bb359a725961b5e040c55d9",
       "bugs": {
@@ -6290,7 +6288,6 @@
       "dependencies": {
         "path-parse": "^1.0.6"
       },
-      "readme": "# resolve\n\nimplements the [node `require.resolve()`\nalgorithm](https://nodejs.org/api/modules.html#modules_all_together)\nsuch that you can `require.resolve()` on behalf of a file asynchronously and\nsynchronously\n\n[![build status](https://secure.travis-ci.org/browserify/resolve.png)](http://travis-ci.org/browserify/resolve)\n\n# example\n\nasynchronously resolve:\n\n```js\nvar resolve = require('resolve');\nresolve('tap', { basedir: __dirname }, function (err, res) {\n    if (err) console.error(err);\n    else console.log(res);\n});\n```\n\n```\n$ node example/async.js\n/home/substack/projects/node-resolve/node_modules/tap/lib/main.js\n```\n\nsynchronously resolve:\n\n```js\nvar resolve = require('resolve');\nvar res = resolve.sync('tap', { basedir: __dirname });\nconsole.log(res);\n```\n\n```\n$ node example/sync.js\n/home/substack/projects/node-resolve/node_modules/tap/lib/main.js\n```\n\n# methods\n\n```js\nvar resolve = require('resolve');\n```\n\n## resolve(id, opts={}, cb)\n\nAsynchronously resolve the module path string `id` into `cb(err, res [, pkg])`, where `pkg` (if defined) is the data from `package.json`.\n\noptions are:\n\n* opts.basedir - directory to begin resolving from\n\n* opts.package - `package.json` data applicable to the module being loaded\n\n* opts.extensions - array of file extensions to search in order\n\n* opts.readFile - how to read files asynchronously\n\n* opts.isFile - function to asynchronously test whether a file exists\n\n* opts.isDirectory - function to asynchronously test whether a file exists and is a directory\n\n* `opts.packageFilter(pkg, pkgfile, dir)` - transform the parsed package.json contents before looking at the \"main\" field\n  * pkg - package data\n  * pkgfile - path to package.json\n  * dir - directory that contains package.json\n\n* `opts.pathFilter(pkg, path, relativePath)` - transform a path within a package\n  * pkg - package data\n  * path - the path being resolved\n  * relativePath - the path relative from the package.json location\n  * returns - a relative path that will be joined from the package.json location\n\n* opts.paths - require.paths array to use if nothing is found on the normal `node_modules` recursive walk (probably don't use this)\n\n  For advanced users, `paths` can also be a `opts.paths(request, start, opts)` function\n    * request - the import specifier being resolved\n    * start - lookup path\n    * getNodeModulesDirs - a thunk (no-argument function) that returns the paths using standard `node_modules` resolution\n    * opts - the resolution options\n\n* `opts.packageIterator(request, start, opts)` - return the list of candidate paths where the packages sources may be found (probably don't use this)\n    * request - the import specifier being resolved\n    * start - lookup path\n    * getPackageCandidates - a thunk (no-argument function) that returns the paths using standard `node_modules` resolution\n    * opts - the resolution options\n\n* opts.moduleDirectory - directory (or directories) in which to recursively look for modules. default: `\"node_modules\"`\n\n* opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.\nThis is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.\n\ndefault `opts` values:\n\n```js\n{\n    paths: [],\n    basedir: __dirname,\n    extensions: ['.js'],\n    readFile: fs.readFile,\n    isFile: function isFile(file, cb) {\n        fs.stat(file, function (err, stat) {\n            if (!err) {\n                return cb(null, stat.isFile() || stat.isFIFO());\n            }\n            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);\n            return cb(err);\n        });\n    },\n    isDirectory: function isDirectory(dir, cb) {\n        fs.stat(dir, function (err, stat) {\n            if (!err) {\n                return cb(null, stat.isDirectory());\n            }\n            if (err.code === 'ENOENT' || err.code === 'ENOTDIR') return cb(null, false);\n            return cb(err);\n        });\n    },\n    moduleDirectory: 'node_modules',\n    preserveSymlinks: false\n}\n```\n\n## resolve.sync(id, opts)\n\nSynchronously resolve the module path string `id`, returning the result and\nthrowing an error when `id` can't be resolved.\n\noptions are:\n\n* opts.basedir - directory to begin resolving from\n\n* opts.extensions - array of file extensions to search in order\n\n* opts.readFile - how to read files synchronously\n\n* opts.isFile - function to synchronously test whether a file exists\n\n* opts.isDirectory - function to synchronously test whether a file exists and is a directory\n\n* `opts.packageFilter(pkg, pkgfile, dir)` - transform the parsed package.json contents before looking at the \"main\" field\n  * pkg - package data\n  * pkgfile - path to package.json\n  * dir - directory that contains package.json\n\n* `opts.pathFilter(pkg, path, relativePath)` - transform a path within a package\n  * pkg - package data\n  * path - the path being resolved\n  * relativePath - the path relative from the package.json location\n  * returns - a relative path that will be joined from the package.json location\n\n* opts.paths - require.paths array to use if nothing is found on the normal `node_modules` recursive walk (probably don't use this)\n\n  For advanced users, `paths` can also be a `opts.paths(request, start, opts)` function\n    * request - the import specifier being resolved\n    * start - lookup path\n    * getNodeModulesDirs - a thunk (no-argument function) that returns the paths using standard `node_modules` resolution\n    * opts - the resolution options\n\n* `opts.packageIterator(request, start, opts)` - return the list of candidate paths where the packages sources may be found (probably don't use this)\n    * request - the import specifier being resolved\n    * start - lookup path\n    * getPackageCandidates - a thunk (no-argument function) that returns the paths using standard `node_modules` resolution\n    * opts - the resolution options\n\n* opts.moduleDirectory - directory (or directories) in which to recursively look for modules. default: `\"node_modules\"`\n\n* opts.preserveSymlinks - if true, doesn't resolve `basedir` to real path before resolving.\nThis is the way Node resolves dependencies when executed with the [--preserve-symlinks](https://nodejs.org/api/all.html#cli_preserve_symlinks) flag.\n\ndefault `opts` values:\n\n```js\n{\n    paths: [],\n    basedir: __dirname,\n    extensions: ['.js'],\n    readFileSync: fs.readFileSync,\n    isFile: function isFile(file) {\n        try {\n            var stat = fs.statSync(file);\n        } catch (e) {\n            if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return false;\n            throw e;\n        }\n        return stat.isFile() || stat.isFIFO();\n    },\n    isDirectory: function isDirectory(dir) {\n        try {\n            var stat = fs.statSync(dir);\n        } catch (e) {\n            if (e && (e.code === 'ENOENT' || e.code === 'ENOTDIR')) return false;\n            throw e;\n        }\n        return stat.isDirectory();\n    },\n    moduleDirectory: 'node_modules',\n    preserveSymlinks: false\n}\n```\n\n## resolve.isCore(pkg)\n\nReturn whether a package is in core.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```sh\nnpm install resolve\n```\n\n# license\n\nMIT\n",
       "readmeFilename": "readme.markdown",
       "gitHead": "c32cf25cdda5ec3fc64e21696f908f59dd44775b",
       "bugs": {
@@ -6328,6 +6325,89 @@
         "tmp": "tmp/resolve_2.0.0-next.1_1579709911586_0.2616463854998077"
       },
       "_hasShrinkwrap": false
+    },
+    "1.15.1": {
+      "name": "resolve",
+      "description": "resolve like require.resolve() on behalf of files asynchronously and synchronously",
+      "version": "1.15.1",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/browserify/resolve.git"
+      },
+      "main": "index.js",
+      "keywords": [
+        "resolve",
+        "require",
+        "node",
+        "module"
+      ],
+      "scripts": {
+        "prepublish": "safe-publish-latest",
+        "lint": "eslint .",
+        "pretests-only": "cd ./test/resolver/nested_symlinks && node mylib/sync && node mylib/async",
+        "tests-only": "tape test/*.js",
+        "pretest": "npm run lint",
+        "test": "npm run --silent tests-only",
+        "posttest": "npm run test:multirepo",
+        "test:multirepo": "cd ./test/resolver/multirepo && npm install && npm test"
+      },
+      "devDependencies": {
+        "@ljharb/eslint-config": "^16.0.0",
+        "array.prototype.map": "^1.0.2",
+        "eslint": "^6.8.0",
+        "object-keys": "^1.1.1",
+        "safe-publish-latest": "^1.1.4",
+        "tap": "0.4.13",
+        "tape": "^5.0.0-next.4"
+      },
+      "license": "MIT",
+      "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      },
+      "dependencies": {
+        "path-parse": "^1.0.6"
+      },
+      "gitHead": "c1750d6f17dbc607c96e73000812b2becf7ea6e5",
+      "bugs": {
+        "url": "https://github.com/browserify/resolve/issues"
+      },
+      "homepage": "https://github.com/browserify/resolve#readme",
+      "_id": "resolve@1.15.1",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "6.13.6",
+      "dist": {
+        "integrity": "sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==",
+        "shasum": "27bdcdeffeaf2d6244b95bb0f9f4b4653451f3e8",
+        "tarball": "https://registry.npmjs.org/resolve/-/resolve-1.15.1.tgz",
+        "fileCount": 90,
+        "unpackedSize": 99301,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeOzQSCRA9TVsSAnZWagAAHE8P+gLb1W5mtrC6rr3VxjjY\nFMioXWme6aLyr+T3ICEAkBz/c3NK49tmqmr+AhTz5d7psbul9YAAJnnrJOey\nW8Q+e+SnwirNaIuPPupJWoUScyWyS4r0iqPT9Kmdyc7XsBBhr0npUPL8YU76\nref36X2XTNblInVDZB6dU/mUH2euVN2DiJlAZf0dbw41pteO0fAEn40EQjdW\nfrgE1aYOM7c9xWdrWGiGVVZRgC0t+IoA/rPQMzaezfeMQjzrN4td48Yhc6oD\nalFHySyCoAtxSPb/Q2azpTqSJm9akjOgiOAFYp50X5H7xSRMPHg7m2KV9ISB\n98hf2Vo1x3BS49IHlYoQgGiHxq9D6IeGdAL3Xwa2S3H3oAmc5Nrj6ThFseFV\nGvUWKF5NN8fN1j1xTC07Q/jWXrK1dS17ALD85DbgTWtmMFoSKA8gGPXUjOZU\nmjRilO/qMAsGgO319pTqG8QXUwFes8MM7RDzCKnQw2O061r+5HjOyGtBUDTO\nlgI0RoCRgEhTUqaWqG56PJ1EsRguDY5TJS9JDrzPGWgvrotZ7HWA+SG6+nji\nyHNMoNsMVQ8/OV4kXBAFntDqgRkowt76IWc7WHFBZJkzjX+CDMJjmTmjOH5e\nRxU4p89B5vY+Khlf+nmYbNqwUFgSbxrZ4HicD8H61HbayvlckVC9hc4bk/s4\ncu+C\r\n=GZXK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "ljharb@gmail.com",
+          "name": "ljharb"
+        },
+        {
+          "email": "substack@gmail.com",
+          "name": "substack"
+        }
+      ],
+      "_npmUser": {
+        "name": "ljharb",
+        "email": "ljharb@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/resolve_1.15.1_1580938257367_0.15287318519972892"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -6341,7 +6421,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-22T16:18:35.533Z",
+    "modified": "2020-02-05T21:31:00.077Z",
     "created": "2011-06-18T10:12:44.109Z",
     "0.0.0": "2011-06-18T10:12:44.853Z",
     "0.0.1": "2011-06-18T21:31:40.192Z",
@@ -6414,7 +6494,8 @@
     "2.0.0-next.0": "2019-12-23T21:59:35.582Z",
     "1.14.2": "2020-01-07T01:56:33.705Z",
     "1.15.0": "2020-01-22T08:23:15.632Z",
-    "2.0.0-next.1": "2020-01-22T16:18:31.746Z"
+    "2.0.0-next.1": "2020-01-22T16:18:31.746Z",
+    "1.15.1": "2020-02-05T21:30:57.685Z"
   },
   "author": {
     "name": "James Halliday",
@@ -6456,7 +6537,6 @@
     "yuqinweb": true,
     "willwolffmyren": true
   },
-  "readme": "",
   "homepage": "https://github.com/browserify/resolve#readme",
   "keywords": [
     "resolve",
@@ -6468,5 +6548,5 @@
     "url": "https://github.com/browserify/resolve/issues"
   },
   "license": "MIT",
-  "readmeFilename": ""
+  "readmeFilename": "readme.markdown"
 }

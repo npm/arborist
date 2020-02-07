@@ -559,7 +559,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# string-length [![Build Status](https://travis-ci.org/sindresorhus/string-length.svg?branch=master)](https://travis-ci.org/sindresorhus/string-length)\n\n> Get the real length of a string - by correctly counting astral symbols and ignoring [ansi escape codes](https://github.com/sindresorhus/strip-ansi)\n\n`String#length` errornously counts [astral symbols](https://web.archive.org/web/20150721114550/http://www.tlg.uci.edu/~opoudjis/unicode/unicode_astral.html) as two characters.\n\n\n## Install\n\n```\n$ npm install string-length\n```\n\n\n## Usage\n\n```js\nconst stringLength = require('string-length');\n\n'🐴'.length;\n//=> 2\n\nstringLength('🐴');\n//=> 1\n\nstringLength('\\u001B[1municorn\\u001B[22m');\n//=> 7\n```\n\n\n## Related\n\n- [string-width](https://github.com/sindresorhus/string-width) - Get visual width of a string\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",

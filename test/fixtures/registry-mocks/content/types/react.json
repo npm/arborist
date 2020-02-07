@@ -1,6 +1,6 @@
 {
   "_id": "@types/react",
-  "_rev": "1577-e199f0a2e781cf4c67c0134cfab64213",
+  "_rev": "1591-e9a076ba933bcc797c98d5c7f1f4cf52",
   "name": "@types/react",
   "description": "TypeScript definitions for React",
   "dist-tags": {
@@ -23,7 +23,8 @@
     "ts3.5": "16.9.19",
     "ts3.6": "16.9.19",
     "ts3.7": "16.9.19",
-    "ts3.8": "16.9.19"
+    "ts3.8": "16.9.19",
+    "ts3.9": "16.9.19"
   },
   "versions": {
     "0.14.14-alpha": {
@@ -26227,7 +26228,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# Installation\r\n> `npm install --save @types/react`\r\n\r\n# Summary\r\nThis package contains type definitions for React (http://facebook.github.io/react/).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react.\r\n\r\n### Additional Details\r\n * Last updated: Wed, 22 Jan 2020 17:30:26 GMT\r\n * Dependencies: [@types/csstype](https://npmjs.com/package/@types/csstype), [@types/prop-types](https://npmjs.com/package/@types/prop-types)\r\n * Global values: `React`\r\n\r\n# Credits\r\nThese definitions were written by Asana (https://asana.com), AssureSign (http://www.assuresign.com), Microsoft (https://microsoft.com), John Reilly (https://github.com/johnnyreilly), Benoit Benezech (https://github.com/bbenezech), Patricio Zavolinsky (https://github.com/pzavolinsky), Digiguru (https://github.com/digiguru), Eric Anderson (https://github.com/ericanderson), Dovydas Navickas (https://github.com/DovydasNavickas), Josh Rutherford (https://github.com/theruther4d), Guilherme Hübner (https://github.com/guilhermehubner), Ferdy Budhidharma (https://github.com/ferdaber), Johann Rakotoharisoa (https://github.com/jrakotoharisoa), Olivier Pascal (https://github.com/pascaloliv), Martin Hochel (https://github.com/hotell), Frank Li (https://github.com/franklixuefei), Jessica Franco (https://github.com/Jessidhia), Saransh Kataria (https://github.com/saranshkataria), Kanitkorn Sujautra (https://github.com/lukyth), Sebastian Silbermann (https://github.com/eps1lon), Kyle Scully (https://github.com/zieka), and Cong Zhang (https://github.com/dancerphil).\r\n",
   "maintainers": [
     {
       "name": "types",
@@ -26235,7 +26235,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-22T17:33:10.172Z",
+    "modified": "2020-02-04T18:55:43.340Z",
     "created": "2016-05-17T18:43:22.882Z",
     "0.14.14-alpha": "2016-05-17T18:43:22.882Z",
     "0.14.15-alpha": "2016-05-19T22:08:27.879Z",

@@ -93,6 +93,5 @@
     }
   ],
   "description": "a package with an optional dependency on a package whose tarball does not exist",
-  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

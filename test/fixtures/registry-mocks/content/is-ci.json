@@ -953,7 +953,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# is-ci\n\nReturns `true` if the current environment is a Continuous Integration\nserver.\n\nPlease [open an issue](https://github.com/watson/is-ci/issues) if your\nCI server isn't properly detected :)\n\n[![npm](https://img.shields.io/npm/v/is-ci.svg)](https://www.npmjs.com/package/is-ci)\n[![Build status](https://travis-ci.org/watson/is-ci.svg?branch=master)](https://travis-ci.org/watson/is-ci)\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)\n\n## Installation\n\n```bash\nnpm install is-ci --save\n```\n\n## Programmatic Usage\n\n```js\nconst isCI = require('is-ci')\n\nif (isCI) {\n  console.log('The code is running on a CI server')\n}\n```\n\n## CLI Usage\n\nFor CLI usage you need to have the `is-ci` executable in your `PATH`.\nThere's a few ways to do that:\n\n- Either install the module globally using `npm install is-ci -g`\n- Or add the module as a dependency to your app in which case it can be\n  used inside your package.json scripts as is\n- Or provide the full path to the executable, e.g.\n  `./node_modules/.bin/is-ci`\n\n```bash\nis-ci && echo \"This is a CI server\"\n```\n\n## Supported CI tools\n\nRefer to [ci-info](https://github.com/watson/ci-info#supported-ci-tools) docs for all supported CI's\n\n## License\n\n[MIT](LICENSE)\n",
   "maintainers": [
     {
       "name": "watson",

@@ -126,6 +126,5 @@
     }
   ],
   "description": "has a peer dep on b, which has a peer dep on c",
-  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

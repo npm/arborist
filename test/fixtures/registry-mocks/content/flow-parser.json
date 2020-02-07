@@ -1,10 +1,10 @@
 {
   "_id": "flow-parser",
-  "_rev": "144-7759114f037b849f2b37256e43bc2d3b",
+  "_rev": "145-54065a8a8f621f68c2dbd6a33d4ce68b",
   "name": "flow-parser",
   "description": "JavaScript parser written in OCaml. Produces ESTree AST",
   "dist-tags": {
-    "latest": "0.117.1"
+    "latest": "0.118.0"
   },
   "versions": {
     "0.0.0": {
@@ -9644,9 +9644,91 @@
         "tmp": "tmp/flow-parser_0.117.1_1580368103437_0.9743741845263083"
       },
       "_hasShrinkwrap": false
+    },
+    "0.118.0": {
+      "name": "flow-parser",
+      "version": "0.118.0",
+      "description": "JavaScript parser written in OCaml. Produces ESTree AST",
+      "homepage": "https://flow.org",
+      "license": "MIT",
+      "author": {
+        "name": "Flow Team",
+        "email": "flow@fb.com"
+      },
+      "main": "flow_parser.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/flow.git"
+      },
+      "scripts": {
+        "test": "node test/run_tests.js",
+        "prepublish": "make js"
+      },
+      "dependencies": {},
+      "devDependencies": {
+        "ast-types": "0.8.18",
+        "colors": ">=0.6.2",
+        "esprima-fb": "15001.1001.0-dev-harmony-fb",
+        "minimist": ">=0.2.0"
+      },
+      "engines": {
+        "node": ">=0.4.0"
+      },
+      "_resolved": "",
+      "_integrity": "",
+      "_from": "file:dist/npm-flow-parser.tgz",
+      "bugs": {
+        "url": "https://github.com/facebook/flow/issues"
+      },
+      "_id": "flow-parser@0.118.0",
+      "_nodeVersion": "8.17.0",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-PM3aKA5K3e5kK2hJPsSVdQD4/SVZUQni9qfB0+JHBCjqoAS5mSe3SlhLR9TlH3WDQccL0H2b6zpP8LjOzx9Wtg==",
+        "shasum": "81671a7649789dccd932aa24f9e4727dc80afa00",
+        "tarball": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.118.0.tgz",
+        "fileCount": 3,
+        "unpackedSize": 2850616,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeO4rkCRA9TVsSAnZWagAAj0AP/A/ToCWGNDwSr/HPZNEW\n9Mgfk5/B3euuH0M5O0gNtTvG/FD3EHtZkkiY39xq4gEsExZnRuYVQ/Ld4RPW\n14xIIQAPyec+jBp4BbiMCxlV9TV4tJ25JojTEY9XD1R7AkGAEchhR13PFe9R\nqMO6Xy5q2B9dNv9ldbNeJwf12TIrQd3W7CxF1vfBkUGEWk1Uk03DFzUcBvnQ\neu/R9pjZa8OLwlk37TnH3TT0hdrJ3J4saytDPzh6HOlvA7Wug6XS1dc1kiRI\n8PccoEciLfjm0/BtJabYABDbuh+Ig29cL8ChSIPLF6kRc3vGBTaDy+InEeLu\nCmsb7TfEj5Lt3MQ0e06jPuEHl1Oi0L/5PEA+W7grUH15JYII6nteHSy7NDF7\njji8oPblA9jJn/wufUJq1knzW0536NIxnGiOH77Ij4iG3YJFifVOrgPwfjzp\nw7sLOOZlJ+Z8PCRjQ7QSdZGXLIlC2g4CjnwxTsq6q0cTfEMn2zmue09CVREn\noiAzKrNQvQXGFCDNg1YeAGL48ap4yN2eRdbImMaEOvgc9GiaVecKnkM4Acu9\nviWYoDT00Ch8LS6tV2O8AoDQ7lTpjcXBwWIgNO87RA0xtZdYoCBYkYBak8tc\nmMaerpXWERFjUE0LTL62W3/ZK2blDzJDmjczFTISEJUKlfJn3mr7pWRCwlLB\nKEAE\r\n=OhbF\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "avikchaudhuri",
+          "email": "avik.ch@gmail.com"
+        },
+        {
+          "name": "flowtype",
+          "email": "flowtype@fb.com"
+        },
+        {
+          "name": "gabelevi",
+          "email": "gabelevi@gmail.com"
+        },
+        {
+          "name": "mroch",
+          "email": "marshall@mroch.com"
+        },
+        {
+          "name": "nmote",
+          "email": "nat@natmote.net"
+        },
+        {
+          "name": "samwgoldman",
+          "email": "samwgoldman@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "flowtype",
+        "email": "flow@fb.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/flow-parser_0.118.0_1580960484117_0.5541106494447392"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "# The flow-parser package\n\nThis package contains the Flow parser in its compiled-to-JavaScript form.\n\n# What is Flow\n\nSee [flow.org](https://flow.org/). The code for the Flow parser [lives on GitHub](https://github.com/facebook/flow/tree/master/src/parser).\n\n# What is the Flow Parser\n\nThe Flow Parser is a JavaScript parser written in OCaml. It produces an AST that conforms to the [ESTree spec](https://github.com/estree/estree) and that mostly matches what [esprima](http://esprima.org/) produces. The Flow Parser can be compiled to native code or can be compiled to JavaScript using [js_of_ocaml](http://ocsigen.org/js_of_ocaml/). This npm package contains the Flow parser compiled to JavaScript.\n\n# Usage\n\nYou can use the Flow parser in your browser or in node. To use in node you can just do\n\n```JavaScript\nrequire('flow-parser').parse('1+1', {});\n```\n\nTo use in the browser, you can add\n\n```HTML\n<script src=\"flow_parser.js\"></script>\n```\n\nwhich will make the `flow` object available to use like so:\n\n```JavaScript\nflow.parse('1+1', {});\n```\n\n## Options\n\nThe second argument to `flow.parse` is the options object. Currently supported options:\n\n* `esproposal_decorators` (boolean, default `false`) - enable parsing of decorators\n* `esproposal_class_instance_fields` (boolean, default `false`) - enable parsing of class instance fields\n* `esproposal_class_static_fields` (boolean, default `false`) - enable parsing of class static fields\n* `esproposal_export_star_as` (boolean, default `false`) - enable parsing of `export * as` syntax\n* `esproposal_optional_chaining` (boolean, default `false`) - enable parsing of optional chaining (`?.`)\n* `esproposal_nullish_coalescing` (boolean, default `false`) - enable parsing of nullish coalescing (`??`)\n* `types` (boolean, default `true`) - enable parsing of Flow types\n",
   "maintainers": [
     {
       "name": "avikchaudhuri",
@@ -9674,7 +9756,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-30T07:08:27.398Z",
+    "modified": "2020-02-06T03:41:26.837Z",
     "created": "2015-02-05T22:22:24.580Z",
     "0.0.0": "2015-02-05T22:22:24.580Z",
     "0.1.0": "2015-02-19T22:42:36.252Z",
@@ -9799,7 +9881,8 @@
     "0.116.0": "2020-01-10T19:53:45.198Z",
     "0.116.1": "2020-01-17T03:16:54.489Z",
     "0.117.0": "2020-01-24T20:42:54.944Z",
-    "0.117.1": "2020-01-30T07:08:23.599Z"
+    "0.117.1": "2020-01-30T07:08:23.599Z",
+    "0.118.0": "2020-02-06T03:41:24.426Z"
   },
   "author": {
     "name": "Flow Team",

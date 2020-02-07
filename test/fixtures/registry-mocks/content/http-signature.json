@@ -1,6 +1,6 @@
 {
   "_id": "http-signature",
-  "_rev": "56-c356a448620167d5213d13dd60bada68",
+  "_rev": "57-71ca2baffa7a698b3d794995e2d5ac04",
   "name": "http-signature",
   "description": "Reference implementation of Joyent's HTTP Signature scheme.",
   "dist-tags": {
@@ -1476,10 +1476,6 @@
   },
   "maintainers": [
     {
-      "email": "richard.kiene@gmail.com",
-      "name": "shmeeny"
-    },
-    {
       "email": "mgerdts@gmail.com",
       "name": "mgerdts"
     },
@@ -1545,7 +1541,7 @@
     }
   ],
   "time": {
-    "modified": "2020-02-03T19:14:52.939Z",
+    "modified": "2020-02-04T21:06:10.997Z",
     "created": "2011-07-14T21:21:46.738Z",
     "0.9.0": "2011-07-14T21:21:47.284Z",
     "0.9.2": "2011-09-04T01:42:03.454Z",
@@ -1577,7 +1573,6 @@
     "type": "git",
     "url": "git://github.com/joyent/node-http-signature.git"
   },
-  "readme": "# node-http-signature\n\nnode-http-signature is a node.js library that has client and server components\nfor Joyent's [HTTP Signature Scheme](http_signing.md).\n\n## Usage\n\nNote the example below signs a request with the same key/cert used to start an\nHTTP server. This is almost certainly not what you actually want, but is just\nused to illustrate the API calls; you will need to provide your own key\nmanagement in addition to this library.\n\n### Client\n\n```js\nvar fs = require('fs');\nvar https = require('https');\nvar httpSignature = require('http-signature');\n\nvar key = fs.readFileSync('./key.pem', 'ascii');\n\nvar options = {\n  host: 'localhost',\n  port: 8443,\n  path: '/',\n  method: 'GET',\n  headers: {}\n};\n\n// Adds a 'Date' header in, signs it, and adds the\n// 'Authorization' header in.\nvar req = https.request(options, function(res) {\n  console.log(res.statusCode);\n});\n\n\nhttpSignature.sign(req, {\n  key: key,\n  keyId: './cert.pem'\n});\n\nreq.end();\n```\n\n### Server\n\n```js\nvar fs = require('fs');\nvar https = require('https');\nvar httpSignature = require('http-signature');\n\nvar options = {\n  key: fs.readFileSync('./key.pem'),\n  cert: fs.readFileSync('./cert.pem')\n};\n\nhttps.createServer(options, function (req, res) {\n  var rc = 200;\n  var parsed = httpSignature.parseRequest(req);\n  var pub = fs.readFileSync(parsed.keyId, 'ascii');\n  if (!httpSignature.verifySignature(parsed, pub))\n    rc = 401;\n\n  res.writeHead(rc);\n  res.end();\n}).listen(8443);\n```\n\n## Installation\n\n    npm install http-signature\n\n## License\n\nMIT.\n\n## Bugs\n\nSee <https://github.com/joyent/node-http-signature/issues>.\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/joyent/node-http-signature/",
   "keywords": [

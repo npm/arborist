@@ -53,6 +53,5 @@
     }
   ],
   "description": "a package with an prod dependency on a package that does not exist",
-  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

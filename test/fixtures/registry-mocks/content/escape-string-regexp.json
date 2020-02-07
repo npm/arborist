@@ -484,7 +484,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# escape-string-regexp [![Build Status](https://travis-ci.org/sindresorhus/escape-string-regexp.svg?branch=master)](https://travis-ci.org/sindresorhus/escape-string-regexp)\n\n> Escape RegExp special characters\n\n\n## Install\n\n```\n$ npm install escape-string-regexp\n```\n\n\n## Usage\n\n```js\nconst escapeStringRegexp = require('escape-string-regexp');\n\nconst escapedString = escapeStringRegexp('How much $ for a 🦄?');\n//=> 'How much \\\\$ for a 🦄\\\\?'\n\nnew RegExp(escapedString);\n```\n\nYou can also use this to escape a string that is inserted into the middle of a regex, for example, into a character class.\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",

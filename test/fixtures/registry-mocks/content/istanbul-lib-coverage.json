@@ -922,7 +922,6 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
-      "readme": "istanbul-lib-coverage\n---------------------\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-coverage.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-coverage.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-coverage)\n\nAn API that provides a read-only view of coverage information with the ability\nto merge and summarize coverage info.\n\nSupersedes `object-utils` and `collector` from the v0 istanbul API.\n\nSee the docs for the full API.\n\n```js\n\nvar libCoverage = require('istanbul-lib-coverage');\nvar map = libCoverage.createCoverageMap(globalCoverageVar);\nvar summary = libCoverage.createCoverageSummary();\n\n// merge another coverage map into the one we created\nmap.merge(otherCoverageMap);\n\n// inspect and summarize all file coverage objects in the map\nmap.files().forEach(function (f) {\n    var fc = map.fileCoverageFor(f),\n    s = fc.toSummary();\n    summary.merge(s);\n});\n\nconsole.log('Global summary', summary);\n\n```\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-coverage@2.0.0",
       "_npmVersion": "6.1.0",
@@ -1158,7 +1157,6 @@
       "engines": {
         "node": ">=6"
       },
-      "readme": "istanbul-lib-coverage\n---------------------\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-coverage.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-coverage.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-coverage)\n\nAn API that provides a read-only view of coverage information with the ability\nto merge and summarize coverage info.\n\nSupersedes `object-utils` and `collector` from the v0 istanbul API.\n\nSee the docs for the full API.\n\n```js\n\nvar libCoverage = require('istanbul-lib-coverage');\nvar map = libCoverage.createCoverageMap(globalCoverageVar);\nvar summary = libCoverage.createCoverageSummary();\n\n// merge another coverage map into the one we created\nmap.merge(otherCoverageMap);\n\n// inspect and summarize all file coverage objects in the map\nmap.files().forEach(function (f) {\n    var fc = map.fileCoverageFor(f),\n    s = fc.toSummary();\n    summary.merge(s);\n});\n\nconsole.log('Global summary', summary);\n\n```\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-coverage@2.0.2",
       "_npmVersion": "6.4.1",
@@ -1469,7 +1467,6 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
-      "readme": "## istanbul-lib-coverage\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-coverage.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-coverage.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-coverage)\n\nAn API that provides a read-only view of coverage information with the ability\nto merge and summarize coverage info.\n\nSupersedes `object-utils` and `collector` from the v0 istanbul API.\n\nSee the docs for the full API.\n\n```js\nvar libCoverage = require('istanbul-lib-coverage');\nvar map = libCoverage.createCoverageMap(globalCoverageVar);\nvar summary = libCoverage.createCoverageSummary();\n\n// merge another coverage map into the one we created\nmap.merge(otherCoverageMap);\n\n// inspect and summarize all file coverage objects in the map\nmap.files().forEach(function(f) {\n    var fc = map.fileCoverageFor(f),\n        s = fc.toSummary();\n    summary.merge(s);\n});\n\nconsole.log('Global summary', summary);\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-coverage@3.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -1553,7 +1550,6 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
-      "readme": "## istanbul-lib-coverage\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-coverage.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-coverage.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-coverage)\n\nAn API that provides a read-only view of coverage information with the ability\nto merge and summarize coverage info.\n\nSupersedes `object-utils` and `collector` from the v0 istanbul API.\n\nSee the docs for the full API.\n\n```js\nvar libCoverage = require('istanbul-lib-coverage');\nvar map = libCoverage.createCoverageMap(globalCoverageVar);\nvar summary = libCoverage.createCoverageSummary();\n\n// merge another coverage map into the one we created\nmap.merge(otherCoverageMap);\n\n// inspect and summarize all file coverage objects in the map\nmap.files().forEach(function(f) {\n    var fc = map.fileCoverageFor(f),\n        s = fc.toSummary();\n    summary.merge(s);\n});\n\nconsole.log('Global summary', summary);\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-coverage@3.0.0-alpha.1",
       "_nodeVersion": "12.11.0",
@@ -1637,7 +1633,6 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
-      "readme": "## istanbul-lib-coverage\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-coverage.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-coverage.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-coverage)\n\nAn API that provides a read-only view of coverage information with the ability\nto merge and summarize coverage info.\n\nSupersedes `object-utils` and `collector` from the v0 istanbul API.\n\nSee the docs for the full API.\n\n```js\nvar libCoverage = require('istanbul-lib-coverage');\nvar map = libCoverage.createCoverageMap(globalCoverageVar);\nvar summary = libCoverage.createCoverageSummary();\n\n// merge another coverage map into the one we created\nmap.merge(otherCoverageMap);\n\n// inspect and summarize all file coverage objects in the map\nmap.files().forEach(function(f) {\n    var fc = map.fileCoverageFor(f),\n        s = fc.toSummary();\n    summary.merge(s);\n});\n\nconsole.log('Global summary', summary);\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-coverage@3.0.0-alpha.2",
       "_nodeVersion": "13.3.0",
@@ -1721,7 +1716,6 @@
         "node": ">=8"
       },
       "gitHead": "5319df684b508ff6fb19fe8b9a6147a3c5924e4b",
-      "readme": "## istanbul-lib-coverage\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-coverage.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-coverage.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-coverage)\n\nAn API that provides a read-only view of coverage information with the ability\nto merge and summarize coverage info.\n\nSupersedes `object-utils` and `collector` from the v0 istanbul API.\n\nSee the docs for the full API.\n\n```js\nvar libCoverage = require('istanbul-lib-coverage');\nvar map = libCoverage.createCoverageMap(globalCoverageVar);\nvar summary = libCoverage.createCoverageSummary();\n\n// merge another coverage map into the one we created\nmap.merge(otherCoverageMap);\n\n// inspect and summarize all file coverage objects in the map\nmap.files().forEach(function(f) {\n    var fc = map.fileCoverageFor(f),\n        s = fc.toSummary();\n    summary.merge(s);\n});\n\nconsole.log('Global summary', summary);\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-coverage@3.0.0",
       "_nodeVersion": "13.3.0",
@@ -1760,7 +1754,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "",
   "maintainers": [
     {
       "email": "ben@npmjs.com",

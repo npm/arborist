@@ -90,6 +90,5 @@
     }
   ],
   "description": "a -> b -> c -> a.  Can we upgrade a?",
-  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

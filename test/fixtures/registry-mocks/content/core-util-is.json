@@ -163,7 +163,6 @@
       "directories": {}
     }
   },
-  "readme": "# core-util-is\n\nThe `util.is*` functions introduced in Node v0.12.\n",
   "maintainers": [
     {
       "name": "isaacs",

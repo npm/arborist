@@ -1,6 +1,6 @@
 {
   "_id": "react",
-  "_rev": "1332-6149b5755dd81c09f0312c05916e4887",
+  "_rev": "1337-87ff86f3d4ee37e11467ef1b864c82a5",
   "name": "react",
   "description": "React is a JavaScript library for building user interfaces.",
   "dist-tags": {
@@ -11066,7 +11066,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.3.0-alpha.1",
       "_npmVersion": "5.3.0",
@@ -11161,7 +11160,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.4.0-alpha.7926752",
       "_npmVersion": "5.5.1",
@@ -11256,7 +11254,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.4.0-alpha.3174632",
       "_npmVersion": "5.5.1",
@@ -11351,7 +11348,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.4.0-alpha.0911da3",
       "_npmVersion": "5.5.1",
@@ -11446,7 +11442,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.3.0-alpha.2",
       "_npmVersion": "5.6.0",
@@ -11537,7 +11532,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.3.0-alpha.3",
       "_npmVersion": "5.6.0",
@@ -11628,7 +11622,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# react\n\nAn npm package to get you immediate access to [React](https://reactjs.org/),\nwithout also requiring the JSX transformer. This is especially useful for cases where you\nwant to [`browserify`](https://github.com/substack/node-browserify) your module using\n`React`.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages.\n\nTo use React in production mode, set the environment variable `NODE_ENV` to `production`. A minifier that performs dead-code elimination such as [UglifyJS](https://github.com/mishoo/UglifyJS2) is recommended to completely remove the extra code present in development mode.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.3.0-rc.0",
       "_npmVersion": "5.6.0",
@@ -12404,7 +12397,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.6.0-alpha.0",
       "_npmVersion": "6.4.1",
@@ -12564,7 +12556,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.6.0-alpha.400d197",
       "_npmVersion": "5.6.0",
@@ -12649,7 +12640,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.6.0-alpha.f47a958",
       "_npmVersion": "6.4.1",
@@ -12734,7 +12724,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.6.0-alpha.8af6728",
       "_npmVersion": "6.4.1",
@@ -12902,7 +12891,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.7.0-alpha.0",
       "_npmVersion": "6.4.1",
@@ -13076,7 +13064,6 @@
         "unstable": true,
         "partial": false
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-d5e1bf0-aee1b84",
       "_npmVersion": "5.6.0",
@@ -13167,7 +13154,6 @@
         "unstable": true,
         "partial": false
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-a8988e4-1d1a717",
       "_npmVersion": "5.6.0",
@@ -13269,7 +13255,6 @@
           "scheduler"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-8b3c1e4-1d1a717",
       "_npmVersion": "5.6.0",
@@ -13371,7 +13356,6 @@
           "scheduler"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-0c756fb-697f004",
       "_npmVersion": "5.6.0",
@@ -13574,7 +13558,6 @@
           "scheduler"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-0c756fb-f7f79fd",
       "_npmVersion": "5.6.0",
@@ -13759,7 +13742,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.7.0-alpha.1",
       "_npmVersion": "6.4.1",
@@ -13848,7 +13830,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.7.0-alpha.2",
       "_npmVersion": "6.4.1",
@@ -13937,7 +13918,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-ed4c4a51c",
       "_npmVersion": "6.4.1",
@@ -14026,7 +14006,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-88ada9819",
       "_npmVersion": "5.6.0",
@@ -14119,7 +14098,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-c5b7d26c7",
       "_npmVersion": "6.4.1",
@@ -14212,7 +14190,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-7325ebe4d",
       "_npmVersion": "6.4.1",
@@ -14305,7 +14282,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-4a1072194",
       "_npmVersion": "6.4.1",
@@ -14514,7 +14490,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-f22621f88",
       "_npmVersion": "6.4.1",
@@ -14633,7 +14608,6 @@
         "url": "git+https://github.com/facebook/react.git"
       },
       "version": "16.8.0-alpha.0",
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_npmVersion": "6.4.1",
       "_nodeVersion": "8.10.0",
@@ -14725,7 +14699,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-3e15b1c69",
       "_npmVersion": "5.6.0",
@@ -14818,7 +14791,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.8.0-alpha.1",
       "_npmVersion": "6.4.1",
@@ -14912,7 +14884,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-fec00a869",
       "_npmVersion": "6.4.1",
@@ -15006,7 +14977,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-267ed9814",
       "_npmVersion": "6.4.1",
@@ -15100,7 +15070,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-d1326f466",
       "_npmVersion": "6.4.1",
@@ -15286,7 +15255,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-11565a207",
       "_npmVersion": "6.4.1",
@@ -15472,7 +15440,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-0e4135e8c",
       "_npmVersion": "6.4.1",
@@ -15566,7 +15533,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-dfabb77a9",
       "_npmVersion": "6.4.1",
@@ -15752,7 +15718,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-b668168d4",
       "_npmVersion": "6.4.1",
@@ -15846,7 +15811,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-29b7b775f",
       "_npmVersion": "6.4.1",
@@ -16032,7 +15996,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-741aa17a3",
       "_npmVersion": "6.4.1",
@@ -16218,7 +16181,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-679402a66",
       "_npmVersion": "6.4.1",
@@ -16312,7 +16274,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-f9e41e3a5",
       "_npmVersion": "6.4.1",
@@ -16498,7 +16459,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-297165f1e",
       "_npmVersion": "6.4.1",
@@ -16684,7 +16644,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-c35e37aab",
       "_npmVersion": "5.6.0",
@@ -16778,7 +16737,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.9.0-alpha.0",
       "_npmVersion": "5.6.0",
@@ -16872,7 +16830,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-a9eff329c",
       "_npmVersion": "6.4.1",
@@ -16966,7 +16923,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-9ebe1768a",
       "_npmVersion": "6.4.1",
@@ -17060,7 +17016,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-4221565e1",
       "_npmVersion": "6.4.1",
@@ -17154,7 +17109,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-fb28e9048",
       "_npmVersion": "6.4.1",
@@ -17248,7 +17202,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-6da04b5d8",
       "_nodeVersion": "12.1.0",
@@ -17341,7 +17294,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-50b50c26f",
       "_nodeVersion": "11.15.0",
@@ -17434,7 +17386,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-fa1e8df11",
       "_nodeVersion": "11.15.0",
@@ -17527,7 +17478,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-9f395904c",
       "_nodeVersion": "11.15.0",
@@ -17616,7 +17566,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-424099da6",
       "_nodeVersion": "11.15.0",
@@ -17705,7 +17654,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-b4178af81",
       "_npmVersion": "6.4.1",
@@ -17794,7 +17742,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-bbd21066e",
       "_npmVersion": "6.4.1",
@@ -17883,7 +17830,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-db3ae32b8",
       "_npmVersion": "6.4.1",
@@ -17972,7 +17918,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-375616788",
       "_npmVersion": "6.4.1",
@@ -18061,7 +18006,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-a1dbb852c",
       "_npmVersion": "6.4.1",
@@ -18150,7 +18094,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@16.9.0-rc.0",
       "_npmVersion": "6.4.1",
@@ -18326,7 +18269,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-8d5403877",
       "_nodeVersion": "11.15.0",
@@ -18415,7 +18357,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-45b6443c9",
       "_npmVersion": "6.4.1",
@@ -18504,7 +18445,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-b4b8a349a",
       "_nodeVersion": "11.15.0",
@@ -18593,7 +18533,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-3694a3b5e",
       "_npmVersion": "6.4.1",
@@ -18769,7 +18708,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-d346d9208",
       "_npmVersion": "6.4.1",
@@ -18945,7 +18883,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-4ab6305f6",
       "_npmVersion": "6.4.1",
@@ -19121,7 +19058,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-d364d8555",
       "_npmVersion": "6.4.1",
@@ -19210,7 +19146,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-d7feeb25a",
       "_npmVersion": "6.4.1",
@@ -19299,7 +19234,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-7082d5a2d",
       "_nodeVersion": "10.16.0",
@@ -19392,7 +19326,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-7082d5a2d",
       "_npmVersion": "6.4.1",
@@ -19485,7 +19418,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-1022ee0ec",
       "_npmVersion": "6.4.1",
@@ -19578,7 +19510,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-1022ee0ec",
       "_npmVersion": "6.4.1",
@@ -19671,7 +19602,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-5faf377df",
       "_npmVersion": "6.4.1",
@@ -19764,7 +19694,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-5faf377df",
       "_npmVersion": "6.4.1",
@@ -19948,7 +19877,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-f6b8d31a7",
       "_npmVersion": "6.4.1",
@@ -20041,7 +19969,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-f6b8d31a7",
       "_npmVersion": "6.4.1",
@@ -20134,7 +20061,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-38dd17ab9",
       "_npmVersion": "6.4.1",
@@ -20227,7 +20153,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-38dd17ab9",
       "_npmVersion": "6.4.1",
@@ -20320,7 +20245,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-b53ea6ca0",
       "_npmVersion": "6.4.1",
@@ -20413,7 +20337,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-b53ea6ca0",
       "_npmVersion": "6.4.1",
@@ -20597,7 +20520,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-0e6839614",
       "_npmVersion": "6.4.1",
@@ -20690,7 +20612,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-3f3fe0874",
       "_npmVersion": "6.4.1",
@@ -20783,7 +20704,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-2c169a568",
       "_npmVersion": "6.4.1",
@@ -20876,7 +20796,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-f42431abe",
       "_npmVersion": "6.4.1",
@@ -20969,7 +20888,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-f42431abe",
       "_npmVersion": "6.4.1",
@@ -21062,7 +20980,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-57333ca33",
       "_npmVersion": "6.4.1",
@@ -21155,7 +21072,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-57333ca33",
       "_npmVersion": "6.4.1",
@@ -21248,7 +21164,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-241c4467e",
       "_nodeVersion": "12.14.0",
@@ -21341,7 +21256,6 @@
           "loose-envify"
         ]
       },
-      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
       "readmeFilename": "README.md",
       "_id": "react@0.0.0-experimental-241c4467e",
       "_nodeVersion": "12.14.0",
@@ -21443,7 +21357,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-29T18:56:58.591Z",
+    "modified": "2020-02-05T17:54:49.945Z",
     "created": "2011-10-26T17:46:21.942Z",
     "0.0.1": "2011-10-26T17:46:22.746Z",
     "0.0.2": "2011-10-28T22:40:36.115Z",
@@ -21702,7 +21616,6 @@
     "url": "git+https://github.com/facebook/react.git",
     "directory": "packages/react"
   },
-  "readme": "",
   "readmeFilename": "",
   "homepage": "https://reactjs.org/",
   "keywords": [
@@ -22458,7 +22371,8 @@
     "georgewl": true,
     "vivekrp": true,
     "aizatto": true,
-    "aryanvikta": true
+    "aryanvikta": true,
+    "rajkanbu": true
   },
   "license": "MIT"
 }

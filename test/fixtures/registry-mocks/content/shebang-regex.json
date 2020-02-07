@@ -196,7 +196,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# shebang-regex [![Build Status](https://travis-ci.org/sindresorhus/shebang-regex.svg?branch=master)](https://travis-ci.org/sindresorhus/shebang-regex)\n\n> Regular expression for matching a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) line\n\n\n## Install\n\n```\n$ npm install shebang-regex\n```\n\n\n## Usage\n\n```js\nconst shebangRegex = require('shebang-regex');\n\nconst string = '#!/usr/bin/env node\\nconsole.log(\"unicorns\");';\n\nshebangRegex.test(string);\n//=> true\n\nshebangRegex.exec(string)[0];\n//=> '#!/usr/bin/env node'\n\nshebangRegex.exec(string)[1];\n//=> '/usr/bin/env node'\n```\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",

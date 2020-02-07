@@ -1,10 +1,10 @@
 {
   "_id": "flow-remove-types",
-  "_rev": "45-a12f63c70e033733f6e0e9a89dc6e478",
+  "_rev": "46-cf0043641775ae529c3e06d7a780afcd",
   "name": "flow-remove-types",
   "description": "Removes Flow type annotations from JavaScript files with speed and simplicity.",
   "dist-tags": {
-    "latest": "2.117.1"
+    "latest": "2.118.0"
   },
   "versions": {
     "1.0.0": {
@@ -3218,9 +3218,88 @@
         "tmp": "tmp/flow-remove-types_2.117.1_1580368108605_0.133719742053946"
       },
       "_hasShrinkwrap": false
+    },
+    "2.118.0": {
+      "name": "flow-remove-types",
+      "version": "2.118.0",
+      "description": "Removes Flow type annotations from JavaScript files with speed and simplicity.",
+      "author": {
+        "name": "Flow Team",
+        "email": "flow@fb.com"
+      },
+      "contributors": [
+        {
+          "name": "Lee Byron",
+          "email": "lee@leebyron.com",
+          "url": "http://leebyron.com/"
+        }
+      ],
+      "license": "MIT",
+      "main": "index.js",
+      "bin": {
+        "flow-remove-types": "flow-remove-types",
+        "flow-node": "flow-node"
+      },
+      "homepage": "https://flow.org",
+      "bugs": {
+        "url": "https://github.com/facebook/flow/issues"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/flow.git"
+      },
+      "scripts": {
+        "test": "./test.sh",
+        "test-update": "./test-update.sh"
+      },
+      "keywords": [
+        "flow",
+        "flowtype",
+        "compiler",
+        "transpiler",
+        "transform",
+        "es6"
+      ],
+      "dependencies": {
+        "flow-parser": "^0.118.0",
+        "pirates": "^3.0.2",
+        "vlq": "^0.2.1"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "_resolved": "",
+      "_integrity": "",
+      "_from": "file:dist/npm-flow-remove-types.tgz",
+      "_id": "flow-remove-types@2.118.0",
+      "_nodeVersion": "8.17.0",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-HrrN9WFCB0Ausk5EvCqQC3RQqgjOsDny+ByxBRYXBqgJrt1Ropxj4JTXBeHcPoeBuN/l8l2Uh0ve7L9NwWXslg==",
+        "shasum": "e2b77957aef21445eb9f8671f968f081315a9c3c",
+        "tarball": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.118.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 40110,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeO4roCRA9TVsSAnZWagAAoZUQAIdUSyNlbpHeKCE0+fO7\nMseOBa88HqB9GtHD0sDEvmgoUV4rL9K2jm6gjjSBUYnWf25JJDjUJf0QHFfw\nRSQMIrdXOtjiIhnz/r2KuwAoc5DxWilxdKHWShtwRS5orn9e0hZ+j670nPhG\nitOk/wUfgYt+5FkbYvHLhvbx5EEV4zkOxFq8EW2Q+vj0LwCvrjS+fuEkLXu5\nZUFdedrxfqFSbtApNRbC1F+/xSy2m6bpjkglcYszhCD4XfiEKWDtIikW4dSp\nVF0iqUql2nvVguQNTrpd+diCxMLaGFgWWjzsehWuDnaFFHg7FZiNuvirDh/j\nE7vFRwePJMwkp0Znb+ZsYC+AjcdV2bF41p/lDzGs00YyEpXNKv7FWD7M6JRn\nB7DgRqe/gMA7khtS6Etm7lEN6Fd4vE2WoIYOBzLx3DH9sf+x6dbAMpgeesI4\nr1X5lfUOiye7zaG2bZu4t6h53Xvix0opT20g5SBUi+VL4VaAYXf3rbqalgkj\nxYNtPZolpa9B4R8tg/sxUj3GB8a4jJeqD6i/T9YKOZ1dvMJR5Lai1qH9wiwd\ndZ4yN/FOLbhtLQUJIX9716ZWveODnislhzRXfZZmMqf/t5XSBG2MZ8TMEFm/\nc+AH+HT7w0j0vtiviByPGckRcbcjSuDJ/O4JRvo1kklpNupjvz4maP3MPLSc\nEMSF\r\n=fwZ7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "leebyron",
+          "email": "lee@leebyron.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "flowtype",
+        "email": "flow@fb.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/flow-remove-types_2.118.0_1580960487907_0.12757911461589355"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "flow-remove-types\n=================\n\n[![npm](https://img.shields.io/npm/v/flow-remove-types.svg?maxAge=86400)](https://www.npmjs.com/package/flow-remove-types)\n[![Build Status](https://img.shields.io/travis/flowtype/flow-remove-types.svg?style=flat&label=travis&branch=master)](https://travis-ci.org/flowtype/flow-remove-types)\n\nTurn your JavaScript with [Flow](https://flowtype.org/) type annotations into\nstandard JavaScript in an instant with no configuration and minimal setup.\n\n[Flow](https://flowtype.org/) provides static type checking to JavaScript which\ncan both help find and detect bugs long before code is deployed and can make\ncode easier to read and more self-documenting. The Flow tool itself only reads\nand analyzes code. Running code with Flow type annotations requires first\nremoving the annotations which are non-standard JavaScript. Typically this is\ndone via adding a plugin to your [Babel](https://babeljs.io/) configuration,\nhowever Babel may be overkill if you're only targeting modern versions of\nNode.js or just not using the modern ES2015 features that may not be in\nevery browser.\n\n`flow-remove-types` is a faster, simpler, zero-configuration alternative with\nminimal dependencies for super-fast `npm install` time.\n\n\n## Get Started!\n\nUse the command line:\n\n```\nnpm install --global flow-remove-types\n```\n\n```\nflow-remove-types --help\nflow-remove-types input.js > output.js\n```\n\nOr the JavaScript API:\n\n```\nnpm install flow-remove-types\n```\n\n```js\nvar flowRemoveTypes = require('flow-remove-types');\nvar fs = require('fs');\n\nvar input = fs.readFileSync('input.js', 'utf8');\nvar output = flowRemoveTypes(input);\nfs.writeFileSync('output.js', output.toString());\n```\n\nWhen using the `flow-remove-types` script, be sure [not to direct the output to itself](https://superuser.com/questions/597244/why-does-redirecting-the-output-of-a-file-to-itself-produce-a-blank-file)!\n\n## Use in Build Systems:\n\n**Rollup:** [`rollup-plugin-flow`](https://github.com/leebyron/rollup-plugin-flow)\n\n**Browserify:** [`unflowify`](https://github.com/leebyron/unflowify)\n\n**Webpack:** [`remove-flow-types-loader`](https://github.com/conorhastings/remove-flow-types-loader)\n\n**Gulp:** [`gulp-flow-remove-types`](https://github.com/wain-pc/gulp-flow-remove-types)\n\n\n## Use with existing development tools\n\n * ESLint: [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype)\n * Mocha: `mocha -r flow-remove-types/register`\n\n\n## Use `flow-node`\n\nWherever you use `node` you can substitute `flow-node` and have a super fast\nflow-types aware evaluator or REPL.\n\n```\n$ flow-node\n> var x: number = 42\nundefined\n> x\n42\n```\n\n> Note: This package is also available under the *alias* `flow-node` since it's\n> often looked for at that location due to the popularity of this script. Both\n> scripts are available no matter which package you install.\n\n## Use the require hook\n\nUsing the require hook allows you to automatically compile files on the fly when\nrequiring in node, useful during development:\n\n```js\nrequire('flow-remove-types/register')\nrequire('./some-module-with-flow-type-syntax')\n```\n\nYou can also provide options to the require hook:\n\n```js\n// Transforms all files, not just those with a \"@flow\" comment.\nrequire('flow-remove-types/register')({ all: true })\n```\n\nUse options to define exactly which files to `includes` or `excludes` with regular\nexpressions. All files are included by default except those found in the\n`node_modules` folder, which is excluded by default.\n\n```js\nrequire('flow-remove-types/register')({ includes: /\\/custom_path\\// })\n```\n\n> #### Don't use the require hook in packages distributed on NPM\n> As always, don't forget to use `flow-remove-types` to compile files before distributing\n> your code on npm, as using the require hook affects the whole runtime and not\n> just your module and may hurt the runtime performance of code that includes it.\n\n\n## Dead-Simple Transforms\n\nWhen `flow-remove-types` removes Flow types, it replaces them with whitespace.\nThis ensures that the transformed output has exactly the same number of lines\nand characters and that all character offsets remain the same. This removes the\nneed for sourcemaps, maintains legible output, and ensures that it is super easy\nto include `flow-remove-types` at any point in your existing build tools.\n\nBuilt atop the official Flow [parser](https://github.com/facebook/flow/tree/master/packages/flow-parser),\n`flow-remove-types` is designed to operate on the same syntax Flow itself understands.\nIt also passes through other common non-standard syntax such as [JSX](https://facebook.github.io/jsx/)\nand experimental ECMAScript proposals that Flow supports.\n\n**Before:**\n\n```js\nimport SomeClass from 'some-module'\nimport type { SomeInterface } from 'some-module'\n\nexport class MyClass<T> extends SomeClass implements SomeInterface {\n\n  value: T\n\n  constructor(value: T) {\n    this.value = value\n  }\n\n  get(): T {\n    return this.value\n  }\n\n}\n\n```\n\n**After:**\n\n```js\nimport SomeClass from 'some-module'\n\n\nexport class MyClass    extends SomeClass                          {\n\n\n\n  constructor(value   ) {\n    this.value = value\n  }\n\n  get()    {\n    return this.value\n  }\n\n}\n```\n\n### Pretty Transform\n\nRather not have the whitespace? Pass the `--pretty` flag to remove the whitespace.\n\n```\nflow-remove-types --pretty --sourcemaps source.js\n```\n\nOr using the JS API:\n\n```js\nvar flowRemoveTypes = require('flow-remove-types');\nvar fs = require('fs');\n\nvar input = fs.readFileSync('input.js', 'utf8');\nvar output = flowRemoveTypes(input, { pretty: true });\nfs.writeFileSync('output.js', output.toString());\nvar sourceMap = output.generateMap();\nfs.writeFileSync('output.js.map', JSON.stringify(sourceMap));\n```\n\n\n## Performance\n\n> *NOTE*: These timings are for `flow-remove-types` v1.\n\n### Install:\n\nInstalling via `npm` from an empty project:\n\n**flow-remove-types:**\n\n```\ntime npm install flow-remove-types\n\nreal  0m3.193s\nuser  0m1.643s\nsys   0m0.775s\n```\n\n**Babel:**\n\n```\ntime npm install babel-cli babel-plugin-transform-flow-strip-types\n\nreal  0m23.200s\nuser  0m10.395s\nsys   0m4.238s\n```\n\n### Transform:\n\nTransforming a directory of 20 files of 100 lines each:\n\n**flow-remove-types:**\n\n```\ntime flow-remove-types src/ --out-dir dest/\n\nreal  0m0.431s\nuser  0m0.436s\nsys   0m0.068s\n```\n\n**Babel:**\n\n```\ntime babel src/ --out-dir dest/\n\nreal  0m1.074s\nuser  0m1.092s\nsys   0m0.149s\n```\n",
   "maintainers": [
     {
       "name": "leebyron",
@@ -3228,7 +3307,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-30T07:08:31.177Z",
+    "modified": "2020-02-06T03:41:30.336Z",
     "created": "2016-07-24T10:28:55.090Z",
     "1.0.0": "2016-07-24T10:28:55.090Z",
     "1.0.1": "2016-07-24T21:56:11.755Z",
@@ -3271,7 +3350,8 @@
     "2.116.0": "2020-01-10T19:53:48.831Z",
     "2.116.1": "2020-01-17T03:16:58.311Z",
     "2.117.0": "2020-01-24T20:43:00.080Z",
-    "2.117.1": "2020-01-30T07:08:28.764Z"
+    "2.117.1": "2020-01-30T07:08:28.764Z",
+    "2.118.0": "2020-02-06T03:41:28.038Z"
   },
   "homepage": "https://flow.org",
   "keywords": [

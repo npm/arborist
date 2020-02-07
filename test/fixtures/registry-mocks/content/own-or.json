@@ -56,7 +56,6 @@
       "directories": {}
     }
   },
-  "readme": "# own-or\n\nEither use the object's own property, or a fallback\n\nUseful for setting default values.\n\n## API\n\n`ownOr(object, key, fallback)`\n\n## USAGE\n\n```js\nvar ownOr = require('own-or')\n\nvar config = { some: 'configs' }\n\nvar foo = ownOr(config, 'bar', 'baz') // 'baz'\nvar some = ownOr(config, 'some', 'quux') // 'configs'\n```\n",
   "maintainers": [
     {
       "name": "isaacs",

@@ -261,7 +261,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# arrify [![Build Status](https://travis-ci.org/sindresorhus/arrify.svg?branch=master)](https://travis-ci.org/sindresorhus/arrify)\n\n> Convert a value to an array\n\n\n## Install\n\n```\n$ npm install arrify\n```\n\n\n## Usage\n\n```js\nconst arrify = require('arrify');\n\narrify('🦄');\n//=> ['🦄']\n\narrify(['🦄']);\n//=> ['🦄']\n\narrify(new Set(['🦄']));\n//=> ['🦄']\n\narrify(null);\n//=> []\n\narrify(undefined);\n//=> []\n```\n\n*Supplying `null` or `undefined` results in an empty array.*\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",

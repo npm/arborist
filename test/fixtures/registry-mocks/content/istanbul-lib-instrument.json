@@ -3372,7 +3372,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@1.10.0",
       "_npmVersion": "5.4.2",
@@ -3551,7 +3550,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.0.0",
       "_npmVersion": "6.0.0",
@@ -3643,7 +3641,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.0.1",
       "_npmVersion": "6.0.0",
@@ -3735,7 +3732,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.0.2",
       "_npmVersion": "5.6.0",
@@ -3827,7 +3823,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.1.0",
       "_npmVersion": "6.1.0-next.0",
@@ -3919,7 +3914,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.2.0",
       "_npmVersion": "6.1.0",
@@ -4011,7 +4005,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.2.1",
       "_npmVersion": "6.1.0",
@@ -4103,7 +4096,6 @@
         "js",
         "instrumentation"
       ],
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.3.0",
       "_npmVersion": "6.1.0-next.0",
@@ -4198,7 +4190,6 @@
       "engines": {
         "node": ">=6"
       },
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@2.3.1",
       "_npmVersion": "6.1.0",
@@ -4565,7 +4556,6 @@
       "engines": {
         "node": ">=6"
       },
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@3.0.1",
       "_npmVersion": "6.4.1",
@@ -4723,7 +4713,6 @@
         "node": ">=6"
       },
       "gitHead": "c81b051d83217947dfd97d8d06532bd5013e98c3",
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@3.1.1",
       "_nodeVersion": "10.15.3",
@@ -4803,7 +4792,6 @@
         "node": ">=6"
       },
       "gitHead": "e8063c799d0854341cb3daaf91c58acd06bd501c",
-      "readme": "istanbul-lib-instrument\n-----------------------\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n* The old API that is mostly unchanged (except for incompatibilities noted) and\n  performs the instrumentation using babel as a library.\n\n* A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n  to emit instrumentation for ES6 code directly without any source map\n  processing. This is the preferred path for babel users. The Babel plugin is\n  called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@3.1.2",
       "_nodeVersion": "10.15.3",
@@ -5053,7 +5041,6 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
-      "readme": "## istanbul-lib-instrument\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n-   The old API that is mostly unchanged (except for incompatibilities noted) and\n    performs the instrumentation using babel as a library.\n\n-   A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n    to emit instrumentation for ES6 code directly without any source map\n    processing. This is the preferred path for babel users. The Babel plugin is\n    called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@4.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -5149,7 +5136,6 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
-      "readme": "## istanbul-lib-instrument\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n-   The old API that is mostly unchanged (except for incompatibilities noted) and\n    performs the instrumentation using babel as a library.\n\n-   A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n    to emit instrumentation for ES6 code directly without any source map\n    processing. This is the preferred path for babel users. The Babel plugin is\n    called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@4.0.0-alpha.1",
       "_nodeVersion": "12.11.0",
@@ -5243,7 +5229,6 @@
         "node": ">=8"
       },
       "gitHead": "7c1367b5786fd6378aa0f3920386672a15edac71",
-      "readme": "## istanbul-lib-instrument\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n-   The old API that is mostly unchanged (except for incompatibilities noted) and\n    performs the instrumentation using babel as a library.\n\n-   A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n    to emit instrumentation for ES6 code directly without any source map\n    processing. This is the preferred path for babel users. The Babel plugin is\n    called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@4.0.0-alpha.2",
       "_nodeVersion": "12.11.0",
@@ -5337,7 +5322,6 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
-      "readme": "## istanbul-lib-instrument\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n-   The old API that is mostly unchanged (except for incompatibilities noted) and\n    performs the instrumentation using babel as a library.\n\n-   A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n    to emit instrumentation for ES6 code directly without any source map\n    processing. This is the preferred path for babel users. The Babel plugin is\n    called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@4.0.0-alpha.3",
       "_nodeVersion": "13.3.0",
@@ -5431,7 +5415,6 @@
         "node": ">=8"
       },
       "gitHead": "5319df684b508ff6fb19fe8b9a6147a3c5924e4b",
-      "readme": "## istanbul-lib-instrument\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n-   The old API that is mostly unchanged (except for incompatibilities noted) and\n    performs the instrumentation using babel as a library.\n\n-   A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n    to emit instrumentation for ES6 code directly without any source map\n    processing. This is the preferred path for babel users. The Babel plugin is\n    called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-instrument@4.0.0",
       "_nodeVersion": "13.3.0",
@@ -5562,7 +5545,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "## istanbul-lib-instrument\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-instrument.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-instrument)\n\nIstanbul instrumenter library.\n\nVersion 1.1.x now implements instrumentation using `Babel`. The implementation is inspired\nby prior art by @dtinth as demonstrated in the `__coverage__` babel plugin.\n\nIt provides 2 \"modes\" of instrumentation.\n\n-   The old API that is mostly unchanged (except for incompatibilities noted) and\n    performs the instrumentation using babel as a library.\n\n-   A `programVisitor` function for the Babel AST that can be used by a Babel plugin\n    to emit instrumentation for ES6 code directly without any source map\n    processing. This is the preferred path for babel users. The Babel plugin is\n    called `babel-plugin-istanbul`.\n\nIncompatibilities and changes to instrumentation behavior can be found in\n[v0-changes.md](v0-changes.md).\n",
   "maintainers": [
     {
       "email": "ben@npmjs.com",

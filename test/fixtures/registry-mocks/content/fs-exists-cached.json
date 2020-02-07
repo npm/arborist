@@ -61,7 +61,6 @@
       "directories": {}
     }
   },
-  "readme": "# fs-exists-cached\n\nJust like `fs.exists` and `fs.existsSync`, but cached\n",
   "maintainers": [
     {
       "name": "isaacs",

@@ -1,6 +1,6 @@
 {
   "_id": "@types/color-name",
-  "_rev": "341-f965601fe3f7ad0e6caea4aada7cbfe5",
+  "_rev": "368-14204e2535c83ea44ce62359eb1f8724",
   "name": "@types/color-name",
   "description": "TypeScript definitions for color-name",
   "dist-tags": {
@@ -23,7 +23,8 @@
     "ts3.5": "1.1.1",
     "ts3.6": "1.1.1",
     "ts3.7": "1.1.1",
-    "ts3.8": "1.1.1"
+    "ts3.8": "1.1.1",
+    "ts3.9": "1.1.1"
   },
   "versions": {
     "1.1.0": {
@@ -118,7 +119,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# Installation\r\n> `npm install --save @types/color-name`\r\n\r\n# Summary\r\nThis package contains type definitions for color-name ( https://github.com/colorjs/color-name ).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/color-name\r\n\r\nAdditional Details\r\n * Last updated: Wed, 13 Feb 2019 16:16:48 GMT\r\n * Dependencies: none\r\n * Global values: none\r\n\r\n# Credits\r\nThese definitions were written by Junyoung Clare Jang <https://github.com/Ailrun>.\r\n",
   "maintainers": [
     {
       "name": "types",
@@ -126,7 +126,7 @@
     }
   ],
   "time": {
-    "modified": "2019-11-05T17:51:42.495Z",
+    "modified": "2020-02-04T18:32:56.476Z",
     "created": "2017-07-25T15:22:38.705Z",
     "1.1.0": "2017-07-25T15:22:38.705Z",
     "1.1.1": "2019-02-13T16:38:27.838Z"

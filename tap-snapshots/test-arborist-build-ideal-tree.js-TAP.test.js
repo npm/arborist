@@ -6578,13 +6578,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.117.1",
+          "spec": "^0.118.0",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.118.0.tgz",
     },
     "flow-remove-types" => Node {
       "dev": true,
@@ -6599,7 +6599,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.117.1",
+          "spec": "^0.118.0",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -6618,7 +6618,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.118.0.tgz",
     },
     "foreground-child" => Node {
       "dev": true,
@@ -10324,7 +10324,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.15.0.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.15.1.tgz",
     },
     "resolve-from" => Node {
       "dev": true,
@@ -24284,13 +24284,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.117.1",
+          "spec": "^0.118.0",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.118.0.tgz",
     },
     "flow-remove-types" => Node {
       "edgesIn": Set {
@@ -24304,7 +24304,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.117.1",
+          "spec": "^0.118.0",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -24323,7 +24323,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.118.0.tgz",
     },
     "node-modules-regexp" => Node {
       "edgesIn": Set {
@@ -24407,7 +24407,7 @@ Node {
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.118.0.tgz",
     },
     "flow-remove-types" => Node {
       "children": Map {
@@ -27409,13 +27409,13 @@ Node {
         Edge {
           "from": "node_modules/flow-remove-types",
           "name": "flow-parser",
-          "spec": "^0.117.1",
+          "spec": "^0.118.0",
           "type": "prod",
         },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.118.0.tgz",
     },
     "flow-remove-types" => Node {
       "edgesIn": Set {
@@ -27435,7 +27435,7 @@ Node {
       "edgesOut": Map {
         "flow-parser" => Edge {
           "name": "flow-parser",
-          "spec": "^0.117.1",
+          "spec": "^0.118.0",
           "to": "node_modules/flow-parser",
           "type": "prod",
         },
@@ -27454,7 +27454,7 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
-      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.117.1.tgz",
+      "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.118.0.tgz",
     },
     "foreground-child" => Node {
       "edgesIn": Set {
@@ -31062,7 +31062,7 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
-      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.15.0.tgz",
+      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.15.1.tgz",
     },
     "resolve-from" => Node {
       "edgesIn": Set {

@@ -2462,7 +2462,6 @@
       "optionalDependencies": {
         "readable-stream": "^2.1.5"
       },
-      "readme": "# tap-mocha-reporter\n\nFormat a TAP stream using Mocha's set of reporters\n\n## USAGE\n\nOn the command line, pipe TAP in, and it'll do its thing.\n\n```bash\ntap test/*.js | tap-mocha-reporter\n```\n\nYou can also specify a reporter with the first argument.  The default\nis `spec`.\n\n```bash\ntap test/*.js | tap-mocha-reporter nyan\n```\n\nProgrammatically, you can use this as a transform stream.\n\n```javascript\nvar TSR = require('tap-mocha-reporter')\n\nfs.createReadStream('saved-test-output.tap')\n  .pipe(TSR('dot'))\n```\n",
       "readmeFilename": "README.md",
       "gitHead": "0c06e9878e16e5f197ca1c16673f771048917ecf",
       "_id": "tap-mocha-reporter@4.0.0",
@@ -2712,7 +2711,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# tap-mocha-reporter\n\nFormat a TAP stream using Mocha's set of reporters\n\n## USAGE\n\nOn the command line, pipe TAP in, and it'll do its thing.\n\n```bash\ntap test/*.js | tap-mocha-reporter\n```\n\nYou can also specify a reporter with the first argument.  The default\nis `spec`.\n\n```bash\ntap test/*.js | tap-mocha-reporter nyan\n```\n\nProgrammatically, you can use this as a transform stream.\n\n```javascript\nvar TSR = require('tap-mocha-reporter')\n\nfs.createReadStream('saved-test-output.tap')\n  .pipe(TSR('dot'))\n```\n",
   "maintainers": [
     {
       "email": "i@izs.me",

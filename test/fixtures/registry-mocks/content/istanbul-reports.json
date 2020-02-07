@@ -1136,7 +1136,6 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.2.0",
       "_npmVersion": "5.4.2",
@@ -1290,7 +1289,6 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.4.0",
       "_npmVersion": "5.8.0",
@@ -1369,7 +1367,6 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.4.1",
       "_npmVersion": "6.0.0",
@@ -1448,7 +1445,6 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.5.0",
       "_npmVersion": "6.1.0",
@@ -1763,7 +1759,6 @@
       "engines": {
         "node": ">=6"
       },
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.0.2",
       "_npmVersion": "6.4.1",
@@ -1843,7 +1838,6 @@
       "engines": {
         "node": ">=6"
       },
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.0.3",
       "_npmVersion": "6.4.1",
@@ -1921,7 +1915,6 @@
         "node": ">=6"
       },
       "gitHead": "7875defdc3c3640787ac5d83700246de119e8b83",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.1.0",
       "_nodeVersion": "10.14.2",
@@ -2075,7 +2068,6 @@
         "node": ">=6"
       },
       "gitHead": "c81b051d83217947dfd97d8d06532bd5013e98c3",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.0",
       "_nodeVersion": "10.15.3",
@@ -2153,7 +2145,6 @@
         "node": ">=6"
       },
       "gitHead": "e8063c799d0854341cb3daaf91c58acd06bd501c",
-      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.1",
       "_nodeVersion": "10.15.3",
@@ -2459,7 +2450,6 @@
         "node": ">=6"
       },
       "gitHead": "679fc641b691442c4e9274e07809fef35272161d",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.5",
       "_nodeVersion": "12.0.0",
@@ -2638,7 +2628,6 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -2741,7 +2730,6 @@
         "node": ">=8"
       },
       "gitHead": "371adb154f0189b793e636b5bbcc63f183d36c2b",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.1",
       "_nodeVersion": "12.3.1",
@@ -2842,7 +2830,6 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.2",
       "_nodeVersion": "12.11.0",
@@ -2943,7 +2930,6 @@
         "node": ">=8"
       },
       "gitHead": "70f48b7e6b60d17b8e2b5a03388a004deb6b8785",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.3",
       "_nodeVersion": "12.11.0",
@@ -3044,7 +3030,6 @@
         "node": ">=8"
       },
       "gitHead": "c69ce0cce10c1fb394b55ef0169e44e70f14ad24",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.4",
       "_nodeVersion": "12.11.0",
@@ -3145,7 +3130,6 @@
         "node": ">=8"
       },
       "gitHead": "bf0141b44a174626f4a3769a19b86a6c14d95a7b",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.5",
       "_nodeVersion": "12.11.0",
@@ -3246,7 +3230,6 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.6",
       "_nodeVersion": "13.3.0",
@@ -3422,7 +3405,6 @@
       "engines": {
         "node": ">=6"
       },
-      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.7",
       "_nodeVersion": "13.6.0",
@@ -3465,7 +3447,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
   "maintainers": [
     {
       "email": "ben@npmjs.com",

@@ -1,6 +1,6 @@
 {
   "_id": "@types/prop-types",
-  "_rev": "274-589d2fa8f2bc08c70ab9138129688c39",
+  "_rev": "288-8d03b035b77d13d38823ae70196907e0",
   "name": "@types/prop-types",
   "description": "TypeScript definitions for prop-types",
   "dist-tags": {
@@ -21,7 +21,8 @@
     "ts3.5": "15.7.3",
     "ts3.6": "15.7.3",
     "ts3.7": "15.7.3",
-    "ts3.8": "15.7.3"
+    "ts3.8": "15.7.3",
+    "ts3.9": "15.7.3"
   },
   "versions": {
     "15.5.0": {
@@ -754,7 +755,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "# Installation\r\n> `npm install --save @types/prop-types`\r\n\r\n# Summary\r\nThis package contains type definitions for prop-types (https://github.com/reactjs/prop-types).\r\n\r\n# Details\r\nFiles were exported from https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/prop-types\r\n\r\nAdditional Details\r\n * Last updated: Tue, 24 Sep 2019 20:14:29 GMT\r\n * Dependencies: none\r\n * Global values: none\r\n\r\n# Credits\r\nThese definitions were written by DovydasNavickas <https://github.com/DovydasNavickas>, Ferdy Budhidharma <https://github.com/ferdaber>, and Sebastian Silbermann <https://github.com/eps1lon>.\r\n",
   "maintainers": [
     {
       "name": "types",
@@ -762,7 +762,7 @@
     }
   ],
   "time": {
-    "modified": "2019-11-05T18:32:44.626Z",
+    "modified": "2020-02-04T18:54:43.836Z",
     "created": "2017-04-17T17:57:14.002Z",
     "15.5.0": "2017-04-17T17:57:14.002Z",
     "15.5.1": "2017-04-18T18:29:18.141Z",

@@ -1169,7 +1169,6 @@
       "_hasShrinkwrap": false
     }
   },
-  "readme": "```javascript\nvar correct = require('spdx-correct')\nvar assert = require('assert')\n\nassert.equal(correct('mit'), 'MIT')\n\nassert.equal(correct('Apache 2'), 'Apache-2.0')\n\nassert(correct('No idea what license') === null)\n\n// disable upgrade option\nassert(correct('GPL-3.0'), 'GPL-3.0-or-later')\nassert(correct('GPL-3.0', { upgrade: false }), 'GPL-3.0')\n```\n",
   "maintainers": [
     {
       "name": "kemitchell",

@@ -12367,23 +12367,7 @@ Object {
     },
   },
   "lockfileVersion": 2,
-  "name": "reify-saving-the-ideal-tree-save-some-stuff",
   "packages": Object {
-    "": Object {
-      "bundleDependencies": Array [
-        "a",
-        "b",
-        "c",
-      ],
-      "dependencies": Object {
-        "a": "github:foo/bar#baz",
-        "b": "^1.2.3",
-        "d": "npm:c@^1.2.3",
-      },
-      "devDependencies": Object {
-        "c": "git+ssh://git@githost.com:a/b/c.git#master",
-      },
-    },
     "node_modules/a": Object {
       "extraneous": true,
       "inBundle": true,

@@ -2,6 +2,7 @@ const {basename, resolve} = require('path')
 const t = require('tap')
 const requireInject = require('require-inject')
 const Node = require('../../lib/node.js')
+const Shrinkwrap = require('../../lib/shrinkwrap.js')
 
 // mock rimraf so we can make it fail in rollback tests
 const realRimraf = require('rimraf')
@@ -606,7 +607,10 @@ t.test('saving the ideal tree', t => {
     })
     const a = new Arborist({ path })
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
-    return a.loadActual().then(tree => {
+    return a.loadActual().then(tree => Shrinkwrap.load({path}).then(meta => {
+      tree.meta = meta
+      return tree
+    })).then(tree => {
       // saving swaps the ideal tree onto the actual tree
       a.idealTree = tree
 
@@ -614,19 +618,19 @@ t.test('saving the ideal tree', t => {
       new Node({
         name: 'a',
         resolved: `git+ssh://git@github.com:foo/bar#${hash}`,
-        parent: a.actualTree,
+        parent: tree,
         pkg: {},
       })
       new Node({
         name: 'b',
         resolved: 'https://registry.npmjs.org/b/-/b-1.2.3.tgz',
         pkg: { version: '1.2.3', name: 'b' },
-        parent: a.actualTree,
+        parent: tree,
       })
       new Node({
         name: 'c',
         resolved: `git+ssh://git@githost.com:a/b/c.git#${hash}`,
-        parent: a.actualTree,
+        parent: tree,
         pkg: {},
       })
       new Node({
@@ -636,7 +640,7 @@ t.test('saving the ideal tree', t => {
           name: 'c',
           version: '1.2.3',
         },
-        parent: a.actualTree,
+        parent: tree,
       })
 
       return a[kSaveIdealTree]({

@@ -412,6 +412,27 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP load a hidden lockfile > must match snapshot 1`] = `
+Object {
+  "lockfileVersion": 2,
+  "name": "hidden-lockfile",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "abbrev": "^1.1.1",
+      },
+    },
+    "node_modules/abbrev": Object {
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+  },
+  "requires": true,
+}
+`
+
 exports[`test/shrinkwrap.js TAP load a legacy shrinkwrap without a package.json > did our best with what we had 1`] = `
 Object {
   "dependencies": Object {

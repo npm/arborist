@@ -16,6 +16,7 @@ const yarnFixture = resolve(__dirname, 'fixtures/yarn-stuff')
 const emptyFixture = resolve(__dirname, 'fixtures/empty')
 const depTypesFixture = resolve(__dirname, 'fixtures/dev-deps')
 const badJsonFixture = resolve(__dirname, 'fixtures/testing-peer-deps-bad-sw')
+const hiddenLockfileFixture = resolve(__dirname, 'fixtures/hidden-lockfile')
 
 t.test('path defaults to .', async t => {
   const sw = new Shrinkwrap()
@@ -46,7 +47,7 @@ t.test('loading in bad dir gets empty lockfile', t =>
     t.equal(sw.loadedFromDisk, false)
   }))
 
-t.test('failure to parse json geets empty lockfile', t =>
+t.test('failure to parse json gets empty lockfile', t =>
   Shrinkwrap.load({ path: badJsonFixture }).then(sw => {
     t.strictSame(sw.data, {
       lockfileVersion: 2,
@@ -437,3 +438,25 @@ t.test('handle missing dependencies object without borking', t => {
   t.matchSnapshot(s.commit())
   t.end()
 })
+
+t.test('load a hidden lockfile', t => Shrinkwrap.load({
+  path: hiddenLockfileFixture,
+  hiddenLockfile: true,
+}).then(s => {
+  t.matchSnapshot(s.data)
+  // make sure it does not add to the dependencies block when a new
+  // node is added.
+  s.data.dependencies = {}
+  s.add(new Node({
+    path: hiddenLockfileFixture + '/node_modules/foo',
+    pkg: {
+      name: 'foo',
+      version: '1.2.3',
+      _integrity: 'sha512-deadbeef',
+      _resolved: 'https://registry.npmjs.org/foo/-/foo-1.2.3.tgz',
+    },
+  }))
+  t.strictSame(s.data.dependencies, {}, 'did not add to legacy data')
+  s.commit()
+  t.equal(s.data.dependencies, undefined, 'deleted legacy metadata')
+}))

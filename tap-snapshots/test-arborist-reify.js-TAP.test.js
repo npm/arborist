@@ -40,6 +40,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-1.2.3.tgz",
     },
     "@isaacs/testing-peer-deps-d" => Node {
@@ -84,6 +85,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
           "name": "@isaacs/testing-peer-deps-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
         },
         "@isaacs/testing-peer-deps-c" => Node {
@@ -97,6 +99,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
           "name": "@isaacs/testing-peer-deps-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
         },
       },
@@ -12642,6 +12645,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
     },
     "@isaacs/testing-peer-deps-d" => Node {
@@ -12738,6 +12742,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-1.2.3.tgz",
     },
     "@isaacs/testing-peer-deps-d" => Node {
@@ -12782,6 +12787,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
           "name": "@isaacs/testing-peer-deps-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
         },
         "@isaacs/testing-peer-deps-c" => Node {
@@ -12795,6 +12801,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
           "name": "@isaacs/testing-peer-deps-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
         },
       },

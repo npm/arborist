@@ -35,6 +35,7 @@ const printTree = tree => ({
     ...(tree.optional ? { optional: true } : {}),
     ...(tree.devOptional && !tree.dev && !tree.optional
       ? { devOptional: true } : {}),
+    ...(tree.peer ? { peer: true } : {}),
   }),
   ...(tree.inBundle ? { bundled: true } : {}),
   ...(tree.error

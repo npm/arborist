@@ -51,6 +51,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "name": "path",
       "optional": true,
       "path": "/home/user/projects/some/kind/of/path",
+      "peer": true,
       "realpath": "/home/user/projects/some/kind/of/path",
       "resolved": null,
     },
@@ -61,6 +62,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "name": "path",
   "optional": true,
   "path": "/home/user/some/other/path",
+  "peer": true,
   "realpath": "/home/user/projects/some/kind/of/path",
 }
 `
@@ -115,6 +117,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "name": "path",
       "optional": true,
       "path": "/home/user/projects/some/kind/of/path",
+      "peer": true,
       "realpath": "/home/user/projects/some/kind/of/path",
       "resolved": null,
     },
@@ -143,6 +146,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "name": "path",
   "optional": true,
   "path": "/home/user/some/other/path",
+  "peer": true,
   "realpath": "/home/user/projects/some/kind/of/path",
 }
 `

@@ -18,6 +18,9 @@ t.formatSnapshot = obj =>
     error: obj.error,
     from: obj.from,
     to: obj.to,
+    peer: obj.peer,
+    dev: obj.dev,
+    optional: obj.optional,
     __proto__: { constructor: Edge },
   } : obj
 

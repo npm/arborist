@@ -7,9 +7,12 @@
 'use strict'
 exports[`test/edge.js TAP > clobbered and detached 1`] = `
 Edge {
+  "dev": false,
   "error": "DETACHED",
   "from": null,
   "name": "aa",
+  "optional": false,
+  "peer": false,
   "spec": "",
   "to": null,
   "type": "prod",
@@ -19,9 +22,12 @@ Edge {
 
 exports[`test/edge.js TAP > clobbered edge 1`] = `
 Edge {
+  "dev": false,
   "error": "DETACHED",
   "from": null,
   "name": "b",
+  "optional": false,
+  "peer": true,
   "spec": "1.2.3",
   "to": null,
   "type": "peer",
@@ -31,6 +37,7 @@ Edge {
 
 exports[`test/edge.js TAP > clobbering edge 1`] = `
 Edge {
+  "dev": false,
   "error": null,
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -63,6 +70,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "b",
+  "optional": false,
+  "peer": false,
   "spec": "*",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -100,6 +109,7 @@ Edge {
 
 exports[`test/edge.js TAP > invalid dependency 1`] = `
 Edge {
+  "dev": false,
   "error": "INVALID",
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -131,6 +141,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "b",
+  "optional": true,
+  "peer": false,
   "spec": "1.69.420-nice",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -168,6 +180,7 @@ Edge {
 
 exports[`test/edge.js TAP > missing optional dep is fine 1`] = `
 Edge {
+  "dev": false,
   "error": null,
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -185,6 +198,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "missing",
+  "optional": true,
+  "peer": false,
   "spec": "",
   "to": null,
   "type": "optional",
@@ -194,6 +209,7 @@ Edge {
 
 exports[`test/edge.js TAP > new location, found dep 1`] = `
 Edge {
+  "dev": false,
   "error": null,
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -239,6 +255,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "aa",
+  "optional": false,
+  "peer": false,
   "spec": "",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -290,6 +308,7 @@ Edge {
 
 exports[`test/edge.js TAP > new location, missing dep again 1`] = `
 Edge {
+  "dev": false,
   "error": "MISSING",
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -321,6 +340,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "aa",
+  "optional": false,
+  "peer": false,
   "spec": "",
   "to": null,
   "type": "prod",
@@ -330,6 +351,7 @@ Edge {
 
 exports[`test/edge.js TAP > old location, missing dep 1`] = `
 Edge {
+  "dev": false,
   "error": null,
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -375,6 +397,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "aa",
+  "optional": false,
+  "peer": false,
   "spec": "",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -426,6 +450,7 @@ Edge {
 
 exports[`test/edge.js TAP > peer dep at top level, nesting is ok 1`] = `
 Edge {
+  "dev": false,
   "error": null,
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -443,6 +468,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "a",
+  "optional": false,
+  "peer": true,
   "spec": "1.2.3",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -480,6 +507,7 @@ Edge {
 
 exports[`test/edge.js TAP > peer dep below top level, nesting not ok 1`] = `
 Edge {
+  "dev": false,
   "error": "PEER LOCAL",
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -511,6 +539,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "aa",
+  "optional": false,
+  "peer": true,
   "spec": "1.2.3",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -562,6 +592,7 @@ Edge {
 
 exports[`test/edge.js TAP > peer dep below top level, parallel ok 1`] = `
 Edge {
+  "dev": false,
   "error": null,
   "from": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -593,6 +624,8 @@ Edge {
     "resolve": Function resolve(n),
   },
   "name": "b",
+  "optional": false,
+  "peer": true,
   "spec": "1.2.3",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),

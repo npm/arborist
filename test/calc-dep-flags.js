@@ -32,6 +32,7 @@ t.test('flag stuff', t => {
       dependencies: { prod: '' },
       devDependencies: { dev: '' },
       optionalDependencies: { optional: '' },
+      peerDependencies: { peer: '' },
     },
   })
 
@@ -59,11 +60,46 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
+  const peer = new Node({
+    pkg: {
+      name: 'peer',
+      version: '1.2.3',
+      dependencies: { peerdep: '' },
+    },
+    parent: root,
+  })
+
+  const peerdep = new Node({
+    pkg: {
+      name: 'peerdep',
+      version: '1.2.3',
+    },
+    parent: root,
+  })
+
   const prod = new Node({
     pkg: {
       name: 'prod',
       version: '1.2.3',
       dependencies: { proddep: '' },
+      peerDependencies: { metapeer: '' },
+    },
+    parent: root,
+  })
+
+  const metapeer = new Node({
+    pkg: {
+      name: 'metapeer',
+      version: '1.2.3',
+      dependencies: { metapeerdep: '' },
+    },
+    parent: root,
+  })
+
+  const metapeerdep = new Node({
+    pkg: {
+      name: 'metapeerdep',
+      version: '1.2.3',
     },
     parent: root,
   })

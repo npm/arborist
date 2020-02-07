@@ -22,7 +22,19 @@ Node {
       "_extraneous": true,
     },
     Node {
+      "_": "peer",
+    },
+    Node {
+      "_": "peerdep",
+    },
+    Node {
       "_": "prod",
+    },
+    Node {
+      "_": "metapeer",
+    },
+    Node {
+      "_": "metapeerdep",
     },
     Node {
       "_": "proddep",

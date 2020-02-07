@@ -5,6 +5,29 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > a peer dep 1`] = `
+Object {
+  "dependencies": Object {
+    "peerdep": "",
+  },
+  "integrity": "sha512-peerpeerpeer",
+  "name": "peer",
+  "peer": true,
+  "resolved": "https://peer.com/peer.tgz",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/shrinkwrap.js TAP construct metadata from node and package data > a peer meta-dep 1`] = `
+Object {
+  "integrity": "sha512-peerdeppeerdep",
+  "name": "peerdep",
+  "peer": true,
+  "resolved": "https://peer.com/peerdep.tgz",
+  "version": "1.2.3",
+}
+`
+
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > bundled pkg metadata 1`] = `
 Object {
   "dev": true,
@@ -75,6 +98,23 @@ Object {
       },
       "version": "1.2.3",
     },
+    "peer": Object {
+      "dependencies": Object {
+        "peerdep": Object {
+          "integrity": "sha512-peerdeppeerdep",
+          "peer": true,
+          "resolved": "https://peer.com/peerdep.tgz",
+          "version": "1.2.3",
+        },
+      },
+      "integrity": "sha512-peerpeerpeer",
+      "peer": true,
+      "requires": Object {
+        "peerdep": "",
+      },
+      "resolved": "https://peer.com/peer.tgz",
+      "version": "1.2.3",
+    },
     "tgz": Object {
       "dev": true,
       "version": "1.2.3",
@@ -104,6 +144,9 @@ Object {
       "name": "root",
       "optionalDependencies": Object {
         "optin": "",
+      },
+      "peerDependencies": Object {
+        "peer": "",
       },
       "version": "1.2.3",
     },
@@ -175,6 +218,23 @@ Object {
       },
       "name": "optin",
       "optional": true,
+      "version": "1.2.3",
+    },
+    "node_modules/peer": Object {
+      "dependencies": Object {
+        "peerdep": "",
+      },
+      "integrity": "sha512-peerpeerpeer",
+      "name": "peer",
+      "peer": true,
+      "resolved": "https://peer.com/peer.tgz",
+      "version": "1.2.3",
+    },
+    "node_modules/peer/node_modules/peerdep": Object {
+      "integrity": "sha512-peerdeppeerdep",
+      "name": "peerdep",
+      "peer": true,
+      "resolved": "https://peer.com/peerdep.tgz",
       "version": "1.2.3",
     },
     "node_modules/tgz": Object {
@@ -373,6 +433,9 @@ Object {
   "optionalDependencies": Object {
     "optin": "",
   },
+  "peerDependencies": Object {
+    "peer": "",
+  },
 }
 `
 
@@ -393,6 +456,9 @@ Object {
   "name": "root",
   "optionalDependencies": Object {
     "optin": "",
+  },
+  "peerDependencies": Object {
+    "peer": "",
   },
   "version": "1.2.3",
 }

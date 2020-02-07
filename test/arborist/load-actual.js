@@ -38,6 +38,7 @@ const printTree = tree => ({
     ...(tree.optional ? { optional: true } : {}),
     ...(tree.devOptional && !tree.dev && !tree.optional
       ? { devOptional: true } : {}),
+    ...(tree.peer ? { peer: true } : {}),
   }),
   ...(tree.fsParent ? { fsParent: pp(tree.fsParent) } : {}),
   ...(tree.errors.length

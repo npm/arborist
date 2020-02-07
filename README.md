@@ -160,31 +160,33 @@ to a package folder, which may have children in `node_modules`.
   `integrity` values for all modules in this tree.  Only relevant on `root`
   nodes.
 
-* `node.children` Map of packages located in the node's `node_modules` folder.
+* `node.children` Map of packages located in the node's `node_modules`
+  folder.
 * `node.package` The contents of this node's `package.json` file.
 * `node.path` File path to this package.  If the node is a link, then this
   is the path to the link, not to the link target.  If the node is _not_ a
   link, then this matches `node.realpath`.
 * `node.realpath` The full real filepath on disk where this node lives.
-* `node.location` A slash-normalized relative path from the root node
-  to this node's path.
+* `node.location` A slash-normalized relative path from the root node to
+  this node's path.
 * `node.isLink` Whether this represents a symlink.  Always `false` for Node
   objects, always `true` for Link objects.
 * `node.isRoot` True if this node is a root node.  (Ie, if `node.root ===
-    node`.)
+  node`.)
 * `node.root` The root node where we are working.  If not assigned to some
-    other value, resolves to the node itself.  (Ie, the root node's `root`
-    property refers to itself.)
+  other value, resolves to the node itself.  (Ie, the root node's `root`
+  property refers to itself.)
 * `node.isTop` True if this node is the top of its tree (ie, has no
-    `parent`, false otherwise).
+  `parent`, false otherwise).
 * `node.top` The top node in this node's tree.  This will be equal to
-    `node.root` for simple trees, but link targets will frequently be
-    outside of (or nested somewhere within) a `node_modules` hierarchy, and
-    so will have a different `top`.
-* `node.dev`, `node.optional`, `node.devOptional` Indicators as to whether
-  this node is a dev dependency and/or optional dependency.  These flags
-  are relevant when pruning optional and/or dev dependencies out of the
-  tree.  See **Package Dependency Flags** below for explanations.
+  `node.root` for simple trees, but link targets will frequently be outside
+  of (or nested somewhere within) a `node_modules` hierarchy, and so will
+  have a different `top`.
+* `node.dev`, `node.optional`, `node.devOptional`, `node.peer`, Indicators
+  as to whether this node is a dev, optional, and/or peer dependency.
+  These flags are relevant when pruning dependencies out of the tree or
+  deciding what to reify.  See **Package Dependency Flags** below for
+  explanations.
 * `node.edgesOut` Edges in the dependency graph indicating nodes that this
   node depends on, which resolve its dependencies.
 * `node.edgesIn` Edges in the dependency graph indicating nodes that depend
@@ -258,31 +260,51 @@ such a way that the dependency graph can change, and are relevant when
 pruning nodes from the tree.
 
 ```
-| extraneous | dev | optional | devOptional | meaning             | prune?            |
-|------------+-----+----------+-------------+---------------------+-------------------|
-|            |     |          |             | production dep      | never             |
-|------------+-----+----------+-------------+---------------------+-------------------|
-|     X      | N/A |   N/A    |     N/A     | nothing depends on  | always            |
-|            |     |          |             | this, it is trash   |                   |
-|------------+-----+----------+-------------+---------------------+-------------------|
-|            |  X  |          |      X      | devDependency, or   | if pruning dev    |
-|            |     |          | not in lock | only depended upon  |                   |
-|            |     |          |             | by devDependencies  |                   |
-|------------+-----+----------+-------------+---------------------+-------------------|
-|            |     |    X     |      X      | optionalDependency, | if pruning        |
-|            |     |          | not in lock | or only depended on | optional          |
-|            |     |          |             | by optionalDeps     |                   |
-|------------+-----+----------+-------------+---------------------+-------------------|
-|            |  X  |    X     |      X      | Optional dependency | if pruning EITHER |
-|            |     |          | not in lock | of dep(s) in the    | dev OR optional   |
-|            |     |          |             | dev hierarchy       |                   |
-|------------+-----+----------+-------------+---------------------+-------------------|
-|            |     |          |      X      | BOTH a non-optional | if pruning BOTH   |
-|            |     |          |   in lock   | dep within the dev  | dev AND optional  |
-|            |     |          |             | hierarchy, AND a    |                   |
-|            |     |          |             | dep within the      |                   |
-|            |     |          |             | optional hierarchy  |                   |
-+------------+-----+----------+-------------+---------------------+-------------------+
+| extraneous | peer | dev | optional | devOptional | meaning             | prune?            |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |      |     |          |             | production dep      | never             |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|     X      | N/A  | N/A |   N/A    |     N/A     | nothing depends on  | always            |
+|            |      |     |          |             | this, it is trash   |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |      |  X  |          |      X      | devDependency, or   | if pruning dev    |
+|            |      |     |          | not in lock | only depended upon  |                   |
+|            |      |     |          |             | by devDependencies  |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |      |     |    X     |      X      | optionalDependency, | if pruning        |
+|            |      |     |          | not in lock | or only depended on | optional          |
+|            |      |     |          |             | by optionalDeps     |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |      |  X  |    X     |      X      | Optional dependency | if pruning EITHER |
+|            |      |     |          | not in lock | of dep(s) in the    | dev OR optional   |
+|            |      |     |          |             | dev hierarchy       |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |      |     |          |      X      | BOTH a non-optional | if pruning BOTH   |
+|            |      |     |          |   in lock   | dep within the dev  | dev AND optional  |
+|            |      |     |          |             | hierarchy, AND a    |                   |
+|            |      |     |          |             | dep within the      |                   |
+|            |      |     |          |             | optional hierarchy  |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |  X   |     |          |             | peer dependency, or | if pruning peers  |
+|            |      |     |          |             | only depended on by |                   |
+|            |      |     |          |             | peer dependencies   |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |  X   |  X  |          |      X      | peer dependency of  | if pruning peer   |
+|            |      |     |          | not in lock | dev node heirarchy  | OR dev deps       |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |  X   |     |    X     |      X      | peer dependency of  | if pruning peer   |
+|            |      |     |          | not in lock | optional nodes, or  | OR optional deps  |
+|            |      |     |          |             | peerOptional dep    |                   |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |  X   |  X  |    X     |      X      | peer optional deps  | if pruning peer   |
+|            |      |     |          | not in lock | of the dev dep      | OR optional OR    |
+|            |      |     |          |             | heirarchy           | dev               |
+|------------+------+-----+----------+-------------+---------------------+-------------------|
+|            |  X   |     |          |      X      | BOTH a non-optional | if pruning peers  |
+|            |      |     |          |   in lock   | peer dep within the | OR:               |
+|            |      |     |          |             | dev heirarchy, AND  | BOTH optional     |
+|            |      |     |          |             | a peer optional dep | AND dev deps      |
++------------+------+-----+----------+-------------+---------------------+-------------------+
 ```
 
 * If none of these flags are set, then the node is required by the
@@ -301,6 +323,9 @@ pruning nodes from the tree.
   dependency within the devDependency hierarchy, _and_ a dependency
   within the `optionalDependency` hierarchy.  It should be pruned if
   _both_ dev and optional dependencies are being removed.
+* If `node.peer` is set, then all the same semantics apply as above, except
+  that the dep is brought in by a peer dep at some point, rather than a
+  normal non-peer dependency.
 
 Note: `devOptional` is only set in the shrinkwrap/package-lock file if
 _neither_ `dev` nor `optional` are set, as it would be redundant.

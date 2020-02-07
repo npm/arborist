@@ -40,6 +40,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-1.2.3.tgz",
     },
     "@isaacs/testing-peer-deps-d" => Node {
@@ -84,6 +85,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
           "name": "@isaacs/testing-peer-deps-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
         },
         "@isaacs/testing-peer-deps-c" => Node {
@@ -97,6 +99,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
           "name": "@isaacs/testing-peer-deps-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
         },
       },
@@ -553,6 +556,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-a",
       "name": "@isaacs/peer-dep-cycle-a",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-b" => Node {
@@ -601,6 +605,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
   },
@@ -667,6 +672,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -688,6 +694,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
     },
   },
@@ -754,6 +761,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -775,6 +783,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
     "abbrev" => Node {
@@ -861,6 +870,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -882,6 +892,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
     },
   },
@@ -929,6 +940,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-a",
       "name": "@isaacs/peer-dep-cycle-a",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-b" => Node {
@@ -977,6 +989,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
   },
@@ -1043,6 +1056,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -1064,6 +1078,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
     },
   },
@@ -1130,6 +1145,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -1151,6 +1167,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
     "abbrev" => Node {
@@ -2300,6 +2317,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -2321,6 +2339,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
     },
   },
@@ -2389,6 +2408,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-b",
           "name": "@isaacs/peer-dep-cycle-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
         },
         "@isaacs/peer-dep-cycle-c" => Node {
@@ -2410,6 +2430,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-c",
           "name": "@isaacs/peer-dep-cycle-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
         },
       },
@@ -2479,6 +2500,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -2500,6 +2522,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
   },
@@ -2574,6 +2597,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-b",
           "name": "@isaacs/peer-dep-cycle-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
         },
         "@isaacs/peer-dep-cycle-c" => Node {
@@ -2595,6 +2619,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-c",
           "name": "@isaacs/peer-dep-cycle-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
         },
       },
@@ -2637,6 +2662,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-a",
       "name": "@isaacs/peer-dep-cycle-a",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-b" => Node {
@@ -2685,6 +2711,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
   },
@@ -2759,6 +2786,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-b",
           "name": "@isaacs/peer-dep-cycle-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
         },
         "@isaacs/peer-dep-cycle-c" => Node {
@@ -2780,6 +2808,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-c",
           "name": "@isaacs/peer-dep-cycle-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
         },
       },
@@ -2822,6 +2851,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-a",
       "name": "@isaacs/peer-dep-cycle-a",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-b" => Node {
@@ -2843,6 +2873,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -3052,6 +3083,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-b",
           "name": "@isaacs/peer-dep-cycle-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
         },
         "@isaacs/peer-dep-cycle-c" => Node {
@@ -3073,6 +3105,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-c",
           "name": "@isaacs/peer-dep-cycle-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
         },
       },
@@ -3142,6 +3175,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -3163,6 +3197,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
   },
@@ -3237,6 +3272,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-b",
           "name": "@isaacs/peer-dep-cycle-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
         },
         "@isaacs/peer-dep-cycle-c" => Node {
@@ -3258,6 +3294,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-c",
           "name": "@isaacs/peer-dep-cycle-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
         },
       },
@@ -3300,6 +3337,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-a",
       "name": "@isaacs/peer-dep-cycle-a",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-b" => Node {
@@ -3348,6 +3386,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-c",
       "name": "@isaacs/peer-dep-cycle-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
   },
@@ -3422,6 +3461,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-b",
           "name": "@isaacs/peer-dep-cycle-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-1.0.0.tgz",
         },
         "@isaacs/peer-dep-cycle-c" => Node {
@@ -3443,6 +3483,7 @@ Node {
           },
           "location": "node_modules/@isaacs/peer-dep-cycle/node_modules/@isaacs/peer-dep-cycle-c",
           "name": "@isaacs/peer-dep-cycle-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-1.0.0.tgz",
         },
       },
@@ -3485,6 +3526,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-a",
       "name": "@isaacs/peer-dep-cycle-a",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-b" => Node {
@@ -3506,6 +3548,7 @@ Node {
       },
       "location": "node_modules/@isaacs/peer-dep-cycle-b",
       "name": "@isaacs/peer-dep-cycle-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
     },
     "@isaacs/peer-dep-cycle-c" => Node {
@@ -4555,6 +4598,8 @@ Node {
       },
       "location": "node_modules/@types/prop-types",
       "name": "@types/prop-types",
+      "optional": true,
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
     },
     "@types/react" => Node {
@@ -4583,6 +4628,8 @@ Node {
       },
       "location": "node_modules/@types/react",
       "name": "@types/react",
+      "optional": true,
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
     },
     "ajv" => Node {
@@ -5984,6 +6031,8 @@ Node {
       },
       "location": "node_modules/csstype",
       "name": "csstype",
+      "optional": true,
+      "peer": true,
       "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
     },
     "dashdash" => Node {
@@ -24073,6 +24122,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
     },
     "@isaacs/testing-peer-deps-d" => Node {
@@ -24169,6 +24219,7 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-1.2.3.tgz",
     },
     "@isaacs/testing-peer-deps-d" => Node {
@@ -24213,6 +24264,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
           "name": "@isaacs/testing-peer-deps-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
         },
         "@isaacs/testing-peer-deps-c" => Node {
@@ -24226,6 +24278,7 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
           "name": "@isaacs/testing-peer-deps-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
         },
       },
@@ -34039,6 +34092,8 @@ Node {
       },
       "location": "node_modules/@types/prop-types",
       "name": "@types/prop-types",
+      "optional": true,
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
     },
     "@types/react" => Node {
@@ -34066,6 +34121,8 @@ Node {
       },
       "location": "node_modules/@types/react",
       "name": "@types/react",
+      "optional": true,
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
     },
     "ajv" => Node {
@@ -35406,6 +35463,8 @@ Node {
       },
       "location": "node_modules/csstype",
       "name": "csstype",
+      "optional": true,
+      "peer": true,
       "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
     },
     "dashdash" => Node {

@@ -72,7 +72,7 @@ t.test('loading in empty dir gets empty lockfile', t =>
       path: emptyFixture,
       realpath: emptyFixture,
     })
-    root.dev = root.devOptional = root.optional = root.extraneous = false
+    root.peer = root.dev = root.devOptional = root.optional = root.extraneous = false
     sw.add(root)
     t.strictSame(sw.commit(), {
       name: 'empty',
@@ -169,6 +169,7 @@ t.test('construct metadata from node and package data', t => {
       dependencies: { a: '', link: '', link2: '' },
       devDependencies: { d: '', e: 'https://foo.com/e.tgz', devit: '' },
       optionalDependencies: { optin: '' },
+      peerDependencies: { peer: '' },
       scripts: {
         install: 'true',
       },
@@ -176,6 +177,27 @@ t.test('construct metadata from node and package data', t => {
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
     meta,
+  })
+
+  const peer = new Node({
+    pkg: {
+      name: 'peer',
+      version: '1.2.3',
+      dependencies: { peerdep: '' },
+    },
+    resolved: 'https://peer.com/peer.tgz',
+    integrity: 'sha512-peerpeerpeer',
+    parent: root,
+  })
+
+  const peerdep = new Node({
+    pkg: {
+      name: 'peerdep',
+      version: '1.2.3',
+    },
+    resolved: 'https://peer.com/peerdep.tgz',
+    integrity: 'sha512-peerdeppeerdep',
+    parent: peer,
   })
 
   const e = new Node({
@@ -339,7 +361,9 @@ t.test('construct metadata from node and package data', t => {
   t.matchSnapshot(meta.get(bundled.location), 'bundled pkg metadata')
   t.matchSnapshot(meta.get(git.location), 'git dep metadata')
   t.matchSnapshot(meta.get(nopkg.location), 'node without a package')
-  t.matchSnapshot(meta.data, 'data calculated from nodes themselves')
+  t.matchSnapshot(meta.get(peer.location), 'a peer dep')
+  t.matchSnapshot(meta.get(peerdep.location), 'a peer meta-dep')
+  t.matchSnapshot(meta.commit(), 'data calculated from nodes themselves')
   t.end()
 })
 

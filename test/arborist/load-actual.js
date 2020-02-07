@@ -150,6 +150,9 @@ t.test('missing symlinks', t =>
       'bar has error')
   }))
 
+t.test('load from a hidden lockfile', t =>
+  t.resolveMatchSnapshot(loadActual(resolve(fixtures, 'hidden-lockfile'))))
+
 t.test('realpath gutchecks', t => {
   // the realpath module is tested pretty thoroughly, but
   // while we've got a bunch of symlinks being created, may as well

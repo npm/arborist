@@ -1052,25 +1052,7 @@ Link {
       },
     },
     "lockfileVersion": 2,
-    "name": "root",
     "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
-        },
-        "devDependencies": Object {
-          "foo": "*",
-        },
-        "name": "root",
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
       "../deeproot/root": Object {
         "link": true,
         "resolved": "",
@@ -1156,7 +1138,6 @@ Link {
       },
     },
     "requires": true,
-    "version": "1.2.3",
   },
   "name": "root",
   "realpath": "root",
@@ -2384,6 +2365,9 @@ Node {
         "version": "1.1.1",
       },
       "node_modules/rimraf": Object {
+        "bin": Object {
+          "rimraf": "bin.js",
+        },
         "dependencies": Object {
           "glob": "^7.1.3",
         },
@@ -2511,25 +2495,7 @@ Link {
       },
     },
     "lockfileVersion": 2,
-    "name": "root",
     "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
-        },
-        "devDependencies": Object {
-          "foo": "*",
-        },
-        "name": "root",
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
       "../linkedroot": Object {
         "link": true,
         "resolved": "",
@@ -2615,7 +2581,6 @@ Link {
       },
     },
     "requires": true,
-    "version": "1.2.3",
   },
   "name": "linkedroot",
   "realpath": "root",
@@ -3043,6 +3008,59 @@ Node {
   "name": "links-all-over",
   "realpath": "links-all-over",
   "top": "links-all-over",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP load from a hidden lockfile > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "hidden-lockfile",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "realpath": "hidden-lockfile/node_modules/abbrev",
+      "top": "hidden-lockfile",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "hidden-lockfile/node_modules/abbrev",
+      "type": "prod",
+    },
+  },
+  "extraneous": true,
+  "location": "",
+  "meta": Object {
+    "lockfileVersion": 2,
+    "name": "hidden-lockfile",
+    "packages": Object {
+      "": Object {
+        "dependencies": Object {
+          "abbrev": "^1.1.1",
+        },
+        "extraneous": true,
+      },
+      "node_modules/abbrev": Object {
+        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+        "name": "abbrev",
+        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        "version": "1.1.1",
+      },
+    },
+    "requires": true,
+  },
+  "name": "hidden-lockfile",
+  "realpath": "hidden-lockfile",
+  "top": "hidden-lockfile",
 }
 `
 

@@ -8,6 +8,8 @@ const pnpmFixture = resolve(__dirname, '../fixtures/pnpm')
 const depTypesFixture = resolve(__dirname, '../fixtures/dev-deps')
 const bundleFixture = resolve(__dirname, '../fixtures/two-bundled-deps')
 const linkedMeta = resolve(__dirname, '../fixtures/cli-750')
+const Shrinkwrap = require('../../lib/shrinkwrap.js')
+const Node = require('../../lib/node.js')
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -81,6 +83,17 @@ t.test('load from fixture', t =>
     t.matchSnapshot(printTree(virtualTree), 'loaded virtual tree from fixture')
     return new Arborist({ path: fixture, virtualTree}).loadVirtual()
       .then(tree2 => t.equal(tree2, virtualTree, 'same tree reused'))
+  }))
+
+t.test('load from root that already has shrinkwrap', t =>
+  Shrinkwrap.load(fixture).then(meta => {
+    const root = new Node({
+      path: fixture,
+      pkg: require(fixture + '/package.json'),
+      meta,
+    })
+    new Arborist({path: fixture}).loadVirtual({root}).then(virtualTree =>
+      t.equal(virtualTree, root))
   }))
 
 t.test('tree with link deps of link deps', t =>

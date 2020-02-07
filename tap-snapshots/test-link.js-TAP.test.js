@@ -17,7 +17,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
-    "../../../projects/some/kind/of/path" => Node {
+    "" => Node {
       "children": Map {},
       "dev": true,
       "devOptional": true,
@@ -32,7 +32,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "linksIn": Set {
         <*ref_1>,
       },
-      "location": "../../../projects/some/kind/of/path",
+      "location": "",
       "meta": Shrinkwrap {
         "data": Object {
           "dependencies": Object {},
@@ -40,6 +40,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
           "packages": Object {},
         },
         "filename": null,
+        "hiddenLockfile": false,
         "indent": 2,
         "loadedFromDisk": false,
         "path": "/home/user/projects/some/kind/of/path",
@@ -76,7 +77,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
-    "../../../projects/some/kind/of/path" => Node {
+    "" => Node {
       "children": Map {},
       "dev": true,
       "devOptional": true,
@@ -91,7 +92,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "linksIn": Set {
         <*ref_1>,
       },
-      "location": "../../../projects/some/kind/of/path",
+      "location": "",
       "meta": Shrinkwrap {
         "data": Object {
           "dependencies": Object {},
@@ -103,6 +104,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
           },
         },
         "filename": null,
+        "hiddenLockfile": false,
         "indent": 2,
         "loadedFromDisk": false,
         "path": "/home/user/projects/some/kind/of/path",
@@ -130,6 +132,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       },
     },
     "filename": null,
+    "hiddenLockfile": false,
     "indent": 2,
     "loadedFromDisk": false,
     "path": "/home/user/projects/some/kind/of/path",

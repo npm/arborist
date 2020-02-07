@@ -21,4 +21,9 @@ new Arborist({path}).loadActual().then(tree => {
   console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 10e6}ms`)
   if (process.argv.includes('--save'))
     tree.meta.save()
+  if (process.argv.includes('--save-hidden')) {
+    tree.meta.hiddenLockfile = true
+    tree.meta.filename = path + '/node_modules/.package-lock.json'
+    tree.meta.save()
+  }
 }).catch(er => console.error(er))

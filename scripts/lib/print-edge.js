@@ -2,6 +2,7 @@ const printEdge = (edge, inout) => ({
   //name: edge.name,
   type: edge.type,
   spec: edge.spec,
+  ...(edge.accept ? { accept: edge.accept } : {}),
   ...(inout === 'in' ? {
     from: edge.from.location,
   } : {

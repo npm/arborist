@@ -2,27 +2,33 @@ const t = require('tap')
 const depValid = require('../lib/dep-valid.js')
 const npa =  require('npm-package-arg')
 
-t.ok(depValid({}, '', {}), '* is always ok')
+t.ok(depValid({}, '', null, {}), '* is always ok')
 
 t.ok(depValid({
   package: {
     version: '1.2.3',
   },
-}, '1.x', {}), 'range that is satisfied')
+}, '1.x', null, {}), 'range that is satisfied')
+
+t.ok(depValid({
+  package: {
+    version: '2.2.3',
+  },
+}, '1.x', '2.x', {}), 'range that is acceptable')
 
 t.ok(depValid({
   isLink: true,
   realpath: '/some/path'
-}, npa('file:/some/path'), {}), 'links must point at intended target')
+}, npa('file:/some/path'), null, {}), 'links must point at intended target')
 
 t.notOk(depValid({
   isLink: true,
   realpath: '/some/other/path'
-}, 'file:/some/path', {}), 'links must point at intended target')
+}, 'file:/some/path', null, {}), 'links must point at intended target')
 
 t.notOk(depValid({
   realpath: '/some/path'
-}, 'file:/some/path', {}), 'file:// must be a link')
+}, 'file:/some/path', null, {}), 'file:// must be a link')
 
 
 t.ok(depValid({
@@ -31,7 +37,7 @@ t.ok(depValid({
   package: {
     version: '1.2.3',
   },
-}, 'git://host/repo#semver:1.x', {}), 'git url with semver range')
+}, 'git://host/repo#semver:1.x', null, {}), 'git url with semver range')
 
 t.ok(depValid({
   name: 'foo',
@@ -39,51 +45,51 @@ t.ok(depValid({
     name: 'bar',
     version: '1.2.3',
   },
-}, 'npm:bar@1.2.3', {}), 'alias is ok')
+}, 'npm:bar@1.2.3', null, {}), 'alias is ok')
 
 t.ok(depValid({
   resolved: 'https://registry/abbrev-1.1.1.tgz',
   package: {},
-}, 'https://registry/abbrev-1.1.1.tgz', {}), 'remote url match')
+}, 'https://registry/abbrev-1.1.1.tgz', null, {}), 'remote url match')
 
 t.ok(depValid({
   resolved: 'git+ssh://git@github.com/foo/bar',
   package: {},
-}, 'git+ssh://git@github.com/foo/bar.git', {}), 'matching _from saveSpec')
+}, 'git+ssh://git@github.com/foo/bar.git', null, {}), 'matching _from saveSpec')
 
 t.notOk(depValid({
   resolved: 'git+ssh://git@github.com/foo/bar',
   package: {},
-}, 'git+ssh://git@github.com/bar/foo.git', {}), 'different repo')
+}, 'git+ssh://git@github.com/bar/foo.git', null, {}), 'different repo')
 
 t.notOk(depValid({
   package: {},
-}, 'git+ssh://git@github.com/bar/foo.git', {}), 'missing repo')
+}, 'git+ssh://git@github.com/bar/foo.git', null, {}), 'missing repo')
 
 t.ok(depValid({
   resolved: '/path/to/tarball.tgz',
-}, '/path/to/tarball.tgz', {}), 'same tarball')
+}, '/path/to/tarball.tgz', null, {}), 'same tarball')
 
 t.notOk(depValid({
   resolved: '/path/to/other/tarball.tgz',
-}, '/path/to/tarball.tgz', {}), 'different tarball')
+}, '/path/to/tarball.tgz', null, {}), 'different tarball')
 
 t.ok(depValid({
   resolved: 'https://registry.npmjs.org/foo/foo-1.2.3.tgz',
-}, 'latest', {}), 'tagged registry version needs remote tarball')
+}, 'latest', null, {}), 'tagged registry version needs remote tarball')
 
 t.notOk(depValid({
   resolved: 'git+https://registry.npmjs.org/foo/foo-1.2.3.git',
-}, 'latest', {}), 'tagged registry version needs remote tarball, not git')
+}, 'latest', null, {}), 'tagged registry version needs remote tarball, not git')
 
-t.notOk(depValid({}, 'latest', {}),
+t.notOk(depValid({}, 'latest', null, {}),
   'tagged registry version needs remote tarball resolution')
 
 t.test('unsupported dependency type', t => {
   const requestor = { errors: [] }
   const child = {name: 'kid'}
   const request = { type: 'not a type' }
-  t.notOk(depValid(child, request, requestor))
+  t.notOk(depValid(child, request, null, requestor))
   t.match(requestor, {
     errors: [{
       message: 'Unsupported dependency type',
@@ -98,7 +104,7 @@ t.test('invalid tag name', t => {
   const requestor = { errors: [] }
   const child = { name: 'kid' }
   const request = '!!@#$%!#@$!'
-  t.notOk(depValid(child, request, requestor))
+  t.notOk(depValid(child, request, null, requestor))
   t.match(requestor, {
     errors: [{
       message: 'Invalid tag name "!!@#$%!#@$!"',
@@ -113,7 +119,7 @@ t.test('invalid request all together', t => {
   const requestor = { errors: [] }
   const child = { name: 'kid' }
   const request = null
-  t.notOk(depValid(child, request, requestor))
+  t.notOk(depValid(child, request, null, requestor))
   t.match(requestor, {
     errors: [{
       message: 'Invalid dependency specifier',

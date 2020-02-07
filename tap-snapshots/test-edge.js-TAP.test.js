@@ -37,6 +37,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
+      "c" => Edge {},
       "b" => Edge {},
     },
     "isTop": false,

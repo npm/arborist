@@ -112,6 +112,23 @@ const aa = {
   },
 }
 
+const c = {
+  edgesOut: new Map(),
+  edgesIn: new Set(),
+  package: { name: 'c', version: '2.3.4' },
+  isTop: false,
+  parent: top,
+  resolve (n) {
+    return this.parent.resolve(n)
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
+}
+
 t.matchSnapshot(new Edge({
   from: top,
   type: 'peer',
@@ -155,6 +172,22 @@ t.ok(new Edge({
 }).satisfiedBy(b), 'b satisfies b@1.x')
 reset(a)
 reset(b)
+
+t.ok(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '1.x',
+  accept: '2.x',
+}).satisfiedBy(c), 'c@2 satisfies spec:1.x, accept:2.x')
+
+t.ok(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '1.x',
+  accept: '',
+}).satisfiedBy(c), 'c@2 satisfies spec:1.x, accept:*')
 
 const old = new Edge({
   from: a,
@@ -215,6 +248,14 @@ t.throws(() => new Edge({
   name: 'yoinks',
   spec: { yoinks: '1.2.3' },
 }), new TypeError('must provide string spec'))
+
+t.throws(() => new Edge({
+  from: top,
+  type: 'prod',
+  name: 'yoinks',
+  spec: '1.x',
+  accept: { yoinks: '2.2.3' },
+}), new TypeError('accept field must be a string if provided'))
 
 t.throws(() => new Edge({
   from: top,

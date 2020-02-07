@@ -345,6 +345,8 @@ t.test('link dep within node_modules and outside root', t => {
   return Promise.all([
     t.resolveMatchSnapshot(printIdeal(path), 'linky deps with lockfile'),
     t.resolveMatchSnapshot(printIdeal(path, { update: true }), 'linky deps without lockfile'),
+    t.resolveMatchSnapshot(printIdeal(path, { follow: true }), 'linky deps followed'),
+    t.resolveMatchSnapshot(printIdeal(path, { update: true, follow: true }), 'linky deps followed without lockfile'),
   ])
 })
 

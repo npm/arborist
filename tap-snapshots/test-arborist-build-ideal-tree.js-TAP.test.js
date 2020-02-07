@@ -1755,6 +1755,206 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP link dep within node_modules and outside root > linky deps followed 1`] = `
+Node {
+  "children": Map {
+    "aaaaaa" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "aaaaaa",
+          "spec": "file:./node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/aaaaaa",
+      "name": "aaaaaa",
+      "resolved": "file:abbrev",
+      "target": Object {
+        "name": "abbrev",
+        "parent": "",
+      },
+    },
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "monorepo" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "monorepo",
+          "spec": "../cli-750",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/monorepo",
+      "name": "monorepo",
+      "resolved": "file:../../cli-750",
+      "target": Object {
+        "name": "cli-750",
+        "parent": undefined,
+      },
+    },
+    "zzzzzz" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "zzzzzz",
+          "spec": "file:./node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/zzzzzz",
+      "name": "zzzzzz",
+      "resolved": "file:abbrev",
+      "target": Object {
+        "name": "abbrev",
+        "parent": "",
+      },
+    },
+  },
+  "edgesOut": Map {
+    "aaaaaa" => Edge {
+      "name": "aaaaaa",
+      "spec": "file:./node_modules/abbrev",
+      "to": "node_modules/aaaaaa",
+      "type": "prod",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "*",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "monorepo" => Edge {
+      "name": "monorepo",
+      "spec": "../cli-750",
+      "to": "node_modules/monorepo",
+      "type": "prod",
+    },
+    "zzzzzz" => Edge {
+      "name": "zzzzzz",
+      "spec": "file:./node_modules/abbrev",
+      "to": "node_modules/zzzzzz",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "external-link-dep",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP link dep within node_modules and outside root > linky deps followed without lockfile 1`] = `
+Node {
+  "children": Map {
+    "aaaaaa" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "aaaaaa",
+          "spec": "file:./node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/aaaaaa",
+      "name": "aaaaaa",
+      "resolved": "file:abbrev",
+      "target": Object {
+        "name": "zzzzzz",
+        "parent": null,
+      },
+    },
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "monorepo" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "monorepo",
+          "spec": "../cli-750",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/monorepo",
+      "name": "monorepo",
+      "resolved": "file:../../cli-750",
+      "target": Object {
+        "name": "monorepo",
+        "parent": null,
+      },
+    },
+    "zzzzzz" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "zzzzzz",
+          "spec": "file:./node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/zzzzzz",
+      "name": "zzzzzz",
+      "resolved": "file:abbrev",
+      "target": Object {
+        "name": "zzzzzz",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "aaaaaa" => Edge {
+      "name": "aaaaaa",
+      "spec": "file:./node_modules/abbrev",
+      "to": "node_modules/aaaaaa",
+      "type": "prod",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "*",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "monorepo" => Edge {
+      "name": "monorepo",
+      "spec": "../cli-750",
+      "to": "node_modules/monorepo",
+      "type": "prod",
+    },
+    "zzzzzz" => Edge {
+      "name": "zzzzzz",
+      "spec": "file:./node_modules/abbrev",
+      "to": "node_modules/zzzzzz",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "external-link-dep",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP link dep within node_modules and outside root > linky deps with lockfile 1`] = `
 Node {
   "children": Map {

@@ -41,7 +41,7 @@
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
   "license": "ISC",
   "files": [
-    "lib/"
+    "lib/**/*.js"
   ],
   "main": "lib/index.js",
   "tap": {

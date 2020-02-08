@@ -39,6 +39,9 @@ for (let i = 2; i < process.argv.length; i++) {
     options.update = options.update || {}
     options.update.names = options.update.names || []
     options.update.names.push(arg.substr('--update='.length))
+  } else if (/^--omit=/.test(arg)) {
+    options.omit = options.omit || []
+    options.omit.push(arg.substr('--omit='.length))
   } else if (/^--[^=]+=/.test(arg)) {
     const [key, ...v] = arg.replace(/^--/, '').split('=')
     const val = v.join('=')

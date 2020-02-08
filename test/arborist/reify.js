@@ -137,6 +137,23 @@ const reify = (path, opt) =>
 t.test('testing-peer-deps package', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps'))))
 
+t.test('omit peer deps', t => {
+  const path = fixture(t, 'testing-peer-deps')
+  return reify(path, { omit: ['peer'] })
+    .then(tree => {
+      for (const node of tree.inventory.values()) {
+        t.equal(node.peer, false, 'did not reify any peer nodes')
+      }
+      const lock = require(tree.path + '/package-lock.json')
+      for (const [loc, meta] of Object.entries(lock.packages)) {
+        if (meta.peer)
+          t.throws(() => fs.statSync(resolve(path, loc)), 'peer not reified')
+        else
+          t.equal(fs.statSync(resolve(path, loc)).isDirectory(), true)
+      }
+    })
+})
+
 t.test('testing-peer-deps nested', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-nested'))))
 
@@ -163,6 +180,40 @@ t.test('update a bundling node without updating all of its deps', t => {
     { add: { devDependencies: { tap: '14.10.5' } } }))
     .then(checkBin)
     .then(checkPackageLock)
+})
+
+t.test('omit optional dep', t => {
+  const path = fixture(t, 'tap-react15-collision-legacy-sw')
+  const ignoreScripts = true
+  return new Arborist({ path, ignoreScripts }).reify({ omit: ['optional'] })
+    .then(tree => {
+      t.equal(tree.children.get('fsevents'), undefined, 'no fsevents in tree')
+      t.throws(() => fs.statSync(path + '/node_modules/fsevents'), 'no fsevents unpacked')
+      t.match(require(path +'/package-lock.json').dependencies.fsevents, {
+        dev: true,
+        optional: true,
+      }, 'fsevents present in lockfile')
+    })
+})
+
+t.test('dev, optional, devOptional flags and omissions', t => {
+  const path = 'testing-dev-optional-flags'
+  const omits = [['dev'], ['dev', 'optional'], ['optional']]
+  t.plan(omits.length)
+  omits.forEach(omit => t.test(omit.join(','), t =>
+    t.resolveMatchSnapshot(printReified(fixture(t, path), {
+      omit,
+    }))))
+})
+
+t.test('omits when both dev and optional flags are set', t => {
+  const path = 'testing-dev-optional-flags-2'
+  const omits = [['dev'], ['optional']]
+  t.plan(omits.length)
+  omits.forEach(omit => t.test(omit.join(','), t =>
+    t.resolveMatchSnapshot(printReified(fixture(t, path), {
+      omit,
+    }))))
 })
 
 t.test('bad shrinkwrap file', t =>

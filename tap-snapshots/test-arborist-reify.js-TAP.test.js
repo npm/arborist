@@ -179,6 +179,200 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP dev, optional, devOptional flags and omissions dev > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "own-or" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "own-or",
+          "spec": "^1.0.0",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/own-or",
+      "name": "own-or",
+      "optional": true,
+      "resolved": "https://registry.npmjs.org/own-or/-/own-or-1.0.0.tgz",
+    },
+    "wrappy" => Node {
+      "devOptional": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "wrappy",
+          "spec": "^1.0.2",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "error": "MISSING",
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": null,
+      "type": "dev",
+    },
+    "once" => Edge {
+      "error": "MISSING",
+      "name": "once",
+      "spec": "^1.4.0",
+      "to": null,
+      "type": "dev",
+    },
+    "own-or" => Edge {
+      "name": "own-or",
+      "spec": "^1.0.0",
+      "to": "node_modules/own-or",
+      "type": "optional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "^1.0.2",
+      "to": "node_modules/wrappy",
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-dev-optional-devOptional-flags-and-omissions-dev",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP dev, optional, devOptional flags and omissions dev,optional > expect resolving Promise 1`] = `
+Node {
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "error": "MISSING",
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": null,
+      "type": "dev",
+    },
+    "once" => Edge {
+      "error": "MISSING",
+      "name": "once",
+      "spec": "^1.4.0",
+      "to": null,
+      "type": "dev",
+    },
+    "own-or" => Edge {
+      "name": "own-or",
+      "spec": "^1.0.0",
+      "to": null,
+      "type": "optional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "^1.0.2",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-dev-optional-devOptional-flags-and-omissions-dev-optional",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP dev, optional, devOptional flags and omissions optional > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "once" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "once",
+          "spec": "^1.4.0",
+          "type": "dev",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+    "wrappy" => Node {
+      "devOptional": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "wrappy",
+          "spec": "^1.0.2",
+          "type": "optional",
+        },
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "dev",
+    },
+    "once" => Edge {
+      "name": "once",
+      "spec": "^1.4.0",
+      "to": "node_modules/once",
+      "type": "dev",
+    },
+    "own-or" => Edge {
+      "name": "own-or",
+      "spec": "^1.0.0",
+      "to": null,
+      "type": "optional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "^1.0.2",
+      "to": "node_modules/wrappy",
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-dev-optional-devOptional-flags-and-omissions-optional",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP do not add shrinkwrapped deps > expect resolving Promise 1`] = `
 Node {
   "children": Map {
@@ -11694,6 +11888,69 @@ Node {
   },
   "location": "",
   "name": "reify-multiple-bundles-at-the-same-level",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP omits when both dev and optional flags are set dev > expect resolving Promise 1`] = `
+Node {
+  "edgesOut": Map {
+    "@isaacs/testing-dev-optional-flags" => Edge {
+      "error": "MISSING",
+      "name": "@isaacs/testing-dev-optional-flags",
+      "spec": "*",
+      "to": null,
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "reify-omits-when-both-dev-and-optional-flags-are-set-dev",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP omits when both dev and optional flags are set optional > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-dev-optional-flags" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-dev-optional-flags",
+          "spec": "*",
+          "type": "dev",
+        },
+      },
+      "edgesOut": Map {
+        "own-or" => Edge {
+          "name": "own-or",
+          "spec": "^1.0.0",
+          "to": null,
+          "type": "optional",
+        },
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "^1.0.2",
+          "to": null,
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-dev-optional-flags",
+      "name": "@isaacs/testing-dev-optional-flags",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-dev-optional-flags/-/testing-dev-optional-flags-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-dev-optional-flags" => Edge {
+      "name": "@isaacs/testing-dev-optional-flags",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-dev-optional-flags",
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "reify-omits-when-both-dev-and-optional-flags-are-set-optional",
   "resolved": null,
 }
 `

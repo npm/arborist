@@ -5,6 +5,153 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/arborist/reify.js TAP a workspace with a duplicated nested conflicted dep > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "bar" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "bar",
+          "spec": "file:packages/bar",
+          "type": "prod",
+        },
+        Edge {
+          "from": "packages/foo",
+          "name": "bar",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/bar",
+      "name": "bar",
+      "resolved": "file:../packages/bar",
+      "target": Object {
+        "name": "bar",
+        "parent": null,
+      },
+    },
+    "foo" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "foo",
+          "spec": "file:packages/foo",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/foo",
+      "name": "foo",
+      "resolved": "file:../packages/foo",
+      "target": Object {
+        "name": "foo",
+        "parent": null,
+      },
+    },
+    "minimist" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "0.0.8",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/minimist",
+      "name": "minimist",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+    },
+    "mkdirp" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/bar",
+          "name": "mkdirp",
+          "spec": "0.x",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "minimist" => Edge {
+          "name": "minimist",
+          "spec": "0.0.8",
+          "to": "node_modules/minimist",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "bar" => Edge {
+      "name": "bar",
+      "spec": "file:packages/bar",
+      "to": "node_modules/bar",
+      "type": "prod",
+    },
+    "foo" => Edge {
+      "name": "foo",
+      "spec": "file:packages/foo",
+      "to": "node_modules/foo",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "mkdirp" => Edge {
+          "name": "mkdirp",
+          "spec": "0.x",
+          "to": "node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/bar",
+      "name": "bar",
+      "resolved": null,
+    },
+    Node {
+      "children": Map {
+        "mkdirp" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "packages/foo",
+              "name": "mkdirp",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "location": "packages/foo/node_modules/mkdirp",
+          "name": "mkdirp",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.3.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "bar" => Edge {
+          "name": "bar",
+          "spec": "^1.0.0",
+          "to": "node_modules/bar",
+          "type": "prod",
+        },
+        "mkdirp" => Edge {
+          "name": "mkdirp",
+          "spec": "1",
+          "to": "packages/foo/node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/foo",
+      "name": "foo",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "reify-a-workspace-with-a-duplicated-nested-conflicted-dep",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP bad shrinkwrap file > expect resolving Promise 1`] = `
 Node {
   "children": Map {
@@ -646,6 +793,13 @@ Node {
           "type": "prod",
         },
       },
+      "fsChildren": Set {
+        Node {
+          "location": "node_modules/@isaacs/testing-link-dep/target",
+          "name": "linked-dep",
+          "resolved": null,
+        },
+      },
       "location": "node_modules/@isaacs/testing-link-dep",
       "name": "@isaacs/testing-link-dep",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-link-dep/-/testing-link-dep-1.0.0.tgz",
@@ -824,6 +978,26 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "lib" => Edge {
+          "name": "lib",
+          "spec": "file:../lib",
+          "to": "node_modules/lib",
+          "type": "prod",
+        },
+      },
+      "location": "app",
+      "name": "app",
+      "resolved": null,
+    },
+    Node {
+      "location": "lib",
+      "name": "lib",
+      "resolved": null,
+    },
+  },
   "location": "",
   "name": "reify-link-metadep-cli-750",
   "resolved": null,
@@ -874,6 +1048,26 @@ Node {
       "spec": "file:./app",
       "to": "node_modules/app",
       "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "lib" => Edge {
+          "name": "lib",
+          "spec": "file:../lib",
+          "to": "node_modules/lib",
+          "type": "prod",
+        },
+      },
+      "location": "app",
+      "name": "app",
+      "resolved": null,
+    },
+    Node {
+      "location": "lib",
+      "name": "lib",
+      "resolved": null,
     },
   },
   "location": "",

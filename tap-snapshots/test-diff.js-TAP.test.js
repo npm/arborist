@@ -25,12 +25,15 @@ Diff {
     "/path/to/root/node_modules/p/node_modules/q",
     "/path/to/root/node_modules/bundler/node_modules/metabundled",
     "/path/to/root/node_modules/bundler/node_modules/not-bundled",
+    "/path/to/root/foo/node_modules/baz",
     "/path/to/root/node_modules/i/node_modules/j",
+    "/path/to/root/foo/node_modules/boo",
   ],
   "unchanged": Array [
     "/path/to/root/node_modules/x",
     "/path/to/root/node_modules/bundler",
     "/path/to/root/node_modules/bundler/node_modules/bundled-a",
+    "/path/to/root/foo/node_modules/bar",
     "/path/to/root/node_modules/b/node_modules/d",
     "/path/to/root/node_modules/b/node_modules/f",
     "/path/to/root/node_modules/x/node_modules/y/node_modules/z",
@@ -41,6 +44,40 @@ Diff {
     "/path/to/root/node_modules/p/node_modules/q",
   ],
   "children": Array [
+    Diff {
+      "action": "CHANGE",
+      "actual": Node {
+        "name": "baz",
+        "path": "/path/to/root/foo/node_modules/baz",
+        "integrity": "sha512-baz",
+      },
+      "ideal": Node {
+        "name": "baz",
+        "path": "/path/to/root/foo/node_modules/baz",
+        "integrity": "sha512-BAZ",
+      },
+      "leaves": Array [
+        "/path/to/root/foo/node_modules/baz",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+    Diff {
+      "action": "ADD",
+      "actual": undefined,
+      "ideal": Node {
+        "name": "boo",
+        "path": "/path/to/root/foo/node_modules/boo",
+        "integrity": "sha512-BOO",
+      },
+      "leaves": Array [
+        "/path/to/root/foo/node_modules/boo",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
     Diff {
       "action": "CHANGE",
       "actual": Node {

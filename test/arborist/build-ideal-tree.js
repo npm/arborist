@@ -61,6 +61,11 @@ const printTree = tree => ({
       .sort((a, b) => a[0].localeCompare(b[0]))
       .map(([name, edge]) => [name, printEdge(edge, 'out')]))
   } : {}),
+  ...( !tree.fsChildren.size ? {} : {
+    fsChildren: new Set([...tree.fsChildren]
+      .sort((a, b) => a.path.localeCompare(b.path))
+      .map(tree => printTree(tree))),
+  }),
   ...( tree.target || !tree.children.size ? {}
     : {
       children: new Map([...tree.children.entries()]
@@ -79,6 +84,10 @@ const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 
 const buildIdeal = (path, opt) =>
   new Arborist({cache, registry, path, ...(opt || {})}).buildIdealTree(opt)
+
+t.test('a workspace with a conflicted nested duplicated dep', t =>
+  t.resolveMatchSnapshot(printIdeal(
+    resolve(__dirname, '../fixtures/workspace4'))))
 
 t.test('testing-peer-deps package', t => {
   const path = resolve(__dirname, '../fixtures/testing-peer-deps')

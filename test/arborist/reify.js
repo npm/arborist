@@ -1,8 +1,6 @@
 const {basename, resolve} = require('path')
 const t = require('tap')
 const requireInject = require('require-inject')
-const Node = require('../../lib/node.js')
-const Shrinkwrap = require('../../lib/shrinkwrap.js')
 
 // mock rimraf so we can make it fail in rollback tests
 const realRimraf = require('rimraf')
@@ -24,6 +22,8 @@ let failRename = null
 let failRenameOnce = null
 let failMkdir = null
 const {rename: realRename, mkdir: realMkdir} = fs
+const Node = require('../../lib/node.js')
+const Shrinkwrap = require('../../lib/shrinkwrap.js')
 
 const Arborist = requireInject('../../lib/arborist', {
   rimraf: rimrafMock,
@@ -44,7 +44,7 @@ const Arborist = requireInject('../../lib/arborist', {
       } else
         realRename(...args)
     },
-  }
+  },
 })
 
 const registryServer = require('../fixtures/registry-mocks/server.js')
@@ -110,6 +110,11 @@ const printTree = tree => ({
       .sort((a, b) => a[0].localeCompare(b[0]))
       .map(([name, edge]) => [name, printEdge(edge, 'out')]))
   } : {}),
+  ...( !tree.fsChildren.size ? {} : {
+    fsChildren: new Set([...tree.fsChildren]
+      .sort((a, b) => a.path.localeCompare(b.path))
+      .map(tree => printTree(tree))),
+  }),
   ...( tree.target || !tree.children.size ? {}
     : {
       children: new Map([...tree.children.entries()]
@@ -156,6 +161,9 @@ t.test('omit peer deps', t => {
 
 t.test('testing-peer-deps nested', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-nested'))))
+
+t.test('a workspace with a duplicated nested conflicted dep', t =>
+  t.resolveMatchSnapshot(printReified(fixture(t, 'workspace4'))))
 
 t.test('testing-peer-deps nested with update', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-nested'), {

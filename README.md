@@ -9,7 +9,7 @@ folder](https://github.com/npm/arborist/tree/master/notes).
 
 ## USAGE
 
-```javascript
+```js
 const Arborist = require('@npmcli/arborist')
 
 const arb = new Arborist({

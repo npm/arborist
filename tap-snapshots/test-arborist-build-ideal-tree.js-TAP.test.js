@@ -2910,7 +2910,7 @@ Node {
         Edge {
           "from": "",
           "name": "@isaacs/peer-dep-cycle-b",
-          "spec": "2.x",
+          "spec": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
           "type": "prod",
         },
         Edge {
@@ -2964,7 +2964,7 @@ Node {
     },
     "@isaacs/peer-dep-cycle-b" => Edge {
       "name": "@isaacs/peer-dep-cycle-b",
-      "spec": "2.x",
+      "spec": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
       "to": "node_modules/@isaacs/peer-dep-cycle-b",
       "type": "prod",
     },
@@ -3585,7 +3585,7 @@ Node {
         Edge {
           "from": "",
           "name": "@isaacs/peer-dep-cycle-b",
-          "spec": "2.x",
+          "spec": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
           "type": "prod",
         },
         Edge {
@@ -3639,7 +3639,7 @@ Node {
     },
     "@isaacs/peer-dep-cycle-b" => Edge {
       "name": "@isaacs/peer-dep-cycle-b",
-      "spec": "2.x",
+      "spec": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
       "to": "node_modules/@isaacs/peer-dep-cycle-b",
       "type": "prod",
     },

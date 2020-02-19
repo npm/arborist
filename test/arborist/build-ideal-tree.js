@@ -3,6 +3,7 @@ const t = require('tap')
 const Arborist = require('../..')
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry} = registryServer
+const npa = require('npm-package-arg')
 
 t.test('setup server', { bail: true }, registryServer)
 
@@ -79,6 +80,7 @@ const { format } = require('tcompare')
 
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
+  .split(registry).join('https://registry.npmjs.org/')
 
 const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 
@@ -131,33 +133,33 @@ t.test('cyclical peer deps', t => {
     t.resolveMatchSnapshot(printIdeal(path), 'cyclical peer deps')
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         // just reload the dep at its current required version
-        add: { dependencies: { '@isaacs/peer-dep-cycle-a': '' } },
+        add: { dependencies: [ '@isaacs/peer-dep-cycle-a' ] },
       }), 'cyclical peer deps - reload a dependency'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
           // also add a devDep just to verify it works when adding
           // a type that isn't already in the root's package
-          devDependencies: {
-            abbrev: '',
-          },
-          dependencies: {
-            '@isaacs/peer-dep-cycle-a': '2.x'
-          }
+          devDependencies: [
+            'abbrev',
+          ],
+          dependencies: [
+            '@isaacs/peer-dep-cycle-a@2.x',
+          ]
         },
       }), 'cyclical peer deps - upgrade a package'))
       .then(() => t.rejects(printIdeal(path, {
         add: {
-          dependencies: {
+          dependencies: [
             // this conflicts with the direct dep on a@1 PEER-> b@1
-            '@isaacs/peer-dep-cycle-b': '2.x',
-          },
+            '@isaacs/peer-dep-cycle-b@2.x',
+          ],
         },
       })))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
-          dependencies: {
-            '@isaacs/peer-dep-cycle-b': '2.x',
-          },
+          dependencies: [
+            '@isaacs/peer-dep-cycle-b@2.x',
+          ],
         },
         rm: [ '@isaacs/peer-dep-cycle-a' ],
       }), 'can add b@2 if we remove a@1 dep'))
@@ -177,31 +179,31 @@ t.test('nested cyclical peer deps', t => {
     t.resolveMatchSnapshot(printIdeal(path), 'nested peer deps cycle')
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
-          dependencies: {
-            '@isaacs/peer-dep-cycle-a': '2.x',
-          },
+          dependencies: [
+            npa('@isaacs/peer-dep-cycle-a@2.x'),
+          ],
         },
       }), 'upgrade a'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
-          dependencies: {
-            '@isaacs/peer-dep-cycle-b': '2.x',
-          },
+          dependencies: [
+            `${registry}@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz`,
+          ],
         },
       }), 'upgrade b'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: {
-          dependencies: {
-            '@isaacs/peer-dep-cycle-c': '2.x',
-          },
+          dependencies: [
+            '@isaacs/peer-dep-cycle-c@2.x',
+          ],
         },
       }), 'upgrade c'))
       .then(() => t.rejects(printIdeal(path, {
         add: {
-          dependencies: {
-            '@isaacs/peer-dep-cycle-a': '1.x',
-            '@isaacs/peer-dep-cycle-c': '2.x',
-          },
+          dependencies: [
+            '@isaacs/peer-dep-cycle-a@1.x',
+            '@isaacs/peer-dep-cycle-c@2.x',
+          ],
         },
       }), 'try (and fail) to upgrade c and a incompatibly'))
   ))
@@ -238,7 +240,7 @@ t.test('bundle deps example 1', t => {
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       add: {
-        bundleDependencies: ['@isaacs/testing-bundledeps'],
+        bundleDependencies: [ '@isaacs/testing-bundledeps' ],
       },
     }), 'bundle the bundler'))
 })

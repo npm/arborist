@@ -185,7 +185,7 @@ t.test('update a bundling node without updating all of its deps', t => {
   }
 
   return t.resolveMatchSnapshot(printReified(path,
-    { add: { devDependencies: { tap: '14.10.5' } } }))
+    { add: { devDependencies: [ 'tap@14.10.5' ] } }))
     .then(checkBin)
     .then(checkPackageLock)
 })
@@ -286,10 +286,10 @@ t.test('link meta deps, update', t =>
     // use legacy nesting so we leave the link nested
     legacyNesting: true,
     add: {
-      dependencies: {
-        '@isaacs/testing-link-dep': '2',
-        '@isaacs/testing-link-dev-dep': '2',
-      },
+      dependencies: [
+        '@isaacs/testing-link-dep@2',
+        '@isaacs/testing-link-dev-dep@2',
+      ],
     },
   })))
 
@@ -640,6 +640,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
 t.test('saving the ideal tree', t => {
   const kSaveIdealTree = Symbol.for('saveIdealTree')
+  const kResolvedAdd = Symbol.for('resolvedAdd')
   t.test('save=false', t => {
     // doesn't actually do anything, just for coverage.
     // if it wasn't an early exit, it'd blow up and throw
@@ -661,6 +662,17 @@ t.test('saving the ideal tree', t => {
       devDependencies: {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
       },
+    }
+    const add = {
+      bundleDependencies: ['a', 'b', 'c'],
+      dependencies: [
+        'a@git+ssh://git@github.com:foo/bar#baz',
+        'b',
+        'd@npm:c@1.x',
+      ],
+      devDependencies: [
+        `c@git+ssh://git@githost.com:a/b/c.git#master`,
+      ],
     }
     const path = t.testdir({
       'package.json': JSON.stringify(pkg)
@@ -703,9 +715,9 @@ t.test('saving the ideal tree', t => {
         parent: tree,
       })
 
+      a[kResolvedAdd] = pkg
       return a[kSaveIdealTree]({
         savePrefix: '~',
-        add: pkg,
       })
     }).then(() => {
       t.matchSnapshot(require(path + '/package-lock.json'), 'lock after save')
@@ -731,7 +743,7 @@ t.test('bin links adding and removing', t => {
     'package.json': JSON.stringify({}),
   })
   const rbin = resolve(path, 'node_modules/.bin/rimraf')
-  return reify(path, { add: { dependencies: { rimraf: '2.7.1' }}})
+  return reify(path, { add: { dependencies: [ 'rimraf@2.7.1' ]}})
     .then(() => fs.statSync(rbin)) // should be there
     .then(() => reify(path, { rm: ['rimraf'] }))
     .then(() => t.throws(() => fs.statSync(rbin))) // should be gone

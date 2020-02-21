@@ -12,17 +12,21 @@ for (let i = 2; i < process.argv.length; i++) {
   const arg = process.argv[i]
   if (/^--add-dev=/.test(arg)) {
     options.add = options.add || {}
-    options.add.devDependencies = options.add.devDependencies || {}
-    const spec = npa(arg.substr('--add-dev='.length))
-    options.add.devDependencies[spec.name] = spec.rawSpec
+    options.add.devDependencies = options.add.devDependencies || []
+    const spec = arg.substr('--add-dev='.length)
+    options.add.devDependencies.push(spec)
   } else if (/^--add=/.test(arg)) {
     options.add = options.add || {}
-    options.add.dependencies = options.add.dependencies || {}
-    const spec = npa(arg.substr('--add='.length))
-    options.add.dependencies[spec.name] = spec.rawSpec
+    options.add.dependencies = options.add.dependencies || []
+    const spec = arg.substr('--add='.length)
+    options.add.dependencies.push(spec)
   } else if (/^--rm=/.test(arg)) {
     options.rm = options.rm || []
     options.rm.push(arg.substr('--rm='.length))
+  } else if (arg === '--global') {
+    options.global = true
+  } else if (arg === '--global-style') {
+    options.globalStyle = true
   } else if (arg === '--prefer-dedupe')
     options.preferDedupe = true
   else if (arg === '--save')

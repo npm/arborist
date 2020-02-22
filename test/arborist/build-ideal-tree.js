@@ -1015,3 +1015,64 @@ t.test('no fix available, linked top package', async t => {
     "'cd ./mkdirp-unfixable' and run 'npm audit' for details."
   ]])
 })
+
+t.test('workspaces', t => {
+  t.test('should install a simple example', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-simple')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should install a simple scoped pkg example', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-scoped-pkg')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should not work with duplicate names', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-duplicate')
+    return t.rejects(printIdeal(path), { code: 'EDUPLICATEWORKSPACE' }, 'throws EDUPLICATEWORKSPACE error')
+  })
+
+  t.test('should install shared dependencies into root folder', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-shared-deps')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should install conflicting dep versions', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-conflicting-versions')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should prefer linking nested workspaces', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-prefer-linking')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should install from registry on version not satisfied', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-version-unsatisfied')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should link top level nested workspaces', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-top-level-link')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should install workspace transitive dependencies', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-transitive-deps')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should ignore nested node_modules folders', t => {
+    // packages/a/node_modules/nested-workspaces should not be installed
+    const path = resolve(__dirname, '../fixtures/workspaces-ignore-nm')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.test('should work with files spec', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-with-files-spec')
+    return t.resolveMatchSnapshot(printIdeal(path))
+  })
+
+  t.end()
+})
+

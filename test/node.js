@@ -1134,6 +1134,7 @@ t.test('has install script', t => {
   t.end()
 })
 
+
 t.test('legacy peer dependencies', t => {
   const root = new Node({
     pkg: {
@@ -1160,5 +1161,77 @@ t.test('legacy peer dependencies', t => {
 
   t.equal(root.children.get('foo'), foo, 'should be a children')
   t.equal(root.edgesOut.size, 0, 'should have no edges out')
+  t.end()
+})
+
+t.test('set workspaces', t => {
+  const root = new Node({
+    pkg: { name: 'workspaces_root' },
+    path: '/home/user/projects/workspaces_root',
+    realpath: '/home/user/projects/workspaces_root',
+  })
+
+  root.workspaces = new Map([
+    ['foo', '/home/user/projects/workspaces_root/foo'],
+    ['bar', '/home/user/projects/workspaces_root/bar'],
+  ])
+
+  t.matchSnapshot(root, 'should setup edges out for each workspace')
+  t.end()
+})
+
+t.test('get workspaces', t => {
+  const root = new Node({
+    pkg: { name: 'workspaces_root' },
+    path: '/home/user/projects/workspaces_root',
+    realpath: '/home/user/projects/workspaces_root',
+  })
+
+  t.equal(root.workspaces, null, 'should default to null when no workspaces defined')
+
+  const ws = new Map()
+  root.workspaces = ws
+
+  t.equal(root.workspaces, ws, 'should match set value')
+  t.end()
+})
+
+t.test('replace workspaces', t => {
+  const root = new Node({
+    pkg: { name: 'workspaces_root' },
+    path: '/home/user/projects/workspaces_root',
+    realpath: '/home/user/projects/workspaces_root',
+  })
+
+  root.workspaces = new Map([
+    ['foo', '/home/user/projects/workspaces_root/foo'],
+    ['bar', '/home/user/projects/workspaces_root/bar'],
+  ])
+
+  const ws = new Map()
+  root.workspaces = ws
+
+  t.equal(root.workspaces, ws, 'should remove previously set workspaces')
+  t.end()
+})
+
+t.test('replace workspaces keeping existing edges out', t => {
+  const root = new Node({
+    pkg: { name: 'workspaces_root' },
+    path: '/home/user/projects/workspaces_root',
+    realpath: '/home/user/projects/workspaces_root',
+  })
+
+  root.workspaces = new Map([
+    ['foo', '/home/user/projects/workspaces_root/foo'],
+  ])
+
+  const ws = new Map([
+    ['foo', '/home/user/projects/workspaces_root/foo'],
+    ['bar', '/home/user/projects/workspaces_root/bar'],
+  ])
+  root.workspaces = ws
+
+  t.equal(root.workspaces, ws, 'should keep existing edges out')
   t.end()
 })

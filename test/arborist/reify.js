@@ -886,3 +886,38 @@ t.test('global', t => {
 
   t.end()
 })
+
+t.test('workspaces', t => {
+  t.test('reify simple-workspaces', t =>
+    t.resolveMatchSnapshot(printReified(fixture(t, 'workspaces-simple')), 'should reify simple workspaces'))
+
+  t.test('reify workspaces lockfile', t => {
+    const path = fixture(t, 'workspaces-simple')
+    reify(path).then(() => {
+      t.matchSnapshot(require(path + '/package-lock.json'), 'should lock workspaces config')
+      t.end()
+    })
+  })
+
+  t.test('reify workspaces bin files', t => {
+    const path = fixture(t, 'workspaces-link-bin')
+
+    const bins = [
+      resolve(path, 'node_modules/.bin/a'),
+      resolve(path, 'node_modules/.bin/b'),
+    ]
+
+    const checkBin = () => {
+      for (const bin of bins)
+        if (process.platform === 'win32')
+          t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
+        else
+          t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+    }
+
+    return t.resolveMatchSnapshot(printReified(path, {}))
+      .then(checkBin)
+  })
+
+  t.end()
+})

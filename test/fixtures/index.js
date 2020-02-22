@@ -89,6 +89,8 @@ const symlinks = {
   'pnpm/node_modules/@scope/x':
     '../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x',
   'pnpm/node_modules/a': '.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a',
+
+  'global-style/lib-link': './lib',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

@@ -889,3 +889,17 @@ t.test('contrived dep placement tests', t => {
 
   t.end()
 })
+
+t.test('global style', t => t.resolveMatchSnapshot(printIdeal(t.testdir(), {
+  globalStyle: true,
+  add: { dependencies: [ 'rimraf' ] },
+})))
+
+t.test('global', t => t.resolveMatchSnapshot(printIdeal(t.testdir(), {
+  global: true,
+  add: { dependencies: [ 'rimraf' ] },
+})))
+
+t.test('global has to add or remove', t => t.rejects(printIdeal(t.testdir(), {
+  global: true,
+})))

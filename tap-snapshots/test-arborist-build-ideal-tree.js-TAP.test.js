@@ -1815,6 +1815,562 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP global > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "rimraf" => Node {
+      "children": Map {
+        "balanced-match" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/brace-expansion",
+              "name": "balanced-match",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/balanced-match",
+          "name": "balanced-match",
+          "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+        },
+        "brace-expansion" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/minimatch",
+              "name": "brace-expansion",
+              "spec": "^1.1.7",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "balanced-match" => Edge {
+              "name": "balanced-match",
+              "spec": "^1.0.0",
+              "to": "node_modules/rimraf/node_modules/balanced-match",
+              "type": "prod",
+            },
+            "concat-map" => Edge {
+              "name": "concat-map",
+              "spec": "0.0.1",
+              "to": "node_modules/rimraf/node_modules/concat-map",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/brace-expansion",
+          "name": "brace-expansion",
+          "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+        },
+        "concat-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/brace-expansion",
+              "name": "concat-map",
+              "spec": "0.0.1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/concat-map",
+          "name": "concat-map",
+          "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+        },
+        "fs.realpath" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "fs.realpath",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/fs.realpath",
+          "name": "fs.realpath",
+          "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+        },
+        "glob" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf",
+              "name": "glob",
+              "spec": "^7.1.3",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "fs.realpath" => Edge {
+              "name": "fs.realpath",
+              "spec": "^1.0.0",
+              "to": "node_modules/rimraf/node_modules/fs.realpath",
+              "type": "prod",
+            },
+            "inflight" => Edge {
+              "name": "inflight",
+              "spec": "^1.0.4",
+              "to": "node_modules/rimraf/node_modules/inflight",
+              "type": "prod",
+            },
+            "inherits" => Edge {
+              "name": "inherits",
+              "spec": "2",
+              "to": "node_modules/rimraf/node_modules/inherits",
+              "type": "prod",
+            },
+            "minimatch" => Edge {
+              "name": "minimatch",
+              "spec": "^3.0.4",
+              "to": "node_modules/rimraf/node_modules/minimatch",
+              "type": "prod",
+            },
+            "once" => Edge {
+              "name": "once",
+              "spec": "^1.3.0",
+              "to": "node_modules/rimraf/node_modules/once",
+              "type": "prod",
+            },
+            "path-is-absolute" => Edge {
+              "name": "path-is-absolute",
+              "spec": "^1.0.0",
+              "to": "node_modules/rimraf/node_modules/path-is-absolute",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/glob",
+          "name": "glob",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.6.tgz",
+        },
+        "inflight" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "inflight",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "once" => Edge {
+              "name": "once",
+              "spec": "^1.3.0",
+              "to": "node_modules/rimraf/node_modules/once",
+              "type": "prod",
+            },
+            "wrappy" => Edge {
+              "name": "wrappy",
+              "spec": "1",
+              "to": "node_modules/rimraf/node_modules/wrappy",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/inflight",
+          "name": "inflight",
+          "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+        },
+        "inherits" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "inherits",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/inherits",
+          "name": "inherits",
+          "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+        },
+        "minimatch" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "minimatch",
+              "spec": "^3.0.4",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "brace-expansion" => Edge {
+              "name": "brace-expansion",
+              "spec": "^1.1.7",
+              "to": "node_modules/rimraf/node_modules/brace-expansion",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/minimatch",
+          "name": "minimatch",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+        },
+        "once" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "once",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/rimraf/node_modules/inflight",
+              "name": "once",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "wrappy" => Edge {
+              "name": "wrappy",
+              "spec": "1",
+              "to": "node_modules/rimraf/node_modules/wrappy",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/once",
+          "name": "once",
+          "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+        },
+        "path-is-absolute" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "path-is-absolute",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/path-is-absolute",
+          "name": "path-is-absolute",
+          "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+        },
+        "wrappy" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/inflight",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/rimraf/node_modules/once",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/wrappy",
+          "name": "wrappy",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "rimraf",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "spec": "^7.1.3",
+          "to": "node_modules/rimraf/node_modules/glob",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/rimraf",
+      "name": "rimraf",
+      "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-3.0.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "rimraf" => Edge {
+      "name": "rimraf",
+      "spec": "",
+      "to": "node_modules/rimraf",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-global",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP global style > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "rimraf" => Node {
+      "children": Map {
+        "balanced-match" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/brace-expansion",
+              "name": "balanced-match",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/balanced-match",
+          "name": "balanced-match",
+          "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+        },
+        "brace-expansion" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/minimatch",
+              "name": "brace-expansion",
+              "spec": "^1.1.7",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "balanced-match" => Edge {
+              "name": "balanced-match",
+              "spec": "^1.0.0",
+              "to": "node_modules/rimraf/node_modules/balanced-match",
+              "type": "prod",
+            },
+            "concat-map" => Edge {
+              "name": "concat-map",
+              "spec": "0.0.1",
+              "to": "node_modules/rimraf/node_modules/concat-map",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/brace-expansion",
+          "name": "brace-expansion",
+          "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+        },
+        "concat-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/brace-expansion",
+              "name": "concat-map",
+              "spec": "0.0.1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/concat-map",
+          "name": "concat-map",
+          "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+        },
+        "fs.realpath" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "fs.realpath",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/fs.realpath",
+          "name": "fs.realpath",
+          "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+        },
+        "glob" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf",
+              "name": "glob",
+              "spec": "^7.1.3",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "fs.realpath" => Edge {
+              "name": "fs.realpath",
+              "spec": "^1.0.0",
+              "to": "node_modules/rimraf/node_modules/fs.realpath",
+              "type": "prod",
+            },
+            "inflight" => Edge {
+              "name": "inflight",
+              "spec": "^1.0.4",
+              "to": "node_modules/rimraf/node_modules/inflight",
+              "type": "prod",
+            },
+            "inherits" => Edge {
+              "name": "inherits",
+              "spec": "2",
+              "to": "node_modules/rimraf/node_modules/inherits",
+              "type": "prod",
+            },
+            "minimatch" => Edge {
+              "name": "minimatch",
+              "spec": "^3.0.4",
+              "to": "node_modules/rimraf/node_modules/minimatch",
+              "type": "prod",
+            },
+            "once" => Edge {
+              "name": "once",
+              "spec": "^1.3.0",
+              "to": "node_modules/rimraf/node_modules/once",
+              "type": "prod",
+            },
+            "path-is-absolute" => Edge {
+              "name": "path-is-absolute",
+              "spec": "^1.0.0",
+              "to": "node_modules/rimraf/node_modules/path-is-absolute",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/glob",
+          "name": "glob",
+          "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.6.tgz",
+        },
+        "inflight" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "inflight",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "once" => Edge {
+              "name": "once",
+              "spec": "^1.3.0",
+              "to": "node_modules/rimraf/node_modules/once",
+              "type": "prod",
+            },
+            "wrappy" => Edge {
+              "name": "wrappy",
+              "spec": "1",
+              "to": "node_modules/rimraf/node_modules/wrappy",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/inflight",
+          "name": "inflight",
+          "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+        },
+        "inherits" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "inherits",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/inherits",
+          "name": "inherits",
+          "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+        },
+        "minimatch" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "minimatch",
+              "spec": "^3.0.4",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "brace-expansion" => Edge {
+              "name": "brace-expansion",
+              "spec": "^1.1.7",
+              "to": "node_modules/rimraf/node_modules/brace-expansion",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/minimatch",
+          "name": "minimatch",
+          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+        },
+        "once" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "once",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/rimraf/node_modules/inflight",
+              "name": "once",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "wrappy" => Edge {
+              "name": "wrappy",
+              "spec": "1",
+              "to": "node_modules/rimraf/node_modules/wrappy",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/once",
+          "name": "once",
+          "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+        },
+        "path-is-absolute" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/glob",
+              "name": "path-is-absolute",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/path-is-absolute",
+          "name": "path-is-absolute",
+          "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+        },
+        "wrappy" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/rimraf/node_modules/inflight",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/rimraf/node_modules/once",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/rimraf/node_modules/wrappy",
+          "name": "wrappy",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "rimraf",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "spec": "^7.1.3",
+          "to": "node_modules/rimraf/node_modules/glob",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/rimraf",
+      "name": "rimraf",
+      "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-3.0.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "rimraf" => Edge {
+      "name": "rimraf",
+      "spec": "",
+      "to": "node_modules/rimraf",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-global-style",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP link dep with a link dep > link metadeps with lockfile 1`] = `
 Node {
   "children": Map {

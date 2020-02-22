@@ -748,3 +748,24 @@ t.test('bin links adding and removing', t => {
     .then(() => reify(path, { rm: ['rimraf'] }))
     .then(() => t.throws(() => fs.statSync(rbin))) // should be gone
 })
+
+t.test('global style', t => {
+  const path = t.testdir()
+  const nm = resolve(path, 'node_modules')
+  const rbinPart = '.bin/rimraf' +
+    (process.platform === 'win32' ? '.cmd' : '')
+  const rbin = resolve(nm, rbinPart)
+  return reify(path, { add: { dependencies: [ 'rimraf@2' ]}, globalStyle: true})
+    .then(() => fs.statSync(rbin))
+    .then(() => t.strictSame(fs.readdirSync(nm).sort(), ['.bin', '.package-lock.json', 'rimraf']))
+})
+
+t.test('global', t => {
+  const path = t.testdir({ lib: {} })
+  const nm = resolve(path, 'lib/node_modules')
+  const rbinPart = process.platform === 'win32' ? 'lib/rimraf.cmd' : 'bin/rimraf'
+  const rbin = resolve(path, rbinPart)
+  return reify(path + '/lib', { add: { dependencies: [ 'rimraf@2' ]}, global: true})
+    .then(() => fs.statSync(rbin))
+    .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf']))
+})

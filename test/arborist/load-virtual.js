@@ -146,3 +146,56 @@ t.test('load a tree with a bunch of bundles', t =>
 t.test('load a tree with an empty dep set and a lockfile', t =>
   loadVirtual(emptyFixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'virtual tree with no deps')))
+
+t.test('workspaces', t => {
+  t.test('load a simple example', t =>
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-simple-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree with multiple bundles')))
+
+  t.test('load shared dependencies example', t =>
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-shared-deps-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree with shared dependencies')))
+
+  t.test('load conflicting dep versions example', t => 
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-conflicting-versions-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree with resolved conflicting dependencies')))
+
+  t.test('load prefer linking nested workspaces', t => 
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-prefer-linking-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree linking to local workspaces')))
+
+  t.test('load installed from registry on version not satisfied', t =>
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-version-unsatisfied-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree with deduped dep')))
+
+
+  t.test('load linked top level nested workspaces', t =>
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-top-level-link-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree top level dep')))
+
+  t.test('load installed workspace with transitive dependencies', t =>
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-transitive-deps-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree with transitive deps')))
+
+  t.test('load installed tree with ignored nested node_modules folders', t =>
+    loadVirtual(
+      resolve(__dirname, '../fixtures/workspaces-ignore-nm-virtual')
+    ).then(tree =>
+      t.matchSnapshot(printTree(tree), 'virtual tree ignoring nested node_modules')))
+
+  t.end()
+})

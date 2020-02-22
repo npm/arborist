@@ -13552,3 +13552,541 @@ Node {
   "resolved": null,
 }
 `
+
+exports[`test/arborist/load-virtual.js TAP workspaces load a simple example > virtual tree with multiple bundles 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-simple-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load conflicting dep versions example > virtual tree with resolved conflicting dependencies 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "=1.0.4",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "packages/b",
+          "name": "abbrev",
+          "spec": "=1.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../packages/b",
+      "target": Object {
+        "name": "b",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-conflicting-versions-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load installed from registry on version not satisfied > virtual tree with deduped dep 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "abbrev" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/packages/abbrev",
+          "type": "workspace",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "=1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "file:../packages/abbrev",
+      "target": Object {
+        "name": "abbrev",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/packages/abbrev",
+      "to": "node_modules/abbrev",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-version-unsatisfied-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load installed tree with ignored nested node_modules folders > virtual tree ignoring nested node_modules 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-ignore-nm-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-ignore-nm-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-ignore-nm-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load installed workspace with transitive dependencies > virtual tree with transitive deps 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-transitive-deps-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "once" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/a",
+          "name": "once",
+          "spec": "^1.4.0",
+          "type": "dev",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-transitive-deps-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-transitive-deps-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load linked top level nested workspaces > virtual tree top level dep 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-top-level-link-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-top-level-link-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-top-level-link-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load prefer linking nested workspaces > virtual tree linking to local workspaces 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "abbrev" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking-virtual/packages/abbrev",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "file:../packages/abbrev",
+      "target": Object {
+        "name": "abbrev",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking-virtual/packages/abbrev",
+      "to": "node_modules/abbrev",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-prefer-linking-virtual",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP workspaces load shared dependencies example > virtual tree with shared dependencies 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "packages/b",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../packages/b",
+      "target": Object {
+        "name": "b",
+        "parent": undefined,
+      },
+    },
+    "c" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "c",
+          "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/c",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/c",
+      "name": "c",
+      "resolved": "file:../packages/c",
+      "target": Object {
+        "name": "c",
+        "parent": undefined,
+      },
+    },
+    "uuid" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/c",
+          "name": "uuid",
+          "spec": "=3.3.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/uuid",
+      "name": "uuid",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "c" => Edge {
+      "name": "c",
+      "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/c",
+      "to": "node_modules/c",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-shared-deps-virtual",
+  "resolved": null,
+}
+`

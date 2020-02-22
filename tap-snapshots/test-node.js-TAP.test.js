@@ -31,6 +31,35 @@ Node {
 }
 `
 
+exports[`test/node.js TAP set workspaces > should setup edges out for each workspace 1`] = `
+Node {
+  "children": Map {},
+  "dev": true,
+  "devOptional": true,
+  "edgesIn": Set {},
+  "edgesOut": Map {
+    "foo" => Edge {},
+    "bar" => Edge {},
+  },
+  "errors": Array [],
+  "extraneous": true,
+  "fsChildren": Set {},
+  "hasShrinkwrap": false,
+  "integrity": null,
+  "inventory": Inventory {},
+  "legacyPeerDeps": false,
+  "linksIn": Set {},
+  "location": "",
+  "meta": undefined,
+  "name": "workspaces_root",
+  "optional": true,
+  "path": "/home/user/projects/workspaces_root",
+  "peer": true,
+  "realpath": "/home/user/projects/workspaces_root",
+  "resolved": null,
+}
+`
+
 exports[`test/node.js TAP testing with dep tree with meta > add new meta under prod 1`] = `
 Node {
   "children": Map {

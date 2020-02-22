@@ -33323,3 +33323,201 @@ Node {
   "resolved": null,
 }
 `
+
+exports[`test/arborist/reify.js TAP workspaces reify simple-workspaces > should reify simple workspaces 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "b" => Edge {
+          "name": "b",
+          "spec": "^1.0.0",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "b",
+      "name": "b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "reify-workspaces-reify-simple-workspaces",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP workspaces reify workspaces bin files > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../packages/b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "packages/b",
+      "name": "b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "reify-workspaces-reify-workspaces-bin-files",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP workspaces reify workspaces lockfile > should lock workspaces config 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "version": "file:a",
+    },
+    "b": Object {
+      "version": "file:b",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "workspace-simple",
+  "packages": Object {
+    "": Object {
+      "name": "workspace-simple",
+      "workspaces": Array [
+        "a",
+        "b",
+      ],
+    },
+    "a": Object {
+      "dependencies": Object {
+        "b": "^1.0.0",
+      },
+      "name": "a",
+      "version": "1.0.0",
+    },
+    "b": Object {
+      "name": "b",
+      "version": "1.0.0",
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "b",
+    },
+  },
+  "requires": true,
+}
+`

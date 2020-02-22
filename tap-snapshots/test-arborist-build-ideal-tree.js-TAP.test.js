@@ -50318,3 +50318,961 @@ Node {
   "resolved": null,
 }
 `
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should ignore nested node_modules folders > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-ignore-nm/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-ignore-nm/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-ignore-nm",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should install a simple example > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "b" => Edge {
+          "name": "b",
+          "spec": "^1.0.0",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "b",
+      "name": "b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-simple",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should install a simple scoped pkg example > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@ruyadorno/scoped-a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@ruyadorno/scoped-a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-scoped-pkg/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/@ruyadorno/scoped-a",
+      "name": "@ruyadorno/scoped-a",
+      "resolved": "file:../../packages/a",
+      "target": Object {
+        "name": "@ruyadorno/scoped-a",
+        "parent": null,
+      },
+    },
+    "@ruyadorno/scoped-b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@ruyadorno/scoped-b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-scoped-pkg/packages/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "packages/a",
+          "name": "@ruyadorno/scoped-b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@ruyadorno/scoped-b",
+      "name": "@ruyadorno/scoped-b",
+      "resolved": "file:../../packages/b",
+      "target": Object {
+        "name": "@ruyadorno/scoped-b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "@ruyadorno/scoped-a" => Edge {
+      "name": "@ruyadorno/scoped-a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-scoped-pkg/packages/a",
+      "to": "node_modules/@ruyadorno/scoped-a",
+      "type": "workspace",
+    },
+    "@ruyadorno/scoped-b" => Edge {
+      "name": "@ruyadorno/scoped-b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-scoped-pkg/packages/b",
+      "to": "node_modules/@ruyadorno/scoped-b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "@ruyadorno/scoped-b" => Edge {
+          "name": "@ruyadorno/scoped-b",
+          "spec": "^1.0.0",
+          "to": "node_modules/@ruyadorno/scoped-b",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "@ruyadorno/scoped-a",
+      "resolved": null,
+    },
+    Node {
+      "location": "packages/b",
+      "name": "@ruyadorno/scoped-b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-scoped-pkg",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should install conflicting dep versions > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../packages/b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-conflicting-versions/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "children": Map {
+        "abbrev" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "packages/a",
+              "name": "abbrev",
+              "spec": "=1.0.4",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/abbrev",
+          "name": "abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "=1.0.4",
+          "to": "packages/a/node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "children": Map {
+        "abbrev" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "packages/b",
+              "name": "abbrev",
+              "spec": "=1.1.0",
+              "type": "prod",
+            },
+          },
+          "location": "packages/b/node_modules/abbrev",
+          "name": "abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.0.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "=1.1.0",
+          "to": "packages/b/node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "packages/b",
+      "name": "b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-conflicting-versions",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should install from registry on version not satisfied > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "abbrev" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied/packages/abbrev",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "file:../packages/abbrev",
+      "target": Object {
+        "name": "abbrev",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "file:{CWD}/test/fixtures/workspaces-version-unsatisfied/packages/abbrev",
+      "to": "node_modules/abbrev",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "children": Map {
+        "abbrev" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "packages/a",
+              "name": "abbrev",
+              "spec": "=1.1.1",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/abbrev",
+          "name": "abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "=1.1.1",
+          "to": "packages/a/node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "packages/abbrev",
+      "name": "abbrev",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-version-unsatisfied",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should install shared dependencies into root folder > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "packages/b",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../packages/b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+    "c" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "c",
+          "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps/packages/c",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/c",
+      "name": "c",
+      "resolved": "file:../packages/c",
+      "target": Object {
+        "name": "c",
+        "parent": null,
+      },
+    },
+    "uuid" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/c",
+          "name": "uuid",
+          "spec": "=3.3.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/uuid",
+      "name": "uuid",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "c" => Edge {
+      "name": "c",
+      "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps/packages/c",
+      "to": "node_modules/c",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "to": "node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "to": "node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "packages/b",
+      "name": "b",
+      "resolved": null,
+    },
+    Node {
+      "edgesOut": Map {
+        "uuid" => Edge {
+          "name": "uuid",
+          "spec": "=3.3.3",
+          "to": "node_modules/uuid",
+          "type": "prod",
+        },
+      },
+      "location": "packages/c",
+      "name": "c",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-shared-deps",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should install workspace transitive dependencies > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-transitive-deps/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "once" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "packages/a",
+          "name": "once",
+          "spec": "^1.4.0",
+          "type": "dev",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-transitive-deps/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "once" => Edge {
+          "name": "once",
+          "spec": "^1.4.0",
+          "to": "node_modules/once",
+          "type": "dev",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-transitive-deps",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should link top level nested workspaces > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-top-level-link/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-top-level-link/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-top-level-link",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should prefer linking nested workspaces > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "abbrev" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking/packages/abbrev",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "file:../packages/abbrev",
+      "target": Object {
+        "name": "abbrev",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "file:{CWD}/test/fixtures/workspaces-prefer-linking/packages/abbrev",
+      "to": "node_modules/abbrev",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "*",
+          "to": "node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "packages/abbrev",
+      "name": "abbrev",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-prefer-linking",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should work with files spec > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-with-files-spec/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../packages/a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-with-files-spec/packages/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "d",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../packages/b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+    "c" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "c",
+          "spec": "file:packages/c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/c",
+      "name": "c",
+      "resolved": "file:../packages/c",
+      "target": Object {
+        "name": "c",
+        "parent": null,
+      },
+    },
+    "d" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "d",
+          "spec": "file:d",
+          "type": "prod",
+        },
+        Edge {
+          "from": "packages/a",
+          "name": "d",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/d",
+      "name": "d",
+      "resolved": "file:../d",
+      "target": Object {
+        "name": "d",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-with-files-spec/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-with-files-spec/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "c" => Edge {
+      "name": "c",
+      "spec": "file:packages/c",
+      "to": "node_modules/c",
+      "type": "prod",
+    },
+    "d" => Edge {
+      "name": "d",
+      "spec": "file:d",
+      "to": "node_modules/d",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "b" => Edge {
+          "name": "b",
+          "spec": "^1.0.0",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+      },
+      "location": "d",
+      "name": "d",
+      "resolved": null,
+    },
+    Node {
+      "edgesOut": Map {
+        "d" => Edge {
+          "name": "d",
+          "spec": "^1.0.0",
+          "to": "node_modules/d",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "packages/b",
+      "name": "b",
+      "resolved": null,
+    },
+    Node {
+      "location": "packages/c",
+      "name": "c",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-with-files-spec",
+  "resolved": null,
+}
+`

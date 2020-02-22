@@ -278,3 +278,9 @@ t.throws(() => new Edge({
   name: 'foo',
   spec: '',
 }), new TypeError('must provide "from" node'))
+
+t.throws(() => new Edge({
+  type: 'workspace',
+  name: 'foo',
+  spec: '*',
+}), new TypeError('workspace edges must be a symlink'))

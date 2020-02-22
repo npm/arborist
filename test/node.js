@@ -1020,30 +1020,99 @@ t.test('bin paths', t => {
     realpath: root.path + '/d/e/f',
   })
 
+  const { resolve: r } = require('path')
+
   t.strictSame(root.binPaths, [])
   t.strictSame(link.binPaths, [
-    '/a/b/c/node_modules/.bin/d',
-    '/a/b/c/node_modules/.bin/d.cmd',
-    '/a/b/c/node_modules/.bin/d.ps1',
+    r('/a/b/c/node_modules/.bin/d'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/a/b/c/node_modules/.bin/d.cmd'),
+      r('/a/b/c/node_modules/.bin/d.ps1'),
+    ]),
   ])
   t.strictSame(link.target.binPaths, [])
   const scoped = root.children.get('@foo/bar')
   t.strictSame(scoped.binPaths, [
-    '/a/b/c/node_modules/.bin/bar',
-    '/a/b/c/node_modules/.bin/bar.cmd',
-    '/a/b/c/node_modules/.bin/bar.ps1',
+    r('/a/b/c/node_modules/.bin/bar'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/a/b/c/node_modules/.bin/bar.cmd'),
+      r('/a/b/c/node_modules/.bin/bar.ps1'),
+    ]),
   ])
   const unscoped = root.children.get('foo')
   t.strictSame(unscoped.binPaths, [
-    '/a/b/c/node_modules/.bin/foo',
-    '/a/b/c/node_modules/.bin/foo.cmd',
-    '/a/b/c/node_modules/.bin/foo.ps1',
+    r('/a/b/c/node_modules/.bin/foo'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/a/b/c/node_modules/.bin/foo.cmd'),
+      r('/a/b/c/node_modules/.bin/foo.ps1'),
+    ]),
   ])
   const nested = unscoped.children.get('bar')
   t.strictSame(nested.binPaths, [
-    '/a/b/c/node_modules/foo/node_modules/.bin/bar',
-    '/a/b/c/node_modules/foo/node_modules/.bin/bar.cmd',
-    '/a/b/c/node_modules/foo/node_modules/.bin/bar.ps1',
+    r('/a/b/c/node_modules/foo/node_modules/.bin/bar'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/a/b/c/node_modules/foo/node_modules/.bin/bar.cmd'),
+      r('/a/b/c/node_modules/foo/node_modules/.bin/bar.ps1'),
+    ]),
+  ])
+  const nobin = root.children.get('nobin')
+  t.strictSame(nobin.binPaths, [])
+  t.end()
+})
+
+t.test('binPaths, but global', t => {
+  const root = new Node({
+    global: true,
+    path: '/usr/local/lib',
+    children: [
+      { pkg: { name: '@foo/bar', bin: { bar: 'foo' }}},
+      { pkg: { name: 'foo', bin: { foo: 'bloo' }},
+        children: [{ pkg: { name: 'bar', bin: { bar: 'noscope' }}}]},
+      { pkg: { name: 'nobin' } },
+    ],
+  })
+
+  const link = new Link({
+    parent: root,
+    name: 'linkfoo',
+    pkg: { bin: { d: 'from-link' } },
+    realpath: root.path + '/d/e/f',
+  })
+
+  const { resolve: r } = require('path')
+
+  t.strictSame(root.binPaths, [])
+  t.strictSame(link.binPaths, [
+    r('/usr/local/bin/d'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/usr/local/bin/d.cmd'),
+      r('/usr/local/bin/d.ps1'),
+    ]),
+  ])
+  t.strictSame(link.target.binPaths, [])
+  const scoped = root.children.get('@foo/bar')
+  t.strictSame(scoped.binPaths, [
+    r('/usr/local/bin/bar'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/usr/local/bin/bar.cmd'),
+      r('/usr/local/bin/bar.ps1'),
+    ]),
+  ])
+  const unscoped = root.children.get('foo')
+  t.strictSame(unscoped.binPaths, [
+    r('/usr/local/bin/foo'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/usr/local/bin/foo.cmd'),
+      r('/usr/local/bin/foo.ps1'),
+    ]),
+  ])
+  const nested = unscoped.children.get('bar')
+  t.strictSame(nested.binPaths, [
+    r('/usr/local/lib/node_modules/foo/node_modules/.bin/bar'),
+    ...(process.platform !== 'win32' ? [] : [
+      r('/usr/local/lib/node_modules/foo/node_modules/.bin/bar.cmd'),
+      r('/usr/local/lib/node_modules/foo/node_modules/.bin/bar.ps1'),
+    ]),
   ])
   const nobin = root.children.get('nobin')
   t.strictSame(nobin.binPaths, [])

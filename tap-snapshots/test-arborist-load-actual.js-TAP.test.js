@@ -3015,6 +3015,346 @@ Node {
 }
 `
 
+exports[`test/arborist/load-actual.js TAP load a global space > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "rimraf" => Node {
+      "children": Map {
+        "balanced-match" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+              "name": "balanced-match",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/balanced-match",
+          "name": "balanced-match",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/balanced-match",
+          "top": "global-style/lib",
+        },
+        "brace-expansion" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+              "name": "brace-expansion",
+              "spec": "^1.1.7",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "balanced-match" => Edge {
+              "name": "balanced-match",
+              "spec": "^1.0.0",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/balanced-match",
+              "type": "prod",
+            },
+            "concat-map" => Edge {
+              "name": "concat-map",
+              "spec": "0.0.1",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/concat-map",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/brace-expansion",
+          "name": "brace-expansion",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+          "top": "global-style/lib",
+        },
+        "concat-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+              "name": "concat-map",
+              "spec": "0.0.1",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/concat-map",
+          "name": "concat-map",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/concat-map",
+          "top": "global-style/lib",
+        },
+        "fs.realpath" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+              "name": "fs.realpath",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/fs.realpath",
+          "name": "fs.realpath",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/fs.realpath",
+          "top": "global-style/lib",
+        },
+        "glob" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf",
+              "name": "glob",
+              "spec": "^7.1.3",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "fs.realpath" => Edge {
+              "name": "fs.realpath",
+              "spec": "^1.0.0",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/fs.realpath",
+              "type": "prod",
+            },
+            "inflight" => Edge {
+              "name": "inflight",
+              "spec": "^1.0.4",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+              "type": "prod",
+            },
+            "inherits" => Edge {
+              "name": "inherits",
+              "spec": "2",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/inherits",
+              "type": "prod",
+            },
+            "minimatch" => Edge {
+              "name": "minimatch",
+              "spec": "^3.0.4",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+              "type": "prod",
+            },
+            "once" => Edge {
+              "name": "once",
+              "spec": "^1.3.0",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/once",
+              "type": "prod",
+            },
+            "path-is-absolute" => Edge {
+              "name": "path-is-absolute",
+              "spec": "^1.0.0",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/path-is-absolute",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/glob",
+          "name": "glob",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/glob",
+          "top": "global-style/lib",
+        },
+        "inflight" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+              "name": "inflight",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "once" => Edge {
+              "name": "once",
+              "spec": "^1.3.0",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/once",
+              "type": "prod",
+            },
+            "wrappy" => Edge {
+              "name": "wrappy",
+              "spec": "1",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/inflight",
+          "name": "inflight",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+          "top": "global-style/lib",
+        },
+        "inherits" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+              "name": "inherits",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/inherits",
+          "name": "inherits",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/inherits",
+          "top": "global-style/lib",
+        },
+        "minimatch" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+              "name": "minimatch",
+              "spec": "^3.0.4",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "brace-expansion" => Edge {
+              "name": "brace-expansion",
+              "spec": "^1.1.7",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/minimatch",
+          "name": "minimatch",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+          "top": "global-style/lib",
+        },
+        "once" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+              "name": "once",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+              "name": "once",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "wrappy" => Edge {
+              "name": "wrappy",
+              "spec": "1",
+              "to": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/once",
+          "name": "once",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/once",
+          "top": "global-style/lib",
+        },
+        "path-is-absolute" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+              "name": "path-is-absolute",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/path-is-absolute",
+          "name": "path-is-absolute",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/path-is-absolute",
+          "top": "global-style/lib",
+        },
+        "wrappy" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "global-style/lib/node_modules/rimraf/node_modules/once",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/rimraf/node_modules/wrappy",
+          "name": "wrappy",
+          "realpath": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+          "top": "global-style/lib",
+        },
+      },
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "spec": "^7.1.3",
+          "to": "global-style/lib/node_modules/rimraf/node_modules/glob",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "node_modules/rimraf",
+      "name": "rimraf",
+      "realpath": "global-style/lib/node_modules/rimraf",
+      "top": "global-style/lib",
+    },
+    "which" => Node {
+      "children": Map {
+        "isexe" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "global-style/lib/node_modules/which",
+              "name": "isexe",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "node_modules/which/node_modules/isexe",
+          "name": "isexe",
+          "realpath": "global-style/lib/node_modules/which/node_modules/isexe",
+          "top": "global-style/lib",
+        },
+      },
+      "edgesOut": Map {
+        "isexe" => Edge {
+          "name": "isexe",
+          "spec": "^2.0.0",
+          "to": "global-style/lib/node_modules/which/node_modules/isexe",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "node_modules/which",
+      "name": "which",
+      "realpath": "global-style/lib/node_modules/which",
+      "top": "global-style/lib",
+    },
+  },
+  "location": "",
+  "name": "lib",
+  "realpath": "global-style/lib",
+  "top": "global-style/lib",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP load a global space symlink > expect resolving Promise 1`] = `
+Link {
+  "location": "",
+  "name": "lib-link",
+  "realpath": "global-style/lib",
+  "target": Object {
+    "name": "lib",
+  },
+  "top": "global-style/lib",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP load a global space with a filter > expect resolving Promise 1`] = `
+Node {
+  "location": "",
+  "name": "lib",
+  "realpath": "global-style/lib",
+  "top": "global-style/lib",
+}
+`
+
 exports[`test/arborist/load-actual.js TAP load from a hidden lockfile > expect resolving Promise 1`] = `
 Node {
   "children": Map {

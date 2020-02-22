@@ -5,7 +5,7 @@
   "dependencies": {
     "@npmcli/installed-package-contents": "^1.0.5",
     "@npmcli/run-script": "^1.2.1",
-    "bin-links": "^2.0.0",
+    "bin-links": "^2.1.2",
     "json-stringify-nice": "^1.1.1",
     "mkdirp-infer-owner": "^1.0.2",
     "npm-install-checks": "^4.0.0",

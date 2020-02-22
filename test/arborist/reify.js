@@ -22,29 +22,36 @@ let failRename = null
 let failRenameOnce = null
 let failMkdir = null
 const {rename: realRename, mkdir: realMkdir} = fs
-const Node = require('../../lib/node.js')
-const Shrinkwrap = require('../../lib/shrinkwrap.js')
+const fsMock = {
+  ...fs,
+  mkdir (...args) {
+    if (failMkdir) {
+      process.nextTick(() => args.pop()(failMkdir))
+    }
+    realMkdir(...args)
+  },
+  rename (...args) {
+    if (failRename)
+      process.nextTick(() => args.pop()(failRename))
+    else if (failRenameOnce) {
+      const er = failRenameOnce
+      failRenameOnce = null
+      process.nextTick(() => args.pop()(er))
+    } else
+      realRename(...args)
+  },
+}
 
+
+const Node = requireInject('../../lib/node.js', { fs: fsMock })
+const Shrinkwrap = requireInject('../../lib/shrinkwrap.js', {
+  fs: fsMock,
+  '../../lib/node.js': Node,
+})
 const Arborist = requireInject('../../lib/arborist', {
   rimraf: rimrafMock,
-  fs: {
-    ...fs,
-    mkdir (...args) {
-      if (failMkdir)
-        process.nextTick(() => args.pop()(failMkdir))
-      realMkdir(...args)
-    },
-    rename (...args) {
-      if (failRename)
-        process.nextTick(() => args.pop()(failRename))
-      else if (failRenameOnce) {
-        const er = failRenameOnce
-        failRenameOnce = null
-        process.nextTick(() => args.pop()(er))
-      } else
-        realRename(...args)
-    },
-  },
+  fs: fsMock,
+  '../../lib/node.js': Node,
 })
 
 const registryServer = require('../fixtures/registry-mocks/server.js')
@@ -423,11 +430,17 @@ t.test('rollbacks', { buffered: false }, t => {
     let rolledBack = false
     a[kRollback] = er => {
       rolledBack = true
-      failRename = null
+      failRename = new Error('some other error')
       failRimraf = false
       t.match(er, new Error('rimraf fail'))
       a[kRollback] = rollbackRetireShallowNodes
-      return a[kRollback](er)
+      return a[kRollback](er).then(er => {
+        failRename = null
+        return er
+      }, er => {
+        failRename = null
+        throw er
+      })
     }
 
     return t.rejects(a.reify({
@@ -483,7 +496,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
     return t.rejects(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
-    }), new Error('poop'))
+    }).then(() => 'it worked'), new Error('poop'))
   })
 
   t.test('fail rolling back from creating sparse tree', t => {
@@ -511,7 +524,7 @@ t.test('rollbacks', { buffered: false }, t => {
     failRimraf = true
     return t.rejects(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
-    }), new Error('poop'))
+    }).then(tree => 'it worked'), new Error('poop'))
       .then(() => {
         t.equal(warnings.length, 1)
         t.match(warnings, [[
@@ -761,11 +774,38 @@ t.test('global style', t => {
 })
 
 t.test('global', t => {
+  const isWindows = process.platform === 'win32'
+
   const path = t.testdir({ lib: {} })
-  const nm = resolve(path, 'lib/node_modules')
-  const rbinPart = process.platform === 'win32' ? 'lib/rimraf.cmd' : 'bin/rimraf'
-  const rbin = resolve(path, rbinPart)
-  return reify(path + '/lib', { add: { dependencies: [ 'rimraf@2' ]}, global: true})
-    .then(() => fs.statSync(rbin))
-    .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf']))
+  const lib = resolve(path, 'lib')
+  const nm = resolve(lib, 'node_modules')
+
+  const binTarget = isWindows ? lib : resolve(path, 'bin')
+  const rimrafBin = resolve(binTarget, isWindows ? 'rimraf.cmd' : 'rimraf')
+  const semverBin = resolve(binTarget, isWindows ? 'semver.cmd' : 'semver')
+
+  t.test('add rimraf', t =>
+    reify(lib, { add: { dependencies: [ 'rimraf@2' ]}, global: true})
+      .then(() => fs.statSync(rimrafBin))
+      .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
+
+  t.test('add semver', t =>
+    reify(lib, { add: { dependencies: [ 'semver@6.3.0' ]}, global: true})
+      .then(() => fs.statSync(rimrafBin))
+      .then(() => fs.statSync(semverBin))
+      .then(() => t.strictSame(fs.readdirSync(nm).sort(), [ 'rimraf', 'semver' ])))
+
+  t.test('remove semver', t =>
+    reify(lib, { rm: [ 'semver' ], global: true})
+      .then(() => fs.statSync(rimrafBin))
+      .then(() => t.throws(() => fs.statSync(semverBin)))
+      .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
+
+  t.test('remove rimraf', t =>
+    reify(lib, { rm: [ 'rimraf' ], global: true})
+      .then(() => t.throws(() => fs.statSync(rimrafBin)))
+      .then(() => t.throws(() => fs.statSync(semverBin)))
+      .then(() => t.strictSame(fs.readdirSync(nm), [])))
+
+  t.end()
 })

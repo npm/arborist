@@ -82,7 +82,7 @@ const printTree = tree => ({
 
 t.formatSnapshot = tree => format(printTree(tree), { sort: true })
 
-const loadActual = path => new Arborist({path}).loadActual()
+const loadActual = (path, opts) => new Arborist({path}).loadActual(opts)
 
 roots.forEach(path => {
   const dir = resolve(fixtures, path)
@@ -153,6 +153,20 @@ t.test('missing symlinks', t =>
 
 t.test('load from a hidden lockfile', t =>
   t.resolveMatchSnapshot(loadActual(resolve(fixtures, 'hidden-lockfile'))))
+
+t.test('load a global space', t =>
+  t.resolveMatchSnapshot(loadActual(resolve(fixtures, 'global-style/lib'), {
+    global: true,
+  })))
+t.test('load a global space symlink', t =>
+  t.resolveMatchSnapshot(loadActual(resolve(fixtures, 'global-style/lib-link'), {
+    global: true,
+  })))
+t.test('load a global space with a filter', t =>
+  t.resolveMatchSnapshot(loadActual(resolve(fixtures, 'global-style/lib'), {
+    global: true,
+    filter: (parent, kid) => parent.parent || kid === 'semver'
+  })))
 
 t.test('realpath gutchecks', t => {
   // the realpath module is tested pretty thoroughly, but

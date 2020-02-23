@@ -807,5 +807,11 @@ t.test('global', t => {
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), [])))
 
+  t.test('add without bin links', t =>
+    reify(lib, { add: { dependencies: [ 'rimraf@2' ] }, global: true, binLinks: false})
+      .then(() => t.throws(() => fs.statSync(rimrafBin)))
+      .then(() => t.throws(() => fs.statSync(semverBin)))
+      .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
+
   t.end()
 })

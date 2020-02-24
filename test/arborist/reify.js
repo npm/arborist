@@ -192,7 +192,7 @@ t.test('update a bundling node without updating all of its deps', t => {
   }
 
   return t.resolveMatchSnapshot(printReified(path,
-    { add: { devDependencies: [ 'tap@14.10.5' ] } }))
+    { saveType: 'dev', add: [ 'tap@14.10.5' ] }))
     .then(checkBin)
     .then(checkPackageLock)
 })
@@ -292,12 +292,10 @@ t.test('link meta deps, update', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'link-meta-deps'), {
     // use legacy nesting so we leave the link nested
     legacyNesting: true,
-    add: {
-      dependencies: [
-        '@isaacs/testing-link-dep@2',
-        '@isaacs/testing-link-dev-dep@2',
-      ],
-    },
+    add: [
+      '@isaacs/testing-link-dep@2',
+      '@isaacs/testing-link-dev-dep@2',
+    ],
   })))
 
 t.test('update a child of a node with bundled deps', t => {
@@ -653,7 +651,6 @@ t.test('rollbacks', { buffered: false }, t => {
 
 t.test('saving the ideal tree', t => {
   const kSaveIdealTree = Symbol.for('saveIdealTree')
-  const kResolvedAdd = Symbol.for('resolvedAdd')
   t.test('save=false', t => {
     // doesn't actually do anything, just for coverage.
     // if it wasn't an early exit, it'd blow up and throw
@@ -676,17 +673,9 @@ t.test('saving the ideal tree', t => {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
       },
     }
-    const add = {
-      bundleDependencies: ['a', 'b', 'c'],
-      dependencies: [
-        'a@git+ssh://git@github.com:foo/bar#baz',
-        'b',
-        'd@npm:c@1.x',
-      ],
-      devDependencies: [
-        `c@git+ssh://git@githost.com:a/b/c.git#master`,
-      ],
-    }
+
+    const npa = require('npm-package-arg')
+    const kResolvedAdd = Symbol.for('resolvedAdd')
     const path = t.testdir({
       'package.json': JSON.stringify(pkg)
     })
@@ -728,7 +717,12 @@ t.test('saving the ideal tree', t => {
         parent: tree,
       })
 
-      a[kResolvedAdd] = pkg
+      a[kResolvedAdd] = [
+        npa('a@git+ssh://git@github.com:foo/bar#baz'),
+        npa('b'),
+        npa('d@npm:c@1.x'),
+        npa(`c@git+ssh://git@githost.com:a/b/c.git#master`),
+      ]
       return a[kSaveIdealTree]({
         savePrefix: '~',
       })
@@ -756,7 +750,7 @@ t.test('bin links adding and removing', t => {
     'package.json': JSON.stringify({}),
   })
   const rbin = resolve(path, 'node_modules/.bin/rimraf')
-  return reify(path, { add: { dependencies: [ 'rimraf@2.7.1' ]}})
+  return reify(path, { add: [ 'rimraf@2.7.1' ]})
     .then(() => fs.statSync(rbin)) // should be there
     .then(() => reify(path, { rm: ['rimraf'] }))
     .then(() => t.throws(() => fs.statSync(rbin))) // should be gone
@@ -768,7 +762,7 @@ t.test('global style', t => {
   const rbinPart = '.bin/rimraf' +
     (process.platform === 'win32' ? '.cmd' : '')
   const rbin = resolve(nm, rbinPart)
-  return reify(path, { add: { dependencies: [ 'rimraf@2' ]}, globalStyle: true})
+  return reify(path, { add: [ 'rimraf@2' ], globalStyle: true})
     .then(() => fs.statSync(rbin))
     .then(() => t.strictSame(fs.readdirSync(nm).sort(), ['.bin', '.package-lock.json', 'rimraf']))
 })
@@ -785,12 +779,12 @@ t.test('global', t => {
   const semverBin = resolve(binTarget, isWindows ? 'semver.cmd' : 'semver')
 
   t.test('add rimraf', t =>
-    reify(lib, { add: { dependencies: [ 'rimraf@2' ]}, global: true})
+    reify(lib, { add:  [ 'rimraf@2' ], global: true})
       .then(() => fs.statSync(rimrafBin))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
 
   t.test('add semver', t =>
-    reify(lib, { add: { dependencies: [ 'semver@6.3.0' ]}, global: true})
+    reify(lib, { add: [ 'semver@6.3.0' ], global: true})
       .then(() => fs.statSync(rimrafBin))
       .then(() => fs.statSync(semverBin))
       .then(() => t.strictSame(fs.readdirSync(nm).sort(), [ 'rimraf', 'semver' ])))
@@ -808,7 +802,7 @@ t.test('global', t => {
       .then(() => t.strictSame(fs.readdirSync(nm), [])))
 
   t.test('add without bin links', t =>
-    reify(lib, { add: { dependencies: [ 'rimraf@2' ] }, global: true, binLinks: false})
+    reify(lib, { add: [ 'rimraf@2' ], global: true, binLinks: false})
       .then(() => t.throws(() => fs.statSync(rimrafBin)))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))

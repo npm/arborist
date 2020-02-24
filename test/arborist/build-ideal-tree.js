@@ -133,34 +133,17 @@ t.test('cyclical peer deps', t => {
     t.resolveMatchSnapshot(printIdeal(path), 'cyclical peer deps')
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         // just reload the dep at its current required version
-        add: { dependencies: [ '@isaacs/peer-dep-cycle-a' ] },
+        add: [ '@isaacs/peer-dep-cycle-a' ],
       }), 'cyclical peer deps - reload a dependency'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: {
-          // also add a devDep just to verify it works when adding
-          // a type that isn't already in the root's package
-          devDependencies: [
-            'abbrev',
-          ],
-          dependencies: [
-            '@isaacs/peer-dep-cycle-a@2.x',
-          ]
-        },
+        add: [ '@isaacs/peer-dep-cycle-a@2.x' ],
       }), 'cyclical peer deps - upgrade a package'))
       .then(() => t.rejects(printIdeal(path, {
-        add: {
-          dependencies: [
-            // this conflicts with the direct dep on a@1 PEER-> b@1
-            '@isaacs/peer-dep-cycle-b@2.x',
-          ],
-        },
+        // this conflicts with the direct dep on a@1 PEER-> b@1
+        add: [ '@isaacs/peer-dep-cycle-b@2.x' ],
       })))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: {
-          dependencies: [
-            '@isaacs/peer-dep-cycle-b@2.x',
-          ],
-        },
+        add: [ '@isaacs/peer-dep-cycle-b@2.x' ],
         rm: [ '@isaacs/peer-dep-cycle-a' ],
       }), 'can add b@2 if we remove a@1 dep'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
@@ -178,33 +161,23 @@ t.test('nested cyclical peer deps', t => {
   paths.forEach(path => t.test(basename(path), t =>
     t.resolveMatchSnapshot(printIdeal(path), 'nested peer deps cycle')
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: {
-          dependencies: [
-            npa('@isaacs/peer-dep-cycle-a@2.x'),
-          ],
-        },
+        // just make sure it works if it gets a spec object
+        add: [ npa('@isaacs/peer-dep-cycle-a@2.x') ],
       }), 'upgrade a'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: {
-          dependencies: [
-            `${registry}@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz`,
-          ],
-        },
+        // a dep whose name we don't yet know
+        add: [
+          `${registry}@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz`,
+        ],
       }), 'upgrade b'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: {
-          dependencies: [
-            '@isaacs/peer-dep-cycle-c@2.x',
-          ],
-        },
+        add: [ '@isaacs/peer-dep-cycle-c@2.x' ],
       }), 'upgrade c'))
       .then(() => t.rejects(printIdeal(path, {
-        add: {
-          dependencies: [
-            '@isaacs/peer-dep-cycle-a@1.x',
-            '@isaacs/peer-dep-cycle-c@2.x',
-          ],
-        },
+        add: [
+          '@isaacs/peer-dep-cycle-a@1.x',
+          '@isaacs/peer-dep-cycle-c@2.x',
+        ],
       }), 'try (and fail) to upgrade c and a incompatibly'))
   ))
 })
@@ -239,9 +212,8 @@ t.test('bundle deps example 1', t => {
   const path = resolve(__dirname, '../fixtures/testing-bundledeps')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-      add: {
-        bundleDependencies: [ '@isaacs/testing-bundledeps' ],
-      },
+      saveBundle: true,
+      add: [ '@isaacs/testing-bundledeps' ],
     }), 'bundle the bundler'))
 })
 
@@ -250,9 +222,8 @@ t.test('bundle deps example 2', t => {
   const path = resolve(__dirname, '../fixtures/testing-bundledeps-2')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-      add: {
-        bundleDependencies: [ '@isaacs/testing-bundledeps-c' ],
-      },
+      saveBundle: true,
+      add: [ '@isaacs/testing-bundledeps-c' ],
     }), 'add new bundled dep c'))
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       rm: ['@isaacs/testing-bundledeps-a'],
@@ -892,12 +863,12 @@ t.test('contrived dep placement tests', t => {
 
 t.test('global style', t => t.resolveMatchSnapshot(printIdeal(t.testdir(), {
   globalStyle: true,
-  add: { dependencies: [ 'rimraf' ] },
+  add: [ 'rimraf' ],
 })))
 
 t.test('global', t => t.resolveMatchSnapshot(printIdeal(t.testdir(), {
   global: true,
-  add: { dependencies: [ 'rimraf' ] },
+  add: [ 'rimraf' ],
 })))
 
 t.test('global has to add or remove', t => t.rejects(printIdeal(t.testdir(), {

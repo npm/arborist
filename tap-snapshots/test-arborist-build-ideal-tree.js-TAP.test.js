@@ -933,20 +933,6 @@ Node {
       "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
-    "abbrev" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "abbrev",
-          "spec": "",
-          "type": "dev",
-        },
-      },
-      "location": "node_modules/abbrev",
-      "name": "abbrev",
-      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-    },
   },
   "edgesOut": Map {
     "@isaacs/peer-dep-cycle-a" => Edge {
@@ -954,12 +940,6 @@ Node {
       "spec": "2.x",
       "to": "node_modules/@isaacs/peer-dep-cycle-a",
       "type": "prod",
-    },
-    "abbrev" => Edge {
-      "name": "abbrev",
-      "spec": "",
-      "to": "node_modules/abbrev",
-      "type": "dev",
     },
   },
   "location": "",
@@ -1317,20 +1297,6 @@ Node {
       "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-c/-/peer-dep-cycle-c-2.0.0.tgz",
     },
-    "abbrev" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "abbrev",
-          "spec": "",
-          "type": "dev",
-        },
-      },
-      "location": "node_modules/abbrev",
-      "name": "abbrev",
-      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-    },
   },
   "edgesOut": Map {
     "@isaacs/peer-dep-cycle-a" => Edge {
@@ -1338,12 +1304,6 @@ Node {
       "spec": "2.x",
       "to": "node_modules/@isaacs/peer-dep-cycle-a",
       "type": "prod",
-    },
-    "abbrev" => Edge {
-      "name": "abbrev",
-      "spec": "",
-      "to": "node_modules/abbrev",
-      "type": "dev",
     },
   },
   "location": "",
@@ -2062,7 +2022,7 @@ Node {
         Edge {
           "from": "",
           "name": "rimraf",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
@@ -2082,7 +2042,7 @@ Node {
   "edgesOut": Map {
     "rimraf" => Edge {
       "name": "rimraf",
-      "spec": "",
+      "spec": "*",
       "to": "node_modules/rimraf",
       "type": "prod",
     },
@@ -2340,7 +2300,7 @@ Node {
         Edge {
           "from": "",
           "name": "rimraf",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
@@ -2360,7 +2320,7 @@ Node {
   "edgesOut": Map {
     "rimraf" => Edge {
       "name": "rimraf",
-      "spec": "",
+      "spec": "*",
       "to": "node_modules/rimraf",
       "type": "prod",
     },

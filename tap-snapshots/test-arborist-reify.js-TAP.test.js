@@ -13364,36 +13364,6 @@ Node {
       "dev": true,
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/@babel/plugin-proposal-object-rest-spread",
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "type": "peer",
-        },
-        Edge {
-          "from": "node_modules/@babel/plugin-syntax-jsx",
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "type": "peer",
-        },
-        Edge {
-          "from": "node_modules/@babel/plugin-syntax-object-rest-spread",
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "type": "peer",
-        },
-        Edge {
-          "from": "node_modules/@babel/plugin-transform-destructuring",
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "type": "peer",
-        },
-        Edge {
-          "from": "node_modules/@babel/plugin-transform-react-jsx",
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "type": "peer",
-        },
-        Edge {
           "from": "node_modules/import-jsx",
           "name": "@babel/core",
           "spec": "^7.5.5",
@@ -13813,12 +13783,6 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@babel/core" => Edge {
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "to": "node_modules/@babel/core",
-          "type": "peer",
-        },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
           "spec": "^7.0.0",
@@ -13847,12 +13811,6 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@babel/core" => Edge {
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "to": "node_modules/@babel/core",
-          "type": "peer",
-        },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
           "spec": "^7.0.0",
@@ -13875,12 +13833,6 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@babel/core" => Edge {
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "to": "node_modules/@babel/core",
-          "type": "peer",
-        },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
           "spec": "^7.0.0",
@@ -13903,12 +13855,6 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@babel/core" => Edge {
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "to": "node_modules/@babel/core",
-          "type": "peer",
-        },
         "@babel/helper-plugin-utils" => Edge {
           "name": "@babel/helper-plugin-utils",
           "spec": "^7.0.0",
@@ -13931,12 +13877,6 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@babel/core" => Edge {
-          "name": "@babel/core",
-          "spec": "^7.0.0-0",
-          "to": "node_modules/@babel/core",
-          "type": "peer",
-        },
         "@babel/helper-builder-react-jsx" => Edge {
           "name": "@babel/helper-builder-react-jsx",
           "spec": "^7.7.4",
@@ -14617,14 +14557,6 @@ Node {
           "name": "auto-bind",
           "spec": "^3.0.0",
           "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@types/react" => Edge {
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "to": null,
-          "type": "peerOptional",
         },
       },
       "location": "node_modules/auto-bind",
@@ -17182,13 +17114,6 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@types/react" => Edge {
-          "error": "MISSING",
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "to": null,
-          "type": "peer",
-        },
         "ansi-escapes" => Edge {
           "name": "ansi-escapes",
           "spec": "^4.2.1",
@@ -17248,13 +17173,6 @@ Node {
           "spec": "^15.6.2",
           "to": "node_modules/prop-types",
           "type": "prod",
-        },
-        "react" => Edge {
-          "error": "INVALID",
-          "name": "react",
-          "spec": ">=16.8.0",
-          "to": "node_modules/react",
-          "type": "peer",
         },
         "react-reconciler" => Edge {
           "name": "react-reconciler",
@@ -20039,27 +19957,6 @@ Node {
           "spec": "15",
           "type": "prod",
         },
-        Edge {
-          "error": "INVALID",
-          "from": "node_modules/ink",
-          "name": "react",
-          "spec": ">=16.8.0",
-          "type": "peer",
-        },
-        Edge {
-          "error": "INVALID",
-          "from": "node_modules/react-reconciler",
-          "name": "react",
-          "spec": "^16.0.0",
-          "type": "peer",
-        },
-        Edge {
-          "error": "INVALID",
-          "from": "node_modules/treport",
-          "name": "react",
-          "spec": "^16.8.6",
-          "type": "peer",
-        },
       },
       "edgesOut": Map {
         "create-react-class" => Edge {
@@ -20138,13 +20035,6 @@ Node {
           "spec": "^15.6.2",
           "to": "node_modules/prop-types",
           "type": "prod",
-        },
-        "react" => Edge {
-          "error": "INVALID",
-          "name": "react",
-          "spec": "^16.0.0",
-          "to": "node_modules/react",
-          "type": "peer",
         },
         "scheduler" => Edge {
           "name": "scheduler",
@@ -25911,13 +25801,6 @@ Node {
           "to": "node_modules/ms",
           "type": "prod",
         },
-        "react" => Edge {
-          "error": "INVALID",
-          "name": "react",
-          "spec": "^16.8.6",
-          "to": "node_modules/react",
-          "type": "peer",
-        },
         "string-length" => Edge {
           "name": "string-length",
           "spec": "^3.1.0",
@@ -25989,12 +25872,6 @@ Node {
           "spec": "^0.5.6",
           "to": "node_modules/source-map-support",
           "type": "prod",
-        },
-        "typescript" => Edge {
-          "name": "typescript",
-          "spec": ">=2.0",
-          "to": "node_modules/typescript",
-          "type": "peer",
         },
         "yn" => Edge {
           "name": "yn",
@@ -26093,12 +25970,6 @@ Node {
           "name": "typescript",
           "spec": "^3.7.2",
           "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/ts-node",
-          "name": "typescript",
-          "spec": ">=2.0",
-          "type": "peer",
         },
       },
       "location": "node_modules/typescript",

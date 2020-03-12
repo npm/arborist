@@ -200,7 +200,9 @@ t.test('update a bundling node without updating all of its deps', t => {
 t.test('omit optional dep', t => {
   const path = fixture(t, 'tap-react15-collision-legacy-sw')
   const ignoreScripts = true
-  return new Arborist({ path, ignoreScripts }).reify({ omit: ['optional'] })
+
+  const arb = new Arborist({ path, ignoreScripts })
+  return arb.reify({ omit: ['optional'] })
     .then(tree => {
       t.equal(tree.children.get('fsevents'), undefined, 'no fsevents in tree')
       t.throws(() => fs.statSync(path + '/node_modules/fsevents'), 'no fsevents unpacked')
@@ -209,6 +211,7 @@ t.test('omit optional dep', t => {
         optional: true,
       }, 'fsevents present in lockfile')
     })
+    .then(() => t.ok(arb.diff, 'has a diff tree'))
 })
 
 t.test('dev, optional, devOptional flags and omissions', t => {

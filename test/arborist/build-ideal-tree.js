@@ -205,6 +205,15 @@ t.test('dedupe example - deduped', t => {
   return t.resolveMatchSnapshot(printIdeal(path), 'dedupe testing')
 })
 
+t.test('expose explicitRequest', async t => {
+  const path = resolve(__dirname, '../fixtures/simple')
+  const arb = new Arborist({ path })
+  const tree = await arb.buildIdealTree({ add: [ 'abbrev' ] })
+  t.ok(arb.explicitRequests, 'exposes the explicit request')
+  t.ok(arb.explicitRequests.has('abbrev'), 'should contain explicit item')
+  t.end()
+})
+
 t.test('bundle deps example 1', t => {
   // NB: this results in ignoring the bundled deps when building the
   // ideal tree.  When we reify, we'll have to ignore the deps that

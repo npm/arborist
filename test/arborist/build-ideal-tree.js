@@ -210,6 +210,7 @@ t.test('expose explicitRequest', async t => {
   const arb = new Arborist({ path })
   const tree = await arb.buildIdealTree({ add: [ 'abbrev' ] })
   t.ok(arb.explicitRequests, 'exposes the explicit request')
+  t.strictSame(arb.explicitRequests, new Set(['abbrev']))
   t.ok(arb.explicitRequests.has('abbrev'), 'should contain explicit item')
   t.end()
 })

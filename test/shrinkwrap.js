@@ -3,6 +3,7 @@ const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
 const calcDepFlags = require('../lib/calc-dep-flags.js')
 const mutateFS = require('mutate-fs')
+const fs = require('fs')
 
 const t = require('tap')
 
@@ -364,6 +365,48 @@ t.test('construct metadata from node and package data', t => {
   t.matchSnapshot(meta.get(peer.location), 'a peer dep')
   t.matchSnapshot(meta.get(peerdep.location), 'a peer meta-dep')
   t.matchSnapshot(meta.commit(), 'data calculated from nodes themselves')
+  t.end()
+})
+
+t.test('saving dependency-free shrinkwrap object', t => {
+  const dir = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'badsave',
+      version: '1.0.0',
+      description: 'no node_modules/ will fail'
+    })
+  })
+
+  t.test('save meta lockfile into node_modules directory', async t => {
+    const sw = await Shrinkwrap.load({ path: dir, hiddenLockfile: true })
+    t.equal(
+      sw.filename,
+      resolve(`${dir}/node_modules/.package-lock.json`),
+      'correct filepath on shrinkwrap instance'
+    )
+    // save does not throw, but doens't write the file
+    await sw.save()
+    t.throws(() => fs.statSync(sw.filename))
+  })
+
+  t.test('if save fails, it does throw, if not a hidden lockfile', async t => {
+    const sw = await Shrinkwrap.load({ path: dir, hiddenLockfile: false })
+    sw.filename = dir + '/this/path/does/not/exist.json'
+    await t.rejects(sw.save(), { code: 'ENOENT' })
+    t.throws(() => fs.statSync(sw.filename))
+  })
+
+  t.test('save lockfile to root directory', async t => {
+    const sw = await Shrinkwrap.load({ path: dir })
+    t.equal(
+      sw.filename,
+      resolve(`${dir}/package-lock.json`),
+      'correct filepath on shrinkwrap instance'
+    )
+    await sw.save()
+    fs.statSync(sw.filename)
+  })
+
   t.end()
 })
 

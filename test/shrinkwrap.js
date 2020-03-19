@@ -367,6 +367,42 @@ t.test('construct metadata from node and package data', t => {
   t.end()
 })
 
+t.test('saving shrinkwrap object', t => {
+  const dir = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'badsave',
+      version: '1.0.0',
+      description: 'no node_modules/ will fail'
+    })
+  })
+
+  t.test('save meta lockfile into node_modules directory', async t => {
+    const sw = await Shrinkwrap.load({ path: dir, hiddenLockfile: true })
+    t.equal(
+      sw.filename,
+      `${dir}/node_modules/.package-lock.json`,
+      'correct filepath on shrinkwrap instance'
+    )
+    await sw.save()
+    t.ok(sw, 'able to save with no deps')
+    t.end()
+  })
+
+  t.test('save lockfile to root directory', async t => {
+    const sw = await Shrinkwrap.load({ path: dir })
+    t.equal(
+      sw.filename,
+      `${dir}/package-lock.json`,
+      'correct filepath on shrinkwrap instance'
+    )
+    await sw.save()
+    t.ok(sw, 'able to save with no deps')
+    t.end()
+  })
+
+  t.end()
+})
+
 t.test('write the shrinkwrap back to disk', t => {
   const dir = t.testdir({})
   t.test('just read and write back', t =>

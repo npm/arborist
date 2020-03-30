@@ -12086,6 +12086,39 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP omit peer deps > finished timers 1`] = `
+Array [
+  "arborist:ctor",
+  "idealTree",
+  "idealTree:#root",
+  "idealTree:buildDeps",
+  "idealTree:fixDepFlags",
+  "idealTree:init",
+  "idealTree:node_modules/@isaacs/testing-peer-deps-b",
+  "idealTree:node_modules/@isaacs/testing-peer-deps-c",
+  "idealTree:node_modules/@isaacs/testing-peer-deps-d",
+  "idealTree:node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+  "idealTree:node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
+  "idealTree:node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
+  "idealTree:userRequests",
+  "reify",
+  "reify:createSparse",
+  "reify:diffTrees",
+  "reify:loadBundles",
+  "reify:loadTrees",
+  "reify:retireShallow",
+  "reify:runScripts",
+  "reify:save",
+  "reify:trash",
+  "reify:trashOmits",
+  "reify:unpack",
+  "reify:unretire",
+  "reifyNode:node_modules/@isaacs/testing-peer-deps-b",
+  "reifyNode:node_modules/@isaacs/testing-peer-deps-d",
+  "reifyNode:node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-a",
+]
+`
+
 exports[`test/arborist/reify.js TAP omits when both dev and optional flags are set dev > expect resolving Promise 1`] = `
 Node {
   "edgesOut": Map {

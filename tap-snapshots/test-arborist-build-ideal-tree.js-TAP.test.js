@@ -9669,7 +9669,7 @@ Node {
       },
       "location": "node_modules/minimist",
       "name": "minimist",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
     },
     "minipass" => Node {
       "children": Map {
@@ -30515,7 +30515,7 @@ Node {
       },
       "location": "node_modules/minimist",
       "name": "minimist",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
     },
     "minipass" => Node {
       "children": Map {

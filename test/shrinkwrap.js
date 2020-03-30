@@ -37,6 +37,18 @@ t.test('load and then reset gets empty lockfile', t =>
     t.equal(sw.filename, resolve(fixture, 'package-lock.json'))
   }))
 
+t.test('starting out with a reset lockfile is an empty lockfile', t =>
+  Shrinkwrap.reset({ path: fixture }).then(sw => {
+    t.strictSame(sw.data, {
+      lockfileVersion: 2,
+      requires: true,
+      dependencies: {},
+      packages: {},
+    })
+    t.equal(sw.loadedFromDisk, true)
+    t.equal(sw.filename, resolve(fixture, 'package-lock.json'))
+  }))
+
 t.test('loading in bad dir gets empty lockfile', t =>
   Shrinkwrap.load({ path: 'path/which/does/not/exist' }).then(sw => {
     t.strictSame(sw.data, {
@@ -456,8 +468,12 @@ t.test('load shrinkwrap if no package-lock.json present', t => {
   return Promise.all([
     Shrinkwrap.load({ path: dir, shrinkwrapOnly: true }).then(s =>
       t.equal(s.type, 'npm-shrinkwrap.json', 'loaded with swonly')),
+    Shrinkwrap.reset({ path: dir, shrinkwrapOnly: true }).then(s =>
+      t.equal(s.type, 'npm-shrinkwrap.json', 'loaded fresh')),
     Shrinkwrap.load({ path: dir }).then(s =>
       t.equal(s.type, 'npm-shrinkwrap.json', 'loaded without swonly')),
+    Shrinkwrap.reset({ path: dir }).then(s =>
+      t.equal(s.type, 'npm-shrinkwrap.json', 'loaded fresh without swonly')),
   ])
 })
 
@@ -526,4 +542,19 @@ t.test('load a hidden lockfile', t => Shrinkwrap.load({
   t.strictSame(s.data.dependencies, {}, 'did not add to legacy data')
   s.commit()
   t.equal(s.data.dependencies, undefined, 'deleted legacy metadata')
+}))
+
+t.test('load a fresh hidden lockfile', t => Shrinkwrap.reset({
+  path: hiddenLockfileFixture,
+  hiddenLockfile: true,
+}).then(sw => {
+  t.strictSame(sw.data, {
+    lockfileVersion: 2,
+    requires: true,
+    dependencies: {},
+    packages: {},
+  })
+  t.equal(sw.loadedFromDisk, true)
+  const hidden = 'node_modules/.package-lock.json'
+  t.equal(sw.filename, resolve(hiddenLockfileFixture, hidden))
 }))

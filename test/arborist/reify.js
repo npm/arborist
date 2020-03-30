@@ -388,6 +388,17 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
   ]))
 })
 
+t.test('warn on reifying deprecated dependency', t => {
+  const a = new Arborist({
+    path: fixture(t, 'deprecated-dep'),
+  })
+  const logs = []
+  process.on('log', (...msg) => msg[0] === 'warn' && logs.push(msg))
+  return a.reify().then(() => t.match(logs, [
+    ['warn', 'deprecated', 'mkdirp@0.5.4: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)'],
+  ])).then(() => process.removeAllListeners('log'))
+})
+
 t.test('rollbacks', { buffered: false }, t => {
   t.test('fail retiring shallow nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')

@@ -42,6 +42,17 @@ const fsMock = {
   },
 }
 
+// track the warnings that are emitted.  returns a function that removes
+// the listener and provides the list of what it saw.
+const warningTracker = () => {
+  const list = []
+  const onlog = (...msg) => msg[0] === 'warn' && list.push(msg)
+  process.on('log', onlog)
+  return () => {
+    process.removeListener('log', onlog)
+    return list
+  }
+}
 
 const Node = requireInject('../../lib/node.js', { fs: fsMock })
 const Shrinkwrap = requireInject('../../lib/shrinkwrap.js', {
@@ -381,9 +392,8 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
     engineStrict: false,
     nodeVersion: '1.2.3',
   })
-  const logs = []
-  a.on('log', (...msg) => logs.push(msg))
-  return a.reify().then(() => t.match(logs, [
+  const check = warningTracker()
+  return a.reify().then(() => t.match(check(), [
     ['warn', { code: 'EBADENGINE' }],
   ]))
 })
@@ -392,11 +402,10 @@ t.test('warn on reifying deprecated dependency', t => {
   const a = new Arborist({
     path: fixture(t, 'deprecated-dep'),
   })
-  const logs = []
-  process.on('log', (...msg) => msg[0] === 'warn' && logs.push(msg))
-  return a.reify().then(() => t.match(logs, [
+  const check = warningTracker()
+  return a.reify().then(() => t.match(check(), [
     ['warn', 'deprecated', 'mkdirp@0.5.4: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)'],
-  ])).then(() => process.removeAllListeners('log'))
+  ]))
 })
 
 t.test('rollbacks', { buffered: false }, t => {
@@ -533,16 +542,16 @@ t.test('rollbacks', { buffered: false }, t => {
       return a[kRollback](er)
     }
 
-    const warnings = []
-    a.on('warn', (...warning) => warnings.push(warning))
-
+    const check = warningTracker()
     failRimraf = true
     return t.rejects(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
     }).then(tree => 'it worked'), new Error('poop'))
       .then(() => {
+        const warnings = check()
         t.equal(warnings.length, 1)
         t.match(warnings, [[
+          'warn',
           'Failed to clean up some directories',
           [[String, new Error('rimraf fail')]],
         ]])
@@ -650,17 +659,20 @@ t.test('rollbacks', { buffered: false }, t => {
       a[kRemove] = removeRetiredAndDeletedNodes
       return a[kRemove]()
     }
-    const warnings = []
-    a.on('warn', (...warning) => warnings.push(warning))
+    const check = warningTracker()
+
     return t.resolveMatchSnapshot(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
     }).then(tree => printTree(tree))).then(() => {
+      const warnings = check()
       t.equal(warnings.length, 1)
       t.match(warnings, [[
+        'warn',
         'Failed to clean up some directories',
         [[String, new Error('rimraf fail')]],
       ]])
-    }).then(() => failRimraf = false)
+    })
+    .then(() => failRimraf = false)
   })
 
   t.end()

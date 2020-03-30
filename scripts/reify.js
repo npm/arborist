@@ -49,10 +49,10 @@ for (let i = 2; i < process.argv.length; i++) {
 }
 
 console.error(options)
+process.on('log', console.error)
 
 const start = process.hrtime()
 new Arborist(options)
-  .on('log', console.error)
   .reify(options).then(tree => {
   const end = process.hrtime(start)
   if (!options.quiet)

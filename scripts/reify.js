@@ -1,6 +1,23 @@
 const Arborist = require('../')
 const path = process.argv[2] || '.'
 
+const ms = require('ms')
+const timers = {}
+process.on('time', name => {
+  if (timers[name]) {
+    throw new Error('conflicting timer! ' + name)
+  }
+  timers[name] = process.hrtime()
+})
+process.on('timeEnd', name => {
+  if (!timers[name]) {
+    throw new Error('timer not started! ' + name)
+  }
+  const res = process.hrtime(timers[name])
+  delete timers[name]
+  console.error(name, res[0] * 1e3 + res[1] / 1e6)
+})
+
 const {format} = require('tcompare')
 const print = tree => console.log(format(printTree(tree), { style: 'js' }))
 const printEdge = require('./lib/print-edge.js')
@@ -52,12 +69,13 @@ console.error(options)
 process.on('log', console.error)
 
 const start = process.hrtime()
-new Arborist(options)
-  .reify(options).then(tree => {
+process.emit('time', 'install')
+new Arborist(options).reify(options).then(tree => {
+  process.emit('timeEnd', 'install')
   const end = process.hrtime(start)
   if (!options.quiet)
     print(tree)
-  console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[1] / 10e9}s`)
+  console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[1] / 1e9}s`)
   if (tree.meta && options.save)
     tree.meta.save()
 }).catch(er => console.error(er))

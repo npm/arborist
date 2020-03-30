@@ -165,6 +165,21 @@ t.test('testing-peer-deps package', t =>
 
 t.test('omit peer deps', t => {
   const path = fixture(t, 'testing-peer-deps')
+  // in this one we also snapshot the timers, mostly just as a smoke test
+  const timers = {}
+  const finishedTimers = []
+  const onTime = name => {
+    t.notOk(timers[name], 'should not have duplicated timers started')
+    timers[name] = true
+  }
+  const onTimeEnd = name => {
+    t.ok(timers[name], 'should not end unstarted timer')
+    delete timers[name]
+    finishedTimers.push(name)
+  }
+  process.on('time', onTime)
+  process.on('timeEnd', onTimeEnd)
+
   return reify(path, { omit: ['peer'] })
     .then(tree => {
       for (const node of tree.inventory.values()) {
@@ -177,6 +192,13 @@ t.test('omit peer deps', t => {
         else
           t.equal(fs.statSync(resolve(path, loc)).isDirectory(), true)
       }
+    })
+    .then(() => {
+      process.removeListener('time', onTime)
+      process.removeListener('timeEnd', onTimeEnd)
+      finishedTimers.sort((a, b) => a.localeCompare(b))
+      t.matchSnapshot(finishedTimers, 'finished timers')
+      t.strictSame(timers, {}, 'should have no timers in progress now')
     })
 })
 

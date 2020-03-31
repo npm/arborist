@@ -23,7 +23,6 @@ Diff {
     "/path/to/root/node_modules/b/node_modules/d/node_modules/e",
     "/path/to/root/node_modules/x/node_modules/y",
     "/path/to/root/node_modules/p/node_modules/q",
-    "/path/to/root/node_modules/bundler/node_modules/metabundled",
     "/path/to/root/node_modules/bundler/node_modules/not-bundled",
     "/path/to/root/foo/node_modules/baz",
     "/path/to/root/node_modules/i/node_modules/j",
@@ -33,6 +32,7 @@ Diff {
     "/path/to/root/node_modules/x",
     "/path/to/root/node_modules/bundler",
     "/path/to/root/node_modules/bundler/node_modules/bundled-a",
+    "/path/to/root/node_modules/bundler/node_modules/metabundled",
     "/path/to/root/foo/node_modules/bar",
     "/path/to/root/node_modules/b/node_modules/d",
     "/path/to/root/node_modules/b/node_modules/f",
@@ -40,7 +40,6 @@ Diff {
   ],
   "removed": Array [
     "/path/to/root/node_modules/p",
-    "/path/to/root/node_modules/bundler/node_modules/metabundled",
     "/path/to/root/node_modules/p/node_modules/q",
   ],
   "children": Array [
@@ -139,21 +138,6 @@ Diff {
           "children": Array [],
         },
       ],
-    },
-    Diff {
-      "action": "REMOVE",
-      "actual": Node {
-        "name": "metabundled",
-        "path": "/path/to/root/node_modules/bundler/node_modules/metabundled",
-        "integrity": null,
-      },
-      "ideal": undefined,
-      "leaves": Array [
-        "/path/to/root/node_modules/bundler/node_modules/metabundled",
-      ],
-      "unchanged": Array [],
-      "removed": Array [],
-      "children": Array [],
     },
     Diff {
       "action": "CHANGE",

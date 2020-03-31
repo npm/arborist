@@ -155,7 +155,7 @@ const fixture = (t, p) =>
 const printReified = (path, opt) => reify(path, opt).then(printTree)
 
 const reify = (path, opt) =>
-  new Arborist({cache, registry, path, ...(opt || {})}).reify(opt)
+  new Arborist({audit: false, cache, registry, path, ...(opt || {})}).reify(opt)
 
 t.test('weirdly broken lockfile without resolved value', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'dep-missing-resolved'))))

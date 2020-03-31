@@ -77,7 +77,8 @@ const startServer = cb => {
       }
 
       res.statusCode = er.code === 'ENOENT' ? 404 : 500
-      console.error(er)
+      if (res.method === 'GET')
+        console.error(er)
       res.setHeader('content-type', 'text/plain')
       res.end(er.stack)
     }

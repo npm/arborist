@@ -1,10 +1,11 @@
 {
   "_id": "mkdirp",
-  "_rev": "452-20dcdbc22149d667d5ddd123a4585b25",
+  "_rev": "511-5d269e956cca7595bcd338b77dd4446c",
   "name": "mkdirp",
   "description": "Recursively mkdir, like `mkdir -p`",
   "dist-tags": {
-    "latest": "1.0.3"
+    "latest": "1.0.4",
+    "legacy": "0.5.5"
   },
   "versions": {
     "0.0.1": {
@@ -38,7 +39,8 @@
         "shasum": "3fbd9f4711a5234233dc6c9d7a052d4b9f83b416",
         "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.0.1.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.0.2": {
       "name": "mkdirp",
@@ -74,7 +76,8 @@
       "dist": {
         "shasum": "d9438082daac12691c71d64076706c8a5c3511b6",
         "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.0.2.tgz"
-      }
+      },
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.0.3": {
       "name": "mkdirp",
@@ -114,7 +117,8 @@
         "shasum": "5a7d88a26857023759ffee7fe4c0b28b0f0066b9",
         "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.0.3.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.0.4": {
       "name": "mkdirp",
@@ -154,7 +158,8 @@
         "shasum": "fbb491deec0b9b00869f52582e5f431b3681d2f5",
         "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.0.4.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.0.5": {
       "name": "mkdirp",
@@ -194,7 +199,8 @@
         "shasum": "375facfa634b17dcdf734c56f59ddae5102811c8",
         "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.0.5.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.0.6": {
       "name": "mkdirp",
@@ -240,7 +246,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.0.7": {
       "name": "mkdirp",
@@ -286,7 +293,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.1.0": {
       "name": "mkdirp",
@@ -336,7 +344,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.2.0": {
       "name": "mkdirp",
@@ -386,7 +395,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.2.1": {
       "name": "mkdirp",
@@ -436,7 +446,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.2.2": {
       "name": "mkdirp",
@@ -486,7 +497,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.3.0": {
       "name": "mkdirp",
@@ -536,7 +548,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.3.1": {
       "name": "mkdirp",
@@ -587,7 +600,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.3.2": {
       "name": "mkdirp",
@@ -638,7 +652,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.3.3": {
       "name": "mkdirp",
@@ -689,7 +704,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.3.4": {
       "name": "mkdirp",
@@ -730,7 +746,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.3.5": {
       "name": "mkdirp",
@@ -774,7 +791,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.4.0": {
       "name": "mkdirp",
@@ -825,7 +843,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.4.1": {
       "name": "mkdirp",
@@ -879,7 +898,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.4.2": {
       "name": "mkdirp",
@@ -933,7 +953,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.5.0": {
       "name": "mkdirp",
@@ -988,7 +1009,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "0.5.1": {
       "name": "mkdirp",
@@ -1046,7 +1068,8 @@
           "email": "mail@substack.net"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "1.0.0": {
       "name": "mkdirp",
@@ -1355,20 +1378,379 @@
         "tmp": "tmp/mkdirp_1.0.3_1579899654395_0.05416104013537226"
       },
       "_hasShrinkwrap": false
+    },
+    "0.5.2": {
+      "name": "mkdirp",
+      "description": "Recursively mkdir, like `mkdir -p`",
+      "version": "0.5.2",
+      "publishConfig": {
+        "tag": "legacy"
+      },
+      "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+      },
+      "main": "index.js",
+      "keywords": [
+        "mkdir",
+        "directory"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/substack/node-mkdirp.git"
+      },
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "minimist": "^1.2.5"
+      },
+      "devDependencies": {
+        "mock-fs": "^3.7.0",
+        "tap": "^5.4.2"
+      },
+      "bin": {
+        "mkdirp": "bin/cmd.js"
+      },
+      "license": "MIT",
+      "readme": "# mkdirp\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\n# example\n\n## pow.js\n\n```js\nvar mkdirp = require('mkdirp');\n    \nmkdirp('/tmp/foo/bar/baz', function (err) {\n    if (err) console.error(err)\n    else console.log('pow!')\n});\n```\n\nOutput\n\n```\npow!\n```\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\n# methods\n\n```js\nvar mkdirp = require('mkdirp');\n```\n\n## mkdirp(dir, opts, cb)\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `opts.mode`. If `opts` is a non-object, it will be treated as\nthe `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdir(path, mode, cb)` and\n`opts.fs.stat(path, cb)`.\n\n## mkdirp.sync(dir, opts)\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `opts.mode`. If `opts` is a non-object, it will be\ntreated as the `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.\n\nReturns the first directory that had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdirSync(path, mode)` and\n`opts.fs.statSync(path)`.\n\n# usage\n\nThis package also ships with a `mkdirp` command.\n\n```\nusage: mkdirp [DIR1,DIR2..] {OPTIONS}\n\n  Create each supplied directory including any necessary parent directories that\n  don't yet exist.\n  \n  If the directory already exists, do nothing.\n\nOPTIONS are:\n\n  -m, --mode   If a directory needs to be created, set the mode as an octal\n               permission string.\n\n```\n\n# install\n\nWith [npm](http://npmjs.org) do:\n\n```\nnpm install mkdirp\n```\n\nto get the library, or\n\n```\nnpm install -g mkdirp\n```\n\nto get the command.\n\n# license\n\nMIT\n",
+      "readmeFilename": "readme.markdown",
+      "gitHead": "b2e7ba0dd8ac7029735969c5a6062d49e839b30d",
+      "bugs": {
+        "url": "https://github.com/substack/node-mkdirp/issues"
+      },
+      "homepage": "https://github.com/substack/node-mkdirp#readme",
+      "_id": "mkdirp@0.5.2",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-jczt4BrifxW743wRHJ05AnqIF52sDrHCAjTO66cFQStG1/jHMLFSGdAa3Rec21jdEObaPugcXfbh6Ammt2VQsw==",
+        "shasum": "2e7138d794dfbd097d74c84c410c3edd9eec479f",
+        "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.2.tgz",
+        "fileCount": 84,
+        "unpackedSize": 238925,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJecPpxCRA9TVsSAnZWagAAuEUP/3W7GzvkixthBZxxTNDW\nQTOv8W2CmOR+bwXVHEW95OKsbh8V4vcnZ6sDyFTqP4tZ/Br+TDSROnlXxu6n\npVhhaDQ/t5j4qmSUP5Jn1KwjvAb0zWWIJHMJ+KDegchVb1xKn+aKTPbvQPbz\nWbU8upX40rbl0zqd+ZhJKx1am2xcEflaRe0bmAXnQO38C5Uu7xLi00VTmHLm\nJj1/KFdGTgr8ba2TGZvB8xhSh/WjAmLlm0XFO1OTbEtfpwJcab2k+G+dZKk6\nBFfNItE2N08ppwCG0iY2DGi3G9Emqh/XnLBgYrkxBxy05JDUi/v+bz8NuDkA\nIHkKhzRLFY5ZEYklX9giIuyNPxEULhBY13Skgq8hB24tZi3yPADUE8jzOljz\nnyBJARbpunpOnmpCM8smeTBx01vE5cFACgddKPe5HeM2+MaqNWYUjO5N9GVD\nAvkZv3i/4Ap7836XxuiWDErMDK0WMyclaVXeRvsBxDMq3Rd4D1leTgz+1FKs\n849emi7Ojmfa7Vo6nRf6zty/yYVMck+/VNcKSITjoSEP7xyYdH+AuR7oT4C3\nvX84Twg+j+OSApgU/Za2IfO9NlA9Wvy3o/ibY9Ez/I9GtC9S6dV0aIlylsPO\n+f0dgujGVb9XWGSuEnWwfF0zBCOKdzu0P1LsG0AIlNFLNKQENBopIX5zOu/L\n+12b\r\n=hDKo\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "substack@gmail.com",
+          "name": "substack"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mkdirp_0.5.2_1584462448629_0.04027690349544977"
+      },
+      "_hasShrinkwrap": false,
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
+    },
+    "0.5.3": {
+      "name": "mkdirp",
+      "description": "Recursively mkdir, like `mkdir -p`",
+      "version": "0.5.3",
+      "publishConfig": {
+        "tag": "legacy"
+      },
+      "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+      },
+      "main": "index.js",
+      "keywords": [
+        "mkdir",
+        "directory"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/substack/node-mkdirp.git"
+      },
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "minimist": "^1.2.5"
+      },
+      "devDependencies": {
+        "mock-fs": "^3.7.0",
+        "tap": "^5.4.2"
+      },
+      "bin": {
+        "mkdirp": "bin/cmd.js"
+      },
+      "license": "MIT",
+      "readme": "# mkdirp\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\n# example\n\n## pow.js\n\n```js\nvar mkdirp = require('mkdirp');\n    \nmkdirp('/tmp/foo/bar/baz', function (err) {\n    if (err) console.error(err)\n    else console.log('pow!')\n});\n```\n\nOutput\n\n```\npow!\n```\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\n# methods\n\n```js\nvar mkdirp = require('mkdirp');\n```\n\n## mkdirp(dir, opts, cb)\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `opts.mode`. If `opts` is a non-object, it will be treated as\nthe `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdir(path, mode, cb)` and\n`opts.fs.stat(path, cb)`.\n\n## mkdirp.sync(dir, opts)\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `opts.mode`. If `opts` is a non-object, it will be\ntreated as the `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.\n\nReturns the first directory that had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdirSync(path, mode)` and\n`opts.fs.statSync(path)`.\n\n# usage\n\nThis package also ships with a `mkdirp` command.\n\n```\nusage: mkdirp [DIR1,DIR2..] {OPTIONS}\n\n  Create each supplied directory including any necessary parent directories that\n  don't yet exist.\n  \n  If the directory already exists, do nothing.\n\nOPTIONS are:\n\n  -m, --mode   If a directory needs to be created, set the mode as an octal\n               permission string.\n\n```\n\n# install\n\nWith [npm](http://npmjs.org) do:\n\n```\nnpm install mkdirp\n```\n\nto get the library, or\n\n```\nnpm install -g mkdirp\n```\n\nto get the command.\n\n# license\n\nMIT\n",
+      "readmeFilename": "readme.markdown",
+      "gitHead": "d784e70d1eb3fc73bcda52f22f57ec55c00c2525",
+      "bugs": {
+        "url": "https://github.com/substack/node-mkdirp/issues"
+      },
+      "homepage": "https://github.com/substack/node-mkdirp#readme",
+      "_id": "mkdirp@0.5.3",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-P+2gwrFqx8lhew375MQHHeTlY8AuOJSrGf0R5ddkEndUkmwpgUob/vQuBD1V22/Cw1/lJr4x+EjllSezBThzBg==",
+        "shasum": "5a514b7179259287952881e94410ec5465659f8c",
+        "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.3.tgz",
+        "fileCount": 6,
+        "unpackedSize": 7559,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJecPqyCRA9TVsSAnZWagAATvcQAJGnQf0PNBHPrlJoeNpR\n/fL18ar6/fwQ38/2W4IwITUclQb0xaV6r7lfIkOzveDx3DXOZI/EaTUBdVY9\nVuqozPcHgSVAxLrS+ScXBSp15lDXnqQwgYsE1AjG6S4EFepvTKjYQto9ZORg\nw4LVxupl5Yqw1+8bDTycXZ8DT9VZz0DB6/h75is27yRfbhpKIHyoH9e3lyOu\nR6pIa9A6cMK4ezM8otrr9V6OPej6h1vIMXW0nPCh4K5/7r6Ajqi83CH1BK5s\nBvNoto7cNOHUZQmKDrTsfxYo/zHXxbeY7oA6pwcg2ZKm124UtA7Vrds9HScO\nlqf5Uv7k80KdBJ7cNsoKJBBX0/wDbTD1YUY0gTcojsmFSwn6m22V2HOnpsd9\nyInBFo6/Rp9NSTH7xR/CVpSycnyCLy71KuEUfi5Rypvj46c5zapqMAxQ0b3c\nHKxlzVLTH36xpBLOq8MWh2ddWMZfL0XJA7iEPOHKfwSgO/WkT5/N6Qk2LZ8M\nqWk1L8p/g5tAVCmYCU4P/CXe0ka8XZ9ubqg76rD3XazDCULS0EStBnxY/XUE\ntzBXBXhVv9eeudtZgjWIBxNNPoEPrNsW3/1reX1ab10qdbz8BsIGNzYcZVSg\nEyIq8E5WtZ94Mr0b/Y99Ni9isCT/RySvYQ1BTnGLsvqaF4IH8YbHP+UDMYAQ\nKCkY\r\n=l2Wn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "substack@gmail.com",
+          "name": "substack"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mkdirp_0.5.3_1584462513748_0.0257106127685085"
+      },
+      "_hasShrinkwrap": false,
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
+    },
+    "0.5.4": {
+      "name": "mkdirp",
+      "description": "Recursively mkdir, like `mkdir -p`",
+      "version": "0.5.4",
+      "publishConfig": {
+        "tag": "legacy"
+      },
+      "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+      },
+      "main": "index.js",
+      "keywords": [
+        "mkdir",
+        "directory"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/substack/node-mkdirp.git"
+      },
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "minimist": "^1.2.5"
+      },
+      "devDependencies": {
+        "mock-fs": "^3.7.0",
+        "tap": "^5.4.2"
+      },
+      "bin": {
+        "mkdirp": "bin/cmd.js"
+      },
+      "license": "MIT",
+      "readme": "# mkdirp\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\n# example\n\n## pow.js\n\n```js\nvar mkdirp = require('mkdirp');\n    \nmkdirp('/tmp/foo/bar/baz', function (err) {\n    if (err) console.error(err)\n    else console.log('pow!')\n});\n```\n\nOutput\n\n```\npow!\n```\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\n# methods\n\n```js\nvar mkdirp = require('mkdirp');\n```\n\n## mkdirp(dir, opts, cb)\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `opts.mode`. If `opts` is a non-object, it will be treated as\nthe `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdir(path, mode, cb)` and\n`opts.fs.stat(path, cb)`.\n\n## mkdirp.sync(dir, opts)\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `opts.mode`. If `opts` is a non-object, it will be\ntreated as the `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777 & (~process.umask())`.\n\nReturns the first directory that had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdirSync(path, mode)` and\n`opts.fs.statSync(path)`.\n\n# usage\n\nThis package also ships with a `mkdirp` command.\n\n```\nusage: mkdirp [DIR1,DIR2..] {OPTIONS}\n\n  Create each supplied directory including any necessary parent directories that\n  don't yet exist.\n  \n  If the directory already exists, do nothing.\n\nOPTIONS are:\n\n  -m, --mode   If a directory needs to be created, set the mode as an octal\n               permission string.\n\n```\n\n# install\n\nWith [npm](http://npmjs.org) do:\n\n```\nnpm install mkdirp\n```\n\nto get the library, or\n\n```\nnpm install -g mkdirp\n```\n\nto get the command.\n\n# license\n\nMIT\n",
+      "readmeFilename": "readme.markdown",
+      "gitHead": "42a012cc6dbd4648790f380df88190bb697dbb9c",
+      "bugs": {
+        "url": "https://github.com/substack/node-mkdirp/issues"
+      },
+      "homepage": "https://github.com/substack/node-mkdirp#readme",
+      "_id": "mkdirp@0.5.4",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-iG9AK/dJLtJ0XNgTuDbSyNS3zECqDlAhnQW4CsNxBG3LQJBbHmRX1egw39DmtOdCAqY+dKXV+sgPgilNWUKMVw==",
+        "shasum": "fd01504a6797ec5c9be81ff43d204961ed64a512",
+        "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.4.tgz",
+        "fileCount": 6,
+        "unpackedSize": 7617,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeePd/CRA9TVsSAnZWagAAF9sQAKIMYrwLQQPHflBZSXKm\nkbTBW+owq0NpOT4vxuh65C0A2u4Q5+5cwB4h3e+qk9tEcboaABaP32qTYKy7\nsqILBVbDGsHE94Kmx+uuDjjEhWG3sQCuWNDzbu66SusRMyaBunhuW2y/t6GV\nuLgyF2qOdOLP9QJ8pKuaAuTux5Zv5F9LolfXWBrKHpqV2nqHVwRFzd/yq7zE\nWnDXT/MAEkRHH5xfIzNL0EQsi73WDfwkGNVXw5i8OvLwfvbZQo7zvdrbcwSP\nuD0OKRj2pmPmMGcuZsqKOWmxYZA4WDSD37aDS7Rw/hnCF55T4UU76ggbfr1M\n33w2aSipHgfpMCrUlYfpSRqWFENMzKmk3tPLb1DPkjmWvaKst0BR5UvC1Vqq\nHxhw+J9rVjojqgtMIo2Ihs/dMT/kuHv1BjlQ1zzucz1WtgCVvLRWs1W4RWdo\ni9tNml6YN2Cr0IqxpBRVHtAm26zHw8dQFUFG0Bmj671RNhWrL5igXDnVXk95\n/eSYtDoiaeIcwmTDrMHPmRIeNP+C8s362Th9FHofSd3qZ2wUlPL6LfEfIxs3\nudzrwdMtapwjMgJ8xoAfdJuIo/UecCvfXvRe/qjLDSe3ZcMh9EmYoO86inb8\nnSAzbBpCkzF4OzKwdL8v1HzywzXDA48acYwqFsDFHmYv8AHmQkRiIxBnXGsy\nM2UD\r\n=v0+5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mkdirp_0.5.4_1584985983142_0.3659078906393478"
+      },
+      "_hasShrinkwrap": false
+    },
+    "1.0.4": {
+      "name": "mkdirp",
+      "description": "Recursively mkdir, like `mkdir -p`",
+      "version": "1.0.4",
+      "main": "index.js",
+      "keywords": [
+        "mkdir",
+        "directory",
+        "make dir",
+        "make",
+        "dir",
+        "recursive",
+        "native"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/isaacs/node-mkdirp.git"
+      },
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "devDependencies": {
+        "require-inject": "^1.4.4",
+        "tap": "^14.10.7"
+      },
+      "bin": {
+        "mkdirp": "bin/cmd.js"
+      },
+      "license": "MIT",
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "b694079b54a0a59ef150c54b29c7c24e90d642f5",
+      "bugs": {
+        "url": "https://github.com/isaacs/node-mkdirp/issues"
+      },
+      "homepage": "https://github.com/isaacs/node-mkdirp#readme",
+      "_id": "mkdirp@1.0.4",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+        "shasum": "3eb5ed62622756d79a5f0e2a221dfebad75c2f7e",
+        "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+        "fileCount": 12,
+        "unpackedSize": 19088,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeh2xNCRA9TVsSAnZWagAAFiMQAIeSoosHZP0eVV6P64NS\nnXRn6I82OfqeOhU9DmWKLO4csIwPiBfLE+ZL4C0bHxeWllyD1HJYB755v38Y\nG8g+GgdkCKeUDSGsL5kcVWXclMydN14FooYF5vjiXig+WNFevum7Ul8Sduvy\np+/o95aKK4Q2xu9JGEVFmmhRF7dKUsb1Q6npcDrdmrDODWHfKQ6t6DXDW3M/\nXYZ/UblSBLOQkiqDKpilB+WWbLe95KOk7pPX8v1dZR94h9RTVoVkDXXX3TLQ\nJAPJ1FrYcIWfBZS3OgbbWo3Baer97ysxBc9zDpXJC3gHbrRMDJnbhnvcxnt/\n41l7zwnPF9JX0gV2Ol8FUSvAfE7FWDQzlpqxfn13g+gPmU42RbKBh4fuhw63\nMTPcvxwjTrDkLecTcbvaNv9WtZN8mJyFhxzjvYPr24ewwsdxj0q7fTMHWMhX\n2edEhaQ1sJVQV49rSPwJwE7+mZK/2D1accQIPa4PdePLTC6LSzviAROJz8eB\ntrcRY5kS3rTJA+Kdw8vByeWV1/eavBMNJL69gdYBgKfX6E0WiXb0YdFSX9DB\njT4CoKYPPKjUrsQdO4NcPPRgmnAlHS9U5nIPbxAhn40eb9hTs9GgN3ZnZcgL\nr4LkQaku79npoNqW2vmxJSJ9axe2qUYE6OycAlKbGiHqP36k3e9GNcK7c9aU\npS9s\r\n=RHg1\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mkdirp_1.0.4_1585933388669_0.38878898110354276"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.5.5": {
+      "name": "mkdirp",
+      "description": "Recursively mkdir, like `mkdir -p`",
+      "version": "0.5.5",
+      "publishConfig": {
+        "tag": "legacy"
+      },
+      "author": {
+        "name": "James Halliday",
+        "email": "mail@substack.net",
+        "url": "http://substack.net"
+      },
+      "main": "index.js",
+      "keywords": [
+        "mkdir",
+        "directory"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/substack/node-mkdirp.git"
+      },
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "minimist": "^1.2.5"
+      },
+      "devDependencies": {
+        "mock-fs": "^3.7.0",
+        "tap": "^5.4.2"
+      },
+      "bin": {
+        "mkdirp": "bin/cmd.js"
+      },
+      "license": "MIT",
+      "readme": "# mkdirp\n\nLike `mkdir -p`, but in node.js!\n\n[![build status](https://secure.travis-ci.org/substack/node-mkdirp.png)](http://travis-ci.org/substack/node-mkdirp)\n\n# example\n\n## pow.js\n\n```js\nvar mkdirp = require('mkdirp');\n    \nmkdirp('/tmp/foo/bar/baz', function (err) {\n    if (err) console.error(err)\n    else console.log('pow!')\n});\n```\n\nOutput\n\n```\npow!\n```\n\nAnd now /tmp/foo/bar/baz exists, huzzah!\n\n# methods\n\n```js\nvar mkdirp = require('mkdirp');\n```\n\n## mkdirp(dir, opts, cb)\n\nCreate a new directory and any necessary subdirectories at `dir` with octal\npermission string `opts.mode`. If `opts` is a non-object, it will be treated as\nthe `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777`.\n\n`cb(err, made)` fires with the error or the first directory `made`\nthat had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdir(path, mode, cb)` and\n`opts.fs.stat(path, cb)`.\n\n## mkdirp.sync(dir, opts)\n\nSynchronously create a new directory and any necessary subdirectories at `dir`\nwith octal permission string `opts.mode`. If `opts` is a non-object, it will be\ntreated as the `opts.mode`.\n\nIf `opts.mode` isn't specified, it defaults to `0777`.\n\nReturns the first directory that had to be created, if any.\n\nYou can optionally pass in an alternate `fs` implementation by passing in\n`opts.fs`. Your implementation should have `opts.fs.mkdirSync(path, mode)` and\n`opts.fs.statSync(path)`.\n\n# usage\n\nThis package also ships with a `mkdirp` command.\n\n```\nusage: mkdirp [DIR1,DIR2..] {OPTIONS}\n\n  Create each supplied directory including any necessary parent directories that\n  don't yet exist.\n  \n  If the directory already exists, do nothing.\n\nOPTIONS are:\n\n  -m, --mode   If a directory needs to be created, set the mode as an octal\n               permission string.\n\n```\n\n# install\n\nWith [npm](http://npmjs.org) do:\n\n```\nnpm install mkdirp\n```\n\nto get the library, or\n\n```\nnpm install -g mkdirp\n```\n\nto get the command.\n\n# license\n\nMIT\n",
+      "readmeFilename": "readme.markdown",
+      "gitHead": "049cf185c9e91727bc505b796a2d16a4fe70d64d",
+      "bugs": {
+        "url": "https://github.com/substack/node-mkdirp/issues"
+      },
+      "homepage": "https://github.com/substack/node-mkdirp#readme",
+      "_id": "mkdirp@0.5.5",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+        "shasum": "d91cefd62d1436ca0f41620e251288d420099def",
+        "tarball": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+        "fileCount": 6,
+        "unpackedSize": 7531,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeh256CRA9TVsSAnZWagAAlzoP/iLuWMWGqLMB70xGqJjf\nCnzJKbwcC2F1ek5f5gL7VLncqA5AoOER5pGmiLw9AhDFU/CK40uutHnujivh\nBNuO+uoweFrBsgS0bKCUBdSWzVABItvv3eJ2l6j7s9mbhiZgmu7weOT0WMcs\nZi1nmsMDeyqxCZUIwz2FJFOlU3QdaiuaXCnW8L/VaxdwUgy7rlLbu4qCKYlP\n8IdkkSUpXksaw6KE7QfFOmc+lM62CaNxIzto/B03ovHaUAUQrAeow8Ly/n8j\nhg+CiTScKeBvjKwMskoeYdV56cDsMQLyLLivlQt+AMN2KcHcE0qqvsvgxGwe\nBXTfvW9hpVsYLj6rICcMkU9yHSRlRkQ4fAInXSwvpzzzIPfavd9zSuFbyMsF\nzcZBEgZu0gbilehWhwwvTZ3Bd8WwxliKnkfgVLN+cOO69JSXJCXwIA7n3N06\nGQVKrGqDkLfKD6nSHy8krDknY0MvOhCDcwy2fNh1IdWMFnmF80x5Huhmxr55\npTkwxQr3IGOyePRqu5B2pXIW7HscnAerXAkccyX/FzmUlw3UIaPlPjNnUJDR\nopPRUYOAMHkg0LtrtVnPQCK0YU+siUzIDSjXnYV/fR0416r+RQXhemdgO6Ey\nqx8tIHVSvdKBLOaCzZYuqkDOIJgWC/qwCudv3Hxbj1gwEcCb3X5IvoK/1ok3\nt18G\r\n=XnRj\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mkdirp_0.5.5_1585933946291_0.6504650567992927"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
     {
       "email": "i@izs.me",
       "name": "isaacs"
-    },
-    {
-      "email": "substack@gmail.com",
-      "name": "substack"
     }
   ],
   "time": {
-    "modified": "2020-01-24T21:00:56.877Z",
+    "modified": "2020-04-03T17:12:29.790Z",
     "created": "2011-01-06T02:54:36.080Z",
     "0.0.1": "2011-01-06T02:54:36.496Z",
     "0.0.2": "2011-02-14T20:11:44.988Z",
@@ -1395,7 +1777,12 @@
     "1.0.0": "2020-01-24T20:18:42.630Z",
     "1.0.1": "2020-01-24T20:20:30.453Z",
     "1.0.2": "2020-01-24T20:22:50.327Z",
-    "1.0.3": "2020-01-24T21:00:54.556Z"
+    "1.0.3": "2020-01-24T21:00:54.556Z",
+    "0.5.2": "2020-03-17T16:27:28.746Z",
+    "0.5.3": "2020-03-17T16:28:33.897Z",
+    "0.5.4": "2020-03-23T17:53:03.257Z",
+    "1.0.4": "2020-04-03T17:03:08.825Z",
+    "0.5.5": "2020-04-03T17:12:26.436Z"
   },
   "repository": {
     "type": "git",
@@ -1758,7 +2145,8 @@
     "native"
   ],
   "license": "MIT",
-  "readmeFilename": "readme.markdown",
+  "readme": "",
+  "readmeFilename": "",
   "homepage": "https://github.com/isaacs/node-mkdirp#readme",
   "bugs": {
     "url": "https://github.com/isaacs/node-mkdirp/issues"

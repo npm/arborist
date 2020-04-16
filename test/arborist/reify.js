@@ -237,7 +237,7 @@ t.test('omit optional dep', t => {
   const path = fixture(t, 'tap-react15-collision-legacy-sw')
   const ignoreScripts = true
 
-  const arb = new Arborist({ path, ignoreScripts })
+  const arb = new Arborist({ path, ignoreScripts, registry })
   return arb.reify({ omit: ['optional'] })
     .then(tree => {
       t.equal(tree.children.get('fsevents'), undefined, 'no fsevents in tree')
@@ -410,6 +410,7 @@ t.test('fail on mismatched engine when engineStrict is set', t =>
 
 t.test('warn on mismatched engine when engineStrict is false', t => {
   const a = new Arborist({
+    registry,
     path: fixture(t, 'tap-and-flow'),
     engineStrict: false,
     nodeVersion: '1.2.3',
@@ -422,11 +423,12 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
 
 t.test('warn on reifying deprecated dependency', t => {
   const a = new Arborist({
+    registry,
     path: fixture(t, 'deprecated-dep'),
   })
   const check = warningTracker()
   return a.reify().then(() => t.match(check(), [
-    ['warn', 'deprecated', 'mkdirp@0.5.4: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)'],
+    ['warn', 'deprecated', 'mkdirp@0.5.3: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)'],
   ]))
 })
 
@@ -707,7 +709,7 @@ t.test('saving the ideal tree', t => {
     // if it wasn't an early exit, it'd blow up and throw
     // an error though.
     const path = t.testdir()
-    const a = new Arborist({ path })
+    const a = new Arborist({ path, registry })
     t.notOk(a[kSaveIdealTree]({ save: false }))
     t.end()
   })
@@ -730,7 +732,7 @@ t.test('saving the ideal tree', t => {
     const path = t.testdir({
       'package.json': JSON.stringify(pkg)
     })
-    const a = new Arborist({ path })
+    const a = new Arborist({ path, registry })
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
     return a.loadActual().then(tree => Shrinkwrap.load({path}).then(meta => {
       tree.meta = meta

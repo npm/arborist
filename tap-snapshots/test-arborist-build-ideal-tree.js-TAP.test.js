@@ -53,13 +53,13 @@ Node {
         Edge {
           "from": "node_modules/mkdirp",
           "name": "minimist",
-          "spec": "0.0.8",
+          "spec": "^1.2.5",
           "type": "prod",
         },
       },
       "location": "node_modules/minimist",
       "name": "minimist",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
     },
     "mkdirp" => Node {
       "edgesIn": Set {
@@ -73,14 +73,14 @@ Node {
       "edgesOut": Map {
         "minimist" => Edge {
           "name": "minimist",
-          "spec": "0.0.8",
+          "spec": "^1.2.5",
           "to": "node_modules/minimist",
           "type": "prod",
         },
       },
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
     },
   },
   "edgesOut": Map {
@@ -124,7 +124,7 @@ Node {
           },
           "location": "packages/foo/node_modules/mkdirp",
           "name": "mkdirp",
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.3.tgz",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
         },
       },
       "edgesOut": Map {
@@ -9666,6 +9666,12 @@ Node {
           "spec": "^1.2.0",
           "type": "prod",
         },
+        Edge {
+          "from": "node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "^1.2.5",
+          "type": "prod",
+        },
       },
       "location": "node_modules/minimist",
       "name": "minimist",
@@ -9716,22 +9722,6 @@ Node {
       "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.1.1.tgz",
     },
     "mkdirp" => Node {
-      "children": Map {
-        "minimist" => Node {
-          "dev": true,
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/mkdirp",
-              "name": "minimist",
-              "spec": "0.0.8",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/mkdirp/node_modules/minimist",
-          "name": "minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-        },
-      },
       "dev": true,
       "edgesIn": Set {
         Edge {
@@ -9750,14 +9740,14 @@ Node {
       "edgesOut": Map {
         "minimist" => Edge {
           "name": "minimist",
-          "spec": "0.0.8",
-          "to": "node_modules/mkdirp/node_modules/minimist",
+          "spec": "^1.2.5",
+          "to": "node_modules/minimist",
           "type": "prod",
         },
       },
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
     },
     "ms" => Node {
       "dev": true,
@@ -30512,6 +30502,12 @@ Node {
           "spec": "^1.2.0",
           "type": "prod",
         },
+        Edge {
+          "from": "node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "^1.2.5",
+          "type": "prod",
+        },
       },
       "location": "node_modules/minimist",
       "name": "minimist",
@@ -30560,21 +30556,6 @@ Node {
       "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.1.1.tgz",
     },
     "mkdirp" => Node {
-      "children": Map {
-        "minimist" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/mkdirp",
-              "name": "minimist",
-              "spec": "0.0.8",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/mkdirp/node_modules/minimist",
-          "name": "minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-        },
-      },
       "edgesIn": Set {
         Edge {
           "from": "node_modules/spawn-wrap",
@@ -30592,14 +30573,14 @@ Node {
       "edgesOut": Map {
         "minimist" => Edge {
           "name": "minimist",
-          "spec": "0.0.8",
-          "to": "node_modules/mkdirp/node_modules/minimist",
+          "spec": "^1.2.5",
+          "to": "node_modules/minimist",
           "type": "prod",
         },
       },
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
     },
     "ms" => Node {
       "edgesIn": Set {

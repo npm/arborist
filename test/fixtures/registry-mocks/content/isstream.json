@@ -1,8 +1,5 @@
 {
-  "_id": "isstream",
-  "_rev": "14-60b7c3e17afe078e6aa38bf38a08e553",
   "name": "isstream",
-  "description": "Determine if an object is a Stream",
   "dist-tags": {
     "latest": "0.1.2"
   },
@@ -10,22 +7,6 @@
     "0.0.0": {
       "name": "isstream",
       "version": "0.0.0",
-      "description": "Determine if an object is a Stream",
-      "main": "isstream.js",
-      "scripts": {
-        "test": "tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/rvagg/isstream.git"
-      },
-      "keywords": [
-        "stream",
-        "type",
-        "streams",
-        "readable-stream",
-        "hippo"
-      ],
       "devDependencies": {
         "tape": "~2.12.3",
         "core-util-is": "~1.0.0",
@@ -33,53 +14,14 @@
         "string_decoder": "~0.10.x",
         "inherits": "~2.0.1"
       },
-      "author": {
-        "name": "Rod Vagg",
-        "email": "rod@vagg.org"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/rvagg/isstream/issues"
-      },
-      "homepage": "https://github.com/rvagg/isstream",
-      "_id": "isstream@0.0.0",
       "dist": {
         "shasum": "566875667e0178ca298d5c869ff3ca6aba71e3f8",
         "tarball": "https://registry.npmjs.org/isstream/-/isstream-0.0.0.tgz"
-      },
-      "_from": ".",
-      "_npmVersion": "1.4.3",
-      "_npmUser": {
-        "name": "rvagg",
-        "email": "rod@vagg.org"
-      },
-      "maintainers": [
-        {
-          "name": "rvagg",
-          "email": "rod@vagg.org"
-        }
-      ],
-      "directories": {}
+      }
     },
     "0.1.0": {
       "name": "isstream",
       "version": "0.1.0",
-      "description": "Determine if an object is a Stream",
-      "main": "isstream.js",
-      "scripts": {
-        "test": "tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/rvagg/isstream.git"
-      },
-      "keywords": [
-        "stream",
-        "type",
-        "streams",
-        "readable-stream",
-        "hippo"
-      ],
       "devDependencies": {
         "tape": "~2.12.3",
         "core-util-is": "~1.0.0",
@@ -87,53 +29,14 @@
         "string_decoder": "~0.10.x",
         "inherits": "~2.0.1"
       },
-      "author": {
-        "name": "Rod Vagg",
-        "email": "rod@vagg.org"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/rvagg/isstream/issues"
-      },
-      "homepage": "https://github.com/rvagg/isstream",
-      "_id": "isstream@0.1.0",
       "dist": {
         "shasum": "1fc062509b8c8902ee78d0a8d015ad3251472285",
         "tarball": "https://registry.npmjs.org/isstream/-/isstream-0.1.0.tgz"
-      },
-      "_from": ".",
-      "_npmVersion": "1.4.3",
-      "_npmUser": {
-        "name": "rvagg",
-        "email": "rod@vagg.org"
-      },
-      "maintainers": [
-        {
-          "name": "rvagg",
-          "email": "rod@vagg.org"
-        }
-      ],
-      "directories": {}
+      }
     },
     "0.1.1": {
       "name": "isstream",
       "version": "0.1.1",
-      "description": "Determine if an object is a Stream",
-      "main": "isstream.js",
-      "scripts": {
-        "test": "tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/rvagg/isstream.git"
-      },
-      "keywords": [
-        "stream",
-        "type",
-        "streams",
-        "readable-stream",
-        "hippo"
-      ],
       "devDependencies": {
         "tape": "~2.12.3",
         "core-util-is": "~1.0.0",
@@ -141,55 +44,14 @@
         "string_decoder": "~0.10.x",
         "inherits": "~2.0.1"
       },
-      "author": {
-        "name": "Rod Vagg",
-        "email": "rod@vagg.org"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/rvagg/isstream/issues"
-      },
-      "homepage": "https://github.com/rvagg/isstream",
-      "gitHead": "0406cfe2677231b7b23a229a61b15999bf60ce67",
-      "_id": "isstream@0.1.1",
-      "_shasum": "48332c5999893996ba253c81c7bd6e7ae0905c4f",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "rvagg",
-        "email": "rod@vagg.org"
-      },
-      "maintainers": [
-        {
-          "name": "rvagg",
-          "email": "rod@vagg.org"
-        }
-      ],
       "dist": {
         "shasum": "48332c5999893996ba253c81c7bd6e7ae0905c4f",
         "tarball": "https://registry.npmjs.org/isstream/-/isstream-0.1.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.1.2": {
       "name": "isstream",
       "version": "0.1.2",
-      "description": "Determine if an object is a Stream",
-      "main": "isstream.js",
-      "scripts": {
-        "test": "tar --xform 's/^package/readable-stream-1.0/' -zxf readable-stream-1.0.*.tgz && tar --xform 's/^package/readable-stream-1.1/' -zxf readable-stream-1.1.*.tgz && node test.js; rm -rf readable-stream-1.?/"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/rvagg/isstream.git"
-      },
-      "keywords": [
-        "stream",
-        "type",
-        "streams",
-        "readable-stream",
-        "hippo"
-      ],
       "devDependencies": {
         "tape": "~2.12.3",
         "core-util-is": "~1.0.0",
@@ -197,80 +59,13 @@
         "string_decoder": "~0.10.x",
         "inherits": "~2.0.1"
       },
-      "author": {
-        "name": "Rod Vagg",
-        "email": "rod@vagg.org"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/rvagg/isstream/issues"
-      },
-      "homepage": "https://github.com/rvagg/isstream",
-      "gitHead": "cd39cba6da939b4fc9110825203adc506422c3dc",
-      "_id": "isstream@0.1.2",
-      "_shasum": "47e63f7af55afa6f92e1500e690eb8b8529c099a",
-      "_from": ".",
-      "_npmVersion": "2.6.1",
-      "_nodeVersion": "1.4.3",
-      "_npmUser": {
-        "name": "rvagg",
-        "email": "rod@vagg.org"
-      },
-      "maintainers": [
-        {
-          "name": "rvagg",
-          "email": "rod@vagg.org"
-        }
-      ],
       "dist": {
         "shasum": "47e63f7af55afa6f92e1500e690eb8b8529c099a",
         "tarball": "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz"
-      },
-      "directories": {}
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "rvagg",
-      "email": "rod@vagg.org"
-    }
-  ],
-  "time": {
-    "modified": "2017-12-28T04:27:35.979Z",
-    "created": "2014-04-07T00:03:04.615Z",
-    "0.0.0": "2014-04-07T00:03:04.615Z",
-    "0.1.0": "2014-04-07T00:38:39.891Z",
-    "0.1.1": "2014-12-08T23:11:38.322Z",
-    "0.1.2": "2015-03-07T00:15:15.512Z"
-  },
-  "homepage": "https://github.com/rvagg/isstream",
-  "keywords": [
-    "stream",
-    "type",
-    "streams",
-    "readable-stream",
-    "hippo"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rvagg/isstream.git"
-  },
-  "author": {
-    "name": "Rod Vagg",
-    "email": "rod@vagg.org"
-  },
-  "bugs": {
-    "url": "https://github.com/rvagg/isstream/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "users": {
-    "wenbing": true,
-    "antixrist": true,
-    "leizongmin": true,
-    "mojaray2k": true,
-    "coolhanddev": true,
-    "ganeshkbhat": true
-  },
-  "_attachments": {}
+  "modified": "2017-12-28T04:27:35.979Z",
+  "_cached": false,
+  "_contentLength": 1309
 }

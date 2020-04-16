@@ -1,1974 +1,487 @@
 {
-  "_id": "dashdash",
-  "_rev": "56-20a53dc7b99354f68cabc2f5636fd411",
   "name": "dashdash",
-  "description": "A light, featureful and explicit option parsing library.",
   "dist-tags": {
     "latest": "1.14.1"
   },
   "versions": {
     "1.0.0": {
       "name": "dashdash",
-      "description": "Yet another node.js option parsing library",
       "version": "1.0.0",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.0.0",
       "dist": {
         "shasum": "34f5e36c7dc2e32351fbeef2f2829ad121f2a601",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.0.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.0.1": {
       "name": "dashdash",
-      "description": "Yet another node.js option parsing library",
       "version": "1.0.1",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.0.1",
       "dist": {
         "shasum": "6ea53c159b099173aae73faecc643b7d2a343013",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.0.1.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.0.2": {
       "name": "dashdash",
-      "description": "Yet another node.js option parsing library",
       "version": "1.0.2",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.0.2",
       "dist": {
         "shasum": "cb1f44d6d0f046435ab784e15217cf48b78b8381",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.0.2.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.1.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.1.0",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.1.0",
       "dist": {
         "shasum": "dad70e645851de3216d4cc43756610c79973b100",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.1.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.2.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.2.0",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.2.0",
       "dist": {
         "shasum": "d617c4725e41d825400b637032bb0c42309e9a26",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.2.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.2.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.2.1",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.2.1",
       "dist": {
         "shasum": "6085257782585250e23ef8173a0b42ffbc8ca67a",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.2.1.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.14",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.3.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.3.0",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.3.0",
       "dist": {
         "shasum": "99ae1d5b398f4b89b578d9dc0d56472414460b32",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.3.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.14",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.3.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.3.1",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.3.1",
       "dist": {
         "shasum": "9119758398e5be65190daa401b905204bc4854ff",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.3.1.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.14",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.3.2": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.3.2",
-      "author": {
-        "name": "Trent Mick",
-        "url": "trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "_id": "dashdash@1.3.2",
       "dist": {
         "shasum": "1e76d13fadf25f8f50e70212c98a25beb1b3b8eb",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.3.2.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.14",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.4.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.4.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "_id": "dashdash@1.4.0",
       "dist": {
         "shasum": "2d0ecc65efe7c4344cb016fbf4a8bfebbb056187",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.4.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.3.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.5.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.5.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.2"
       },
       "devDependencies": {
         "nodeunit": "0.7.4"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "_id": "dashdash@1.5.0",
       "dist": {
         "shasum": "fa5aa8a9415a7c5c3928be18bd4975458e666452",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.5.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.3.11",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.6.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.6.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.6.0",
-      "_shasum": "c4b14318f88edead4713a1695e283276a7543963",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "c4b14318f88edead4713a1695e283276a7543963",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.6.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.7.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.7.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.7.0",
-      "_shasum": "81234881f5773c28ac324dc0070c274b8b3c2bc6",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "81234881f5773c28ac324dc0070c274b8b3c2bc6",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.7.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.7.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.7.1",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.7.1",
-      "_shasum": "aa85b3e8c9a8932d1263162deb7b6acb9a8b37f4",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "aa85b3e8c9a8932d1263162deb7b6acb9a8b37f4",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.7.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.7.2": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.7.2",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.7.2",
-      "_shasum": "2c0041ae78400c716c09a3329ea5e4dbf47d2c04",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "2c0041ae78400c716c09a3329ea5e4dbf47d2c04",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.7.2.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.7.3": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.7.3",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.7.3",
-      "_shasum": "bf533fedaa455ed8fee11519ebfb9ad66170dcdf",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "bf533fedaa455ed8fee11519ebfb9ad66170dcdf",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.7.3.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.8.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.8.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.8.0",
-      "_shasum": "40c19740ee4cb6921992d118ad4dd7689f8b9f43",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "40c19740ee4cb6921992d118ad4dd7689f8b9f43",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.8.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.9.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.9.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.9.0",
-      "_shasum": "05d97206366f5411563c3d0fbc87d19cd46cbd51",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "05d97206366f5411563c3d0fbc87d19cd46cbd51",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.9.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.10.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.10.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.10.0",
-      "_shasum": "119b756c1aa67e55dcfb3152e2e659d1d26f5229",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "119b756c1aa67e55dcfb3152e2e659d1d26f5229",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.10.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.10.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.10.1",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "gitHead": "e95a66a095553ef045283b34d7615bf02f0dfaac",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.10.1",
-      "_shasum": "0abf1af89a8f5129a81f18c2b35b21df22622f60",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "0abf1af89a8f5129a81f18c2b35b21df22622f60",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.10.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.11.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.11.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "gitHead": "c0f126a9ec1c8e75ef904a68b1f3b4b7fc1a86ad",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.11.0",
-      "_shasum": "babd3892d71ab403948c6a2b9d65f7de1ace8e92",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "babd3892d71ab403948c6a2b9d65f7de1ace8e92",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.11.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.12.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.12.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "gitHead": "30f46825de72f479b014c32c7a8ab97a0ea68b34",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.12.0",
-      "_shasum": "478075969f75afad5c9af944233b6e7dd3edf1fb",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "478075969f75afad5c9af944233b6e7dd3edf1fb",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.12.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.12.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.12.1",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "0.1.x"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "gitHead": "927f21d4bfbd69e95c900509d415e4f5bef6dd8a",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.12.1",
-      "_shasum": "ed5fd0f9d2dc189e1fbf11e40f6a412167203b6a",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "ed5fd0f9d2dc189e1fbf11e40f6a412167203b6a",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.12.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.12.2": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.12.2",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "^0.2.0"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.8"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        }
-      ],
-      "gitHead": "d4248f21da0b30bd89c88ccee9bf6eac0e59f9f6",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.12.2",
-      "_shasum": "1c6f70588498d047b8cd5777b32ba85a5e25be36",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "1c6f70588498d047b8cd5777b32ba85a5e25be36",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.12.2.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8"
+      }
     },
     "1.13.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.13.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "^1.0.0"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.10"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        },
-        {
-          "name": "Dave Pacheco",
-          "url": "https://github.com/davepacheco"
-        }
-      ],
-      "gitHead": "69425c9d9000d72c95e78ca43e3f84675f8f73ff",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.13.0",
-      "_shasum": "a5aae6fd9d8e156624eb0dd9259eb12ba245385a",
-      "_from": ".",
-      "_npmVersion": "1.4.29",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "a5aae6fd9d8e156624eb0dd9259eb12ba245385a",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.13.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-5-east.internal.npmjs.com",
-        "tmp": "tmp/dashdash-1.13.0.tgz_1455248887432_0.5643249636050314"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10"
+      }
     },
     "1.13.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.13.1",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "^1.0.0"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.10"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        },
-        {
-          "name": "Dave Pacheco",
-          "url": "https://github.com/davepacheco"
-        }
-      ],
-      "gitHead": "aabf8a7e71ce7ed3d24c3c57d64a57b78c1a8546",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.13.1",
-      "_shasum": "3530ed38b9026be9af05c83423c9154122e3d47c",
-      "_from": ".",
-      "_npmVersion": "1.4.29",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "3530ed38b9026be9af05c83423c9154122e3d47c",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.13.1.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/dashdash-1.13.1.tgz_1461355198185_0.31851457548327744"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10"
+      }
     },
     "1.14.0": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.14.0",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "^1.0.0"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.10"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        },
-        {
-          "name": "Dave Pacheco",
-          "url": "https://github.com/davepacheco"
-        }
-      ],
-      "gitHead": "2f70d248a509418e4473922ee034faf9cd91b3f8",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash",
-      "_id": "dashdash@1.14.0",
-      "_shasum": "29e486c5418bf0f356034a993d51686a33e84141",
-      "_from": ".",
-      "_npmVersion": "1.4.29",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "29e486c5418bf0f356034a993d51686a33e84141",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.14.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/dashdash-1.14.0.tgz_1464847169030_0.07120498712174594"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10"
+      }
     },
     "1.14.1": {
       "name": "dashdash",
-      "description": "A light, featureful and explicit option parsing library.",
       "version": "1.14.1",
-      "author": {
-        "name": "Trent Mick",
-        "email": "trentm@gmail.com",
-        "url": "http://trentm.com"
-      },
-      "keywords": [
-        "option",
-        "parser",
-        "parsing",
-        "cli",
-        "command",
-        "args",
-        "bash",
-        "completion"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/trentm/node-dashdash.git"
-      },
-      "main": "./lib/dashdash.js",
       "dependencies": {
         "assert-plus": "^1.0.0"
       },
       "devDependencies": {
         "nodeunit": "0.9.x"
       },
-      "engines": {
-        "node": ">=0.10"
-      },
-      "scripts": {
-        "test": "nodeunit test/*.test.js"
-      },
-      "license": "MIT",
-      "contributors": [
-        {
-          "name": "Trent Mick",
-          "email": "trentm@gmail.com",
-          "url": "http://trentm.com"
-        },
-        {
-          "name": "Isaac Schlueter",
-          "url": "https://github.com/isaacs"
-        },
-        {
-          "name": "Joshua M. Clulow",
-          "url": "https://github.com/jclulow"
-        },
-        {
-          "name": "Patrick Mooney",
-          "url": "https://github.com/pfmooney"
-        },
-        {
-          "name": "Dave Pacheco",
-          "url": "https://github.com/davepacheco"
-        }
-      ],
-      "gitHead": "1dd7379640462a21ca6d92502803de830b4acfa2",
-      "bugs": {
-        "url": "https://github.com/trentm/node-dashdash/issues"
-      },
-      "homepage": "https://github.com/trentm/node-dashdash#readme",
-      "_id": "dashdash@1.14.1",
-      "_shasum": "853cfa0f7cbe2fed5de20326b8dd581035f6e2f0",
-      "_from": ".",
-      "_npmVersion": "2.15.9",
-      "_nodeVersion": "4.6.1",
-      "_npmUser": {
-        "name": "trentm",
-        "email": "trentm@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "853cfa0f7cbe2fed5de20326b8dd581035f6e2f0",
         "tarball": "https://registry.npmjs.org/dashdash/-/dashdash-1.14.1.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/dashdash-1.14.1.tgz_1479854020349_0.731718891998753"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10"
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "trentm",
-      "email": "trentm@gmail.com"
-    }
-  ],
-  "time": {
-    "modified": "2017-12-28T04:04:47.569Z",
-    "created": "2013-02-28T08:00:19.903Z",
-    "1.0.0": "2013-02-28T08:00:21.323Z",
-    "1.0.1": "2013-02-28T09:02:35.313Z",
-    "1.0.2": "2013-03-01T04:27:17.922Z",
-    "1.1.0": "2013-03-08T06:50:05.004Z",
-    "1.2.0": "2013-03-08T17:23:28.716Z",
-    "1.2.1": "2013-04-24T04:05:07.026Z",
-    "1.3.0": "2013-06-01T04:12:06.242Z",
-    "1.3.1": "2013-06-03T20:13:00.497Z",
-    "1.3.2": "2013-06-03T20:32:11.954Z",
-    "1.4.0": "2013-11-25T23:14:34.971Z",
-    "1.5.0": "2014-03-29T05:28:13.099Z",
-    "1.6.0": "2014-06-04T22:13:05.771Z",
-    "1.7.0": "2014-09-25T06:58:14.126Z",
-    "1.7.1": "2014-11-19T23:44:01.631Z",
-    "1.7.2": "2015-01-05T21:54:34.068Z",
-    "1.7.3": "2015-02-05T08:49:20.454Z",
-    "1.8.0": "2015-03-26T04:08:11.335Z",
-    "1.9.0": "2015-04-07T16:09:52.766Z",
-    "1.10.0": "2015-04-13T05:51:22.989Z",
-    "1.10.1": "2015-09-11T22:39:55.045Z",
-    "1.11.0": "2015-12-31T17:03:38.561Z",
-    "1.12.0": "2016-01-08T18:42:31.068Z",
-    "1.12.1": "2016-01-09T00:26:34.390Z",
-    "1.12.2": "2016-01-18T19:18:23.688Z",
-    "1.13.0": "2016-02-12T03:48:10.373Z",
-    "1.13.1": "2016-04-22T19:59:58.788Z",
-    "1.14.0": "2016-06-02T05:59:31.595Z",
-    "1.14.1": "2016-11-22T22:33:40.575Z"
-  },
-  "author": {
-    "name": "Trent Mick",
-    "email": "trentm@gmail.com",
-    "url": "http://trentm.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/trentm/node-dashdash.git"
-  },
-  "users": {
-    "jacques": true,
-    "groundwater": true,
-    "guumaster": true,
-    "j.su": true,
-    "scottfreecode": true,
-    "mojaray2k": true,
-    "shuoshubao": true,
-    "rijnhard": true,
-    "ganeshkbhat": true
-  },
-  "contributors": [
-    {
-      "name": "Trent Mick",
-      "email": "trentm@gmail.com",
-      "url": "http://trentm.com"
-    },
-    {
-      "name": "Isaac Schlueter",
-      "url": "https://github.com/isaacs"
-    },
-    {
-      "name": "Joshua M. Clulow",
-      "url": "https://github.com/jclulow"
-    },
-    {
-      "name": "Patrick Mooney",
-      "url": "https://github.com/pfmooney"
-    },
-    {
-      "name": "Dave Pacheco",
-      "url": "https://github.com/davepacheco"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/trentm/node-dashdash/issues"
-  },
-  "readmeFilename": "README.md",
-  "keywords": [
-    "option",
-    "parser",
-    "parsing",
-    "cli",
-    "command",
-    "args",
-    "bash",
-    "completion"
-  ],
-  "homepage": "https://github.com/trentm/node-dashdash#readme",
-  "license": "MIT",
-  "_attachments": {}
+  "modified": "2017-12-28T04:04:47.569Z",
+  "_cached": false,
+  "_contentLength": 8009
 }

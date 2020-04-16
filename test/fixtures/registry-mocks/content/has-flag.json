@@ -1,8 +1,5 @@
 {
-  "_id": "has-flag",
-  "_rev": "11-c8b2538e0ea567ee48b2bc44b666ab59",
   "name": "has-flag",
-  "description": "Check if argv has a specific flag",
   "dist-tags": {
     "latest": "4.0.0"
   },
@@ -10,300 +7,54 @@
     "1.0.0": {
       "name": "has-flag",
       "version": "1.0.0",
-      "description": "Check if argv has a specific flag",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sindresorhus/has-flag.git"
-      },
-      "author": {
-        "name": "Sindre Sorhus",
-        "email": "sindresorhus@gmail.com",
-        "url": "sindresorhus.com"
-      },
-      "maintainers": [
-        {
-          "name": "Sindre Sorhus",
-          "email": "sindresorhus@gmail.com",
-          "url": "sindresorhus.com"
-        },
-        {
-          "name": "Joshua Appelman",
-          "email": "jappelman@xebia.com",
-          "url": "jbnicolai.com"
-        },
-        {
-          "name": "JD Ballard",
-          "email": "i.am.qix@gmail.com",
-          "url": "github.com/qix-"
-        }
-      ],
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "node test.js"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "has",
-        "check",
-        "detect",
-        "contains",
-        "find",
-        "flag",
-        "cli",
-        "command-line",
-        "argv",
-        "process",
-        "arg",
-        "args",
-        "argument",
-        "arguments",
-        "getopt",
-        "minimist",
-        "optimist"
-      ],
       "devDependencies": {
         "ava": "0.0.4"
-      },
-      "gitHead": "621de2782d538f28f99f0bb85b158799cb3ae5cf",
-      "bugs": {
-        "url": "https://github.com/sindresorhus/has-flag/issues"
-      },
-      "homepage": "https://github.com/sindresorhus/has-flag#readme",
-      "_id": "has-flag@1.0.0",
-      "_shasum": "9d9e793165ce017a00f00418c43f942a7b1d11fa",
-      "_from": ".",
-      "_npmVersion": "2.11.2",
-      "_nodeVersion": "0.12.5",
-      "_npmUser": {
-        "name": "sindresorhus",
-        "email": "sindresorhus@gmail.com"
       },
       "dist": {
         "shasum": "9d9e793165ce017a00f00418c43f942a7b1d11fa",
         "tarball": "https://registry.npmjs.org/has-flag/-/has-flag-1.0.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.0": {
       "name": "has-flag",
       "version": "2.0.0",
-      "description": "Check if argv has a specific flag",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sindresorhus/has-flag.git"
-      },
-      "author": {
-        "name": "Sindre Sorhus",
-        "email": "sindresorhus@gmail.com",
-        "url": "sindresorhus.com"
-      },
-      "maintainers": [
-        {
-          "name": "sindresorhus",
-          "email": "sindresorhus@gmail.com"
-        },
-        {
-          "name": "jbnicolai",
-          "email": "jappelman@xebia.com"
-        }
-      ],
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "has",
-        "check",
-        "detect",
-        "contains",
-        "find",
-        "flag",
-        "cli",
-        "command-line",
-        "argv",
-        "process",
-        "arg",
-        "args",
-        "argument",
-        "arguments",
-        "getopt",
-        "minimist",
-        "optimist"
-      ],
       "devDependencies": {
         "ava": "*",
         "xo": "*"
-      },
-      "gitHead": "601137409f2617c75838d8f3febed5c6e6e8ee2c",
-      "bugs": {
-        "url": "https://github.com/sindresorhus/has-flag/issues"
-      },
-      "homepage": "https://github.com/sindresorhus/has-flag#readme",
-      "_id": "has-flag@2.0.0",
-      "_shasum": "e8207af1cc7b30d446cc70b734b5e8be18f88d51",
-      "_from": ".",
-      "_npmVersion": "3.8.6",
-      "_nodeVersion": "4.4.2",
-      "_npmUser": {
-        "name": "sindresorhus",
-        "email": "sindresorhus@gmail.com"
       },
       "dist": {
         "shasum": "e8207af1cc7b30d446cc70b734b5e8be18f88d51",
         "tarball": "https://registry.npmjs.org/has-flag/-/has-flag-2.0.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/has-flag-2.0.0.tgz_1460389675597_0.3113734829239547"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "3.0.0": {
       "name": "has-flag",
       "version": "3.0.0",
-      "description": "Check if argv has a specific flag",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sindresorhus/has-flag.git"
-      },
-      "author": {
-        "name": "Sindre Sorhus",
-        "email": "sindresorhus@gmail.com",
-        "url": "sindresorhus.com"
-      },
-      "engines": {
-        "node": ">=4"
-      },
-      "scripts": {
-        "test": "xo && ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "has",
-        "check",
-        "detect",
-        "contains",
-        "find",
-        "flag",
-        "cli",
-        "command-line",
-        "argv",
-        "process",
-        "arg",
-        "args",
-        "argument",
-        "arguments",
-        "getopt",
-        "minimist",
-        "optimist"
-      ],
       "devDependencies": {
         "ava": "*",
         "xo": "*"
-      },
-      "gitHead": "8b2ca7e693b2c742b29f2399194077b64b9ff781",
-      "bugs": {
-        "url": "https://github.com/sindresorhus/has-flag/issues"
-      },
-      "homepage": "https://github.com/sindresorhus/has-flag#readme",
-      "_id": "has-flag@3.0.0",
-      "_shasum": "b5d454dc2199ae225699f3467e5a07f3b955bafd",
-      "_from": ".",
-      "_npmVersion": "2.15.11",
-      "_nodeVersion": "4.8.4",
-      "_npmUser": {
-        "name": "sindresorhus",
-        "email": "sindresorhus@gmail.com"
       },
       "dist": {
         "shasum": "b5d454dc2199ae225699f3467e5a07f3b955bafd",
         "tarball": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "sindresorhus",
-          "email": "sindresorhus@gmail.com"
-        },
-        {
-          "name": "jbnicolai",
-          "email": "jappelman@xebia.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/has-flag-3.0.0.tgz_1514920915118_0.33958922349847853"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=4"
+      }
     },
     "4.0.0": {
       "name": "has-flag",
       "version": "4.0.0",
-      "description": "Check if argv has a specific flag",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/sindresorhus/has-flag.git"
-      },
-      "author": {
-        "name": "Sindre Sorhus",
-        "email": "sindresorhus@gmail.com",
-        "url": "sindresorhus.com"
-      },
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "xo && ava && tsd"
-      },
-      "keywords": [
-        "has",
-        "check",
-        "detect",
-        "contains",
-        "find",
-        "flag",
-        "cli",
-        "command-line",
-        "argv",
-        "process",
-        "arg",
-        "args",
-        "argument",
-        "arguments",
-        "getopt",
-        "minimist",
-        "optimist"
-      ],
       "devDependencies": {
         "ava": "^1.4.1",
         "tsd": "^0.7.2",
         "xo": "^0.24.0"
-      },
-      "gitHead": "474aa39afca7333d356c022fc5be4d31732bbba3",
-      "bugs": {
-        "url": "https://github.com/sindresorhus/has-flag/issues"
-      },
-      "homepage": "https://github.com/sindresorhus/has-flag#readme",
-      "_id": "has-flag@4.0.0",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.15.1",
-      "_npmUser": {
-        "name": "sindresorhus",
-        "email": "sindresorhus@gmail.com"
       },
       "dist": {
         "integrity": "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==",
@@ -313,73 +64,12 @@
         "unpackedSize": 4419,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcqMqCCRA9TVsSAnZWagAATrIP/22VegVJi5IYjjhsWhNL\nllQoPP8zRlEq/AG6a36bAVuF2lEGtPvtausr/IUbsWZj83n4orGFECflp7Qb\nAsJ3u6zFZLtnp5ug+AhjcqloCM57A05T2RT1YtMpIStapRGsIVc5xudQJtQI\nC+i8ePGQH42iYtLweN7xEw6UKa1ke8UG9hn8FvNP3EkGJOhS59TL8KfsxD8v\nQaNYjOr15UsRsL8K44afDQyhlO4njhr/e+INBDBQhR9vbjTysSxjf/edhzqu\n0CT+WdecdjAMk5egAjIIIbFTQmJtzITfVGJy/UnDmHF3Dyn68QPCOGVbInzy\ncyR858RhE2DAthInEOTYoM5ZfzH2YVSboXcsVZCn2/qcwmKVEyMcGzb0Mzeb\na2jyCMKacWlFO4LbdlXelLaiAfax5auAGiCtDyVfxV1QzBfGbOPoHpmN3drr\nRGxKBoQnlvXrrofmnnpP6sTHQVJJEo86y+F3WzlTwXqp50sC1gq05JC/TNxp\nOIsT5A8RPYmJBvZZKArMo3dHtlvOPPCN9GNERqrKr6ITq55d6h2dylmi46pJ\n920HPH55IKZlB3w73e3ylfAqEmG1KlM3auk/bHqRZJpdPRxUtHP+9pxweDbV\nNYAxJI6hZ3yMhAU8CwbLGBDYZTXSEJt2QxfJj8Yw4lQbQfUScjiML+MmJipS\nM5jU\r\n=+VZG\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "sindresorhus@gmail.com",
-          "name": "sindresorhus"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/has-flag_4.0.0_1554565761745_0.3213063984648754"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "sindresorhus@gmail.com",
-      "name": "sindresorhus"
-    }
-  ],
-  "time": {
-    "modified": "2019-04-06T15:49:24.714Z",
-    "created": "2015-07-07T22:43:54.339Z",
-    "1.0.0": "2015-07-07T22:43:54.339Z",
-    "2.0.0": "2016-04-11T15:47:58.270Z",
-    "3.0.0": "2018-01-02T19:21:56.098Z",
-    "4.0.0": "2019-04-06T15:49:21.907Z"
-  },
-  "homepage": "https://github.com/sindresorhus/has-flag#readme",
-  "keywords": [
-    "has",
-    "check",
-    "detect",
-    "contains",
-    "find",
-    "flag",
-    "cli",
-    "command-line",
-    "argv",
-    "process",
-    "arg",
-    "args",
-    "argument",
-    "arguments",
-    "getopt",
-    "minimist",
-    "optimist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sindresorhus/has-flag.git"
-  },
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "bugs": {
-    "url": "https://github.com/sindresorhus/has-flag/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "readme.md",
-  "users": {
-    "michalskuza": true,
-    "webzuu": true,
-    "aleclarson": true,
-    "rubiadias": true,
-    "drewigg": true
-  }
+  "modified": "2019-04-06T15:49:24.714Z",
+  "_cached": false,
+  "_contentLength": 2148
 }

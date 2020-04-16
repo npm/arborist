@@ -1,8 +1,5 @@
 {
-  "_id": "release-zalgo",
-  "_rev": "2-bbe8ff7d546cee9e07d2db9511b99734",
   "name": "release-zalgo",
-  "description": "Helps you write code with promise-like chains that can run both synchronously and asynchronously",
   "dist-tags": {
     "latest": "1.0.0"
   },
@@ -10,37 +7,6 @@
     "1.0.0": {
       "name": "release-zalgo",
       "version": "1.0.0",
-      "description": "Helps you write code with promise-like chains that can run both synchronously and asynchronously",
-      "main": "index.js",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "engines": {
-        "node": ">=4"
-      },
-      "scripts": {
-        "lint": "as-i-preach",
-        "test": "ava",
-        "posttest": "as-i-preach",
-        "coverage": "nyc npm test"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/novemberborn/release-zalgo.git"
-      },
-      "keywords": [
-        "babel"
-      ],
-      "author": {
-        "name": "Mark Wubben",
-        "url": "https://novemberborn.net/"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/novemberborn/release-zalgo/issues"
-      },
-      "homepage": "https://github.com/novemberborn/release-zalgo#readme",
       "dependencies": {
         "es6-error": "^4.0.1"
       },
@@ -50,71 +16,16 @@
         "coveralls": "^2.11.15",
         "nyc": "^10.1.2"
       },
-      "nyc": {
-        "reporter": [
-          "html",
-          "lcov",
-          "text"
-        ]
-      },
-      "standard-engine": "@novemberborn/as-i-preach",
-      "gitHead": "696e6ac92340120fe4b26fce4152f0197b45183b",
-      "_id": "release-zalgo@1.0.0",
-      "_shasum": "09700b7e5074329739330e535c5a90fb67851730",
-      "_from": ".",
-      "_npmVersion": "4.1.2",
-      "_nodeVersion": "7.4.0",
-      "_npmUser": {
-        "name": "novemberborn",
-        "email": "mark@novemberborn.net"
-      },
       "dist": {
         "shasum": "09700b7e5074329739330e535c5a90fb67851730",
         "tarball": "https://registry.npmjs.org/release-zalgo/-/release-zalgo-1.0.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "novemberborn",
-          "email": "mark@novemberborn.net"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/release-zalgo-1.0.0.tgz_1486135246627_0.704961761366576"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=4"
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "novemberborn",
-      "email": "mark@novemberborn.net"
-    }
-  ],
-  "time": {
-    "modified": "2017-10-01T10:15:04.458Z",
-    "created": "2017-02-03T15:20:48.613Z",
-    "1.0.0": "2017-02-03T15:20:48.613Z"
-  },
-  "homepage": "https://github.com/novemberborn/release-zalgo#readme",
-  "keywords": [
-    "babel"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/novemberborn/release-zalgo.git"
-  },
-  "author": {
-    "name": "Mark Wubben",
-    "url": "https://novemberborn.net/"
-  },
-  "bugs": {
-    "url": "https://github.com/novemberborn/release-zalgo/issues"
-  },
-  "license": "ISC",
-  "readmeFilename": "README.md",
-  "users": {
-    "sampic": true
-  },
-  "_attachments": {}
+  "modified": "2017-10-01T10:15:04.458Z",
+  "_cached": false,
+  "_contentLength": 472
 }

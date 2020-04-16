@@ -1,36 +1,12 @@
 {
-  "_id": "picomatch",
-  "_rev": "20-cbbe1b5edfd95d80863234e748c2a3ca",
   "name": "picomatch",
   "dist-tags": {
-    "latest": "2.2.1"
+    "latest": "2.2.2"
   },
   "versions": {
     "1.0.0": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.0.0",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "ansi-colors": "^3.0.5",
         "bash-match": "file:../bash-match",
@@ -42,46 +18,6 @@
         "multimatch": "^2.1.0",
         "nyc": "^13.0.1"
       },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "reflinks": [
-          "bash",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "nanomatch",
-          "picomatch"
-        ],
-        "related": {
-          "list": []
-        }
-      },
-      "gitHead": "e31190a5be26c1d69651db566792878e18a6a1ed",
-      "_id": "picomatch@1.0.0",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.10.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
       "dist": {
         "integrity": "sha512-5RUhp8IAAODWzJMyt8caoCR0mzKjcIk8VHCmNzrId095B8KB7U+yxJ2oTbWnesWVk7BQXdRCm0JFFUCNDnokCA==",
         "shasum": "ad8e4b63ed9ec16ecce02e55b7cca6eb1933e0f8",
@@ -90,44 +26,13 @@
         "unpackedSize": 15616,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb4DJtCRA9TVsSAnZWagAAFsEP/25zaI7WxDnR+yjBI+Xy\n7Ap79GoPUfjAFEHk2FDCwKrvg1Al84u/5jNg/372DWU8ZV3+ng89vzRImuRN\njGuBieApCBswcCl4ucI/SJCDNvhmlbSe7He0otLDiB+E5tK/mlIu4zUoiqpT\n+eZFOlXvNDZTc+NoX7HVV6nTfzT2tbWNwA5lXQZpv41C/F+xh/XieIdP+pdC\nLGcF20R4OTpwgh2QYjGtvQwaeEzR1WqYppr3yRZjF7PJ7pSOLuOVs+y61GDF\npHCmpaRCJV4irmGFc7wZ0sgvCSaaDnAtu7ICl8+kEyHGYUygQaiX8HrzVtc/\ns3QAO5fHhJVMc4Jf+QK2mtc40iiW6+GlRNco3neCLJnUbzZTHXny/ZBRjN2s\nwKb1DosiaRmARxjFcQiTe/Q/gIqeefF8x53q5n8dHfrNrK7abYiDyXbzds7A\nK9w9T5oKr/5hRqxakc3448CxP9z5ggKpjitF7K3Xqj4/AiprHm3tbEZG9NrQ\n4BK8z8eGO6jGojKfROrm9bIVY0AyznTGZFDC3Wpu09W5Zm7KV2GfK10cBWJn\nTny/H42L3Dn61J22Ua+fNUjZJ2lYsoXwrBTKvouUy42CU/3te2JjoNE5k0qX\npizVAmmFGpdRaMd9xSyxtnUf9Arbjyj0VagbAmFSE8QjUI9/FrrWwUlG9IT3\neezU\r\n=6krx\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.0.0_1541419628561_0.6850721941651912"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "1.0.1": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.0.1",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "ansi-colors": "^3.0.5",
         "bash-match": "^1.0.2",
@@ -138,46 +43,6 @@
         "mocha": "^3.5.3",
         "multimatch": "^2.1.0",
         "nyc": "^13.0.1"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "reflinks": [
-          "bash",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "nanomatch",
-          "picomatch"
-        ],
-        "related": {
-          "list": []
-        }
-      },
-      "gitHead": "087aa19296fb4b5bba0baf8e63535573b6f7e8f5",
-      "_id": "picomatch@1.0.1",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.10.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-LhU431VW6NbNnXz9K7MxRMLPov3MzO7sFw289mltXXdAQmkmi6TCZ+60t1V2qS7HF/bAPJ3WwOYtJDCJ0lp+QQ==",
@@ -187,44 +52,13 @@
         "unpackedSize": 15645,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb4DOQCRA9TVsSAnZWagAAmBAQAJJDQlWvO71Q8yM8cS7r\nxq+bsNgK+MFRlKp6FHcxo0AIXkojzr4OAyiBAXBP8r9e2/Hr1ekUoCEKw/ti\nyIOef7N2I9Iy1u2aZz7Ev5iy6cxYm9EyQnR7Gx8GxyM1NbmdJjdQQTgGK1/o\njB1zBVwYrAkKT9a1+kRG8ezi961m5KDwD1bg73ElqANVjL8VpfZp2VvqyD+W\nu8MwdQCHJjWzicFYVQCBc9HQWlu3u0w7yM9rvP70fq716aI9f1Dc7U41NKd8\nwcxZdTK844tsATVsNK0pq1T3UOhba0IWIeAP2DExIR3dg/ADDp80cJwpJK01\n8fJyguGc7hBtmGBNmYlSmnYbse++XYAZg0BWqBccNpZ+IboKs5BkquhwyH05\nbLc0cP2M614cjOZ8Utg6ZuFFKfmfJXi2QhwwKSRPx9J1q7oPGvJDKsIEu2nw\nuU8/JHt/UrFvemRzhg198hYWb8d6lApIcD4LFMYZpMYb7mZc66WQvMYnTx4e\n7hfy5d6tQ3fIfbbb8HR131QdO3GuNxQfdaI74dxw9ggqUaMTPBoeWzQAc5it\nlNFnHQUXKUUGqYX75q40jtR0u03V+bPStLtPwpy2Y5snhAzX2SUq9NmdhAlW\nk7DWrNZvfg1+Xj0173LOZTtrxnNXgzYX8O1NlnxhhU2MznEGoLSOGBrOr1wl\njBQx\r\n=tb/G\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.0.1_1541419920246_0.36685476241990167"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "1.0.2": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.0.2",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "ansi-colors": "^3.0.5",
         "bash-match": "^1.0.2",
@@ -236,46 +70,6 @@
         "multimatch": "^2.1.0",
         "nyc": "^13.0.1"
       },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "reflinks": [
-          "bash",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "nanomatch",
-          "picomatch"
-        ],
-        "related": {
-          "list": []
-        }
-      },
-      "gitHead": "6e17e8982e83965f0d9f468a83e945ad7da92c1b",
-      "_id": "picomatch@1.0.2",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.10.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
       "dist": {
         "integrity": "sha512-tTQlevEXfC16KUht/5hM84OBmCVO4bc5MiJ8VSwbD13dfv8ICCjRaDo9Mi2ZgZYm5EaCojRIhk8xIl8Y3+JNXw==",
         "shasum": "47a605ba6b76f20305331302b5d4ed731c69bdc9",
@@ -284,44 +78,13 @@
         "unpackedSize": 46965,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb4El5CRA9TVsSAnZWagAA06AP/RHAvGr465et+Ck6lmft\nD2eJeZp1US9xm6jB3sJDLbDt1Ah6Z/Rp1++/6kio4KG9ZErcoHa79LQjXM4E\n9lcJtEg6Suuox62pZ0sZ1EIKd4gTrYA6lRsKlhk13VBEdMczysYJ96y8YrIE\nDsv+qzoUtaMuQYDixh1Ids8WbqsuoGPQ4+YeLYzIHSjvFLLtI1tt2ViLjP8v\nMa9Tm+HDm6VAwd8RnrlB8KliRLAvzDfi4cONdES0wMGelRUmNRCkueCEdBZX\ngEmiEzhqNFYEZYtuMca2zk32C/7Jt6XQwo59CAGodYLCPna8OGhV0kh++WJ2\nxGjNru4SzIzcHKMg2oho1OuAC6N1yDey0LdFdyTp1HyNE22DlmrOaTFVK5uA\ngXHYMkViDkqqPGR3gzzLDQtDVPzS3gczA2CJH6zOGVE8x0Vee4uVuFEJiGN8\n3hoAs5qi5gAop9yLNQJtW/OsuvrD4lD+Ge0TwKtHXvdvKPva75F2de7k76DV\nYAlvxnWVzmeCAIwsDtxULuk+OzKEmZ7eKtJjOW627wxzhFNbHa2Yv7lfgpmV\nQxkEJlHvVY7jkoak9isLe0mrzfvsFPJd7jfHXHGG8gp2WUJrRghshnaFZHoY\nw54AHZqGWNte63bNCrgMQxVk+RaMXC48Nhnde4Ty4DYgIIrzuolMe9E5hP/q\nn2ge\r\n=2z2C\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.0.2_1541425529166_0.3812978102395246"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "1.1.0": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.1.0",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "ansi-colors": "^3.2.1",
         "bash-match": "^1.0.2",
@@ -332,49 +95,6 @@
         "mocha": "^3.5.3",
         "multimatch": "^2.1.0",
         "nyc": "^13.0.1"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "reflinks": [
-          "bash",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "nanomatch",
-          "picomatch"
-        ],
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        }
-      },
-      "gitHead": "77bd2d05830b10e8bac557beeb54d201fb007f2c",
-      "_id": "picomatch@1.1.0",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "11.4.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-ncNfzrfFY1cC3Vtdu8NPVdt5z4iNkjDT1e5fAQo0mmKXGD4nxJqSf07iR53bHJBumJJn3Ya9jgloj9mXZe0S1w==",
@@ -384,48 +104,13 @@
         "unpackedSize": 73788,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcE+XhCRA9TVsSAnZWagAAipoP/iYfhLJOqJxDXtn5vg/m\n/8uyxtla25xbtG9mZFFJAF38Qr5el/KsolJWFmAiXYyzBrpWLSSoljnhSl/p\nuV+JE3HClmVRj0FWh+xHS1KJIExB/S/vD+rnsltNmWaDii6miYjQmv0EH3tD\nM609MgytAYS0UypO39TpUJ/hJJBAbWD3lP6aR4IFDQjjeLwqAkc5NU6P+kX1\nUhYqu4fGlTrgEcWD3hdnY/e44jADR9FD0hZgIY9QpFBfioBzz39aYaL2G9YH\nWRlDKQ4DnEI86vfWuI97/kIH6mZtcDaHjrVnyQ6tEOcjTH54K1HHrMjbAZIh\nRqHauJVUvjp8wjVamGnqytySce65bvfpngxZ2VYTbGv6mRCRSJYm1rnZ+q3E\nnxCWvPhn0mDwZjipwRQ2h9ntNx/D4yYw9k32wf0yMluUxRkfwJuA6jdmyRDc\nmJfgxOg+BvQ6EWytJVX3MAE1r83qSr4I1GtLrVuOMsuNl64gUw75bD5VRvBc\nph5mjjYQo0oRDZwKJMDQ6l3MT5bL8VjljxPuZ8vvO3OpqdKOI5gELFCD4dlQ\nfcdKqW65rKuKwuBK0fbWAV6jXPdLgMpt0lYPy7qNfl3LRiGUTE9hF1emxH4y\njS3Cs92eO4+/sV1RuvvnG/lRReIbutn8s00IOjW5g5BVsN6X0Dm6nhFpqmXK\nSsE5\r\n=27rJ\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.1.0_1544807904081_0.47910854865565145"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "1.1.1": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.1.1",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "ansi-colors": "^3.2.1",
         "bash-match": "^1.0.2",
@@ -436,49 +121,6 @@
         "mocha": "^3.5.3",
         "multimatch": "^2.1.0",
         "nyc": "^13.0.1"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "reflinks": [
-          "bash",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "nanomatch",
-          "picomatch"
-        ],
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        }
-      },
-      "gitHead": "77bd2d05830b10e8bac557beeb54d201fb007f2c",
-      "_id": "picomatch@1.1.1",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "11.4.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-VWDOC2iibCJClkU5A1t3tUEGi4Rs73W7gyxO2enf5SCvkQoz+Q9viQSRu300ZUSRXMip/Esnt00sOffpDUFkrw==",
@@ -488,48 +130,13 @@
         "unpackedSize": 53918,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcFHB9CRA9TVsSAnZWagAAdRUQAKJ0P6LVuK2ojqYZunZK\nB7b1knkL6UVVa1T5obM6TVk6+mITdITV8uUWl3nLnt0EUonzwaK610Jqlxw7\nWxQ45xRyXN7SxUXq4gUq3Yj971fpGWACnFEqhzeJ0K387/DP1niLoWJzY1WZ\nevKXq3NQOoQhmhC4x7zWRljP7l7EyRv9eDOVc+Mm9++4/2y8jTvy7v8VhWb8\nWIUc7AXj9SUl3l/JuL3WF0qGLz28L9Ull8p1kRLmP5CSFU+r3X4iYg8CvkxR\nKpN4TFoRgBD2LzLVfG0t31tZ2JszrNXVmoswt2IcovHIGVxTxycG6RZrpO2v\nJBbxnwQqLDxCKUejQf9bhH+gfECpqIMw/aPTT8leoe2shRAc5A+uxzzj2Ua0\neLqIVVtJQMTYlrE7TUeIPMOxesXcLE+w3nirk/VpWaZoccU/4SpWF96cg+Gr\n0cQAGXWJs5Z+Z8VB5/Ln0ISVQsluRcxKfJxxXGqHBZe9S4+YbvEW1gDoEKD3\nqWp7qdQ5RD812q0bZJ9fq7K62g9p2DImppKfnmR7xI/o0/We1WO8b0Roz2yQ\nqxsx3YqFEFOsn9ZK6C6A0t/cwxIA1Z/GQ/Z4oxNkahYX9UhrLDxIKHq0Rl6f\n0fBTV9i0mqon9J5ii9z0eb5C3UNzATsJwCx8BaQKaK35DcjWNsKo6WBzmQre\ncJCQ\r\n=NtYK\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.1.1_1544843388115_0.8869841129031935"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "1.1.2": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.1.2",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "ansi-colors": "^3.2.1",
         "bash-match": "^1.0.2",
@@ -541,49 +148,6 @@
         "multimatch": "^2.1.0",
         "nyc": "^13.0.1"
       },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "reflinks": [
-          "bash",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "nanomatch",
-          "picomatch"
-        ],
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        }
-      },
-      "gitHead": "c50cb8b2d61976e8ae4244c6aedeef63c0fc474c",
-      "_id": "picomatch@1.1.2",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "11.4.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
       "dist": {
         "integrity": "sha512-FcXFq7ttIsWpwlMLaDvVskGLNSfKB0ibgEV4KpuJACD1S45dM4ViQuGrPMxNX3mXUtg3OZ3xC5Ny+lJS1PqIZg==",
         "shasum": "122f5efb555576410acc4bc328fb1a1eb69ae537",
@@ -592,95 +156,19 @@
         "unpackedSize": 53858,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcFHE9CRA9TVsSAnZWagAARZAP/j3IJoY4yqZQ2Vqow/1M\njkdljHGbfJCuAr7TY8215MMW/8aS+ZechfxqONN8PQzGv025SyML9bODQ224\nQ04aVPgCLp6BfYt1nWv5bJ+RQ+cnwlJa7sdbvZCNJFlbI3t4A+9yFVL+aZBd\no9jXoNkdZG/fXsAj1zFMCZ/whzekIPhurOVsj7Fz97+4irwfTBwcECuPUcXt\nUCIFCK7ZFl4IZEQU+4DK41U40jGFRqpq+b7LUd3t+NwK4BfQtYFPMYK/G3Do\nmNjgyQCP7xvjQ8XY47H9H0rLxmrH2WZ8/xTPlEz67BFlM1MROgWbnH7RYJvV\nFcUOM9UktQDXpRw+A2XFDPFZ+MvJHTCExtB+l3WnGFgQzk6HhnQSrK7GVPz/\nCYcVIV+EpRBJN355UGGbs+5ymjGGtun7/lXbWbtXDADmSfK5iWEXL74N4PY7\n+yb4m31Lf8UbkWyZAFVcHvoQiV6AJatQEIYhRSxgzDAi6FcLwt1ug5F/C4z4\n1GuxnJie2k1IsnF2WympWoNYP9rsDGCH6e6mXi56nwBUyOC7HSzI6lnzXFz/\npL778o3iaLsFQgo+szoxSEgDOwq+KWCJamFTwTUaX29VdDWElbF5aj207zl8\n7IrFh0vM0d890SKVz5Z3klJlEYaaQbCq1FzQXpfKKjZcrMy+qfl8Zsxgztkg\nCivN\r\n=Ug6y\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.1.2_1544843580410_0.9152113891811657"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "1.2.0": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "1.2.0",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^6.0.0",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "15a5d0e85cf411d1331078e896e764fc102533d2",
-      "_id": "picomatch@1.2.0",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-cMSUWLsIT8VCmIPlM87m5OASGmDnYJR2fEUIpOnuArPQY5p7kWfJ47wZtIOYHT8GJHo9B/QRr4m5mbsIXxZkMg==",
@@ -690,96 +178,19 @@
         "unpackedSize": 70185,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcntJnCRA9TVsSAnZWagAAAEoQAJnOUaVLtYsbpgX1U97F\nqoK9DgANIdBjwoAcLJa1ctAsP1Fnu0mEtsk18G9RP+tdHrUsWRLNy0ktKhP/\nKrudvB8Y0WWAGaqSdGGcJ8h2zK3PpWm+ivFpLWXErCqRBiKiDLua+L27Tgsl\nDjtHcdY7ClNI6ug8JYwlKc2tNNmVCAOZeAHPy1x4cu8DSUtKrCRe8GOg6d/u\nscJ+1kXPM2QT840KSDvDe081UFZCpFxvijiQNwn40PwQpGiVc26mcUPXXdMg\nVYLF6Q8R0ja4b/syYunwsNsGTQ+sXLxmz6EOWYVvrsKhgrQzy3g4xyN+DLnx\nXkOCkWMjBMb1rNMH/GWi7FZeFmtKbmZMPEHayRyxW2DrDfBZLA0W7SHRxYn4\nD3Bz8Rl6OdISXFa61+WUfh3eBt14WuiuEEXMG3hIE1lGG79kzSHll+p+IdIG\njR2ZZexQa8SrLJ/KV42HoADE9TWa/FsUB8PeHCcD2Vf/lDUaxAzQXgk3U4qr\nZN1PZpPYr38dPVFGxwAjJKnyWWJMefpfpF0taIaRbAsN7jEq72CJv7TiXFhe\nvSK71NNHjwSUZW6n2mR17RdmQTOD1ZKJKY1rHI3A8KT7HCQhPm9I3TYrEZeI\nYAYlj/TN/UOTG4hxclvLh4uU557ROUX7JvVCG9SQUWdP+HH9GO45cMdBfQ1b\navEI\r\n=SHbE\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_1.2.0_1553912422567_0.7493384972833748"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.0": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.0",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "8212a2e641ab1365cadeab2110334e268b2a4762",
-      "_id": "picomatch@2.0.0",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-LCp3QJ9q6YPH7u0dZTgOuxj4DW20Li5R1xQAnzsOs9R0OmadvgxiPsTB224Jh/5pnyYlb48n9nETuQCOqB37Jw==",
@@ -789,96 +200,19 @@
         "unpackedSize": 67186,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcrc2BCRA9TVsSAnZWagAAmg8P/Awi3xnQeIX66Trd4F0U\npNBHinKmzG878PvwhVuxEsJt3T+BULVHWUFoX91wddnnFM5uTti7M2dZKQTi\n7BPzClNztiyCQJTeer8gCuia03xTofjn8/qM64Hab2m0pvP36CdtG9TaqO2q\nfDxU3BvNSzS2rAtS4b32Iy1Jg2wLpxc/Fk/YUG6GOBH1AFvM2m1Yvet+3MLf\ntFkE1EZE4IfrK2zXuca9bQwpwCZMLikYCtfo22S8y8ibbdxv8nHegzxH+KCp\nK+lEDC4+L8MH1fH6gpiXSfUb+gr1dSyuCd981vgpc3/03E8O0rOmQyjArxbc\niygEFBd/l1AtE0E+niKKL7FC7mRggbMFmloKaP/5hVbFe5uHpnWFqwsRdPSQ\ntJ7Fu4U/tr310Dh9dh2/g71asaryMs3gFUeM4YsYPNRdASjDPl138jBsue20\nQXrDdNy7pGONS2/gMUv/fcM6IgAqdveNaOEYUi5+40lA81HAbYxSnEZOMit6\n/iEXAv2JaDI3ssFW9/at0YBdkbP9/RDrvnrT+kFsbG2WNbMsSUxrS3ejNYe/\nYtkunV9nkSPY3qsvL/kTtf01abr28E7Fq+UiKzE9fk5kTZshl+1+amgmd+6H\nxVZqdSD1pJDyDZt6v9jD7l+bX/UafXAR9F/KvafwH35Wznn/7mKTFb1juVeb\nuDYT\r\n=W7d6\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.0_1554894208830_0.7281662890740057"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.1": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.1",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "fbdeb893beb223fdc4084797c33ff88049321543",
-      "_id": "picomatch@2.0.1",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-zruX90vxmnhSGd3mzHzNL+cbnZ/CTLGGI3MrCrcoP6mSHLxZP8n7Obg7MF3ZrN9Pb1u0I+fEOiw3CDp87D8Fzg==",
@@ -888,96 +222,19 @@
         "unpackedSize": 67186,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcrdhvCRA9TVsSAnZWagAAhN0P/2UP3PoS2bvtoaGzQRm/\nb9bm3Z+x4THEOsgkCUvY3dFcLRVMKhrgQ59xfKp+1x8ijOR/+RdjJv0LnCeS\nBS4ojiF8oaQxBhn2Nj4scZD7yySlscRGoF85YnWGaYetT1IkoSvwu4PUB1ir\nHOrGJiADPfZaZ28kdMa6Gk+STBQbxTZpLxrde8XDaCnwoewl/nyHhyLMnkNL\nz+8+XVGbPqWDf7DRrd/rZhN9OiMsd+w2o16PpA1VO2VV5bSBJvVqfElaEj4E\nvhUJ7US1mpb6QcD4V8BFb3GlJlRE5xTsaBBN4Q0puZnNEy9Sax2DftcBATtn\nQRiRz0AOFBCl5Fy7HeaJzpivOcV4CvheuzHyG72B2iDapuoNlAA1JskhjDV7\nEDllGH2TRrxDfnhMoCM2bGCLccT6UZZrO5STxy9f6nNsZa7Xib+fDCE0Kh4E\n1zBkPUCBDFO7U7BisIRpma0org04950WX0+w2MjJTdpzk3H0x8+UPr71+/JY\nQ4p51AYVqhrxQTokGioHFVvUQ0/98N/5T5t/ZnjKlAUvh24ae/fcpO7nIIVD\n9HMm8nAdxE0iD/ht/LX2VHo7SwWZlgUB0gpHpzNKn/SaO074hlkAS0pV9c7m\ny1KLTUtzEs5zfTsNEY58bsuc0YwUASPNVz5J+Gf9Cig98T5moSx90tmuWWFD\nkJnf\r\n=FWow\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.1_1554897006577_0.6770058205351768"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.2": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.2",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "64a4660ca62b5718dd4b440242cf914fbac000e4",
-      "_id": "picomatch@2.0.2",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-PsJljvIvCvQjzgw2ejIP/t1z9obDXzXxcDLc4IwzKS99UzVEzRqXJS3NEK9V8cuFk4d7DzYb6N8AVKBmq+j9fQ==",
@@ -987,96 +244,19 @@
         "unpackedSize": 67373,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcrd6lCRA9TVsSAnZWagAAWFkP/0WbffqeG6ciBS4Bc3VP\nvONcRjdWcnV8YTM3Z9xwBmRHmz7qSaomrgRB8arpEgDi/VqqHegiyyZ2Cxww\nPE+NLx2GeIdBSspa0bHfKfLGuckIf2ql+YaP7CdUIYC3d+R+CyKRy9pd3arO\nnmnwF4xAlafaDzqDHnkxRnesaj+7h+Apw8U4Dve+YywoyOL65aLGcEXnP5WU\nmvliVz5BUGFsu1cnwgB8E06dtPSdjm3xF9T5n4stm8D/GRGEMQoJT/sFSype\ntA0lgocHZYtPysrA5DLRNpuFLzbrrl/6p/aCiUEIQuAQks69dwfH+B1gAzqh\nXO1SvyyFWMveZGYILpr32RJeOq0qdOzo8AG0nzb0UDJsx0WfmN5e9y73eLqT\nT8BHiWSSf8H2XMpeUl39XCYpGwmi+CJpnwX1n7gXVC4tddri3320PDDn9l07\ntpk8GUiFa60lXWLbkHN8WacWGR98uuYQkMdE5Nqt7LtBjDF4lLCdRDTY4P6Q\nBiRp9FYAK4yT5XsmQjXtmJiXhuz2VCpAIRRZ13t7TTWaC41INnjlVgGcJVu4\nGXKC/YuFZftBxQPfZ7QEkhmXvF+PuWJc5uQyaFvMeaiLfmdcV2FxPFXR3Jpm\n2sOF4Dp6hCUR63AT9ITGo4TgDXzzHt+oozhUxzHFxqd+/J7hB4Y7DR7Bg1Qb\n2vAr\r\n=c5L6\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.2_1554898596496_0.06921179849650527"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.3": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.3",
-      "homepage": "https://github.com/folder/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/folder/folder.git"
-      },
-      "bugs": {
-        "url": "https://github.com/folder/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "818cd93b8172663acd19d17c18b5059d5130a031",
-      "_id": "picomatch@2.0.3",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-NSJqCeCfH7loxpU6i04aBiJZv4oZFlLKTLTyoWCpJnC28Qm0T1XUfNfzwLi+vtFNGIjc9pyvx/NJUJhFQ3Ptdg==",
@@ -1086,96 +266,19 @@
         "unpackedSize": 67373,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcreT8CRA9TVsSAnZWagAAMHMQAJ5BPcB/8/zrQ3oa763d\nsZiaWwWeep2kOCo9fFOBbSlo5EDgoTFpa9lw6QZNWnvcRebwSGepH2XBdUjI\nsWM/8s3HDUUce8HMgMGbLRd5LFTmXLqytVSUih/C+I/rifjY9mP9RVqkMFTm\nr7V4xaPUg3LXQ+hA5vpqdBHOGe10lZnwLG8U/sfu5gNo/eJlg7Pdtl6YMvFb\nHN5rqpqXKExlXnSg15yjJQL7XzycrWQtF3i05eS21YdzgJNe4Tnwj5eeg2tt\nRhezzvppeCgLvgIF7rMuXgqUoFnwfLG8vL9anwkxaPN5yqiYbbRbzfX70APX\nXIbeQ2HKUM6c1yfIT+NmPw95JM5b8Arv1GnGaCXMfWHdkohmmxo8N5SDcrdQ\nXnLFEaCfUEjgNP4QIxiVhYEmAHKRhDEnF5eHnZUbFqfRBd6WaWntm9mtdJra\nodFU/4qDSumXGq1tgUM+sM7dwNJQNpLPAZYxZGprqg6LPTriHegJ5Emymefq\nckvrgY6Jbd+6kzrCb6UxP7VFhwX3H4RY5fevDpsKyQJWoLsnGg2cv+RTPbN4\n8BYWddcv2IrXwP93PJmRT5MH3VyzS3g/wc1j/Z/wrNg+9q0ZyX2PTkEUs8Qa\nml5OYs3uxxnAHJcMTCG1p/xpwtK/65HABv2LHADzBnd1HgIcuRbSSfH6riFx\nr2UF\r\n=a9BB\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.3_1554900219249_0.170282712670206"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.4": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.4",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "c7020d80433bd3a87195cff9c5fe4f261cea0f9f",
-      "_id": "picomatch@2.0.4",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-lN1llt2d+xBz96Vp+yj0qMUVMyDsqvNSecdRDIEuh72kQi1N6ttkxPJ7zDVwKR4ehD2R3WhMKqdp/5LeRfc+PA==",
@@ -1185,96 +288,19 @@
         "unpackedSize": 73134,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcstSMCRA9TVsSAnZWagAASZwP/2PvlgpwLbE9Ppn1I5e1\njgUnfx00NrPlVbr2v4agPraeCXZ47/jLdgDI6v+OG94cpFlIHFUCZmykk0WS\nYpFuGOU/wcGSTSYSiwA+nDKlL6uu+7TsZOg4w1u3ZV/VP1vrvQKBfsw/Me3p\n/SmgAS5HUlquSRBq/nyYk8JL7wUkydHkVImj+0j150Q09npXihPmnWYLtb41\n0RDtx+rax60zqYv1Ie0zkNlAHtLShODBApbVlQdQe0XmQ3TGeP76EZJzN1N3\n1uJhuKCM7p2s0f2g/OfjALv4tJduD9uQ+TCD+AScOU5b6ngzb2UbKNQk+231\n+dyqNYMwX1PhxZkAOWaRF2KwDX+vy09AMGiZ8Bz/ZsHuaqXxGxIIRyzwIbEx\nPkJu3VwGircr2WqMsucbOoADD7zsN3HteB1PsGf54C5EM+ikf2uQ7KrAmC60\nWzVBbeREn3WGfm2QbwLTO4yxVKx54Sx3jJ6YHJJH+YodrTcd21Sc3RBy8P7W\n3aK/QfMiyQejQCeMjZtWzCkzlpIrJfXv67N1fAkOIeo/pxtxa5zD23G+14T5\nsxXR/2Harxxtf/Iw2GJZiweCnHUGmJoJrRRK0oxZZpBHUZNoFbq4xfyTTGrG\nv25A/lwMqghqlBtd6o8LMQ082y2bSkngqCG5SB0eGseS2RdPVplIZtBxYpm/\n1D8v\r\n=v1mS\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.4_1555223690896_0.8356264220137732"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.5": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.5",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "f364c5bc3412bf029a60540cfdd5c85dcbd6a2a9",
-      "_id": "picomatch@2.0.5",
-      "_nodeVersion": "11.14.0",
-      "_npmVersion": "6.7.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-Zisqgaq/4P05ZclrU/g5XrzFqVo7YiJx+EP4haeVI9S7kvtZmZgmQMZfcvjEus9JcMhqZfQZObimT5ZydvKJGA==",
@@ -1284,96 +310,19 @@
         "unpackedSize": 73171,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcuz38CRA9TVsSAnZWagAAzsEP/RUMj0tauYG4PPKXE5eL\nppq6s7p5XNzBiKt8PrXRN6gnON+nqcASN3QxFu6qpivwXHQcKcnU09dnUN5s\niiArCL+J8QlsfUg3roJ8TWNPCfYm0bENBWLudtqkQV+QSXVk/C7dcPsEYjJ2\nnLzN/Q4sBSmvClohuHuBj80C6vsJNy5Qvicot02GLSOA4i/h4pG5jZ/E4BPl\n8tH39ZpbBKBLyXuIOGu4xBteq2KGNe11EPHnx2q4nehKwg8pMtPeh+TUtAF5\nhwPv3oC0iiVB4xf+JL/4R54+zzSXLdI5Mucihd+3PIid+30hV4dzsezeKux1\nwsLZQKBXr0k0vahO9sJRuuVPzqnNmFWDViaCJChrQvvnn7/oM9KGAQH6kGCH\nIpbGtOIYtW7+TIBGKBWw/Hi0sTeLk26qbegeQKXggBkG5M0GJ1UOAlN+rLQk\nH5aPO7Uh3rZGza1iatdIjERGUFQDjv1YtmZIrvy44pzAR7ezEIBypzgQBUYJ\nQ0m0NL1lmVc0MDRLmXl2YaZa3gXPVXIzd6b8CLeEyUfIb/reEvcYj7XMIbsK\nVng5mgG9w22iqzrcqLcgp+dxG5rKXzJu9kNtttaQRTCWeHjPG6POfNpFMdo8\n5hRAr075pv+AZJMoagTBxJGUCCHufdwAWMud0FVlu1MV3qwIVEPB8PISl8Gf\neE3O\r\n=xEOA\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.5_1555774971490_0.37326703747523826"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.6": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.6",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "49148dc56587afd78ae3467af859e1f8ac49160c",
-      "_id": "picomatch@2.0.6",
-      "_nodeVersion": "12.0.0",
-      "_npmVersion": "6.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-Btng9qVvFsW6FkXYQQK5nEI5i8xdXFDmlKxC7Q8S2Bu5HGWnbQf7ts2kOoxJIrZn5hmw61RZIayAg2zBuJDtyQ==",
@@ -1383,96 +332,19 @@
         "unpackedSize": 73472,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJczUqYCRA9TVsSAnZWagAAktQP/RrqjicQL2Ana/FSPtm9\nBqEu3CafZOXD1G7QmzHYZ6DtTX3vzVm5Q7fSi4h7Yfuqhnf3TMNnoOGBqZaQ\niyViRNTdJZk1K073Sfd1HvnED3xvuBzm1PtBpUN+xeBzwcaxy+C2ThUeYI/Y\nRvOxgV1Vte/+wRjTQwml32BiVX3gWbstxZMh75jpYnzQxZcqMpgyG4iwSzxN\ncTrygRaaibF86GjQ7FPdYMeHTcfo0WmGp7bfg59JJh5/glhrLEYL3c7fSYUd\nY5MOrg7aSsJ0SeBvYDzWr6AIdcbbFaFGZd3gVMYuMT2gDxa7T71TW+Mw7E+Z\nqnP8HLPO0nVS6mDJMady76qw/qUBXQ4MqNjLb1R47UcYvIub49C7NtLygbCU\na/Tzf6fV3xn+dXPw8fSxN/0tP2OSzzZiSKy1/hINCT9uCYeZjNtaScnAM4Tw\nIb8d/7yTmViiZYtwWYWUc9S4HhVgfQkqoGdu93dZoUz81LIpV5rwaD45kkTi\nXpyrR6F2U1An89oy93ABUj0lynQnRVEhs3HwSEjq+uh+IoxZPKLsE4WkEs/0\n4cpVIDSU6ohzzIt4s+4SXlHOLwLGHmyWVjT6DkISQ0PXJ5R+Gks5g2+Qz3vD\nY2vI4Yq+OTVVvb5+igNuaz2VuWiv7xzGTFWQ7d9nZHmIjWhj2g0khNeeDfAh\nA3mZ\r\n=mpAB\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.6_1556957847393_0.5211348957818349"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.0.7": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.0.7",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "9eb9a71780035c5c3e2c1e67eafa3d967f2289b2",
-      "_id": "picomatch@2.0.7",
-      "_nodeVersion": "10.15.2",
-      "_npmVersion": "6.9.0",
-      "_npmUser": {
-        "name": "doowb",
-        "email": "brian.woodward@gmail.com"
       },
       "dist": {
         "integrity": "sha512-oLHIdio3tZ0qH76NybpeneBhYVj0QFTfXEFTc/B3zKQspYfYYkWYgFsmzo+4kvId/bQRcNkVeguI3y+CD22BtA==",
@@ -1482,100 +354,19 @@
         "unpackedSize": 73492,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc2v3DCRA9TVsSAnZWagAArBEP/08ZY+N0XGMP6tySuJRm\n6fmAEC+W5Zugeb/z9/poRHFL2PkUj3k8QxXpanoCcySDCMn8exAWdRiiw7a4\n1cwdBS7SGowauCJRoFL9AcmRZv6e0+a+7lStHRd6kjTec5ZHN9LAVNXwhUST\n6Ch2c37HkbNcuEaO3y7a4WpLoWZkXeXiAMX0m3kCwiywUskfAnFQiEwbeGAG\nPCUAiEYrh1/MRUZ8xv4+AZJ6/OlBmeQYSgBPelyONk9NGVsVQ5I2pjGnaQsG\n1UtGhofoT/3zIfIb2sb1bU3fZbMxwEbQ6KG+Rg4lejFi2+Zq6MZdiYPlNCrq\nEcWqPWmtutGFM0ipsyswkwvUZRh+1C8hq8IUFP+n3BebsFLUjIygnXLCSFWW\ny3WfsHgnxoKgJqezB18M07yd7C1me8uo4PHMRXtVcj2Za3q+4uvb1QFYuJAr\nN/3Sfmc9JF53ToRa7/kdn96ONgrtdyDBG7e5begUYZ0DOgXIRJV+CRJhW0oG\njEPzRgUjxZqiuBSvfNdYlj8w1rVHbwrILAtol7M4I3c995Dvcpf7La3Vmsd2\nxGfaTR8VVKsqr3nQ2FXhOBWmNSCvl+gqbxesy9yQ3oU+xgZuZuGnj+RR1R66\nxafxp0UXKd5/G24UEmgkYZCznjFmY9IqiGHPyg/RsGmOvZr7m+k5TYoqjO9e\nLoz5\r\n=SN3+\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "brian.woodward@gmail.com",
-          "name": "doowb"
-        },
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.0.7_1557855682387_0.9874545198503017"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "2.1.0": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.1.0",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8.6"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "8ba5215c7e4a69bc3ce371bdb559d21553f3518f",
-      "_id": "picomatch@2.1.0",
-      "_nodeVersion": "13.0.1",
-      "_npmVersion": "6.12.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-uhnEDzAbrcJ8R3g2fANnSuXZMBtkpSjxTTgn2LeSiQlfmq72enQJWdQllXW24MBLYnA1SBD2vfvx2o0Zw3Ielw==",
@@ -1585,100 +376,19 @@
         "unpackedSize": 77098,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdupVRCRA9TVsSAnZWagAAMmoP/j9JIN9tVkRQlu4MnfgL\nBya7r0wnydqGmIB4oj4iDihN4P+TLDTkjp7rbY1oXhfcDLcCoN/AAC4asIC7\nbp0Q6rl/o45Ys9bol4mFee4gqPcp9TTM7/jz7XUN7GcxE1rryIJz9b5cEwmM\nqVT0oVOreuAqpBYDKMC/3nDGnwmwnk5bAhGMB0aC/+kKIlN/MRQuUZhUbd21\ngwDFQEB0kaNlVK9WXAXNEke/iN22MMs2pQKxInkNFNrC/wHNaPAx8zuGernv\nUhdUTBQxTMJiZBCW9lTHMOJeoPM+e/WgingVFXY8KWNja9IehPol3Tgq9tbf\nG2Mk8joOqdUQMZuu56DD6VltLPKF8bqAp/tSmYEiDd4/O2mOKZBKKwxlBbxi\nBp2Av88YjDoCLk5pCs6H2vV47EG+gItLxP5H01xmbNrSLkG2ZamETW1uq6M3\nxaz0lC8TcwJwnUO5TdL0HT3QjYKy1UPkNyBG5GnGulRP6gNSo7l4WqcDa2Ht\nyLNMAkqO972xZESRdjDfpLtcJV1/3FF1dZVZhq6BKbftYeIo2f5dBwy4VmPM\nMHF5pm00vvzWAtc0wyXlQxLnb1+RszLZGlh8ZzA+RIgqYxzy54mwA8GoHXgQ\nMg3bArogYLkkXlWWODkJTalVdCz6pFyqQW8dcbN2Ju1ZBUAEYwI42daNqgFc\nRhn1\r\n=AJTg\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "brian.woodward@gmail.com",
-          "name": "doowb"
-        },
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.1.0_1572509008306_0.7569108006631269"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8.6"
+      }
     },
     "2.1.1": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.1.1",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8.6"
-      },
-      "scripts": {
-        "test": "mocha",
-        "cover": "nyc --reporter=text --reporter=html mocha"
-      },
       "devDependencies": {
         "fill-range": "^7.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.0.2",
         "nyc": "^13.3.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": false,
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "micromatch",
-            "braces"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "7944dd0f7d174b067c6f3fddbaefb0a8ae9900c9",
-      "_id": "picomatch@2.1.1",
-      "_nodeVersion": "10.16.3",
-      "_npmVersion": "6.9.0",
-      "_npmUser": {
-        "name": "doowb",
-        "email": "brian.woodward@gmail.com"
       },
       "dist": {
         "integrity": "sha512-OYMyqkKzK7blWO/+XZYP6w8hH0LDvkBvdvKukti+7kqYFCiEAk+gI3DWnryapc0Dau05ugGTy0foQ6mqn4AHYA==",
@@ -1688,56 +398,13 @@
         "unpackedSize": 77265,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdw0feCRA9TVsSAnZWagAAsPIP/0D2fvmFV4rS447u+HNt\nyrsrQrD2tI34JeY5tzo1Rs3iChtQLmER1e3X0plfkBT7IOeohoYg9SHtxqlX\nl6FrDadfhSrcUKL/geRh5QLiDX1mfGo0LKeG8hb0jjTxFuCLSLA4yGWGGMJZ\nAfJwulDk4xzDX+j1RxE8REtTISa/Np/VDYW0pClj8JhFemI/D0cB5GlAUU73\nki5hAlXoCC7V/aDHEOKQiHdfoH05C0uDg5D8RSJTHsnR4JkOS+Rui9IaHa0w\nQTgdOdTst76iDIA851S/VZKf9Gg6jZ5v8VheZpsP7ePrgIy4w79wgHrgtgoI\nK1nppY7kF892c3v1QRkEKyU+mPqtPORWUip8C4R1guwgdoXVlBVQ7sABzwlY\ncsIgvT1y8z5UusxUvzO790yZ/BlLwbft2pBNi3dTaMruTD0ztTXtKvwkXiC3\nqCC8JRaUT0dl1dsB3rrpFV+P/Eff6V9Jp+P8gxSTH0F18Zw6ZLUz1YsdjZKn\n9Ikmb8Y97CFAtTwy7W9Rsx0ULCeIssdInVXlACyA0FDTa6v5EgJi+AiA3g4s\nlrPC/zb1iUfB0Ui4hchrQHCxpQKSzjAkCfjoXIxuETZ2xwBNZv0fYuDc5jQ5\nD3uPjWnEKPscDnhBIC3PD6f/DbcZQPsmQ59kFl1i7VXxcHw6gy33mP3eDEUV\nNVOl\r\n=cnOX\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "brian.woodward@gmail.com",
-          "name": "doowb"
-        },
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.1.1_1573079005960_0.8760210690317336"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8.6"
+      }
     },
     "2.2.0": {
       "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
       "version": "2.2.0",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "funding": "https://github.com/sponsors/jonschlinkert",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8.6"
-      },
-      "scripts": {
-        "lint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives --ignore-path .gitignore .",
-        "mocha": "mocha --reporter dot",
-        "test": "npm run lint && npm run mocha",
-        "test:ci": "npm run lint && npm run test:cover",
-        "test:cover": "nyc npm run mocha"
-      },
       "devDependencies": {
         "eslint": "^6.8.0",
         "fill-range": "^7.0.1",
@@ -1745,59 +412,6 @@
         "mocha": "^6.2.2",
         "nyc": "^15.0.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "nyc": {
-        "reporter": [
-          "html",
-          "lcov",
-          "text-summary"
-        ]
-      },
-      "verb": {
-        "toc": {
-          "render": true,
-          "method": "preWrite",
-          "maxdepth": 3
-        },
-        "layout": "empty",
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "braces",
-            "micromatch"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "002e806951ddadc7b27c9d8e8f92d6709d34d1d7",
-      "_id": "picomatch@2.2.0",
-      "_nodeVersion": "13.5.0",
-      "_npmVersion": "6.13.4",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-Gskshv+376q+hmJbbOiMK+Jtv3bNkwnoOtVSPkcSrvsu9WuKJvBXOcSlBkWgWE0+A011wfafeWpiDrdbowddfg==",
@@ -1807,56 +421,14 @@
         "unpackedSize": 91626,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeEPYtCRA9TVsSAnZWagAA5I8P/36DVnHPX3v7sQtvPwrX\nXjdHfPRstr4F51OZ27dIcoLN21CV5qRmI8EhsSLl3sTv9AOhx6wm9f2cChWF\nNZF8/fQXa4C/ZtckhJWIL3GgyfXZbDIJBHImq9EeenGzCLk93FopZZPpa+z1\nt0fBON+Jr+J7/y5paTSPNVKGdfvdDfGPgSO0j0KYPYhQn1IMnBkuzMt2li5B\nQ9T7BfUJ8CL6fu/37PWQ/RnJeOFWW/cHk8NWe9/bowk0Xq6x1Jsf6MQeM55d\nEvBmTHSc1gra+4dWzjdfG+x4X7lJ5xnJiUtXO5Eld0i5qGknjQKvUAKHCyaF\n9moYR1aCXe3Yetx7TfNPQE1574lalljQL4T5rgximAJOxA8UjlE7xBmU3d6m\nBo2mjjYeJb2Y8VRf3LxweD2RMWlzxsiEssyF1+dydQY3R1pKH5QQYcugbwM6\n2ci3ISisTYqJNMEgxc0d7pWgM8XCjI1vx2uUZhkZghgHuXPz+X6V06aNdSl3\n5tNfX9+M3EVFkakjFgXzjAcGcF2/IteAgrl8miLdbPyq7iaAmpRRQRunkbva\nFbPxNyC0BPp0p3vMRTykmJfkfXZCaFrnN1B5G/BZAi3Tt43rTUtjDEN9dCzi\njTlYI8nqsiX+WHbe9APKIgmB8EZ1xYbfXIDaeHBvgnREPtDf6qCpzc+eRq6/\n64PB\r\n=O5nY\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "brian.woodward@gmail.com",
-          "name": "doowb"
-        },
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.2.0_1578169900719_0.35959725130594666"
-      },
-      "_hasShrinkwrap": false
-    },
-    "2.2.1": {
-      "name": "picomatch",
-      "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
-      "version": "2.2.1",
-      "homepage": "https://github.com/micromatch/picomatch",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "funding": "https://github.com/sponsors/jonschlinkert",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/picomatch.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/picomatch/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
       "engines": {
         "node": ">=8.6"
       },
-      "scripts": {
-        "lint": "eslint --cache --cache-location node_modules/.cache/.eslintcache --report-unused-disable-directives --ignore-path .gitignore .",
-        "mocha": "mocha --reporter dot",
-        "test": "npm run lint && npm run mocha",
-        "test:ci": "npm run lint && npm run test:cover",
-        "test:cover": "nyc npm run mocha"
-      },
+      "funding": "https://github.com/sponsors/jonschlinkert"
+    },
+    "2.2.1": {
+      "name": "picomatch",
+      "version": "2.2.1",
       "devDependencies": {
         "eslint": "^6.8.0",
         "fill-range": "^7.0.1",
@@ -1864,59 +436,6 @@
         "mocha": "^6.2.2",
         "nyc": "^15.0.0",
         "time-require": "github:jonschlinkert/time-require"
-      },
-      "keywords": [
-        "glob",
-        "match",
-        "picomatch"
-      ],
-      "nyc": {
-        "reporter": [
-          "html",
-          "lcov",
-          "text-summary"
-        ]
-      },
-      "verb": {
-        "toc": {
-          "render": true,
-          "method": "preWrite",
-          "maxdepth": 3
-        },
-        "layout": "empty",
-        "tasks": [
-          "readme"
-        ],
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "related": {
-          "list": [
-            "braces",
-            "micromatch"
-          ]
-        },
-        "reflinks": [
-          "braces",
-          "expand-brackets",
-          "extglob",
-          "fill-range",
-          "micromatch",
-          "minimatch",
-          "nanomatch",
-          "picomatch"
-        ]
-      },
-      "gitHead": "1d546ea22efa8ff3ca15b4848a2dffdb53aaef9a",
-      "_id": "picomatch@2.2.1",
-      "_nodeVersion": "13.5.0",
-      "_npmVersion": "6.13.4",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-ISBaA8xQNmwELC7eOjqFKMESB2VIqt4PPDD0nsS95b/9dZXvVKOlz9keMSnoGGKcOHXfTvDD6WMaRoSc9UuhRA==",
@@ -1926,83 +445,37 @@
         "unpackedSize": 92535,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeEQF1CRA9TVsSAnZWagAAFPUP/iMuLEJZn5i/5ZikfVC7\nKuODpS6DPrtfaWEc+j6WjLGhLyjt4XDvSGO/5CD1T1+lTM/Ch2XsnUji7MPq\nKcQecli695M0daO8LI9NbnN3omHsoWVOKGWqEAzML+rcvvfFCb0coCaMyoyN\n6E3Y0oxIRt4Wwzbo6VMq2NBy49K+f5hJidxpDENe+P9Vcu587tyG/21MPTcE\npLOiNCkGY7p+1TN7NxzhmDJZ5u8L21U2v11MnOzLp+umOfo1x0kEbar8r5vB\nb7Ux3G4tMyCHo15ts6XnsgzZcQaznjeClOX6Swv2jPW8nrcTN27/v+LeIVL2\ngW3pTqTadCd6xkorMfOYMI3fjrVtMERI+xkWFtqD7yOTyJ4jr1ofSSssvXBv\ncMTI2sq8008pbSCrM4jPqH/9zV4Vs3B9PWL+2NckiHxLD86z5zGt7GcWmF/Y\nBkXz647xqu/dEkrM+eLnPxqwq+vxJyEYcClbXJlU3KsJYa5DtXucqtMQyR0W\nD7f4QMiBPc/DHxiXcQn26zFushCNV6wRGNzHlUl2TzZqt71jaJ+ywvGOTEcm\nZTFbGPoB3lhsjBQItFyl6vbx9n0JhSOb6nD5nCjSLHCMFerWfdFMJwNlnClW\nPI1iOe9gRzLQdHdaMCIYS5/KpsttPTN7VgGmcSRwOQoLkihXTj4PMITRjwbG\nETnD\r\n=EKo9\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "brian.woodward@gmail.com",
-          "name": "doowb"
-        },
-        {
-          "email": "github@sellside.com",
-          "name": "jonschlinkert"
-        },
-        {
-          "email": "dmalinochkin@rambler.ru",
-          "name": "mrmlnc"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/picomatch_2.2.1_1578172787892_0.37797747768464274"
+      "engines": {
+        "node": ">=8.6"
       },
-      "_hasShrinkwrap": false
+      "funding": "https://github.com/sponsors/jonschlinkert"
+    },
+    "2.2.2": {
+      "name": "picomatch",
+      "version": "2.2.2",
+      "devDependencies": {
+        "eslint": "^6.8.0",
+        "fill-range": "^7.0.1",
+        "gulp-format-md": "^2.0.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0",
+        "time-require": "github:jonschlinkert/time-require"
+      },
+      "dist": {
+        "integrity": "sha512-q0M/9eZHzmr0AulXyPwNfZjtwZ/RBZlbN3K3CErVrk50T2ASYI7Bye0EvekFY3IP1Nt2DHu0re+V2ZHIpMkuWg==",
+        "shasum": "21f333e9b6b8eaff02468f5146ea406d345f4dad",
+        "tarball": "https://registry.npmjs.org/picomatch/-/picomatch-2.2.2.tgz",
+        "fileCount": 10,
+        "unpackedSize": 86698,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedfs/CRA9TVsSAnZWagAAFd8QAI0oUsjS5gRkdVpkhFu3\n6SzPIdB44O9vJVnG0cYu65jTNGvi5Pm2/TeBgHzZka873aJXCbWv05iLZrMq\nJ9uuLUJGxtTO5DIMAU6CKbX9LwH3kPv5XFYMREu1Kv64wq4azFj0THglySIN\n54nda1JWMy6DiP5ukuGbgOI29AOIkascwZPwtpj8uHDVJH6kB6mQH8NPMUAC\nl9w4l7+L+aOVd4epU55Gd8hp0mNrTkp0XmuWt43T8gvmPd1aW2wK7civq1gs\nYxZNqzi7sIooMlnn/AcqaHyvfh7b6kwPZG6w3qKTELlIfPFhzYDOaq9YCLIw\ne2DXO5O/1Xkf1wik9zkRFkbNPTRlG3mtqiJ77NIXr4jWBTeE/FBT0oBJxm0K\nGv7vc/h9SreU/4vNM3pZeX3S3tk2DaOym4wcjXbLiB7QlnVTahuBb5xUKEwS\nM49zBKXLGj6DyvgWnTs1yz37+yCynNAMBWDO4xcIFOvfWkqfd88+hi7Jd1rF\ntPeKxrXnFUUlayKKg13gHTVu3VCyHGTs58TDDDGhVZRZT62DTIrlkommLbF2\nKQr//pmeWX4osj1yrdkbSUbrUgIAfPgMXGOvo+a2bzxEjEJsCPswWgZ635AZ\noqUPsLsFqb4KU1VD4kP7c1WGAfywgYIhr/XNwFCURfKA891VT/68bfvB9f/y\n/f1C\r\n=CTbl\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8.6"
+      },
+      "funding": "https://github.com/sponsors/jonschlinkert"
     }
   },
-  "time": {
-    "created": "2018-11-05T12:07:08.561Z",
-    "1.0.0": "2018-11-05T12:07:08.695Z",
-    "modified": "2020-01-04T21:19:51.120Z",
-    "1.0.1": "2018-11-05T12:12:00.358Z",
-    "1.0.2": "2018-11-05T13:45:29.274Z",
-    "1.1.0": "2018-12-14T17:18:24.238Z",
-    "1.1.1": "2018-12-15T03:09:48.333Z",
-    "1.1.2": "2018-12-15T03:13:01.124Z",
-    "1.2.0": "2019-03-30T02:20:22.763Z",
-    "2.0.0": "2019-04-10T11:03:29.057Z",
-    "2.0.1": "2019-04-10T11:50:06.709Z",
-    "2.0.2": "2019-04-10T12:16:36.700Z",
-    "2.0.3": "2019-04-10T12:43:39.432Z",
-    "2.0.4": "2019-04-14T06:34:51.007Z",
-    "2.0.5": "2019-04-20T15:42:51.621Z",
-    "2.0.6": "2019-05-04T08:17:27.543Z",
-    "2.0.7": "2019-05-14T17:41:22.540Z",
-    "2.1.0": "2019-10-31T08:03:28.846Z",
-    "2.1.1": "2019-11-06T22:23:26.115Z",
-    "2.2.0": "2020-01-04T20:31:40.843Z",
-    "2.2.1": "2020-01-04T21:19:48.019Z"
-  },
-  "maintainers": [
-    {
-      "email": "brian.woodward@gmail.com",
-      "name": "doowb"
-    },
-    {
-      "email": "github@sellside.com",
-      "name": "jonschlinkert"
-    },
-    {
-      "email": "dmalinochkin@rambler.ru",
-      "name": "mrmlnc"
-    }
-  ],
-  "description": "Blazing fast and accurate glob matcher written in JavaScript, with no dependencies and full support for standard and extended Bash glob features, including braces, extglobs, POSIX brackets, and regular expressions.",
-  "homepage": "https://github.com/micromatch/picomatch",
-  "keywords": [
-    "glob",
-    "match",
-    "picomatch"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/micromatch/picomatch.git"
-  },
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "bugs": {
-    "url": "https://github.com/micromatch/picomatch/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md"
+  "modified": "2020-03-21T11:32:17.452Z",
+  "_cached": false,
+  "_contentLength": 28956
 }

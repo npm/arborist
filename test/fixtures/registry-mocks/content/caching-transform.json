@@ -1,8 +1,5 @@
 {
-  "_id": "caching-transform",
-  "_rev": "15-948c2b649eaf8ab23ea5dd7253c81538",
   "name": "caching-transform",
-  "description": "Wraps a transform and provides caching",
   "dist-tags": {
     "latest": "4.0.0"
   },
@@ -10,35 +7,6 @@
     "0.0.1": {
       "name": "caching-transform",
       "version": "0.0.1",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamestalmage/caching-transform.git"
-      },
-      "author": {
-        "name": "James Talmage",
-        "email": "james@talmage.io",
-        "url": "github.com/jamestalmage"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && nyc --reporter=lcov --reporter=text ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "mkdirp": "^0.5.1"
       },
@@ -50,70 +18,18 @@
         "proxyquire": "^1.7.3",
         "sinon": "^1.17.2",
         "xo": "^0.12.1"
-      },
-      "xo": {
-        "ignores": [
-          "test.js"
-        ]
-      },
-      "gitHead": "088db0afc433a701b57c1324406e2b73db611c3b",
-      "bugs": {
-        "url": "https://github.com/jamestalmage/caching-transform/issues"
-      },
-      "homepage": "https://github.com/jamestalmage/caching-transform#readme",
-      "_id": "caching-transform@0.0.1",
-      "_shasum": "af333d9bf6b113b6a4cdb038ef95a045b4e45792",
-      "_from": ".",
-      "_npmVersion": "3.5.2",
-      "_nodeVersion": "5.2.0",
-      "_npmUser": {
-        "name": "jamestalmage",
-        "email": "james@talmage.io"
       },
       "dist": {
         "shasum": "af333d9bf6b113b6a4cdb038ef95a045b4e45792",
         "tarball": "https://registry.npmjs.org/caching-transform/-/caching-transform-0.0.1.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.0.2": {
       "name": "caching-transform",
       "version": "0.0.2",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamestalmage/caching-transform.git"
-      },
-      "author": {
-        "name": "James Talmage",
-        "email": "james@talmage.io",
-        "url": "github.com/jamestalmage"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && nyc --reporter=lcov --reporter=text ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "mkdirp": "^0.5.1"
       },
@@ -125,70 +41,18 @@
         "proxyquire": "^1.7.3",
         "sinon": "^1.17.2",
         "xo": "^0.12.1"
-      },
-      "xo": {
-        "ignores": [
-          "test.js"
-        ]
-      },
-      "gitHead": "675a8370205d46ccbd5cb4b5a1e2bbf6050c8513",
-      "bugs": {
-        "url": "https://github.com/jamestalmage/caching-transform/issues"
-      },
-      "homepage": "https://github.com/jamestalmage/caching-transform#readme",
-      "_id": "caching-transform@0.0.2",
-      "_shasum": "e444d6a2022f1e9c89894cbaca7f08fd5fe0e6b1",
-      "_from": ".",
-      "_npmVersion": "3.5.2",
-      "_nodeVersion": "5.2.0",
-      "_npmUser": {
-        "name": "jamestalmage",
-        "email": "james@talmage.io"
       },
       "dist": {
         "shasum": "e444d6a2022f1e9c89894cbaca7f08fd5fe0e6b1",
         "tarball": "https://registry.npmjs.org/caching-transform/-/caching-transform-0.0.2.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.0.3": {
       "name": "caching-transform",
       "version": "0.0.3",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamestalmage/caching-transform.git"
-      },
-      "author": {
-        "name": "James Talmage",
-        "email": "james@talmage.io",
-        "url": "github.com/jamestalmage"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && nyc --reporter=lcov --reporter=text ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "mkdirp": "^0.5.1"
       },
@@ -201,69 +65,17 @@
         "sinon": "^1.17.2",
         "xo": "^0.12.1"
       },
-      "xo": {
-        "ignores": [
-          "test.js"
-        ]
-      },
-      "gitHead": "2c9b5e7797dbc2a5dd1722ed683e5c8c16f425e9",
-      "bugs": {
-        "url": "https://github.com/jamestalmage/caching-transform/issues"
-      },
-      "homepage": "https://github.com/jamestalmage/caching-transform#readme",
-      "_id": "caching-transform@0.0.3",
-      "_shasum": "4c17d0eaa282dfe6b3109a512dc1741677e1a953",
-      "_from": ".",
-      "_npmVersion": "3.5.2",
-      "_nodeVersion": "5.2.0",
-      "_npmUser": {
-        "name": "jamestalmage",
-        "email": "james@talmage.io"
-      },
       "dist": {
         "shasum": "4c17d0eaa282dfe6b3109a512dc1741677e1a953",
         "tarball": "https://registry.npmjs.org/caching-transform/-/caching-transform-0.0.3.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.0.4": {
       "name": "caching-transform",
       "version": "0.0.4",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamestalmage/caching-transform.git"
-      },
-      "author": {
-        "name": "James Talmage",
-        "email": "james@talmage.io",
-        "url": "github.com/jamestalmage"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && nyc --reporter=lcov --reporter=text ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "mkdirp": "^0.5.1",
         "write-file-atomic": "^1.1.4"
@@ -277,69 +89,17 @@
         "sinon": "^1.17.2",
         "xo": "^0.12.1"
       },
-      "xo": {
-        "ignores": [
-          "test.js"
-        ]
-      },
-      "gitHead": "736192584dee896c6ec7e0ffb90eb10c7e3d4c2c",
-      "bugs": {
-        "url": "https://github.com/jamestalmage/caching-transform/issues"
-      },
-      "homepage": "https://github.com/jamestalmage/caching-transform#readme",
-      "_id": "caching-transform@0.0.4",
-      "_shasum": "ed3aa971f249520d0075af472fb0da89fb9a53fb",
-      "_from": ".",
-      "_npmVersion": "3.5.2",
-      "_nodeVersion": "5.2.0",
-      "_npmUser": {
-        "name": "jamestalmage",
-        "email": "james@talmage.io"
-      },
       "dist": {
         "shasum": "ed3aa971f249520d0075af472fb0da89fb9a53fb",
         "tarball": "https://registry.npmjs.org/caching-transform/-/caching-transform-0.0.4.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.0.0": {
       "name": "caching-transform",
       "version": "1.0.0",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamestalmage/caching-transform.git"
-      },
-      "author": {
-        "name": "James Talmage",
-        "email": "james@talmage.io",
-        "url": "github.com/jamestalmage"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && nyc --reporter=lcov --reporter=text ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "md5-hex": "^1.2.0",
         "mkdirp": "^0.5.1",
@@ -354,69 +114,17 @@
         "sinon": "^1.17.2",
         "xo": "^0.12.1"
       },
-      "xo": {
-        "ignores": [
-          "test.js"
-        ]
-      },
-      "gitHead": "06bd91d2c42777567bb74277c60e43ad5cc0f9cb",
-      "bugs": {
-        "url": "https://github.com/jamestalmage/caching-transform/issues"
-      },
-      "homepage": "https://github.com/jamestalmage/caching-transform#readme",
-      "_id": "caching-transform@1.0.0",
-      "_shasum": "0640d4cc40aa96b52cbdab1f0d372a6d727ae5e5",
-      "_from": ".",
-      "_npmVersion": "3.5.2",
-      "_nodeVersion": "5.2.0",
-      "_npmUser": {
-        "name": "jamestalmage",
-        "email": "james@talmage.io"
-      },
       "dist": {
         "shasum": "0640d4cc40aa96b52cbdab1f0d372a6d727ae5e5",
         "tarball": "https://registry.npmjs.org/caching-transform/-/caching-transform-1.0.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.0.1": {
       "name": "caching-transform",
       "version": "1.0.1",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jamestalmage/caching-transform.git"
-      },
-      "author": {
-        "name": "James Talmage",
-        "email": "james@talmage.io",
-        "url": "github.com/jamestalmage"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "xo && nyc --reporter=lcov --reporter=text ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "md5-hex": "^1.2.0",
         "mkdirp": "^0.5.1",
@@ -431,64 +139,17 @@
         "sinon": "^1.17.2",
         "xo": "^0.12.1"
       },
-      "xo": {
-        "ignores": [
-          "test.js"
-        ]
-      },
-      "gitHead": "508395eb3e785c5010d091fc05d93b7024201414",
-      "bugs": {
-        "url": "https://github.com/jamestalmage/caching-transform/issues"
-      },
-      "homepage": "https://github.com/jamestalmage/caching-transform#readme",
-      "_id": "caching-transform@1.0.1",
-      "_shasum": "6dbdb2f20f8d8fbce79f3e94e9d1742dcdf5c0a1",
-      "_from": ".",
-      "_npmVersion": "3.3.12",
-      "_nodeVersion": "5.3.0",
-      "_npmUser": {
-        "name": "jamestalmage",
-        "email": "james@talmage.io"
-      },
       "dist": {
         "shasum": "6dbdb2f20f8d8fbce79f3e94e9d1742dcdf5c0a1",
         "tarball": "https://registry.npmjs.org/caching-transform/-/caching-transform-1.0.1.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.0": {
       "name": "caching-transform",
       "version": "2.0.0",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/avajs/caching-transform.git"
-      },
-      "engines": {
-        "node": ">=6"
-      },
-      "scripts": {
-        "test": "xo && nyc ava"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "make-dir": "^1.0.0",
         "md5-hex": "^2.0.0",
@@ -504,24 +165,6 @@
         "sinon": "^5.1.0",
         "xo": "^0.21.1"
       },
-      "nyc": {
-        "reporter": [
-          "lcov",
-          "text"
-        ]
-      },
-      "gitHead": "6a4840e85efe1243a8c47c7715c1e4735d41f3eb",
-      "bugs": {
-        "url": "https://github.com/avajs/caching-transform/issues"
-      },
-      "homepage": "https://github.com/avajs/caching-transform#readme",
-      "_id": "caching-transform@2.0.0",
-      "_npmVersion": "6.1.0",
-      "_nodeVersion": "8.11.2",
-      "_npmUser": {
-        "name": "sindresorhus",
-        "email": "sindresorhus@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-tTfemGmFWe7KZ3KN6VsSgQZbd9Bgo7A40wlp4PTsJJvFu4YAnEC5YnfdiKq6Vh2i9XJLnA9n8OXD46orVpnPMw==",
         "shasum": "e1292bd92d35b6e8b1ed7075726724b3bd64eea0",
@@ -530,47 +173,13 @@
         "unpackedSize": 9366,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbGoM3CRA9TVsSAnZWagAA4kAP/2tvUkT4165llRSWtd+p\n9MWTJg6SqyPv3z1U98sbqtcwyO1zTBUmSlrANGSzfuHtd4Z568EOJXY3/iWq\nu4KiyWuVL8syaOEp3PLzaEIhhdUpGB7TnSABAvG8124bPHQox46KbSEd/eiw\nj8I+TFdk3yYAXssanGGrRfhbYLc0eeHP8YAVzo41jq2n7Pj7ap69FuOJJy5u\n+lsNwnxj6dIcmCfr5hgZu0mnjCWFNVPhfnHURlqTA3f6XVI3oIc2qVqYpV44\n3z/PJRbGWsxELDqKGExwlh0qrJIt1RtifMQkOd2uqiFvdaLhIzNkHeFzIeAI\nYqTJ2AvDX8ZJPiq1B/IYxKcgpIOt6T1xu0cnsyhMWCVrXfNnPyEqUZsYiFSQ\n5dtJVd+n7lPxX0xSOGNGAvKvscPgMUVupWzNEmMezELTQzhVd+H39ltu7kQi\n9YIwtrTbhOYv2/oxNypvWryotz79IO4iiJ/V6KWtXjhT0LdLeKFgDvv70E/N\ndDQzwwqiohehk0tCQz8dgf8/VFNwtX9iw0Q33FaCniuvCd8Lgg7dCgmF1qQb\nk5oYzcZemT98r6KPlDiXTFMN5+M/7sAESceuieE2Q6eZrabNcLwYk/4ioRNo\naLmfLBMJzCbZ2qZQFttverN4dLKpkLaF6Ryujp/oesJfihGZFimgjRTk0ziW\nhvNS\r\n=0fHg\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "jamestalmage",
-          "email": "james@talmage.io"
-        },
-        {
-          "name": "sindresorhus",
-          "email": "sindresorhus@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/caching-transform_2.0.0_1528464182822_0.096560539145915"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=6"
+      }
     },
     "3.0.1": {
       "name": "caching-transform",
       "version": "3.0.1",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/istanbuljs/caching-transform.git"
-      },
-      "engines": {
-        "node": ">=6"
-      },
-      "scripts": {
-        "test": "xo && nyc ava"
-      },
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "hasha": "^3.0.0",
         "make-dir": "^1.3.0",
@@ -586,24 +195,6 @@
         "sinon": "^7.2.2",
         "xo": "^0.24.0"
       },
-      "nyc": {
-        "reporter": [
-          "lcov",
-          "text"
-        ]
-      },
-      "gitHead": "f31633444eeb58c05068a5da0bda4e9a1fed5200",
-      "bugs": {
-        "url": "https://github.com/istanbuljs/caching-transform/issues"
-      },
-      "homepage": "https://github.com/istanbuljs/caching-transform#readme",
-      "_id": "caching-transform@3.0.1",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.14.2",
-      "_npmUser": {
-        "name": "coreyfarrell",
-        "email": "git@cfware.com"
-      },
       "dist": {
         "integrity": "sha512-Y1KTLNwSPd4ljsDrFOtyXVmm7Gnk42yQitNq43AhE+cwUR/e4T+rmOHs1IPtzBg8066GBJfTOj1rQYFSWSsH2g==",
         "shasum": "1df89e850803ad15f68dafb2abe9a8b866016c7d",
@@ -612,59 +203,13 @@
         "unpackedSize": 9409,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcQnlXCRA9TVsSAnZWagAA9w4P/Rwd3Ep736EZW/nJbeg2\nvu/5zsOu5fAEAEXKFDbK9Z1zTgf5PRMk+rGqUllbX302OMzZm2rlUK/SODg2\nPuJrpj8rAqzIAWm+K3+iptESFPIbSu0V/cbgCd7RpvUmkaLiEgx488HqPu9c\n8RPZQ9UqLJ+395CDclYBwOmBiES6TGTMLWKrVW6QFm6snl9BFmFGaNomPTu5\nIevymp4Jb4SrJPoWP2teJFKq2UAnpBjiV/fnMmY3BpyKOkod2XHfj3TDCU1Z\n1vtI3Oy2XLi3jVa0/bZuVSRVKMcYm6aepKaRgx2wK3535YqwZJ6efriLgwaH\nzpNiOaVAN3V3K/1R8KP1q1V9BNF47xPTxd2EPjZlnnW1VhUOo/hh38vavVd5\nh/cCu7kLZIupaBUxLmdngqvhvdYDL7ExE0jcPak6szK4UKfoH6rejG1JGtVc\nZ2Cfd52fEbapXhbKwJ8RERJPMP11ktWdqpRI3ErfXIDeJwOpGQqkboOj5794\nOR9L5P85vwy/AP94amb5CNZzHgp65sOWWyKQh6N6n+hG6SggJ3v9hE2DgU9C\n1Z4ooletPsqGVZ1JlLDkYp4BYIZkDIAfGiu3Dnf6e5UpX+mRsknrxn8MZUr8\nsiAG+vR+bedu/Ztp90rNzeUrB3vfYYUc96bSVTECMfonVGvrNr89bjMvfe1v\nxn2Q\r\n=FTDj\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "ben@npmjs.com",
-          "name": "bcoe"
-        },
-        {
-          "email": "git@cfware.com",
-          "name": "coreyfarrell"
-        },
-        {
-          "email": "mark@novemberborn.net",
-          "name": "novemberborn"
-        },
-        {
-          "email": "sindresorhus@gmail.com",
-          "name": "sindresorhus"
-        },
-        {
-          "email": "vdemedes@gmail.com",
-          "name": "vdemedes"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/caching-transform_3.0.1_1547860310436_0.693975463249602"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=6"
+      }
     },
     "3.0.2": {
       "name": "caching-transform",
       "version": "3.0.2",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/istanbuljs/caching-transform.git"
-      },
-      "engines": {
-        "node": ">=6"
-      },
-      "scripts": {
-        "test": "xo && nyc ava"
-      },
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "hasha": "^3.0.0",
         "make-dir": "^2.0.0",
@@ -680,24 +225,6 @@
         "sinon": "^7.2.3",
         "xo": "^0.24.0"
       },
-      "nyc": {
-        "reporter": [
-          "lcov",
-          "text"
-        ]
-      },
-      "gitHead": "ff411054852532f12c78fb6204a778589f671fd6",
-      "bugs": {
-        "url": "https://github.com/istanbuljs/caching-transform/issues"
-      },
-      "homepage": "https://github.com/istanbuljs/caching-transform#readme",
-      "_id": "caching-transform@3.0.2",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.15.0",
-      "_npmUser": {
-        "name": "coreyfarrell",
-        "email": "git@cfware.com"
-      },
       "dist": {
         "integrity": "sha512-Mtgcv3lh3U0zRii/6qVgQODdPA4G3zhG+jtbCWj39RXuUFTMzH0vcdMtaJS1jPowd+It2Pqr6y3NJMQqOqCE2w==",
         "shasum": "601d46b91eca87687a281e71cef99791b0efca70",
@@ -706,59 +233,13 @@
         "unpackedSize": 9409,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcatDOCRA9TVsSAnZWagAA18YP/1BCNNPuu6QBgc5jQZq6\nTVaDo7vAsKicdAWpOsoFlrJf76aobJPAtb/HccKnqLs7bRvshCUQGZL8V7Wc\ndW02cR183+ituwXREBOGE7/EJShr13DylerONoQyfsIpt18K77bdRBLzcVkD\nxm9PvCv4SIEBiD08Fx9FKpXdrdVblLRqTKKXqsjTD8YE780MluXG6HFb6F3+\nUmv0AMH7nT+VsWcgFDczFq+B9aHGRGAdxcp79cgAQwUF+JRlN7oyKJwpswUY\nmBcrCzCVf7ytzOlP2SYGlgSaonki/rnS5qtBlVOGzApH9NZB081bEF1avxvM\nAgS6z9Ucu3JWOQx1P5TO/A5oJnm59odlM+dwuHPeZL6dfNbrA+KqNsU739sD\nUebuwvG3dQt50g7OetS9QpfhR2CxNL/KXKK/qHOdvTtwfQdIpuq0U9qMhVFW\nItbxZtLKUC3h9JZfBftvYjbZltk7j2oW24onE/eUPRSWoHxlG6nWYn+PWKAz\noR/U6ALlcsD98pP97bKUSMxdks4i9KhhjefH86ttDPvj0rk+nvyQgvdvtixv\n5uAt0tZ1/5aGQB+abarDtaw3iLbkrX7thUjWaIdYCPFyugx9K5VLgF4STCqy\nKAPLSGfxRLfrBQxTcK9g+Hg+gmjQy2si2Mm2ZIHmQMNySfUy4+Ay422wxPz7\n0CyR\r\n=zGTY\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "ben@npmjs.com",
-          "name": "bcoe"
-        },
-        {
-          "email": "git@cfware.com",
-          "name": "coreyfarrell"
-        },
-        {
-          "email": "mark@novemberborn.net",
-          "name": "novemberborn"
-        },
-        {
-          "email": "sindresorhus@gmail.com",
-          "name": "sindresorhus"
-        },
-        {
-          "email": "vdemedes@gmail.com",
-          "name": "vdemedes"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/caching-transform_3.0.2_1550504141989_0.022300962140494596"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=6"
+      }
     },
     "4.0.0": {
       "name": "caching-transform",
       "version": "4.0.0",
-      "description": "Wraps a transform and provides caching",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/istanbuljs/caching-transform.git"
-      },
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "xo && nyc ava"
-      },
-      "keywords": [
-        "transform",
-        "cache",
-        "require",
-        "transpile",
-        "fast",
-        "speed",
-        "hash"
-      ],
       "dependencies": {
         "hasha": "^5.0.0",
         "make-dir": "^3.0.0",
@@ -774,20 +255,6 @@
         "sinon": "^7.3.2",
         "xo": "^0.24.0"
       },
-      "nyc": {
-        "reporter": [
-          "lcov",
-          "text"
-        ]
-      },
-      "gitHead": "961cc0dab59f4327795446eb41e700c067d0b87d",
-      "bugs": {
-        "url": "https://github.com/istanbuljs/caching-transform/issues"
-      },
-      "homepage": "https://github.com/istanbuljs/caching-transform#readme",
-      "_id": "caching-transform@4.0.0",
-      "_nodeVersion": "12.3.1",
-      "_npmVersion": "6.9.0",
       "dist": {
         "integrity": "sha512-kpqOvwXnjjN44D89K5ccQC+RUrsy7jB/XLlRrx0D7/2HNcTPqzsb6XgYoErwko6QsV184CA2YgS1fxDiiDZMWA==",
         "shasum": "00d297a4206d71e2163c39eaffa8157ac0651f0f",
@@ -796,94 +263,12 @@
         "unpackedSize": 10088,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc9OsrCRA9TVsSAnZWagAA8usP/iUTe6ubOJzUz8XzWb/s\nMIzSWsGCHJAgn4PEbJLhVAvSlgdwhe2LqKLOKMrCwJdEum+Oh85VdX3SBC7P\nImZM4yG5IE1nTrxLhqNiJLgWGWjwUWQKJj0mznzOhfhVJFSjqLnGhUBvD/7N\nXwQi2KIobP2sIGbujXK5kfvxFeNN/2Vulmi3xi+gyS1h2iTJROKh4W6x/hWf\nRk0tztXfxZB8ogmUGJoWsQK4VEwsYCSm3tpzfEH1Fykx2FGxd1bo2QmZX8+g\n8Y1VYkTSSEiaxMakkAisquKWOJNWKCGt7ChVdE6V7DixMgwwwUs1SGItvXin\n5GU7vkY9u0exFUpxbc7WtH9wcP7jqEWuS3fx1fRjQc1wYrGs7DAAApBS2q8w\nC5fj6XcnjDt1n4o5Fte+83qkQzzsp6z9mLlhW05BmK2gfdlzKqLq7Fd5TtFx\n8SdfLmJqYRsnVGd1aZWKgf0tBFWJYbA12/UCDwA1tQgT7QznAEuVvXVgJ2xL\nzK4ptWRS5RAWT95FF5wwYmjMqqVN/pssYMp74XAjuSBLoS7uJ1LemBY/YLea\nZyaIJ6d42g+z7GZEnvtBeDA5pvabQ3MP6ILdhyaldeDWK8O1+cBlrRSCpqeJ\nyeI8H5HKXhlwhPcO3ANmbve2dOLBV4zpypHRyHorOXoh1KxSsvRgRrPKj+Vo\nScqE\r\n=ADHw\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "email": "ben@npmjs.com",
-          "name": "bcoe"
-        },
-        {
-          "email": "git@cfware.com",
-          "name": "coreyfarrell"
-        },
-        {
-          "email": "mark@novemberborn.net",
-          "name": "novemberborn"
-        },
-        {
-          "email": "sindresorhus@gmail.com",
-          "name": "sindresorhus"
-        },
-        {
-          "email": "vdemedes@gmail.com",
-          "name": "vdemedes"
-        }
-      ],
-      "_npmUser": {
-        "name": "coreyfarrell",
-        "email": "git@cfware.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/caching-transform_4.0.0_1559554857029_0.42641067364926744"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "ben@npmjs.com",
-      "name": "bcoe"
-    },
-    {
-      "email": "git@cfware.com",
-      "name": "coreyfarrell"
-    },
-    {
-      "email": "mark@novemberborn.net",
-      "name": "novemberborn"
-    },
-    {
-      "email": "sindresorhus@gmail.com",
-      "name": "sindresorhus"
-    },
-    {
-      "email": "vdemedes@gmail.com",
-      "name": "vdemedes"
-    }
-  ],
-  "time": {
-    "modified": "2019-06-03T09:41:01.357Z",
-    "created": "2015-12-19T18:33:37.753Z",
-    "0.0.1": "2015-12-19T18:33:37.753Z",
-    "0.0.2": "2015-12-20T02:26:46.802Z",
-    "0.0.3": "2015-12-22T18:16:23.311Z",
-    "0.0.4": "2015-12-24T10:09:11.673Z",
-    "1.0.0": "2015-12-25T04:06:10.082Z",
-    "1.0.1": "2016-01-01T07:24:13.651Z",
-    "2.0.0": "2018-06-08T13:23:02.916Z",
-    "3.0.0": "2019-01-19T01:09:27.639Z",
-    "3.0.1": "2019-01-19T01:11:50.558Z",
-    "3.0.2": "2019-02-18T15:35:42.142Z",
-    "4.0.0": "2019-06-03T09:40:58.075Z"
-  },
-  "homepage": "https://github.com/istanbuljs/caching-transform#readme",
-  "keywords": [
-    "transform",
-    "cache",
-    "require",
-    "transpile",
-    "fast",
-    "speed",
-    "hash"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/istanbuljs/caching-transform.git"
-  },
-  "bugs": {
-    "url": "https://github.com/istanbuljs/caching-transform/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "readme.md"
+  "modified": "2020-02-12T16:19:22.041Z",
+  "_cached": false,
+  "_contentLength": 8862
 }

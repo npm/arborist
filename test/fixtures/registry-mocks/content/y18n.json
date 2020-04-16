@@ -1,8 +1,5 @@
 {
-  "_id": "y18n",
-  "_rev": "20-5eddcedda1cc2ac0cf2ab37e5fb97599",
   "name": "y18n",
-  "description": "the bare-bones internationalization library used by yargs",
   "dist-tags": {
     "latest": "4.0.0",
     "next": "4.0.0"
@@ -11,87 +8,21 @@
     "1.0.0": {
       "name": "y18n",
       "version": "1.0.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git@github.com:bcoe/y18n.git"
-      },
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/bcoe/y18n/issues"
-      },
-      "homepage": "https://github.com/bcoe/y18n",
       "devDependencies": {
         "chai": "^3.2.0",
         "mocha": "^2.2.5",
         "nyc": "^3.0.1",
         "rimraf": "^2.4.2",
         "standard": "^4.5.4"
-      },
-      "gitHead": "da3facd10d36b380d02dfa14db367f09ff124869",
-      "_id": "y18n@1.0.0",
-      "_shasum": "408ca633ce1cb2e8e1e288acb8c7007dcb28a588",
-      "_from": ".",
-      "_npmVersion": "2.7.5",
-      "_nodeVersion": "0.10.36",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
       },
       "dist": {
         "shasum": "408ca633ce1cb2e8e1e288acb8c7007dcb28a588",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "1.1.0": {
       "name": "y18n",
       "version": "1.1.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/bcoe/y18n.git"
-      },
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/bcoe/y18n/issues"
-      },
-      "homepage": "https://github.com/bcoe/y18n",
       "devDependencies": {
         "chai": "^3.2.0",
         "coveralls": "^2.11.3",
@@ -99,57 +30,15 @@
         "nyc": "^3.0.1",
         "rimraf": "^2.4.2",
         "standard": "^4.5.4"
-      },
-      "gitHead": "84becd79cc173a7dbfd97decbbc50aec85a52694",
-      "_id": "y18n@1.1.0",
-      "_shasum": "ba6bce6ebc50bcdb66bebadcd8f2c6fa5f5d6e4d",
-      "_from": ".",
-      "_npmVersion": "2.13.2",
-      "_nodeVersion": "2.0.2",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
       },
       "dist": {
         "shasum": "ba6bce6ebc50bcdb66bebadcd8f2c6fa5f5d6e4d",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-1.1.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "y18n",
       "version": "2.0.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/bcoe/y18n.git"
-      },
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/bcoe/y18n/issues"
-      },
-      "homepage": "https://github.com/bcoe/y18n",
       "devDependencies": {
         "chai": "^3.2.0",
         "coveralls": "^2.11.3",
@@ -157,57 +46,15 @@
         "nyc": "^3.0.1",
         "rimraf": "^2.4.2",
         "standard": "^4.5.4"
-      },
-      "gitHead": "17c6b1146fc008e4e95645105f1733210733e786",
-      "_id": "y18n@2.0.0",
-      "_shasum": "c4bc87a9add7962f72d208f8d04660abd774e4de",
-      "_from": ".",
-      "_npmVersion": "2.13.2",
-      "_nodeVersion": "2.0.2",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
       },
       "dist": {
         "shasum": "c4bc87a9add7962f72d208f8d04660abd774e4de",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-2.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "3.0.0": {
       "name": "y18n",
       "version": "3.0.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/bcoe/y18n.git"
-      },
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/bcoe/y18n/issues"
-      },
-      "homepage": "https://github.com/bcoe/y18n",
       "devDependencies": {
         "chai": "^3.2.0",
         "coveralls": "^2.11.3",
@@ -216,56 +63,14 @@
         "rimraf": "^2.4.2",
         "standard": "^4.5.4"
       },
-      "gitHead": "58bf38fb645839f75f0ccfae16ef819fe0df2986",
-      "_id": "y18n@3.0.0",
-      "_shasum": "848c0149c64003945d62287d6a0a3b91d7fdf6f5",
-      "_from": ".",
-      "_npmVersion": "2.13.2",
-      "_nodeVersion": "2.0.2",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
-      },
       "dist": {
         "shasum": "848c0149c64003945d62287d6a0a3b91d7fdf6f5",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-3.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "3.1.0": {
       "name": "y18n",
       "version": "3.1.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/bcoe/y18n.git"
-      },
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/bcoe/y18n/issues"
-      },
-      "homepage": "https://github.com/bcoe/y18n",
       "devDependencies": {
         "chai": "^3.2.0",
         "coveralls": "^2.11.4",
@@ -274,60 +79,14 @@
         "rimraf": "^2.4.2",
         "standard": "^5.1.0"
       },
-      "gitHead": "a75460b306db0097aed0c7e12362bb222e8de90b",
-      "_id": "y18n@3.1.0",
-      "_shasum": "dfcf19493e8dd9763a3d4bd0fa673de37cf8e860",
-      "_from": ".",
-      "_npmVersion": "2.13.1",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "abg",
-        "email": "andrewbgoode@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        },
-        {
-          "name": "abg",
-          "email": "andrewbgoode@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "dfcf19493e8dd9763a3d4bd0fa673de37cf8e860",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-3.1.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "3.2.0": {
       "name": "y18n",
       "version": "3.2.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/bcoe/y18n.git"
-      },
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/bcoe/y18n/issues"
-      },
-      "homepage": "https://github.com/bcoe/y18n",
       "devDependencies": {
         "chai": "^3.3.0",
         "coveralls": "^2.11.4",
@@ -336,63 +95,14 @@
         "rimraf": "^2.4.3",
         "standard": "^5.3.1"
       },
-      "gitHead": "a92184823afa8cccef4c8100a0b79338f85ab089",
-      "_id": "y18n@3.2.0",
-      "_shasum": "3bec64c93b730d924a6148c765757932433e34c8",
-      "_from": ".",
-      "_npmVersion": "2.14.2",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "abg",
-        "email": "andrewbgoode@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        },
-        {
-          "name": "abg",
-          "email": "andrewbgoode@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "3bec64c93b730d924a6148c765757932433e34c8",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-3.2.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "3.2.1": {
       "name": "y18n",
       "version": "3.2.1",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/yargs/y18n.git"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/yargs/y18n/issues"
-      },
-      "homepage": "https://github.com/yargs/y18n",
       "devDependencies": {
         "chai": "^3.4.1",
         "coveralls": "^2.11.6",
@@ -401,68 +111,14 @@
         "rimraf": "^2.5.0",
         "standard": "^5.4.1"
       },
-      "gitHead": "34d6ad7bfeac67721ccbcf3bbcc761f33d787c90",
-      "_id": "y18n@3.2.1",
-      "_shasum": "6d15fba884c08679c0d77e88e7759e811e07fa41",
-      "_from": ".",
-      "_npmVersion": "3.3.0",
-      "_nodeVersion": "3.2.0",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
-      },
       "dist": {
         "shasum": "6d15fba884c08679c0d77e88e7759e811e07fa41",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-3.2.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        },
-        {
-          "name": "nexdrew",
-          "email": "andrew@npmjs.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-13-west.internal.npmjs.com",
-        "tmp": "tmp/y18n-3.2.1.tgz_1458191070611_0.9606689948122948"
-      },
-      "directories": {}
+      }
     },
     "4.0.0": {
       "name": "y18n",
       "version": "4.0.0",
-      "description": "the bare-bones internationalization library used by yargs",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "release": "standard-version"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com/yargs/y18n.git"
-      },
-      "files": [
-        "index.js"
-      ],
-      "keywords": [
-        "i18n",
-        "internationalization",
-        "yargs"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/yargs/y18n/issues"
-      },
-      "homepage": "https://github.com/yargs/y18n",
       "devDependencies": {
         "chai": "^4.0.1",
         "coveralls": "^3.0.0",
@@ -472,84 +128,14 @@
         "standard": "^10.0.0-beta.0",
         "standard-version": "^4.2.0"
       },
-      "gitHead": "45d2568800d6c57be045e76dc4984b2ef3432233",
-      "_id": "y18n@4.0.0",
-      "_npmVersion": "5.4.2",
-      "_nodeVersion": "8.6.0",
-      "_npmUser": {
-        "name": "nexdrew",
-        "email": "andrewbgoode@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==",
         "shasum": "95ef94f85ecc81d007c264e190a120f0a3c8566b",
         "tarball": "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "email": "andrewbgoode@gmail.com",
-          "name": "nexdrew"
-        },
-        {
-          "email": "ben@npmjs.com",
-          "name": "bcoe"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/y18n-4.0.0.tgz_1507662196433_0.6819839081726968"
-      },
-      "directories": {}
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "andrewbgoode@gmail.com",
-      "name": "nexdrew"
-    },
-    {
-      "email": "ben@npmjs.com",
-      "name": "bcoe"
-    }
-  ],
-  "time": {
-    "modified": "2017-11-22T06:26:12.099Z",
-    "created": "2015-07-27T07:19:00.467Z",
-    "1.0.0": "2015-07-27T07:19:00.467Z",
-    "1.1.0": "2015-07-28T04:15:40.553Z",
-    "2.0.0": "2015-07-28T05:07:08.737Z",
-    "3.0.0": "2015-07-29T07:35:44.735Z",
-    "3.1.0": "2015-08-18T22:01:52.657Z",
-    "3.2.0": "2015-09-21T20:58:01.658Z",
-    "3.2.1": "2016-03-17T05:04:31.363Z",
-    "4.0.0": "2017-10-10T19:03:17.301Z"
-  },
-  "homepage": "https://github.com/yargs/y18n",
-  "keywords": [
-    "i18n",
-    "internationalization",
-    "yargs"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/yargs/y18n.git"
-  },
-  "author": {
-    "name": "Ben Coe",
-    "email": "ben@npmjs.com"
-  },
-  "bugs": {
-    "url": "https://github.com/yargs/y18n/issues"
-  },
-  "license": "ISC",
-  "readmeFilename": "README.md",
-  "users": {
-    "slurm": true,
-    "alberh": true,
-    "terrychan": true,
-    "arttse": true,
-    "metaa": true,
-    "zeligzhou": true
-  },
-  "_attachments": {}
+  "modified": "2017-11-22T06:26:12.099Z",
+  "_cached": false,
+  "_contentLength": 2572
 }

@@ -1,8 +1,5 @@
 {
-  "_id": "bcrypt-pbkdf",
-  "_rev": "18-de00cd2ce718603412dff5b1b737d744",
   "name": "bcrypt-pbkdf",
-  "description": "Port of the OpenBSD bcrypt_pbkdf function to pure JS",
   "dist-tags": {
     "latest": "1.0.2"
   },
@@ -10,227 +7,40 @@
     "1.0.0": {
       "name": "bcrypt-pbkdf",
       "version": "1.0.0",
-      "description": "Port of the OpenBSD bcrypt_pbkdf function to pure JS",
-      "main": "index.js",
       "dependencies": {
         "tweetnacl": "^0.14.3"
-      },
-      "devDependencies": {},
-      "license": "BSD-4-Clause",
-      "gitHead": "e88be37d3cd25395b4aa496ac468b33671368be6",
-      "_id": "bcrypt-pbkdf@1.0.0",
-      "scripts": {},
-      "_shasum": "3ca76b85241c7170bf7d9703e7b9aa74630040d4",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "0.12.15",
-      "_npmUser": {
-        "name": "arekinath",
-        "email": "alex@cooperi.net"
       },
       "dist": {
         "shasum": "3ca76b85241c7170bf7d9703e7b9aa74630040d4",
         "tarball": "https://registry.npmjs.org/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "arekinath",
-          "email": "alex@cooperi.net"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/bcrypt-pbkdf-1.0.0.tgz_1471381825814_0.06877309852279723"
-      },
-      "directories": {}
+      }
     },
     "1.0.1": {
       "name": "bcrypt-pbkdf",
       "version": "1.0.1",
-      "description": "Port of the OpenBSD bcrypt_pbkdf function to pure JS",
-      "main": "index.js",
       "dependencies": {
         "tweetnacl": "^0.14.3"
-      },
-      "devDependencies": {},
-      "license": "BSD-3-Clause",
-      "gitHead": "fa2ab3ae9efa15367264151398635a915c7b411d",
-      "_id": "bcrypt-pbkdf@1.0.1",
-      "scripts": {},
-      "_shasum": "63bc5dcb61331b92bc05fd528953c33462a06f8d",
-      "_from": ".",
-      "_npmVersion": "2.14.9",
-      "_nodeVersion": "0.12.9",
-      "_npmUser": {
-        "name": "arekinath",
-        "email": "alex@cooperi.net"
       },
       "dist": {
         "shasum": "63bc5dcb61331b92bc05fd528953c33462a06f8d",
         "tarball": "https://registry.npmjs.org/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "arekinath",
-          "email": "alex@cooperi.net"
-        },
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        },
-        {
-          "name": "jclulow",
-          "email": "josh@sysmgr.org"
-        },
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/bcrypt-pbkdf-1.0.1.tgz_1486007687899_0.974529881728813"
-      },
-      "directories": {}
+      }
     },
     "1.0.2": {
       "name": "bcrypt-pbkdf",
       "version": "1.0.2",
-      "description": "Port of the OpenBSD bcrypt_pbkdf function to pure JS",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/joyent/node-bcrypt-pbkdf.git"
-      },
-      "main": "index.js",
       "dependencies": {
         "tweetnacl": "^0.14.3"
-      },
-      "devDependencies": {},
-      "license": "BSD-3-Clause",
-      "gitHead": "15fa7399a1090ba70d855764f7ace23003bf45f3",
-      "bugs": {
-        "url": "https://github.com/joyent/node-bcrypt-pbkdf/issues"
-      },
-      "homepage": "https://github.com/joyent/node-bcrypt-pbkdf#readme",
-      "_id": "bcrypt-pbkdf@1.0.2",
-      "scripts": {},
-      "_shasum": "a4301d389b6a43f9b67ff3ca11a3f6637e360e9e",
-      "_from": ".",
-      "_npmVersion": "2.15.11",
-      "_nodeVersion": "0.12.18",
-      "_npmUser": {
-        "name": "arekinath",
-        "email": "alex@cooperi.net"
       },
       "dist": {
         "shasum": "a4301d389b6a43f9b67ff3ca11a3f6637e360e9e",
         "tarball": "https://registry.npmjs.org/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz",
         "fileCount": 5,
         "unpackedSize": 28994
-      },
-      "maintainers": [
-        {
-          "name": "arekinath",
-          "email": "alex@cooperi.net"
-        },
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        },
-        {
-          "name": "jclulow",
-          "email": "josh@sysmgr.org"
-        },
-        {
-          "name": "trentm",
-          "email": "trentm@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/bcrypt-pbkdf_1.0.2_1530232438519_0.6464853720318084"
-      },
-      "_hasShrinkwrap": false
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "mgerdts@gmail.com",
-      "name": "mgerdts"
-    },
-    {
-      "email": "kelly.mclaughlin@joyent.com",
-      "name": "kellymclaughlin"
-    },
-    {
-      "email": "isaac.davis@joyent.com",
-      "name": "isaacdavis"
-    },
-    {
-      "email": "dave@daveeddy.com",
-      "name": "bahamas10"
-    },
-    {
-      "email": "aguycalledrichard@gmail.com",
-      "name": "chudley"
-    },
-    {
-      "email": "bahamat@digitalelf.net",
-      "name": "bahamat"
-    },
-    {
-      "email": "michael.hicks@joyent.com",
-      "name": "michael.hicks"
-    },
-    {
-      "email": "wpreul@gmail.com",
-      "name": "wyatt"
-    },
-    {
-      "email": "kusorbox@gmail.com",
-      "name": "kusor"
-    },
-    {
-      "email": "kody.kantor@joyent.com",
-      "name": "kkantor"
-    },
-    {
-      "email": "trentm@gmail.com",
-      "name": "trentm"
-    },
-    {
-      "email": "todd.whiteman@joyent.com",
-      "name": "todd.whiteman"
-    },
-    {
-      "email": "dap@cs.brown.edu",
-      "name": "dap"
-    },
-    {
-      "email": "josh@sysmgr.org",
-      "name": "jclulow"
-    },
-    {
-      "email": "alex@cooperi.net",
-      "name": "arekinath"
-    }
-  ],
-  "time": {
-    "modified": "2020-02-04T21:05:52.791Z",
-    "created": "2016-08-16T21:10:29.470Z",
-    "1.0.0": "2016-08-16T21:10:29.470Z",
-    "1.0.1": "2017-02-02T03:54:49.593Z",
-    "1.0.2": "2018-06-29T00:33:59.042Z"
-  },
-  "license": "BSD-3-Clause",
-  "readmeFilename": "README.md",
-  "homepage": "https://github.com/joyent/node-bcrypt-pbkdf#readme",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/joyent/node-bcrypt-pbkdf.git"
-  },
-  "bugs": {
-    "url": "https://github.com/joyent/node-bcrypt-pbkdf/issues"
-  }
+  "modified": "2020-02-04T21:05:52.791Z",
+  "_cached": false,
+  "_contentLength": 821
 }

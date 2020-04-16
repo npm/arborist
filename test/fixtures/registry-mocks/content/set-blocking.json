@@ -1,8 +1,5 @@
 {
-  "_id": "set-blocking",
-  "_rev": "3-6f3ed774dd4b0b52fc4e3761b6b5497b",
   "name": "set-blocking",
-  "description": "set blocking stdio and stderr ensuring that terminal output does not truncate",
   "dist-tags": {
     "latest": "2.0.0"
   },
@@ -10,34 +7,6 @@
     "1.0.0": {
       "name": "set-blocking",
       "version": "1.0.0",
-      "description": "set blocking stdio and stderr ensuring that terminal output does not truncate",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha ./test/*.js",
-        "coverage": "nyc report --reporter=text-lcov | coveralls"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/yargs/set-blocking.git"
-      },
-      "keywords": [
-        "flush",
-        "terminal",
-        "blocking",
-        "shim",
-        "stdio",
-        "stderr"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/yargs/set-blocking/issues"
-      },
-      "homepage": "https://github.com/yargs/set-blocking#readme",
       "devDependencies": {
         "chai": "^3.5.0",
         "coveralls": "^2.11.9",
@@ -45,69 +14,15 @@
         "nyc": "^6.4.4",
         "standard": "^7.0.1",
         "standard-version": "^2.2.1"
-      },
-      "files": [
-        "index.js",
-        "LICENSE.txt"
-      ],
-      "gitHead": "7d0c45e56bbf7fe2634b71df47c5003b3ae1008a",
-      "_id": "set-blocking@1.0.0",
-      "_shasum": "cd5e5d938048df1ac92dfe92e1f16add656f5ec5",
-      "_from": ".",
-      "_npmVersion": "2.7.5",
-      "_nodeVersion": "0.10.36",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
       },
       "dist": {
         "shasum": "cd5e5d938048df1ac92dfe92e1f16add656f5ec5",
         "tarball": "https://registry.npmjs.org/set-blocking/-/set-blocking-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/set-blocking-1.0.0.tgz_1463262253151_0.16861064941622317"
-      },
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "set-blocking",
       "version": "2.0.0",
-      "description": "set blocking stdio and stderr ensuring that terminal output does not truncate",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc mocha ./test/*.js",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "version": "standard-version"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/yargs/set-blocking.git"
-      },
-      "keywords": [
-        "flush",
-        "terminal",
-        "blocking",
-        "shim",
-        "stdio",
-        "stderr"
-      ],
-      "author": {
-        "name": "Ben Coe",
-        "email": "ben@npmjs.com"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/yargs/set-blocking/issues"
-      },
-      "homepage": "https://github.com/yargs/set-blocking#readme",
       "devDependencies": {
         "chai": "^3.5.0",
         "coveralls": "^2.11.9",
@@ -116,73 +31,13 @@
         "standard": "^7.0.1",
         "standard-version": "^2.2.1"
       },
-      "files": [
-        "index.js",
-        "LICENSE.txt"
-      ],
-      "gitHead": "7eec10577b5fff264de477ba3b9d07f404946eff",
-      "_id": "set-blocking@2.0.0",
-      "_shasum": "045f9782d011ae9a6803ddd382b24392b3d890f7",
-      "_from": ".",
-      "_npmVersion": "2.11.3",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "bcoe",
-        "email": "ben@npmjs.com"
-      },
       "dist": {
         "shasum": "045f9782d011ae9a6803ddd382b24392b3d890f7",
         "tarball": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bcoe",
-          "email": "ben@npmjs.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/set-blocking-2.0.0.tgz_1463525966987_0.5456729622092098"
-      },
-      "directories": {}
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "bcoe",
-      "email": "ben@npmjs.com"
-    }
-  ],
-  "time": {
-    "modified": "2017-07-11T07:31:18.612Z",
-    "created": "2016-05-14T21:44:13.754Z",
-    "1.0.0": "2016-05-14T21:44:13.754Z",
-    "2.0.0": "2016-05-17T22:59:27.619Z"
-  },
-  "homepage": "https://github.com/yargs/set-blocking#readme",
-  "keywords": [
-    "flush",
-    "terminal",
-    "blocking",
-    "shim",
-    "stdio",
-    "stderr"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yargs/set-blocking.git"
-  },
-  "author": {
-    "name": "Ben Coe",
-    "email": "ben@npmjs.com"
-  },
-  "bugs": {
-    "url": "https://github.com/yargs/set-blocking/issues"
-  },
-  "license": "ISC",
-  "readmeFilename": "README.md",
-  "users": {
-    "usex": true
-  },
-  "_attachments": {}
+  "modified": "2017-07-11T07:31:18.612Z",
+  "_cached": false,
+  "_contentLength": 757
 }

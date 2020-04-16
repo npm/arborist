@@ -1,38 +1,16 @@
 {
-  "_id": "node-fetch",
-  "_rev": "277-c2018d870bb7c6165be001d94f0be4dd",
   "name": "node-fetch",
-  "description": "A light-weight module that brings window.fetch to node.js",
   "dist-tags": {
     "latest": "2.6.0",
-    "next": "2.1.2"
+    "next": "3.0.0-beta.4"
   },
   "versions": {
     "0.1.0": {
       "name": "node-fetch",
       "version": "0.1.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -40,57 +18,17 @@
         "mocha": "^2.1.0",
         "promise": "^6.1.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "5cb7365d5cbf1dabffed31f6dfe6f996cbbfb7c2",
-      "_id": "node-fetch@0.1.0",
-      "_shasum": "26c6afcd56ff31a8de2643a4cba6438dfa844bf9",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "26c6afcd56ff31a8de2643a4cba6438dfa844bf9",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-0.1.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.0": {
       "name": "node-fetch",
       "version": "1.0.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -101,57 +39,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "95ad88e527455bdef40c69d936e4bf1da2fae307",
-      "_id": "node-fetch@1.0.0",
-      "_shasum": "342cc3ff90d200d6710ffcba132af37f385df2d8",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "342cc3ff90d200d6710ffcba132af37f385df2d8",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.1": {
       "name": "node-fetch",
       "version": "1.0.1",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -162,57 +60,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "4532ad699ecf290202a2c2bdab9c6c6cc8570d16",
-      "_id": "node-fetch@1.0.1",
-      "_shasum": "ecbccd80d52708f9c0bb6a900ba60672c743b243",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "ecbccd80d52708f9c0bb6a900ba60672c743b243",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.2": {
       "name": "node-fetch",
       "version": "1.0.2",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -223,57 +81,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "f0bca7ee663879e5d50814048d9a4cec333d271d",
-      "_id": "node-fetch@1.0.2",
-      "_shasum": "ead209298a4dbb0a0ea151745ff641db67747953",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "ead209298a4dbb0a0ea151745ff641db67747953",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.2.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.3": {
       "name": "node-fetch",
       "version": "1.0.3",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -284,57 +102,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "6705b3cdaf3e0b472623e7d271ca686a97e61276",
-      "_id": "node-fetch@1.0.3",
-      "_shasum": "7c3bcc966ebaa5fbf9c650423f2bbf204abf0c52",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "7c3bcc966ebaa5fbf9c650423f2bbf204abf0c52",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.3.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.4": {
       "name": "node-fetch",
       "version": "1.0.4",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -345,57 +123,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "6172067d1ef9704b9af97de2554d912572801360",
-      "_id": "node-fetch@1.0.4",
-      "_shasum": "e324813be355fb832bdfce68b959f8d7707dbc9b",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "e324813be355fb832bdfce68b959f8d7707dbc9b",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.4.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.5": {
       "name": "node-fetch",
       "version": "1.0.5",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -406,58 +144,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "220506757b4d1bd91f0724b5c781430867736e65",
-      "_id": "node-fetch@1.0.5",
-      "_shasum": "320ca8a3e584267df3bd22bd10489b3868e4c8d8",
-      "_from": ".",
-      "_npmVersion": "2.7.1",
-      "_nodeVersion": "1.5.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "320ca8a3e584267df3bd22bd10489b3868e4c8d8",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.5.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.6": {
       "name": "node-fetch",
       "version": "1.0.6",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -468,58 +165,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "f04609055c0d3c4543ba743abe6d94902c8a9c7f",
-      "_id": "node-fetch@1.0.6",
-      "_shasum": "2299d61ffd5ba0abc4440cd782ea9125ea96fd11",
-      "_from": ".",
-      "_npmVersion": "2.7.1",
-      "_nodeVersion": "1.5.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "2299d61ffd5ba0abc4440cd782ea9125ea96fd11",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.0.6.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.1.0": {
       "name": "node-fetch",
       "version": "1.1.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -530,58 +186,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "c363782b0a88af99963c4b4cc58d472f11bc4375",
-      "_id": "node-fetch@1.1.0",
-      "_shasum": "92a8f0407e5d153494f45f8d05a0c1688f8986ab",
-      "_from": ".",
-      "_npmVersion": "2.7.6",
-      "_nodeVersion": "1.7.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "92a8f0407e5d153494f45f8d05a0c1688f8986ab",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.1.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.1.1": {
       "name": "node-fetch",
       "version": "1.1.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -592,58 +207,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "c02cb4229d46ff653e33f9ae75cc450c1c608c2c",
-      "_id": "node-fetch@1.1.1",
-      "_shasum": "0f7ffe76f12bb386757ccd566ced04b7d6c3cc06",
-      "_from": ".",
-      "_npmVersion": "2.7.6",
-      "_nodeVersion": "1.7.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "0f7ffe76f12bb386757ccd566ced04b7d6c3cc06",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.1.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.1.2": {
       "name": "node-fetch",
       "version": "1.1.2",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -654,58 +228,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "377bce655fbd62f08ebcbc30c261ab9acccc52c9",
-      "_id": "node-fetch@1.1.2",
-      "_shasum": "cf369f6dd45415dcbebf9aaeb7d7e8ad18dec9ab",
-      "_from": ".",
-      "_npmVersion": "2.7.0",
-      "_nodeVersion": "1.5.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "cf369f6dd45415dcbebf9aaeb7d7e8ad18dec9ab",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.1.2.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.2.0": {
       "name": "node-fetch",
       "version": "1.2.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -716,58 +249,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "60f819f0a0fc4779a5f61a8a3db2faa5459e63f7",
-      "_id": "node-fetch@1.2.0",
-      "_shasum": "2051585c4f4ed0265805a0b783d15bb81634ca7c",
-      "_from": ".",
-      "_npmVersion": "2.7.6",
-      "_nodeVersion": "1.7.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "2051585c4f4ed0265805a0b783d15bb81634ca7c",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.2.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.2.1": {
       "name": "node-fetch",
       "version": "1.2.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -778,58 +270,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "177d42e00168c87e9ce830a2b796c81a4b8f6ac6",
-      "_id": "node-fetch@1.2.1",
-      "_shasum": "8404802c3346c1e8776e3699c0f32df9be13cbed",
-      "_from": ".",
-      "_npmVersion": "2.7.6",
-      "_nodeVersion": "1.7.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "8404802c3346c1e8776e3699c0f32df9be13cbed",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.2.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.3.0": {
       "name": "node-fetch",
       "version": "1.3.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -840,58 +291,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "32b60634434a63865ea3f79edb33d17e40876c9f",
-      "_id": "node-fetch@1.3.0",
-      "_shasum": "655fd3a0c5d86bf452f63b5a959d15498678befe",
-      "_from": ".",
-      "_npmVersion": "2.8.3",
-      "_nodeVersion": "1.8.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "655fd3a0c5d86bf452f63b5a959d15498678befe",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.3.1": {
       "name": "node-fetch",
       "version": "1.3.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -902,58 +312,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "b5579eb34d13cc3422dfb3c9d3a6d262f3200019",
-      "_id": "node-fetch@1.3.1",
-      "_shasum": "e95c3796272295061222ba67644577959bd4faab",
-      "_from": ".",
-      "_npmVersion": "2.11.1",
-      "_nodeVersion": "2.3.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "e95c3796272295061222ba67644577959bd4faab",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.3.2": {
       "name": "node-fetch",
       "version": "1.3.2",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -966,58 +335,17 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "129d9338a9d2b89f211b2d014d1eb23b4e9d307d",
-      "_id": "node-fetch@1.3.2",
-      "_shasum": "c0ef9fc0f86809349269cc8051a459d07c091412",
-      "_from": ".",
-      "_npmVersion": "2.11.1",
-      "_nodeVersion": "2.3.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "c0ef9fc0f86809349269cc8051a459d07c091412",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.2.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.3.3": {
       "name": "node-fetch",
       "version": "1.3.3",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^2.9.1",
         "chai": "^1.10.0",
@@ -1030,58 +358,18 @@
         "promise": "^6.1.0",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "fd3f89fcd94e5bcee31de4cbca4c15cd79999b07",
-      "_id": "node-fetch@1.3.3",
-      "_shasum": "880228be75fd207a8a9baa2042ead437e6edaf84",
-      "_from": ".",
-      "_npmVersion": "2.11.1",
-      "_nodeVersion": "2.3.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "880228be75fd207a8a9baa2042ead437e6edaf84",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.3.3.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.4.0": {
       "name": "node-fetch",
       "version": "1.4.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1094,63 +382,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "2dd4ee583867dabc0102b4391a7aa343fd366be2",
-      "_id": "node-fetch@1.4.0",
-      "_shasum": "5c9f574ee1239838d8eb888a8f38ec4590903357",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "5c9f574ee1239838d8eb888a8f38ec4590903357",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.4.0.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-13-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.4.0.tgz_1458385366564_0.6444221257697791"
-      },
-      "directories": {}
+      }
     },
     "1.4.1": {
       "name": "node-fetch",
       "version": "1.4.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1163,63 +406,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "98b167c35d4465bdff1c5760ad9676142e3eefc6",
-      "_id": "node-fetch@1.4.1",
-      "_shasum": "f50a3a98a586c434e9a63984c97127eb33c09145",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "f50a3a98a586c434e9a63984c97127eb33c09145",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.4.1.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.4.1.tgz_1458718398432_0.22000137832947075"
-      },
-      "directories": {}
+      }
     },
     "1.5.0": {
       "name": "node-fetch",
       "version": "1.5.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1232,63 +430,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "321d80075062a8bfaf917d9b562e748624325da0",
-      "_id": "node-fetch@1.5.0",
-      "_shasum": "c1b82cda9579aa57ee05b838278183c6e997f642",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "c1b82cda9579aa57ee05b838278183c6e997f642",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.0.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.5.0.tgz_1459883125410_0.07301584328524768"
-      },
-      "directories": {}
+      }
     },
     "1.5.1": {
       "name": "node-fetch",
       "version": "1.5.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1301,63 +454,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "3f24c09005fe5c7e42c64c19a0ff57a8d0c43710",
-      "_id": "node-fetch@1.5.1",
-      "_shasum": "edc64350cc0bca48a5f79e038c1f7c5ff0869fef",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "edc64350cc0bca48a5f79e038c1f7c5ff0869fef",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.1.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.5.1.tgz_1460487536401_0.19198199780657887"
-      },
-      "directories": {}
+      }
     },
     "1.5.2": {
       "name": "node-fetch",
       "version": "1.5.2",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1370,63 +478,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "e1fcc2315acd9bcb211ca6c0b1e7218093289763",
-      "_id": "node-fetch@1.5.2",
-      "_shasum": "7dfd59492766cafb6af198b8e954468497a44727",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "7dfd59492766cafb6af198b8e954468497a44727",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.2.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.5.2.tgz_1462536779216_0.9876336704473943"
-      },
-      "directories": {}
+      }
     },
     "1.5.3": {
       "name": "node-fetch",
       "version": "1.5.3",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1439,63 +502,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "b46c5ea9ee6692676a2824334e24f9d3b95d3b78",
-      "_id": "node-fetch@1.5.3",
-      "_shasum": "f28d8b95ca8d45b433745dd319361e36402baef0",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "f28d8b95ca8d45b433745dd319361e36402baef0",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.5.3.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.5.3.tgz_1464202483131_0.3381968201138079"
-      },
-      "directories": {}
+      }
     },
     "1.6.0": {
       "name": "node-fetch",
       "version": "1.6.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1508,63 +526,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "4e455a4185da81abf814ccdb9c9e789691f7a349",
-      "_id": "node-fetch@1.6.0",
-      "_shasum": "00ccd811c657aee9e2f0d79fd2256fbcffd733a2",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.9.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "00ccd811c657aee9e2f0d79fd2256fbcffd733a2",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.0.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.6.0.tgz_1470219032038_0.3425547960214317"
-      },
-      "directories": {}
+      }
     },
     "1.6.1": {
       "name": "node-fetch",
       "version": "1.6.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1577,63 +550,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "3e53f0c2c86078808508aa2ca11094bb45570548",
-      "_id": "node-fetch@1.6.1",
-      "_shasum": "2ac748594cc82610da9a7a32c530777dcfcb51ff",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.3.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "2ac748594cc82610da9a7a32c530777dcfcb51ff",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.1.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.6.1.tgz_1473608280483_0.7950712053570896"
-      },
-      "directories": {}
+      }
     },
     "1.6.2": {
       "name": "node-fetch",
       "version": "1.6.2",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1646,63 +574,18 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "b2e6cca648bb5da176b6f4ab39dca6a33e992567",
-      "_id": "node-fetch@1.6.2",
-      "_shasum": "6a605f52c6b77ce28ce24f131b97e73fe2ea9fa0",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.3.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "6a605f52c6b77ce28ce24f131b97e73fe2ea9fa0",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.2.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.6.2.tgz_1474710825909_0.8582186447456479"
-      },
-      "directories": {}
+      }
     },
     "1.6.3": {
       "name": "node-fetch",
       "version": "1.6.3",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -1715,70 +598,20 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "3c053ce32760d2d5d6cb8712fb4115b44e4083d4",
-      "_id": "node-fetch@1.6.3",
-      "_shasum": "dc234edd6489982d58e8f0db4f695029abcd8c04",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.3.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "dc234edd6489982d58e8f0db4f695029abcd8c04",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.6.3.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-1.6.3.tgz_1474870810431_0.44125940511003137"
-      },
-      "directories": {}
+      }
     },
     "2.0.0-alpha.1": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.1",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "jsnext:main": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepublish": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
+      "dependencies": {
+        "babel-runtime": "^6.11.6",
+        "buffer-to-arraybuffer": "0.0.4",
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^3.0.0",
         "babel-plugin-transform-runtime": "^6.15.0",
@@ -1803,76 +636,20 @@
         "rollup-plugin-node-resolve": "^2.0.0",
         "whatwg-url": "^4.0.0"
       },
+      "dist": {
+        "shasum": "28499a933f19adcf3ecf8b9fa39a6c79202d1072",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.1.tgz"
+      }
+    },
+    "2.0.0-alpha.3": {
+      "name": "node-fetch",
+      "version": "2.0.0-alpha.3",
       "dependencies": {
         "babel-runtime": "^6.11.6",
         "buffer-to-arraybuffer": "0.0.4",
         "encoding": "^0.1.11",
         "is-stream": "^1.0.1"
       },
-      "gitHead": "908f661664e51fd847a5f69eb31724bbf2b3724b",
-      "_id": "node-fetch@2.0.0-alpha.1",
-      "_shasum": "28499a933f19adcf3ecf8b9fa39a6c79202d1072",
-      "_from": ".",
-      "_npmVersion": "4.1.1",
-      "_nodeVersion": "7.3.0",
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
-      "dist": {
-        "shasum": "28499a933f19adcf3ecf8b9fa39a6c79202d1072",
-        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.1.tgz_1484458641973_0.14498046622611582"
-      },
-      "directories": {}
-    },
-    "2.0.0-alpha.3": {
-      "name": "node-fetch",
-      "version": "2.0.0-alpha.3",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepublish": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^3.0.0",
         "babel-plugin-transform-runtime": "^6.15.0",
@@ -1897,80 +674,17 @@
         "rollup-plugin-node-resolve": "^2.0.0",
         "whatwg-url": "^4.0.0"
       },
-      "dependencies": {
-        "babel-runtime": "^6.11.6",
-        "buffer-to-arraybuffer": "0.0.4",
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "560d5d6a023f069c37497f633fe65955182fa3d5",
-      "_id": "node-fetch@2.0.0-alpha.3",
-      "_shasum": "8031bded671c806e4604c16b27ab1973b4fe88cc",
-      "_from": ".",
-      "_npmVersion": "4.1.2",
-      "_nodeVersion": "7.4.0",
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
       "dist": {
         "shasum": "8031bded671c806e4604c16b27ab1973b4fe88cc",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.3.tgz_1485714967416_0.2058272489812225"
-      },
-      "directories": {}
+      }
     },
     "2.0.0-alpha.4": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.4",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "engines": {
-        "node": ">=4"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepublish": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^4.0.0",
         "babel-preset-env": "^1.1.10",
@@ -1991,67 +705,22 @@
         "rollup": "^0.41.4",
         "rollup-plugin-babel": "^2.6.1",
         "whatwg-url": "^4.0.0"
-      },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "9cea8719eb4c2de70ec1d423398ebc38d3f8b8ab",
-      "_id": "node-fetch@2.0.0-alpha.4",
-      "_shasum": "ae3fe092fef710a7e565e68d5fcccefabad674b6",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.10.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "shasum": "ae3fe092fef710a7e565e68d5fcccefabad674b6",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.4.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.4.tgz_1494850616065_0.33211735682561994"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=4"
+      }
     },
     "1.7.0": {
       "name": "node-fetch",
       "version": "1.7.0",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && codecov"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -2063,68 +732,19 @@
         "parted": "^0.1.1",
         "promise": "^7.1.1",
         "resumer": "0.0.0"
-      },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "cf71a1bc8badaebf0243748f66a719fe5e32cfdc",
-      "_id": "node-fetch@1.7.0",
-      "_shasum": "3ff6c56544f9b7fb00682338bb55ee6f54a8a0ef",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.10.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "shasum": "3ff6c56544f9b7fb00682338bb55ee6f54a8a0ef",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-1.7.0.tgz_1495527871673_0.4224355819169432"
-      },
-      "directories": {}
+      }
     },
     "1.7.1": {
       "name": "node-fetch",
       "version": "1.7.1",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && codecov"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -2136,78 +756,19 @@
         "parted": "^0.1.1",
         "promise": "^7.1.1",
         "resumer": "0.0.0"
-      },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "4bb15ce988bf614a2b1b72da1d6545b09ca6b4c6",
-      "_id": "node-fetch@1.7.1",
-      "_npmVersion": "5.0.1",
-      "_nodeVersion": "8.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "integrity": "sha512-j8XsFGCLw79vWXkZtMSmmLaOk9z5SQ9bV/tkbZVCqvgwzrjAGq66igobLofHtF63NvMTp2WjytpsNTGKa+XRIQ==",
         "shasum": "899cb3d0a3c92f952c47f1b876f4c8aeabd400d5",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-1.7.1.tgz_1496493897766_0.25435457238927484"
-      },
-      "directories": {}
+      }
     },
     "2.0.0-alpha.5": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.5",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "engines": {
-        "node": ">=4"
+      "dependencies": {
+        "encoding": "^0.1.11"
       },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^4.0.0",
         "babel-preset-env": "^1.1.10",
@@ -2228,77 +789,19 @@
         "rollup": "^0.41.4",
         "rollup-plugin-babel": "^2.6.1",
         "whatwg-url": "^4.0.0"
-      },
-      "dependencies": {
-        "encoding": "^0.1.11"
-      },
-      "gitHead": "fa58aa0ab152293066ea912d4abdaa877d72eb16",
-      "_id": "node-fetch@2.0.0-alpha.5",
-      "_npmVersion": "5.0.1",
-      "_nodeVersion": "8.0.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "integrity": "sha512-ricDvef3324E+SqaOFJWiVCrQVHbJqxDfeOBwn7LymV67MYxeljHkJXAYOCADlopy/Q9NpTjFxtwv3+xLubGbA==",
         "shasum": "efe2816af7107bafd3d3cabd0f24deca4b408b64",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.5.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.5.tgz_1496495125929_0.37553365412168205"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=4"
+      }
     },
     "2.0.0-alpha.6": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.6",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "engines": {
-        "node": ">=4"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^4.0.0",
         "babel-preset-env": "^1.1.10",
@@ -2320,77 +823,19 @@
         "rollup-plugin-babel": "^2.6.1",
         "url-search-params": "^0.9.0",
         "whatwg-url": "^4.0.0"
-      },
-      "dependencies": {},
-      "gitHead": "2b359c1ea161edf5778490b9303a40ee11fef7ea",
-      "_id": "node-fetch@2.0.0-alpha.6",
-      "_shasum": "2fafa63b4a248f8d6b67a239fc16299a35641161",
-      "_from": ".",
-      "_npmVersion": "3.8.6",
-      "_nodeVersion": "5.12.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "shasum": "2fafa63b4a248f8d6b67a239fc16299a35641161",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.6.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.6.tgz_1500660271436_0.007863717619329691"
+      "engines": {
+        "node": ">=4"
       },
-      "directories": {},
       "deprecated": "it accidentally includes an older copy of node-fetch v2, do not use"
     },
     "2.0.0-alpha.7": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.7",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^4.0.0",
         "babel-preset-env": "^1.1.10",
@@ -2412,75 +857,19 @@
         "rollup-plugin-babel": "^2.6.1",
         "url-search-params": "^0.9.0",
         "whatwg-url": "^4.0.0"
-      },
-      "dependencies": {},
-      "gitHead": "2edb4c026667e5c8e7c808a3973bd94d193b2d0f",
-      "_id": "node-fetch@2.0.0-alpha.7",
-      "_npmVersion": "5.3.0",
-      "_nodeVersion": "8.2.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "integrity": "sha512-jODLrTvE4jOCDkrxf6RDqhoShkMIfExOQ8XBaYZx+zo3u9UfzYxMWFlPONAlslPwWQNgM8WZ7Tpdo26VWDWS9A==",
         "shasum": "78f61fc78c55a86674f071237a3f73de5ba4138b",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.7.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.7.tgz_1500955861406_0.3457566825672984"
-      },
-      "directories": {}
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.0.0-alpha.8": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.8",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^4.0.0",
         "babel-preset-env": "^1.1.10",
@@ -2502,63 +891,22 @@
         "url-search-params": "^0.9.0",
         "whatwg-url": "^4.0.0"
       },
-      "dependencies": {},
-      "gitHead": "863449de2e5b14c128503dd1c425d5e0fd24d267",
-      "_id": "node-fetch@2.0.0-alpha.8",
-      "_npmVersion": "5.3.0",
-      "_nodeVersion": "8.2.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-cDokdqn6TD7LNpMqxgPsI1Iqu23sD4ihqbGELFn4YmMvJSiyJcAws2sm0qKo5hIPXwvc7vR2BDPK09UyyLSivw==",
         "shasum": "f586cf6730ce30431c7d4528ce561d81add8ba90",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.8.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.8.tgz_1501089111834_0.10333641874603927"
-      },
-      "directories": {}
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "1.7.2": {
       "name": "node-fetch",
       "version": "1.7.2",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && codecov"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -2570,67 +918,20 @@
         "parted": "^0.1.1",
         "promise": "^7.1.1",
         "resumer": "0.0.0"
-      },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "3c9b64caf5c84f96052078f18d91c9e12bd5f5c6",
-      "_id": "node-fetch@1.7.2",
-      "_npmVersion": "5.3.0",
-      "_nodeVersion": "8.2.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
       },
       "dist": {
         "integrity": "sha512-xZZUq2yDhKMIn/UgG5q//IZSNLJIwW2QxS14CNH5spuiXkITM2pUitjdq58yLSaU7m4M0wBNaM2Gh/ggY4YJig==",
         "shasum": "c54e9aac57e432875233525f3c891c4159ffefd7",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.2.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-1.7.2.tgz_1502191381219_0.664517188211903"
-      },
-      "directories": {}
+      }
     },
     "1.7.3": {
       "name": "node-fetch",
       "version": "1.7.3",
-      "description": "A light-weight module that brings window.fetch to node.js and io.js",
-      "main": "index.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "report": "istanbul cover _mocha -- -R spec test/test.js",
-        "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && codecov"
+      "dependencies": {
+        "encoding": "^0.1.11",
+        "is-stream": "^1.0.1"
       },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "bluebird": "^3.3.4",
         "chai": "^3.5.0",
@@ -2643,78 +944,15 @@
         "promise": "^7.1.1",
         "resumer": "0.0.0"
       },
-      "dependencies": {
-        "encoding": "^0.1.11",
-        "is-stream": "^1.0.1"
-      },
-      "gitHead": "16f33bf76f06afb58307a652ceb48f597e48a095",
-      "_id": "node-fetch@1.7.3",
-      "_npmVersion": "5.3.0",
-      "_nodeVersion": "8.2.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==",
         "shasum": "980f6f72d85211a5347c6b2bc18c5b84c3eb47ef",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-1.7.3.tgz_1504852098188_0.7899843158666044"
-      },
-      "directories": {}
+      }
     },
     "2.0.0-alpha.9": {
       "name": "node-fetch",
       "version": "2.0.0-alpha.9",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js",
-        "browser.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-plugin-istanbul": "^4.0.0",
         "babel-preset-env": "^1.1.10",
@@ -2736,75 +974,18 @@
         "url-search-params": "^0.9.0",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "d1a3b1ee34720b0d2674a21741264a888863cb3f",
-      "_id": "node-fetch@2.0.0-alpha.9",
-      "_npmVersion": "5.3.0",
-      "_nodeVersion": "8.2.1",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-I7wP1QkmBNX1mt4BS5zyLRTegl5Ii+MSalpfFefn+EZFrGVsdfCvLTKt9eHkNlU4phKgp3tqLWW8VXDcCm9m9w==",
         "shasum": "990c0634f510f76449a0d6f6eaec96b22f273628",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0-alpha.9.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-2.0.0-alpha.9.tgz_1506232062978_0.9201480248011649"
-      },
-      "directories": {}
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.0.0": {
       "name": "node-fetch",
       "version": "2.0.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js",
-        "browser.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-istanbul": "^4.1.5",
@@ -2827,71 +1008,17 @@
         "url-search-params": "^0.10.0",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "_id": "node-fetch@2.0.0",
       "dist": {
         "shasum": "982bba43ecd4f2922a29cc186a6bbb0bb73fcba6",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.0.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch-2.0.0.tgz_1517690064671_0.487887607421726"
-      },
-      "directories": {}
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.1.0": {
       "name": "node-fetch",
       "version": "2.1.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js",
-        "browser.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-istanbul": "^4.1.5",
@@ -2915,74 +1042,19 @@
         "url-search-params": "^0.10.0",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "_id": "node-fetch@2.1.0",
       "dist": {
         "shasum": "9d96dde9fe1fcef6e4081226ba496b8d5950b647",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.0.tgz",
         "fileCount": 9,
         "unpackedSize": 98268
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.1.0_1520224872510_0.5133806259710896"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.1.1": {
       "name": "node-fetch",
       "version": "2.1.1",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js",
-        "browser.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-istanbul": "^4.1.5",
@@ -3006,74 +1078,19 @@
         "url-search-params": "^0.10.0",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "_id": "node-fetch@2.1.1",
       "dist": {
         "shasum": "369ca70b82f50c86496104a6c776d274f4e4a2d4",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.1.tgz",
         "fileCount": 9,
         "unpackedSize": 98310
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.1.1_1520225048881_0.16817806000341773"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.1.2": {
       "name": "node-fetch",
       "version": "2.1.2",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index.js",
-      "browser": "./browser.js",
-      "module": "lib/index.es.js",
-      "files": [
-        "lib/index.js",
-        "lib/index.es.js",
-        "browser.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --compilers js:babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-istanbul": "^4.1.5",
@@ -3097,75 +1114,19 @@
         "url-search-params": "^0.10.0",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "_id": "node-fetch@2.1.2",
       "dist": {
         "shasum": "ab884e8e7e57e38a944753cec706f788d1768bb5",
         "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.1.2.tgz",
         "fileCount": 9,
         "unpackedSize": 100225
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.1.2_1522011300411_0.9473331736799258"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.2.0": {
       "name": "node-fetch",
       "version": "2.2.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "files": [
-        "lib/index.js",
-        "lib/index.mjs",
-        "lib/index.es.js",
-        "browser.js"
-      ],
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-istanbul": "^4.1.5",
@@ -3190,15 +1151,6 @@
         "url-search-params": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "09ef40e8a883344a38f8ebddc58ff0ac129a415c",
-      "_id": "node-fetch@2.2.0",
-      "_npmVersion": "6.1.0",
-      "_nodeVersion": "10.5.0",
-      "_npmUser": {
-        "name": "timothygu",
-        "email": "timothygu99@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==",
         "shasum": "4ee79bde909262f9775f731e3656d0db55ced5b5",
@@ -3207,57 +1159,13 @@
         "unpackedSize": 137549,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbVPfVCRA9TVsSAnZWagAAGT4QAIfTvAj/5gAZdXkFjkhB\nIHrgwmJd/rhFyYwdaNHCeJ4qpUDBQ+/LaCh/2C95HgkVuOwX6xbRMauHve9I\n1N9eCingZfHyFoD+GF/tnkEI1133b7sgwPbl7OPzxw1XTrul2EnpSMdA/Gl3\nod3uiQngQCQm7uoB8GsvFvDQT0XN4YxsK3JK7PD3dvcHBQpH9FR5YxQxsKya\nABLfQ8z+WFR0ag8nZnhMFcuKeRJpddKPOyuhxNwjk9MHeJB2vA8JafjnTP9v\nfR2ErS1qUKL/3KMRvy9SvWNbq48+pxR4tHbVRLtlfdtsEorT2HumVnDcnAuX\nGFFpqFx8h3F4Z8UjXAKGMLRL/u70xYPLJBe4AP3DLjqOMWc6bOcUK4L0wMmG\neOyZMGiMBzenk3jShekXwNZYxBZEj0alvSKtrZpUM2Nw+YJyha7f3vm7Q1z1\n+uFBnkTZfv9smfyW3XimOkeS77tsgbkrs1+eSODIkEGHN6ceRNWzhIIV53Lc\nIqRcvFKXKA9eMDk8a+cO+Y+0SmgRJ8b9I1c+LXtSKqyQJs23CM+OY7o2YrEJ\nu9u3svnqLsJZIwbT7t9501H2rQsuzVCh64XBV9KCAGrF5f6le2Jg13yEZK0b\n3dEzPUe/rrujdpABHLpfighoVCF9aJn3QpyiglmXkyFEIu8xjt4aZr2kw7cs\nPoXK\r\n=71zf\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.2.0_1532295125636_0.31629715469618946"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.2.1": {
       "name": "node-fetch",
       "version": "2.2.1",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-plugin-istanbul": "^4.1.5",
@@ -3282,15 +1190,6 @@
         "url-search-params": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "ac07bf751c93fa86f87f01c924ddbd8c76b84966",
-      "_id": "node-fetch@2.2.1",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.11.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-ObXBpNCD3A/vYQiQtEWl7DuqjAXjfptYFuGHLdPl5U19/6kJuZV+8uMHLrkj3wJrJoyfg4nhgyFixZdaZoAiEQ==",
         "shasum": "1fe551e0ded6c45b3b3b937d0fb46f76df718d1e",
@@ -3299,57 +1198,13 @@
         "unpackedSize": 142342,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb4BEKCRA9TVsSAnZWagAA5JQP/RoGvjtEglFV3OUDMLaq\nuvXp4bN3X+bJt3lFYgj4ydWU83WBTG9bJHrBjzvyOuCzjRpBJOCwKYwOxIgu\niFVveFI7iXGJaX/jnb1a6RCnnNBuojKChLN805rJmLvQFkqy4kYq3jxOCx+h\nVqklwLoohRaEGnOHeo2cny7KQUjq7BLhJg2MIjQvfOWGPnRKuu0MFhZwIuwV\nq9C6ABeWYTNgEvf5gf/acBgow91peRpSINm+pqx+IVGyNpWJE6jgFfpn4yh5\nOtofS7bM3sp5L0THxPQSmqjbqLDU5v3sZGoWfzS8+k0Q/KkaZtxgIJwB6XcP\nRrgt6s6zuE5vW6ongrEc219gHVC0dfzeMoGHcLVPKcBRRD1spkSH3ElIBJOm\nJnWKmx78yhzO++mGFyFzLphNn2985raBRuTb9pEsdjnI5L046ZK/DwRzYJXy\nQDlAcXx7YWljyir3hMZ4GJBo4fIjYTx9xLSSc/FtcQsZgycOaRRMm3HDNpLL\nleNJ9LSoioRFsG/6qVnEe0c7EDhwnQmTtbteF47sW63mXS7MxiSIt3lEHZdq\nBmbNOAIOWLHLaVw56pyN22nKjiI/xnSODu49zxkXJjAnJpFkprF1q9h37ie3\nuh3XJs1mvBASdlVD1PtomZals7ihCsUvkaZ2m4mxMsEWuqM4iOepWCxL1Mv0\nBDJI\r\n=khSH\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.2.1_1541411081386_0.6507879255509943"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.3.0": {
       "name": "node-fetch",
       "version": "2.3.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "abort-controller": "^1.0.2",
         "abortcontroller-polyfill": "^1.1.9",
@@ -3376,15 +1231,6 @@
         "url-search-params": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "5367fe6a978e01745e4264384a91140dc99a4bf8",
-      "_id": "node-fetch@2.3.0",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.11.0",
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==",
         "shasum": "1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5",
@@ -3393,57 +1239,13 @@
         "unpackedSize": 152599,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb6nI1CRA9TVsSAnZWagAAr9cP/3EF/SdGNbAPQFxUGTiy\nNWmae4Y3lpoT/iFgvPfKKR9JZ9y6wbrQ57tzntIvNtu9ksGKWG0LW6qk90pm\nn2sxw9sKD7FeEZdmPorB0T+chP8LLbOJ6eJ/1o+TprqlrKvL+2eXTxAo+Ytq\nMerjorRst5DwFICkPWl+lgwH/YtVip/u1JKziaH0O3GgrI/3koDcTaY/EmjY\nbi8hT9pYwEt65sbD/MmF54rC3WaBNHnCxa3S1J56UnlZHc5JpVgpMQnSklmT\nO4f67qs83qQzA0YoONP0Pgi1tJiG1Wk+BLWLV8Oav7km9cuGwZRQZhFLLV0C\nsnFF91C5j4AXtbSqST92jH87Ij8hkSnbiBv3F+KTCAy+5UIlxEzMTGFmqytt\n0Kp5/3mNdJp/ZaANv9zo9yPa8DA4T3mDED0P0XjWRhRERGfGo5zWCa9tdtqO\n79Sy2SkhWYqgOdVwD11ao7qTkQymmI236DZekXAG/kZ7hOHUGfQ/sEGFMzTG\noD9tfMpSs68lNXbaZXNHBdp65Eq8nUe6R6oMMSrp8aEYl5LTuMqzyBvTkYVo\nWDrKB6bXhUqX3VOCiqE7VXETXtk+SCQG5Bze8L2rF1Q/4kSs8KojFjGOJV/v\nWPnhB2e4NnclH2r0zGI2Esw9Ay1/1VwTnNzgTgpV58k/LPh+6Ng2BWEwXXKa\nNcdV\r\n=2f2s\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.3.0_1542091315995_0.7896717463160674"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.4.0": {
       "name": "node-fetch",
       "version": "2.4.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "abort-controller": "^1.1.0",
         "abortcontroller-polyfill": "^1.3.0",
@@ -3470,11 +1272,6 @@
         "url-search-params": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "c9805a2868bb0896be126acefdc2c11c4c586bf9",
-      "_id": "node-fetch@2.4.0",
-      "_nodeVersion": "12.0.0",
-      "_npmVersion": "6.9.0",
       "dist": {
         "integrity": "sha512-1mt8bw5JQWWTcwUM1FGjFJLFo5lB/jz6zbm+qwdEh2iqYobKS4aHWgz1d+mvho5cqCaShFDF+hnpgraIi/5tqA==",
         "shasum": "125ae2b0c2a75cb3b2ed141bf73e106cfe1f0ca8",
@@ -3483,61 +1280,13 @@
         "unpackedSize": 151944,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcwz7FCRA9TVsSAnZWagAA2cEP/i69KaivNBODtsW1Rtgl\nPKRNpe6O/zmNNaFUI3bfYf2u/Mr441qCgc0cOiTMu5WXmc1BU5DpyL/3WS56\nGvAdem/1R0VKyX22LB9RlQOP/xIvSIxgYS5xgsvjuu/N5Ub9jgF55tsDBU1+\nUXa9E19dBkCtbEkVfsLE2rIb74wWxetkW9M/aaiMCyTDR8eX9ieZOc+MNr6W\nTBd5fHeUEDpKWJ1t0rf4zlc4Aj7CgRl/VzcOP2BUzFKiSb+J/uBannKdHyxJ\n3EPtMIS5QJCN9cAxx4+Oct2Np5fHI3D9ZnX350Mcf3sCRQZ00G256FynmP5F\nH77wjSnZd+DtQQ2fR8/W/ElR7AlXJY+kLwGJeEfZyODZdWXSycVqWykxAqwN\nDZ7YhiFKXOnzotNDU0htrih2xSXnBNh6o9Nx/omw6quiLOv7d8VFwsYbQAuU\nCiU7mLuKv8YZ6R/06CQMNFFyEZHfDmcscQf6qtfdxMeXLfqkBPrS3ILMNmBy\nrlYdM60Sxj+Cwl0KI+aMXYKsIAWRRNUxJHussogtb9CiTib3LyxKcrDtaSr5\n2C/88t3ziu4bGqoCAcQrqgQGtmaiK5ESHQ6abgPPKyYiPwt210+G3uM3zPC2\nOovnj1Q4Qa+zXDhuzZRgWWSqRbHu1rBoWXfdR0YQQToR+PtsX6LBuyA/fsY4\n720e\r\n=HVDL\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.4.0_1556299460716_0.9054885680028364"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.4.1": {
       "name": "node-fetch",
       "version": "2.4.1",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "abort-controller": "^1.1.0",
         "abortcontroller-polyfill": "^1.3.0",
@@ -3564,11 +1313,6 @@
         "url-search-params": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "b3ecba5e81016390eec57718636122459cc33a94",
-      "_id": "node-fetch@2.4.1",
-      "_nodeVersion": "12.0.0",
-      "_npmVersion": "6.9.0",
       "dist": {
         "integrity": "sha512-P9UbpFK87NyqBZzUuDBDz4f6Yiys8xm8j7ACDbi6usvFm6KItklQUKjeoqTrYS/S1k6I8oaOC2YLLDr/gg26Mw==",
         "shasum": "b2e38f1117b8acbedbe0524f041fb3177188255d",
@@ -3577,61 +1321,13 @@
         "unpackedSize": 152130,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcw/++CRA9TVsSAnZWagAApYkP/2bd4/6e2uAPz8LvxgPn\nBpXg/4lesRsTXdVeKQsScNe9HeS2kcH8Zk4Q5bvD+yO9KE8Xhr6Mw/mOhep+\nVoPZq/aVYHYcn62RUYPIsGdL6hyMzGrEaLaGNwKE9wBK6cd8gq+YZMDPWukJ\nzohhvgZyLUq73kQJwQv01GP7KzcRF18B8wtStDgbss20RBBnBa1etlg9bgom\nH6X7SLxt5S0geC3EE8ORgSxHC+e8h2LGk/MccGmXppGTCv9BFXwoNZvWwfQa\nzEvU2wkqFEgzoRdleJhUw12hcRKzw1dELrRFTrg2BNeT/grS1RorsMaAAujO\nDnjMiOXyDc5OZKa8ShUwncoe8Qx/u3oblDg8md+H2YDavSBTZST2RU8vKXIc\nKPw4h7yxH48Vs32TU0B7YuXDrOac/cAhNsWhZpmwtvrkqjjoI87RwIpr1jDv\nwA0mDZOjDEs82wck6Nu6IMaRX485hzpBsfzXz+LX/bvvRQsnbWwGqZ0oRMWd\nrepUwupTM35a2E/d02QJvtLFbp3ZEe7OjdYSZlGBsvI/Y7qPJ0UHZQAZBqon\nS/r/ClobXPAimqxSGLgw20tQHFn1lmC/EUzQ4f2n9Aw2qHJazqf0e2yisfge\ntARioB2JAkAuKRKnKl8vw1AvTGPlKaJ3J6A2LvC1gyB9usDzIEheARB0nzcF\nuQ+C\r\n=jpWB\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.4.1_1556348861860_0.709170139396043"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.5.0": {
       "name": "node-fetch",
       "version": "2.5.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register --throw-deprecation test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "@ungap/url-search-params": "^0.1.2",
         "abort-controller": "^1.1.0",
@@ -3658,11 +1354,6 @@
         "string-to-arraybuffer": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "0c2294ec48fa5b84519f8bdd60f4e2672ebd9b06",
-      "_id": "node-fetch@2.5.0",
-      "_nodeVersion": "12.0.0",
-      "_npmVersion": "6.9.0",
       "dist": {
         "integrity": "sha512-YuZKluhWGJwCcUu4RlZstdAxr8bFfOVHakc1mplwHkk8J+tqM1Y5yraYvIUpeX8aY7+crCwiELJq7Vl0o0LWXw==",
         "shasum": "8028c49fc1191bba56a07adc6e2a954644a48501",
@@ -3671,61 +1362,13 @@
         "unpackedSize": 154848,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcySm4CRA9TVsSAnZWagAASf4P/Rd7YpIG4OA1Kz+ANSsM\nDJaQIpaXPtU1bqqD05e72Dm0XTmjLxx0MUKtL2k8jcZJwvevNFX2q7e8CiSn\ngphwrvYoc8+nhwSrsArhnk+OSXMaujL3E2Bh7O29A1PLU/SL4ZtXl2JPD0HF\neTQpso9AKkZCrTRC1Ef5IIDKpMJhjJ54kZYpjeC3DncaYGfHFMRx3bRKwl19\nRXU6uHd3AUb23DeNMbJWd4pMogQ8KqoRRtHNaauL16FYiEjW8JYK//AzAX42\nvrjjWCjVIFio55YugOnzaCs43Thk0hYjVPWdXFPkn+JwiftqwD5BWzU5rv4V\nyuFNihuwlIHpt0gtg1z101EvWs0CZiK5gE5A3773K7e2PrBHZ2XtzQpKzhYv\nDtwsmdrBHrm0oba5lzrW3Lfd4XEy70usAEPQLBvqES77t3sW/y3Y5rHsIT0Y\ndN6Mh2V65sU9zFNHmmLUia1MxiyAP7RXkS3kp/vMBKx/NOJKuM0yeco1z9u7\ntrLbjQ2ZtVEV40N9S/GFn/c8g9mrdoaC/WjxBYjrg8FLY5XofGZY+C7tpyM3\nnj82+yDUIGdtUvwHfleOfkUz5y0rirUVqp+KcPTOKYQoOAJTN74chMRnDy2Q\nA9ULWPzHF6GyUZEE6M3+9r1/QC8HstqUPBP/sQJ/bLDsAIIduQ34KxY6cKjK\n/yAF\r\n=g+bJ\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.5.0_1556687287265_0.5189085772983091"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
     },
     "2.6.0": {
       "name": "node-fetch",
       "version": "2.6.0",
-      "description": "A light-weight module that brings window.fetch to node.js",
-      "main": "lib/index",
-      "browser": "./browser.js",
-      "module": "lib/index.mjs",
-      "engines": {
-        "node": "4.x || >=6.0.0"
-      },
-      "scripts": {
-        "build": "cross-env BABEL_ENV=rollup rollup -c",
-        "prepare": "npm run build",
-        "test": "cross-env BABEL_ENV=test mocha --require babel-register --throw-deprecation test/test.js",
-        "report": "cross-env BABEL_ENV=coverage nyc --reporter lcov --reporter text mocha -R spec test/test.js",
-        "coverage": "cross-env BABEL_ENV=coverage nyc --reporter json --reporter text mocha -R spec test/test.js && codecov -f coverage/coverage-final.json"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bitinn/node-fetch.git"
-      },
-      "keywords": [
-        "fetch",
-        "http",
-        "promise"
-      ],
-      "author": {
-        "name": "David Frank"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/bitinn/node-fetch/issues"
-      },
-      "homepage": "https://github.com/bitinn/node-fetch",
       "devDependencies": {
         "@ungap/url-search-params": "^0.1.2",
         "abort-controller": "^1.1.0",
@@ -3752,11 +1395,6 @@
         "string-to-arraybuffer": "^1.0.2",
         "whatwg-url": "^5.0.0"
       },
-      "dependencies": {},
-      "gitHead": "95286f52bb866283bc69521a04efe1de37b26a33",
-      "_id": "node-fetch@2.6.0",
-      "_nodeVersion": "12.0.0",
-      "_npmVersion": "6.9.0",
       "dist": {
         "integrity": "sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==",
         "shasum": "e633456386d4aa55863f676a7ab0daa8fdecb0fd",
@@ -3765,293 +1403,208 @@
         "unpackedSize": 156222,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc3QWtCRA9TVsSAnZWagAAIT4P/3aM/33tMjOx9vllJ/6G\nZOweEzEiRN9ZurrhD9phAVj0QV0iC5BLo+IvZMvLylIzwHQGFZT5P4ZCMucC\nUxNRR/Ckt55de+nG3A0wQ5JNApxHjuVYTBkg70+LbkRKYlFnsAHNH+b62kIG\nWETJV79q/lqryuqw0RjkOhjYm9p2162ThE9kp61YsGopD1a6WuWZD0iDyJTz\nlvK2bJztclYoyXNr4WkNu8QMm6XZVV++eX1xOLbQHeFBnqlstHDYaK8dgzPb\nGOmXjSRs1GvArlemBMHrVr4JlsSoz6lfNoiZ2j2kkkpAKwBvMkx7rikcDIle\n215JLJGySxdrehbTPdxi+A7tVAVK3F2X5n8PENYl7JVTHoTz86LMv0reRlvr\ndCBghHaEpenfR/FhV1z8r59D44hzPRODhaDtOVuDMEpIYIMHmhcGZivP9VHB\ny+uwy4YYYEzaOw0x4N7tPPMnUT9dKx/kGMEpS4XiwVCHrGGMeq+ntHEm03fD\nZ42i5rMjEwlBgRjnTwe4gb/8yGmT8y1hlyeZYpB2jZw+By5WL3vm5TBbaVHJ\n2TgPFJye9/YU/iaDuSAmEi1Fci+tNuOWOoqPWBWywD5paXoe87rQyjVrag4A\nEBdw4cbUFu3U6kWRcNxTmHT6Ba+T8LTQ68UvbI1jfXjVPepHbSSLtPetxvOQ\nEhAm\r\n=275P\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "bitinn",
-          "email": "bitinn@gmail.com"
-        },
-        {
-          "name": "timothygu",
-          "email": "timothygu99@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "bitinn",
-        "email": "bitinn@gmail.com"
+      "engines": {
+        "node": "4.x || >=6.0.0"
+      }
+    },
+    "3.0.0-beta.1": {
+      "name": "node-fetch",
+      "version": "3.0.0-beta.1",
+      "dependencies": {
+        "data-uri-to-buffer": "^3.0.0",
+        "fetch-blob": "^1.0.5"
       },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/node-fetch_2.6.0_1557988780767_0.1012615293164354"
+      "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/preset-env": "^7.8.7",
+        "@babel/register": "^7.8.6",
+        "@pika/pack": "^0.5.0",
+        "@pika/plugin-build-node": "^0.9.2",
+        "@pika/plugin-build-types": "^0.9.2",
+        "@pika/plugin-copy-assets": "^0.9.2",
+        "@pika/plugin-standard-pkg": "^0.9.2",
+        "abort-controller": "^3.0.0",
+        "abortcontroller-polyfill": "^1.4.0",
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^3.0.2",
+        "chai-string": "^1.5.0",
+        "codecov": "^3.6.5",
+        "cross-env": "^7.0.2",
+        "form-data": "^3.0.0",
+        "mocha": "^7.1.0",
+        "nyc": "^15.0.0",
+        "parted": "^0.1.1",
+        "promise": "^8.1.0",
+        "resumer": "0.0.0",
+        "string-to-arraybuffer": "^1.0.2",
+        "xo": "^0.28.0"
       },
-      "_hasShrinkwrap": false
+      "dist": {
+        "integrity": "sha512-92vRiuYD81o/xGXOtwFNatkbPdg7w8XdLu5pj+OJmHvbxI6Qj/bfJe/U1PqbPNu0P+p5bNlqbxoiSOeFGmNO4w==",
+        "shasum": "7664c0c7031a1c8a296395ee964b613b2ff82485",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-3.0.0-beta.1.tgz",
+        "fileCount": 26,
+        "unpackedSize": 184836,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJea6MiCRA9TVsSAnZWagAAhAEP/jifdXHiGtmPwo4bkNxL\nI5ZpNe/RRdYkMDLtc+3xUs5WKKX9mRjiNmVBmK/95VUgYcwItHig/FNMerbq\n3NbwMBrcfoKX3fXzEyWmEp9T1gT3uJgbYOp1hksQR9pwThT/YQFw+Ro/sGJs\npbT0dKvpYY5UHjORo47kBByTAk3VBM9k50TFIf8sC5s4BD65NjKj+5L3F8td\ndNYMdnHT5ciHd3qc5xNKR52eeAbomRHr07IAirSiNTox1kUcJ2X96FBoJtFM\n/Wc+vV2YKRjY3EfzoavqatK6Hyv8OmM4Khw+huVOEQ5CXSPVTtEK64D2RJ4B\ncx81P1qx5OxRSnYQPqg4s5OtydcubCbVBlMI7mMCzmKdrAL8ELxhFaaKigjI\nRIP1Fm/8caFvLUXbYRqJkXpK3Q5F3RB0XQRm9wLzHJNXl/2H8JZH1/VowMsD\nZSLLph6YWadQVF6Ip3tmScv74UNDB+UhrjSwPvA+usBysp9RpbgcIF92tKcB\nW1MCriFj1K+nGxdngP1wSHO7xLT/xLjfWjn1BZ2apNY/mzwnSOxjQQ1J2Apx\n5iEBdVC/y8g4pxspoc+6Ejc6M9TGvv2UjLBHFKFm8rUPVnUz/lkyR+GJQpDk\nYm4INm/BeTeBBvfN1PCVCRLDmt21RIrY+c1Lz+oEKhYZQH2shWOVvLQpXh+R\nQf0Z\r\n=mwdi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "deprecated": "this package is deprecated, it was published in the wrong release channel, 2.x is still the stable release",
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/node-fetch"
+      }
+    },
+    "3.0.0-beta.2": {
+      "name": "node-fetch",
+      "version": "3.0.0-beta.2",
+      "dependencies": {
+        "data-uri-to-buffer": "^3.0.0",
+        "fetch-blob": "^1.0.5"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/preset-env": "^7.8.7",
+        "@babel/register": "^7.8.6",
+        "@pika/pack": "^0.5.0",
+        "@pika/plugin-build-node": "^0.9.2",
+        "@pika/plugin-build-types": "^0.9.2",
+        "@pika/plugin-copy-assets": "^0.9.2",
+        "@pika/plugin-standard-pkg": "^0.9.2",
+        "abort-controller": "^3.0.0",
+        "abortcontroller-polyfill": "^1.4.0",
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^3.0.2",
+        "chai-string": "^1.5.0",
+        "codecov": "^3.6.5",
+        "cross-env": "^7.0.2",
+        "form-data": "^3.0.0",
+        "mocha": "^7.1.0",
+        "nyc": "^15.0.0",
+        "parted": "^0.1.1",
+        "promise": "^8.1.0",
+        "resumer": "0.0.0",
+        "string-to-arraybuffer": "^1.0.2",
+        "xo": "^0.28.0"
+      },
+      "dist": {
+        "integrity": "sha512-B3Gu7oTNhaaK0kZTSdAewW1Wpxj07Oe77R0p7S7todxpolnJuwvRFfabnILVFO2CWcp1BRQOBtem5s2xBt6aGA==",
+        "shasum": "21dab0112c90d66d5d8b4f1e7a895cae5ac9d391",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-3.0.0-beta.2.tgz",
+        "fileCount": 26,
+        "unpackedSize": 184701,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJea9ihCRA9TVsSAnZWagAAlTAP/Ryq8pyw7/UoW8aO4WRq\nVH9Q8sJctFD0n03pQZgqdGtD7LZ2bLaq6F4hpU9oj8E/0JvU/AlK/LzRguVN\nvl8AE7NDh6JhqcvE3ACLKukFAf1uPZcHIXliw7H2eb1C4JN8c7GlTkycF6aW\nr8OEgr4cuFAX7xsrxFVu+bAW1nxnwTRw1IyAgIyoYHkcbu1JqsvA392BAV29\nvQuOj+UfLr1c4MhpEJ6SqtOs9/JQSqm7GMivxp/GcdLaEmqUIwwLq8cQYsmZ\nnE46FswqTCuXyqNZln4NrOkmI+laDw6wvXPn1LsFRVJeBMMvJsbuBiuNIELN\ndZOQEYPN1zrhL6DIwoZeHkh34/k2ykZtHdzAIHNYCokSLqSgmJ3VGP2fwCw8\najqapc5fboAlQB2eRhJQU6uDt7OyzDUcCOsd5ER4JooaiSWHxJI5a97kNLai\nckWq7mSnFokT5aiziXvIMgxEUUreEOvR6vr5Cit5v3e+0qfjmw2qkwKqEukx\n8/p98w9YF4KXRrfDYd1HJ5mNTV2u3XWUiRmKui53x36Upzk5C1nieAhk33mZ\n8dujX2mJJBdOsdlgV+EzGcFbSoIopXDiojqxeK66uKULs4mFbuqxVL08f6bW\nZVOgOh2hANXhltynui3HM9mxQcW/tV5VMPanUfGbCvqfqxPbHtpMAj5EicNG\nbpOD\r\n=Cahb\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "deprecated": "this package is deprecated, it was published in the wrong release channel, 2.x is still the stable release",
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/node-fetch"
+      }
+    },
+    "3.0.0-beta.3": {
+      "name": "node-fetch",
+      "version": "3.0.0-beta.3",
+      "dependencies": {
+        "data-uri-to-buffer": "^3.0.0",
+        "fetch-blob": "^1.0.5"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/preset-env": "^7.8.7",
+        "@babel/register": "^7.8.6",
+        "@pika/pack": "^0.5.0",
+        "@pika/plugin-build-node": "^0.9.2",
+        "@pika/plugin-build-types": "^0.9.2",
+        "@pika/plugin-copy-assets": "^0.9.2",
+        "@pika/plugin-standard-pkg": "^0.9.2",
+        "abort-controller": "^3.0.0",
+        "abortcontroller-polyfill": "^1.4.0",
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^3.0.2",
+        "chai-string": "^1.5.0",
+        "codecov": "^3.6.5",
+        "cross-env": "^7.0.2",
+        "form-data": "^3.0.0",
+        "mocha": "^7.1.0",
+        "nyc": "^15.0.0",
+        "parted": "^0.1.1",
+        "promise": "^8.1.0",
+        "resumer": "0.0.0",
+        "string-to-arraybuffer": "^1.0.2",
+        "xo": "^0.28.0"
+      },
+      "dist": {
+        "integrity": "sha512-gp8E4VvERm0/b9MoPx3S8/WT1LyJVbffcQf04LsyTWnOrZUPHQUNTIo84n3T+HA3YNkrWTt2g4K9g/g1QXO63A==",
+        "shasum": "46ce9df3c4d4134e6cf6a30a682f894e0ee812dc",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-3.0.0-beta.3.tgz",
+        "fileCount": 26,
+        "unpackedSize": 184701,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJea9qOCRA9TVsSAnZWagAA5YYQAIFGQF4nu+mierYkRmxg\nsrU/qydniNAvle2BwEv6uA/jHtBdTgp2eoIsxlVgtR0Pl5QiTIb2kvl49SDH\n5cr2DHcTWaLjLFBjsoncPtcgGXQqd/DN8fhWYeck5sNAoxHl4j1YqjykRvgj\nofxvEGvq6/yol0wCUvJNknvNVlsrhqUuj6sK8xPp1akMG9VPzJUYiY80adQ9\n6ILR2RrQqyk0BlYuDrk4YYMfLygf9H1DpNtHa7NejCQ2hrPZj+2qJ9VL10Jj\njyVwYvXVoUU1XR7NyK5m+maQsoyC4fg7MZ7oZfn7xCoeBT7ucsCm3vf4VCdk\nX+GDfYEmo1RRyv2XIyheMCe2ta0wBEGfGvET3t2hx6HtzpUM6TsRCRoZMn6p\nymG1oH5xOAPGHS3g/UkE1amonFKTaiNcnNZu1bhTUNkbgk7c99GPjH6LZxDn\nGyxnerflWdYyrbComRGEKvb+NK8NijRjyd4TwqDN6ppyDLw2za7QlfVQJ1hr\nQ4RvAq8kAmawNGXcn4R3fT0Lumv3PkZ649Gf69DqP9/vjTXvRZV9SBwgaL0u\nMuvZhLZfElz4eeWZy99L7N1MZ3h9I7S6rHi7ahXgTVza2gytx4DmIyXeDxCC\nHJACwIfjQIH+iA9X0tq5Ea7AX1VBXQMAII4EphwRfVpkYQeAP7zh0lKIXRIi\nSxNF\r\n=4tF/\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "deprecated": "this package is deprecated, it was published in the wrong release channel, 2.x is still the stable release",
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/node-fetch"
+      }
+    },
+    "3.0.0-beta.4": {
+      "name": "node-fetch",
+      "version": "3.0.0-beta.4",
+      "dependencies": {
+        "data-uri-to-buffer": "^3.0.0",
+        "fetch-blob": "^1.0.5"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/preset-env": "^7.8.7",
+        "@babel/register": "^7.8.6",
+        "@pika/pack": "^0.5.0",
+        "@pika/plugin-standard-pkg": "^0.9.2",
+        "abort-controller": "^3.0.0",
+        "abortcontroller-polyfill": "^1.4.0",
+        "chai": "^4.2.0",
+        "chai-as-promised": "^7.1.1",
+        "chai-iterator": "^3.0.2",
+        "chai-string": "^1.5.0",
+        "codecov": "^3.6.5",
+        "cross-env": "^7.0.2",
+        "form-data": "^3.0.0",
+        "mocha": "^7.1.0",
+        "nyc": "^15.0.0",
+        "parted": "^0.1.1",
+        "promise": "^8.1.0",
+        "resumer": "0.0.0",
+        "string-to-arraybuffer": "^1.0.2",
+        "xo": "^0.28.0"
+      },
+      "dist": {
+        "integrity": "sha512-NxI746RCCuW5XmvGEOVPMFksmoMFEaWUEhNAGY5VLJ9qmit1mCEfRTHdomZuMe94FuY2QO2DLrWYe70HT7ubqw==",
+        "shasum": "f5fcc70e506314c90df4f5f19e81cff55aa1ecea",
+        "tarball": "https://registry.npmjs.org/node-fetch/-/node-fetch-3.0.0-beta.4.tgz",
+        "fileCount": 24,
+        "unpackedSize": 146376,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJebHJzCRA9TVsSAnZWagAAUG4P/R91Twj/Uycl+zpj92N0\nXh0sgipDFMkepMLDjCS6rfUyVJPhFH+mGV4klqJeN5UWMA8XX+RRDA8vv9fb\nWotmezVYJw4BEUYb62G04byrNTZekRlkj5Rnmr6FO6WMUQfzLqBrOOzOg8Iu\n1lF50s9nqatbi2rAeqcNEqCdUJxWjNC1/ne+ycKANXioSGjTdGkcxPNr3kc+\nCNgefF0wrpf7P/MRB0SX7ppnwdlA2UAc1+D/89OelfYkK6eRpnUuZLZspiXf\nSK5iek0myRbQIzT4CEHCyYxVFPXOV89SsLf4XbRdrgXwuQA4RgK+OvIAp+dj\nSo5EmZaYH8Z28uHA280RlmQWHY6D8c2onJdE5KOcgTF47UMkPEInZjqy5REW\nU/Pln5YPJ9s13QbzJsdx8WFAVAwYhDatPegx2QVtbLkmccG6xZXWBYskCl+n\nILJ3vX3SaEgtD6JzBy48/cC7TPM42EyZcS6TTOBmVdsURXTE2kHXlMKZeMlp\na18nOE/014mJN2dp6FWvGSvZc4y3qTgzSy0IvL6F3eN8Ea7o15gdxDyA2e9R\nZY5/C7Xd0ss1mmGg9He3HK7DmJZP5NFRHT3rU3C0CB97EJsqYC1NEN84j3ak\nJTfDe5tn/JE4lycqL0S9lk1A16oL7QUE/1pO3n9M18liG63QwI388qOr/rhX\niAUY\r\n=SpV9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/node-fetch"
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "jimmy@warting.se",
-      "name": "endless"
-    },
-    {
-      "email": "bitinn@gmail.com",
-      "name": "bitinn"
-    },
-    {
-      "email": "timothygu99@gmail.com",
-      "name": "timothygu"
-    }
-  ],
-  "time": {
-    "modified": "2019-09-07T09:49:44.052Z",
-    "created": "2015-01-27T13:17:06.232Z",
-    "0.1.0": "2015-01-27T13:17:06.232Z",
-    "1.0.0": "2015-01-27T17:38:21.770Z",
-    "1.0.1": "2015-01-27T18:07:00.334Z",
-    "1.0.2": "2015-01-28T05:05:24.596Z",
-    "1.0.3": "2015-01-28T15:43:47.362Z",
-    "1.0.4": "2015-02-06T11:21:10.299Z",
-    "1.0.5": "2015-03-19T17:02:57.089Z",
-    "1.0.6": "2015-03-24T04:31:46.736Z",
-    "1.1.0": "2015-04-17T05:33:19.652Z",
-    "1.1.1": "2015-04-22T15:36:35.892Z",
-    "1.1.2": "2015-04-29T04:18:18.100Z",
-    "1.2.0": "2015-05-03T10:07:55.396Z",
-    "1.2.1": "2015-05-04T04:08:19.210Z",
-    "1.3.0": "2015-06-04T04:43:32.007Z",
-    "1.3.1": "2015-07-11T11:45:04.398Z",
-    "1.3.2": "2015-07-22T07:53:11.928Z",
-    "1.3.3": "2015-09-28T15:15:17.294Z",
-    "1.4.0": "2016-03-19T11:02:46.951Z",
-    "1.4.1": "2016-03-23T07:33:18.873Z",
-    "1.5.0": "2016-04-05T19:05:25.946Z",
-    "1.5.1": "2016-04-12T18:58:56.981Z",
-    "1.5.2": "2016-05-06T12:13:02.250Z",
-    "1.5.3": "2016-05-25T18:54:43.665Z",
-    "1.6.0": "2016-08-03T10:10:34.469Z",
-    "1.6.1": "2016-09-11T15:38:02.062Z",
-    "1.6.2": "2016-09-24T09:53:47.594Z",
-    "1.6.3": "2016-09-26T06:20:12.535Z",
-    "2.0.0-alpha.1": "2017-01-15T05:37:22.197Z",
-    "2.0.0-alpha.3": "2017-01-29T18:36:09.254Z",
-    "2.0.0-alpha.4": "2017-05-15T12:16:58.709Z",
-    "1.7.0": "2017-05-23T08:24:31.812Z",
-    "1.7.1": "2017-06-03T12:44:58.110Z",
-    "2.0.0-alpha.5": "2017-06-03T13:05:26.072Z",
-    "2.0.0-alpha.6": "2017-07-21T18:04:31.572Z",
-    "2.0.0-alpha.7": "2017-07-25T04:11:01.517Z",
-    "2.0.0-alpha.8": "2017-07-26T17:11:52.034Z",
-    "1.7.2": "2017-08-08T11:23:01.450Z",
-    "1.7.3": "2017-09-08T06:28:18.255Z",
-    "2.0.0-alpha.9": "2017-09-24T05:47:43.171Z",
-    "2.0.0": "2018-02-03T20:34:24.774Z",
-    "2.1.0": "2018-03-05T04:41:12.676Z",
-    "2.1.1": "2018-03-05T04:44:09.059Z",
-    "2.1.2": "2018-03-25T20:55:00.498Z",
-    "2.2.0": "2018-07-22T21:32:05.747Z",
-    "2.2.1": "2018-11-05T09:44:41.523Z",
-    "2.3.0": "2018-11-13T06:41:56.187Z",
-    "2.4.0": "2019-04-26T17:24:20.869Z",
-    "2.4.1": "2019-04-27T07:07:42.071Z",
-    "2.5.0": "2019-05-01T05:08:07.621Z",
-    "2.6.0": "2019-05-16T06:39:41.004Z"
-  },
-  "homepage": "https://github.com/bitinn/node-fetch",
-  "keywords": [
-    "fetch",
-    "http",
-    "promise"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bitinn/node-fetch.git"
-  },
-  "author": {
-    "name": "David Frank"
-  },
-  "bugs": {
-    "url": "https://github.com/bitinn/node-fetch/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "users": {
-    "jamescostian": true,
-    "billautomata": true,
-    "naltatis": true,
-    "danestuckel": true,
-    "luhuan": true,
-    "rmarques": true,
-    "pjb3": true,
-    "drewigg": true,
-    "nchase": true,
-    "ftornik": true,
-    "robertpenner": true,
-    "wenbing": true,
-    "slowmove": true,
-    "matanlb": true,
-    "guananddu": true,
-    "asawq2006": true,
-    "hengkiardo": true,
-    "curioussavage": true,
-    "moimikey": true,
-    "andersonsantos": true,
-    "nex": true,
-    "mallendeo": true,
-    "program247365": true,
-    "detj": true,
-    "alxndr": true,
-    "shanewholloway": true,
-    "standy": true,
-    "qqcome110": true,
-    "finico": true,
-    "sunnylost": true,
-    "jasonwang1888": true,
-    "curiousdannii": true,
-    "mikemimik": true,
-    "nice_body": true,
-    "ridermansb": true,
-    "antixrist": true,
-    "antanst": true,
-    "jswartwood": true,
-    "michalstocki": true,
-    "chrisyipw": true,
-    "tyr_asd": true,
-    "nonemoticoner": true,
-    "stevenvachon": true,
-    "lorenazohar": true,
-    "gejiawen": true,
-    "fchienvuhoang": true,
-    "tedyhy": true,
-    "wangnan0610": true,
-    "adrianpark": true,
-    "abuelwafa": true,
-    "shakakira": true,
-    "itonyyo": true,
-    "brainpoint": true,
-    "floriannagel": true,
-    "wilmoore": true,
-    "djviolin": true,
-    "mstmustisnt": true,
-    "fenrir": true,
-    "ohar": true,
-    "jetthiago": true,
-    "fengmiaosen": true,
-    "justengland": true,
-    "soundtemple": true,
-    "samobo": true,
-    "alphatr": true,
-    "ctaggart": true,
-    "mhaidarh": true,
-    "zoluzo": true,
-    "guzgarcia": true,
-    "jordan-carney": true,
-    "xingtao": true,
-    "coolhanddev": true,
-    "ollo": true,
-    "jtfu": true,
-    "grreenzz": true,
-    "thevikingcoder": true,
-    "mauriciolauffer": true,
-    "tin-lek": true,
-    "bonashen": true,
-    "benstr": true,
-    "hckhanh": true,
-    "programmer.severson": true,
-    "andr": true,
-    "iori20091101": true,
-    "rocket0191": true,
-    "sammyteahan": true,
-    "jirqoadai": true,
-    "camus": true,
-    "ryansully": true,
-    "amenadiel": true,
-    "mjasso": true,
-    "stephenhuh": true,
-    "panzhiyong": true,
-    "shaomingquan": true,
-    "lukeed": true,
-    "m80126colin": true,
-    "javafun": true,
-    "gokhanamal": true,
-    "wearevilla": true,
-    "nisimjoseph": true,
-    "ungurys": true,
-    "ferchoriverar": true,
-    "dkblay": true,
-    "alexxnica": true,
-    "anaskhan96": true,
-    "dralc": true,
-    "dillonace": true,
-    "miloc": true,
-    "programmer5000": true,
-    "artmadiar": true,
-    "cloud_swing": true,
-    "digital_owl": true,
-    "programmer5000-com": true,
-    "kkho595": true,
-    "vinbhatt": true,
-    "hexcola": true,
-    "fanyegong": true,
-    "safwanmzah": true,
-    "ishantiw": true,
-    "chenkan": true,
-    "drazisil": true,
-    "shuoshubao": true,
-    "asaupup": true,
-    "h1gdev": true,
-    "cedx": true,
-    "aquafadas": true,
-    "yonigoldberg": true,
-    "drdoof": true,
-    "gzg1500521074": true,
-    "jdudley": true,
-    "clementoh": true,
-    "activescott": true,
-    "nuwaio": true,
-    "stej": true,
-    "heartnett": true,
-    "jbhurruth": true,
-    "dhanya-kr": true,
-    "jota": true,
-    "kiknag": true,
-    "markh817": true,
-    "marcobiedermann": true,
-    "raycharles": true,
-    "danieljameskay": true,
-    "trackds": true,
-    "fozero": true,
-    "suryasaripalli": true,
-    "ezeikel": true,
-    "benigro": true,
-    "kontrax": true,
-    "npmmurali": true,
-    "ritsu": true,
-    "sermir": true,
-    "iseif": true,
-    "daniheras": true,
-    "panlw": true,
-    "he313572052": true,
-    "arvi": true,
-    "anticom": true,
-    "j3rrywan9": true,
-    "isayme": true,
-    "jniac": true,
-    "coolhector": true,
-    "stefan.age": true,
-    "rkopylkov": true,
-    "tomgao365": true,
-    "timmytown": true,
-    "johnthad": true,
-    "krishaamer": true,
-    "omkar.sheral.1989": true,
-    "kopepasah": true,
-    "ecelis": true,
-    "mdawsondev": true,
-    "smrr723": true,
-    "drew.brokke": true,
-    "d3ck": true,
-    "kaycee": true,
-    "yanghcc": true,
-    "jalik": true,
-    "payaamemami": true
-  }
+  "modified": "2020-04-12T08:57:23.826Z",
+  "_cached": false,
+  "_contentLength": 44787
 }

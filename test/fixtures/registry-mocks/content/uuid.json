@@ -1,68 +1,25 @@
 {
-  "_id": "uuid",
-  "_rev": "403-656f959c994b2e7b36714545db0ed1fa",
   "name": "uuid",
-  "description": "RFC4122 (v1, v4, and v5) UUIDs",
   "dist-tags": {
-    "latest": "3.4.0"
+    "latest": "7.0.3",
+    "beta": "7.0.2-beta.0"
   },
   "versions": {
     "0.0.1": {
       "name": "uuid",
-      "description": "Simple libuuid bindings to allow UUIDs to be generated from JS.",
       "version": "0.0.1",
-      "author": {
-        "name": "Nikhil Marathe"
-      },
-      "repository": {
-        "type": "hg",
-        "url": "http://bitbucket.org/nikhilm/uuidjs"
-      },
-      "engine": [
-        "node >=0.1.103"
-      ],
-      "scripts": {
-        "preinstall": "node-waf configure && node-waf build"
-      },
-      "main": "build/default/uuid",
-      "_id": "uuid@0.0.1",
-      "engines": {
-        "node": "*"
-      },
-      "_nodeSupported": true,
-      "_npmVersion": "0.2.7-2",
-      "_nodeVersion": "v0.3.1-pre",
       "dist": {
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-0.0.1.tgz",
         "shasum": "5b43a6840d25914b5a76a0664d71a51601ddec79"
       },
-      "directories": {}
-    },
-    "0.0.2": {
-      "name": "uuid",
-      "description": "Simple libuuid bindings to allow UUIDs to be generated from JS.",
-      "version": "0.0.2",
-      "author": {
-        "name": "Nikhil Marathe"
-      },
-      "repository": {
-        "type": "hg",
-        "url": "http://bitbucket.org/nikhilm/uuidjs"
-      },
-      "engine": [
-        "node >=0.1.103"
-      ],
-      "scripts": {
-        "preinstall": "node-waf configure && node-waf build"
-      },
-      "main": "build/default/uuid",
-      "_id": "uuid@0.0.2",
       "engines": {
         "node": "*"
       },
-      "_nodeSupported": true,
-      "_npmVersion": "0.2.7-2",
-      "_nodeVersion": "v0.3.1-pre",
+      "hasInstallScript": true
+    },
+    "0.0.2": {
+      "name": "uuid",
+      "version": "0.0.2",
       "dist": {
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-0.0.2.tgz",
         "bin": {
@@ -73,1028 +30,167 @@
         },
         "shasum": "3171f2c4f58895b8b307692a335fb2349ddf6733"
       },
-      "directories": {}
+      "engines": {
+        "node": "*"
+      },
+      "hasInstallScript": true
     },
     "1.4.0": {
       "name": "uuid",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "url": "http://github.com/broofa/node-uuid",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        }
-      ],
-      "lib": ".",
-      "main": "./uuid.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/broofa/node-uuid.git"
-      },
       "version": "1.4.0",
-      "_id": "uuid@1.4.0",
       "dist": {
         "shasum": "d0d3b84ab56902e99ff952f2a17aa3986d44d36f",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-1.4.0.tgz"
-      },
-      "_npmVersion": "1.1.66",
-      "_npmUser": {
-        "name": "tim-smart",
-        "email": "tim@fostle.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "1.4.1": {
       "name": "uuid",
       "version": "1.4.1",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        }
-      ],
-      "main": "./uuid.js",
       "devDependencies": {
         "mocha": "1.8.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./rng.js": "./rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/shtylman/node-uuid.git"
-      },
-      "testling": {
-        "browsers": [
-          "ie6..latest",
-          "firefox/3.6..latest",
-          "chrome/22..latest",
-          "safari/5.1..latest"
-        ],
-        "harness": "mocha-tdd",
-        "files": "test/*.js"
-      },
-      "_id": "uuid@1.4.1",
       "dist": {
         "shasum": "a337828580d426e375b8ee11bd2bf901a596e0b8",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-1.4.1.tgz"
-      },
-      "_from": ".",
-      "_npmVersion": "1.2.11",
-      "_npmUser": {
-        "name": "shtylman",
-        "email": "shtylman@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "1.4.2": {
       "name": "uuid",
       "version": "1.4.2",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        }
-      ],
-      "main": "./uuid.js",
       "devDependencies": {
         "mocha": "1.8.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./rng.js": "./rng-browser.js",
-        "./buffer.js": "./buffer-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/shtylman/node-uuid.git"
-      },
-      "testling": {
-        "browsers": [
-          "ie6..latest",
-          "firefox/3.6..latest",
-          "chrome/22..latest",
-          "safari/5.1..latest"
-        ],
-        "harness": "mocha-tdd",
-        "files": "test/*.js"
-      },
-      "gitHead": "688730efe3ec3ab7c12c6b92db2aa2826a50ed14",
-      "bugs": {
-        "url": "https://github.com/shtylman/node-uuid/issues"
-      },
-      "homepage": "https://github.com/shtylman/node-uuid",
-      "_id": "uuid@1.4.2",
-      "_shasum": "453019f686966a6df83cdc5244e7c990ecc332fc",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "vvo",
-        "email": "vincent.voyer@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "shtylman",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "453019f686966a6df83cdc5244e7c990ecc332fc",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-1.4.2.tgz"
-      },
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "uuid",
       "version": "2.0.0",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        }
-      ],
-      "main": "./uuid.js",
       "devDependencies": {
         "mocha": "1.8.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./rng.js": "./rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/shtylman/node-uuid.git"
-      },
-      "testling": {
-        "browsers": [
-          "ie6..latest",
-          "firefox/3.6..latest",
-          "chrome/22..latest",
-          "safari/5.1..latest"
-        ],
-        "harness": "mocha-tdd",
-        "files": "test/*.js"
-      },
-      "gitHead": "3c007a5748d6fcbd0916ea8b6d18539958972932",
-      "bugs": {
-        "url": "https://github.com/shtylman/node-uuid/issues"
-      },
-      "homepage": "https://github.com/shtylman/node-uuid",
-      "_id": "uuid@2.0.0",
-      "_shasum": "377ab4417736dba5ce379ff0a0c1a539921ebb74",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "vvo",
-        "email": "vincent.voyer@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "shtylman",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "377ab4417736dba5ce379ff0a0c1a539921ebb74",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-2.0.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "2.0.1": {
       "name": "uuid",
       "version": "2.0.1",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        }
-      ],
-      "main": "./uuid.js",
       "devDependencies": {
         "mocha": "1.8.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./rng.js": "./rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/shtylman/node-uuid.git"
-      },
-      "testling": {
-        "browsers": [
-          "ie6..latest",
-          "firefox/3.6..latest",
-          "chrome/22..latest",
-          "safari/5.1..latest"
-        ],
-        "harness": "mocha-tdd",
-        "files": "test/*.js"
-      },
-      "gitHead": "ddaf90942095f26ee8c1961b4346f093b3e7eb5b",
-      "bugs": {
-        "url": "https://github.com/shtylman/node-uuid/issues"
-      },
-      "homepage": "https://github.com/shtylman/node-uuid",
-      "_id": "uuid@2.0.1",
-      "_shasum": "c2a30dedb3e535d72ccf82e343941a50ba8533ac",
-      "_from": ".",
-      "_npmVersion": "2.0.0",
-      "_npmUser": {
-        "name": "vvo",
-        "email": "vincent.voyer@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "shtylman",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "c2a30dedb3e535d72ccf82e343941a50ba8533ac",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-2.0.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "2.0.2": {
       "name": "uuid",
       "version": "2.0.2",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        }
-      ],
-      "license": "MIT",
-      "main": "./uuid.js",
       "devDependencies": {
         "mocha": "1.8.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./rng.js": "./rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/shtylman/node-uuid.git"
-      },
-      "testling": {
-        "browsers": [
-          "ie6..latest",
-          "firefox/3.6..latest",
-          "chrome/22..latest",
-          "safari/5.1..latest"
-        ],
-        "harness": "mocha-tdd",
-        "files": "test/*.js"
-      },
-      "gitHead": "6e95855ff4b79881aa95c5502478314adc6719dc",
-      "bugs": {
-        "url": "https://github.com/shtylman/node-uuid/issues"
-      },
-      "homepage": "https://github.com/shtylman/node-uuid#readme",
-      "_id": "uuid@2.0.2",
-      "_shasum": "48bd5698f0677e3c7901a1c46ef15b1643794726",
-      "_from": ".",
-      "_npmVersion": "2.15.2",
-      "_nodeVersion": "5.9.1",
-      "_npmUser": {
-        "name": "vvo",
-        "email": "vincent.voyer@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "48bd5698f0677e3c7901a1c46ef15b1643794726",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-2.0.2.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/uuid-2.0.2.tgz_1460533041436_0.07706069457344711"
-      },
-      "directories": {}
+      }
     },
     "2.0.3": {
       "name": "uuid",
       "version": "2.0.3",
-      "description": "Rigorous implementation of RFC4122 (v1 and v4) UUIDs.",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "author": {
-        "name": "Robert Kieffer",
-        "email": "robert@broofa.com"
-      },
-      "contributors": [
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        }
-      ],
-      "license": "MIT",
-      "main": "./uuid.js",
       "devDependencies": {
         "mocha": "1.8.0"
-      },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./rng.js": "./rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/defunctzombie/node-uuid.git"
-      },
-      "testling": {
-        "browsers": [
-          "ie6..latest",
-          "firefox/3.6..latest",
-          "chrome/22..latest",
-          "safari/5.1..latest"
-        ],
-        "harness": "mocha-tdd",
-        "files": "test/*.js"
-      },
-      "gitHead": "3f44acd0e722e965c14af816e2f658361a6b15f9",
-      "bugs": {
-        "url": "https://github.com/defunctzombie/node-uuid/issues"
-      },
-      "homepage": "https://github.com/defunctzombie/node-uuid#readme",
-      "_id": "uuid@2.0.3",
-      "_shasum": "67e2e863797215530dff318e5bf9dcebfd47b21a",
-      "_from": ".",
-      "_npmVersion": "3.8.9",
-      "_nodeVersion": "6.2.0",
-      "_npmUser": {
-        "name": "defunctzombie",
-        "email": "shtylman@gmail.com"
       },
       "dist": {
         "shasum": "67e2e863797215530dff318e5bf9dcebfd47b21a",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-2.0.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/uuid-2.0.3.tgz_1474232617862_0.6578061426989734"
-      },
-      "directories": {}
+      }
     },
     "3.0.0": {
       "name": "uuid",
       "version": "3.0.0",
-      "description": "RFC4122 (v1 and v4) generator",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "main": "./uuid.js",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "mocha": "3.1.2"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "923fe4a7893c2057b608c0c74743ad5512599072",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.0.0",
-      "_shasum": "6728fc0459c450d796a99c31837569bdf672d728",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.7.0",
-      "_npmUser": {
-        "name": "defunctzombie",
-        "email": "shtylman@gmail.com"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
       "dist": {
         "shasum": "6728fc0459c450d796a99c31837569bdf672d728",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-3.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "tim-smart",
-          "email": "tim@fostle.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/uuid-3.0.0.tgz_1479448535568_0.9578766466584057"
-      },
-      "directories": {}
+      }
     },
     "3.0.1": {
       "name": "uuid",
       "version": "3.0.1",
-      "description": "RFC4122 (v1 and v4) generator",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "mocha": "3.1.2"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "374de826de71d8997f71b4641f65552e48956ced",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.0.1",
-      "_shasum": "6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.7.0",
-      "_npmUser": {
-        "name": "defunctzombie",
-        "email": "shtylman@gmail.com"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
       "dist": {
         "shasum": "6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-3.0.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/uuid-3.0.1.tgz_1480403886767_0.2584113120101392"
-      },
-      "directories": {}
+      }
     },
     "3.1.0": {
       "name": "uuid",
       "version": "3.1.0",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "mocha": "3.1.2"
       },
-      "scripts": {
-        "test": "mocha test/test.js"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "c50ac88f098ecfbff9a940816c8e6825ffd7e05a",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.1.0",
-      "_npmVersion": "5.0.3",
-      "_nodeVersion": "7.10.0",
-      "_npmUser": {
-        "name": "broofa",
-        "email": "robert@broofa.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "integrity": "sha512-DIWtzUkw04M4k3bf1IcpS2tngXEL26YUD2M0tMDUpnUrz2hgzUBlD55a4FjdLGPvfHxS6uluGWvaVEqgBcVa+g==",
         "shasum": "3dd3d3e790abc24d7b0d3a034ffababe28ebbc04",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-3.1.0.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid-3.1.0.tgz_1497635691778_0.6424044836312532"
-      },
-      "directories": {}
+      }
     },
     "3.2.0": {
       "name": "uuid",
       "version": "3.2.0",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "eslint": "4.5.0",
         "mocha": "3.1.2",
         "runmd": "1.0.1",
         "standard-version": "4.2.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js",
-        "md": "runmd --watch --output=README.md README_js.md",
-        "release": "standard-version",
-        "prepare": "runmd --output=README.md README_js.md"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js",
-        "./lib/md5.js": "./lib/md5-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "dependencies": {},
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "c0d44fda8abeac5eb1444f03a135f8a6353854da",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.2.0",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "7.10.1",
-      "_npmUser": {
-        "name": "broofa",
-        "email": "robert@broofa.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "integrity": "sha512-qC0vMFX6q6ee8JaoTF2Om1uL8KAV1ATUjVaHRxLiPJkIsp8JZl6ZjG0MIB+twZFLbi1vXj30rqj4zlqYiOS9xg==",
         "shasum": "19a63e22b3b32a0ba23984a4f384836465e24949",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-3.2.0.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid-3.2.0.tgz_1516113890512_0.8254034700803459"
-      },
-      "directories": {}
+      }
     },
     "3.2.1": {
       "name": "uuid",
       "version": "3.2.1",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "eslint": "4.5.0",
         "mocha": "3.1.2",
         "runmd": "1.0.1",
         "standard-version": "4.2.0"
       },
-      "scripts": {
-        "test": "mocha test/test.js",
-        "md": "runmd --watch --output=README.md README_js.md",
-        "release": "standard-version",
-        "prepare": "runmd --output=README.md README_js.md"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js",
-        "./lib/md5.js": "./lib/md5-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "dependencies": {},
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "ce7d3176fc927ab83b4e29b8d5a37b7243ce3360",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.2.1",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "7.10.1",
-      "_npmUser": {
-        "name": "broofa",
-        "email": "robert@broofa.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "integrity": "sha512-jZnMwlb9Iku/O3smGWvZhauCf6cvvpKi4BKRiliS3cxnI+Gz9j5MEpTz2UFuXiKPJocb7gnsLHwiS05ige5BEA==",
         "shasum": "12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14",
         "tarball": "https://registry.npmjs.org/uuid/-/uuid-3.2.1.tgz"
-      },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid-3.2.1.tgz_1516124697652_0.3172094284091145"
-      },
-      "directories": {}
+      }
     },
     "3.3.0": {
       "name": "uuid",
       "version": "3.3.0",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "commitlint": {
-        "extends": [
-          "@commitlint/config-conventional"
-        ]
-      },
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "@commitlint/cli": "7.0.0",
         "@commitlint/config-conventional": "7.0.1",
@@ -1104,70 +200,9 @@
         "runmd": "1.0.1",
         "standard-version": "4.4.0"
       },
-      "scripts": {
-        "commitmsg": "commitlint -E GIT_PARAMS",
-        "test": "mocha test/test.js",
-        "md": "runmd --watch --output=README.md README_js.md",
-        "release": "standard-version",
-        "prepare": "runmd --output=README.md README_js.md"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js",
-        "./lib/md5.js": "./lib/md5-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "1cb9826260b46352db19ccbfb36dfdbc323c35c9",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.3.0",
-      "_npmVersion": "6.0.0",
-      "_nodeVersion": "8.11.1",
-      "_npmUser": {
-        "name": "broofa",
-        "email": "robert@broofa.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "integrity": "sha512-ijO9N2xY/YaOqQ5yz5c4sy2ZjWmA6AR6zASb/gdpeKZ8+948CxwfMW9RrKVk5may6ev8c0/Xguu32e2Llelpqw==",
         "shasum": "b237147804881d7b86f40a7ff8f590f15c37de32",
@@ -1175,32 +210,11 @@
         "fileCount": 21,
         "unpackedSize": 44057,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbMj5bCRA9TVsSAnZWagAAoowP/05xAG0lM80CctZLOyEd\nkUJj8ihe+AkwLCMa+7HgJpbc/NiNhJtjN0I9peEEXoGMrg+IZOehcUabm3pN\nUz29450CXc1mEeEWjTBHfE0fZOWGVSHrbVhKuqZByS/Gq4W9hHOMQcRbeDOM\nHUg2Cg1BD9YEJgCdWbMAZHkWmE36FJ7UaaRcZNn1qhzj5KlNqft8tRAxt0n5\nsQ099IitF+d8rMYxDHS23GCAEHDcwM0rolyQJio3mMmFi5GDdYoDybNCR/Jx\nyETA3f3PVdybkfPuCwufwfFH9YDBPHo0tCikpi9Sz4sKXxdDo7lxXToP5+ai\nujTl5AB+oEKtbjLIugrISDfaHRcRGV/z0lnoXJOl+i/GM9FCkoxwA6r+HnOX\ner8HwUFSDrd0YV37EJMKLPgWLqdJTpZHCZjuU5b9RhbAujp5gGpUO1iITgJC\nJ/WcMkTaaGcHteJuSV39UV4tG0B3fHaC9/eHoF/jrsoJGRfZhbKECMXcTTLM\n6+FNvIA3PGE+onKyPutX2ROCciL4bxS6Rih6cU4pbOUV5SmpbPFkW6XX3UY5\n53K64Qjuv1wNCNS2WzYBnU/HGqwgcg/Pefdi7A+n6Z87/2fxfEqQf24xjOk4\naa/VCC/3mCnVzTMeSa1ckCQSoQNh/f05wtZ7qf90PGx4NFwzT5CgNDnhovER\nyl2Z\r\n=lu2+\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid_3.3.0_1530019419356_0.9632179204070574"
-      },
-      "_hasShrinkwrap": false
+      }
     },
     "3.3.2": {
       "name": "uuid",
       "version": "3.3.2",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "commitlint": {
-        "extends": [
-          "@commitlint/config-conventional"
-        ]
-      },
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "@commitlint/cli": "7.0.0",
         "@commitlint/config-conventional": "7.0.1",
@@ -1210,70 +224,9 @@
         "runmd": "1.0.1",
         "standard-version": "4.4.0"
       },
-      "scripts": {
-        "commitmsg": "commitlint -E GIT_PARAMS",
-        "test": "mocha test/test.js",
-        "md": "runmd --watch --output=README.md README_js.md",
-        "release": "standard-version",
-        "prepare": "runmd --output=README.md README_js.md"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js",
-        "./lib/md5.js": "./lib/md5-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "fe4ae79c55af2c7cbf2bb39d3bcb6716d5367091",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.3.2",
-      "_npmVersion": "6.1.0",
-      "_nodeVersion": "10.5.0",
-      "_npmUser": {
-        "name": "broofa",
-        "email": "robert@broofa.com"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
       "dist": {
         "integrity": "sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==",
         "shasum": "1b4af4955eb3077c501c23872fc6513811587131",
@@ -1281,32 +234,11 @@
         "fileCount": 21,
         "unpackedSize": 43599,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNVMdCRA9TVsSAnZWagAAHMAP/3dazKIzx5o8pB3uqIOa\nUj3OOWemMXXKN6m/ncbq23zi69Vi0WRpYwC8vbRiD+NwXdnV5yP5fesAoGjw\ngttCujsby2Q96xqGDmnpxF//+OZC2/fPt/EBVtvlZM/KSpevRoDBF03ihcFL\nGyAFS7i0FvRJskP2xp+72Z+6C6A24OvW7BB+WGJcTh8z7QbStTPDQmjam1jM\n9lkez4SbOpFd4Hpca1yFM8HRb6UGUFo+UdIoylbaeKnUDBzCmtv1LwtkL77I\noMB8AyHna8iUjv43l08EODev+G08dBQcrL2K83WMp+ztAHwi8KOryxTLKgUV\nvZwaObtCH77QSnraFF5Vq1onGw+FTckQlP0zS37e5IKSRv0GV/t3E1aSkemt\ndDU2qURkFLyVuGSV8utAMWvwTDA6CEsXeEs49ZEYtZWKeEKc1dXxx0ovVMBV\nxGFgmTnP+pYXUCnqrXlJfkfEtBvGhU6N4KmfBz8tAWjfafYFZng9pQxF04vh\nMgHOy7upIMtDKZCyCGW+C81L24cdggmOVGfLHIpMLbMpR05cS1gXqHGe1OBy\nY5SP34YgMjhRnyfvb1LlcDJEjJvruzx46UP/D9JDBmjhLTJSDxwQuN+UrjPx\n9WhQEv/P3CvSlHVpfd+NF6b0vwM7IoiWbxMwF3z9jZpNU7o+3pySZrni3aMC\nHEgb\r\n=qIAF\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid_3.3.2_1530221341707_0.5404045638057293"
-      },
-      "_hasShrinkwrap": false
+      }
     },
     "3.3.3": {
       "name": "uuid",
       "version": "3.3.3",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "commitlint": {
-        "extends": [
-          "@commitlint/config-conventional"
-        ]
-      },
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "@commitlint/cli": "8.1.0",
         "@commitlint/config-conventional": "8.1.0",
@@ -1316,55 +248,8 @@
         "runmd": "1.2.1",
         "standard-version": "7.0.0"
       },
-      "scripts": {
-        "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
-        "test": "mocha test/test.js",
-        "md": "runmd --watch --output=README.md README_js.md",
-        "release": "standard-version",
-        "prepare": "runmd --output=README.md README_js.md"
-      },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js",
-        "./lib/md5.js": "./lib/md5-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kelektiv/node-uuid.git"
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "ab33c8a77df180de1a12fede423490b3c2de9d07",
-      "bugs": {
-        "url": "https://github.com/kelektiv/node-uuid/issues"
-      },
-      "homepage": "https://github.com/kelektiv/node-uuid#readme",
-      "_id": "uuid@3.3.3",
-      "_nodeVersion": "8.15.1",
-      "_npmVersion": "6.9.0",
-      "_npmUser": {
-        "name": "broofa",
-        "email": "robert@broofa.com"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
       "dist": {
         "integrity": "sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==",
@@ -1373,46 +258,11 @@
         "fileCount": 19,
         "unpackedSize": 34683,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdWqOBCRA9TVsSAnZWagAA1b0P/30Jwx5qz0EAfdMRewwZ\nNaClKkF9nznrtjK84p4vrf+/7nlXfclQtZO65pcVSgXYQsqUTadATY/nHIdV\nC/TYyrgk0fjS5TkLzMs8268S5iO+ruCAyCXA27JqVyfFGxlPZRTneukR71R8\n7Htg3MnZMM5REIM7xckj1maZpi+SNEfvbNNY9Je4bKnAWNX1ezznicfpEaT7\nXQkoOakMKked+CGJhTEXdwKBn9rBKjNr74DMgXiIlEnL6pn7vhNu10zTY1cp\njbsdkOptkWsQBUMzDfkjpBJc+xnji80SSekfZ0iLt5Qak4fYzUcnbZM2XCaC\nvJEz2cLYlbhJox3K92/ikwsBZTGaXtwB96DQbJJ8zDvx7DtTq53tSF1qTgTf\ni+Nm8HDRGbGMkTseJm0sm83NYPQY4RQbiR4bcJNlQQ9ZLWCJSdfudaHkKOU9\nPyFW0aP1LT3qzitpAvHDV3B1fnQEvBJplmVOdm5F0qnTXEmgekjfQMGc5GMG\nDt42B9Vjxs2oVQszMKuG1K+ouXk4JcIQMXYYZA9JfpEmAocHfgam0Y03MZ2J\nb5+7YmeqIZu7n3PwVKTdsLQLPMmibtg6lCC+Akfq1ytuDWVPREIS7JM5Bts7\ngTiRG8rSPeNpLetCN25Ke02xbZDJof3dTJZxWu2vSTeczrh2BFqLjshy/5r4\ny3+j\r\n=wnZc\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "maintainers": [
-        {
-          "name": "broofa",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "defunctzombie",
-          "email": "shtylman@gmail.com"
-        },
-        {
-          "name": "vvo",
-          "email": "vincent.voyer@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid_3.3.3_1566221184938_0.9358725731017152"
-      },
-      "_hasShrinkwrap": false
+      }
     },
     "3.4.0": {
       "name": "uuid",
       "version": "3.4.0",
-      "description": "RFC4122 (v1, v4, and v5) UUIDs",
-      "commitlint": {
-        "extends": [
-          "@commitlint/config-conventional"
-        ]
-      },
-      "keywords": [
-        "uuid",
-        "guid",
-        "rfc4122"
-      ],
-      "license": "MIT",
-      "bin": {
-        "uuid": "./bin/uuid"
-      },
       "devDependencies": {
         "@commitlint/cli": "~8.2.0",
         "@commitlint/config-conventional": "~8.2.0",
@@ -1422,60 +272,8 @@
         "runmd": "1.2.1",
         "standard-version": "7.0.0"
       },
-      "scripts": {
-        "lint": "eslint .",
-        "test": "npm run lint && mocha test/test.js",
-        "md": "runmd --watch --output=README.md README_js.md",
-        "release": "standard-version",
-        "prepare": "runmd --output=README.md README_js.md"
-      },
-      "browser": {
-        "./lib/rng.js": "./lib/rng-browser.js",
-        "./lib/sha1.js": "./lib/sha1-browser.js",
-        "./lib/md5.js": "./lib/md5-browser.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/uuidjs/uuid.git"
-      },
-      "husky": {
-        "hooks": {
-          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-      },
-      "contributors": [
-        {
-          "name": "Robert Kieffer",
-          "email": "robert@broofa.com"
-        },
-        {
-          "name": "Christoph Tavan",
-          "email": "dev@tavan.de"
-        },
-        {
-          "name": "AJ ONeal",
-          "email": "coolaj86@gmail.com"
-        },
-        {
-          "name": "Vincent Voyer",
-          "email": "vincent@zeroload.net"
-        },
-        {
-          "name": "Roman Shtylman",
-          "email": "shtylman@gmail.com"
-        }
-      ],
-      "gitHead": "3df73a98f07c0a38a94bcaf1ecde0e384dc3b126",
-      "bugs": {
-        "url": "https://github.com/uuidjs/uuid/issues"
-      },
-      "homepage": "https://github.com/uuidjs/uuid#readme",
-      "_id": "uuid@3.4.0",
-      "_nodeVersion": "12.13.0",
-      "_npmVersion": "6.12.0",
-      "_npmUser": {
-        "name": "ctavan",
-        "email": "dev@tavan.de"
+      "bin": {
+        "uuid": "./bin/uuid"
       },
       "dist": {
         "integrity": "sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==",
@@ -1484,423 +282,263 @@
         "fileCount": 19,
         "unpackedSize": 34269,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeINAiCRA9TVsSAnZWagAAOHsP/RVFM7OJamQHALP58acz\nQHrh9S8dhiix0+OGPfzJjPDnB/ver8y3weYkOtTXVU6qempJOgVZnigeR2yZ\nH00hUco5UxkK0j1eg1afyGoeso4jjNBtpVkyPnCb2Cg0A8l0g8I6zzb3LByf\nwv74IPlhjXlYyZsIlYwan5q4w5nRsf6+xdV4qdYXquxf05hCYgt3pWV4tSe6\nE2Y+WWZSVpYBpLyY1p7IJBk6xAYmwF1M8D+G0weLJCoOMa41fvhRsd2E84iW\nJYUDCKn+NfMoN4RaphGSBcpQD3POgE4UaI8D/QpFYUpF2bCQDFVakfqYsmtv\nsdCILUlRdhWmOJuoDc5GNk6iD83rtaqu+nwdNsBUal6iF+/8L1E8aCJ0VleI\nr5gLMm/kSl14lFue3iPkUIadoDu4rclpuPs2tiOIxH0Dnt9FHMw69uUr50O1\noCTLM2da2bZ9Vm9UxyIWEdx1TOFtiL4pWfcoQUQcRMDQ3wyoSmv/3ryfd+zl\n3HGwOM5w5zqOOs0JUizf90CRWvL48VUnaeKxL6xcS3OqbJmq7bDmfM2bAdJE\nI0g73oAf9/Ouch1l9Bt1mcZACtUeBYPSvlvN1u0jLzTqPP2VxBWboqZl291P\npR2Nqk3JDmcvY4HYl1oZ7wITiiiaARlTfNY4z2U5v8/f+QAtgwO/SPfHMXJL\nECdn\r\n=rDnh\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.0.0-beta.0": {
+      "name": "uuid",
+      "version": "7.0.0-beta.0",
+      "devDependencies": {
+        "@babel/cli": "7.8.3",
+        "@babel/core": "7.8.3",
+        "@babel/preset-env": "7.8.3",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.4",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.9.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "24.9.0",
+        "lint-staged": "10.0.1",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.30.0",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.0.1"
       },
-      "maintainers": [
-        {
-          "email": "robert@broofa.com",
-          "name": "broofa"
-        },
-        {
-          "email": "dev@tavan.de",
-          "name": "ctavan"
-        },
-        {
-          "email": "shtylman@gmail.com",
-          "name": "defunctzombie"
-        },
-        {
-          "email": "vincent.voyer@gmail.com",
-          "name": "vvo"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/uuid_3.4.0_1579208738423_0.4772515028870088"
+      "bin": {
+        "uuid": "dist/bin/uuid"
       },
-      "_hasShrinkwrap": false
+      "dist": {
+        "integrity": "sha512-Am22LVM3UXB0DTzQAeDSsZwP5eyqjIhmff330hqkxGvIxX8RRrUYLtKJ0eYxiBgjeQdUaMONpBZbJachMShxBw==",
+        "shasum": "7f2bd91cf896f8f3d8d911d995edd7d66d4c2651",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.0-beta.0.tgz",
+        "fileCount": 36,
+        "unpackedSize": 68693,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeSngmCRA9TVsSAnZWagAAbkwP/RXJ5KOgqWONL6GrOdrx\nRRzSvg0VlcF8bj18EAg4ZEzWjgyCtLjAKfnjlQkfj1twaxlrrgbHBiYhEzME\nPr/8tUXn6/Hix13r7Zrkw+kJdISFz2acM6u0sgGJZ+ooxgXtwP/Xs2BVVk4k\n5u5cEN9GpyPxUvrDDgE8BPTDoQ1MxTU+4DWRcb57VIki26O44vvNYZGZJteR\nD/+P/oqHWNZ0hy01Ed5yXB3V/u92E3yc7FPKgGTLmmJjAdCRNifBjcEoQT51\n3/RlPkXB/yTza6fwaiVl+DA7FypppthNbo90drJqboS5iE4B/6ZwApSRrnKf\nWnKQDFWl/XWpNjtga+TC5VjN/KQbptheM3Xus0m9KNvmHUna/5svGJBkptqV\n3TSruCViqBaML1yxD1wTiArGacVakAbZRKSbz9XunOMIf8Qq6/unnBIRQDEi\njXbi+tHmGlJ9GzGn/Z4LXf7zwPPZV796LxIfq+TUsEQVrszJ1SRTsUkZ8oMg\nWOz4DwsI6DDU3KDBNiq+FqSfULRF/TwfrcybkfZDNyfXWbFPgk6bF583fN5e\n9l2TNs30eBsoCJiaLkCGnf4oHhUSMJhzTQoV8YyU/zwq+n04jNmP9S2PnkaW\nHZ+NAiAxMdi/y/3hEiaZAaEAQYhu3VVvjjeu6WU18OApWmF6E6idnLyb+A5V\nfXdA\r\n=UYmC\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.0.0": {
+      "name": "uuid",
+      "version": "7.0.0",
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "dist": {
+        "integrity": "sha512-LNUrNsXdI/fUsypJbWM8Jt4DgQdFAZh41p9C7WE9Cn+CULOEkoG2lgQyH68v3wnIy5K3fN4jdSt270K6IFA3MQ==",
+        "shasum": "1833d4b9ce50b732bfaa271f9cb74e974d303c79",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.0.tgz",
+        "fileCount": 36,
+        "unpackedSize": 72408,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeU85jCRA9TVsSAnZWagAAQQkP/AlIM9UlpC8m86bmakLZ\nMxFzqPOYzXwQwpm2CkjwlYzdUWxqyvPiaobBeVhP3ieMW3aD2f19+3dAwpiw\ne9G9DZrQfGMFyzXFI/wRPBspzSWe6lP+n3J6IJoienzeXkV/3oeL0IBcAvr0\n4U7g7WW+C3deUyik8uO59fB3ITRAai/BX151MNeBmp0WB8S64FMTgUstesaq\ndlsKAcFNnN075DJEzTiIVm72h7bK2A5DTrkriQspVtYaobe0NA6zLovMLjFW\nJP84qZTPAcVfxRzd/5qVpUbHKyR5NLCraBWzDw/K64nd1HS05WAWKbSNebEM\nqPrs3VV6LBVtbXRqmT+7vedFr27g8f046NCMUQb0d0InxIt9/YXp0zaa79il\nBRnYvHaNmYXy4k0u4uxSsfxfLLZ7imtLIQ9nhkqVNlWYp4LjUlZLw1cBHsZx\npZ1HQ8G8TtnXEU/6GMtCZ6hnwCtq+4Bm4s4dgxzpGexOJIpYTK4+0rtmOEgR\ntY0aR5K27N7Lm2Zo88vZUqjbcQmuKEFhX5onVuPZBGg8qTXqOsasyi6T9jJf\n3YovQYwl/TdqRv27AUWS4ZhryG6byurIOKETENv/DC6ybYa1Lvy9t77Qor6a\nTwR3+IJ3S9RP0jtC59gMoUpH078XWBEN+4gkX8sSDEewZXv3Y6u2lR7hUqEy\nQKnT\r\n=SAzF\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.0.1": {
+      "name": "uuid",
+      "version": "7.0.1",
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "dist": {
+        "integrity": "sha512-yqjRXZzSJm9Dbl84H2VDHpM3zMjzSJQ+hn6C4zqd5ilW+7P4ZmLEEqwho9LjP+tGuZlF4xrHQXT0h9QZUS/pWA==",
+        "shasum": "95ed6ff3d8c881cbf85f0f05cc3915ef994818ef",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.1.tgz",
+        "fileCount": 49,
+        "unpackedSize": 91125,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeVYL8CRA9TVsSAnZWagAAR8UP/iKsHTGRssBfDvB2I+MD\nvActHY6aC3wf+7nxLIyfA8OVfZCt8Q/bUB+FLKgqPPkp/MKFVkvEE3aidWX+\nD9HnZm3J2/b/+iH7l+3u2J/L+Bb369p7Q6Aje0EJksO6MEA/S/1egvLxMEd/\nYi3Q2/93eZOCt5ogroCUQ9vtKxLSJRwvoHICJN04DCw96OYe+GUTB6VOQFld\n5kx+ctksSaZmXYtmmWyHyHe8z2T2GoAdWZSg4LsB7nHGVcmio8rKqJmbdesU\n0esYjkGHhZszrB4/pgNSDl4PmMIpgTtfY5moE0tvaKlgVsUBQ4G1K1bo4LzW\nAtGBwgqtf2ystzXw9AU1SXS4l3vuhdRypHJCqvEZxnLliQeCaeMtNDoGBLed\n2aZe14zcTnyem5RgOgKax5cWJWj9o/zIl2aiAG8B2pPt+bml0Z/e+dok6MRp\nMqiqqa0SqeIrVicahyWzJ+6LSssaaqhLPc171g9lv7M3ddod4910E1XxfVLU\nxCDWYn/mgoBjs/0UqcE3RIkPdOJnLGbmvT2sr/grDRBVl9aY6lL84S8h8aZx\nLdmWlpRxPjt7GWCSIg8oZgVw4B5p+qp0Th2JYSK0xYFkvj4mOi39H7tN2UCA\nAukUAz4q83b4cyJIOjVP8nR4GXt1ae+MUdNSpuTJns4n/aH/fE20SU8svkxu\nrsp9\r\n=Hfuo\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.0.2-beta.0": {
+      "name": "uuid",
+      "version": "7.0.2-beta.0",
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "dist": {
+        "integrity": "sha512-nWN1O0baX9+xv8DxMl6O5ERk0R/4xAuCkosXBNB68m1PReciNwzBoO9xzf8wX4HrXpfbcu9Mpo5mmgLcsDTZlA==",
+        "shasum": "8cc5d456c79a9dcb527108a799639cbf2e764bab",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.2-beta.0.tgz",
+        "fileCount": 49,
+        "unpackedSize": 91761,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeXW0MCRA9TVsSAnZWagAAvn8QAJHGY0rSQicG6809E5rG\nkOMu13oLNhO27M98xi5uOak2eYG3hsKqDKnngsUDqKj7wbWWyKAEN3kbhOfS\nF97vJaf+DbxQtnbDL5YZSMtYYmOAjpTsAkYP2vnRc2ovWUXRwR0f2O5Q5idX\nHwRLIpIUUsYEwFKq8Re9oTJnLGcQWLWmIdv3lEaujX9fsEInC8hb5aFZGrJJ\nx4HA5hcNcJK6gZt4G6wAqbgqKDvouR73IDOYyFST3G6VwlXD/ZA7Gx6KGqHu\nu+okHWuKybJwK7xJzoa8qs0gdXTmqSc5a6oQGKWFj6C4oa22EMaprDTn27xv\npYf4phKKEKr2UWyhZPVfdW4oeAtinetxM6gV6vLt2f6MQizXekUibzJRzLn+\n9B8bXeEiYOXWK8RZKwPlDl20fOXdYgLjHq/uo7DCh4FOq43nf7q+1eS+r6oo\n21dYXEFvwXYgHtF2JkqfXjN0xfhyt2+JSVEiYH6DJUDC/QRPYVEeitKa6zDK\nyWBNUHP8CidgLUG4Kj3wjQKYqjoMXZNdE0QJpVZZLMj+CjfvqQSPXcLjyc8g\nhGI6B7HTRZVyqt6GyhTVM4L+lwZh79N6flLcWtKYPAv5jSTrGOFAIwWvN2Sh\nVDZJYABAVS0APfqhLV/k1U2h2qZCLWvBcBpoStr09+A77JY67DcUOzxCS2tx\nX9f0\r\n=YJwA\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.0.2": {
+      "name": "uuid",
+      "version": "7.0.2",
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "dist": {
+        "integrity": "sha512-vy9V/+pKG+5ZTYKf+VcphF5Oc6EFiu3W8Nv3P3zIh0EqVI80ZxOzuPfe9EHjkFNvf8+xuTHVeei4Drydlx4zjw==",
+        "shasum": "7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.2.tgz",
+        "fileCount": 49,
+        "unpackedSize": 92084,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeX6O9CRA9TVsSAnZWagAAjlYQAJ5hKsHQkBAKkf1NzVvv\nQ+/w/d3YJgcfrlrDFe2jqbGqooI74L6ueVPlJs4LIKUCpVvhZIvY4yGHI2hY\nYgzFhbffp2i6E8DGKOvrVvKR6+MFh97vAcOzI2ZUAzOtea++arEJLmxcFUxr\n9VXnY7j1GztqULh0p0XPfAXFkCzm/lm/hDTnBMr0A82qGs0u1PoA5haJl2si\nNA7bFMYQX5nXYyRi/sFfLC1aPiyGDoWs5fGFKRjMSsn7gA+oiI83mpWZ5WVn\nKq28bNNDc+aqe3yG9aT7veXXv3aeUnHmEbP8u6gpswh7QG2h+gNmxvDriovy\n08BxDuR89SPwKIzOb3UF/gk6wPSCpMHZ46xqTX8nVjnEfdvZDMQnzpGCIfGz\n8++uhxIFRbAKg+tvCgClS3fFqxZ27Ai1zNBbnNfH/+XjdH+idOZbK5yglWGr\nIAnYkstMmAsSF+dS1Betk+dnHfgUKJHd2zGU8USulhWblvSW3YIpeXNaIQzB\nzWKP9a47Yp+6B33HcqhRWOSnkhj7xsoL0LEhcrYhC8Zk1KSS5uzqucLpnNfG\nDyVzlxj/BUaNUVVsP3HuayAWtkmsVOZm3O6aKXog7IX4keIw1CCcfDM6bnaD\nzd++5iyGEFfgENa7Fl7LKxAQy2Y4Olcy/aUn3S4ht9CF7GGXvuOc9fNwf2QU\nrjjb\r\n=Xkrr\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "7.0.3": {
+      "name": "uuid",
+      "version": "7.0.3",
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.7",
+        "@babel/preset-env": "7.8.7",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "@wdio/browserstack-service": "5.18.7",
+        "@wdio/cli": "5.18.7",
+        "@wdio/jasmine-framework": "5.18.6",
+        "@wdio/local-runner": "5.18.7",
+        "@wdio/spec-reporter": "5.18.7",
+        "@wdio/static-server-service": "5.16.10",
+        "@wdio/sync": "5.18.7",
+        "babel-eslint": "10.1.0",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "bundlewatch": "0.2.6",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.8",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.32.0",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "standard-version": "7.1.0"
+      },
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "dist": {
+        "integrity": "sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==",
+        "shasum": "c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.3.tgz",
+        "fileCount": 50,
+        "unpackedSize": 92933,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeg5zlCRA9TVsSAnZWagAA67UP/0v7FNDUajl++p6xis/E\nyX/iTGa9FhCdz0usy/6trk20kx8RqF4Li0NrQ50r5GOCfFqFYgxbaweJIJM8\nZytCMDxfM4v/gVDwms92hV7BIVWcq+kPcReW8aDliUAWPIx33HnpCkPya7lG\nYbDv6vto4JJNggasmNF9dt5BTu4oof4q2t6VDXC1tMVHQ9SbsQo+0rpiTPDZ\nq+0py4XaNMKx0v1WH81pghxWr+z1AKn2pdx+24E4J4WUn/cA1Z0D7nN+HaTb\nckPlMx4yFJZDxT+EqdtQOHp7kxGht9Xk4xJD5bpUDyLcuurhQeNLLYiI/ynO\n4Txd8Tdby5INbAp9NCHMvzGmLQiZrfOLz54s2l6At3oQfDYShljIGouSgWtI\nktp7A1e5woBLk5KHTYssvDNZmFRBiL743rFGzFF+ZZ7eWT66aGqzDu52wpKF\nRcKidJp7jOgRHA3LruF9byaab6ApmO5tnNIF3qxG1DaAYIOCpHawjgcf+xAx\nDcF0cZy1jUnnOlziH3AwPfs99LlERHJViLXWReX/9jqzN9tp1R7BJQ6nIxjM\ngXp5IEjIe8r68jTbCyDMiwbfsW3//5qrSCvsOfAdQIcZBSeCWsbSblspABtS\nbM7ysSh6srvHNTj2q/zQm2zHxuGyl5beJrhP5n3jUM9IWOU1UYlhfa6nNV7T\nb7H7\r\n=76Y4\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "robert@broofa.com",
-      "name": "broofa"
-    },
-    {
-      "email": "dev@tavan.de",
-      "name": "ctavan"
-    },
-    {
-      "email": "shtylman@gmail.com",
-      "name": "defunctzombie"
-    },
-    {
-      "email": "vincent.voyer@gmail.com",
-      "name": "vvo"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/uuidjs/uuid.git"
-  },
-  "time": {
-    "modified": "2020-01-16T21:05:41.464Z",
-    "created": "2011-03-31T08:12:51.801Z",
-    "0.0.1": "2011-03-31T08:12:51.801Z",
-    "0.0.2": "2011-03-31T08:12:51.801Z",
-    "1.4.0": "2013-02-19T22:28:10.376Z",
-    "1.4.1": "2013-03-14T05:25:04.735Z",
-    "1.4.2": "2014-09-25T09:03:34.083Z",
-    "2.0.0": "2014-09-29T09:03:24.612Z",
-    "2.0.1": "2014-09-29T09:16:55.228Z",
-    "2.0.2": "2016-04-13T07:37:23.788Z",
-    "2.0.3": "2016-09-18T21:03:38.127Z",
-    "3.0.0": "2016-11-18T05:55:37.542Z",
-    "3.0.1": "2016-11-29T07:18:07.016Z",
-    "3.1.0": "2017-06-16T17:54:51.877Z",
-    "3.2.0": "2018-01-16T14:44:50.639Z",
-    "3.2.1": "2018-01-16T17:44:57.871Z",
-    "3.3.0": "2018-06-26T13:23:39.426Z",
-    "3.3.2": "2018-06-28T21:29:01.853Z",
-    "3.3.3": "2019-08-19T13:26:25.072Z",
-    "3.4.0": "2020-01-16T21:05:38.628Z"
-  },
-  "users": {
-    "luk": true,
-    "shtylman": true,
-    "chilts": true,
-    "appleboy": true,
-    "davidrlee": true,
-    "lych": true,
-    "brentonhouse": true,
-    "afollestad": true,
-    "blackbunny": true,
-    "matteospampani": true,
-    "jakecadams": true,
-    "yourhoneysky": true,
-    "pospi": true,
-    "esessoms": true,
-    "kankungyip": true,
-    "thomask33": true,
-    "adamk": true,
-    "chrisyipw": true,
-    "tmypawa": true,
-    "danharper": true,
-    "erincinci": true,
-    "lifecube": true,
-    "yashprit": true,
-    "moimikey": true,
-    "ninozhang": true,
-    "ysk8": true,
-    "jesusgoku": true,
-    "sonhuytran": true,
-    "smd4": true,
-    "defunctzombie": true,
-    "etsit": true,
-    "junjiansyu": true,
-    "bpatel": true,
-    "benburwell": true,
-    "shipengyan": true,
-    "piecioshka": true,
-    "jueb": true,
-    "qqqppp9998": true,
-    "flozz": true,
-    "grantcarthew": true,
-    "po": true,
-    "aitorllj93": true,
-    "parkerproject": true,
-    "jasonpearson": true,
-    "vwal": true,
-    "ash": true,
-    "procom": true,
-    "almccann": true,
-    "wfcookie": true,
-    "fedor": true,
-    "koulmomo": true,
-    "monsterkodi": true,
-    "orkisz": true,
-    "mlohscheidt": true,
-    "carlosvillademor": true,
-    "ziflex": true,
-    "shadowlong": true,
-    "nomemires": true,
-    "antanst": true,
-    "zhoutk": true,
-    "epdplus": true,
-    "hecto932": true,
-    "r3nya": true,
-    "lwgojustgo": true,
-    "evanyeung": true,
-    "pavel.zubkou": true,
-    "geooogle": true,
-    "roman-io": true,
-    "xufz": true,
-    "rochejul": true,
-    "ijidau": true,
-    "456wyc": true,
-    "markthethomas": true,
-    "freebird": true,
-    "ianpaschal": true,
-    "clarenceho": true,
-    "jlmorgan": true,
-    "sasquatch": true,
-    "segen": true,
-    "gavaxiang": true,
-    "nigel0913": true,
-    "octetstream": true,
-    "lestad": true,
-    "shekharreddy": true,
-    "bapinney": true,
-    "sourcesoft": true,
-    "gollojs": true,
-    "reinoud": true,
-    "zpoons": true,
-    "scotchulous": true,
-    "jlagunas": true,
-    "jaxelson": true,
-    "holly": true,
-    "akarem": true,
-    "apopek": true,
-    "wenhsiaoyi": true,
-    "ferchoriverar": true,
-    "writech": true,
-    "gildasdubois": true,
-    "nhz.io": true,
-    "blade254353074": true,
-    "jtrh": true,
-    "mauriciolauffer": true,
-    "justdomepaul": true,
-    "neo1": true,
-    "leon740727": true,
-    "mhaidarh": true,
-    "tmurngon": true,
-    "jez9999": true,
-    "monolithed": true,
-    "nohomey": true,
-    "ckaatz": true,
-    "diegorbaquero": true,
-    "ahvonenj": true,
-    "praxiq": true,
-    "kavyababu7": true,
-    "dzhou777": true,
-    "caiofossa": true,
-    "jamiechoi": true,
-    "harumambur": true,
-    "broofa": true,
-    "wangnan0610": true,
-    "ivan.marquez": true,
-    "albertofdzm": true,
-    "abuelwafa": true,
-    "rumkin": true,
-    "stretchgz": true,
-    "shrike": true,
-    "chaofeis": true,
-    "nickleefly": true,
-    "sachacr": true,
-    "haihepeng": true,
-    "wenbing": true,
-    "kodekracker": true,
-    "jian263994241": true,
-    "bsara": true,
-    "guzgarcia": true,
-    "ferrari": true,
-    "i3fox": true,
-    "augiethornton": true,
-    "mikestaub": true,
-    "programmer.severson": true,
-    "sgvinci": true,
-    "appsparkler": true,
-    "techmuch": true,
-    "cblumer": true,
-    "jk6": true,
-    "tdevm": true,
-    "max_devjs": true,
-    "cbetancourt": true,
-    "gdibble": true,
-    "isenricho": true,
-    "vchouhan": true,
-    "danielye": true,
-    "andfaulkner": true,
-    "rocket0191": true,
-    "satoru": true,
-    "serge-nikitin": true,
-    "alexcoady": true,
-    "kaufmo": true,
-    "miadzadfallah": true,
-    "asaupup": true,
-    "potentii": true,
-    "xfloops": true,
-    "n0f3": true,
-    "marcobiedermann": true,
-    "soulchainer": true,
-    "leapm": true,
-    "artjacob": true,
-    "stevenvachon": true,
-    "papasavva": true,
-    "philipjc": true,
-    "dkblay": true,
-    "awhmandan": true,
-    "sternelee": true,
-    "walexstevens": true,
-    "guurgle": true,
-    "quafoo": true,
-    "scott.m.sarsfield": true,
-    "yswon": true,
-    "pddivine": true,
-    "subinvarghesein": true,
-    "superchenney": true,
-    "thomas.han": true,
-    "kikna": true,
-    "zand3rs": true,
-    "heartnett": true,
-    "simonja": true,
-    "fengmiaosen": true,
-    "someok": true,
-    "raycharles": true,
-    "xxsnake28": true,
-    "icognivator": true,
-    "zhyq0826": true,
-    "partsunknown": true,
-    "kkho595": true,
-    "jybleau": true,
-    "jamesbedont": true,
-    "sundaycrafts": true,
-    "yikuo": true,
-    "shiva127": true,
-    "jasonbbelcher": true,
-    "flxa888": true,
-    "jonaslomholdt": true,
-    "vivek.vikhere": true,
-    "whathejoe": true,
-    "abhijitkalta": true,
-    "wayn": true,
-    "infernocloud": true,
-    "gpuente": true,
-    "leland-kwong": true,
-    "isayme": true,
-    "arnold-almeida": true,
-    "xrush": true,
-    "eserozvataf": true,
-    "restuta": true,
-    "atomgao": true,
-    "rojo2": true,
-    "gzg1500521074": true,
-    "processbrain": true,
-    "donggw2030521": true,
-    "itcorp": true,
-    "tomgao365": true,
-    "yash3492": true,
-    "mirkoj": true,
-    "palsson": true,
-    "xinwangwang": true,
-    "keyn": true,
-    "bart1208": true,
-    "wozhizui": true,
-    "tjg": true,
-    "johntbales": true,
-    "nuwaio": true,
-    "bigglesatlarge": true,
-    "tztz": true,
-    "tjfwalker": true,
-    "reggiezhang": true,
-    "nonemoticoner": true,
-    "jakedalus": true,
-    "swedendrift": true,
-    "astesio": true,
-    "huangshijuan": true,
-    "zuojiang": true,
-    "wolfram77": true,
-    "luffy84217": true,
-    "iainhallam": true,
-    "cainwatson": true,
-    "shahabkhalvati": true,
-    "leonardothibes": true,
-    "vjenks": true,
-    "jonathas": true,
-    "edwardxyt": true,
-    "razor164": true,
-    "snowdream": true,
-    "joelwallis": true,
-    "leonardorb": true,
-    "bluelover": true,
-    "mgub": true,
-    "somerayg": true,
-    "laoshaw": true,
-    "dtunes": true,
-    "marcker": true,
-    "warcrydoggie": true,
-    "vparaskevas": true,
-    "biao166": true,
-    "xtx1130": true,
-    "cschmitz81": true,
-    "ganeshkbhat": true,
-    "karzanosman984": true,
-    "selenasong": true,
-    "sammade": true,
-    "obsessiveprogrammer": true,
-    "cognivator": true,
-    "marlberm2014": true,
-    "he313572052": true,
-    "ralphkay": true,
-    "arefm": true,
-    "jarrodhroberson": true,
-    "hugovila": true,
-    "reyronald": true,
-    "akshay.vs9543": true,
-    "yakumat": true,
-    "davidnyhuis": true,
-    "ashco": true,
-    "wangxb": true,
-    "ezeikel": true,
-    "crwnvr": true,
-    "horrorandtropics": true,
-    "rikstam": true,
-    "avivharuzi": true,
-    "lex_nel": true,
-    "esilva2902": true,
-    "dheerajvs": true,
-    "faraoman": true,
-    "sunkeysun": true,
-    "lgl1993": true,
-    "winjeysong": true,
-    "pixelventures": true,
-    "kvrao": true,
-    "juananto11": true,
-    "rparris": true,
-    "lionel86": true,
-    "gamersdelight": true,
-    "martinspinks": true,
-    "matsgm": true,
-    "maxblock": true,
-    "dwqs": true,
-    "daizch": true,
-    "fearnbuster": true,
-    "wandyezj": true,
-    "leota": true,
-    "jochemstoel": true,
-    "justforuse": true
-  },
-  "readmeFilename": "README.md",
-  "keywords": [
-    "uuid",
-    "guid",
-    "rfc4122"
-  ],
-  "contributors": [
-    {
-      "name": "Robert Kieffer",
-      "email": "robert@broofa.com"
-    },
-    {
-      "name": "Christoph Tavan",
-      "email": "dev@tavan.de"
-    },
-    {
-      "name": "AJ ONeal",
-      "email": "coolaj86@gmail.com"
-    },
-    {
-      "name": "Vincent Voyer",
-      "email": "vincent@zeroload.net"
-    },
-    {
-      "name": "Roman Shtylman",
-      "email": "shtylman@gmail.com"
-    }
-  ],
-  "homepage": "https://github.com/uuidjs/uuid#readme",
-  "bugs": {
-    "url": "https://github.com/uuidjs/uuid/issues"
-  },
-  "license": "MIT"
+  "modified": "2020-03-31T19:41:27.278Z",
+  "_cached": false,
+  "_contentLength": 20905
 }

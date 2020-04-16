@@ -1,6 +1,4 @@
 {
-  "_id": "safer-buffer",
-  "_rev": "8-4ffd6074071f2751cb0535e23979908f",
   "name": "safer-buffer",
   "dist-tags": {
     "latest": "2.1.2"
@@ -9,41 +7,9 @@
     "2.0.0": {
       "name": "safer-buffer",
       "version": "2.0.0",
-      "description": "Modern Buffer API polyfill without footguns",
-      "main": "safer.js",
-      "scripts": {
-        "test": "standard && tape tests.js"
-      },
-      "author": {
-        "name": "Nikita Skovoroda",
-        "email": "chalkerx@gmail.com",
-        "url": "https://github.com/ChALkeR"
-      },
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-      },
-      "bugs": {
-        "url": "https://github.com/ChALkeR/safer-buffer/issues"
-      },
       "devDependencies": {
         "standard": "^11.0.1",
         "tape": "^4.9.0"
-      },
-      "files": [
-        "tests.js",
-        "dangerous.js",
-        "safer.js"
-      ],
-      "gitHead": "a9f897f4a3abfe6c6a2b657aec7b93ea26078e82",
-      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-      "_id": "safer-buffer@2.0.0",
-      "_npmVersion": "5.7.1",
-      "_nodeVersion": "9.8.0",
-      "_npmUser": {
-        "name": "chalker",
-        "email": "chalkerx@gmail.com"
       },
       "dist": {
         "integrity": "sha512-xfyC9tPVPALdc+v+iF5EgNWLq2tBaVLCqcwPjvZ6oNzzL/q4Bh0D+dFy90dVlX6RkCzqamJhBcxgG72DCmZ2XQ==",
@@ -51,57 +17,14 @@
         "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.0.0.tgz",
         "fileCount": 5,
         "unpackedSize": 19297
-      },
-      "maintainers": [
-        {
-          "name": "chalker",
-          "email": "chalkerx@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safer-buffer_2.0.0_1521448517452_0.9654642196058854"
       }
     },
     "2.0.1": {
       "name": "safer-buffer",
       "version": "2.0.1",
-      "description": "Modern Buffer API polyfill without footguns",
-      "main": "safer.js",
-      "scripts": {
-        "test": "standard && tape tests.js"
-      },
-      "author": {
-        "name": "Nikita Skovoroda",
-        "email": "chalkerx@gmail.com",
-        "url": "https://github.com/ChALkeR"
-      },
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-      },
-      "bugs": {
-        "url": "https://github.com/ChALkeR/safer-buffer/issues"
-      },
       "devDependencies": {
         "standard": "^11.0.1",
         "tape": "^4.9.0"
-      },
-      "files": [
-        "tests.js",
-        "dangerous.js",
-        "safer.js"
-      ],
-      "gitHead": "3e812676ce51ba04a3d58c4f1dc9a80907789234",
-      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-      "_id": "safer-buffer@2.0.1",
-      "_npmVersion": "5.7.1",
-      "_nodeVersion": "9.8.0",
-      "_npmUser": {
-        "name": "chalker",
-        "email": "chalkerx@gmail.com"
       },
       "dist": {
         "integrity": "sha512-3i2tOIUGJ6ZOIJ0FPTN+K/6iFBZUGB6fCee1PQGrLaioDFPLWQCaRJeBMMTpdSMCRAmuyu7FSJKnjriAmE/aQA==",
@@ -109,59 +32,14 @@
         "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.0.1.tgz",
         "fileCount": 6,
         "unpackedSize": 21003
-      },
-      "maintainers": [
-        {
-          "name": "chalker",
-          "email": "chalkerx@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safer-buffer_2.0.1_1521458495616_0.06119043006489222"
       }
     },
     "2.0.2": {
       "name": "safer-buffer",
       "version": "2.0.2",
-      "description": "Modern Buffer API polyfill without footguns",
-      "main": "safer.js",
-      "scripts": {
-        "test": "standard && tape tests.js"
-      },
-      "author": {
-        "name": "Nikita Skovoroda",
-        "email": "chalkerx@gmail.com",
-        "url": "https://github.com/ChALkeR"
-      },
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-      },
-      "bugs": {
-        "url": "https://github.com/ChALkeR/safer-buffer/issues"
-      },
       "devDependencies": {
         "standard": "^11.0.1",
         "tape": "^4.9.0"
-      },
-      "files": [
-        "Porting-Buffer.md",
-        "Readme.md",
-        "tests.js",
-        "dangerous.js",
-        "safer.js"
-      ],
-      "gitHead": "ba8472e414180be4e567c47789f8a20cb73affea",
-      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-      "_id": "safer-buffer@2.0.2",
-      "_npmVersion": "5.7.1",
-      "_nodeVersion": "9.8.0",
-      "_npmUser": {
-        "name": "chalker",
-        "email": "chalkerx@gmail.com"
       },
       "dist": {
         "integrity": "sha512-n7d2A1kx/NW7bow4A2jx111qpYsF0qDhvfHssl+FIuXY8skGswVCIXoo8AUt72d8vK6R3teMjHIV1Yt7Q/m08A==",
@@ -169,59 +47,14 @@
         "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.0.2.tgz",
         "fileCount": 7,
         "unpackedSize": 36955
-      },
-      "maintainers": [
-        {
-          "name": "chalker",
-          "email": "chalkerx@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safer-buffer_2.0.2_1521545289647_0.7300470347310737"
       }
     },
     "2.1.0": {
       "name": "safer-buffer",
       "version": "2.1.0",
-      "description": "Modern Buffer API polyfill without footguns",
-      "main": "safer.js",
-      "scripts": {
-        "test": "standard && tape tests.js"
-      },
-      "author": {
-        "name": "Nikita Skovoroda",
-        "email": "chalkerx@gmail.com",
-        "url": "https://github.com/ChALkeR"
-      },
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-      },
-      "bugs": {
-        "url": "https://github.com/ChALkeR/safer-buffer/issues"
-      },
       "devDependencies": {
         "standard": "^11.0.1",
         "tape": "^4.9.0"
-      },
-      "files": [
-        "Porting-Buffer.md",
-        "Readme.md",
-        "tests.js",
-        "dangerous.js",
-        "safer.js"
-      ],
-      "gitHead": "38d80d6be470a792126e42e5ee2c447c3da18b46",
-      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-      "_id": "safer-buffer@2.1.0",
-      "_npmVersion": "5.7.1",
-      "_nodeVersion": "9.8.0",
-      "_npmUser": {
-        "name": "chalker",
-        "email": "chalkerx@gmail.com"
       },
       "dist": {
         "integrity": "sha512-HQhCIIl7TrF1aa7d352EXG+xumPERvoIWxOqq2CagDId0FVGtlG/fuQ7kZT+wZ7ytyGiP3pnYUVni5otBzOVmA==",
@@ -229,59 +62,14 @@
         "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.0.tgz",
         "fileCount": 7,
         "unpackedSize": 41366
-      },
-      "maintainers": [
-        {
-          "name": "chalker",
-          "email": "chalkerx@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safer-buffer_2.1.0_1521659685140_0.5417942695599183"
       }
     },
     "2.1.1": {
       "name": "safer-buffer",
       "version": "2.1.1",
-      "description": "Modern Buffer API polyfill without footguns",
-      "main": "safer.js",
-      "scripts": {
-        "test": "standard && tape tests.js"
-      },
-      "author": {
-        "name": "Nikita Skovoroda",
-        "email": "chalkerx@gmail.com",
-        "url": "https://github.com/ChALkeR"
-      },
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-      },
-      "bugs": {
-        "url": "https://github.com/ChALkeR/safer-buffer/issues"
-      },
       "devDependencies": {
         "standard": "^11.0.1",
         "tape": "^4.9.0"
-      },
-      "files": [
-        "Porting-Buffer.md",
-        "Readme.md",
-        "tests.js",
-        "dangerous.js",
-        "safer.js"
-      ],
-      "gitHead": "e87995376d301d7559064cfacdcbab918e7ad0fc",
-      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-      "_id": "safer-buffer@2.1.1",
-      "_npmVersion": "5.8.0",
-      "_nodeVersion": "9.11.1",
-      "_npmUser": {
-        "name": "chalker",
-        "email": "chalkerx@gmail.com"
       },
       "dist": {
         "integrity": "sha512-sSsAhyRw8mBRo96T6nsCCAQosFTc79+wYWbiECHP5P03a7wE76VAbbLysuJ8EEfBhElIsLZau+WNWES4Y/IQSA==",
@@ -289,60 +77,14 @@
         "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.1.tgz",
         "fileCount": 7,
         "unpackedSize": 42153
-      },
-      "maintainers": [
-        {
-          "name": "chalker",
-          "email": "chalkerx@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safer-buffer_2.1.1_1523179067144_0.7766754431469289"
       }
     },
     "2.1.2": {
       "name": "safer-buffer",
       "version": "2.1.2",
-      "description": "Modern Buffer API polyfill without footguns",
-      "main": "safer.js",
-      "scripts": {
-        "browserify-test": "browserify --external tape tests.js > browserify-tests.js && tape browserify-tests.js",
-        "test": "standard && tape tests.js"
-      },
-      "author": {
-        "name": "Nikita Skovoroda",
-        "email": "chalkerx@gmail.com",
-        "url": "https://github.com/ChALkeR"
-      },
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-      },
-      "bugs": {
-        "url": "https://github.com/ChALkeR/safer-buffer/issues"
-      },
       "devDependencies": {
         "standard": "^11.0.1",
         "tape": "^4.9.0"
-      },
-      "files": [
-        "Porting-Buffer.md",
-        "Readme.md",
-        "tests.js",
-        "dangerous.js",
-        "safer.js"
-      ],
-      "gitHead": "e8ac214944eda30e1e6c6b7d7e7f6a21cf7dce7c",
-      "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-      "_id": "safer-buffer@2.1.2",
-      "_npmVersion": "5.8.0",
-      "_nodeVersion": "9.11.1",
-      "_npmUser": {
-        "name": "chalker",
-        "email": "chalkerx@gmail.com"
       },
       "dist": {
         "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==",
@@ -350,52 +92,10 @@
         "tarball": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
         "fileCount": 7,
         "unpackedSize": 42299
-      },
-      "maintainers": [
-        {
-          "name": "chalker",
-          "email": "chalkerx@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safer-buffer_2.1.2_1523184162015_0.8333925439572323"
       }
     }
   },
-  "time": {
-    "created": "2018-03-19T08:26:02.082Z",
-    "1.0.0": "2018-03-19T08:26:02.318Z",
-    "modified": "2018-04-08T10:42:42.789Z",
-    "2.0.0": "2018-03-19T08:35:17.564Z",
-    "2.0.1": "2018-03-19T11:21:35.766Z",
-    "2.0.2": "2018-03-20T11:28:09.716Z",
-    "2.1.0": "2018-03-21T19:14:45.213Z",
-    "2.1.1": "2018-04-08T09:17:47.195Z",
-    "2.1.2": "2018-04-08T10:42:42.130Z"
-  },
-  "maintainers": [
-    {
-      "name": "chalker",
-      "email": "chalkerx@gmail.com"
-    }
-  ],
-  "description": "Modern Buffer API polyfill without footguns",
-  "homepage": "https://github.com/ChALkeR/safer-buffer#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ChALkeR/safer-buffer.git"
-  },
-  "author": {
-    "name": "Nikita Skovoroda",
-    "email": "chalkerx@gmail.com",
-    "url": "https://github.com/ChALkeR"
-  },
-  "bugs": {
-    "url": "https://github.com/ChALkeR/safer-buffer/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "Readme.md",
-  "_attachments": {}
+  "modified": "2018-04-08T10:42:42.789Z",
+  "_cached": false,
+  "_contentLength": 2445
 }

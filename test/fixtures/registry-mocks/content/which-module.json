@@ -1,8 +1,5 @@
 {
-  "_id": "which-module",
-  "_rev": "6-f6ee7fe9f3acd03881ba625a76931bd6",
   "name": "which-module",
-  "description": "Find the module object for something that was require()d",
   "dist-tags": {
     "latest": "2.0.0"
   },
@@ -10,38 +7,6 @@
     "1.0.0": {
       "name": "which-module",
       "version": "1.0.0",
-      "description": "Find the module object for something that was require()d",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc ava",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "release": "standard-version"
-      },
-      "files": [
-        "index.js"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nexdrew/which-module.git"
-      },
-      "keywords": [
-        "which",
-        "module",
-        "exports",
-        "filename",
-        "require",
-        "reverse",
-        "lookup"
-      ],
-      "author": {
-        "name": "nexdrew"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/nexdrew/which-module/issues"
-      },
-      "homepage": "https://github.com/nexdrew/which-module#readme",
       "devDependencies": {
         "ava": "^0.15.2",
         "coveralls": "^2.11.9",
@@ -49,67 +14,14 @@
         "standard": "^7.1.2",
         "standard-version": "^2.3.0"
       },
-      "gitHead": "a5b7492798fac7e484fd8812d3d3a1138bb08784",
-      "_id": "which-module@1.0.0",
-      "_shasum": "bba63ca861948994ff307736089e3b96026c2a4f",
-      "_from": ".",
-      "_npmVersion": "3.8.8",
-      "_nodeVersion": "5.11.0",
-      "_npmUser": {
-        "name": "nexdrew",
-        "email": "andrew@npmjs.com"
-      },
       "dist": {
         "shasum": "bba63ca861948994ff307736089e3b96026c2a4f",
         "tarball": "https://registry.npmjs.org/which-module/-/which-module-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "nexdrew",
-          "email": "andrew@npmjs.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/which-module-1.0.0.tgz_1465192451403_0.19380306638777256"
-      },
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "which-module",
       "version": "2.0.0",
-      "description": "Find the module object for something that was require()d",
-      "main": "index.js",
-      "scripts": {
-        "pretest": "standard",
-        "test": "nyc ava",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "release": "standard-version"
-      },
-      "files": [
-        "index.js"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/nexdrew/which-module.git"
-      },
-      "keywords": [
-        "which",
-        "module",
-        "exports",
-        "filename",
-        "require",
-        "reverse",
-        "lookup"
-      ],
-      "author": {
-        "name": "nexdrew"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/nexdrew/which-module/issues"
-      },
-      "homepage": "https://github.com/nexdrew/which-module#readme",
       "devDependencies": {
         "ava": "^0.19.1",
         "coveralls": "^2.13.1",
@@ -117,71 +29,13 @@
         "standard": "^10.0.2",
         "standard-version": "^4.0.0"
       },
-      "gitHead": "7f78f42d0761133263c3947a3b24dde324a467ce",
-      "_id": "which-module@2.0.0",
-      "_shasum": "d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.9.0",
-      "_npmUser": {
-        "name": "nexdrew",
-        "email": "andrew@npmjs.com"
-      },
       "dist": {
         "shasum": "d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a",
         "tarball": "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "nexdrew",
-          "email": "andrew@npmjs.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/which-module-2.0.0.tgz_1493670259112_0.19386909971944988"
-      },
-      "directories": {}
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "andrewbgoode@gmail.com",
-      "name": "nexdrew"
-    }
-  ],
-  "time": {
-    "modified": "2018-01-23T08:55:31.744Z",
-    "created": "2016-06-06T05:54:13.093Z",
-    "1.0.0": "2016-06-06T05:54:13.093Z",
-    "2.0.0": "2017-05-01T20:24:20.945Z"
-  },
-  "homepage": "https://github.com/nexdrew/which-module#readme",
-  "keywords": [
-    "which",
-    "module",
-    "exports",
-    "filename",
-    "require",
-    "reverse",
-    "lookup"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nexdrew/which-module.git"
-  },
-  "author": {
-    "name": "nexdrew"
-  },
-  "bugs": {
-    "url": "https://github.com/nexdrew/which-module/issues"
-  },
-  "license": "ISC",
-  "readmeFilename": "README.md",
-  "users": {
-    "zhenguo.zhao": true,
-    "shuoshubao": true,
-    "losymear": true
-  },
-  "_attachments": {}
+  "modified": "2018-01-23T08:55:31.744Z",
+  "_cached": false,
+  "_contentLength": 725
 }

@@ -1,8 +1,5 @@
 {
-  "_id": "verror",
-  "_rev": "119-5498306b3500648af2a997c870d475fd",
   "name": "verror",
-  "description": "richer JavaScript errors",
   "dist-tags": {
     "latest": "1.10.0"
   },
@@ -10,1039 +7,324 @@
     "1.0.0": {
       "name": "verror",
       "version": "1.0.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "_id": "verror@1.0.0",
-      "devDependencies": {},
-      "optionalDependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.1.4",
-      "_nodeVersion": "v0.6.12",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "5cb98dd3b334144679ed2f9df5d300a2053a71ed",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.0.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.0.1": {
       "name": "verror",
       "version": "1.0.1",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "_id": "verror@1.0.1",
-      "devDependencies": {},
-      "_engineSupported": false,
-      "_npmVersion": "1.0.94",
-      "_nodeVersion": "v0.4.2",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "758d8fb57cc988fdd744a4186d87ed8ab691e7c7",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.0.1.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.1.0": {
       "name": "verror",
       "version": "1.1.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "_id": "verror@1.1.0",
-      "devDependencies": {},
-      "optionalDependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.1.4",
-      "_nodeVersion": "v0.6.10",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "2a4b4eb14a207051e75a6f94ee51315bf173a1b0",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.1.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.2.0": {
       "name": "verror",
       "version": "1.2.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "_id": "verror@1.2.0",
-      "devDependencies": {},
-      "optionalDependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.1.24",
-      "_nodeVersion": "v0.6.19",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "0bfad0cb643d50ddb02c517cecae9aae6965f28a",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.2.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.0": {
       "name": "verror",
       "version": "1.3.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "_id": "verror@1.3.0",
       "dist": {
         "shasum": "e6047cae0bb5bdf862ac0b7e1fa1e1f8e3cfc6db",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.1": {
       "name": "verror",
       "version": "1.3.1",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "_id": "verror@1.3.1",
       "dist": {
         "shasum": "0d6598b520fdbac16753c2994a9f0f6de8a1ca68",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.1.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.2": {
       "name": "verror",
       "version": "1.3.2",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "_id": "verror@1.3.2",
       "dist": {
         "shasum": "371c3a07de6b699cd43f0bc2c7425eea5d5e1b1f",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.2.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.3": {
       "name": "verror",
       "version": "1.3.3",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "_id": "verror@1.3.3",
       "dist": {
         "shasum": "8a6a4ac3a8c774b6f687fece49bdffd78552e2cd",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.3.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.4": {
       "name": "verror",
       "version": "1.3.4",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "_id": "verror@1.3.4",
       "dist": {
         "shasum": "0cd68820c711206b5157b751d037b6e04a4244f6",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.4.tgz"
       },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.5": {
       "name": "verror",
       "version": "1.3.5",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "_id": "verror@1.3.5",
       "dist": {
         "shasum": "5d2d0af474628bf6979f25ee869407af9a148c32",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.5.tgz"
       },
-      "_npmVersion": "1.1.66",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.6": {
       "name": "verror",
       "version": "1.3.6",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.2"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "_id": "verror@1.3.6",
       "dist": {
         "shasum": "cff5df12946d297d2baaefaa2689e25be01c005c",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.6.tgz"
       },
-      "_npmVersion": "1.1.65",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.3.7": {
       "name": "verror",
       "version": "1.3.7",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.2"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "_id": "verror@1.3.7",
       "dist": {
         "shasum": "b9dd10e98d1291ab4dde3746d70ef966162237f0",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.3.7.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.3.8",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.4.0": {
       "name": "verror",
       "version": "1.4.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.3"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "_id": "verror@1.4.0",
       "dist": {
         "shasum": "5d8fdf5875141c3183b7c6bc23a0aa3e3e6ca4e2",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.4.0.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.32",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.5.0": {
       "name": "verror",
       "version": "1.5.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.0.3"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror",
-      "_id": "verror@1.5.0",
-      "_shasum": "c0f5b0965ed75f17ed891a7735539173f229e1bc",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "c0f5b0965ed75f17ed891a7735539173f229e1bc",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.5.0.tgz"
       },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.5.1": {
       "name": "verror",
       "version": "1.5.1",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror",
-      "_id": "verror@1.5.1",
-      "_shasum": "6ba9003345a4f8c3c6a6ada344f3cd6fa7b98821",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "6ba9003345a4f8c3c6a6ada344f3cd6fa7b98821",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.5.1.tgz"
       },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.6.0": {
       "name": "verror",
       "version": "1.6.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "extsprintf": "1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror",
-      "_id": "verror@1.6.0",
-      "_shasum": "7d13b27b1facc2e2da90405eb5ea6e5bdd252ea5",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "7d13b27b1facc2e2da90405eb5ea6e5bdd252ea5",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.6.0.tgz"
       },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.6.1": {
       "name": "verror",
       "version": "1.6.1",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "core-util-is": "1.0.2",
         "extsprintf": "1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "gitHead": "b1c7bf701c232eb0039da2321291636c6815e061",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror",
-      "_id": "verror@1.6.1",
-      "_shasum": "236402060648c219d1162c2451d1c341a0e1c9ce",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "236402060648c219d1162c2451d1c341a0e1c9ce",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.6.1.tgz"
       },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.7.0": {
       "name": "verror",
       "version": "1.7.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "assert-plus": "^1.0.0",
         "core-util-is": "1.0.2",
         "extsprintf": "^1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "gitHead": "a4de6666c36a0889283cd13dfadb5645f77b9137",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror#readme",
-      "_id": "verror@1.7.0",
-      "_shasum": "e60584035c54417b981a631326cd047af3a065fb",
-      "_from": ".",
-      "_npmVersion": "2.11.3",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "e60584035c54417b981a631326cd047af3a065fb",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.7.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/verror-1.7.0.tgz_1470965402274_0.31455223984085023"
-      },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.8.0": {
       "name": "verror",
       "version": "1.8.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "assert-plus": "^1.0.0",
         "core-util-is": "1.0.2",
         "extsprintf": "^1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "gitHead": "8b782cb7514aa3a09503e848e4c9ac3662a37075",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror#readme",
-      "_id": "verror@1.8.0",
-      "_shasum": "f538042e92a1a60eff17b8e2a5cb7f27e3a98a09",
-      "_from": ".",
-      "_npmVersion": "2.15.9",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "f538042e92a1a60eff17b8e2a5cb7f27e3a98a09",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.8.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/verror-1.8.0.tgz_1471383208692_0.5374380375724286"
-      },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.8.1": {
       "name": "verror",
       "version": "1.8.1",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "assert-plus": "^1.0.0",
         "core-util-is": "1.0.2",
         "extsprintf": "^1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "gitHead": "53b3b757acf0a59cad30ad6d2bf688160cab0369",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror#readme",
-      "_id": "verror@1.8.1",
-      "_shasum": "157589400a2d14570a62f2d5dd6a0f6214be3029",
-      "_from": ".",
-      "_npmVersion": "2.15.9",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "157589400a2d14570a62f2d5dd6a0f6214be3029",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.8.1.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/verror-1.8.1.tgz_1471459232080_0.8993467639666051"
-      },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.9.0": {
       "name": "verror",
       "version": "1.9.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "assert-plus": "^1.0.0",
         "core-util-is": "1.0.2",
         "extsprintf": "^1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "gitHead": "29b7ce4dc7c4e488b00355db5a41a11496633679",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror#readme",
-      "_id": "verror@1.9.0",
-      "_shasum": "107a8a2d14c33586fc4bb830057cd2d19ae2a6ee",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.45",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "107a8a2d14c33586fc4bb830057cd2d19ae2a6ee",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.9.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/verror-1.9.0.tgz_1479333178189_0.022463352419435978"
-      },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     },
     "1.10.0": {
       "name": "verror",
       "version": "1.10.0",
-      "description": "richer JavaScript errors",
-      "main": "./lib/verror.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/davepacheco/node-verror.git"
-      },
       "dependencies": {
         "assert-plus": "^1.0.0",
         "core-util-is": "1.0.2",
         "extsprintf": "^1.2.0"
       },
-      "engines": [
-        "node >=0.6.0"
-      ],
-      "scripts": {
-        "test": "make test"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/davepacheco/node-verror/issues"
-      },
-      "homepage": "https://github.com/davepacheco/node-verror",
-      "_id": "verror@1.10.0",
-      "_shasum": "3a105ca17053af55d6e270c1f8288682e18da400",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "dap",
-        "email": "dap@cs.brown.edu"
-      },
-      "maintainers": [
-        {
-          "name": "dap",
-          "email": "dap@cs.brown.edu"
-        }
-      ],
       "dist": {
         "shasum": "3a105ca17053af55d6e270c1f8288682e18da400",
         "tarball": "https://registry.npmjs.org/verror/-/verror-1.10.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/verror-1.10.0.tgz_1493743247437_0.7535550429020077"
-      },
-      "directories": {}
+      "engines": [
+        "node >=0.6.0"
+      ]
     }
   },
-  "maintainers": [
-    {
-      "email": "mgerdts@gmail.com",
-      "name": "mgerdts"
-    },
-    {
-      "email": "kelly.mclaughlin@joyent.com",
-      "name": "kellymclaughlin"
-    },
-    {
-      "email": "isaac.davis@joyent.com",
-      "name": "isaacdavis"
-    },
-    {
-      "email": "dave@daveeddy.com",
-      "name": "bahamas10"
-    },
-    {
-      "email": "aguycalledrichard@gmail.com",
-      "name": "chudley"
-    },
-    {
-      "email": "bahamat@digitalelf.net",
-      "name": "bahamat"
-    },
-    {
-      "email": "michael.hicks@joyent.com",
-      "name": "michael.hicks"
-    },
-    {
-      "email": "wpreul@gmail.com",
-      "name": "wyatt"
-    },
-    {
-      "email": "kusorbox@gmail.com",
-      "name": "kusor"
-    },
-    {
-      "email": "kody.kantor@joyent.com",
-      "name": "kkantor"
-    },
-    {
-      "email": "trentm@gmail.com",
-      "name": "trentm"
-    },
-    {
-      "email": "todd.whiteman@joyent.com",
-      "name": "todd.whiteman"
-    },
-    {
-      "email": "dap@cs.brown.edu",
-      "name": "dap"
-    },
-    {
-      "email": "josh@sysmgr.org",
-      "name": "jclulow"
-    },
-    {
-      "email": "alex@cooperi.net",
-      "name": "arekinath"
-    },
-    {
-      "email": "cody.mello@joyent.com",
-      "name": "melloc"
-    }
-  ],
-  "time": {
-    "modified": "2020-02-04T21:07:03.119Z",
-    "created": "2012-04-18T01:13:51.779Z",
-    "1.0.0": "2012-04-18T01:13:53.033Z",
-    "1.0.1": "2012-04-18T16:21:48.400Z",
-    "1.1.0": "2012-05-01T19:11:24.848Z",
-    "1.2.0": "2012-07-11T18:56:59.684Z",
-    "1.3.0": "2012-07-27T00:03:18.667Z",
-    "1.3.1": "2012-07-27T17:37:13.264Z",
-    "1.3.2": "2012-07-30T23:16:11.948Z",
-    "1.3.3": "2012-07-30T23:57:10.716Z",
-    "1.3.4": "2012-10-17T18:55:23.042Z",
-    "1.3.5": "2012-12-14T17:25:51.996Z",
-    "1.3.6": "2013-02-06T18:29:57.875Z",
-    "1.3.7": "2014-01-15T00:33:58.024Z",
-    "1.4.0": "2014-03-13T04:35:07.331Z",
-    "1.5.0": "2014-11-17T18:25:19.433Z",
-    "1.5.1": "2014-11-17T18:28:09.308Z",
-    "1.6.0": "2014-11-20T23:24:57.881Z",
-    "1.6.1": "2016-01-30T00:25:54.798Z",
-    "1.7.0": "2016-08-12T01:30:04.564Z",
-    "1.8.0": "2016-08-16T21:33:32.494Z",
-    "1.8.1": "2016-08-17T18:40:33.822Z",
-    "1.9.0": "2016-11-16T21:53:00.253Z",
-    "1.10.0": "2017-05-02T16:40:47.677Z"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/davepacheco/node-verror.git"
-  },
-  "users": {
-    "fgribreau": true,
-    "isao": true,
-    "davepoon": true,
-    "juriwiens": true,
-    "wenbing": true,
-    "samshull": true,
-    "forivall": true,
-    "voxpelli": true,
-    "ninjatux": true,
-    "shahzaib": true,
-    "gonzalofj": true,
-    "srl": true,
-    "arikon": true,
-    "jaxon": true,
-    "garek": true,
-    "djensen47": true,
-    "goliatone": true,
-    "barenko": true,
-    "pdedkov": true,
-    "sasquatch": true,
-    "quocnguyen": true,
-    "fuhbaz": true,
-    "dkannan": true,
-    "j.su": true,
-    "cmudrick": true,
-    "francisbrito": true,
-    "santihbc": true,
-    "joaquin.briceno": true,
-    "jonathas": true,
-    "vectorhacker": true,
-    "debel": true,
-    "mojaray2k": true,
-    "ziflex": true,
-    "ghanbari": true,
-    "programmer.severson": true,
-    "poppowerlb2": true,
-    "nicknaso": true,
-    "aidenzou": true,
-    "linfeng9008": true,
-    "evanshortiss": true,
-    "cheapsteak": true,
-    "leonstill": true,
-    "leonzhao": true,
-    "sinfex": true,
-    "vparaskevas": true,
-    "rping": true,
-    "deividasjackus": true,
-    "ganeshkbhat": true,
-    "selenasong": true,
-    "paraself": true,
-    "lgl1993": true,
-    "dwqs": true
-  },
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/davepacheco/node-verror/issues"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/davepacheco/node-verror"
+  "modified": "2020-02-04T21:07:03.119Z",
+  "_cached": false,
+  "_contentLength": 5531
 }

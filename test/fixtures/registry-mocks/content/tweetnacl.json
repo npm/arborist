@@ -1,105 +1,12 @@
 {
-  "_id": "tweetnacl",
-  "_rev": "46-48e95182448d59035f84c7256b9cd7ba",
   "name": "tweetnacl",
-  "time": {
-    "modified": "2020-01-16T19:28:59.267Z",
-    "created": "2014-07-08T17:17:59.887Z",
-    "0.9.0": "2014-07-08T17:17:59.887Z",
-    "0.9.1": "2014-07-08T17:27:03.089Z",
-    "0.9.2": "2014-07-22T11:51:50.399Z",
-    "0.10.0": "2014-07-26T14:13:21.181Z",
-    "0.10.1": "2014-07-31T08:56:22.521Z",
-    "0.11.0": "2014-08-03T12:57:58.614Z",
-    "0.11.1": "2014-08-06T09:51:16.595Z",
-    "0.11.2": "2014-08-08T11:33:58.342Z",
-    "0.12.0": "2014-09-03T12:53:37.141Z",
-    "0.12.1": "2014-09-09T19:10:37.958Z",
-    "0.12.2": "2014-09-18T16:07:52.210Z",
-    "0.13.0": "2014-12-26T16:18:57.757Z",
-    "0.13.1": "2015-04-15T16:16:46.594Z",
-    "0.13.2": "2015-09-17T14:24:35.137Z",
-    "0.13.3": "2016-01-06T23:08:59.717Z",
-    "0.14.0": "2016-02-20T16:07:29.491Z",
-    "0.14.1": "2016-02-25T00:35:25.704Z",
-    "0.14.2": "2016-03-28T17:49:52.954Z",
-    "0.14.3": "2016-03-29T04:15:52.637Z",
-    "0.14.4": "2016-12-02T18:10:24.264Z",
-    "0.14.5": "2016-12-13T11:11:56.945Z",
-    "1.0.0-rc.1": "2017-02-22T11:39:29.982Z",
-    "1.0.0": "2017-05-22T18:43:50.045Z",
-    "1.0.1": "2019-01-24T14:52:36.909Z",
-    "1.0.2": "2020-01-16T19:28:56.851Z"
-  },
-  "maintainers": [
-    {
-      "name": "dchest",
-      "email": "dmitry@codingrobots.com"
-    }
-  ],
   "dist-tags": {
-    "latest": "1.0.2"
+    "latest": "1.0.3"
   },
-  "description": "Port of TweetNaCl cryptographic library to JavaScript",
   "versions": {
     "0.9.1": {
       "name": "tweetnacl",
       "version": "0.9.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -108,21 +15,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "84a604351a03eca9a9737594cf5b45b31122183f",
-      "_id": "tweetnacl@0.9.1",
-      "_shasum": "061d781c759b0f4ba6f8c93e71b9cba6d3e61db7",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "061d781c759b0f4ba6f8c93e71b9cba6d3e61db7",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.9.1.tgz"
@@ -131,61 +26,6 @@
     "0.9.2": {
       "name": "tweetnacl",
       "version": "0.9.2",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -194,21 +34,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "4389a049194c4bd557f17c7910b278aaf6bbe43f",
-      "_id": "tweetnacl@0.9.2",
-      "_shasum": "ce6690698ccfa0bb0fe0b12997ec0211900add38",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "ce6690698ccfa0bb0fe0b12997ec0211900add38",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.9.2.tgz"
@@ -217,61 +45,6 @@
     "0.10.0": {
       "name": "tweetnacl",
       "version": "0.10.0",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -280,21 +53,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "4e193660e644b3fcd23eb9404dafc4a143b07fa2",
-      "_id": "tweetnacl@0.10.0",
-      "_shasum": "4d202f18aa36f1290e09a56150776072310aeec2",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "4d202f18aa36f1290e09a56150776072310aeec2",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.10.0.tgz"
@@ -303,61 +64,6 @@
     "0.10.1": {
       "name": "tweetnacl",
       "version": "0.10.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -366,21 +72,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "decc137b6c651bb4123fddf8c8afe34e86bb3701",
-      "_id": "tweetnacl@0.10.1",
-      "_shasum": "d0cb2f3d62977b1b9a9ec4060644e99419644d6d",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "d0cb2f3d62977b1b9a9ec4060644e99419644d6d",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.10.1.tgz"
@@ -389,61 +83,6 @@
     "0.11.0": {
       "name": "tweetnacl",
       "version": "0.11.0",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -452,21 +91,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "111adafd548a97d729ae32f27d709457adddb250",
-      "_id": "tweetnacl@0.11.0",
-      "_shasum": "80e2c0f6cd02a4cd877551647957bd66dead4d8f",
-      "_from": ".",
-      "_npmVersion": "1.4.21",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "80e2c0f6cd02a4cd877551647957bd66dead4d8f",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.11.0.tgz"
@@ -475,61 +102,6 @@
     "0.11.1": {
       "name": "tweetnacl",
       "version": "0.11.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -538,21 +110,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "255f22b2f91b295b47e0980d7af52db0e5c3ee03",
-      "_id": "tweetnacl@0.11.1",
-      "_shasum": "c79336c9e5b37858a05e541a7f94861ead96e2e9",
-      "_from": ".",
-      "_npmVersion": "1.4.21",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "c79336c9e5b37858a05e541a7f94861ead96e2e9",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.11.1.tgz"
@@ -561,61 +121,6 @@
     "0.11.2": {
       "name": "tweetnacl",
       "version": "0.11.2",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^4.2.0",
         "faucet": "0.0.1",
@@ -624,21 +129,9 @@
         "testling": "^1.7.0",
         "uglify-js": "^2.4.14"
       },
-      "gitHead": "d3597da76ed0141d08565ed329bcda7076fccfcd",
-      "_id": "tweetnacl@0.11.2",
-      "_shasum": "ed4bce52d1ddbceea3a2c504cd17d364a34f414b",
-      "_from": ".",
-      "_npmVersion": "1.4.21",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "ed4bce52d1ddbceea3a2c504cd17d364a34f414b",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.11.2.tgz"
@@ -647,61 +140,6 @@
     "0.12.0": {
       "name": "tweetnacl",
       "version": "0.12.0",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "4.x.x",
         "faucet": "0.x.x",
@@ -710,21 +148,9 @@
         "testling": "1.x.x",
         "uglify-js": "2.x.x"
       },
-      "gitHead": "defcf332adb945e5659d34bf3ee13e2d325a6bce",
-      "_id": "tweetnacl@0.12.0",
-      "_shasum": "2a23aee15925799bd627fc586642d7feaea37bbf",
-      "_from": ".",
-      "_npmVersion": "2.0.0-beta.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "2a23aee15925799bd627fc586642d7feaea37bbf",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.12.0.tgz"
@@ -733,61 +159,6 @@
     "0.12.1": {
       "name": "tweetnacl",
       "version": "0.12.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "4.x.x",
         "faucet": "0.x.x",
@@ -796,21 +167,9 @@
         "testling": "1.x.x",
         "uglify-js": "2.x.x"
       },
-      "gitHead": "a811228a7c40929a76ff17fc4a8da39bcc064dd6",
-      "_id": "tweetnacl@0.12.1",
-      "_shasum": "11231bac11b56f88e2dd594f283ef14d47b943e0",
-      "_from": ".",
-      "_npmVersion": "2.0.0-beta.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "11231bac11b56f88e2dd594f283ef14d47b943e0",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.12.1.tgz"
@@ -819,61 +178,6 @@
     "0.12.2": {
       "name": "tweetnacl",
       "version": "0.12.2",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "ie/11..latest",
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "4.x.x",
         "faucet": "0.x.x",
@@ -882,21 +186,9 @@
         "testling": "1.x.x",
         "uglify-js": "2.x.x"
       },
-      "gitHead": "8a21381d696acdc4e99c9f706f1ad23285795f79",
-      "_id": "tweetnacl@0.12.2",
-      "_shasum": "bd59f890507856fb0a1136acc3a8b44547e29ddb",
-      "_from": ".",
-      "_npmVersion": "2.0.0-beta.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "bd59f890507856fb0a1136acc3a8b44547e29ddb",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.12.2.tgz"
@@ -905,60 +197,6 @@
     "0.13.0": {
       "name": "tweetnacl",
       "version": "0.13.0",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "4.x.x",
         "faucet": "0.x.x",
@@ -967,22 +205,9 @@
         "testling": "1.x.x",
         "uglify-js": "2.x.x"
       },
-      "gitHead": "b40db2cad07ceb9285ca616afc84318b9b751770",
-      "_id": "tweetnacl@0.13.0",
-      "_shasum": "884ce855c8f2bb03bfcbe9c7e82d854229fbee67",
-      "_from": ".",
-      "_npmVersion": "2.1.14",
-      "_nodeVersion": "0.10.35",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
       "dist": {
         "shasum": "884ce855c8f2bb03bfcbe9c7e82d854229fbee67",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.13.0.tgz"
@@ -991,60 +216,6 @@
     "0.13.1": {
       "name": "tweetnacl",
       "version": "0.13.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "4.x.x",
         "faucet": "0.x.x",
@@ -1053,89 +224,17 @@
         "testling": "1.x.x",
         "uglify-js": "2.x.x"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "abfbce7c68c8ad0b3b8a90b769e1f67885237aac",
-      "_id": "tweetnacl@0.13.1",
-      "_shasum": "568d436b13aeb7e32adba6e16df9173008a581ad",
-      "_from": ".",
-      "_npmVersion": "2.7.6",
-      "_nodeVersion": "0.12.1",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "568d436b13aeb7e32adba6e16df9173008a581ad",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.13.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ]
+      }
     },
     "0.13.2": {
       "name": "tweetnacl",
       "version": "0.13.2",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "CC0-1.0",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^10.1.3",
         "eslint": "^1.4.3",
@@ -1145,89 +244,17 @@
         "testling": "^1.7.1",
         "uglify-js": "^2.4.21"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "f093f0c34fbab5caf51f3ed9a48149c37041abb3",
-      "_id": "tweetnacl@0.13.2",
-      "_shasum": "453161770469d45cd266c36404e2bc99a8fa9944",
-      "_from": ".",
-      "_npmVersion": "2.12.1",
-      "_nodeVersion": "0.12.7",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "453161770469d45cd266c36404e2bc99a8fa9944",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.13.2.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ]
+      }
     },
     "0.13.3": {
       "name": "tweetnacl",
       "version": "0.13.3",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test": "tape test/*.js | faucet",
-        "testall": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null",
-        "browser-quick": "browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "testling": "browserify test/browser/testling_init.js test/*.js | testling | faucet",
-        "firefox": "browserify test/browser/testling_init.js test/*.js | testling -x firefox | faucet",
-        "chrome": "browserify test/browser/testling_init.js test/*.js | testling -x google-chrome | faucet",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "testling": {
-        "files": "test/*.js",
-        "browsers": [
-          "chrome/22..latest",
-          "firefox/16..latest",
-          "safari/latest",
-          "opera/11.0..latest",
-          "iphone/6..latest",
-          "ipad/6..latest",
-          "android-browser/latest"
-        ]
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://dchest.github.io/tweetnacl-js",
       "devDependencies": {
         "browserify": "^10.1.3",
         "eslint": "^1.4.3",
@@ -1237,75 +264,17 @@
         "testling": "^1.7.1",
         "uglify-js": "^2.4.21"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "2bb422cb707fba4a5ec9654688564a4fb861b068",
-      "_id": "tweetnacl@0.13.3",
-      "_shasum": "d628b56f3bcc3d5ae74ba9d4c1a704def5ab4b56",
-      "_from": ".",
-      "_npmVersion": "2.14.7",
-      "_nodeVersion": "4.2.3",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "d628b56f3bcc3d5ae74ba9d4c1a704def5ab4b56",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.13.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ]
+      }
     },
     "0.14.0": {
       "name": "tweetnacl",
       "version": "0.14.0",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Public domain",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.0.0",
         "eslint": "^2.2.0",
@@ -1316,79 +285,17 @@
         "tweetnacl-util": "^0.13.3",
         "uglify-js": "^2.6.1"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "eff9ede198032894b29065e486f34de8b892b428",
-      "_id": "tweetnacl@0.14.0",
-      "_shasum": "59e665d00089311259954eac16cfb35d1c7eb130",
-      "_from": ".",
-      "_npmVersion": "3.6.0",
-      "_nodeVersion": "5.6.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "59e665d00089311259954eac16cfb35d1c7eb130",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-9-west.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-0.14.0.tgz_1455984444410_0.7439826326444745"
       }
     },
     "0.14.1": {
       "name": "tweetnacl",
       "version": "0.14.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "SEE LICENSE IN COPYING.txt",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.0.0",
         "eslint": "^2.2.0",
@@ -1399,79 +306,17 @@
         "tweetnacl-util": "^0.13.3",
         "uglify-js": "^2.6.1"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "e4e8b4d8c882f5de3bcfc4262ea15d86f7f482d5",
-      "_id": "tweetnacl@0.14.1",
-      "_shasum": "37c6a1fb5cd4b63b7acee450d8419d9c0024cc03",
-      "_from": ".",
-      "_npmVersion": "3.6.0",
-      "_nodeVersion": "5.6.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "37c6a1fb5cd4b63b7acee450d8419d9c0024cc03",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-9-west.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-0.14.1.tgz_1456360522655_0.3124228978995234"
       }
     },
     "0.14.2": {
       "name": "tweetnacl",
       "version": "0.14.2",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "SEE LICENSE IN COPYING.txt",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.0.0",
         "eslint": "^2.2.0",
@@ -1482,79 +327,17 @@
         "tweetnacl-util": "^0.13.3",
         "uglify-js": "^2.6.1"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "5869cd970287971fd4ebeb3e80093e382014c0ec",
-      "_id": "tweetnacl@0.14.2",
-      "_shasum": "79f38003a8be74757846ff6479f2152034808134",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.6.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "79f38003a8be74757846ff6479f2152034808134",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.2.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-0.14.2.tgz_1459187390463_0.6325501962564886"
       }
     },
     "0.14.3": {
       "name": "tweetnacl",
       "version": "0.14.3",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "SEE LICENSE IN COPYING.txt",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.0.0",
         "eslint": "^2.2.0",
@@ -1565,80 +348,17 @@
         "tweetnacl-util": "^0.13.3",
         "uglify-js": "^2.6.1"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "3eb4fc544a2a1d6c0a41b98b9906288ca8b087e4",
-      "_id": "tweetnacl@0.14.3",
-      "_shasum": "3da382f670f25ded78d7b3d1792119bca0b7132d",
-      "_from": ".",
-      "_npmVersion": "3.7.3",
-      "_nodeVersion": "5.6.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "3da382f670f25ded78d7b3d1792119bca0b7132d",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-0.14.3.tgz_1459224951636_0.7403244483284652"
       }
     },
     "0.14.4": {
       "name": "tweetnacl",
       "version": "0.14.4",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "types": "nacl.d.ts",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "SEE LICENSE IN COPYING.txt",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.0.0",
         "eslint": "^2.2.0",
@@ -1649,80 +369,17 @@
         "tweetnacl-util": "^0.13.3",
         "uglify-js": "^2.6.1"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "53024cf517ead075666dd430295bd0992dd2a48d",
-      "_id": "tweetnacl@0.14.4",
-      "_shasum": "8c9dbfb52795686f166cd2023794bcf103d13c2b",
-      "_from": ".",
-      "_npmVersion": "3.10.8",
-      "_nodeVersion": "7.0.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "8c9dbfb52795686f166cd2023794bcf103d13c2b",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.4.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-0.14.4.tgz_1480702221977_0.6762865034397691"
       }
     },
     "0.14.5": {
       "name": "tweetnacl",
       "version": "0.14.5",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "types": "nacl.d.ts",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Unlicense",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.0.0",
         "eslint": "^2.2.0",
@@ -1733,80 +390,17 @@
         "tweetnacl-util": "^0.13.3",
         "uglify-js": "^2.6.1"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "cce829e473b1ae299a9373b5140c713ee88f577f",
-      "_id": "tweetnacl@0.14.5",
-      "_shasum": "5ae68177f192d4456269d108afa93ff8743f4f64",
-      "_from": ".",
-      "_npmVersion": "3.10.8",
-      "_nodeVersion": "7.0.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "5ae68177f192d4456269d108afa93ff8743f4f64",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.5.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-0.14.5.tgz_1481627515097_0.015130913350731134"
       }
     },
     "1.0.0-rc.1": {
       "name": "tweetnacl",
       "version": "1.0.0-rc.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "types": "nacl.d.ts",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Unlicense",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.1.1",
         "electron": "^1.4.12",
@@ -1818,80 +412,17 @@
         "tweetnacl-util": "^0.13.5",
         "uglify-js": "^2.7.5"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "88b8ea49b771f15d9e447bfc3eaba260bed2daff",
-      "_id": "tweetnacl@1.0.0-rc.1",
-      "_shasum": "1198f1dfccb24859a4091c82787d5882425f0cde",
-      "_from": ".",
-      "_npmVersion": "4.0.5",
-      "_nodeVersion": "7.4.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "1198f1dfccb24859a4091c82787d5882425f0cde",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-1.0.0-rc.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/tweetnacl-1.0.0-rc.1.tgz_1487763567946_0.9748900488484651"
       }
     },
     "1.0.0": {
       "name": "tweetnacl",
       "version": "1.0.0",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "types": "nacl.d.ts",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "test-browser": "NACL_SRC=${NACL_SRC:='nacl.min.js'} && npm run build-test-browser && cat $NACL_SRC test/browser/_bundle.js | tape-run | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all && npm run test-browser",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Unlicense",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.1.1",
         "electron": "^1.4.12",
@@ -1903,79 +434,17 @@
         "tweetnacl-util": "^0.13.5",
         "uglify-js": "^2.7.5"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "988c41917199cd33a93896c52fcad29fb96833d8",
-      "_id": "tweetnacl@1.0.0",
-      "_shasum": "713d8b818da42068740bf68386d0479e66fc8a7b",
-      "_from": ".",
-      "_npmVersion": "4.1.2",
-      "_nodeVersion": "7.7.1",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "713d8b818da42068740bf68386d0479e66fc8a7b",
         "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/tweetnacl-1.0.0.tgz_1495478628926_0.32991178915835917"
       }
     },
     "1.0.1": {
       "name": "tweetnacl",
       "version": "1.0.1",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "types": "nacl.d.ts",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Unlicense",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^13.1.1",
         "eslint": "^3.12.1",
@@ -1985,17 +454,8 @@
         "tweetnacl-util": "^0.13.5",
         "uglify-js": "^2.7.5"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "acab4d4883e7a0be0b230df7b42c0bbd25210d39",
-      "_id": "tweetnacl@1.0.1",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.6.0",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "integrity": "sha512-kcoMoKTPYnoeS50tzoqjPY3Uv9axeuuFAZY9M/9zFnhoVvRfxz9K29IMPD7jGmt2c8SW7i3gT9WqDl2+nV7p4A==",
@@ -2004,63 +464,11 @@
         "fileCount": 11,
         "unpackedSize": 174133,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcSdE1CRA9TVsSAnZWagAAMd4P/jpUtuLLm3oh5982OTgS\nAKBPCOMPJ1ueiNwFIgvfHTpt1mSRg5NFnVZELLkks9apvaiuGUbL47DXIacn\nA+EHYf2uhmWbQltjQvxb5APr8C4VDJDyjdu9ixAmoN3mqSYgva1BEuxz/4LN\nvnABgNxO6jNiM3pZbJ2LRDbe1N0Bnjjv7mYbcmfAK8ittPkEXiXMbKyZBLay\nhZal8Ih+oZP1MhyyBrjLJvTpJu2WrT48gUUUZk9gXhMtFL4QaViufOW3CLy3\nOSlug2DYTY9CkouUxaLibYQN+fTIATinJoq0NDXg+97SKEplS1I/J9Atv54W\nvt5ZYt8goUAg+tpyC8zYHXNZp5XPLqT3aVbmTn6xMYUtCVkW+IeqwUQpT+Y3\nYwraC0qVVTWEp5tEmXI07+FJAH6aF8dJ8hyT4AxtL0ndoNOo6iyhPpp2+LYH\nUgY1orXVbxAr5Roz5wk4ej10SvqjFVrETJeR6Avtm6d9bkytLsrJr6N8Q2MK\n2xy7Ik1PA1S7yNkCVhDn9AocdhmcAXRWtV2qib4ySqtQ6vevJtKndJOVMFlP\nue4qSieg2vH1S9K+qwzLSil8Y3gMWrXpmaQ2YmR6S1uxfA1aHDRFHHHt5WFQ\n+AtJe9l5Q/N7FTw+w3YJvOmVLl+RZRKicKlZOMMwEwWFKKrbHFEQnW06A1TW\nAyz5\r\n=dIRt\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/tweetnacl_1.0.1_1548341556828_0.49747684050344443"
-      },
-      "_hasShrinkwrap": false
+      }
     },
     "1.0.2": {
       "name": "tweetnacl",
       "version": "1.0.2",
-      "description": "Port of TweetNaCl cryptographic library to JavaScript",
-      "main": "nacl-fast.js",
-      "types": "nacl.d.ts",
-      "directories": {
-        "test": "test"
-      },
-      "scripts": {
-        "build": "uglifyjs nacl.js -c -m -o nacl.min.js && uglifyjs nacl-fast.js -c -m -o nacl-fast.min.js",
-        "test-node": "tape test/*.js | faucet",
-        "test-node-all": "make -C test/c && tape test/*.js test/c/*.js | faucet",
-        "build-test-browser": "browserify test/browser/init.js test/*.js | uglifyjs -c -m -o test/browser/_bundle.js 2>/dev/null && browserify test/browser/init.js test/*.quick.js | uglifyjs -c -m -o test/browser/_bundle-quick.js 2>/dev/null",
-        "test": "npm run test-node-all",
-        "bench": "node test/benchmark/bench.js",
-        "lint": "eslint nacl.js nacl-fast.js test/*.js test/benchmark/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dchest/tweetnacl-js.git"
-      },
-      "keywords": [
-        "crypto",
-        "cryptography",
-        "curve25519",
-        "ed25519",
-        "encrypt",
-        "hash",
-        "key",
-        "nacl",
-        "poly1305",
-        "public",
-        "salsa20",
-        "signatures"
-      ],
-      "author": {
-        "name": "TweetNaCl-js contributors"
-      },
-      "license": "Unlicense",
-      "bugs": {
-        "url": "https://github.com/dchest/tweetnacl-js/issues"
-      },
-      "homepage": "https://tweetnacl.js.org",
       "devDependencies": {
         "browserify": "^16.2.3",
         "eslint": "^6.8.0",
@@ -2070,17 +478,8 @@
         "tweetnacl-util": "^0.15.0",
         "uglify-js": "^3.7.5"
       },
-      "browser": {
-        "buffer": false,
-        "crypto": false
-      },
-      "gitHead": "73a94a24306d7a195b4c756e0ccf1c89c742f64f",
-      "_id": "tweetnacl@1.0.2",
-      "_nodeVersion": "13.6.0",
-      "_npmVersion": "6.13.4",
-      "_npmUser": {
-        "name": "dchest",
-        "email": "dmitry@codingrobots.com"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "integrity": "sha512-+8aPRjmXgf1VqvyxSlBUzKzeYqVS9Ai8vZ28g+mL7dNQl1jlUTCMDZnvNQdAS1xTywMkIXwJsfipsR/6s2+syw==",
@@ -2089,55 +488,34 @@
         "fileCount": 11,
         "unpackedSize": 174513,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeILl5CRA9TVsSAnZWagAAtXwQAIzLkk1dQ17wF7XbKkaK\net9jGjgZ+GQIOaWKUhgIHLTTEZvL+xsxZt2yuzdtVRkmNYDxEmzTvXIlpOmM\nPkyc7SDj4NhQ72L9XG61I4A+SZZQEFzm+CFSDwzPSnUA2+LFp9t3TUSSUpma\nMItZk3dhRpE4ruLAGckYSOGlFs9wbKLTZuPHo3Z60klIxCILWVlFSh0P+vs0\nbXEqhWFp5rsVDiVoGI31rE65fSA1KM07Y0noNW5tDcsMl/9MMjYS2F0PrwWj\n0K/sdmwPGCH9gGQCPWNeqdtqaHobOiNCVPVRnmy7f1EZoFQufJoYDPHK/KA1\nGkrXzj0PHm+ehTbCBNlDTRfXd/ty8QFj1tfkwmlBk2jCQJihQgtIpSOfyrkd\n1t71Sf5S3FzHSQhSCkbjr7gq7R+KBftdZYnoJ9n5+fcUqwQOjBXHc9xn1rr8\nNYvJfv9bDQApIA5m2KBhymot8AmqoLvxjhydFiRDNf7ytrg9BrrczVCaaRe5\nzRXOG7lOzOWR/ezLYKqep3AryI99ilddUJrVVU86B4vkaXlD5PkQIqYsXIcA\n7JIYu0DmKMPeSLUxM3KVwzy4l9NisBI0sgnq/HaapQWN0PUnjevwp5RA/vKA\nGNKEfJAl3QuOOMV7YOUYKvhHq7k/91iYnTGbG/yo+yXuWQOrVUkxB8JmVaNR\nErNf\r\n=6YoX\r\n-----END PGP SIGNATURE-----\r\n"
+      }
+    },
+    "1.0.3": {
+      "name": "tweetnacl",
+      "version": "1.0.3",
+      "devDependencies": {
+        "browserify": "^16.2.3",
+        "eslint": "^6.8.0",
+        "faucet": "^0.0.1",
+        "tap-browser-color": "^0.1.2",
+        "tape": "^4.13.0",
+        "tweetnacl-util": "^0.15.0",
+        "uglify-js": "^3.7.5"
       },
-      "maintainers": [
-        {
-          "name": "dchest",
-          "email": "dmitry@codingrobots.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/tweetnacl_1.0.2_1579202936724_0.9972577727428134"
+      "directories": {
+        "test": "test"
       },
-      "_hasShrinkwrap": false
+      "dist": {
+        "integrity": "sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw==",
+        "shasum": "ac0af71680458d8a6378d0d0d050ab1407d35596",
+        "tarball": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-1.0.3.tgz",
+        "fileCount": 11,
+        "unpackedSize": 174912,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeQbOyCRA9TVsSAnZWagAAzkUP/2YF9RSZ+Z1ybmfA4rtG\nCbDALyjdbYfsja/u90GhcXRVL0b2q5kQMUBpRjhkqUG5l8OisnmugsyBeYn6\n6HQje44Kbtf1cB9ZC2Wv/du1s5wu+TPGRTopL5eUrQcAC0i9pI7g+DGYqJvq\nIL2MjIMzWJWSNgYhgiZ/3+Jn6CqQLZwsZzTnNTF4zBuYX62U6V0ByhWmc/Le\nz/aBKlW0nlphH6yTW2ayP2JPPoJGmIzPAetd4LfmlZp2gQZMejjJUWX9SWBW\nTB++QrDNGMJ7aEEN/2+O3CD5+UXH8cFIzgBPgF1MWcUCWJsRpULKz+55yA0x\n/SN9nWzwo8LQCdPRmxYUpOS4wLZYH6zCUwwTq66BhBG1SklnB2fWH+D9MSvm\nNH242Y3nU4uokxQo0mJgdBszBZQJT98FpvCM/zzU44WjeGPwXoYhoYw/FbYo\n78zou/vA6EV8VeGhVEBU7njwr4/MtgCNuD9hpOfp+e/Fhk80Do9v/1ZJ70de\n0R423mABDo67sHQ7zV+bCNRfu675GWgLCQnUCf+czwxFreDb5f5BQWrDCCTz\nZMRJTrgwmGSOrjppWSji51J0Zx4Qu3wAFmfN6nZD4jgnSvvZdkiUHhLxGLfO\n522xA9hSPqQiWsKAyTQ/cvRyd9kabjqV45YBIFEBU3MTb4vvtKk59Zay/Qy+\ngELA\r\n=D+R+\r\n-----END PGP SIGNATURE-----\r\n"
+      }
     }
   },
-  "homepage": "https://tweetnacl.js.org",
-  "keywords": [
-    "crypto",
-    "cryptography",
-    "curve25519",
-    "ed25519",
-    "encrypt",
-    "hash",
-    "key",
-    "nacl",
-    "poly1305",
-    "public",
-    "salsa20",
-    "signatures"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dchest/tweetnacl-js.git"
-  },
-  "author": {
-    "name": "TweetNaCl-js contributors"
-  },
-  "bugs": {
-    "url": "https://github.com/dchest/tweetnacl-js/issues"
-  },
-  "license": "Unlicense",
-  "readmeFilename": "README.md",
-  "users": {
-    "dchest": true,
-    "tcrowe": true,
-    "antanst": true,
-    "kerwyn": true,
-    "mojaray2k": true,
-    "anoubis": true,
-    "meeh": true,
-    "dogun098": true
-  }
+  "modified": "2020-02-10T19:49:08.318Z",
+  "_cached": false,
+  "_contentLength": 12731
 }

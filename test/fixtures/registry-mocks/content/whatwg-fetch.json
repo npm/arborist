@@ -1,8 +1,5 @@
 {
-  "_id": "whatwg-fetch",
-  "_rev": "181-d620dae7da683c9824e962e15e37ae2b",
   "name": "whatwg-fetch",
-  "description": "A window.fetch polyfill.",
   "dist-tags": {
     "latest": "3.0.0"
   },
@@ -10,7 +7,6 @@
     "0.5.0": {
       "name": "whatwg-fetch",
       "version": "0.5.0",
-      "main": "fetch.js",
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -19,34 +15,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "gitHead": "7b9ab7e777f21f0425c95667f10a42d11b684778",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "_id": "whatwg-fetch@0.5.0",
-      "scripts": {},
-      "_shasum": "6dfc88ffca5d64e0763ea33394643e05258dfc56",
-      "_from": ".",
-      "_npmVersion": "2.1.14",
-      "_nodeVersion": "0.10.33",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        }
-      ],
       "dist": {
         "shasum": "6dfc88ffca5d64e0763ea33394643e05258dfc56",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.5.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.6.0": {
       "name": "whatwg-fetch",
       "version": "0.6.0",
-      "main": "fetch.js",
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -55,37 +31,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "gitHead": "4d793121a940aa5d09af5edcf0ad2ce0e75336b2",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "_id": "whatwg-fetch@0.6.0",
-      "scripts": {},
-      "_shasum": "f25cdac834aec89449f62e7bd416886f1fb18220",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "f25cdac834aec89449f62e7bd416886f1fb18220",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.6.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.6.1": {
       "name": "whatwg-fetch",
       "version": "0.6.1",
-      "main": "fetch.js",
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -94,47 +47,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "gitHead": "5df663e716ff6bc19590296d7dfdbf37c897e175",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "_id": "whatwg-fetch@0.6.1",
-      "scripts": {},
-      "_shasum": "1af85d52c99e3e587104c666fd79d863e79df0d0",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "1af85d52c99e3e587104c666fd79d863e79df0d0",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.6.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.7.0": {
       "name": "whatwg-fetch",
       "version": "0.7.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/github/fetch"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -143,51 +63,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "gitHead": "115cd972a7d5dbc63bd2335a05976070e0ebc48c",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch",
-      "_id": "whatwg-fetch@0.7.0",
-      "scripts": {},
-      "_shasum": "538fee9896768dcec6634bbdda583c8f78fed806",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "538fee9896768dcec6634bbdda583c8f78fed806",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.7.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.8.0": {
       "name": "whatwg-fetch",
       "version": "0.8.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/github/fetch"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -196,55 +79,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "14462ef52357047dfc60a96c1d445c84271154d2",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch",
-      "_id": "whatwg-fetch@0.8.0",
-      "scripts": {},
-      "_shasum": "14a779209be855d99b615f35a087204662ad9c20",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "14a779209be855d99b615f35a087204662ad9c20",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.8.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.8.1": {
       "name": "whatwg-fetch",
       "version": "0.8.1",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/github/fetch"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -253,55 +95,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "09c316d2450c08fde129336438b3a44de4e8177c",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch",
-      "_id": "whatwg-fetch@0.8.1",
-      "scripts": {},
-      "_shasum": "b0141110a98c4cd0add9d3c0687687a81d003e2d",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "b0141110a98c4cd0add9d3c0687687a81d003e2d",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.8.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.8.2": {
       "name": "whatwg-fetch",
       "version": "0.8.2",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/github/fetch"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -310,55 +111,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "0b3e1d7c41c75359a3e0b771741ebc2a8823da38",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch",
-      "_id": "whatwg-fetch@0.8.2",
-      "scripts": {},
-      "_shasum": "344402184ef54cc5c01f58809f2cf6737b9c7222",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "344402184ef54cc5c01f58809f2cf6737b9c7222",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.8.2.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.9.0": {
       "name": "whatwg-fetch",
       "version": "0.9.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/github/fetch"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -367,55 +127,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "030e72106cd7b2f1e616a4af6503ee3a6df0bdf5",
-      "description": "The global `fetch` function is an easier way to make web requests and handle responses than using an XMLHttpRequest. This polyfill is written as closely as possible to the standard Fetch specification at https://fetch.spec.whatwg.org.",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch",
-      "_id": "whatwg-fetch@0.9.0",
-      "scripts": {},
-      "_shasum": "0e3684c6cb9995b43efc9df03e4c365d95fd9cc0",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "mattandrews",
-        "email": "matt@mattandre.ws"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        }
-      ],
       "dist": {
         "shasum": "0e3684c6cb9995b43efc9df03e4c365d95fd9cc0",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.9.0.tgz"
-      },
-      "directories": {}
+      }
     },
     "0.10.0": {
       "name": "whatwg-fetch",
       "version": "0.10.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -423,61 +142,15 @@
         "mocha-phantomjs": "3.5.2",
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "92de9f1b87f0defc3673470044a4477080533324",
-      "description": "This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to uphold this code. [code-of-conduct]: http://todogroup.org/opencodeofconduct/#fetch/opensource@github.com",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@0.10.0",
-      "scripts": {},
-      "_shasum": "bd82f3c6e69f12ef9cb4b51f20ea5f5c1d3b05ea",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "bd82f3c6e69f12ef9cb4b51f20ea5f5c1d3b05ea",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.10.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "ftlabs",
-          "email": "ftlabs-opensource@ft.com"
-        },
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "0.10.1": {
       "name": "whatwg-fetch",
       "version": "0.10.1",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -486,57 +159,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.13"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "f4f8ca8d0ba6c7d11e5317a84189913cefe55809",
-      "description": "This project adheres to the [Open Code of Conduct][code-of-conduct]. By participating, you are expected to uphold this code. [code-of-conduct]: http://todogroup.org/opencodeofconduct/#fetch/opensource@github.com",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@0.10.1",
-      "scripts": {},
-      "_shasum": "365125d40b36823feac8ab41b71c4d56e84a531f",
-      "_from": ".",
-      "_npmVersion": "3.3.9",
-      "_nodeVersion": "5.0.0",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
-      },
       "dist": {
         "shasum": "365125d40b36823feac8ab41b71c4d56e84a531f",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.10.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "0.11.0": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "0.11.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -545,51 +175,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.19"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "989a1e8132e9adb4c4e973875ad043ff7219fc5a",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@0.11.0",
-      "scripts": {},
-      "_shasum": "46b1d18d0aa99955971ef1a2f5aac506add28815",
-      "_from": ".",
-      "_npmVersion": "3.3.12",
-      "_nodeVersion": "5.4.0",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
-      },
       "dist": {
         "shasum": "46b1d18d0aa99955971ef1a2f5aac506add28815",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.11.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "1.0.0": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "1.0.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -598,60 +191,14 @@
         "mocha-phantomjs-core": "2.0.1",
         "url-search-params": "0.5.0"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "ad96feb721393590a1b79dd2646854f5cbb16186",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@1.0.0",
-      "scripts": {},
-      "_shasum": "01c2ac4df40e236aaa18480e3be74bd5c8eb798e",
-      "_from": ".",
-      "_npmVersion": "2.15.0",
-      "_nodeVersion": "0.10.44",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
-      },
       "dist": {
         "shasum": "01c2ac4df40e236aaa18480e3be74bd5c8eb798e",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-1.0.0.tgz_1461876470856_0.9817740931175649"
-      },
-      "directories": {}
+      }
     },
     "0.11.1": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "0.11.1",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/github/fetch/blob/master/LICENSE"
-        }
-      ],
       "devDependencies": {
         "bower": "1.3.8",
         "chai": "1.10.0",
@@ -660,55 +207,14 @@
         "mocha": "2.1.0",
         "phantomjs": "1.9.19"
       },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "gitHead": "7d9a11deec5c0ea2d453390be647ba52695166f8",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@0.11.1",
-      "scripts": {},
-      "_shasum": "6d3ded245fdd97cd728e0e2587b54b733949e663",
-      "_from": ".",
-      "_npmVersion": "3.8.3",
-      "_nodeVersion": "5.10.1",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
-      },
       "dist": {
         "shasum": "6d3ded245fdd97cd728e0e2587b54b733949e663",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-0.11.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-0.11.1.tgz_1462449705636_0.04168060328811407"
-      },
-      "directories": {}
+      }
     },
     "1.1.0": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "1.1.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -716,58 +222,15 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "76f6a09cbfc1c955479dd9da2a333f7404c79de2",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@1.1.0",
-      "_shasum": "f143957839af3b6fbfbb00f70eb752292fe1cbb6",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.48",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "f143957839af3b6fbfbb00f70eb752292fe1cbb6",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-1.1.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-1.1.0.tgz_1479152495244_0.06688376050442457"
-      },
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "2.0.0",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -775,58 +238,15 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "c576d61fee39bb34699bbe870460b6120011150a",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@2.0.0",
-      "_shasum": "cde428ac2b1dab717c96bc6785feb557619b249e",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.48",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "cde428ac2b1dab717c96bc6785feb557619b249e",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-2.0.0.tgz_1479152623482_0.38356511015444994"
-      },
-      "directories": {}
+      }
     },
     "1.1.1": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "1.1.1",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -834,58 +254,15 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "f7a514829820fc77c0f884c74cf2d36356a781c0",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@1.1.1",
-      "_shasum": "ac3c9d39f320c6dce5339969d054ef43dd333319",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.48",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "ac3c9d39f320c6dce5339969d054ef43dd333319",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-1.1.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-1.1.1.tgz_1479399501787_0.8345572426915169"
-      },
-      "directories": {}
+      }
     },
     "2.0.1": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "2.0.1",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -893,58 +270,15 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "b54dbacecabeaf0eb4ee6a7cd6fb5daf54e00d8c",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@2.0.1",
-      "_shasum": "078b9461bbe91cea73cbce8bb122a05f9e92b772",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.48",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "078b9461bbe91cea73cbce8bb122a05f9e92b772",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-2.0.1.tgz_1479399503414_0.6371742249466479"
-      },
-      "directories": {}
+      }
     },
     "2.0.2": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "2.0.2",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -952,58 +286,15 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "b337f9578fa8e21fa5c9fe8d6eb74baaa43a1c02",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@2.0.2",
-      "_shasum": "fe294d1d89e36c5be8b3195057f2e4bc74fc980e",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.48",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "fe294d1d89e36c5be8b3195057f2e4bc74fc980e",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.2.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-2.0.2.tgz_1484847349627_0.22377261309884489"
-      },
-      "directories": {}
+      }
     },
     "2.0.3": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "2.0.3",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -1011,58 +302,15 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "d4ed806fdcbdeaef707d27f6c88943f0336a647d",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@2.0.3",
-      "_shasum": "9c84ec2dcf68187ff00bc64e1274b442176e1c84",
-      "_from": ".",
-      "_npmVersion": "2.15.1",
-      "_nodeVersion": "0.10.48",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "shasum": "9c84ec2dcf68187ff00bc64e1274b442176e1c84",
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/whatwg-fetch-2.0.3.tgz_1488476993688_0.31996091664768755"
-      },
-      "directories": {}
+      }
     },
     "2.0.4": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "2.0.4",
-      "main": "fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "chai": "1.10.0",
         "jshint": "2.8.0",
@@ -1070,25 +318,6 @@
         "mocha-phantomjs-core": "2.0.1",
         "promise-polyfill": "6.0.2",
         "url-search-params": "0.6.1"
-      },
-      "files": [
-        "LICENSE",
-        "fetch.js"
-      ],
-      "scripts": {
-        "test": "make"
-      },
-      "gitHead": "cbb313bf09512efda9444e40fe9e8ac432ac1108",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@2.0.4",
-      "_npmVersion": "5.6.0",
-      "_nodeVersion": "9.5.0",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
       },
       "dist": {
         "integrity": "sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng==",
@@ -1096,35 +325,11 @@
         "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz",
         "fileCount": 4,
         "unpackedSize": 23102
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/whatwg-fetch_2.0.4_1522408997536_0.5930892900990181"
-      },
-      "_hasShrinkwrap": false
+      }
     },
     "3.0.0": {
       "name": "whatwg-fetch",
-      "description": "A window.fetch polyfill.",
       "version": "3.0.0",
-      "main": "./dist/fetch.umd.js",
-      "module": "./fetch.js",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/github/fetch.git"
-      },
-      "license": "MIT",
       "devDependencies": {
         "abortcontroller-polyfill": "^1.1.9",
         "chai": "^4.1.2",
@@ -1143,24 +348,6 @@
         "rollup": "^0.59.1",
         "url-search-params": "0.6.1"
       },
-      "scripts": {
-        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
-        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
-        "pretest": "make",
-        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
-      },
-      "gitHead": "cc84bc284bd2d8eeddaf1c6a68e02e5329482f97",
-      "bugs": {
-        "url": "https://github.com/github/fetch/issues"
-      },
-      "homepage": "https://github.com/github/fetch#readme",
-      "_id": "whatwg-fetch@3.0.0",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.8.0",
-      "_npmUser": {
-        "name": "mislav",
-        "email": "mislav.marohnic@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==",
         "shasum": "fc804e458cc460009b1a2b966bc8817d2578aefb",
@@ -1168,212 +355,10 @@
         "fileCount": 7,
         "unpackedSize": 46470,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJblic9CRA9TVsSAnZWagAAlZkP/jqDv05GbhF8wlZMXz19\nFwupHJhZWhOj/ytmsIFvmd3Fj+OLOSvHuN622eJMNgO0vxVDO80fpmc03ay1\n51zdzJz4/gVPl/9P+8lc0A1dRW3DJLDDKlSNMvjs3ysxVCcaDrsXwbmC3ORI\nLRbi/ZqBGp+mK/y1fXcsTpZlBhPLLSL7l3FdkU4DqCH4xq3/jknwVfFMtUUt\nDvkUwcEhuZ/Yh2IbS/3I2gVwkgFHuzrbzYFf4vaWyr9tnpxOB3bFpfirPpgM\nwmSu7UZ0zIND1ZzlDdzSsjXrMhCZG58Uf2XT+TvBofrBFaPITU2zDBR6B2uv\nIMt79M8/zL6+mBoYjO9vdrudAlp+eH29eXQCBcBrV7+iaeROGshwhUCHuLtg\n8DcCvGGBX6xstoB+drh/X21TnBA0vnc39CfOxtPGodIH7HBXkyfs5IrqmADd\nFtJX39TPtI7UKJ8ESQ82ba2eOevtRlKO86I2qk1acKhdfPQVignyfe7jyTV5\n5rkHdagVMxF2XRnOKo1I4gD4qC+5F+yrbHWj/8kuXsBzcLTy+niVMQkLEc2x\nQIHAyNv18m5t4gmYNP9b41J2ltg51Tj2+GWPWqA5jD3NbqxQL0+wU9t7BIT9\ndO7AynEPdgyleXr0Dk5p2K3s4wn6inMQuzSJFXIHa2BAWZmS1/JiHjAF9eCw\nxwAl\r\n=vDZ/\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "maintainers": [
-        {
-          "name": "mattandrews",
-          "email": "matt@mattandre.ws"
-        },
-        {
-          "name": "mislav",
-          "email": "mislav.marohnic@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/whatwg-fetch_3.0.0_1536567101178_0.015735020964251056"
-      },
-      "_hasShrinkwrap": false
+      }
     }
   },
-  "maintainers": [
-    {
-      "email": "me@jakechampion.name",
-      "name": "jakechampion"
-    },
-    {
-      "email": "matt@mattandre.ws",
-      "name": "mattandrews"
-    },
-    {
-      "email": "mislav.marohnic@gmail.com",
-      "name": "mislav"
-    }
-  ],
-  "time": {
-    "modified": "2019-01-22T14:09:45.448Z",
-    "created": "2015-01-12T23:46:17.785Z",
-    "0.5.0": "2015-01-12T23:46:17.785Z",
-    "0.6.0": "2015-01-13T00:10:39.303Z",
-    "0.6.1": "2015-01-16T00:01:06.778Z",
-    "0.7.0": "2015-01-24T19:31:20.018Z",
-    "0.8.0": "2015-05-04T20:05:46.212Z",
-    "0.8.1": "2015-05-04T20:23:25.873Z",
-    "0.8.2": "2015-05-19T22:58:23.775Z",
-    "0.9.0": "2015-05-29T21:01:17.713Z",
-    "0.10.0": "2015-10-12T13:09:54.454Z",
-    "0.10.1": "2015-11-03T11:44:09.025Z",
-    "0.11.0": "2016-01-19T05:39:06.560Z",
-    "1.0.0": "2016-04-28T20:47:51.704Z",
-    "0.11.1": "2016-05-05T12:01:48.316Z",
-    "1.1.0": "2016-11-14T19:41:35.946Z",
-    "2.0.0": "2016-11-14T19:43:44.160Z",
-    "1.1.1": "2016-11-17T16:18:23.692Z",
-    "2.0.1": "2016-11-17T16:18:24.111Z",
-    "2.0.2": "2017-01-19T17:35:51.553Z",
-    "2.0.3": "2017-03-02T17:49:55.818Z",
-    "2.0.4": "2018-03-30T11:23:17.581Z",
-    "3.0.0": "2018-09-10T08:11:41.299Z"
-  },
-  "readmeFilename": "README.md",
-  "users": {
-    "ferrari": true,
-    "jaywalking101": true,
-    "jamescostian": true,
-    "davidchase": true,
-    "dannyfritz": true,
-    "augbog": true,
-    "mysticatea": true,
-    "asaaki": true,
-    "arkanciscan": true,
-    "renderkid": true,
-    "moimikey": true,
-    "nchase": true,
-    "r3nya": true,
-    "mrmartineau": true,
-    "draganhr": true,
-    "lenville": true,
-    "mlm": true,
-    "anthonyringoet": true,
-    "leonardorb": true,
-    "s4g6": true,
-    "timdp": true,
-    "detj": true,
-    "nikhilkumar80": true,
-    "hckhanh": true,
-    "stevenvachon": true,
-    "timothy.pharo": true,
-    "peterbakonyi05": true,
-    "raffaele": true,
-    "amirrustam": true,
-    "nex": true,
-    "foto": true,
-    "jmsherry": true,
-    "j.su": true,
-    "qqcome110": true,
-    "nickeljew": true,
-    "mdrobny": true,
-    "digital-owl": true,
-    "panlw": true,
-    "dheerajvs": true,
-    "tomekf": true,
-    "jo12bar": true,
-    "fabrianibrahim": true,
-    "marliotto": true,
-    "bourne": true,
-    "kaashin": true,
-    "refack": true,
-    "namniak": true,
-    "gejiawen": true,
-    "backnight": true,
-    "knksmith57": true,
-    "weerd": true,
-    "shanewholloway": true,
-    "fchienvuhoang": true,
-    "adrianpark": true,
-    "shakakira": true,
-    "ninozhang": true,
-    "asaupup": true,
-    "codebyren": true,
-    "pixel67": true,
-    "wuyangwang": true,
-    "gusgarcia": true,
-    "junya": true,
-    "fenrir": true,
-    "antanst": true,
-    "harryandrew": true,
-    "nfrigus": true,
-    "dean-xu": true,
-    "princetoad": true,
-    "monjer": true,
-    "taturou": true,
-    "sartrey": true,
-    "wangfeia": true,
-    "xueboren": true,
-    "javafun": true,
-    "bolerovt": true,
-    "hendry": true,
-    "tiendq": true,
-    "austinstarin": true,
-    "liximomo": true,
-    "shuoshubao": true,
-    "shadowlong": true,
-    "krugarmatt": true,
-    "ahme-t": true,
-    "philmayer": true,
-    "robertpenner": true,
-    "redstrike": true,
-    "iliyat": true,
-    "morewry": true,
-    "deneboulton": true,
-    "ridermansb": true,
-    "drewigg": true,
-    "ungurys": true,
-    "orenschwartz": true,
-    "ifeature": true,
-    "warcrydoggie": true,
-    "zhouxz": true,
-    "alexxnica": true,
-    "cfleschhut": true,
-    "shaomingquan": true,
-    "huarse": true,
-    "shihaibin0715": true,
-    "hugojosefson": true,
-    "javajess": true,
-    "dkblay": true,
-    "ganesharulanantham": true,
-    "landy2014": true,
-    "vinbhatt": true,
-    "dpjayasekara": true,
-    "hiztmine": true,
-    "mavarazy": true,
-    "fmakareev": true,
-    "d-band": true,
-    "washingtonhua": true,
-    "ww522413622": true,
-    "xinwangwang": true,
-    "sternelee": true,
-    "nuwaio": true,
-    "heartnett": true,
-    "yangzw": true,
-    "pantyuhind": true,
-    "zeroth007": true,
-    "adrtho4": true,
-    "zuojiang": true,
-    "gurunate": true,
-    "npmrud5g": true,
-    "tztz": true,
-    "ohar": true,
-    "maddas": true,
-    "vparaskevas": true,
-    "doppelgunner": true,
-    "tech_query": true,
-    "sean-oneal": true,
-    "zhnoah": true,
-    "yong_a": true,
-    "mrhuangyuhui": true,
-    "semlette": true,
-    "altus": true,
-    "jalik": true
-  },
-  "homepage": "https://github.com/github/fetch#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/github/fetch.git"
-  },
-  "bugs": {
-    "url": "https://github.com/github/fetch/issues"
-  },
-  "license": "MIT"
+  "modified": "2019-01-22T14:09:45.448Z",
+  "_cached": false,
+  "_contentLength": 8532
 }

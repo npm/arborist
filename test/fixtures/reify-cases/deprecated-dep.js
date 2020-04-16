@@ -2,7 +2,7 @@
 module.exports = t => ({
   "package.json": JSON.stringify({
     "dependencies": {
-      "mkdirp": "0.x"
+      "mkdirp": "0.5.3"
     }
   })
 })

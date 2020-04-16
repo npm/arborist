@@ -1,57 +1,15 @@
 {
-  "_id": "yoga-layout-prebuilt",
   "name": "yoga-layout-prebuilt",
   "dist-tags": {
-    "latest": "1.9.3"
+    "latest": "1.9.5"
   },
   "versions": {
     "1.9.3": {
       "name": "yoga-layout-prebuilt",
       "version": "1.9.3",
-      "description": "Prebuilt yoga-layout package",
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/vadimdemedes/yoga-layout-prebuilt.git"
-      },
-      "author": {
-        "name": "Vadim Demedes",
-        "email": "vdemedes@gmail.com",
-        "url": "github.com/vadimdemedes"
-      },
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "xo && ava",
-        "prepublishOnly": "./build.sh"
-      },
-      "main": "yoga-layout/dist/entry-browser",
-      "keywords": [
-        "yoga",
-        "yoga-layout"
-      ],
       "devDependencies": {
         "ava": "^0.25.0",
         "xo": "^0.21.0"
-      },
-      "xo": {
-        "ignores": [
-          "yoga-layout"
-        ]
-      },
-      "dependencies": {},
-      "gitHead": "92496860031cedf502e1469f047d7ea3798d40f7",
-      "bugs": {
-        "url": "https://github.com/vadimdemedes/yoga-layout-prebuilt/issues"
-      },
-      "homepage": "https://github.com/vadimdemedes/yoga-layout-prebuilt#readme",
-      "_id": "yoga-layout-prebuilt@1.9.3",
-      "_npmVersion": "5.6.0",
-      "_nodeVersion": "8.11.2",
-      "_npmUser": {
-        "name": "vdemedes",
-        "email": "vdemedes@gmail.com"
       },
       "dist": {
         "integrity": "sha512-9SNQpwuEh2NucU83i2KMZnONVudZ86YNcFk9tq74YaqrQfgJWO3yB9uzH1tAg8iqh5c9F5j0wuyJ2z72wcum2w==",
@@ -61,49 +19,34 @@
         "unpackedSize": 616796,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbsT6XCRA9TVsSAnZWagAAjMEP+gIzquIqh4i56l3WzGZc\nHUGH72PfB2ZJXgPHe5lEHTsW1QznWYf4XXfHb6AdpuzOKUtQDhBssWLhL1UG\nwBwVCi+gDrNEYbOV5Ds67XMn5CRBkDdo/r/TwytS1HK3gHqRU+vlYVoGAWj0\nvBCr7VqjXA4urOr/8DkecjNjompXeGInkXL35NF5olJREk1pfNu3Dpw3uvX/\n8M5khHo+ktZrQtWBOk/OZm/ylI2XRbOnEaTtfwy4uOzcKBSvW6psxrDd3qek\n5joGmdIQDq0wU7H/kutAL90PnfUYna8TJwIHQ97UNyuNWTctgJpKRemF4vKV\nIYegL9KQHroFwkBnNQnOQKA/NQNO5Aj1OGI8dEpF0xJkJI+0SqBvYmSeKZ3y\n/MA9DqdJR546f/OGvJWxbTfMcST+F7d4CD27Ux5sVQ7ksEYRgUep/3J1rPFj\nYlopCy/IkdsTUQuf0/7hwF4zaitCVqjwWycZJxUIptHhQWuF+Ug/MZrpafZ0\nd/9lpBD0U6wvnwqFT9GkR47UYzonEHkxRk1qOzw2juMetL7cjDeu6yDmGa9f\n1+33OoijL15rYOvh1cXsqkgZjnIF7iXahb+gjGd/MEpjwQKCV15H5MtaF94G\nOWS0FzbtZVnbnNPvqP3KslbodrjbLdCCpr3MPZ0HdZu7R2P/nvQke9T4VMQD\nzvqv\r\n=uzbu\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "vdemedes",
-          "email": "vdemedes@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/yoga-layout-prebuilt_1.9.3_1538342551287_0.6524635558629936"
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "1.9.5": {
+      "name": "yoga-layout-prebuilt",
+      "version": "1.9.5",
+      "dependencies": {
+        "@types/yoga-layout": "1.9.1"
       },
-      "_hasShrinkwrap": false
+      "devDependencies": {
+        "ava": "^0.25.0",
+        "xo": "^0.21.0"
+      },
+      "dist": {
+        "integrity": "sha512-+G5Ojl4/sG78mk5masCL3SRaZtkKXRBhMGf5c+4C1j32jN9KpS4lxVFdYyBi15EHN4gMeK5sIRf83T33TOaDkA==",
+        "shasum": "bb25ae106eb4ba48c13b650e75269c582a8b43e5",
+        "tarball": "https://registry.npmjs.org/yoga-layout-prebuilt/-/yoga-layout-prebuilt-1.9.5.tgz",
+        "fileCount": 11,
+        "unpackedSize": 617172,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeb9U8CRA9TVsSAnZWagAA8cYP/jOyavFvlkI6DC6cQ9Bn\nM+1M0NLDwrqKWIIGHX0GVyaAzJc7WKcrCR2kf4ylrup7T20pCOYOr0s7Nvbd\nT+xoLvnlRNv+zlndORQSpy1tThZ0RfkjKXk5YlZFIkOysZ9hmoefuZIDtBcu\n9ywK7NEml/NRdbGqBEKJ9L+KpLQoGPpHxyZ37WRy4CXa4Kv5JkC3a8aKn+rL\nBaZ02olEtrhsTCgwSJspi8lJiwnqKDziSqMC0IKOaUkUQkVEpkdR7eJxTQ6E\nVnJnjeojvHyjnISBlI9nyQ/pbz3mnlfOYvMdlEG7SAJA3xf8iFc+mR4hb7Z4\nIk7W6fj03elIJYMRt45pzOH80GY9yiHrCKwTirO+eKhXySm7chj5TjbAChpx\nl7YvFPIqsWprFVL2HB4U1Azrml/bKhXMYKghbWWX6ps3rmvrwts6uKbaEuPw\npN8sMTJfWT0ajeX3aSu6PKAEhT9001MGAqWXgZnhy5pkK2jmWh7BPROOXtcJ\nEvuEh0tmnECTT5TdSXCwAQs7lLv+djC2ELh+iP4OPO+aJhcFXMEstQfZ1jqK\nHZvmxeT2tOLt2rJDtSF7hncSPdXG5h9B5noN5Y6qOGYMsJyWHVl75hpgXziv\nDKiHxKCK2WLa8jMdKtVKdm0e8osUtdHtfy5pQK+x294SgD2ujXrDAW6GyCXB\nQaUQ\r\n=W37/\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
-  "time": {
-    "created": "2018-09-30T21:22:31.286Z",
-    "1.9.3": "2018-09-30T21:22:31.524Z",
-    "modified": "2018-09-30T21:22:34.377Z"
-  },
-  "maintainers": [
-    {
-      "name": "vdemedes",
-      "email": "vdemedes@gmail.com"
-    }
-  ],
-  "description": "Prebuilt yoga-layout package",
-  "homepage": "https://github.com/vadimdemedes/yoga-layout-prebuilt#readme",
-  "keywords": [
-    "yoga",
-    "yoga-layout"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vadimdemedes/yoga-layout-prebuilt.git"
-  },
-  "author": {
-    "name": "Vadim Demedes",
-    "email": "vdemedes@gmail.com",
-    "url": "github.com/vadimdemedes"
-  },
-  "bugs": {
-    "url": "https://github.com/vadimdemedes/yoga-layout-prebuilt/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "readme.md"
+  "modified": "2020-03-16T19:36:32.679Z",
+  "_cached": false,
+  "_contentLength": 2853
 }

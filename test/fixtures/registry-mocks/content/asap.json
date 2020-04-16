@@ -1,8 +1,5 @@
 {
-  "_id": "asap",
-  "_rev": "29-6bd8e1558246a457169a22d3de60d652",
   "name": "asap",
-  "description": "High-priority task queue for Node.js and browsers",
   "dist-tags": {
     "latest": "2.0.6"
   },
@@ -10,101 +7,22 @@
     "0.0.0": {
       "name": "asap",
       "version": "0.0.0",
-      "_id": "asap@0.0.0",
-      "description": "ERROR: No README.md file found!",
       "dist": {
         "shasum": "518fe1dfaa9a0ee7bf40a3f63cf35915dd2970db",
         "tarball": "https://registry.npmjs.org/asap/-/asap-0.0.0.tgz"
-      },
-      "_from": ".",
-      "_npmVersion": "1.2.15",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "1.0.0": {
       "name": "asap",
       "version": "1.0.0",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/kriskowal/asap/raw/master/LICENSE.md"
-        }
-      ],
-      "main": "asap",
-      "_id": "asap@1.0.0",
       "dist": {
         "shasum": "b2a45da5fdfa20b0496fc3768cc27c12fa916a7d",
         "tarball": "https://registry.npmjs.org/asap/-/asap-1.0.0.tgz"
-      },
-      "_from": ".",
-      "_npmVersion": "1.2.15",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "asap",
       "version": "2.0.0",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/kriskowal/asap/raw/master/LICENSE.md"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "asap": "./browser-asap.js",
-        "raw": "./browser-raw.js",
-        "test/domain": "./test/browser-domain.js"
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run test-node && npm run lint",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js scripts"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "opener": "^1.3.0",
@@ -117,73 +35,15 @@
         "q-io": "^2.0.3",
         "weak-map": "^1.0.5"
       },
-      "gitHead": "56dcb7aeb2eb94b360155b1b7729ee84aa9f156e",
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap",
-      "_id": "asap@2.0.0",
-      "_shasum": "ff2452b38cabb6bb62aaf25a78faded47db251b9",
-      "_from": ".",
-      "_npmVersion": "1.4.21",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        }
-      ],
       "dist": {
         "shasum": "ff2452b38cabb6bb62aaf25a78faded47db251b9",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.0.tgz"
       },
-      "deprecated": "critical race condition fixed in 2.0.3, update now",
-      "directories": {}
+      "deprecated": "critical race condition fixed in 2.0.3, update now"
     },
     "2.0.1": {
       "name": "asap",
       "version": "2.0.1",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/kriskowal/asap/raw/master/LICENSE.md"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "./asap": "./browser-asap.js",
-        "./raw": "./browser-raw.js",
-        "./test/domain": "./test/browser-domain.js"
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run lint && npm run test-node",
-        "test-travis": "npm run lint && npm run test-node && npm run test-saucelabs && npm run test-saucelabs-worker",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js $(find scripts -name '*.js' | grep -v gauntlet)"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "opener": "^1.3.0",
@@ -196,71 +56,15 @@
         "q-io": "^2.0.3",
         "weak-map": "^1.0.5"
       },
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap",
-      "_id": "asap@2.0.1",
       "dist": {
         "shasum": "1345eaff39393ba58863177440a424ce59029244",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.1.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.4.3",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        }
-      ],
-      "deprecated": "critical race condition fixed in 2.0.3, update now",
-      "directories": {}
+      "deprecated": "critical race condition fixed in 2.0.3, update now"
     },
     "2.0.2": {
       "name": "asap",
       "version": "2.0.2",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/kriskowal/asap/raw/master/LICENSE.md"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "./asap.js": "./browser-asap.js",
-        "./raw.js": "./browser-raw.js",
-        "./test/domain.js": "./test/browser-domain.js"
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run lint && npm run test-node",
-        "test-travis": "npm run lint && npm run test-node && npm run test-saucelabs && npm run test-saucelabs-worker",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js $(find scripts -name '*.js' | grep -v gauntlet)"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "jshint": "^2.5.1",
@@ -273,77 +77,15 @@
         "wd": "^0.2.21",
         "weak-map": "^1.0.5"
       },
-      "gitHead": "c09db7355b91e9bd76b1d6fa9c44cf7fc58e418d",
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap",
-      "_id": "asap@2.0.2",
-      "_shasum": "4a028b746c1a0720151c2650c166c17ca032a2ef",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        },
-        {
-          "name": "forbeslindesay",
-          "email": "forbes@lindesay.co.uk"
-        }
-      ],
       "dist": {
         "shasum": "4a028b746c1a0720151c2650c166c17ca032a2ef",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.2.tgz"
       },
-      "deprecated": "critical race condition fixed in 2.0.3, update now",
-      "directories": {}
+      "deprecated": "critical race condition fixed in 2.0.3, update now"
     },
     "2.0.3": {
       "name": "asap",
       "version": "2.0.3",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/kriskowal/asap/raw/master/LICENSE.md"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "./asap.js": "./browser-asap.js",
-        "./raw.js": "./browser-raw.js",
-        "./test/domain.js": "./test/browser-domain.js"
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run lint && npm run test-node",
-        "test-travis": "npm run lint && npm run test-node && npm run test-saucelabs && npm run test-saucelabs-worker",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js $(find scripts -name '*.js' | grep -v gauntlet)"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "jshint": "^2.5.1",
@@ -356,77 +98,14 @@
         "wd": "^0.2.21",
         "weak-map": "^1.0.5"
       },
-      "gitHead": "ccbf94d4e4a0c3afc2df13331044020a46a74ab6",
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap#readme",
-      "_id": "asap@2.0.3",
-      "_shasum": "1fc1d1564ee11620dfca6d67029850913f9f4679",
-      "_from": ".",
-      "_npmVersion": "2.8.3",
-      "_nodeVersion": "1.8.1",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        },
-        {
-          "name": "forbeslindesay",
-          "email": "forbes@lindesay.co.uk"
-        }
-      ],
       "dist": {
         "shasum": "1fc1d1564ee11620dfca6d67029850913f9f4679",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.3.tgz"
-      },
-      "directories": {}
+      }
     },
     "2.0.4": {
       "name": "asap",
       "version": "2.0.4",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "./asap": "./browser-asap.js",
-        "./asap.js": "./browser-asap.js",
-        "./raw": "./browser-raw.js",
-        "./raw.js": "./browser-raw.js",
-        "./test/domain.js": "./test/browser-domain.js"
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run lint && npm run test-node",
-        "test-travis": "npm run lint && npm run test-node && npm run test-saucelabs && npm run test-saucelabs-worker",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js $(find scripts -name '*.js' | grep -v gauntlet)",
-        "benchmarks": "node benchmarks"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "jshint": "^2.5.1",
@@ -439,82 +118,15 @@
         "wd": "^0.2.21",
         "weak-map": "^1.0.5",
         "benchmark": "^1.0.0"
-      },
-      "gitHead": "26e815dafed7bc112924bf7a6be0d997abf1b407",
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap#readme",
-      "_id": "asap@2.0.4",
-      "_shasum": "b391bf7f6bfbc65706022fec8f49c4b07fecf589",
-      "_from": ".",
-      "_npmVersion": "2.14.7",
-      "_nodeVersion": "0.10.32",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
       },
       "dist": {
         "shasum": "b391bf7f6bfbc65706022fec8f49c4b07fecf589",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.4.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        },
-        {
-          "name": "forbeslindesay",
-          "email": "forbes@lindesay.co.uk"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/asap-2.0.4.tgz_1463764720924_0.3805790115147829"
-      },
-      "directories": {}
+      }
     },
     "2.0.5": {
       "name": "asap",
       "version": "2.0.5",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "./asap": "./browser-asap.js",
-        "./asap.js": "./browser-asap.js",
-        "./raw": "./browser-raw.js",
-        "./raw.js": "./browser-raw.js",
-        "./test/domain.js": "./test/browser-domain.js"
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run lint && npm run test-node",
-        "test-travis": "npm run lint && npm run test-node && npm run test-saucelabs && npm run test-saucelabs-worker",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js $(find scripts -name '*.js' | grep -v gauntlet)",
-        "benchmarks": "node benchmarks"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "jshint": "^2.5.1",
@@ -527,85 +139,15 @@
         "wd": "^0.2.21",
         "weak-map": "^1.0.5",
         "benchmark": "^1.0.0"
-      },
-      "gitHead": "e7f3d29eed4967ecfcaddbfc9542e2ee12b76227",
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap#readme",
-      "_id": "asap@2.0.5",
-      "_shasum": "522765b50c3510490e52d7dcfe085ef9ba96958f",
-      "_from": ".",
-      "_npmVersion": "2.14.7",
-      "_nodeVersion": "0.10.32",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
       },
       "dist": {
         "shasum": "522765b50c3510490e52d7dcfe085ef9ba96958f",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.5.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        },
-        {
-          "name": "forbeslindesay",
-          "email": "forbes@lindesay.co.uk"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/asap-2.0.5.tgz_1474846549990_0.794441896257922"
-      },
-      "directories": {}
+      }
     },
     "2.0.6": {
       "name": "asap",
       "version": "2.0.6",
-      "description": "High-priority task queue for Node.js and browsers",
-      "keywords": [
-        "event",
-        "task",
-        "queue"
-      ],
-      "license": "MIT",
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/kriskowal/asap.git"
-      },
-      "main": "./asap.js",
-      "browser": {
-        "./asap": "./browser-asap.js",
-        "./asap.js": "./browser-asap.js",
-        "./raw": "./browser-raw.js",
-        "./raw.js": "./browser-raw.js",
-        "./test/domain.js": "./test/browser-domain.js"
-      },
-      "react-native": {
-        "domain": false
-      },
-      "files": [
-        "raw.js",
-        "asap.js",
-        "browser-raw.js",
-        "browser-asap.js"
-      ],
-      "scripts": {
-        "test": "npm run lint && npm run test-node",
-        "test-travis": "npm run lint && npm run test-node && npm run test-saucelabs && npm run test-saucelabs-worker",
-        "test-node": "node test/asap-test.js",
-        "test-publish": "node scripts/publish-bundle.js test/asap-test.js | pbcopy",
-        "test-browser": "node scripts/publish-bundle.js test/asap-test.js | xargs opener",
-        "test-saucelabs": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-all": "node scripts/saucelabs.js test/asap-test.js scripts/saucelabs-all-configurations.json",
-        "test-saucelabs-worker": "node scripts/saucelabs-worker-test.js scripts/saucelabs-spot-configurations.json",
-        "test-saucelabs-worker-all": "node scripts/saucelabs-worker-test.js scripts/saucelabs-all-configurations.json",
-        "lint": "jshint raw.js asap.js browser-raw.js browser-asap.js $(find scripts -name '*.js' | grep -v gauntlet)",
-        "benchmarks": "node benchmarks"
-      },
       "devDependencies": {
         "events": "^1.0.1",
         "jshint": "^2.5.1",
@@ -619,91 +161,13 @@
         "weak-map": "^1.0.5",
         "benchmark": "^1.0.0"
       },
-      "gitHead": "3e3d99381444379bb0483cb9216caa39ac67bebb",
-      "bugs": {
-        "url": "https://github.com/kriskowal/asap/issues"
-      },
-      "homepage": "https://github.com/kriskowal/asap#readme",
-      "_id": "asap@2.0.6",
-      "_shasum": "e50347611d7e690943208bbdafebcbc2fb866d46",
-      "_from": ".",
-      "_npmVersion": "3.10.10",
-      "_nodeVersion": "6.9.5",
-      "_npmUser": {
-        "name": "kriskowal",
-        "email": "kris.kowal@cixar.com"
-      },
       "dist": {
         "shasum": "e50347611d7e690943208bbdafebcbc2fb866d46",
         "tarball": "https://registry.npmjs.org/asap/-/asap-2.0.6.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "kriskowal",
-          "email": "kris.kowal@cixar.com"
-        },
-        {
-          "name": "forbeslindesay",
-          "email": "forbes@lindesay.co.uk"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/asap-2.0.6.tgz_1499700096673_0.1125483822543174"
-      },
-      "directories": {}
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "kriskowal",
-      "email": "kris.kowal@cixar.com"
-    },
-    {
-      "name": "forbeslindesay",
-      "email": "forbes@lindesay.co.uk"
-    }
-  ],
-  "time": {
-    "modified": "2017-12-25T07:49:24.662Z",
-    "created": "2013-06-12T00:37:42.056Z",
-    "0.0.0": "2013-06-12T00:37:43.284Z",
-    "1.0.0": "2013-07-09T21:47:49.724Z",
-    "2.0.0": "2014-11-02T01:31:58.580Z",
-    "2.0.1": "2015-02-05T16:43:37.167Z",
-    "2.0.2": "2015-04-12T00:07:17.749Z",
-    "2.0.3": "2015-04-25T23:31:52.813Z",
-    "2.0.4": "2016-05-20T17:18:41.266Z",
-    "2.0.5": "2016-09-25T23:35:50.212Z",
-    "2.0.6": "2017-07-10T15:21:36.791Z"
-  },
-  "users": {
-    "brentonhouse": true,
-    "tunnckocore": true,
-    "fansgentle": true,
-    "antixrist": true,
-    "coalesce": true,
-    "abuelwafa": true,
-    "dm07": true,
-    "oleg_tsyba": true,
-    "monjer": true,
-    "ferx": true,
-    "wangzongxu": true
-  },
-  "homepage": "https://github.com/kriskowal/asap#readme",
-  "keywords": [
-    "event",
-    "task",
-    "queue"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kriskowal/asap.git"
-  },
-  "bugs": {
-    "url": "https://github.com/kriskowal/asap/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "_attachments": {}
+  "modified": "2017-12-25T07:49:24.662Z",
+  "_cached": false,
+  "_contentLength": 3164
 }

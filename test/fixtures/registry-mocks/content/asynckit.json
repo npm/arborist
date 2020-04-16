@@ -1,8 +1,5 @@
 {
-  "_id": "asynckit",
-  "_rev": "4-642e853bedecbdb1f7b4d5c2988277d1",
   "name": "asynckit",
-  "description": "Minimal async jobs utility library, with streams support",
   "dist-tags": {
     "latest": "0.4.0"
   },
@@ -10,47 +7,6 @@
     "0.1.0": {
       "name": "asynckit",
       "version": "0.1.0",
-      "description": "Minimal async jobs utility library",
-      "main": "index.js",
-      "scripts": {
-        "clean": "rimraf coverage",
-        "lint": "eslint *.js test/*.js",
-        "test": "istanbul cover --reporter=json tape -- 'test/test-*.js' | tap-spec",
-        "browser": "browserify -t browserify-istanbul test/test-*.js | obake --coverage | tap-spec",
-        "report": "istanbul report",
-        "size": "browserify index.js | size-table asynckit",
-        "debug": "tape test/*.js | tap-spec"
-      },
-      "pre-commit": [
-        "clean",
-        "lint",
-        "test",
-        "browser",
-        "report",
-        "size"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexindigo/asynckit.git"
-      },
-      "keywords": [
-        "async",
-        "jobs",
-        "parallel",
-        "serial",
-        "iterator",
-        "array",
-        "object"
-      ],
-      "author": {
-        "name": "Alex Indigo",
-        "email": "iam@alexindigo.com"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/alexindigo/asynckit/issues"
-      },
-      "homepage": "https://github.com/alexindigo/asynckit#readme",
       "devDependencies": {
         "browserify": "^13.0.0",
         "browserify-istanbul": "^2.0.0",
@@ -65,78 +21,15 @@
         "size-table": "^0.2.0",
         "tap-spec": "^4.1.1",
         "tape": "^4.5.1"
-      },
-      "gitHead": "4e07ce5c2cf1ef940ee2d2ef7e8428ef6a2def9d",
-      "_id": "asynckit@0.1.0",
-      "_shasum": "328b62aa8bb99bff494e25379a19861e01572a4e",
-      "_from": ".",
-      "_npmVersion": "2.15.6",
-      "_nodeVersion": "0.12.11",
-      "_npmUser": {
-        "name": "alexindigo",
-        "email": "iam@alexindigo.com"
       },
       "dist": {
         "shasum": "328b62aa8bb99bff494e25379a19861e01572a4e",
         "tarball": "https://registry.npmjs.org/asynckit/-/asynckit-0.1.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexindigo",
-          "email": "iam@alexindigo.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/asynckit-0.1.0.tgz_1463613943057_0.8168901917524636"
-      },
-      "directories": {}
+      }
     },
     "0.2.0": {
       "name": "asynckit",
       "version": "0.2.0",
-      "description": "Minimal async jobs utility library",
-      "main": "index.js",
-      "scripts": {
-        "clean": "rimraf coverage",
-        "lint": "eslint *.js test/*.js",
-        "test": "istanbul cover --reporter=json tape -- 'test/test-*.js' | tap-spec",
-        "win-test": "tape test/test-*.js",
-        "browser": "browserify -t browserify-istanbul test/test-*.js | obake --coverage | tap-spec",
-        "report": "istanbul report",
-        "size": "browserify index.js | size-table asynckit",
-        "debug": "tape test/test-*.js | tap-spec"
-      },
-      "pre-commit": [
-        "clean",
-        "lint",
-        "test",
-        "browser",
-        "report",
-        "size"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexindigo/asynckit.git"
-      },
-      "keywords": [
-        "async",
-        "jobs",
-        "parallel",
-        "serial",
-        "iterator",
-        "array",
-        "object"
-      ],
-      "author": {
-        "name": "Alex Indigo",
-        "email": "iam@alexindigo.com"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/alexindigo/asynckit/issues"
-      },
-      "homepage": "https://github.com/alexindigo/asynckit#readme",
       "devDependencies": {
         "browserify": "^13.0.0",
         "browserify-istanbul": "^2.0.0",
@@ -151,79 +44,15 @@
         "size-table": "^0.2.0",
         "tap-spec": "^4.1.1",
         "tape": "^4.5.1"
-      },
-      "dependencies": {},
-      "gitHead": "9e318400f05566fd7ae5968b6f2052926853dd0a",
-      "_id": "asynckit@0.2.0",
-      "_shasum": "449693b00700b64babfb12f81be4c9919e4deb4e",
-      "_from": ".",
-      "_npmVersion": "2.15.6",
-      "_nodeVersion": "0.12.11",
-      "_npmUser": {
-        "name": "alexindigo",
-        "email": "iam@alexindigo.com"
       },
       "dist": {
         "shasum": "449693b00700b64babfb12f81be4c9919e4deb4e",
         "tarball": "https://registry.npmjs.org/asynckit/-/asynckit-0.2.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexindigo",
-          "email": "iam@alexindigo.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/asynckit-0.2.0.tgz_1463645848762_0.41517290310002863"
-      },
-      "directories": {}
+      }
     },
     "0.3.0": {
       "name": "asynckit",
       "version": "0.3.0",
-      "description": "Minimal async jobs utility library",
-      "main": "index.js",
-      "scripts": {
-        "clean": "rimraf coverage",
-        "lint": "eslint *.js lib/*.js test/*.js",
-        "test": "istanbul cover --reporter=json tape -- 'test/test-*.js' | tap-spec",
-        "win-test": "tape test/test-*.js",
-        "browser": "browserify -t browserify-istanbul test/lib/browserify_adjustment.js test/test-*.js | obake --coverage | tap-spec",
-        "report": "istanbul report",
-        "size": "browserify index.js | size-table asynckit",
-        "debug": "tape test/test-*.js | tap-spec"
-      },
-      "pre-commit": [
-        "clean",
-        "lint",
-        "test",
-        "browser",
-        "report",
-        "size"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexindigo/asynckit.git"
-      },
-      "keywords": [
-        "async",
-        "jobs",
-        "parallel",
-        "serial",
-        "iterator",
-        "array",
-        "object"
-      ],
-      "author": {
-        "name": "Alex Indigo",
-        "email": "iam@alexindigo.com"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/alexindigo/asynckit/issues"
-      },
-      "homepage": "https://github.com/alexindigo/asynckit#readme",
       "devDependencies": {
         "browserify": "^13.0.0",
         "browserify-istanbul": "^2.0.0",
@@ -238,83 +67,15 @@
         "size-table": "^0.2.0",
         "tap-spec": "^4.1.1",
         "tape": "^4.5.1"
-      },
-      "dependencies": {},
-      "gitHead": "b92a500fee672934c19bdb008974b46d494b8b4b",
-      "_id": "asynckit@0.3.0",
-      "_shasum": "bde42eec27d7888fef99f7427e63c2eb624c2903",
-      "_from": ".",
-      "_npmVersion": "2.15.6",
-      "_nodeVersion": "0.12.11",
-      "_npmUser": {
-        "name": "alexindigo",
-        "email": "iam@alexindigo.com"
       },
       "dist": {
         "shasum": "bde42eec27d7888fef99f7427e63c2eb624c2903",
         "tarball": "https://registry.npmjs.org/asynckit/-/asynckit-0.3.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexindigo",
-          "email": "iam@alexindigo.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/asynckit-0.3.0.tgz_1464241837301_0.37562970467843115"
-      },
-      "directories": {}
+      }
     },
     "0.4.0": {
       "name": "asynckit",
       "version": "0.4.0",
-      "description": "Minimal async jobs utility library, with streams support",
-      "main": "index.js",
-      "scripts": {
-        "clean": "rimraf coverage",
-        "lint": "eslint *.js lib/*.js test/*.js",
-        "test": "istanbul cover --reporter=json tape -- 'test/test-*.js' | tap-spec",
-        "win-test": "tape test/test-*.js",
-        "browser": "browserify -t browserify-istanbul test/lib/browserify_adjustment.js test/test-*.js | obake --coverage | tap-spec",
-        "report": "istanbul report",
-        "size": "browserify index.js | size-table asynckit",
-        "debug": "tape test/test-*.js"
-      },
-      "pre-commit": [
-        "clean",
-        "lint",
-        "test",
-        "browser",
-        "report",
-        "size"
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexindigo/asynckit.git"
-      },
-      "keywords": [
-        "async",
-        "jobs",
-        "parallel",
-        "serial",
-        "iterator",
-        "array",
-        "object",
-        "stream",
-        "destroy",
-        "terminate",
-        "abort"
-      ],
-      "author": {
-        "name": "Alex Indigo",
-        "email": "iam@alexindigo.com"
-      },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/alexindigo/asynckit/issues"
-      },
-      "homepage": "https://github.com/alexindigo/asynckit#readme",
       "devDependencies": {
         "browserify": "^13.0.0",
         "browserify-istanbul": "^2.0.0",
@@ -330,74 +91,13 @@
         "tap-spec": "^4.1.1",
         "tape": "^4.5.1"
       },
-      "dependencies": {},
-      "gitHead": "583a75ed4fe41761b66416bb6e703ebb1f8963bf",
-      "_id": "asynckit@0.4.0",
-      "_shasum": "c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79",
-      "_from": ".",
-      "_npmVersion": "2.15.6",
-      "_nodeVersion": "0.12.11",
-      "_npmUser": {
-        "name": "alexindigo",
-        "email": "iam@alexindigo.com"
-      },
       "dist": {
         "shasum": "c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79",
         "tarball": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexindigo",
-          "email": "iam@alexindigo.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/asynckit-0.4.0.tgz_1465928940169_0.8008207362145185"
-      },
-      "directories": {}
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "alexindigo",
-      "email": "iam@alexindigo.com"
-    }
-  ],
-  "time": {
-    "modified": "2016-06-14T18:29:05.418Z",
-    "created": "2016-05-18T23:25:43.646Z",
-    "0.1.0": "2016-05-18T23:25:43.646Z",
-    "0.2.0": "2016-05-19T08:17:31.695Z",
-    "0.3.0": "2016-05-26T05:50:39.597Z",
-    "0.4.0": "2016-06-14T18:29:05.418Z"
-  },
-  "homepage": "https://github.com/alexindigo/asynckit#readme",
-  "keywords": [
-    "async",
-    "jobs",
-    "parallel",
-    "serial",
-    "iterator",
-    "array",
-    "object",
-    "stream",
-    "destroy",
-    "terminate",
-    "abort"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexindigo/asynckit.git"
-  },
-  "author": {
-    "name": "Alex Indigo",
-    "email": "iam@alexindigo.com"
-  },
-  "bugs": {
-    "url": "https://github.com/alexindigo/asynckit/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "_attachments": {}
+  "modified": "2016-06-14T18:29:05.418Z",
+  "_cached": false,
+  "_contentLength": 1993
 }

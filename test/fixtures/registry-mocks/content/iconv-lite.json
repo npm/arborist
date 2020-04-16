@@ -1,8 +1,5 @@
 {
-  "_id": "iconv-lite",
-  "_rev": "205-e4fdab2548da03fec592d492607f9472",
   "name": "iconv-lite",
-  "description": "Convert character encodings in pure javascript.",
   "dist-tags": {
     "latest": "0.5.1",
     "bleeding": "0.4.0-pre3"
@@ -10,1165 +7,246 @@
   "versions": {
     "0.1.0": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.1.0",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "homepage": "http://github.com/ashtuchkin/node-iconv/",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/node-iconv.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
       "devDependencies": {
         "vows": ""
       },
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "_id": "iconv-lite@0.1.0",
-      "dependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.0.104",
-      "_nodeVersion": "v0.6.0",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "bb686e9e87899523e69c313d01ffae9d7850e1eb",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.1.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.1.1": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.1.1",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        }
-      ],
-      "homepage": "http://github.com/ashtuchkin/node-iconv/",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/node-iconv.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ""
       },
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "_id": "iconv-lite@0.1.1",
-      "dependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.0.105",
-      "_nodeVersion": "v0.6.1",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "7844849646a553d2b65711d4e8e3188c2d0a5106",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.1.1.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.1.2": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.1.2",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        }
-      ],
-      "homepage": "http://github.com/ashtuchkin/node-iconv/",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/node-iconv.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ""
       },
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "_id": "iconv-lite@0.1.2",
-      "dependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.0.105",
-      "_nodeVersion": "v0.6.11",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "ae828cd32708a17258d6a558c653bde646e84d0a",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.1.2.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.1.3": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.1.3",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "http://github.com/ashtuchkin/node-iconv/",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/node-iconv.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ""
       },
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "_id": "iconv-lite@0.1.3",
-      "dependencies": {},
-      "optionalDependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.1.18",
-      "_nodeVersion": "v0.6.17",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "e5b1742382fb90f4900ec0076ac0b868d249615d",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.1.3.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.1.4": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.1.4",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ""
       },
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "_id": "iconv-lite@0.1.4",
-      "dependencies": {},
-      "optionalDependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.1.18",
-      "_nodeVersion": "v0.6.17",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "d9d9f7f2902ae56c68c800c0d42822cc681e20af",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.1.4.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.0": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.0",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ""
       },
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "_id": "iconv-lite@0.2.0",
-      "dependencies": {},
-      "optionalDependencies": {},
-      "_engineSupported": true,
-      "_npmVersion": "1.1.18",
-      "_nodeVersion": "v0.6.17",
-      "_defaultsLoaded": true,
       "dist": {
         "shasum": "235d7ca31fbc40ddf1855bed5eb020f45251247c",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.1": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.1",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ""
       },
-      "_id": "iconv-lite@0.2.1",
       "dist": {
         "shasum": "011b31b8eeffc57b4cb65521b2a0858ce1ed8bfb",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.1.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.3": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.3",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": "1.1"
       },
-      "_id": "iconv-lite@0.2.3",
       "dist": {
         "shasum": "f6b14037951e3a334543932e9829dfd004168755",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.3.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.4": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.4",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": "1.1"
       },
-      "_id": "iconv-lite@0.2.4",
       "dist": {
         "shasum": "03659514658e27e4d1691a63e7aa01f1dca7f296",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.4.tgz"
       },
-      "_npmVersion": "1.1.49",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.5": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.5",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": "1.1"
       },
-      "_id": "iconv-lite@0.2.5",
       "dist": {
         "shasum": "e9f2155037f4afd000c095b1d5ad8831c4c5eacc",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.5.tgz"
       },
-      "_npmVersion": "1.1.49",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.6": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.6",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "jenkinv",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ">=1.1"
       },
-      "_id": "iconv-lite@0.2.6",
       "dist": {
         "shasum": "f4dc95055077fc0580bf829c3e75c20d55824a3e",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.6.tgz"
       },
-      "_npmVersion": "1.1.65",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.7": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.7",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ">=1.1"
       },
-      "_id": "iconv-lite@0.2.7",
       "dist": {
         "shasum": "45be2390d27af4b7613aac4ee4d957e3f4cbdb54",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.7.tgz"
       },
-      "_npmVersion": "1.1.66",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.8": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.8",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ">=1.1"
       },
-      "_id": "iconv-lite@0.2.8",
       "dist": {
         "shasum": "8b9ebdc6c0751742951d67786f6fd5c09a9e0109",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.8.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.18",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.9": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.9",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ">=1.1"
       },
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "_id": "iconv-lite@0.2.9",
       "dist": {
         "shasum": "5788ae876660ddb663ab68a45fef14922e16998e",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.9.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.21",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.10": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.10",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ">=1.1"
       },
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "_id": "iconv-lite@0.2.10",
       "dist": {
         "shasum": "8839fa77a9e4325a51ca0f8bae6b0cbd490f5a92",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.10.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.2.23",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.2.11": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.2.11",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.4.0"
-      },
-      "scripts": {
-        "test": "vows --spec"
-      },
       "devDependencies": {
         "vows": "",
         "iconv": ">=1.1"
       },
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "_id": "iconv-lite@0.2.11",
       "dist": {
         "shasum": "1ce60a3a57864a292d1321ff4609ca4bb965adc8",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.11.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.3.2",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.4.0"
+      }
     },
     "0.4.0-pre": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.0-pre",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1177,97 +255,17 @@
         "async": "*",
         "iconv": "2.x"
       },
-      "_id": "iconv-lite@0.4.0-pre",
       "dist": {
         "shasum": "8ef26bada5b13a311ab299fd53a8685686826c8a",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.0-pre.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.4.3",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.0-pre2": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.0-pre2",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1276,97 +274,17 @@
         "async": "*",
         "iconv": "2.x"
       },
-      "_id": "iconv-lite@0.4.0-pre2",
       "dist": {
         "shasum": "be0ec485136c00984825c8de63b0e22f7e23193e",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.0-pre2.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.4.3",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.0-pre3": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.0-pre3",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        }
-      ],
-      "main": "index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1375,101 +293,17 @@
         "async": "*",
         "iconv": "2.x"
       },
-      "_id": "iconv-lite@0.4.0-pre3",
       "dist": {
         "shasum": "bfbdb354cecc2f54d58addda32d62817da843f6a",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.0-pre3.tgz"
       },
-      "_from": ".",
-      "_npmVersion": "1.4.3",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.0": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.0",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1478,102 +312,17 @@
         "async": "*",
         "iconv": "~2.1.4"
       },
-      "_id": "iconv-lite@0.4.0",
-      "_shasum": "cc77430093c1298e35aba9e8fa38d09582fcdcb7",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "cc77430093c1298e35aba9e8fa38d09582fcdcb7",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.1": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.1",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1582,107 +331,17 @@
         "async": "*",
         "iconv": "~2.1.4"
       },
-      "gitHead": "c61800cc51fb7496754f810c14b66b8e543d22b6",
-      "_id": "iconv-lite@0.4.1",
-      "_shasum": "c9d4621aafb06b67979b79676ca99ac4c0378b1a",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "c9d4621aafb06b67979b79676ca99ac4c0378b1a",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.2": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.2",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1691,107 +350,17 @@
         "async": "*",
         "iconv": "~2.1.4"
       },
-      "gitHead": "832e328447c1ea879c329e359a200b258942c2bc",
-      "_id": "iconv-lite@0.4.2",
-      "_shasum": "af57e14c2ccd8b27e945d7b4de071accd59f00bb",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "af57e14c2ccd8b27e945d7b4de071accd59f00bb",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.2.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.3": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.3",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1800,107 +369,17 @@
         "async": "*",
         "iconv": "~2.1.4"
       },
-      "gitHead": "42f4a837055c1277a73468ccaedb5f5eac31425d",
-      "_id": "iconv-lite@0.4.3",
-      "_shasum": "9e7887793b769cc695eb22d2546a4fd2d79b7a1e",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "9e7887793b769cc695eb22d2546a4fd2d79b7a1e",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.3.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.4": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.4",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -1909,113 +388,17 @@
         "async": "*",
         "iconv": "~2.1.4"
       },
-      "gitHead": "9f0b0a7631d167322f47c2202aa3e5b090945131",
-      "_id": "iconv-lite@0.4.4",
-      "_shasum": "e95f2e41db0735fc21652f7827a5ee32e63c83a8",
-      "_from": ".",
-      "_npmVersion": "1.4.14",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "e95f2e41db0735fc21652f7827a5ee32e63c83a8",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.4.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.5": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.5",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2025,114 +408,17 @@
         "istanbul": "*",
         "iconv": "~2.1.4"
       },
-      "gitHead": "0654719791aa2c159bb3820f095b5da8702d091b",
-      "_id": "iconv-lite@0.4.5",
-      "_shasum": "9c574b70c30d615859f2064d2be4335ad6b1a8d6",
-      "_from": ".",
-      "_npmVersion": "2.1.6",
-      "_nodeVersion": "0.10.33",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "9c574b70c30d615859f2064d2be4335ad6b1a8d6",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.5.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.6": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.6",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2142,114 +428,17 @@
         "istanbul": "*",
         "iconv": "~2.1.4"
       },
-      "gitHead": "920dad2303f7c64d92e771ffd379688e0a0d6fc1",
-      "_id": "iconv-lite@0.4.6",
-      "_shasum": "e39c682610a791f3eedc27382ff49e263f91fa09",
-      "_from": ".",
-      "_npmVersion": "2.1.6",
-      "_nodeVersion": "0.10.33",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "e39c682610a791f3eedc27382ff49e263f91fa09",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.6.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.7": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.7",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2259,114 +448,17 @@
         "istanbul": "*",
         "iconv": "2.1.4"
       },
-      "gitHead": "820336d20d947159895c80daab55bac4261ff53c",
-      "_id": "iconv-lite@0.4.7",
-      "_shasum": "89d32fec821bf8597f44609b4bc09bed5c209a23",
-      "_from": ".",
-      "_npmVersion": "2.1.6",
-      "_nodeVersion": "0.10.33",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "89d32fec821bf8597f44609b4bc09bed5c209a23",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.7.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.8": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.8",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2376,114 +468,17 @@
         "istanbul": "*",
         "iconv": "2.1.4"
       },
-      "gitHead": "3dc7d0cb0e223b29634ecb7bff46910c8107ab3d",
-      "_id": "iconv-lite@0.4.8",
-      "_shasum": "c6019a7595f2cefca702eab694a010bcd9298d20",
-      "_from": ".",
-      "_npmVersion": "2.7.4",
-      "_nodeVersion": "0.12.2",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "c6019a7595f2cefca702eab694a010bcd9298d20",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.8.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.9": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.9",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2493,114 +488,17 @@
         "istanbul": "*",
         "iconv": "2.1"
       },
-      "gitHead": "a9a123e22074cb4d8e0392ae037b0e348df1559a",
-      "_id": "iconv-lite@0.4.9",
-      "_shasum": "4d8b3c7f596c558ce95b4bd4562c874010a7df3e",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "4d8b3c7f596c558ce95b4bd4562c874010a7df3e",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.9.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.10": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.10",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2610,114 +508,17 @@
         "istanbul": "*",
         "iconv": "2.1"
       },
-      "gitHead": "e8af2b49035abbe4fabe826925764bc20f8587c6",
-      "_id": "iconv-lite@0.4.10",
-      "_shasum": "4f1a2562efd36d41c54d45c59999b590951796de",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "4f1a2562efd36d41c54d45c59999b590951796de",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.10.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.11": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.11",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2727,114 +528,17 @@
         "istanbul": "*",
         "iconv": "2.1"
       },
-      "gitHead": "e285b7c31eb0406cf5a8e3e09bc16fbd2786360f",
-      "_id": "iconv-lite@0.4.11",
-      "_shasum": "2ecb42fd294744922209a2e7c404dac8793d8ade",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "2ecb42fd294744922209a2e7c404dac8793d8ade",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.11.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.12": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.12",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2844,114 +548,17 @@
         "istanbul": "*",
         "iconv": "2.1"
       },
-      "gitHead": "5f5f71492e287c9c7231009103ddf9e8884df62d",
-      "_id": "iconv-lite@0.4.12",
-      "_shasum": "ef4bb2cb28f406d3c05fc89feea4504624b5ac87",
-      "_from": ".",
-      "_npmVersion": "2.14.4",
-      "_nodeVersion": "4.1.1",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "ef4bb2cb28f406d3c05fc89feea4504624b5ac87",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.12.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.13": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.13",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.8.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "2.47",
@@ -2961,115 +568,17 @@
         "istanbul": "*",
         "iconv": "2.1"
       },
-      "gitHead": "f5ec51b1e7dd1477a3570824960641eebdc5fbc6",
-      "_id": "iconv-lite@0.4.13",
-      "_shasum": "1f88aba4ab0b1508e8312acc39345f36e992e2f2",
-      "_from": ".",
-      "_npmVersion": "2.14.4",
-      "_nodeVersion": "4.1.1",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "1f88aba4ab0b1508e8312acc39345f36e992e2f2",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.8.0"
+      }
     },
     "0.4.14": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.14",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -3079,119 +588,17 @@
         "istanbul": "*",
         "iconv": "*"
       },
-      "gitHead": "65beacd34d084bbc72ecc260f1ae4470a051cc51",
-      "_id": "iconv-lite@0.4.14",
-      "_shasum": "0c4b78106835ecce149ffc7f1b588a9f23bf28e3",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.5.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "0c4b78106835ecce149ffc7f1b588a9f23bf28e3",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.14.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/iconv-lite-0.4.14.tgz_1479707686517_0.8387471821624786"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.15": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.15",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -3200,120 +607,18 @@
         "async": "*",
         "istanbul": "*",
         "iconv": "*"
-      },
-      "gitHead": "c3bcedcd6a5025c25e39ed1782347acaed1d290f",
-      "_id": "iconv-lite@0.4.15",
-      "_shasum": "fe265a218ac6a57cfe854927e9d04c19825eddeb",
-      "_from": ".",
-      "_npmVersion": "2.15.9",
-      "_nodeVersion": "7.0.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "shasum": "fe265a218ac6a57cfe854927e9d04c19825eddeb",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.15.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/iconv-lite-0.4.15.tgz_1479754977280_0.752664492232725"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.16": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.16",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -3323,120 +628,18 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "gitHead": "bf0acd95103de6fd624d10b65abaf6e91753c4c8",
-      "_id": "iconv-lite@0.4.16",
-      "_shasum": "65de3beeb39e2960d67f049f1634ffcbcde9014b",
-      "_from": ".",
-      "_npmVersion": "3.10.10",
-      "_nodeVersion": "6.10.2",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "shasum": "65de3beeb39e2960d67f049f1634ffcbcde9014b",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.16.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/iconv-lite-0.4.16.tgz_1492901339391_0.7763116010464728"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.17": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.17",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -3446,120 +649,18 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "gitHead": "64d1e3d7403bbb5414966de83d325419e7ea14e2",
-      "_id": "iconv-lite@0.4.17",
-      "_shasum": "4fdaa3b38acbc2c031b045d0edcdfe1ecab18c8d",
-      "_from": ".",
-      "_npmVersion": "3.10.10",
-      "_nodeVersion": "6.10.2",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "shasum": "4fdaa3b38acbc2c031b045d0edcdfe1ecab18c8d",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.17.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/iconv-lite-0.4.17.tgz_1493615411939_0.8651245310902596"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.18": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.18",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -3569,119 +670,19 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "gitHead": "637fbc0172247da3b4bf57685dd945b786ca2bee",
-      "_id": "iconv-lite@0.4.18",
-      "_npmVersion": "5.0.3",
-      "_nodeVersion": "8.1.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "integrity": "sha512-sr1ZQph3UwHTR0XftSbK85OvBbxe/abLGzEnPENCQwmHf7sck8Oyu4ob3LgBxWWxRoM+QszeUyl7jbqapu2TqA==",
         "shasum": "23d8656b16aae6742ac29732ea8f0336a4789cf2",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.18.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite-0.4.18.tgz_1497367212038_0.6705294267740101"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.19": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.19",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
-      },
       "devDependencies": {
         "mocha": "*",
         "request": "*",
@@ -3692,117 +693,20 @@
         "semver": "*",
         "iconv": "*"
       },
-      "gitHead": "5255c1b3c81a0f276619cce3151a1923cba90431",
-      "_id": "iconv-lite@0.4.19",
-      "_npmVersion": "5.0.3",
-      "_nodeVersion": "8.1.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-oTZqweIP51xaGPI4uPa56/Pri/480R+mo7SeU+YETByQNhDG55ycFyNLIgta9vXhILrxXDmF7ZGhqZIcuN0gJQ==",
         "shasum": "f7468f60135f5e5dad3399c0a81be9a1603a082b",
         "tarball": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.19.tgz"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite-0.4.19.tgz_1505015801484_0.10463660513050854"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.20": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.20",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "contributors": [
-        {
-          "name": "Jinwu Zhan",
-          "url": "https://github.com/jenkinv"
-        },
-        {
-          "name": "Adamansky Anton",
-          "url": "https://github.com/adamansky"
-        },
-        {
-          "name": "George Stagas",
-          "url": "https://github.com/stagas"
-        },
-        {
-          "name": "Mike D Pilsbury",
-          "url": "https://github.com/pekim"
-        },
-        {
-          "name": "Niggler",
-          "url": "https://github.com/Niggler"
-        },
-        {
-          "name": "wychi",
-          "url": "https://github.com/wychi"
-        },
-        {
-          "name": "David Kuo",
-          "url": "https://github.com/david50407"
-        },
-        {
-          "name": "ChangZhuo Chen",
-          "url": "https://github.com/czchen"
-        },
-        {
-          "name": "Lee Treveil",
-          "url": "https://github.com/leetreveil"
-        },
-        {
-          "name": "Brian White",
-          "url": "https://github.com/mscdex"
-        },
-        {
-          "name": "Mithgol",
-          "url": "https://github.com/Mithgol"
-        },
-        {
-          "name": "Nazar Leush",
-          "url": "https://github.com/nleush"
-        }
-      ],
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./extend-node": false,
-        "./streams": false
+      "dependencies": {
+        "safer-buffer": "^2.1.0"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -3813,17 +717,6 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "dependencies": {
-        "safer-buffer": "^2.1.0"
-      },
-      "gitHead": "9a6ad952f47639d16c1e7273d07a5660ab0634e1",
-      "_id": "iconv-lite@0.4.20",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "9.2.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "integrity": "sha512-YyvWZ7Konl8yQCyGdFub5XmVqQonxkFjDoExIY22RA0NI0pskdU6plSyaUnVyEL+RsOcz+LhPDclXsc02indDQ==",
@@ -3832,55 +725,15 @@
         "fileCount": 27,
         "unpackedSize": 335838
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.4.20_1523073755298_0.9205402977665564"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.21": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.21",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./lib/extend-node": false,
-        "./lib/streams": false
+      "dependencies": {
+        "safer-buffer": "^2.1.0"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -3891,17 +744,6 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "dependencies": {
-        "safer-buffer": "^2.1.0"
-      },
-      "gitHead": "c679ab26ad95a804ff95671d7258a505ccba36c2",
-      "_id": "iconv-lite@0.4.21",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "9.2.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "integrity": "sha512-En5V9za5mBt2oUA03WGD3TwDv0MKAruqsuxstbMUZaj9W9k/m1CV/9py3l0L5kw9Bln8fdHQmzHSYtvpvTLpKw==",
@@ -3910,55 +752,15 @@
         "fileCount": 27,
         "unpackedSize": 335343
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.4.21_1523075472870_0.21793181179943022"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.22": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.22",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./lib/extend-node": false,
-        "./lib/streams": false
+      "dependencies": {
+        "safer-buffer": ">= 2.1.2 < 3"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -3969,17 +771,6 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "dependencies": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      },
-      "gitHead": "6b9091873b12929a605c819a547ce73a916ccd01",
-      "_id": "iconv-lite@0.4.22",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "9.2.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "integrity": "sha512-1AinFBeDTnsvVEP+V1QBlHpM1UZZl7gWB6fcz7B1Ho+LI1dUh2sSrxoCfVt2PinRHzXAziSniEV3P7JbTDHcXA==",
@@ -3989,55 +780,15 @@
         "unpackedSize": 335550,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa7kA9CRA9TVsSAnZWagAARFIP/jXu8+CmuVjFVeZcFzV0\nw5bKRhVRux7lUMBMVCDwz4BLGb/bob7qnLmwjxbeUuPfcZSwrdk397XtoD0T\nFavSzYqkbojvoGPkN8jo+ee7KX3hwv0Dki953NMWEUy8r5ECenb2BoveHl3u\nnHiGpv33OcjWbZgY7u6MXONvMEMVfUB8z0s12Vd6dbO3UMB6SYWwK+1Ex49f\nVfEBIgC8watumFKTnJBdCGvsdyJOrAeDvdXz3BZpnpDmA7UCl45+VdO8rwQF\nqESLt+YcUDcgfjxgDTr1VLo3ahULAZ7iGkCjFrB8A4+xHq8I448aZDbUoWND\n98dLkOJLNM1YnFULdlWv9PHQK2Dmn2c6MPQP7TvxOCHOIc0xWMfwpl2t5Z1s\nPt4hqaRGz3MAVzCc8/dOq5MWtwCqJXmotTzJ4q4EmdYyu33aEgIp+TO66oNp\nWbqP5zZjW/pdYh5uWvX9CUSO8B6uG951TC5hxmbG+fm07HyVymMWjPKLqi4C\n4e7kr5EjJ/B2o2oH4l4lpeBc/qZ9Oyr4m7bbfL9abMPs/jCGnmDW9UxFXp2G\nHYTYqR+pKynwhn85PpTGOaCJ2zHpAX9rEM8hqe3UUSTK+B2T5x3cNc6iWOlE\nlyWMNavUduZlB4LXTcpyjeRWmiwI70w8T3rxgfCoq/koFeIMLrd+U+VkP0Zl\nvmU0\r\n=ilVm\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.4.22_1525563451449_0.750337618259016"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.23": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.23",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./lib/extend-node": false,
-        "./lib/streams": false
+      "dependencies": {
+        "safer-buffer": ">= 2.1.2 < 3"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -4049,17 +800,6 @@
         "semver": "*",
         "iconv": "*"
       },
-      "dependencies": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      },
-      "gitHead": "d37d558b3caf5a158bf70accb788c36286fffca5",
-      "_id": "iconv-lite@0.4.23",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "9.2.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-neyTUVFtahjf0mB3dZT77u+8O0QB89jFdnBkd5P1JgYPbPaia3gXXOVL2fq8VyU2gMMD7SaN7QukTB/pmXYvDA==",
         "shasum": "297871f63be507adcfbfca715d0cd0eed84e9a63",
@@ -4068,55 +808,15 @@
         "unpackedSize": 335778,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa8NGhCRA9TVsSAnZWagAA5ZoP/2O9a5eki82Fy1DP/jJU\nx3nUceaekdMIiOFVtP3akk0Uvx00TeGIANH4qyLulwW0R1cYJyTP4T3eelON\nYzznGtHEGLlzKUS5y+ICOR+X0V6TujHPDU1AP6QTiqx7lMBiaqdEkBfKncRV\nti9SUSvewr+oj4q0+mnLgC+iGK+Sl3QyPcBeZQM5dn3T8nb1UeutQKsc/dAJ\nEjCju6fZyiUNPTPeS62hLoprTJXeRa6Rsg48alnVIlwAsfEYMSDuEkjnX7EV\nNe0P8AIEBvB4VJ9pcpOlzdp4uHKSNqUKBHfNTDn7yP2U0THhjXMYhlKgP6kx\nY516QoSyj2S4bUl2DTyfK6y9HtC//BMqaWgKKfOjQCiALYLTiOxNWGzXOH53\nl4Vtm4NBTVpEZiQBYnnfFZUb/1tI4rWzM4nJOq3sAVlC4V9NI22V3fw7AkLd\nuC5DCLsfU3l+HV5A7reFIn7WQuoBc2mzg5iZVYU+YDGbO1rj+O/s/Mn2hqc/\nNf0vMyr5CVHPIhFLf8cY4DZeX+IXyGVhbBNFvzGfpRwTel5ksEKAwKsVhJRs\nRkuLwtq2+fmbX0tvjKC31trK+MYXihYfM2fya0JXY9uUEueHYYDLS+G/eUJC\npSASKzTaJFsbzMHRMMUz9kkcVGW631eVtCWXGXBEgLRi3wCiwiS20eth4Zvr\nQJ6d\r\n=mBpw\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.4.23_1525731744169_0.30693622174256374"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.4.24": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.4.24",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./lib/extend-node": false,
-        "./lib/streams": false
+      "dependencies": {
+        "safer-buffer": ">= 2.1.2 < 3"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -4127,17 +827,6 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "dependencies": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      },
-      "gitHead": "efbbb0937ca8dda1c14e0b69958b9d6f20771f7a",
-      "_id": "iconv-lite@0.4.24",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "8.9.1",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "integrity": "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==",
@@ -4147,55 +836,15 @@
         "unpackedSize": 335941,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbfcYwCRA9TVsSAnZWagAARlIQAJ0ml9Ow+Z9mHwP+vAM/\negB/zY3a6Mq2l0ediXft4nQDlVUspdYCXCu5vtwO0z9wao5VisC0RXnEoVoT\n8u2OddejmkpVcGuGKfVuTk/OdWt6Z8yHGIPxUoPzHUmDL3cjWxS/dPkdlBLA\n6X5Ix5kcHbR2mDS0moEO1Pjp6zWbFN8vzNXe6HBOhpN1Z6cm2ppNETG7JTTR\n3mPfp1HbEY6BA04avf0ZE+/snD6zM6nGZY5WGnWOiYdaEVi1Ol5GBjTeVB3z\nCRo8CSSS+wq/iggtSoR12lvAcQlsR0T+blzWNJ6w6lt1GuwKsWg2pdJbmGcC\nVIii/Cq7Sh4wFzLYkDkBudjUesKx6AbKA8EcO0/2im9quQpie/AXdpSKV/LH\nTgN3SDY5/90/8L0Kn0YIaYAxnNoHjN7vX4fGeFyzcbViArhud0vRzyp2gnVO\nK5I2z4tiO+lIKxaSSOSxSt7+x1Fkn9zU1/ZJuIiv31AuMaQVDrAbi5GjegLs\nv/UBrWxfvIYsoNX1rnZpf2+iHaRRCSgECcGZz2W/b5DAXhA5YA87KrDPn5Ut\nMEgRY9eehGAz7lzKt0Zfs/zmoCwfe6ZErAxNHKCsnjV6c9uSto8Jya0zfENG\n2Jhrsbyj1N9fECq8U1+E4GLhecrOCJzF7bJi7KeXo9isIZQt+BsPBgeYbzSJ\n9uVK\r\n=GkHx\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.4.24_1534969392040_0.7324868237182729"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.5.0": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.5.0",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./lib/extend-node": false,
-        "./lib/streams": false
+      "dependencies": {
+        "safer-buffer": ">= 2.1.2 < 3"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -4206,17 +855,6 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-      },
-      "dependencies": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      },
-      "gitHead": "2b4125d11a733a40e45a755648389b2512a97a62",
-      "_id": "iconv-lite@0.5.0",
-      "_nodeVersion": "12.1.0",
-      "_npmVersion": "6.9.0",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
       },
       "dist": {
         "integrity": "sha512-NnEhI9hIEKHOzJ4f697DMz9IQEXr/MMJ5w64vN2/4Ai+wRnvV7SBrL0KLoRlwaKVghOc7LQ5YkPLuX146b6Ydw==",
@@ -4226,55 +864,15 @@
         "unpackedSize": 346031,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdE/HdCRA9TVsSAnZWagAAtwwP/0A7gJ8ks851kXBTq6VJ\nhWlcoH4O4p+EXHO2oSPHqNiBVKme4KJH/eZelsKcLM3DdL4KjQEdGRT0kcEF\nimeagOhpZxIvP5uS54170P/uNpxtSxqFbpdWEmNoK6InVt2mKXbEosaIVIyu\nClFLlD0JftT3jkRe35egrN/2HTbI5tS/Xms15u41L5bgJnB7PAuXwZFBD9Rx\nHolgA2ENPHKXOzxJ2s338Cawonz3L2flW++KJwUIp6SgyFUrfOZfacSS/8UK\nQhaESFlnL17geSZOdgp/8Uxc8ClOFw8cs3lFVTW5tSsGBlVPwxgyEhTXKbXH\nRxPMycpRoulWGvpzfJuW114kco3KGsYpeHiafyQ2RBQUCXIXIfMUxztXjMtW\nNkTPNAwgW/X0P3cuUdx4tEwvHWFQLI4pscTufczsMLYn7cgMJs5pSaX/szYi\nrb14yLD02tBARpKH57PoEEfgustZvSJDCpKpaYycyzBIRSrXIsjBXpprQqab\nSZ9qoKuSJNRQueJTTDg2juSNHjQwucMQ0/5G1O9LnrRaiTjq8mY8Yq5Fm7aU\nu5GRwOZ0XdkqYV7QA7fbSKIG23VgqEjhl2HLESjhvPOHS4imw+/EUyMqyR8U\nb+lWqytvWRiGT0UNTz8swnNH1zvrkatb2MC320/dCK9VGsNJnBMSGNQOBZ2E\n8nnF\r\n=y8ow\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.5.0_1561588188650_0.5881942713503567"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.5.1": {
       "name": "iconv-lite",
-      "description": "Convert character encodings in pure javascript.",
       "version": "0.5.1",
-      "license": "MIT",
-      "keywords": [
-        "iconv",
-        "convert",
-        "charset",
-        "icu"
-      ],
-      "author": {
-        "name": "Alexander Shtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
-      "main": "./lib/index.js",
-      "typings": "./lib/index.d.ts",
-      "homepage": "https://github.com/ashtuchkin/iconv-lite",
-      "bugs": {
-        "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/ashtuchkin/iconv-lite.git"
-      },
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "coverage": "istanbul cover _mocha -- --grep .",
-        "coverage-open": "open coverage/lcov-report/index.html",
-        "test": "mocha --reporter spec --grep ."
-      },
-      "browser": {
-        "./lib/extend-node": false,
-        "./lib/streams": false
+      "dependencies": {
+        "safer-buffer": ">= 2.1.2 < 3"
       },
       "devDependencies": {
         "mocha": "^3.1.0",
@@ -4286,17 +884,6 @@
         "semver": "*",
         "iconv": "*"
       },
-      "dependencies": {
-        "safer-buffer": ">= 2.1.2 < 3"
-      },
-      "gitHead": "c60e647d0d825ad3815d0865e871fabb68a531df",
-      "_id": "iconv-lite@0.5.1",
-      "_nodeVersion": "13.6.0",
-      "_npmVersion": "6.13.4",
-      "_npmUser": {
-        "name": "ashtuchkin",
-        "email": "ashtuchkin@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-ONHr16SQvKZNSqjQT9gy5z24Jw+uqfO02/ngBSBoqChZ+W8qXX7GPRa1RoUnzGADw8K63R1BXUMzarCVQBpY8Q==",
         "shasum": "b2425d3c7b18f7219f2ca663d103bddb91718d64",
@@ -4305,203 +892,12 @@
         "unpackedSize": 346613,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeIrkZCRA9TVsSAnZWagAAWewP/jg46EbbijEKJ4Rv89jW\nzbhQVRIbKDH0yjRC7e440Eb+vJ8OJZqyIcpkDJhgUQW0KkH3NGoaiVbevBfi\nTUNIM0CuMn8Vfiyb84JyQLEYoJVy9ONgY/4+jnqfDTIm/Rcj7lviNExsjzVe\nazfyGI6nanK31cAw0uiZx/BVr47uvgReaDRoWIgsNeFMLoN0OeOr9+4ZmKIG\nvbtYIxRLv4IJMJUk4LFJwU74Pi90CXNsKq4nEQ2njbl8oyZlM9CqNHrZnQ9j\n/nTy2SJNDfH+XpAv32IuLYKrtle3UZvpa174cZjGea+2D/Mok6hWy+XnSLhe\nX4yq1+H952YjAsaORwUSSIBDOuFo3sUNDs08owexbjXgpPRW1kWSQxFWm0c8\nWKkR20uBtT/FucFrguxClKdH8bN0zEkCRJFI3jUmEz23aOpfBsIGGWMN0xXr\n34u+PG2533SbEVVhdtEZxaaNy03Y1Vn0Havwg4fWbXZoofK1Zikp8x89/gXY\n2WBi26EumiG9Vp6eFOBy82ti/MqybpjT/HhW/vV/DBQ/PCeJhymWtiqFF76g\nFFtIkO8tQJt08mVi0ZHaeA3oekiKwp/5P8IbC9Ii4OFIg/ZNylL55vN9l1/h\nejGtS19hy53dLXqCM+kdcn+vLW8tYX15sHLhyFu9JyMk17guLZpni1Ifyea2\nD/uC\r\n=xZUQ\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "ashtuchkin",
-          "email": "ashtuchkin@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/iconv-lite_0.5.1_1579333912541_0.3489234031838713"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "ashtuchkin",
-      "email": "ashtuchkin@gmail.com"
-    }
-  ],
-  "time": {
-    "modified": "2020-01-18T07:51:55.040Z",
-    "created": "2011-11-09T17:51:01.242Z",
-    "0.1.0": "2011-11-09T17:51:05.090Z",
-    "0.1.1": "2011-11-23T12:55:22.201Z",
-    "0.1.2": "2012-03-09T18:49:04.510Z",
-    "0.1.3": "2012-05-06T10:06:54.542Z",
-    "0.1.4": "2012-05-06T11:24:01.572Z",
-    "0.2.0": "2012-05-07T17:43:01.137Z",
-    "0.2.1": "2012-06-29T14:49:19.424Z",
-    "0.2.3": "2012-07-13T14:07:06.630Z",
-    "0.2.4": "2012-08-24T21:10:48.490Z",
-    "0.2.5": "2012-08-26T02:55:50.688Z",
-    "0.2.6": "2012-11-20T07:39:43.417Z",
-    "0.2.7": "2012-12-05T06:40:33.383Z",
-    "0.2.8": "2013-04-16T20:41:10.178Z",
-    "0.2.9": "2013-05-19T23:16:51.894Z",
-    "0.2.10": "2013-05-27T03:33:58.336Z",
-    "0.2.11": "2013-07-15T01:23:17.021Z",
-    "0.4.0-pre": "2014-04-25T21:50:56.999Z",
-    "0.4.0-pre2": "2014-04-26T02:35:46.872Z",
-    "0.4.0-pre3": "2014-04-28T10:27:26.683Z",
-    "0.4.0": "2014-06-11T03:06:17.844Z",
-    "0.4.1": "2014-06-12T04:58:44.366Z",
-    "0.4.2": "2014-06-12T23:55:05.316Z",
-    "0.4.3": "2014-06-15T04:57:36.477Z",
-    "0.4.4": "2014-07-17T04:53:40.014Z",
-    "0.4.5": "2014-11-20T10:38:59.501Z",
-    "0.4.6": "2015-01-12T14:46:50.603Z",
-    "0.4.7": "2015-02-06T07:41:29.590Z",
-    "0.4.8": "2015-04-14T17:46:59.824Z",
-    "0.4.9": "2015-05-24T12:47:29.122Z",
-    "0.4.10": "2015-05-27T06:18:34.272Z",
-    "0.4.11": "2015-07-03T21:29:49.475Z",
-    "0.4.12": "2015-09-26T21:17:50.923Z",
-    "0.4.13": "2015-10-02T04:10:55.543Z",
-    "0.4.14": "2016-11-21T05:54:48.478Z",
-    "0.4.15": "2016-11-21T19:02:59.113Z",
-    "0.4.16": "2017-04-22T22:48:59.698Z",
-    "0.4.17": "2017-05-01T05:10:12.243Z",
-    "0.4.18": "2017-06-13T15:20:12.238Z",
-    "0.4.19": "2017-09-10T03:56:41.914Z",
-    "0.4.20": "2018-04-07T04:02:35.444Z",
-    "0.4.21": "2018-04-07T04:31:13.009Z",
-    "0.4.22": "2018-05-05T23:37:31.575Z",
-    "0.4.23": "2018-05-07T22:22:24.294Z",
-    "0.4.24": "2018-08-22T20:23:12.162Z",
-    "0.5.0": "2019-06-26T22:29:48.857Z",
-    "0.5.1": "2020-01-18T07:51:52.746Z"
-  },
-  "author": {
-    "name": "Alexander Shtuchkin",
-    "email": "ashtuchkin@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ashtuchkin/iconv-lite.git"
-  },
-  "users": {
-    "326060588": true,
-    "792884274": true,
-    "pekim": true,
-    "leesei": true,
-    "pana": true,
-    "timur.shemsedinov": true,
-    "derektu": true,
-    "redmed": true,
-    "serdar2nc": true,
-    "croplio": true,
-    "kahboom": true,
-    "boustanihani": true,
-    "rentalname": true,
-    "louxiaojian": true,
-    "masaaki": true,
-    "magemagic": true,
-    "cshao": true,
-    "samhou1988": true,
-    "alanshaw": true,
-    "novo": true,
-    "hrmoller": true,
-    "52u": true,
-    "moimikey": true,
-    "staraple": true,
-    "itonyyo": true,
-    "programmingpearls": true,
-    "luhuan": true,
-    "h0ward": true,
-    "leonning": true,
-    "lokismax": true,
-    "mikend": true,
-    "shacoxss": true,
-    "chrisyipw": true,
-    "luobotang": true,
-    "krot47": true,
-    "jackchi1981": true,
-    "po": true,
-    "cassln": true,
-    "dongxu": true,
-    "igor.gudymenko": true,
-    "antanst": true,
-    "byrdkm17": true,
-    "demopark": true,
-    "lijinghust": true,
-    "xinwangwang": true,
-    "modao": true,
-    "rianma": true,
-    "vtocco": true,
-    "jasonwang1888": true,
-    "runjinz": true,
-    "scrd": true,
-    "tongjieme": true,
-    "dahe": true,
-    "diegoperini": true,
-    "tigefa": true,
-    "lianhr12": true,
-    "wangnan0610": true,
-    "marsking": true,
-    "manikantag": true,
-    "monolithed": true,
-    "nuer": true,
-    "vjudge": true,
-    "huigezong": true,
-    "mojaray2k": true,
-    "monjer": true,
-    "cliffyan": true,
-    "seangenabe": true,
-    "lonjoy": true,
-    "nice_body": true,
-    "4rlekin": true,
-    "ninozhang": true,
-    "evdokimovm": true,
-    "jaxcode": true,
-    "chaoliu": true,
-    "0936zz": true,
-    "heineiuo": true,
-    "binginsist": true,
-    "junyiz": true,
-    "xueboren": true,
-    "grabantot": true,
-    "raycharles": true,
-    "lbeff": true,
-    "nayuki": true,
-    "joan12358": true,
-    "justdomepaul": true,
-    "maemichi-monosense": true,
-    "morogasper": true,
-    "mysticatea": true,
-    "miacui": true,
-    "artjacob": true,
-    "xiaoyangyangly": true,
-    "tzq1011": true,
-    "evanlai": true,
-    "faraoman": true,
-    "haihepeng": true,
-    "sammy_winchester": true,
-    "wujianfu": true,
-    "jinglf000": true,
-    "zjj19970517": true,
-    "zhenguo.zhao": true,
-    "kuaiyienchou": true,
-    "jsyzqt": true,
-    "wxfskylove": true,
-    "michalskuza": true,
-    "poplartang": true,
-    "tomgao365": true,
-    "daizch": true
-  },
-  "homepage": "https://github.com/ashtuchkin/iconv-lite",
-  "keywords": [
-    "iconv",
-    "convert",
-    "charset",
-    "icu"
-  ],
-  "bugs": {
-    "url": "https://github.com/ashtuchkin/iconv-lite/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md"
+  "modified": "2020-01-18T07:51:55.040Z",
+  "_cached": false,
+  "_contentLength": 20205
 }

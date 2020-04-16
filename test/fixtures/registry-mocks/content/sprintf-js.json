@@ -1,8 +1,5 @@
 {
-  "_id": "sprintf-js",
-  "_rev": "80-a4ba0acd2d2196506b1a1f96bd49a173",
   "name": "sprintf-js",
-  "description": "JavaScript sprintf implementation",
   "dist-tags": {
     "latest": "1.1.2"
   },
@@ -10,206 +7,59 @@
     "0.0.7": {
       "name": "sprintf-js",
       "version": "0.0.7",
-      "description": "JavaScript sprintf implementation",
-      "main": "src/sprintf.js",
       "directories": {
         "test": "test"
       },
-      "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/alexei/sprintf.js.git"
-      },
-      "author": {
-        "name": "Alexandru Marasteanu",
-        "email": "hello@alexei.ro",
-        "url": "http://alexei.ro/"
-      },
-      "license": "BSD",
-      "_id": "sprintf-js@0.0.7",
       "dist": {
         "shasum": "f00d78fd160130809b4ab340c0310faa71253dbd",
         "tarball": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-0.0.7.tgz"
-      },
-      "_npmVersion": "1.1.65",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ]
+      }
     },
     "1.0.1": {
       "name": "sprintf-js",
       "version": "1.0.1",
-      "description": "JavaScript sprintf implementation",
-      "author": {
-        "name": "Alexandru Marasteanu",
-        "email": "hello@alexei.ro",
-        "url": "http://alexei.ro/"
-      },
-      "main": "src/sprintf.js",
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/alexei/sprintf.js.git"
-      },
-      "license": "BSD-3-Clause",
       "devDependencies": {
         "mocha": "*",
         "grunt": "*",
         "grunt-contrib-watch": "*",
         "grunt-contrib-uglify": "*"
       },
-      "gitHead": "6d742809698ee0caff18c71251cba3ed8b03de5d",
-      "bugs": {
-        "url": "https://github.com/alexei/sprintf.js/issues"
-      },
-      "homepage": "https://github.com/alexei/sprintf.js",
-      "_id": "sprintf-js@1.0.1",
-      "_shasum": "57ed6d7fe6240c1b2e7638431b57704f86a7f0ef",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ],
       "dist": {
         "shasum": "57ed6d7fe6240c1b2e7638431b57704f86a7f0ef",
         "tarball": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.1.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.2": {
       "name": "sprintf-js",
       "version": "1.0.2",
-      "description": "JavaScript sprintf implementation",
-      "author": {
-        "name": "Alexandru Marasteanu",
-        "email": "hello@alexei.ro",
-        "url": "http://alexei.ro/"
-      },
-      "main": "src/sprintf.js",
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/alexei/sprintf.js.git"
-      },
-      "license": "BSD-3-Clause",
       "devDependencies": {
         "mocha": "*",
         "grunt": "*",
         "grunt-contrib-watch": "*",
         "grunt-contrib-uglify": "*"
       },
-      "gitHead": "e8c73065cd1a79a32c697806a4e85f1fe7917592",
-      "bugs": {
-        "url": "https://github.com/alexei/sprintf.js/issues"
-      },
-      "homepage": "https://github.com/alexei/sprintf.js",
-      "_id": "sprintf-js@1.0.2",
-      "_shasum": "11e4d84ff32144e35b0bf3a66f8587f38d8f9978",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ],
       "dist": {
         "shasum": "11e4d84ff32144e35b0bf3a66f8587f38d8f9978",
         "tarball": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.2.tgz"
-      },
-      "directories": {}
+      }
     },
     "1.0.3": {
       "name": "sprintf-js",
       "version": "1.0.3",
-      "description": "JavaScript sprintf implementation",
-      "author": {
-        "name": "Alexandru Marasteanu",
-        "email": "hello@alexei.ro",
-        "url": "http://alexei.ro/"
-      },
-      "main": "src/sprintf.js",
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexei/sprintf.js.git"
-      },
-      "license": "BSD-3-Clause",
       "devDependencies": {
         "mocha": "*",
         "grunt": "*",
         "grunt-contrib-watch": "*",
         "grunt-contrib-uglify": "*"
       },
-      "gitHead": "747b806c2dab5b64d5c9958c42884946a187c3b1",
-      "bugs": {
-        "url": "https://github.com/alexei/sprintf.js/issues"
-      },
-      "homepage": "https://github.com/alexei/sprintf.js#readme",
-      "_id": "sprintf-js@1.0.3",
-      "_shasum": "04e6926f662895354f3dd015203633b857297e2c",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
       "dist": {
         "shasum": "04e6926f662895354f3dd015203633b857297e2c",
         "tarball": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ],
-      "directories": {}
+      }
     },
     "1.1.0": {
       "name": "sprintf-js",
       "version": "1.1.0",
-      "description": "JavaScript sprintf implementation",
-      "author": {
-        "name": "Alexandru Marasteanu",
-        "email": "hello@alexei.ro"
-      },
-      "main": "src/sprintf.js",
-      "scripts": {
-        "test": "mocha test/test.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexei/sprintf.js.git"
-      },
-      "license": "BSD-3-Clause",
       "devDependencies": {
         "benchmark": "^2.1.4",
         "gulp": "^3.9.0",
@@ -223,56 +73,14 @@
         "jshint": "^2.9.1",
         "mocha": "^3.3.0"
       },
-      "gitHead": "2e19f9a9b2c358749eb53d63be60ff7d3465711b",
-      "bugs": {
-        "url": "https://github.com/alexei/sprintf.js/issues"
-      },
-      "homepage": "https://github.com/alexei/sprintf.js#readme",
-      "_id": "sprintf-js@1.1.0",
-      "_shasum": "cffcaf702daf65ea39bb4e0fa2b299cec1a1be46",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.8.0",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
       "dist": {
         "shasum": "cffcaf702daf65ea39bb4e0fa2b299cec1a1be46",
         "tarball": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/sprintf-js-1.1.0.tgz_1494081358347_0.5414827775675803"
-      },
-      "directories": {}
+      }
     },
     "1.1.1": {
       "name": "sprintf-js",
       "version": "1.1.1",
-      "description": "JavaScript sprintf implementation",
-      "author": {
-        "name": "Alexandru Mărășteanu",
-        "email": "hello@alexei.ro"
-      },
-      "main": "src/sprintf.js",
-      "scripts": {
-        "test": "mocha test/test.js",
-        "posttest": "npm run lint",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix ."
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexei/sprintf.js.git"
-      },
-      "license": "BSD-3-Clause",
       "devDependencies": {
         "benchmark": "^2.1.4",
         "eslint": "3.19.0",
@@ -286,56 +94,14 @@
         "gulp-uglify": "^3.0.0",
         "mocha": "^3.4.2"
       },
-      "gitHead": "6bfe81840e560d675a9de3d79c06354a47ac9236",
-      "bugs": {
-        "url": "https://github.com/alexei/sprintf.js/issues"
-      },
-      "homepage": "https://github.com/alexei/sprintf.js#readme",
-      "_id": "sprintf-js@1.1.1",
-      "_shasum": "36be78320afe5801f6cea3ee78b6e5aab940ea0c",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.8.0",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
       "dist": {
         "shasum": "36be78320afe5801f6cea3ee78b6e5aab940ea0c",
         "tarball": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.1.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/sprintf-js-1.1.1.tgz_1496074852444_0.6851142619270831"
-      },
-      "directories": {}
+      }
     },
     "1.1.2": {
       "name": "sprintf-js",
       "version": "1.1.2",
-      "description": "JavaScript sprintf implementation",
-      "author": {
-        "name": "Alexandru Mărășteanu",
-        "email": "hello@alexei.ro"
-      },
-      "main": "src/sprintf.js",
-      "scripts": {
-        "test": "mocha test/*.js",
-        "pretest": "npm run lint",
-        "lint": "eslint .",
-        "lint:fix": "eslint --fix ."
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/alexei/sprintf.js.git"
-      },
-      "license": "BSD-3-Clause",
       "devDependencies": {
         "benchmark": "^2.1.4",
         "eslint": "^5.10.0",
@@ -349,18 +115,6 @@
         "gulp-uglify": "^3.0.1",
         "mocha": "^5.2.0"
       },
-      "gitHead": "ceb9b805e6d594a9c24cdde02890d3c00c6643b7",
-      "bugs": {
-        "url": "https://github.com/alexei/sprintf.js/issues"
-      },
-      "homepage": "https://github.com/alexei/sprintf.js#readme",
-      "_id": "sprintf-js@1.1.2",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "9.0.0",
-      "_npmUser": {
-        "name": "alexei",
-        "email": "hello@alexei.ro"
-      },
       "dist": {
         "integrity": "sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==",
         "shasum": "da1765262bf8c0f571749f2ad6c26300207ae673",
@@ -368,91 +122,10 @@
         "fileCount": 12,
         "unpackedSize": 40231,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcDSE4CRA9TVsSAnZWagAAaNwP/1h7BqeK4PRzJRpu7PsQ\nEohuxkAhwGYnx6iTt+S5kB55BiVot9WSzOxDCvTfdcD9msg2ejdtgOLPq9kN\ntTBQOtvoXy6Xc5RwYiH+o3Kla6qir+69XBXC9CkwdOAEcPSkDvB2QFUmiUo/\ni8Mkg9r/JGtsjwSxAYcryLUUIOZkDuoMu/YCVeUWRcxPi7WiKgumQsRGW8VY\nQnJiplaydvcYREw5efMvKo3iiK2Puts0Y6KohrBvLTxFK1gnAIX/Ycq/PfYa\npDLFMwLiuvZ799Hbs44yb+52M7SX1H0Y3VULOeFWY5vYJT1I5Xqnr6U8QsQ2\nFIVMeOL2jn8gq+LcP+nUT41V1ij/L3MvMISo4YBqr32dji3+JgC0tqHxqjdi\nph36pRpEgz8cU4Nu0d0ssH9Ubx+MsbLfQ2+cWAR5BJfs79Yhu/6eo1Te0XUi\njQMstGdcQi2jyKCiBMUVaatrqiMeXhvBdnnGd7QRR0ooRZatrCpYATvnwPGl\nXfRG7MjLiFSbrYmMsnpZW09IT3FG88SwoVVnk8VhMR5glUMTS+XUJ5QT7h8F\nqhz9gjQNSUJceKMsSsrjiiRUj93/diqVVGAp7juCHQESEKHe8BCKWDguCAGg\nOsb4YsSCnj5YnCLjuvTF4dYZln9OQ5/kq3PIUbfrBp6KBg4UwQKwems9C+sp\nWCGx\r\n=4TfB\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "maintainers": [
-        {
-          "name": "alexei",
-          "email": "hello@alexei.ro"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/sprintf-js_1.1.2_1544364344346_0.16399656635245852"
-      },
-      "_hasShrinkwrap": false
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "alexei",
-      "email": "hello@alexei.ro"
-    }
-  ],
-  "time": {
-    "modified": "2019-01-05T13:06:52.402Z",
-    "created": "2013-04-03T13:24:36.516Z",
-    "0.0.7": "2013-04-03T13:24:39.808Z",
-    "1.0.1": "2014-10-25T09:32:31.819Z",
-    "1.0.2": "2014-10-25T09:37:23.896Z",
-    "1.0.3": "2015-07-10T13:41:29.308Z",
-    "1.1.0": "2017-05-06T14:35:59.835Z",
-    "1.1.1": "2017-05-29T16:20:53.315Z",
-    "1.1.2": "2018-12-09T14:05:44.561Z"
-  },
-  "author": {
-    "name": "Alexandru Mărășteanu",
-    "email": "hello@alexei.ro"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexei/sprintf.js.git"
-  },
-  "users": {
-    "blalor": true,
-    "lexa": true,
-    "jimnox": true,
-    "guumaster": true,
-    "rsp": true,
-    "tnagengast": true,
-    "dbck": true,
-    "battlemidget": true,
-    "chocolateboy": true,
-    "flozz": true,
-    "acollins-ts": true,
-    "mattonfoot": true,
-    "jahnestacado": true,
-    "m80126colin": true,
-    "evandrix": true,
-    "redmonkeydf": true,
-    "brightchen": true,
-    "rreusser": true,
-    "kabirbaidhya": true,
-    "sopepos": true,
-    "monsterkodi": true,
-    "roberkules": true,
-    "hyokosdeveloper": true,
-    "claudiopro": true,
-    "limit": true,
-    "shanewholloway": true,
-    "axelrindle": true,
-    "armantaherian": true,
-    "ys_sidson_aidson": true,
-    "nbuchanan": true,
-    "agamlarage": true,
-    "peter.forgacs": true,
-    "create3000": true,
-    "yuch4n": true,
-    "keyn": true,
-    "justjavac": true,
-    "touskar": true,
-    "soerenskoett": true,
-    "panlw": true
-  },
-  "homepage": "https://github.com/alexei/sprintf.js#readme",
-  "bugs": {
-    "url": "https://github.com/alexei/sprintf.js/issues"
-  },
-  "license": "BSD-3-Clause",
-  "readmeFilename": "README.md"
+  "modified": "2019-01-05T13:06:52.402Z",
+  "_cached": false,
+  "_contentLength": 3534
 }

@@ -1,40 +1,14 @@
 {
-  "_id": "braces",
-  "_rev": "62-361606b0343e8b0ff37bd33623a1918e",
   "name": "braces",
-  "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
   "dist-tags": {
     "latest": "3.0.2"
   },
   "versions": {
     "0.1.0": {
       "name": "braces",
-      "description": "Faster brace expansion for file paths.",
       "version": "0.1.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE-MIT"
-        }
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
+      "dependencies": {
+        "expand-range": "^0.1.0"
       },
       "devDependencies": {
         "benchmarked": "^0.1.1",
@@ -46,74 +20,19 @@
         "verb": ">= 0.2.6",
         "verb-tag-jscomments": ">= 0.2.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "glob",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "dependencies": {
-        "expand-range": "^0.1.0"
-      },
-      "_id": "braces@0.1.0",
-      "_shasum": "2ea567d1f9622ba2395135bbf81fe140da7fefeb",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "2ea567d1f9622ba2395135bbf81fe140da7fefeb",
         "tarball": "https://registry.npmjs.org/braces/-/braces-0.1.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.1.1": {
       "name": "braces",
-      "description": "Faster brace expansion for file paths.",
       "version": "0.1.1",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE-MIT"
-        }
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
+      "dependencies": {
+        "expand-range": "^0.1.0"
       },
       "devDependencies": {
         "benchmarked": "^0.1.1",
@@ -125,80 +44,19 @@
         "verb": ">= 0.2.6",
         "verb-tag-jscomments": ">= 0.2.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "file",
-        "filepath",
-        "fp",
-        "fs",
-        "glob",
-        "globbing",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "dependencies": {
-        "expand-range": "^0.1.0"
-      },
-      "_id": "braces@0.1.1",
-      "_shasum": "9b3c273b426d1a7b3c9265094a9434ab84643ba3",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "9b3c273b426d1a7b3c9265094a9434ab84643ba3",
         "tarball": "https://registry.npmjs.org/braces/-/braces-0.1.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.1.2": {
       "name": "braces",
-      "description": "Faster brace expansion for file paths.",
       "version": "0.1.2",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE-MIT"
-        }
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
+      "dependencies": {
+        "expand-range": "^0.1.0"
       },
       "devDependencies": {
         "benchmarked": "^0.1.1",
@@ -210,80 +68,19 @@
         "verb": ">= 0.2.6",
         "verb-tag-jscomments": ">= 0.2.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "file",
-        "filepath",
-        "fp",
-        "fs",
-        "glob",
-        "globbing",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "dependencies": {
-        "expand-range": "^0.1.0"
-      },
-      "_id": "braces@0.1.2",
-      "_shasum": "f794ff9aabe60eaf557e9607cc850c8f531a12be",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "f794ff9aabe60eaf557e9607cc850c8f531a12be",
         "tarball": "https://registry.npmjs.org/braces/-/braces-0.1.2.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.1.4": {
       "name": "braces",
-      "description": "Fastest brace expansion lib. Typically used with file paths, but can be used with any string. Expands comma-separated values (e.g. `foo/{a,b,c}/bar`) and alphabetical or numerical ranges (e.g. `{1..9}`)",
       "version": "0.1.4",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE-MIT"
-        }
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
+      "dependencies": {
+        "expand-range": "^0.1.0"
       },
       "devDependencies": {
         "benchmarked": "^0.1.1",
@@ -293,81 +90,17 @@
         "mocha": "*",
         "should": "^4.1.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "file",
-        "filepath",
-        "fp",
-        "fs",
-        "glob",
-        "globbing",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "dependencies": {
-        "expand-range": "^0.1.0"
-      },
-      "_id": "braces@0.1.4",
-      "_shasum": "45ed440222debb0fec60b06bb75059e421c590fd",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "45ed440222debb0fec60b06bb75059e421c590fd",
         "tarball": "https://registry.npmjs.org/braces/-/braces-0.1.4.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "0.1.5": {
       "name": "braces",
-      "description": "Fastest brace expansion lib. Typically used with file paths, but can be used with any string. Expands comma-separated values (e.g. `foo/{a,b,c}/bar`) and alphabetical or numerical ranges (e.g. `{1..9}`)",
       "version": "0.1.5",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "licenses": [
-        {
-          "type": "MIT",
-          "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE-MIT"
-        }
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
       "dependencies": {
         "expand-range": "^0.1.0"
       },
@@ -379,76 +112,17 @@
         "mocha": "*",
         "should": "^4.1.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "file",
-        "filepath",
-        "fp",
-        "fs",
-        "glob",
-        "globbing",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "_id": "braces@0.1.5",
-      "_shasum": "c085711085291d8b75fdd74eab0f8597280711e6",
-      "_from": ".",
-      "_npmVersion": "1.4.9",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "c085711085291d8b75fdd74eab0f8597280711e6",
         "tarball": "https://registry.npmjs.org/braces/-/braces-0.1.5.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.0.0": {
       "name": "braces",
-      "description": "Fastest brace expansion lib, with the most complete implementation of the Bash 4.3 spec.",
       "version": "1.0.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE-MIT"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
       "dependencies": {
         "expand-range": "^0.3.1"
       },
@@ -460,77 +134,17 @@
         "should": "^4.4.1",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "file",
-        "filepath",
-        "fp",
-        "fs",
-        "glob",
-        "globbing",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "1acbc5c311a615b0cb94f5309f40329a6d8b6bcb",
-      "_id": "braces@1.0.0",
-      "_shasum": "991c57970805294a6f1a8aade96c9037fcea1246",
-      "_from": ".",
-      "_npmVersion": "1.4.23",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "991c57970805294a6f1a8aade96c9037fcea1246",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.0.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.1.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.1.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
       "dependencies": {
         "arr-filter": "^1.0.0",
         "expand-range": "^1.1.0",
@@ -546,77 +160,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "762112a749c669e7fae57eace98e481e145b3bfa",
-      "_id": "braces@1.1.0",
-      "_shasum": "1fd01ee8420a7196d234f2a29dc1bfe6e259854b",
-      "_from": ".",
-      "_npmVersion": "1.4.23",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "1fd01ee8420a7196d234f2a29dc1bfe6e259854b",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.1.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.2.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.2.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
       "dependencies": {
         "arr-filter": "^1.0.2",
         "expand-range": "^1.2.0",
@@ -632,80 +186,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "0255915a73f3feaf271261e589cc8975c1e15596",
-      "_id": "braces@1.2.0",
-      "_shasum": "b86f8f3898d11dc1008d29176a45b4863190e7b9",
-      "_from": ".",
-      "_npmVersion": "1.4.23",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "b86f8f3898d11dc1008d29176a45b4863190e7b9",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.2.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.3.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.3.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js"
-      ],
       "dependencies": {
         "arr-filter": "^1.0.2",
         "expand-range": "^1.4.0",
@@ -721,80 +212,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "0255915a73f3feaf271261e589cc8975c1e15596",
-      "_id": "braces@1.3.0",
-      "_shasum": "e0495cf4796c137fb0d80a922ffef431fbde6bef",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "e0495cf4796c137fb0d80a922ffef431fbde6bef",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.3.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.4.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.4.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js"
-      ],
       "dependencies": {
         "arr-filter": "^1.0.2",
         "expand-range": "^1.5.0",
@@ -810,80 +238,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "4026752b8795c282a4ba2546eb88c9d1ee9b6653",
-      "_id": "braces@1.4.0",
-      "_shasum": "c95b1b8fd045b765703c2c0cd95e0369e5696492",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "c95b1b8fd045b765703c2c0cd95e0369e5696492",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.4.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.5.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.5.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js"
-      ],
       "dependencies": {
         "arr-filter": "^1.0.2",
         "expand-range": "^1.5.0",
@@ -900,81 +265,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "46547e1d1553c497a061d13b8ed3c85b2d16b6d7",
-      "_id": "braces@1.5.0",
-      "_shasum": "3600d82f04390dfc7c6016f091657b2d86189a15",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "3600d82f04390dfc7c6016f091657b2d86189a15",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.5.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.5.1": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.5.1",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js",
-        "lib/"
-      ],
       "dependencies": {
         "arr-filter": "^1.0.2",
         "expand-range": "^1.5.0",
@@ -991,81 +292,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "a4a43ccb73b67bb8c86ded66f57417e5b13bba15",
-      "_id": "braces@1.5.1",
-      "_shasum": "faefcd7e5251c84c21127e8f079b14775b6c06ce",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "faefcd7e5251c84c21127e8f079b14775b6c06ce",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.5.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.6.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with more complete support of Bash 4.3 than minimatch.",
       "version": "1.6.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js",
-        "lib/"
-      ],
       "dependencies": {
         "arr-filter": "^1.0.2",
         "expand-range": "^1.8.0",
@@ -1082,81 +319,17 @@
         "should": "*",
         "write": "^0.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "25551ac2f8dade4ee68b4eeece4a338a9d8263f2",
-      "_id": "braces@1.6.0",
-      "_shasum": "438c23185022e8fa968af9feeaa056723a3efe55",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "438c23185022e8fa968af9feeaa056723a3efe55",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.6.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.7.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.7.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js",
-        "lib/"
-      ],
       "dependencies": {
         "arr-filter": "^1.0.2",
         "arr-map": "^1.0.0",
@@ -1173,81 +346,17 @@
         "mocha": "*",
         "should": "*"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "3960c6f34a4383b657e9bac59fe1345e5d3177c1",
-      "_id": "braces@1.7.0",
-      "_shasum": "ed954c25e8a170971202316c1899fa98fdae6d6d",
-      "_from": ".",
-      "_npmVersion": "1.4.28",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "ed954c25e8a170971202316c1899fa98fdae6d6d",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.7.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.8.0": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.8.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": {
-        "type": "MIT",
-        "url": "https://github.com/jonschlinkert/braces/blob/master/LICENSE"
-      },
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha -R spec"
-      },
-      "files": [
-        "index.js",
-        "lib/"
-      ],
       "dependencies": {
         "expand-range": "^1.8.1",
         "preserve": "^0.2.0",
@@ -1262,78 +371,17 @@
         "mocha": "*",
         "should": "*"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "3960c6f34a4383b657e9bac59fe1345e5d3177c1",
-      "_id": "braces@1.8.0",
-      "_shasum": "3a4a005aae0391817c17b074dca8f08e6fc9e4c4",
-      "_from": ".",
-      "_npmVersion": "2.5.1",
-      "_nodeVersion": "0.12.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
       "dist": {
         "shasum": "3a4a005aae0391817c17b074dca8f08e6fc9e4c4",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.8.0.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.8.1": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.8.1",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
-      "files": [
-        "index.js"
-      ],
       "dependencies": {
         "expand-range": "^1.8.1",
         "lazy-cache": "^0.2.3",
@@ -1349,87 +397,17 @@
         "mocha": "*",
         "should": "*"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "04aa03dccdadaf469bb7cad86ac8a31d21e974d7",
-      "_id": "braces@1.8.1",
-      "_shasum": "2d195b85a0a997ec21be78a7f1bc970480b12a1a",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "2d195b85a0a997ec21be78a7f1bc970480b12a1a",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.8.1.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.8.2": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.8.2",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
-      "files": [
-        "index.js",
-        "utils.js"
-      ],
       "dependencies": {
         "expand-range": "^1.8.1",
         "lazy-cache": "^0.2.3",
@@ -1444,88 +422,18 @@
         "minimist": "^1.1.0",
         "mocha": "*",
         "should": "*"
-      },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "9ab31c0dbf663ad08a7d9519286858f24e2ea9ac",
-      "_id": "braces@1.8.2",
-      "_shasum": "036e024051d4bbc7096428b4d6f20ea1f137a794",
-      "_from": ".",
-      "_npmVersion": "2.13.3",
-      "_nodeVersion": "0.12.0",
-      "_npmUser": {
-        "name": "doowb",
-        "email": "brian.woodward@gmail.com"
       },
       "dist": {
         "shasum": "036e024051d4bbc7096428b4d6f20ea1f137a794",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.8.2.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.8.3": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.8.3",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
-      "files": [
-        "index.js",
-        "utils.js"
-      ],
       "dependencies": {
         "expand-range": "^1.8.1",
         "preserve": "^0.2.0",
@@ -1540,86 +448,17 @@
         "mocha": "*",
         "should": "*"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "gitHead": "9ab31c0dbf663ad08a7d9519286858f24e2ea9ac",
-      "_id": "braces@1.8.3",
-      "_shasum": "35d4e7dda632b33e215d38a8a9cf4329c9c75d2c",
-      "_from": ".",
-      "_npmVersion": "3.3.6",
-      "_nodeVersion": "5.0.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "35d4e7dda632b33e215d38a8a9cf4329c9c75d2c",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.8.3.tgz"
       },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.8.4": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.8.4",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "expand-range": "^1.8.1",
         "preserve": "^0.2.0",
@@ -1635,113 +474,17 @@
         "mocha": "^2.4.5",
         "should": "^8.3.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "reflinks": [
-          "verb"
-        ],
-        "toc": false,
-        "layout": "default",
-        "lint": {
-          "reflinks": true
-        },
-        "tasks": [
-          "readme"
-        ],
-        "related": {
-          "list": [
-            "micromatch",
-            "expand-range",
-            "fill-range"
-          ]
-        }
-      },
-      "gitHead": "de218311bfb9d3c72531beafec67c6572b5e9c18",
-      "_id": "braces@1.8.4",
-      "_shasum": "75e2d6456d48b06dbb5205ed63442a3bfc5eefce",
-      "_from": ".",
-      "_npmVersion": "3.6.0",
-      "_nodeVersion": "5.5.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "75e2d6456d48b06dbb5205ed63442a3bfc5eefce",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.8.4.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/braces-1.8.4.tgz_1461140683394_0.9431159163359553"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "1.8.5": {
       "name": "braces",
-      "description": "Fastest brace expansion for node.js, with the most complete support for the Bash 4.3 braces specification.",
       "version": "1.8.5",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "expand-range": "^1.8.1",
         "preserve": "^0.2.0",
@@ -1757,130 +500,17 @@
         "mocha": "^2.4.5",
         "should": "^8.3.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "reflinks": [
-          "verb"
-        ],
-        "toc": false,
-        "layout": "default",
-        "lint": {
-          "reflinks": true
-        },
-        "tasks": [
-          "readme"
-        ],
-        "related": {
-          "list": [
-            "micromatch",
-            "expand-range",
-            "fill-range"
-          ]
-        }
-      },
-      "gitHead": "24874614ebeda1c5405180f1f6c9f374bcf384ce",
-      "_id": "braces@1.8.5",
-      "_shasum": "ba77962e12dff969d6b76711e914b737857bf6a7",
-      "_from": ".",
-      "_npmVersion": "3.6.0",
-      "_nodeVersion": "5.5.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "ba77962e12dff969d6b76711e914b737857bf6a7",
         "tarball": "https://registry.npmjs.org/braces/-/braces-1.8.5.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/braces-1.8.5.tgz_1463843581552_0.5618140168953687"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.0": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.0.0",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://github.com/doowb"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.1",
         "array-unique": "^0.3.2",
@@ -1915,145 +545,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^4.0.2"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "brace-expansion",
-          "to-regex-range",
-          "verb",
-          "verb-generate-readme"
-        ]
-      },
-      "gitHead": "e6761d8bf6e430ef73713a3a7d7b0115f6183c90",
-      "_id": "braces@2.0.0",
-      "_shasum": "3d809da0a3e2024761d48651955fd9452e25ec85",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.7.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "3d809da0a3e2024761d48651955fd9452e25ec85",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.0.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/braces-2.0.0.tgz_1476927129221_0.6485608567018062"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.1": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.0.1",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://github.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "email": "hemanth.hm@gmail.com",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.1",
         "array-unique": "^0.3.2",
@@ -2088,145 +590,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^4.0.2"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "brace-expansion",
-          "to-regex-range",
-          "verb",
-          "verb-generate-readme"
-        ]
-      },
-      "gitHead": "2c8155e67b85fe134110d178e4b916f5bd0db034",
-      "_id": "braces@2.0.1",
-      "_shasum": "aef8fb862f7f429d9840a931cbbbbf8355107905",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.7.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "aef8fb862f7f429d9840a931cbbbbf8355107905",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.0.1.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/braces-2.0.1.tgz_1476997523234_0.9440339561551809"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.2": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.0.2",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://github.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "email": "hemanth.hm@gmail.com",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.1",
         "array-unique": "^0.3.2",
@@ -2261,145 +635,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^4.0.2"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "brace-expansion",
-          "to-regex-range",
-          "verb",
-          "verb-generate-readme"
-        ]
-      },
-      "gitHead": "d2bb3cf243719334f245580c9eed4c4f5b90184c",
-      "_id": "braces@2.0.2",
-      "_shasum": "d4c9b44820e63a7b79437a4ef094b8ab53a4ae44",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.7.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "d4c9b44820e63a7b79437a4ef094b8ab53a4ae44",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.0.2.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/braces-2.0.2.tgz_1477032399842_0.88175986148417"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.3": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.0.3",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://github.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "email": "hemanth.hm@gmail.com",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.1",
         "array-unique": "^0.3.2",
@@ -2433,145 +679,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^4.2.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "brace-expansion",
-          "to-regex-range",
-          "verb",
-          "verb-generate-readme"
-        ]
-      },
-      "gitHead": "3b9f881ae5d07d1e6d1d66aec61e134731671807",
-      "_id": "braces@2.0.3",
-      "_shasum": "7ac586e593bdc43a262daf45673661464844198f",
-      "_from": ".",
-      "_npmVersion": "3.10.9",
-      "_nodeVersion": "6.9.2",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "7ac586e593bdc43a262daf45673661464844198f",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.0.3.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/braces-2.0.3.tgz_1481418802700_0.12234931578859687"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.0.4": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.0.4",
-      "homepage": "https://github.com/jonschlinkert/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "email": "hemanth.hm@gmail.com",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/jonschlinkert/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/jonschlinkert/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.1",
         "array-unique": "^0.3.2",
@@ -2606,143 +724,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^5.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "multimatch",
-          "to-regex-range"
-        ]
-      },
-      "gitHead": "1e18cfad8e1fba642b80737d0987dbe988b30b57",
-      "_id": "braces@2.0.4",
-      "_shasum": "6381bfe9154fbc2b0b1b420aab574b1ac87534ee",
-      "_from": ".",
-      "_npmVersion": "4.1.2",
-      "_nodeVersion": "7.7.3",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "6381bfe9154fbc2b0b1b420aab574b1ac87534ee",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.0.4.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/braces-2.0.4.tgz_1491959561858_0.7802031957544386"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.1.0": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.1.0",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "email": "hemanth.hm@gmail.com",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.3",
         "array-unique": "^0.3.2",
@@ -2776,143 +768,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^5.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "multimatch",
-          "to-regex-range"
-        ]
-      },
-      "gitHead": "3bfb5df3f4cf18cf098f22f0005b365d96a7ca62",
-      "_id": "braces@2.1.0",
-      "_shasum": "27dc86dfb1add13b2974fc4276e01941a246e14a",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.7.3",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "27dc86dfb1add13b2974fc4276e01941a246e14a",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.1.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/braces-2.1.0.tgz_1493246364083_0.3190110339783132"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.1.1": {
       "name": "braces",
-      "description": "Fast, comprehensive, bash-like brace expansion implemented in JavaScript. Complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.1.1",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "email": "brian.woodward@gmail.com",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "email": "hemanth.hm@gmail.com",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "email": "jon.schlinkert@sellside.com",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.3",
         "array-unique": "^0.3.2",
@@ -2946,141 +812,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^5.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        },
-        "reflinks": [
-          "multimatch",
-          "to-regex-range"
-        ]
-      },
-      "gitHead": "9a2ca2624823578aa68b624ffe71e089da66261d",
-      "_id": "braces@2.1.1",
-      "_shasum": "b33581be8553a651fdc79012760a7e767f82b834",
-      "_from": ".",
-      "_npmVersion": "4.2.0",
-      "_nodeVersion": "7.7.3",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "b33581be8553a651fdc79012760a7e767f82b834",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.1.1.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "packages-18-east.internal.npmjs.com",
-        "tmp": "tmp/braces-2.1.1.tgz_1493280609200_0.7220009674783796"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.2.0": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.2.0",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.3",
         "array-unique": "^0.3.2",
@@ -3114,137 +856,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^5.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        }
-      },
-      "gitHead": "6acf24280dbdeff24ea0b2d76fef3314ee2869dd",
-      "_id": "braces@2.2.0",
-      "_shasum": "9edd1d6ee0acd760f1d1e5c13bc66d428ad0a3c0",
-      "_from": ".",
-      "_npmVersion": "4.6.1",
-      "_nodeVersion": "7.7.3",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "9edd1d6ee0acd760f1d1e5c13bc66d428ad0a3c0",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.2.0.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces-2.2.0.tgz_1496014212571_0.4040629423689097"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.2.1": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.2.1",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.3",
         "array-unique": "^0.3.2",
@@ -3278,137 +900,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^5.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        }
-      },
-      "gitHead": "13f2def55bc873764c9638eaf8ded1646f48fc17",
-      "_id": "braces@2.2.1",
-      "_shasum": "cccce9e092a93faa0bba2c1174cd262d2369794d",
-      "_from": ".",
-      "_npmVersion": "4.6.1",
-      "_nodeVersion": "7.7.3",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "cccce9e092a93faa0bba2c1174cd262d2369794d",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.2.1.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces-2.2.1.tgz_1496193670172_0.42343820934183896"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.2.2": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.2.2",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "arr-flatten": "^1.0.3",
         "array-unique": "^0.3.2",
@@ -3442,137 +944,17 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^5.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        }
-      },
-      "gitHead": "f888915cb261fc633a2a221b33b45b80ed5e0bb8",
-      "_id": "braces@2.2.2",
-      "_shasum": "241f868c2b2690d9febeee5a7c83fbbf25d00b1b",
-      "_from": ".",
-      "_npmVersion": "4.6.1",
-      "_nodeVersion": "7.7.3",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
       "dist": {
         "shasum": "241f868c2b2690d9febeee5a7c83fbbf25d00b1b",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.2.2.tgz"
       },
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces-2.2.2.tgz_1496224590043_0.89456413150765"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.3.0": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.3.0",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "arr-flatten": "^1.1.0",
         "array-unique": "^0.3.2",
@@ -3606,136 +988,18 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^8.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        }
-      },
-      "gitHead": "d442bde36a17c2ed7a982866d85073338fda8c85",
-      "_id": "braces@2.3.0",
-      "_npmVersion": "5.5.1",
-      "_nodeVersion": "8.7.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
       "dist": {
         "integrity": "sha512-P4O8UQRdGiMLWSizsApmXVQDBS6KCt7dSexgLKBmH5Hr1CZq7vsnscFh8oR1sP1ab1Zj0uCHCEzZeV6SfUf3rA==",
         "shasum": "a46941cb5fb492156b3d6a656e06c35364e3e66e",
         "tarball": "https://registry.npmjs.org/braces/-/braces-2.3.0.tgz"
       },
-      "maintainers": [
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces-2.3.0.tgz_1508420228531_0.9479703973047435"
-      },
-      "directories": {}
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.3.1": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.3.1",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "arr-flatten": "^1.1.0",
         "array-unique": "^0.3.2",
@@ -3769,60 +1033,6 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^8.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        }
-      },
-      "gitHead": "b37f6972503348af5ecec46ff65a3a9d12d21274",
-      "_id": "braces@2.3.1",
-      "_npmVersion": "5.6.0",
-      "_nodeVersion": "9.5.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
       "dist": {
         "integrity": "sha512-SO5lYHA3vO6gz66erVvedSCkp7AKWdv6VcQ2N4ysXfPxdAlxAMMAdwegGGcv1Bqwm7naF1hNdk5d6AAIEHV2nQ==",
         "shasum": "7086c913b4e5a08dbe37ac0ee6a2500c4ba691bb",
@@ -3830,78 +1040,13 @@
         "fileCount": 12,
         "unpackedSize": 94768
       },
-      "maintainers": [
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces_2.3.1_1518927409826_0.33240580605170256"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "2.3.2": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "2.3.2",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "files": [
-        "index.js",
-        "lib"
-      ],
-      "main": "index.js",
-      "engines": {
-        "node": ">=0.10.0"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "arr-flatten": "^1.1.0",
         "array-unique": "^0.3.2",
@@ -3933,60 +1078,6 @@
         "time-diff": "^0.3.1",
         "yargs-parser": "^8.0.0"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ],
-        "related": {
-          "list": [
-            "expand-brackets",
-            "extglob",
-            "fill-range",
-            "micromatch",
-            "nanomatch"
-          ]
-        }
-      },
-      "gitHead": "8a3edbb31955881ae87ba540b9f86eb390e5c4bd",
-      "_id": "braces@2.3.2",
-      "_npmVersion": "5.8.0",
-      "_nodeVersion": "9.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
-      },
       "dist": {
         "integrity": "sha512-aNdbnj9P8PjdXU4ybaWLK2IF3jc/EoDYbC7AazW6to3TRsfXxscC9UXOB5iDiEQrkyIbWp2SLQda4+QAa7nc3w==",
         "shasum": "5979fd3f14cd531565e5fa2df1abfff1dfaee729",
@@ -3994,74 +1085,13 @@
         "fileCount": 8,
         "unpackedSize": 59699
       },
-      "maintainers": [
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces_2.3.2_1523197311772_0.8796414074016354"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=0.10.0"
+      }
     },
     "3.0.0": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "3.0.0",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "fill-range": "^7.0.1"
       },
@@ -4070,51 +1100,6 @@
         "bash-path": "^2.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.1.1"
-      },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ]
-      },
-      "gitHead": "abcf3418f13b1082fccf65fa2f4a5afb9432f295",
-      "_id": "braces@3.0.0",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-JrED+3ZoiTW3KmWkrajE5zm5Pl69XD1DjItKTX9KS+dsfrge66nho5fAOC+tBwMH5p5bPv97EYm8loTb7mxPKg==",
@@ -4124,74 +1109,13 @@
         "unpackedSize": 55270,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcq89rCRA9TVsSAnZWagAAY1oP/Ak0JTSaZUQv/2xXrF1Z\nD4zJ0bXdRNtkOIRwO1wqrl5Jn6LKc0lQmhfAanVxFE7LhuCFvS0f3bi/yMBY\nTkKlnMy376/Z5VIpxqwtOprvx0UG2k1/1LTgfLWt1sLlC1exAxK1HDnUUHhi\nGCiiPlAKvhB+ygp5334F2Mcwp9keW2yIMjH+7vZTxVToBwJYv3lHvcc3U8c0\nqifRFQTLK3vyoKTXCkP0EhmzbPBtcs5PFsi6b5qv5N8/3uHphqMg8YFhfpcr\nFtwh+NWLFdLEYIpFa2dHbIzISiRFFIkFIqTmPg7P89IPHXQAQL6xGi50VedN\nOvWxVQZyV1yGE/xVJgfR66FSZUGvL61ScW5zJ2noBqjsKwjv0XJoQL+aWDH0\ny0HgWdTQ0uylZjXqoL9h7Y8+jMfUO4DyukdqiqmPJmqziA4wJcyK8XKjfqZ/\nH88ej3z9TitURBb5ZJpGGEuMKkGSY2My03fq5aac//428dZ0BsXKBe2G5j/b\nzIZ6gNUVLWC6EpztEEC4S90Q3H/uoDan4i/rpw9rM9buPw4tUyqL2tU0YuBo\nu1/aDTuOOh+BHp8MAVzn/EmsfivhEh9uBZhrF+yxKMlSWanUkPmytMUcIoPq\nE/SAO3Ho2LSd3b+vZvi0ZcX5R1bLUdcx29wSxtux8QjbCHLAVifz+1S4Y2IJ\nquHV\r\n=Z/eb\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces_3.0.0_1554763626998_0.08917727299226375"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "3.0.1": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "3.0.1",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "fill-range": "^7.0.1"
       },
@@ -4200,51 +1124,6 @@
         "bash-path": "^2.0.1",
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.1.1"
-      },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ]
-      },
-      "gitHead": "3c51342023661b8d07444509c32ce294b6cb43e7",
-      "_id": "braces@3.0.1",
-      "_npmVersion": "6.5.0",
-      "_nodeVersion": "11.9.0",
-      "_npmUser": {
-        "name": "jonschlinkert",
-        "email": "github@sellside.com"
       },
       "dist": {
         "integrity": "sha512-Vmyh3JAr5DRUKCdRrC+WyAAsWBez8HLnBmVb6Ux2VYbvC8DjqMC228WHx24fiQG5BiDOVo+otK1scdkK5S6YNg==",
@@ -4254,74 +1133,13 @@
         "unpackedSize": 55387,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcrdPFCRA9TVsSAnZWagAA9ZsP/1rIkCKn2vfIdy1HvAGt\nY532MHHBmRKiy5UhFTnR9xvYpQYMOFgiXnuClYJBh0j/u3CtzgDkP+T/zDjw\nteMLJxcat86yNrt42ZBHRBjRPHjRy7ALyk/ocgC2M5bXENaWKVRGAq15vIXU\nQM3kqjAvN78Ea7y9DKA1yesI+1xLTVjBZQ1iAFFkRzYZPhKMX15xRHMnMKPE\n+9ZQCQjUBj0SEimbxV87UeTorj2RSGuhjkNurLAMvvUyQ5thPGGBiGt7JKSF\niR81fJBXijrOtzNle5sENmP3OkBLN5JEhksGwBUxS1h/XJhr+FBOiaI/64Wk\niZbzg0EtoaJ509oOzy1laWL9YAo+kiPKKVVeCYD+nWpNLxumWNq9hrOSgtM3\nRc/C9Q/91B03IWeaYUZFXaLW7zh+VSKAqFl0V1L5O7O/e1OrDg88f8FBzdQA\nnijtV51AuO9pTcvtHNlhKwYwV6+wYO08xMEn0KUCTiPNugrdvsvHPlRfk+hd\nWf9Igdp6pq1PYYtVjTPcCev3bRzKNo/3p755k/4sqgpfMX3QSQ/zOanED3QO\nfvaDEBerTLtfzFhTZfK/wySUHzb4hTCO1qcOeXj7qbDnVJvVUiEwZnKsMQlm\nWM7os3QUzYuIRtCzemsxcgYgWN7TB3SkwABGlUKmot9xWrXxSmvJw0GP+LPt\nuuaR\r\n=QRl/\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces_3.0.1_1554895812543_0.4256142650947923"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     },
     "3.0.2": {
       "name": "braces",
-      "description": "Bash-like brace expansion, implemented in JavaScript. Safer than other brace expansion libs, with complete support for the Bash 4.3 braces specification, without sacrificing speed.",
       "version": "3.0.2",
-      "homepage": "https://github.com/micromatch/braces",
-      "author": {
-        "name": "Jon Schlinkert",
-        "url": "https://github.com/jonschlinkert"
-      },
-      "contributors": [
-        {
-          "name": "Brian Woodward",
-          "url": "https://twitter.com/doowb"
-        },
-        {
-          "name": "Elan Shanker",
-          "url": "https://github.com/es128"
-        },
-        {
-          "name": "Eugene Sharygin",
-          "url": "https://github.com/eush77"
-        },
-        {
-          "name": "hemanth.hm",
-          "url": "http://h3manth.com"
-        },
-        {
-          "name": "Jon Schlinkert",
-          "url": "http://twitter.com/jonschlinkert"
-        }
-      ],
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/micromatch/braces.git"
-      },
-      "bugs": {
-        "url": "https://github.com/micromatch/braces/issues"
-      },
-      "license": "MIT",
-      "main": "index.js",
-      "engines": {
-        "node": ">=8"
-      },
-      "scripts": {
-        "test": "mocha",
-        "benchmark": "node benchmark"
-      },
       "dependencies": {
         "fill-range": "^7.0.1"
       },
@@ -4331,51 +1149,6 @@
         "gulp-format-md": "^2.0.0",
         "mocha": "^6.1.1"
       },
-      "keywords": [
-        "alpha",
-        "alphabetical",
-        "bash",
-        "brace",
-        "braces",
-        "expand",
-        "expansion",
-        "filepath",
-        "fill",
-        "fs",
-        "glob",
-        "globbing",
-        "letter",
-        "match",
-        "matches",
-        "matching",
-        "number",
-        "numerical",
-        "path",
-        "range",
-        "ranges",
-        "sh"
-      ],
-      "verb": {
-        "toc": false,
-        "layout": "default",
-        "tasks": [
-          "readme"
-        ],
-        "lint": {
-          "reflinks": true
-        },
-        "plugins": [
-          "gulp-format-md"
-        ]
-      },
-      "gitHead": "25791512d219b284bd62bb068cae85d8e68bd05b",
-      "_id": "braces@3.0.2",
-      "_npmVersion": "6.4.1",
-      "_nodeVersion": "10.15.2",
-      "_npmUser": {
-        "name": "doowb",
-        "email": "brian.woodward@gmail.com"
-      },
       "dist": {
         "integrity": "sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==",
         "shasum": "3454e1a462ee8d599e236df336cd9ea4f8afe107",
@@ -4384,146 +1157,12 @@
         "unpackedSize": 49239,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJctjIxCRA9TVsSAnZWagAAwA4P/i6j6DyxGZfojgDNzaNX\n6GlgCFb4mF64au4BAi+9q2gJTJOVbr2P/0iEl9tjdM5LU+tqEv1eLKkHenBi\ndc+ktaVD/c+XaTMubGNhtBfDxQUiU/QqI6dLMCEOb5EOlSclHsTiLV3frQxI\nEUzh9+LL3V6okecvADaWgt17xTWXSDRktZJoFeAK5q0017ras8yWLqp+5uDO\nRpapuec1wK4RRUDUS9/I+K9R7Kxv9aTyfdGQ5sueLj1QdAmNKDAVH77OG9Rl\nACDijw5L1KpzRkGxGkrwUHyjh0V7EMDwj74XgddEEE3eUgn5UN5n+Dmyj0/H\nP5tcGxOqNEpj9UueU8m6A18URJatSzDwqhAEKbJ1jyYs3LyElDUdiOxYedib\nHz8Ny9+5TJqEeEhU0de/8bsafjV4QsC/JZLI8nc9W65HVQ8M1fAgvxQ6O7Uj\naoZiqhME6OaE43tR4ldNnnYVujQInyOnTocL3GkbxNWvuQQieLNvBsV0p1H4\n6A9Q4y0fzsfdH+NoEJ3ghgSMn2P5Bb9EuExg0McW//H1Gj5+V2nfXEFGXoQE\n874CBL5gIxyAGSGiWB57y6bGCMWvo6gKhFdeEF+msvMSiv18hw4CcgogVzy/\n1pWI+R9hSWbaWD6q/Em9HmIJDqNS633NWy+KMMrEQLGZjfrEa3VsRjiXGCaH\nUQTq\r\n=kTks\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "maintainers": [
-        {
-          "name": "doowb",
-          "email": "brian.woodward@gmail.com"
-        },
-        {
-          "name": "es128",
-          "email": "elan.shanker+npm@gmail.com"
-        },
-        {
-          "name": "jonschlinkert",
-          "email": "github@sellside.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/braces_3.0.2_1555444272661_0.9578113107001449"
-      },
-      "_hasShrinkwrap": false
+      "engines": {
+        "node": ">=8"
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "doowb",
-      "email": "brian.woodward@gmail.com"
-    },
-    {
-      "name": "es128",
-      "email": "elan.shanker+npm@gmail.com"
-    },
-    {
-      "name": "jonschlinkert",
-      "email": "github@sellside.com"
-    }
-  ],
-  "time": {
-    "modified": "2019-04-16T19:51:15.518Z",
-    "created": "2014-10-20T16:26:32.656Z",
-    "0.1.0": "2014-10-20T16:26:32.656Z",
-    "0.1.1": "2014-10-22T18:19:54.228Z",
-    "0.1.2": "2014-10-22T18:51:58.044Z",
-    "0.1.3": "2014-11-15T03:23:28.705Z",
-    "0.1.4": "2014-11-15T03:24:22.095Z",
-    "0.1.5": "2014-11-24T02:08:00.293Z",
-    "1.0.0": "2014-12-23T11:35:57.637Z",
-    "1.1.0": "2015-01-12T00:45:29.358Z",
-    "1.2.0": "2015-01-16T11:55:08.268Z",
-    "1.3.0": "2015-01-24T11:32:14.592Z",
-    "1.4.0": "2015-01-25T00:33:05.711Z",
-    "1.5.0": "2015-01-28T18:08:49.158Z",
-    "1.5.1": "2015-01-30T13:27:20.249Z",
-    "1.6.0": "2015-01-30T13:35:38.758Z",
-    "1.7.0": "2015-01-31T00:24:25.055Z",
-    "1.8.0": "2015-03-18T11:37:22.409Z",
-    "1.8.1": "2015-08-21T10:17:04.643Z",
-    "1.8.2": "2015-10-19T17:46:05.744Z",
-    "1.8.3": "2015-12-19T23:03:30.884Z",
-    "1.8.4": "2016-04-20T08:24:45.636Z",
-    "1.8.5": "2016-05-21T15:13:02.602Z",
-    "2.0.0": "2016-10-20T01:32:09.939Z",
-    "2.0.1": "2016-10-20T21:05:23.946Z",
-    "2.0.2": "2016-10-21T06:46:42.002Z",
-    "2.0.3": "2016-12-11T01:13:25.003Z",
-    "2.0.4": "2017-04-12T01:12:43.808Z",
-    "2.1.0": "2017-04-26T22:39:25.950Z",
-    "2.1.1": "2017-04-27T08:10:11.271Z",
-    "2.2.0": "2017-05-28T23:30:13.765Z",
-    "2.2.1": "2017-05-31T01:21:11.257Z",
-    "2.2.2": "2017-05-31T09:56:31.159Z",
-    "2.3.0": "2017-10-19T13:37:09.763Z",
-    "2.3.1": "2018-02-18T04:16:49.881Z",
-    "2.3.2": "2018-04-08T14:21:51.992Z",
-    "3.0.0": "2019-04-08T22:47:07.141Z",
-    "3.0.1": "2019-04-10T11:30:12.815Z",
-    "3.0.2": "2019-04-16T19:51:12.829Z"
-  },
-  "homepage": "https://github.com/micromatch/braces",
-  "keywords": [
-    "alpha",
-    "alphabetical",
-    "bash",
-    "brace",
-    "braces",
-    "expand",
-    "expansion",
-    "filepath",
-    "fill",
-    "fs",
-    "glob",
-    "globbing",
-    "letter",
-    "match",
-    "matches",
-    "matching",
-    "number",
-    "numerical",
-    "path",
-    "range",
-    "ranges",
-    "sh"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/micromatch/braces.git"
-  },
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "bugs": {
-    "url": "https://github.com/micromatch/braces/issues"
-  },
-  "readmeFilename": "README.md",
-  "license": "MIT",
-  "users": {
-    "simone.sanfra": true,
-    "oboochin": true,
-    "jonschlinkert": true
-  },
-  "contributors": [
-    {
-      "name": "Brian Woodward",
-      "url": "https://twitter.com/doowb"
-    },
-    {
-      "name": "Elan Shanker",
-      "url": "https://github.com/es128"
-    },
-    {
-      "name": "Eugene Sharygin",
-      "url": "https://github.com/eush77"
-    },
-    {
-      "name": "hemanth.hm",
-      "url": "http://h3manth.com"
-    },
-    {
-      "name": "Jon Schlinkert",
-      "url": "http://twitter.com/jonschlinkert"
-    }
-  ]
+  "modified": "2019-04-16T19:51:15.518Z",
+  "_cached": false,
+  "_contentLength": 25361
 }

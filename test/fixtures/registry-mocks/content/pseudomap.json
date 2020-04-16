@@ -1,8 +1,5 @@
 {
-  "_id": "pseudomap",
-  "_rev": "5-a93165b774ba126a6638b933fb682aa4",
   "name": "pseudomap",
-  "description": "A thing that is a lot like ES6 `Map`, but without iterators, for use in environments where `for..of` syntax and `Map` are not available.",
   "dist-tags": {
     "latest": "1.0.2"
   },
@@ -10,182 +7,47 @@
     "1.0.0": {
       "name": "pseudomap",
       "version": "1.0.0",
-      "description": "A thing that is a lot like ES6 `Map`, but without iterators, for use in environments where `for..of` syntax and `Map` are not available.",
-      "main": "map.js",
-      "directories": {
-        "test": "test"
-      },
       "devDependencies": {
         "tap": "^2.3.1"
       },
-      "scripts": {
-        "test": "tap test/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/isaacs/pseudomap.git"
-      },
-      "author": {
-        "name": "Isaac Z. Schlueter",
-        "email": "i@izs.me",
-        "url": "http://blog.izs.me/"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/isaacs/pseudomap/issues"
-      },
-      "homepage": "https://github.com/isaacs/pseudomap#readme",
-      "gitHead": "2f2252a92ef96db2352e16426d4769375bac3e8f",
-      "_id": "pseudomap@1.0.0",
-      "_shasum": "e54724c45d2467838ea8efd05e9e9d0a80f324ba",
-      "_from": ".",
-      "_npmVersion": "3.3.2",
-      "_nodeVersion": "4.0.0",
-      "_npmUser": {
-        "name": "isaacs",
-        "email": "i@izs.me"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "e54724c45d2467838ea8efd05e9e9d0a80f324ba",
         "tarball": "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "isaacs",
-          "email": "i@izs.me"
-        }
-      ]
+      }
     },
     "1.0.1": {
       "name": "pseudomap",
       "version": "1.0.1",
-      "description": "A thing that is a lot like ES6 `Map`, but without iterators, for use in environments where `for..of` syntax and `Map` are not available.",
-      "main": "map.js",
-      "directories": {
-        "test": "test"
-      },
       "devDependencies": {
         "tap": "^2.3.1"
       },
-      "scripts": {
-        "test": "tap test/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/isaacs/pseudomap.git"
-      },
-      "author": {
-        "name": "Isaac Z. Schlueter",
-        "email": "i@izs.me",
-        "url": "http://blog.izs.me/"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/isaacs/pseudomap/issues"
-      },
-      "homepage": "https://github.com/isaacs/pseudomap#readme",
-      "gitHead": "a1226c608b1933fa02436b098c483b926f0b4d54",
-      "_id": "pseudomap@1.0.1",
-      "_shasum": "29b4e7f37bbbf3e3c9b9152981c40f33d56b2b28",
-      "_from": ".",
-      "_npmVersion": "3.3.2",
-      "_nodeVersion": "4.0.0",
-      "_npmUser": {
-        "name": "isaacs",
-        "email": "i@izs.me"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "29b4e7f37bbbf3e3c9b9152981c40f33d56b2b28",
         "tarball": "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "isaacs",
-          "email": "i@izs.me"
-        }
-      ]
+      }
     },
     "1.0.2": {
       "name": "pseudomap",
       "version": "1.0.2",
-      "description": "A thing that is a lot like ES6 `Map`, but without iterators, for use in environments where `for..of` syntax and `Map` are not available.",
-      "main": "map.js",
-      "directories": {
-        "test": "test"
-      },
       "devDependencies": {
         "tap": "^2.3.1"
       },
-      "scripts": {
-        "test": "tap test/*.js"
-      },
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/isaacs/pseudomap.git"
-      },
-      "author": {
-        "name": "Isaac Z. Schlueter",
-        "email": "i@izs.me",
-        "url": "http://blog.izs.me/"
-      },
-      "license": "ISC",
-      "bugs": {
-        "url": "https://github.com/isaacs/pseudomap/issues"
-      },
-      "homepage": "https://github.com/isaacs/pseudomap#readme",
-      "gitHead": "b6dc728207a0321ede6479e34506d3e0e13a940b",
-      "_id": "pseudomap@1.0.2",
-      "_shasum": "f052a28da70e618917ef0a8ac34c1ae5a68286b3",
-      "_from": ".",
-      "_npmVersion": "3.3.2",
-      "_nodeVersion": "4.0.0",
-      "_npmUser": {
-        "name": "isaacs",
-        "email": "i@izs.me"
+      "directories": {
+        "test": "test"
       },
       "dist": {
         "shasum": "f052a28da70e618917ef0a8ac34c1ae5a68286b3",
         "tarball": "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.2.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "isaacs",
-          "email": "i@izs.me"
-        }
-      ]
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "isaacs",
-      "email": "i@izs.me"
-    }
-  ],
-  "time": {
-    "modified": "2017-01-18T10:51:41.887Z",
-    "created": "2015-11-27T22:21:52.729Z",
-    "1.0.0": "2015-11-27T22:21:52.729Z",
-    "1.0.1": "2015-11-27T22:26:27.081Z",
-    "1.0.2": "2016-01-05T03:03:55.449Z"
-  },
-  "homepage": "https://github.com/isaacs/pseudomap#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/isaacs/pseudomap.git"
-  },
-  "author": {
-    "name": "Isaac Z. Schlueter",
-    "email": "i@izs.me",
-    "url": "http://blog.izs.me/"
-  },
-  "bugs": {
-    "url": "https://github.com/isaacs/pseudomap/issues"
-  },
-  "license": "ISC",
-  "readmeFilename": "README.md",
-  "users": {
-    "timdp": true,
-    "joaquin.briceno": true
-  },
-  "_attachments": {}
+  "modified": "2017-01-18T10:51:41.887Z",
+  "_cached": false,
+  "_contentLength": 834
 }

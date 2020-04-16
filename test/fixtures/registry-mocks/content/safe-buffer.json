@@ -1,571 +1,121 @@
 {
-  "_id": "safe-buffer",
-  "_rev": "18-fbb351e1bed50849939f908291ddcc32",
   "name": "safe-buffer",
-  "description": "Safer Node.js Buffer API",
   "dist-tags": {
     "latest": "5.2.0"
   },
   "versions": {
     "1.0.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "1.0.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
-      "dependencies": {},
       "devDependencies": {
         "standard": "^5.0.0",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
-      },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "b8aaf15d48a29fdc5386d902631f9befd52a9db3",
-      "_id": "safe-buffer@1.0.0",
-      "_shasum": "10ac4127f54c368becb6879dcae2a2fb96571fa3",
-      "_from": ".",
-      "_npmVersion": "2.14.12",
-      "_nodeVersion": "4.2.4",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
       },
       "dist": {
         "shasum": "10ac4127f54c368becb6879dcae2a2fb96571fa3",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-1.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        }
-      ],
-      "directories": {}
+      }
     },
     "2.0.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "2.0.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
-      "dependencies": {},
       "devDependencies": {
         "standard": "^5.0.0",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
-      },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "79f40c926d9dcba272d9dc3acf365ee715857d51",
-      "_id": "safe-buffer@2.0.0",
-      "_shasum": "311d4a0deefdaa9f8d883fe898bdb04d12d3f14b",
-      "_from": ".",
-      "_npmVersion": "2.14.12",
-      "_nodeVersion": "4.2.4",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
       },
       "dist": {
         "shasum": "311d4a0deefdaa9f8d883fe898bdb04d12d3f14b",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-2.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "3.0.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "3.0.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
-      "dependencies": {},
       "devDependencies": {
         "standard": "^5.0.0",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
       },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "c3caf505557a60807b44aa97197d01251c192abb",
-      "_id": "safe-buffer@3.0.0",
-      "_shasum": "ab7065a989e2634fb0946df00368343258a759fe",
-      "_from": ".",
-      "_npmVersion": "2.14.12",
-      "_nodeVersion": "4.2.4",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
-      },
       "dist": {
         "shasum": "ab7065a989e2634fb0946df00368343258a759fe",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-3.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "directories": {}
+      }
     },
     "4.0.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "4.0.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
-      "dependencies": {},
       "devDependencies": {
         "standard": "^7.0.0",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
-      },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "481d1d9cd7bf6f392e1881f7b381f1c68ddaad0a",
-      "_id": "safe-buffer@4.0.0",
-      "_shasum": "b725368f0ec0e8a6faa9e657db34a3d2b332d680",
-      "_from": ".",
-      "_npmVersion": "2.15.5",
-      "_nodeVersion": "4.4.5",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
       },
       "dist": {
         "shasum": "b725368f0ec0e8a6faa9e657db34a3d2b332d680",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-4.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-16-east.internal.npmjs.com",
-        "tmp": "tmp/safe-buffer-4.0.0.tgz_1464584289130_0.17331634392030537"
-      },
-      "directories": {}
+      }
     },
     "5.0.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "5.0.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
-      "browser": "./browser.js",
       "devDependencies": {
         "standard": "^7.0.0",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
-      },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "ffb629c9ca70d66339f58a6441082184a9299634",
-      "_id": "safe-buffer@5.0.0",
-      "_shasum": "a59971ca637f5bcb622c47238a5e1e2c7751f354",
-      "_from": ".",
-      "_npmVersion": "2.15.5",
-      "_nodeVersion": "4.4.5",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
       },
       "dist": {
         "shasum": "a59971ca637f5bcb622c47238a5e1e2c7751f354",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.0.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/safe-buffer-5.0.0.tgz_1464587148074_0.3391482220031321"
-      },
-      "directories": {}
+      }
     },
     "5.0.1": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "5.0.1",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
-      "browser": "./browser.js",
       "devDependencies": {
         "standard": "^7.0.0",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
       },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "1e371a367da962afae2bebc527b50271c739d28c",
-      "_id": "safe-buffer@5.0.1",
-      "_shasum": "d263ca54696cd8a306b5ca6551e92de57918fbe7",
-      "_from": ".",
-      "_npmVersion": "2.15.5",
-      "_nodeVersion": "4.4.5",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
-      },
       "dist": {
         "shasum": "d263ca54696cd8a306b5ca6551e92de57918fbe7",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.0.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "packages-12-west.internal.npmjs.com",
-        "tmp": "tmp/safe-buffer-5.0.1.tgz_1464588482081_0.8112505874596536"
-      },
-      "directories": {}
+      }
     },
     "5.1.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "5.1.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
       "devDependencies": {
         "standard": "*",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
-      },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "9d841b67306768de05f147839fb32f7fc9bf10ad",
-      "_id": "safe-buffer@5.1.0",
-      "_npmVersion": "5.0.1",
-      "_nodeVersion": "8.0.0",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
       },
       "dist": {
         "integrity": "sha512-aSLEDudu6OoRr/2rU609gRmnYboRLxgDG1z9o2Q0os7236FwvcqIOO8r8U5JUEwivZOhDaKlFO4SbPTJYyBEyQ==",
         "shasum": "fe4c8460397f9eaaaa58e73be46273408a45e223",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.0.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safe-buffer-5.1.0.tgz_1496440779986_0.7629844571929425"
-      },
-      "directories": {}
+      }
     },
     "5.1.1": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "5.1.1",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
       "devDependencies": {
         "standard": "*",
         "tape": "^4.0.0",
         "zuul": "^3.0.0"
       },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test.js"
-      },
-      "gitHead": "5261e0c19dd820c31dd21cb4116902b0ed0f9e57",
-      "_id": "safe-buffer@5.1.1",
-      "_npmVersion": "5.0.3",
-      "_nodeVersion": "8.1.2",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
-      },
       "dist": {
         "integrity": "sha512-kKvNJn6Mm93gAczWVJg7wH+wGYWNrDHdWvpUmHyEsgCtIwwo3bqPtV4tR5tuPaUhTOo/kvhVwd8XwwOllGYkbg==",
         "shasum": "893312af69b2123def71f57889001671eeb2c853",
         "tarball": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.1.tgz"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safe-buffer-5.1.1.tgz_1498076368476_0.22441886644810438"
-      },
-      "directories": {}
+      }
     },
     "5.1.2": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "5.1.2",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
       "devDependencies": {
         "standard": "*",
         "tape": "^4.0.0"
-      },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "types": "index.d.ts",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test/*.js"
-      },
-      "gitHead": "649435cc8e2d1f3ecdc7caf323f1cb1187307a16",
-      "_id": "safe-buffer@5.1.2",
-      "_npmVersion": "6.0.0",
-      "_nodeVersion": "8.11.1",
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
       },
       "dist": {
         "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
@@ -574,64 +124,15 @@
         "fileCount": 5,
         "unpackedSize": 31686,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa4OCyCRA9TVsSAnZWagAAwf8QAIlCcf+WlqWgpiGufGgi\n+P81J+YsGVk8haOYIgZX8FTI10RjPKiGN6R11R2B8YMJhxk3kX6O2SO/pl6A\n3tuw9/n+HBQClzobhWovJ6aymO+ozlaxxWADx0DrqKhoDOfpPLoIjaWNS2q2\nh1VxErOXagn/JP11Le89LHqcZs3s1jYyH/cAvA7ygaHvHaDhAiMMimAdz8Ze\n07VKtAM6PSnBYODducjXNTWdqotsRnzmqWEQrV2OQsk8OudJ3+YBZG8szsQ2\nVGrOLeQyj7g+q/WrjFi6I4S+Eg0dYYUg73X3PaAFzGXf7VIjDDNkFjwmtx5u\nUxQ/HczXVzHkcVOfBzbNk4rPTx9o6gr+oDIvWeAgOPYIv1YT5bnMHZ2w7M+8\n4b+SPqVeWHcNfnUhLcHmxim2TWkl0DD+oeYSucsOZ65dJdihMlNiOlVe5XXl\nIPJbfOqNcWCzkibq7pQmTSeM52l8JSekpNZGi3RQQkbrVR+cR3F53VrDzvZe\n3Jqwg7hGlGXyXl5i3TPL0oqD15n/1+wLxZEBVrqM5SeQzvD8l1iDv+3sPViP\ng3msNBtX8NH+Sf4kfCJzHRGestQb0zpVa8wvKeQBBlmpv1kqAgnuPR3k39hI\ncjpqjm2vkmAetW4XnOnCuuMk4SEqejwXh0w1TAHlFLqhywxgSZhH6SJhTbgQ\nKQZ7\r\n=EOr+\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safe-buffer_5.1.2_1524687024555_0.6520279716197115"
-      },
-      "_hasShrinkwrap": false
+      }
     },
     "5.2.0": {
       "name": "safe-buffer",
-      "description": "Safer Node.js Buffer API",
       "version": "5.2.0",
-      "author": {
-        "name": "Feross Aboukhadijeh",
-        "email": "feross@feross.org",
-        "url": "http://feross.org"
-      },
-      "bugs": {
-        "url": "https://github.com/feross/safe-buffer/issues"
-      },
       "devDependencies": {
         "standard": "*",
         "tape": "^4.0.0"
       },
-      "homepage": "https://github.com/feross/safe-buffer",
-      "keywords": [
-        "buffer",
-        "buffer allocate",
-        "node security",
-        "safe",
-        "safe-buffer",
-        "security",
-        "uninitialized"
-      ],
-      "license": "MIT",
-      "main": "index.js",
-      "types": "index.d.ts",
-      "repository": {
-        "type": "git",
-        "url": "git://github.com/feross/safe-buffer.git"
-      },
-      "scripts": {
-        "test": "standard && tape test/*.js"
-      },
-      "gitHead": "ae53d5b9f06eae8540ca948d14e43ca32692dd8c",
-      "_id": "safe-buffer@5.2.0",
-      "_nodeVersion": "10.16.0",
-      "_npmVersion": "6.10.0",
       "dist": {
         "integrity": "sha512-fZEwUGbVl7kouZs1jCdMLdt95hdIv0ZeHg6L7qPeciMZhZ+/gdesW4wgTARkrFWEpspjEATAzUGPG8N2jJiwbg==",
         "shasum": "b74daec49b1148f88c64b68d49b1e815c1f2f519",
@@ -639,82 +140,10 @@
         "fileCount": 5,
         "unpackedSize": 31924,
         "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdH5EyCRA9TVsSAnZWagAA1QQP/RhJdEyKhGt8CC6AjuHT\nEYn+EG8LKupNcX4D3O1Tba5pHT8t6RTi1F+pQnENjaVVqYVo1UGnLHB7mvfK\ntJt/ebqCAGZicYtz0k8OjsptrDsta+x/AkSemMmpEgfHQyEVy3W+e2KXi9z1\nY30LDvK0SXo/TW3ii5cGJqqppUMfNAAh1QfaNT4w4W3lZQkDpyWxaqThHBD2\nJIYdGzjbo0TQAEFvhLeHK+QXBAimWSKdNzlQyxobhNMuNP0im+a0UHu/mJLO\ndprty7mp2QU0/2UsHDN+h9HKD/TqaiMHj0BYNZ5eLna2ztEWHym1lTPByfiN\nqMaMC/zNY8iWL3vIfQuehWr9cQXzHtQG4CUB2SqnFhY7OhY7sgIpVcn4N+dZ\nwQ3yr3cEECuUmW0xSJvD6RwF7pIiX0bHk1mZNV6Tg2TaaMt9/yv/k2+hln9K\nEvO8aXWIOiFCrmuc9WEx263HMNG/6NOpMhR9Pxy3+LMHFkQMkHOTzRFL4fU3\nATNpNOgBxLvCsj0OiPzfaz2vAoMuOs5nZlBbTMGM1VW8Q8mxzxgjnMPC7cMg\nDxurutltjysNkP2XMkojmHpyuMQwWIMe2HpDfqgFkio7i4eGTCatgzlJkFIn\n3GraU8j6PBfTmSlA04pO8Q8fPXO9ZUMYR3RDDtE5hmP7ppMWSg56qroLsMH6\n0PVS\r\n=jfBj\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "maintainers": [
-        {
-          "name": "feross",
-          "email": "feross@feross.org"
-        },
-        {
-          "name": "mafintosh",
-          "email": "mathiasbuus@gmail.com"
-        }
-      ],
-      "_npmUser": {
-        "name": "feross",
-        "email": "feross@feross.org"
-      },
-      "directories": {},
-      "_npmOperationalInternal": {
-        "host": "s3://npm-registry-packages",
-        "tmp": "tmp/safe-buffer_5.2.0_1562349873361_0.9333919101404049"
-      },
-      "_hasShrinkwrap": false
+      }
     }
   },
-  "maintainers": [
-    {
-      "name": "feross",
-      "email": "feross@feross.org"
-    },
-    {
-      "name": "mafintosh",
-      "email": "mathiasbuus@gmail.com"
-    }
-  ],
-  "time": {
-    "modified": "2019-07-05T18:04:36.336Z",
-    "created": "2016-01-13T04:36:59.750Z",
-    "1.0.0": "2016-01-13T04:36:59.750Z",
-    "2.0.0": "2016-01-17T15:22:43.586Z",
-    "3.0.0": "2016-01-19T01:41:25.217Z",
-    "4.0.0": "2016-05-30T04:58:11.135Z",
-    "5.0.0": "2016-05-30T05:45:50.643Z",
-    "5.0.1": "2016-05-30T06:08:04.471Z",
-    "5.1.0": "2017-06-02T21:59:40.124Z",
-    "5.1.1": "2017-06-21T20:19:28.582Z",
-    "5.1.2": "2018-04-25T20:10:24.706Z",
-    "5.2.0": "2019-07-05T18:04:33.530Z"
-  },
-  "homepage": "https://github.com/feross/safe-buffer",
-  "keywords": [
-    "buffer",
-    "buffer allocate",
-    "node security",
-    "safe",
-    "safe-buffer",
-    "security",
-    "uninitialized"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/feross/safe-buffer.git"
-  },
-  "author": {
-    "name": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "http://feross.org"
-  },
-  "bugs": {
-    "url": "https://github.com/feross/safe-buffer/issues"
-  },
-  "license": "MIT",
-  "readmeFilename": "README.md",
-  "users": {
-    "mysticatea": true,
-    "ivan.marquez": true,
-    "wxttxw125": true,
-    "michaeljwilliams": true,
-    "hualei": true
-  }
+  "modified": "2019-07-05T18:04:36.336Z",
+  "_cached": false,
+  "_contentLength": 4956
 }

@@ -43,6 +43,8 @@ for (let i = 2; i < process.argv.length; i++) {
     options.save = true
   else if (arg === '--quiet')
     options.quiet = true
+  else if (arg === '--legacy-peer-deps')
+    options.legacyPeerDeps = true
   else if (arg === '--update-all') {
     options.update = options.update || {}
     options.update.all = true

@@ -29,6 +29,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "hasShrinkwrap": false,
       "integrity": null,
       "inventory": Inventory {},
+      "legacyPeerDeps": false,
       "linksIn": Set {
         <*ref_1>,
       },
@@ -56,6 +57,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "resolved": null,
     },
   },
+  "legacyPeerDeps": false,
   "linksIn": Set {},
   "location": "",
   "meta": undefined,
@@ -91,6 +93,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "hasShrinkwrap": false,
       "integrity": null,
       "inventory": Inventory {},
+      "legacyPeerDeps": false,
       "linksIn": Set {
         <*ref_1>,
       },
@@ -122,6 +125,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "resolved": null,
     },
   },
+  "legacyPeerDeps": false,
   "linksIn": Set {},
   "location": "",
   "meta": Shrinkwrap {

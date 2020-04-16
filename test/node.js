@@ -1133,3 +1133,32 @@ t.test('has install script', t => {
   t.equal(node.hasInstallScript, true)
   t.end()
 })
+
+t.test('legacy peer dependencies', t => {
+  const root = new Node({
+    pkg: {
+      name: 'root',
+      peerDependencies: {
+        'foo': '1.x'
+      }
+    },
+    path: '/home/user/projects/root',
+    realpath: '/home/user/projects/root',
+    legacyPeerDeps: true,
+  })
+
+  const foo = new Node({
+    pkg: {
+      name: 'foo',
+      version: '1.2.3',
+    },
+    path: '/home/user/projects/root/foo',
+    realpath: '/home/user/projects/root/foo',
+    legacyPeerDeps: true,
+    parent: root
+  })
+
+  t.equal(root.children.get('foo'), foo, 'should be a children')
+  t.equal(root.edgesOut.size, 0, 'should have no edges out')
+  t.end()
+})

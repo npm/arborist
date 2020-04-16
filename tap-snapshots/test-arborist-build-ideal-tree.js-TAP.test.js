@@ -1037,6 +1037,56 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP cyclical peer deps peer-dep-cycle > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/peer-dep-cycle-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/peer-dep-cycle-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/peer-dep-cycle-a",
+      "name": "@isaacs/peer-dep-cycle-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-1.0.0.tgz",
+    },
+    "@isaacs/peer-dep-cycle-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/peer-dep-cycle-b",
+          "spec": "2.x",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/peer-dep-cycle-b",
+      "name": "@isaacs/peer-dep-cycle-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/peer-dep-cycle-a" => Edge {
+      "name": "@isaacs/peer-dep-cycle-a",
+      "spec": "1",
+      "to": "node_modules/@isaacs/peer-dep-cycle-a",
+      "type": "prod",
+    },
+    "@isaacs/peer-dep-cycle-b" => Edge {
+      "name": "@isaacs/peer-dep-cycle-b",
+      "spec": "2.x",
+      "to": "node_modules/@isaacs/peer-dep-cycle-b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "peer-dep-cycle",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP cyclical peer deps peer-dep-cycle > remove the dep, prune everything 1`] = `
 Node {
   "location": "",
@@ -1390,6 +1440,56 @@ Node {
       "name": "@isaacs/peer-dep-cycle-a",
       "spec": "1",
       "to": "node_modules/@isaacs/peer-dep-cycle-a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "peer-dep-cycle-with-sw",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP cyclical peer deps peer-dep-cycle-with-sw > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/peer-dep-cycle-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/peer-dep-cycle-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/peer-dep-cycle-a",
+      "name": "@isaacs/peer-dep-cycle-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-a/-/peer-dep-cycle-a-1.0.0.tgz",
+    },
+    "@isaacs/peer-dep-cycle-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/peer-dep-cycle-b",
+          "spec": "2.x",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/peer-dep-cycle-b",
+      "name": "@isaacs/peer-dep-cycle-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/peer-dep-cycle-a" => Edge {
+      "name": "@isaacs/peer-dep-cycle-a",
+      "spec": "1",
+      "to": "node_modules/@isaacs/peer-dep-cycle-a",
+      "type": "prod",
+    },
+    "@isaacs/peer-dep-cycle-b" => Edge {
+      "name": "@isaacs/peer-dep-cycle-b",
+      "spec": "2.x",
+      "to": "node_modules/@isaacs/peer-dep-cycle-b",
       "type": "prod",
     },
   },

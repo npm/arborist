@@ -142,6 +142,11 @@ t.test('cyclical peer deps', t => {
         // this conflicts with the direct dep on a@1 PEER-> b@1
         add: [ '@isaacs/peer-dep-cycle-b@2.x' ],
       })))
+        // this conflict is ok since we're using legacy peer deps
+      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+        add: [ '@isaacs/peer-dep-cycle-b@2.x' ],
+        legacyPeerDeps: true,
+      })))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: [ '@isaacs/peer-dep-cycle-b@2.x' ],
         rm: [ '@isaacs/peer-dep-cycle-a' ],

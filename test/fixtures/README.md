@@ -37,6 +37,10 @@ To remove them all:
 node test/fixtures/index.js cleanup
 ```
 
+To add symlinks, put them on the list in `test/fixtures/index.js` rather
+than creating them manually, as there are some platform-specific issues
+that cause test failures on Windows otherwise.
+
 ## Reify Test Case Fixtures
 
 Since `Arborist.reify()` writes to the file system, it would not do to have

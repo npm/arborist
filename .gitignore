@@ -2,14 +2,38 @@
 /.nyc_output/
 /coverage/
 
-/test/fixtures/selflink/node_modules/@scope/z/node_modules/glob
-/test/fixtures/selflink/node_modules/foo/node_modules/selflink
-/test/fixtures/other/node_modules/glob
-/test/fixtures/linkedroot
+.editorconfig
+*.js
+!map.js
+
+### BEGIN IGNORED SYMLINKS ###
+### this list is generated automatically, do not edit directly
+### update it by running `node test/fixtures/index.js`
+/test/fixtures/badlink/node_modules/bar
+/test/fixtures/badlink/node_modules/foo
 /test/fixtures/deep/root
 /test/fixtures/deeproot
-/test/fixtures/badlink/node_modules/foo
-/test/fixtures/badlink/node_modules/bar
+/test/fixtures/global-style/lib-link
+/test/fixtures/install-types/node_modules/symlink
+/test/fixtures/linkedroot
+/test/fixtures/links-all-over/node_modules/link-deep
+/test/fixtures/links-all-over/node_modules/link-link
+/test/fixtures/links-all-over/node_modules/link-outside-nest
+/test/fixtures/links-all-over/node_modules/nest/node_modules/link-in-nest
+/test/fixtures/other/node_modules/glob
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c
+/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x
+/test/fixtures/pnpm/node_modules/@scope/x
+/test/fixtures/pnpm/node_modules/a
+/test/fixtures/selflink/node_modules/@scope/z/node_modules/glob
+/test/fixtures/selflink/node_modules/foo/node_modules/selflink
+/test/fixtures/symlinked-node-modules/example/node_modules
+/test/fixtures/symlinked-node-modules/linked-node-modules/bar
 /test/fixtures/workspace/node_modules/a
 /test/fixtures/workspace/node_modules/b
 /test/fixtures/workspace/node_modules/c
@@ -21,23 +45,8 @@
 /test/fixtures/workspace/packages/c/node_modules/b
 /test/fixtures/workspace2/node_modules/c/node_modules/d
 /test/fixtures/workspace2/node_modules/c/node_modules/x
-/test/fixtures/workspace3/node_modules/app
 /test/fixtures/workspace3/node_modules/a
+/test/fixtures/workspace3/node_modules/app
 /test/fixtures/workspace3/node_modules/b
 /test/fixtures/workspace3/node_modules/c
-/test/fixtures/links-all-over/node_modules/link-outside-nest
-/test/fixtures/links-all-over/node_modules/link-deep
-/test/fixtures/links-all-over/node_modules/link-link
-/test/fixtures/links-all-over/node_modules/nest/node_modules/link-in-nest
-/test/fixtures/symlinked-node-modules/example/node_modules
-/test/fixtures/symlinked-node-modules/linked-node-modules/bar
-/test/fixtures/install-types/node_modules/symlink
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x
-/test/fixtures/pnpm/node_modules/@scope/x
-/test/fixtures/pnpm/node_modules/a
+### END IGNORED SYMLINKS ###

@@ -1,5 +1,5 @@
 const mkdirp = require('mkdirp').sync
-const { unlinkSync, symlinkSync } = require('fs')
+const { unlinkSync, symlinkSync, readFileSync, writeFileSync } = require('fs')
 const { relative, resolve, dirname } = require('path')
 
 const fixtures = __dirname
@@ -99,16 +99,36 @@ const cleanup = () => Object.keys(symlinks).forEach(s => {
   } catch (er) {}
 })
 
+
 const setup = () => {
+  const links = []
+  let didSomething = false
   Object.keys(symlinks).forEach(s => {
     const p = resolve(__dirname, s)
     mkdirp(dirname(p))
-    // console.log(relative(process.cwd(), p))
+    const rel = relative(resolve(__dirname, '../..'), p)
+    links.push('/' + rel.replace(/\\/g, '/'))
+    console.log(rel)
 
     // it's fine for this to throw, since it typically means
-    // that the links already exist.
-    try { symlinkSync(symlinks[s], p, 'dir') } catch (_) {}
+    // that the links already exist, and that's fine.
+    try {
+      symlinkSync(symlinks[s], p, 'dir')
+      didSomething = true
+    } catch (_) {}
   })
+  if (didSomething) {
+    const gifile = resolve(__dirname, '../../.gitignore')
+    const gitignore = readFileSync(gifile, 'utf8')
+      .replace(/### BEGIN IGNORED SYMLINKS ###[\s\S]*### END IGNORED SYMLINKS ###/,
+      `### BEGIN IGNORED SYMLINKS ###
+### this list is generated automatically, do not edit directly
+### update it by running \`node test/fixtures/index.js\`
+${links.sort((a,b) => a.localeCompare(b)).join('\n')}
+### END IGNORED SYMLINKS ###`)
+    console.log(gitignore)
+    writeFileSync(gifile, gitignore)
+  }
 }
 
 if (process.argv[2] === 'cleanup' && require.main === module)

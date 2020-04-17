@@ -108,7 +108,6 @@ const setup = () => {
     mkdirp(dirname(p))
     const rel = relative(resolve(__dirname, '../..'), p)
     links.push('/' + rel.replace(/\\/g, '/'))
-    console.log(rel)
 
     // it's fine for this to throw, since it typically means
     // that the links already exist, and that's fine.
@@ -126,7 +125,6 @@ const setup = () => {
 ### update it by running \`node test/fixtures/index.js\`
 ${links.sort((a,b) => a.localeCompare(b)).join('\n')}
 ### END IGNORED SYMLINKS ###`)
-    console.log(gitignore)
     writeFileSync(gifile, gitignore)
   }
 }

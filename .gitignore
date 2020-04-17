@@ -3,7 +3,7 @@
 /coverage/
 
 .editorconfig
-*.js
+/*.js
 !map.js
 
 ### BEGIN IGNORED SYMLINKS ###

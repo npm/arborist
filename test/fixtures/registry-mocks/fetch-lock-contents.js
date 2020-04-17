@@ -15,10 +15,15 @@ const main = async lock => {
 
     console.error('FETCHING', name)
 
-    const paku = await pacote.packument(name)
+    const paku = await pacote.packument(name, { fullMetadata: true })
     const saveTo = resolve(dir, name.replace(/^@/, '') + '.json')
     mkdirp.sync(dirname(saveTo))
     writeFileSync(saveTo, JSON.stringify(paku, 0, 2))
+
+    const corgi = await pacote.packument(name, { fullMetadata: true })
+    const corgiSaveTo = resolve(dir, name.replace(/^@/, '') + '.min.json')
+    writeFileSync(corgiSaveTo, JSON.stringify(corgi, 0, 2))
+
     // bundled deps sometimes don't have a resolved value
     if (!meta.resolved)
       continue

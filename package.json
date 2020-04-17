@@ -5,13 +5,13 @@
   "dependencies": {
     "@npmcli/installed-package-contents": "^1.0.5",
     "@npmcli/name-from-folder": "^1.0.1",
-    "@npmcli/run-script": "^1.2.1",
+    "@npmcli/run-script": "^1.3.1",
     "bin-links": "^2.1.2",
     "json-stringify-nice": "^1.1.1",
     "mkdirp-infer-owner": "^1.0.2",
     "npm-install-checks": "^4.0.0",
     "npm-package-arg": "^8.0.0",
-    "pacote": "^11.1.0",
+    "pacote": "^11.1.4",
     "parse-conflict-json": "^1.0.0",
     "promise-all-reject-late": "^1.0.0",
     "promise-call-limit": "^1.0.1",
@@ -24,7 +24,7 @@
     "minify-registry-metadata": "^2.1.0",
     "mutate-fs": "^2.1.1",
     "require-inject": "^1.4.4",
-    "tap": "^14.10.6",
+    "tap": "^14.10.7",
     "tcompare": "^3.0.4"
   },
   "scripts": {

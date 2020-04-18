@@ -20,7 +20,7 @@ const main = async lock => {
     mkdirp.sync(dirname(saveTo))
     writeFileSync(saveTo, JSON.stringify(paku, 0, 2))
 
-    const corgi = await pacote.packument(name, { fullMetadata: true })
+    const corgi = await pacote.packument(name, {})
     const corgiSaveTo = resolve(dir, name.replace(/^@/, '') + '.min.json')
     writeFileSync(corgiSaveTo, JSON.stringify(corgi, 0, 2))
 

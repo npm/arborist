@@ -1833,6 +1833,32 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Set {
+    Node {
+      "children": Map {
+        "@ruyadorno/package-with-added-bin" => Node {
+          "location": "a/node_modules/@ruyadorno/package-with-added-bin",
+          "name": "@ruyadorno/package-with-added-bin",
+          "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-1.0.0.tgz",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": "a",
+    },
+    Node {
+      "children": Map {
+        "@ruyadorno/package-with-added-bin" => Node {
+          "location": "b/node_modules/@ruyadorno/package-with-added-bin",
+          "name": "@ruyadorno/package-with-added-bin",
+          "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-2.0.0.tgz",
+        },
+      },
+      "location": "b",
+      "name": "b",
+      "resolved": "b",
+    },
+  },
   "location": "",
   "name": "testing-asymmetrical-bin-with-lock",
   "resolved": null,

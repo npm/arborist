@@ -320,6 +320,13 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Set {
+    Node {
+      "location": "target",
+      "name": "target",
+      "resolved": null,
+    },
+  },
   "location": "",
   "name": "reify-create-link-deps",
   "resolved": null,
@@ -767,6 +774,13 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Set {
+    Node {
+      "location": "target",
+      "name": "target",
+      "resolved": null,
+    },
+  },
   "location": "",
   "name": "reify-link-deps-already-in-place",
   "resolved": null,
@@ -924,6 +938,13 @@ Node {
       "spec": "^2.0.1",
       "to": "node_modules/@isaacs/testing-link-dev-dep",
       "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "location": "node_modules/@isaacs/testing-link-dep/target",
+      "name": "target",
+      "resolved": null,
     },
   },
   "location": "",
@@ -13494,6 +13515,32 @@ Node {
       "spec": "file:b",
       "to": "node_modules/b",
       "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "children": Map {
+        "@ruyadorno/package-with-added-bin" => Node {
+          "location": "a/node_modules/@ruyadorno/package-with-added-bin",
+          "name": "@ruyadorno/package-with-added-bin",
+          "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-1.0.0.tgz",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": "a",
+    },
+    Node {
+      "children": Map {
+        "@ruyadorno/package-with-added-bin" => Node {
+          "location": "b/node_modules/@ruyadorno/package-with-added-bin",
+          "name": "@ruyadorno/package-with-added-bin",
+          "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-2.0.0.tgz",
+        },
+      },
+      "location": "b",
+      "name": "b",
+      "resolved": "b",
     },
   },
   "location": "",

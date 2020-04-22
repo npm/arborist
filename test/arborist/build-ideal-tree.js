@@ -267,6 +267,18 @@ t.test('do not update shrinkwrapped deps', t => {
     { update: { names: ['abbrev']}}))
 })
 
+t.test('deduped transitive deps with asymmetrical bin declaration', t => {
+  const path =
+    resolve(__dirname, '../fixtures/testing-asymmetrical-bin-no-lock')
+  return t.resolveMatchSnapshot(printIdeal(path), 'with no lockfile')
+})
+
+t.test('deduped transitive deps with asymmetrical bin declaration', t => {
+  const path =
+    resolve(__dirname, '../fixtures/testing-asymmetrical-bin-with-lock')
+  return t.resolveMatchSnapshot(printIdeal(path), 'with lockfile')
+})
+
 t.test('update', t => {
   t.test('flow outdated', t => {
     const flowOutdated = resolve(__dirname, '../fixtures/flow-outdated')

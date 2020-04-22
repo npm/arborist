@@ -11021,6 +11021,14 @@ Node {
 }
 `
 
+exports[`test/arborist/load-virtual.js TAP load a tree with an empty dep set and a lockfile > virtual tree with no deps 1`] = `
+Node {
+  "location": "",
+  "name": "empty-with-shrinkwrap",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/load-virtual.js TAP load a tree with optional and dev dependencies > loaded virtual tree with dev/optional deps 1`] = `
 Node {
   "children": Map {

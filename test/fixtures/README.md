@@ -110,3 +110,30 @@ And of course, you could just delete the entire `content` folder and run
 Note that it's not a great idea to update the registry mocks too casually,
 since changes in the packages published to the registry can cause tests to
 no longer exercise the edge cases that they are intended to.
+
+### Audit Response and Audit Failure
+
+To have the server respond to audit requests, use the exported
+`auditResponse` method to set a file to use for the audit results.
+
+If the file doesn't exist, and proxy mode is enabled, then it'll pass the
+request up to the public registry, and save the result in the file
+specified.
+
+`auditFail()` and `auditResponse(file)` each return a function that will
+un-hook the response from the server so you can use it for another test.
+
+```js
+const registryServer = require('../fixtures/registry-mocks/server.js')
+const {registry, auditResponse, auditFail} = registryServer
+t.test('send an audit response', t => {
+  // makes it send an audit response file, or creates in proxy mode,
+  // if the file does not already exist.
+  t.teardown(auditResponse('.../path/to/audit.json'))
+
+  // makes it so that the audit fails with a 503
+  t.teardown(auditFail())
+
+  // then do some audits
+})
+```

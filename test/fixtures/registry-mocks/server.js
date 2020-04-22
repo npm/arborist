@@ -8,10 +8,65 @@ const mkdirp = require('mkdirp')
 const doProxy = process.env.ARBORIST_TEST_PROXY
 const missing = /\/@isaacs(\/|%2[fF])(this-does-not-exist-at-all|testing-missing-tgz\/-\/)/
 const corgiDoc = 'application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*'
+const { gzipSync, unzipSync } = require('zlib')
 
+let auditResponse = null
+let failAudit = false
 const startServer = cb => {
   const server = module.exports.server = http.createServer((req, res) => {
     res.setHeader('connection', 'close')
+
+    if (req.url === '/-/npm/v1/security/audits/quick' && auditResponse) {
+      const body = []
+      req.on('data', c => body.push(c))
+      req.on('end', () => {
+        res.setHeader('connection', 'close')
+        if (failAudit) {
+          res.statusCode = 503
+          return res.end('no audit for you')
+        }
+        if (doProxy && !existsSync(auditResponse)) {
+          return https.request({
+            host: 'registry.npmjs.org',
+            method: req.method,
+            path: req.url,
+            headers: {
+              ...req.headers,
+              accept: '*',
+              host: 'registry.npmjs.org',
+              connection: 'close',
+              'if-none-match': '',
+            },
+          }).on('response', upstream => {
+            res.statusCode = upstream.statusCode
+            if (upstream.statusCode >= 300 || upstream.status < 200) {
+              console.error('UPSTREAM ERROR', upstream.statusCode, upstream.headers)
+              // don't save if it's not a valid response
+              return upstream.pipe(res)
+            }
+            res.setHeader('content-encoding', upstream.headers['content-encoding'])
+            const file = auditResponse
+            console.error('PROXY', `${req.url} -> ${file}`)
+            mkdirp.sync(dirname(file))
+            const data = []
+            upstream.on('end', () => {
+              const out = Buffer.concat(data)
+              // make it a bit prettier to read later
+              const obj = JSON.parse(unzipSync(out).toString())
+              writeFileSync(file, JSON.stringify(obj, 0, 2) + '\n')
+              res.end(out)
+            })
+            upstream.on('data', c => data.push(c))
+          }).end(Buffer.concat(body))
+
+        } else {
+          res.setHeader('content-encoding', 'gzip')
+          res.end(gzipSync(readFileSync(auditResponse)))
+        }
+      })
+      return
+    }
+
     const f = join(__dirname, 'content', join('/', req.url.replace(/@/, '').replace(/%2f/i, '/')))
     const isCorgi = req.headers.accept.includes('application/vnd.npm.install-v1+json')
     const file = f + (
@@ -90,6 +145,18 @@ module.exports = t => startServer(() => {
   t.parent.teardown(() => module.exports.server.close())
   t.end()
 })
+
+module.exports.auditResponse = value => {
+  if (auditResponse && auditResponse !== value)
+    throw new Error('setting audit response, but already set\n' +
+      '(did you forget to call the returned function on teardown?)')
+  auditResponse = value
+  return () => auditResponse = null
+}
+module.exports.failAudit = () => {
+  failAudit = true
+  return () => failAudit = false
+}
 
 module.exports.registry = `http://localhost:${PORT}/`
 

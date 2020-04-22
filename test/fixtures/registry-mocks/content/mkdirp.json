@@ -1,6 +1,6 @@
 {
   "_id": "mkdirp",
-  "_rev": "511-5d269e956cca7595bcd338b77dd4446c",
+  "_rev": "512-7fb0f3267372e723404538111bca258d",
   "name": "mkdirp",
   "description": "Recursively mkdir, like `mkdir -p`",
   "dist-tags": {
@@ -1597,7 +1597,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/mkdirp_0.5.4_1584985983142_0.3659078906393478"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)"
     },
     "1.0.4": {
       "name": "mkdirp",
@@ -1750,7 +1751,7 @@
     }
   ],
   "time": {
-    "modified": "2020-04-03T17:12:29.790Z",
+    "modified": "2020-04-22T06:03:23.719Z",
     "created": "2011-01-06T02:54:36.080Z",
     "0.0.1": "2011-01-06T02:54:36.496Z",
     "0.0.2": "2011-02-14T20:11:44.988Z",

@@ -70,8 +70,6 @@ const {registry} = registryServer
 
 const cache = t.testdir()
 
-// there's a lot of fs stuff in this test.
-// Parallelize as much as possible.
 t.test('setup server', { bail: true, buffered: false }, registryServer)
 
 // two little helper functions to make the loaded trees
@@ -453,7 +451,7 @@ t.test('warn on reifying deprecated dependency', t => {
     path: fixture(t, 'deprecated-dep'),
   })
   const check = warningTracker()
-  return a.reify().then(() => t.match(check(), [
+  return a.reify({ update: true }).then(() => t.match(check(), [
     ['warn', 'deprecated', 'mkdirp@0.5.3: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)'],
   ]))
 })

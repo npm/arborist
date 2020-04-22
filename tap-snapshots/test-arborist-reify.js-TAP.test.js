@@ -13330,6 +13330,178 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP transitive deps containing asymmetrical bin no lockfile > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@ruyadorno/package-with-added-bin" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "a",
+          "name": "@ruyadorno/package-with-added-bin",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@ruyadorno/package-with-added-bin",
+      "name": "@ruyadorno/package-with-added-bin",
+      "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-1.0.0.tgz",
+    },
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:a",
+      "to": "node_modules/a",
+      "type": "prod",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:b",
+      "to": "node_modules/b",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "@ruyadorno/package-with-added-bin" => Edge {
+          "name": "@ruyadorno/package-with-added-bin",
+          "spec": "^1.0.0",
+          "to": "node_modules/@ruyadorno/package-with-added-bin",
+          "type": "prod",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "children": Map {
+        "@ruyadorno/package-with-added-bin" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "b",
+              "name": "@ruyadorno/package-with-added-bin",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "b/node_modules/@ruyadorno/package-with-added-bin",
+          "name": "@ruyadorno/package-with-added-bin",
+          "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-2.0.0.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "@ruyadorno/package-with-added-bin" => Edge {
+          "name": "@ruyadorno/package-with-added-bin",
+          "spec": "^2.0.0",
+          "to": "b/node_modules/@ruyadorno/package-with-added-bin",
+          "type": "prod",
+        },
+      },
+      "location": "b",
+      "name": "b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "reify-transitive-deps-containing-asymmetrical-bin-no-lockfile",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP transitive deps containing asymmetrical bin with lockfile > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:a",
+      "to": "node_modules/a",
+      "type": "prod",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:b",
+      "to": "node_modules/b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-transitive-deps-containing-asymmetrical-bin-with-lockfile",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP update a bundling node without updating all of its deps > contains fsevents in lockfile 1`] = `
 Object {
   "dev": true,

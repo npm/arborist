@@ -233,6 +233,32 @@ t.test('update a bundling node without updating all of its deps', t => {
     .then(checkPackageLock)
 })
 
+t.test('transitive deps containing asymmetrical bin no lockfile', t => {
+  const path = fixture(t, 'testing-asymmetrical-bin-no-lock')
+
+  // check that it links the bin
+  const bin = resolve(path, 'node_modules/.bin/b')
+  const checkBin = process.platform === 'win32'
+    ? () => t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
+    : () => t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+
+  return t.resolveMatchSnapshot(printReified(path, {}))
+    .then(checkBin)
+})
+
+t.test('transitive deps containing asymmetrical bin with lockfile', t => {
+  const path = fixture(t, 'testing-asymmetrical-bin-with-lock')
+
+  // check that it links the bin
+  const bin = resolve(path, 'node_modules/.bin/b')
+  const checkBin = process.platform === 'win32'
+    ? () => t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
+    : () => t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+
+  return t.resolveMatchSnapshot(printReified(path, {}))
+    .then(checkBin)
+})
+
 t.test('omit optional dep', t => {
   const path = fixture(t, 'tap-react15-collision-legacy-sw')
   const ignoreScripts = true

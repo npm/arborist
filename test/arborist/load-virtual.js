@@ -94,8 +94,8 @@ t.test('load from root that already has shrinkwrap', t =>
       pkg: require(fixture + '/package.json'),
       meta,
     })
-    new Arborist({path: fixture}).loadVirtual({root}).then(virtualTree =>
-      t.equal(virtualTree, root))
+    return new Arborist({path: fixture}).loadVirtual({root})
+      .then(virtualTree => t.equal(virtualTree, root))
   }))
 
 t.test('tree with link deps of link deps', t =>

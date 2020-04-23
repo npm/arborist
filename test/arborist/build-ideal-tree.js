@@ -1,13 +1,28 @@
 const {basename, resolve} = require('path')
 const t = require('tap')
 const Arborist = require('../..')
+const fixtures = resolve(__dirname, '../fixtures')
 const registryServer = require('../fixtures/registry-mocks/server.js')
-const {registry} = registryServer
+const {registry, auditResponse} = registryServer
 const npa = require('npm-package-arg')
+const AuditReport = require('../../lib/audit-report.js')
 
 t.test('setup server', { bail: true }, registryServer)
 
 const cache = t.testdir()
+
+// track the warnings that are emitted.  returns a function that removes
+// the listener and provides the list of what it saw.
+const warningTracker = () => {
+  const list = []
+  const onlog = (...msg) => msg[0] === 'warn' && list.push(msg)
+  process.on('log', onlog)
+  return () => {
+    process.removeListener('log', onlog)
+    return list
+  }
+}
+
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -89,17 +104,17 @@ const buildIdeal = (path, opt) =>
 
 t.test('a workspace with a conflicted nested duplicated dep', t =>
   t.resolveMatchSnapshot(printIdeal(
-    resolve(__dirname, '../fixtures/workspace4'))))
+    resolve(fixtures, 'workspace4'))))
 
 t.test('testing-peer-deps package', t => {
-  const path = resolve(__dirname, '../fixtures/testing-peer-deps')
+  const path = resolve(fixtures, 'testing-peer-deps')
   return buildIdeal(path).then(idealTree => new Arborist({path, idealTree})
     .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
     .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')))
 })
 
 t.test('testing-peer-deps nested', t => {
-  const path = resolve(__dirname, '../fixtures/testing-peer-deps-nested')
+  const path = resolve(fixtures, 'testing-peer-deps-nested')
   return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       // hit the branch where update is just a list of names
@@ -108,24 +123,24 @@ t.test('testing-peer-deps nested', t => {
 })
 
 t.test('tap vs react15', t => {
-  const path = resolve(__dirname, '../fixtures/tap-react15-collision')
+  const path = resolve(fixtures, 'tap-react15-collision')
   return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree with tap collision')
 })
 
 t.test('tap vs react15 with legacy shrinkwrap', t => {
-  const path = resolve(__dirname, '../fixtures/tap-react15-collision-legacy-sw')
+  const path = resolve(fixtures, 'tap-react15-collision-legacy-sw')
   return t.resolveMatchSnapshot(printIdeal(path), 'tap collision with legacy sw file')
 })
 
 t.test('bad shrinkwrap file', t => {
-  const path = resolve(__dirname, '../fixtures/testing-peer-deps-bad-sw')
+  const path = resolve(fixtures, 'testing-peer-deps-bad-sw')
   return t.resolveMatchSnapshot(printIdeal(path), 'bad shrinkwrap')
 })
 
 t.test('cyclical peer deps', t => {
   const paths = [
-    resolve(__dirname, '../fixtures/peer-dep-cycle'),
-    resolve(__dirname, '../fixtures/peer-dep-cycle-with-sw'),
+    resolve(fixtures, 'peer-dep-cycle'),
+    resolve(fixtures, 'peer-dep-cycle-with-sw'),
   ]
 
   t.plan(paths.length)
@@ -159,8 +174,8 @@ t.test('cyclical peer deps', t => {
 
 t.test('nested cyclical peer deps', t => {
   const paths = [
-    resolve(__dirname, '../fixtures/peer-dep-cycle-nested'),
-    resolve(__dirname, '../fixtures/peer-dep-cycle-nested-with-sw'),
+    resolve(fixtures, 'peer-dep-cycle-nested'),
+    resolve(fixtures, 'peer-dep-cycle-nested-with-sw'),
   ]
   t.plan(paths.length)
   paths.forEach(path => t.test(basename(path), t =>
@@ -188,17 +203,17 @@ t.test('nested cyclical peer deps', t => {
 })
 
 t.test('dedupe example - not deduped', t => {
-  const path = resolve(__dirname, '../fixtures/dedupe-tests')
+  const path = resolve(fixtures, 'dedupe-tests')
   return t.resolveMatchSnapshot(printIdeal(path), 'dedupe testing')
 })
 
 t.test('dedupe example - deduped because preferDedupe=true', t => {
-  const path = resolve(__dirname, '../fixtures/dedupe-tests')
+  const path = resolve(fixtures, 'dedupe-tests')
   return t.resolveMatchSnapshot(printIdeal(path, { preferDedupe: true }))
 })
 
 t.test('dedupe example - nested because legacyBundling=true', t => {
-  const path = resolve(__dirname, '../fixtures/dedupe-tests')
+  const path = resolve(fixtures, 'dedupe-tests')
   return t.resolveMatchSnapshot(printIdeal(path, {
     legacyBundling: true,
     preferDedupe: true,
@@ -206,12 +221,12 @@ t.test('dedupe example - nested because legacyBundling=true', t => {
 })
 
 t.test('dedupe example - deduped', t => {
-  const path = resolve(__dirname, '../fixtures/dedupe-tests-2')
+  const path = resolve(fixtures, 'dedupe-tests-2')
   return t.resolveMatchSnapshot(printIdeal(path), 'dedupe testing')
 })
 
 t.test('expose explicitRequest', async t => {
-  const path = resolve(__dirname, '../fixtures/simple')
+  const path = resolve(fixtures, 'simple')
   const arb = new Arborist({ path })
   const tree = await arb.buildIdealTree({ add: [ 'abbrev' ] })
   t.ok(arb.explicitRequests, 'exposes the explicit request')
@@ -224,7 +239,7 @@ t.test('bundle deps example 1', t => {
   // NB: this results in ignoring the bundled deps when building the
   // ideal tree.  When we reify, we'll have to ignore the deps that
   // got placed as part of the bundle.
-  const path = resolve(__dirname, '../fixtures/testing-bundledeps')
+  const path = resolve(fixtures, 'testing-bundledeps')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       saveBundle: true,
@@ -234,7 +249,7 @@ t.test('bundle deps example 1', t => {
 
 t.test('bundle deps example 2', t => {
   // bundled deps at the root level are NOT ignored when building ideal trees
-  const path = resolve(__dirname, '../fixtures/testing-bundledeps-2')
+  const path = resolve(fixtures, 'testing-bundledeps-2')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       saveBundle: true,
@@ -246,7 +261,7 @@ t.test('bundle deps example 2', t => {
 })
 
 t.test('unresolveable peer deps', t => {
-  const path = resolve(__dirname, '../fixtures/testing-peer-deps-unresolvable')
+  const path = resolve(fixtures, 'testing-peer-deps-unresolvable')
   return t.rejects(printIdeal(path), {
     message: 'unable to resolve dependency tree',
     package: '@isaacs/testing-peer-deps-c',
@@ -257,31 +272,31 @@ t.test('unresolveable peer deps', t => {
 })
 
 t.test('do not add shrinkwrapped deps', t => {
-  const path = resolve(__dirname, '../fixtures/shrinkwrapped-dep-no-lock')
+  const path = resolve(fixtures, 'shrinkwrapped-dep-no-lock')
   return t.resolveMatchSnapshot(printIdeal(path))
 })
 
 t.test('do not update shrinkwrapped deps', t => {
-  const path = resolve(__dirname, '../fixtures/shrinkwrapped-dep-with-lock')
+  const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,
     { update: { names: ['abbrev']}}))
 })
 
 t.test('deduped transitive deps with asymmetrical bin declaration', t => {
   const path =
-    resolve(__dirname, '../fixtures/testing-asymmetrical-bin-no-lock')
+    resolve(fixtures, 'testing-asymmetrical-bin-no-lock')
   return t.resolveMatchSnapshot(printIdeal(path), 'with no lockfile')
 })
 
 t.test('deduped transitive deps with asymmetrical bin declaration', t => {
   const path =
-    resolve(__dirname, '../fixtures/testing-asymmetrical-bin-with-lock')
+    resolve(fixtures, 'testing-asymmetrical-bin-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path), 'with lockfile')
 })
 
 t.test('update', t => {
   t.test('flow outdated', t => {
-    const flowOutdated = resolve(__dirname, '../fixtures/flow-outdated')
+    const flowOutdated = resolve(fixtures, 'flow-outdated')
 
     t.resolveMatchSnapshot(printIdeal(flowOutdated, {
       update: {
@@ -297,7 +312,7 @@ t.test('update', t => {
   })
 
   t.test('tap and flow', t => {
-    const tapAndFlow = resolve(__dirname, '../fixtures/tap-and-flow')
+    const tapAndFlow = resolve(fixtures, 'tap-and-flow')
     t.resolveMatchSnapshot(printIdeal(tapAndFlow, {
       update: {
         all: true,
@@ -317,7 +332,7 @@ t.test('update', t => {
 
 t.test('link meta deps', t =>
   t.resolveMatchSnapshot(printIdeal(
-    resolve(__dirname, '../fixtures/link-meta-deps-empty'))))
+    resolve(fixtures, 'link-meta-deps-empty'))))
 
 t.test('optional dependency failures', t => {
   const cases = [
@@ -329,7 +344,7 @@ t.test('optional dependency failures', t => {
   ]
   t.plan(cases.length)
   cases.forEach(c => t.resolveMatchSnapshot(printIdeal(
-    resolve(__dirname, `../fixtures/${c}`)), c))
+    resolve(fixtures, c)), c))
 })
 
 t.test('prod dependency failures', t => {
@@ -339,11 +354,11 @@ t.test('prod dependency failures', t => {
   ]
   t.plan(cases.length)
   cases.forEach(c => t.rejects(printIdeal(
-    resolve(__dirname, `../fixtures/${c}`)), c))
+    resolve(fixtures, c)), c))
 })
 
 t.test('link dep with a link dep', t => {
-  const path = resolve(__dirname, '../fixtures/cli-750')
+  const path = resolve(fixtures, 'cli-750')
   return Promise.all([
     t.resolveMatchSnapshot(printIdeal(path), 'link metadeps with lockfile'),
     t.resolveMatchSnapshot(printIdeal(path, { update: true }), 'link metadeps without lockfile'),
@@ -351,7 +366,7 @@ t.test('link dep with a link dep', t => {
 })
 
 t.test('link dep within node_modules and outside root', t => {
-  const path = resolve(__dirname, '../fixtures/external-link-dep')
+  const path = resolve(fixtures, 'external-link-dep')
   return Promise.all([
     t.resolveMatchSnapshot(printIdeal(path), 'linky deps with lockfile'),
     t.resolveMatchSnapshot(printIdeal(path, { update: true }), 'linky deps without lockfile'),
@@ -901,3 +916,89 @@ t.test('global', t => t.resolveMatchSnapshot(printIdeal(t.testdir(), {
 t.test('global has to add or remove', t => t.rejects(printIdeal(t.testdir(), {
   global: true,
 })))
+
+// somewhat copy-pasta from the test/arborist/audit.js to exercise
+// the buildIdealTree code paths
+t.test('update mkdirp to non-minimist-using version', async t => {
+  const path = resolve(fixtures, 'deprecated-dep')
+  t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
+
+  const arb = new Arborist({
+    cache,
+    path,
+    registry,
+  })
+
+  await arb.audit()
+  t.matchSnapshot(printTree(await arb.buildIdealTree()))
+})
+
+t.test('force a new nyc (and update mkdirp nicely)', async t => {
+  const path = resolve(fixtures, 'audit-nyc-mkdirp')
+  t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
+
+  const arb = new Arborist({
+    force: true,
+    cache,
+    path,
+    registry,
+  })
+
+  await arb.audit()
+  t.matchSnapshot(printTree(await arb.buildIdealTree()))
+  t.equal(arb.idealTree.children.get('mkdirp').package.version, '0.5.5')
+  t.equal(arb.idealTree.children.get('nyc').package.version, '15.0.0')
+})
+
+t.test('force a new mkdirp (but not semver major)', async t => {
+  const path = resolve(fixtures, 'mkdirp-pinned')
+  t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
+
+  const arb = new Arborist({
+    force: true,
+    cache,
+    path,
+    registry,
+  })
+
+  await arb.audit()
+  t.matchSnapshot(printTree(await arb.buildIdealTree()))
+  t.equal(arb.idealTree.children.get('mkdirp').package.version, '0.5.5')
+  t.equal(arb.idealTree.children.get('minimist').package.version, '1.2.5')
+})
+
+t.test('no fix available', async t => {
+  const path = resolve(fixtures, 'audit-mkdirp/mkdirp-unfixable')
+  const checkLogs = warningTracker()
+  t.teardown(auditResponse(resolve(path, 'audit.json')))
+
+  const arb = new Arborist({
+    force: true,
+    cache,
+    path,
+    registry,
+  })
+
+  await arb.audit()
+  t.matchSnapshot(printTree(await arb.buildIdealTree()))
+  t.equal(arb.idealTree.children.get('mkdirp').package.version, '0.5.1')
+  t.match(checkLogs(), [['warn', 'audit', 'No fix available for mkdirp@*']])
+})
+
+t.test('no fix available, linked top package', async t => {
+  const path = resolve(fixtures, 'audit-mkdirp')
+  const checkLogs = warningTracker()
+  t.teardown(auditResponse(resolve(path, 'mkdirp-unfixable/audit.json')))
+
+  const arb = new Arborist({
+    force: true,
+    cache,
+    path,
+    registry,
+  })
+
+  await arb.audit()
+  const v = arb.auditReport.get('mkdirp')
+  t.matchSnapshot(printTree(await arb.buildIdealTree()))
+  t.strictSame(checkLogs(), [['warn', 'audit', 'Manual fix required in linked project at ./mkdirp-unfixable for mkdirp@* vulnerability']])
+})

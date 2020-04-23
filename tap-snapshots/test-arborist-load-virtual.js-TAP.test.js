@@ -11264,6 +11264,15 @@ Node {
           "type": "prod",
         },
       },
+      "edgesOut": Map {
+        "tap" => Edge {
+          "error": "MISSING",
+          "name": "tap",
+          "spec": "^10.1",
+          "to": null,
+          "type": "dev",
+        },
+      },
       "location": "node_modules/abbrev",
       "name": "abbrev",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -11865,6 +11874,15 @@ Node {
           "name": "abbrev",
           "spec": "^1.1.1",
           "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "tap" => Edge {
+          "error": "MISSING",
+          "name": "tap",
+          "spec": "^10.1",
+          "to": null,
+          "type": "dev",
         },
       },
       "location": "node_modules/abbrev",

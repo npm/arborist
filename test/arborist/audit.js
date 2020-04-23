@@ -10,6 +10,7 @@ const fixture = (t, p) =>
 
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry, auditResponse} = registryServer
+const cache = t.testdir()
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -93,6 +94,7 @@ t.test('audit finds the bad deps', async t => {
   t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
 
   const arb = new Arborist({
+    cache,
     path,
     registry,
   })
@@ -108,6 +110,7 @@ t.test('audit fix reifies out the bad deps', async t => {
   const path = fixture(t, 'deprecated-dep')
   t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
   const arb = new Arborist({
+    cache,
     path,
     registry,
   })
@@ -116,7 +119,7 @@ t.test('audit fix reifies out the bad deps', async t => {
 })
 
 t.test('audit does not do globals', t =>
-  t.rejects(new Arborist({ path: '.', global: true }).audit(), {
+  t.rejects(new Arborist({ cache, path: '.', global: true }).audit(), {
     message: '`npm audit` does not support testing globals',
     code: 'EAUDITGLOBAL',
   }))

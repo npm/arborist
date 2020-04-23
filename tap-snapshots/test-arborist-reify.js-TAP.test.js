@@ -13521,9 +13521,25 @@ Node {
     Node {
       "children": Map {
         "@ruyadorno/package-with-added-bin" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "a",
+              "name": "@ruyadorno/package-with-added-bin",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
           "location": "a/node_modules/@ruyadorno/package-with-added-bin",
           "name": "@ruyadorno/package-with-added-bin",
           "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-1.0.0.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "@ruyadorno/package-with-added-bin" => Edge {
+          "name": "@ruyadorno/package-with-added-bin",
+          "spec": "^1.0.0",
+          "to": "a/node_modules/@ruyadorno/package-with-added-bin",
+          "type": "prod",
         },
       },
       "location": "a",
@@ -13533,9 +13549,25 @@ Node {
     Node {
       "children": Map {
         "@ruyadorno/package-with-added-bin" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "b",
+              "name": "@ruyadorno/package-with-added-bin",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
           "location": "b/node_modules/@ruyadorno/package-with-added-bin",
           "name": "@ruyadorno/package-with-added-bin",
           "resolved": "https://registry.npmjs.org/@ruyadorno/package-with-added-bin/-/package-with-added-bin-2.0.0.tgz",
+        },
+      },
+      "edgesOut": Map {
+        "@ruyadorno/package-with-added-bin" => Edge {
+          "name": "@ruyadorno/package-with-added-bin",
+          "spec": "^2.0.0",
+          "to": "b/node_modules/@ruyadorno/package-with-added-bin",
+          "type": "prod",
         },
       },
       "location": "b",

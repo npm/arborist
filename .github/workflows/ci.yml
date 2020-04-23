@@ -29,6 +29,7 @@ jobs:
 
       # Run for all environments
       - name: Run Tap Tests
+        if: matrix.os != 'macOS-latest' || matrix.node-version != '14.x'
         run: npm test -- -c -t0
 
       # Push coverage for specific environment

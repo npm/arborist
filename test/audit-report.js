@@ -22,6 +22,8 @@ t.test('audit outdated nyc and mkdirp', async t => {
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
   // just a gut-check that the registry server is actually doing stuff
   t.match(report.report, require(auditFile), 'got expected response')
 

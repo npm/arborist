@@ -3,12 +3,13 @@ const Vuln = require('../lib/vuln.js')
 const Node = require('../lib/node.js')
 
 t.test('basic vulnerability object tests', async t => {
-  const v = new Vuln({ name: 'name', via: { some: 'advisory' } })
+  const v = new Vuln({ name: 'name', via: { some: 'advisory', severity: 'critical' } })
   t.isa(v, Vuln)
-  t.match(v.via, new Set([{some: 'advisory'}]))
-  v.addVia({ another: 'advisory' })
-  t.match(v.via, new Set([{some: 'advisory'}, {another: 'advisory'}]))
+  t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}]))
+  v.addVia({ another: 'advisory', severity: 'info' })
+  t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}, {another: 'advisory', severity: 'info'}]))
 
+  t.matchSnapshot(JSON.stringify(v, 0, 2), 'json formatted before packument')
   const v2 = new Vuln({ name: 'another', via: v })
   t.match(v.effects, new Set([v2]))
   t.match(v2.via, new Set([v]))
@@ -65,6 +66,9 @@ t.test('basic vulnerability object tests', async t => {
   t.equal(v.isVulnerable(node), true)
   t.equal(v.isVulnerable(node), true)
   t.match(v.nodes, new Set([node]))
+  v2.fixAvailable = { isSemVerMajor: true }
+  t.matchSnapshot(JSON.stringify(v, 0, 2), 'json formatted after loading')
+  t.matchSnapshot(JSON.stringify(v2, 0, 2), 'json formatted metavuln')
 
   const ok = new Node({
     path: '/path/to/node_modules/thing',

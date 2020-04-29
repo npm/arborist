@@ -928,7 +928,8 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "low": 8,
       "moderate": 1,
       "high": 6,
-      "critical": 1
+      "critical": 1,
+      "total": 16
     },
     "dependencies": {
       "prod": 506,
@@ -1663,7 +1664,8 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       "low": 8,
       "moderate": 0,
       "high": 5,
-      "critical": 0
+      "critical": 0,
+      "total": 13
     },
     "dependencies": {
       "prod": 317,
@@ -1756,7 +1758,8 @@ exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at
       "low": 2,
       "moderate": 0,
       "high": 0,
-      "critical": 0
+      "critical": 0,
+      "total": 2
     },
     "dependencies": {
       "prod": 0,
@@ -1849,7 +1852,8 @@ exports[`test/audit-report.js TAP metavuln where dep is not a registry dep > jso
       "low": 2,
       "moderate": 0,
       "high": 0,
-      "critical": 0
+      "critical": 0,
+      "total": 2
     },
     "dependencies": {
       "prod": 0,

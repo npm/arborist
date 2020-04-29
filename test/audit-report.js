@@ -137,6 +137,7 @@ t.test('metavuln where dep is not a registry dep', async t => {
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
 
   t.equal(report.has('@isaacs/minimist-git-dep'), true)
   t.equal(report.has('minimist'), true)
@@ -154,10 +155,29 @@ t.test('metavuln where a dep is not on the registry at all', async t => {
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
 
   t.equal(report.topVulns.size, 1)
   t.equal(report.advisoryVulns.size, 1)
   t.equal(report.dependencyVulns.size, 1)
+})
+
+t.test('all severity levels', async t => {
+  const path = resolve(fixtures, 'audit-all-severities')
+  const auditFile = resolve(path, 'audit.json')
+  t.teardown(auditResponse(auditFile))
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  t.equal(report.topVulns.size, 4)
+  t.equal(report.advisoryVulns.size, 10)
+  t.equal(report.dependencyVulns.size, 6)
 })
 
 t.test('get default opts when loaded without opts', async t => {

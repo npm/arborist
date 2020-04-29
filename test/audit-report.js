@@ -180,6 +180,24 @@ t.test('all severity levels', async t => {
   t.equal(report.dependencyVulns.size, 6)
 })
 
+t.test('one vulnerability', async t => {
+  const path = resolve(fixtures, 'audit-one-vuln')
+  const auditFile = resolve(path, 'audit.json')
+  t.teardown(auditResponse(auditFile))
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  t.equal(report.topVulns.size, 0)
+  t.equal(report.advisoryVulns.size, 1)
+  t.equal(report.dependencyVulns.size, 0)
+})
+
 t.test('get default opts when loaded without opts', async t => {
   const ar = new AuditReport()
   t.equal(ar.tree, undefined)

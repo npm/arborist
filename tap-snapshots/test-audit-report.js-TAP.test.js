@@ -1866,3 +1866,82 @@ exports[`test/audit-report.js TAP metavuln where dep is not a registry dep > jso
   }
 }
 `
+
+exports[`test/audit-report.js TAP one vulnerability > json version 1`] = `
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "minimist": {
+      "name": "minimist",
+      "severity": "low",
+      "via": [
+        {
+          "findings": [
+            {
+              "version": "1.0.0",
+              "paths": [
+                "minimist"
+              ]
+            }
+          ],
+          "id": 1179,
+          "created": "2019-09-23T15:01:43.049Z",
+          "updated": "2020-03-18T19:41:45.921Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "https://www.checkmarx.com/resources/blog/",
+            "name": "Checkmarx Research Team",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "https://www.checkmarx.com/resources/blog/",
+            "name": "Checkmarx Research Team",
+            "email": ""
+          },
+          "module_name": "minimist",
+          "cves": [],
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+          "patched_versions": ">=0.2.1 <1.0.0 || >=1.2.3",
+          "overview": "Affected versions of \`minimist\` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of \`Object\`, causing the addition or modification of an existing property that will exist on all objects.  \\nParsing the argument \`--__proto__.y=Polluted\` adds a \`y\` property with value \`Polluted\` to all objects. The argument \`--__proto__=Polluted\` raises and uncaught error and crashes the application.  \\nThis is exploitable if attackers have control over the arguments being passed to \`minimist\`.\\n",
+          "recommendation": "Upgrade to versions 0.2.1, 1.2.3 or later.",
+          "references": "- [GitHub commit 1](https://github.com/substack/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95)\\n- [GitHub commit 2](https://github.com/substack/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94)",
+          "access": "public",
+          "severity": "low",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 1,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1179"
+        }
+      ],
+      "effects": [],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "nodes": [
+        "node_modules/minimist"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 1
+    },
+    "dependencies": {
+      "prod": 1,
+      "dev": 0,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1
+    }
+  }
+}
+`

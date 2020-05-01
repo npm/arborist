@@ -198,6 +198,42 @@ t.test('one vulnerability', async t => {
   t.equal(report.dependencyVulns.size, 0)
 })
 
+t.test('unfixable, but not a semver major forced fix', async t => {
+  const path = resolve(fixtures, 'mkdirp-pinned')
+  const auditFile = resolve(fixtures, 'audit-nyc-mkdirp/audit.json')
+  t.teardown(auditResponse(auditFile))
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  t.equal(report.topVulns.size, 1)
+  t.equal(report.advisoryVulns.size, 1)
+  t.equal(report.dependencyVulns.size, 1)
+})
+
+t.test('a dep vuln that also has its own advisory against it', async t => {
+  const path = resolve(fixtures, 'audit-dep-vuln-with-own-advisory')
+  const auditFile = resolve(path, 'audit.json')
+  t.teardown(auditResponse(auditFile))
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  t.equal(report.topVulns.size, 0)
+  t.equal(report.advisoryVulns.size, 2)
+  t.equal(report.dependencyVulns.size, 0)
+})
+
 t.test('get default opts when loaded without opts', async t => {
   const ar = new AuditReport()
   t.equal(ar.tree, undefined)

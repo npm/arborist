@@ -16,7 +16,7 @@ exports[`test/vuln.js TAP basic vulnerability object tests > json formatted afte
     },
     {
       "another": "advisory",
-      "severity": "info"
+      "severity": "low"
     }
   ],
   "effects": [
@@ -43,7 +43,7 @@ exports[`test/vuln.js TAP basic vulnerability object tests > json formatted befo
     },
     {
       "another": "advisory",
-      "severity": "info"
+      "severity": "low"
     }
   ],
   "effects": [],

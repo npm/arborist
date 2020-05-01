@@ -5,13 +5,148 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/audit-report.js TAP a dep vuln that also has its own advisory against it > json version 1`] = `
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "minimist": {
+      "name": "minimist",
+      "severity": "low",
+      "via": [
+        {
+          "findings": [
+            {
+              "version": "0.0.8",
+              "paths": [
+                "mkdirp>minimist"
+              ]
+            }
+          ],
+          "id": 1179,
+          "created": "2019-09-23T15:01:43.049Z",
+          "updated": "2020-03-18T19:41:45.921Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "https://www.checkmarx.com/resources/blog/",
+            "name": "Checkmarx Research Team",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "https://www.checkmarx.com/resources/blog/",
+            "name": "Checkmarx Research Team",
+            "email": ""
+          },
+          "module_name": "minimist",
+          "cves": [],
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+          "patched_versions": ">=0.2.1 <1.0.0 || >=1.2.3",
+          "overview": "Affected versions of \`minimist\` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of \`Object\`, causing the addition or modification of an existing property that will exist on all objects.  \\nParsing the argument \`--__proto__.y=Polluted\` adds a \`y\` property with value \`Polluted\` to all objects. The argument \`--__proto__=Polluted\` raises and uncaught error and crashes the application.  \\nThis is exploitable if attackers have control over the arguments being passed to \`minimist\`.\\n",
+          "recommendation": "Upgrade to versions 0.2.1, 1.2.3 or later.",
+          "references": "- [GitHub commit 1](https://github.com/substack/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95)\\n- [GitHub commit 2](https://github.com/substack/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94)",
+          "access": "public",
+          "severity": "low",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 1,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1179"
+        }
+      ],
+      "effects": [
+        "mkdirp"
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "nodes": [
+        "node_modules/minimist"
+      ],
+      "fixAvailable": true
+    },
+    "mkdirp": {
+      "name": "mkdirp",
+      "severity": "high",
+      "via": [
+        {
+          "findings": [
+            {
+              "version": "0.5.1",
+              "paths": [
+                "mkdirp"
+              ]
+            }
+          ],
+          "id": 42069,
+          "created": "2020-04-20T16:20:00.069Z",
+          "updated": "2020-04-20T23:20:00.069Z",
+          "deleted": null,
+          "title": "File System Pollution",
+          "found_by": {
+            "link": "https://www.antidirectory.com/",
+            "name": "Anti-Directory Research Team",
+            "email": "nodir@antidirectory.com"
+          },
+          "reported_by": {
+            "link": "https://www.antidirectory.com/",
+            "name": "Anti-Directory Research Team",
+            "email": "nodir@antidirectory.com"
+          },
+          "module_name": "mkdirp",
+          "cves": [],
+          "vulnerable_versions": "<0.5.5",
+          "patched_versions": ">=0.5.5",
+          "overview": "Affected versions of \`mkdirp\` are vulnerable to file system pollution. Arguments are used to create directories, allowing an attacker to modify the file system, causing the addition or modification of directories which will persist after the process has exited.  \\nPassing the argument \`/foo/bar/baz\` adds a \`baz\` directory within the \`/foo/bar\` directory path. The presence of this directory raises uncaught errors and crashe applications that expect a directory to not be at that path.  \\nThis is exploitable if attackers pass arguments to \`mkdirp\`.\\n",
+          "recommendation": "Do not create directories",
+          "references": "- [GitHub commit where problem was added](https://github.com/substack/node-mkdirp/commit/284bc24eaafca75786c7e86f1da66ad61adacdb7)",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-42069",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 1,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/42069"
+        },
+        "minimist"
+      ],
+      "effects": [],
+      "range": "<=0.5.4",
+      "nodes": [
+        "node_modules/mkdirp"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 0,
+      "high": 1,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 2,
+      "dev": 0,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 2
+    }
+  }
+}
+`
+
 exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
 {
   "auditReportVersion": 2,
   "vulnerabilities": {
     "handlebars": {
       "name": "handlebars",
-      "severity": "high",
+      "severity": "critical",
       "via": [
         {
           "findings": [
@@ -61,6 +196,172 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
               ]
             }
           ],
+          "id": 1164,
+          "created": "2019-09-16T15:14:43.509Z",
+          "updated": "2020-02-26T17:57:03.589Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "",
+            "name": "itszn",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "itszn",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [
+            "CVE-2019-19919"
+          ],
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+          "patched_versions": ">=3.0.8 <4.0.0 || >=4.3.0",
+          "overview": "Versions of \`handlebars\` prior to 3.0.8 or 4.3.0 are vulnerable to Prototype Pollution leading to Remote Code Execution. Templates may alter an Objects' \`__proto__\` and \`__defineGetter__\` properties, which may allow an attacker to execute arbitrary code through crafted payloads.",
+          "recommendation": "Upgrade to version 3.0.8, 4.3.0 or later.",
+          "references": "- [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19919)",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 6,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1164"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
+          "id": 1300,
+          "created": "2019-10-30T15:57:14.032Z",
+          "updated": "2020-02-24T16:20:25.230Z",
+          "deleted": null,
+          "title": "Denial of Service",
+          "found_by": {
+            "link": "",
+            "name": "Nils Knappmeier",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Nils Knappmeier",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [],
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+          "patched_versions": ">=4.4.5",
+          "overview": "Affected versions of \`handlebars\` are vulnerable to Denial of Service. The package's parser may be forced into an endless loop while processing specially-crafted templates. This may allow attackers to exhaust system resources leading to Denial of Service.",
+          "recommendation": "Upgrade to version 4.4.5 or later.",
+          "references": "",
+          "access": "public",
+          "severity": "moderate",
+          "cwe": "CWE-400",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 5,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1300"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
+          "id": 1316,
+          "created": "2019-11-14T15:29:41.991Z",
+          "updated": "2020-02-26T17:53:41.428Z",
+          "deleted": null,
+          "title": "Arbitrary Code Execution",
+          "found_by": {
+            "link": "",
+            "name": "François Lajeunesse-Robert",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "François Lajeunesse-Robert",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [],
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+          "patched_versions": ">=3.0.8 <4.0.0 || >=4.5.2",
+          "overview": "Versions of \`handlebars\` prior to 3.0.8 or 4.5.2 are vulnerable to Arbitrary Code Execution. The package's lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript in the system. It can be used to run arbitrary code in a server processing Handlebars templates or on a victim's browser (effectively serving as Cross-Site Scripting).\\n\\nThe following template can be used to demonstrate the vulnerability:  \\n\`\`\`{{#with \\"constructor\\"}}\\n\\t{{#with split as |a|}}\\n\\t\\t{{pop (push \\"alert('Vulnerable Handlebars JS');\\")}}\\n\\t\\t{{#with (concat (lookup join (slice 0 1)))}}\\n\\t\\t\\t{{#each (slice 2 3)}}\\n\\t\\t\\t\\t{{#with (apply 0 a)}}\\n\\t\\t\\t\\t\\t{{.}}\\n\\t\\t\\t\\t{{/with}}\\n\\t\\t\\t{{/each}}\\n\\t\\t{{/with}}\\n\\t{{/with}}\\n{{/with}}\`\`\`",
+          "recommendation": "Upgrade to version 3.0.8, 4.5.2 or later.",
+          "references": "",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-79",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 6,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1316"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
+          "id": 1324,
+          "created": "2019-11-18T19:06:46.461Z",
+          "updated": "2020-02-26T17:51:49.573Z",
+          "deleted": null,
+          "title": "Arbitrary Code Execution",
+          "found_by": {
+            "link": "",
+            "name": "Unknown",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Unknown",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [],
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+          "patched_versions": ">=3.0.8 <4.0.0 || >=4.5.3",
+          "overview": "Versions of \`handlebars\` prior to 3.0.8 or 4.5.3 are vulnerable to Arbitrary Code Execution. The package's lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript in the system. It is due to an incomplete fix for a [previous issue](https://www.npmjs.com/advisories/1316). This vulnerability can be used to run arbitrary code in a server processing Handlebars templates or on a victim's browser (effectively serving as Cross-Site Scripting).",
+          "recommendation": "Upgrade to version 3.0.8, 4.5.3 or later.",
+          "references": "",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-79",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 4,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1324"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
           "id": 1325,
           "created": "2019-11-18T19:42:01.445Z",
           "updated": "2020-02-26T17:55:51.120Z",
@@ -92,7 +393,8 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
             "affected_components": ""
           },
           "url": "https://npmjs.com/advisories/1325"
-        }
+        },
+        "optimist"
       ],
       "effects": [],
       "range": "<=4.7.3",
@@ -153,6 +455,55 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
             "affected_components": ""
           },
           "url": "https://npmjs.com/advisories/782"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.17.10",
+              "paths": [
+                "nyc>istanbul-lib-instrument>babel-generator>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-traverse>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-generator>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>babel-traverse>lodash",
+                "nyc>istanbul-lib-instrument>babel-traverse>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>lodash"
+              ]
+            }
+          ],
+          "id": 1065,
+          "created": "2019-07-15T17:22:56.990Z",
+          "updated": "2019-07-15T17:25:05.721Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "",
+            "name": "Snyk Security Team"
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Snyk Security Team"
+          },
+          "module_name": "lodash",
+          "cves": [
+            "CVE-2019-10744"
+          ],
+          "vulnerable_versions": "<4.17.12",
+          "patched_versions": ">=4.17.12",
+          "overview": "Versions of \`lodash\` before 4.17.12 are vulnerable to Prototype Pollution.  The function \`defaultsDeep\` allows a malicious user to modify the prototype of \`Object\` via \`{constructor: {prototype: {...}}}\` causing the addition or modification of an existing property that will exist on all objects.\\n\\n",
+          "recommendation": "Update to version 4.17.12 or later.",
+          "references": "- [Snyk Advisory](https://snyk.io/vuln/SNYK-JS-LODASH-450202)",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 3,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1065"
         }
       ],
       "effects": [],
@@ -405,6 +756,47 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
             "affected_components": ""
           },
           "url": "https://npmjs.com/advisories/1168"
+        },
+        {
+          "findings": [
+            {
+              "version": "6.0.12",
+              "paths": [
+                "subtext"
+              ]
+            }
+          ],
+          "id": 1478,
+          "created": "2020-02-17T13:49:54.470Z",
+          "updated": "2020-02-18T17:59:35.722Z",
+          "deleted": null,
+          "title": "Denial of Service",
+          "found_by": {
+            "link": "",
+            "name": "Eran Hammer",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Eran Hammer",
+            "email": ""
+          },
+          "module_name": "subtext",
+          "cves": [],
+          "vulnerable_versions": ">=4.1.0",
+          "patched_versions": "<0.0.0",
+          "overview": "Versions of \`subtext\` >=4.1.0 are vulnerable to Denial of Service. The Content-Encoding HTTP header parser has a vulnerability which will cause the function to throw a system error if the header contains some invalid values. Because hapi rethrows system errors (as opposed to catching expected application errors), the error is thrown all the way up the stack. If no unhandled exception handler is available, the application will exist, allowing an attacker to shut down services.",
+          "recommendation": "This package is deprecated and is now maintained as \`@hapi/subtext\`. Please update your dependencies to use \`@hapi/subtext\`. ",
+          "references": "",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-400",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 6,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1478"
         },
         {
           "findings": [
@@ -878,7 +1270,9 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "via": [
         "minimist"
       ],
-      "effects": [],
+      "effects": [
+        "handlebars"
+      ],
       "range": ">=0.6.0",
       "nodes": [
         "node_modules/nyc/node_modules/optimist"
@@ -927,8 +1321,8 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "info": 0,
       "low": 8,
       "moderate": 1,
-      "high": 6,
-      "critical": 1,
+      "high": 5,
+      "critical": 2,
       "total": 16
     },
     "dependencies": {
@@ -949,7 +1343,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
   "vulnerabilities": {
     "handlebars": {
       "name": "handlebars",
-      "severity": "high",
+      "severity": "critical",
       "via": [
         {
           "findings": [
@@ -999,6 +1393,172 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
               ]
             }
           ],
+          "id": 1164,
+          "created": "2019-09-16T15:14:43.509Z",
+          "updated": "2020-02-26T17:57:03.589Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "",
+            "name": "itszn",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "itszn",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [
+            "CVE-2019-19919"
+          ],
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+          "patched_versions": ">=3.0.8 <4.0.0 || >=4.3.0",
+          "overview": "Versions of \`handlebars\` prior to 3.0.8 or 4.3.0 are vulnerable to Prototype Pollution leading to Remote Code Execution. Templates may alter an Objects' \`__proto__\` and \`__defineGetter__\` properties, which may allow an attacker to execute arbitrary code through crafted payloads.",
+          "recommendation": "Upgrade to version 3.0.8, 4.3.0 or later.",
+          "references": "- [CVE](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19919)",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 6,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1164"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
+          "id": 1300,
+          "created": "2019-10-30T15:57:14.032Z",
+          "updated": "2020-02-24T16:20:25.230Z",
+          "deleted": null,
+          "title": "Denial of Service",
+          "found_by": {
+            "link": "",
+            "name": "Nils Knappmeier",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Nils Knappmeier",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [],
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+          "patched_versions": ">=4.4.5",
+          "overview": "Affected versions of \`handlebars\` are vulnerable to Denial of Service. The package's parser may be forced into an endless loop while processing specially-crafted templates. This may allow attackers to exhaust system resources leading to Denial of Service.",
+          "recommendation": "Upgrade to version 4.4.5 or later.",
+          "references": "",
+          "access": "public",
+          "severity": "moderate",
+          "cwe": "CWE-400",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 5,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1300"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
+          "id": 1316,
+          "created": "2019-11-14T15:29:41.991Z",
+          "updated": "2020-02-26T17:53:41.428Z",
+          "deleted": null,
+          "title": "Arbitrary Code Execution",
+          "found_by": {
+            "link": "",
+            "name": "François Lajeunesse-Robert",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "François Lajeunesse-Robert",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [],
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+          "patched_versions": ">=3.0.8 <4.0.0 || >=4.5.2",
+          "overview": "Versions of \`handlebars\` prior to 3.0.8 or 4.5.2 are vulnerable to Arbitrary Code Execution. The package's lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript in the system. It can be used to run arbitrary code in a server processing Handlebars templates or on a victim's browser (effectively serving as Cross-Site Scripting).\\n\\nThe following template can be used to demonstrate the vulnerability:  \\n\`\`\`{{#with \\"constructor\\"}}\\n\\t{{#with split as |a|}}\\n\\t\\t{{pop (push \\"alert('Vulnerable Handlebars JS');\\")}}\\n\\t\\t{{#with (concat (lookup join (slice 0 1)))}}\\n\\t\\t\\t{{#each (slice 2 3)}}\\n\\t\\t\\t\\t{{#with (apply 0 a)}}\\n\\t\\t\\t\\t\\t{{.}}\\n\\t\\t\\t\\t{{/with}}\\n\\t\\t\\t{{/each}}\\n\\t\\t{{/with}}\\n\\t{{/with}}\\n{{/with}}\`\`\`",
+          "recommendation": "Upgrade to version 3.0.8, 4.5.2 or later.",
+          "references": "",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-79",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 6,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1316"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
+          "id": 1324,
+          "created": "2019-11-18T19:06:46.461Z",
+          "updated": "2020-02-26T17:51:49.573Z",
+          "deleted": null,
+          "title": "Arbitrary Code Execution",
+          "found_by": {
+            "link": "",
+            "name": "Unknown",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Unknown",
+            "email": ""
+          },
+          "module_name": "handlebars",
+          "cves": [],
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+          "patched_versions": ">=3.0.8 <4.0.0 || >=4.5.3",
+          "overview": "Versions of \`handlebars\` prior to 3.0.8 or 4.5.3 are vulnerable to Arbitrary Code Execution. The package's lookup helper fails to properly validate templates, allowing attackers to submit templates that execute arbitrary JavaScript in the system. It is due to an incomplete fix for a [previous issue](https://www.npmjs.com/advisories/1316). This vulnerability can be used to run arbitrary code in a server processing Handlebars templates or on a victim's browser (effectively serving as Cross-Site Scripting).",
+          "recommendation": "Upgrade to version 3.0.8, 4.5.3 or later.",
+          "references": "",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-79",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 4,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1324"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.0.11",
+              "paths": [
+                "nyc>istanbul-reports>handlebars"
+              ]
+            }
+          ],
           "id": 1325,
           "created": "2019-11-18T19:42:01.445Z",
           "updated": "2020-02-26T17:55:51.120Z",
@@ -1030,7 +1590,8 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
             "affected_components": ""
           },
           "url": "https://npmjs.com/advisories/1325"
-        }
+        },
+        "optimist"
       ],
       "effects": [],
       "range": "<=4.7.3",
@@ -1091,6 +1652,55 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
             "affected_components": ""
           },
           "url": "https://npmjs.com/advisories/782"
+        },
+        {
+          "findings": [
+            {
+              "version": "4.17.10",
+              "paths": [
+                "nyc>istanbul-lib-instrument>babel-generator>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>babel-traverse>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-traverse>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-types>lodash",
+                "nyc>istanbul-lib-instrument>babel-generator>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>babel-traverse>lodash",
+                "nyc>istanbul-lib-instrument>babel-traverse>lodash",
+                "nyc>istanbul-lib-instrument>babel-template>lodash"
+              ]
+            }
+          ],
+          "id": 1065,
+          "created": "2019-07-15T17:22:56.990Z",
+          "updated": "2019-07-15T17:25:05.721Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "",
+            "name": "Snyk Security Team"
+          },
+          "reported_by": {
+            "link": "",
+            "name": "Snyk Security Team"
+          },
+          "module_name": "lodash",
+          "cves": [
+            "CVE-2019-10744"
+          ],
+          "vulnerable_versions": "<4.17.12",
+          "patched_versions": ">=4.17.12",
+          "overview": "Versions of \`lodash\` before 4.17.12 are vulnerable to Prototype Pollution.  The function \`defaultsDeep\` allows a malicious user to modify the prototype of \`Object\` via \`{constructor: {prototype: {...}}}\` causing the addition or modification of an existing property that will exist on all objects.\\n\\n",
+          "recommendation": "Update to version 4.17.12 or later.",
+          "references": "- [Snyk Advisory](https://snyk.io/vuln/SNYK-JS-LODASH-450202)",
+          "access": "public",
+          "severity": "high",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 3,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1065"
         }
       ],
       "effects": [],
@@ -1614,7 +2224,9 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       "via": [
         "minimist"
       ],
-      "effects": [],
+      "effects": [
+        "handlebars"
+      ],
       "range": ">=0.6.0",
       "nodes": [
         "node_modules/nyc/node_modules/optimist"
@@ -1663,8 +2275,8 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       "info": 0,
       "low": 8,
       "moderate": 0,
-      "high": 5,
-      "critical": 0,
+      "high": 4,
+      "critical": 1,
       "total": 13
     },
     "dependencies": {
@@ -1941,6 +2553,120 @@ exports[`test/audit-report.js TAP one vulnerability > json version 1`] = `
       "peer": 0,
       "peerOptional": 0,
       "total": 1
+    }
+  }
+}
+`
+
+exports[`test/audit-report.js TAP unfixable, but not a semver major forced fix > json version 1`] = `
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "minimist": {
+      "name": "minimist",
+      "severity": "low",
+      "via": [
+        {
+          "findings": [
+            {
+              "version": "0.0.8",
+              "paths": [
+                "mkdirp>minimist"
+              ]
+            },
+            {
+              "version": "0.0.8",
+              "paths": [
+                "nyc>caching-transform>mkdirp>minimist",
+                "nyc>find-cache-dir>mkdirp>minimist",
+                "nyc>istanbul-lib-report>mkdirp>minimist",
+                "nyc>istanbul-lib-source-maps>mkdirp>minimist",
+                "nyc>mkdirp>minimist",
+                "nyc>spawn-wrap>mkdirp>minimist",
+                "nyc>istanbul-reports>handlebars>optimist>minimist"
+              ]
+            }
+          ],
+          "id": 1179,
+          "created": "2019-09-23T15:01:43.049Z",
+          "updated": "2020-03-18T19:41:45.921Z",
+          "deleted": null,
+          "title": "Prototype Pollution",
+          "found_by": {
+            "link": "https://www.checkmarx.com/resources/blog/",
+            "name": "Checkmarx Research Team",
+            "email": ""
+          },
+          "reported_by": {
+            "link": "https://www.checkmarx.com/resources/blog/",
+            "name": "Checkmarx Research Team",
+            "email": ""
+          },
+          "module_name": "minimist",
+          "cves": [],
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+          "patched_versions": ">=0.2.1 <1.0.0 || >=1.2.3",
+          "overview": "Affected versions of \`minimist\` are vulnerable to prototype pollution. Arguments are not properly sanitized, allowing an attacker to modify the prototype of \`Object\`, causing the addition or modification of an existing property that will exist on all objects.  \\nParsing the argument \`--__proto__.y=Polluted\` adds a \`y\` property with value \`Polluted\` to all objects. The argument \`--__proto__=Polluted\` raises and uncaught error and crashes the application.  \\nThis is exploitable if attackers have control over the arguments being passed to \`minimist\`.\\n",
+          "recommendation": "Upgrade to versions 0.2.1, 1.2.3 or later.",
+          "references": "- [GitHub commit 1](https://github.com/substack/minimist/commit/4cf1354839cb972e38496d35e12f806eea92c11f#diff-a1e0ee62c91705696ddb71aa30ad4f95)\\n- [GitHub commit 2](https://github.com/substack/minimist/commit/63e7ed05aa4b1889ec2f3b196426db4500cbda94)",
+          "access": "public",
+          "severity": "low",
+          "cwe": "CWE-471",
+          "metadata": {
+            "module_type": "",
+            "exploitability": 1,
+            "affected_components": ""
+          },
+          "url": "https://npmjs.com/advisories/1179"
+        }
+      ],
+      "effects": [
+        "mkdirp"
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "nodes": [
+        "node_modules/minimist"
+      ],
+      "fixAvailable": {
+        "name": "mkdirp",
+        "version": "0.5.5",
+        "isSemVerMajor": false
+      }
+    },
+    "mkdirp": {
+      "name": "mkdirp",
+      "severity": "low",
+      "via": [
+        "minimist"
+      ],
+      "effects": [],
+      "range": "0.4.1 - 0.5.1",
+      "nodes": [
+        "node_modules/mkdirp"
+      ],
+      "fixAvailable": {
+        "name": "mkdirp",
+        "version": "0.5.5",
+        "isSemVerMajor": false
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 2,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 2,
+      "dev": 0,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 2
     }
   }
 }

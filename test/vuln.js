@@ -6,8 +6,10 @@ t.test('basic vulnerability object tests', async t => {
   const v = new Vuln({ name: 'name', via: { some: 'advisory', severity: 'critical' } })
   t.isa(v, Vuln)
   t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}]))
-  v.addVia({ another: 'advisory', severity: 'info' })
-  t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}, {another: 'advisory', severity: 'info'}]))
+  t.equal(v.severity, 'critical')
+  v.addVia({ another: 'advisory', severity: 'low' })
+  t.equal(v.severity, 'critical')
+  t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}, {another: 'advisory', severity: 'low'}]))
 
   t.matchSnapshot(JSON.stringify(v, 0, 2), 'json formatted before packument')
   const v2 = new Vuln({ name: 'another', via: v })

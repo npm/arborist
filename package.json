@@ -4,8 +4,8 @@
   "description": "Manage node_modules trees",
   "dependencies": {
     "@npmcli/installed-package-contents": "^1.0.5",
-    "@npmcli/name-from-folder": "^1.0.1",
     "@npmcli/map-workspaces": "0.0.0-pre.1",
+    "@npmcli/name-from-folder": "^1.0.1",
     "@npmcli/run-script": "^1.3.1",
     "bin-links": "^2.1.2",
     "json-stringify-nice": "^1.1.1",
@@ -13,7 +13,7 @@
     "npm-install-checks": "^4.0.0",
     "npm-package-arg": "^8.0.0",
     "npm-pick-manifest": "^6.1.0",
-    "pacote": "^11.1.6",
+    "pacote": "^11.1.9",
     "parse-conflict-json": "^1.0.0",
     "promise-all-reject-late": "^1.0.0",
     "promise-call-limit": "^1.0.1",

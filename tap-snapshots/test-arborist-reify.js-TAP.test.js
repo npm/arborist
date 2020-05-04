@@ -27476,6 +27476,220 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "children": Map {},
+      "dev": false,
+      "devOptional": false,
+      "edgesIn": Set {
+        Edge {},
+      },
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": false,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/abbrev",
+      "meta": undefined,
+      "name": "abbrev",
+      "optional": false,
+      "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
+      "peer": false,
+      "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "mkdirp" => Node {
+      "children": Map {},
+      "dev": false,
+      "devOptional": false,
+      "edgesIn": Set {
+        Edge {},
+      },
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": false,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/mkdirp",
+      "meta": undefined,
+      "name": "mkdirp",
+      "optional": false,
+      "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
+      "peer": false,
+      "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+    },
+  },
+  "dev": false,
+  "devOptional": false,
+  "edgesIn": Set {},
+  "edgesOut": Map {
+    "mkdirp" => Edge {},
+    "abbrev" => Edge {},
+  },
+  "errors": Array [],
+  "extraneous": false,
+  "fsChildren": Set {},
+  "hasShrinkwrap": false,
+  "integrity": null,
+  "inventory": Inventory {
+    "node_modules/abbrev" => Node {
+      "children": Map {},
+      "dev": false,
+      "devOptional": false,
+      "edgesIn": Set {
+        Edge {},
+      },
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": false,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/abbrev",
+      "meta": undefined,
+      "name": "abbrev",
+      "optional": false,
+      "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
+      "peer": false,
+      "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "node_modules/mkdirp" => Node {
+      "children": Map {},
+      "dev": false,
+      "devOptional": false,
+      "edgesIn": Set {
+        Edge {},
+      },
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": false,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/mkdirp",
+      "meta": undefined,
+      "name": "mkdirp",
+      "optional": false,
+      "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
+      "peer": false,
+      "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+    },
+  },
+  "legacyPeerDeps": false,
+  "linksIn": Set {},
+  "location": "",
+  "meta": Shrinkwrap {
+    "data": Object {
+      "lockfileVersion": 2,
+      "name": "reify-update-a-yarn-lock-file",
+      "packages": Object {
+        "": Object {
+          "dependencies": Object {
+            "abbrev": "^1.1.1",
+            "mkdirp": "^1.0.4",
+          },
+        },
+        "node_modules/abbrev": Object {
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+          "name": "abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "version": "1.1.1",
+        },
+        "node_modules/mkdirp": Object {
+          "bin": Object {
+            "mkdirp": "bin/cmd.js",
+          },
+          "engines": Object {
+            "node": ">=10",
+          },
+          "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+          "name": "mkdirp",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+          "version": "1.0.4",
+        },
+      },
+      "requires": true,
+    },
+    "filename": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/.package-lock.json",
+    "hiddenLockfile": true,
+    "indent": 2,
+    "loadedFromDisk": false,
+    "originalLockfileVersion": undefined,
+    "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
+    "shrinkwrapOnly": false,
+    "type": "package-lock.json",
+    "yarnLock": YarnLock {
+      "current": YarnLockEntry {
+        "dependencies": null,
+        "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+        "optionalDependencies": null,
+        "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+        "version": "1.0.4",
+      },
+      "entries": Map {
+        "abbrev@^1.1.1" => YarnLockEntry {
+          "dependencies": null,
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+          "optionalDependencies": null,
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "version": "1.1.1",
+        },
+        "mkdirp@^1.0.4" => YarnLockEntry {
+          "dependencies": null,
+          "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+          "optionalDependencies": null,
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+          "version": "1.0.4",
+        },
+      },
+      "subkey": Symbol(null),
+    },
+  },
+  "name": "reify-update-a-yarn-lock-file",
+  "optional": false,
+  "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
+  "peer": false,
+  "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP update a yarn.lock file > updated yarn lock 1`] = `
+# THIS IS AN AUTOGENERATED FILE. DO NOT EDIT THIS FILE DIRECTLY.
+# yarn lockfile v1
+
+
+"abbrev@^1.1.1":
+  "integrity" "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+  "resolved" "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
+  "version" "1.1.1"
+
+"mkdirp@^1.0.4":
+  "integrity" "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw=="
+  "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
+  "version" "1.0.4"
+
+`
+
 exports[`test/arborist/reify.js TAP weirdly broken lockfile without resolved value > expect resolving Promise 1`] = `
 Node {
   "children": Map {

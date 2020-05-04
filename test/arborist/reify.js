@@ -155,6 +155,12 @@ const printReified = (path, opt) => reify(path, opt).then(printTree)
 const reify = (path, opt) =>
   new Arborist({audit: false, cache, registry, path, ...(opt || {})}).reify(opt)
 
+t.test('update a yarn.lock file', async t => {
+  const path = fixture(t, 'yarn-lock-mkdirp')
+  t.matchSnapshot(await reify(path, { add: ['abbrev'] }), 'add abbrev')
+  t.matchSnapshot(fs.readFileSync(path + '/yarn.lock', 'utf8'), 'updated yarn lock')
+})
+
 t.test('weirdly broken lockfile without resolved value', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'dep-missing-resolved'))))
 

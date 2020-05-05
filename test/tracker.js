@@ -2,9 +2,9 @@ const Tracker = require('../lib/tracker.js')(class {})
 const t = require('tap')
 
 const npmlog = {
-  newGroup: () => ({ 
-    newGroup: () => ({ finish: () => {} }), 
-    finish: () => {} 
+  newGroup: () => ({
+    newGroup: () => ({ finish: () => {} }),
+    finish: () => {}
   }),
   enableProgress: () => {},
   disableProgress: () => {}
@@ -19,25 +19,25 @@ t.test('no npmlog', t => {
 })
 
 t.test('adds tracker', t => {
-  t.notThrow(() => { 
+  t.notThrow(() => {
     const tr = new Tracker({ log: npmlog })
-    tr.addTracker('testTracker') 
+    tr.addTracker('testTracker')
   })
-  t.notThrow(() => { 
-    const tr = new Tracker({ log: npmlog })
-    tr.addTracker('testTracker') 
-    tr.addTracker('testTracker', 'subTracker') 
-  })
-  t.notThrow(() => { 
+  t.notThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker')
-    tr.addTracker('testTracker', 'subTracker') 
   })
-  t.notThrow(() => { 
+  t.notThrow(() => {
     const tr = new Tracker({ log: npmlog })
-    tr.addTracker('testTracker') 
-    tr.addTracker('testTracker', 'subTracker.name', 'subTracker.key') 
+    tr.addTracker('testTracker')
+    tr.addTracker('testTracker', 'subTracker')
+    tr.addTracker('testTracker', 'subTracker')
+  })
+  t.notThrow(() => {
+    const tr = new Tracker({ log: npmlog })
+    tr.addTracker('testTracker')
+    tr.addTracker('testTracker', 'subTracker.name', 'subTracker.key')
   })
 
   const tr = new Tracker({ log: npmlog })
@@ -45,12 +45,12 @@ t.test('adds tracker', t => {
   t.throws(() => { tr.addTracker(null) }, Error, `Tracker can't be null or undefined`)
   t.throws(() => { tr.addTracker(undefined) }, Error, `Tracker can't be null or undefined`)
 
-  t.throws(() => { 
+  t.throws(() => {
     tr.addTracker('testTracker')
     tr.addTracker('testTracker')
   }, Error, 'Tracker "testTracker" already exists')
 
-  t.throws(() => { tr.addTracker('nonExistentTracker', 'tracker') }, 
+  t.throws(() => { tr.addTracker('nonExistentTracker', 'tracker') },
     Error, 'Parent tracker "nonExistentTracker" does not exist')
 
   t.end()
@@ -58,21 +58,21 @@ t.test('adds tracker', t => {
 
 t.test('finishes tracker', t => {
 
-  t.notThrow(() => { 
+  t.notThrow(() => {
     const tr = new Tracker({ log: npmlog })
-    tr.addTracker('testTracker') 
+    tr.addTracker('testTracker')
     tr.finishTracker('testTracker')
   })
-  t.notThrow(() => { 
+  t.notThrow(() => {
     const tr = new Tracker({ log: npmlog })
-    tr.addTracker('testTracker') 
+    tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker')
     tr.finishTracker('testTracker', 'subTracker')
     tr.finishTracker('testTracker')
   })
-  t.notThrow(() => { 
+  t.notThrow(() => {
     const tr = new Tracker({ log: npmlog })
-    tr.addTracker('testTracker') 
+    tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker.name', 'subTracker.key')
     tr.finishTracker('testTracker', 'subTracker.name', 'subTracker.key')
     tr.finishTracker('testTracker')
@@ -91,22 +91,22 @@ t.test('finishes tracker', t => {
   t.throws(() => { tr.finish(null) }, Error, `Tracker can't be null or undefined`)
   t.throws(() => { tr.finish(undefined) }, Error, `Tracker can't be null or undefined`)
 
-  t.throws(() => { 
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'testChild')
-    tr.finishTracker('testTracker') 
-  }, Error, 'Tracker "testTracker" contains unfinished child: testChild')
+    tr.finishTracker('testTracker')
+  })
 
-  t.throws(() => { 
+  t.throws(() => {
     const tr = new Tracker({ log: npmlog })
     tr.finishTracker('testTracker') }, Error, 'Tracker "testTracker" does not exist')
 
-  t.throws(() => { 
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
-    tr.finishTracker('testTracker', 'nonExistentSubTracker') 
-  }, Error, 'Subtracker "nonExistentSubTracker" does not exist')
+    tr.finishTracker('testTracker', 'nonExistentSubTracker')
+  })
 
   t.end()
 })

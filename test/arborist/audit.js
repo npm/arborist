@@ -118,6 +118,18 @@ t.test('audit fix reifies out the bad deps', async t => {
   t.matchSnapshot(tree, 'reified out the bad mkdirp and minimist')
 })
 
+t.test('completely fix tap 13 installed in 2019', async t => {
+  const path = fixture(t, 'audit-fix-old-tap')
+  t.teardown(auditResponse(resolve(path, 'audit.json')))
+  const arb = new Arborist({
+    cache,
+    path,
+    registry,
+  })
+  const tree = printTree(await arb.audit({fix: true}))
+  t.matchSnapshot(tree, 'reified out the bad stuff')
+})
+
 t.test('audit does not do globals', t =>
   t.rejects(new Arborist({ cache, path: '.', global: true }).audit(), {
     message: '`npm audit` does not support testing globals',

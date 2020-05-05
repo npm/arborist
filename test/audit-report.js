@@ -38,6 +38,31 @@ t.test('audit outdated nyc and mkdirp', async t => {
   t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
 })
 
+t.test('audit outdated nyc and mkdirp with before: option', async t => {
+  const path = resolve(fixtures, 'audit-nyc-mkdirp')
+  const auditFile = resolve(path, 'audit.json')
+  t.teardown(auditResponse(auditFile))
+
+  const arb = new Arborist({
+    before: new Date('2020-01-01'),
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  // just a gut-check that the registry server is actually doing stuff
+  t.match(report.report, require(auditFile), 'got expected response')
+
+  t.equal(report.topVulns.size, 1, 'one top node found vulnerable')
+  t.equal(report.dependencyVulns.size, 6, 'dep vulns')
+  t.equal(report.advisoryVulns.size, 7, 'advisory vulns')
+  t.equal(report.get('nyc').simpleRange, '11.0.0-candidate.1 - 13.1.0')
+  t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
+})
+
 t.test('audit returns an error', async t => {
   const path = resolve(fixtures, 'audit-nyc-mkdirp')
   const auditFile = resolve(path, 'audit.json')

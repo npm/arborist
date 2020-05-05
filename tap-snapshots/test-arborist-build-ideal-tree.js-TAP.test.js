@@ -8553,6 +8553,68 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP respect the yarn.lock file > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "mkdirp" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "mkdirp" => Edge {
+      "name": "mkdirp",
+      "spec": "^1.0.2",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "yarn-lock-mkdirp",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP respect the yarn.lock file version, if lacking resolved > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "mkdirp" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "mkdirp" => Edge {
+      "name": "mkdirp",
+      "spec": "^1.0.2",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "yarn-lock-mkdirp-no-resolved",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP tap vs react15 > build ideal tree with tap collision 1`] = `
 Node {
   "children": Map {

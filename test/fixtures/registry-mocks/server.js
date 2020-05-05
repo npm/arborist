@@ -16,7 +16,7 @@ const startServer = cb => {
   const server = module.exports.server = http.createServer((req, res) => {
     res.setHeader('connection', 'close')
 
-    if (req.url === '/-/npm/v1/security/audits/quick' && auditResponse) {
+    if (req.url === '/-/npm/v1/security/audits/quick') {
       const body = []
       req.on('data', c => body.push(c))
       req.on('end', () => {
@@ -24,6 +24,10 @@ const startServer = cb => {
         if (failAudit) {
           res.statusCode = 503
           return res.end('no audit for you')
+        }
+        if (!auditResponse) {
+          res.statusCode = 404
+          return res.end('not found')
         }
         if (doProxy && !existsSync(auditResponse)) {
           return https.request({

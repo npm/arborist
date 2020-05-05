@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "mkdirp": "^1.0.2"
+    "mkdirp": "file:mkdirp"
   }
 }

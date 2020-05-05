@@ -27516,7 +27516,7 @@ Node {
       "extraneous": false,
       "fsChildren": Set {},
       "hasShrinkwrap": false,
-      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
       "linksIn": Set {},
@@ -27527,7 +27527,7 @@ Node {
       "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
       "peer": false,
       "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
     },
   },
   "dev": false,
@@ -27580,7 +27580,7 @@ Node {
       "extraneous": false,
       "fsChildren": Set {},
       "hasShrinkwrap": false,
-      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
       "linksIn": Set {},
@@ -27591,7 +27591,7 @@ Node {
       "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
       "peer": false,
       "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
-      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
     },
   },
   "legacyPeerDeps": false,
@@ -27605,7 +27605,7 @@ Node {
         "": Object {
           "dependencies": Object {
             "abbrev": "^1.1.1",
-            "mkdirp": "^1.0.4",
+            "mkdirp": "^1.0.2",
           },
         },
         "node_modules/abbrev": Object {
@@ -27621,10 +27621,10 @@ Node {
           "engines": Object {
             "node": ">=10",
           },
-          "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+          "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
           "name": "mkdirp",
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-          "version": "1.0.4",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+          "version": "1.0.2",
         },
       },
       "requires": true,
@@ -27640,10 +27640,10 @@ Node {
     "yarnLock": YarnLock {
       "current": YarnLockEntry {
         "dependencies": null,
-        "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+        "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
         "optionalDependencies": null,
-        "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-        "version": "1.0.4",
+        "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+        "version": "1.0.2",
       },
       "entries": Map {
         "abbrev@^1.1.1" => YarnLockEntry {
@@ -27653,12 +27653,12 @@ Node {
           "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
           "version": "1.1.1",
         },
-        "mkdirp@^1.0.4" => YarnLockEntry {
+        "mkdirp@^1.0.2" => YarnLockEntry {
           "dependencies": null,
-          "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+          "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
           "optionalDependencies": null,
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
-          "version": "1.0.4",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+          "version": "1.0.2",
         },
       },
       "subkey": Symbol(null),
@@ -27683,10 +27683,10 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > updated yarn lock 
   "resolved" "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
   "version" "1.1.1"
 
-"mkdirp@^1.0.4":
-  "integrity" "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw=="
-  "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz"
-  "version" "1.0.4"
+"mkdirp@^1.0.2":
+  "integrity" "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA=="
+  "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz"
+  "version" "1.0.2"
 
 `
 

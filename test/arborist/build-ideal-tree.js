@@ -344,6 +344,14 @@ t.test('link meta deps', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'link-meta-deps-empty'))))
 
+t.test('respect the yarn.lock file', t =>
+  t.resolveMatchSnapshot(printIdeal(
+    resolve(fixtures, 'yarn-lock-mkdirp'))))
+
+t.test('respect the yarn.lock file version, if lacking resolved', t =>
+  t.resolveMatchSnapshot(printIdeal(
+    resolve(fixtures, 'yarn-lock-mkdirp-no-resolved'))))
+
 t.test('optional dependency failures', t => {
   const cases = [
     'optional-ok',

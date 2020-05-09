@@ -9,6 +9,7 @@ const depTypesFixture = resolve(__dirname, '../fixtures/dev-deps')
 const bundleFixture = resolve(__dirname, '../fixtures/two-bundled-deps')
 const emptyFixture = resolve(__dirname, '../fixtures/empty-with-shrinkwrap')
 const linkedMeta = resolve(__dirname, '../fixtures/cli-750')
+const oldMeta = resolve(__dirname, '../fixtures/old-package-lock')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
 const Node = require('../../lib/node.js')
 
@@ -29,6 +30,10 @@ const printEdge = (edge, inout) => ({
 
 const printTree = tree => ({
   name: tree.name,
+  package: {
+    name: tree.package.name,
+    version: tree.package.version,
+  },
   location: tree.location,
   resolved: tree.resolved,
   ...(tree.extraneous ? { extraneous: true } : {
@@ -146,6 +151,10 @@ t.test('load a tree with a bunch of bundles', t =>
 t.test('load a tree with an empty dep set and a lockfile', t =>
   loadVirtual(emptyFixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'virtual tree with no deps')))
+
+t.test('load a tree with a v1 lockfile', t =>
+  loadVirtual(oldMeta).then(tree =>
+    t.matchSnapshot(printTree(tree), 'virtual tree with v1 shronk')))
 
 t.test('workspaces', t => {
   t.test('load a simple example', t =>

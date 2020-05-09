@@ -11,7 +11,6 @@ Object {
     "peerdep": "",
   },
   "integrity": "sha512-peerpeerpeer",
-  "name": "peer",
   "peer": true,
   "resolved": "https://peer.com/peer.tgz",
   "version": "1.2.3",
@@ -21,7 +20,6 @@ Object {
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > a peer meta-dep 1`] = `
 Object {
   "integrity": "sha512-peerdeppeerdep",
-  "name": "peerdep",
   "peer": true,
   "resolved": "https://peer.com/peerdep.tgz",
   "version": "1.2.3",
@@ -141,7 +139,6 @@ Object {
         "e": "https://foo.com/e.tgz",
       },
       "hasInstallScript": true,
-      "name": "root",
       "optionalDependencies": Object {
         "optin": "",
       },
@@ -152,7 +149,6 @@ Object {
     },
     "node_modules/a": Object {
       "integrity": "sha512-helloyesthisisdog",
-      "name": "a",
       "resolved": "https://example.com/a.tgz",
       "version": "1.2.3",
     },
@@ -166,7 +162,6 @@ Object {
         "git-dep": "github:foo/bar",
       },
       "dev": true,
-      "name": "d",
       "version": "1.2.3",
     },
     "node_modules/d/node_modules/bundled": Object {
@@ -177,7 +172,6 @@ Object {
     },
     "node_modules/d/node_modules/git-dep": Object {
       "dev": true,
-      "name": "git-dep",
       "resolved": "git+ssh://git@github.com/foo/bar.git#0000000000000000000000000000000000000000",
       "version": "1.2.3",
     },
@@ -186,12 +180,10 @@ Object {
         "devo": "",
       },
       "dev": true,
-      "name": "devit",
       "version": "1.2.3",
     },
     "node_modules/devo": Object {
       "devOptional": true,
-      "name": "devo",
       "version": "1.2.3",
     },
     "node_modules/e": Object {
@@ -201,7 +193,6 @@ Object {
       },
       "dev": true,
       "license": "blurb",
-      "name": "e",
       "resolved": "https://foo.com/e.tgz",
       "version": "1.2.3",
     },
@@ -216,7 +207,6 @@ Object {
       "dependencies": Object {
         "devo": "",
       },
-      "name": "optin",
       "optional": true,
       "version": "1.2.3",
     },
@@ -225,14 +215,12 @@ Object {
         "peerdep": "",
       },
       "integrity": "sha512-peerpeerpeer",
-      "name": "peer",
       "peer": true,
       "resolved": "https://peer.com/peer.tgz",
       "version": "1.2.3",
     },
     "node_modules/peer/node_modules/peerdep": Object {
       "integrity": "sha512-peerdeppeerdep",
-      "name": "peerdep",
       "peer": true,
       "resolved": "https://peer.com/peerdep.tgz",
       "version": "1.2.3",
@@ -248,7 +236,6 @@ Object {
       "funding": Object {
         "url": "https://example.com/",
       },
-      "name": "tgz",
       "os": Array [
         "any",
         "!win32",
@@ -262,7 +249,6 @@ Object {
         "url": "https://example.com/",
       },
       "integrity": "sha512-tarball/package/resolved/integrity",
-      "name": "tgz-pkg-resolved",
       "version": "1.2.3",
     },
     "target": Object {
@@ -282,7 +268,6 @@ Object {
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > dep a metadata 1`] = `
 Object {
   "integrity": "sha512-helloyesthisisdog",
-  "name": "a",
   "resolved": "https://example.com/a.tgz",
   "version": "1.2.3",
 }
@@ -299,7 +284,6 @@ Object {
     "git-dep": "github:foo/bar",
   },
   "dev": true,
-  "name": "d",
   "version": "1.2.3",
 }
 `
@@ -312,7 +296,6 @@ Object {
   },
   "dev": true,
   "license": "blurb",
-  "name": "e",
   "resolved": "https://foo.com/e.tgz",
   "version": "1.2.3",
 }
@@ -321,7 +304,6 @@ Object {
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > git dep metadata 1`] = `
 Object {
   "dev": true,
-  "name": "git-dep",
   "resolved": "git+ssh://git@github.com/foo/bar.git#0000000000000000000000000000000000000000",
   "version": "1.2.3",
 }
@@ -351,7 +333,6 @@ Object {
     "devo": "",
   },
   "dev": true,
-  "name": "devit",
   "version": "1.2.3",
 }
 `
@@ -359,7 +340,6 @@ Object {
 exports[`test/shrinkwrap.js TAP construct metadata from node and package data > meta for devOptional dep 1`] = `
 Object {
   "devOptional": true,
-  "name": "devo",
   "version": "1.2.3",
 }
 `
@@ -369,7 +349,6 @@ Object {
   "dependencies": Object {
     "devo": "",
   },
-  "name": "optin",
   "optional": true,
   "version": "1.2.3",
 }
@@ -387,7 +366,6 @@ Object {
   "funding": Object {
     "url": "https://example.com/",
   },
-  "name": "tgz",
   "os": Array [
     "any",
     "!win32",
@@ -404,7 +382,6 @@ Object {
     "url": "https://example.com/",
   },
   "integrity": "sha512-tarball/package/resolved/integrity",
-  "name": "tgz-pkg-resolved",
   "version": "1.2.3",
 }
 `
@@ -429,7 +406,6 @@ Object {
     "e": "https://foo.com/e.tgz",
   },
   "hasInstallScript": true,
-  "name": "root",
   "optionalDependencies": Object {
     "optin": "",
   },
@@ -453,7 +429,6 @@ Object {
     "e": "https://foo.com/e.tgz",
   },
   "hasInstallScript": true,
-  "name": "root",
   "optionalDependencies": Object {
     "optin": "",
   },

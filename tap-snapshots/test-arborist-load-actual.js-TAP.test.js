@@ -49,11 +49,9 @@ Node {
         "dependencies": Object {
           "dep": "",
         },
-        "name": "bundle",
       },
       "node_modules/dep": Object {
         "inBundle": true,
-        "name": "dep",
       },
     },
     "requires": true,
@@ -465,7 +463,6 @@ Node {
         "devDependencies": Object {
           "foo": "*",
         },
-        "name": "root",
         "optionalDependencies": Object {
           "notinstalledhere": "",
         },
@@ -479,7 +476,6 @@ Node {
           "@scope/y": "",
           "glob": "4",
         },
-        "name": "@scope/x",
         "optionalDependencies": Object {
           "@scope/y": "",
         },
@@ -496,15 +492,12 @@ Node {
           "minimatch": "",
           "once": "",
         },
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
@@ -513,26 +506,21 @@ Node {
           "once": "",
           "sigmund": "",
         },
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
         },
-        "name": "@scope/y",
         "version": "1.2.3",
       },
       "node_modules/foo": Object {
@@ -540,7 +528,6 @@ Node {
           "@scope/x": "",
           "express": "npm:abbrev@*",
         },
-        "name": "foo",
         "optionalDependencies": Object {
           "@scope/x": "",
         },
@@ -897,7 +884,6 @@ Node {
         "dependencies": Object {
           "b": "",
         },
-        "name": "a",
         "optional": true,
         "version": "1.2.3",
       },
@@ -905,7 +891,6 @@ Node {
         "dependencies": Object {
           "c": "",
         },
-        "name": "b",
         "optional": true,
         "version": "1.2.3",
       },
@@ -913,7 +898,6 @@ Node {
         "dependencies": Object {
           "d": "",
         },
-        "name": "c",
         "optional": true,
         "version": "1.2.3",
       },
@@ -921,12 +905,10 @@ Node {
         "dependencies": Object {
           "e": "",
         },
-        "name": "d",
         "optional": true,
         "version": "1.2.3",
       },
       "node_modules/e": Object {
-        "name": "e",
         "optional": true,
         "version": "1.2.3",
       },
@@ -935,36 +917,30 @@ Node {
           "j": "",
         },
         "dev": true,
-        "name": "i",
       },
       "node_modules/j": Object {
         "dependencies": Object {
           "k": "",
         },
         "dev": true,
-        "name": "j",
       },
       "node_modules/k": Object {
         "dev": true,
-        "name": "k",
       },
       "node_modules/x": Object {
         "dependencies": Object {
           "y": "",
         },
-        "name": "x",
       },
       "node_modules/y": Object {
         "dependencies": Object {
           "z": "",
         },
-        "name": "y",
       },
       "node_modules/z": Object {
         "dependencies": Object {
           "a": "",
         },
-        "name": "z",
         "optionalDependencies": Object {
           "a": "",
         },
@@ -1063,7 +1039,6 @@ Link {
           "@scope/y": "",
           "glob": "4",
         },
-        "name": "@scope/x",
         "optionalDependencies": Object {
           "@scope/y": "",
         },
@@ -1080,15 +1055,12 @@ Link {
           "minimatch": "",
           "once": "",
         },
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
@@ -1097,26 +1069,21 @@ Link {
           "once": "",
           "sigmund": "",
         },
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
         },
-        "name": "@scope/y",
         "peer": true,
         "version": "1.2.3",
       },
@@ -1125,7 +1092,6 @@ Link {
           "@scope/x": "",
           "express": "npm:abbrev@*",
         },
-        "name": "foo",
         "optionalDependencies": Object {
           "@scope/x": "",
         },
@@ -1304,7 +1270,6 @@ Node {
         "devDependencies": Object {
           "a": "",
         },
-        "name": "devloop",
       },
       "node_modules/a": Object {
         "dependencies": Object {
@@ -1312,25 +1277,21 @@ Node {
           "d": "",
         },
         "dev": true,
-        "name": "a",
         "version": "1.2.3",
       },
       "node_modules/b": Object {
-        "name": "b",
         "version": "1.2.3",
       },
       "node_modules/c": Object {
         "dependencies": Object {
           "d": "",
         },
-        "name": "c",
         "version": "1.2.3",
       },
       "node_modules/d": Object {
         "dependencies": Object {
           "b": "",
         },
-        "name": "d",
         "version": "1.2.3",
       },
     },
@@ -2151,7 +2112,6 @@ Node {
       "node_modules/abbrev": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "license": "ISC",
-        "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
@@ -2169,7 +2129,6 @@ Node {
         "extraneous": true,
         "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
         "license": "MIT",
-        "name": "balanced-match",
         "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
         "version": "1.0.0",
       },
@@ -2181,7 +2140,6 @@ Node {
         "extraneous": true,
         "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
         "license": "MIT",
-        "name": "brace-expansion",
         "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
         "version": "1.1.11",
       },
@@ -2193,7 +2151,6 @@ Node {
           "a": "",
         },
         "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "name": "bundler",
         "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
         "version": "1.2.3",
       },
@@ -2203,7 +2160,6 @@ Node {
         },
         "inBundle": true,
         "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "name": "a",
         "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         "version": "1.2.3",
       },
@@ -2213,14 +2169,12 @@ Node {
         },
         "inBundle": true,
         "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "name": "b",
         "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         "version": "1.2.3",
       },
       "node_modules/bundler/node_modules/c": Object {
         "inBundle": true,
         "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "name": "c",
         "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         "version": "1.2.3",
       },
@@ -2228,7 +2182,6 @@ Node {
         "extraneous": true,
         "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
         "license": "MIT",
-        "name": "concat-map",
         "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
         "version": "0.0.1",
       },
@@ -2236,7 +2189,6 @@ Node {
         "extraneous": true,
         "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
         "license": "ISC",
-        "name": "fs.realpath",
         "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
         "version": "1.0.0",
       },
@@ -2275,7 +2227,6 @@ Node {
         "extraneous": true,
         "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
         "license": "ISC",
-        "name": "glob",
         "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
         "version": "7.1.4",
       },
@@ -2287,7 +2238,6 @@ Node {
         "extraneous": true,
         "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
         "license": "ISC",
-        "name": "inflight",
         "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
         "version": "1.0.6",
       },
@@ -2295,7 +2245,6 @@ Node {
         "extraneous": true,
         "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
         "license": "ISC",
-        "name": "inherits",
         "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
         "version": "2.0.4",
       },
@@ -2309,7 +2258,6 @@ Node {
         "extraneous": true,
         "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
         "license": "ISC",
-        "name": "minimatch",
         "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
         "version": "3.0.4",
       },
@@ -2329,7 +2277,6 @@ Node {
         "extraneous": true,
         "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
         "license": "ISC",
-        "name": "once",
         "resolved": "file:once-1.4.0.tgz",
         "version": "1.4.0",
       },
@@ -2340,7 +2287,6 @@ Node {
         "extraneous": true,
         "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
         "license": "MIT",
-        "name": "path-is-absolute",
         "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
         "version": "1.0.1",
       },
@@ -2376,7 +2322,6 @@ Node {
         "extraneous": true,
         "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
         "license": "ISC",
-        "name": "rimraf",
         "optionalDependencies": Object {
           "glob": "^7.1.3",
         },
@@ -2409,7 +2354,6 @@ Node {
         "extraneous": true,
         "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
         "license": "ISC",
-        "name": "wrappy",
         "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
         "version": "1.0.2",
       },
@@ -2508,7 +2452,6 @@ Link {
           "@scope/y": "",
           "glob": "4",
         },
-        "name": "@scope/x",
         "optionalDependencies": Object {
           "@scope/y": "",
         },
@@ -2525,15 +2468,12 @@ Link {
           "minimatch": "",
           "once": "",
         },
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
@@ -2542,26 +2482,21 @@ Link {
           "once": "",
           "sigmund": "",
         },
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
         },
-        "name": "@scope/y",
         "peer": true,
         "version": "1.2.3",
       },
@@ -2570,7 +2505,6 @@ Link {
           "@scope/x": "",
           "express": "npm:abbrev@*",
         },
-        "name": "foo",
         "optionalDependencies": Object {
           "@scope/x": "",
         },
@@ -2943,7 +2877,6 @@ Node {
           "link-outside-nest": "",
           "nest": "",
         },
-        "name": "links-all-over",
         "version": "1.2.3",
       },
       "node_modules/link-deep": Object {
@@ -2963,14 +2896,12 @@ Node {
           "a": "",
           "link-in-nest": "",
         },
-        "name": "nest",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a": Object {
         "dependencies": Object {
           "b": "",
         },
-        "name": "a",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a/node_modules/b": Object {},
@@ -2979,7 +2910,6 @@ Node {
           "d": "",
         },
         "extraneous": true,
-        "name": "c",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d": Object {
@@ -2987,11 +2917,9 @@ Node {
           "deep": "",
         },
         "extraneous": true,
-        "name": "d",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a": Object {
-        "name": "deep-a",
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/link-in-nest": Object {
@@ -3002,7 +2930,6 @@ Node {
         "dependencies": Object {
           "link-link": "",
         },
-        "name": "real",
         "version": "1.2.3",
       },
     },
@@ -3395,7 +3322,6 @@ Node {
       },
       "node_modules/abbrev": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "name": "abbrev",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
         "version": "1.1.1",
       },
@@ -3809,7 +3735,6 @@ Node {
         "devDependencies": Object {
           "foo": "*",
         },
-        "name": "root",
         "optionalDependencies": Object {
           "notinstalledhere": "",
         },
@@ -3823,7 +3748,6 @@ Node {
           "@scope/y": "",
           "glob": "4",
         },
-        "name": "@scope/x",
         "optionalDependencies": Object {
           "@scope/y": "",
         },
@@ -3840,15 +3764,12 @@ Node {
           "minimatch": "",
           "once": "",
         },
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
@@ -3857,26 +3778,21 @@ Node {
           "once": "",
           "sigmund": "",
         },
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
         },
-        "name": "@scope/y",
         "version": "1.2.3",
       },
       "node_modules/foo": Object {
@@ -3884,7 +3800,6 @@ Node {
           "@scope/x": "",
           "express": "npm:abbrev@*",
         },
-        "name": "foo",
         "optionalDependencies": Object {
           "@scope/x": "",
         },
@@ -4093,7 +4008,6 @@ Node {
         "dependencies": Object {
           "b": "",
         },
-        "name": "a",
         "optional": true,
         "version": "1.1.1",
       },
@@ -4101,7 +4015,6 @@ Node {
         "dependencies": Object {
           "c": "",
         },
-        "name": "b",
         "optional": true,
         "version": "1.2.3",
       },
@@ -4110,7 +4023,6 @@ Node {
           "d": "",
         },
         "devOptional": true,
-        "name": "c",
         "version": "1.2.3",
       },
       "node_modules/d": Object {
@@ -4118,12 +4030,10 @@ Node {
           "e": "",
         },
         "devOptional": true,
-        "name": "d",
         "version": "1.2.3",
       },
       "node_modules/e": Object {
         "devOptional": true,
-        "name": "e",
         "version": "1.2.3",
       },
     },
@@ -4615,7 +4525,6 @@ Node {
         "dependencies": Object {
           "b": "",
         },
-        "name": "a",
         "optional": true,
         "version": "1.2.3",
       },
@@ -4624,13 +4533,11 @@ Node {
           "c": "",
           "j": "",
         },
-        "name": "b",
         "optional": true,
         "version": "1.2.3",
       },
       "node_modules/c": Object {
         "devOptional": true,
-        "name": "c",
         "version": "1.2.3",
       },
       "node_modules/i": Object {
@@ -4638,56 +4545,46 @@ Node {
           "j": "",
         },
         "dev": true,
-        "name": "i",
       },
       "node_modules/j": Object {
         "dependencies": Object {
           "k": "",
         },
         "devOptional": true,
-        "name": "j",
       },
       "node_modules/k": Object {
         "dependencies": Object {
           "c": "",
         },
         "devOptional": true,
-        "name": "k",
       },
       "node_modules/l": Object {
         "dependencies": Object {
           "m": "",
         },
-        "name": "l",
       },
-      "node_modules/m": Object {
-        "name": "m",
-      },
+      "node_modules/m": Object {},
       "node_modules/n": Object {
         "dependencies": Object {
           "b": "",
           "j": "",
         },
         "extraneous": true,
-        "name": "n",
       },
       "node_modules/x": Object {
         "dependencies": Object {
           "y": "",
         },
-        "name": "x",
       },
       "node_modules/y": Object {
         "dependencies": Object {
           "z": "",
         },
-        "name": "y",
       },
       "node_modules/z": Object {
         "dependencies": Object {
           "l": "",
         },
-        "name": "z",
       },
     },
     "requires": true,
@@ -4896,7 +4793,6 @@ Node {
           "a": "",
           "c": "",
         },
-        "name": "optionalloop",
         "optionalDependencies": Object {
           "a": "",
         },
@@ -4906,26 +4802,22 @@ Node {
           "b": "",
           "d": "",
         },
-        "name": "a",
         "optional": true,
         "version": "1.2.3",
       },
       "node_modules/b": Object {
-        "name": "b",
         "version": "1.2.3",
       },
       "node_modules/c": Object {
         "dependencies": Object {
           "d": "",
         },
-        "name": "c",
         "version": "1.2.3",
       },
       "node_modules/d": Object {
         "dependencies": Object {
           "b": "",
         },
-        "name": "d",
         "version": "1.2.3",
       },
     },
@@ -5111,7 +5003,6 @@ Node {
         "devDependencies": Object {
           "a": "",
         },
-        "name": "optofdev",
       },
       "node_modules/a": Object {
         "dependencies": Object {
@@ -5119,7 +5010,6 @@ Node {
           "d": "",
         },
         "dev": true,
-        "name": "a",
         "optionalDependencies": Object {
           "b": "",
         },
@@ -5129,7 +5019,6 @@ Node {
           "c": "",
         },
         "dev": true,
-        "name": "b",
         "optional": true,
       },
       "node_modules/c": Object {
@@ -5137,7 +5026,6 @@ Node {
           "e": "",
         },
         "dev": true,
-        "name": "c",
         "optional": true,
       },
       "node_modules/d": Object {
@@ -5145,11 +5033,9 @@ Node {
           "e": "",
         },
         "dev": true,
-        "name": "d",
       },
       "node_modules/e": Object {
         "dev": true,
-        "name": "e",
       },
     },
     "requires": true,
@@ -5250,7 +5136,6 @@ Node {
           "glob": "4",
         },
         "extraneous": true,
-        "name": "@scope/x",
         "optionalDependencies": Object {
           "@scope/y": "",
         },
@@ -5268,17 +5153,14 @@ Node {
           "once": "",
         },
         "extraneous": true,
-        "name": "glob",
         "version": "4.0.5",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
         "extraneous": true,
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
         "extraneous": true,
-        "name": "inherits",
         "version": "2.0.1",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
@@ -5288,22 +5170,18 @@ Node {
           "sigmund": "",
         },
         "extraneous": true,
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
         "extraneous": true,
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
         "extraneous": true,
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "../root/node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
         "extraneous": true,
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/glob": Object {
@@ -5471,7 +5349,6 @@ Node {
           "b": "",
           "c": "",
         },
-        "name": "@scope/x",
         "version": "1.0.0",
       },
       "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a": Object {
@@ -5494,7 +5371,6 @@ Node {
           "b": "",
           "c": "",
         },
-        "name": "a",
         "version": "1.0.0",
       },
       "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b": Object {
@@ -5512,7 +5388,6 @@ Node {
         "dependencies": Object {
           "c": "",
         },
-        "name": "b",
         "version": "1.0.0",
       },
       "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c": Object {
@@ -5530,7 +5405,6 @@ Node {
         "dependencies": Object {
           "@scope/x": "",
         },
-        "name": "c",
         "version": "1.0.0",
       },
       "node_modules/@scope/x": Object {
@@ -5952,7 +5826,6 @@ Node {
         "devDependencies": Object {
           "foo": "*",
         },
-        "name": "root",
         "optionalDependencies": Object {
           "notinstalledhere": "",
         },
@@ -5966,7 +5839,6 @@ Node {
           "@scope/y": "",
           "glob": "4",
         },
-        "name": "@scope/x",
         "optionalDependencies": Object {
           "@scope/y": "",
         },
@@ -5983,15 +5855,12 @@ Node {
           "minimatch": "",
           "once": "",
         },
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
@@ -6000,26 +5869,21 @@ Node {
           "once": "",
           "sigmund": "",
         },
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "99.x",
         },
-        "name": "@scope/y",
         "version": "1.2.3",
       },
       "node_modules/foo": Object {
@@ -6027,7 +5891,6 @@ Node {
           "@scope/x": "",
           "express": "npm:abbrev@*",
         },
-        "name": "foo",
         "optionalDependencies": Object {
           "@scope/x": "",
         },
@@ -6321,14 +6184,12 @@ Node {
           "@scope/y": "",
           "foo": "",
         },
-        "name": "selflink",
         "version": "1.2.3",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "*",
         },
-        "name": "@scope/y",
         "version": "1.2.3",
       },
       "node_modules/@scope/z": Object {
@@ -6336,7 +6197,6 @@ Node {
           "glob": "4",
         },
         "extraneous": true,
-        "name": "@scope/z",
         "version": "1.2.3",
       },
       "node_modules/@scope/z/node_modules/glob": Object {
@@ -6348,41 +6208,33 @@ Node {
           "glob": "4",
           "selflink": "*",
         },
-        "name": "foo",
         "version": "1.2.3",
       },
       "node_modules/foo/node_modules/glob": Object {
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
         "extraneous": true,
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
         "extraneous": true,
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
         "extraneous": true,
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
         "extraneous": true,
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
         "extraneous": true,
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/once": Object {
         "extraneous": true,
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/foo/node_modules/selflink": Object {
@@ -6670,14 +6522,12 @@ Node {
           "@scope/y": "",
           "foo": "",
         },
-        "name": "selflink",
         "version": "1.2.3",
       },
       "node_modules/@scope/y": Object {
         "dependencies": Object {
           "foo": "*",
         },
-        "name": "@scope/y",
         "version": "1.2.3",
       },
       "node_modules/@scope/z": Object {
@@ -6685,7 +6535,6 @@ Node {
           "glob": "4",
         },
         "extraneous": true,
-        "name": "@scope/z",
         "version": "1.2.3",
       },
       "node_modules/@scope/z/node_modules/glob": Object {
@@ -6697,41 +6546,33 @@ Node {
           "glob": "4",
           "selflink": "*",
         },
-        "name": "foo",
         "version": "1.2.3",
       },
       "node_modules/foo/node_modules/glob": Object {
-        "name": "glob",
         "version": "4.0.5",
       },
       "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
         "extraneous": true,
-        "name": "graceful-fs",
         "version": "3.0.2",
       },
       "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
         "extraneous": true,
-        "name": "inherits",
         "version": "2.0.1",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
         "extraneous": true,
-        "name": "minimatch",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
         "extraneous": true,
-        "name": "lru-cache",
         "version": "2.5.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
         "extraneous": true,
-        "name": "sigmund",
         "version": "1.0.0",
       },
       "node_modules/foo/node_modules/glob/node_modules/once": Object {
         "extraneous": true,
-        "name": "once",
         "version": "1.3.0",
       },
       "node_modules/foo/node_modules/selflink": Object {
@@ -6788,17 +6629,14 @@ Node {
     "name": "example",
     "packages": Object {
       "": Object {
-        "name": "example",
         "version": "1.0.0",
       },
       "../bar": Object {
         "extraneous": true,
-        "name": "bar",
         "version": "1.0.0",
       },
       "../linked-node-modules/foo": Object {
         "extraneous": true,
-        "name": "foo",
         "version": "1.0.0",
       },
       "node_modules/bar": Object {
@@ -6949,7 +6787,6 @@ Node {
           "b": "",
           "c": "",
         },
-        "name": "workspace",
       },
       "node_modules/a": Object {
         "link": true,
@@ -6968,7 +6805,6 @@ Node {
           "b": "",
           "c": "",
         },
-        "name": "a",
       },
       "packages/a/node_modules/b": Object {
         "link": true,
@@ -6983,7 +6819,6 @@ Node {
           "a": "",
           "c": "",
         },
-        "name": "b",
       },
       "packages/b/node_modules/a": Object {
         "link": true,
@@ -6998,7 +6833,6 @@ Node {
           "a": "",
           "b": "",
         },
-        "name": "c",
       },
       "packages/c/node_modules/a": Object {
         "link": true,
@@ -7207,14 +7041,12 @@ Node {
         "dependencies": Object {
           "d": "",
         },
-        "name": "b",
         "version": "1.2.3",
       },
       "node_modules/b/node_modules/d": Object {
         "dependencies": Object {
           "b": "",
         },
-        "name": "d",
         "version": "1.2.3",
       },
       "node_modules/c": Object {
@@ -7222,7 +7054,6 @@ Node {
           "d": "",
           "x": "",
         },
-        "name": "c",
         "version": "1.2.3",
       },
       "node_modules/c/node_modules/d": Object {
@@ -7237,7 +7068,6 @@ Node {
         "dependencies": Object {
           "b": "",
         },
-        "name": "x",
         "version": "1.2.3",
       },
     },
@@ -7411,9 +7241,7 @@ Node {
     "lockfileVersion": 2,
     "name": "workspace3",
     "packages": Object {
-      "": Object {
-        "name": "workspace3",
-      },
+      "": Object {},
       "app": Object {
         "dependencies": Object {
           "a": "",
@@ -7422,12 +7250,10 @@ Node {
           "i": "",
         },
         "extraneous": true,
-        "name": "app",
         "version": "1.2.3",
       },
       "app/node_modules/i": Object {
         "extraneous": true,
-        "name": "i",
         "version": "1.2.3",
       },
       "node_modules/a": Object {
@@ -7453,12 +7279,10 @@ Node {
           "x": "",
         },
         "extraneous": true,
-        "name": "a",
         "version": "1.2.3",
       },
       "packages/a/node_modules/x": Object {
         "extraneous": true,
-        "name": "x",
         "version": "1.2.3",
       },
       "packages/b": Object {
@@ -7468,12 +7292,10 @@ Node {
           "y": "",
         },
         "extraneous": true,
-        "name": "b",
         "version": "1.2.3",
       },
       "packages/b/node_modules/y": Object {
         "extraneous": true,
-        "name": "y",
         "version": "1.2.3",
       },
       "packages/c": Object {
@@ -7483,12 +7305,10 @@ Node {
           "z": "",
         },
         "extraneous": true,
-        "name": "c",
         "version": "1.2.3",
       },
       "packages/c/node_modules/z": Object {
         "extraneous": true,
-        "name": "z",
         "version": "1.2.3",
       },
     },

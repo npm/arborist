@@ -12894,7 +12894,6 @@ Object {
     "node_modules/b": Object {
       "extraneous": true,
       "inBundle": true,
-      "name": "b",
       "resolved": "https://registry.npmjs.org/b/-/b-1.2.3.tgz",
       "version": "1.2.3",
     },
@@ -27620,7 +27619,6 @@ Node {
         },
         "node_modules/abbrev": Object {
           "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-          "name": "abbrev",
           "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
           "version": "1.1.1",
         },
@@ -27632,7 +27630,6 @@ Node {
             "node": ">=10",
           },
           "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
-          "name": "mkdirp",
           "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
           "version": "1.0.2",
         },
@@ -33726,11 +33723,9 @@ Object {
       "dependencies": Object {
         "b": "^1.0.0",
       },
-      "name": "a",
       "version": "1.0.0",
     },
     "b": Object {
-      "name": "b",
       "version": "1.0.0",
     },
     "node_modules/a": Object {

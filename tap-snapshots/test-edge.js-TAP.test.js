@@ -10,13 +10,17 @@ Edge {
   "dev": false,
   "error": "DETACHED",
   "from": null,
+  "invalid": false,
+  "missing": false,
   "name": "aa",
   "optional": false,
   "peer": false,
+  "peerLocal": false,
   "spec": "",
   "to": null,
   "type": "prod",
   "valid": false,
+  "workspace": false,
 }
 `
 
@@ -25,13 +29,17 @@ Edge {
   "dev": false,
   "error": "DETACHED",
   "from": null,
+  "invalid": false,
+  "missing": false,
   "name": "b",
   "optional": false,
   "peer": true,
+  "peerLocal": false,
   "spec": "1.2.3",
   "to": null,
   "type": "peer",
   "valid": false,
+  "workspace": false,
 }
 `
 
@@ -69,9 +77,12 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "b",
   "optional": false,
   "peer": false,
+  "peerLocal": false,
   "spec": "*",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -104,6 +115,7 @@ Edge {
   },
   "type": "prod",
   "valid": true,
+  "workspace": false,
 }
 `
 
@@ -140,9 +152,12 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": true,
+  "missing": false,
   "name": "b",
   "optional": true,
   "peer": false,
+  "peerLocal": false,
   "spec": "1.69.420-nice",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -175,6 +190,7 @@ Edge {
   },
   "type": "optional",
   "valid": false,
+  "workspace": false,
 }
 `
 
@@ -197,13 +213,17 @@ Edge {
     "parent": null,
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "missing",
   "optional": true,
   "peer": false,
+  "peerLocal": false,
   "spec": "",
   "to": null,
   "type": "optional",
   "valid": true,
+  "workspace": false,
 }
 `
 
@@ -254,9 +274,12 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "aa",
   "optional": false,
   "peer": false,
+  "peerLocal": false,
   "spec": "",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -303,6 +326,7 @@ Edge {
   },
   "type": "prod",
   "valid": true,
+  "workspace": false,
 }
 `
 
@@ -339,13 +363,17 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": true,
   "name": "aa",
   "optional": false,
   "peer": false,
+  "peerLocal": false,
   "spec": "",
   "to": null,
   "type": "prod",
   "valid": false,
+  "workspace": false,
 }
 `
 
@@ -396,9 +424,12 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "aa",
   "optional": false,
   "peer": false,
+  "peerLocal": false,
   "spec": "",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -445,6 +476,7 @@ Edge {
   },
   "type": "prod",
   "valid": true,
+  "workspace": false,
 }
 `
 
@@ -467,9 +499,12 @@ Edge {
     "parent": null,
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "a",
   "optional": false,
   "peer": true,
+  "peerLocal": false,
   "spec": "1.2.3",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -502,6 +537,7 @@ Edge {
   },
   "type": "peer",
   "valid": true,
+  "workspace": false,
 }
 `
 
@@ -538,9 +574,12 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "aa",
   "optional": false,
   "peer": true,
+  "peerLocal": true,
   "spec": "1.2.3",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -587,6 +626,7 @@ Edge {
   },
   "type": "peer",
   "valid": false,
+  "workspace": false,
 }
 `
 
@@ -623,9 +663,12 @@ Edge {
     },
     "resolve": Function resolve(n),
   },
+  "invalid": false,
+  "missing": false,
   "name": "b",
   "optional": false,
   "peer": true,
+  "peerLocal": false,
   "spec": "1.2.3",
   "to": Object {
     "addEdgeIn": Function addEdgeIn(edge),
@@ -658,5 +701,6 @@ Edge {
   },
   "type": "peer",
   "valid": true,
+  "workspace": false,
 }
 `

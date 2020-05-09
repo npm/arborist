@@ -21,6 +21,10 @@ t.formatSnapshot = obj =>
     peer: obj.peer,
     dev: obj.dev,
     optional: obj.optional,
+    workspace: obj.workspace,
+    missing: obj.missing,
+    peerLocal: obj.peerLocal,
+    invalid: obj.invalid,
     __proto__: { constructor: Edge },
   } : obj
 
@@ -284,3 +288,54 @@ t.throws(() => new Edge({
   name: 'foo',
   spec: '*',
 }), new TypeError('workspace edges must be a symlink'))
+
+t.test('convenience type getter flags', async t => {
+  t.equal(new Edge({
+    from: a,
+    type: 'workspace',
+    name: 'foo',
+    spec: 'file:bar/baz',
+  }).workspace, true, 'workspace convenience getter')
+
+  t.equal(new Edge({
+    from: a,
+    type: 'dev',
+    name: 'foo',
+    spec: '*',
+  }).dev, true, 'dev convenience getter')
+
+  t.equal(new Edge({
+    from: a,
+    type: 'optional',
+    name: 'foo',
+    spec: '*',
+  }).optional, true, 'optional convenience getter')
+
+  t.equal(new Edge({
+    from: a,
+    type: 'peer',
+    name: 'foo',
+    spec: '*',
+  }).peer, true, 'peer convenience getter')
+
+  t.equal(new Edge({
+    from: a,
+    type: 'optional',
+    name: 'foo',
+    spec: '*',
+  }).optional, true, 'optional convenience getter')
+
+  t.equal(new Edge({
+    from: a,
+    type: 'peerOptional',
+    name: 'foo',
+    spec: '*',
+  }).peer, true, 'peer convenience getter for peerOptional edge')
+
+  t.equal(new Edge({
+    from: a,
+    type: 'peerOptional',
+    name: 'foo',
+    spec: '*',
+  }).optional, true, 'optional convenience getter for peerOptional edge')
+})

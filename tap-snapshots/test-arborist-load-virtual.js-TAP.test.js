@@ -35,7 +35,7 @@ Node {
       "location": "node_modules/@babel/code-frame",
       "name": "@babel/code-frame",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/code-frame",
         "version": "7.5.5",
       },
       "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.5.5.tgz",
@@ -55,7 +55,7 @@ Node {
           "location": "node_modules/@babel/generator/node_modules/source-map",
           "name": "source-map",
           "package": Object {
-            "name": undefined,
+            "name": "source-map",
             "version": "0.5.7",
           },
           "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz",
@@ -105,7 +105,7 @@ Node {
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/generator",
         "version": "7.7.7",
       },
       "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
@@ -143,7 +143,7 @@ Node {
       "location": "node_modules/@babel/helper-function-name",
       "name": "@babel/helper-function-name",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/helper-function-name",
         "version": "7.7.4",
       },
       "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz",
@@ -169,7 +169,7 @@ Node {
       "location": "node_modules/@babel/helper-get-function-arity",
       "name": "@babel/helper-get-function-arity",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/helper-get-function-arity",
         "version": "7.7.4",
       },
       "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.7.4.tgz",
@@ -195,7 +195,7 @@ Node {
       "location": "node_modules/@babel/helper-split-export-declaration",
       "name": "@babel/helper-split-export-declaration",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/helper-split-export-declaration",
         "version": "7.7.4",
       },
       "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.7.4.tgz",
@@ -233,7 +233,7 @@ Node {
       "location": "node_modules/@babel/highlight",
       "name": "@babel/highlight",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/highlight",
         "version": "7.5.0",
       },
       "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.5.0.tgz",
@@ -263,7 +263,7 @@ Node {
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/parser",
         "version": "7.7.7",
       },
       "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
@@ -289,7 +289,7 @@ Node {
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/runtime",
         "version": "7.7.7",
       },
       "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
@@ -333,7 +333,7 @@ Node {
       "location": "node_modules/@babel/template",
       "name": "@babel/template",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/template",
         "version": "7.7.4",
       },
       "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.7.4.tgz",
@@ -407,7 +407,7 @@ Node {
       "location": "node_modules/@babel/traverse",
       "name": "@babel/traverse",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/traverse",
         "version": "7.7.4",
       },
       "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.7.4.tgz",
@@ -481,7 +481,7 @@ Node {
       "location": "node_modules/@babel/types",
       "name": "@babel/types",
       "package": Object {
-        "name": undefined,
+        "name": "@babel/types",
         "version": "7.7.4",
       },
       "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
@@ -509,7 +509,7 @@ Node {
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
           "name": "@isaacs/testing-bundledeps-a",
           "package": Object {
-            "name": undefined,
+            "name": "@isaacs/testing-bundledeps-a",
             "version": "1.0.0",
           },
           "resolved": null,
@@ -527,7 +527,7 @@ Node {
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
           "name": "@isaacs/testing-bundledeps-b",
           "package": Object {
-            "name": undefined,
+            "name": "@isaacs/testing-bundledeps-b",
             "version": "1.0.0",
           },
           "resolved": null,
@@ -558,7 +558,7 @@ Node {
       "location": "node_modules/@isaacs/testing-bundledeps",
       "name": "@isaacs/testing-bundledeps",
       "package": Object {
-        "name": undefined,
+        "name": "@isaacs/testing-bundledeps",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
@@ -575,7 +575,7 @@ Node {
       "location": "node_modules/@isaacs/testing-bundledeps-b",
       "name": "@isaacs/testing-bundledeps-b",
       "package": Object {
-        "name": undefined,
+        "name": "@isaacs/testing-bundledeps-b",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
@@ -600,7 +600,7 @@ Node {
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
       "package": Object {
-        "name": undefined,
+        "name": "@isaacs/testing-bundledeps-c",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
@@ -618,7 +618,7 @@ Node {
       "name": "abbrev",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -662,7 +662,7 @@ Node {
       "location": "node_modules/ajv",
       "name": "ajv",
       "package": Object {
-        "name": undefined,
+        "name": "ajv",
         "version": "6.10.2",
       },
       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",
@@ -680,7 +680,7 @@ Node {
       "location": "node_modules/ansi-regex",
       "name": "ansi-regex",
       "package": Object {
-        "name": undefined,
+        "name": "ansi-regex",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
@@ -712,7 +712,7 @@ Node {
       "location": "node_modules/ansi-styles",
       "name": "ansi-styles",
       "package": Object {
-        "name": undefined,
+        "name": "ansi-styles",
         "version": "3.2.1",
       },
       "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
@@ -744,7 +744,7 @@ Node {
       "location": "node_modules/anymatch",
       "name": "anymatch",
       "package": Object {
-        "name": undefined,
+        "name": "anymatch",
         "version": "3.1.1",
       },
       "resolved": "https://registry.npmjs.org/anymatch/-/anymatch-3.1.1.tgz",
@@ -770,7 +770,7 @@ Node {
       "location": "node_modules/append-transform",
       "name": "append-transform",
       "package": Object {
-        "name": undefined,
+        "name": "append-transform",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/append-transform/-/append-transform-1.0.0.tgz",
@@ -794,7 +794,7 @@ Node {
       "location": "node_modules/archy",
       "name": "archy",
       "package": Object {
-        "name": undefined,
+        "name": "archy",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/archy/-/archy-1.0.0.tgz",
@@ -812,7 +812,7 @@ Node {
       "location": "node_modules/arg",
       "name": "arg",
       "package": Object {
-        "name": undefined,
+        "name": "arg",
         "version": "4.1.2",
       },
       "resolved": "https://registry.npmjs.org/arg/-/arg-4.1.2.tgz",
@@ -838,7 +838,7 @@ Node {
       "location": "node_modules/argparse",
       "name": "argparse",
       "package": Object {
-        "name": undefined,
+        "name": "argparse",
         "version": "1.0.10",
       },
       "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
@@ -864,7 +864,7 @@ Node {
       "location": "node_modules/asn1",
       "name": "asn1",
       "package": Object {
-        "name": undefined,
+        "name": "asn1",
         "version": "0.2.4",
       },
       "resolved": "https://registry.npmjs.org/asn1/-/asn1-0.2.4.tgz",
@@ -912,7 +912,7 @@ Node {
       "location": "node_modules/assert-plus",
       "name": "assert-plus",
       "package": Object {
-        "name": undefined,
+        "name": "assert-plus",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/assert-plus/-/assert-plus-1.0.0.tgz",
@@ -938,7 +938,7 @@ Node {
       "location": "node_modules/async-hook-domain",
       "name": "async-hook-domain",
       "package": Object {
-        "name": undefined,
+        "name": "async-hook-domain",
         "version": "1.1.3",
       },
       "resolved": "https://registry.npmjs.org/async-hook-domain/-/async-hook-domain-1.1.3.tgz",
@@ -956,7 +956,7 @@ Node {
       "location": "node_modules/asynckit",
       "name": "asynckit",
       "package": Object {
-        "name": undefined,
+        "name": "asynckit",
         "version": "0.4.0",
       },
       "resolved": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz",
@@ -974,7 +974,7 @@ Node {
       "location": "node_modules/aws-sign2",
       "name": "aws-sign2",
       "package": Object {
-        "name": undefined,
+        "name": "aws-sign2",
         "version": "0.7.0",
       },
       "resolved": "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.7.0.tgz",
@@ -992,7 +992,7 @@ Node {
       "location": "node_modules/aws4",
       "name": "aws4",
       "package": Object {
-        "name": undefined,
+        "name": "aws4",
         "version": "1.9.0",
       },
       "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.9.0.tgz",
@@ -1010,7 +1010,7 @@ Node {
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
       "package": Object {
-        "name": undefined,
+        "name": "balanced-match",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
@@ -1036,7 +1036,7 @@ Node {
       "location": "node_modules/bcrypt-pbkdf",
       "name": "bcrypt-pbkdf",
       "package": Object {
-        "name": undefined,
+        "name": "bcrypt-pbkdf",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz",
@@ -1054,7 +1054,7 @@ Node {
       "location": "node_modules/binary-extensions",
       "name": "binary-extensions",
       "package": Object {
-        "name": undefined,
+        "name": "binary-extensions",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.0.0.tgz",
@@ -1072,7 +1072,7 @@ Node {
       "location": "node_modules/bind-obj-methods",
       "name": "bind-obj-methods",
       "package": Object {
-        "name": undefined,
+        "name": "bind-obj-methods",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/bind-obj-methods/-/bind-obj-methods-2.0.0.tgz",
@@ -1104,7 +1104,7 @@ Node {
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
       "package": Object {
-        "name": undefined,
+        "name": "brace-expansion",
         "version": "1.1.11",
       },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -1130,7 +1130,7 @@ Node {
       "location": "node_modules/braces",
       "name": "braces",
       "package": Object {
-        "name": undefined,
+        "name": "braces",
         "version": "3.0.2",
       },
       "resolved": "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz",
@@ -1148,7 +1148,7 @@ Node {
       "location": "node_modules/browser-process-hrtime",
       "name": "browser-process-hrtime",
       "package": Object {
-        "name": undefined,
+        "name": "browser-process-hrtime",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz",
@@ -1166,7 +1166,7 @@ Node {
       "location": "node_modules/buffer-from",
       "name": "buffer-from",
       "package": Object {
-        "name": undefined,
+        "name": "buffer-from",
         "version": "1.1.1",
       },
       "resolved": "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz",
@@ -1206,7 +1206,7 @@ Node {
           "location": "node_modules/caching-transform/node_modules/write-file-atomic",
           "name": "write-file-atomic",
           "package": Object {
-            "name": undefined,
+            "name": "write-file-atomic",
             "version": "2.4.3",
           },
           "resolved": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-2.4.3.tgz",
@@ -1250,7 +1250,7 @@ Node {
       "location": "node_modules/caching-transform",
       "name": "caching-transform",
       "package": Object {
-        "name": undefined,
+        "name": "caching-transform",
         "version": "3.0.2",
       },
       "resolved": "https://registry.npmjs.org/caching-transform/-/caching-transform-3.0.2.tgz",
@@ -1268,7 +1268,7 @@ Node {
       "location": "node_modules/camelcase",
       "name": "camelcase",
       "package": Object {
-        "name": undefined,
+        "name": "camelcase",
         "version": "5.3.1",
       },
       "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz",
@@ -1286,7 +1286,7 @@ Node {
       "location": "node_modules/caseless",
       "name": "caseless",
       "package": Object {
-        "name": undefined,
+        "name": "caseless",
         "version": "0.12.0",
       },
       "resolved": "https://registry.npmjs.org/caseless/-/caseless-0.12.0.tgz",
@@ -1324,7 +1324,7 @@ Node {
       "location": "node_modules/chalk",
       "name": "chalk",
       "package": Object {
-        "name": undefined,
+        "name": "chalk",
         "version": "2.4.2",
       },
       "resolved": "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz",
@@ -1392,7 +1392,7 @@ Node {
       "location": "node_modules/chokidar",
       "name": "chokidar",
       "package": Object {
-        "name": undefined,
+        "name": "chokidar",
         "version": "3.3.1",
       },
       "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-3.3.1.tgz",
@@ -1430,7 +1430,7 @@ Node {
       "location": "node_modules/cliui",
       "name": "cliui",
       "package": Object {
-        "name": undefined,
+        "name": "cliui",
         "version": "4.1.0",
       },
       "resolved": "https://registry.npmjs.org/cliui/-/cliui-4.1.0.tgz",
@@ -1448,7 +1448,7 @@ Node {
       "location": "node_modules/code-point-at",
       "name": "code-point-at",
       "package": Object {
-        "name": undefined,
+        "name": "code-point-at",
         "version": "1.1.0",
       },
       "resolved": "https://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz",
@@ -1474,7 +1474,7 @@ Node {
       "location": "node_modules/color-convert",
       "name": "color-convert",
       "package": Object {
-        "name": undefined,
+        "name": "color-convert",
         "version": "1.9.3",
       },
       "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
@@ -1492,7 +1492,7 @@ Node {
       "location": "node_modules/color-name",
       "name": "color-name",
       "package": Object {
-        "name": undefined,
+        "name": "color-name",
         "version": "1.1.3",
       },
       "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
@@ -1516,7 +1516,7 @@ Node {
       "location": "node_modules/color-support",
       "name": "color-support",
       "package": Object {
-        "name": undefined,
+        "name": "color-support",
         "version": "1.1.3",
       },
       "resolved": "https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz",
@@ -1548,7 +1548,7 @@ Node {
       "location": "node_modules/combined-stream",
       "name": "combined-stream",
       "package": Object {
-        "name": undefined,
+        "name": "combined-stream",
         "version": "1.0.8",
       },
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
@@ -1567,7 +1567,7 @@ Node {
       "name": "commander",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "commander",
         "version": "2.20.3",
       },
       "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
@@ -1585,7 +1585,7 @@ Node {
       "location": "node_modules/commondir",
       "name": "commondir",
       "package": Object {
-        "name": undefined,
+        "name": "commondir",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz",
@@ -1603,7 +1603,7 @@ Node {
       "location": "node_modules/concat-map",
       "name": "concat-map",
       "package": Object {
-        "name": undefined,
+        "name": "concat-map",
         "version": "0.0.1",
       },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
@@ -1623,7 +1623,7 @@ Node {
           "location": "node_modules/convert-source-map/node_modules/safe-buffer",
           "name": "safe-buffer",
           "package": Object {
-            "name": undefined,
+            "name": "safe-buffer",
             "version": "5.1.2",
           },
           "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
@@ -1649,7 +1649,7 @@ Node {
       "location": "node_modules/convert-source-map",
       "name": "convert-source-map",
       "package": Object {
-        "name": undefined,
+        "name": "convert-source-map",
         "version": "1.7.0",
       },
       "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.7.0.tgz",
@@ -1673,7 +1673,7 @@ Node {
       "location": "node_modules/core-util-is",
       "name": "core-util-is",
       "package": Object {
-        "name": undefined,
+        "name": "core-util-is",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
@@ -1723,7 +1723,7 @@ Node {
       "location": "node_modules/coveralls",
       "name": "coveralls",
       "package": Object {
-        "name": undefined,
+        "name": "coveralls",
         "version": "3.0.9",
       },
       "resolved": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.9.tgz",
@@ -1773,7 +1773,7 @@ Node {
       "location": "node_modules/cp-file",
       "name": "cp-file",
       "package": Object {
-        "name": undefined,
+        "name": "cp-file",
         "version": "6.2.0",
       },
       "resolved": "https://registry.npmjs.org/cp-file/-/cp-file-6.2.0.tgz",
@@ -1801,7 +1801,7 @@ Node {
           "location": "node_modules/cross-spawn/node_modules/which",
           "name": "which",
           "package": Object {
-            "name": undefined,
+            "name": "which",
             "version": "1.3.1",
           },
           "resolved": "https://registry.npmjs.org/which/-/which-1.3.1.tgz",
@@ -1833,7 +1833,7 @@ Node {
       "location": "node_modules/cross-spawn",
       "name": "cross-spawn",
       "package": Object {
-        "name": undefined,
+        "name": "cross-spawn",
         "version": "4.0.2",
       },
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
@@ -1859,7 +1859,7 @@ Node {
       "location": "node_modules/dashdash",
       "name": "dashdash",
       "package": Object {
-        "name": undefined,
+        "name": "dashdash",
         "version": "1.14.1",
       },
       "resolved": "https://registry.npmjs.org/dashdash/-/dashdash-1.14.1.tgz",
@@ -1891,7 +1891,7 @@ Node {
       "location": "node_modules/debug",
       "name": "debug",
       "package": Object {
-        "name": undefined,
+        "name": "debug",
         "version": "4.1.1",
       },
       "resolved": "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz",
@@ -1909,7 +1909,7 @@ Node {
       "location": "node_modules/decamelize",
       "name": "decamelize",
       "package": Object {
-        "name": undefined,
+        "name": "decamelize",
         "version": "1.2.0",
       },
       "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz",
@@ -1935,7 +1935,7 @@ Node {
       "location": "node_modules/default-require-extensions",
       "name": "default-require-extensions",
       "package": Object {
-        "name": undefined,
+        "name": "default-require-extensions",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/default-require-extensions/-/default-require-extensions-2.0.0.tgz",
@@ -1953,7 +1953,7 @@ Node {
       "location": "node_modules/delayed-stream",
       "name": "delayed-stream",
       "package": Object {
-        "name": undefined,
+        "name": "delayed-stream",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz",
@@ -1977,7 +1977,7 @@ Node {
       "location": "node_modules/diff",
       "name": "diff",
       "package": Object {
-        "name": undefined,
+        "name": "diff",
         "version": "4.0.1",
       },
       "resolved": "https://registry.npmjs.org/diff/-/diff-4.0.1.tgz",
@@ -1995,7 +1995,7 @@ Node {
       "location": "node_modules/diff-frag",
       "name": "diff-frag",
       "package": Object {
-        "name": undefined,
+        "name": "diff-frag",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/diff-frag/-/diff-frag-1.0.1.tgz",
@@ -2027,7 +2027,7 @@ Node {
       "location": "node_modules/ecc-jsbn",
       "name": "ecc-jsbn",
       "package": Object {
-        "name": undefined,
+        "name": "ecc-jsbn",
         "version": "0.1.2",
       },
       "resolved": "https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz",
@@ -2045,7 +2045,7 @@ Node {
       "location": "node_modules/emoji-regex",
       "name": "emoji-regex",
       "package": Object {
-        "name": undefined,
+        "name": "emoji-regex",
         "version": "7.0.3",
       },
       "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
@@ -2071,7 +2071,7 @@ Node {
       "location": "node_modules/error-ex",
       "name": "error-ex",
       "package": Object {
-        "name": undefined,
+        "name": "error-ex",
         "version": "1.3.2",
       },
       "resolved": "https://registry.npmjs.org/error-ex/-/error-ex-1.3.2.tgz",
@@ -2089,7 +2089,7 @@ Node {
       "location": "node_modules/es6-error",
       "name": "es6-error",
       "package": Object {
-        "name": undefined,
+        "name": "es6-error",
         "version": "4.1.1",
       },
       "resolved": "https://registry.npmjs.org/es6-error/-/es6-error-4.1.1.tgz",
@@ -2113,7 +2113,7 @@ Node {
       "location": "node_modules/escape-string-regexp",
       "name": "escape-string-regexp",
       "package": Object {
-        "name": undefined,
+        "name": "escape-string-regexp",
         "version": "1.0.5",
       },
       "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
@@ -2131,7 +2131,7 @@ Node {
       "location": "node_modules/esm",
       "name": "esm",
       "package": Object {
-        "name": undefined,
+        "name": "esm",
         "version": "3.2.25",
       },
       "resolved": "https://registry.npmjs.org/esm/-/esm-3.2.25.tgz",
@@ -2149,7 +2149,7 @@ Node {
       "location": "node_modules/esprima",
       "name": "esprima",
       "package": Object {
-        "name": undefined,
+        "name": "esprima",
         "version": "4.0.1",
       },
       "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
@@ -2173,7 +2173,7 @@ Node {
       "location": "node_modules/esutils",
       "name": "esutils",
       "package": Object {
-        "name": undefined,
+        "name": "esutils",
         "version": "2.0.3",
       },
       "resolved": "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz",
@@ -2191,7 +2191,7 @@ Node {
       "location": "node_modules/events-to-array",
       "name": "events-to-array",
       "package": Object {
-        "name": undefined,
+        "name": "events-to-array",
         "version": "1.1.2",
       },
       "resolved": "https://registry.npmjs.org/events-to-array/-/events-to-array-1.1.2.tgz",
@@ -2209,7 +2209,7 @@ Node {
       "location": "node_modules/extend",
       "name": "extend",
       "package": Object {
-        "name": undefined,
+        "name": "extend",
         "version": "3.0.2",
       },
       "resolved": "https://registry.npmjs.org/extend/-/extend-3.0.2.tgz",
@@ -2233,7 +2233,7 @@ Node {
       "location": "node_modules/extsprintf",
       "name": "extsprintf",
       "package": Object {
-        "name": undefined,
+        "name": "extsprintf",
         "version": "1.3.0",
       },
       "resolved": "https://registry.npmjs.org/extsprintf/-/extsprintf-1.3.0.tgz",
@@ -2251,7 +2251,7 @@ Node {
       "location": "node_modules/fast-deep-equal",
       "name": "fast-deep-equal",
       "package": Object {
-        "name": undefined,
+        "name": "fast-deep-equal",
         "version": "2.0.1",
       },
       "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz",
@@ -2269,7 +2269,7 @@ Node {
       "location": "node_modules/fast-json-stable-stringify",
       "name": "fast-json-stable-stringify",
       "package": Object {
-        "name": undefined,
+        "name": "fast-json-stable-stringify",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
@@ -2295,7 +2295,7 @@ Node {
       "location": "node_modules/fill-range",
       "name": "fill-range",
       "package": Object {
-        "name": undefined,
+        "name": "fill-range",
         "version": "7.0.1",
       },
       "resolved": "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz",
@@ -2333,7 +2333,7 @@ Node {
       "location": "node_modules/find-cache-dir",
       "name": "find-cache-dir",
       "package": Object {
-        "name": undefined,
+        "name": "find-cache-dir",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-2.1.0.tgz",
@@ -2377,7 +2377,7 @@ Node {
       "location": "node_modules/find-up",
       "name": "find-up",
       "package": Object {
-        "name": undefined,
+        "name": "find-up",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/find-up/-/find-up-3.0.0.tgz",
@@ -2395,7 +2395,7 @@ Node {
       "location": "node_modules/findit",
       "name": "findit",
       "package": Object {
-        "name": undefined,
+        "name": "findit",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/findit/-/findit-2.0.0.tgz",
@@ -2413,7 +2413,7 @@ Node {
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
       "package": Object {
-        "name": undefined,
+        "name": "flow-parser",
         "version": "0.114.0",
       },
       "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
@@ -2451,7 +2451,7 @@ Node {
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
       "package": Object {
-        "name": undefined,
+        "name": "flow-remove-types",
         "version": "2.114.0",
       },
       "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
@@ -2495,7 +2495,7 @@ Node {
       "location": "node_modules/foreground-child",
       "name": "foreground-child",
       "package": Object {
-        "name": undefined,
+        "name": "foreground-child",
         "version": "1.5.6",
       },
       "resolved": "https://registry.npmjs.org/foreground-child/-/foreground-child-1.5.6.tgz",
@@ -2513,7 +2513,7 @@ Node {
       "location": "node_modules/forever-agent",
       "name": "forever-agent",
       "package": Object {
-        "name": undefined,
+        "name": "forever-agent",
         "version": "0.6.1",
       },
       "resolved": "https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz",
@@ -2551,7 +2551,7 @@ Node {
       "location": "node_modules/form-data",
       "name": "form-data",
       "package": Object {
-        "name": undefined,
+        "name": "form-data",
         "version": "2.3.3",
       },
       "resolved": "https://registry.npmjs.org/form-data/-/form-data-2.3.3.tgz",
@@ -2569,7 +2569,7 @@ Node {
       "location": "node_modules/fs-exists-cached",
       "name": "fs-exists-cached",
       "package": Object {
-        "name": undefined,
+        "name": "fs-exists-cached",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/fs-exists-cached/-/fs-exists-cached-1.0.0.tgz",
@@ -2587,7 +2587,7 @@ Node {
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
       "package": Object {
-        "name": undefined,
+        "name": "fs.realpath",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
@@ -2606,7 +2606,7 @@ Node {
       "name": "fsevents",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "fsevents",
         "version": "2.1.2",
       },
       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.1.2.tgz",
@@ -2624,7 +2624,7 @@ Node {
       "location": "node_modules/function-loop",
       "name": "function-loop",
       "package": Object {
-        "name": undefined,
+        "name": "function-loop",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/function-loop/-/function-loop-1.0.2.tgz",
@@ -2642,7 +2642,7 @@ Node {
       "location": "node_modules/get-caller-file",
       "name": "get-caller-file",
       "package": Object {
-        "name": undefined,
+        "name": "get-caller-file",
         "version": "2.0.5",
       },
       "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
@@ -2668,7 +2668,7 @@ Node {
       "location": "node_modules/getpass",
       "name": "getpass",
       "package": Object {
-        "name": undefined,
+        "name": "getpass",
         "version": "0.1.7",
       },
       "resolved": "https://registry.npmjs.org/getpass/-/getpass-0.1.7.tgz",
@@ -2748,7 +2748,7 @@ Node {
       "location": "node_modules/glob",
       "name": "glob",
       "package": Object {
-        "name": undefined,
+        "name": "glob",
         "version": "7.1.6",
       },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.6.tgz",
@@ -2774,7 +2774,7 @@ Node {
       "location": "node_modules/glob-parent",
       "name": "glob-parent",
       "package": Object {
-        "name": undefined,
+        "name": "glob-parent",
         "version": "5.1.0",
       },
       "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.0.tgz",
@@ -2792,7 +2792,7 @@ Node {
       "location": "node_modules/globals",
       "name": "globals",
       "package": Object {
-        "name": undefined,
+        "name": "globals",
         "version": "11.12.0",
       },
       "resolved": "https://registry.npmjs.org/globals/-/globals-11.12.0.tgz",
@@ -2828,7 +2828,7 @@ Node {
       "location": "node_modules/graceful-fs",
       "name": "graceful-fs",
       "package": Object {
-        "name": undefined,
+        "name": "graceful-fs",
         "version": "4.2.3",
       },
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.3.tgz",
@@ -2872,7 +2872,7 @@ Node {
       "location": "node_modules/handlebars",
       "name": "handlebars",
       "package": Object {
-        "name": undefined,
+        "name": "handlebars",
         "version": "4.5.3",
       },
       "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
@@ -2890,7 +2890,7 @@ Node {
       "location": "node_modules/har-schema",
       "name": "har-schema",
       "package": Object {
-        "name": undefined,
+        "name": "har-schema",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/har-schema/-/har-schema-2.0.0.tgz",
@@ -2922,7 +2922,7 @@ Node {
       "location": "node_modules/har-validator",
       "name": "har-validator",
       "package": Object {
-        "name": undefined,
+        "name": "har-validator",
         "version": "5.1.3",
       },
       "resolved": "https://registry.npmjs.org/har-validator/-/har-validator-5.1.3.tgz",
@@ -2946,7 +2946,7 @@ Node {
       "location": "node_modules/has-flag",
       "name": "has-flag",
       "package": Object {
-        "name": undefined,
+        "name": "has-flag",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz",
@@ -2978,7 +2978,7 @@ Node {
       "location": "node_modules/hasha",
       "name": "hasha",
       "package": Object {
-        "name": undefined,
+        "name": "hasha",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/hasha/-/hasha-3.0.0.tgz",
@@ -2996,7 +2996,7 @@ Node {
       "location": "node_modules/hosted-git-info",
       "name": "hosted-git-info",
       "package": Object {
-        "name": undefined,
+        "name": "hosted-git-info",
         "version": "2.8.5",
       },
       "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.5.tgz",
@@ -3034,7 +3034,7 @@ Node {
       "location": "node_modules/http-signature",
       "name": "http-signature",
       "package": Object {
-        "name": undefined,
+        "name": "http-signature",
         "version": "1.2.0",
       },
       "resolved": "https://registry.npmjs.org/http-signature/-/http-signature-1.2.0.tgz",
@@ -3058,7 +3058,7 @@ Node {
       "location": "node_modules/imurmurhash",
       "name": "imurmurhash",
       "package": Object {
-        "name": undefined,
+        "name": "imurmurhash",
         "version": "0.1.4",
       },
       "resolved": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
@@ -3090,7 +3090,7 @@ Node {
       "location": "node_modules/inflight",
       "name": "inflight",
       "package": Object {
-        "name": undefined,
+        "name": "inflight",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -3114,7 +3114,7 @@ Node {
       "location": "node_modules/inherits",
       "name": "inherits",
       "package": Object {
-        "name": undefined,
+        "name": "inherits",
         "version": "2.0.4",
       },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
@@ -3132,7 +3132,7 @@ Node {
       "location": "node_modules/is-arrayish",
       "name": "is-arrayish",
       "package": Object {
-        "name": undefined,
+        "name": "is-arrayish",
         "version": "0.2.1",
       },
       "resolved": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
@@ -3158,7 +3158,7 @@ Node {
       "location": "node_modules/is-binary-path",
       "name": "is-binary-path",
       "package": Object {
-        "name": undefined,
+        "name": "is-binary-path",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/is-binary-path/-/is-binary-path-2.1.0.tgz",
@@ -3176,7 +3176,7 @@ Node {
       "location": "node_modules/is-extglob",
       "name": "is-extglob",
       "package": Object {
-        "name": undefined,
+        "name": "is-extglob",
         "version": "2.1.1",
       },
       "resolved": "https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz",
@@ -3200,7 +3200,7 @@ Node {
       "location": "node_modules/is-fullwidth-code-point",
       "name": "is-fullwidth-code-point",
       "package": Object {
-        "name": undefined,
+        "name": "is-fullwidth-code-point",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
@@ -3232,7 +3232,7 @@ Node {
       "location": "node_modules/is-glob",
       "name": "is-glob",
       "package": Object {
-        "name": undefined,
+        "name": "is-glob",
         "version": "4.0.1",
       },
       "resolved": "https://registry.npmjs.org/is-glob/-/is-glob-4.0.1.tgz",
@@ -3250,7 +3250,7 @@ Node {
       "location": "node_modules/is-number",
       "name": "is-number",
       "package": Object {
-        "name": undefined,
+        "name": "is-number",
         "version": "7.0.0",
       },
       "resolved": "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz",
@@ -3268,7 +3268,7 @@ Node {
       "location": "node_modules/is-stream",
       "name": "is-stream",
       "package": Object {
-        "name": undefined,
+        "name": "is-stream",
         "version": "1.1.0",
       },
       "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
@@ -3298,7 +3298,7 @@ Node {
       "location": "node_modules/is-typedarray",
       "name": "is-typedarray",
       "package": Object {
-        "name": undefined,
+        "name": "is-typedarray",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
@@ -3317,7 +3317,7 @@ Node {
       "name": "isarray",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "isarray",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
@@ -3359,7 +3359,7 @@ Node {
       "location": "node_modules/isexe",
       "name": "isexe",
       "package": Object {
-        "name": undefined,
+        "name": "isexe",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
@@ -3377,7 +3377,7 @@ Node {
       "location": "node_modules/isstream",
       "name": "isstream",
       "package": Object {
-        "name": undefined,
+        "name": "isstream",
         "version": "0.1.2",
       },
       "resolved": "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz",
@@ -3419,7 +3419,7 @@ Node {
       "location": "node_modules/istanbul-lib-coverage",
       "name": "istanbul-lib-coverage",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-lib-coverage",
         "version": "2.0.5",
       },
       "resolved": "https://registry.npmjs.org/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.5.tgz",
@@ -3445,7 +3445,7 @@ Node {
       "location": "node_modules/istanbul-lib-hook",
       "name": "istanbul-lib-hook",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-lib-hook",
         "version": "2.0.7",
       },
       "resolved": "https://registry.npmjs.org/istanbul-lib-hook/-/istanbul-lib-hook-2.0.7.tgz",
@@ -3465,7 +3465,7 @@ Node {
           "location": "node_modules/istanbul-lib-instrument/node_modules/semver",
           "name": "semver",
           "package": Object {
-            "name": undefined,
+            "name": "semver",
             "version": "6.3.0",
           },
           "resolved": "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz",
@@ -3527,7 +3527,7 @@ Node {
       "location": "node_modules/istanbul-lib-instrument",
       "name": "istanbul-lib-instrument",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-lib-instrument",
         "version": "3.3.0",
       },
       "resolved": "https://registry.npmjs.org/istanbul-lib-instrument/-/istanbul-lib-instrument-3.3.0.tgz",
@@ -3579,7 +3579,7 @@ Node {
           "location": "node_modules/istanbul-lib-processinfo/node_modules/cross-spawn",
           "name": "cross-spawn",
           "package": Object {
-            "name": undefined,
+            "name": "cross-spawn",
             "version": "6.0.5",
           },
           "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-6.0.5.tgz",
@@ -3605,7 +3605,7 @@ Node {
           "location": "node_modules/istanbul-lib-processinfo/node_modules/which",
           "name": "which",
           "package": Object {
-            "name": undefined,
+            "name": "which",
             "version": "1.3.1",
           },
           "resolved": "https://registry.npmjs.org/which/-/which-1.3.1.tgz",
@@ -3655,7 +3655,7 @@ Node {
       "location": "node_modules/istanbul-lib-processinfo",
       "name": "istanbul-lib-processinfo",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-lib-processinfo",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/istanbul-lib-processinfo/-/istanbul-lib-processinfo-1.0.0.tgz",
@@ -3683,7 +3683,7 @@ Node {
           "location": "node_modules/istanbul-lib-report/node_modules/supports-color",
           "name": "supports-color",
           "package": Object {
-            "name": undefined,
+            "name": "supports-color",
             "version": "6.1.0",
           },
           "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-6.1.0.tgz",
@@ -3721,7 +3721,7 @@ Node {
       "location": "node_modules/istanbul-lib-report",
       "name": "istanbul-lib-report",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-lib-report",
         "version": "2.0.8",
       },
       "resolved": "https://registry.npmjs.org/istanbul-lib-report/-/istanbul-lib-report-2.0.8.tgz",
@@ -3771,7 +3771,7 @@ Node {
       "location": "node_modules/istanbul-lib-source-maps",
       "name": "istanbul-lib-source-maps",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-lib-source-maps",
         "version": "3.0.6",
       },
       "resolved": "https://registry.npmjs.org/istanbul-lib-source-maps/-/istanbul-lib-source-maps-3.0.6.tgz",
@@ -3797,7 +3797,7 @@ Node {
       "location": "node_modules/istanbul-reports",
       "name": "istanbul-reports",
       "package": Object {
-        "name": undefined,
+        "name": "istanbul-reports",
         "version": "2.2.6",
       },
       "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-2.2.6.tgz",
@@ -3823,7 +3823,7 @@ Node {
       "location": "node_modules/jackspeak",
       "name": "jackspeak",
       "package": Object {
-        "name": undefined,
+        "name": "jackspeak",
         "version": "1.4.0",
       },
       "resolved": "https://registry.npmjs.org/jackspeak/-/jackspeak-1.4.0.tgz",
@@ -3847,7 +3847,7 @@ Node {
       "location": "node_modules/js-tokens",
       "name": "js-tokens",
       "package": Object {
-        "name": undefined,
+        "name": "js-tokens",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
@@ -3885,7 +3885,7 @@ Node {
       "location": "node_modules/js-yaml",
       "name": "js-yaml",
       "package": Object {
-        "name": undefined,
+        "name": "js-yaml",
         "version": "3.13.1",
       },
       "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.13.1.tgz",
@@ -3909,7 +3909,7 @@ Node {
       "location": "node_modules/jsbn",
       "name": "jsbn",
       "package": Object {
-        "name": undefined,
+        "name": "jsbn",
         "version": "0.1.1",
       },
       "resolved": "https://registry.npmjs.org/jsbn/-/jsbn-0.1.1.tgz",
@@ -3927,7 +3927,7 @@ Node {
       "location": "node_modules/jsesc",
       "name": "jsesc",
       "package": Object {
-        "name": undefined,
+        "name": "jsesc",
         "version": "2.5.2",
       },
       "resolved": "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz",
@@ -3945,7 +3945,7 @@ Node {
       "location": "node_modules/json-parse-better-errors",
       "name": "json-parse-better-errors",
       "package": Object {
-        "name": undefined,
+        "name": "json-parse-better-errors",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz",
@@ -3963,7 +3963,7 @@ Node {
       "location": "node_modules/json-schema",
       "name": "json-schema",
       "package": Object {
-        "name": undefined,
+        "name": "json-schema",
         "version": "0.2.3",
       },
       "resolved": "https://registry.npmjs.org/json-schema/-/json-schema-0.2.3.tgz",
@@ -3981,7 +3981,7 @@ Node {
       "location": "node_modules/json-schema-traverse",
       "name": "json-schema-traverse",
       "package": Object {
-        "name": undefined,
+        "name": "json-schema-traverse",
         "version": "0.4.1",
       },
       "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
@@ -3999,7 +3999,7 @@ Node {
       "location": "node_modules/json-stringify-safe",
       "name": "json-stringify-safe",
       "package": Object {
-        "name": undefined,
+        "name": "json-stringify-safe",
         "version": "5.0.1",
       },
       "resolved": "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz",
@@ -4043,7 +4043,7 @@ Node {
       "location": "node_modules/jsprim",
       "name": "jsprim",
       "package": Object {
-        "name": undefined,
+        "name": "jsprim",
         "version": "1.4.1",
       },
       "resolved": "https://registry.npmjs.org/jsprim/-/jsprim-1.4.1.tgz",
@@ -4061,7 +4061,7 @@ Node {
       "location": "node_modules/lcov-parse",
       "name": "lcov-parse",
       "package": Object {
-        "name": undefined,
+        "name": "lcov-parse",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/lcov-parse/-/lcov-parse-1.0.0.tgz",
@@ -4081,7 +4081,7 @@ Node {
           "location": "node_modules/load-json-file/node_modules/pify",
           "name": "pify",
           "package": Object {
-            "name": undefined,
+            "name": "pify",
             "version": "3.0.0",
           },
           "resolved": "https://registry.npmjs.org/pify/-/pify-3.0.0.tgz",
@@ -4125,7 +4125,7 @@ Node {
       "location": "node_modules/load-json-file",
       "name": "load-json-file",
       "package": Object {
-        "name": undefined,
+        "name": "load-json-file",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/load-json-file/-/load-json-file-4.0.0.tgz",
@@ -4157,7 +4157,7 @@ Node {
       "location": "node_modules/locate-path",
       "name": "locate-path",
       "package": Object {
-        "name": undefined,
+        "name": "locate-path",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-3.0.0.tgz",
@@ -4187,7 +4187,7 @@ Node {
       "location": "node_modules/lodash",
       "name": "lodash",
       "package": Object {
-        "name": undefined,
+        "name": "lodash",
         "version": "4.17.15",
       },
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
@@ -4205,7 +4205,7 @@ Node {
       "location": "node_modules/lodash.flattendeep",
       "name": "lodash.flattendeep",
       "package": Object {
-        "name": undefined,
+        "name": "lodash.flattendeep",
         "version": "4.4.0",
       },
       "resolved": "https://registry.npmjs.org/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz",
@@ -4223,7 +4223,7 @@ Node {
       "location": "node_modules/log-driver",
       "name": "log-driver",
       "package": Object {
-        "name": undefined,
+        "name": "log-driver",
         "version": "1.2.7",
       },
       "resolved": "https://registry.npmjs.org/log-driver/-/log-driver-1.2.7.tgz",
@@ -4255,7 +4255,7 @@ Node {
       "location": "node_modules/loose-envify",
       "name": "loose-envify",
       "package": Object {
-        "name": undefined,
+        "name": "loose-envify",
         "version": "1.4.0",
       },
       "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
@@ -4287,7 +4287,7 @@ Node {
       "location": "node_modules/lru-cache",
       "name": "lru-cache",
       "package": Object {
-        "name": undefined,
+        "name": "lru-cache",
         "version": "4.1.5",
       },
       "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.5.tgz",
@@ -4349,7 +4349,7 @@ Node {
       "location": "node_modules/make-dir",
       "name": "make-dir",
       "package": Object {
-        "name": undefined,
+        "name": "make-dir",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz",
@@ -4367,7 +4367,7 @@ Node {
       "location": "node_modules/make-error",
       "name": "make-error",
       "package": Object {
-        "name": undefined,
+        "name": "make-error",
         "version": "1.3.5",
       },
       "resolved": "https://registry.npmjs.org/make-error/-/make-error-1.3.5.tgz",
@@ -4393,7 +4393,7 @@ Node {
       "location": "node_modules/merge-source-map",
       "name": "merge-source-map",
       "package": Object {
-        "name": undefined,
+        "name": "merge-source-map",
         "version": "1.1.0",
       },
       "resolved": "https://registry.npmjs.org/merge-source-map/-/merge-source-map-1.1.0.tgz",
@@ -4411,7 +4411,7 @@ Node {
       "location": "node_modules/mime-db",
       "name": "mime-db",
       "package": Object {
-        "name": undefined,
+        "name": "mime-db",
         "version": "1.42.0",
       },
       "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.42.0.tgz",
@@ -4443,7 +4443,7 @@ Node {
       "location": "node_modules/mime-types",
       "name": "mime-types",
       "package": Object {
-        "name": undefined,
+        "name": "mime-types",
         "version": "2.1.25",
       },
       "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.25.tgz",
@@ -4475,7 +4475,7 @@ Node {
       "location": "node_modules/minimatch",
       "name": "minimatch",
       "package": Object {
-        "name": undefined,
+        "name": "minimatch",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
@@ -4493,7 +4493,7 @@ Node {
       "location": "node_modules/minimist",
       "name": "minimist",
       "package": Object {
-        "name": undefined,
+        "name": "minimist",
         "version": "1.2.0",
       },
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
@@ -4513,7 +4513,7 @@ Node {
           "location": "node_modules/minipass/node_modules/yallist",
           "name": "yallist",
           "package": Object {
-            "name": undefined,
+            "name": "yallist",
             "version": "4.0.0",
           },
           "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
@@ -4539,7 +4539,7 @@ Node {
       "location": "node_modules/minipass",
       "name": "minipass",
       "package": Object {
-        "name": undefined,
+        "name": "minipass",
         "version": "3.1.1",
       },
       "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.1.1.tgz",
@@ -4559,7 +4559,7 @@ Node {
           "location": "node_modules/mkdirp/node_modules/minimist",
           "name": "minimist",
           "package": Object {
-            "name": undefined,
+            "name": "minimist",
             "version": "0.0.8",
           },
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
@@ -4591,7 +4591,7 @@ Node {
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
       "package": Object {
-        "name": undefined,
+        "name": "mkdirp",
         "version": "0.5.1",
       },
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
@@ -4609,7 +4609,7 @@ Node {
       "location": "node_modules/ms",
       "name": "ms",
       "package": Object {
-        "name": undefined,
+        "name": "ms",
         "version": "2.1.2",
       },
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
@@ -4627,7 +4627,7 @@ Node {
       "location": "node_modules/neo-async",
       "name": "neo-async",
       "package": Object {
-        "name": undefined,
+        "name": "neo-async",
         "version": "2.6.1",
       },
       "resolved": "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz",
@@ -4645,7 +4645,7 @@ Node {
       "location": "node_modules/nested-error-stacks",
       "name": "nested-error-stacks",
       "package": Object {
-        "name": undefined,
+        "name": "nested-error-stacks",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz",
@@ -4663,7 +4663,7 @@ Node {
       "location": "node_modules/nice-try",
       "name": "nice-try",
       "package": Object {
-        "name": undefined,
+        "name": "nice-try",
         "version": "1.0.5",
       },
       "resolved": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz",
@@ -4681,7 +4681,7 @@ Node {
       "location": "node_modules/node-modules-regexp",
       "name": "node-modules-regexp",
       "package": Object {
-        "name": undefined,
+        "name": "node-modules-regexp",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz",
@@ -4725,7 +4725,7 @@ Node {
       "location": "node_modules/normalize-package-data",
       "name": "normalize-package-data",
       "package": Object {
-        "name": undefined,
+        "name": "normalize-package-data",
         "version": "2.5.0",
       },
       "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz",
@@ -4749,7 +4749,7 @@ Node {
       "location": "node_modules/normalize-path",
       "name": "normalize-path",
       "package": Object {
-        "name": undefined,
+        "name": "normalize-path",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz",
@@ -4767,7 +4767,7 @@ Node {
       "location": "node_modules/number-is-nan",
       "name": "number-is-nan",
       "package": Object {
-        "name": undefined,
+        "name": "number-is-nan",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.1.tgz",
@@ -4937,7 +4937,7 @@ Node {
       "location": "node_modules/nyc",
       "name": "nyc",
       "package": Object {
-        "name": undefined,
+        "name": "nyc",
         "version": "14.1.1",
       },
       "resolved": "https://registry.npmjs.org/nyc/-/nyc-14.1.1.tgz",
@@ -4955,7 +4955,7 @@ Node {
       "location": "node_modules/oauth-sign",
       "name": "oauth-sign",
       "package": Object {
-        "name": undefined,
+        "name": "oauth-sign",
         "version": "0.9.0",
       },
       "resolved": "https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.9.0.tgz",
@@ -4979,7 +4979,7 @@ Node {
       "location": "node_modules/object-assign",
       "name": "object-assign",
       "package": Object {
-        "name": undefined,
+        "name": "object-assign",
         "version": "4.1.1",
       },
       "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
@@ -5011,7 +5011,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
@@ -5029,7 +5029,7 @@ Node {
       "location": "node_modules/opener",
       "name": "opener",
       "package": Object {
-        "name": undefined,
+        "name": "opener",
         "version": "1.5.1",
       },
       "resolved": "https://registry.npmjs.org/opener/-/opener-1.5.1.tgz",
@@ -5049,7 +5049,7 @@ Node {
           "location": "node_modules/optimist/node_modules/minimist",
           "name": "minimist",
           "package": Object {
-            "name": undefined,
+            "name": "minimist",
             "version": "0.0.10",
           },
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz",
@@ -5081,7 +5081,7 @@ Node {
       "location": "node_modules/optimist",
       "name": "optimist",
       "package": Object {
-        "name": undefined,
+        "name": "optimist",
         "version": "0.6.1",
       },
       "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
@@ -5099,7 +5099,7 @@ Node {
       "location": "node_modules/os-homedir",
       "name": "os-homedir",
       "package": Object {
-        "name": undefined,
+        "name": "os-homedir",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/os-homedir/-/os-homedir-1.0.2.tgz",
@@ -5123,7 +5123,7 @@ Node {
       "location": "node_modules/own-or",
       "name": "own-or",
       "package": Object {
-        "name": undefined,
+        "name": "own-or",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/own-or/-/own-or-1.0.0.tgz",
@@ -5149,7 +5149,7 @@ Node {
       "location": "node_modules/own-or-env",
       "name": "own-or-env",
       "package": Object {
-        "name": undefined,
+        "name": "own-or-env",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/own-or-env/-/own-or-env-1.0.1.tgz",
@@ -5175,7 +5175,7 @@ Node {
       "location": "node_modules/p-limit",
       "name": "p-limit",
       "package": Object {
-        "name": undefined,
+        "name": "p-limit",
         "version": "2.2.1",
       },
       "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.1.tgz",
@@ -5201,7 +5201,7 @@ Node {
       "location": "node_modules/p-locate",
       "name": "p-locate",
       "package": Object {
-        "name": undefined,
+        "name": "p-locate",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-3.0.0.tgz",
@@ -5219,7 +5219,7 @@ Node {
       "location": "node_modules/p-try",
       "name": "p-try",
       "package": Object {
-        "name": undefined,
+        "name": "p-try",
         "version": "2.2.0",
       },
       "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",
@@ -5263,7 +5263,7 @@ Node {
       "location": "node_modules/package-hash",
       "name": "package-hash",
       "package": Object {
-        "name": undefined,
+        "name": "package-hash",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/package-hash/-/package-hash-3.0.0.tgz",
@@ -5295,7 +5295,7 @@ Node {
       "location": "node_modules/parse-json",
       "name": "parse-json",
       "package": Object {
-        "name": undefined,
+        "name": "parse-json",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/parse-json/-/parse-json-4.0.0.tgz",
@@ -5313,7 +5313,7 @@ Node {
       "location": "node_modules/path-exists",
       "name": "path-exists",
       "package": Object {
-        "name": undefined,
+        "name": "path-exists",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-3.0.0.tgz",
@@ -5331,7 +5331,7 @@ Node {
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
       "package": Object {
-        "name": undefined,
+        "name": "path-is-absolute",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
@@ -5349,7 +5349,7 @@ Node {
       "location": "node_modules/path-key",
       "name": "path-key",
       "package": Object {
-        "name": undefined,
+        "name": "path-key",
         "version": "2.0.1",
       },
       "resolved": "https://registry.npmjs.org/path-key/-/path-key-2.0.1.tgz",
@@ -5367,7 +5367,7 @@ Node {
       "location": "node_modules/path-parse",
       "name": "path-parse",
       "package": Object {
-        "name": undefined,
+        "name": "path-parse",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz",
@@ -5387,7 +5387,7 @@ Node {
           "location": "node_modules/path-type/node_modules/pify",
           "name": "pify",
           "package": Object {
-            "name": undefined,
+            "name": "pify",
             "version": "3.0.0",
           },
           "resolved": "https://registry.npmjs.org/pify/-/pify-3.0.0.tgz",
@@ -5413,7 +5413,7 @@ Node {
       "location": "node_modules/path-type",
       "name": "path-type",
       "package": Object {
-        "name": undefined,
+        "name": "path-type",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/path-type/-/path-type-3.0.0.tgz",
@@ -5431,7 +5431,7 @@ Node {
       "location": "node_modules/performance-now",
       "name": "performance-now",
       "package": Object {
-        "name": undefined,
+        "name": "performance-now",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz",
@@ -5455,7 +5455,7 @@ Node {
       "location": "node_modules/picomatch",
       "name": "picomatch",
       "package": Object {
-        "name": undefined,
+        "name": "picomatch",
         "version": "2.1.1",
       },
       "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.1.1.tgz",
@@ -5479,7 +5479,7 @@ Node {
       "location": "node_modules/pify",
       "name": "pify",
       "package": Object {
-        "name": undefined,
+        "name": "pify",
         "version": "4.0.1",
       },
       "resolved": "https://registry.npmjs.org/pify/-/pify-4.0.1.tgz",
@@ -5505,7 +5505,7 @@ Node {
       "location": "node_modules/pirates",
       "name": "pirates",
       "package": Object {
-        "name": undefined,
+        "name": "pirates",
         "version": "3.0.2",
       },
       "resolved": "https://registry.npmjs.org/pirates/-/pirates-3.0.2.tgz",
@@ -5531,7 +5531,7 @@ Node {
       "location": "node_modules/pkg-dir",
       "name": "pkg-dir",
       "package": Object {
-        "name": undefined,
+        "name": "pkg-dir",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
@@ -5550,7 +5550,7 @@ Node {
       "name": "process-nextick-args",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "process-nextick-args",
         "version": "2.0.1",
       },
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
@@ -5588,7 +5588,7 @@ Node {
       "location": "node_modules/prop-types",
       "name": "prop-types",
       "package": Object {
-        "name": undefined,
+        "name": "prop-types",
         "version": "15.7.2",
       },
       "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",
@@ -5606,7 +5606,7 @@ Node {
       "location": "node_modules/pseudomap",
       "name": "pseudomap",
       "package": Object {
-        "name": undefined,
+        "name": "pseudomap",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.2.tgz",
@@ -5624,7 +5624,7 @@ Node {
       "location": "node_modules/psl",
       "name": "psl",
       "package": Object {
-        "name": undefined,
+        "name": "psl",
         "version": "1.7.0",
       },
       "resolved": "https://registry.npmjs.org/psl/-/psl-1.7.0.tgz",
@@ -5642,7 +5642,7 @@ Node {
       "location": "node_modules/punycode",
       "name": "punycode",
       "package": Object {
-        "name": undefined,
+        "name": "punycode",
         "version": "2.1.1",
       },
       "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
@@ -5660,7 +5660,7 @@ Node {
       "location": "node_modules/qs",
       "name": "qs",
       "package": Object {
-        "name": undefined,
+        "name": "qs",
         "version": "6.5.2",
       },
       "resolved": "https://registry.npmjs.org/qs/-/qs-6.5.2.tgz",
@@ -5698,7 +5698,7 @@ Node {
       "location": "node_modules/react",
       "name": "react",
       "package": Object {
-        "name": undefined,
+        "name": "react",
         "version": "16.12.0",
       },
       "resolved": "https://registry.npmjs.org/react/-/react-16.12.0.tgz",
@@ -5716,7 +5716,7 @@ Node {
       "location": "node_modules/react-is",
       "name": "react-is",
       "package": Object {
-        "name": undefined,
+        "name": "react-is",
         "version": "16.12.0",
       },
       "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.12.0.tgz",
@@ -5754,7 +5754,7 @@ Node {
       "location": "node_modules/read-pkg",
       "name": "read-pkg",
       "package": Object {
-        "name": undefined,
+        "name": "read-pkg",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/read-pkg/-/read-pkg-3.0.0.tgz",
@@ -5786,7 +5786,7 @@ Node {
       "location": "node_modules/read-pkg-up",
       "name": "read-pkg-up",
       "package": Object {
-        "name": undefined,
+        "name": "read-pkg-up",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
@@ -5807,7 +5807,7 @@ Node {
           "name": "safe-buffer",
           "optional": true,
           "package": Object {
-            "name": undefined,
+            "name": "safe-buffer",
             "version": "5.1.2",
           },
           "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
@@ -5870,7 +5870,7 @@ Node {
       "name": "readable-stream",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "readable-stream",
         "version": "2.3.6",
       },
       "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
@@ -5896,7 +5896,7 @@ Node {
       "location": "node_modules/readdirp",
       "name": "readdirp",
       "package": Object {
-        "name": undefined,
+        "name": "readdirp",
         "version": "3.3.0",
       },
       "resolved": "https://registry.npmjs.org/readdirp/-/readdirp-3.3.0.tgz",
@@ -5914,7 +5914,7 @@ Node {
       "location": "node_modules/regenerator-runtime",
       "name": "regenerator-runtime",
       "package": Object {
-        "name": undefined,
+        "name": "regenerator-runtime",
         "version": "0.13.3",
       },
       "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz",
@@ -5940,7 +5940,7 @@ Node {
       "location": "node_modules/release-zalgo",
       "name": "release-zalgo",
       "package": Object {
-        "name": undefined,
+        "name": "release-zalgo",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/release-zalgo/-/release-zalgo-1.0.0.tgz",
@@ -6080,7 +6080,7 @@ Node {
       "location": "node_modules/request",
       "name": "request",
       "package": Object {
-        "name": undefined,
+        "name": "request",
         "version": "2.88.0",
       },
       "resolved": "https://registry.npmjs.org/request/-/request-2.88.0.tgz",
@@ -6098,7 +6098,7 @@ Node {
       "location": "node_modules/require-directory",
       "name": "require-directory",
       "package": Object {
-        "name": undefined,
+        "name": "require-directory",
         "version": "2.1.1",
       },
       "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
@@ -6122,7 +6122,7 @@ Node {
       "location": "node_modules/require-main-filename",
       "name": "require-main-filename",
       "package": Object {
-        "name": undefined,
+        "name": "require-main-filename",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/require-main-filename/-/require-main-filename-2.0.0.tgz",
@@ -6148,7 +6148,7 @@ Node {
       "location": "node_modules/resolve",
       "name": "resolve",
       "package": Object {
-        "name": undefined,
+        "name": "resolve",
         "version": "1.14.1",
       },
       "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
@@ -6166,7 +6166,7 @@ Node {
       "location": "node_modules/resolve-from",
       "name": "resolve-from",
       "package": Object {
-        "name": undefined,
+        "name": "resolve-from",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz",
@@ -6216,7 +6216,7 @@ Node {
       "location": "node_modules/rimraf",
       "name": "rimraf",
       "package": Object {
-        "name": undefined,
+        "name": "rimraf",
         "version": "2.7.1",
       },
       "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.7.1.tgz",
@@ -6246,7 +6246,7 @@ Node {
       "location": "node_modules/safe-buffer",
       "name": "safe-buffer",
       "package": Object {
-        "name": undefined,
+        "name": "safe-buffer",
         "version": "5.2.0",
       },
       "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.0.tgz",
@@ -6276,7 +6276,7 @@ Node {
       "location": "node_modules/safer-buffer",
       "name": "safer-buffer",
       "package": Object {
-        "name": undefined,
+        "name": "safer-buffer",
         "version": "2.1.2",
       },
       "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
@@ -6306,7 +6306,7 @@ Node {
       "location": "node_modules/semver",
       "name": "semver",
       "package": Object {
-        "name": undefined,
+        "name": "semver",
         "version": "5.7.1",
       },
       "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",
@@ -6324,7 +6324,7 @@ Node {
       "location": "node_modules/set-blocking",
       "name": "set-blocking",
       "package": Object {
-        "name": undefined,
+        "name": "set-blocking",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
@@ -6350,7 +6350,7 @@ Node {
       "location": "node_modules/shebang-command",
       "name": "shebang-command",
       "package": Object {
-        "name": undefined,
+        "name": "shebang-command",
         "version": "1.2.0",
       },
       "resolved": "https://registry.npmjs.org/shebang-command/-/shebang-command-1.2.0.tgz",
@@ -6368,7 +6368,7 @@ Node {
       "location": "node_modules/shebang-regex",
       "name": "shebang-regex",
       "package": Object {
-        "name": undefined,
+        "name": "shebang-regex",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-1.0.0.tgz",
@@ -6410,7 +6410,7 @@ Node {
       "location": "node_modules/signal-exit",
       "name": "signal-exit",
       "package": Object {
-        "name": undefined,
+        "name": "signal-exit",
         "version": "3.0.2",
       },
       "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz",
@@ -6452,7 +6452,7 @@ Node {
       "location": "node_modules/source-map",
       "name": "source-map",
       "package": Object {
-        "name": undefined,
+        "name": "source-map",
         "version": "0.6.1",
       },
       "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
@@ -6496,7 +6496,7 @@ Node {
       "location": "node_modules/source-map-support",
       "name": "source-map-support",
       "package": Object {
-        "name": undefined,
+        "name": "source-map-support",
         "version": "0.5.16",
       },
       "resolved": "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.16.tgz",
@@ -6524,7 +6524,7 @@ Node {
           "location": "node_modules/spawn-wrap/node_modules/which",
           "name": "which",
           "package": Object {
-            "name": undefined,
+            "name": "which",
             "version": "1.3.1",
           },
           "resolved": "https://registry.npmjs.org/which/-/which-1.3.1.tgz",
@@ -6580,7 +6580,7 @@ Node {
       "location": "node_modules/spawn-wrap",
       "name": "spawn-wrap",
       "package": Object {
-        "name": undefined,
+        "name": "spawn-wrap",
         "version": "1.4.3",
       },
       "resolved": "https://registry.npmjs.org/spawn-wrap/-/spawn-wrap-1.4.3.tgz",
@@ -6612,7 +6612,7 @@ Node {
       "location": "node_modules/spdx-correct",
       "name": "spdx-correct",
       "package": Object {
-        "name": undefined,
+        "name": "spdx-correct",
         "version": "3.1.0",
       },
       "resolved": "https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.1.0.tgz",
@@ -6630,7 +6630,7 @@ Node {
       "location": "node_modules/spdx-exceptions",
       "name": "spdx-exceptions",
       "package": Object {
-        "name": undefined,
+        "name": "spdx-exceptions",
         "version": "2.2.0",
       },
       "resolved": "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.2.0.tgz",
@@ -6668,7 +6668,7 @@ Node {
       "location": "node_modules/spdx-expression-parse",
       "name": "spdx-expression-parse",
       "package": Object {
-        "name": undefined,
+        "name": "spdx-expression-parse",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.0.tgz",
@@ -6692,7 +6692,7 @@ Node {
       "location": "node_modules/spdx-license-ids",
       "name": "spdx-license-ids",
       "package": Object {
-        "name": undefined,
+        "name": "spdx-license-ids",
         "version": "3.0.5",
       },
       "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz",
@@ -6710,7 +6710,7 @@ Node {
       "location": "node_modules/sprintf-js",
       "name": "sprintf-js",
       "package": Object {
-        "name": undefined,
+        "name": "sprintf-js",
         "version": "1.0.3",
       },
       "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
@@ -6784,7 +6784,7 @@ Node {
       "location": "node_modules/sshpk",
       "name": "sshpk",
       "package": Object {
-        "name": undefined,
+        "name": "sshpk",
         "version": "1.16.1",
       },
       "resolved": "https://registry.npmjs.org/sshpk/-/sshpk-1.16.1.tgz",
@@ -6802,7 +6802,7 @@ Node {
       "location": "node_modules/stack-utils",
       "name": "stack-utils",
       "package": Object {
-        "name": undefined,
+        "name": "stack-utils",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
@@ -6823,7 +6823,7 @@ Node {
           "name": "safe-buffer",
           "optional": true,
           "package": Object {
-            "name": undefined,
+            "name": "safe-buffer",
             "version": "5.1.2",
           },
           "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
@@ -6850,7 +6850,7 @@ Node {
       "name": "string_decoder",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "string_decoder",
         "version": "1.1.1",
       },
       "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
@@ -6882,7 +6882,7 @@ Node {
       "location": "node_modules/string-width",
       "name": "string-width",
       "package": Object {
-        "name": undefined,
+        "name": "string-width",
         "version": "2.1.1",
       },
       "resolved": "https://registry.npmjs.org/string-width/-/string-width-2.1.1.tgz",
@@ -6914,7 +6914,7 @@ Node {
       "location": "node_modules/strip-ansi",
       "name": "strip-ansi",
       "package": Object {
-        "name": undefined,
+        "name": "strip-ansi",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-4.0.0.tgz",
@@ -6938,7 +6938,7 @@ Node {
       "location": "node_modules/strip-bom",
       "name": "strip-bom",
       "package": Object {
-        "name": undefined,
+        "name": "strip-bom",
         "version": "3.0.0",
       },
       "resolved": "https://registry.npmjs.org/strip-bom/-/strip-bom-3.0.0.tgz",
@@ -6964,7 +6964,7 @@ Node {
       "location": "node_modules/supports-color",
       "name": "supports-color",
       "package": Object {
-        "name": undefined,
+        "name": "supports-color",
         "version": "5.5.0",
       },
       "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz",
@@ -7005,7 +7005,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/code-frame",
           "name": "@babel/code-frame",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/code-frame",
             "version": "7.5.5",
           },
           "resolved": null,
@@ -7027,7 +7027,7 @@ Node {
               "location": "node_modules/tap/node_modules/@babel/core/node_modules/source-map",
               "name": "source-map",
               "package": Object {
-                "name": undefined,
+                "name": "source-map",
                 "version": "0.5.7",
               },
               "resolved": null,
@@ -7131,7 +7131,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/core",
           "name": "@babel/core",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/core",
             "version": "7.7.5",
           },
           "resolved": null,
@@ -7153,7 +7153,7 @@ Node {
               "location": "node_modules/tap/node_modules/@babel/generator/node_modules/source-map",
               "name": "source-map",
               "package": Object {
-                "name": undefined,
+                "name": "source-map",
                 "version": "0.5.7",
               },
               "resolved": null,
@@ -7203,7 +7203,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/generator",
           "name": "@babel/generator",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/generator",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7236,7 +7236,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
           "name": "@babel/helper-builder-react-jsx",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/helper-builder-react-jsx",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7275,7 +7275,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/helper-function-name",
           "name": "@babel/helper-function-name",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/helper-function-name",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7302,7 +7302,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/helper-get-function-arity",
           "name": "@babel/helper-get-function-arity",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/helper-get-function-arity",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7345,7 +7345,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/helper-plugin-utils",
           "name": "@babel/helper-plugin-utils",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/helper-plugin-utils",
             "version": "7.0.0",
           },
           "resolved": null,
@@ -7372,7 +7372,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/helper-split-export-declaration",
           "name": "@babel/helper-split-export-declaration",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/helper-split-export-declaration",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7411,7 +7411,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/helpers",
           "name": "@babel/helpers",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/helpers",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7453,7 +7453,7 @@ Node {
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
               "name": "chalk",
               "package": Object {
-                "name": undefined,
+                "name": "chalk",
                 "version": "2.4.2",
               },
               "resolved": null,
@@ -7480,7 +7480,7 @@ Node {
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
               "name": "supports-color",
               "package": Object {
-                "name": undefined,
+                "name": "supports-color",
                 "version": "5.5.0",
               },
               "resolved": null,
@@ -7518,7 +7518,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/highlight",
           "name": "@babel/highlight",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/highlight",
             "version": "7.5.0",
           },
           "resolved": null,
@@ -7549,7 +7549,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/parser",
           "name": "@babel/parser",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/parser",
             "version": "7.7.5",
           },
           "resolved": null,
@@ -7582,7 +7582,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/plugin-proposal-object-rest-spread",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/plugin-proposal-object-rest-spread",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7609,7 +7609,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-jsx",
           "name": "@babel/plugin-syntax-jsx",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/plugin-syntax-jsx",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7636,7 +7636,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-object-rest-spread",
           "name": "@babel/plugin-syntax-object-rest-spread",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/plugin-syntax-object-rest-spread",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7663,7 +7663,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-destructuring",
           "name": "@babel/plugin-transform-destructuring",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/plugin-transform-destructuring",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7702,7 +7702,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/plugin-transform-react-jsx",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/plugin-transform-react-jsx",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7729,7 +7729,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/runtime",
           "name": "@babel/runtime",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/runtime",
             "version": "7.7.6",
           },
           "resolved": null,
@@ -7780,7 +7780,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/template",
           "name": "@babel/template",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/template",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7861,7 +7861,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/traverse",
           "name": "@babel/traverse",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/traverse",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7948,7 +7948,7 @@ Node {
           "location": "node_modules/tap/node_modules/@babel/types",
           "name": "@babel/types",
           "package": Object {
-            "name": undefined,
+            "name": "@babel/types",
             "version": "7.7.4",
           },
           "resolved": null,
@@ -7979,7 +7979,7 @@ Node {
           "location": "node_modules/tap/node_modules/@types/color-name",
           "name": "@types/color-name",
           "package": Object {
-            "name": undefined,
+            "name": "@types/color-name",
             "version": "1.1.1",
           },
           "resolved": null,
@@ -7998,7 +7998,7 @@ Node {
           "location": "node_modules/tap/node_modules/@types/prop-types",
           "name": "@types/prop-types",
           "package": Object {
-            "name": undefined,
+            "name": "@types/prop-types",
             "version": "15.7.3",
           },
           "resolved": null,
@@ -8031,7 +8031,7 @@ Node {
           "location": "node_modules/tap/node_modules/@types/react",
           "name": "@types/react",
           "package": Object {
-            "name": undefined,
+            "name": "@types/react",
             "version": "16.9.16",
           },
           "resolved": null,
@@ -8058,7 +8058,7 @@ Node {
           "location": "node_modules/tap/node_modules/ansi-escapes",
           "name": "ansi-escapes",
           "package": Object {
-            "name": undefined,
+            "name": "ansi-escapes",
             "version": "4.3.0",
           },
           "resolved": null,
@@ -8077,7 +8077,7 @@ Node {
           "location": "node_modules/tap/node_modules/ansi-regex",
           "name": "ansi-regex",
           "package": Object {
-            "name": undefined,
+            "name": "ansi-regex",
             "version": "5.0.0",
           },
           "resolved": null,
@@ -8110,7 +8110,7 @@ Node {
           "location": "node_modules/tap/node_modules/ansi-styles",
           "name": "ansi-styles",
           "package": Object {
-            "name": undefined,
+            "name": "ansi-styles",
             "version": "3.2.1",
           },
           "resolved": null,
@@ -8129,7 +8129,7 @@ Node {
           "location": "node_modules/tap/node_modules/ansicolors",
           "name": "ansicolors",
           "package": Object {
-            "name": undefined,
+            "name": "ansicolors",
             "version": "0.3.2",
           },
           "resolved": null,
@@ -8148,7 +8148,7 @@ Node {
           "location": "node_modules/tap/node_modules/arrify",
           "name": "arrify",
           "package": Object {
-            "name": undefined,
+            "name": "arrify",
             "version": "2.0.1",
           },
           "resolved": null,
@@ -8167,7 +8167,7 @@ Node {
           "location": "node_modules/tap/node_modules/astral-regex",
           "name": "astral-regex",
           "package": Object {
-            "name": undefined,
+            "name": "astral-regex",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -8186,7 +8186,7 @@ Node {
           "location": "node_modules/tap/node_modules/auto-bind",
           "name": "auto-bind",
           "package": Object {
-            "name": undefined,
+            "name": "auto-bind",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -8213,7 +8213,7 @@ Node {
           "location": "node_modules/tap/node_modules/caller-callsite",
           "name": "caller-callsite",
           "package": Object {
-            "name": undefined,
+            "name": "caller-callsite",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -8240,7 +8240,7 @@ Node {
           "location": "node_modules/tap/node_modules/caller-path",
           "name": "caller-path",
           "package": Object {
-            "name": undefined,
+            "name": "caller-path",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -8259,7 +8259,7 @@ Node {
           "location": "node_modules/tap/node_modules/callsites",
           "name": "callsites",
           "package": Object {
-            "name": undefined,
+            "name": "callsites",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -8292,7 +8292,7 @@ Node {
           "location": "node_modules/tap/node_modules/cardinal",
           "name": "cardinal",
           "package": Object {
-            "name": undefined,
+            "name": "cardinal",
             "version": "2.1.1",
           },
           "resolved": null,
@@ -8328,7 +8328,7 @@ Node {
               "location": "node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
               "name": "ansi-styles",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-styles",
                 "version": "4.2.0",
               },
               "resolved": null,
@@ -8355,7 +8355,7 @@ Node {
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-convert",
               "name": "color-convert",
               "package": Object {
-                "name": undefined,
+                "name": "color-convert",
                 "version": "2.0.1",
               },
               "resolved": null,
@@ -8374,7 +8374,7 @@ Node {
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-name",
               "name": "color-name",
               "package": Object {
-                "name": undefined,
+                "name": "color-name",
                 "version": "1.1.4",
               },
               "resolved": null,
@@ -8412,7 +8412,7 @@ Node {
           "location": "node_modules/tap/node_modules/chalk",
           "name": "chalk",
           "package": Object {
-            "name": undefined,
+            "name": "chalk",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -8431,7 +8431,7 @@ Node {
           "location": "node_modules/tap/node_modules/ci-info",
           "name": "ci-info",
           "package": Object {
-            "name": undefined,
+            "name": "ci-info",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -8458,7 +8458,7 @@ Node {
           "location": "node_modules/tap/node_modules/cli-cursor",
           "name": "cli-cursor",
           "package": Object {
-            "name": undefined,
+            "name": "cli-cursor",
             "version": "3.1.0",
           },
           "resolved": null,
@@ -8491,7 +8491,7 @@ Node {
           "location": "node_modules/tap/node_modules/cli-truncate",
           "name": "cli-truncate",
           "package": Object {
-            "name": undefined,
+            "name": "cli-truncate",
             "version": "2.1.0",
           },
           "resolved": null,
@@ -8518,7 +8518,7 @@ Node {
           "location": "node_modules/tap/node_modules/color-convert",
           "name": "color-convert",
           "package": Object {
-            "name": undefined,
+            "name": "color-convert",
             "version": "1.9.3",
           },
           "resolved": null,
@@ -8537,7 +8537,7 @@ Node {
           "location": "node_modules/tap/node_modules/color-name",
           "name": "color-name",
           "package": Object {
-            "name": undefined,
+            "name": "color-name",
             "version": "1.1.3",
           },
           "resolved": null,
@@ -8559,7 +8559,7 @@ Node {
               "location": "node_modules/tap/node_modules/convert-source-map/node_modules/safe-buffer",
               "name": "safe-buffer",
               "package": Object {
-                "name": undefined,
+                "name": "safe-buffer",
                 "version": "5.1.2",
               },
               "resolved": null,
@@ -8585,7 +8585,7 @@ Node {
           "location": "node_modules/tap/node_modules/convert-source-map",
           "name": "convert-source-map",
           "package": Object {
-            "name": undefined,
+            "name": "convert-source-map",
             "version": "1.7.0",
           },
           "resolved": null,
@@ -8604,7 +8604,7 @@ Node {
           "location": "node_modules/tap/node_modules/csstype",
           "name": "csstype",
           "package": Object {
-            "name": undefined,
+            "name": "csstype",
             "version": "2.6.8",
           },
           "resolved": null,
@@ -8637,7 +8637,7 @@ Node {
           "location": "node_modules/tap/node_modules/debug",
           "name": "debug",
           "package": Object {
-            "name": undefined,
+            "name": "debug",
             "version": "4.1.1",
           },
           "resolved": null,
@@ -8656,7 +8656,7 @@ Node {
           "location": "node_modules/tap/node_modules/emoji-regex",
           "name": "emoji-regex",
           "package": Object {
-            "name": undefined,
+            "name": "emoji-regex",
             "version": "8.0.0",
           },
           "resolved": null,
@@ -8675,7 +8675,7 @@ Node {
           "location": "node_modules/tap/node_modules/escape-string-regexp",
           "name": "escape-string-regexp",
           "package": Object {
-            "name": undefined,
+            "name": "escape-string-regexp",
             "version": "1.0.5",
           },
           "resolved": null,
@@ -8694,7 +8694,7 @@ Node {
           "location": "node_modules/tap/node_modules/esprima",
           "name": "esprima",
           "package": Object {
-            "name": undefined,
+            "name": "esprima",
             "version": "4.0.1",
           },
           "resolved": null,
@@ -8725,7 +8725,7 @@ Node {
           "location": "node_modules/tap/node_modules/esutils",
           "name": "esutils",
           "package": Object {
-            "name": undefined,
+            "name": "esutils",
             "version": "2.0.3",
           },
           "resolved": null,
@@ -8744,7 +8744,7 @@ Node {
           "location": "node_modules/tap/node_modules/events-to-array",
           "name": "events-to-array",
           "package": Object {
-            "name": undefined,
+            "name": "events-to-array",
             "version": "1.1.2",
           },
           "resolved": null,
@@ -8763,7 +8763,7 @@ Node {
           "location": "node_modules/tap/node_modules/globals",
           "name": "globals",
           "package": Object {
-            "name": undefined,
+            "name": "globals",
             "version": "11.12.0",
           },
           "resolved": null,
@@ -8782,7 +8782,7 @@ Node {
           "location": "node_modules/tap/node_modules/has-flag",
           "name": "has-flag",
           "package": Object {
-            "name": undefined,
+            "name": "has-flag",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -8845,7 +8845,7 @@ Node {
           "location": "node_modules/tap/node_modules/import-jsx",
           "name": "import-jsx",
           "package": Object {
-            "name": undefined,
+            "name": "import-jsx",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -8980,7 +8980,7 @@ Node {
           "location": "node_modules/tap/node_modules/ink",
           "name": "ink",
           "package": Object {
-            "name": undefined,
+            "name": "ink",
             "version": "2.6.0",
           },
           "resolved": null,
@@ -9007,7 +9007,7 @@ Node {
           "location": "node_modules/tap/node_modules/is-ci",
           "name": "is-ci",
           "package": Object {
-            "name": undefined,
+            "name": "is-ci",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -9032,7 +9032,7 @@ Node {
           "location": "node_modules/tap/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
           "package": Object {
-            "name": undefined,
+            "name": "is-fullwidth-code-point",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -9057,7 +9057,7 @@ Node {
           "location": "node_modules/tap/node_modules/js-tokens",
           "name": "js-tokens",
           "package": Object {
-            "name": undefined,
+            "name": "js-tokens",
             "version": "4.0.0",
           },
           "resolved": null,
@@ -9076,7 +9076,7 @@ Node {
           "location": "node_modules/tap/node_modules/jsesc",
           "name": "jsesc",
           "package": Object {
-            "name": undefined,
+            "name": "jsesc",
             "version": "2.5.2",
           },
           "resolved": null,
@@ -9103,7 +9103,7 @@ Node {
           "location": "node_modules/tap/node_modules/json5",
           "name": "json5",
           "package": Object {
-            "name": undefined,
+            "name": "json5",
             "version": "2.1.1",
           },
           "resolved": null,
@@ -9140,7 +9140,7 @@ Node {
           "location": "node_modules/tap/node_modules/lodash",
           "name": "lodash",
           "package": Object {
-            "name": undefined,
+            "name": "lodash",
             "version": "4.17.15",
           },
           "resolved": null,
@@ -9159,7 +9159,7 @@ Node {
           "location": "node_modules/tap/node_modules/lodash.throttle",
           "name": "lodash.throttle",
           "package": Object {
-            "name": undefined,
+            "name": "lodash.throttle",
             "version": "4.1.1",
           },
           "resolved": null,
@@ -9181,7 +9181,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-escapes",
               "name": "ansi-escapes",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-escapes",
                 "version": "3.2.0",
               },
               "resolved": null,
@@ -9200,7 +9200,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-regex",
               "name": "ansi-regex",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-regex",
                 "version": "4.1.0",
               },
               "resolved": null,
@@ -9227,7 +9227,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
               "name": "cli-cursor",
               "package": Object {
-                "name": undefined,
+                "name": "cli-cursor",
                 "version": "2.1.0",
               },
               "resolved": null,
@@ -9246,7 +9246,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/emoji-regex",
               "name": "emoji-regex",
               "package": Object {
-                "name": undefined,
+                "name": "emoji-regex",
                 "version": "7.0.3",
               },
               "resolved": null,
@@ -9265,7 +9265,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/is-fullwidth-code-point",
               "name": "is-fullwidth-code-point",
               "package": Object {
-                "name": undefined,
+                "name": "is-fullwidth-code-point",
                 "version": "2.0.0",
               },
               "resolved": null,
@@ -9284,7 +9284,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/mimic-fn",
               "name": "mimic-fn",
               "package": Object {
-                "name": undefined,
+                "name": "mimic-fn",
                 "version": "1.2.0",
               },
               "resolved": null,
@@ -9311,7 +9311,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/onetime",
               "name": "onetime",
               "package": Object {
-                "name": undefined,
+                "name": "onetime",
                 "version": "2.0.1",
               },
               "resolved": null,
@@ -9344,7 +9344,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
               "name": "restore-cursor",
               "package": Object {
-                "name": undefined,
+                "name": "restore-cursor",
                 "version": "2.0.0",
               },
               "resolved": null,
@@ -9383,7 +9383,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/string-width",
               "name": "string-width",
               "package": Object {
-                "name": undefined,
+                "name": "string-width",
                 "version": "3.1.0",
               },
               "resolved": null,
@@ -9416,7 +9416,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
               "name": "strip-ansi",
               "package": Object {
-                "name": undefined,
+                "name": "strip-ansi",
                 "version": "5.2.0",
               },
               "resolved": null,
@@ -9455,7 +9455,7 @@ Node {
               "location": "node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
               "name": "wrap-ansi",
               "package": Object {
-                "name": undefined,
+                "name": "wrap-ansi",
                 "version": "5.1.0",
               },
               "resolved": null,
@@ -9493,7 +9493,7 @@ Node {
           "location": "node_modules/tap/node_modules/log-update",
           "name": "log-update",
           "package": Object {
-            "name": undefined,
+            "name": "log-update",
             "version": "3.3.0",
           },
           "resolved": null,
@@ -9532,7 +9532,7 @@ Node {
           "location": "node_modules/tap/node_modules/loose-envify",
           "name": "loose-envify",
           "package": Object {
-            "name": undefined,
+            "name": "loose-envify",
             "version": "1.4.0",
           },
           "resolved": null,
@@ -9551,7 +9551,7 @@ Node {
           "location": "node_modules/tap/node_modules/mimic-fn",
           "name": "mimic-fn",
           "package": Object {
-            "name": undefined,
+            "name": "mimic-fn",
             "version": "2.1.0",
           },
           "resolved": null,
@@ -9570,7 +9570,7 @@ Node {
           "location": "node_modules/tap/node_modules/minimist",
           "name": "minimist",
           "package": Object {
-            "name": undefined,
+            "name": "minimist",
             "version": "1.2.0",
           },
           "resolved": null,
@@ -9592,7 +9592,7 @@ Node {
               "location": "node_modules/tap/node_modules/minipass/node_modules/yallist",
               "name": "yallist",
               "package": Object {
-                "name": undefined,
+                "name": "yallist",
                 "version": "4.0.0",
               },
               "resolved": null,
@@ -9624,7 +9624,7 @@ Node {
           "location": "node_modules/tap/node_modules/minipass",
           "name": "minipass",
           "package": Object {
-            "name": undefined,
+            "name": "minipass",
             "version": "3.1.1",
           },
           "resolved": null,
@@ -9649,7 +9649,7 @@ Node {
           "location": "node_modules/tap/node_modules/ms",
           "name": "ms",
           "package": Object {
-            "name": undefined,
+            "name": "ms",
             "version": "2.1.2",
           },
           "resolved": null,
@@ -9680,7 +9680,7 @@ Node {
           "location": "node_modules/tap/node_modules/object-assign",
           "name": "object-assign",
           "package": Object {
-            "name": undefined,
+            "name": "object-assign",
             "version": "4.1.1",
           },
           "resolved": null,
@@ -9707,7 +9707,7 @@ Node {
           "location": "node_modules/tap/node_modules/onetime",
           "name": "onetime",
           "package": Object {
-            "name": undefined,
+            "name": "onetime",
             "version": "5.1.0",
           },
           "resolved": null,
@@ -9726,7 +9726,7 @@ Node {
           "location": "node_modules/tap/node_modules/path-parse",
           "name": "path-parse",
           "package": Object {
-            "name": undefined,
+            "name": "path-parse",
             "version": "1.0.6",
           },
           "resolved": null,
@@ -9771,7 +9771,7 @@ Node {
           "location": "node_modules/tap/node_modules/prop-types",
           "name": "prop-types",
           "package": Object {
-            "name": undefined,
+            "name": "prop-types",
             "version": "15.7.2",
           },
           "resolved": null,
@@ -9790,7 +9790,7 @@ Node {
           "location": "node_modules/tap/node_modules/punycode",
           "name": "punycode",
           "package": Object {
-            "name": undefined,
+            "name": "punycode",
             "version": "2.1.1",
           },
           "resolved": null,
@@ -9809,7 +9809,7 @@ Node {
           "location": "node_modules/tap/node_modules/react-is",
           "name": "react-is",
           "package": Object {
-            "name": undefined,
+            "name": "react-is",
             "version": "16.12.0",
           },
           "resolved": null,
@@ -9854,7 +9854,7 @@ Node {
           "location": "node_modules/tap/node_modules/react-reconciler",
           "name": "react-reconciler",
           "package": Object {
-            "name": undefined,
+            "name": "react-reconciler",
             "version": "0.24.0",
           },
           "resolved": null,
@@ -9881,7 +9881,7 @@ Node {
           "location": "node_modules/tap/node_modules/redeyed",
           "name": "redeyed",
           "package": Object {
-            "name": undefined,
+            "name": "redeyed",
             "version": "2.1.1",
           },
           "resolved": null,
@@ -9900,7 +9900,7 @@ Node {
           "location": "node_modules/tap/node_modules/regenerator-runtime",
           "name": "regenerator-runtime",
           "package": Object {
-            "name": undefined,
+            "name": "regenerator-runtime",
             "version": "0.13.3",
           },
           "resolved": null,
@@ -9927,7 +9927,7 @@ Node {
           "location": "node_modules/tap/node_modules/resolve",
           "name": "resolve",
           "package": Object {
-            "name": undefined,
+            "name": "resolve",
             "version": "1.13.1",
           },
           "resolved": null,
@@ -9946,7 +9946,7 @@ Node {
           "location": "node_modules/tap/node_modules/resolve-from",
           "name": "resolve-from",
           "package": Object {
-            "name": undefined,
+            "name": "resolve-from",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -9979,7 +9979,7 @@ Node {
           "location": "node_modules/tap/node_modules/restore-cursor",
           "name": "restore-cursor",
           "package": Object {
-            "name": undefined,
+            "name": "restore-cursor",
             "version": "3.1.0",
           },
           "resolved": null,
@@ -10018,7 +10018,7 @@ Node {
           "location": "node_modules/tap/node_modules/scheduler",
           "name": "scheduler",
           "package": Object {
-            "name": undefined,
+            "name": "scheduler",
             "version": "0.18.0",
           },
           "resolved": null,
@@ -10037,7 +10037,7 @@ Node {
           "location": "node_modules/tap/node_modules/semver",
           "name": "semver",
           "package": Object {
-            "name": undefined,
+            "name": "semver",
             "version": "5.7.1",
           },
           "resolved": null,
@@ -10074,7 +10074,7 @@ Node {
           "location": "node_modules/tap/node_modules/signal-exit",
           "name": "signal-exit",
           "package": Object {
-            "name": undefined,
+            "name": "signal-exit",
             "version": "3.0.2",
           },
           "resolved": null,
@@ -10110,7 +10110,7 @@ Node {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-styles",
                 "version": "4.2.0",
               },
               "resolved": null,
@@ -10137,7 +10137,7 @@ Node {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
               "name": "color-convert",
               "package": Object {
-                "name": undefined,
+                "name": "color-convert",
                 "version": "2.0.1",
               },
               "resolved": null,
@@ -10156,7 +10156,7 @@ Node {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-name",
               "name": "color-name",
               "package": Object {
-                "name": undefined,
+                "name": "color-name",
                 "version": "1.1.4",
               },
               "resolved": null,
@@ -10200,7 +10200,7 @@ Node {
           "location": "node_modules/tap/node_modules/slice-ansi",
           "name": "slice-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "slice-ansi",
             "version": "3.0.0",
           },
           "resolved": null,
@@ -10222,7 +10222,7 @@ Node {
               "location": "node_modules/tap/node_modules/string-length/node_modules/ansi-regex",
               "name": "ansi-regex",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-regex",
                 "version": "4.1.0",
               },
               "resolved": null,
@@ -10241,7 +10241,7 @@ Node {
               "location": "node_modules/tap/node_modules/string-length/node_modules/astral-regex",
               "name": "astral-regex",
               "package": Object {
-                "name": undefined,
+                "name": "astral-regex",
                 "version": "1.0.0",
               },
               "resolved": null,
@@ -10268,7 +10268,7 @@ Node {
               "location": "node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
               "name": "strip-ansi",
               "package": Object {
-                "name": undefined,
+                "name": "strip-ansi",
                 "version": "5.2.0",
               },
               "resolved": null,
@@ -10306,7 +10306,7 @@ Node {
           "location": "node_modules/tap/node_modules/string-length",
           "name": "string-length",
           "package": Object {
-            "name": undefined,
+            "name": "string-length",
             "version": "3.1.0",
           },
           "resolved": null,
@@ -10357,7 +10357,7 @@ Node {
           "location": "node_modules/tap/node_modules/string-width",
           "name": "string-width",
           "package": Object {
-            "name": undefined,
+            "name": "string-width",
             "version": "4.2.0",
           },
           "resolved": null,
@@ -10390,7 +10390,7 @@ Node {
           "location": "node_modules/tap/node_modules/strip-ansi",
           "name": "strip-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "strip-ansi",
             "version": "6.0.0",
           },
           "resolved": null,
@@ -10412,7 +10412,7 @@ Node {
               "location": "node_modules/tap/node_modules/supports-color/node_modules/has-flag",
               "name": "has-flag",
               "package": Object {
-                "name": undefined,
+                "name": "has-flag",
                 "version": "4.0.0",
               },
               "resolved": null,
@@ -10438,7 +10438,7 @@ Node {
           "location": "node_modules/tap/node_modules/supports-color",
           "name": "supports-color",
           "package": Object {
-            "name": undefined,
+            "name": "supports-color",
             "version": "7.1.0",
           },
           "resolved": null,
@@ -10483,7 +10483,7 @@ Node {
           "location": "node_modules/tap/node_modules/tap-parser",
           "name": "tap-parser",
           "package": Object {
-            "name": undefined,
+            "name": "tap-parser",
             "version": "10.0.1",
           },
           "resolved": null,
@@ -10516,7 +10516,7 @@ Node {
           "location": "node_modules/tap/node_modules/tap-yaml",
           "name": "tap-yaml",
           "package": Object {
-            "name": undefined,
+            "name": "tap-yaml",
             "version": "1.0.0",
           },
           "resolved": null,
@@ -10535,7 +10535,7 @@ Node {
           "location": "node_modules/tap/node_modules/to-fast-properties",
           "name": "to-fast-properties",
           "package": Object {
-            "name": undefined,
+            "name": "to-fast-properties",
             "version": "2.0.0",
           },
           "resolved": null,
@@ -10557,7 +10557,7 @@ Node {
               "location": "node_modules/tap/node_modules/treport/node_modules/ansi-regex",
               "name": "ansi-regex",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-regex",
                 "version": "2.1.1",
               },
               "resolved": null,
@@ -10584,7 +10584,7 @@ Node {
               "location": "node_modules/tap/node_modules/treport/node_modules/strip-ansi",
               "name": "strip-ansi",
               "package": Object {
-                "name": undefined,
+                "name": "strip-ansi",
                 "version": "3.0.1",
               },
               "resolved": null,
@@ -10617,7 +10617,7 @@ Node {
               "location": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
               "name": "unicode-length",
               "package": Object {
-                "name": undefined,
+                "name": "unicode-length",
                 "version": "2.0.2",
               },
               "resolved": null,
@@ -10685,7 +10685,7 @@ Node {
           "location": "node_modules/tap/node_modules/treport",
           "name": "treport",
           "package": Object {
-            "name": undefined,
+            "name": "treport",
             "version": "1.0.1",
           },
           "resolved": null,
@@ -10704,7 +10704,7 @@ Node {
           "location": "node_modules/tap/node_modules/type-fest",
           "name": "type-fest",
           "package": Object {
-            "name": undefined,
+            "name": "type-fest",
             "version": "0.8.1",
           },
           "resolved": null,
@@ -10731,7 +10731,7 @@ Node {
           "location": "node_modules/tap/node_modules/widest-line",
           "name": "widest-line",
           "package": Object {
-            "name": undefined,
+            "name": "widest-line",
             "version": "3.1.0",
           },
           "resolved": null,
@@ -10767,7 +10767,7 @@ Node {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
               "package": Object {
-                "name": undefined,
+                "name": "ansi-styles",
                 "version": "4.2.0",
               },
               "resolved": null,
@@ -10794,7 +10794,7 @@ Node {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
               "name": "color-convert",
               "package": Object {
-                "name": undefined,
+                "name": "color-convert",
                 "version": "2.0.1",
               },
               "resolved": null,
@@ -10813,7 +10813,7 @@ Node {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-name",
               "name": "color-name",
               "package": Object {
-                "name": undefined,
+                "name": "color-name",
                 "version": "1.1.4",
               },
               "resolved": null,
@@ -10851,7 +10851,7 @@ Node {
           "location": "node_modules/tap/node_modules/wrap-ansi",
           "name": "wrap-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "wrap-ansi",
             "version": "6.2.0",
           },
           "resolved": null,
@@ -10884,7 +10884,7 @@ Node {
           "location": "node_modules/tap/node_modules/yaml",
           "name": "yaml",
           "package": Object {
-            "name": undefined,
+            "name": "yaml",
             "version": "1.7.2",
           },
           "resolved": null,
@@ -10903,7 +10903,7 @@ Node {
           "location": "node_modules/tap/node_modules/yoga-layout-prebuilt",
           "name": "yoga-layout-prebuilt",
           "package": Object {
-            "name": undefined,
+            "name": "yoga-layout-prebuilt",
             "version": "1.9.3",
           },
           "resolved": null,
@@ -11173,7 +11173,7 @@ Node {
       "location": "node_modules/tap",
       "name": "tap",
       "package": Object {
-        "name": undefined,
+        "name": "tap",
         "version": "14.10.5",
       },
       "resolved": "https://registry.npmjs.org/tap/-/tap-14.10.5.tgz",
@@ -11201,7 +11201,7 @@ Node {
           "location": "node_modules/tap-mocha-reporter/node_modules/debug",
           "name": "debug",
           "package": Object {
-            "name": undefined,
+            "name": "debug",
             "version": "2.6.9",
           },
           "resolved": "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz",
@@ -11219,7 +11219,7 @@ Node {
           "location": "node_modules/tap-mocha-reporter/node_modules/diff",
           "name": "diff",
           "package": Object {
-            "name": undefined,
+            "name": "diff",
             "version": "1.4.0",
           },
           "resolved": "https://registry.npmjs.org/diff/-/diff-1.4.0.tgz",
@@ -11237,7 +11237,7 @@ Node {
           "location": "node_modules/tap-mocha-reporter/node_modules/ms",
           "name": "ms",
           "package": Object {
-            "name": undefined,
+            "name": "ms",
             "version": "2.0.0",
           },
           "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
@@ -11311,7 +11311,7 @@ Node {
       "location": "node_modules/tap-mocha-reporter",
       "name": "tap-mocha-reporter",
       "package": Object {
-        "name": undefined,
+        "name": "tap-mocha-reporter",
         "version": "5.0.0",
       },
       "resolved": "https://registry.npmjs.org/tap-mocha-reporter/-/tap-mocha-reporter-5.0.0.tgz",
@@ -11349,7 +11349,7 @@ Node {
       "location": "node_modules/tap-parser",
       "name": "tap-parser",
       "package": Object {
-        "name": undefined,
+        "name": "tap-parser",
         "version": "10.0.1",
       },
       "resolved": "https://registry.npmjs.org/tap-parser/-/tap-parser-10.0.1.tgz",
@@ -11381,7 +11381,7 @@ Node {
       "location": "node_modules/tap-yaml",
       "name": "tap-yaml",
       "package": Object {
-        "name": undefined,
+        "name": "tap-yaml",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/tap-yaml/-/tap-yaml-1.0.0.tgz",
@@ -11407,7 +11407,7 @@ Node {
       "location": "node_modules/tcompare",
       "name": "tcompare",
       "package": Object {
-        "name": undefined,
+        "name": "tcompare",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/tcompare/-/tcompare-3.0.4.tgz",
@@ -11451,7 +11451,7 @@ Node {
       "location": "node_modules/test-exclude",
       "name": "test-exclude",
       "package": Object {
-        "name": undefined,
+        "name": "test-exclude",
         "version": "5.2.3",
       },
       "resolved": "https://registry.npmjs.org/test-exclude/-/test-exclude-5.2.3.tgz",
@@ -11469,7 +11469,7 @@ Node {
       "location": "node_modules/to-fast-properties",
       "name": "to-fast-properties",
       "package": Object {
-        "name": undefined,
+        "name": "to-fast-properties",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz",
@@ -11495,7 +11495,7 @@ Node {
       "location": "node_modules/to-regex-range",
       "name": "to-regex-range",
       "package": Object {
-        "name": undefined,
+        "name": "to-regex-range",
         "version": "5.0.1",
       },
       "resolved": "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz",
@@ -11515,7 +11515,7 @@ Node {
           "location": "node_modules/tough-cookie/node_modules/punycode",
           "name": "punycode",
           "package": Object {
-            "name": undefined,
+            "name": "punycode",
             "version": "1.4.1",
           },
           "resolved": "https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz",
@@ -11547,7 +11547,7 @@ Node {
       "location": "node_modules/tough-cookie",
       "name": "tough-cookie",
       "package": Object {
-        "name": undefined,
+        "name": "tough-cookie",
         "version": "2.4.3",
       },
       "resolved": "https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.4.3.tgz",
@@ -11565,7 +11565,7 @@ Node {
       "location": "node_modules/trivial-deferred",
       "name": "trivial-deferred",
       "package": Object {
-        "name": undefined,
+        "name": "trivial-deferred",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/trivial-deferred/-/trivial-deferred-1.0.1.tgz",
@@ -11615,7 +11615,7 @@ Node {
       "location": "node_modules/ts-node",
       "name": "ts-node",
       "package": Object {
-        "name": undefined,
+        "name": "ts-node",
         "version": "8.5.4",
       },
       "resolved": "https://registry.npmjs.org/ts-node/-/ts-node-8.5.4.tgz",
@@ -11641,7 +11641,7 @@ Node {
       "location": "node_modules/tunnel-agent",
       "name": "tunnel-agent",
       "package": Object {
-        "name": undefined,
+        "name": "tunnel-agent",
         "version": "0.6.0",
       },
       "resolved": "https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz",
@@ -11665,7 +11665,7 @@ Node {
       "location": "node_modules/tweetnacl",
       "name": "tweetnacl",
       "package": Object {
-        "name": undefined,
+        "name": "tweetnacl",
         "version": "0.14.5",
       },
       "resolved": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.5.tgz",
@@ -11691,7 +11691,7 @@ Node {
       "location": "node_modules/typedarray-to-buffer",
       "name": "typedarray-to-buffer",
       "package": Object {
-        "name": undefined,
+        "name": "typedarray-to-buffer",
         "version": "3.1.5",
       },
       "resolved": "https://registry.npmjs.org/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz",
@@ -11709,7 +11709,7 @@ Node {
       "location": "node_modules/typescript",
       "name": "typescript",
       "package": Object {
-        "name": undefined,
+        "name": "typescript",
         "version": "3.7.4",
       },
       "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
@@ -11742,7 +11742,7 @@ Node {
       "name": "uglify-js",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "uglify-js",
         "version": "3.7.3",
       },
       "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
@@ -11762,7 +11762,7 @@ Node {
           "location": "node_modules/unicode-length/node_modules/ansi-regex",
           "name": "ansi-regex",
           "package": Object {
-            "name": undefined,
+            "name": "ansi-regex",
             "version": "2.1.1",
           },
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
@@ -11780,7 +11780,7 @@ Node {
           "location": "node_modules/unicode-length/node_modules/punycode",
           "name": "punycode",
           "package": Object {
-            "name": undefined,
+            "name": "punycode",
             "version": "1.4.1",
           },
           "resolved": "https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz",
@@ -11806,7 +11806,7 @@ Node {
           "location": "node_modules/unicode-length/node_modules/strip-ansi",
           "name": "strip-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "strip-ansi",
             "version": "3.0.1",
           },
           "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
@@ -11838,7 +11838,7 @@ Node {
       "location": "node_modules/unicode-length",
       "name": "unicode-length",
       "package": Object {
-        "name": undefined,
+        "name": "unicode-length",
         "version": "1.0.3",
       },
       "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-1.0.3.tgz",
@@ -11864,7 +11864,7 @@ Node {
       "location": "node_modules/uri-js",
       "name": "uri-js",
       "package": Object {
-        "name": undefined,
+        "name": "uri-js",
         "version": "4.2.2",
       },
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
@@ -11883,7 +11883,7 @@ Node {
       "name": "util-deprecate",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "util-deprecate",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
@@ -11913,7 +11913,7 @@ Node {
       "location": "node_modules/uuid",
       "name": "uuid",
       "package": Object {
-        "name": undefined,
+        "name": "uuid",
         "version": "3.3.3",
       },
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
@@ -11945,7 +11945,7 @@ Node {
       "location": "node_modules/validate-npm-package-license",
       "name": "validate-npm-package-license",
       "package": Object {
-        "name": undefined,
+        "name": "validate-npm-package-license",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz",
@@ -11983,7 +11983,7 @@ Node {
       "location": "node_modules/verror",
       "name": "verror",
       "package": Object {
-        "name": undefined,
+        "name": "verror",
         "version": "1.10.0",
       },
       "resolved": "https://registry.npmjs.org/verror/-/verror-1.10.0.tgz",
@@ -12001,7 +12001,7 @@ Node {
       "location": "node_modules/vlq",
       "name": "vlq",
       "package": Object {
-        "name": undefined,
+        "name": "vlq",
         "version": "0.2.3",
       },
       "resolved": "https://registry.npmjs.org/vlq/-/vlq-0.2.3.tgz",
@@ -12027,7 +12027,7 @@ Node {
       "location": "node_modules/which",
       "name": "which",
       "package": Object {
-        "name": undefined,
+        "name": "which",
         "version": "2.0.2",
       },
       "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
@@ -12045,7 +12045,7 @@ Node {
       "location": "node_modules/which-module",
       "name": "which-module",
       "package": Object {
-        "name": undefined,
+        "name": "which-module",
         "version": "2.0.0",
       },
       "resolved": "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz",
@@ -12063,7 +12063,7 @@ Node {
       "location": "node_modules/wordwrap",
       "name": "wordwrap",
       "package": Object {
-        "name": undefined,
+        "name": "wordwrap",
         "version": "0.0.3",
       },
       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
@@ -12083,7 +12083,7 @@ Node {
           "location": "node_modules/wrap-ansi/node_modules/ansi-regex",
           "name": "ansi-regex",
           "package": Object {
-            "name": undefined,
+            "name": "ansi-regex",
             "version": "2.1.1",
           },
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
@@ -12109,7 +12109,7 @@ Node {
           "location": "node_modules/wrap-ansi/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
           "package": Object {
-            "name": undefined,
+            "name": "is-fullwidth-code-point",
             "version": "1.0.0",
           },
           "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz",
@@ -12147,7 +12147,7 @@ Node {
           "location": "node_modules/wrap-ansi/node_modules/string-width",
           "name": "string-width",
           "package": Object {
-            "name": undefined,
+            "name": "string-width",
             "version": "1.0.2",
           },
           "resolved": "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz",
@@ -12179,7 +12179,7 @@ Node {
           "location": "node_modules/wrap-ansi/node_modules/strip-ansi",
           "name": "strip-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "strip-ansi",
             "version": "3.0.1",
           },
           "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
@@ -12211,7 +12211,7 @@ Node {
       "location": "node_modules/wrap-ansi",
       "name": "wrap-ansi",
       "package": Object {
-        "name": undefined,
+        "name": "wrap-ansi",
         "version": "2.1.0",
       },
       "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-2.1.0.tgz",
@@ -12235,7 +12235,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
@@ -12279,7 +12279,7 @@ Node {
       "location": "node_modules/write-file-atomic",
       "name": "write-file-atomic",
       "package": Object {
-        "name": undefined,
+        "name": "write-file-atomic",
         "version": "3.0.1",
       },
       "resolved": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.1.tgz",
@@ -12297,7 +12297,7 @@ Node {
       "location": "node_modules/y18n",
       "name": "y18n",
       "package": Object {
-        "name": undefined,
+        "name": "y18n",
         "version": "4.0.0",
       },
       "resolved": "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz",
@@ -12315,7 +12315,7 @@ Node {
       "location": "node_modules/yallist",
       "name": "yallist",
       "package": Object {
-        "name": undefined,
+        "name": "yallist",
         "version": "2.1.2",
       },
       "resolved": "https://registry.npmjs.org/yallist/-/yallist-2.1.2.tgz",
@@ -12341,7 +12341,7 @@ Node {
       "location": "node_modules/yaml",
       "name": "yaml",
       "package": Object {
-        "name": undefined,
+        "name": "yaml",
         "version": "1.7.2",
       },
       "resolved": "https://registry.npmjs.org/yaml/-/yaml-1.7.2.tgz",
@@ -12359,7 +12359,7 @@ Node {
       "location": "node_modules/yapool",
       "name": "yapool",
       "package": Object {
-        "name": undefined,
+        "name": "yapool",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/yapool/-/yapool-1.0.0.tgz",
@@ -12379,7 +12379,7 @@ Node {
           "location": "node_modules/yargs/node_modules/ansi-regex",
           "name": "ansi-regex",
           "package": Object {
-            "name": undefined,
+            "name": "ansi-regex",
             "version": "4.1.0",
           },
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
@@ -12417,7 +12417,7 @@ Node {
           "location": "node_modules/yargs/node_modules/cliui",
           "name": "cliui",
           "package": Object {
-            "name": undefined,
+            "name": "cliui",
             "version": "5.0.0",
           },
           "resolved": "https://registry.npmjs.org/cliui/-/cliui-5.0.0.tgz",
@@ -12467,7 +12467,7 @@ Node {
           "location": "node_modules/yargs/node_modules/string-width",
           "name": "string-width",
           "package": Object {
-            "name": undefined,
+            "name": "string-width",
             "version": "3.1.0",
           },
           "resolved": "https://registry.npmjs.org/string-width/-/string-width-3.1.0.tgz",
@@ -12505,7 +12505,7 @@ Node {
           "location": "node_modules/yargs/node_modules/strip-ansi",
           "name": "strip-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "strip-ansi",
             "version": "5.2.0",
           },
           "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
@@ -12543,7 +12543,7 @@ Node {
           "location": "node_modules/yargs/node_modules/wrap-ansi",
           "name": "wrap-ansi",
           "package": Object {
-            "name": undefined,
+            "name": "wrap-ansi",
             "version": "5.1.0",
           },
           "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-5.1.0.tgz",
@@ -12623,7 +12623,7 @@ Node {
       "location": "node_modules/yargs",
       "name": "yargs",
       "package": Object {
-        "name": undefined,
+        "name": "yargs",
         "version": "13.3.0",
       },
       "resolved": "https://registry.npmjs.org/yargs/-/yargs-13.3.0.tgz",
@@ -12661,7 +12661,7 @@ Node {
       "location": "node_modules/yargs-parser",
       "name": "yargs-parser",
       "package": Object {
-        "name": undefined,
+        "name": "yargs-parser",
         "version": "13.1.1",
       },
       "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-13.1.1.tgz",
@@ -12679,7 +12679,7 @@ Node {
       "location": "node_modules/yn",
       "name": "yn",
       "package": Object {
-        "name": undefined,
+        "name": "yn",
         "version": "3.1.1",
       },
       "resolved": "https://registry.npmjs.org/yn/-/yn-3.1.1.tgz",
@@ -12732,7 +12732,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
@@ -12749,7 +12749,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
@@ -12766,7 +12766,7 @@ Node {
   "location": "",
   "name": "old-package-lock",
   "package": Object {
-    "name": undefined,
+    "name": "old-package-lock",
     "version": undefined,
   },
   "resolved": null,
@@ -12778,7 +12778,7 @@ Node {
   "location": "",
   "name": "empty-with-shrinkwrap",
   "package": Object {
-    "name": undefined,
+    "name": "empty-with-shrinkwrap",
     "version": undefined,
   },
   "resolved": null,
@@ -12801,7 +12801,7 @@ Node {
       "location": "node_modules/diff-frag",
       "name": "diff-frag",
       "package": Object {
-        "name": undefined,
+        "name": "diff-frag",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/diff-frag/-/diff-frag-1.0.1.tgz",
@@ -12833,7 +12833,7 @@ Node {
       "name": "inflight",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inflight",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -12864,7 +12864,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
@@ -12882,7 +12882,7 @@ Node {
       "location": "node_modules/tcompare",
       "name": "tcompare",
       "package": Object {
-        "name": undefined,
+        "name": "tcompare",
         "version": "4.0.1",
       },
       "resolved": "https://registry.npmjs.org/tcompare/-/tcompare-4.0.1.tgz",
@@ -12905,7 +12905,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
@@ -13025,7 +13025,7 @@ Node {
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "package": Object {
-                "name": undefined,
+                "name": "@otherscope/othername",
                 "version": undefined,
               },
               "resolved": "fake resolved value",
@@ -13050,7 +13050,7 @@ Node {
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "package": Object {
-            "name": undefined,
+            "name": "@scope/name",
             "version": undefined,
           },
           "resolved": null,
@@ -13094,7 +13094,7 @@ Node {
       "name": "balanced-match",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "balanced-match",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
@@ -13126,7 +13126,7 @@ Node {
       "name": "brace-expansion",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "brace-expansion",
         "version": "1.1.11",
       },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -13154,7 +13154,7 @@ Node {
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
           "package": Object {
-            "name": undefined,
+            "name": "a",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
@@ -13180,7 +13180,7 @@ Node {
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
           "package": Object {
-            "name": undefined,
+            "name": "b",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
@@ -13198,7 +13198,7 @@ Node {
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
           "package": Object {
-            "name": undefined,
+            "name": "c",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
@@ -13223,7 +13223,7 @@ Node {
       "location": "node_modules/bundler",
       "name": "bundler",
       "package": Object {
-        "name": undefined,
+        "name": "bundler",
         "version": "1.2.3",
       },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
@@ -13241,7 +13241,7 @@ Node {
       "name": "concat-map",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "concat-map",
         "version": "0.0.1",
       },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
@@ -13259,7 +13259,7 @@ Node {
       "name": "fs.realpath",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "fs.realpath",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
@@ -13276,7 +13276,7 @@ Node {
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "package": Object {
-        "name": undefined,
+        "name": "full-git-url",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -13293,7 +13293,7 @@ Node {
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "package": Object {
-        "name": undefined,
+        "name": "ghshort",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -13302,7 +13302,7 @@ Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
       "package": Object {
-        "name": undefined,
+        "name": "ghtgz",
         "version": undefined,
       },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -13358,7 +13358,7 @@ Node {
       "name": "glob",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "glob",
         "version": "7.1.4",
       },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
@@ -13390,7 +13390,7 @@ Node {
       "name": "inflight",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inflight",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -13408,7 +13408,7 @@ Node {
       "name": "inherits",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inherits",
         "version": "2.0.4",
       },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
@@ -13434,7 +13434,7 @@ Node {
       "name": "minimatch",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "minimatch",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
@@ -13482,7 +13482,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "file:../../once-1.4.0.tgz",
@@ -13500,7 +13500,7 @@ Node {
       "name": "path-is-absolute",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "path-is-absolute",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
@@ -13526,7 +13526,7 @@ Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
       "package": Object {
-        "name": undefined,
+        "name": "really-bad-invalid",
         "version": undefined,
       },
       "resolved": null,
@@ -13577,7 +13577,7 @@ Node {
       "location": "node_modules/rimraf",
       "name": "rimraf",
       "package": Object {
-        "name": undefined,
+        "name": "rimraf",
         "version": "2.6.3",
       },
       "resolved": "file:../../rimraf-2.6.3.tgz",
@@ -13607,7 +13607,7 @@ Node {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "file:abbrev",
@@ -13629,7 +13629,7 @@ Node {
       "location": "node_modules/tarball",
       "name": "tarball",
       "package": Object {
-        "name": undefined,
+        "name": "tarball",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -13639,7 +13639,7 @@ Node {
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
       "package": Object {
-        "name": undefined,
+        "name": "tarball-no-integrity",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -13648,7 +13648,7 @@ Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
       "package": Object {
-        "name": undefined,
+        "name": "unhosted-git",
         "version": undefined,
       },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -13671,7 +13671,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
@@ -13769,7 +13769,7 @@ Node {
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "package": Object {
-                "name": undefined,
+                "name": "@otherscope/othername",
                 "version": undefined,
               },
               "resolved": "fake resolved value",
@@ -13794,7 +13794,7 @@ Node {
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "package": Object {
-            "name": undefined,
+            "name": "@scope/name",
             "version": undefined,
           },
           "resolved": null,
@@ -13838,7 +13838,7 @@ Node {
       "name": "balanced-match",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "balanced-match",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
@@ -13870,7 +13870,7 @@ Node {
       "name": "brace-expansion",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "brace-expansion",
         "version": "1.1.11",
       },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -13898,7 +13898,7 @@ Node {
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
           "package": Object {
-            "name": undefined,
+            "name": "a",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
@@ -13924,7 +13924,7 @@ Node {
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
           "package": Object {
-            "name": undefined,
+            "name": "b",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
@@ -13942,7 +13942,7 @@ Node {
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
           "package": Object {
-            "name": undefined,
+            "name": "c",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
@@ -13967,7 +13967,7 @@ Node {
       "location": "node_modules/bundler",
       "name": "bundler",
       "package": Object {
-        "name": undefined,
+        "name": "bundler",
         "version": "1.2.3",
       },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
@@ -13985,7 +13985,7 @@ Node {
       "name": "concat-map",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "concat-map",
         "version": "0.0.1",
       },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
@@ -14003,7 +14003,7 @@ Node {
       "name": "fs.realpath",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "fs.realpath",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
@@ -14020,7 +14020,7 @@ Node {
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "package": Object {
-        "name": undefined,
+        "name": "full-git-url",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14037,7 +14037,7 @@ Node {
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "package": Object {
-        "name": undefined,
+        "name": "ghshort",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14046,7 +14046,7 @@ Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
       "package": Object {
-        "name": undefined,
+        "name": "ghtgz",
         "version": undefined,
       },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14102,7 +14102,7 @@ Node {
       "name": "glob",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "glob",
         "version": "7.1.4",
       },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
@@ -14134,7 +14134,7 @@ Node {
       "name": "inflight",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inflight",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -14152,7 +14152,7 @@ Node {
       "name": "inherits",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inherits",
         "version": "2.0.4",
       },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
@@ -14178,7 +14178,7 @@ Node {
       "name": "minimatch",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "minimatch",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
@@ -14226,7 +14226,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "file:../../once-1.4.0.tgz",
@@ -14244,7 +14244,7 @@ Node {
       "name": "path-is-absolute",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "path-is-absolute",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
@@ -14270,7 +14270,7 @@ Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
       "package": Object {
-        "name": undefined,
+        "name": "really-bad-invalid",
         "version": undefined,
       },
       "resolved": null,
@@ -14321,7 +14321,7 @@ Node {
       "location": "node_modules/rimraf",
       "name": "rimraf",
       "package": Object {
-        "name": undefined,
+        "name": "rimraf",
         "version": "2.6.3",
       },
       "resolved": "file:../../rimraf-2.6.3.tgz",
@@ -14351,7 +14351,7 @@ Node {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "file:abbrev",
@@ -14373,7 +14373,7 @@ Node {
       "location": "node_modules/tarball",
       "name": "tarball",
       "package": Object {
-        "name": undefined,
+        "name": "tarball",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -14383,7 +14383,7 @@ Node {
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
       "package": Object {
-        "name": undefined,
+        "name": "tarball-no-integrity",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -14392,7 +14392,7 @@ Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
       "package": Object {
-        "name": undefined,
+        "name": "unhosted-git",
         "version": undefined,
       },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14415,7 +14415,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
@@ -14513,7 +14513,7 @@ Node {
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "package": Object {
-                "name": undefined,
+                "name": "@otherscope/othername",
                 "version": undefined,
               },
               "resolved": "fake resolved value",
@@ -14538,7 +14538,7 @@ Node {
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "package": Object {
-            "name": undefined,
+            "name": "@scope/name",
             "version": undefined,
           },
           "resolved": null,
@@ -14555,7 +14555,7 @@ Node {
       "location": "node_modules/abbrev",
       "name": "abbrev",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -14573,7 +14573,7 @@ Node {
       "name": "balanced-match",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "balanced-match",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
@@ -14605,7 +14605,7 @@ Node {
       "name": "brace-expansion",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "brace-expansion",
         "version": "1.1.11",
       },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -14633,7 +14633,7 @@ Node {
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
           "package": Object {
-            "name": undefined,
+            "name": "a",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
@@ -14659,7 +14659,7 @@ Node {
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
           "package": Object {
-            "name": undefined,
+            "name": "b",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
@@ -14677,7 +14677,7 @@ Node {
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
           "package": Object {
-            "name": undefined,
+            "name": "c",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
@@ -14702,7 +14702,7 @@ Node {
       "location": "node_modules/bundler",
       "name": "bundler",
       "package": Object {
-        "name": undefined,
+        "name": "bundler",
         "version": "1.2.3",
       },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
@@ -14720,7 +14720,7 @@ Node {
       "name": "concat-map",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "concat-map",
         "version": "0.0.1",
       },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
@@ -14738,7 +14738,7 @@ Node {
       "name": "fs.realpath",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "fs.realpath",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
@@ -14755,7 +14755,7 @@ Node {
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "package": Object {
-        "name": undefined,
+        "name": "full-git-url",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14772,7 +14772,7 @@ Node {
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "package": Object {
-        "name": undefined,
+        "name": "ghshort",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14781,7 +14781,7 @@ Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
       "package": Object {
-        "name": undefined,
+        "name": "ghtgz",
         "version": undefined,
       },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -14837,7 +14837,7 @@ Node {
       "name": "glob",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "glob",
         "version": "7.1.4",
       },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
@@ -14869,7 +14869,7 @@ Node {
       "name": "inflight",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inflight",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -14887,7 +14887,7 @@ Node {
       "name": "inherits",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inherits",
         "version": "2.0.4",
       },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
@@ -14913,7 +14913,7 @@ Node {
       "name": "minimatch",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "minimatch",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
@@ -14961,7 +14961,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "file:../../once-1.4.0.tgz",
@@ -14979,7 +14979,7 @@ Node {
       "name": "path-is-absolute",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "path-is-absolute",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
@@ -15005,7 +15005,7 @@ Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
       "package": Object {
-        "name": undefined,
+        "name": "really-bad-invalid",
         "version": undefined,
       },
       "resolved": null,
@@ -15056,7 +15056,7 @@ Node {
       "location": "node_modules/rimraf",
       "name": "rimraf",
       "package": Object {
-        "name": undefined,
+        "name": "rimraf",
         "version": "2.6.3",
       },
       "resolved": "file:../../rimraf-2.6.3.tgz",
@@ -15086,7 +15086,7 @@ Node {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "file:abbrev",
@@ -15108,7 +15108,7 @@ Node {
       "location": "node_modules/tarball",
       "name": "tarball",
       "package": Object {
-        "name": undefined,
+        "name": "tarball",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -15118,7 +15118,7 @@ Node {
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
       "package": Object {
-        "name": undefined,
+        "name": "tarball-no-integrity",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -15127,7 +15127,7 @@ Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
       "package": Object {
-        "name": undefined,
+        "name": "unhosted-git",
         "version": undefined,
       },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -15150,7 +15150,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
@@ -15248,7 +15248,7 @@ Node {
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
               "package": Object {
-                "name": undefined,
+                "name": "@otherscope/othername",
                 "version": undefined,
               },
               "resolved": "fake resolved value",
@@ -15273,7 +15273,7 @@ Node {
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
           "package": Object {
-            "name": undefined,
+            "name": "@scope/name",
             "version": undefined,
           },
           "resolved": null,
@@ -15282,7 +15282,7 @@ Node {
       "location": "node_modules/abbrev",
       "name": "abbrev",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -15300,7 +15300,7 @@ Node {
       "name": "balanced-match",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "balanced-match",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
@@ -15332,7 +15332,7 @@ Node {
       "name": "brace-expansion",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "brace-expansion",
         "version": "1.1.11",
       },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -15360,7 +15360,7 @@ Node {
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
           "package": Object {
-            "name": undefined,
+            "name": "a",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
@@ -15386,7 +15386,7 @@ Node {
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
           "package": Object {
-            "name": undefined,
+            "name": "b",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
@@ -15404,7 +15404,7 @@ Node {
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
           "package": Object {
-            "name": undefined,
+            "name": "c",
             "version": "1.2.3",
           },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
@@ -15421,7 +15421,7 @@ Node {
       "location": "node_modules/bundler",
       "name": "bundler",
       "package": Object {
-        "name": undefined,
+        "name": "bundler",
         "version": "1.2.3",
       },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
@@ -15439,7 +15439,7 @@ Node {
       "name": "concat-map",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "concat-map",
         "version": "0.0.1",
       },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
@@ -15457,7 +15457,7 @@ Node {
       "name": "fs.realpath",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "fs.realpath",
         "version": "1.0.0",
       },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
@@ -15466,7 +15466,7 @@ Node {
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
       "package": Object {
-        "name": undefined,
+        "name": "full-git-url",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -15475,7 +15475,7 @@ Node {
       "location": "node_modules/ghshort",
       "name": "ghshort",
       "package": Object {
-        "name": undefined,
+        "name": "ghshort",
         "version": undefined,
       },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -15484,7 +15484,7 @@ Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
       "package": Object {
-        "name": undefined,
+        "name": "ghtgz",
         "version": undefined,
       },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -15540,7 +15540,7 @@ Node {
       "name": "glob",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "glob",
         "version": "7.1.4",
       },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
@@ -15572,7 +15572,7 @@ Node {
       "name": "inflight",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inflight",
         "version": "1.0.6",
       },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
@@ -15590,7 +15590,7 @@ Node {
       "name": "inherits",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "inherits",
         "version": "2.0.4",
       },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
@@ -15616,7 +15616,7 @@ Node {
       "name": "minimatch",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "minimatch",
         "version": "3.0.4",
       },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
@@ -15656,7 +15656,7 @@ Node {
       "location": "node_modules/once",
       "name": "once",
       "package": Object {
-        "name": undefined,
+        "name": "once",
         "version": "1.4.0",
       },
       "resolved": "file:../../once-1.4.0.tgz",
@@ -15674,7 +15674,7 @@ Node {
       "name": "path-is-absolute",
       "optional": true,
       "package": Object {
-        "name": undefined,
+        "name": "path-is-absolute",
         "version": "1.0.1",
       },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
@@ -15692,7 +15692,7 @@ Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
       "package": Object {
-        "name": undefined,
+        "name": "really-bad-invalid",
         "version": undefined,
       },
       "resolved": null,
@@ -15727,7 +15727,7 @@ Node {
       "location": "node_modules/rimraf",
       "name": "rimraf",
       "package": Object {
-        "name": undefined,
+        "name": "rimraf",
         "version": "2.6.3",
       },
       "resolved": "file:../../rimraf-2.6.3.tgz",
@@ -15749,7 +15749,7 @@ Node {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev",
         "version": "1.1.1",
       },
       "resolved": "file:abbrev",
@@ -15763,7 +15763,7 @@ Node {
       "location": "node_modules/tarball",
       "name": "tarball",
       "package": Object {
-        "name": undefined,
+        "name": "tarball",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -15773,7 +15773,7 @@ Node {
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
       "package": Object {
-        "name": undefined,
+        "name": "tarball-no-integrity",
         "version": undefined,
       },
       "resolved": "file:../../abbrev-1.1.1.tgz",
@@ -15782,7 +15782,7 @@ Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
       "package": Object {
-        "name": undefined,
+        "name": "unhosted-git",
         "version": undefined,
       },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
@@ -15805,7 +15805,7 @@ Node {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "package": Object {
-        "name": undefined,
+        "name": "wrappy",
         "version": "1.0.2",
       },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",

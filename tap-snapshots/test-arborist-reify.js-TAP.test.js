@@ -156,7 +156,7 @@ exports[`test/arborist/reify.js TAP add a dep present in the tree, with v1 shrin
 {
   "dependencies": {
     "once": "^1.4.0",
-    "wrappy": "npm:undefined@^1.0.2"
+    "wrappy": "^1.0.2"
   }
 }
 

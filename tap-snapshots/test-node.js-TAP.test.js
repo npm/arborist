@@ -5585,7 +5585,6 @@ Object {
   },
   "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
-  "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
   "version": "1.2.3",
 }
@@ -5598,7 +5597,6 @@ Object {
   },
   "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
-  "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
   "version": "1.2.3",
 }
@@ -5619,7 +5617,6 @@ Object {
   },
   "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
-  "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
   "version": "1.2.3",
 }
@@ -5652,7 +5649,6 @@ Object {
   },
   "extraneous": true,
   "integrity": "sha512-blortzeyblartzeyfartz",
-  "name": "child",
   "resolved": "https://child.com/-/child-1.2.3.tgz",
   "version": "1.2.3",
 }

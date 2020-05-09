@@ -34,6 +34,10 @@ Node {
       },
       "location": "node_modules/@babel/code-frame",
       "name": "@babel/code-frame",
+      "package": Object {
+        "name": undefined,
+        "version": "7.5.5",
+      },
       "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.5.5.tgz",
     },
     "@babel/generator" => Node {
@@ -50,6 +54,10 @@ Node {
           },
           "location": "node_modules/@babel/generator/node_modules/source-map",
           "name": "source-map",
+          "package": Object {
+            "name": undefined,
+            "version": "0.5.7",
+          },
           "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz",
         },
       },
@@ -96,6 +104,10 @@ Node {
       },
       "location": "node_modules/@babel/generator",
       "name": "@babel/generator",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.7",
+      },
       "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.7.tgz",
     },
     "@babel/helper-function-name" => Node {
@@ -130,6 +142,10 @@ Node {
       },
       "location": "node_modules/@babel/helper-function-name",
       "name": "@babel/helper-function-name",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.4",
+      },
       "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz",
     },
     "@babel/helper-get-function-arity" => Node {
@@ -152,6 +168,10 @@ Node {
       },
       "location": "node_modules/@babel/helper-get-function-arity",
       "name": "@babel/helper-get-function-arity",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.4",
+      },
       "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.7.4.tgz",
     },
     "@babel/helper-split-export-declaration" => Node {
@@ -174,6 +194,10 @@ Node {
       },
       "location": "node_modules/@babel/helper-split-export-declaration",
       "name": "@babel/helper-split-export-declaration",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.4",
+      },
       "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.7.4.tgz",
     },
     "@babel/highlight" => Node {
@@ -208,6 +232,10 @@ Node {
       },
       "location": "node_modules/@babel/highlight",
       "name": "@babel/highlight",
+      "package": Object {
+        "name": undefined,
+        "version": "7.5.0",
+      },
       "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.5.0.tgz",
     },
     "@babel/parser" => Node {
@@ -234,6 +262,10 @@ Node {
       },
       "location": "node_modules/@babel/parser",
       "name": "@babel/parser",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.7",
+      },
       "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.7.tgz",
     },
     "@babel/runtime" => Node {
@@ -256,6 +288,10 @@ Node {
       },
       "location": "node_modules/@babel/runtime",
       "name": "@babel/runtime",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.7",
+      },
       "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.7.tgz",
     },
     "@babel/template" => Node {
@@ -296,6 +332,10 @@ Node {
       },
       "location": "node_modules/@babel/template",
       "name": "@babel/template",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.4",
+      },
       "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.7.4.tgz",
     },
     "@babel/traverse" => Node {
@@ -366,6 +406,10 @@ Node {
       },
       "location": "node_modules/@babel/traverse",
       "name": "@babel/traverse",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.4",
+      },
       "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.7.4.tgz",
     },
     "@babel/types" => Node {
@@ -436,6 +480,10 @@ Node {
       },
       "location": "node_modules/@babel/types",
       "name": "@babel/types",
+      "package": Object {
+        "name": undefined,
+        "version": "7.7.4",
+      },
       "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
     },
     "@isaacs/testing-bundledeps" => Node {
@@ -460,6 +508,10 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
           "name": "@isaacs/testing-bundledeps-a",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.0",
+          },
           "resolved": null,
         },
         "@isaacs/testing-bundledeps-b" => Node {
@@ -474,6 +526,10 @@ Node {
           },
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
           "name": "@isaacs/testing-bundledeps-b",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.0",
+          },
           "resolved": null,
         },
       },
@@ -501,6 +557,10 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps",
       "name": "@isaacs/testing-bundledeps",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
     },
     "@isaacs/testing-bundledeps-b" => Node {
@@ -514,6 +574,10 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-b",
       "name": "@isaacs/testing-bundledeps-b",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
     },
     "@isaacs/testing-bundledeps-c" => Node {
@@ -535,6 +599,10 @@ Node {
       },
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
     },
     "abbrev" => Node {
@@ -549,6 +617,10 @@ Node {
       "location": "node_modules/abbrev",
       "name": "abbrev",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "ajv" => Node {
@@ -589,6 +661,10 @@ Node {
       },
       "location": "node_modules/ajv",
       "name": "ajv",
+      "package": Object {
+        "name": undefined,
+        "version": "6.10.2",
+      },
       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",
     },
     "ansi-regex" => Node {
@@ -603,6 +679,10 @@ Node {
       },
       "location": "node_modules/ansi-regex",
       "name": "ansi-regex",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-3.0.0.tgz",
     },
     "ansi-styles" => Node {
@@ -631,6 +711,10 @@ Node {
       },
       "location": "node_modules/ansi-styles",
       "name": "ansi-styles",
+      "package": Object {
+        "name": undefined,
+        "version": "3.2.1",
+      },
       "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
     },
     "anymatch" => Node {
@@ -659,6 +743,10 @@ Node {
       },
       "location": "node_modules/anymatch",
       "name": "anymatch",
+      "package": Object {
+        "name": undefined,
+        "version": "3.1.1",
+      },
       "resolved": "https://registry.npmjs.org/anymatch/-/anymatch-3.1.1.tgz",
     },
     "append-transform" => Node {
@@ -681,6 +769,10 @@ Node {
       },
       "location": "node_modules/append-transform",
       "name": "append-transform",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/append-transform/-/append-transform-1.0.0.tgz",
     },
     "archy" => Node {
@@ -701,6 +793,10 @@ Node {
       },
       "location": "node_modules/archy",
       "name": "archy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/archy/-/archy-1.0.0.tgz",
     },
     "arg" => Node {
@@ -715,6 +811,10 @@ Node {
       },
       "location": "node_modules/arg",
       "name": "arg",
+      "package": Object {
+        "name": undefined,
+        "version": "4.1.2",
+      },
       "resolved": "https://registry.npmjs.org/arg/-/arg-4.1.2.tgz",
     },
     "argparse" => Node {
@@ -737,6 +837,10 @@ Node {
       },
       "location": "node_modules/argparse",
       "name": "argparse",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.10",
+      },
       "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
     },
     "asn1" => Node {
@@ -759,6 +863,10 @@ Node {
       },
       "location": "node_modules/asn1",
       "name": "asn1",
+      "package": Object {
+        "name": undefined,
+        "version": "0.2.4",
+      },
       "resolved": "https://registry.npmjs.org/asn1/-/asn1-0.2.4.tgz",
     },
     "assert-plus" => Node {
@@ -803,6 +911,10 @@ Node {
       },
       "location": "node_modules/assert-plus",
       "name": "assert-plus",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/assert-plus/-/assert-plus-1.0.0.tgz",
     },
     "async-hook-domain" => Node {
@@ -825,6 +937,10 @@ Node {
       },
       "location": "node_modules/async-hook-domain",
       "name": "async-hook-domain",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.3",
+      },
       "resolved": "https://registry.npmjs.org/async-hook-domain/-/async-hook-domain-1.1.3.tgz",
     },
     "asynckit" => Node {
@@ -839,6 +955,10 @@ Node {
       },
       "location": "node_modules/asynckit",
       "name": "asynckit",
+      "package": Object {
+        "name": undefined,
+        "version": "0.4.0",
+      },
       "resolved": "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz",
     },
     "aws-sign2" => Node {
@@ -853,6 +973,10 @@ Node {
       },
       "location": "node_modules/aws-sign2",
       "name": "aws-sign2",
+      "package": Object {
+        "name": undefined,
+        "version": "0.7.0",
+      },
       "resolved": "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.7.0.tgz",
     },
     "aws4" => Node {
@@ -867,6 +991,10 @@ Node {
       },
       "location": "node_modules/aws4",
       "name": "aws4",
+      "package": Object {
+        "name": undefined,
+        "version": "1.9.0",
+      },
       "resolved": "https://registry.npmjs.org/aws4/-/aws4-1.9.0.tgz",
     },
     "balanced-match" => Node {
@@ -881,6 +1009,10 @@ Node {
       },
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "bcrypt-pbkdf" => Node {
@@ -903,6 +1035,10 @@ Node {
       },
       "location": "node_modules/bcrypt-pbkdf",
       "name": "bcrypt-pbkdf",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz",
     },
     "binary-extensions" => Node {
@@ -917,6 +1053,10 @@ Node {
       },
       "location": "node_modules/binary-extensions",
       "name": "binary-extensions",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.0.0.tgz",
     },
     "bind-obj-methods" => Node {
@@ -931,6 +1071,10 @@ Node {
       },
       "location": "node_modules/bind-obj-methods",
       "name": "bind-obj-methods",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/bind-obj-methods/-/bind-obj-methods-2.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -959,6 +1103,10 @@ Node {
       },
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.11",
+      },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "braces" => Node {
@@ -981,6 +1129,10 @@ Node {
       },
       "location": "node_modules/braces",
       "name": "braces",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.2",
+      },
       "resolved": "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz",
     },
     "browser-process-hrtime" => Node {
@@ -995,6 +1147,10 @@ Node {
       },
       "location": "node_modules/browser-process-hrtime",
       "name": "browser-process-hrtime",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/browser-process-hrtime/-/browser-process-hrtime-1.0.0.tgz",
     },
     "buffer-from" => Node {
@@ -1009,6 +1165,10 @@ Node {
       },
       "location": "node_modules/buffer-from",
       "name": "buffer-from",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz",
     },
     "caching-transform" => Node {
@@ -1045,6 +1205,10 @@ Node {
           },
           "location": "node_modules/caching-transform/node_modules/write-file-atomic",
           "name": "write-file-atomic",
+          "package": Object {
+            "name": undefined,
+            "version": "2.4.3",
+          },
           "resolved": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-2.4.3.tgz",
         },
       },
@@ -1085,6 +1249,10 @@ Node {
       },
       "location": "node_modules/caching-transform",
       "name": "caching-transform",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.2",
+      },
       "resolved": "https://registry.npmjs.org/caching-transform/-/caching-transform-3.0.2.tgz",
     },
     "camelcase" => Node {
@@ -1099,6 +1267,10 @@ Node {
       },
       "location": "node_modules/camelcase",
       "name": "camelcase",
+      "package": Object {
+        "name": undefined,
+        "version": "5.3.1",
+      },
       "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz",
     },
     "caseless" => Node {
@@ -1113,6 +1285,10 @@ Node {
       },
       "location": "node_modules/caseless",
       "name": "caseless",
+      "package": Object {
+        "name": undefined,
+        "version": "0.12.0",
+      },
       "resolved": "https://registry.npmjs.org/caseless/-/caseless-0.12.0.tgz",
     },
     "chalk" => Node {
@@ -1147,6 +1323,10 @@ Node {
       },
       "location": "node_modules/chalk",
       "name": "chalk",
+      "package": Object {
+        "name": undefined,
+        "version": "2.4.2",
+      },
       "resolved": "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz",
     },
     "chokidar" => Node {
@@ -1211,6 +1391,10 @@ Node {
       },
       "location": "node_modules/chokidar",
       "name": "chokidar",
+      "package": Object {
+        "name": undefined,
+        "version": "3.3.1",
+      },
       "resolved": "https://registry.npmjs.org/chokidar/-/chokidar-3.3.1.tgz",
     },
     "cliui" => Node {
@@ -1245,6 +1429,10 @@ Node {
       },
       "location": "node_modules/cliui",
       "name": "cliui",
+      "package": Object {
+        "name": undefined,
+        "version": "4.1.0",
+      },
       "resolved": "https://registry.npmjs.org/cliui/-/cliui-4.1.0.tgz",
     },
     "code-point-at" => Node {
@@ -1259,6 +1447,10 @@ Node {
       },
       "location": "node_modules/code-point-at",
       "name": "code-point-at",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.0",
+      },
       "resolved": "https://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz",
     },
     "color-convert" => Node {
@@ -1281,6 +1473,10 @@ Node {
       },
       "location": "node_modules/color-convert",
       "name": "color-convert",
+      "package": Object {
+        "name": undefined,
+        "version": "1.9.3",
+      },
       "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
     },
     "color-name" => Node {
@@ -1295,6 +1491,10 @@ Node {
       },
       "location": "node_modules/color-name",
       "name": "color-name",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.3",
+      },
       "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
     },
     "color-support" => Node {
@@ -1315,6 +1515,10 @@ Node {
       },
       "location": "node_modules/color-support",
       "name": "color-support",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.3",
+      },
       "resolved": "https://registry.npmjs.org/color-support/-/color-support-1.1.3.tgz",
     },
     "combined-stream" => Node {
@@ -1343,6 +1547,10 @@ Node {
       },
       "location": "node_modules/combined-stream",
       "name": "combined-stream",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.8",
+      },
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
     },
     "commander" => Node {
@@ -1358,6 +1566,10 @@ Node {
       "location": "node_modules/commander",
       "name": "commander",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.20.3",
+      },
       "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
     },
     "commondir" => Node {
@@ -1372,6 +1584,10 @@ Node {
       },
       "location": "node_modules/commondir",
       "name": "commondir",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz",
     },
     "concat-map" => Node {
@@ -1386,6 +1602,10 @@ Node {
       },
       "location": "node_modules/concat-map",
       "name": "concat-map",
+      "package": Object {
+        "name": undefined,
+        "version": "0.0.1",
+      },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "convert-source-map" => Node {
@@ -1402,6 +1622,10 @@ Node {
           },
           "location": "node_modules/convert-source-map/node_modules/safe-buffer",
           "name": "safe-buffer",
+          "package": Object {
+            "name": undefined,
+            "version": "5.1.2",
+          },
           "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
         },
       },
@@ -1424,6 +1648,10 @@ Node {
       },
       "location": "node_modules/convert-source-map",
       "name": "convert-source-map",
+      "package": Object {
+        "name": undefined,
+        "version": "1.7.0",
+      },
       "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.7.0.tgz",
     },
     "core-util-is" => Node {
@@ -1444,6 +1672,10 @@ Node {
       },
       "location": "node_modules/core-util-is",
       "name": "core-util-is",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
     },
     "coveralls" => Node {
@@ -1490,6 +1722,10 @@ Node {
       },
       "location": "node_modules/coveralls",
       "name": "coveralls",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.9",
+      },
       "resolved": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.9.tgz",
     },
     "cp-file" => Node {
@@ -1536,6 +1772,10 @@ Node {
       },
       "location": "node_modules/cp-file",
       "name": "cp-file",
+      "package": Object {
+        "name": undefined,
+        "version": "6.2.0",
+      },
       "resolved": "https://registry.npmjs.org/cp-file/-/cp-file-6.2.0.tgz",
     },
     "cross-spawn" => Node {
@@ -1560,6 +1800,10 @@ Node {
           },
           "location": "node_modules/cross-spawn/node_modules/which",
           "name": "which",
+          "package": Object {
+            "name": undefined,
+            "version": "1.3.1",
+          },
           "resolved": "https://registry.npmjs.org/which/-/which-1.3.1.tgz",
         },
       },
@@ -1588,6 +1832,10 @@ Node {
       },
       "location": "node_modules/cross-spawn",
       "name": "cross-spawn",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.2",
+      },
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
     },
     "dashdash" => Node {
@@ -1610,6 +1858,10 @@ Node {
       },
       "location": "node_modules/dashdash",
       "name": "dashdash",
+      "package": Object {
+        "name": undefined,
+        "version": "1.14.1",
+      },
       "resolved": "https://registry.npmjs.org/dashdash/-/dashdash-1.14.1.tgz",
     },
     "debug" => Node {
@@ -1638,6 +1890,10 @@ Node {
       },
       "location": "node_modules/debug",
       "name": "debug",
+      "package": Object {
+        "name": undefined,
+        "version": "4.1.1",
+      },
       "resolved": "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz",
     },
     "decamelize" => Node {
@@ -1652,6 +1908,10 @@ Node {
       },
       "location": "node_modules/decamelize",
       "name": "decamelize",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.0",
+      },
       "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz",
     },
     "default-require-extensions" => Node {
@@ -1674,6 +1934,10 @@ Node {
       },
       "location": "node_modules/default-require-extensions",
       "name": "default-require-extensions",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/default-require-extensions/-/default-require-extensions-2.0.0.tgz",
     },
     "delayed-stream" => Node {
@@ -1688,6 +1952,10 @@ Node {
       },
       "location": "node_modules/delayed-stream",
       "name": "delayed-stream",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/delayed-stream/-/delayed-stream-1.0.0.tgz",
     },
     "diff" => Node {
@@ -1708,6 +1976,10 @@ Node {
       },
       "location": "node_modules/diff",
       "name": "diff",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.1",
+      },
       "resolved": "https://registry.npmjs.org/diff/-/diff-4.0.1.tgz",
     },
     "diff-frag" => Node {
@@ -1722,6 +1994,10 @@ Node {
       },
       "location": "node_modules/diff-frag",
       "name": "diff-frag",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/diff-frag/-/diff-frag-1.0.1.tgz",
     },
     "ecc-jsbn" => Node {
@@ -1750,6 +2026,10 @@ Node {
       },
       "location": "node_modules/ecc-jsbn",
       "name": "ecc-jsbn",
+      "package": Object {
+        "name": undefined,
+        "version": "0.1.2",
+      },
       "resolved": "https://registry.npmjs.org/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz",
     },
     "emoji-regex" => Node {
@@ -1764,6 +2044,10 @@ Node {
       },
       "location": "node_modules/emoji-regex",
       "name": "emoji-regex",
+      "package": Object {
+        "name": undefined,
+        "version": "7.0.3",
+      },
       "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
     },
     "error-ex" => Node {
@@ -1786,6 +2070,10 @@ Node {
       },
       "location": "node_modules/error-ex",
       "name": "error-ex",
+      "package": Object {
+        "name": undefined,
+        "version": "1.3.2",
+      },
       "resolved": "https://registry.npmjs.org/error-ex/-/error-ex-1.3.2.tgz",
     },
     "es6-error" => Node {
@@ -1800,6 +2088,10 @@ Node {
       },
       "location": "node_modules/es6-error",
       "name": "es6-error",
+      "package": Object {
+        "name": undefined,
+        "version": "4.1.1",
+      },
       "resolved": "https://registry.npmjs.org/es6-error/-/es6-error-4.1.1.tgz",
     },
     "escape-string-regexp" => Node {
@@ -1820,6 +2112,10 @@ Node {
       },
       "location": "node_modules/escape-string-regexp",
       "name": "escape-string-regexp",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.5",
+      },
       "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
     },
     "esm" => Node {
@@ -1834,6 +2130,10 @@ Node {
       },
       "location": "node_modules/esm",
       "name": "esm",
+      "package": Object {
+        "name": undefined,
+        "version": "3.2.25",
+      },
       "resolved": "https://registry.npmjs.org/esm/-/esm-3.2.25.tgz",
     },
     "esprima" => Node {
@@ -1848,6 +2148,10 @@ Node {
       },
       "location": "node_modules/esprima",
       "name": "esprima",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.1",
+      },
       "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
     },
     "esutils" => Node {
@@ -1868,6 +2172,10 @@ Node {
       },
       "location": "node_modules/esutils",
       "name": "esutils",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.3",
+      },
       "resolved": "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz",
     },
     "events-to-array" => Node {
@@ -1882,6 +2190,10 @@ Node {
       },
       "location": "node_modules/events-to-array",
       "name": "events-to-array",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.2",
+      },
       "resolved": "https://registry.npmjs.org/events-to-array/-/events-to-array-1.1.2.tgz",
     },
     "extend" => Node {
@@ -1896,6 +2208,10 @@ Node {
       },
       "location": "node_modules/extend",
       "name": "extend",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.2",
+      },
       "resolved": "https://registry.npmjs.org/extend/-/extend-3.0.2.tgz",
     },
     "extsprintf" => Node {
@@ -1916,6 +2232,10 @@ Node {
       },
       "location": "node_modules/extsprintf",
       "name": "extsprintf",
+      "package": Object {
+        "name": undefined,
+        "version": "1.3.0",
+      },
       "resolved": "https://registry.npmjs.org/extsprintf/-/extsprintf-1.3.0.tgz",
     },
     "fast-deep-equal" => Node {
@@ -1930,6 +2250,10 @@ Node {
       },
       "location": "node_modules/fast-deep-equal",
       "name": "fast-deep-equal",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.1",
+      },
       "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz",
     },
     "fast-json-stable-stringify" => Node {
@@ -1944,6 +2268,10 @@ Node {
       },
       "location": "node_modules/fast-json-stable-stringify",
       "name": "fast-json-stable-stringify",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
     },
     "fill-range" => Node {
@@ -1966,6 +2294,10 @@ Node {
       },
       "location": "node_modules/fill-range",
       "name": "fill-range",
+      "package": Object {
+        "name": undefined,
+        "version": "7.0.1",
+      },
       "resolved": "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz",
     },
     "find-cache-dir" => Node {
@@ -2000,6 +2332,10 @@ Node {
       },
       "location": "node_modules/find-cache-dir",
       "name": "find-cache-dir",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-2.1.0.tgz",
     },
     "find-up" => Node {
@@ -2040,6 +2376,10 @@ Node {
       },
       "location": "node_modules/find-up",
       "name": "find-up",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/find-up/-/find-up-3.0.0.tgz",
     },
     "findit" => Node {
@@ -2054,6 +2394,10 @@ Node {
       },
       "location": "node_modules/findit",
       "name": "findit",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/findit/-/findit-2.0.0.tgz",
     },
     "flow-parser" => Node {
@@ -2068,6 +2412,10 @@ Node {
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
+      "package": Object {
+        "name": undefined,
+        "version": "0.114.0",
+      },
       "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.114.0.tgz",
     },
     "flow-remove-types" => Node {
@@ -2102,6 +2450,10 @@ Node {
       },
       "location": "node_modules/flow-remove-types",
       "name": "flow-remove-types",
+      "package": Object {
+        "name": undefined,
+        "version": "2.114.0",
+      },
       "resolved": "https://registry.npmjs.org/flow-remove-types/-/flow-remove-types-2.114.0.tgz",
     },
     "foreground-child" => Node {
@@ -2142,6 +2494,10 @@ Node {
       },
       "location": "node_modules/foreground-child",
       "name": "foreground-child",
+      "package": Object {
+        "name": undefined,
+        "version": "1.5.6",
+      },
       "resolved": "https://registry.npmjs.org/foreground-child/-/foreground-child-1.5.6.tgz",
     },
     "forever-agent" => Node {
@@ -2156,6 +2512,10 @@ Node {
       },
       "location": "node_modules/forever-agent",
       "name": "forever-agent",
+      "package": Object {
+        "name": undefined,
+        "version": "0.6.1",
+      },
       "resolved": "https://registry.npmjs.org/forever-agent/-/forever-agent-0.6.1.tgz",
     },
     "form-data" => Node {
@@ -2190,6 +2550,10 @@ Node {
       },
       "location": "node_modules/form-data",
       "name": "form-data",
+      "package": Object {
+        "name": undefined,
+        "version": "2.3.3",
+      },
       "resolved": "https://registry.npmjs.org/form-data/-/form-data-2.3.3.tgz",
     },
     "fs-exists-cached" => Node {
@@ -2204,6 +2568,10 @@ Node {
       },
       "location": "node_modules/fs-exists-cached",
       "name": "fs-exists-cached",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/fs-exists-cached/-/fs-exists-cached-1.0.0.tgz",
     },
     "fs.realpath" => Node {
@@ -2218,6 +2586,10 @@ Node {
       },
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "fsevents" => Node {
@@ -2233,6 +2605,10 @@ Node {
       "location": "node_modules/fsevents",
       "name": "fsevents",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.2",
+      },
       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.1.2.tgz",
     },
     "function-loop" => Node {
@@ -2247,6 +2623,10 @@ Node {
       },
       "location": "node_modules/function-loop",
       "name": "function-loop",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/function-loop/-/function-loop-1.0.2.tgz",
     },
     "get-caller-file" => Node {
@@ -2261,6 +2641,10 @@ Node {
       },
       "location": "node_modules/get-caller-file",
       "name": "get-caller-file",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.5",
+      },
       "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
     },
     "getpass" => Node {
@@ -2283,6 +2667,10 @@ Node {
       },
       "location": "node_modules/getpass",
       "name": "getpass",
+      "package": Object {
+        "name": undefined,
+        "version": "0.1.7",
+      },
       "resolved": "https://registry.npmjs.org/getpass/-/getpass-0.1.7.tgz",
     },
     "glob" => Node {
@@ -2359,6 +2747,10 @@ Node {
       },
       "location": "node_modules/glob",
       "name": "glob",
+      "package": Object {
+        "name": undefined,
+        "version": "7.1.6",
+      },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.6.tgz",
     },
     "glob-parent" => Node {
@@ -2381,6 +2773,10 @@ Node {
       },
       "location": "node_modules/glob-parent",
       "name": "glob-parent",
+      "package": Object {
+        "name": undefined,
+        "version": "5.1.0",
+      },
       "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.0.tgz",
     },
     "globals" => Node {
@@ -2395,6 +2791,10 @@ Node {
       },
       "location": "node_modules/globals",
       "name": "globals",
+      "package": Object {
+        "name": undefined,
+        "version": "11.12.0",
+      },
       "resolved": "https://registry.npmjs.org/globals/-/globals-11.12.0.tgz",
     },
     "graceful-fs" => Node {
@@ -2427,6 +2827,10 @@ Node {
       },
       "location": "node_modules/graceful-fs",
       "name": "graceful-fs",
+      "package": Object {
+        "name": undefined,
+        "version": "4.2.3",
+      },
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.3.tgz",
     },
     "handlebars" => Node {
@@ -2467,6 +2871,10 @@ Node {
       },
       "location": "node_modules/handlebars",
       "name": "handlebars",
+      "package": Object {
+        "name": undefined,
+        "version": "4.5.3",
+      },
       "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
     },
     "har-schema" => Node {
@@ -2481,6 +2889,10 @@ Node {
       },
       "location": "node_modules/har-schema",
       "name": "har-schema",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/har-schema/-/har-schema-2.0.0.tgz",
     },
     "har-validator" => Node {
@@ -2509,6 +2921,10 @@ Node {
       },
       "location": "node_modules/har-validator",
       "name": "har-validator",
+      "package": Object {
+        "name": undefined,
+        "version": "5.1.3",
+      },
       "resolved": "https://registry.npmjs.org/har-validator/-/har-validator-5.1.3.tgz",
     },
     "has-flag" => Node {
@@ -2529,6 +2945,10 @@ Node {
       },
       "location": "node_modules/has-flag",
       "name": "has-flag",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz",
     },
     "hasha" => Node {
@@ -2557,6 +2977,10 @@ Node {
       },
       "location": "node_modules/hasha",
       "name": "hasha",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/hasha/-/hasha-3.0.0.tgz",
     },
     "hosted-git-info" => Node {
@@ -2571,6 +2995,10 @@ Node {
       },
       "location": "node_modules/hosted-git-info",
       "name": "hosted-git-info",
+      "package": Object {
+        "name": undefined,
+        "version": "2.8.5",
+      },
       "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.5.tgz",
     },
     "http-signature" => Node {
@@ -2605,6 +3033,10 @@ Node {
       },
       "location": "node_modules/http-signature",
       "name": "http-signature",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.0",
+      },
       "resolved": "https://registry.npmjs.org/http-signature/-/http-signature-1.2.0.tgz",
     },
     "imurmurhash" => Node {
@@ -2625,6 +3057,10 @@ Node {
       },
       "location": "node_modules/imurmurhash",
       "name": "imurmurhash",
+      "package": Object {
+        "name": undefined,
+        "version": "0.1.4",
+      },
       "resolved": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
     },
     "inflight" => Node {
@@ -2653,6 +3089,10 @@ Node {
       },
       "location": "node_modules/inflight",
       "name": "inflight",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -2673,6 +3113,10 @@ Node {
       },
       "location": "node_modules/inherits",
       "name": "inherits",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.4",
+      },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "is-arrayish" => Node {
@@ -2687,6 +3131,10 @@ Node {
       },
       "location": "node_modules/is-arrayish",
       "name": "is-arrayish",
+      "package": Object {
+        "name": undefined,
+        "version": "0.2.1",
+      },
       "resolved": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
     },
     "is-binary-path" => Node {
@@ -2709,6 +3157,10 @@ Node {
       },
       "location": "node_modules/is-binary-path",
       "name": "is-binary-path",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/is-binary-path/-/is-binary-path-2.1.0.tgz",
     },
     "is-extglob" => Node {
@@ -2723,6 +3175,10 @@ Node {
       },
       "location": "node_modules/is-extglob",
       "name": "is-extglob",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.1",
+      },
       "resolved": "https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz",
     },
     "is-fullwidth-code-point" => Node {
@@ -2743,6 +3199,10 @@ Node {
       },
       "location": "node_modules/is-fullwidth-code-point",
       "name": "is-fullwidth-code-point",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
     },
     "is-glob" => Node {
@@ -2771,6 +3231,10 @@ Node {
       },
       "location": "node_modules/is-glob",
       "name": "is-glob",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.1",
+      },
       "resolved": "https://registry.npmjs.org/is-glob/-/is-glob-4.0.1.tgz",
     },
     "is-number" => Node {
@@ -2785,6 +3249,10 @@ Node {
       },
       "location": "node_modules/is-number",
       "name": "is-number",
+      "package": Object {
+        "name": undefined,
+        "version": "7.0.0",
+      },
       "resolved": "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz",
     },
     "is-stream" => Node {
@@ -2799,6 +3267,10 @@ Node {
       },
       "location": "node_modules/is-stream",
       "name": "is-stream",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.0",
+      },
       "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
     },
     "is-typedarray" => Node {
@@ -2825,6 +3297,10 @@ Node {
       },
       "location": "node_modules/is-typedarray",
       "name": "is-typedarray",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
     },
     "isarray" => Node {
@@ -2840,6 +3316,10 @@ Node {
       "location": "node_modules/isarray",
       "name": "isarray",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
     },
     "isexe" => Node {
@@ -2878,6 +3358,10 @@ Node {
       },
       "location": "node_modules/isexe",
       "name": "isexe",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
     },
     "isstream" => Node {
@@ -2892,6 +3376,10 @@ Node {
       },
       "location": "node_modules/isstream",
       "name": "isstream",
+      "package": Object {
+        "name": undefined,
+        "version": "0.1.2",
+      },
       "resolved": "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz",
     },
     "istanbul-lib-coverage" => Node {
@@ -2930,6 +3418,10 @@ Node {
       },
       "location": "node_modules/istanbul-lib-coverage",
       "name": "istanbul-lib-coverage",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.5",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.5.tgz",
     },
     "istanbul-lib-hook" => Node {
@@ -2952,6 +3444,10 @@ Node {
       },
       "location": "node_modules/istanbul-lib-hook",
       "name": "istanbul-lib-hook",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.7",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-lib-hook/-/istanbul-lib-hook-2.0.7.tgz",
     },
     "istanbul-lib-instrument" => Node {
@@ -2968,6 +3464,10 @@ Node {
           },
           "location": "node_modules/istanbul-lib-instrument/node_modules/semver",
           "name": "semver",
+          "package": Object {
+            "name": undefined,
+            "version": "6.3.0",
+          },
           "resolved": "https://registry.npmjs.org/semver/-/semver-6.3.0.tgz",
         },
       },
@@ -3026,6 +3526,10 @@ Node {
       },
       "location": "node_modules/istanbul-lib-instrument",
       "name": "istanbul-lib-instrument",
+      "package": Object {
+        "name": undefined,
+        "version": "3.3.0",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-lib-instrument/-/istanbul-lib-instrument-3.3.0.tgz",
     },
     "istanbul-lib-processinfo" => Node {
@@ -3074,6 +3578,10 @@ Node {
           },
           "location": "node_modules/istanbul-lib-processinfo/node_modules/cross-spawn",
           "name": "cross-spawn",
+          "package": Object {
+            "name": undefined,
+            "version": "6.0.5",
+          },
           "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-6.0.5.tgz",
         },
         "which" => Node {
@@ -3096,6 +3604,10 @@ Node {
           },
           "location": "node_modules/istanbul-lib-processinfo/node_modules/which",
           "name": "which",
+          "package": Object {
+            "name": undefined,
+            "version": "1.3.1",
+          },
           "resolved": "https://registry.npmjs.org/which/-/which-1.3.1.tgz",
         },
       },
@@ -3142,6 +3654,10 @@ Node {
       },
       "location": "node_modules/istanbul-lib-processinfo",
       "name": "istanbul-lib-processinfo",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-lib-processinfo/-/istanbul-lib-processinfo-1.0.0.tgz",
     },
     "istanbul-lib-report" => Node {
@@ -3166,6 +3682,10 @@ Node {
           },
           "location": "node_modules/istanbul-lib-report/node_modules/supports-color",
           "name": "supports-color",
+          "package": Object {
+            "name": undefined,
+            "version": "6.1.0",
+          },
           "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-6.1.0.tgz",
         },
       },
@@ -3200,6 +3720,10 @@ Node {
       },
       "location": "node_modules/istanbul-lib-report",
       "name": "istanbul-lib-report",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.8",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-lib-report/-/istanbul-lib-report-2.0.8.tgz",
     },
     "istanbul-lib-source-maps" => Node {
@@ -3246,6 +3770,10 @@ Node {
       },
       "location": "node_modules/istanbul-lib-source-maps",
       "name": "istanbul-lib-source-maps",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.6",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-lib-source-maps/-/istanbul-lib-source-maps-3.0.6.tgz",
     },
     "istanbul-reports" => Node {
@@ -3268,6 +3796,10 @@ Node {
       },
       "location": "node_modules/istanbul-reports",
       "name": "istanbul-reports",
+      "package": Object {
+        "name": undefined,
+        "version": "2.2.6",
+      },
       "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-2.2.6.tgz",
     },
     "jackspeak" => Node {
@@ -3290,6 +3822,10 @@ Node {
       },
       "location": "node_modules/jackspeak",
       "name": "jackspeak",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "https://registry.npmjs.org/jackspeak/-/jackspeak-1.4.0.tgz",
     },
     "js-tokens" => Node {
@@ -3310,6 +3846,10 @@ Node {
       },
       "location": "node_modules/js-tokens",
       "name": "js-tokens",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
     },
     "js-yaml" => Node {
@@ -3344,6 +3884,10 @@ Node {
       },
       "location": "node_modules/js-yaml",
       "name": "js-yaml",
+      "package": Object {
+        "name": undefined,
+        "version": "3.13.1",
+      },
       "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.13.1.tgz",
     },
     "jsbn" => Node {
@@ -3364,6 +3908,10 @@ Node {
       },
       "location": "node_modules/jsbn",
       "name": "jsbn",
+      "package": Object {
+        "name": undefined,
+        "version": "0.1.1",
+      },
       "resolved": "https://registry.npmjs.org/jsbn/-/jsbn-0.1.1.tgz",
     },
     "jsesc" => Node {
@@ -3378,6 +3926,10 @@ Node {
       },
       "location": "node_modules/jsesc",
       "name": "jsesc",
+      "package": Object {
+        "name": undefined,
+        "version": "2.5.2",
+      },
       "resolved": "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz",
     },
     "json-parse-better-errors" => Node {
@@ -3392,6 +3944,10 @@ Node {
       },
       "location": "node_modules/json-parse-better-errors",
       "name": "json-parse-better-errors",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz",
     },
     "json-schema" => Node {
@@ -3406,6 +3962,10 @@ Node {
       },
       "location": "node_modules/json-schema",
       "name": "json-schema",
+      "package": Object {
+        "name": undefined,
+        "version": "0.2.3",
+      },
       "resolved": "https://registry.npmjs.org/json-schema/-/json-schema-0.2.3.tgz",
     },
     "json-schema-traverse" => Node {
@@ -3420,6 +3980,10 @@ Node {
       },
       "location": "node_modules/json-schema-traverse",
       "name": "json-schema-traverse",
+      "package": Object {
+        "name": undefined,
+        "version": "0.4.1",
+      },
       "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
     },
     "json-stringify-safe" => Node {
@@ -3434,6 +3998,10 @@ Node {
       },
       "location": "node_modules/json-stringify-safe",
       "name": "json-stringify-safe",
+      "package": Object {
+        "name": undefined,
+        "version": "5.0.1",
+      },
       "resolved": "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz",
     },
     "jsprim" => Node {
@@ -3474,6 +4042,10 @@ Node {
       },
       "location": "node_modules/jsprim",
       "name": "jsprim",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.1",
+      },
       "resolved": "https://registry.npmjs.org/jsprim/-/jsprim-1.4.1.tgz",
     },
     "lcov-parse" => Node {
@@ -3488,6 +4060,10 @@ Node {
       },
       "location": "node_modules/lcov-parse",
       "name": "lcov-parse",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/lcov-parse/-/lcov-parse-1.0.0.tgz",
     },
     "load-json-file" => Node {
@@ -3504,6 +4080,10 @@ Node {
           },
           "location": "node_modules/load-json-file/node_modules/pify",
           "name": "pify",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": "https://registry.npmjs.org/pify/-/pify-3.0.0.tgz",
         },
       },
@@ -3544,6 +4124,10 @@ Node {
       },
       "location": "node_modules/load-json-file",
       "name": "load-json-file",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/load-json-file/-/load-json-file-4.0.0.tgz",
     },
     "locate-path" => Node {
@@ -3572,6 +4156,10 @@ Node {
       },
       "location": "node_modules/locate-path",
       "name": "locate-path",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-3.0.0.tgz",
     },
     "lodash" => Node {
@@ -3598,6 +4186,10 @@ Node {
       },
       "location": "node_modules/lodash",
       "name": "lodash",
+      "package": Object {
+        "name": undefined,
+        "version": "4.17.15",
+      },
       "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
     },
     "lodash.flattendeep" => Node {
@@ -3612,6 +4204,10 @@ Node {
       },
       "location": "node_modules/lodash.flattendeep",
       "name": "lodash.flattendeep",
+      "package": Object {
+        "name": undefined,
+        "version": "4.4.0",
+      },
       "resolved": "https://registry.npmjs.org/lodash.flattendeep/-/lodash.flattendeep-4.4.0.tgz",
     },
     "log-driver" => Node {
@@ -3626,6 +4222,10 @@ Node {
       },
       "location": "node_modules/log-driver",
       "name": "log-driver",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.7",
+      },
       "resolved": "https://registry.npmjs.org/log-driver/-/log-driver-1.2.7.tgz",
     },
     "loose-envify" => Node {
@@ -3654,6 +4254,10 @@ Node {
       },
       "location": "node_modules/loose-envify",
       "name": "loose-envify",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
     },
     "lru-cache" => Node {
@@ -3682,6 +4286,10 @@ Node {
       },
       "location": "node_modules/lru-cache",
       "name": "lru-cache",
+      "package": Object {
+        "name": undefined,
+        "version": "4.1.5",
+      },
       "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-4.1.5.tgz",
     },
     "make-dir" => Node {
@@ -3740,6 +4348,10 @@ Node {
       },
       "location": "node_modules/make-dir",
       "name": "make-dir",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz",
     },
     "make-error" => Node {
@@ -3754,6 +4366,10 @@ Node {
       },
       "location": "node_modules/make-error",
       "name": "make-error",
+      "package": Object {
+        "name": undefined,
+        "version": "1.3.5",
+      },
       "resolved": "https://registry.npmjs.org/make-error/-/make-error-1.3.5.tgz",
     },
     "merge-source-map" => Node {
@@ -3776,6 +4392,10 @@ Node {
       },
       "location": "node_modules/merge-source-map",
       "name": "merge-source-map",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.0",
+      },
       "resolved": "https://registry.npmjs.org/merge-source-map/-/merge-source-map-1.1.0.tgz",
     },
     "mime-db" => Node {
@@ -3790,6 +4410,10 @@ Node {
       },
       "location": "node_modules/mime-db",
       "name": "mime-db",
+      "package": Object {
+        "name": undefined,
+        "version": "1.42.0",
+      },
       "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.42.0.tgz",
     },
     "mime-types" => Node {
@@ -3818,6 +4442,10 @@ Node {
       },
       "location": "node_modules/mime-types",
       "name": "mime-types",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.25",
+      },
       "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.25.tgz",
     },
     "minimatch" => Node {
@@ -3846,6 +4474,10 @@ Node {
       },
       "location": "node_modules/minimatch",
       "name": "minimatch",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "minimist" => Node {
@@ -3860,6 +4492,10 @@ Node {
       },
       "location": "node_modules/minimist",
       "name": "minimist",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.0",
+      },
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
     },
     "minipass" => Node {
@@ -3876,6 +4512,10 @@ Node {
           },
           "location": "node_modules/minipass/node_modules/yallist",
           "name": "yallist",
+          "package": Object {
+            "name": undefined,
+            "version": "4.0.0",
+          },
           "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
         },
       },
@@ -3898,6 +4538,10 @@ Node {
       },
       "location": "node_modules/minipass",
       "name": "minipass",
+      "package": Object {
+        "name": undefined,
+        "version": "3.1.1",
+      },
       "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.1.1.tgz",
     },
     "mkdirp" => Node {
@@ -3914,6 +4558,10 @@ Node {
           },
           "location": "node_modules/mkdirp/node_modules/minimist",
           "name": "minimist",
+          "package": Object {
+            "name": undefined,
+            "version": "0.0.8",
+          },
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
         },
       },
@@ -3942,6 +4590,10 @@ Node {
       },
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
+      "package": Object {
+        "name": undefined,
+        "version": "0.5.1",
+      },
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
     },
     "ms" => Node {
@@ -3956,6 +4608,10 @@ Node {
       },
       "location": "node_modules/ms",
       "name": "ms",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.2",
+      },
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
     },
     "neo-async" => Node {
@@ -3970,6 +4626,10 @@ Node {
       },
       "location": "node_modules/neo-async",
       "name": "neo-async",
+      "package": Object {
+        "name": undefined,
+        "version": "2.6.1",
+      },
       "resolved": "https://registry.npmjs.org/neo-async/-/neo-async-2.6.1.tgz",
     },
     "nested-error-stacks" => Node {
@@ -3984,6 +4644,10 @@ Node {
       },
       "location": "node_modules/nested-error-stacks",
       "name": "nested-error-stacks",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/nested-error-stacks/-/nested-error-stacks-2.1.0.tgz",
     },
     "nice-try" => Node {
@@ -3998,6 +4662,10 @@ Node {
       },
       "location": "node_modules/nice-try",
       "name": "nice-try",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.5",
+      },
       "resolved": "https://registry.npmjs.org/nice-try/-/nice-try-1.0.5.tgz",
     },
     "node-modules-regexp" => Node {
@@ -4012,6 +4680,10 @@ Node {
       },
       "location": "node_modules/node-modules-regexp",
       "name": "node-modules-regexp",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz",
     },
     "normalize-package-data" => Node {
@@ -4052,6 +4724,10 @@ Node {
       },
       "location": "node_modules/normalize-package-data",
       "name": "normalize-package-data",
+      "package": Object {
+        "name": undefined,
+        "version": "2.5.0",
+      },
       "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz",
     },
     "normalize-path" => Node {
@@ -4072,6 +4748,10 @@ Node {
       },
       "location": "node_modules/normalize-path",
       "name": "normalize-path",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz",
     },
     "number-is-nan" => Node {
@@ -4086,6 +4766,10 @@ Node {
       },
       "location": "node_modules/number-is-nan",
       "name": "number-is-nan",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.1.tgz",
     },
     "nyc" => Node {
@@ -4252,6 +4936,10 @@ Node {
       },
       "location": "node_modules/nyc",
       "name": "nyc",
+      "package": Object {
+        "name": undefined,
+        "version": "14.1.1",
+      },
       "resolved": "https://registry.npmjs.org/nyc/-/nyc-14.1.1.tgz",
     },
     "oauth-sign" => Node {
@@ -4266,6 +4954,10 @@ Node {
       },
       "location": "node_modules/oauth-sign",
       "name": "oauth-sign",
+      "package": Object {
+        "name": undefined,
+        "version": "0.9.0",
+      },
       "resolved": "https://registry.npmjs.org/oauth-sign/-/oauth-sign-0.9.0.tgz",
     },
     "object-assign" => Node {
@@ -4286,6 +4978,10 @@ Node {
       },
       "location": "node_modules/object-assign",
       "name": "object-assign",
+      "package": Object {
+        "name": undefined,
+        "version": "4.1.1",
+      },
       "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
     },
     "once" => Node {
@@ -4314,6 +5010,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
     },
     "opener" => Node {
@@ -4328,6 +5028,10 @@ Node {
       },
       "location": "node_modules/opener",
       "name": "opener",
+      "package": Object {
+        "name": undefined,
+        "version": "1.5.1",
+      },
       "resolved": "https://registry.npmjs.org/opener/-/opener-1.5.1.tgz",
     },
     "optimist" => Node {
@@ -4344,6 +5048,10 @@ Node {
           },
           "location": "node_modules/optimist/node_modules/minimist",
           "name": "minimist",
+          "package": Object {
+            "name": undefined,
+            "version": "0.0.10",
+          },
           "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.10.tgz",
         },
       },
@@ -4372,6 +5080,10 @@ Node {
       },
       "location": "node_modules/optimist",
       "name": "optimist",
+      "package": Object {
+        "name": undefined,
+        "version": "0.6.1",
+      },
       "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
     },
     "os-homedir" => Node {
@@ -4386,6 +5098,10 @@ Node {
       },
       "location": "node_modules/os-homedir",
       "name": "os-homedir",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/os-homedir/-/os-homedir-1.0.2.tgz",
     },
     "own-or" => Node {
@@ -4406,6 +5122,10 @@ Node {
       },
       "location": "node_modules/own-or",
       "name": "own-or",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/own-or/-/own-or-1.0.0.tgz",
     },
     "own-or-env" => Node {
@@ -4428,6 +5148,10 @@ Node {
       },
       "location": "node_modules/own-or-env",
       "name": "own-or-env",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/own-or-env/-/own-or-env-1.0.1.tgz",
     },
     "p-limit" => Node {
@@ -4450,6 +5174,10 @@ Node {
       },
       "location": "node_modules/p-limit",
       "name": "p-limit",
+      "package": Object {
+        "name": undefined,
+        "version": "2.2.1",
+      },
       "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.2.1.tgz",
     },
     "p-locate" => Node {
@@ -4472,6 +5200,10 @@ Node {
       },
       "location": "node_modules/p-locate",
       "name": "p-locate",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-3.0.0.tgz",
     },
     "p-try" => Node {
@@ -4486,6 +5218,10 @@ Node {
       },
       "location": "node_modules/p-try",
       "name": "p-try",
+      "package": Object {
+        "name": undefined,
+        "version": "2.2.0",
+      },
       "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",
     },
     "package-hash" => Node {
@@ -4526,6 +5262,10 @@ Node {
       },
       "location": "node_modules/package-hash",
       "name": "package-hash",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/package-hash/-/package-hash-3.0.0.tgz",
     },
     "parse-json" => Node {
@@ -4554,6 +5294,10 @@ Node {
       },
       "location": "node_modules/parse-json",
       "name": "parse-json",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/parse-json/-/parse-json-4.0.0.tgz",
     },
     "path-exists" => Node {
@@ -4568,6 +5312,10 @@ Node {
       },
       "location": "node_modules/path-exists",
       "name": "path-exists",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-3.0.0.tgz",
     },
     "path-is-absolute" => Node {
@@ -4582,6 +5330,10 @@ Node {
       },
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "path-key" => Node {
@@ -4596,6 +5348,10 @@ Node {
       },
       "location": "node_modules/path-key",
       "name": "path-key",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.1",
+      },
       "resolved": "https://registry.npmjs.org/path-key/-/path-key-2.0.1.tgz",
     },
     "path-parse" => Node {
@@ -4610,6 +5366,10 @@ Node {
       },
       "location": "node_modules/path-parse",
       "name": "path-parse",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz",
     },
     "path-type" => Node {
@@ -4626,6 +5386,10 @@ Node {
           },
           "location": "node_modules/path-type/node_modules/pify",
           "name": "pify",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": "https://registry.npmjs.org/pify/-/pify-3.0.0.tgz",
         },
       },
@@ -4648,6 +5412,10 @@ Node {
       },
       "location": "node_modules/path-type",
       "name": "path-type",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/path-type/-/path-type-3.0.0.tgz",
     },
     "performance-now" => Node {
@@ -4662,6 +5430,10 @@ Node {
       },
       "location": "node_modules/performance-now",
       "name": "performance-now",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz",
     },
     "picomatch" => Node {
@@ -4682,6 +5454,10 @@ Node {
       },
       "location": "node_modules/picomatch",
       "name": "picomatch",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.1",
+      },
       "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.1.1.tgz",
     },
     "pify" => Node {
@@ -4702,6 +5478,10 @@ Node {
       },
       "location": "node_modules/pify",
       "name": "pify",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.1",
+      },
       "resolved": "https://registry.npmjs.org/pify/-/pify-4.0.1.tgz",
     },
     "pirates" => Node {
@@ -4724,6 +5504,10 @@ Node {
       },
       "location": "node_modules/pirates",
       "name": "pirates",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.2",
+      },
       "resolved": "https://registry.npmjs.org/pirates/-/pirates-3.0.2.tgz",
     },
     "pkg-dir" => Node {
@@ -4746,6 +5530,10 @@ Node {
       },
       "location": "node_modules/pkg-dir",
       "name": "pkg-dir",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
     },
     "process-nextick-args" => Node {
@@ -4761,6 +5549,10 @@ Node {
       "location": "node_modules/process-nextick-args",
       "name": "process-nextick-args",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.1",
+      },
       "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
     },
     "prop-types" => Node {
@@ -4795,6 +5587,10 @@ Node {
       },
       "location": "node_modules/prop-types",
       "name": "prop-types",
+      "package": Object {
+        "name": undefined,
+        "version": "15.7.2",
+      },
       "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",
     },
     "pseudomap" => Node {
@@ -4809,6 +5605,10 @@ Node {
       },
       "location": "node_modules/pseudomap",
       "name": "pseudomap",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.2.tgz",
     },
     "psl" => Node {
@@ -4823,6 +5623,10 @@ Node {
       },
       "location": "node_modules/psl",
       "name": "psl",
+      "package": Object {
+        "name": undefined,
+        "version": "1.7.0",
+      },
       "resolved": "https://registry.npmjs.org/psl/-/psl-1.7.0.tgz",
     },
     "punycode" => Node {
@@ -4837,6 +5641,10 @@ Node {
       },
       "location": "node_modules/punycode",
       "name": "punycode",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.1",
+      },
       "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
     },
     "qs" => Node {
@@ -4851,6 +5659,10 @@ Node {
       },
       "location": "node_modules/qs",
       "name": "qs",
+      "package": Object {
+        "name": undefined,
+        "version": "6.5.2",
+      },
       "resolved": "https://registry.npmjs.org/qs/-/qs-6.5.2.tgz",
     },
     "react" => Node {
@@ -4885,6 +5697,10 @@ Node {
       },
       "location": "node_modules/react",
       "name": "react",
+      "package": Object {
+        "name": undefined,
+        "version": "16.12.0",
+      },
       "resolved": "https://registry.npmjs.org/react/-/react-16.12.0.tgz",
     },
     "react-is" => Node {
@@ -4899,6 +5715,10 @@ Node {
       },
       "location": "node_modules/react-is",
       "name": "react-is",
+      "package": Object {
+        "name": undefined,
+        "version": "16.12.0",
+      },
       "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.12.0.tgz",
     },
     "read-pkg" => Node {
@@ -4933,6 +5753,10 @@ Node {
       },
       "location": "node_modules/read-pkg",
       "name": "read-pkg",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/read-pkg/-/read-pkg-3.0.0.tgz",
     },
     "read-pkg-up" => Node {
@@ -4961,6 +5785,10 @@ Node {
       },
       "location": "node_modules/read-pkg-up",
       "name": "read-pkg-up",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
     },
     "readable-stream" => Node {
@@ -4978,6 +5806,10 @@ Node {
           "location": "node_modules/readable-stream/node_modules/safe-buffer",
           "name": "safe-buffer",
           "optional": true,
+          "package": Object {
+            "name": undefined,
+            "version": "5.1.2",
+          },
           "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
         },
       },
@@ -5037,6 +5869,10 @@ Node {
       "location": "node_modules/readable-stream",
       "name": "readable-stream",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.3.6",
+      },
       "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
     },
     "readdirp" => Node {
@@ -5059,6 +5895,10 @@ Node {
       },
       "location": "node_modules/readdirp",
       "name": "readdirp",
+      "package": Object {
+        "name": undefined,
+        "version": "3.3.0",
+      },
       "resolved": "https://registry.npmjs.org/readdirp/-/readdirp-3.3.0.tgz",
     },
     "regenerator-runtime" => Node {
@@ -5073,6 +5913,10 @@ Node {
       },
       "location": "node_modules/regenerator-runtime",
       "name": "regenerator-runtime",
+      "package": Object {
+        "name": undefined,
+        "version": "0.13.3",
+      },
       "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz",
     },
     "release-zalgo" => Node {
@@ -5095,6 +5939,10 @@ Node {
       },
       "location": "node_modules/release-zalgo",
       "name": "release-zalgo",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/release-zalgo/-/release-zalgo-1.0.0.tgz",
     },
     "request" => Node {
@@ -5231,6 +6079,10 @@ Node {
       },
       "location": "node_modules/request",
       "name": "request",
+      "package": Object {
+        "name": undefined,
+        "version": "2.88.0",
+      },
       "resolved": "https://registry.npmjs.org/request/-/request-2.88.0.tgz",
     },
     "require-directory" => Node {
@@ -5245,6 +6097,10 @@ Node {
       },
       "location": "node_modules/require-directory",
       "name": "require-directory",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.1",
+      },
       "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
     },
     "require-main-filename" => Node {
@@ -5265,6 +6121,10 @@ Node {
       },
       "location": "node_modules/require-main-filename",
       "name": "require-main-filename",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/require-main-filename/-/require-main-filename-2.0.0.tgz",
     },
     "resolve" => Node {
@@ -5287,6 +6147,10 @@ Node {
       },
       "location": "node_modules/resolve",
       "name": "resolve",
+      "package": Object {
+        "name": undefined,
+        "version": "1.14.1",
+      },
       "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.14.1.tgz",
     },
     "resolve-from" => Node {
@@ -5301,6 +6165,10 @@ Node {
       },
       "location": "node_modules/resolve-from",
       "name": "resolve-from",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz",
     },
     "rimraf" => Node {
@@ -5347,6 +6215,10 @@ Node {
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
+      "package": Object {
+        "name": undefined,
+        "version": "2.7.1",
+      },
       "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.7.1.tgz",
     },
     "safe-buffer" => Node {
@@ -5373,6 +6245,10 @@ Node {
       },
       "location": "node_modules/safe-buffer",
       "name": "safe-buffer",
+      "package": Object {
+        "name": undefined,
+        "version": "5.2.0",
+      },
       "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.0.tgz",
     },
     "safer-buffer" => Node {
@@ -5399,6 +6275,10 @@ Node {
       },
       "location": "node_modules/safer-buffer",
       "name": "safer-buffer",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.2",
+      },
       "resolved": "https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.tgz",
     },
     "semver" => Node {
@@ -5425,6 +6305,10 @@ Node {
       },
       "location": "node_modules/semver",
       "name": "semver",
+      "package": Object {
+        "name": undefined,
+        "version": "5.7.1",
+      },
       "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",
     },
     "set-blocking" => Node {
@@ -5439,6 +6323,10 @@ Node {
       },
       "location": "node_modules/set-blocking",
       "name": "set-blocking",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
     },
     "shebang-command" => Node {
@@ -5461,6 +6349,10 @@ Node {
       },
       "location": "node_modules/shebang-command",
       "name": "shebang-command",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.0",
+      },
       "resolved": "https://registry.npmjs.org/shebang-command/-/shebang-command-1.2.0.tgz",
     },
     "shebang-regex" => Node {
@@ -5475,6 +6367,10 @@ Node {
       },
       "location": "node_modules/shebang-regex",
       "name": "shebang-regex",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-1.0.0.tgz",
     },
     "signal-exit" => Node {
@@ -5513,6 +6409,10 @@ Node {
       },
       "location": "node_modules/signal-exit",
       "name": "signal-exit",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.2",
+      },
       "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz",
     },
     "source-map" => Node {
@@ -5551,6 +6451,10 @@ Node {
       },
       "location": "node_modules/source-map",
       "name": "source-map",
+      "package": Object {
+        "name": undefined,
+        "version": "0.6.1",
+      },
       "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
     },
     "source-map-support" => Node {
@@ -5591,6 +6495,10 @@ Node {
       },
       "location": "node_modules/source-map-support",
       "name": "source-map-support",
+      "package": Object {
+        "name": undefined,
+        "version": "0.5.16",
+      },
       "resolved": "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.16.tgz",
     },
     "spawn-wrap" => Node {
@@ -5615,6 +6523,10 @@ Node {
           },
           "location": "node_modules/spawn-wrap/node_modules/which",
           "name": "which",
+          "package": Object {
+            "name": undefined,
+            "version": "1.3.1",
+          },
           "resolved": "https://registry.npmjs.org/which/-/which-1.3.1.tgz",
         },
       },
@@ -5667,6 +6579,10 @@ Node {
       },
       "location": "node_modules/spawn-wrap",
       "name": "spawn-wrap",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.3",
+      },
       "resolved": "https://registry.npmjs.org/spawn-wrap/-/spawn-wrap-1.4.3.tgz",
     },
     "spdx-correct" => Node {
@@ -5695,6 +6611,10 @@ Node {
       },
       "location": "node_modules/spdx-correct",
       "name": "spdx-correct",
+      "package": Object {
+        "name": undefined,
+        "version": "3.1.0",
+      },
       "resolved": "https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.1.0.tgz",
     },
     "spdx-exceptions" => Node {
@@ -5709,6 +6629,10 @@ Node {
       },
       "location": "node_modules/spdx-exceptions",
       "name": "spdx-exceptions",
+      "package": Object {
+        "name": undefined,
+        "version": "2.2.0",
+      },
       "resolved": "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.2.0.tgz",
     },
     "spdx-expression-parse" => Node {
@@ -5743,6 +6667,10 @@ Node {
       },
       "location": "node_modules/spdx-expression-parse",
       "name": "spdx-expression-parse",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.0.tgz",
     },
     "spdx-license-ids" => Node {
@@ -5763,6 +6691,10 @@ Node {
       },
       "location": "node_modules/spdx-license-ids",
       "name": "spdx-license-ids",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.5",
+      },
       "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz",
     },
     "sprintf-js" => Node {
@@ -5777,6 +6709,10 @@ Node {
       },
       "location": "node_modules/sprintf-js",
       "name": "sprintf-js",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.3",
+      },
       "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
     },
     "sshpk" => Node {
@@ -5847,6 +6783,10 @@ Node {
       },
       "location": "node_modules/sshpk",
       "name": "sshpk",
+      "package": Object {
+        "name": undefined,
+        "version": "1.16.1",
+      },
       "resolved": "https://registry.npmjs.org/sshpk/-/sshpk-1.16.1.tgz",
     },
     "stack-utils" => Node {
@@ -5861,6 +6801,10 @@ Node {
       },
       "location": "node_modules/stack-utils",
       "name": "stack-utils",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
     },
     "string_decoder" => Node {
@@ -5878,6 +6822,10 @@ Node {
           "location": "node_modules/string_decoder/node_modules/safe-buffer",
           "name": "safe-buffer",
           "optional": true,
+          "package": Object {
+            "name": undefined,
+            "version": "5.1.2",
+          },
           "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
         },
       },
@@ -5901,6 +6849,10 @@ Node {
       "location": "node_modules/string_decoder",
       "name": "string_decoder",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
     },
     "string-width" => Node {
@@ -5929,6 +6881,10 @@ Node {
       },
       "location": "node_modules/string-width",
       "name": "string-width",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.1",
+      },
       "resolved": "https://registry.npmjs.org/string-width/-/string-width-2.1.1.tgz",
     },
     "strip-ansi" => Node {
@@ -5957,6 +6913,10 @@ Node {
       },
       "location": "node_modules/strip-ansi",
       "name": "strip-ansi",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-4.0.0.tgz",
     },
     "strip-bom" => Node {
@@ -5977,6 +6937,10 @@ Node {
       },
       "location": "node_modules/strip-bom",
       "name": "strip-bom",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.0",
+      },
       "resolved": "https://registry.npmjs.org/strip-bom/-/strip-bom-3.0.0.tgz",
     },
     "supports-color" => Node {
@@ -5999,6 +6963,10 @@ Node {
       },
       "location": "node_modules/supports-color",
       "name": "supports-color",
+      "package": Object {
+        "name": undefined,
+        "version": "5.5.0",
+      },
       "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz",
     },
     "tap" => Node {
@@ -6036,6 +7004,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/code-frame",
           "name": "@babel/code-frame",
+          "package": Object {
+            "name": undefined,
+            "version": "7.5.5",
+          },
           "resolved": null,
         },
         "@babel/core" => Node {
@@ -6054,6 +7026,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/@babel/core/node_modules/source-map",
               "name": "source-map",
+              "package": Object {
+                "name": undefined,
+                "version": "0.5.7",
+              },
               "resolved": null,
             },
           },
@@ -6154,6 +7130,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/core",
           "name": "@babel/core",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.5",
+          },
           "resolved": null,
         },
         "@babel/generator" => Node {
@@ -6172,6 +7152,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/@babel/generator/node_modules/source-map",
               "name": "source-map",
+              "package": Object {
+                "name": undefined,
+                "version": "0.5.7",
+              },
               "resolved": null,
             },
           },
@@ -6218,6 +7202,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/generator",
           "name": "@babel/generator",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/helper-builder-react-jsx" => Node {
@@ -6247,6 +7235,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
           "name": "@babel/helper-builder-react-jsx",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/helper-function-name" => Node {
@@ -6282,6 +7274,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/helper-function-name",
           "name": "@babel/helper-function-name",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/helper-get-function-arity" => Node {
@@ -6305,6 +7301,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/helper-get-function-arity",
           "name": "@babel/helper-get-function-arity",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/helper-plugin-utils" => Node {
@@ -6344,6 +7344,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/helper-plugin-utils",
           "name": "@babel/helper-plugin-utils",
+          "package": Object {
+            "name": undefined,
+            "version": "7.0.0",
+          },
           "resolved": null,
         },
         "@babel/helper-split-export-declaration" => Node {
@@ -6367,6 +7371,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/helper-split-export-declaration",
           "name": "@babel/helper-split-export-declaration",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/helpers" => Node {
@@ -6402,6 +7410,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/helpers",
           "name": "@babel/helpers",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/highlight" => Node {
@@ -6440,6 +7452,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
               "name": "chalk",
+              "package": Object {
+                "name": undefined,
+                "version": "2.4.2",
+              },
               "resolved": null,
             },
             "supports-color" => Node {
@@ -6463,6 +7479,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
               "name": "supports-color",
+              "package": Object {
+                "name": undefined,
+                "version": "5.5.0",
+              },
               "resolved": null,
             },
           },
@@ -6497,6 +7517,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/highlight",
           "name": "@babel/highlight",
+          "package": Object {
+            "name": undefined,
+            "version": "7.5.0",
+          },
           "resolved": null,
         },
         "@babel/parser" => Node {
@@ -6524,6 +7548,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/parser",
           "name": "@babel/parser",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.5",
+          },
           "resolved": null,
         },
         "@babel/plugin-proposal-object-rest-spread" => Node {
@@ -6553,6 +7581,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/plugin-proposal-object-rest-spread",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/plugin-syntax-jsx" => Node {
@@ -6576,6 +7608,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-jsx",
           "name": "@babel/plugin-syntax-jsx",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/plugin-syntax-object-rest-spread" => Node {
@@ -6599,6 +7635,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-object-rest-spread",
           "name": "@babel/plugin-syntax-object-rest-spread",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/plugin-transform-destructuring" => Node {
@@ -6622,6 +7662,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-destructuring",
           "name": "@babel/plugin-transform-destructuring",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/plugin-transform-react-jsx" => Node {
@@ -6657,6 +7701,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/plugin-transform-react-jsx",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/runtime" => Node {
@@ -6680,6 +7728,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/runtime",
           "name": "@babel/runtime",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.6",
+          },
           "resolved": null,
         },
         "@babel/template" => Node {
@@ -6727,6 +7779,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/template",
           "name": "@babel/template",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/traverse" => Node {
@@ -6804,6 +7860,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/traverse",
           "name": "@babel/traverse",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@babel/types" => Node {
@@ -6887,6 +7947,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@babel/types",
           "name": "@babel/types",
+          "package": Object {
+            "name": undefined,
+            "version": "7.7.4",
+          },
           "resolved": null,
         },
         "@types/color-name" => Node {
@@ -6914,6 +7978,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@types/color-name",
           "name": "@types/color-name",
+          "package": Object {
+            "name": undefined,
+            "version": "1.1.1",
+          },
           "resolved": null,
         },
         "@types/prop-types" => Node {
@@ -6929,6 +7997,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@types/prop-types",
           "name": "@types/prop-types",
+          "package": Object {
+            "name": undefined,
+            "version": "15.7.3",
+          },
           "resolved": null,
         },
         "@types/react" => Node {
@@ -6958,6 +8030,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/@types/react",
           "name": "@types/react",
+          "package": Object {
+            "name": undefined,
+            "version": "16.9.16",
+          },
           "resolved": null,
         },
         "ansi-escapes" => Node {
@@ -6981,6 +8057,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ansi-escapes",
           "name": "ansi-escapes",
+          "package": Object {
+            "name": undefined,
+            "version": "4.3.0",
+          },
           "resolved": null,
         },
         "ansi-regex" => Node {
@@ -6996,6 +8076,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ansi-regex",
           "name": "ansi-regex",
+          "package": Object {
+            "name": undefined,
+            "version": "5.0.0",
+          },
           "resolved": null,
         },
         "ansi-styles" => Node {
@@ -7025,6 +8109,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ansi-styles",
           "name": "ansi-styles",
+          "package": Object {
+            "name": undefined,
+            "version": "3.2.1",
+          },
           "resolved": null,
         },
         "ansicolors" => Node {
@@ -7040,6 +8128,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ansicolors",
           "name": "ansicolors",
+          "package": Object {
+            "name": undefined,
+            "version": "0.3.2",
+          },
           "resolved": null,
         },
         "arrify" => Node {
@@ -7055,6 +8147,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/arrify",
           "name": "arrify",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.1",
+          },
           "resolved": null,
         },
         "astral-regex" => Node {
@@ -7070,6 +8166,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/astral-regex",
           "name": "astral-regex",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "auto-bind" => Node {
@@ -7085,6 +8185,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/auto-bind",
           "name": "auto-bind",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "caller-callsite" => Node {
@@ -7108,6 +8212,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/caller-callsite",
           "name": "caller-callsite",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "caller-path" => Node {
@@ -7131,6 +8239,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/caller-path",
           "name": "caller-path",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "callsites" => Node {
@@ -7146,6 +8258,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/callsites",
           "name": "callsites",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "cardinal" => Node {
@@ -7175,6 +8291,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/cardinal",
           "name": "cardinal",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.1",
+          },
           "resolved": null,
         },
         "chalk" => Node {
@@ -7207,6 +8327,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
               "name": "ansi-styles",
+              "package": Object {
+                "name": undefined,
+                "version": "4.2.0",
+              },
               "resolved": null,
             },
             "color-convert" => Node {
@@ -7230,6 +8354,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-convert",
               "name": "color-convert",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.1",
+              },
               "resolved": null,
             },
             "color-name" => Node {
@@ -7245,6 +8373,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-name",
               "name": "color-name",
+              "package": Object {
+                "name": undefined,
+                "version": "1.1.4",
+              },
               "resolved": null,
             },
           },
@@ -7279,6 +8411,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/chalk",
           "name": "chalk",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "ci-info" => Node {
@@ -7294,6 +8430,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ci-info",
           "name": "ci-info",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "cli-cursor" => Node {
@@ -7317,6 +8457,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/cli-cursor",
           "name": "cli-cursor",
+          "package": Object {
+            "name": undefined,
+            "version": "3.1.0",
+          },
           "resolved": null,
         },
         "cli-truncate" => Node {
@@ -7346,6 +8490,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/cli-truncate",
           "name": "cli-truncate",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.0",
+          },
           "resolved": null,
         },
         "color-convert" => Node {
@@ -7369,6 +8517,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/color-convert",
           "name": "color-convert",
+          "package": Object {
+            "name": undefined,
+            "version": "1.9.3",
+          },
           "resolved": null,
         },
         "color-name" => Node {
@@ -7384,6 +8536,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/color-name",
           "name": "color-name",
+          "package": Object {
+            "name": undefined,
+            "version": "1.1.3",
+          },
           "resolved": null,
         },
         "convert-source-map" => Node {
@@ -7402,6 +8558,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/convert-source-map/node_modules/safe-buffer",
               "name": "safe-buffer",
+              "package": Object {
+                "name": undefined,
+                "version": "5.1.2",
+              },
               "resolved": null,
             },
           },
@@ -7424,6 +8584,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/convert-source-map",
           "name": "convert-source-map",
+          "package": Object {
+            "name": undefined,
+            "version": "1.7.0",
+          },
           "resolved": null,
         },
         "csstype" => Node {
@@ -7439,6 +8603,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/csstype",
           "name": "csstype",
+          "package": Object {
+            "name": undefined,
+            "version": "2.6.8",
+          },
           "resolved": null,
         },
         "debug" => Node {
@@ -7468,6 +8636,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/debug",
           "name": "debug",
+          "package": Object {
+            "name": undefined,
+            "version": "4.1.1",
+          },
           "resolved": null,
         },
         "emoji-regex" => Node {
@@ -7483,6 +8655,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/emoji-regex",
           "name": "emoji-regex",
+          "package": Object {
+            "name": undefined,
+            "version": "8.0.0",
+          },
           "resolved": null,
         },
         "escape-string-regexp" => Node {
@@ -7498,6 +8674,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/escape-string-regexp",
           "name": "escape-string-regexp",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.5",
+          },
           "resolved": null,
         },
         "esprima" => Node {
@@ -7513,6 +8693,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/esprima",
           "name": "esprima",
+          "package": Object {
+            "name": undefined,
+            "version": "4.0.1",
+          },
           "resolved": null,
         },
         "esutils" => Node {
@@ -7540,6 +8724,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/esutils",
           "name": "esutils",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.3",
+          },
           "resolved": null,
         },
         "events-to-array" => Node {
@@ -7555,6 +8743,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/events-to-array",
           "name": "events-to-array",
+          "package": Object {
+            "name": undefined,
+            "version": "1.1.2",
+          },
           "resolved": null,
         },
         "globals" => Node {
@@ -7570,6 +8762,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/globals",
           "name": "globals",
+          "package": Object {
+            "name": undefined,
+            "version": "11.12.0",
+          },
           "resolved": null,
         },
         "has-flag" => Node {
@@ -7585,6 +8781,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/has-flag",
           "name": "has-flag",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "import-jsx" => Node {
@@ -7644,6 +8844,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/import-jsx",
           "name": "import-jsx",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "ink" => Node {
@@ -7775,6 +8979,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ink",
           "name": "ink",
+          "package": Object {
+            "name": undefined,
+            "version": "2.6.0",
+          },
           "resolved": null,
         },
         "is-ci" => Node {
@@ -7798,6 +9006,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/is-ci",
           "name": "is-ci",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "is-fullwidth-code-point" => Node {
@@ -7819,6 +9031,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "js-tokens" => Node {
@@ -7840,6 +9056,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/js-tokens",
           "name": "js-tokens",
+          "package": Object {
+            "name": undefined,
+            "version": "4.0.0",
+          },
           "resolved": null,
         },
         "jsesc" => Node {
@@ -7855,6 +9075,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/jsesc",
           "name": "jsesc",
+          "package": Object {
+            "name": undefined,
+            "version": "2.5.2",
+          },
           "resolved": null,
         },
         "json5" => Node {
@@ -7878,6 +9102,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/json5",
           "name": "json5",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.1",
+          },
           "resolved": null,
         },
         "lodash" => Node {
@@ -7911,6 +9139,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/lodash",
           "name": "lodash",
+          "package": Object {
+            "name": undefined,
+            "version": "4.17.15",
+          },
           "resolved": null,
         },
         "lodash.throttle" => Node {
@@ -7926,6 +9158,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/lodash.throttle",
           "name": "lodash.throttle",
+          "package": Object {
+            "name": undefined,
+            "version": "4.1.1",
+          },
           "resolved": null,
         },
         "log-update" => Node {
@@ -7944,6 +9180,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-escapes",
               "name": "ansi-escapes",
+              "package": Object {
+                "name": undefined,
+                "version": "3.2.0",
+              },
               "resolved": null,
             },
             "ansi-regex" => Node {
@@ -7959,6 +9199,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-regex",
               "name": "ansi-regex",
+              "package": Object {
+                "name": undefined,
+                "version": "4.1.0",
+              },
               "resolved": null,
             },
             "cli-cursor" => Node {
@@ -7982,6 +9226,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
               "name": "cli-cursor",
+              "package": Object {
+                "name": undefined,
+                "version": "2.1.0",
+              },
               "resolved": null,
             },
             "emoji-regex" => Node {
@@ -7997,6 +9245,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/emoji-regex",
               "name": "emoji-regex",
+              "package": Object {
+                "name": undefined,
+                "version": "7.0.3",
+              },
               "resolved": null,
             },
             "is-fullwidth-code-point" => Node {
@@ -8012,6 +9264,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/is-fullwidth-code-point",
               "name": "is-fullwidth-code-point",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.0",
+              },
               "resolved": null,
             },
             "mimic-fn" => Node {
@@ -8027,6 +9283,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/mimic-fn",
               "name": "mimic-fn",
+              "package": Object {
+                "name": undefined,
+                "version": "1.2.0",
+              },
               "resolved": null,
             },
             "onetime" => Node {
@@ -8050,6 +9310,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/onetime",
               "name": "onetime",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.1",
+              },
               "resolved": null,
             },
             "restore-cursor" => Node {
@@ -8079,6 +9343,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
               "name": "restore-cursor",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.0",
+              },
               "resolved": null,
             },
             "string-width" => Node {
@@ -8114,6 +9382,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/string-width",
               "name": "string-width",
+              "package": Object {
+                "name": undefined,
+                "version": "3.1.0",
+              },
               "resolved": null,
             },
             "strip-ansi" => Node {
@@ -8143,6 +9415,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
               "name": "strip-ansi",
+              "package": Object {
+                "name": undefined,
+                "version": "5.2.0",
+              },
               "resolved": null,
             },
             "wrap-ansi" => Node {
@@ -8178,6 +9454,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
               "name": "wrap-ansi",
+              "package": Object {
+                "name": undefined,
+                "version": "5.1.0",
+              },
               "resolved": null,
             },
           },
@@ -8212,6 +9492,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/log-update",
           "name": "log-update",
+          "package": Object {
+            "name": undefined,
+            "version": "3.3.0",
+          },
           "resolved": null,
         },
         "loose-envify" => Node {
@@ -8247,6 +9531,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/loose-envify",
           "name": "loose-envify",
+          "package": Object {
+            "name": undefined,
+            "version": "1.4.0",
+          },
           "resolved": null,
         },
         "mimic-fn" => Node {
@@ -8262,6 +9550,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/mimic-fn",
           "name": "mimic-fn",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.0",
+          },
           "resolved": null,
         },
         "minimist" => Node {
@@ -8277,6 +9569,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/minimist",
           "name": "minimist",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.0",
+          },
           "resolved": null,
         },
         "minipass" => Node {
@@ -8295,6 +9591,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/minipass/node_modules/yallist",
               "name": "yallist",
+              "package": Object {
+                "name": undefined,
+                "version": "4.0.0",
+              },
               "resolved": null,
             },
           },
@@ -8323,6 +9623,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/minipass",
           "name": "minipass",
+          "package": Object {
+            "name": undefined,
+            "version": "3.1.1",
+          },
           "resolved": null,
         },
         "ms" => Node {
@@ -8344,6 +9648,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/ms",
           "name": "ms",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.2",
+          },
           "resolved": null,
         },
         "object-assign" => Node {
@@ -8371,6 +9679,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/object-assign",
           "name": "object-assign",
+          "package": Object {
+            "name": undefined,
+            "version": "4.1.1",
+          },
           "resolved": null,
         },
         "onetime" => Node {
@@ -8394,6 +9706,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/onetime",
           "name": "onetime",
+          "package": Object {
+            "name": undefined,
+            "version": "5.1.0",
+          },
           "resolved": null,
         },
         "path-parse" => Node {
@@ -8409,6 +9725,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/path-parse",
           "name": "path-parse",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.6",
+          },
           "resolved": null,
         },
         "prop-types" => Node {
@@ -8450,6 +9770,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/prop-types",
           "name": "prop-types",
+          "package": Object {
+            "name": undefined,
+            "version": "15.7.2",
+          },
           "resolved": null,
         },
         "punycode" => Node {
@@ -8465,6 +9789,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/punycode",
           "name": "punycode",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.1",
+          },
           "resolved": null,
         },
         "react-is" => Node {
@@ -8480,6 +9808,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/react-is",
           "name": "react-is",
+          "package": Object {
+            "name": undefined,
+            "version": "16.12.0",
+          },
           "resolved": null,
         },
         "react-reconciler" => Node {
@@ -8521,6 +9853,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/react-reconciler",
           "name": "react-reconciler",
+          "package": Object {
+            "name": undefined,
+            "version": "0.24.0",
+          },
           "resolved": null,
         },
         "redeyed" => Node {
@@ -8544,6 +9880,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/redeyed",
           "name": "redeyed",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.1",
+          },
           "resolved": null,
         },
         "regenerator-runtime" => Node {
@@ -8559,6 +9899,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/regenerator-runtime",
           "name": "regenerator-runtime",
+          "package": Object {
+            "name": undefined,
+            "version": "0.13.3",
+          },
           "resolved": null,
         },
         "resolve" => Node {
@@ -8582,6 +9926,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/resolve",
           "name": "resolve",
+          "package": Object {
+            "name": undefined,
+            "version": "1.13.1",
+          },
           "resolved": null,
         },
         "resolve-from" => Node {
@@ -8597,6 +9945,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/resolve-from",
           "name": "resolve-from",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "restore-cursor" => Node {
@@ -8626,6 +9978,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/restore-cursor",
           "name": "restore-cursor",
+          "package": Object {
+            "name": undefined,
+            "version": "3.1.0",
+          },
           "resolved": null,
         },
         "scheduler" => Node {
@@ -8661,6 +10017,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/scheduler",
           "name": "scheduler",
+          "package": Object {
+            "name": undefined,
+            "version": "0.18.0",
+          },
           "resolved": null,
         },
         "semver" => Node {
@@ -8676,6 +10036,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/semver",
           "name": "semver",
+          "package": Object {
+            "name": undefined,
+            "version": "5.7.1",
+          },
           "resolved": null,
         },
         "signal-exit" => Node {
@@ -8709,6 +10073,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/signal-exit",
           "name": "signal-exit",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.2",
+          },
           "resolved": null,
         },
         "slice-ansi" => Node {
@@ -8741,6 +10109,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
+              "package": Object {
+                "name": undefined,
+                "version": "4.2.0",
+              },
               "resolved": null,
             },
             "color-convert" => Node {
@@ -8764,6 +10136,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
               "name": "color-convert",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.1",
+              },
               "resolved": null,
             },
             "color-name" => Node {
@@ -8779,6 +10155,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-name",
               "name": "color-name",
+              "package": Object {
+                "name": undefined,
+                "version": "1.1.4",
+              },
               "resolved": null,
             },
           },
@@ -8819,6 +10199,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/slice-ansi",
           "name": "slice-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.0",
+          },
           "resolved": null,
         },
         "string-length" => Node {
@@ -8837,6 +10221,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/string-length/node_modules/ansi-regex",
               "name": "ansi-regex",
+              "package": Object {
+                "name": undefined,
+                "version": "4.1.0",
+              },
               "resolved": null,
             },
             "astral-regex" => Node {
@@ -8852,6 +10240,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/string-length/node_modules/astral-regex",
               "name": "astral-regex",
+              "package": Object {
+                "name": undefined,
+                "version": "1.0.0",
+              },
               "resolved": null,
             },
             "strip-ansi" => Node {
@@ -8875,6 +10267,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
               "name": "strip-ansi",
+              "package": Object {
+                "name": undefined,
+                "version": "5.2.0",
+              },
               "resolved": null,
             },
           },
@@ -8909,6 +10305,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/string-length",
           "name": "string-length",
+          "package": Object {
+            "name": undefined,
+            "version": "3.1.0",
+          },
           "resolved": null,
         },
         "string-width" => Node {
@@ -8956,6 +10356,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/string-width",
           "name": "string-width",
+          "package": Object {
+            "name": undefined,
+            "version": "4.2.0",
+          },
           "resolved": null,
         },
         "strip-ansi" => Node {
@@ -8985,6 +10389,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/strip-ansi",
           "name": "strip-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "6.0.0",
+          },
           "resolved": null,
         },
         "supports-color" => Node {
@@ -9003,6 +10411,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/supports-color/node_modules/has-flag",
               "name": "has-flag",
+              "package": Object {
+                "name": undefined,
+                "version": "4.0.0",
+              },
               "resolved": null,
             },
           },
@@ -9025,6 +10437,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/supports-color",
           "name": "supports-color",
+          "package": Object {
+            "name": undefined,
+            "version": "7.1.0",
+          },
           "resolved": null,
         },
         "tap-parser" => Node {
@@ -9066,6 +10482,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/tap-parser",
           "name": "tap-parser",
+          "package": Object {
+            "name": undefined,
+            "version": "10.0.1",
+          },
           "resolved": null,
         },
         "tap-yaml" => Node {
@@ -9095,6 +10515,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/tap-yaml",
           "name": "tap-yaml",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.0",
+          },
           "resolved": null,
         },
         "to-fast-properties" => Node {
@@ -9110,6 +10534,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/to-fast-properties",
           "name": "to-fast-properties",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": null,
         },
         "treport" => Node {
@@ -9128,6 +10556,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/treport/node_modules/ansi-regex",
               "name": "ansi-regex",
+              "package": Object {
+                "name": undefined,
+                "version": "2.1.1",
+              },
               "resolved": null,
             },
             "strip-ansi" => Node {
@@ -9151,6 +10583,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/treport/node_modules/strip-ansi",
               "name": "strip-ansi",
+              "package": Object {
+                "name": undefined,
+                "version": "3.0.1",
+              },
               "resolved": null,
             },
             "unicode-length" => Node {
@@ -9180,6 +10616,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
               "name": "unicode-length",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.2",
+              },
               "resolved": null,
             },
           },
@@ -9244,6 +10684,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/treport",
           "name": "treport",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.1",
+          },
           "resolved": null,
         },
         "type-fest" => Node {
@@ -9259,6 +10703,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/type-fest",
           "name": "type-fest",
+          "package": Object {
+            "name": undefined,
+            "version": "0.8.1",
+          },
           "resolved": null,
         },
         "widest-line" => Node {
@@ -9282,6 +10730,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/widest-line",
           "name": "widest-line",
+          "package": Object {
+            "name": undefined,
+            "version": "3.1.0",
+          },
           "resolved": null,
         },
         "wrap-ansi" => Node {
@@ -9314,6 +10766,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
+              "package": Object {
+                "name": undefined,
+                "version": "4.2.0",
+              },
               "resolved": null,
             },
             "color-convert" => Node {
@@ -9337,6 +10793,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
               "name": "color-convert",
+              "package": Object {
+                "name": undefined,
+                "version": "2.0.1",
+              },
               "resolved": null,
             },
             "color-name" => Node {
@@ -9352,6 +10812,10 @@ Node {
               },
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-name",
               "name": "color-name",
+              "package": Object {
+                "name": undefined,
+                "version": "1.1.4",
+              },
               "resolved": null,
             },
           },
@@ -9386,6 +10850,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/wrap-ansi",
           "name": "wrap-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "6.2.0",
+          },
           "resolved": null,
         },
         "yaml" => Node {
@@ -9415,6 +10883,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/yaml",
           "name": "yaml",
+          "package": Object {
+            "name": undefined,
+            "version": "1.7.2",
+          },
           "resolved": null,
         },
         "yoga-layout-prebuilt" => Node {
@@ -9430,6 +10902,10 @@ Node {
           },
           "location": "node_modules/tap/node_modules/yoga-layout-prebuilt",
           "name": "yoga-layout-prebuilt",
+          "package": Object {
+            "name": undefined,
+            "version": "1.9.3",
+          },
           "resolved": null,
         },
       },
@@ -9696,6 +11172,10 @@ Node {
       },
       "location": "node_modules/tap",
       "name": "tap",
+      "package": Object {
+        "name": undefined,
+        "version": "14.10.5",
+      },
       "resolved": "https://registry.npmjs.org/tap/-/tap-14.10.5.tgz",
     },
     "tap-mocha-reporter" => Node {
@@ -9720,6 +11200,10 @@ Node {
           },
           "location": "node_modules/tap-mocha-reporter/node_modules/debug",
           "name": "debug",
+          "package": Object {
+            "name": undefined,
+            "version": "2.6.9",
+          },
           "resolved": "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz",
         },
         "diff" => Node {
@@ -9734,6 +11218,10 @@ Node {
           },
           "location": "node_modules/tap-mocha-reporter/node_modules/diff",
           "name": "diff",
+          "package": Object {
+            "name": undefined,
+            "version": "1.4.0",
+          },
           "resolved": "https://registry.npmjs.org/diff/-/diff-1.4.0.tgz",
         },
         "ms" => Node {
@@ -9748,6 +11236,10 @@ Node {
           },
           "location": "node_modules/tap-mocha-reporter/node_modules/ms",
           "name": "ms",
+          "package": Object {
+            "name": undefined,
+            "version": "2.0.0",
+          },
           "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
         },
       },
@@ -9818,6 +11310,10 @@ Node {
       },
       "location": "node_modules/tap-mocha-reporter",
       "name": "tap-mocha-reporter",
+      "package": Object {
+        "name": undefined,
+        "version": "5.0.0",
+      },
       "resolved": "https://registry.npmjs.org/tap-mocha-reporter/-/tap-mocha-reporter-5.0.0.tgz",
     },
     "tap-parser" => Node {
@@ -9852,6 +11348,10 @@ Node {
       },
       "location": "node_modules/tap-parser",
       "name": "tap-parser",
+      "package": Object {
+        "name": undefined,
+        "version": "10.0.1",
+      },
       "resolved": "https://registry.npmjs.org/tap-parser/-/tap-parser-10.0.1.tgz",
     },
     "tap-yaml" => Node {
@@ -9880,6 +11380,10 @@ Node {
       },
       "location": "node_modules/tap-yaml",
       "name": "tap-yaml",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/tap-yaml/-/tap-yaml-1.0.0.tgz",
     },
     "tcompare" => Node {
@@ -9902,6 +11406,10 @@ Node {
       },
       "location": "node_modules/tcompare",
       "name": "tcompare",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/tcompare/-/tcompare-3.0.4.tgz",
     },
     "test-exclude" => Node {
@@ -9942,6 +11450,10 @@ Node {
       },
       "location": "node_modules/test-exclude",
       "name": "test-exclude",
+      "package": Object {
+        "name": undefined,
+        "version": "5.2.3",
+      },
       "resolved": "https://registry.npmjs.org/test-exclude/-/test-exclude-5.2.3.tgz",
     },
     "to-fast-properties" => Node {
@@ -9956,6 +11468,10 @@ Node {
       },
       "location": "node_modules/to-fast-properties",
       "name": "to-fast-properties",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz",
     },
     "to-regex-range" => Node {
@@ -9978,6 +11494,10 @@ Node {
       },
       "location": "node_modules/to-regex-range",
       "name": "to-regex-range",
+      "package": Object {
+        "name": undefined,
+        "version": "5.0.1",
+      },
       "resolved": "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz",
     },
     "tough-cookie" => Node {
@@ -9994,6 +11514,10 @@ Node {
           },
           "location": "node_modules/tough-cookie/node_modules/punycode",
           "name": "punycode",
+          "package": Object {
+            "name": undefined,
+            "version": "1.4.1",
+          },
           "resolved": "https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz",
         },
       },
@@ -10022,6 +11546,10 @@ Node {
       },
       "location": "node_modules/tough-cookie",
       "name": "tough-cookie",
+      "package": Object {
+        "name": undefined,
+        "version": "2.4.3",
+      },
       "resolved": "https://registry.npmjs.org/tough-cookie/-/tough-cookie-2.4.3.tgz",
     },
     "trivial-deferred" => Node {
@@ -10036,6 +11564,10 @@ Node {
       },
       "location": "node_modules/trivial-deferred",
       "name": "trivial-deferred",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/trivial-deferred/-/trivial-deferred-1.0.1.tgz",
     },
     "ts-node" => Node {
@@ -10082,6 +11614,10 @@ Node {
       },
       "location": "node_modules/ts-node",
       "name": "ts-node",
+      "package": Object {
+        "name": undefined,
+        "version": "8.5.4",
+      },
       "resolved": "https://registry.npmjs.org/ts-node/-/ts-node-8.5.4.tgz",
     },
     "tunnel-agent" => Node {
@@ -10104,6 +11640,10 @@ Node {
       },
       "location": "node_modules/tunnel-agent",
       "name": "tunnel-agent",
+      "package": Object {
+        "name": undefined,
+        "version": "0.6.0",
+      },
       "resolved": "https://registry.npmjs.org/tunnel-agent/-/tunnel-agent-0.6.0.tgz",
     },
     "tweetnacl" => Node {
@@ -10124,6 +11664,10 @@ Node {
       },
       "location": "node_modules/tweetnacl",
       "name": "tweetnacl",
+      "package": Object {
+        "name": undefined,
+        "version": "0.14.5",
+      },
       "resolved": "https://registry.npmjs.org/tweetnacl/-/tweetnacl-0.14.5.tgz",
     },
     "typedarray-to-buffer" => Node {
@@ -10146,6 +11690,10 @@ Node {
       },
       "location": "node_modules/typedarray-to-buffer",
       "name": "typedarray-to-buffer",
+      "package": Object {
+        "name": undefined,
+        "version": "3.1.5",
+      },
       "resolved": "https://registry.npmjs.org/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz",
     },
     "typescript" => Node {
@@ -10160,6 +11708,10 @@ Node {
       },
       "location": "node_modules/typescript",
       "name": "typescript",
+      "package": Object {
+        "name": undefined,
+        "version": "3.7.4",
+      },
       "resolved": "https://registry.npmjs.org/typescript/-/typescript-3.7.4.tgz",
     },
     "uglify-js" => Node {
@@ -10189,6 +11741,10 @@ Node {
       "location": "node_modules/uglify-js",
       "name": "uglify-js",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "3.7.3",
+      },
       "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
     },
     "unicode-length" => Node {
@@ -10205,6 +11761,10 @@ Node {
           },
           "location": "node_modules/unicode-length/node_modules/ansi-regex",
           "name": "ansi-regex",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.1",
+          },
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
         },
         "punycode" => Node {
@@ -10219,6 +11779,10 @@ Node {
           },
           "location": "node_modules/unicode-length/node_modules/punycode",
           "name": "punycode",
+          "package": Object {
+            "name": undefined,
+            "version": "1.4.1",
+          },
           "resolved": "https://registry.npmjs.org/punycode/-/punycode-1.4.1.tgz",
         },
         "strip-ansi" => Node {
@@ -10241,6 +11805,10 @@ Node {
           },
           "location": "node_modules/unicode-length/node_modules/strip-ansi",
           "name": "strip-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.1",
+          },
           "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
         },
       },
@@ -10269,6 +11837,10 @@ Node {
       },
       "location": "node_modules/unicode-length",
       "name": "unicode-length",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.3",
+      },
       "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-1.0.3.tgz",
     },
     "uri-js" => Node {
@@ -10291,6 +11863,10 @@ Node {
       },
       "location": "node_modules/uri-js",
       "name": "uri-js",
+      "package": Object {
+        "name": undefined,
+        "version": "4.2.2",
+      },
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
     },
     "util-deprecate" => Node {
@@ -10306,6 +11882,10 @@ Node {
       "location": "node_modules/util-deprecate",
       "name": "util-deprecate",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
     },
     "uuid" => Node {
@@ -10332,6 +11912,10 @@ Node {
       },
       "location": "node_modules/uuid",
       "name": "uuid",
+      "package": Object {
+        "name": undefined,
+        "version": "3.3.3",
+      },
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
     },
     "validate-npm-package-license" => Node {
@@ -10360,6 +11944,10 @@ Node {
       },
       "location": "node_modules/validate-npm-package-license",
       "name": "validate-npm-package-license",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz",
     },
     "verror" => Node {
@@ -10394,6 +11982,10 @@ Node {
       },
       "location": "node_modules/verror",
       "name": "verror",
+      "package": Object {
+        "name": undefined,
+        "version": "1.10.0",
+      },
       "resolved": "https://registry.npmjs.org/verror/-/verror-1.10.0.tgz",
     },
     "vlq" => Node {
@@ -10408,6 +12000,10 @@ Node {
       },
       "location": "node_modules/vlq",
       "name": "vlq",
+      "package": Object {
+        "name": undefined,
+        "version": "0.2.3",
+      },
       "resolved": "https://registry.npmjs.org/vlq/-/vlq-0.2.3.tgz",
     },
     "which" => Node {
@@ -10430,6 +12026,10 @@ Node {
       },
       "location": "node_modules/which",
       "name": "which",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.2",
+      },
       "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
     },
     "which-module" => Node {
@@ -10444,6 +12044,10 @@ Node {
       },
       "location": "node_modules/which-module",
       "name": "which-module",
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.0",
+      },
       "resolved": "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz",
     },
     "wordwrap" => Node {
@@ -10458,6 +12062,10 @@ Node {
       },
       "location": "node_modules/wordwrap",
       "name": "wordwrap",
+      "package": Object {
+        "name": undefined,
+        "version": "0.0.3",
+      },
       "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
     },
     "wrap-ansi" => Node {
@@ -10474,6 +12082,10 @@ Node {
           },
           "location": "node_modules/wrap-ansi/node_modules/ansi-regex",
           "name": "ansi-regex",
+          "package": Object {
+            "name": undefined,
+            "version": "2.1.1",
+          },
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
         },
         "is-fullwidth-code-point" => Node {
@@ -10496,6 +12108,10 @@ Node {
           },
           "location": "node_modules/wrap-ansi/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.0",
+          },
           "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz",
         },
         "string-width" => Node {
@@ -10530,6 +12146,10 @@ Node {
           },
           "location": "node_modules/wrap-ansi/node_modules/string-width",
           "name": "string-width",
+          "package": Object {
+            "name": undefined,
+            "version": "1.0.2",
+          },
           "resolved": "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz",
         },
         "strip-ansi" => Node {
@@ -10558,6 +12178,10 @@ Node {
           },
           "location": "node_modules/wrap-ansi/node_modules/strip-ansi",
           "name": "strip-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "3.0.1",
+          },
           "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
         },
       },
@@ -10586,6 +12210,10 @@ Node {
       },
       "location": "node_modules/wrap-ansi",
       "name": "wrap-ansi",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.0",
+      },
       "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-2.1.0.tgz",
     },
     "wrappy" => Node {
@@ -10606,6 +12234,10 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
     },
     "write-file-atomic" => Node {
@@ -10646,6 +12278,10 @@ Node {
       },
       "location": "node_modules/write-file-atomic",
       "name": "write-file-atomic",
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.1",
+      },
       "resolved": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.1.tgz",
     },
     "y18n" => Node {
@@ -10660,6 +12296,10 @@ Node {
       },
       "location": "node_modules/y18n",
       "name": "y18n",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.0",
+      },
       "resolved": "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz",
     },
     "yallist" => Node {
@@ -10674,6 +12314,10 @@ Node {
       },
       "location": "node_modules/yallist",
       "name": "yallist",
+      "package": Object {
+        "name": undefined,
+        "version": "2.1.2",
+      },
       "resolved": "https://registry.npmjs.org/yallist/-/yallist-2.1.2.tgz",
     },
     "yaml" => Node {
@@ -10696,6 +12340,10 @@ Node {
       },
       "location": "node_modules/yaml",
       "name": "yaml",
+      "package": Object {
+        "name": undefined,
+        "version": "1.7.2",
+      },
       "resolved": "https://registry.npmjs.org/yaml/-/yaml-1.7.2.tgz",
     },
     "yapool" => Node {
@@ -10710,6 +12358,10 @@ Node {
       },
       "location": "node_modules/yapool",
       "name": "yapool",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/yapool/-/yapool-1.0.0.tgz",
     },
     "yargs" => Node {
@@ -10726,6 +12378,10 @@ Node {
           },
           "location": "node_modules/yargs/node_modules/ansi-regex",
           "name": "ansi-regex",
+          "package": Object {
+            "name": undefined,
+            "version": "4.1.0",
+          },
           "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
         },
         "cliui" => Node {
@@ -10760,6 +12416,10 @@ Node {
           },
           "location": "node_modules/yargs/node_modules/cliui",
           "name": "cliui",
+          "package": Object {
+            "name": undefined,
+            "version": "5.0.0",
+          },
           "resolved": "https://registry.npmjs.org/cliui/-/cliui-5.0.0.tgz",
         },
         "string-width" => Node {
@@ -10806,6 +12466,10 @@ Node {
           },
           "location": "node_modules/yargs/node_modules/string-width",
           "name": "string-width",
+          "package": Object {
+            "name": undefined,
+            "version": "3.1.0",
+          },
           "resolved": "https://registry.npmjs.org/string-width/-/string-width-3.1.0.tgz",
         },
         "strip-ansi" => Node {
@@ -10840,6 +12504,10 @@ Node {
           },
           "location": "node_modules/yargs/node_modules/strip-ansi",
           "name": "strip-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "5.2.0",
+          },
           "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
         },
         "wrap-ansi" => Node {
@@ -10874,6 +12542,10 @@ Node {
           },
           "location": "node_modules/yargs/node_modules/wrap-ansi",
           "name": "wrap-ansi",
+          "package": Object {
+            "name": undefined,
+            "version": "5.1.0",
+          },
           "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-5.1.0.tgz",
         },
       },
@@ -10950,6 +12622,10 @@ Node {
       },
       "location": "node_modules/yargs",
       "name": "yargs",
+      "package": Object {
+        "name": undefined,
+        "version": "13.3.0",
+      },
       "resolved": "https://registry.npmjs.org/yargs/-/yargs-13.3.0.tgz",
     },
     "yargs-parser" => Node {
@@ -10984,6 +12660,10 @@ Node {
       },
       "location": "node_modules/yargs-parser",
       "name": "yargs-parser",
+      "package": Object {
+        "name": undefined,
+        "version": "13.1.1",
+      },
       "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-13.1.1.tgz",
     },
     "yn" => Node {
@@ -10998,6 +12678,10 @@ Node {
       },
       "location": "node_modules/yn",
       "name": "yn",
+      "package": Object {
+        "name": undefined,
+        "version": "3.1.1",
+      },
       "resolved": "https://registry.npmjs.org/yn/-/yn-3.1.1.tgz",
     },
   },
@@ -11017,6 +12701,74 @@ Node {
   },
   "location": "",
   "name": "two-bundled-deps",
+  "package": Object {
+    "name": "two-bundled-deps",
+    "version": "1.0.0",
+  },
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP load a tree with a v1 lockfile > virtual tree with v1 shronk 1`] = `
+Node {
+  "children": Map {
+    "once" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "once",
+          "spec": "^1.4.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+    "wrappy" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "once" => Edge {
+      "name": "once",
+      "spec": "^1.4.0",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "old-package-lock",
+  "package": Object {
+    "name": undefined,
+    "version": undefined,
+  },
   "resolved": null,
 }
 `
@@ -11025,6 +12777,10 @@ exports[`test/arborist/load-virtual.js TAP load a tree with an empty dep set and
 Node {
   "location": "",
   "name": "empty-with-shrinkwrap",
+  "package": Object {
+    "name": undefined,
+    "version": undefined,
+  },
   "resolved": null,
 }
 `
@@ -11044,6 +12800,10 @@ Node {
       },
       "location": "node_modules/diff-frag",
       "name": "diff-frag",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/diff-frag/-/diff-frag-1.0.1.tgz",
     },
     "inflight" => Node {
@@ -11072,6 +12832,10 @@ Node {
       "location": "node_modules/inflight",
       "name": "inflight",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "once" => Node {
@@ -11099,6 +12863,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
     },
     "tcompare" => Node {
@@ -11113,6 +12881,10 @@ Node {
       },
       "location": "node_modules/tcompare",
       "name": "tcompare",
+      "package": Object {
+        "name": undefined,
+        "version": "4.0.1",
+      },
       "resolved": "https://registry.npmjs.org/tcompare/-/tcompare-4.0.1.tgz",
     },
     "wrappy" => Node {
@@ -11132,6 +12904,10 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
     },
   },
@@ -11151,6 +12927,10 @@ Node {
   },
   "location": "",
   "name": "dev-deps",
+  "package": Object {
+    "name": "dev-deps",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -11169,6 +12949,10 @@ Node {
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
+      "package": Object {
+        "name": "@scope/x",
+        "version": "1.0.0",
+      },
       "resolved": "file:../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "target": Object {
         "name": "@scope/x",
@@ -11186,6 +12970,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "target": Object {
         "name": "a",
@@ -11209,6 +12997,10 @@ Node {
   },
   "location": "",
   "name": "pnpm",
+  "package": Object {
+    "name": "pnpm-root",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -11232,6 +13024,10 @@ Node {
               },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
+              "package": Object {
+                "name": undefined,
+                "version": undefined,
+              },
               "resolved": "fake resolved value",
             },
           },
@@ -11253,6 +13049,10 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
+          "package": Object {
+            "name": undefined,
+            "version": undefined,
+          },
           "resolved": null,
         },
       },
@@ -11275,6 +13075,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "balanced-match" => Node {
@@ -11289,6 +13093,10 @@ Node {
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -11317,6 +13125,10 @@ Node {
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.11",
+      },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -11341,6 +13153,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
@@ -11363,6 +13179,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
@@ -11377,6 +13197,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
@@ -11398,6 +13222,10 @@ Node {
       },
       "location": "node_modules/bundler",
       "name": "bundler",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.3",
+      },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
     },
     "concat-map" => Node {
@@ -11412,6 +13240,10 @@ Node {
       "location": "node_modules/concat-map",
       "name": "concat-map",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "0.0.1",
+      },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -11426,6 +13258,10 @@ Node {
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
@@ -11439,6 +13275,10 @@ Node {
       },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
@@ -11452,11 +13292,19 @@ Node {
       },
       "location": "node_modules/ghshort",
       "name": "ghshort",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "glob" => Node {
@@ -11509,6 +13357,10 @@ Node {
       "location": "node_modules/glob",
       "name": "glob",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "7.1.4",
+      },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -11537,6 +13389,10 @@ Node {
       "location": "node_modules/inflight",
       "name": "inflight",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -11551,6 +13407,10 @@ Node {
       "location": "node_modules/inherits",
       "name": "inherits",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.4",
+      },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -11573,6 +13433,10 @@ Node {
       "location": "node_modules/minimatch",
       "name": "minimatch",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
@@ -11586,6 +13450,10 @@ Node {
       },
       "location": "node_modules/old",
       "name": "old",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.0.3",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
     },
     "once" => Node {
@@ -11613,6 +13481,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
@@ -11627,6 +13499,10 @@ Node {
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
@@ -11640,11 +13516,19 @@ Node {
       },
       "location": "node_modules/pinned",
       "name": "pinned",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": null,
     },
     "reg" => Node {
@@ -11658,6 +13542,10 @@ Node {
       },
       "location": "node_modules/reg",
       "name": "reg",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
@@ -11671,6 +13559,10 @@ Node {
       },
       "location": "node_modules/remote",
       "name": "remote",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "rimraf" => Node {
@@ -11684,6 +13576,10 @@ Node {
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
+      "package": Object {
+        "name": undefined,
+        "version": "2.6.3",
+      },
       "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
@@ -11697,6 +13593,10 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
@@ -11706,6 +13606,10 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
@@ -11724,17 +13628,29 @@ Node {
       },
       "location": "node_modules/tarball",
       "name": "tarball",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "wrappy" => Node {
@@ -11754,6 +13670,10 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
     },
   },
@@ -11821,6 +13741,10 @@ Node {
   },
   "location": "",
   "name": "install-types",
+  "package": Object {
+    "name": "a",
+    "version": "1.2.3",
+  },
   "resolved": null,
 }
 `
@@ -11844,6 +13768,10 @@ Node {
               },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
+              "package": Object {
+                "name": undefined,
+                "version": undefined,
+              },
               "resolved": "fake resolved value",
             },
           },
@@ -11865,6 +13793,10 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
+          "package": Object {
+            "name": undefined,
+            "version": undefined,
+          },
           "resolved": null,
         },
       },
@@ -11887,6 +13819,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "balanced-match" => Node {
@@ -11901,6 +13837,10 @@ Node {
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -11929,6 +13869,10 @@ Node {
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.11",
+      },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -11953,6 +13897,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
@@ -11975,6 +13923,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
@@ -11989,6 +13941,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
@@ -12010,6 +13966,10 @@ Node {
       },
       "location": "node_modules/bundler",
       "name": "bundler",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.3",
+      },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
     },
     "concat-map" => Node {
@@ -12024,6 +13984,10 @@ Node {
       "location": "node_modules/concat-map",
       "name": "concat-map",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "0.0.1",
+      },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -12038,6 +14002,10 @@ Node {
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
@@ -12051,6 +14019,10 @@ Node {
       },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
@@ -12064,11 +14036,19 @@ Node {
       },
       "location": "node_modules/ghshort",
       "name": "ghshort",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "glob" => Node {
@@ -12121,6 +14101,10 @@ Node {
       "location": "node_modules/glob",
       "name": "glob",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "7.1.4",
+      },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -12149,6 +14133,10 @@ Node {
       "location": "node_modules/inflight",
       "name": "inflight",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -12163,6 +14151,10 @@ Node {
       "location": "node_modules/inherits",
       "name": "inherits",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.4",
+      },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -12185,6 +14177,10 @@ Node {
       "location": "node_modules/minimatch",
       "name": "minimatch",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
@@ -12198,6 +14194,10 @@ Node {
       },
       "location": "node_modules/old",
       "name": "old",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.0.3",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
     },
     "once" => Node {
@@ -12225,6 +14225,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
@@ -12239,6 +14243,10 @@ Node {
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
@@ -12252,11 +14260,19 @@ Node {
       },
       "location": "node_modules/pinned",
       "name": "pinned",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": null,
     },
     "reg" => Node {
@@ -12270,6 +14286,10 @@ Node {
       },
       "location": "node_modules/reg",
       "name": "reg",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
@@ -12283,6 +14303,10 @@ Node {
       },
       "location": "node_modules/remote",
       "name": "remote",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "rimraf" => Node {
@@ -12296,6 +14320,10 @@ Node {
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
+      "package": Object {
+        "name": undefined,
+        "version": "2.6.3",
+      },
       "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
@@ -12309,6 +14337,10 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
@@ -12318,6 +14350,10 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
@@ -12336,17 +14372,29 @@ Node {
       },
       "location": "node_modules/tarball",
       "name": "tarball",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "wrappy" => Node {
@@ -12366,6 +14414,10 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
     },
   },
@@ -12433,6 +14485,10 @@ Node {
   },
   "location": "",
   "name": "install-types",
+  "package": Object {
+    "name": "a",
+    "version": "1.2.3",
+  },
   "resolved": null,
 }
 `
@@ -12456,6 +14512,10 @@ Node {
               },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
+              "package": Object {
+                "name": undefined,
+                "version": undefined,
+              },
               "resolved": "fake resolved value",
             },
           },
@@ -12477,6 +14537,10 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
+          "package": Object {
+            "name": undefined,
+            "version": undefined,
+          },
           "resolved": null,
         },
       },
@@ -12490,6 +14554,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "balanced-match" => Node {
@@ -12504,6 +14572,10 @@ Node {
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -12532,6 +14604,10 @@ Node {
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.11",
+      },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -12556,6 +14632,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
@@ -12578,6 +14658,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
@@ -12592,6 +14676,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
@@ -12613,6 +14701,10 @@ Node {
       },
       "location": "node_modules/bundler",
       "name": "bundler",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.3",
+      },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
     },
     "concat-map" => Node {
@@ -12627,6 +14719,10 @@ Node {
       "location": "node_modules/concat-map",
       "name": "concat-map",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "0.0.1",
+      },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -12641,6 +14737,10 @@ Node {
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
@@ -12654,6 +14754,10 @@ Node {
       },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
@@ -12667,11 +14771,19 @@ Node {
       },
       "location": "node_modules/ghshort",
       "name": "ghshort",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "glob" => Node {
@@ -12724,6 +14836,10 @@ Node {
       "location": "node_modules/glob",
       "name": "glob",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "7.1.4",
+      },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -12752,6 +14868,10 @@ Node {
       "location": "node_modules/inflight",
       "name": "inflight",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -12766,6 +14886,10 @@ Node {
       "location": "node_modules/inherits",
       "name": "inherits",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.4",
+      },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -12788,6 +14912,10 @@ Node {
       "location": "node_modules/minimatch",
       "name": "minimatch",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
@@ -12801,6 +14929,10 @@ Node {
       },
       "location": "node_modules/old",
       "name": "old",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.0.3",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
     },
     "once" => Node {
@@ -12828,6 +14960,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
@@ -12842,6 +14978,10 @@ Node {
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
@@ -12855,11 +14995,19 @@ Node {
       },
       "location": "node_modules/pinned",
       "name": "pinned",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": null,
     },
     "reg" => Node {
@@ -12873,6 +15021,10 @@ Node {
       },
       "location": "node_modules/reg",
       "name": "reg",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
@@ -12886,6 +15038,10 @@ Node {
       },
       "location": "node_modules/remote",
       "name": "remote",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "rimraf" => Node {
@@ -12899,6 +15055,10 @@ Node {
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
+      "package": Object {
+        "name": undefined,
+        "version": "2.6.3",
+      },
       "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
@@ -12912,6 +15072,10 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
@@ -12921,6 +15085,10 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
@@ -12939,17 +15107,29 @@ Node {
       },
       "location": "node_modules/tarball",
       "name": "tarball",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "wrappy" => Node {
@@ -12969,6 +15149,10 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
     },
   },
@@ -13036,6 +15220,10 @@ Node {
   },
   "location": "",
   "name": "load-virtual-load-from-npm-shrinkwrap-json",
+  "package": Object {
+    "name": "a",
+    "version": "1.2.3",
+  },
   "resolved": null,
 }
 `
@@ -13059,6 +15247,10 @@ Node {
               },
               "location": "node_modules/abbrev/node_modules/@scope/name/node_modules/@otherscope/othername",
               "name": "@otherscope/othername",
+              "package": Object {
+                "name": undefined,
+                "version": undefined,
+              },
               "resolved": "fake resolved value",
             },
           },
@@ -13080,11 +15272,19 @@ Node {
           },
           "location": "node_modules/abbrev/node_modules/@scope/name",
           "name": "@scope/name",
+          "package": Object {
+            "name": undefined,
+            "version": undefined,
+          },
           "resolved": null,
         },
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "balanced-match" => Node {
@@ -13099,6 +15299,10 @@ Node {
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
     },
     "brace-expansion" => Node {
@@ -13127,6 +15331,10 @@ Node {
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.11",
+      },
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
     },
     "bundler" => Node {
@@ -13151,6 +15359,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
         },
         "b" => Node {
@@ -13173,6 +15385,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
         },
         "c" => Node {
@@ -13187,6 +15403,10 @@ Node {
           },
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
+          "package": Object {
+            "name": undefined,
+            "version": "1.2.3",
+          },
           "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
         },
       },
@@ -13200,6 +15420,10 @@ Node {
       },
       "location": "node_modules/bundler",
       "name": "bundler",
+      "package": Object {
+        "name": undefined,
+        "version": "1.2.3",
+      },
       "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
     },
     "concat-map" => Node {
@@ -13214,6 +15438,10 @@ Node {
       "location": "node_modules/concat-map",
       "name": "concat-map",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "0.0.1",
+      },
       "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
     },
     "fs.realpath" => Node {
@@ -13228,21 +15456,37 @@ Node {
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.0",
+      },
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
     },
     "full-git-url" => Node {
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
       "location": "node_modules/ghshort",
       "name": "ghshort",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "glob" => Node {
@@ -13295,6 +15539,10 @@ Node {
       "location": "node_modules/glob",
       "name": "glob",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "7.1.4",
+      },
       "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
     },
     "inflight" => Node {
@@ -13323,6 +15571,10 @@ Node {
       "location": "node_modules/inflight",
       "name": "inflight",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.6",
+      },
       "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
     },
     "inherits" => Node {
@@ -13337,6 +15589,10 @@ Node {
       "location": "node_modules/inherits",
       "name": "inherits",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "2.0.4",
+      },
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
     },
     "minimatch" => Node {
@@ -13359,11 +15615,19 @@ Node {
       "location": "node_modules/minimatch",
       "name": "minimatch",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "3.0.4",
+      },
       "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
     },
     "old" => Node {
       "location": "node_modules/old",
       "name": "old",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.0.3",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
     },
     "once" => Node {
@@ -13391,6 +15655,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": undefined,
+        "version": "1.4.0",
+      },
       "resolved": "file:../../once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
@@ -13405,26 +15673,46 @@ Node {
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
       "optional": true,
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.1",
+      },
       "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
     },
     "pinned" => Node {
       "location": "node_modules/pinned",
       "name": "pinned",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "really-bad-invalid" => Node {
       "location": "node_modules/really-bad-invalid",
       "name": "really-bad-invalid",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": null,
     },
     "reg" => Node {
       "location": "node_modules/reg",
       "name": "reg",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
     },
     "remote" => Node {
       "location": "node_modules/remote",
       "name": "remote",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "rimraf" => Node {
@@ -13438,11 +15726,19 @@ Node {
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
+      "package": Object {
+        "name": undefined,
+        "version": "2.6.3",
+      },
       "resolved": "file:../../rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "location": "node_modules/symlink",
       "name": "symlink",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
@@ -13452,6 +15748,10 @@ Node {
     "symlink-in-tree" => Link {
       "location": "node_modules/symlink-in-tree",
       "name": "symlink-in-tree",
+      "package": Object {
+        "name": undefined,
+        "version": "1.1.1",
+      },
       "resolved": "file:abbrev",
       "target": Object {
         "name": "abbrev",
@@ -13462,17 +15762,29 @@ Node {
       "dev": true,
       "location": "node_modules/tarball",
       "name": "tarball",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
       "location": "node_modules/tarball-no-integrity",
       "name": "tarball-no-integrity",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "file:../../abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
       "name": "unhosted-git",
+      "package": Object {
+        "name": undefined,
+        "version": undefined,
+      },
       "resolved": "git+https://mygit.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "wrappy" => Node {
@@ -13492,11 +15804,19 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": undefined,
+        "version": "1.0.2",
+      },
       "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
     },
   },
   "location": "",
   "name": "install-types-sw-only",
+  "package": Object {
+    "name": "a",
+    "version": "1.2.3",
+  },
   "resolved": null,
 }
 `
@@ -13515,6 +15835,10 @@ Node {
       },
       "location": "node_modules/app",
       "name": "app",
+      "package": Object {
+        "name": "app",
+        "version": undefined,
+      },
       "resolved": "file:../app",
       "target": Object {
         "name": "app",
@@ -13532,6 +15856,10 @@ Node {
       },
       "location": "node_modules/lib",
       "name": "lib",
+      "package": Object {
+        "name": "lib",
+        "version": undefined,
+      },
       "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
@@ -13549,6 +15877,10 @@ Node {
   },
   "location": "",
   "name": "cli-750",
+  "package": Object {
+    "name": "monorepo",
+    "version": undefined,
+  },
   "resolved": null,
 }
 `
@@ -13567,6 +15899,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
@@ -13590,6 +15926,10 @@ Node {
       },
       "location": "node_modules/b",
       "name": "b",
+      "package": Object {
+        "name": "b",
+        "version": "1.0.0",
+      },
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
@@ -13613,6 +15953,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-simple-virtual",
+  "package": Object {
+    "name": "workspace-simple",
+    "version": undefined,
+  },
   "resolved": null,
 }
 `
@@ -13631,6 +15975,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -13662,6 +16010,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "b" => Link {
@@ -13675,6 +16027,10 @@ Node {
       },
       "location": "node_modules/b",
       "name": "b",
+      "package": Object {
+        "name": "b",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/b",
       "target": Object {
         "name": "b",
@@ -13704,6 +16060,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-conflicting-versions-virtual",
+  "package": Object {
+    "name": "workspaces-conflicting-deps",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -13722,6 +16082,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -13746,6 +16110,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": "abbrev",
+        "version": "2.0.0",
+      },
       "resolved": "file:../packages/abbrev",
       "target": Object {
         "name": "abbrev",
@@ -13769,6 +16137,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-version-unsatisfied-virtual",
+  "package": Object {
+    "name": "workspaces-version-unsatisfied",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -13787,6 +16159,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -13804,6 +16180,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-ignore-nm-virtual",
+  "package": Object {
+    "name": "workspace-ignore-nm",
+    "version": undefined,
+  },
   "resolved": null,
 }
 `
@@ -13822,6 +16202,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -13848,6 +16232,10 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "package": Object {
+        "name": "once",
+        "version": "1.4.0",
+      },
       "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
     },
     "wrappy" => Node {
@@ -13862,6 +16250,10 @@ Node {
       },
       "location": "node_modules/wrappy",
       "name": "wrappy",
+      "package": Object {
+        "name": "wrappy",
+        "version": "1.0.2",
+      },
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
     },
   },
@@ -13875,6 +16267,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-transitive-deps-virtual",
+  "package": Object {
+    "name": "workspaces-transitive-deps",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -13893,6 +16289,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -13910,6 +16310,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-top-level-link-virtual",
+  "package": Object {
+    "name": "workspaces-top-level-link",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -13928,6 +16332,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -13951,6 +16359,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": "abbrev",
+        "version": "2.0.0",
+      },
       "resolved": "file:../packages/abbrev",
       "target": Object {
         "name": "abbrev",
@@ -13974,6 +16386,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-prefer-linking-virtual",
+  "package": Object {
+    "name": "workspaces-prefer-linking",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `
@@ -13992,6 +16408,10 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
@@ -14015,6 +16435,10 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
+      "package": Object {
+        "name": "abbrev",
+        "version": "1.1.1",
+      },
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
     },
     "b" => Link {
@@ -14028,6 +16452,10 @@ Node {
       },
       "location": "node_modules/b",
       "name": "b",
+      "package": Object {
+        "name": "b",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/b",
       "target": Object {
         "name": "b",
@@ -14045,6 +16473,10 @@ Node {
       },
       "location": "node_modules/c",
       "name": "c",
+      "package": Object {
+        "name": "c",
+        "version": "1.0.0",
+      },
       "resolved": "file:../packages/c",
       "target": Object {
         "name": "c",
@@ -14062,6 +16494,10 @@ Node {
       },
       "location": "node_modules/uuid",
       "name": "uuid",
+      "package": Object {
+        "name": "uuid",
+        "version": "3.3.3",
+      },
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
     },
   },
@@ -14087,6 +16523,10 @@ Node {
   },
   "location": "",
   "name": "workspaces-shared-deps-virtual",
+  "package": Object {
+    "name": "workspaces-shared-deps",
+    "version": "1.0.0",
+  },
   "resolved": null,
 }
 `

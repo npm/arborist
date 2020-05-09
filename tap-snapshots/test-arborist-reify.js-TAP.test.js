@@ -152,6 +152,16 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP add a dep present in the tree, with v1 shrinkwrap > must match snapshot 1`] = `
+{
+  "dependencies": {
+    "once": "^1.4.0",
+    "wrappy": "npm:undefined@^1.0.2"
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP bad shrinkwrap file > expect resolving Promise 1`] = `
 Node {
   "children": Map {

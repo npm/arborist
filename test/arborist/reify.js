@@ -927,3 +927,10 @@ t.test('workspaces', t => {
 
   t.end()
 })
+
+t.test('add a dep present in the tree, with v1 shrinkwrap', async t => {
+  // https://github.com/npm/arborist/issues/70
+  const path = fixture(t, 'old-package-lock')
+  const tree = await reify(path, { add: ['wrappy'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})

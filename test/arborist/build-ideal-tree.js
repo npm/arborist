@@ -257,6 +257,20 @@ t.test('bundle deps example 1', t => {
     }), 'bundle the bundler'))
 })
 
+t.test('bundle deps example 1, complete:true', t => {
+  // When complete:true is set, we extract into a temp dir to read
+  // the bundled deps, so they ARE included, just like during reify()
+  const path = resolve(fixtures, 'testing-bundledeps')
+  return t.resolveMatchSnapshot(printIdeal(path, {
+    complete: true,
+  }), 'bundle deps testing')
+    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+      saveBundle: true,
+      add: [ '@isaacs/testing-bundledeps' ],
+      complete: true,
+    }), 'bundle the bundler'))
+})
+
 t.test('bundle deps example 2', t => {
   // bundled deps at the root level are NOT ignored when building ideal trees
   const path = resolve(fixtures, 'testing-bundledeps-2')
@@ -286,10 +300,21 @@ t.test('do not add shrinkwrapped deps', t => {
   return t.resolveMatchSnapshot(printIdeal(path))
 })
 
+t.test('do add shrinkwrapped deps when complete:true is set', t => {
+  const path = resolve(fixtures, 'shrinkwrapped-dep-no-lock')
+  return t.resolveMatchSnapshot(printIdeal(path, { complete: true }))
+})
+
 t.test('do not update shrinkwrapped deps', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,
     { update: { names: ['abbrev']}}))
+})
+
+t.test('do not update shrinkwrapped deps when complete:true is set', t => {
+  const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
+  return t.resolveMatchSnapshot(printIdeal(path,
+    { update: { names: ['abbrev']}, complete: true}))
 })
 
 t.test('deduped transitive deps with asymmetrical bin declaration', t => {

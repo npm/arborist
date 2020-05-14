@@ -70,5 +70,24 @@ t.test('basic operations', t => {
   t.equal(i.get('z'), undefined, 'node is not here')
   t.equal(i.has(z), false, 'i does not have z any more')
 
+  t.doesNotThrow(() =>
+    i.add({
+      location: 'f',
+      name: 'f',
+      'package': {
+        license: 'MIT',
+        funding: null
+      }
+    }) , 'doesnt throw on falsy funding info')
+
+  t.doesNotThrow(() =>
+    i.add({
+      location: 'l',
+      name: 'l',
+      'package': {
+        license: null
+      }
+    }) , 'doesnt throw on falsy license info')
+
   t.end()
 })

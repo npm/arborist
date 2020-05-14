@@ -1977,7 +1977,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -2251,7 +2251,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -2286,6 +2286,27 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "meta": undefined,
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
   "legacyPeerDeps": false,
@@ -2512,7 +2533,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -2786,7 +2807,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -2821,6 +2842,27 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "meta": undefined,
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
   "legacyPeerDeps": false,
@@ -4725,7 +4767,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -4999,7 +5041,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -5034,6 +5076,27 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "meta": undefined,
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
   "legacyPeerDeps": false,
@@ -5246,7 +5309,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -5520,7 +5583,7 @@ Node {
           "inventory": Inventory {},
           "legacyPeerDeps": false,
           "linksIn": Set {},
-          "location": "node_modules/prod/node_modules/meta/node_modules/metameta",
+          "location": "node_modules/meta/node_modules/metameta",
           "meta": undefined,
           "name": "metameta",
           "optional": true,
@@ -5555,6 +5618,27 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "meta": undefined,
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
     },
   },
   "legacyPeerDeps": false,
@@ -5607,7 +5691,7 @@ exports[`test/node.js TAP update metadata when moving between linked top-of-tree
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new child2 location 1`] = `
-../../../../path/to/top1/node_modules/child/node_modules/child2
+../../../../path/to/top2/node_modules/child/node_modules/child2
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new top metadata updated 1`] = `
@@ -5623,7 +5707,12 @@ Object {
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new top metadata updated 2`] = `
-Object {}
+Object {
+  "extraneous": true,
+  "integrity": "sha512-a childs child is a kidkid",
+  "resolved": "https://child.com/-/child-2.3.4.tgz",
+  "version": "2.3.4",
+}
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > old location deleted from root 1`] = `
@@ -5655,5 +5744,10 @@ Object {
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > root metadata updated 2`] = `
-Object {}
+Object {
+  "extraneous": true,
+  "integrity": "sha512-a childs child is a kidkid",
+  "resolved": "https://child.com/-/child-2.3.4.tgz",
+  "version": "2.3.4",
+}
 `

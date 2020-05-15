@@ -133,6 +133,29 @@ t.test('load a tree rooted on a different node', async t => {
 
   // should look the same, once we strip off the other/fixture paths
   t.equal(format(printTree(actual)), format(printTree(transp)), 'similar trees')
+
+  // now try with a transplant filter that keeps out the 'a' module
+  const rootFiltered = new Node({
+    meta: await Shrinkwrap.reset({path: other}),
+    path: other,
+    realpath: other,
+    pkg: require(path + '/package.json'),
+  })
+  rootFiltered.extraneous = false
+  rootFiltered.dev = false
+  rootFiltered.devOptional = false
+  rootFiltered.optional = false
+  rootFiltered.peer = false
+  const transpFilter = await new Arborist({path}).loadActual({
+    root: rootFiltered,
+    transplantFilter: n => n.name !== 'a'
+  })
+  t.equal(transpFilter.children.get('a'), undefined)
+  t.equal(transpFilter.children.get('b').path, resolve(other, 'node_modules/b'))
+  t.equal(transpFilter.children.get('c').path, resolve(other, 'node_modules/c'))
+  t.equal(transpFilter.children.get('a'), undefined)
+  t.equal(transpFilter.children.get('b').realpath, resolve(other, 'packages/b'))
+  t.equal(transpFilter.children.get('c').realpath, resolve(other, 'packages/c'))
 })
 
 t.test('looking outside of cwd', t => {

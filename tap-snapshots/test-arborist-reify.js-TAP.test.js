@@ -755,6 +755,79 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP just the shrinkwrap cli-750-fresh > must match snapshot 1`] = `
+{
+  "name": "monorepo",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "monorepo",
+      "dependencies": {
+        "app": "file:./app"
+      }
+    },
+    "app": {
+      "dependencies": {
+        "lib": "file:../lib"
+      }
+    },
+    "lib": {},
+    "node_modules/app": {
+      "resolved": "app",
+      "link": true
+    },
+    "node_modules/lib": {
+      "resolved": "lib",
+      "link": true
+    }
+  },
+  "dependencies": {
+    "app": {
+      "version": "file:app"
+    },
+    "lib": {
+      "version": "file:lib"
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP just the shrinkwrap yarn-lock-mkdirp > must match snapshot 1`] = `
+{
+  "name": "reify-just-the-shrinkwrap-yarn-lock-mkdirp",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "mkdirp": "^1.0.2"
+      }
+    },
+    "node_modules/mkdirp": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+      "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
+      "bin": {
+        "mkdirp": "bin/cmd.js"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+    }
+  },
+  "dependencies": {
+    "mkdirp": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+      "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA=="
+    }
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP link deps already in place > expect resolving Promise 1`] = `
 Node {
   "children": Map {
@@ -12514,6 +12587,43 @@ Node {
   "name": "reify-optional-dependency-failures-optional-metadep-tgz-missing",
   "resolved": null,
 }
+`
+
+exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 1`] = `
+{
+  "dependencies": {
+    "abbrev": "^1.1.1"
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 2`] = `
+{
+  "name": "reify-packageLockOnly-can-add-deps",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "abbrev": "^1.1.1"
+      }
+    },
+    "node_modules/abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  },
+  "dependencies": {
+    "abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  }
+}
+
 `
 
 exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-no-lock > expect resolving Promise 1`] = `

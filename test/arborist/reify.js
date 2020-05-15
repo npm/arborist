@@ -167,6 +167,37 @@ t.test('weirdly broken lockfile without resolved value', t =>
 t.test('testing-peer-deps package', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps'))))
 
+t.test('just the shrinkwrap', t => {
+  const paths = [
+    'cli-750-fresh',
+    'yarn-lock-mkdirp',
+  ]
+  t.plan(paths.length)
+  for (const p of paths) {
+    t.test(p, async t => {
+      const path = fixture(t, p)
+      const arb = new Arborist({ path, registry, cache, packageLockOnly: true })
+      await arb.reify()
+      t.ok(arb.auditReport, 'got an audit report')
+      t.throws(() => fs.statSync(path + '/node_modules'), { code: 'ENOENT' })
+      t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'))
+    })
+  }
+})
+
+t.test('packageLockOnly can add deps', async t => {
+  const path = t.testdir({ 'package.json': '{}' })
+  await reify(path, { add: ['abbrev'], packageLockOnly: true })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+  t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'))
+  t.throws(() => fs.statSync(path + '/node_modules'), { code: 'ENOENT' })
+})
+
+t.test('packageLockOnly does not work on globals', t => {
+  const path = t.testdir({ 'package.json': '{}' })
+  return t.rejects(() => reify(path, { global: true, packageLockOnly: true }))
+})
+
 t.test('omit peer deps', t => {
   const path = fixture(t, 'testing-peer-deps')
   // in this one we also snapshot the timers, mostly just as a smoke test

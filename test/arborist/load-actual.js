@@ -114,6 +114,12 @@ t.test('load a tree rooted on a different node', async t => {
     realpath: other,
     pkg: require(path + '/package.json'),
   })
+  root.extraneous = false
+  root.dev = false
+  root.devOptional = false
+  root.optional = false
+  root.peer = false
+
   const actual = await new Arborist({path}).loadActual()
   const transp = await new Arborist({path}).loadActual({root})
 

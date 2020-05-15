@@ -75,3 +75,16 @@ Node {
   ],
 }
 `
+
+exports[`test/calc-dep-flags.js TAP no reset > after 1`] = `
+Node {
+  "_": "path",
+  "_dev": true,
+  "children": Array [
+    Node {
+      "_": "foo",
+      "_dev": true,
+    },
+  ],
+}
+`

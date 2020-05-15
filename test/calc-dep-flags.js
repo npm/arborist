@@ -165,3 +165,27 @@ t.test('flag stuff', t => {
   t.matchSnapshot(printTree(root), 'after')
   t.end()
 })
+
+t.test('no reset', async t => {
+  const root = new Node({
+    path: '/some/path',
+    realpath: '/some/path',
+    pkg: {
+      dependencies: { foo: '' },
+    },
+  })
+  const foo = new Node({parent: root, pkg: { name: 'foo', version: '1.2.3' }})
+
+  root.optional = false
+  root.dev = true
+  root.extraneous = false
+
+  calcDepFlags(root, false)
+  t.matchSnapshot(printTree(root), 'after')
+  t.equal(root.dev, true, 'root.dev')
+  t.equal(foo.dev, true, 'foo.dev')
+  t.equal(root.optional, false, 'root.optional')
+  t.equal(foo.optional, false, 'foo.optional')
+  t.equal(root.extraneous, false, 'root.extraneous')
+  t.equal(foo.extraneous, false, 'foo.extraneous')
+})

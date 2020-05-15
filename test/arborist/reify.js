@@ -231,8 +231,10 @@ t.test('update a bundling node without updating all of its deps', t => {
       'contains fsevents in lockfile')
   }
 
-  return t.resolveMatchSnapshot(printReified(path,
-    { saveType: 'dev', add: [ 'tap@14.10.5' ] }))
+  return t.resolveMatchSnapshot(printReified(path, {
+    saveType: 'dev',
+    add: [ 'tap@14.10.5' ],
+  }))
     .then(checkBin)
     .then(checkPackageLock)
 })
@@ -439,16 +441,21 @@ t.test('fail on mismatched engine when engineStrict is set', t =>
   }).then(() => { throw new Error('failed to fail') }), { code: 'EBADENGINE' }))
 
 t.test('warn on mismatched engine when engineStrict is false', t => {
+  const path = fixture(t, 'tap-and-flow')
   const a = new Arborist({
     registry,
-    path: fixture(t, 'tap-and-flow'),
+    path,
     engineStrict: false,
     nodeVersion: '1.2.3',
+    // just to add coverage for the no-op function for bundleBinLinks
+    binLinks: false,
   })
   const check = warningTracker()
+  const binPath = `${path}/node_modules/tap/node_modules/.bin`
   return a.reify().then(() => t.match(check(), [
     ['warn', { code: 'EBADENGINE' }],
   ]))
+  .then(() => t.throws(() => fs.readdir(binPath)))
 })
 
 t.test('warn on reifying deprecated dependency', t => {

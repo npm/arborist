@@ -3,6 +3,8 @@ const { format } = require('tcompare')
 const Arborist = require('../../lib/arborist')
 const { resolve, dirname, relative } = require('path')
 const { realpathSync } = require('fs')
+const Node = require('../../lib/node.js')
+const Shrinkwrap = require('../../lib/shrinkwrap.js')
 
 const {
   fixtures,
@@ -12,8 +14,8 @@ const {
 
 // little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
-const pp = path => path && path.substr(fixtures.length + 1)
-  .replace(/\\/g, '/')
+const pp = path => path && path.substr(fixtures.length + 1).replace(/\\/g, '/')
+
 const printEdge = (edge, inout) => ({
   name: edge.name,
   type: edge.type,
@@ -73,6 +75,12 @@ const printTree = tree => ({
         .sort((a, b) => a[0].localeCompare(b[0]))
         .map(([name, tree]) => [name, printTree(tree)]))
     }),
+  ...(tree.target || !tree.fsChildren.size ? {}
+    : {
+      fsChildren: [...tree.fsChildren]
+        .sort((a, b) => a.path.localeCompare(b.path))
+        .map(tree => tree.location)
+    }),
   __proto__: { constructor: tree.constructor },
   ...( !tree.meta ? {} : {
     // stringify and re-parse to sort consistently
@@ -96,6 +104,30 @@ t.test('already loaded', t => new Arborist({
   path: resolve(__dirname, '../fixtures/selflink'),
   actualTree,
 }).loadActual().then(tree2 => t.equal(tree2, actualTree))))
+
+t.test('load a tree rooted on a different node', async t => {
+  const path = resolve(fixtures, 'workspace')
+  const other = resolve(fixtures.replace(/[a-z]/gi, 'X'), 'workspace')
+  const root = new Node({
+    meta: await Shrinkwrap.reset({path: other}),
+    path: other,
+    realpath: other,
+    pkg: require(path + '/package.json'),
+  })
+  const actual = await new Arborist({path}).loadActual()
+  const transp = await new Arborist({path}).loadActual({root})
+
+  // verify that the transp nodes have the right paths
+  t.equal(transp.children.get('a').path, resolve(other, 'node_modules/a'))
+  t.equal(transp.children.get('b').path, resolve(other, 'node_modules/b'))
+  t.equal(transp.children.get('c').path, resolve(other, 'node_modules/c'))
+  t.equal(transp.children.get('a').realpath, resolve(other, 'packages/a'))
+  t.equal(transp.children.get('b').realpath, resolve(other, 'packages/b'))
+  t.equal(transp.children.get('c').realpath, resolve(other, 'packages/c'))
+
+  // should look the same, once we strip off the other/fixture paths
+  t.equal(format(printTree(actual)), format(printTree(transp)), 'similar trees')
+})
 
 t.test('looking outside of cwd', t => {
   const cwd = process.cwd()

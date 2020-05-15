@@ -1865,6 +1865,9 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Array [
+    "abbrev-link-target",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -2805,6 +2808,9 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Array [
+    "real",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -5251,6 +5257,12 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Array [
+    "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
+    "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
+    "node_modules/.pnpm/registry.npmjs.org/b/1.0.0",
+    "node_modules/.pnpm/registry.npmjs.org/c/1.0.0",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -6735,6 +6747,11 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Array [
+    "packages/a",
+    "packages/b",
+    "packages/c",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -6993,6 +7010,9 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Array [
+    "x",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -7188,6 +7208,12 @@ Node {
       "top": "workspace3",
     },
   },
+  "fsChildren": Array [
+    "app",
+    "packages/a",
+    "packages/b",
+    "packages/c",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {

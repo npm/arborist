@@ -270,6 +270,25 @@ t.test('update a bundling node without updating all of its deps', t => {
     .then(checkPackageLock)
 })
 
+t.test('Bundles rebuilt as long as rebuildBundle not false', async t => {
+  t.test('rebuild the bundle', async t => {
+    const path = fixture(t, 'testing-rebuild-bundle')
+    const a = resolve(path, 'node_modules/@isaacs/testing-rebuild-bundle-a')
+    const dir = resolve(a, 'node_modules/@isaacs/testing-rebuild-bundle-b')
+    const file = resolve(dir, 'cwd')
+    await reify(path)
+    t.equal(fs.readFileSync(file, 'utf8'), dir)
+  })
+  t.test('do not rebuild the bundle', async t => {
+    const path = fixture(t, 'testing-rebuild-bundle')
+    const a = resolve(path, 'node_modules/@isaacs/testing-rebuild-bundle-a')
+    const dir = resolve(a, 'node_modules/@isaacs/testing-rebuild-bundle-b')
+    const file = resolve(dir, 'cwd')
+    await reify(path, { rebuildBundle: false })
+    t.throws(() => fs.statSync(file))
+  })
+})
+
 t.test('transitive deps containing asymmetrical bin no lockfile', t => {
   const path = fixture(t, 'testing-asymmetrical-bin-no-lock')
 

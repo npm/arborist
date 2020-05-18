@@ -10,3 +10,5 @@ t.match(a, {
   loadActual: Function,
   loadVirtual: Function,
 })
+// make sure we don't mess up the class name with the mixin stack trick
+t.equal(Arborist.name, 'Arborist')

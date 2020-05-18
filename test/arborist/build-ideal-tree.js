@@ -118,7 +118,7 @@ t.test('a workspace with a conflicted nested duplicated dep', t =>
 
 t.test('testing-peer-deps package', t => {
   const path = resolve(fixtures, 'testing-peer-deps')
-  return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, registry})
+  return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, registry, cache})
     .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
     .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')))
 })
@@ -237,7 +237,7 @@ t.test('dedupe example - deduped', t => {
 
 t.test('expose explicitRequest', async t => {
   const path = resolve(fixtures, 'simple')
-  const arb = new Arborist({ path, registry })
+  const arb = new Arborist({ path, registry, cache })
   const tree = await arb.buildIdealTree({ add: [ 'abbrev' ] })
   t.ok(arb.explicitRequests, 'exposes the explicit request')
   t.strictSame(arb.explicitRequests, new Set(['abbrev']))
@@ -469,7 +469,7 @@ t.test('contrived dep placement tests', t => {
       },
       integrity: 'sha512-foofoofoo',
     })
-    const a = new Arborist({ registry })
+    const a = new Arborist({ registry, cache })
     t.match(a[kCanPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
       Symbol('KEEP'), 'same integrity, keep the one we have')
 
@@ -538,7 +538,7 @@ t.test('contrived dep placement tests', t => {
       parent: root,
     })
 
-    const a = new Arborist({ registry })
+    const a = new Arborist({ registry, cache })
 
     const newFoo = new Node({
       name: 'foo',
@@ -570,7 +570,7 @@ t.test('contrived dep placement tests', t => {
       Symbol('CONFLICT'), 'conflicts with root dependency')
 
     t.test('shadow conflict', t => {
-      const a = new Arborist({ registry })
+      const a = new Arborist({ registry, cache })
       // test the case where we're trying to place a dep somewhere that will
       // cause a conflict deeper in the tree.  The tree looks like this:
       // root
@@ -636,7 +636,7 @@ t.test('contrived dep placement tests', t => {
     })
 
     t.test('shadow no conflict', t => {
-      const a = new Arborist({ registry })
+      const a = new Arborist({ registry, cache })
       // just like the shadow conflict test above, except it is ok to place
       // root
       // +-- b <-- ok place d@2 here on behalf of e
@@ -699,7 +699,7 @@ t.test('contrived dep placement tests', t => {
     })
 
     t.test('update replacing with a better node, dedupe existing', t => {
-      const a = new Arborist({ registry })
+      const a = new Arborist({ registry, cache })
       // given a tree like this:
       // root
       // +-- b
@@ -747,7 +747,7 @@ t.test('contrived dep placement tests', t => {
     })
 
     t.test('update replacing with better node, keep needed dupe', t => {
-      const a = new Arborist({ registry })
+      const a = new Arborist({ registry, cache })
       // root (a, d, d*)
       // +-- a (b, c2)
       // |   +-- b (c2) <-- place c2 for b, lands at root
@@ -870,7 +870,7 @@ t.test('contrived dep placement tests', t => {
       })
       const anode = root.children.get('a')
       const edge = anode.edgesOut.get('b')
-      const arb = new Arborist({ path: root.path, registry })
+      const arb = new Arborist({ path: root.path, registry, cache })
       arb[kUpdateNames] = ['b']
       arb.idealTree = root
       const placed = arb[kPlaceDep](newb, anode, edge)
@@ -882,7 +882,7 @@ t.test('contrived dep placement tests', t => {
   })
 
   t.test('linked tops get their peer deps local if no other option', t => {
-    const a = new Arborist({ registry })
+    const a = new Arborist({ registry, cache })
     const root = new Node({
       path: '/some/path',
       pkg: { name: 'root', dependencies: { 'foo': '*' }},
@@ -912,7 +912,7 @@ t.test('contrived dep placement tests', t => {
   })
 
   t.test('linked tops use fsParent if possible', t => {
-    const a = new Arborist({ registry })
+    const a = new Arborist({ registry, cache })
     const root = new Node({
       path: '/some/path',
       realpath: '/some/path',

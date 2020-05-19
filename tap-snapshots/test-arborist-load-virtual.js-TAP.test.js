@@ -13485,7 +13485,7 @@ Node {
         "name": "once",
         "version": "1.4.0",
       },
-      "resolved": "file:../../once-1.4.0.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -13580,7 +13580,7 @@ Node {
         "name": "rimraf",
         "version": "2.6.3",
       },
-      "resolved": "file:../../rimraf-2.6.3.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -13632,7 +13632,7 @@ Node {
         "name": "tarball",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
@@ -13642,7 +13642,7 @@ Node {
         "name": "tarball-no-integrity",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -14229,7 +14229,7 @@ Node {
         "name": "once",
         "version": "1.4.0",
       },
-      "resolved": "file:../../once-1.4.0.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -14324,7 +14324,7 @@ Node {
         "name": "rimraf",
         "version": "2.6.3",
       },
-      "resolved": "file:../../rimraf-2.6.3.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -14376,7 +14376,7 @@ Node {
         "name": "tarball",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
@@ -14386,7 +14386,7 @@ Node {
         "name": "tarball-no-integrity",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -14964,7 +14964,7 @@ Node {
         "name": "once",
         "version": "1.4.0",
       },
-      "resolved": "file:../../once-1.4.0.tgz",
+      "resolved": "file:{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -15059,7 +15059,7 @@ Node {
         "name": "rimraf",
         "version": "2.6.3",
       },
-      "resolved": "file:../../rimraf-2.6.3.tgz",
+      "resolved": "file:{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "edgesIn": Set {
@@ -15111,7 +15111,7 @@ Node {
         "name": "tarball",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
@@ -15121,7 +15121,7 @@ Node {
         "name": "tarball-no-integrity",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",
@@ -15659,7 +15659,7 @@ Node {
         "name": "once",
         "version": "1.4.0",
       },
-      "resolved": "file:../../once-1.4.0.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types-sw-only/once-1.4.0.tgz",
     },
     "path-is-absolute" => Node {
       "edgesIn": Set {
@@ -15730,7 +15730,7 @@ Node {
         "name": "rimraf",
         "version": "2.6.3",
       },
-      "resolved": "file:../../rimraf-2.6.3.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types-sw-only/rimraf-2.6.3.tgz",
     },
     "symlink" => Link {
       "location": "node_modules/symlink",
@@ -15766,7 +15766,7 @@ Node {
         "name": "tarball",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types-sw-only/abbrev-1.1.1.tgz",
     },
     "tarball-no-integrity" => Node {
       "dev": true,
@@ -15776,7 +15776,7 @@ Node {
         "name": "tarball-no-integrity",
         "version": undefined,
       },
-      "resolved": "file:../../abbrev-1.1.1.tgz",
+      "resolved": "file:{CWD}/test/fixtures/install-types-sw-only/abbrev-1.1.1.tgz",
     },
     "unhosted-git" => Node {
       "location": "node_modules/unhosted-git",

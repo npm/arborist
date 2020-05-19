@@ -13150,6 +13150,77 @@ Object {
 }
 `
 
+exports[`test/arborist/reify.js TAP tarball deps with transitive tarball deps > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-file-transitive-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-file-transitive-a",
+          "spec": "file:testing-file-transitive-a/isaacs-testing-file-transitive-a-1.0.0.tgz",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-file-transitive-b" => Edge {
+          "name": "@isaacs/testing-file-transitive-b",
+          "spec": "file:../testing-file-transitive-b/isaacs-testing-file-transitive-b-1.0.0.tgz",
+          "to": "node_modules/@isaacs/testing-file-transitive-b",
+          "type": "prod",
+        },
+        "@isaacs/testing-file-transitive-c" => Edge {
+          "name": "@isaacs/testing-file-transitive-c",
+          "spec": "file:./c/isaacs-testing-file-transitive-c-1.0.0.tgz",
+          "to": "node_modules/@isaacs/testing-file-transitive-c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-file-transitive-a",
+      "name": "@isaacs/testing-file-transitive-a",
+      "resolved": "file:{CWD}/test/arborist/reify-tarball-deps-with-transitive-tarball-deps/testing-file-transitive-a/isaacs-testing-file-transitive-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-file-transitive-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-file-transitive-a",
+          "name": "@isaacs/testing-file-transitive-b",
+          "spec": "file:../testing-file-transitive-b/isaacs-testing-file-transitive-b-1.0.0.tgz",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-file-transitive-b",
+      "name": "@isaacs/testing-file-transitive-b",
+      "resolved": "file:{CWD}/test/arborist/reify-tarball-deps-with-transitive-tarball-deps/testing-file-transitive-b/isaacs-testing-file-transitive-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-file-transitive-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-file-transitive-a",
+          "name": "@isaacs/testing-file-transitive-c",
+          "spec": "file:./c/isaacs-testing-file-transitive-c-1.0.0.tgz",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-file-transitive-c",
+      "name": "@isaacs/testing-file-transitive-c",
+      "resolved": "file:{CWD}/test/arborist/reify-tarball-deps-with-transitive-tarball-deps/testing-file-transitive-a/c/isaacs-testing-file-transitive-c-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-file-transitive-a" => Edge {
+      "name": "@isaacs/testing-file-transitive-a",
+      "spec": "file:testing-file-transitive-a/isaacs-testing-file-transitive-a-1.0.0.tgz",
+      "to": "node_modules/@isaacs/testing-file-transitive-a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-tarball-deps-with-transitive-tarball-deps",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP testing-peer-deps nested > expect resolving Promise 1`] = `
 Node {
   "children": Map {

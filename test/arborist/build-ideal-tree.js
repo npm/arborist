@@ -116,6 +116,10 @@ t.test('a workspace with a conflicted nested duplicated dep', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'workspace4'))))
 
+t.test('tarball deps with transitive tarball deps', t =>
+  t.resolveMatchSnapshot(printIdeal(
+    resolve(fixtures, 'tarball-dependencies'))))
+
 t.test('testing-peer-deps package', t => {
   const path = resolve(fixtures, 'testing-peer-deps')
   return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, registry, cache})

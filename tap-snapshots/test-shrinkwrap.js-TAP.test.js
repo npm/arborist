@@ -249,6 +249,7 @@ Object {
         "url": "https://example.com/",
       },
       "integrity": "sha512-tarball/package/resolved/integrity",
+      "resolved": "file:archives/tarball-pkg-resolved.tgz",
       "version": "1.2.3",
     },
     "target": Object {
@@ -382,6 +383,7 @@ Object {
     "url": "https://example.com/",
   },
   "integrity": "sha512-tarball/package/resolved/integrity",
+  "resolved": "file:archives/tarball-pkg-resolved.tgz",
   "version": "1.2.3",
 }
 `

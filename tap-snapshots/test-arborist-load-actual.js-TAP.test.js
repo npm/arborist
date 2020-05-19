@@ -1967,8 +1967,7 @@ Node {
       "ghtgz": Object {
         "extraneous": true,
         "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
-        "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-        "version": "npm:abbrev@1.1.1",
+        "version": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "glob": Object {
         "extraneous": true,
@@ -2057,7 +2056,7 @@ Node {
         "requires": Object {
           "glob": "^7.1.3",
         },
-        "version": "2.6.3",
+        "version": "file:rimraf-2.6.3.tgz",
       },
       "symlink": Object {
         "version": "file:abbrev-link-target",

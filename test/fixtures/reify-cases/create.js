@@ -19,6 +19,7 @@ const outFile = resolve(__dirname, basename(fixture)) + '.js'
 // the tokens with `t.fixture('symlink', ${symlinks.get(token)})`
 const symlinks = new Map()
 const jsonFiles = new Map()
+const buffers = new Map()
 const crypto = require('crypto')
 const token = p => p + crypto.randomBytes(8).toString('base64')
 
@@ -30,6 +31,7 @@ const readFixture = dir => {
       res[ent.name] = readFixture(p)
     else if (ent.isFile()) {
       const content = readFileSync(p, 'utf8')
+      const buf = readFileSync(p)
       // if it's JSON, then store it in a way that's easier to look at
       try {
         const o = JSON.parse(content)
@@ -37,7 +39,14 @@ const readFixture = dir => {
         jsonFiles.set(t, o)
         res[ent.name] = t
       } catch (_) {
-        res[ent.name] = content
+        if (buf.equals(Buffer.from(content)))
+          res[ent.name] = content
+        else {
+          // save as a buffer if it's binary data
+          const t = token(p)
+          res[ent.name] = t
+          buffers.set(t, buf)
+        }
       }
     } else if (ent.isSymbolicLink()) {
       const t = token(p)
@@ -65,6 +74,11 @@ for (const [token, obj] of jsonFiles.entries()) {
       ')'
   }
   output = output.replace(re, replace)
+}
+for (const [token, buf] of buffers.entries()) {
+  output = output
+    .split(JSON.stringify(token))
+    .join(`Buffer.from(${JSON.stringify(buf.toString('base64'))}, 'base64')`)
 }
 
 writeFileSync(outFile, `// generated from ${rel}

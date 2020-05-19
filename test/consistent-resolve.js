@@ -4,27 +4,48 @@ const cr = require('../lib/consistent-resolve.js')
 t.test('file and directories resolved to toPath', t => {
   const tp = '/foo'
   const fp = '/foo/bar'
-  t.equal(cr('/foo/bar/baz', fp, tp), 'file:bar/baz')
-  t.equal(cr('./baz', fp, tp), 'file:bar/baz')
-  t.equal(cr('/foo/bar/baz.tgz', fp, tp), 'file:bar/baz.tgz')
-  t.equal(cr('baz.tgz', fp, tp), 'file:bar/baz.tgz')
-  t.equal(cr('file:/foo/bar/baz', fp, tp), 'file:bar/baz')
-  t.equal(cr('file:baz', fp, tp), 'file:bar/baz')
-  t.equal(cr('file:/foo/bar/baz.tgz', fp, tp), 'file:bar/baz.tgz')
-  t.equal(cr('file:baz.tgz', fp, tp), 'file:bar/baz.tgz')
+  t.equal(cr('/foo/bar/baz', fp, tp, true), 'file:bar/baz')
+  t.equal(cr('/foo/bar/baz', fp, tp), 'file:/foo/bar/baz')
+
+  t.equal(cr('./baz', fp, tp, true), 'file:bar/baz')
+  t.equal(cr('./baz', fp, tp), 'file:/foo/bar/baz')
+
+  t.equal(cr('/foo/bar/baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
+  t.equal(cr('/foo/bar/baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
+
+  t.equal(cr('baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
+  t.equal(cr('baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
+
+  t.equal(cr('file:/foo/bar/baz', fp, tp, true), 'file:bar/baz')
+  t.equal(cr('file:/foo/bar/baz', fp, tp), 'file:/foo/bar/baz')
+
+  t.equal(cr('file:baz', fp, tp, true), 'file:bar/baz')
+  t.equal(cr('file:baz', fp, tp), 'file:/foo/bar/baz')
+
+  t.equal(cr('file:/foo/bar/baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
+  t.equal(cr('file:/foo/bar/baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
+
+  t.equal(cr('file:baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
+  t.equal(cr('file:baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
   t.end()
 })
 
 t.test('file and directories made consistent if toPath not set', t => {
   const fp = '/foo/bar'
-  t.equal(cr('/foo/bar/baz', fp), 'file:/foo/bar/baz')
-  t.equal(cr('./baz', fp), 'file:/foo/bar/baz')
-  t.equal(cr('/foo/bar/baz.tgz', fp), 'file:/foo/bar/baz.tgz')
-  t.equal(cr('baz.tgz', fp), 'file:/foo/bar/baz.tgz')
-  t.equal(cr('file:/foo/bar/baz', fp), 'file:/foo/bar/baz')
-  t.equal(cr('file:baz', fp), 'file:/foo/bar/baz')
-  t.equal(cr('file:/foo/bar/baz.tgz', fp), 'file:/foo/bar/baz.tgz')
-  t.equal(cr('file:baz.tgz', fp), 'file:/foo/bar/baz.tgz')
+  for (const rel of [true, false]) {
+    // relative doesn't matter if toPath not set
+    t.test(`rel=${rel}`, t => {
+      t.equal(cr('/foo/bar/baz', fp, null, rel), 'file:/foo/bar/baz')
+      t.equal(cr('./baz', fp, null, rel), 'file:/foo/bar/baz')
+      t.equal(cr('/foo/bar/baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
+      t.equal(cr('baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
+      t.equal(cr('file:/foo/bar/baz', fp, null, rel), 'file:/foo/bar/baz')
+      t.equal(cr('file:baz', fp, null, rel), 'file:/foo/bar/baz')
+      t.equal(cr('file:/foo/bar/baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
+      t.equal(cr('file:baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
+      t.end()
+    })
+  }
   t.end()
 })
 

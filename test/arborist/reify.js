@@ -155,6 +155,9 @@ const printReified = (path, opt) => reify(path, opt).then(printTree)
 const reify = (path, opt) =>
   new Arborist({audit: false, cache, registry, path, ...(opt || {})}).reify(opt)
 
+t.test('tarball deps with transitive tarball deps', t =>
+  t.resolveMatchSnapshot(printReified(fixture(t, 'tarball-dependencies'))))
+
 t.test('update a yarn.lock file', async t => {
   const path = fixture(t, 'yarn-lock-mkdirp')
   t.matchSnapshot(await reify(path, { add: ['abbrev'] }), 'add abbrev')

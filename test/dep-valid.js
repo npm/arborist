@@ -67,12 +67,26 @@ t.notOk(depValid({
 }, 'git+ssh://git@github.com/bar/foo.git', null, {}), 'missing repo')
 
 t.ok(depValid({
-  resolved: '/path/to/tarball.tgz',
+  resolved: 'file:/path/to/tarball.tgz',
 }, '/path/to/tarball.tgz', null, {}), 'same tarball')
 
 t.notOk(depValid({
-  resolved: '/path/to/other/tarball.tgz',
+  resolved: 'file:/path/to/other/tarball.tgz',
 }, '/path/to/tarball.tgz', null, {}), 'different tarball')
+
+t.notOk(depValid({
+  isLink: true,
+}, '/path/to/tarball.tgz', null, {}), 'links are not tarballs')
+
+t.ok(depValid({
+  package: {
+    _requested: {
+      saveSpec: 'file:tarball.tgz',
+    },
+  },
+}, './tarball.tgz', null, {}), 'probably the same-ish, hopefully')
+
+t.notOk(depValid({package:{}}, './tarball.tgz', null, {}), 'too uncertain, nope')
 
 t.ok(depValid({
   resolved: 'https://registry.npmjs.org/foo/foo-1.2.3.tgz',

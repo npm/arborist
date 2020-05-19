@@ -775,7 +775,7 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(bar.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
-  t.equal(bar.resolved, 'file:../../bar-2.3.4.tgz', 'bar resolved from yarn.lock')
+  t.equal(bar.resolved, 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved from yarn.lock')
 
   bar.parent = null
 
@@ -829,10 +829,10 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(barSameIntegrity.integrity, barEntry.integrity, 'bar integrity still matches')
-  t.equal(barSameIntegrity.resolved, 'file:../../bar-2.3.4.tgz', 'bar resolved from yarn.lock')
+  t.equal(barSameIntegrity.resolved, 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved from yarn.lock')
 
   const barSameResolved = new Node({
-    resolved: 'file:../../bar-2.3.4.tgz',
+    resolved: 'file:/path/to/root/bar-2.3.4.tgz',
     name: 'bar',
     parent: tree,
     pkg: {
@@ -841,7 +841,7 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(barSameResolved.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
-  t.equal(barSameResolved.resolved, 'file:../../bar-2.3.4.tgz', 'bar resolved still matches')
+  t.equal(barSameResolved.resolved, 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved still matches')
 
   // test that we sometimes might not get the resolved/integrity values
   barEntry.resolved = barEntry.integrity = null
@@ -925,8 +925,8 @@ t.test('metadata that only has one of resolved/integrity', t => {
   t.equal(integrity.integrity, 'has integrity no resolved', 'integrity only')
   t.equal(integrity.resolved, null, 'integrity only')
 
-  t.equal(resolved.resolved, 'file:../../has-resolved-no-integrity.tgz',
-    'resolved only, made relative to node path')
+  t.equal(resolved.resolved, 'file:/path/to/root/has-resolved-no-integrity.tgz',
+    'resolved only')
   t.equal(resolved.integrity, null, 'resolved only')
 
   t.equal(intalready.resolved, null, 'integrity only, from node settings')
@@ -1234,4 +1234,24 @@ t.test('replace workspaces keeping existing edges out', t => {
 
   t.equal(root.workspaces, ws, 'should keep existing edges out')
   t.end()
+})
+
+t.test('dont rely on legacy _resolved for file: nodes', async t => {
+  const old = new Node({
+    pkg: {
+      _resolved: 'file:/x/y/z/blorg.tgz',
+      _where: '/why/did/i/think/this/was/a/good/idea',
+    },
+    path: '/some/completely/different/path',
+  })
+  t.equal(old.resolved, null)
+
+  // _resolved without _where means it's probably valid though
+  const notOld = new Node({
+    pkg: {
+      _resolved: 'file:/x/y/z/blorg.tgz',
+    },
+    path: '/some/completely/different/path',
+  })
+  t.equal(notOld.resolved, 'file:/x/y/z/blorg.tgz')
 })

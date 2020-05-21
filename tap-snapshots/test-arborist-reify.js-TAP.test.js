@@ -12320,6 +12320,8 @@ Node {
 exports[`test/arborist/reify.js TAP omit peer deps > finished timers 1`] = `
 Array [
   "arborist:ctor",
+  "build",
+  "build:queue",
   "idealTree",
   "idealTree:#root",
   "idealTree:buildDeps",
@@ -12333,12 +12335,12 @@ Array [
   "idealTree:node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
   "idealTree:userRequests",
   "reify",
+  "reify:build",
   "reify:createSparse",
   "reify:diffTrees",
   "reify:loadBundles",
   "reify:loadTrees",
   "reify:retireShallow",
-  "reify:runScripts",
   "reify:save",
   "reify:trash",
   "reify:trashOmits",

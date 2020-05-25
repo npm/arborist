@@ -17,7 +17,35 @@ t.test('basic instantiation', t => {
   t.equal(root.isTop, true, 'root is top')
   t.equal(root.isLink, false, 'root is not a link')
 
+  t.test('dep flags all set true', t => {
+    t.equal(root.dummy, false)
+    t.equal(root.extraneous, true)
+    t.equal(root.dev, true)
+    t.equal(root.devOptional, true)
+    t.equal(root.optional, true)
+    t.equal(root.peer, true)
+    t.end()
+  })
+
   t.matchSnapshot(root, 'just a lone root node')
+
+  t.test('dummy node', t => {
+    const node = new Node({
+      path: '/not/a/real/path',
+      dummy: true,
+    })
+    t.test('dep flags all set false', t => {
+      t.equal(node.dummy, true)
+      t.equal(node.extraneous, false)
+      t.equal(node.dev, false)
+      t.equal(node.devOptional, false)
+      t.equal(node.optional, false)
+      t.equal(node.peer, false)
+      t.end()
+    })
+    t.end()
+  })
+
   t.end()
 })
 
@@ -1254,4 +1282,31 @@ t.test('dont rely on legacy _resolved for file: nodes', async t => {
     path: '/some/completely/different/path',
   })
   t.equal(notOld.resolved, 'file:/x/y/z/blorg.tgz')
+})
+
+t.test('reparenting keeps children in root inventory', async t => {
+  const root = new Node({ path: '/some/path' })
+  const nested = new Node({
+    fsParent: root,
+    path: '/some/path/node_modules/parent/node_modules/nested',
+  })
+  const fsNested = new Node({
+    fsParent: nested,
+    path: '/some/path/node_modules/parent/node_modules/nested/x',
+  })
+
+  const kid = new Node({
+    name: 'kid',
+    parent: nested,
+  })
+
+  t.equal(root.inventory.has(kid), true)
+  t.equal(root.inventory.has(fsNested), true)
+
+  // now reparent, and make sure the kids are still accounted for
+  const parent = new Node({ name: 'parent', parent: root })
+  nested.parent = parent
+
+  t.equal(root.inventory.has(kid), true)
+  t.equal(root.inventory.has(fsNested), true)
 })

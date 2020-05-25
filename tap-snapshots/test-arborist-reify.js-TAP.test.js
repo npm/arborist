@@ -991,6 +991,13 @@ Node {
           "type": "prod",
         },
       },
+      "fsChildren": Set {
+        Node {
+          "location": "node_modules/@isaacs/testing-link-dep/target",
+          "name": "target",
+          "resolved": null,
+        },
+      },
       "location": "node_modules/@isaacs/testing-link-dep",
       "name": "@isaacs/testing-link-dep",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-link-dep/-/testing-link-dep-2.0.0.tgz",
@@ -1021,13 +1028,6 @@ Node {
       "spec": "^2.0.1",
       "to": "node_modules/@isaacs/testing-link-dev-dep",
       "type": "prod",
-    },
-  },
-  "fsChildren": Set {
-    Node {
-      "location": "node_modules/@isaacs/testing-link-dep/target",
-      "name": "target",
-      "resolved": null,
     },
   },
   "location": "",
@@ -27929,6 +27929,7 @@ Node {
       "children": Map {},
       "dev": false,
       "devOptional": false,
+      "dummy": false,
       "edgesIn": Set {
         Edge {},
       },
@@ -27954,6 +27955,7 @@ Node {
       "children": Map {},
       "dev": false,
       "devOptional": false,
+      "dummy": false,
       "edgesIn": Set {
         Edge {},
       },
@@ -27978,6 +27980,7 @@ Node {
   },
   "dev": false,
   "devOptional": false,
+  "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
     "mkdirp" => Edge {},
@@ -27993,6 +27996,7 @@ Node {
       "children": Map {},
       "dev": false,
       "devOptional": false,
+      "dummy": false,
       "edgesIn": Set {
         Edge {},
       },
@@ -28018,6 +28022,7 @@ Node {
       "children": Map {},
       "dev": false,
       "devOptional": false,
+      "dummy": false,
       "edgesIn": Set {
         Edge {},
       },

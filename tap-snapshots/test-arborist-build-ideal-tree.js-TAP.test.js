@@ -6880,22 +6880,6 @@ Node {
       "type": "prod",
     },
   },
-  "fsChildren": Set {
-    Node {
-      "edgesOut": Map {
-        "app" => Edge {
-          "error": "MISSING",
-          "name": "app",
-          "spec": "file:./app",
-          "to": null,
-          "type": "prod",
-        },
-      },
-      "location": "../cli-750",
-      "name": "cli-750",
-      "resolved": null,
-    },
-  },
   "location": "",
   "name": "external-link-dep",
   "resolved": null,
@@ -7101,22 +7085,6 @@ Node {
       "spec": "file:./node_modules/abbrev",
       "to": "node_modules/zzzzzz",
       "type": "prod",
-    },
-  },
-  "fsChildren": Set {
-    Node {
-      "edgesOut": Map {
-        "app" => Edge {
-          "error": "MISSING",
-          "name": "app",
-          "spec": "file:./app",
-          "to": null,
-          "type": "prod",
-        },
-      },
-      "location": "../cli-750",
-      "name": "cli-750",
-      "resolved": null,
     },
   },
   "location": "",

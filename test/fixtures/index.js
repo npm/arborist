@@ -25,6 +25,8 @@ const roots = [
   'workspace3',
   'install-types',
   'pnpm',
+  'external-dep/root',
+  'external-link/root',
 ]
 
 const symlinks = {
@@ -91,6 +93,11 @@ const symlinks = {
   'pnpm/node_modules/a': '.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a',
 
   'global-style/lib-link': './lib',
+
+  'external-link/root/node_modules/o': '../../m/node_modules/n/o',
+  'external-link/root/node_modules/o2': '../../m/node_modules/n/o2',
+  'external-link/root/node_modules/j': '../../i/j',
+  'external-link/root/node_modules/x/node_modules/b': '../../../../a/node_modules/b',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

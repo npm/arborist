@@ -34,6 +34,7 @@ const printTree = (tree, path = []) => (path.includes(tree) ? tree.location : (p
   ...( !tree.fsChildren.size ? {} : {
     fsChildren: [...tree.fsChildren].map(n => n.location),
   }),
+  ...(!tree.fsParent ? {} : { fsParent: tree.fsParent.location }),
   ...( tree.meta ? { meta: tree.meta.commit() } : {}),
   __proto__: { constructor: tree.constructor },
 }))

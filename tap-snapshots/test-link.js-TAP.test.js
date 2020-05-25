@@ -9,6 +9,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
 &ref_1 Link {
   "dev": true,
   "devOptional": true,
+  "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "errors": Array [],
@@ -21,6 +22,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
       "children": Map {},
       "dev": true,
       "devOptional": true,
+      "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "errors": Array [],
@@ -73,6 +75,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
 &ref_1 Link {
   "dev": true,
   "devOptional": true,
+  "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {},
   "errors": Array [],
@@ -85,6 +88,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "children": Map {},
       "dev": true,
       "devOptional": true,
+      "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {},
       "errors": Array [],

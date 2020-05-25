@@ -13,6 +13,10 @@
 /test/fixtures/badlink/node_modules/foo
 /test/fixtures/deep/root
 /test/fixtures/deeproot
+/test/fixtures/external-link/root/node_modules/j
+/test/fixtures/external-link/root/node_modules/o
+/test/fixtures/external-link/root/node_modules/o2
+/test/fixtures/external-link/root/node_modules/x/node_modules/b
 /test/fixtures/global-style/lib-link
 /test/fixtures/install-types/node_modules/symlink
 /test/fixtures/linkedroot

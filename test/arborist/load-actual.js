@@ -1,5 +1,6 @@
 const t = require('tap')
 const { format } = require('tcompare')
+const requireInject = require('require-inject')
 const Arborist = require('../../lib/arborist')
 const { resolve, dirname, relative } = require('path')
 const { realpathSync } = require('fs')
@@ -42,7 +43,7 @@ const printTree = tree => ({
       ? { devOptional: true } : {}),
     ...(tree.peer ? { peer: true } : {}),
   }),
-  ...(tree.fsParent ? { fsParent: pp(tree.fsParent) } : {}),
+  ...(tree.fsParent ? { fsParent: pp(tree.fsParent.path) } : {}),
   ...(tree.errors.length
     ? {
       errors: tree.errors.map(error => ({
@@ -98,9 +99,22 @@ roots.forEach(path => {
     t.matchSnapshot(tree, 'loaded tree')))
 })
 
+t.test('look for missing deps by default', t => {
+  const paths = ['external-dep/root', 'external-link/root']
+  t.plan(paths.length)
+  for (const p of paths) {
+    t.test(p, async t => {
+      const path = resolve(__dirname, '../fixtures', p)
+      const arb = new Arborist({path})
+      const tree = await arb.loadActual()
+      t.matchSnapshot(tree, '"dep" should have missing deps, "link" should not')
+    })
+  }
+})
+
 t.test('already loaded', t => new Arborist({
   path: resolve(__dirname, '../fixtures/selflink'),
-}).loadActual().then(actualTree => new Arborist({
+}).loadActual({ ignoreMissing: true }).then(actualTree => new Arborist({
   path: resolve(__dirname, '../fixtures/selflink'),
   actualTree,
 }).loadActual().then(tree2 => t.equal(tree2, actualTree))))
@@ -120,8 +134,8 @@ t.test('load a tree rooted on a different node', async t => {
   root.optional = false
   root.peer = false
 
-  const actual = await new Arborist({path}).loadActual()
-  const transp = await new Arborist({path}).loadActual({root})
+  const actual = await (new Arborist({path}).loadActual())
+  const transp = await (new Arborist({path}).loadActual({ root }))
 
   // verify that the transp nodes have the right paths
   t.equal(transp.children.get('a').path, resolve(other, 'node_modules/a'))

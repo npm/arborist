@@ -958,151 +958,12 @@ exports[`test/arborist/load-actual.js TAP deeproot/root > loaded tree 1`] = `
 Link {
   "location": "",
   "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "version": "1.0.0",
-                  },
-                },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
-                },
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "version": "1.3.0",
-              },
-            },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "@scope/y": "",
-          "express": "420.69.0-nice",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "peer": true,
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "version": "1.2.3",
-      },
-    },
+    "dependencies": Object {},
     "lockfileVersion": 2,
     "packages": Object {
       "../deeproot/root": Object {
         "link": true,
         "resolved": "",
-      },
-      "node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
-        "peer": true,
-        "version": "1.2.3",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "optionalDependencies": Object {
-          "@scope/x": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
       },
     },
     "requires": true,
@@ -1300,6 +1161,296 @@ Node {
   "name": "devloop",
   "realpath": "devloop",
   "top": "devloop",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP external-dep/root > loaded tree 1`] = `
+Node {
+  "edgesOut": Map {
+    "dep" => Edge {
+      "error": "MISSING",
+      "name": "dep",
+      "spec": "",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {},
+    "lockfileVersion": 2,
+    "name": "root",
+    "packages": Object {
+      "": Object {
+        "dependencies": Object {
+          "dep": "",
+        },
+        "version": "1.0.0",
+      },
+    },
+    "requires": true,
+    "version": "1.0.0",
+  },
+  "name": "root",
+  "realpath": "external-dep/root",
+  "top": "external-dep/root",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP external-link/root > loaded tree 1`] = `
+Node {
+  "children": Map {
+    "j" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "j",
+          "spec": "file:../i/j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/j",
+      "name": "j",
+      "realpath": "external-link/i/j",
+      "target": Object {
+        "fsParent": "external-link/i",
+        "name": "j",
+      },
+      "top": "external-link/root",
+    },
+    "o" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "o",
+          "spec": "file:../m/node_modules/n/o",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/o",
+      "name": "o",
+      "realpath": "external-link/m/node_modules/n/o",
+      "target": Object {
+        "fsParent": "external-link/m",
+        "name": "o",
+      },
+      "top": "external-link/root",
+    },
+    "o2" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "o2",
+          "spec": "file:../m/node_modules/n/o2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/o2",
+      "name": "o2",
+      "realpath": "external-link/m/node_modules/n/o2",
+      "target": Object {
+        "fsParent": "external-link/m",
+        "name": "o2",
+      },
+      "top": "external-link/root",
+    },
+    "x" => Node {
+      "children": Map {
+        "b" => Link {
+          "edgesIn": Set {
+            Edge {
+              "from": "external-link/root/node_modules/x",
+              "name": "b",
+              "spec": "file:../../../a/node_modules/b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/x/node_modules/b",
+          "name": "b",
+          "realpath": "external-link/a/node_modules/b",
+          "target": Object {
+            "name": "b",
+            "parent": "external-link/a",
+          },
+          "top": "external-link/root",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "x",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "b" => Edge {
+          "name": "b",
+          "spec": "file:../../../a/node_modules/b",
+          "to": "external-link/a/node_modules/b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "realpath": "external-link/root/node_modules/x",
+      "top": "external-link/root",
+    },
+  },
+  "edgesOut": Map {
+    "j" => Edge {
+      "name": "j",
+      "spec": "file:../i/j",
+      "to": "external-link/i/j",
+      "type": "prod",
+    },
+    "o" => Edge {
+      "name": "o",
+      "spec": "file:../m/node_modules/n/o",
+      "to": "external-link/m/node_modules/n/o",
+      "type": "prod",
+    },
+    "o2" => Edge {
+      "name": "o2",
+      "spec": "file:../m/node_modules/n/o2",
+      "to": "external-link/m/node_modules/n/o2",
+      "type": "prod",
+    },
+    "x" => Edge {
+      "name": "x",
+      "spec": "",
+      "to": "external-link/root/node_modules/x",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {
+      "../a": Object {
+        "dependencies": Object {
+          "b": Object {
+            "requires": Object {
+              "c": "",
+            },
+            "version": "1.0.0",
+          },
+          "c": Object {
+            "version": "1.0.0",
+          },
+        },
+      },
+      "../i": Object {
+        "dependencies": Object {
+          "k": Object {
+            "version": "1.0.0",
+          },
+        },
+      },
+      "../m": Object {
+        "dependencies": Object {
+          "p": Object {
+            "version": "1.0.0",
+          },
+        },
+      },
+      "j": Object {
+        "version": "file:../i/j",
+      },
+      "o": Object {
+        "version": "file:../m/node_modules/n/o",
+      },
+      "o2": Object {
+        "version": "file:../m/node_modules/n/o2",
+      },
+      "x": Object {
+        "dependencies": Object {
+          "b": Object {
+            "version": "file:../a/node_modules/b",
+          },
+        },
+        "requires": Object {
+          "b": "file:../../../a/node_modules/b",
+        },
+        "version": "1.0.0",
+      },
+    },
+    "lockfileVersion": 2,
+    "name": "root",
+    "packages": Object {
+      "": Object {
+        "dependencies": Object {
+          "j": "file:../i/j",
+          "o": "file:../m/node_modules/n/o",
+          "o2": "file:../m/node_modules/n/o2",
+          "x": "",
+        },
+        "version": "1.0.0",
+      },
+      "../a": Object {},
+      "../a/node_modules/b": Object {
+        "dependencies": Object {
+          "c": "",
+        },
+        "version": "1.0.0",
+      },
+      "../a/node_modules/c": Object {
+        "version": "1.0.0",
+      },
+      "../i": Object {},
+      "../i/j": Object {
+        "dependencies": Object {
+          "k": "",
+        },
+        "version": "1.0.0",
+      },
+      "../i/node_modules/k": Object {
+        "version": "1.0.0",
+      },
+      "../m": Object {},
+      "../m/node_modules/n/o": Object {
+        "dependencies": Object {
+          "p": "",
+        },
+        "version": "1.0.0",
+      },
+      "../m/node_modules/n/o2": Object {
+        "dependencies": Object {
+          "p": "",
+        },
+        "version": "1.0.0",
+      },
+      "../m/node_modules/p": Object {
+        "version": "1.0.0",
+      },
+      "node_modules/j": Object {
+        "link": true,
+        "resolved": "../i/j",
+      },
+      "node_modules/o": Object {
+        "link": true,
+        "resolved": "../m/node_modules/n/o",
+      },
+      "node_modules/o2": Object {
+        "link": true,
+        "resolved": "../m/node_modules/n/o2",
+      },
+      "node_modules/x": Object {
+        "dependencies": Object {
+          "b": "file:../../../a/node_modules/b",
+        },
+        "version": "1.0.0",
+      },
+      "node_modules/x/node_modules/b": Object {
+        "link": true,
+        "resolved": "../a/node_modules/b",
+      },
+    },
+    "requires": true,
+    "version": "1.0.0",
+  },
+  "name": "root",
+  "realpath": "external-link/root",
+  "top": "external-link/root",
 }
 `
 
@@ -2373,151 +2524,12 @@ exports[`test/arborist/load-actual.js TAP linkedroot > loaded tree 1`] = `
 Link {
   "location": "",
   "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "version": "1.0.0",
-                  },
-                },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
-                },
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "version": "1.3.0",
-              },
-            },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "@scope/y": "",
-          "express": "420.69.0-nice",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "peer": true,
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "version": "1.2.3",
-      },
-    },
+    "dependencies": Object {},
     "lockfileVersion": 2,
     "packages": Object {
       "../linkedroot": Object {
         "link": true,
         "resolved": "",
-      },
-      "node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
-        "peer": true,
-        "version": "1.2.3",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "optionalDependencies": Object {
-          "@scope/x": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
       },
     },
     "requires": true,
@@ -2838,6 +2850,11 @@ Node {
                                 "version": "1.2.3",
                               },
                             },
+                            "requires": Object {
+                              "a": "",
+                              "deep-a": "",
+                            },
+                            "version": "1.2.3",
                           },
                         },
                         "extraneous": true,
@@ -2922,6 +2939,13 @@ Node {
           "deep": "",
         },
         "extraneous": true,
+        "version": "1.2.3",
+      },
+      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep": Object {
+        "dependencies": Object {
+          "a": "",
+          "deep-a": "",
+        },
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a": Object {
@@ -3336,6 +3360,296 @@ Node {
   "name": "hidden-lockfile",
   "realpath": "hidden-lockfile",
   "top": "hidden-lockfile",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP look for missing deps by default external-dep/root > "dep" should have missing deps, "link" should not 1`] = `
+Node {
+  "edgesOut": Map {
+    "dep" => Edge {
+      "error": "MISSING",
+      "name": "dep",
+      "spec": "",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {},
+    "lockfileVersion": 2,
+    "name": "root",
+    "packages": Object {
+      "": Object {
+        "dependencies": Object {
+          "dep": "",
+        },
+        "version": "1.0.0",
+      },
+    },
+    "requires": true,
+    "version": "1.0.0",
+  },
+  "name": "root",
+  "realpath": "external-dep/root",
+  "top": "external-dep/root",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP look for missing deps by default external-link/root > "dep" should have missing deps, "link" should not 1`] = `
+Node {
+  "children": Map {
+    "j" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "j",
+          "spec": "file:../i/j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/j",
+      "name": "j",
+      "realpath": "external-link/i/j",
+      "target": Object {
+        "fsParent": "external-link/i",
+        "name": "j",
+      },
+      "top": "external-link/root",
+    },
+    "o" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "o",
+          "spec": "file:../m/node_modules/n/o",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/o",
+      "name": "o",
+      "realpath": "external-link/m/node_modules/n/o",
+      "target": Object {
+        "fsParent": "external-link/m",
+        "name": "o",
+      },
+      "top": "external-link/root",
+    },
+    "o2" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "o2",
+          "spec": "file:../m/node_modules/n/o2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/o2",
+      "name": "o2",
+      "realpath": "external-link/m/node_modules/n/o2",
+      "target": Object {
+        "fsParent": "external-link/m",
+        "name": "o2",
+      },
+      "top": "external-link/root",
+    },
+    "x" => Node {
+      "children": Map {
+        "b" => Link {
+          "edgesIn": Set {
+            Edge {
+              "from": "external-link/root/node_modules/x",
+              "name": "b",
+              "spec": "file:../../../a/node_modules/b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/x/node_modules/b",
+          "name": "b",
+          "realpath": "external-link/a/node_modules/b",
+          "target": Object {
+            "name": "b",
+            "parent": "external-link/a",
+          },
+          "top": "external-link/root",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link/root",
+          "name": "x",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "b" => Edge {
+          "name": "b",
+          "spec": "file:../../../a/node_modules/b",
+          "to": "external-link/a/node_modules/b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "realpath": "external-link/root/node_modules/x",
+      "top": "external-link/root",
+    },
+  },
+  "edgesOut": Map {
+    "j" => Edge {
+      "name": "j",
+      "spec": "file:../i/j",
+      "to": "external-link/i/j",
+      "type": "prod",
+    },
+    "o" => Edge {
+      "name": "o",
+      "spec": "file:../m/node_modules/n/o",
+      "to": "external-link/m/node_modules/n/o",
+      "type": "prod",
+    },
+    "o2" => Edge {
+      "name": "o2",
+      "spec": "file:../m/node_modules/n/o2",
+      "to": "external-link/m/node_modules/n/o2",
+      "type": "prod",
+    },
+    "x" => Edge {
+      "name": "x",
+      "spec": "",
+      "to": "external-link/root/node_modules/x",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {
+      "../a": Object {
+        "dependencies": Object {
+          "b": Object {
+            "requires": Object {
+              "c": "",
+            },
+            "version": "1.0.0",
+          },
+          "c": Object {
+            "version": "1.0.0",
+          },
+        },
+      },
+      "../i": Object {
+        "dependencies": Object {
+          "k": Object {
+            "version": "1.0.0",
+          },
+        },
+      },
+      "../m": Object {
+        "dependencies": Object {
+          "p": Object {
+            "version": "1.0.0",
+          },
+        },
+      },
+      "j": Object {
+        "version": "file:../i/j",
+      },
+      "o": Object {
+        "version": "file:../m/node_modules/n/o",
+      },
+      "o2": Object {
+        "version": "file:../m/node_modules/n/o2",
+      },
+      "x": Object {
+        "dependencies": Object {
+          "b": Object {
+            "version": "file:../a/node_modules/b",
+          },
+        },
+        "requires": Object {
+          "b": "file:../../../a/node_modules/b",
+        },
+        "version": "1.0.0",
+      },
+    },
+    "lockfileVersion": 2,
+    "name": "root",
+    "packages": Object {
+      "": Object {
+        "dependencies": Object {
+          "j": "file:../i/j",
+          "o": "file:../m/node_modules/n/o",
+          "o2": "file:../m/node_modules/n/o2",
+          "x": "",
+        },
+        "version": "1.0.0",
+      },
+      "../a": Object {},
+      "../a/node_modules/b": Object {
+        "dependencies": Object {
+          "c": "",
+        },
+        "version": "1.0.0",
+      },
+      "../a/node_modules/c": Object {
+        "version": "1.0.0",
+      },
+      "../i": Object {},
+      "../i/j": Object {
+        "dependencies": Object {
+          "k": "",
+        },
+        "version": "1.0.0",
+      },
+      "../i/node_modules/k": Object {
+        "version": "1.0.0",
+      },
+      "../m": Object {},
+      "../m/node_modules/n/o": Object {
+        "dependencies": Object {
+          "p": "",
+        },
+        "version": "1.0.0",
+      },
+      "../m/node_modules/n/o2": Object {
+        "dependencies": Object {
+          "p": "",
+        },
+        "version": "1.0.0",
+      },
+      "../m/node_modules/p": Object {
+        "version": "1.0.0",
+      },
+      "node_modules/j": Object {
+        "link": true,
+        "resolved": "../i/j",
+      },
+      "node_modules/o": Object {
+        "link": true,
+        "resolved": "../m/node_modules/n/o",
+      },
+      "node_modules/o2": Object {
+        "link": true,
+        "resolved": "../m/node_modules/n/o2",
+      },
+      "node_modules/x": Object {
+        "dependencies": Object {
+          "b": "file:../../../a/node_modules/b",
+        },
+        "version": "1.0.0",
+      },
+      "node_modules/x/node_modules/b": Object {
+        "link": true,
+        "resolved": "../a/node_modules/b",
+      },
+    },
+    "requires": true,
+    "version": "1.0.0",
+  },
+  "name": "root",
+  "realpath": "external-link/root",
+  "top": "external-link/root",
 }
 `
 
@@ -5061,7 +5375,6 @@ Node {
       "realpath": "root/node_modules/@scope/x/node_modules/glob",
       "target": Object {
         "name": "glob",
-        "parent": "root/node_modules/@scope/x",
       },
       "top": "other",
     },
@@ -5113,14 +5426,6 @@ Node {
                     "version": "1.3.0",
                   },
                 },
-                "extraneous": true,
-                "requires": Object {
-                  "graceful-fs": "",
-                  "inherits": "",
-                  "minimatch": "",
-                  "once": "",
-                },
-                "version": "4.0.5",
               },
             },
           },
@@ -5135,21 +5440,6 @@ Node {
     "name": "other",
     "packages": Object {
       "": Object {},
-      "../root/node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "extraneous": true,
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
       "../root/node_modules/@scope/x/node_modules/glob": Object {
         "dependencies": Object {
           "graceful-fs": "",
@@ -5256,12 +5546,6 @@ Node {
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
-    "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
-    "node_modules/.pnpm/registry.npmjs.org/b/1.0.0",
-    "node_modules/.pnpm/registry.npmjs.org/c/1.0.0",
-  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -5285,7 +5569,6 @@ Node {
             "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
         },
-        "extraneous": true,
       },
       ".pnpm/registry.npmjs.org/a/1.0.0": Object {
         "dependencies": Object {
@@ -5303,7 +5586,6 @@ Node {
             "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
         },
-        "extraneous": true,
       },
       ".pnpm/registry.npmjs.org/b/1.0.0": Object {
         "dependencies": Object {
@@ -5317,7 +5599,6 @@ Node {
             "version": "file:node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
         },
-        "extraneous": true,
       },
       ".pnpm/registry.npmjs.org/c/1.0.0": Object {
         "dependencies": Object {
@@ -5331,7 +5612,6 @@ Node {
             "version": "1.0.0",
           },
         },
-        "extraneous": true,
       },
       "@scope/x": Object {
         "version": "file:node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
@@ -5351,9 +5631,7 @@ Node {
         "name": "pnpm-root",
         "version": "1.0.0",
       },
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {
-        "extraneous": true,
-      },
+      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {},
       "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x": Object {
         "dependencies": Object {
           "a": "",
@@ -5374,9 +5652,7 @@ Node {
         "link": true,
         "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
       },
-      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {
-        "extraneous": true,
-      },
+      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {},
       "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a": Object {
         "dependencies": Object {
           "b": "",
@@ -5392,9 +5668,7 @@ Node {
         "link": true,
         "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
       },
-      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {
-        "extraneous": true,
-      },
+      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {},
       "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b": Object {
         "dependencies": Object {
           "c": "",
@@ -5405,9 +5679,7 @@ Node {
         "link": true,
         "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
       },
-      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {
-        "extraneous": true,
-      },
+      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {},
       "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x": Object {
         "link": true,
         "resolved": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",

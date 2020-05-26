@@ -79,16 +79,17 @@ t.test('setup server', { bail: true, buffered: false }, registryServer)
 const fixture = (t, p) =>
   t.testdir(require('../fixtures/reify-cases/' + p)(t))
 
+const cache = t.testdir()
 const printDedupe = (path, opt) => dedupeTree(path, opt).then(printTree)
 const dedupeTree = (path, opt) =>
-  new Arborist({registry, path, ...(opt || {})}).dedupe(opt)
+  new Arborist({registry, path, cache, ...(opt || {})}).dedupe(opt)
 
 t.test('dedupes with actual tree', async t => {
   const path = fixture(t, 'dedupe-actual')
   return t.resolveMatchSnapshot(printDedupe(path))
 })
 
-t.test('dedupes with lockfile', async t => { 
+t.test('dedupes with lockfile', async t => {
   const path = fixture(t, 'dedupe-lockfile')
-  return t.resolveMatchSnapshot(printDedupe(path))
-})  
+  return t.resolveMatchSnapshot(printDedupe(path, {}))
+})

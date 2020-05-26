@@ -318,7 +318,7 @@ Node {
       "resolved": "file:../target",
       "target": Object {
         "name": "target",
-        "parent": null,
+        "parent": undefined,
       },
     },
   },
@@ -784,7 +784,10 @@ exports[`test/arborist/reify.js TAP just the shrinkwrap cli-750-fresh > must mat
   },
   "dependencies": {
     "app": {
-      "version": "file:app"
+      "version": "file:app",
+      "requires": {
+        "lib": "file:../lib"
+      }
     },
     "lib": {
       "version": "file:lib"
@@ -845,7 +848,7 @@ Node {
       "resolved": "file:../target",
       "target": Object {
         "name": "target",
-        "parent": null,
+        "parent": undefined,
       },
     },
   },
@@ -971,7 +974,7 @@ Node {
           "resolved": "file:../target",
           "target": Object {
             "name": "target",
-            "parent": null,
+            "parent": undefined,
           },
         },
       },
@@ -13124,7 +13127,23 @@ Object {
     },
   },
   "lockfileVersion": 2,
+  "name": "reify-saving-the-ideal-tree-save-some-stuff",
   "packages": Object {
+    "": Object {
+      "bundleDependencies": Array [
+        "a",
+        "b",
+        "c",
+      ],
+      "dependencies": Object {
+        "a": "github:foo/bar#baz",
+        "b": "^1.2.3",
+        "d": "npm:c@^1.2.3",
+      },
+      "devDependencies": Object {
+        "c": "git+ssh://git@githost.com:a/b/c.git#master",
+      },
+    },
     "node_modules/a": Object {
       "extraneous": true,
       "inBundle": true,
@@ -13801,7 +13820,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": null,
+        "parent": undefined,
       },
     },
     "b" => Link {
@@ -13818,7 +13837,7 @@ Node {
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
-        "parent": null,
+        "parent": undefined,
       },
     },
   },
@@ -13863,7 +13882,7 @@ Node {
       },
       "location": "a",
       "name": "a",
-      "resolved": "a",
+      "resolved": null,
     },
     Node {
       "children": Map {
@@ -13891,7 +13910,7 @@ Node {
       },
       "location": "b",
       "name": "b",
-      "resolved": "b",
+      "resolved": null,
     },
   },
   "location": "",
@@ -27923,7 +27942,7 @@ Node {
 `
 
 exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "abbrev" => Node {
       "children": Map {},
@@ -28085,6 +28104,7 @@ Node {
     "originalLockfileVersion": undefined,
     "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
     "shrinkwrapOnly": false,
+    "tree": <*ref_1>,
     "type": "package-lock.json",
     "yarnLock": YarnLock {
       "current": YarnLockEntry {
@@ -34145,6 +34165,9 @@ exports[`test/arborist/reify.js TAP workspaces reify workspaces lockfile > shoul
 Object {
   "dependencies": Object {
     "a": Object {
+      "requires": Object {
+        "b": "^1.0.0",
+      },
       "version": "file:a",
     },
     "b": Object {

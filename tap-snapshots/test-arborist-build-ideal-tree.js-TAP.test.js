@@ -2035,7 +2035,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": null,
+        "parent": undefined,
       },
     },
     "b" => Link {
@@ -2052,7 +2052,7 @@ Node {
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
-        "parent": null,
+        "parent": undefined,
       },
     },
   },
@@ -2097,7 +2097,7 @@ Node {
       },
       "location": "a",
       "name": "a",
-      "resolved": "a",
+      "resolved": null,
     },
     Node {
       "children": Map {
@@ -2125,7 +2125,7 @@ Node {
       },
       "location": "b",
       "name": "b",
-      "resolved": "b",
+      "resolved": null,
     },
   },
   "location": "",
@@ -8737,7 +8737,7 @@ Node {
       "resolved": "file:../mkdirp-unfixable",
       "target": Object {
         "name": "mkdirp-unfixable",
-        "parent": null,
+        "parent": undefined,
       },
     },
   },
@@ -8761,7 +8761,7 @@ Node {
       },
       "location": "mkdirp-unfixable",
       "name": "mkdirp-unfixable",
-      "resolved": "mkdirp-unfixable",
+      "resolved": null,
     },
   },
   "location": "",

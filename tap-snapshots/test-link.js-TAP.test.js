@@ -18,7 +18,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
-    "" => Node {
+    "" => &ref_2 Node {
       "children": Map {},
       "dev": true,
       "devOptional": true,
@@ -40,7 +40,15 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
         "data": Object {
           "dependencies": Object {},
           "lockfileVersion": 2,
-          "packages": Object {},
+          "packages": Object {
+            "": Object {
+              "name": undefined,
+            },
+            "../../../../../some/other/path": Object {
+              "link": true,
+              "resolved": "",
+            },
+          },
         },
         "filename": null,
         "hiddenLockfile": false,
@@ -48,6 +56,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
         "loadedFromDisk": false,
         "path": "/home/user/projects/some/kind/of/path",
         "shrinkwrapOnly": false,
+        "tree": <*ref_2>,
         "type": null,
         "yarnLock": null,
       },
@@ -84,7 +93,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
-    "" => Node {
+    "" => &ref_2 Node {
       "children": Map {},
       "dev": true,
       "devOptional": true,
@@ -108,7 +117,12 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
           "lockfileVersion": 2,
           "packages": Object {
             "": Object {
-              "name": undefined,
+              "extraneous": true,
+              "name": "root",
+            },
+            "../../../../../some/other/path": Object {
+              "link": true,
+              "resolved": "",
             },
           },
         },
@@ -118,6 +132,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
         "loadedFromDisk": false,
         "path": "/home/user/projects/some/kind/of/path",
         "shrinkwrapOnly": false,
+        "tree": <*ref_2>,
         "type": null,
         "yarnLock": null,
       },
@@ -132,13 +147,18 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "legacyPeerDeps": false,
   "linksIn": Set {},
   "location": "",
-  "meta": Shrinkwrap {
+  "meta": &ref_3 Shrinkwrap {
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
       "packages": Object {
         "": Object {
-          "name": undefined,
+          "extraneous": true,
+          "name": "root",
+        },
+        "../../../../../some/other/path": Object {
+          "link": true,
+          "resolved": "",
         },
       },
     },
@@ -148,6 +168,32 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "loadedFromDisk": false,
     "path": "/home/user/projects/some/kind/of/path",
     "shrinkwrapOnly": false,
+    "tree": Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        <*ref_1>,
+      },
+      "location": "",
+      "meta": <*ref_3>,
+      "name": "path",
+      "optional": true,
+      "path": "/home/user/projects/some/kind/of/path",
+      "peer": true,
+      "realpath": "/home/user/projects/some/kind/of/path",
+      "resolved": null,
+    },
     "type": null,
     "yarnLock": null,
   },

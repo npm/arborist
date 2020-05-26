@@ -63,7 +63,7 @@ Node {
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > add new meta under prod 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {
@@ -775,7 +775,11 @@ Node {
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {},
+      "packages": Object {
+        "": Object {
+          "name": undefined,
+        },
+      },
     },
     "filename": null,
     "hiddenLockfile": false,
@@ -783,6 +787,7 @@ Node {
     "loadedFromDisk": false,
     "path": "/home/user/projects/root",
     "shrinkwrapOnly": false,
+    "tree": <*ref_1>,
     "type": null,
     "yarnLock": null,
   },
@@ -796,7 +801,7 @@ Node {
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > initial load with some deps 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {
@@ -1315,7 +1320,11 @@ Node {
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {},
+      "packages": Object {
+        "": Object {
+          "name": undefined,
+        },
+      },
     },
     "filename": null,
     "hiddenLockfile": false,
@@ -1323,6 +1332,7 @@ Node {
     "loadedFromDisk": false,
     "path": "/home/user/projects/root",
     "shrinkwrapOnly": false,
+    "tree": <*ref_1>,
     "type": null,
     "yarnLock": null,
   },
@@ -1336,7 +1346,7 @@ Node {
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > move meta to top level, update stuff 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -1826,7 +1836,11 @@ Node {
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {},
+      "packages": Object {
+        "": Object {
+          "name": undefined,
+        },
+      },
     },
     "filename": null,
     "hiddenLockfile": false,
@@ -1834,6 +1848,7 @@ Node {
     "loadedFromDisk": false,
     "path": "/home/user/projects/root",
     "shrinkwrapOnly": false,
+    "tree": <*ref_1>,
     "type": null,
     "yarnLock": null,
   },
@@ -1847,7 +1862,7 @@ Node {
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > move new meta to top level 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -2403,7 +2418,11 @@ Node {
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {},
+      "packages": Object {
+        "": Object {
+          "name": undefined,
+        },
+      },
     },
     "filename": null,
     "hiddenLockfile": false,
@@ -2411,6 +2430,7 @@ Node {
     "loadedFromDisk": false,
     "path": "/home/user/projects/root",
     "shrinkwrapOnly": false,
+    "tree": <*ref_1>,
     "type": null,
     "yarnLock": null,
   },
@@ -2424,7 +2444,7 @@ Node {
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > move new meta to top level second time (no-op) 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -2980,7 +3000,11 @@ Node {
     "data": Object {
       "dependencies": Object {},
       "lockfileVersion": 2,
-      "packages": Object {},
+      "packages": Object {
+        "": Object {
+          "name": undefined,
+        },
+      },
     },
     "filename": null,
     "hiddenLockfile": false,
@@ -2988,6 +3012,7 @@ Node {
     "loadedFromDisk": false,
     "path": "/home/user/projects/root",
     "shrinkwrapOnly": false,
+    "tree": <*ref_1>,
     "type": null,
     "yarnLock": null,
   },

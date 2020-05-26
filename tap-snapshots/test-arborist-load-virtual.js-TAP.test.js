@@ -13594,13 +13594,13 @@ Node {
       "location": "node_modules/symlink",
       "name": "symlink",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev-link-target",
         "version": undefined,
       },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": null,
+        "parent": undefined,
       },
     },
     "symlink-in-tree" => Link {
@@ -14338,13 +14338,13 @@ Node {
       "location": "node_modules/symlink",
       "name": "symlink",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev-link-target",
         "version": undefined,
       },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": null,
+        "parent": undefined,
       },
     },
     "symlink-in-tree" => Link {
@@ -15073,13 +15073,13 @@ Node {
       "location": "node_modules/symlink",
       "name": "symlink",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev-link-target",
         "version": undefined,
       },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": null,
+        "parent": undefined,
       },
     },
     "symlink-in-tree" => Link {
@@ -15736,13 +15736,13 @@ Node {
       "location": "node_modules/symlink",
       "name": "symlink",
       "package": Object {
-        "name": undefined,
+        "name": "abbrev-link-target",
         "version": undefined,
       },
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": null,
+        "parent": undefined,
       },
     },
     "symlink-in-tree" => Link {

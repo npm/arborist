@@ -81,7 +81,7 @@ const fixture = (t, p) =>
 
 const printDedupe = (path, opt) => dedupeTree(path, opt).then(printTree)
 const dedupeTree = (path, opt) =>
-  new Arborist({registry, path, ...(opt || {})}).dedupe(opt)
+  new Arborist({registry, path, ...(opt || {})}).dedupe()
 
 t.test('dedupes with actual tree', async t => {
   const path = fixture(t, 'dedupe-actual')

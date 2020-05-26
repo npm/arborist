@@ -19,6 +19,13 @@
 /test/fixtures/external-link/root/node_modules/x/node_modules/b
 /test/fixtures/global-style/lib-link
 /test/fixtures/install-types/node_modules/symlink
+/test/fixtures/link-dep-cycle/a/node_modules/b
+/test/fixtures/link-dep-cycle/b/node_modules/a
+/test/fixtures/link-dep-cycle/node_modules/a
+/test/fixtures/link-dep-cycle/node_modules/b
+/test/fixtures/link-dep-nested/node_modules/foo
+/test/fixtures/link-dep-nested/node_modules/once
+/test/fixtures/link-dep-nested/root/node_modules/bork
 /test/fixtures/linkedroot
 /test/fixtures/links-all-over/node_modules/link-deep
 /test/fixtures/links-all-over/node_modules/link-link

@@ -828,6 +828,7 @@ t.test('saving the ideal tree', t => {
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
     return a.loadActual().then(tree => Shrinkwrap.load({path}).then(meta => {
       tree.meta = meta
+      meta.add(tree)
       return tree
     })).then(tree => {
       // saving swaps the ideal tree onto the actual tree

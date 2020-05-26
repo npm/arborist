@@ -27,6 +27,10 @@ const roots = [
   'pnpm',
   'external-dep/root',
   'external-link/root',
+  'yarn-lock-mkdirp-file-dep',
+  'link-dep-cycle',
+  'link-dep-nested',
+  'link-dep-nested/root',
 ]
 
 const symlinks = {
@@ -98,6 +102,15 @@ const symlinks = {
   'external-link/root/node_modules/o2': '../../m/node_modules/n/o2',
   'external-link/root/node_modules/j': '../../i/j',
   'external-link/root/node_modules/x/node_modules/b': '../../../../a/node_modules/b',
+
+  'link-dep-cycle/node_modules/a': '../a',
+  'link-dep-cycle/node_modules/b': '../b',
+  'link-dep-cycle/a/node_modules/b': '../../b',
+  'link-dep-cycle/b/node_modules/a': '../../a',
+
+  'link-dep-nested/node_modules/once': '../once',
+  'link-dep-nested/node_modules/foo': '../once',
+  'link-dep-nested/root/node_modules/bork': '../..',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

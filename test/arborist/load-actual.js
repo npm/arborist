@@ -119,6 +119,21 @@ t.test('already loaded', t => new Arborist({
   actualTree,
 }).loadActual().then(tree2 => t.equal(tree2, actualTree))))
 
+t.test('already loading', t => {
+  const arb = new Arborist({
+    path: resolve(__dirname, '../fixtures/selflink'),
+  })
+  // try repeatedly to get at the actual tree, but it's not there until
+  // the end of the process and the promise resolves
+  const promise = arb.loadActual()
+  const int = setInterval(() => {
+    if (arb.actualTree)
+      t.fail('set public arb.actualTree before promise resolved')
+    arb.loadActual()
+  })
+  return promise.then(() => clearInterval(int))
+})
+
 t.test('load a tree rooted on a different node', async t => {
   const path = resolve(fixtures, 'workspace')
   const other = resolve(fixtures.replace(/[a-z]/gi, 'X'), 'workspace')

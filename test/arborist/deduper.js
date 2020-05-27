@@ -86,10 +86,20 @@ const dedupeTree = (path, opt) =>
 
 t.test('dedupes with actual tree', async t => {
   const path = fixture(t, 'dedupe-actual')
-  return t.resolveMatchSnapshot(printDedupe(path))
+  const tree = await dedupeTree(path)
+  const dep = tree.children.get('@isaacs/dedupe-tests-a')
+    .edgesOut.get('@isaacs/dedupe-tests-b').to
+  const child = tree.children.get('@isaacs/dedupe-tests-b')
+  t.equal(dep, child, 'dep was deduped to child of root node')
+  t.matchSnapshot(printTree(tree))
 })
 
 t.test('dedupes with lockfile', async t => {
   const path = fixture(t, 'dedupe-lockfile')
-  return t.resolveMatchSnapshot(printDedupe(path, {}))
+  const tree = await dedupeTree(path)
+  const dep = tree.children.get('@isaacs/dedupe-tests-a')
+    .edgesOut.get('@isaacs/dedupe-tests-b').to
+  const child = tree.children.get('@isaacs/dedupe-tests-b')
+  t.equal(dep, child, 'dep was deduped to child of root node')
+  t.matchSnapshot(printTree(tree))
 })

@@ -12323,6 +12323,7 @@ Node {
 exports[`test/arborist/reify.js TAP omit peer deps > finished timers 1`] = `
 Array [
   "arborist:ctor",
+  "arborist:ctor",
   "build",
   "build:queue",
   "idealTree",

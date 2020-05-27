@@ -116,6 +116,19 @@ t.test('a workspace with a conflicted nested duplicated dep', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'workspace4'))))
 
+t.test('a tree with an outdated dep, missing dep, no lockfile', async t => {
+  const path = resolve(fixtures, 'outdated-no-lockfile')
+  const tree = await buildIdeal(path)
+  const expected = {
+    once: '1.3.3',
+    wrappy: '1.0.1',
+  }
+  for (const [name, version] of Object.entries(expected)) {
+    t.equal(tree.children.get(name).package.version, version, `expect ${name}@${version}`)
+  }
+  t.matchSnapshot(printTree(tree), 'should not update all')
+})
+
 t.test('tarball deps with transitive tarball deps', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'tarball-dependencies'))))
@@ -249,30 +262,41 @@ t.test('expose explicitRequest', async t => {
   t.end()
 })
 
-t.test('bundle deps example 1', t => {
+t.test('bundle deps example 1, empty', t => {
   // NB: this results in ignoring the bundled deps when building the
   // ideal tree.  When we reify, we'll have to ignore the deps that
   // got placed as part of the bundle.
-  const path = resolve(fixtures, 'testing-bundledeps')
+  const path = resolve(fixtures, 'testing-bundledeps-empty')
   return t.resolveMatchSnapshot(printIdeal(path), 'bundle deps testing')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       saveBundle: true,
       add: [ '@isaacs/testing-bundledeps' ],
-    }), 'bundle the bundler'))
+    }), 'should have some missing deps in the ideal tree'))
+})
+
+t.test('bundle deps example 1, full', t => {
+  // In this test, bundle deps show up, because they're present in
+  // the actual tree to begin with.
+  const path = resolve(fixtures, 'testing-bundledeps')
+  return t.resolveMatchSnapshot(printIdeal(path), 'no missing deps')
+    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+      saveBundle: true,
+      add: [ '@isaacs/testing-bundledeps' ],
+    }), 'add stuff, no missing deps'))
 })
 
 t.test('bundle deps example 1, complete:true', t => {
   // When complete:true is set, we extract into a temp dir to read
   // the bundled deps, so they ARE included, just like during reify()
-  const path = resolve(fixtures, 'testing-bundledeps')
+  const path = resolve(fixtures, 'testing-bundledeps-empty')
   return t.resolveMatchSnapshot(printIdeal(path, {
     complete: true,
-  }), 'bundle deps testing')
+  }), 'no missing deps, because complete: true')
     .then(() => t.resolveMatchSnapshot(printIdeal(path, {
       saveBundle: true,
       add: [ '@isaacs/testing-bundledeps' ],
       complete: true,
-    }), 'bundle the bundler'))
+    }), 'no missing deps, because complete:true'))
 })
 
 t.test('bundle deps example 2', t => {
@@ -301,12 +325,15 @@ t.test('unresolveable peer deps', t => {
 
 t.test('do not add shrinkwrapped deps', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-no-lock')
-  return t.resolveMatchSnapshot(printIdeal(path))
+  return t.resolveMatchSnapshot(printIdeal(path, { update: true }))
 })
 
 t.test('do add shrinkwrapped deps when complete:true is set', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-no-lock')
-  return t.resolveMatchSnapshot(printIdeal(path, { complete: true }))
+  return t.resolveMatchSnapshot(printIdeal(path, {
+    complete: true,
+    update: true,
+  }))
 })
 
 t.test('do not update shrinkwrapped deps', t => {
@@ -318,7 +345,7 @@ t.test('do not update shrinkwrapped deps', t => {
 t.test('do not update shrinkwrapped deps when complete:true is set', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,
-    { update: { names: ['abbrev']}, complete: true}))
+    { update: { names: ['abbrev']}, complete: true }))
 })
 
 t.test('deduped transitive deps with asymmetrical bin declaration', t => {

@@ -27,7 +27,7 @@ Node {
       },
       "location": "node_modules/@isaacs/dedupe-tests-a",
       "name": "@isaacs/dedupe-tests-a",
-      "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-a/-/dedupe-tests-a-1.0.1.tgz",
+      "resolved": null,
     },
     "@isaacs/dedupe-tests-b" => Node {
       "edgesIn": Set {

@@ -5,6 +5,77 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/arborist/build-ideal-tree.js TAP a tree with an outdated dep, missing dep, no lockfile > should not update all 1`] = `
+Node {
+  "children": Map {
+    "mkdirp" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+    },
+    "once" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "once",
+          "spec": "^1.3.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.3.3.tgz",
+    },
+    "wrappy" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "mkdirp" => Edge {
+      "name": "mkdirp",
+      "spec": "1",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+    "once" => Edge {
+      "name": "once",
+      "spec": "^1.3.3",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "outdated-no-lockfile",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP a workspace with a conflicted nested duplicated dep > expect resolving Promise 1`] = `
 Node {
   "children": Map {
@@ -291,170 +362,7 @@ Node {
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1 > bundle deps testing 1`] = `
-Node {
-  "children": Map {
-    "@isaacs/testing-bundledeps" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-bundledeps",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-bundledeps-a" => Edge {
-          "error": "MISSING",
-          "name": "@isaacs/testing-bundledeps-a",
-          "spec": "*",
-          "to": null,
-          "type": "prod",
-        },
-        "@isaacs/testing-bundledeps-c" => Edge {
-          "name": "@isaacs/testing-bundledeps-c",
-          "spec": "*",
-          "to": "node_modules/@isaacs/testing-bundledeps-c",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-bundledeps",
-      "name": "@isaacs/testing-bundledeps",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
-    },
-    "@isaacs/testing-bundledeps-b" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-bundledeps-c",
-          "name": "@isaacs/testing-bundledeps-b",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-bundledeps-b",
-      "name": "@isaacs/testing-bundledeps-b",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
-    },
-    "@isaacs/testing-bundledeps-c" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-bundledeps",
-          "name": "@isaacs/testing-bundledeps-c",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-bundledeps-b" => Edge {
-          "name": "@isaacs/testing-bundledeps-b",
-          "spec": "*",
-          "to": "node_modules/@isaacs/testing-bundledeps-b",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-bundledeps-c",
-      "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
-    },
-  },
-  "edgesOut": Map {
-    "@isaacs/testing-bundledeps" => Edge {
-      "name": "@isaacs/testing-bundledeps",
-      "spec": "*",
-      "to": "node_modules/@isaacs/testing-bundledeps",
-      "type": "prod",
-    },
-  },
-  "location": "",
-  "name": "testing-bundledeps",
-  "resolved": null,
-}
-`
-
-exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1 > bundle the bundler 1`] = `
-Node {
-  "children": Map {
-    "@isaacs/testing-bundledeps" => Node {
-      "bundled": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-bundledeps",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-bundledeps-a" => Edge {
-          "error": "MISSING",
-          "name": "@isaacs/testing-bundledeps-a",
-          "spec": "*",
-          "to": null,
-          "type": "prod",
-        },
-        "@isaacs/testing-bundledeps-c" => Edge {
-          "name": "@isaacs/testing-bundledeps-c",
-          "spec": "*",
-          "to": "node_modules/@isaacs/testing-bundledeps-c",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-bundledeps",
-      "name": "@isaacs/testing-bundledeps",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
-    },
-    "@isaacs/testing-bundledeps-b" => Node {
-      "bundled": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-bundledeps-c",
-          "name": "@isaacs/testing-bundledeps-b",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-bundledeps-b",
-      "name": "@isaacs/testing-bundledeps-b",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
-    },
-    "@isaacs/testing-bundledeps-c" => Node {
-      "bundled": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@isaacs/testing-bundledeps",
-          "name": "@isaacs/testing-bundledeps-c",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-bundledeps-b" => Edge {
-          "name": "@isaacs/testing-bundledeps-b",
-          "spec": "*",
-          "to": "node_modules/@isaacs/testing-bundledeps-b",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-bundledeps-c",
-      "name": "@isaacs/testing-bundledeps-c",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
-    },
-  },
-  "edgesOut": Map {
-    "@isaacs/testing-bundledeps" => Edge {
-      "name": "@isaacs/testing-bundledeps",
-      "spec": "*",
-      "to": "node_modules/@isaacs/testing-bundledeps",
-      "type": "prod",
-    },
-  },
-  "location": "",
-  "name": "testing-bundledeps",
-  "resolved": null,
-}
-`
-
-exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, complete:true > bundle deps testing 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, complete:true > no missing deps, because complete: true 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-bundledeps" => Node {
@@ -566,12 +474,12 @@ Node {
     },
   },
   "location": "",
-  "name": "testing-bundledeps",
+  "name": "testing-bundledeps-empty",
   "resolved": null,
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, complete:true > bundle the bundler 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, complete:true > no missing deps, because complete:true 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-bundledeps" => Node {
@@ -675,6 +583,406 @@ Node {
       "location": "node_modules/@isaacs/testing-bundledeps-c",
       "name": "@isaacs/testing-bundledeps-c",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-bundledeps" => Edge {
+      "name": "@isaacs/testing-bundledeps",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-bundledeps",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "testing-bundledeps-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, empty > bundle deps testing 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-bundledeps" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-bundledeps",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-a" => Edge {
+          "error": "MISSING",
+          "name": "@isaacs/testing-bundledeps-a",
+          "spec": "*",
+          "to": null,
+          "type": "prod",
+        },
+        "@isaacs/testing-bundledeps-c" => Edge {
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps",
+      "name": "@isaacs/testing-bundledeps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps-c",
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-b",
+      "name": "@isaacs/testing-bundledeps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps",
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-b" => Edge {
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-c",
+      "name": "@isaacs/testing-bundledeps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-bundledeps" => Edge {
+      "name": "@isaacs/testing-bundledeps",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-bundledeps",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "testing-bundledeps-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, empty > should have some missing deps in the ideal tree 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-bundledeps" => Node {
+      "bundled": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-bundledeps",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-a" => Edge {
+          "error": "MISSING",
+          "name": "@isaacs/testing-bundledeps-a",
+          "spec": "*",
+          "to": null,
+          "type": "prod",
+        },
+        "@isaacs/testing-bundledeps-c" => Edge {
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps",
+      "name": "@isaacs/testing-bundledeps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-b" => Node {
+      "bundled": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps-c",
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-b",
+      "name": "@isaacs/testing-bundledeps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-c" => Node {
+      "bundled": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps",
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-b" => Edge {
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-c",
+      "name": "@isaacs/testing-bundledeps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-bundledeps" => Edge {
+      "name": "@isaacs/testing-bundledeps",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-bundledeps",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "testing-bundledeps-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, full > add stuff, no missing deps 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-bundledeps" => Node {
+      "bundled": true,
+      "children": Map {
+        "@isaacs/testing-bundledeps-a" => Node {
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-bundledeps",
+              "name": "@isaacs/testing-bundledeps-a",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-bundledeps-b" => Edge {
+              "name": "@isaacs/testing-bundledeps-b",
+              "spec": "*",
+              "to": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+          "name": "@isaacs/testing-bundledeps-a",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-bundledeps-b" => Node {
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+              "name": "@isaacs/testing-bundledeps-b",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
+          "name": "@isaacs/testing-bundledeps-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-bundledeps",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-a" => Edge {
+          "name": "@isaacs/testing-bundledeps-a",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-bundledeps-c" => Edge {
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps",
+      "name": "@isaacs/testing-bundledeps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-b" => Node {
+      "bundled": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps-c",
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-b",
+      "name": "@isaacs/testing-bundledeps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-c" => Node {
+      "bundled": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps",
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-b" => Edge {
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-c",
+      "name": "@isaacs/testing-bundledeps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-bundledeps" => Edge {
+      "name": "@isaacs/testing-bundledeps",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-bundledeps",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "testing-bundledeps",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP bundle deps example 1, full > no missing deps 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-bundledeps" => Node {
+      "children": Map {
+        "@isaacs/testing-bundledeps-a" => Node {
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-bundledeps",
+              "name": "@isaacs/testing-bundledeps-a",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-bundledeps-b" => Edge {
+              "name": "@isaacs/testing-bundledeps-b",
+              "spec": "*",
+              "to": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+          "name": "@isaacs/testing-bundledeps-a",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-bundledeps-b" => Node {
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+              "name": "@isaacs/testing-bundledeps-b",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
+          "name": "@isaacs/testing-bundledeps-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-bundledeps",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-a" => Edge {
+          "name": "@isaacs/testing-bundledeps-a",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-bundledeps-c" => Edge {
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps",
+      "name": "@isaacs/testing-bundledeps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps-c",
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-b",
+      "name": "@isaacs/testing-bundledeps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps",
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-b" => Edge {
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-c",
+      "name": "@isaacs/testing-bundledeps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-1.0.0.tgz",
     },
   },
   "edgesOut": Map {

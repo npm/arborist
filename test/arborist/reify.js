@@ -386,7 +386,7 @@ t.test('update a node without updating its children', t =>
 
 t.test('do not add shrinkwrapped deps', t =>
   t.resolveMatchSnapshot(printReified(
-    fixture(t, 'shrinkwrapped-dep-no-lock'))))
+    fixture(t, 'shrinkwrapped-dep-no-lock'), { update: true })))
 
 t.test('do not update shrinkwrapped deps', t =>
   t.resolveMatchSnapshot(printReified(
@@ -402,7 +402,9 @@ t.test('reifying with shronk warp dep', t => {
   ]
   t.plan(cases.length)
   cases.forEach(c => t.test(c, t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, c)))))
+    t.resolveMatchSnapshot(printReified(fixture(t, c), {
+      update: /no-lock/.test(c),
+    }))))
 })
 
 t.test('link deps already in place', t =>
@@ -452,7 +454,7 @@ t.test('optional dependency failures', t => {
   ]
   t.plan(cases.length)
   cases.forEach(c => t.test(c, t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, c)))))
+    t.resolveMatchSnapshot(printReified(fixture(t, c), { update: true }))))
 })
 
 t.test('failure to fetch prod dep is failure', t =>

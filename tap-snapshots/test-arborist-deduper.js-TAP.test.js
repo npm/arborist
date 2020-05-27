@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/arborist/trimmer.js TAP dedupes with actual tree > expect resolving Promise 1`] = `
+exports[`test/arborist/deduper.js TAP dedupes with actual tree > expect resolving Promise 1`] = `
 Node {
   "children": Map {
     "@isaacs/dedupe-tests-a" => Node {
@@ -64,12 +64,12 @@ Node {
     },
   },
   "location": "",
-  "name": "trimmer-dedupes-with-actual-tree",
+  "name": "deduper-dedupes-with-actual-tree",
   "resolved": null,
 }
 `
 
-exports[`test/arborist/trimmer.js TAP dedupes with lockfile > expect resolving Promise 1`] = `
+exports[`test/arborist/deduper.js TAP dedupes with lockfile > expect resolving Promise 1`] = `
 Node {
   "children": Map {
     "@isaacs/dedupe-tests-a" => Node {
@@ -128,7 +128,7 @@ Node {
     },
   },
   "location": "",
-  "name": "trimmer-dedupes-with-lockfile",
+  "name": "deduper-dedupes-with-lockfile",
   "resolved": null,
 }
 `

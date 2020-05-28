@@ -54,6 +54,7 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
         "hiddenLockfile": false,
         "indent": 2,
         "loadedFromDisk": false,
+        "loadingError": null,
         "path": "/home/user/projects/some/kind/of/path",
         "shrinkwrapOnly": false,
         "tree": <*ref_2>,
@@ -130,6 +131,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
         "hiddenLockfile": false,
         "indent": 2,
         "loadedFromDisk": false,
+        "loadingError": null,
         "path": "/home/user/projects/some/kind/of/path",
         "shrinkwrapOnly": false,
         "tree": <*ref_2>,
@@ -166,6 +168,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
     "hiddenLockfile": false,
     "indent": 2,
     "loadedFromDisk": false,
+    "loadingError": null,
     "path": "/home/user/projects/some/kind/of/path",
     "shrinkwrapOnly": false,
     "tree": Node {

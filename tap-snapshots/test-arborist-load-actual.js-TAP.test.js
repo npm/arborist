@@ -3989,12 +3989,6 @@ Node {
     "lockfileVersion": 2,
     "name": "hidden-lockfile",
     "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "abbrev": "^1.1.1",
-        },
-        "extraneous": true,
-      },
       "node_modules/abbrev": Object {
         "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
         "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",

@@ -301,8 +301,9 @@ t.test('transitive deps containing asymmetrical bin no lockfile', t => {
     ? () => t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
     : () => t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
 
-  return t.resolveMatchSnapshot(printReified(path, {}))
+  return t.resolveMatchSnapshot(printReified(path, { packageLock: false }))
     .then(checkBin)
+    .then(() => t.throws(() => fs.statSync(path + '/package-lock.json')))
 })
 
 t.test('transitive deps containing asymmetrical bin with lockfile', t => {

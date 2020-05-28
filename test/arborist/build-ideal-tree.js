@@ -342,6 +342,12 @@ t.test('do not update shrinkwrapped deps', t => {
     { update: { names: ['abbrev']}}))
 })
 
+t.test('do not update shrinkwrapped deps, ignore lockfile', t => {
+  const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
+  return t.resolveMatchSnapshot(printIdeal(path,
+    { packageLock: false, update: { names: ['abbrev']}}))
+})
+
 t.test('do not update shrinkwrapped deps when complete:true is set', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,

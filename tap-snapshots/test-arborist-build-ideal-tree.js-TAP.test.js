@@ -2758,6 +2758,46 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP do not update shrinkwrapped deps, ignore lockfile > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/shrinkwrapped-dependency" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/shrinkwrapped-dependency",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "error": "MISSING",
+          "name": "abbrev",
+          "spec": "^1.0.4",
+          "to": null,
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/shrinkwrapped-dependency",
+      "name": "@isaacs/shrinkwrapped-dependency",
+      "resolved": "https://registry.npmjs.org/@isaacs/shrinkwrapped-dependency/-/shrinkwrapped-dependency-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/shrinkwrapped-dependency" => Edge {
+      "name": "@isaacs/shrinkwrapped-dependency",
+      "spec": "^1.0.0",
+      "to": "node_modules/@isaacs/shrinkwrapped-dependency",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "shrinkwrapped-dep-with-lock",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP force a new mkdirp (but not semver major) > must match snapshot 1`] = `
 Node {
   "children": Map {

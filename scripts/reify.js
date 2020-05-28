@@ -67,16 +67,45 @@ for (let i = 2; i < process.argv.length; i++) {
   }
 }
 
+const printDiff = diff => {
+  const {depth} = require('treeverse')
+  depth({
+    tree: diff,
+    visit: d => {
+      if (d.location === '')
+        return
+      switch (d.action) {
+        case 'REMOVE':
+          console.error('REMOVE', d.actual.location)
+          break
+        case 'ADD':
+          console.error('ADD', d.ideal.location, d.ideal.resolved)
+          break
+        case 'CHANGE':
+          console.error('CHANGE', d.actual.location, {
+            from: d.actual.resolved,
+            to: d.ideal.resolved,
+          })
+          break
+      }
+    },
+    getChildren: d => d.children,
+  })
+}
+
 console.error(options)
 process.on('log', console.error)
 
 const start = process.hrtime()
 process.emit('time', 'install')
-new Arborist(options).reify(options).then(tree => {
+const arb = new Arborist(options)
+arb.reify(options).then(tree => {
   process.emit('timeEnd', 'install')
   const end = process.hrtime(start)
   if (!options.quiet)
     print(tree)
+  if (options.dryRun)
+    printDiff(arb.diff)
   console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[1] / 1e9}s`)
   if (tree.meta && options.save)
     tree.meta.save()

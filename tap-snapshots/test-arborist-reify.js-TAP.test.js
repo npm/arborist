@@ -631,6 +631,355 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP dry run, do not get anything wet link-dep-empty > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "linked-dep" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "linked-dep",
+          "spec": "file:target",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/linked-dep",
+      "name": "linked-dep",
+      "resolved": "file:../target",
+      "target": Object {
+        "name": "target",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "linked-dep" => Edge {
+      "name": "linked-dep",
+      "spec": "file:target",
+      "to": "node_modules/linked-dep",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "location": "target",
+      "name": "target",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "reify-dry-run-do-not-get-anything-wet-link-dep-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP dry run, do not get anything wet link-meta-deps-empty > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-link-dep" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-link-dep",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "linked-dep" => Edge {
+          "name": "linked-dep",
+          "spec": "file:target",
+          "to": "node_modules/linked-dep",
+          "type": "prod",
+        },
+      },
+      "fsChildren": Set {
+        Node {
+          "location": "node_modules/@isaacs/testing-link-dep/target",
+          "name": "linked-dep",
+          "resolved": null,
+        },
+      },
+      "location": "node_modules/@isaacs/testing-link-dep",
+      "name": "@isaacs/testing-link-dep",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-link-dep/-/testing-link-dep-1.0.0.tgz",
+    },
+    "@isaacs/testing-link-dev-dep" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-link-dev-dep",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-link-dev-dep",
+      "name": "@isaacs/testing-link-dev-dep",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-link-dev-dep/-/testing-link-dev-dep-1.0.1.tgz",
+    },
+    "linked-dep" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-link-dep",
+          "name": "linked-dep",
+          "spec": "file:target",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/linked-dep",
+      "name": "linked-dep",
+      "resolved": "file:@isaacs/testing-link-dep/target",
+      "target": Object {
+        "name": "linked-dep",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-link-dep" => Edge {
+      "name": "@isaacs/testing-link-dep",
+      "spec": "^1.0.0",
+      "to": "node_modules/@isaacs/testing-link-dep",
+      "type": "prod",
+    },
+    "@isaacs/testing-link-dev-dep" => Edge {
+      "name": "@isaacs/testing-link-dev-dep",
+      "spec": "^1.0.1",
+      "to": "node_modules/@isaacs/testing-link-dev-dep",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-dry-run-do-not-get-anything-wet-link-meta-deps-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP dry run, do not get anything wet shrinkwrapped-dep-no-lock-empty > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/shrinkwrapped-dependency" => Node {
+      "children": Map {
+        "abbrev" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/shrinkwrapped-dependency",
+              "name": "abbrev",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "name": "abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/shrinkwrapped-dependency",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "^1.0.4",
+          "to": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/shrinkwrapped-dependency",
+      "name": "@isaacs/shrinkwrapped-dependency",
+      "resolved": "https://registry.npmjs.org/@isaacs/shrinkwrapped-dependency/-/shrinkwrapped-dependency-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/shrinkwrapped-dependency" => Edge {
+      "name": "@isaacs/shrinkwrapped-dependency",
+      "spec": "^1.0.0",
+      "to": "node_modules/@isaacs/shrinkwrapped-dependency",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-dry-run-do-not-get-anything-wet-shrinkwrapped-dep-no-lock-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP dry run, do not get anything wet shrinkwrapped-dep-with-lock-empty > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/shrinkwrapped-dependency" => Node {
+      "children": Map {
+        "abbrev" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/shrinkwrapped-dependency",
+              "name": "abbrev",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "name": "abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/shrinkwrapped-dependency",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "abbrev" => Edge {
+          "name": "abbrev",
+          "spec": "^1.0.4",
+          "to": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/shrinkwrapped-dependency",
+      "name": "@isaacs/shrinkwrapped-dependency",
+      "resolved": "https://registry.npmjs.org/@isaacs/shrinkwrapped-dependency/-/shrinkwrapped-dependency-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/shrinkwrapped-dependency" => Edge {
+      "name": "@isaacs/shrinkwrapped-dependency",
+      "spec": "^1.0.0",
+      "to": "node_modules/@isaacs/shrinkwrapped-dependency",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-dry-run-do-not-get-anything-wet-shrinkwrapped-dep-with-lock-empty",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP dry run, do not get anything wet testing-bundledeps-empty > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-bundledeps" => Node {
+      "children": Map {
+        "@isaacs/testing-bundledeps-a" => Node {
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-bundledeps",
+              "name": "@isaacs/testing-bundledeps-a",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-bundledeps-b" => Edge {
+              "name": "@isaacs/testing-bundledeps-b",
+              "spec": "*",
+              "to": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+          "name": "@isaacs/testing-bundledeps-a",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-bundledeps-b" => Node {
+          "bundled": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+              "name": "@isaacs/testing-bundledeps-b",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
+          "name": "@isaacs/testing-bundledeps-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-bundledeps",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-a" => Edge {
+          "name": "@isaacs/testing-bundledeps-a",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-bundledeps-c" => Edge {
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-c",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps",
+      "name": "@isaacs/testing-bundledeps",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps/-/testing-bundledeps-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps-c",
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-b",
+      "name": "@isaacs/testing-bundledeps-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-bundledeps-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-bundledeps",
+          "name": "@isaacs/testing-bundledeps-c",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-bundledeps-b" => Edge {
+          "name": "@isaacs/testing-bundledeps-b",
+          "spec": "*",
+          "to": "node_modules/@isaacs/testing-bundledeps-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundledeps-c",
+      "name": "@isaacs/testing-bundledeps-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-c/-/testing-bundledeps-c-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-bundledeps" => Edge {
+      "name": "@isaacs/testing-bundledeps",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-bundledeps",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "reify-dry-run-do-not-get-anything-wet-testing-bundledeps-empty",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP failing script means install failure, unless ignoreScripts prod-dep-allinstall-fail --ignore-scripts > expect resolving Promise 1`] = `
 Node {
   "children": Map {

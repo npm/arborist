@@ -152,8 +152,14 @@ const fixture = (t, p) =>
 
 const printReified = (path, opt) => reify(path, opt).then(printTree)
 
-const reify = (path, opt) =>
-  new Arborist({audit: false, cache, registry, path, ...(opt || {})}).reify(opt)
+const newArb = opt => new Arborist({
+  audit: false,
+  cache,
+  registry,
+  ...opt,
+})
+
+const reify = (path, opt) => newArb({path, ...(opt || {})}).reify(opt)
 
 t.test('tarball deps with transitive tarball deps', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'tarball-dependencies'))))
@@ -179,7 +185,7 @@ t.test('just the shrinkwrap', t => {
   for (const p of paths) {
     t.test(p, async t => {
       const path = fixture(t, p)
-      const arb = new Arborist({ path, registry, cache, packageLockOnly: true })
+      const arb = newArb({ path, audit: true, packageLockOnly: true })
       await arb.reify()
       t.ok(arb.auditReport, 'got an audit report')
       t.throws(() => fs.statSync(path + '/node_modules'), { code: 'ENOENT' })
@@ -323,7 +329,7 @@ t.test('omit optional dep', t => {
   const path = fixture(t, 'tap-react15-collision-legacy-sw')
   const ignoreScripts = true
 
-  const arb = new Arborist({ path, ignoreScripts, registry, cache })
+  const arb = newArb({ path, ignoreScripts })
   return arb.reify({ omit: ['optional'] })
     .then(tree => {
       t.equal(tree.children.get('fsevents'), undefined, 'no fsevents in tree')
@@ -361,7 +367,7 @@ t.test('bad shrinkwrap file', t =>
 
 t.test('multiple bundles at the same level', t => {
   const path = fixture(t, 'two-bundled-deps')
-  const a = new Arborist({ path, registry, cache })
+  const a = newArb({ path })
   return a.reify().then(tree => {
     const root = tree.root
     const p = printTree(tree)
@@ -394,6 +400,24 @@ t.test('do not update shrinkwrapped deps', t =>
     fixture(t, 'shrinkwrapped-dep-with-lock'),
     { update: { names: ['abbrev']}})))
 
+t.test('dry run, do not get anything wet', async t => {
+  const cases = [
+    'shrinkwrapped-dep-with-lock-empty',
+    'shrinkwrapped-dep-no-lock-empty',
+    'link-dep-empty',
+    'link-meta-deps-empty',
+    'testing-bundledeps-empty',
+  ]
+  t.plan(cases.length)
+  cases.forEach(c => t.test(c, async t => {
+    const path = fixture(t, c)
+    const arb = newArb({path, dryRun: true})
+    t.matchSnapshot(printTree(await arb.reify()))
+    t.throws(() => fs.statSync(resolve(path, 'node_modules')))
+    t.ok(arb.diff)
+  }))
+})
+
 t.test('reifying with shronk warp dep', t => {
   const cases = [
     'shrinkwrapped-dep-with-lock',
@@ -404,6 +428,9 @@ t.test('reifying with shronk warp dep', t => {
   t.plan(cases.length)
   cases.forEach(c => t.test(c, t =>
     t.resolveMatchSnapshot(printReified(fixture(t, c), {
+      // set update so that we don't start the idealTree
+      // with the actualTree, and can see that the deps
+      // are indeed getting set up from the shrink wrap
       update: /no-lock/.test(c),
     }))))
 })
@@ -498,10 +525,8 @@ t.test('fail on mismatched engine when engineStrict is set', t =>
 
 t.test('warn on mismatched engine when engineStrict is false', t => {
   const path = fixture(t, 'tap-and-flow')
-  const a = new Arborist({
-    registry,
+  const a = newArb({
     path,
-    cache,
     engineStrict: false,
     nodeVersion: '1.2.3',
     // just to add coverage for the no-op function for bundleBinLinks
@@ -516,9 +541,7 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
 })
 
 t.test('warn on reifying deprecated dependency', t => {
-  const a = new Arborist({
-    registry,
-    cache,
+  const a = newArb({
     path: fixture(t, 'deprecated-dep'),
   })
   const check = warningTracker()
@@ -530,7 +553,7 @@ t.test('warn on reifying deprecated dependency', t => {
 t.test('rollbacks', { buffered: false }, t => {
   t.test('fail retiring shallow nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const expect = new Error('rename fail')
     const kRenamePath = Symbol.for('renamePath')
     const renamePath = a[kRenamePath]
@@ -557,7 +580,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail retiring nodes because rimraf fails after eexist', t => {
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const eexist = new Error('rename fail')
     eexist.code = 'EEXIST'
     const kRenamePath = Symbol.for('renamePath')
@@ -594,7 +617,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail retiring node, but then rimraf fixes it', t => {
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const eexist = new Error('rename fail')
     eexist.code = 'EEXIST'
     const kRenamePath = Symbol.for('renamePath')
@@ -621,7 +644,7 @@ t.test('rollbacks', { buffered: false }, t => {
   t.test('fail creating sparse tree', t => {
     t.teardown(() => failMkdir = null)
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kCreateST = Symbol.for('createSparseTree')
     const createSparseTree = a[kCreateST]
     a[kCreateST] = () => {
@@ -644,7 +667,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail rolling back from creating sparse tree', t => {
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kCreateST = Symbol.for('createSparseTree')
     const createSparseTree = a[kCreateST]
     t.teardown(() => failMkdir = null)
@@ -680,7 +703,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail loading shrinkwraps and updating trees', t => {
     const path = fixture(t, 'shrinkwrapped-dep-no-lock-empty')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kLoadSW = Symbol.for('loadShrinkwrapsAndUpdateTrees')
     const loadShrinkwrapsAndUpdateTrees = a[kLoadSW]
     a[kLoadSW] = seen => {
@@ -706,7 +729,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail loading bundles and updating trees', t => {
     const path = fixture(t, 'two-bundled-deps')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kLoadBundles = Symbol.for('loadBundlesAndUpdateTrees')
     const loadBundlesAndUpdateTrees = a[kLoadBundles]
     a[kLoadBundles] = (depth, bundlesByDepth) => {
@@ -724,7 +747,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail unpacking new modules', t => {
     const path = fixture(t, 'two-bundled-deps')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kUnpack = Symbol.for('unpackNewModules')
     const unpackNewModules = a[kUnpack]
     a[kUnpack] = () => {
@@ -742,7 +765,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail moving back retired unchanged', t => {
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kMoveback = Symbol.for('moveBackRetiredUnchanged')
 
     const moveBackRetiredUnchanged = a[kMoveback]
@@ -770,7 +793,7 @@ t.test('rollbacks', { buffered: false }, t => {
 
   t.test('fail removing retired and deleted nodes', t => {
     const path = fixture(t, 'testing-bundledeps-3')
-    const a = new Arborist({ path, registry, legacyBundling: true, cache })
+    const a = newArb({ path, legacyBundling: true })
     const kRemove = Symbol.for('removeTrash')
     const removeRetiredAndDeletedNodes = a[kRemove]
     a[kRemove] = () => {
@@ -804,7 +827,7 @@ t.test('saving the ideal tree', t => {
     // if it wasn't an early exit, it'd blow up and throw
     // an error though.
     const path = t.testdir()
-    const a = new Arborist({ path, registry, cache })
+    const a = newArb({ path })
     t.notOk(a[kSaveIdealTree]({ save: false }))
     t.end()
   })
@@ -827,7 +850,7 @@ t.test('saving the ideal tree', t => {
     const path = t.testdir({
       'package.json': JSON.stringify(pkg)
     })
-    const a = new Arborist({ path, registry, cache })
+    const a = newArb({ path })
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
     return a.loadActual().then(tree => Shrinkwrap.load({path}).then(meta => {
       tree.meta = meta

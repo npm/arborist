@@ -28073,12 +28073,6 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "lockfileVersion": 2,
       "name": "reify-update-a-yarn-lock-file",
       "packages": Object {
-        "": Object {
-          "dependencies": Object {
-            "abbrev": "^1.1.1",
-            "mkdirp": "^1.0.2",
-          },
-        },
         "node_modules/abbrev": Object {
           "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
           "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
@@ -28102,6 +28096,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
     "hiddenLockfile": true,
     "indent": 2,
     "loadedFromDisk": false,
+    "loadingError": null,
     "originalLockfileVersion": undefined,
     "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
     "shrinkwrapOnly": false,

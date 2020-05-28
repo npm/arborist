@@ -639,6 +639,7 @@ t.test('load a hidden lockfile', t => Shrinkwrap.load({
   }))
   t.strictSame(s.data.dependencies, {}, 'did not add to legacy data')
   s.commit()
+  t.equal(s.data.packages[''], undefined, 'no root entry')
   t.equal(s.data.dependencies, undefined, 'deleted legacy metadata')
 }))
 
@@ -656,6 +657,40 @@ t.test('load a fresh hidden lockfile', t => Shrinkwrap.reset({
   const hidden = 'node_modules/.package-lock.json'
   t.equal(sw.filename, resolve(hiddenLockfileFixture, hidden))
 }))
+
+t.test('hidden lockfile only used if up to date', async t => {
+  const hidden = 'node_modules/.package-lock.json'
+  const lockdata = require(resolve(hiddenLockfileFixture, hidden))
+  const path = t.testdir({
+    node_modules: {
+      '.package-lock.json': JSON.stringify(lockdata),
+      abbrev: {
+        'package.json': JSON.stringify({ name: 'abbrev', version: '1.1.1' }),
+      },
+    },
+    'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' }}),
+  })
+  {
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, true)
+  }
+  // make the node_modules dir have a newer mtime by adding an entry
+  {
+    fs.mkdirSync(resolve(path, 'node_modules/xyz'))
+    const time = new Date('1999-12-31T23:59:59Z')
+    fs.utimesSync(resolve(path, hidden), time, time)
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, false)
+    t.equal(s.loadingError, 'out of date, updated: node_modules')
+  }
+  // make the lockfile newer, but that new entry is still a problem
+  {
+    fs.writeFileSync(resolve(path, hidden), JSON.stringify(lockdata))
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, false)
+    t.equal(s.loadingError, 'missing from lockfile: node_modules/xyz')
+  }
+})
 
 t.test('a yarn.lock entry with version mismatch', async t => {
   const path = t.testdir({

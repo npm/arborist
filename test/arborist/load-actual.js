@@ -26,6 +26,8 @@ const printEdge = (edge, inout) => ({
   } : {
     to: edge.to && pp(edge.to.realpath),
   }),
+  ...(edge.from && edge.from.dummy ? { FROM_DUMMY: true } : {}),
+  ...(edge.to && edge.to.dummy ? { TO_DUMMY: true } : {}),
   ...(edge.error ? { error: edge.error } : {}),
   __proto__: { constructor: edge.constructor },
 })

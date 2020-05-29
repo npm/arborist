@@ -13,6 +13,8 @@
 /test/fixtures/badlink/node_modules/foo
 /test/fixtures/deep/root
 /test/fixtures/deeproot
+/test/fixtures/external-link-cached-dummy-dep/root/node_modules/x
+/test/fixtures/external-link-cached-dummy-dep/root/node_modules/z
 /test/fixtures/external-link/root/node_modules/j
 /test/fixtures/external-link/root/node_modules/o
 /test/fixtures/external-link/root/node_modules/o2

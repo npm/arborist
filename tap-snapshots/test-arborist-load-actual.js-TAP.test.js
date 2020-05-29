@@ -1353,6 +1353,124 @@ Node {
 }
 `
 
+exports[`test/arborist/load-actual.js TAP external-link-cached-dummy-dep/root > loaded tree 1`] = `
+Node {
+  "children": Map {
+    "x" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link-cached-dummy-dep/root",
+          "name": "x",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "realpath": "external-link-cached-dummy-dep/a/node_modules/b/node_modules/x",
+      "target": Object {
+        "name": "x",
+        "parent": "external-link-cached-dummy-dep/a/node_modules/b",
+      },
+      "top": "external-link-cached-dummy-dep/root",
+    },
+    "z" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "external-link-cached-dummy-dep/root",
+          "name": "z",
+          "spec": "",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/z",
+      "name": "z",
+      "realpath": "external-link-cached-dummy-dep/a/t/u/v/w/x/y/z",
+      "target": Object {
+        "fsParent": "external-link-cached-dummy-dep/a",
+        "name": "z",
+      },
+      "top": "external-link-cached-dummy-dep/root",
+    },
+  },
+  "edgesOut": Map {
+    "x" => Edge {
+      "name": "x",
+      "spec": "",
+      "to": "external-link-cached-dummy-dep/a/node_modules/b/node_modules/x",
+      "type": "prod",
+    },
+    "z" => Edge {
+      "name": "z",
+      "spec": "",
+      "to": "external-link-cached-dummy-dep/a/t/u/v/w/x/y/z",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {
+      "x": Object {
+        "requires": Object {
+          "y": "",
+        },
+        "version": "file:../a/node_modules/b/node_modules/x",
+      },
+      "z": Object {
+        "requires": Object {
+          "b": "",
+        },
+        "version": "file:../a/t/u/v/w/x/y/z",
+      },
+    },
+    "lockfileVersion": 2,
+    "name": "root",
+    "packages": Object {
+      "": Object {
+        "dependencies": Object {
+          "x": "",
+          "z": "",
+        },
+      },
+      "../a": Object {},
+      "../a/node_modules/b": Object {
+        "dependencies": Object {
+          "x": "",
+        },
+        "version": "1.0.0",
+      },
+      "../a/node_modules/b/node_modules/x": Object {
+        "dependencies": Object {
+          "y": "",
+        },
+        "version": "1.0.0",
+      },
+      "../a/node_modules/b/node_modules/y": Object {
+        "version": "1.0.0",
+      },
+      "../a/t/u/v/w/x/y/z": Object {
+        "dependencies": Object {
+          "b": "",
+        },
+        "version": "1.0.0",
+      },
+      "node_modules/x": Object {
+        "link": true,
+        "resolved": "../a/node_modules/b/node_modules/x",
+      },
+      "node_modules/z": Object {
+        "link": true,
+        "resolved": "../a/t/u/v/w/x/y/z",
+      },
+    },
+    "requires": true,
+  },
+  "name": "root",
+  "realpath": "external-link-cached-dummy-dep/root",
+  "top": "external-link-cached-dummy-dep/root",
+}
+`
+
 exports[`test/arborist/load-actual.js TAP external-link/root > loaded tree 1`] = `
 Node {
   "children": Map {

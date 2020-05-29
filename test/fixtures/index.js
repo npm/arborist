@@ -31,6 +31,7 @@ const roots = [
   'link-dep-cycle',
   'link-dep-nested',
   'link-dep-nested/root',
+  'external-link-cached-dummy-dep/root',
 ]
 
 const symlinks = {
@@ -111,6 +112,9 @@ const symlinks = {
   'link-dep-nested/node_modules/once': '../once',
   'link-dep-nested/node_modules/foo': '../once',
   'link-dep-nested/root/node_modules/bork': '../..',
+
+  'external-link-cached-dummy-dep/root/node_modules/z': '../../a/t/u/v/w/x/y/z',
+  'external-link-cached-dummy-dep/root/node_modules/x': '../../a/node_modules/b/node_modules/x',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

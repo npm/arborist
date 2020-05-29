@@ -1659,6 +1659,66 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP loadActual tests external-link-cached-dummy-dep/root > shrinkwrap data 1`] = `
+Object {
+  "dependencies": Object {
+    "x": Object {
+      "requires": Object {
+        "y": "",
+      },
+      "version": "file:../a/node_modules/b/node_modules/x",
+    },
+    "z": Object {
+      "requires": Object {
+        "b": "",
+      },
+      "version": "file:../a/t/u/v/w/x/y/z",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "root",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "x": "",
+        "z": "",
+      },
+    },
+    "../a": Object {},
+    "../a/node_modules/b": Object {
+      "dependencies": Object {
+        "x": "",
+      },
+      "version": "1.0.0",
+    },
+    "../a/node_modules/b/node_modules/x": Object {
+      "dependencies": Object {
+        "y": "",
+      },
+      "version": "1.0.0",
+    },
+    "../a/node_modules/b/node_modules/y": Object {
+      "version": "1.0.0",
+    },
+    "../a/t/u/v/w/x/y/z": Object {
+      "dependencies": Object {
+        "b": "",
+      },
+      "version": "1.0.0",
+    },
+    "node_modules/x": Object {
+      "link": true,
+      "resolved": "../a/node_modules/b/node_modules/x",
+    },
+    "node_modules/z": Object {
+      "link": true,
+      "resolved": "../a/t/u/v/w/x/y/z",
+    },
+  },
+  "requires": true,
+}
+`
+
 exports[`test/shrinkwrap.js TAP loadActual tests external-link/root > shrinkwrap data 1`] = `
 Object {
   "dependencies": Object {

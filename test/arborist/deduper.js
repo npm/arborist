@@ -79,7 +79,6 @@ t.test('setup server', { bail: true, buffered: false }, registryServer)
 const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
 
 const cache = t.testdir()
-const printDedupe = (path, opt) => dedupeTree(path, opt).then(printTree)
 const dedupeTree = (path, opt) =>
   new Arborist({registry, path, cache, ...(opt || {})}).dedupe(opt)
 

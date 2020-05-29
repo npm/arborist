@@ -620,28 +620,34 @@ t.test('handle missing dependencies object without borking', t => {
   t.end()
 })
 
-t.test('load a hidden lockfile', t => Shrinkwrap.load({
-  path: hiddenLockfileFixture,
-  hiddenLockfile: true,
-}).then(s => {
-  t.matchSnapshot(s.data)
-  // make sure it does not add to the dependencies block when a new
-  // node is added.
-  s.data.dependencies = {}
-  s.add(new Node({
-    path: hiddenLockfileFixture + '/node_modules/foo',
-    pkg: {
-      name: 'foo',
-      version: '1.2.3',
-      _integrity: 'sha512-deadbeef',
-      _resolved: 'https://registry.npmjs.org/foo/-/foo-1.2.3.tgz',
-    },
-  }))
-  t.strictSame(s.data.dependencies, {}, 'did not add to legacy data')
-  s.commit()
-  t.equal(s.data.packages[''], undefined, 'no root entry')
-  t.equal(s.data.dependencies, undefined, 'deleted legacy metadata')
-}))
+t.test('load a hidden lockfile', t => {
+  const hidden = 'node_modules/.package-lock.json'
+  // ensure the hidden lockfile is newer than the contents
+  // otherwise this can fail on a fresh checkout.
+  fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
+  return Shrinkwrap.load({
+    path: hiddenLockfileFixture,
+    hiddenLockfile: true,
+  }).then(s => {
+    t.matchSnapshot(s.data)
+    // make sure it does not add to the dependencies block when a new
+    // node is added.
+    s.data.dependencies = {}
+    s.add(new Node({
+      path: hiddenLockfileFixture + '/node_modules/foo',
+      pkg: {
+        name: 'foo',
+        version: '1.2.3',
+        _integrity: 'sha512-deadbeef',
+        _resolved: 'https://registry.npmjs.org/foo/-/foo-1.2.3.tgz',
+      },
+    }))
+    t.strictSame(s.data.dependencies, {}, 'did not add to legacy data')
+    s.commit()
+    t.equal(s.data.packages[''], undefined, 'no root entry')
+    t.equal(s.data.dependencies, undefined, 'deleted legacy metadata')
+  })
+})
 
 t.test('load a fresh hidden lockfile', t => Shrinkwrap.reset({
   path: hiddenLockfileFixture,

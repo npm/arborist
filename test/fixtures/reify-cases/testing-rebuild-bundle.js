@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-rebuild-bundle
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "README.md": "- `root` depends on `parent`\n- `parent` bundles `a`\n- `a` depends on `b`\n- `b` has a build script\n\nShould get rebuilt if `rebuildBundle` is true, otherwise not.\n",
   "a": {
     "package-lock.json": JSON.stringify({
@@ -105,3 +106,5 @@ module.exports = t => ({
     })
   }
 })
+  return path
+}

@@ -1,5 +1,6 @@
 // generated from test/fixtures/old-package-lock
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "once": {
       "package.json": JSON.stringify({
@@ -156,3 +157,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

@@ -1,5 +1,6 @@
 // generated from test/fixtures/peer-dep-cycle
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "@isaacs/peer-dep-cycle",
     "version": "1.0.0",
@@ -9,3 +10,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

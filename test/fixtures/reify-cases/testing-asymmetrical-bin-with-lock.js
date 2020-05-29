@@ -1,5 +1,6 @@
-// generated from test/fixtures/test-bin-added-transitive-deps
-module.exports = t => ({
+// generated from test/fixtures/testing-asymmetrical-bin-with-lock
+module.exports = t => {
+  const path = t.testdir({
   "a": {
     "package.json": JSON.stringify({
       "name": "a",
@@ -89,3 +90,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

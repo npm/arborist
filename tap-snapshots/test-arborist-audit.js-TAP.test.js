@@ -26,7 +26,7 @@ Node {
         Edge {
           "from": "",
           "name": "mkdirp",
-          "spec": "0.5.1 - 0.5.3",
+          "spec": "^0.5.1 <0.5.4",
           "type": "prod",
         },
       },
@@ -46,7 +46,7 @@ Node {
   "edgesOut": Map {
     "mkdirp" => Edge {
       "name": "mkdirp",
-      "spec": "0.5.1 - 0.5.3",
+      "spec": "^0.5.1 <0.5.4",
       "to": "node_modules/mkdirp",
       "type": "prod",
     },

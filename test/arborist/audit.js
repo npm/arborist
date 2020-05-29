@@ -5,8 +5,7 @@ const { resolve } = require('path')
 
 const fixtures = resolve(__dirname, '../fixtures')
 
-const fixture = (t, p) =>
-  t.testdir(require(fixtures + '/reify-cases/' + p)(t))
+const fixture = (t, p) => require(fixtures + '/reify-cases/' + p)(t)
 
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry, auditResponse} = registryServer

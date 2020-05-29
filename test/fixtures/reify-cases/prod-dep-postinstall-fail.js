@@ -1,5 +1,6 @@
 // generated from test/fixtures/prod-dep-postinstall-fail
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "@isaacs/testing-prod-dep-postinstall-fail",
     "version": "1.0.1",
@@ -13,3 +14,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

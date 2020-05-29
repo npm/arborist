@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-asymmetrical-bin-no-lock
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "a": {
     "package.json": JSON.stringify({
       "name": "a",
@@ -55,3 +56,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

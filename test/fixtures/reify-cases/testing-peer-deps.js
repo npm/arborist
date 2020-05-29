@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-peer-deps
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "@isaacs/testing-peer-deps",
     "version": "2.0.0",
@@ -10,3 +11,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

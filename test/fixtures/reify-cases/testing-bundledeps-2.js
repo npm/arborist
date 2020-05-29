@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-bundledeps-2
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "index.js": "",
   "lib": {
     "foo": ""
@@ -19,3 +20,5 @@ module.exports = t => ({
     ]
   })
 })
+  return path
+}

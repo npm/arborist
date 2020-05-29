@@ -1,5 +1,6 @@
 // generated from test/fixtures/prune-actual-omit-dev
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "abbrev": {
       "package.json": JSON.stringify({
@@ -28,3 +29,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

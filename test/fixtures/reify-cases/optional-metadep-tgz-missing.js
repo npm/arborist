@@ -1,5 +1,6 @@
 // generated from test/fixtures/optional-metadep-tgz-missing
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "@isaacs/testing-optional-metadep-tgz-missing",
     "version": "1.0.0",
@@ -9,3 +10,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

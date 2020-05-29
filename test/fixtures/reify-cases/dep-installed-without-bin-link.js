@@ -1,5 +1,6 @@
 // generated from test/fixtures/dep-installed-without-bin-link
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     ".package-lock.json": JSON.stringify({
       "name": "@isaacs/dep-installed-without-bin-link",
@@ -194,3 +195,10 @@ module.exports = t => ({
     }
   })
 })
+  const {utimesSync} = require('fs')
+  const n = Date.now()
+  const {resolve} = require('path')
+  
+  utimesSync(resolve(path, "node_modules/.package-lock.json"), new Date(n), new Date(n))
+  return path
+}

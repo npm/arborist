@@ -1,5 +1,6 @@
 // generated from test/fixtures/shrinkwrapped-dep-with-lock-empty
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "README.md": "Just a module that depends on a module that ships a shrinkwrap.\n",
   "package-lock.json": JSON.stringify({
     "name": "shrinkwrap",
@@ -61,3 +62,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

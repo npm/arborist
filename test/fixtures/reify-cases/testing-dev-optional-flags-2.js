@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-dev-optional-flags-2
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "@isaacs/testing-dev-optional-flags-2",
     "version": "1.0.0",
@@ -9,3 +10,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

@@ -1,5 +1,6 @@
 // generated from test/fixtures/tap-react15-collision
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "tap-14.7-react-15-peerdep-collision",
     "version": "1.2.3",
@@ -11,3 +12,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

@@ -76,8 +76,7 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 t.test('setup server', { bail: true, buffered: false }, registryServer)
 
-const fixture = (t, p) =>
-  t.testdir(require('../fixtures/reify-cases/' + p)(t))
+const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
 
 const cache = t.testdir()
 const printDedupe = (path, opt) => dedupeTree(path, opt).then(printTree)

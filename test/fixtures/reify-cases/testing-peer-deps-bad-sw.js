@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-peer-deps-bad-sw
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": "this isn't a shrinkwrap file\n\nit isn't even json\n\nwhat is it even doing here?\n",
   "package.json": JSON.stringify({
     "name": "@isaacs/testing-peer-deps",
@@ -11,3 +12,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

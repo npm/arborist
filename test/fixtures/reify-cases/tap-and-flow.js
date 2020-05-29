@@ -1,6 +1,6 @@
 // generated from test/fixtures/tap-and-flow
-module.exports = t => ({
-  "node_modules": {},
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "tap-and-flow",
     "version": "1.0.0",
@@ -3464,3 +3464,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

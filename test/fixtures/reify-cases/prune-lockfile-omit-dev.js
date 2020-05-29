@@ -1,5 +1,6 @@
 // generated from test/fixtures/prune-lockfile-omit-dev
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "prune-actual",
     "version": "1.0.0",
@@ -49,3 +50,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

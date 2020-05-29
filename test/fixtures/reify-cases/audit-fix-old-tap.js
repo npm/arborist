@@ -1,5 +1,6 @@
 // generated from test/fixtures/audit-fix-old-tap
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "audit.json": JSON.stringify({
     "actions": [
       {
@@ -13383,3 +13384,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

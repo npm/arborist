@@ -1,5 +1,6 @@
 // generated from test/fixtures/once-outdated
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "once": {
       "node_modules": {
@@ -157,3 +158,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

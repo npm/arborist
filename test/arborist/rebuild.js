@@ -5,7 +5,7 @@ const {resolve, dirname} = require('path')
 const fs = require('fs')
 const fixtures = resolve(__dirname, '../fixtures')
 
-const fixture = (t, p) => t.testdir(require(`${fixtures}/reify-cases/${p}`)(t))
+const fixture = (t, p) => require(`${fixtures}/reify-cases/${p}`)(t)
 
 const PORT = 12345 + (+process.env.TAP_CHILD_ID || 0)
 t.test('setup explosive server', t => {

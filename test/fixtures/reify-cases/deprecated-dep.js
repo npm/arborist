@@ -1,5 +1,6 @@
 // generated from test/fixtures/deprecated-dep
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "requires": true,
     "lockfileVersion": 1,
@@ -21,7 +22,9 @@ module.exports = t => ({
   }),
   "package.json": JSON.stringify({
     "dependencies": {
-      "mkdirp": "0.5.1 - 0.5.3"
+      "mkdirp": "^0.5.1 <0.5.4"
     }
   })
 })
+  return path
+}

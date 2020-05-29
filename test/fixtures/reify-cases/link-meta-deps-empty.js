@@ -1,5 +1,6 @@
 // generated from test/fixtures/link-meta-deps-empty
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "dependencies": {
       "@isaacs/testing-link-dep": "^1.0.0",
@@ -7,3 +8,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

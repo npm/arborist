@@ -1,5 +1,6 @@
 // generated from test/fixtures/flow-outdated
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "flow-outdated",
     "version": "1.0.0",
@@ -103,3 +104,5 @@ module.exports = t => ({
     "license": "ISC"
   })
 })
+  return path
+}

@@ -1,5 +1,6 @@
 // generated from test/fixtures/tarball-dependencies
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "dependencies": {
       "@isaacs/testing-file-transitive-a": "file:testing-file-transitive-a/isaacs-testing-file-transitive-a-1.0.0.tgz"
@@ -31,3 +32,5 @@ module.exports = t => ({
     })
   }
 })
+  return path
+}

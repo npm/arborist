@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-peer-deps-unresolvable
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "unacceptable-condition",
     "version": "1.2.3",
@@ -9,3 +10,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

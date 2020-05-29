@@ -1,5 +1,6 @@
 // generated from test/fixtures/two-bundled-deps
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "two-bundled-deps",
     "version": "1.0.0",
@@ -6991,3 +6992,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

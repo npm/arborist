@@ -1,5 +1,6 @@
 // generated from test/fixtures/dedupe-actual
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "@isaacs": {
       "dedupe-tests-a": {
@@ -38,3 +39,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

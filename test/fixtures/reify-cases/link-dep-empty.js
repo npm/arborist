@@ -1,5 +1,6 @@
 // generated from test/fixtures/link-dep-empty
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "@isaacs/testing-link-dep",
     "version": "1.0.0",
@@ -25,3 +26,5 @@ module.exports = t => ({
     })
   }
 })
+  return path
+}

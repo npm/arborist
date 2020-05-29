@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-rebuild-bundle-reified
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "README.md": "- `root` depends on `parent`\n- `parent` bundles `a`\n- `a` depends on `b`\n- `b` has a build script\n\nShould get rebuilt if `rebuildBundle` is true, otherwise not.\n",
   "node_modules": {
     ".package-lock.json": JSON.stringify({
@@ -182,3 +183,10 @@ module.exports = t => ({
     "files": []
   })
 })
+  const {utimesSync} = require('fs')
+  const n = Date.now()
+  const {resolve} = require('path')
+  
+  utimesSync(resolve(path, "node_modules/.package-lock.json"), new Date(n), new Date(n))
+  return path
+}

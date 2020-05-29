@@ -1,5 +1,6 @@
 // generated from test/fixtures/workspaces-link-bin
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "foo.js": "",
   "package.json": JSON.stringify({
     "name": "workspace-duplicate",
@@ -36,3 +37,5 @@ module.exports = t => ({
     }
   }
 })
+  return path
+}

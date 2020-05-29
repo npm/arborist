@@ -1,5 +1,6 @@
 // generated from test/fixtures/prod-dep-tgz-missing
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package.json": JSON.stringify({
     "name": "@isaacs/testing-prod-dep-tgz-missing",
     "version": "1.0.1",
@@ -12,3 +13,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

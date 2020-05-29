@@ -1,5 +1,6 @@
 // generated from test/fixtures/prune-actual
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "abbrev": {
       "package.json": JSON.stringify({
@@ -13,3 +14,5 @@ module.exports = t => ({
     "version": "1.0.0"
   })
 })
+  return path
+}

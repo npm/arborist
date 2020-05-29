@@ -1,5 +1,6 @@
 // generated from test/fixtures/workspace4
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "README.md": "an example where a workspace needs a duplicated nested dep\n",
   "package.json": JSON.stringify({
     "dependencies": {
@@ -29,3 +30,5 @@ module.exports = t => ({
     }
   }
 })
+  return path
+}

@@ -1,5 +1,6 @@
 // generated from test/fixtures/optional-dep-install-fail
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "@isaacs": {
       "testing-fail-postinstall": {
@@ -84,3 +85,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

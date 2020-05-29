@@ -1,5 +1,6 @@
 // generated from test/fixtures/link-dep
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "linked-dep": t.fixture('symlink', "../target")
   },
@@ -28,3 +29,5 @@ module.exports = t => ({
     })
   }
 })
+  return path
+}

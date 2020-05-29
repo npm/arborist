@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-peer-deps-nested
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "testing-peer-deps-nested",
     "version": "1.0.0",
@@ -155,3 +156,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

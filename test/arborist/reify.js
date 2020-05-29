@@ -147,8 +147,7 @@ const { format } = require('tcompare')
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-const fixture = (t, p) =>
-  t.testdir(require('../fixtures/reify-cases/' + p)(t))
+const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
 
 const printReified = (path, opt) => reify(path, opt).then(printTree)
 

@@ -1,5 +1,6 @@
 // generated from test/fixtures/dedupe-lockfile
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "package-lock.json": JSON.stringify({
     "name": "dedupe-lockfile",
     "version": "1.0.0",
@@ -68,3 +69,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

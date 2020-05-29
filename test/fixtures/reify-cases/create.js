@@ -22,6 +22,7 @@ const jsonFiles = new Map()
 const buffers = new Map()
 const crypto = require('crypto')
 const token = p => p + crypto.randomBytes(8).toString('base64')
+const hiddenLocks = []
 
 const readFixture = dir => {
   const res = {}
@@ -32,6 +33,10 @@ const readFixture = dir => {
     else if (ent.isFile()) {
       const content = readFileSync(p, 'utf8')
       const buf = readFileSync(p)
+      // make sure hidden lockfiles are newer than the contents they cover
+      if (ent.name === '.package-lock.json')
+        hiddenLocks.push(relative(fixture, p))
+
       // if it's JSON, then store it in a way that's easier to look at
       try {
         const o = JSON.parse(content)
@@ -80,7 +85,22 @@ for (const [token, buf] of buffers.entries()) {
     .split(JSON.stringify(token))
     .join(`Buffer.from(${JSON.stringify(buf.toString('base64'))}, 'base64')`)
 }
+output = `t.testdir(${output})`
+if (hiddenLocks.length) {
+  output += `
+  const {utimesSync} = require('fs')
+  const n = Date.now()
+  const {resolve} = require('path')
+  `
+  for (const hiddenLock of hiddenLocks) {
+    const h = JSON.stringify(hiddenLock)
+    output += `\n  utimesSync(resolve(path, ${h}), new Date(n), new Date(n))`
+  }
+}
 
 writeFileSync(outFile, `// generated from ${rel}
-module.exports = t => (${output})
+module.exports = t => {
+  const path = ${output}
+  return path
+}
 `)

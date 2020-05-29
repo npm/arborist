@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-bundledeps
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "@isaacs": {
       "testing-bundledeps": {
@@ -217,3 +218,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

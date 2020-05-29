@@ -1,5 +1,6 @@
 // generated from test/fixtures/testing-bundledeps-legacy-bundling
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "@isaacs": {
       "testing-bundledeps": {
@@ -226,3 +227,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

@@ -1,5 +1,6 @@
-// generated from test/fixtures/cli-750
-module.exports = t => ({
+// generated from test/fixtures/cli-750-fresh
+module.exports = t => {
+  const path = t.testdir({
   "app": {
     "package.json": JSON.stringify({
       "name": "app",
@@ -20,3 +21,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

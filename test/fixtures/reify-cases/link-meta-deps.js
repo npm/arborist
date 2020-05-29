@@ -1,5 +1,6 @@
 // generated from test/fixtures/link-meta-deps
-module.exports = t => ({
+module.exports = t => {
+  const path = t.testdir({
   "node_modules": {
     "@isaacs": {
       "testing-link-dep": {
@@ -120,3 +121,5 @@ module.exports = t => ({
     }
   })
 })
+  return path
+}

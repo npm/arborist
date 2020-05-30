@@ -1146,3 +1146,7 @@ t.test('workspaces', t => {
   t.end()
 })
 
+// if we get this wrong, it'll spin forever and use up all the memory
+t.test('pathologically nested dependency cycle', t =>
+  t.resolveMatchSnapshot(printIdeal(
+    resolve(fixtures, 'pathological-dep-nesting-cycle'))))

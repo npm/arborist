@@ -9214,6 +9214,150 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP pathologically nested dependency cycle > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/pathological-dep-nesting-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/pathological-dep-nesting-a",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/pathological-dep-nesting-b" => Edge {
+          "name": "@isaacs/pathological-dep-nesting-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/pathological-dep-nesting-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/pathological-dep-nesting-a",
+      "name": "@isaacs/pathological-dep-nesting-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/pathological-dep-nesting-a/-/pathological-dep-nesting-a-1.0.0.tgz",
+    },
+    "@isaacs/pathological-dep-nesting-b" => Node {
+      "children": Map {
+        "@isaacs/pathological-dep-nesting-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/pathological-dep-nesting-b",
+              "name": "@isaacs/pathological-dep-nesting-a",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/pathological-dep-nesting-b" => Edge {
+              "name": "@isaacs/pathological-dep-nesting-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-a",
+          "name": "@isaacs/pathological-dep-nesting-a",
+          "resolved": "https://registry.npmjs.org/@isaacs/pathological-dep-nesting-a/-/pathological-dep-nesting-a-2.0.0.tgz",
+        },
+        "@isaacs/pathological-dep-nesting-b" => Node {
+          "children": Map {
+            "@isaacs/pathological-dep-nesting-a" => Node {
+              "edgesIn": Set {
+                Edge {
+                  "from": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b",
+                  "name": "@isaacs/pathological-dep-nesting-a",
+                  "spec": "1",
+                  "type": "prod",
+                },
+              },
+              "edgesOut": Map {
+                "@isaacs/pathological-dep-nesting-b" => Edge {
+                  "name": "@isaacs/pathological-dep-nesting-b",
+                  "spec": "1",
+                  "to": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b",
+                  "type": "prod",
+                },
+              },
+              "location": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-a",
+              "name": "@isaacs/pathological-dep-nesting-a",
+              "resolved": "https://registry.npmjs.org/@isaacs/pathological-dep-nesting-a/-/pathological-dep-nesting-a-1.0.0.tgz",
+            },
+            "@isaacs/pathological-dep-nesting-b" => Link {
+              "edgesIn": Set {
+                Edge {
+                  "from": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-a",
+                  "name": "@isaacs/pathological-dep-nesting-b",
+                  "spec": "1",
+                  "type": "prod",
+                },
+              },
+              "location": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b",
+              "name": "@isaacs/pathological-dep-nesting-b",
+              "resolved": "file:../../../../..",
+              "target": Object {
+                "name": "@isaacs/pathological-dep-nesting-b",
+                "parent": "",
+              },
+            },
+          },
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-a",
+              "name": "@isaacs/pathological-dep-nesting-b",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/pathological-dep-nesting-a" => Edge {
+              "name": "@isaacs/pathological-dep-nesting-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-a",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-b",
+          "name": "@isaacs/pathological-dep-nesting-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/pathological-dep-nesting-b/-/pathological-dep-nesting-b-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/pathological-dep-nesting-a",
+          "name": "@isaacs/pathological-dep-nesting-b",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/pathological-dep-nesting-a" => Edge {
+          "name": "@isaacs/pathological-dep-nesting-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/pathological-dep-nesting-b/node_modules/@isaacs/pathological-dep-nesting-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/pathological-dep-nesting-b",
+      "name": "@isaacs/pathological-dep-nesting-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/pathological-dep-nesting-b/-/pathological-dep-nesting-b-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/pathological-dep-nesting-a" => Edge {
+      "name": "@isaacs/pathological-dep-nesting-a",
+      "spec": "^1.0.0",
+      "to": "node_modules/@isaacs/pathological-dep-nesting-a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "pathological-dep-nesting-cycle",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP respect the yarn.lock file > expect resolving Promise 1`] = `
 Node {
   "children": Map {

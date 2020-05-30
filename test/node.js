@@ -1042,3 +1042,92 @@ t.test('reparenting keeps children in root inventory', async t => {
   t.equal(root.inventory.has(kid), true)
   t.equal(root.inventory.has(fsNested), true)
 })
+
+t.test('reloading named edges should refresh edgesIn', t => {
+  // pathological dep nesting scenario:
+  //
+  // x@1 -> y@1
+  // x@2 -> y@2
+  // y@1 -> x@2
+  // y@2 -> x@1
+  //
+  // ensure we have the correct edge state at all points along this
+  // infinite journey.  (will *prevent* said infinite journey in
+  // buildIdealTree, but only if we can detect its presence properly
+  // with correct Node edge behavior along the way.)
+  //
+  // Resulting tree looks like:
+  //
+  // +-- x1
+  // +-- y1
+  //     +-- x2
+  //     +-- y2
+  //         +-- x1
+  //         +-- y1 ...and so on forever
+
+  const root = new Node({
+    path: '/some/path',
+    pkg: { dependencies: { x: '1' } },
+  })
+  t.match(root.edgesOut.get('x'), { spec: '1', missing: true })
+
+  const x1 = new Node({
+    pkg: { name: 'x', version: '1.0.0', dependencies: {y: '1'} },
+    parent: root,
+  })
+  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(x1.edgesOut.get('y'), { spec: '1', missing: true })
+
+  const y1 = new Node({
+    pkg: { name: 'y', version: '1.0.0', dependencies: {x: '2'} },
+    parent: root,
+  })
+  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
+  t.match(y1.edgesOut.get('x'), { spec: '2', invalid: true, to: x1 })
+
+  const y1x2 = new Node({
+    pkg: { name: 'x', version: '2.0.0', dependencies: {y: '2'} },
+    parent: y1,
+  })
+  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
+  t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
+  t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: true, to: y1 })
+
+  const y1y2 = new Node({
+    pkg: { name: 'y', version: '2.0.0', dependencies: {x: '1'} },
+    parent: y1,
+  })
+  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
+  t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
+  t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: false, to: y1y2 })
+  t.match(y1y2.edgesOut.get('x'), { spec: '1', invalid: true, to: y1x2 })
+
+  const y1y2x1 = new Node({
+    pkg: { name: 'x', version: '1.0.0', dependencies: {y: '1'} },
+    parent: y1y2,
+  })
+  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
+  t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
+  t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: false, to: y1y2 })
+  t.match(y1y2.edgesOut.get('x'), { spec: '1', invalid: false, to: y1y2x1 })
+  t.match(y1y2x1.edgesOut.get('y'), { spec: '1', invalid: true, to: y1y2 })
+
+  // this is the point at which can tell for certain it's an infinite cycle
+  const y1y2y1 = new Node({
+    pkg: { name: 'y', version: '1.0.0', dependencies: {x: '2'} },
+    parent: y1y2,
+  })
+  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
+  t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
+  t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: false, to: y1y2 })
+  t.match(y1y2.edgesOut.get('x'), { spec: '1', invalid: false, to: y1y2x1 })
+  t.match(y1y2x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1y2y1 })
+  t.match(y1y2y1.edgesOut.get('x'), { spec: '2', invalid: true, to: y1y2x1 })
+
+  t.end()
+})

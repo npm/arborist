@@ -1131,3 +1131,93 @@ t.test('reloading named edges should refresh edgesIn', t => {
 
   t.end()
 })
+
+t.test('detect that two nodes are the same thing', async t => {
+  const check = (a, b, expect, message) => {
+    t.equal(a.matches(b), expect, message)
+    if (a !== b)
+      t.equal(b.matches(a), expect, message)
+  }
+
+  {
+    const a = new Node({ path: '/x' })
+    check(a, a, true, 'same object is trivially matching')
+  }
+
+  {
+    const p = new Node({ path: '/foo' })
+    const a = new Node({ name: 'a', parent: p, integrity: 'sha512-xyz' })
+    const b = new Node({ name: 'b', parent: p, integrity: 'sha512-xyz' })
+    check(a, b, false, 'different names mean no match')
+  }
+
+  {
+    const target = new Node({ path:'/foo', pkg:{name:'x', version:'1.2.3'}})
+    const a = new Link({ path: '/a/x', target: target })
+    const b = new Link({ path: '/b/x', target: target })
+    check(a, b, true, 'links match if targets match')
+  }
+
+  {
+    const a = new Node({ path: '/foo', pkg: {name:'x',version:'1.2.3'}})
+    const b = new Node({ path: '/foo', pkg: {name:'x',version:'1.2.3'}})
+    check(a, b, true, 'root nodes match if paths patch')
+  }
+
+  {
+    const a = new Node({ path: '/a/x', pkg: {name:'x',version:'1.2.3'}})
+    const b = new Node({ path: '/b/x', pkg: {name:'x',version:'1.2.3'}})
+    check(a, b, false, 'root nodes do not match if paths differ')
+  }
+
+  {
+    const root = new Node({ path: '/x' })
+    const integrity = 'sha512-xyzabc'
+    const a = new Node({ parent: root, name: 'x', integrity})
+    const b = new Node({ parent: a, name: 'x', integrity})
+    t.equal(a.integrity, integrity, 'integrity was set')
+    t.equal(a.integrity, b.integrity, 'integrities match')
+    check(a, b, true, 'same integrity means same thing')
+  }
+
+  {
+    const root = new Node({ path: '/x' })
+    const inta = 'sha512-xyzabc'
+    const intb = 'sha512-foobar'
+    const pkg = { name: 'x', version: '1.2.3' }
+    const resolved = 'https://registry.npmjs.org/x/-/x-1.2.3.tgz'
+    const a = new Node({ parent: root, pkg, integrity: inta, resolved})
+    const b = new Node({ parent: a, pkg, integrity: intb, resolved})
+    t.equal(a.integrity, inta, 'integrity a was set')
+    t.equal(b.integrity, intb, 'integrity b was set')
+    check(a, b, false, 'different integrity means different thing')
+  }
+
+  {
+    const root = new Node({ path: '/x' })
+    const resolved = 'https://registry.npmjs.org/x/-/x-1.2.3.tgz'
+    const pkga = { name: 'x', version: '1.2.3-a' }
+    const pkgb = { name: 'x', version: '1.2.3-b' }
+    const a = new Node({ parent: root, pkg: pkga, resolved})
+    const b = new Node({ parent: a, pkg: pkgb, resolved})
+    check(a, b, true, 'same resolved means same thing, if no integrity')
+  }
+
+  {
+    const root = new Node({ path: '/x' })
+    const pkga = { name: 'x', version: '1.2.3' }
+    const pkgb = { name: 'x', version: '1.2.3' }
+    const a = new Node({ parent: root, pkg: pkga})
+    const b = new Node({ parent: a, pkg: pkgb})
+    check(a, b, true, 'name/version match, if no resolved/integrity')
+  }
+
+  {
+    const root = new Node({ path: '/x' })
+    const pkga = { name: 'x', version: '1.2.3-a' }
+    const pkgb = { name: 'x', version: '1.2.3-b' }
+    const a = new Node({ parent: root, pkg: pkga})
+    const b = new Node({ parent: a, pkg: pkgb})
+    check(a, b, false, 'name/version mismatch, if no resolved/integrity')
+  }
+})

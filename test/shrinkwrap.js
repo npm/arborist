@@ -415,8 +415,21 @@ t.test('saving dependency-free shrinkwrap object', t => {
       resolve(`${dir}/package-lock.json`),
       'correct filepath on shrinkwrap instance'
     )
-    await sw.save()
+    await sw.save({ format: false })
     fs.statSync(sw.filename)
+    t.matchSnapshot(fs.readFileSync(sw.filename, 'utf8'), 'no indent json output')
+  })
+
+  t.test('load the unindented file, and save it back default', async t => {
+    const sw = await Shrinkwrap.load({ path: dir })
+    t.equal(
+      sw.filename,
+      resolve(`${dir}/package-lock.json`),
+      'correct filepath on shrinkwrap instance'
+    )
+    t.equal(sw.indent, '')
+    await sw.save()
+    t.matchSnapshot(fs.readFileSync(sw.filename, 'utf8'), 'indented json output')
   })
 
   t.end()

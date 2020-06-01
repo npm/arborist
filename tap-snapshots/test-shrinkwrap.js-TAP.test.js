@@ -14893,6 +14893,20 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP saving dependency-free shrinkwrap object load the unindented file, and save it back default > indented json output 1`] = `
+{
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {},
+  "dependencies": {}
+}
+
+`
+
+exports[`test/shrinkwrap.js TAP saving dependency-free shrinkwrap object save lockfile to root directory > no indent json output 1`] = `
+{"lockfileVersion":2,"requires":true,"packages":{},"dependencies":{}}
+`
+
 exports[`test/shrinkwrap.js TAP shrinkwrap key order > must match snapshot 1`] = `
 Array [
   "name",

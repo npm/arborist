@@ -689,11 +689,14 @@ t.test('hidden lockfile only used if up to date', async t => {
     },
     'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' }}),
   })
+  // ensure that the lockfile is fresh to start
+  fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
   {
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, true)
   }
   // make the node_modules dir have a newer mtime by adding an entry
+  // and setting the hidden lockfile back in time
   {
     fs.mkdirSync(resolve(path, 'node_modules/xyz'))
     const time = new Date('1999-12-31T23:59:59Z')
@@ -704,7 +707,7 @@ t.test('hidden lockfile only used if up to date', async t => {
   }
   // make the lockfile newer, but that new entry is still a problem
   {
-    fs.writeFileSync(resolve(path, hidden), JSON.stringify(lockdata))
+    fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, false)
     t.equal(s.loadingError, 'missing from lockfile: node_modules/xyz')

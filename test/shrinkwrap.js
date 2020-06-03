@@ -690,7 +690,7 @@ t.test('hidden lockfile only used if up to date', async t => {
     'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' }}),
   })
   // ensure that the lockfile is fresh to start
-  fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
+  fs.utimesSync(resolve(path, hidden), new Date(), new Date())
   {
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, true)
@@ -707,7 +707,7 @@ t.test('hidden lockfile only used if up to date', async t => {
   }
   // make the lockfile newer, but that new entry is still a problem
   {
-    fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
+    fs.utimesSync(resolve(path, hidden), new Date(), new Date())
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, false)
     t.equal(s.loadingError, 'missing from lockfile: node_modules/xyz')

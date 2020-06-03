@@ -34,7 +34,7 @@ t.test('audit outdated nyc and mkdirp', async t => {
   t.equal(report.topVulns.size, 1, 'one top node found vulnerable')
   t.equal(report.dependencyVulns.size, 6, 'dep vulns')
   t.equal(report.advisoryVulns.size, 7, 'advisory vulns')
-  t.equal(report.get('nyc').simpleRange, '11.0.0-candidate.1 - 13.1.0')
+  t.equal(report.get('nyc').simpleRange, '6.2.0-alpha - 13.1.0')
   t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
 })
 
@@ -59,7 +59,7 @@ t.test('audit outdated nyc and mkdirp with before: option', async t => {
   t.equal(report.topVulns.size, 1, 'one top node found vulnerable')
   t.equal(report.dependencyVulns.size, 6, 'dep vulns')
   t.equal(report.advisoryVulns.size, 7, 'advisory vulns')
-  t.equal(report.get('nyc').simpleRange, '11.0.0-candidate.1 - 13.1.0')
+  t.equal(report.get('nyc').simpleRange, '6.2.0-alpha - 13.1.0')
   t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
 })
 

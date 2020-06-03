@@ -918,7 +918,11 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
         "node_modules/minimist",
         "node_modules/nyc/node_modules/minimist"
       ],
-      "fixAvailable": true
+      "fixAvailable": {
+        "name": "nyc",
+        "version": "15.0.0",
+        "isSemVerMajor": true
+      }
     },
     "kind-of": {
       "name": "kind-of",
@@ -1256,13 +1260,19 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "via": [
         "minimist"
       ],
-      "effects": [],
+      "effects": [
+        "nyc"
+      ],
       "range": "0.4.1 - 0.5.1",
       "nodes": [
         "node_modules/mkdirp",
         "node_modules/nyc/node_modules/mkdirp"
       ],
-      "fixAvailable": true
+      "fixAvailable": {
+        "name": "nyc",
+        "version": "15.0.0",
+        "isSemVerMajor": true
+      }
     },
     "optimist": {
       "name": "optimist",
@@ -1302,10 +1312,11 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "name": "nyc",
       "severity": "low",
       "via": [
+        "mkdirp",
         "yargs"
       ],
       "effects": [],
-      "range": "11.0.0-candidate.1 - 13.1.0",
+      "range": "6.2.0-alpha - 13.1.0",
       "nodes": [
         "node_modules/nyc"
       ],
@@ -1978,7 +1989,11 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
         "node_modules/minimist",
         "node_modules/nyc/node_modules/minimist"
       ],
-      "fixAvailable": true
+      "fixAvailable": {
+        "name": "nyc",
+        "version": "15.0.0",
+        "isSemVerMajor": true
+      }
     },
     "kind-of": {
       "name": "kind-of",
@@ -2210,13 +2225,19 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       "via": [
         "minimist"
       ],
-      "effects": [],
+      "effects": [
+        "nyc"
+      ],
       "range": "0.4.1 - 0.5.1",
       "nodes": [
         "node_modules/mkdirp",
         "node_modules/nyc/node_modules/mkdirp"
       ],
-      "fixAvailable": true
+      "fixAvailable": {
+        "name": "nyc",
+        "version": "15.0.0",
+        "isSemVerMajor": true
+      }
     },
     "optimist": {
       "name": "optimist",
@@ -2256,10 +2277,11 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       "name": "nyc",
       "severity": "low",
       "via": [
+        "mkdirp",
         "yargs"
       ],
       "effects": [],
-      "range": "11.0.0-candidate.1 - 13.1.0",
+      "range": "6.2.0-alpha - 13.1.0",
       "nodes": [
         "node_modules/nyc"
       ],
@@ -2932,7 +2954,11 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
         "node_modules/minimist",
         "node_modules/nyc/node_modules/minimist"
       ],
-      "fixAvailable": true
+      "fixAvailable": {
+        "name": "nyc",
+        "version": "15.0.0",
+        "isSemVerMajor": true
+      }
     },
     "kind-of": {
       "name": "kind-of",
@@ -3164,13 +3190,19 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       "via": [
         "minimist"
       ],
-      "effects": [],
+      "effects": [
+        "nyc"
+      ],
       "range": "0.4.1 - 0.5.1",
       "nodes": [
         "node_modules/mkdirp",
         "node_modules/nyc/node_modules/mkdirp"
       ],
-      "fixAvailable": true
+      "fixAvailable": {
+        "name": "nyc",
+        "version": "15.0.0",
+        "isSemVerMajor": true
+      }
     },
     "optimist": {
       "name": "optimist",
@@ -3210,10 +3242,11 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       "name": "nyc",
       "severity": "low",
       "via": [
+        "mkdirp",
         "yargs"
       ],
       "effects": [],
-      "range": "11.0.0-candidate.1 - 13.1.0",
+      "range": "6.2.0-alpha - 13.1.0",
       "nodes": [
         "node_modules/nyc"
       ],

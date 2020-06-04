@@ -1,10 +1,11 @@
 const t = require('tap')
 const AuditReport = require('../lib/audit-report.js')
+const {auditToBulk} = AuditReport
 const Node = require('../lib/node.js')
 const Vuln = require('../lib/vuln.js')
 const Arborist = require('../')
 const registryServer = require('./fixtures/registry-mocks/server.js')
-const {registry, auditResponse, failAudit} = registryServer
+const {registry, auditResponse, failAudit, advisoryBulkResponse} = registryServer
 const {resolve} = require('path')
 const fixtures = resolve(__dirname, 'fixtures')
 
@@ -14,6 +15,34 @@ t.test('audit outdated nyc and mkdirp', async t => {
   const path = resolve(fixtures, 'audit-nyc-mkdirp')
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
+
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  // just a gut-check that the registry server is actually doing stuff
+  t.match(report.report, auditToBulk(require(auditFile)), 'got expected response')
+
+  t.throws(() => report.set('foo', 'bar'), {
+    message: 'do not call AuditReport.set() directly',
+  })
+
+  t.equal(report.topVulns.size, 1, 'one top node found vulnerable')
+  t.equal(report.dependencyVulns.size, 6, 'dep vulns')
+  t.equal(report.advisoryVulns.size, 7, 'advisory vulns')
+  t.equal(report.get('nyc').simpleRange, '6.2.0-alpha - 13.1.0')
+  t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
+})
+
+t.test('audit outdated nyc and mkdirp with newer endpoint', async t => {
+  const path = resolve(fixtures, 'audit-nyc-mkdirp')
+  const auditFile = resolve(path, 'advisory-bulk.json')
+  t.teardown(advisoryBulkResponse(auditFile))
 
   const arb = new Arborist({
     path,
@@ -54,7 +83,7 @@ t.test('audit outdated nyc and mkdirp with before: option', async t => {
   t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
 
   // just a gut-check that the registry server is actually doing stuff
-  t.match(report.report, require(auditFile), 'got expected response')
+  t.match(report.report, auditToBulk(require(auditFile)), 'got expected response')
 
   t.equal(report.topVulns.size, 1, 'one top node found vulnerable')
   t.equal(report.dependencyVulns.size, 6, 'dep vulns')
@@ -142,7 +171,7 @@ t.test('get advisory about node not in tree', async t => {
 
   const report = await AuditReport.load(tree, arb.options)
   // just a gut-check that the registry server is actually doing stuff
-  t.match(report.report, require(auditFile), 'got expected response')
+  t.match(report.report, auditToBulk(require(auditFile)), 'got expected response')
   t.equal(report.topVulns.size, 0, 'one top node found vulnerable')
   t.equal(report.dependencyVulns.size, 0, 'dep vulns')
   t.equal(report.advisoryVulns.size, 0, 'advisory vulns')
@@ -263,4 +292,25 @@ t.test('get default opts when loaded without opts', async t => {
   const ar = new AuditReport()
   t.equal(ar.tree, undefined)
   t.strictSame(ar.options, {})
+})
+
+t.test('error on audit response with no advisories object', async t => {
+  const dir = t.testdir({
+    'audit.json': JSON.stringify({no:'advisories',at:'all'})
+  })
+  const path = resolve(fixtures, 'audit-nyc-mkdirp')
+  const auditFile = resolve(dir, 'audit.json')
+  t.teardown(auditResponse(auditFile))
+
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  t.match(report.error, {
+    message: 'Invalid advisory report',
+    body: JSON.stringify({no:'advisories',at:'all'}),
+  })
 })

@@ -10,13 +10,92 @@ const missing = /\/@isaacs(\/|%2[fF])(this-does-not-exist-at-all|testing-missing
 const corgiDoc = 'application/vnd.npm.install-v1+json; q=1.0, application/json; q=0.8, */*'
 const { gzipSync, unzipSync } = require('zlib')
 
+let advisoryBulkResponse = null
+let failAdvisoryBulk = false
 let auditResponse = null
 let failAudit = false
 const startServer = cb => {
   const server = module.exports.server = http.createServer((req, res) => {
     res.setHeader('connection', 'close')
 
-    if (req.url === '/-/npm/v1/security/audits/quick') {
+    if (req.url === '/-/npm/v1/security/advisories/bulk') {
+      const body = []
+      req.on('data', c => body.push(c))
+      req.on('end', () => {
+        res.setHeader('connection', 'close')
+        if (failAdvisoryBulk) {
+          res.statusCode = 503
+          return res.end('no advisory bulk for you')
+        }
+        if (!advisoryBulkResponse) {
+          if (auditResponse && !failAudit) {
+            // simulate what the registry does when quick audits are allowed,
+            // but advisory bulk requests are not
+            res.statusCode = 405
+            return res.end(JSON.stringify({
+              code: 'MethodNotAllowedError',
+              message: 'POST is not allowed',
+            }))
+          } else {
+            res.statusCode = 404
+            return res.end('not found')
+          }
+        }
+        if (doProxy && !existsSync(advisoryBulkResponse)) {
+          // hit the main registry, then fall back to staging for now
+          // XXX: remove this when bulk advisory endpoint pushed to production!
+          const opts = {
+            host: 'registry.npmjs.org',
+            method: req.method,
+            path: req.url,
+            headers: {
+              ...req.headers,
+              accept: '*',
+              host: 'registry.npmjs.org',
+              connection: 'close',
+              'if-none-match': '',
+            }
+          }
+          const handleUpstream = upstream => {
+            res.statusCode = upstream.statusCode
+            if (upstream.statusCode >= 300 || upstream.statusCode < 200) {
+              console.error('UPSTREAM ERROR', upstream.statusCode, upstream.headers)
+              return upstream.pipe(res)
+            }
+            res.setHeader('content-encoding', upstream.headers['content-encoding'])
+            const file = advisoryBulkResponse
+            console.error('PROXY', `${req.url} -> ${file}`)
+            mkdirp.sync(dirname(file))
+            const data = []
+            upstream.on('end', () => {
+              const out = Buffer.concat(data)
+              const obj = JSON.parse(unzipSync(out).toString())
+              writeFileSync(file, JSON.stringify(obj, 0, 2) + '\n')
+              res.end(out)
+            })
+            upstream.on('data', c => data.push(c))
+          }
+          return https.request(opts).on('response', upstream => {
+            if (upstream.statusCode !== 200) {
+              console.error('ATTEMPTING TO PROXY FROM STAGING')
+              console.error('NOTE: THIS WILL FAIL WHEN NOT ON VPN!')
+              opts.host = 'security-microservice-3-west.npm.red'
+              opts.headers.host = opts.host
+              opts.path = '/v1/advisories/bulk'
+              https.request(opts)
+                .on('response', upstream => handleUpstream(upstream))
+                .end(Buffer.concat(body))
+            } else {
+              handleUpstream(upstream)
+            }
+          }).end(Buffer.concat(body))
+        } else {
+          res.setHeader('content-encoding', 'gzip')
+          res.end(gzipSync(readFileSync(advisoryBulkResponse)))
+        }
+      })
+      return
+    } else if (req.url === '/-/npm/v1/security/audits/quick') {
       const body = []
       req.on('data', c => body.push(c))
       req.on('end', () => {
@@ -43,7 +122,7 @@ const startServer = cb => {
             },
           }).on('response', upstream => {
             res.statusCode = upstream.statusCode
-            if (upstream.statusCode >= 300 || upstream.status < 200) {
+            if (upstream.statusCode >= 300 || upstream.statusCode < 200) {
               console.error('UPSTREAM ERROR', upstream.statusCode, upstream.headers)
               // don't save if it's not a valid response
               return upstream.pipe(res)
@@ -160,6 +239,18 @@ module.exports.auditResponse = value => {
 module.exports.failAudit = () => {
   failAudit = true
   return () => failAudit = false
+}
+
+module.exports.advisoryBulkResponse = value => {
+  if (advisoryBulkResponse && advisoryBulkResponse !== value)
+    throw new Error('setting advisory bulk response, but already set\n' +
+      '(did you forget to call the returned function on teardown?)')
+  advisoryBulkResponse = value
+  return () => advisoryBulkResponse = null
+}
+module.exports.failAdvisoryBulk = () => {
+  failAdvisoryBulk = true
+  return () => failAdvisoryBulk = false
 }
 
 module.exports.registry = `http://localhost:${PORT}/`

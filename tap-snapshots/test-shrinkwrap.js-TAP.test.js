@@ -11220,17 +11220,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "source-map" "^0.5.0"
     "trim-right" "^1.0.1"
 
-"@babel/generator@^7.4.0", "@babel/generator@^7.5.0":
-  "integrity" "sha512-1TTVrt7J9rcG5PMjvO7VEG3FrEoEJNHxumRq66GemPmzboLWtIjjcJgk8rokuAS7IiRSpgVSu5Vb9lc99iJkOA=="
-  "resolved" "https://registry.yarnpkg.com/@babel/generator/-/generator-7.5.0.tgz"
-  "version" "7.5.0"
-  dependencies:
-    "@babel/types" "^7.5.0"
-    "jsesc" "^2.5.1"
-    "lodash" "^4.17.11"
-    "source-map" "^0.5.0"
-    "trim-right" "^1.0.1"
-
 "@babel/helper-function-name@^7.1.0":
   "integrity" "sha512-A95XEoCpb3TO+KZzJ4S/5uW5fNe26DjBGqf1o9ucyLyCmi1dXq/B3c8iaWTfBk3VvetUxl16e8tIrd5teOCfGw=="
   "resolved" "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.1.0.tgz"
@@ -11268,31 +11257,12 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/@babel/parser/-/parser-7.5.0.tgz"
   "version" "7.5.0"
 
-"@babel/parser@^7.4.3", "@babel/parser@^7.4.4", "@babel/parser@^7.5.0":
-  "integrity" "sha512-I5nW8AhGpOXGCCNYGc+p7ExQIBxRFnS2fd/d862bNOKvmoEPjYPcfIjsfdy0ujagYOIYPczKgD9l3FsgTkAzKA=="
-  "resolved" "https://registry.yarnpkg.com/@babel/parser/-/parser-7.5.0.tgz"
-  "version" "7.5.0"
-
-"@babel/parser@^7.4.3", "@babel/parser@^7.4.4", "@babel/parser@^7.5.0":
-  "integrity" "sha512-I5nW8AhGpOXGCCNYGc+p7ExQIBxRFnS2fd/d862bNOKvmoEPjYPcfIjsfdy0ujagYOIYPczKgD9l3FsgTkAzKA=="
-  "resolved" "https://registry.yarnpkg.com/@babel/parser/-/parser-7.5.0.tgz"
-  "version" "7.5.0"
-
 "@babel/runtime@^7.4.5":
   "integrity" "sha512-9M29wrrP7//JBGX70+IrDuD1w4iOYhUGpJNMQJVNAXue+cFeFlMTqBECouIziXPUphlgrfjcfiEpGX4t0WGK4g=="
   "resolved" "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.5.2.tgz"
   "version" "7.5.2"
   dependencies:
     "regenerator-runtime" "^0.13.2"
-
-"@babel/template@^7.1.0", "@babel/template@^7.4.0":
-  "integrity" "sha512-CiGzLN9KgAvgZsnivND7rkA+AeJ9JB0ciPOD4U59GKbQP2iQl+olF1l76kJOupqidozfZ32ghwBEJDhnk9MEcw=="
-  "resolved" "https://registry.yarnpkg.com/@babel/template/-/template-7.4.4.tgz"
-  "version" "7.4.4"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/parser" "^7.4.4"
-    "@babel/types" "^7.4.4"
 
 "@babel/template@^7.1.0", "@babel/template@^7.4.0":
   "integrity" "sha512-CiGzLN9KgAvgZsnivND7rkA+AeJ9JB0ciPOD4U59GKbQP2iQl+olF1l76kJOupqidozfZ32ghwBEJDhnk9MEcw=="
@@ -11327,45 +11297,10 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "lodash" "^4.17.11"
     "to-fast-properties" "^2.0.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.5.0":
-  "integrity" "sha512-UFpDVqRABKsW01bvw7/wSUe56uy6RXM5+VJibVVAybDGxEW25jdwiFJEf7ASvSaC7sN7rbE/l3cLp2izav+CtQ=="
-  "resolved" "https://registry.yarnpkg.com/@babel/types/-/types-7.5.0.tgz"
-  "version" "7.5.0"
-  dependencies:
-    "esutils" "^2.0.2"
-    "lodash" "^4.17.11"
-    "to-fast-properties" "^2.0.0"
-
-"@babel/types@^7.0.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.5.0":
-  "integrity" "sha512-UFpDVqRABKsW01bvw7/wSUe56uy6RXM5+VJibVVAybDGxEW25jdwiFJEf7ASvSaC7sN7rbE/l3cLp2izav+CtQ=="
-  "resolved" "https://registry.yarnpkg.com/@babel/types/-/types-7.5.0.tgz"
-  "version" "7.5.0"
-  dependencies:
-    "esutils" "^2.0.2"
-    "lodash" "^4.17.11"
-    "to-fast-properties" "^2.0.0"
-
-"@babel/types@^7.0.0", "@babel/types@^7.4.0", "@babel/types@^7.4.4", "@babel/types@^7.5.0":
-  "integrity" "sha512-UFpDVqRABKsW01bvw7/wSUe56uy6RXM5+VJibVVAybDGxEW25jdwiFJEf7ASvSaC7sN7rbE/l3cLp2izav+CtQ=="
-  "resolved" "https://registry.yarnpkg.com/@babel/types/-/types-7.5.0.tgz"
-  "version" "7.5.0"
-  dependencies:
-    "esutils" "^2.0.2"
-    "lodash" "^4.17.11"
-    "to-fast-properties" "^2.0.0"
-
 "@types/prop-types@*":
   "integrity" "sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg=="
   "resolved" "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz"
   "version" "15.7.1"
-
-"@types/react@^16.8.12", "@types/react@^16.8.6":
-  "integrity" "sha512-abkEOIeljniUN9qB5onp++g0EY38h7atnDHxwKUFz1r3VH1+yG1OKi2sNPTyObL40goBmfKFpdii2lEzwLX1cA=="
-  "resolved" "https://registry.yarnpkg.com/@types/react/-/react-16.8.23.tgz"
-  "version" "16.8.23"
-  dependencies:
-    "@types/prop-types" "*"
-    "csstype" "^2.2.0"
 
 "@types/react@^16.8.12", "@types/react@^16.8.6":
   "integrity" "sha512-abkEOIeljniUN9qB5onp++g0EY38h7atnDHxwKUFz1r3VH1+yG1OKi2sNPTyObL40goBmfKFpdii2lEzwLX1cA=="
@@ -11409,13 +11344,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4="
   "resolved" "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz"
   "version" "2.2.1"
-
-"ansi-styles@^3.2.0", "ansi-styles@^3.2.1":
-  "integrity" "sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA=="
-  "resolved" "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz"
-  "version" "3.2.1"
-  dependencies:
-    "color-convert" "^1.9.0"
 
 "ansi-styles@^3.2.0", "ansi-styles@^3.2.1":
   "integrity" "sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA=="
@@ -11478,11 +11406,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz"
   "version" "1.0.0"
 
-"assert-plus@^1.0.0", "assert-plus@1.0.0":
-  "integrity" "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU="
-  "resolved" "https://registry.yarnpkg.com/assert-plus/-/assert-plus-1.0.0.tgz"
-  "version" "1.0.0"
-
 "astral-regex@^1.0.0":
   "integrity" "sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg=="
   "resolved" "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz"
@@ -11525,31 +11448,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "chalk" "^1.1.3"
     "esutils" "^2.0.2"
     "js-tokens" "^3.0.2"
-
-"babel-core@^6.25.0", "babel-core@^6.26.0":
-  "integrity" "sha512-6jyFLuDmeidKmUEb3NM+/yawG0M2bDZ9Z1qbZP59cyHLz8kYGKYwpJP0UwUKKUiTRNvxfLesJnTedqczP7cTDA=="
-  "resolved" "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.3.tgz"
-  "version" "6.26.3"
-  dependencies:
-    "babel-code-frame" "^6.26.0"
-    "babel-generator" "^6.26.0"
-    "babel-helpers" "^6.24.1"
-    "babel-messages" "^6.23.0"
-    "babel-register" "^6.26.0"
-    "babel-runtime" "^6.26.0"
-    "babel-template" "^6.26.0"
-    "babel-traverse" "^6.26.0"
-    "babel-types" "^6.26.0"
-    "babylon" "^6.18.0"
-    "convert-source-map" "^1.5.1"
-    "debug" "^2.6.9"
-    "json5" "^0.5.1"
-    "lodash" "^4.17.4"
-    "minimatch" "^3.0.4"
-    "path-is-absolute" "^1.0.1"
-    "private" "^0.1.8"
-    "slash" "^1.0.0"
-    "source-map" "^0.5.7"
 
 "babel-core@^6.25.0", "babel-core@^6.26.0":
   "integrity" "sha512-6jyFLuDmeidKmUEb3NM+/yawG0M2bDZ9Z1qbZP59cyHLz8kYGKYwpJP0UwUKKUiTRNvxfLesJnTedqczP7cTDA=="
@@ -11668,25 +11566,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "core-js" "^2.4.0"
     "regenerator-runtime" "^0.11.0"
-
-"babel-runtime@^6.22.0", "babel-runtime@^6.26.0":
-  "integrity" "sha1-llxwWGaOgrVde/4E/yM3vItWR/4="
-  "resolved" "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz"
-  "version" "6.26.0"
-  dependencies:
-    "core-js" "^2.4.0"
-    "regenerator-runtime" "^0.11.0"
-
-"babel-template@^6.24.1", "babel-template@^6.26.0":
-  "integrity" "sha1-3gPi0WOWsGn0bdn/+FIfsaDjXgI="
-  "resolved" "https://registry.yarnpkg.com/babel-template/-/babel-template-6.26.0.tgz"
-  "version" "6.26.0"
-  dependencies:
-    "babel-runtime" "^6.26.0"
-    "babel-traverse" "^6.26.0"
-    "babel-types" "^6.26.0"
-    "babylon" "^6.18.0"
-    "lodash" "^4.17.4"
 
 "babel-template@^6.24.1", "babel-template@^6.26.0":
   "integrity" "sha1-3gPi0WOWsGn0bdn/+FIfsaDjXgI="
@@ -11843,24 +11722,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
-"chalk@^2.0.0", "chalk@^2.4.1", "chalk@^2.4.2":
-  "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
-  "resolved" "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz"
-  "version" "2.4.2"
-  dependencies:
-    "ansi-styles" "^3.2.1"
-    "escape-string-regexp" "^1.0.5"
-    "supports-color" "^5.3.0"
-
-"chalk@^2.0.0", "chalk@^2.4.1", "chalk@^2.4.2":
-  "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
-  "resolved" "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz"
-  "version" "2.4.2"
-  dependencies:
-    "ansi-styles" "^3.2.1"
-    "escape-string-regexp" "^1.0.5"
-    "supports-color" "^5.3.0"
-
 "chokidar@^3.0.2":
   "integrity" "sha512-dGmKLDdT3Gdl7fBUe8XK+gAtGmzy5Fn0XkkWQuYxGIgWVPPse2CxFA5mtrlD0TOHaHjEUqkWNyP1XdHoJES/4A=="
   "resolved" "https://registry.yarnpkg.com/chokidar/-/chokidar-3.3.0.tgz"
@@ -11944,13 +11805,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "delayed-stream" "~1.0.0"
 
-"combined-stream@^1.0.6", "combined-stream@~1.0.6":
-  "integrity" "sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg=="
-  "resolved" "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz"
-  "version" "1.0.8"
-  dependencies:
-    "delayed-stream" "~1.0.0"
-
 "commander@~2.20.0":
   "integrity" "sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ=="
   "resolved" "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz"
@@ -11973,27 +11827,10 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "safe-buffer" "~5.1.1"
 
-"convert-source-map@^1.5.1", "convert-source-map@^1.6.0":
-  "integrity" "sha512-eFu7XigvxdZ1ETfbgPBohgyQ/Z++C0eEhTor0qRwBw9unw+L0/6V8wkSuGgzdThkiS5lSpdptOQPD8Ak40a+7A=="
-  "resolved" "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.6.0.tgz"
-  "version" "1.6.0"
-  dependencies:
-    "safe-buffer" "~5.1.1"
-
 "core-js@^2.4.0", "core-js@^2.5.0":
   "integrity" "sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A=="
   "resolved" "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz"
   "version" "2.6.9"
-
-"core-js@^2.4.0", "core-js@^2.5.0":
-  "integrity" "sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A=="
-  "resolved" "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz"
-  "version" "2.6.9"
-
-"core-util-is@~1.0.0", "core-util-is@1.0.2":
-  "integrity" "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="
-  "resolved" "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz"
-  "version" "1.0.2"
 
 "core-util-is@~1.0.0", "core-util-is@1.0.2":
   "integrity" "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="
@@ -12042,17 +11879,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "shebang-command" "^1.2.0"
     "which" "^1.2.9"
 
-"cross-spawn@^6.0.0", "cross-spawn@^6.0.5":
-  "integrity" "sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ=="
-  "resolved" "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz"
-  "version" "6.0.5"
-  dependencies:
-    "nice-try" "^1.0.4"
-    "path-key" "^2.0.1"
-    "semver" "^5.5.0"
-    "shebang-command" "^1.2.0"
-    "which" "^1.2.9"
-
 "csstype@^2.2.0":
   "integrity" "sha512-RpFbQGUE74iyPgvr46U9t1xoQBM8T4BL8SxrN66Le2xYAPSaDJJKeztV3awugusb3g3G9iL8StmkBBXhcbbXhg=="
   "resolved" "https://registry.yarnpkg.com/csstype/-/csstype-2.6.6.tgz"
@@ -12064,20 +11890,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "version" "1.14.1"
   dependencies:
     "assert-plus" "^1.0.0"
-
-"debug@^2.1.3", "debug@^2.6.8", "debug@^2.6.9":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
-
-"debug@^2.1.3", "debug@^2.6.8", "debug@^2.6.9":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
 
 "debug@^2.1.3", "debug@^2.6.8", "debug@^2.6.9":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
@@ -12171,25 +11983,10 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
   "version" "1.0.5"
 
-"escape-string-regexp@^1.0.2", "escape-string-regexp@^1.0.3", "escape-string-regexp@^1.0.5":
-  "integrity" "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ="
-  "resolved" "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
-  "version" "1.0.5"
-
-"escape-string-regexp@^1.0.2", "escape-string-regexp@^1.0.3", "escape-string-regexp@^1.0.5":
-  "integrity" "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ="
-  "resolved" "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
-  "version" "1.0.5"
-
 "esm@^3.2.25":
   "integrity" "sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA=="
   "resolved" "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz"
   "version" "3.2.25"
-
-"esprima@^4.0.0", "esprima@~4.0.0":
-  "integrity" "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A=="
-  "resolved" "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz"
-  "version" "4.0.1"
 
 "esprima@^4.0.0", "esprima@~4.0.0":
   "integrity" "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A=="
@@ -12294,14 +12091,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "cross-spawn" "^4"
     "signal-exit" "^3.0.0"
 
-"foreground-child@^1.3.3", "foreground-child@^1.5.6":
-  "integrity" "sha1-T9ca0t/elnibmApcCilZN8svXOk="
-  "resolved" "https://registry.yarnpkg.com/foreground-child/-/foreground-child-1.5.6.tgz"
-  "version" "1.5.6"
-  dependencies:
-    "cross-spawn" "^4"
-    "signal-exit" "^3.0.0"
-
 "forever-agent@~0.6.1":
   "integrity" "sha1-+8cfDEGt6zf5bFd60e1C2P2sypE="
   "resolved" "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz"
@@ -12374,30 +12163,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "once" "^1.3.0"
     "path-is-absolute" "^1.0.0"
 
-"glob@^7.0.5", "glob@^7.1.3", "glob@^7.1.4":
-  "integrity" "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A=="
-  "resolved" "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz"
-  "version" "7.1.4"
-  dependencies:
-    "fs.realpath" "^1.0.0"
-    "inflight" "^1.0.4"
-    "inherits" "2"
-    "minimatch" "^3.0.4"
-    "once" "^1.3.0"
-    "path-is-absolute" "^1.0.0"
-
-"glob@^7.0.5", "glob@^7.1.3", "glob@^7.1.4":
-  "integrity" "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A=="
-  "resolved" "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz"
-  "version" "7.1.4"
-  dependencies:
-    "fs.realpath" "^1.0.0"
-    "inflight" "^1.0.4"
-    "inherits" "2"
-    "minimatch" "^3.0.4"
-    "once" "^1.3.0"
-    "path-is-absolute" "^1.0.0"
-
 "globals@^11.1.0":
   "integrity" "sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA=="
   "resolved" "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz"
@@ -12407,16 +12172,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ=="
   "resolved" "https://registry.yarnpkg.com/globals/-/globals-9.18.0.tgz"
   "version" "9.18.0"
-
-"graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.1.2":
-  "integrity" "sha512-jpSvDPV4Cq/bgtpndIWbI5hmYxhQGHPC4d4cqBPb4DLniCfhJokdXhwhaDuLBGLQdvvRum/UiX6ECVIPvDXqdg=="
-  "resolved" "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.0.tgz"
-  "version" "4.2.0"
-
-"graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.1.2":
-  "integrity" "sha512-jpSvDPV4Cq/bgtpndIWbI5hmYxhQGHPC4d4cqBPb4DLniCfhJokdXhwhaDuLBGLQdvvRum/UiX6ECVIPvDXqdg=="
-  "resolved" "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.0.tgz"
-  "version" "4.2.0"
 
 "graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.1.2":
   "integrity" "sha512-jpSvDPV4Cq/bgtpndIWbI5hmYxhQGHPC4d4cqBPb4DLniCfhJokdXhwhaDuLBGLQdvvRum/UiX6ECVIPvDXqdg=="
@@ -12524,35 +12279,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz"
   "version" "2.0.4"
 
-"inherits@~2.0.3", "inherits@2":
-  "integrity" "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="
-  "resolved" "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz"
-  "version" "2.0.4"
-
-"ink@^2.1.1", "ink@^2.3.0":
-  "integrity" "sha512-931rgXHAS3hM++8ygWPOBeHOFwTzHh3pDAVZtiBVOUH6tVvJijym43ODUy22ySo2NwYUFeR/Zj3xuWzBEKMiHw=="
-  "resolved" "https://registry.yarnpkg.com/ink/-/ink-2.3.0.tgz"
-  "version" "2.3.0"
-  dependencies:
-    "@types/react" "^16.8.6"
-    "arrify" "^1.0.1"
-    "auto-bind" "^2.0.0"
-    "chalk" "^2.4.1"
-    "cli-cursor" "^2.1.0"
-    "cli-truncate" "^1.1.0"
-    "is-ci" "^2.0.0"
-    "lodash.throttle" "^4.1.1"
-    "log-update" "^3.0.0"
-    "prop-types" "^15.6.2"
-    "react-reconciler" "^0.20.0"
-    "scheduler" "^0.13.2"
-    "signal-exit" "^3.0.2"
-    "slice-ansi" "^1.0.0"
-    "string-length" "^2.0.0"
-    "widest-line" "^2.0.0"
-    "wrap-ansi" "^5.0.0"
-    "yoga-layout-prebuilt" "^1.9.3"
-
 "ink@^2.1.1", "ink@^2.3.0":
   "integrity" "sha512-931rgXHAS3hM++8ygWPOBeHOFwTzHh3pDAVZtiBVOUH6tVvJijym43ODUy22ySo2NwYUFeR/Zj3xuWzBEKMiHw=="
   "resolved" "https://registry.yarnpkg.com/ink/-/ink-2.3.0.tgz"
@@ -12639,13 +12365,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "is-extglob" "^2.1.1"
 
-"is-glob@^4.0.1", "is-glob@~4.0.1":
-  "integrity" "sha512-5G0tKtBTFImOqDnLB2hG6Bp2qcKEFduo4tZu9MT/H6NQv/ghhy30o55ufafxJ/LdH79LLs2Kfrn85TLKyA7BUg=="
-  "resolved" "https://registry.yarnpkg.com/is-glob/-/is-glob-4.0.1.tgz"
-  "version" "4.0.1"
-  dependencies:
-    "is-extglob" "^2.1.1"
-
 "is-number@^7.0.0":
   "integrity" "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng=="
   "resolved" "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz"
@@ -12655,16 +12374,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha1-EtSj3U5o4Lec6428hBc66A2RykQ="
   "resolved" "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz"
   "version" "1.1.0"
-
-"is-stream@^1.0.1", "is-stream@^1.1.0":
-  "integrity" "sha1-EtSj3U5o4Lec6428hBc66A2RykQ="
-  "resolved" "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz"
-  "version" "1.1.0"
-
-"is-typedarray@^1.0.0", "is-typedarray@~1.0.0":
-  "integrity" "sha1-5HnICFjfDBsR3dppQPlgEfzaSpo="
-  "resolved" "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz"
-  "version" "1.0.0"
 
 "is-typedarray@^1.0.0", "is-typedarray@~1.0.0":
   "integrity" "sha1-5HnICFjfDBsR3dppQPlgEfzaSpo="
@@ -12685,11 +12394,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo="
   "resolved" "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz"
   "version" "0.1.2"
-
-"istanbul-lib-coverage@^2.0.3", "istanbul-lib-coverage@^2.0.5":
-  "integrity" "sha512-8aXznuEPCJvGnMSRft4udDRDtb1V3pkQkMMI5LI+6HuQz5oQ4J2UFn1H82raA3qJtyOLkkwVqICBQkjnGtn5mA=="
-  "resolved" "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.5.tgz"
-  "version" "2.0.5"
 
 "istanbul-lib-coverage@^2.0.3", "istanbul-lib-coverage@^2.0.5":
   "integrity" "sha512-8aXznuEPCJvGnMSRft4udDRDtb1V3pkQkMMI5LI+6HuQz5oQ4J2UFn1H82raA3qJtyOLkkwVqICBQkjnGtn5mA=="
@@ -12760,11 +12464,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "version" "1.4.0"
   dependencies:
     "cliui" "^4.1.0"
-
-"js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
-  "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
-  "resolved" "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz"
-  "version" "4.0.0"
 
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ=="
@@ -12879,11 +12578,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz"
   "version" "4.17.11"
 
-"lodash@^4.17.11", "lodash@^4.17.4":
-  "integrity" "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg=="
-  "resolved" "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz"
-  "version" "4.17.11"
-
 "log-driver@^1.2.7":
   "integrity" "sha512-U7KCmLdqsGHBLeWqYlFA0V0Sl6P08EE1ZrmA9cxjUE0WVqT9qnyVDPz1kzpFEP0jdJuFnasWIfSd7fsaNXkpbg=="
   "resolved" "https://registry.yarnpkg.com/log-driver/-/log-driver-1.2.7.tgz"
@@ -12905,20 +12599,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "js-tokens" "^3.0.0 || ^4.0.0"
 
-"loose-envify@^1.0.0", "loose-envify@^1.1.0", "loose-envify@^1.4.0":
-  "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
-  "resolved" "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz"
-  "version" "1.4.0"
-  dependencies:
-    "js-tokens" "^3.0.0 || ^4.0.0"
-
-"loose-envify@^1.0.0", "loose-envify@^1.1.0", "loose-envify@^1.4.0":
-  "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
-  "resolved" "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz"
-  "version" "1.4.0"
-  dependencies:
-    "js-tokens" "^3.0.0 || ^4.0.0"
-
 "lru-cache@^4.0.1":
   "integrity" "sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g=="
   "resolved" "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz"
@@ -12926,14 +12606,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "pseudomap" "^1.0.2"
     "yallist" "^2.1.2"
-
-"make-dir@^2.0.0", "make-dir@^2.1.0":
-  "integrity" "sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA=="
-  "resolved" "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz"
-  "version" "2.1.0"
-  dependencies:
-    "pify" "^4.0.1"
-    "semver" "^5.6.0"
 
 "make-dir@^2.0.0", "make-dir@^2.1.0":
   "integrity" "sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA=="
@@ -12975,13 +12647,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha512-jYdeOMPy9vnxEqFRRo6ZvTZ8d9oPb+k18PKoYNYUe2stVEBPPwsln/qWzdbmaIvnhZ9v2P+CuecK+fpUfsV2mA=="
   "resolved" "https://registry.yarnpkg.com/mime-db/-/mime-db-1.40.0.tgz"
   "version" "1.40.0"
-
-"mime-types@^2.1.12", "mime-types@~2.1.19":
-  "integrity" "sha512-WaFHS3MCl5fapm3oLxU4eYDw77IQM2ACcxQ9RIxfaC3ooc6PFuBMGZZsYpvoXS5D5QTWPieo1jjLdAm3TBP3cQ=="
-  "resolved" "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.24.tgz"
-  "version" "2.1.24"
-  dependencies:
-    "mime-db" "1.40.0"
 
 "mime-types@^2.1.12", "mime-types@~2.1.19":
   "integrity" "sha512-WaFHS3MCl5fapm3oLxU4eYDw77IQM2ACcxQ9RIxfaC3ooc6PFuBMGZZsYpvoXS5D5QTWPieo1jjLdAm3TBP3cQ=="
@@ -13036,13 +12701,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "minimist" "0.0.8"
 
-"mkdirp@^0.5.0", "mkdirp@^0.5.1":
-  "integrity" "sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM="
-  "resolved" "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz"
-  "version" "0.5.1"
-  dependencies:
-    "minimist" "0.0.8"
-
 "ms@^2.1.1":
   "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
   "resolved" "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz"
@@ -13082,11 +12740,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "resolve" "^1.10.0"
     "semver" "2 || 3 || 4 || 5"
     "validate-npm-package-license" "^3.0.1"
-
-"normalize-path@^3.0.0", "normalize-path@~3.0.0":
-  "integrity" "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
-  "resolved" "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz"
-  "version" "3.0.0"
 
 "normalize-path@^3.0.0", "normalize-path@~3.0.0":
   "integrity" "sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA=="
@@ -13153,20 +12806,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "wrappy" "1"
 
-"once@^1.3.0", "once@^1.3.1", "once@^1.4.0":
-  "integrity" "sha1-WDsap3WWHUsROsF9nFC6753Xa9E="
-  "resolved" "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz"
-  "version" "1.4.0"
-  dependencies:
-    "wrappy" "1"
-
-"once@^1.3.0", "once@^1.3.1", "once@^1.4.0":
-  "integrity" "sha1-WDsap3WWHUsROsF9nFC6753Xa9E="
-  "resolved" "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz"
-  "version" "1.4.0"
-  dependencies:
-    "wrappy" "1"
-
 "onetime@^2.0.0":
   "integrity" "sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ="
   "resolved" "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz"
@@ -13186,11 +12825,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "minimist" "~0.0.1"
     "wordwrap" "~0.0.2"
-
-"os-homedir@^1.0.0", "os-homedir@^1.0.1":
-  "integrity" "sha1-/7xJiDNuDoM94MFox+8VISGqf7M="
-  "resolved" "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz"
-  "version" "1.0.2"
 
 "os-homedir@^1.0.0", "os-homedir@^1.0.1":
   "integrity" "sha1-/7xJiDNuDoM94MFox+8VISGqf7M="
@@ -13285,16 +12919,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
   "version" "1.0.1"
 
-"path-is-absolute@^1.0.0", "path-is-absolute@^1.0.1":
-  "integrity" "sha1-F0uSaHNVNP+8es5r9TpanhtcX18="
-  "resolved" "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
-  "version" "1.0.1"
-
-"path-key@^2.0.0", "path-key@^2.0.1":
-  "integrity" "sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A="
-  "resolved" "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz"
-  "version" "2.0.1"
-
 "path-key@^2.0.0", "path-key@^2.0.1":
   "integrity" "sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A="
   "resolved" "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz"
@@ -13388,11 +13012,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz"
   "version" "1.4.1"
 
-"punycode@^1.3.2", "punycode@^1.4.1":
-  "integrity" "sha1-wNWmOycYgArY4esPpSachN1BhF4="
-  "resolved" "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz"
-  "version" "1.4.1"
-
 "punycode@^2.0.0":
   "integrity" "sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A=="
   "resolved" "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz"
@@ -13422,24 +13041,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "object-assign" "^4.1.1"
     "prop-types" "^15.6.2"
     "scheduler" "^0.13.6"
-
-"react@^16.0.0", "react@^16.9.0", "react@>=16.8.0":
-  "integrity" "sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA=="
-  "resolved" "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz"
-  "version" "16.12.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
-
-"react@^16.0.0", "react@^16.9.0", "react@>=16.8.0":
-  "integrity" "sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA=="
-  "resolved" "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz"
-  "version" "16.12.0"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-    "prop-types" "^15.6.2"
 
 "react@^16.0.0", "react@^16.9.0", "react@>=16.8.0":
   "integrity" "sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA=="
@@ -13625,21 +13226,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz"
   "version" "5.1.2"
 
-"safe-buffer@~5.1.0", "safe-buffer@~5.1.1":
-  "integrity" "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
-  "resolved" "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz"
-  "version" "5.1.2"
-
-"safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@~2.1.0":
-  "integrity" "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
-  "resolved" "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz"
-  "version" "2.1.2"
-
-"safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@~2.1.0":
-  "integrity" "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
-  "resolved" "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz"
-  "version" "2.1.2"
-
 "safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@~2.1.0":
   "integrity" "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
   "resolved" "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz"
@@ -13652,24 +13238,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
-
-"scheduler@^0.13.2", "scheduler@^0.13.6":
-  "integrity" "sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ=="
-  "resolved" "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz"
-  "version" "0.13.6"
-  dependencies:
-    "loose-envify" "^1.1.0"
-    "object-assign" "^4.1.1"
-
-"semver@^5.5.0", "semver@^5.6.0", "semver@2 || 3 || 4 || 5":
-  "integrity" "sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA=="
-  "resolved" "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz"
-  "version" "5.7.0"
-
-"semver@^5.5.0", "semver@^5.6.0", "semver@2 || 3 || 4 || 5":
-  "integrity" "sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA=="
-  "resolved" "https://registry.yarnpkg.com/semver/-/semver-5.7.0.tgz"
-  "version" "5.7.0"
 
 "semver@^5.5.0", "semver@^5.6.0", "semver@2 || 3 || 4 || 5":
   "integrity" "sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA=="
@@ -13697,11 +13265,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM="
   "resolved" "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-1.0.0.tgz"
   "version" "1.0.0"
-
-"signal-exit@^3.0.0", "signal-exit@^3.0.2":
-  "integrity" "sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0="
-  "resolved" "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz"
-  "version" "3.0.2"
 
 "signal-exit@^3.0.0", "signal-exit@^3.0.2":
   "integrity" "sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0="
@@ -13765,16 +13328,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "integrity" "sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w="
   "resolved" "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz"
   "version" "0.5.7"
-
-"source-map@^0.6.0", "source-map@^0.6.1", "source-map@~0.6.1":
-  "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
-  "resolved" "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz"
-  "version" "0.6.1"
-
-"source-map@^0.6.0", "source-map@^0.6.1", "source-map@~0.6.1":
-  "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
-  "resolved" "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz"
-  "version" "0.6.1"
 
 "source-map@^0.6.0", "source-map@^0.6.1", "source-map@~0.6.1":
   "integrity" "sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g=="
@@ -13876,14 +13429,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "is-fullwidth-code-point" "^2.0.0"
     "strip-ansi" "^4.0.0"
 
-"string-width@^2.0.0", "string-width@^2.1.1":
-  "integrity" "sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw=="
-  "resolved" "https://registry.yarnpkg.com/string-width/-/string-width-2.1.1.tgz"
-  "version" "2.1.1"
-  dependencies:
-    "is-fullwidth-code-point" "^2.0.0"
-    "strip-ansi" "^4.0.0"
-
 "string-width@^3.0.0", "string-width@^3.1.0":
   "integrity" "sha512-vafcv6KjVZKSgz06oM/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJPQ1b+KDUqDFctkdRW44e1w=="
   "resolved" "https://registry.yarnpkg.com/string-width/-/string-width-3.1.0.tgz"
@@ -13892,22 +13437,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "emoji-regex" "^7.0.1"
     "is-fullwidth-code-point" "^2.0.0"
     "strip-ansi" "^5.1.0"
-
-"string-width@^3.0.0", "string-width@^3.1.0":
-  "integrity" "sha512-vafcv6KjVZKSgz06oM/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJPQ1b+KDUqDFctkdRW44e1w=="
-  "resolved" "https://registry.yarnpkg.com/string-width/-/string-width-3.1.0.tgz"
-  "version" "3.1.0"
-  dependencies:
-    "emoji-regex" "^7.0.1"
-    "is-fullwidth-code-point" "^2.0.0"
-    "strip-ansi" "^5.1.0"
-
-"strip-ansi@^3.0.0", "strip-ansi@^3.0.1":
-  "integrity" "sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8="
-  "resolved" "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-3.0.1.tgz"
-  "version" "3.0.1"
-  dependencies:
-    "ansi-regex" "^2.0.0"
 
 "strip-ansi@^3.0.0", "strip-ansi@^3.0.1":
   "integrity" "sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8="
@@ -13923,21 +13452,7 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "ansi-regex" "^3.0.0"
 
-"strip-ansi@^5.0.0", "strip-ansi@^5.1.0":
-  "integrity" "sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA=="
-  "resolved" "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-5.2.0.tgz"
-  "version" "5.2.0"
-  dependencies:
-    "ansi-regex" "^4.1.0"
-
-"strip-ansi@^5.1.0", "strip-ansi@^5.2.0":
-  "integrity" "sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA=="
-  "resolved" "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-5.2.0.tgz"
-  "version" "5.2.0"
-  dependencies:
-    "ansi-regex" "^4.1.0"
-
-"strip-ansi@^5.1.0", "strip-ansi@^5.2.0":
+"strip-ansi@^5.0.0", "strip-ansi@^5.1.0", "strip-ansi@^5.2.0":
   "integrity" "sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA=="
   "resolved" "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-5.2.0.tgz"
   "version" "5.2.0"
@@ -13989,15 +13504,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "unicode-length" "^1.0.0"
   optionalDependencies:
     "readable-stream" "^2.1.5"
-
-"tap-parser@^10.0.0", "tap-parser@^10.0.1":
-  "integrity" "sha512-qdT15H0DoJIi7zOqVXDn9X0gSM68JjNy1w3VemwTJlDnETjbi6SutnqmBfjDJAwkFS79NJ97gZKqie00ZCGmzg=="
-  "resolved" "https://registry.yarnpkg.com/tap-parser/-/tap-parser-10.0.1.tgz"
-  "version" "10.0.1"
-  dependencies:
-    "events-to-array" "^1.0.1"
-    "minipass" "^3.0.0"
-    "tap-yaml" "^1.0.0"
 
 "tap-parser@^10.0.0", "tap-parser@^10.0.1":
   "integrity" "sha512-qdT15H0DoJIi7zOqVXDn9X0gSM68JjNy1w3VemwTJlDnETjbi6SutnqmBfjDJAwkFS79NJ97gZKqie00ZCGmzg=="
@@ -14103,22 +13609,12 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   "resolved" "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz"
   "version" "0.14.5"
 
-"tweetnacl@^0.14.3", "tweetnacl@~0.14.0":
-  "integrity" "sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q="
-  "resolved" "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz"
-  "version" "0.14.5"
-
 "typedarray-to-buffer@^3.1.5":
   "integrity" "sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q=="
   "resolved" "https://registry.yarnpkg.com/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz"
   "version" "3.1.5"
   dependencies:
     "is-typedarray" "^1.0.0"
-
-"typescript@^3.6.3", "typescript@>=2.0":
-  "integrity" "sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ=="
-  "resolved" "https://registry.yarnpkg.com/typescript/-/typescript-3.7.2.tgz"
-  "version" "3.7.2"
 
 "typescript@^3.6.3", "typescript@>=2.0":
   "integrity" "sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ=="
@@ -14243,15 +13739,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "string-width" "^3.0.0"
     "strip-ansi" "^5.0.0"
 
-"wrap-ansi@^5.0.0", "wrap-ansi@^5.1.0":
-  "integrity" "sha512-QC1/iN/2/RPVJ5jYK8BGttj5z83LmSKmvbvrXPNCLZSEb32KKVDJDl/MOt2N01qU2H/FkzEa9PKto1BqDjtd7Q=="
-  "resolved" "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-5.1.0.tgz"
-  "version" "5.1.0"
-  dependencies:
-    "ansi-styles" "^3.2.0"
-    "string-width" "^3.0.0"
-    "strip-ansi" "^5.0.0"
-
 "wrappy@1":
   "integrity" "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
   "resolved" "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz"
@@ -14298,25 +13785,10 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "@babel/runtime" "^7.4.5"
 
-"yaml@^1.5.0", "yaml@^1.6.0":
-  "integrity" "sha512-iZfse3lwrJRoSlfs/9KQ9iIXxs9++RvBFVzAqbbBiFT+giYtyanevreF9r61ZTbGMgWQBxAua3FzJiniiJXWWw=="
-  "resolved" "https://registry.yarnpkg.com/yaml/-/yaml-1.6.0.tgz"
-  "version" "1.6.0"
-  dependencies:
-    "@babel/runtime" "^7.4.5"
-
 "yapool@^1.0.0":
   "integrity" "sha1-9pPymjFbUNmp2iZGp6ZkXJaYW2o="
   "resolved" "https://registry.yarnpkg.com/yapool/-/yapool-1.0.0.tgz"
   "version" "1.0.0"
-
-"yargs-parser@^13.0.0", "yargs-parser@^13.1.0":
-  "integrity" "sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ=="
-  "resolved" "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-13.1.1.tgz"
-  "version" "13.1.1"
-  dependencies:
-    "camelcase" "^5.0.0"
-    "decamelize" "^1.2.0"
 
 "yargs-parser@^13.0.0", "yargs-parser@^13.1.0":
   "integrity" "sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ=="

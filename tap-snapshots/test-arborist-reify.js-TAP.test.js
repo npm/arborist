@@ -28452,13 +28452,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
     "tree": <*ref_1>,
     "type": "package-lock.json",
     "yarnLock": YarnLock {
-      "current": YarnLockEntry {
-        "dependencies": null,
-        "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
-        "optionalDependencies": null,
-        "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
-        "version": "1.0.2",
-      },
+      "current": null,
       "entries": Map {
         "abbrev@^1.1.1" => YarnLockEntry {
           "dependencies": null,

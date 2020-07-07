@@ -137,3 +137,28 @@ t.test('prune with lockfile omit dev', async t => {
     'should remove all deps from reified tree'
   )
 })
+
+t.test('prune omit dev with bins', async t => {
+  const fs = require('fs')
+  const { promisify } = require('util')
+  const readdir = promisify(fs.readdir)
+
+  const path = fixture(t, 'prune-dev-bins')
+  const tree = await pruneTree(path, { omit: ['dev'] })
+  const dirs = await readdir(path + '/node_modules')
+
+  // bindirs are never removed
+  // they should remain after prune
+  t.same(dirs, ['.bin', '.package-lock.json'], 'should keep bin dir')
+
+  const devDep = tree.children.get('yes')
+  t.notOk(devDep, 'all listed dev deps pruned from tree')
+})
+
+t.test('prune do not omit duplicated dependecy in prod and dev', async t => {
+  const path = fixture(t, 'prune-dev-dep-duplicate')
+  const tree = await pruneTree(path, { omit: ['dev'] })
+
+  const dep = tree.children.get('once')
+  t.ok(dep, 'dep should exist')
+})

@@ -11,7 +11,7 @@
     "cacache": "^15.0.3",
     "common-ancestor-path": "^1.0.1",
     "json-stringify-nice": "^1.1.1",
-    "mkdirp-infer-owner": "^1.0.2",
+    "mkdirp-infer-owner": "^2.0.0",
     "npm-install-checks": "^4.0.0",
     "npm-package-arg": "^8.0.0",
     "npm-pick-manifest": "^6.1.0",

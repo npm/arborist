@@ -1265,3 +1265,11 @@ t.test('node.pkgid', t => {
 
   t.end()
 })
+
+t.test('node.version', t => {
+  const n = new Node({ path: '/some/path' })
+  t.equal(n.version, '')
+  n.package.version = '1.2.3'
+  t.equal(n.version, '1.2.3')
+  t.end()
+})

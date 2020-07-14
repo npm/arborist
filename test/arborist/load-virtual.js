@@ -117,6 +117,7 @@ t.test('load from cwd', t => {
 t.test('loading without a package-lock fails', t =>
   t.rejects(loadVirtual(badfixture), {
     message: 'loadVirtual requires existing shrinkwrap file',
+    code: 'ENOLOCK',
   }))
 
 t.test('load from npm-shrinkwrap.json', t => {

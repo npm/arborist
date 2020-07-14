@@ -1243,3 +1243,25 @@ t.test('node.satisfies(requested)', t => {
   t.equal(node.satisfies('github:org/foo'), true)
   t.end()
 })
+
+t.test('node.pkgid', t => {
+  const parent = new Node({ path: '/some/path' })
+  t.equal(parent.pkgid, 'path@')
+
+  parent.package = { name: 'parent' }
+  t.equal(parent.pkgid, 'parent@')
+
+  parent.package = { name: 'parent', version: '1.2.3' }
+  t.equal(parent.pkgid, 'parent@1.2.3')
+
+  const n = new Node({ path: '/some/path/node_modules/foo', parent })
+  t.equal(n.pkgid, 'foo@')
+
+  n.package = { name: 'foo', version: '1.2.3' }
+  t.equal(n.pkgid, 'foo@1.2.3')
+
+  n.package = { name: 'bar', version: '1.2.3' }
+  t.equal(n.pkgid, 'foo@npm:bar@1.2.3')
+
+  t.end()
+})

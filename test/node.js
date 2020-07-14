@@ -1221,3 +1221,25 @@ t.test('detect that two nodes are the same thing', async t => {
     check(a, b, false, 'name/version mismatch, if no resolved/integrity')
   }
 })
+
+t.test('node.satisfies(requested)', t => {
+  const node = new Node({
+    path: '/some/path/to/foo',
+    resolved: 'https://registry.npmjs.org/foo/-/foo-1.2.3.tgz',
+    pkg: {
+      name: 'foo',
+      version: '1.2.3'
+    },
+  })
+  t.equal(node.satisfies('foo'), true)
+  t.equal(node.satisfies('foo@1'), true)
+  t.equal(node.satisfies('https://registry.npmjs.org/foo/-/foo-1.2.3.tgz'), true)
+  t.equal(node.satisfies('foo@2'), false)
+  t.equal(node.satisfies('bar'), false)
+  t.equal(node.satisfies('https://registry.npmjs.org/foo/-/foo-1.2.5.tgz'), false)
+  node.resolved = 'git+ssh://git@github.com/org/foo.git#decafbad1100facefaceface'
+  t.equal(node.satisfies('https://registry.npmjs.org/foo/-/foo-1.2.3.tgz'), false)
+  t.equal(node.satisfies('org/foo'), true)
+  t.equal(node.satisfies('github:org/foo'), true)
+  t.end()
+})

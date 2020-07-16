@@ -299,6 +299,13 @@ t.test('convenience type getter flags', async t => {
 
   t.equal(new Edge({
     from: a,
+    type: 'prod',
+    name: 'foo',
+    spec: '*',
+  }).prod, true, 'prod convenience getter')
+
+  t.equal(new Edge({
+    from: a,
     type: 'dev',
     name: 'foo',
     spec: '*',

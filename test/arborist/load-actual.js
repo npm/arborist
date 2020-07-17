@@ -1,7 +1,7 @@
 const t = require('tap')
 const { format } = require('tcompare')
-const requireInject = require('require-inject')
 const Arborist = require('../../lib/arborist')
+
 const { resolve, dirname, relative } = require('path')
 const { realpathSync } = require('fs')
 const Node = require('../../lib/node.js')

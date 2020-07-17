@@ -51,6 +51,7 @@
   ],
   "main": "lib/index.js",
   "tap": {
+    "node-arg": ["--unhandled-rejections=strict"],
     "100": true,
     "coverage-map": "map.js",
     "esm": false,

@@ -219,6 +219,14 @@ exports[`test/yarn-lock.js TAP load a yarn lock from an actual tree links-all-ov
     "b" ""
 
 "b@":
+  "version" "1.2.3"
+  dependencies:
+    "c" ""
+
+"c@":
+  "version" "1.2.3"
+  dependencies:
+    "d" ""
 
 "d@":
   "version" "1.2.3"

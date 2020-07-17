@@ -3417,11 +3417,18 @@ Node {
                           "type": "prod",
                         },
                       },
-                      "extraneous": true,
                       "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                       "name": "d",
                       "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                       "top": "links-all-over",
+                    },
+                  },
+                  "edgesIn": Set {
+                    Edge {
+                      "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
+                      "name": "c",
+                      "spec": "",
+                      "type": "prod",
                     },
                   },
                   "edgesOut": Map {
@@ -3432,7 +3439,6 @@ Node {
                       "type": "prod",
                     },
                   },
-                  "extraneous": true,
                   "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
                   "name": "c",
                   "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
@@ -3447,12 +3453,14 @@ Node {
                   "type": "prod",
                 },
               },
-              "errors": Array [
-                Object {
-                  "code": "EJSONPARSE",
-                  "path": "../fixtures/links-all-over/node_modules/nest/node_modules/a/node_modules/b/package.json",
+              "edgesOut": Map {
+                "c" => Edge {
+                  "name": "c",
+                  "spec": "",
+                  "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
+                  "type": "prod",
                 },
-              ],
+              },
               "location": "node_modules/nest/node_modules/a/node_modules/b",
               "name": "b",
               "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
@@ -3618,20 +3626,22 @@ Node {
                             "version": "1.2.3",
                           },
                         },
-                        "extraneous": true,
                         "requires": Object {
                           "deep": "",
                         },
                         "version": "1.2.3",
                       },
                     },
-                    "extraneous": true,
                     "requires": Object {
                       "d": "",
                     },
                     "version": "1.2.3",
                   },
                 },
+                "requires": Object {
+                  "c": "",
+                },
+                "version": "1.2.3",
               },
             },
             "requires": Object {
@@ -3690,19 +3700,22 @@ Node {
         },
         "version": "1.2.3",
       },
-      "node_modules/nest/node_modules/a/node_modules/b": Object {},
+      "node_modules/nest/node_modules/a/node_modules/b": Object {
+        "dependencies": Object {
+          "c": "",
+        },
+        "version": "1.2.3",
+      },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c": Object {
         "dependencies": Object {
           "d": "",
         },
-        "extraneous": true,
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d": Object {
         "dependencies": Object {
           "deep": "",
         },
-        "extraneous": true,
         "version": "1.2.3",
       },
       "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep": Object {

@@ -2722,20 +2722,22 @@ Object {
                           "version": "1.2.3",
                         },
                       },
-                      "extraneous": true,
                       "requires": Object {
                         "deep": "",
                       },
                       "version": "1.2.3",
                     },
                   },
-                  "extraneous": true,
                   "requires": Object {
                     "d": "",
                   },
                   "version": "1.2.3",
                 },
               },
+              "requires": Object {
+                "c": "",
+              },
+              "version": "1.2.3",
             },
           },
           "requires": Object {
@@ -2794,19 +2796,22 @@ Object {
       },
       "version": "1.2.3",
     },
-    "node_modules/nest/node_modules/a/node_modules/b": Object {},
+    "node_modules/nest/node_modules/a/node_modules/b": Object {
+      "dependencies": Object {
+        "c": "",
+      },
+      "version": "1.2.3",
+    },
     "node_modules/nest/node_modules/a/node_modules/b/node_modules/c": Object {
       "dependencies": Object {
         "d": "",
       },
-      "extraneous": true,
       "version": "1.2.3",
     },
     "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d": Object {
       "dependencies": Object {
         "deep": "",
       },
-      "extraneous": true,
       "version": "1.2.3",
     },
     "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep": Object {

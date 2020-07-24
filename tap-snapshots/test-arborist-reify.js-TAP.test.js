@@ -1532,6 +1532,14 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP modules bundled by the root should be installed > must match snapshot 1`] = `
+{
+  "name": "child",
+  "version": "1.2.3"
+}
+
+`
+
 exports[`test/arborist/reify.js TAP multiple bundles at the same level > must match snapshot 1`] = `
 Node {
   "children": Map {

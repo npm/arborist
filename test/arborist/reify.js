@@ -1022,3 +1022,9 @@ t.test('add a dep present in the tree, with v1 shrinkwrap', async t => {
   const tree = await reify(path, { add: ['wrappy'] })
   t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
 })
+
+t.test('modules bundled by the root should be installed', async t => {
+  const path = fixture(t, 'root-bundler')
+  const tree = await reify(path)
+  t.matchSnapshot(fs.readFileSync(path + '/node_modules/child/package.json', 'utf8'))
+})

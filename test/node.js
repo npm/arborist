@@ -562,12 +562,15 @@ t.test('bundled dependencies logic', t => {
   })
 
   t.equal(a.inBundle, true, 'bundled dep is bundled')
+  t.equal(a.inDepBundle, false, 'bundled dep is bundled by root')
   t.equal(aa.inBundle, true, 'child of bundled dep is bundled')
+  t.equal(aa.inDepBundle, false, 'child of dep bundled by root is not dep bundled')
   t.equal(b.inBundle, true, 'dep of bundled dep at peer level is bundled')
   t.equal(c.inBundle, true, 'metadep of bundled dep at peer level is bundled')
   t.equal(d.inBundle, true, 'deduped metadep of bundled metadep is bundled')
   t.equal(e.inBundle, false, 'deduped dep of bundled dep of metadep is not bundled')
   t.equal(fb.inBundle, true, 'bundled dep of dep is bundled')
+  t.equal(fb.inDepBundle, true, 'bundled dep of dep is dep bundled (not by root)')
   t.end()
 })
 

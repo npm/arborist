@@ -5,6 +5,7 @@ const calcDepFlags = require('../lib/calc-dep-flags.js')
 const mutateFS = require('mutate-fs')
 const fs = require('fs')
 const Arborist = require('../lib/arborist/index.js')
+const rimraf = require('rimraf')
 
 const t = require('tap')
 
@@ -19,6 +20,10 @@ const emptyFixture = resolve(__dirname, 'fixtures/empty')
 const depTypesFixture = resolve(__dirname, 'fixtures/dev-deps')
 const badJsonFixture = resolve(__dirname, 'fixtures/testing-peer-deps-bad-sw')
 const hiddenLockfileFixture = resolve(__dirname, 'fixtures/hidden-lockfile')
+const hidden = 'node_modules/.package-lock.json'
+
+// start out with the file being fresh
+fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
 
 t.test('shrinkwrap key order', async t => t.matchSnapshot(Shrinkwrap.keyOrder))
 
@@ -634,7 +639,6 @@ t.test('handle missing dependencies object without borking', t => {
 })
 
 t.test('load a hidden lockfile', t => {
-  const hidden = 'node_modules/.package-lock.json'
   // ensure the hidden lockfile is newer than the contents
   // otherwise this can fail on a fresh checkout.
   fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
@@ -673,12 +677,10 @@ t.test('load a fresh hidden lockfile', t => Shrinkwrap.reset({
     packages: {},
   })
   t.equal(sw.loadedFromDisk, true)
-  const hidden = 'node_modules/.package-lock.json'
   t.equal(sw.filename, resolve(hiddenLockfileFixture, hidden))
 }))
 
 t.test('hidden lockfile only used if up to date', async t => {
-  const hidden = 'node_modules/.package-lock.json'
   const lockdata = require(resolve(hiddenLockfileFixture, hidden))
   const path = t.testdir({
     node_modules: {
@@ -693,7 +695,7 @@ t.test('hidden lockfile only used if up to date', async t => {
   fs.utimesSync(resolve(path, hidden), new Date(), new Date())
   {
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
-    t.equal(s.loadedFromDisk, true)
+    t.equal(s.loadedFromDisk, true, 'loading from fresh lockfile')
   }
   // make the node_modules dir have a newer mtime by adding an entry
   // and setting the hidden lockfile back in time
@@ -702,15 +704,24 @@ t.test('hidden lockfile only used if up to date', async t => {
     const time = new Date('1999-12-31T23:59:59Z')
     fs.utimesSync(resolve(path, hidden), time, time)
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
-    t.equal(s.loadedFromDisk, false)
+    t.equal(s.loadedFromDisk, false, 'did not load from disk, updated nm')
     t.equal(s.loadingError, 'out of date, updated: node_modules')
   }
   // make the lockfile newer, but that new entry is still a problem
   {
     fs.utimesSync(resolve(path, hidden), new Date(), new Date())
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
-    t.equal(s.loadedFromDisk, false)
+    t.equal(s.loadedFromDisk, false, 'did not load, new entry')
     t.equal(s.loadingError, 'missing from lockfile: node_modules/xyz')
+  }
+  // make the lockfile newer, but missing a folder from node_modules
+  {
+    rimraf.sync(resolve(path, 'node_modules/abbrev'))
+    rimraf.sync(resolve(path, 'node_modules/xyz'))
+    fs.utimesSync(resolve(path, hidden), new Date(), new Date())
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, false, 'did not load, missing entry')
+    t.equal(s.loadingError, 'missing from node_modules: node_modules/abbrev')
   }
 })
 

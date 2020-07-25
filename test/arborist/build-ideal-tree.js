@@ -1150,3 +1150,24 @@ t.test('workspaces', t => {
 t.test('pathologically nested dependency cycle', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'pathological-dep-nesting-cycle'))))
+
+t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  const path = t.testdir({
+    global: {}
+  })
+  const fixturedir = resolve(fixtures, 'root-bundler')
+  process.chdir(fixturedir)
+  const arb = new Arborist({
+    global: true,
+    path: resolve(path, 'global'),
+  })
+  return arb.buildIdealTree({
+    add: ['child-1.2.3.tgz'],
+    global: true,
+  }).then(tree => {
+    const resolved = `file:${resolve(fixturedir, 'child-1.2.3.tgz')}`
+    t.equal(tree.children.get('child').resolved, resolved)
+  })
+})

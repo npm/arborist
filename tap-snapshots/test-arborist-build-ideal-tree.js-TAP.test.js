@@ -1256,7 +1256,7 @@ Node {
         Edge {
           "from": "",
           "name": "@isaacs/peer-dep-cycle-b",
-          "spec": "2.x",
+          "spec": "2.0.0",
           "type": "prod",
         },
         Edge {
@@ -1304,7 +1304,7 @@ Node {
   "edgesOut": Map {
     "@isaacs/peer-dep-cycle-b" => Edge {
       "name": "@isaacs/peer-dep-cycle-b",
-      "spec": "2.x",
+      "spec": "2.0.0",
       "to": "node_modules/@isaacs/peer-dep-cycle-b",
       "type": "prod",
     },
@@ -1670,7 +1670,7 @@ Node {
         Edge {
           "from": "",
           "name": "@isaacs/peer-dep-cycle-b",
-          "spec": "2.x",
+          "spec": "2.0.0",
           "type": "prod",
         },
         Edge {
@@ -1718,7 +1718,7 @@ Node {
   "edgesOut": Map {
     "@isaacs/peer-dep-cycle-b" => Edge {
       "name": "@isaacs/peer-dep-cycle-b",
-      "spec": "2.x",
+      "spec": "2.0.0",
       "to": "node_modules/@isaacs/peer-dep-cycle-b",
       "type": "prod",
     },

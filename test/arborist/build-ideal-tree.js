@@ -190,7 +190,8 @@ t.test('cyclical peer deps', t => {
         legacyPeerDeps: true,
       })))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: [ '@isaacs/peer-dep-cycle-b@2.x' ],
+        // use @latest rather than @2.x to exercise the 'explicit tag' path
+        add: [ '@isaacs/peer-dep-cycle-b@latest' ],
         rm: [ '@isaacs/peer-dep-cycle-a' ],
       }), 'can add b@2 if we remove a@1 dep'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {

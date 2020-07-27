@@ -1234,9 +1234,7 @@ Object {
 exports[`test/shrinkwrap.js TAP loadActual tests bundle > shrinkwrap data 1`] = `
 Object {
   "dependencies": Object {
-    "dep": Object {
-      "bundled": true,
-    },
+    "dep": Object {},
   },
   "lockfileVersion": 2,
   "name": "bundle",
@@ -3906,7 +3904,6 @@ Object {
       "version": "7.5.0",
     },
     "@babel/runtime": Object {
-      "bundled": true,
       "integrity": "sha512-9M29wrrP7//JBGX70+IrDuD1w4iOYhUGpJNMQJVNAXue+cFeFlMTqBECouIziXPUphlgrfjcfiEpGX4t0WGK4g==",
       "requires": Object {
         "regenerator-runtime": "^0.13.2",
@@ -3968,13 +3965,11 @@ Object {
       "version": "7.5.0",
     },
     "@types/prop-types": Object {
-      "bundled": true,
       "integrity": "sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==",
       "resolved": "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.1.tgz",
       "version": "15.7.1",
     },
     "@types/react": Object {
-      "bundled": true,
       "integrity": "sha512-abkEOIeljniUN9qB5onp++g0EY38h7atnDHxwKUFz1r3VH1+yG1OKi2sNPTyObL40goBmfKFpdii2lEzwLX1cA==",
       "requires": Object {
         "@types/prop-types": "*",
@@ -3995,19 +3990,16 @@ Object {
       "version": "6.10.1",
     },
     "ansi-escapes": Object {
-      "bundled": true,
       "integrity": "sha512-cBhpre4ma+U0T1oM5fXg7Dy1Jw7zzwv7lt/GoCpr+hDQJoYnKVPLL4dCvSEFMmQurOQvSrwT7SL/DAlhBI97RQ==",
       "resolved": "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.2.0.tgz",
       "version": "3.2.0",
     },
     "ansi-regex": Object {
-      "bundled": true,
       "integrity": "sha1-w7M6te42DYbg5ijwRorn7yfWVN8=",
       "resolved": "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz",
       "version": "2.1.1",
     },
     "ansi-styles": Object {
-      "bundled": true,
       "integrity": "sha512-VT0ZI6kZRdTh8YyJw3SMbYm/u+NqfsAxEpWO0Pf9sq8/e94WxxOpPKx9FR1FlyCtOVDNOQ+8ntlqFxiRc+r5qA==",
       "requires": Object {
         "color-convert": "^1.9.0",
@@ -4016,7 +4008,6 @@ Object {
       "version": "3.2.1",
     },
     "ansicolors": Object {
-      "bundled": true,
       "integrity": "sha1-ZlWX3oap/+Oqm/vmyuXG6kJrSXk=",
       "resolved": "https://registry.yarnpkg.com/ansicolors/-/ansicolors-0.3.2.tgz",
       "version": "0.3.2",
@@ -4057,7 +4048,6 @@ Object {
       "version": "1.0.10",
     },
     "arrify": Object {
-      "bundled": true,
       "integrity": "sha1-iYUI2iIm84DfkEcoRWhJwVAaSw0=",
       "resolved": "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz",
       "version": "1.0.1",
@@ -4076,7 +4066,6 @@ Object {
       "version": "1.0.0",
     },
     "astral-regex": Object {
-      "bundled": true,
       "integrity": "sha512-+Ryf6g3BKoRc7jfp7ad8tM4TtMiaWvbF/1/sQcZPkkS7ag3D5nMBCe2UfOTONtAkaG0tO0ij3C5Lwmf1EiyjHg==",
       "resolved": "https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz",
       "version": "1.0.0",
@@ -4106,7 +4095,6 @@ Object {
       "version": "0.4.0",
     },
     "auto-bind": Object {
-      "bundled": true,
       "integrity": "sha512-qZuFvkes1eh9lB2mg8/HG18C+5GIO51r+RrCSst/lh+i5B1CtVlkhTE488M805Nr3dKl0sM/pIFKSKUIlg3zUg==",
       "requires": Object {
         "@types/react": "^16.8.12",
@@ -4125,16 +4113,13 @@ Object {
       "version": "1.8.0",
     },
     "babel-code-frame": Object {
-      "bundled": true,
       "dependencies": Object {
         "ansi-styles": Object {
-          "bundled": true,
           "integrity": "sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4=",
           "resolved": "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz",
           "version": "2.2.1",
         },
         "chalk": Object {
-          "bundled": true,
           "integrity": "sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=",
           "requires": Object {
             "ansi-styles": "^2.2.1",
@@ -4147,13 +4132,11 @@ Object {
           "version": "1.1.3",
         },
         "js-tokens": Object {
-          "bundled": true,
           "integrity": "sha1-mGbfOVECEw449/mWvOtlRDIJwls=",
           "resolved": "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz",
           "version": "3.0.2",
         },
         "supports-color": Object {
-          "bundled": true,
           "integrity": "sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=",
           "resolved": "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz",
           "version": "2.0.0",
@@ -4169,10 +4152,8 @@ Object {
       "version": "6.26.0",
     },
     "babel-core": Object {
-      "bundled": true,
       "dependencies": Object {
         "source-map": Object {
-          "bundled": true,
           "integrity": "sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=",
           "resolved": "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz",
           "version": "0.5.7",
@@ -4204,10 +4185,8 @@ Object {
       "version": "6.26.3",
     },
     "babel-generator": Object {
-      "bundled": true,
       "dependencies": Object {
         "source-map": Object {
-          "bundled": true,
           "integrity": "sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=",
           "resolved": "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz",
           "version": "0.5.7",
@@ -4228,7 +4207,6 @@ Object {
       "version": "6.26.1",
     },
     "babel-helper-builder-react-jsx": Object {
-      "bundled": true,
       "integrity": "sha1-Of+DE7dci2Xc7/HzHTg+D/KkCKA=",
       "requires": Object {
         "babel-runtime": "^6.26.0",
@@ -4239,7 +4217,6 @@ Object {
       "version": "6.26.0",
     },
     "babel-helpers": Object {
-      "bundled": true,
       "integrity": "sha1-NHHenK7DiOXIUOWX5Yom3fN2ArI=",
       "requires": Object {
         "babel-runtime": "^6.22.0",
@@ -4249,7 +4226,6 @@ Object {
       "version": "6.24.1",
     },
     "babel-messages": Object {
-      "bundled": true,
       "integrity": "sha1-8830cDhYA1sqKVHG7F7fbGLyYw4=",
       "requires": Object {
         "babel-runtime": "^6.22.0",
@@ -4258,19 +4234,16 @@ Object {
       "version": "6.23.0",
     },
     "babel-plugin-syntax-jsx": Object {
-      "bundled": true,
       "integrity": "sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=",
       "resolved": "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz",
       "version": "6.18.0",
     },
     "babel-plugin-syntax-object-rest-spread": Object {
-      "bundled": true,
       "integrity": "sha1-/WU28rzhODb/o6VFjEkDpZe7O/U=",
       "resolved": "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz",
       "version": "6.13.0",
     },
     "babel-plugin-transform-es2015-destructuring": Object {
-      "bundled": true,
       "integrity": "sha1-mXux8auWf2gtKwh2/jWNYOdlxW0=",
       "requires": Object {
         "babel-runtime": "^6.22.0",
@@ -4279,7 +4252,6 @@ Object {
       "version": "6.23.0",
     },
     "babel-plugin-transform-object-rest-spread": Object {
-      "bundled": true,
       "integrity": "sha1-DzZpLVD+9rfi1LOsFHgTepY7ewY=",
       "requires": Object {
         "babel-plugin-syntax-object-rest-spread": "^6.8.0",
@@ -4289,7 +4261,6 @@ Object {
       "version": "6.26.0",
     },
     "babel-plugin-transform-react-jsx": Object {
-      "bundled": true,
       "integrity": "sha1-hAoCjn30YN/DotKfDA2R9jduZqM=",
       "requires": Object {
         "babel-helper-builder-react-jsx": "^6.24.1",
@@ -4300,16 +4271,13 @@ Object {
       "version": "6.24.1",
     },
     "babel-register": Object {
-      "bundled": true,
       "dependencies": Object {
         "source-map": Object {
-          "bundled": true,
           "integrity": "sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=",
           "resolved": "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz",
           "version": "0.5.7",
         },
         "source-map-support": Object {
-          "bundled": true,
           "integrity": "sha512-try0/JqxPLF9nOjvSta7tVondkP5dwgyLDjVoyMDlmjugT2lRZ1OfsrYTkCd2hkDnJTKRbO/Rl3orm8vlsUzbA==",
           "requires": Object {
             "source-map": "^0.5.6",
@@ -4332,10 +4300,8 @@ Object {
       "version": "6.26.0",
     },
     "babel-runtime": Object {
-      "bundled": true,
       "dependencies": Object {
         "regenerator-runtime": Object {
-          "bundled": true,
           "integrity": "sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==",
           "resolved": "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz",
           "version": "0.11.1",
@@ -4350,7 +4316,6 @@ Object {
       "version": "6.26.0",
     },
     "babel-template": Object {
-      "bundled": true,
       "integrity": "sha1-3gPi0WOWsGn0bdn/+FIfsaDjXgI=",
       "requires": Object {
         "babel-runtime": "^6.26.0",
@@ -4363,10 +4328,8 @@ Object {
       "version": "6.26.0",
     },
     "babel-traverse": Object {
-      "bundled": true,
       "dependencies": Object {
         "globals": Object {
-          "bundled": true,
           "integrity": "sha512-S0nG3CLEQiY/ILxqtztTWH/3iRRdyBLw6KMDxnKMchrtbj2OFmehVh0WUCfW3DUrIgx/qFrJPICrq4Z4sTR9UQ==",
           "resolved": "https://registry.yarnpkg.com/globals/-/globals-9.18.0.tgz",
           "version": "9.18.0",
@@ -4388,7 +4351,6 @@ Object {
       "version": "6.26.0",
     },
     "babel-types": Object {
-      "bundled": true,
       "integrity": "sha1-o7Bz+Uq0nrb6Vc1lInozQ4BjJJc=",
       "requires": Object {
         "babel-runtime": "^6.26.0",
@@ -4400,13 +4362,11 @@ Object {
       "version": "6.26.0",
     },
     "babylon": Object {
-      "bundled": true,
       "integrity": "sha512-q/UEjfGJ2Cm3oKV71DJz9d25TPnq5rhBVL2Q4fA5wcC3jcrdn7+SssEybFIxwAvvP+YCsCYNKughoF33GxgycQ==",
       "resolved": "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz",
       "version": "6.18.0",
     },
     "balanced-match": Object {
-      "bundled": true,
       "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
       "resolved": "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz",
       "version": "1.0.0",
@@ -4430,7 +4390,6 @@ Object {
       "version": "2.0.0",
     },
     "brace-expansion": Object {
-      "bundled": true,
       "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
       "requires": Object {
         "balanced-match": "^1.0.0",
@@ -4481,7 +4440,6 @@ Object {
       "version": "3.0.2",
     },
     "caller-callsite": Object {
-      "bundled": true,
       "integrity": "sha1-hH4PzgoiN1CpoCfFSzNzGtMVQTQ=",
       "requires": Object {
         "callsites": "^2.0.0",
@@ -4490,7 +4448,6 @@ Object {
       "version": "2.0.0",
     },
     "caller-path": Object {
-      "bundled": true,
       "integrity": "sha1-Ro+DBE42mrIBD6xfBs7uFbsssfQ=",
       "requires": Object {
         "caller-callsite": "^2.0.0",
@@ -4499,7 +4456,6 @@ Object {
       "version": "2.0.0",
     },
     "callsites": Object {
-      "bundled": true,
       "integrity": "sha1-BuuE8A7qQT2oav/vrL/7Ngk7PFA=",
       "resolved": "https://registry.yarnpkg.com/callsites/-/callsites-2.0.0.tgz",
       "version": "2.0.0",
@@ -4510,7 +4466,6 @@ Object {
       "version": "5.3.1",
     },
     "cardinal": Object {
-      "bundled": true,
       "integrity": "sha1-fMEFXYItISlU0HsIXeolHMe8VQU=",
       "requires": Object {
         "ansicolors": "~0.3.2",
@@ -4525,7 +4480,6 @@ Object {
       "version": "0.12.0",
     },
     "chalk": Object {
-      "bundled": true,
       "integrity": "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==",
       "requires": Object {
         "ansi-styles": "^3.2.1",
@@ -4551,13 +4505,11 @@ Object {
       "version": "3.3.0",
     },
     "ci-info": Object {
-      "bundled": true,
       "integrity": "sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==",
       "resolved": "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz",
       "version": "2.0.0",
     },
     "cli-cursor": Object {
-      "bundled": true,
       "integrity": "sha1-s12sN2R5+sw+lHR9QdDQ9SOP/LU=",
       "requires": Object {
         "restore-cursor": "^2.0.0",
@@ -4566,7 +4518,6 @@ Object {
       "version": "2.1.0",
     },
     "cli-truncate": Object {
-      "bundled": true,
       "integrity": "sha512-bAtZo0u82gCfaAGfSNxUdTI9mNyza7D8w4CVCcaOsy7sgwDzvx6ekr6cuWJqY3UGzgnQ1+4wgENup5eIhgxEYA==",
       "requires": Object {
         "slice-ansi": "^1.0.0",
@@ -4648,7 +4599,6 @@ Object {
       "version": "1.1.0",
     },
     "color-convert": Object {
-      "bundled": true,
       "integrity": "sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==",
       "requires": Object {
         "color-name": "1.1.3",
@@ -4657,7 +4607,6 @@ Object {
       "version": "1.9.3",
     },
     "color-name": Object {
-      "bundled": true,
       "integrity": "sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=",
       "resolved": "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz",
       "version": "1.1.3",
@@ -4687,13 +4636,11 @@ Object {
       "version": "1.0.1",
     },
     "concat-map": Object {
-      "bundled": true,
       "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
       "resolved": "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz",
       "version": "0.0.1",
     },
     "convert-source-map": Object {
-      "bundled": true,
       "integrity": "sha512-eFu7XigvxdZ1ETfbgPBohgyQ/Z++C0eEhTor0qRwBw9unw+L0/6V8wkSuGgzdThkiS5lSpdptOQPD8Ak40a+7A==",
       "requires": Object {
         "safe-buffer": "~5.1.1",
@@ -4702,7 +4649,6 @@ Object {
       "version": "1.6.0",
     },
     "core-js": Object {
-      "bundled": true,
       "integrity": "sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==",
       "resolved": "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz",
       "version": "2.6.9",
@@ -4779,7 +4725,6 @@ Object {
       "version": "6.0.5",
     },
     "csstype": Object {
-      "bundled": true,
       "integrity": "sha512-RpFbQGUE74iyPgvr46U9t1xoQBM8T4BL8SxrN66Le2xYAPSaDJJKeztV3awugusb3g3G9iL8StmkBBXhcbbXhg==",
       "resolved": "https://registry.yarnpkg.com/csstype/-/csstype-2.6.6.tgz",
       "version": "2.6.6",
@@ -4793,10 +4738,8 @@ Object {
       "version": "1.14.1",
     },
     "debug": Object {
-      "bundled": true,
       "dependencies": Object {
         "ms": Object {
-          "bundled": true,
           "integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=",
           "resolved": "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz",
           "version": "2.0.0",
@@ -4828,7 +4771,6 @@ Object {
       "version": "1.0.0",
     },
     "detect-indent": Object {
-      "bundled": true,
       "integrity": "sha1-920GQ1LN9Docts5hnE7jqUdd4gg=",
       "requires": Object {
         "repeating": "^2.0.0",
@@ -4851,7 +4793,6 @@ Object {
       "version": "0.1.2",
     },
     "emoji-regex": Object {
-      "bundled": true,
       "integrity": "sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==",
       "resolved": "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz",
       "version": "7.0.3",
@@ -4878,7 +4819,6 @@ Object {
       "version": "4.1.1",
     },
     "escape-string-regexp": Object {
-      "bundled": true,
       "integrity": "sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=",
       "resolved": "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
       "version": "1.0.5",
@@ -4889,19 +4829,16 @@ Object {
       "version": "3.2.25",
     },
     "esprima": Object {
-      "bundled": true,
       "integrity": "sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==",
       "resolved": "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz",
       "version": "4.0.1",
     },
     "esutils": Object {
-      "bundled": true,
       "integrity": "sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=",
       "resolved": "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz",
       "version": "2.0.2",
     },
     "events-to-array": Object {
-      "bundled": true,
       "integrity": "sha1-LUH1Y+H+QA7Uli/hpNXGp1Od9/Y=",
       "resolved": "https://registry.yarnpkg.com/events-to-array/-/events-to-array-1.1.2.tgz",
       "version": "1.1.2",
@@ -5133,7 +5070,6 @@ Object {
       "version": "5.1.3",
     },
     "has-ansi": Object {
-      "bundled": true,
       "integrity": "sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=",
       "requires": Object {
         "ansi-regex": "^2.0.0",
@@ -5142,7 +5078,6 @@ Object {
       "version": "2.0.0",
     },
     "has-flag": Object {
-      "bundled": true,
       "integrity": "sha1-tdRU3CGZriJWmfNGfloH87lVuv0=",
       "resolved": "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz",
       "version": "3.0.0",
@@ -5156,7 +5091,6 @@ Object {
       "version": "3.0.0",
     },
     "home-or-tmp": Object {
-      "bundled": true,
       "integrity": "sha1-42w/LSyufXRqhX440Y1fMqeILbg=",
       "requires": Object {
         "os-homedir": "^1.0.0",
@@ -5181,7 +5115,6 @@ Object {
       "version": "1.2.0",
     },
     "import-jsx": Object {
-      "bundled": true,
       "integrity": "sha512-xmrgtiRnAdjIaRzKwsHut54FA8nx59WqN4MpQvPFr/8yD6BamavkmKHrA5dotAlnIiF4uqMzg/lA5yhPdpIXsA==",
       "requires": Object {
         "babel-core": "^6.25.0",
@@ -5214,7 +5147,6 @@ Object {
       "version": "2.0.4",
     },
     "ink": Object {
-      "bundled": true,
       "integrity": "sha512-931rgXHAS3hM++8ygWPOBeHOFwTzHh3pDAVZtiBVOUH6tVvJijym43ODUy22ySo2NwYUFeR/Zj3xuWzBEKMiHw==",
       "requires": Object {
         "@types/react": "^16.8.6",
@@ -5241,7 +5173,6 @@ Object {
       "version": "2.3.0",
     },
     "invariant": Object {
-      "bundled": true,
       "integrity": "sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==",
       "requires": Object {
         "loose-envify": "^1.0.0",
@@ -5268,7 +5199,6 @@ Object {
       "version": "2.1.0",
     },
     "is-ci": Object {
-      "bundled": true,
       "integrity": "sha512-YfJT7rkpQB0updsdHLGWrvhBJfcfzNNawYDNIyQXJz0IViGf75O8EBPKSdvw2rF+LGCsX4FZ8tcr3b19LcZq4w==",
       "requires": Object {
         "ci-info": "^2.0.0",
@@ -5282,7 +5212,6 @@ Object {
       "version": "2.1.1",
     },
     "is-finite": Object {
-      "bundled": true,
       "integrity": "sha1-zGZ3aVYCvlUO8R6LSqYwU0K20Ko=",
       "requires": Object {
         "number-is-nan": "^1.0.0",
@@ -5291,7 +5220,6 @@ Object {
       "version": "1.0.2",
     },
     "is-fullwidth-code-point": Object {
-      "bundled": true,
       "integrity": "sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=",
       "resolved": "https://registry.yarnpkg.com/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
       "version": "2.0.0",
@@ -5458,7 +5386,6 @@ Object {
       "version": "1.4.0",
     },
     "js-tokens": Object {
-      "bundled": true,
       "integrity": "sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==",
       "resolved": "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz",
       "version": "4.0.0",
@@ -5478,7 +5405,6 @@ Object {
       "version": "0.1.1",
     },
     "jsesc": Object {
-      "bundled": true,
       "integrity": "sha1-RsP+yMGJKxKwgz25vHYiF226s0s=",
       "resolved": "https://registry.yarnpkg.com/jsesc/-/jsesc-1.3.0.tgz",
       "version": "1.3.0",
@@ -5504,7 +5430,6 @@ Object {
       "version": "5.0.1",
     },
     "json5": Object {
-      "bundled": true,
       "integrity": "sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE=",
       "resolved": "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz",
       "version": "0.5.1",
@@ -5554,7 +5479,6 @@ Object {
       "version": "3.0.0",
     },
     "lodash": Object {
-      "bundled": true,
       "integrity": "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==",
       "resolved": "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz",
       "version": "4.17.11",
@@ -5565,7 +5489,6 @@ Object {
       "version": "4.4.0",
     },
     "lodash.throttle": Object {
-      "bundled": true,
       "integrity": "sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=",
       "resolved": "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz",
       "version": "4.1.1",
@@ -5576,7 +5499,6 @@ Object {
       "version": "1.2.7",
     },
     "log-update": Object {
-      "bundled": true,
       "integrity": "sha512-KJ6zAPIHWo7Xg1jYror6IUDFJBq1bQ4Bi4wAEp2y/0ScjBBVi/g0thr0sUVhuvuXauWzczt7T2QHghPDNnKBuw==",
       "requires": Object {
         "ansi-escapes": "^3.2.0",
@@ -5587,7 +5509,6 @@ Object {
       "version": "3.2.0",
     },
     "loose-envify": Object {
-      "bundled": true,
       "integrity": "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==",
       "requires": Object {
         "js-tokens": "^3.0.0 || ^4.0.0",
@@ -5679,13 +5600,11 @@ Object {
       "version": "2.1.24",
     },
     "mimic-fn": Object {
-      "bundled": true,
       "integrity": "sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==",
       "resolved": "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz",
       "version": "1.2.0",
     },
     "minimatch": Object {
-      "bundled": true,
       "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
       "requires": Object {
         "brace-expansion": "^1.1.7",
@@ -5694,13 +5613,11 @@ Object {
       "version": "3.0.4",
     },
     "minimist": Object {
-      "bundled": true,
       "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
       "resolved": "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz",
       "version": "0.0.8",
     },
     "minipass": Object {
-      "bundled": true,
       "integrity": "sha512-UFqVihv6PQgwj8/yTGvl9kPz7xIAY+R5z6XYjRInD3Gk3qx6QGSD6zEcpeG4Dy/lQnv1J6zv8ejV90hyYIKf3w==",
       "requires": Object {
         "yallist": "^4.0.0",
@@ -5709,7 +5626,6 @@ Object {
       "version": "3.1.1",
     },
     "mkdirp": Object {
-      "bundled": true,
       "integrity": "sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=",
       "requires": Object {
         "minimist": "0.0.8",
@@ -5718,7 +5634,6 @@ Object {
       "version": "0.5.1",
     },
     "ms": Object {
-      "bundled": true,
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==",
       "resolved": "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz",
       "version": "2.1.2",
@@ -5768,7 +5683,6 @@ Object {
       "version": "2.0.2",
     },
     "number-is-nan": Object {
-      "bundled": true,
       "integrity": "sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=",
       "resolved": "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz",
       "version": "1.0.1",
@@ -5826,7 +5740,6 @@ Object {
       "version": "0.9.0",
     },
     "object-assign": Object {
-      "bundled": true,
       "integrity": "sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=",
       "resolved": "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz",
       "version": "4.1.1",
@@ -5840,7 +5753,6 @@ Object {
       "version": "1.4.0",
     },
     "onetime": Object {
-      "bundled": true,
       "integrity": "sha1-BnQoIw/WdEOyeUsiu6UotoZ5YtQ=",
       "requires": Object {
         "mimic-fn": "^1.0.0",
@@ -5870,7 +5782,6 @@ Object {
       "version": "0.6.1",
     },
     "os-homedir": Object {
-      "bundled": true,
       "integrity": "sha1-/7xJiDNuDoM94MFox+8VISGqf7M=",
       "resolved": "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz",
       "version": "1.0.2",
@@ -5886,7 +5797,6 @@ Object {
       "version": "3.1.0",
     },
     "os-tmpdir": Object {
-      "bundled": true,
       "integrity": "sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=",
       "resolved": "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz",
       "version": "1.0.2",
@@ -5966,7 +5876,6 @@ Object {
       "version": "3.0.0",
     },
     "path-is-absolute": Object {
-      "bundled": true,
       "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
       "resolved": "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
       "version": "1.0.1",
@@ -6021,7 +5930,6 @@ Object {
       "version": "3.0.0",
     },
     "private": Object {
-      "bundled": true,
       "integrity": "sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==",
       "resolved": "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz",
       "version": "0.1.8",
@@ -6033,7 +5941,6 @@ Object {
       "version": "2.0.1",
     },
     "prop-types": Object {
-      "bundled": true,
       "integrity": "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==",
       "requires": Object {
         "loose-envify": "^1.4.0",
@@ -6073,7 +5980,6 @@ Object {
       "version": "6.5.2",
     },
     "react": Object {
-      "bundled": true,
       "integrity": "sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==",
       "requires": Object {
         "loose-envify": "^1.1.0",
@@ -6084,13 +5990,11 @@ Object {
       "version": "16.12.0",
     },
     "react-is": Object {
-      "bundled": true,
       "integrity": "sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==",
       "resolved": "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz",
       "version": "16.8.6",
     },
     "react-reconciler": Object {
-      "bundled": true,
       "integrity": "sha512-kxERc4H32zV2lXMg/iMiwQHOtyqf15qojvkcZ5Ja2CPkjVohHw9k70pdDBwrnQhLVetUJBSYyqU3yqrlVTOajA==",
       "requires": Object {
         "loose-envify": "^1.1.0",
@@ -6145,7 +6049,6 @@ Object {
       "version": "3.2.0",
     },
     "redeyed": Object {
-      "bundled": true,
       "integrity": "sha1-iYS1gV2ZyyIEacme7v/jiRPmzAs=",
       "requires": Object {
         "esprima": "~4.0.0",
@@ -6154,7 +6057,6 @@ Object {
       "version": "2.1.1",
     },
     "regenerator-runtime": Object {
-      "bundled": true,
       "integrity": "sha512-S/TQAZJO+D3m9xeN1WTI8dLKBBiRgXBlTJvbWjCThHWZj9EvHK70Ff50/tYj2J/fvBY6JtFVwRuazHN2E7M9BA==",
       "resolved": "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz",
       "version": "0.13.2",
@@ -6168,7 +6070,6 @@ Object {
       "version": "1.0.0",
     },
     "repeating": Object {
-      "bundled": true,
       "integrity": "sha1-UhTFOpJtNVJwdSf7q0FdvAjQbdo=",
       "requires": Object {
         "is-finite": "^1.0.0",
@@ -6229,13 +6130,11 @@ Object {
       "version": "1.11.1",
     },
     "resolve-from": Object {
-      "bundled": true,
       "integrity": "sha1-six699nWiBvItuZTM17rywoYh0g=",
       "resolved": "https://registry.yarnpkg.com/resolve-from/-/resolve-from-3.0.0.tgz",
       "version": "3.0.0",
     },
     "restore-cursor": Object {
-      "bundled": true,
       "integrity": "sha1-n37ih/gv0ybU/RYpI9YhKe7g368=",
       "requires": Object {
         "onetime": "^2.0.0",
@@ -6253,7 +6152,6 @@ Object {
       "version": "2.7.1",
     },
     "safe-buffer": Object {
-      "bundled": true,
       "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==",
       "resolved": "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz",
       "version": "5.1.2",
@@ -6264,7 +6162,6 @@ Object {
       "version": "2.1.2",
     },
     "scheduler": Object {
-      "bundled": true,
       "integrity": "sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==",
       "requires": Object {
         "loose-envify": "^1.1.0",
@@ -6297,19 +6194,16 @@ Object {
       "version": "1.0.0",
     },
     "signal-exit": Object {
-      "bundled": true,
       "integrity": "sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=",
       "resolved": "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz",
       "version": "3.0.2",
     },
     "slash": Object {
-      "bundled": true,
       "integrity": "sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=",
       "resolved": "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz",
       "version": "1.0.0",
     },
     "slice-ansi": Object {
-      "bundled": true,
       "integrity": "sha512-POqxBK6Lb3q6s047D/XsDVNPnF9Dl8JSaqe9h9lURl0OdNqy/ujDrOiIHtsqXMGbWWTIomRzAMaTyawAU//Reg==",
       "requires": Object {
         "is-fullwidth-code-point": "^2.0.0",
@@ -6426,16 +6320,13 @@ Object {
       "version": "1.1.1",
     },
     "string-length": Object {
-      "bundled": true,
       "dependencies": Object {
         "ansi-regex": Object {
-          "bundled": true,
           "integrity": "sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=",
           "resolved": "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz",
           "version": "3.0.0",
         },
         "strip-ansi": Object {
-          "bundled": true,
           "integrity": "sha1-qEeQIusaw2iocTibY1JixQXuNo8=",
           "requires": Object {
             "ansi-regex": "^3.0.0",
@@ -6453,16 +6344,13 @@ Object {
       "version": "2.0.0",
     },
     "string-width": Object {
-      "bundled": true,
       "dependencies": Object {
         "ansi-regex": Object {
-          "bundled": true,
           "integrity": "sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=",
           "resolved": "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz",
           "version": "3.0.0",
         },
         "strip-ansi": Object {
-          "bundled": true,
           "integrity": "sha1-qEeQIusaw2iocTibY1JixQXuNo8=",
           "requires": Object {
             "ansi-regex": "^3.0.0",
@@ -6480,7 +6368,6 @@ Object {
       "version": "2.1.1",
     },
     "strip-ansi": Object {
-      "bundled": true,
       "integrity": "sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=",
       "requires": Object {
         "ansi-regex": "^2.0.0",
@@ -6499,7 +6386,6 @@ Object {
       "version": "1.0.0",
     },
     "supports-color": Object {
-      "bundled": true,
       "integrity": "sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==",
       "requires": Object {
         "has-flag": "^3.0.0",
@@ -6531,7 +6417,6 @@ Object {
       "version": "5.0.0",
     },
     "tap-parser": Object {
-      "bundled": true,
       "integrity": "sha512-qdT15H0DoJIi7zOqVXDn9X0gSM68JjNy1w3VemwTJlDnETjbi6SutnqmBfjDJAwkFS79NJ97gZKqie00ZCGmzg==",
       "requires": Object {
         "events-to-array": "^1.0.1",
@@ -6542,7 +6427,6 @@ Object {
       "version": "10.0.1",
     },
     "tap-yaml": Object {
-      "bundled": true,
       "integrity": "sha512-Rxbx4EnrWkYk0/ztcm5u3/VznbyFJpyXO12dDBHKWiDVxy7O2Qw6MRrwO5H6Ww0U5YhRY/4C/VzWmFPhBQc4qQ==",
       "requires": Object {
         "yaml": "^1.5.0",
@@ -6567,7 +6451,6 @@ Object {
       "version": "5.2.3",
     },
     "to-fast-properties": Object {
-      "bundled": true,
       "integrity": "sha1-uDVx+k2MJbguIxsG46MFXeTKGkc=",
       "resolved": "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz",
       "version": "1.0.3",
@@ -6590,16 +6473,13 @@ Object {
       "version": "2.4.3",
     },
     "treport": Object {
-      "bundled": true,
       "dependencies": Object {
         "punycode": Object {
-          "bundled": true,
           "integrity": "sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==",
           "resolved": "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz",
           "version": "2.1.1",
         },
         "react": Object {
-          "bundled": true,
           "integrity": "sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==",
           "requires": Object {
             "loose-envify": "^1.1.0",
@@ -6611,7 +6491,6 @@ Object {
           "version": "16.8.6",
         },
         "unicode-length": Object {
-          "bundled": true,
           "integrity": "sha512-Ph/j1VbS3/r77nhoY2WU0GWGjVYOHL3xpKp0y/Eq2e5r0mT/6b649vm7KFO6RdAdrZkYLdxphYVgvODxPB+Ebg==",
           "requires": Object {
             "punycode": "^2.0.0",
@@ -6637,7 +6516,6 @@ Object {
       "version": "0.4.2",
     },
     "trim-right": Object {
-      "bundled": true,
       "integrity": "sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=",
       "resolved": "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz",
       "version": "1.0.1",
@@ -6794,7 +6672,6 @@ Object {
       "version": "2.0.0",
     },
     "widest-line": Object {
-      "bundled": true,
       "integrity": "sha512-Ba5m9/Fa4Xt9eb2ELXt77JxVDV8w7qQrH0zS/TWSJdLyAwQjWoOzpzj5lwVftDz6n/EOu3tNACS84v509qwnJA==",
       "requires": Object {
         "string-width": "^2.1.1",
@@ -6808,16 +6685,13 @@ Object {
       "version": "0.0.3",
     },
     "wrap-ansi": Object {
-      "bundled": true,
       "dependencies": Object {
         "ansi-regex": Object {
-          "bundled": true,
           "integrity": "sha512-1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==",
           "resolved": "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-4.1.0.tgz",
           "version": "4.1.0",
         },
         "string-width": Object {
-          "bundled": true,
           "integrity": "sha512-vafcv6KjVZKSgz06oM/H6GDBrAtz8vdhQakGjFIvNrHA6y3HCF1CInLy+QLq8dTJPQ1b+KDUqDFctkdRW44e1w==",
           "requires": Object {
             "emoji-regex": "^7.0.1",
@@ -6828,7 +6702,6 @@ Object {
           "version": "3.1.0",
         },
         "strip-ansi": Object {
-          "bundled": true,
           "integrity": "sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==",
           "requires": Object {
             "ansi-regex": "^4.1.0",
@@ -6868,13 +6741,11 @@ Object {
       "version": "4.0.0",
     },
     "yallist": Object {
-      "bundled": true,
       "integrity": "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==",
       "resolved": "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz",
       "version": "4.0.0",
     },
     "yaml": Object {
-      "bundled": true,
       "integrity": "sha512-iZfse3lwrJRoSlfs/9KQ9iIXxs9++RvBFVzAqbbBiFT+giYtyanevreF9r61ZTbGMgWQBxAua3FzJiniiJXWWw==",
       "requires": Object {
         "@babel/runtime": "^7.4.5",
@@ -6955,7 +6826,6 @@ Object {
       "version": "3.1.0",
     },
     "yoga-layout-prebuilt": Object {
-      "bundled": true,
       "integrity": "sha512-9SNQpwuEh2NucU83i2KMZnONVudZ86YNcFk9tq74YaqrQfgJWO3yB9uzH1tAg8iqh5c9F5j0wuyJ2z72wcum2w==",
       "resolved": "https://registry.yarnpkg.com/yoga-layout-prebuilt/-/yoga-layout-prebuilt-1.9.3.tgz",
       "version": "1.9.3",

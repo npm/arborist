@@ -13461,19 +13461,16 @@ exports[`test/arborist/reify.js TAP saving the ideal tree save some stuff > lock
 Object {
   "dependencies": Object {
     "a": Object {
-      "bundled": true,
       "extraneous": true,
       "from": "a@github:foo/bar#baz",
       "version": "git+ssh://git@github.com:foo/bar#71f3ccfefba85d2048484569dba8c1829f6f41d7",
     },
     "b": Object {
-      "bundled": true,
       "extraneous": true,
       "resolved": "https://registry.npmjs.org/b/-/b-1.2.3.tgz",
       "version": "1.2.3",
     },
     "c": Object {
-      "bundled": true,
       "extraneous": true,
       "from": "c@git+ssh://git@githost.com:a/b/c.git#master",
       "version": "git+ssh://git@githost.com:a/b/c.git#71f3ccfefba85d2048484569dba8c1829f6f41d7",

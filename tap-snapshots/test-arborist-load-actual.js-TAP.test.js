@@ -35,9 +35,7 @@ Node {
   "location": "",
   "meta": Object {
     "dependencies": Object {
-      "dep": Object {
-        "bundled": true,
-      },
+      "dep": Object {},
     },
     "lockfileVersion": 2,
     "name": "bundle",

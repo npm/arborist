@@ -4114,7 +4114,6 @@ Node {
       "type": "prod",
     },
   },
-  "extraneous": true,
   "location": "",
   "meta": Object {
     "lockfileVersion": 2,

@@ -1028,3 +1028,13 @@ t.test('modules bundled by the root should be installed', async t => {
   const tree = await reify(path)
   t.matchSnapshot(fs.readFileSync(path + '/node_modules/child/package.json', 'utf8'))
 })
+
+t.test('do not delete root-bundled deps in global update', async t => {
+  const path = t.testdir()
+  const file = resolve(__dirname, '../fixtures/bundle.tgz')
+  const firstTree = await reify(path, { global: true, add: [`file:${file}`] })
+  const depPJ = resolve(path, 'node_modules/bundle/node_modules/dep/package.json')
+  t.matchSnapshot(fs.readFileSync(depPJ, 'utf8'), 'after first install')
+  const secondTree = await reify(path, { global: true, add: [`file:${file}`] })
+  t.matchSnapshot(fs.readFileSync(depPJ, 'utf8'), 'after second install')
+})

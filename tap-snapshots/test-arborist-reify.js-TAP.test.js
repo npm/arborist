@@ -577,6 +577,20 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP do not delete root-bundled deps in global update > after first install 1`] = `
+{
+  "name": "dep"
+}
+
+`
+
+exports[`test/arborist/reify.js TAP do not delete root-bundled deps in global update > after second install 1`] = `
+{
+  "name": "dep"
+}
+
+`
+
 exports[`test/arborist/reify.js TAP do not update shrinkwrapped deps > expect resolving Promise 1`] = `
 Node {
   "children": Map {

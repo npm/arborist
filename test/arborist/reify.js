@@ -1038,3 +1038,13 @@ t.test('do not delete root-bundled deps in global update', async t => {
   const secondTree = await reify(path, { global: true, add: [`file:${file}`] })
   t.matchSnapshot(fs.readFileSync(depPJ, 'utf8'), 'after second install')
 })
+
+t.test('do not excessively duplicate bundled metadeps', async t => {
+  const path = fixture(t, 'bundle-metadep-duplication')
+  const tree = await reify(path)
+  const hidden = path + '/node_modules/.package-lock.json'
+  t.matchSnapshot(fs.readFileSync(hidden, 'utf8'), 'hidden lockfile')
+  const plock = path + '/package-lock.json'
+  t.matchSnapshot(fs.readFileSync(plock, 'utf8'), 'normal lockfile')
+  t.matchSnapshot(printTree(tree), 'tree')
+})

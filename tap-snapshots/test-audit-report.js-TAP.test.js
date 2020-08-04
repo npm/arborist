@@ -1495,7 +1495,7 @@ exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at
         "minimist"
       ],
       "effects": [],
-      "range": "0.5.1",
+      "range": "",
       "nodes": [
         "node_modules/@isaacs/this-does-not-exist-at-all"
       ],

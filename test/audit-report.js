@@ -314,3 +314,23 @@ t.test('error on audit response with no advisories object', async t => {
     body: JSON.stringify({no:'advisories',at:'all'}),
   })
 })
+
+t.test('audit report with a lying v5 lockfile', async t => {
+  // npm v5 stored the resolved dependency version in the `requires`
+  // set, rather than the spec that is actually required.  As a result,
+  // a dep may _appear_ to be a metavuln, but when we scan the
+  // packument, it turns out that it matches no nodes, and gets deleted.
+  const path = resolve(fixtures, 'eslintme')
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+  const auditFile = resolve(path, 'audit.json')
+  t.teardown(advisoryBulkResponse(auditFile))
+  const tree = await arb.loadVirtual()
+  const report = await AuditReport.load(tree, arb.options)
+  // also try to delete something that just very much is not present
+  report.delete('eslint')
+  report.delete('eslint')
+  t.matchSnapshot(report.toJSON())
+})

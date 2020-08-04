@@ -1463,6 +1463,260 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
 }
 `
 
+exports[`test/audit-report.js TAP audit report with a lying v5 lockfile > must match snapshot 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 1,
+      "optional": 0,
+      "peer": 0,
+      "peerOptional": 0,
+      "prod": 155,
+      "total": 156,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 4,
+      "info": 0,
+      "low": 5,
+      "moderate": 2,
+      "total": 12,
+    },
+  },
+  "vulnerabilities": Object {
+    "acorn": Object {
+      "effects": Array [
+        "espree",
+      ],
+      "fixAvailable": true,
+      "name": "acorn",
+      "nodes": Array [
+        "node_modules/acorn",
+      ],
+      "range": ">=5.5.0 <5.7.4 || >=6.0.0 <6.4.1 || >=7.0.0 <7.1.1",
+      "severity": "moderate",
+      "via": Array [
+        Object {
+          "id": 1488,
+          "severity": "moderate",
+          "title": "Regular Expression Denial of Service",
+          "url": "https://npmjs.com/advisories/1488",
+          "vulnerable_versions": ">=5.5.0 <5.7.4 || >=6.0.0 <6.4.1 || >=7.0.0 <7.1.1",
+        },
+      ],
+    },
+    "eslint_d": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "eslint_d",
+      "nodes": Array [
+        "node_modules/eslint_d",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "eslint",
+      ],
+    },
+    "espree": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "espree",
+      "nodes": Array [
+        "node_modules/espree",
+      ],
+      "range": "",
+      "severity": "moderate",
+      "via": Array [
+        "acorn",
+      ],
+    },
+    "file-entry-cache": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "file-entry-cache",
+      "nodes": Array [
+        "node_modules/file-entry-cache",
+      ],
+      "range": "",
+      "severity": "low",
+      "via": Array [
+        "flat-cache",
+      ],
+    },
+    "flat-cache": Object {
+      "effects": Array [
+        "file-entry-cache",
+      ],
+      "fixAvailable": true,
+      "name": "flat-cache",
+      "nodes": Array [
+        "node_modules/flat-cache",
+      ],
+      "range": "",
+      "severity": "low",
+      "via": Array [
+        "write",
+      ],
+    },
+    "inquirer": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "inquirer",
+      "nodes": Array [
+        "node_modules/inquirer",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "lodash",
+      ],
+    },
+    "js-yaml": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "js-yaml",
+      "nodes": Array [
+        "node_modules/js-yaml",
+      ],
+      "range": "<=3.13.0",
+      "severity": "critical",
+      "via": Array [
+        Object {
+          "id": 788,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/788",
+          "vulnerable_versions": "<3.13.0",
+        },
+        Object {
+          "id": 16,
+          "severity": "critical",
+          "title": "Deserialization Code Execution",
+          "url": "https://npmjs.com/advisories/16",
+          "vulnerable_versions": "<  2.0.5",
+        },
+        Object {
+          "id": 813,
+          "severity": "high",
+          "title": "Code Injection",
+          "url": "https://npmjs.com/advisories/813",
+          "vulnerable_versions": "<3.13.1",
+        },
+      ],
+    },
+    "lodash": Object {
+      "effects": Array [
+        "inquirer",
+        "table",
+      ],
+      "fixAvailable": true,
+      "name": "lodash",
+      "nodes": Array [
+        "node_modules/lodash",
+      ],
+      "range": "*",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 782,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/782",
+          "vulnerable_versions": "<4.17.11",
+        },
+        Object {
+          "id": 1065,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1065",
+          "vulnerable_versions": "<4.17.12",
+        },
+        Object {
+          "id": 577,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/577",
+          "vulnerable_versions": "<4.17.5",
+        },
+        Object {
+          "id": 1523,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1523",
+          "vulnerable_versions": "<4.17.19",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "mkdirp",
+      ],
+      "fixAvailable": true,
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "mkdirp": Object {
+      "effects": Array [
+        "write",
+      ],
+      "fixAvailable": true,
+      "name": "mkdirp",
+      "nodes": Array [
+        "node_modules/mkdirp",
+      ],
+      "range": "0.4.1 - 0.5.1",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "table": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "table",
+      "nodes": Array [
+        "node_modules/table",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "lodash",
+      ],
+    },
+    "write": Object {
+      "effects": Array [
+        "flat-cache",
+      ],
+      "fixAvailable": true,
+      "name": "write",
+      "nodes": Array [
+        "node_modules/write",
+      ],
+      "range": "",
+      "severity": "low",
+      "via": Array [
+        "mkdirp",
+      ],
+    },
+  },
+}
+`
+
 exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at all > json version 1`] = `
 {
   "auditReportVersion": 2,

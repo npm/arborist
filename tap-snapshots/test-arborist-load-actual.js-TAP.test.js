@@ -422,9 +422,7 @@ Node {
           },
         },
         "requires": Object {
-          "@scope/x": "",
           "@scope/y": "",
-          "express": "420.69.0-nice",
           "glob": "4",
         },
         "version": "1.2.3",
@@ -997,9 +995,7 @@ Link {
           },
         },
         "requires": Object {
-          "@scope/x": "",
           "@scope/y": "",
-          "express": "420.69.0-nice",
           "glob": "4",
         },
         "version": "1.2.3",
@@ -3146,9 +3142,7 @@ Link {
           },
         },
         "requires": Object {
-          "@scope/x": "",
           "@scope/y": "",
-          "express": "420.69.0-nice",
           "glob": "4",
         },
         "version": "1.2.3",
@@ -4767,9 +4761,7 @@ Node {
           },
         },
         "requires": Object {
-          "@scope/x": "",
           "@scope/y": "",
-          "express": "420.69.0-nice",
           "glob": "4",
         },
         "version": "1.2.3",
@@ -6761,9 +6753,7 @@ Node {
           },
         },
         "requires": Object {
-          "@scope/x": "",
           "@scope/y": "",
-          "express": "420.69.0-nice",
           "glob": "4",
         },
         "version": "1.2.3",

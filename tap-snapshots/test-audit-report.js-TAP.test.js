@@ -1476,8 +1476,8 @@ Object {
       "total": 156,
     },
     "vulnerabilities": Object {
-      "critical": 1,
-      "high": 4,
+      "critical": 0,
+      "high": 5,
       "info": 0,
       "low": 5,
       "moderate": 2,
@@ -1581,7 +1581,7 @@ Object {
         "node_modules/js-yaml",
       ],
       "range": "<=3.13.0",
-      "severity": "critical",
+      "severity": "high",
       "via": Array [
         Object {
           "id": 788,
@@ -1589,13 +1589,6 @@ Object {
           "title": "Denial of Service",
           "url": "https://npmjs.com/advisories/788",
           "vulnerable_versions": "<3.13.0",
-        },
-        Object {
-          "id": 16,
-          "severity": "critical",
-          "title": "Deserialization Code Execution",
-          "url": "https://npmjs.com/advisories/16",
-          "vulnerable_versions": "<  2.0.5",
         },
         Object {
           "id": 813,
@@ -1632,13 +1625,6 @@ Object {
           "title": "Prototype Pollution",
           "url": "https://npmjs.com/advisories/1065",
           "vulnerable_versions": "<4.17.12",
-        },
-        Object {
-          "id": 577,
-          "severity": "low",
-          "title": "Prototype Pollution",
-          "url": "https://npmjs.com/advisories/577",
-          "vulnerable_versions": "<4.17.5",
         },
         Object {
           "id": 1523,
@@ -1834,6 +1820,2553 @@ exports[`test/audit-report.js TAP metavuln where dep is not a registry dep > jso
       "total": 2
     }
   }
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 18,
+      "info": 0,
+      "low": 8,
+      "moderate": 0,
+      "total": 27,
+    },
+  },
+  "vulnerabilities": Object {
+    "babel-core": Object {
+      "effects": Array [
+        "babel-register",
+        "import-jsx",
+      ],
+      "fixAvailable": true,
+      "name": "babel-core",
+      "nodes": Array [
+        "node_modules/babel-core",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-generator",
+        "babel-helpers",
+        "babel-register",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-generator": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-generator",
+      "nodes": Array [
+        "node_modules/babel-generator",
+        "node_modules/nyc/node_modules/babel-generator",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-helper-builder-react-jsx": Object {
+      "effects": Array [
+        "babel-plugin-transform-react-jsx",
+      ],
+      "fixAvailable": true,
+      "name": "babel-helper-builder-react-jsx",
+      "nodes": Array [
+        "node_modules/babel-helper-builder-react-jsx",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+      ],
+    },
+    "babel-helpers": Object {
+      "effects": Array [
+        "babel-core",
+      ],
+      "fixAvailable": true,
+      "name": "babel-helpers",
+      "nodes": Array [
+        "node_modules/babel-helpers",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-template",
+      ],
+    },
+    "babel-plugin-transform-react-jsx": Object {
+      "effects": Array [
+        "import-jsx",
+      ],
+      "fixAvailable": true,
+      "name": "babel-plugin-transform-react-jsx",
+      "nodes": Array [
+        "node_modules/babel-plugin-transform-react-jsx",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-helper-builder-react-jsx",
+      ],
+    },
+    "babel-register": Object {
+      "effects": Array [
+        "babel-core",
+      ],
+      "fixAvailable": true,
+      "name": "babel-register",
+      "nodes": Array [
+        "node_modules/babel-register",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-core",
+        "lodash",
+      ],
+    },
+    "babel-template": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+        "babel-helpers",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-template",
+      "nodes": Array [
+        "node_modules/babel-template",
+        "node_modules/nyc/node_modules/babel-template",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-traverse",
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-traverse": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+        "babel-template",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-traverse",
+      "nodes": Array [
+        "node_modules/babel-traverse",
+        "node_modules/nyc/node_modules/babel-traverse",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-types": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+        "babel-template",
+        "babel-generator",
+        "babel-helper-builder-react-jsx",
+        "babel-traverse",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-types",
+      "nodes": Array [
+        "node_modules/babel-types",
+        "node_modules/nyc/node_modules/babel-types",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "lodash",
+      ],
+    },
+    "handlebars": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "handlebars",
+      "nodes": Array [
+        "node_modules/handlebars",
+        "node_modules/nyc/node_modules/handlebars",
+      ],
+      "range": "<=4.7.3",
+      "severity": "critical",
+      "via": Array [
+        "optimist",
+        Object {
+          "id": 755,
+          "severity": "critical",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/755",
+          "vulnerable_versions": "<=4.0.13 || >=4.1.0 <4.1.2",
+        },
+        Object {
+          "id": 1164,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1164",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+        },
+        Object {
+          "id": 1300,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1300",
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+        },
+        Object {
+          "id": 1316,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1316",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+        },
+        Object {
+          "id": 1324,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1324",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+        Object {
+          "id": 1325,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1325",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+      ],
+    },
+    "import-jsx": Object {
+      "effects": Array [
+        "tap",
+        "treport",
+      ],
+      "fixAvailable": true,
+      "name": "import-jsx",
+      "nodes": Array [
+        "node_modules/import-jsx",
+      ],
+      "range": "1.2.0 - 2.0.0",
+      "severity": "high",
+      "via": Array [
+        "babel-core",
+        "babel-plugin-transform-react-jsx",
+      ],
+    },
+    "istanbul-lib-instrument": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "istanbul-lib-instrument",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/istanbul-lib-instrument",
+      ],
+      "range": "1.1.0-alpha.0 - 1.10.2",
+      "severity": "high",
+      "via": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+      ],
+    },
+    "kind-of": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "kind-of",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/base/node_modules/kind-of",
+        "node_modules/nyc/node_modules/define-property/node_modules/kind-of",
+        "node_modules/nyc/node_modules/extglob/node_modules/kind-of",
+        "node_modules/nyc/node_modules/micromatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/nanomatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/snapdragon-node/node_modules/kind-of",
+        "node_modules/nyc/node_modules/test-exclude/node_modules/kind-of",
+        "node_modules/nyc/node_modules/use/node_modules/kind-of",
+      ],
+      "range": "6.0.0 - 6.0.2",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1490,
+          "severity": "low",
+          "title": "Validation Bypass",
+          "url": "https://npmjs.com/advisories/1490",
+          "vulnerable_versions": ">=6.0.0 <6.0.3",
+        },
+      ],
+    },
+    "lodash": Object {
+      "effects": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+        "babel-core",
+        "babel-register",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "lodash",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/lodash",
+        "node_modules/lodash",
+      ],
+      "range": "*",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 782,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/782",
+          "vulnerable_versions": "<4.17.11",
+        },
+        Object {
+          "id": 1065,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1065",
+          "vulnerable_versions": "<4.17.12",
+        },
+        Object {
+          "id": 1523,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1523",
+          "vulnerable_versions": "<4.17.19",
+        },
+      ],
+    },
+    "mem": Object {
+      "effects": Array [
+        "os-locale",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "mem",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mem",
+      ],
+      "range": "<4.0.0",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1084,
+          "severity": "low",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1084",
+          "vulnerable_versions": "<4.0.0",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "mkdirp",
+        "optimist",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/minimist",
+        "node_modules/optimist/node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "mixin-deep": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "mixin-deep",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mixin-deep",
+      ],
+      "range": "<=1.3.1 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1013,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1013",
+          "vulnerable_versions": "<1.3.2 || >=2.0.0 <2.0.1",
+        },
+      ],
+    },
+    "mkdirp": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "mkdirp",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mkdirp",
+      ],
+      "range": "0.4.1 - 0.5.1",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "nyc": Object {
+      "effects": Array [
+        "tap",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "nyc",
+      "nodes": Array [
+        "node_modules/nyc",
+        "node_modules/tap/node_modules/nyc",
+      ],
+      "range": ">=6.0.0",
+      "severity": "high",
+      "via": Array [
+        "istanbul-lib-instrument",
+        "mkdirp",
+        "yargs",
+        "yargs-parser",
+      ],
+    },
+    "optimist": Object {
+      "effects": Array [
+        "handlebars",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "optimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/optimist",
+        "node_modules/optimist",
+      ],
+      "range": ">=0.6.0",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "os-locale": Object {
+      "effects": Array [
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "os-locale",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/os-locale",
+      ],
+      "range": "2.0.0 - 3.0.0",
+      "severity": "low",
+      "via": Array [
+        "mem",
+      ],
+    },
+    "set-value": Object {
+      "effects": Array [
+        "union-value",
+      ],
+      "fixAvailable": true,
+      "name": "set-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/set-value",
+        "node_modules/nyc/node_modules/union-value/node_modules/set-value",
+      ],
+      "range": "<=2.0.0 || 3.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1012,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1012",
+          "vulnerable_versions": "<2.0.1 || >=3.0.0 <3.0.1",
+        },
+      ],
+    },
+    "tap": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "tap",
+        "version": "5.7.1",
+      },
+      "name": "tap",
+      "nodes": Array [
+        "node_modules/tap",
+      ],
+      "range": "5.1.0 - 5.1.1 || >=5.7.2",
+      "severity": "high",
+      "via": Array [
+        "import-jsx",
+        "nyc",
+        "treport",
+      ],
+    },
+    "treport": Object {
+      "effects": Array [
+        "tap",
+      ],
+      "fixAvailable": true,
+      "name": "treport",
+      "nodes": Array [
+        "node_modules/treport",
+      ],
+      "range": "<=0.5.0",
+      "severity": "high",
+      "via": Array [
+        "import-jsx",
+      ],
+    },
+    "union-value": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "union-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/union-value",
+      ],
+      "range": "<=1.0.0 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        "set-value",
+      ],
+    },
+    "yargs": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "yargs",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs",
+        "node_modules/yargs",
+      ],
+      "range": ">=4.0.0-alpha1",
+      "severity": "low",
+      "via": Array [
+        "os-locale",
+        "yargs-parser",
+      ],
+    },
+    "yargs-parser": Object {
+      "effects": Array [
+        "nyc",
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "yargs-parser",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs-parser",
+        "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
+        "node_modules/yargs-parser",
+      ],
+      "range": "*",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1500,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1500",
+          "vulnerable_versions": "<13.1.2 || >=14.0.0 <15.0.1 || >=16.0.0 <18.1.2",
+        },
+      ],
+    },
+  },
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[dev,optional] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 0,
+      "info": 0,
+      "low": 2,
+      "moderate": 0,
+      "total": 3,
+    },
+  },
+  "vulnerabilities": Object {
+    "handlebars": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "handlebars",
+      "nodes": Array [
+        "node_modules/handlebars",
+      ],
+      "range": "<=4.7.3",
+      "severity": "critical",
+      "via": Array [
+        "optimist",
+        Object {
+          "id": 755,
+          "severity": "critical",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/755",
+          "vulnerable_versions": "<=4.0.13 || >=4.1.0 <4.1.2",
+        },
+        Object {
+          "id": 1164,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1164",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+        },
+        Object {
+          "id": 1300,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1300",
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+        },
+        Object {
+          "id": 1316,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1316",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+        },
+        Object {
+          "id": 1324,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1324",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+        Object {
+          "id": 1325,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1325",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "optimist",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/optimist/node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "optimist": Object {
+      "effects": Array [
+        "handlebars",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "optimist",
+      "nodes": Array [
+        "node_modules/optimist",
+      ],
+      "range": ">=0.6.0",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+  },
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[dev] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 10,
+      "info": 0,
+      "low": 8,
+      "moderate": 0,
+      "total": 19,
+    },
+  },
+  "vulnerabilities": Object {
+    "babel-generator": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-generator",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-generator",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-template": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-template",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-template",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-traverse",
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-traverse": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+        "babel-template",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-traverse",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-traverse",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-types": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+        "babel-template",
+        "babel-generator",
+        "babel-traverse",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-types",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-types",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "lodash",
+      ],
+    },
+    "handlebars": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "handlebars",
+      "nodes": Array [
+        "node_modules/handlebars",
+        "node_modules/nyc/node_modules/handlebars",
+      ],
+      "range": "<=4.7.3",
+      "severity": "critical",
+      "via": Array [
+        "optimist",
+        Object {
+          "id": 755,
+          "severity": "critical",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/755",
+          "vulnerable_versions": "<=4.0.13 || >=4.1.0 <4.1.2",
+        },
+        Object {
+          "id": 1164,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1164",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+        },
+        Object {
+          "id": 1300,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1300",
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+        },
+        Object {
+          "id": 1316,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1316",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+        },
+        Object {
+          "id": 1324,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1324",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+        Object {
+          "id": 1325,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1325",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+      ],
+    },
+    "istanbul-lib-instrument": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "istanbul-lib-instrument",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/istanbul-lib-instrument",
+      ],
+      "range": "1.1.0-alpha.0 - 1.10.2",
+      "severity": "high",
+      "via": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+      ],
+    },
+    "kind-of": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "kind-of",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/base/node_modules/kind-of",
+        "node_modules/nyc/node_modules/define-property/node_modules/kind-of",
+        "node_modules/nyc/node_modules/extglob/node_modules/kind-of",
+        "node_modules/nyc/node_modules/micromatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/nanomatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/snapdragon-node/node_modules/kind-of",
+        "node_modules/nyc/node_modules/test-exclude/node_modules/kind-of",
+        "node_modules/nyc/node_modules/use/node_modules/kind-of",
+      ],
+      "range": "6.0.0 - 6.0.2",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1490,
+          "severity": "low",
+          "title": "Validation Bypass",
+          "url": "https://npmjs.com/advisories/1490",
+          "vulnerable_versions": ">=6.0.0 <6.0.3",
+        },
+      ],
+    },
+    "lodash": Object {
+      "effects": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "lodash",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/lodash",
+      ],
+      "range": "*",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 782,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/782",
+          "vulnerable_versions": "<4.17.11",
+        },
+        Object {
+          "id": 1065,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1065",
+          "vulnerable_versions": "<4.17.12",
+        },
+        Object {
+          "id": 1523,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1523",
+          "vulnerable_versions": "<4.17.19",
+        },
+      ],
+    },
+    "mem": Object {
+      "effects": Array [
+        "os-locale",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "mem",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mem",
+      ],
+      "range": "<4.0.0",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1084,
+          "severity": "low",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1084",
+          "vulnerable_versions": "<4.0.0",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "mkdirp",
+        "optimist",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/minimist",
+        "node_modules/optimist/node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "mixin-deep": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "mixin-deep",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mixin-deep",
+      ],
+      "range": "<=1.3.1 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1013,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1013",
+          "vulnerable_versions": "<1.3.2 || >=2.0.0 <2.0.1",
+        },
+      ],
+    },
+    "mkdirp": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "mkdirp",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mkdirp",
+      ],
+      "range": "0.4.1 - 0.5.1",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "nyc": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "nyc",
+      "nodes": Array [
+        "node_modules/nyc",
+      ],
+      "range": ">=6.0.0",
+      "severity": "high",
+      "via": Array [
+        "istanbul-lib-instrument",
+        "mkdirp",
+        "yargs",
+        "yargs-parser",
+      ],
+    },
+    "optimist": Object {
+      "effects": Array [
+        "handlebars",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "optimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/optimist",
+        "node_modules/optimist",
+      ],
+      "range": ">=0.6.0",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "os-locale": Object {
+      "effects": Array [
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "os-locale",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/os-locale",
+      ],
+      "range": "2.0.0 - 3.0.0",
+      "severity": "low",
+      "via": Array [
+        "mem",
+      ],
+    },
+    "set-value": Object {
+      "effects": Array [
+        "union-value",
+      ],
+      "fixAvailable": true,
+      "name": "set-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/set-value",
+        "node_modules/nyc/node_modules/union-value/node_modules/set-value",
+      ],
+      "range": "<=2.0.0 || 3.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1012,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1012",
+          "vulnerable_versions": "<2.0.1 || >=3.0.0 <3.0.1",
+        },
+      ],
+    },
+    "union-value": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "union-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/union-value",
+      ],
+      "range": "<=1.0.0 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        "set-value",
+      ],
+    },
+    "yargs": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "yargs",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs",
+      ],
+      "range": ">=4.0.0-alpha1",
+      "severity": "low",
+      "via": Array [
+        "os-locale",
+        "yargs-parser",
+      ],
+    },
+    "yargs-parser": Object {
+      "effects": Array [
+        "nyc",
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "yargs-parser",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs-parser",
+        "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
+      ],
+      "range": "*",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1500,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1500",
+          "vulnerable_versions": "<13.1.2 || >=14.0.0 <15.0.1 || >=16.0.0 <18.1.2",
+        },
+      ],
+    },
+  },
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[optional] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 0,
+      "info": 0,
+      "low": 2,
+      "moderate": 0,
+      "total": 3,
+    },
+  },
+  "vulnerabilities": Object {
+    "handlebars": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "handlebars",
+      "nodes": Array [
+        "node_modules/handlebars",
+      ],
+      "range": "<=4.7.3",
+      "severity": "critical",
+      "via": Array [
+        "optimist",
+        Object {
+          "id": 755,
+          "severity": "critical",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/755",
+          "vulnerable_versions": "<=4.0.13 || >=4.1.0 <4.1.2",
+        },
+        Object {
+          "id": 1164,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1164",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+        },
+        Object {
+          "id": 1300,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1300",
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+        },
+        Object {
+          "id": 1316,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1316",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+        },
+        Object {
+          "id": 1324,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1324",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+        Object {
+          "id": 1325,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1325",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "optimist",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/optimist/node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "optimist": Object {
+      "effects": Array [
+        "handlebars",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "optimist",
+      "nodes": Array [
+        "node_modules/optimist",
+      ],
+      "range": ">=0.6.0",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+  },
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[peer,dev,optional] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 0,
+      "high": 0,
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "total": 0,
+    },
+  },
+  "vulnerabilities": Object {},
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[peer,dev] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 10,
+      "info": 0,
+      "low": 8,
+      "moderate": 0,
+      "total": 19,
+    },
+  },
+  "vulnerabilities": Object {
+    "babel-generator": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-generator",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-generator",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-template": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-template",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-template",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-traverse",
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-traverse": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+        "babel-template",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-traverse",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-traverse",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-types": Object {
+      "effects": Array [
+        "istanbul-lib-instrument",
+        "babel-template",
+        "babel-generator",
+        "babel-traverse",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-types",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/babel-types",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "lodash",
+      ],
+    },
+    "handlebars": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "handlebars",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/handlebars",
+        "node_modules/handlebars",
+      ],
+      "range": "<=4.7.3",
+      "severity": "critical",
+      "via": Array [
+        "optimist",
+        Object {
+          "id": 755,
+          "severity": "critical",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/755",
+          "vulnerable_versions": "<=4.0.13 || >=4.1.0 <4.1.2",
+        },
+        Object {
+          "id": 1164,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1164",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+        },
+        Object {
+          "id": 1300,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1300",
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+        },
+        Object {
+          "id": 1316,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1316",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+        },
+        Object {
+          "id": 1324,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1324",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+        Object {
+          "id": 1325,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1325",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+      ],
+    },
+    "istanbul-lib-instrument": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "istanbul-lib-instrument",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/istanbul-lib-instrument",
+      ],
+      "range": "1.1.0-alpha.0 - 1.10.2",
+      "severity": "high",
+      "via": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+      ],
+    },
+    "kind-of": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "kind-of",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/base/node_modules/kind-of",
+        "node_modules/nyc/node_modules/define-property/node_modules/kind-of",
+        "node_modules/nyc/node_modules/extglob/node_modules/kind-of",
+        "node_modules/nyc/node_modules/micromatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/nanomatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/snapdragon-node/node_modules/kind-of",
+        "node_modules/nyc/node_modules/test-exclude/node_modules/kind-of",
+        "node_modules/nyc/node_modules/use/node_modules/kind-of",
+      ],
+      "range": "6.0.0 - 6.0.2",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1490,
+          "severity": "low",
+          "title": "Validation Bypass",
+          "url": "https://npmjs.com/advisories/1490",
+          "vulnerable_versions": ">=6.0.0 <6.0.3",
+        },
+      ],
+    },
+    "lodash": Object {
+      "effects": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "lodash",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/lodash",
+      ],
+      "range": "*",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 782,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/782",
+          "vulnerable_versions": "<4.17.11",
+        },
+        Object {
+          "id": 1065,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1065",
+          "vulnerable_versions": "<4.17.12",
+        },
+        Object {
+          "id": 1523,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1523",
+          "vulnerable_versions": "<4.17.19",
+        },
+      ],
+    },
+    "mem": Object {
+      "effects": Array [
+        "os-locale",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "mem",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mem",
+      ],
+      "range": "<4.0.0",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1084,
+          "severity": "low",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1084",
+          "vulnerable_versions": "<4.0.0",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "mkdirp",
+        "optimist",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "mixin-deep": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "mixin-deep",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mixin-deep",
+      ],
+      "range": "<=1.3.1 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1013,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1013",
+          "vulnerable_versions": "<1.3.2 || >=2.0.0 <2.0.1",
+        },
+      ],
+    },
+    "mkdirp": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "mkdirp",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mkdirp",
+      ],
+      "range": "0.4.1 - 0.5.1",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "nyc": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "nyc",
+      "nodes": Array [
+        "node_modules/nyc",
+      ],
+      "range": ">=6.0.0",
+      "severity": "high",
+      "via": Array [
+        "istanbul-lib-instrument",
+        "mkdirp",
+        "yargs",
+        "yargs-parser",
+      ],
+    },
+    "optimist": Object {
+      "effects": Array [
+        "handlebars",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "optimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/optimist",
+      ],
+      "range": ">=0.6.0",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "os-locale": Object {
+      "effects": Array [
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "os-locale",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/os-locale",
+      ],
+      "range": "2.0.0 - 3.0.0",
+      "severity": "low",
+      "via": Array [
+        "mem",
+      ],
+    },
+    "set-value": Object {
+      "effects": Array [
+        "union-value",
+      ],
+      "fixAvailable": true,
+      "name": "set-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/set-value",
+        "node_modules/nyc/node_modules/union-value/node_modules/set-value",
+      ],
+      "range": "<=2.0.0 || 3.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1012,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1012",
+          "vulnerable_versions": "<2.0.1 || >=3.0.0 <3.0.1",
+        },
+      ],
+    },
+    "union-value": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "union-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/union-value",
+      ],
+      "range": "<=1.0.0 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        "set-value",
+      ],
+    },
+    "yargs": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "yargs",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs",
+      ],
+      "range": ">=4.0.0-alpha1",
+      "severity": "low",
+      "via": Array [
+        "os-locale",
+        "yargs-parser",
+      ],
+    },
+    "yargs-parser": Object {
+      "effects": Array [
+        "nyc",
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "yargs-parser",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs-parser",
+        "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
+      ],
+      "range": "*",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1500,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1500",
+          "vulnerable_versions": "<13.1.2 || >=14.0.0 <15.0.1 || >=16.0.0 <18.1.2",
+        },
+      ],
+    },
+  },
+}
+`
+
+exports[`test/audit-report.js TAP omit options omit=[peer] > bulk 1`] = `
+Object {
+  "auditReportVersion": 2,
+  "metadata": Object {
+    "dependencies": Object {
+      "dev": 399,
+      "optional": 351,
+      "peer": 26,
+      "peerOptional": 0,
+      "prod": 2,
+      "total": 751,
+    },
+    "vulnerabilities": Object {
+      "critical": 1,
+      "high": 18,
+      "info": 0,
+      "low": 8,
+      "moderate": 0,
+      "total": 27,
+    },
+  },
+  "vulnerabilities": Object {
+    "babel-core": Object {
+      "effects": Array [
+        "babel-register",
+        "import-jsx",
+      ],
+      "fixAvailable": true,
+      "name": "babel-core",
+      "nodes": Array [
+        "node_modules/babel-core",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-generator",
+        "babel-helpers",
+        "babel-register",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-generator": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-generator",
+      "nodes": Array [
+        "node_modules/babel-generator",
+        "node_modules/nyc/node_modules/babel-generator",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-helper-builder-react-jsx": Object {
+      "effects": Array [
+        "babel-plugin-transform-react-jsx",
+      ],
+      "fixAvailable": true,
+      "name": "babel-helper-builder-react-jsx",
+      "nodes": Array [
+        "node_modules/babel-helper-builder-react-jsx",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+      ],
+    },
+    "babel-helpers": Object {
+      "effects": Array [
+        "babel-core",
+      ],
+      "fixAvailable": true,
+      "name": "babel-helpers",
+      "nodes": Array [
+        "node_modules/babel-helpers",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-template",
+      ],
+    },
+    "babel-plugin-transform-react-jsx": Object {
+      "effects": Array [
+        "import-jsx",
+      ],
+      "fixAvailable": true,
+      "name": "babel-plugin-transform-react-jsx",
+      "nodes": Array [
+        "node_modules/babel-plugin-transform-react-jsx",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-helper-builder-react-jsx",
+      ],
+    },
+    "babel-register": Object {
+      "effects": Array [
+        "babel-core",
+      ],
+      "fixAvailable": true,
+      "name": "babel-register",
+      "nodes": Array [
+        "node_modules/babel-register",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-core",
+        "lodash",
+      ],
+    },
+    "babel-template": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+        "babel-helpers",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-template",
+      "nodes": Array [
+        "node_modules/babel-template",
+        "node_modules/nyc/node_modules/babel-template",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-traverse",
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-traverse": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+        "babel-template",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-traverse",
+      "nodes": Array [
+        "node_modules/babel-traverse",
+        "node_modules/nyc/node_modules/babel-traverse",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "babel-types",
+        "lodash",
+      ],
+    },
+    "babel-types": Object {
+      "effects": Array [
+        "babel-core",
+        "istanbul-lib-instrument",
+        "babel-template",
+        "babel-generator",
+        "babel-helper-builder-react-jsx",
+        "babel-traverse",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "babel-types",
+      "nodes": Array [
+        "node_modules/babel-types",
+        "node_modules/nyc/node_modules/babel-types",
+      ],
+      "range": "",
+      "severity": "high",
+      "via": Array [
+        "lodash",
+      ],
+    },
+    "handlebars": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "handlebars",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/handlebars",
+        "node_modules/handlebars",
+      ],
+      "range": "<=4.7.3",
+      "severity": "critical",
+      "via": Array [
+        "optimist",
+        Object {
+          "id": 755,
+          "severity": "critical",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/755",
+          "vulnerable_versions": "<=4.0.13 || >=4.1.0 <4.1.2",
+        },
+        Object {
+          "id": 1164,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1164",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.3.0",
+        },
+        Object {
+          "id": 1300,
+          "severity": "moderate",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1300",
+          "vulnerable_versions": ">=4.0.0 <4.4.5",
+        },
+        Object {
+          "id": 1316,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1316",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.2",
+        },
+        Object {
+          "id": 1324,
+          "severity": "high",
+          "title": "Arbitrary Code Execution",
+          "url": "https://npmjs.com/advisories/1324",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+        Object {
+          "id": 1325,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1325",
+          "vulnerable_versions": "<3.0.8 || >=4.0.0 <4.5.3",
+        },
+      ],
+    },
+    "import-jsx": Object {
+      "effects": Array [
+        "tap",
+        "treport",
+      ],
+      "fixAvailable": true,
+      "name": "import-jsx",
+      "nodes": Array [
+        "node_modules/import-jsx",
+      ],
+      "range": "1.2.0 - 2.0.0",
+      "severity": "high",
+      "via": Array [
+        "babel-core",
+        "babel-plugin-transform-react-jsx",
+      ],
+    },
+    "istanbul-lib-instrument": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "istanbul-lib-instrument",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/istanbul-lib-instrument",
+      ],
+      "range": "1.1.0-alpha.0 - 1.10.2",
+      "severity": "high",
+      "via": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+      ],
+    },
+    "kind-of": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "kind-of",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/base/node_modules/kind-of",
+        "node_modules/nyc/node_modules/define-property/node_modules/kind-of",
+        "node_modules/nyc/node_modules/extglob/node_modules/kind-of",
+        "node_modules/nyc/node_modules/micromatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/nanomatch/node_modules/kind-of",
+        "node_modules/nyc/node_modules/snapdragon-node/node_modules/kind-of",
+        "node_modules/nyc/node_modules/test-exclude/node_modules/kind-of",
+        "node_modules/nyc/node_modules/use/node_modules/kind-of",
+      ],
+      "range": "6.0.0 - 6.0.2",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1490,
+          "severity": "low",
+          "title": "Validation Bypass",
+          "url": "https://npmjs.com/advisories/1490",
+          "vulnerable_versions": ">=6.0.0 <6.0.3",
+        },
+      ],
+    },
+    "lodash": Object {
+      "effects": Array [
+        "babel-generator",
+        "babel-template",
+        "babel-traverse",
+        "babel-types",
+        "babel-core",
+        "babel-register",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "lodash",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/lodash",
+        "node_modules/lodash",
+      ],
+      "range": "*",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 782,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/782",
+          "vulnerable_versions": "<4.17.11",
+        },
+        Object {
+          "id": 1065,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1065",
+          "vulnerable_versions": "<4.17.12",
+        },
+        Object {
+          "id": 1523,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1523",
+          "vulnerable_versions": "<4.17.19",
+        },
+      ],
+    },
+    "mem": Object {
+      "effects": Array [
+        "os-locale",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "mem",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mem",
+      ],
+      "range": "<4.0.0",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1084,
+          "severity": "low",
+          "title": "Denial of Service",
+          "url": "https://npmjs.com/advisories/1084",
+          "vulnerable_versions": "<4.0.0",
+        },
+      ],
+    },
+    "minimist": Object {
+      "effects": Array [
+        "mkdirp",
+        "optimist",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "minimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/minimist",
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1179,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "vulnerable_versions": "<0.2.1 || >=1.0.0 <1.2.3",
+        },
+      ],
+    },
+    "mixin-deep": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "mixin-deep",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mixin-deep",
+      ],
+      "range": "<=1.3.1 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1013,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1013",
+          "vulnerable_versions": "<1.3.2 || >=2.0.0 <2.0.1",
+        },
+      ],
+    },
+    "mkdirp": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "mkdirp",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/mkdirp",
+      ],
+      "range": "0.4.1 - 0.5.1",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "nyc": Object {
+      "effects": Array [
+        "tap",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "nyc",
+      "nodes": Array [
+        "node_modules/nyc",
+        "node_modules/tap/node_modules/nyc",
+      ],
+      "range": ">=6.0.0",
+      "severity": "high",
+      "via": Array [
+        "istanbul-lib-instrument",
+        "mkdirp",
+        "yargs",
+        "yargs-parser",
+      ],
+    },
+    "optimist": Object {
+      "effects": Array [
+        "handlebars",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": false,
+        "name": "handlebars",
+        "version": "4.7.6",
+      },
+      "name": "optimist",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/optimist",
+      ],
+      "range": ">=0.6.0",
+      "severity": "low",
+      "via": Array [
+        "minimist",
+      ],
+    },
+    "os-locale": Object {
+      "effects": Array [
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "os-locale",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/os-locale",
+      ],
+      "range": "2.0.0 - 3.0.0",
+      "severity": "low",
+      "via": Array [
+        "mem",
+      ],
+    },
+    "set-value": Object {
+      "effects": Array [
+        "union-value",
+      ],
+      "fixAvailable": true,
+      "name": "set-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/set-value",
+        "node_modules/nyc/node_modules/union-value/node_modules/set-value",
+      ],
+      "range": "<=2.0.0 || 3.0.0",
+      "severity": "high",
+      "via": Array [
+        Object {
+          "id": 1012,
+          "severity": "high",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1012",
+          "vulnerable_versions": "<2.0.1 || >=3.0.0 <3.0.1",
+        },
+      ],
+    },
+    "tap": Object {
+      "effects": Array [],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "tap",
+        "version": "5.7.1",
+      },
+      "name": "tap",
+      "nodes": Array [
+        "node_modules/tap",
+      ],
+      "range": "5.1.0 - 5.1.1 || >=5.7.2",
+      "severity": "high",
+      "via": Array [
+        "import-jsx",
+        "nyc",
+        "treport",
+      ],
+    },
+    "treport": Object {
+      "effects": Array [
+        "tap",
+      ],
+      "fixAvailable": true,
+      "name": "treport",
+      "nodes": Array [
+        "node_modules/treport",
+      ],
+      "range": "<=0.5.0",
+      "severity": "high",
+      "via": Array [
+        "import-jsx",
+      ],
+    },
+    "union-value": Object {
+      "effects": Array [],
+      "fixAvailable": true,
+      "name": "union-value",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/union-value",
+      ],
+      "range": "<=1.0.0 || 2.0.0",
+      "severity": "high",
+      "via": Array [
+        "set-value",
+      ],
+    },
+    "yargs": Object {
+      "effects": Array [
+        "nyc",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "5.6.0",
+      },
+      "name": "yargs",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs",
+        "node_modules/yargs",
+      ],
+      "range": ">=4.0.0-alpha1",
+      "severity": "low",
+      "via": Array [
+        "os-locale",
+        "yargs-parser",
+      ],
+    },
+    "yargs-parser": Object {
+      "effects": Array [
+        "nyc",
+        "yargs",
+      ],
+      "fixAvailable": Object {
+        "isSemVerMajor": true,
+        "name": "nyc",
+        "version": "15.0.0",
+      },
+      "name": "yargs-parser",
+      "nodes": Array [
+        "node_modules/nyc/node_modules/yargs-parser",
+        "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
+        "node_modules/yargs-parser",
+      ],
+      "range": "*",
+      "severity": "low",
+      "via": Array [
+        Object {
+          "id": 1500,
+          "severity": "low",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1500",
+          "vulnerable_versions": "<13.1.2 || >=14.0.0 <15.0.1 || >=16.0.0 <18.1.2",
+        },
+      ],
+    },
+  },
 }
 `
 

@@ -334,3 +334,59 @@ t.test('audit report with a lying v5 lockfile', async t => {
   report.delete('eslint')
   t.matchSnapshot(report.toJSON())
 })
+
+t.test('omit options', async t => {
+  const path = resolve(fixtures, 'audit-omit')
+  const quick = resolve(path, 'quick.json')
+  // quick response doesn't change for omit args
+  t.teardown(auditResponse(quick))
+  const omits = [
+    [],
+    ['dev'],
+    ['optional'],
+    ['dev', 'optional'],
+    ['peer'],
+    ['peer', 'dev'],
+    ['peer', 'dev', 'optional'], // empty
+  ]
+  const arb = new Arborist({
+    path,
+    registry,
+  })
+  const tree = await arb.loadVirtual()
+
+  const sortReport = report => {
+    const entries = Object.entries(report.vulnerabilities)
+    const vulns = entries.sort(([a, _], [b, $]) =>
+      a.localeCompare(b)
+    ).map(([name, vuln]) =>
+      [name, { ...vuln, via: (vuln.via || []).sort((a, b) =>
+        typeof a === 'string' && typeof b === 'string' ? a.localeCompare(b)
+        : typeof a === 'string' ? -1
+        : typeof b === 'string' ? 1
+        : a.id - b.id
+      )}]
+    )
+    report.vulnerabilities = vulns.reduce((set, [k, v]) => {
+      set[k] = v
+      return set
+    }, {})
+  }
+
+  for (const omit of omits) {
+    t.test(`omit=[${omit.join(',')}]`, async t => {
+      const s = omit.map(o => `-omit${o}`).join('')
+      const bulk = resolve(path, `bulk${s}.json`)
+      const rmBulk = advisoryBulkResponse(bulk)
+      const r1 = (await AuditReport.load(tree, { ...arb.options, omit })).toJSON()
+      sortReport(r1)
+      rmBulk()
+      t.matchSnapshot(r1, 'bulk')
+      const r2 = (await AuditReport.load(tree, { ...arb.options, omit })).toJSON()
+      sortReport(r2)
+      t.strictSame(r1, r2, 'same results')
+      t.end()
+    })
+  }
+  t.end()
+})

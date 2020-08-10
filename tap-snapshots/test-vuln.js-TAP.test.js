@@ -11,12 +11,12 @@ exports[`test/vuln.js TAP basic vulnerability object tests > json formatted afte
   "severity": "critical",
   "via": [
     {
-      "some": "advisory",
-      "severity": "critical"
-    },
-    {
       "another": "advisory",
       "severity": "low"
+    },
+    {
+      "some": "advisory",
+      "severity": "critical"
     }
   ],
   "effects": [
@@ -38,12 +38,12 @@ exports[`test/vuln.js TAP basic vulnerability object tests > json formatted befo
   "severity": "critical",
   "via": [
     {
-      "some": "advisory",
-      "severity": "critical"
-    },
-    {
       "another": "advisory",
       "severity": "low"
+    },
+    {
+      "some": "advisory",
+      "severity": "critical"
     }
   ],
   "effects": [],

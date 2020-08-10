@@ -3,11 +3,18 @@ const Vuln = require('../lib/vuln.js')
 const Node = require('../lib/node.js')
 
 t.test('basic vulnerability object tests', async t => {
-  const v = new Vuln({ name: 'name', via: { some: 'advisory', severity: 'critical' } })
+  const crit = { some: 'advisory', severity: 'critical' }
+  const v = new Vuln({ name: 'name', via: crit })
   t.isa(v, Vuln)
   t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}]))
   t.equal(v.severity, 'critical')
   v.addVia({ another: 'advisory', severity: 'low' })
+  t.equal(v.severity, 'critical')
+  t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}, {another: 'advisory', severity: 'low'}]))
+  v.deleteVia(crit)
+  t.equal(v.severity, 'low')
+  t.match(v.via, new Set([{another: 'advisory', severity: 'low'}]))
+  v.addVia(crit)
   t.equal(v.severity, 'critical')
   t.match(v.via, new Set([{some: 'advisory', severity: 'critical'}, {another: 'advisory', severity: 'low'}]))
 

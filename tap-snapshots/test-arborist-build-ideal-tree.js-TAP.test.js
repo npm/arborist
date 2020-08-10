@@ -2798,6 +2798,152 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP dont get confused if root matches duped metadep > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "test-root-matches-metadep" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/test-root-matches-metadep-x",
+          "name": "test-root-matches-metadep",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "test-root-matches-metadep-x" => Edge {
+          "name": "test-root-matches-metadep-x",
+          "spec": "1.0.0",
+          "to": "node_modules/test-root-matches-metadep-x",
+          "type": "prod",
+        },
+        "test-root-matches-metadep-y" => Edge {
+          "name": "test-root-matches-metadep-y",
+          "spec": "1.0.0",
+          "to": "node_modules/test-root-matches-metadep-y",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/test-root-matches-metadep",
+      "name": "test-root-matches-metadep",
+      "resolved": "https://registry.npmjs.org/test-root-matches-metadep/-/test-root-matches-metadep-1.0.0.tgz",
+    },
+    "test-root-matches-metadep-x" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "test-root-matches-metadep-x",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/test-root-matches-metadep",
+          "name": "test-root-matches-metadep-x",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/test-root-matches-metadep-y/node_modules/test-root-matches-metadep",
+          "name": "test-root-matches-metadep-x",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "test-root-matches-metadep" => Edge {
+          "name": "test-root-matches-metadep",
+          "spec": "1.0.0",
+          "to": "node_modules/test-root-matches-metadep",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/test-root-matches-metadep-x",
+      "name": "test-root-matches-metadep-x",
+      "resolved": "https://registry.npmjs.org/test-root-matches-metadep-x/-/test-root-matches-metadep-x-1.0.0.tgz",
+    },
+    "test-root-matches-metadep-y" => Node {
+      "children": Map {
+        "test-root-matches-metadep" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/test-root-matches-metadep-y",
+              "name": "test-root-matches-metadep",
+              "spec": "1.0.1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "test-root-matches-metadep-x" => Edge {
+              "name": "test-root-matches-metadep-x",
+              "spec": "1.0.0",
+              "to": "node_modules/test-root-matches-metadep-x",
+              "type": "prod",
+            },
+            "test-root-matches-metadep-y" => Edge {
+              "name": "test-root-matches-metadep-y",
+              "spec": "1.0.0",
+              "to": "node_modules/test-root-matches-metadep-y",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/test-root-matches-metadep-y/node_modules/test-root-matches-metadep",
+          "name": "test-root-matches-metadep",
+          "resolved": "https://registry.npmjs.org/test-root-matches-metadep/-/test-root-matches-metadep-1.0.1.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "test-root-matches-metadep-y",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/test-root-matches-metadep",
+          "name": "test-root-matches-metadep-y",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/test-root-matches-metadep-y/node_modules/test-root-matches-metadep",
+          "name": "test-root-matches-metadep-y",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "test-root-matches-metadep" => Edge {
+          "name": "test-root-matches-metadep",
+          "spec": "1.0.1",
+          "to": "node_modules/test-root-matches-metadep-y/node_modules/test-root-matches-metadep",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/test-root-matches-metadep-y",
+      "name": "test-root-matches-metadep-y",
+      "resolved": "https://registry.npmjs.org/test-root-matches-metadep-y/-/test-root-matches-metadep-y-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "test-root-matches-metadep-x" => Edge {
+      "name": "test-root-matches-metadep-x",
+      "spec": "1.0.0",
+      "to": "node_modules/test-root-matches-metadep-x",
+      "type": "prod",
+    },
+    "test-root-matches-metadep-y" => Edge {
+      "name": "test-root-matches-metadep-y",
+      "spec": "1.0.0",
+      "to": "node_modules/test-root-matches-metadep-y",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "test-root-matches-metadep",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP force a new mkdirp (but not semver major) > must match snapshot 1`] = `
 Node {
   "children": Map {

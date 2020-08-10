@@ -1048,3 +1048,9 @@ t.test('do not excessively duplicate bundled metadeps', async t => {
   t.matchSnapshot(fs.readFileSync(plock, 'utf8'), 'normal lockfile')
   t.matchSnapshot(printTree(tree), 'tree')
 })
+
+t.test('do not reify root when root matches duplicated metadep', async t => {
+  const path = fixture(t, 'test-root-matches-metadep')
+  const tree = await reify(path)
+  fs.statSync(path + '/do-not-delete-this-file')
+})

@@ -99,8 +99,9 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 
+const OPT = { cache, registry }
 const buildIdeal = (path, opt) =>
-  new Arborist({cache, registry, path, ...(opt || {})}).buildIdealTree(opt)
+  new Arborist({...OPT, path, ...(opt || {})}).buildIdealTree(opt)
 
 t.test('no options', t => {
   const arb = new Arborist()
@@ -135,7 +136,7 @@ t.test('tarball deps with transitive tarball deps', t =>
 
 t.test('testing-peer-deps package', t => {
   const path = resolve(fixtures, 'testing-peer-deps')
-  return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, registry, cache})
+  return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, ...OPT})
     .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
     .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')))
 })
@@ -255,7 +256,7 @@ t.test('dedupe example - deduped', t => {
 
 t.test('expose explicitRequest', async t => {
   const path = resolve(fixtures, 'simple')
-  const arb = new Arborist({ path, registry, cache })
+  const arb = new Arborist({...OPT})
   const tree = await arb.buildIdealTree({ add: [ 'abbrev' ] })
   t.ok(arb.explicitRequests, 'exposes the explicit request')
   t.strictSame(arb.explicitRequests, new Set(['abbrev']))
@@ -507,7 +508,7 @@ t.test('contrived dep placement tests', t => {
       },
       integrity: 'sha512-foofoofoo',
     })
-    const a = new Arborist({ registry, cache })
+    const a = new Arborist({ ...OPT })
     t.match(a[kCanPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
       Symbol('KEEP'), 'same integrity, keep the one we have')
 
@@ -576,7 +577,7 @@ t.test('contrived dep placement tests', t => {
       parent: root,
     })
 
-    const a = new Arborist({ registry, cache })
+    const a = new Arborist({ ...OPT })
 
     const newFoo = new Node({
       name: 'foo',
@@ -608,7 +609,7 @@ t.test('contrived dep placement tests', t => {
       Symbol('CONFLICT'), 'conflicts with root dependency')
 
     t.test('shadow conflict', t => {
-      const a = new Arborist({ registry, cache })
+      const a = new Arborist({ ...OPT })
       // test the case where we're trying to place a dep somewhere that will
       // cause a conflict deeper in the tree.  The tree looks like this:
       // root
@@ -674,7 +675,7 @@ t.test('contrived dep placement tests', t => {
     })
 
     t.test('shadow no conflict', t => {
-      const a = new Arborist({ registry, cache })
+      const a = new Arborist({ ...OPT })
       // just like the shadow conflict test above, except it is ok to place
       // root
       // +-- b <-- ok place d@2 here on behalf of e
@@ -737,7 +738,7 @@ t.test('contrived dep placement tests', t => {
     })
 
     t.test('update replacing with a better node, dedupe existing', t => {
-      const a = new Arborist({ registry, cache })
+      const a = new Arborist({ ...OPT })
       // given a tree like this:
       // root
       // +-- b
@@ -785,7 +786,7 @@ t.test('contrived dep placement tests', t => {
     })
 
     t.test('update replacing with better node, keep needed dupe', t => {
-      const a = new Arborist({ registry, cache })
+      const a = new Arborist({ ...OPT })
       // root (a, d, d*)
       // +-- a (b, c2)
       // |   +-- b (c2) <-- place c2 for b, lands at root
@@ -908,7 +909,7 @@ t.test('contrived dep placement tests', t => {
       })
       const anode = root.children.get('a')
       const edge = anode.edgesOut.get('b')
-      const arb = new Arborist({ path: root.path, registry, cache })
+      const arb = new Arborist({ path: root.path, ...OPT })
       arb[kUpdateNames] = ['b']
       arb.idealTree = root
       const placed = arb[kPlaceDep](newb, anode, edge)
@@ -920,7 +921,7 @@ t.test('contrived dep placement tests', t => {
   })
 
   t.test('linked tops get their peer deps local if no other option', t => {
-    const a = new Arborist({ registry, cache })
+    const a = new Arborist({ ...OPT })
     const root = new Node({
       path: '/some/path',
       pkg: { name: 'root', dependencies: { 'foo': '*' }},
@@ -950,7 +951,7 @@ t.test('contrived dep placement tests', t => {
   })
 
   t.test('linked tops use fsParent if possible', t => {
-    const a = new Arborist({ registry, cache })
+    const a = new Arborist({ ...OPT })
     const root = new Node({
       path: '/some/path',
       realpath: '/some/path',
@@ -1004,11 +1005,7 @@ t.test('update mkdirp to non-minimist-using version', async t => {
   const path = resolve(fixtures, 'deprecated-dep')
   t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
 
-  const arb = new Arborist({
-    cache,
-    path,
-    registry,
-  })
+  const arb = new Arborist({ path, ...OPT })
 
   await arb.audit()
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
@@ -1020,9 +1017,8 @@ t.test('force a new nyc (and update mkdirp nicely)', async t => {
 
   const arb = new Arborist({
     force: true,
-    cache,
     path,
-    registry,
+    ...OPT,
   })
 
   await arb.audit()
@@ -1037,9 +1033,8 @@ t.test('force a new mkdirp (but not semver major)', async t => {
 
   const arb = new Arborist({
     force: true,
-    cache,
     path,
-    registry,
+    ...OPT,
   })
 
   await arb.audit()
@@ -1055,9 +1050,8 @@ t.test('no fix available', async t => {
 
   const arb = new Arborist({
     force: true,
-    cache,
     path,
-    registry,
+    ...OPT,
   })
 
   await arb.audit()
@@ -1073,9 +1067,8 @@ t.test('no fix available, linked top package', async t => {
 
   const arb = new Arborist({
     force: true,
-    cache,
     path,
-    registry,
+    ...OPT,
   })
 
   await arb.audit()
@@ -1163,6 +1156,7 @@ t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
   const arb = new Arborist({
     global: true,
     path: resolve(path, 'global'),
+    ...OPT,
   })
   return arb.buildIdealTree({
     add: ['child-1.2.3.tgz'],
@@ -1171,4 +1165,11 @@ t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
     const resolved = `file:${resolve(fixturedir, 'child-1.2.3.tgz')}`
     t.equal(tree.children.get('child').resolved, resolved)
   })
+})
+
+t.test('dont get confused if root matches duped metadep', async t => {
+  const path = resolve(fixtures, 'test-root-matches-metadep')
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree()
+  t.matchSnapshot(printTree(tree))
 })

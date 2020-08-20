@@ -21,6 +21,7 @@ const depTypesFixture = resolve(__dirname, 'fixtures/dev-deps')
 const badJsonFixture = resolve(__dirname, 'fixtures/testing-peer-deps-bad-sw')
 const hiddenLockfileFixture = resolve(__dirname, 'fixtures/hidden-lockfile')
 const hidden = 'node_modules/.package-lock.json'
+const saxFixture = resolve(__dirname, 'fixtures/sax')
 
 // start out with the file being fresh
 fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
@@ -1267,3 +1268,6 @@ t.test('metadata that only has one of resolved/integrity', t => {
 
   t.end()
 })
+
+t.test('load an ancient lockfile', async t =>
+  t.match(await Shrinkwrap.load({ path: saxFixture }), { ancientLockfile: true }))

@@ -1173,3 +1173,49 @@ t.test('dont get confused if root matches duped metadep', async t => {
   const tree = await arb.buildIdealTree()
   t.matchSnapshot(printTree(tree))
 })
+
+t.test('inflate an ancient lockfile by hitting the registry', async t => {
+  const checkLogs = warningTracker()
+  const path = resolve(fixtures, 'sax')
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree()
+  t.matchSnapshot(printTree(tree))
+  t.strictSame(checkLogs(), [
+    [
+      'warn',
+      'ancient lockfile',
+      `
+The package-lock.json file was created with a very old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
+    ],
+  ])
+})
+
+t.test('inflate an ancient lockfile with a dep gone missing', async t => {
+  const checkLogs = warningTracker()
+  const path = resolve(fixtures, 'ancient-lockfile-invalid')
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree()
+  t.matchSnapshot(printTree(tree))
+  t.match(checkLogs(), [
+    [
+      'warn',
+      'ancient lockfile',
+      `
+The package-lock.json file was created with a very old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
+    ],
+    [
+      'warn',
+      'ancient lockfile',
+      'Could not fetch metadata for @isaacs/this-does-not-exist-at-all@1.2.3',
+      { code: 'E404', method: 'GET' },
+    ],
+  ])
+})

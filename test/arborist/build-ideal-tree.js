@@ -1185,7 +1185,7 @@ t.test('inflate an ancient lockfile by hitting the registry', async t => {
       'warn',
       'ancient lockfile',
       `
-The package-lock.json file was created with a very old version of npm,
+The package-lock.json file was created with an old version of npm,
 so supplemental metadata must be fetched from the registry.
 
 This is a one-time fix-up, please be patient...
@@ -1205,7 +1205,7 @@ t.test('inflate an ancient lockfile with a dep gone missing', async t => {
       'warn',
       'ancient lockfile',
       `
-The package-lock.json file was created with a very old version of npm,
+The package-lock.json file was created with an old version of npm,
 so supplemental metadata must be fetched from the registry.
 
 This is a one-time fix-up, please be patient...
@@ -1216,6 +1216,26 @@ This is a one-time fix-up, please be patient...
       'ancient lockfile',
       'Could not fetch metadata for @isaacs/this-does-not-exist-at-all@1.2.3',
       { code: 'E404', method: 'GET' },
+    ],
+  ])
+})
+
+t.test('complete build for project with old lockfile', async t => {
+  const checkLogs = warningTracker()
+  const path = resolve(fixtures, 'eslintme')
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree({ complete: true })
+  t.matchSnapshot(printTree(tree))
+  t.match(checkLogs(), [
+    [
+      'warn',
+      'old lockfile',
+      `
+The package-lock.json file was created with an old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
     ],
   ])
 })

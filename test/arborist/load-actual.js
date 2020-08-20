@@ -50,6 +50,11 @@ const printTree = tree => ({
     ? {
       errors: tree.errors.map(error => ({
         code: error.code,
+        ...(error.code ? {} : {
+          code: 'no code, wtf???',
+          message: error.message,
+          stack: ('' + error.stack).split('\n'),
+        }),
         ...(error.path ? { path: relative(__dirname, error.path) }
           : {}),
       })),

@@ -1479,9 +1479,9 @@ Object {
       "critical": 0,
       "high": 5,
       "info": 0,
-      "low": 5,
+      "low": 3,
       "moderate": 2,
-      "total": 12,
+      "total": 10,
     },
   },
   "vulnerabilities": Object {
@@ -1494,7 +1494,7 @@ Object {
       "nodes": Array [
         "node_modules/acorn",
       ],
-      "range": ">=5.5.0 <5.7.4 || >=6.0.0 <6.4.1 || >=7.0.0 <7.1.1",
+      "range": "5.5.0 - 5.7.3 || 6.0.0 - 6.4.0 || 7.0.0 - 7.1.0",
       "severity": "moderate",
       "via": Array [
         Object {
@@ -1532,34 +1532,6 @@ Object {
         "acorn",
       ],
     },
-    "file-entry-cache": Object {
-      "effects": Array [],
-      "fixAvailable": true,
-      "name": "file-entry-cache",
-      "nodes": Array [
-        "node_modules/file-entry-cache",
-      ],
-      "range": "",
-      "severity": "low",
-      "via": Array [
-        "flat-cache",
-      ],
-    },
-    "flat-cache": Object {
-      "effects": Array [
-        "file-entry-cache",
-      ],
-      "fixAvailable": true,
-      "name": "flat-cache",
-      "nodes": Array [
-        "node_modules/flat-cache",
-      ],
-      "range": "",
-      "severity": "low",
-      "via": Array [
-        "write",
-      ],
-    },
     "inquirer": Object {
       "effects": Array [],
       "fixAvailable": true,
@@ -1567,7 +1539,7 @@ Object {
       "nodes": Array [
         "node_modules/inquirer",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "lodash",
@@ -1678,16 +1650,14 @@ Object {
       "nodes": Array [
         "node_modules/table",
       ],
-      "range": "",
+      "range": ">=1.0.0",
       "severity": "high",
       "via": Array [
         "lodash",
       ],
     },
     "write": Object {
-      "effects": Array [
-        "flat-cache",
-      ],
+      "effects": Array [],
       "fixAvailable": true,
       "name": "write",
       "nodes": Array [
@@ -1882,7 +1852,7 @@ Object {
         "node_modules/babel-generator",
         "node_modules/nyc/node_modules/babel-generator",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -1966,7 +1936,7 @@ Object {
         "node_modules/babel-template",
         "node_modules/nyc/node_modules/babel-template",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-traverse",
@@ -1990,7 +1960,7 @@ Object {
         "node_modules/babel-traverse",
         "node_modules/nyc/node_modules/babel-traverse",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -2016,7 +1986,7 @@ Object {
         "node_modules/babel-types",
         "node_modules/nyc/node_modules/babel-types",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "lodash",
@@ -2630,7 +2600,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-generator",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -2650,7 +2620,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-template",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-traverse",
@@ -2672,7 +2642,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-traverse",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -2695,7 +2665,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-types",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "lodash",
@@ -3275,7 +3245,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-generator",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -3295,7 +3265,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-template",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-traverse",
@@ -3317,7 +3287,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-traverse",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -3340,7 +3310,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/babel-types",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "lodash",
@@ -3788,7 +3758,7 @@ Object {
         "node_modules/babel-generator",
         "node_modules/nyc/node_modules/babel-generator",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -3872,7 +3842,7 @@ Object {
         "node_modules/babel-template",
         "node_modules/nyc/node_modules/babel-template",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-traverse",
@@ -3896,7 +3866,7 @@ Object {
         "node_modules/babel-traverse",
         "node_modules/nyc/node_modules/babel-traverse",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -3922,7 +3892,7 @@ Object {
         "node_modules/babel-types",
         "node_modules/nyc/node_modules/babel-types",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "lodash",

@@ -153,13 +153,7 @@ Node {
 `
 
 exports[`test/arborist/reify.js TAP add a dep present in the tree, with v1 shrinkwrap > must match snapshot 1`] = `
-{
-  "dependencies": {
-    "once": "^1.4.0",
-    "wrappy": "^1.0.2"
-  }
-}
-
+{"dependencies":{"once":"^1.4.0","wrappy":"^1.0.2"}}
 `
 
 exports[`test/arborist/reify.js TAP bad shrinkwrap file > expect resolving Promise 1`] = `
@@ -13260,12 +13254,7 @@ Node {
 `
 
 exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 1`] = `
-{
-  "dependencies": {
-    "abbrev": "^1.1.1"
-  }
-}
-
+{"dependencies":{"abbrev":"^1.1.1"}}
 `
 
 exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 2`] = `
@@ -39695,9 +39684,10 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
     },
     "filename": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/.package-lock.json",
     "hiddenLockfile": true,
-    "indent": 2,
+    "indent": undefined,
     "loadedFromDisk": false,
     "loadingError": null,
+    "newline": undefined,
     "originalLockfileVersion": undefined,
     "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
     "shrinkwrapOnly": false,

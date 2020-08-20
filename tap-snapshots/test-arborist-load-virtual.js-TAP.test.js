@@ -10910,6 +10910,14 @@ Node {
         },
       },
       "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "tap",
+          "spec": "^14.10.5",
+          "type": "dev",
+        },
+      },
       "edgesOut": Map {
         "@types/react" => Edge {
           "name": "@types/react",
@@ -12698,6 +12706,12 @@ Node {
       "to": "node_modules/abbrev",
       "type": "optional",
     },
+    "tap" => Edge {
+      "name": "tap",
+      "spec": "^14.10.5",
+      "to": "node_modules/tap",
+      "type": "dev",
+    },
   },
   "location": "",
   "name": "two-bundled-deps",
@@ -12773,12 +12787,12 @@ Node {
 }
 `
 
-exports[`test/arborist/load-virtual.js TAP load a tree with an empty dep set and a lockfile > virtual tree with no deps 1`] = `
+exports[`test/arborist/load-virtual.js TAP load a tree with an empty root, no pj, and a lockfile > virtual tree with no deps 1`] = `
 Node {
   "location": "",
-  "name": "empty-with-shrinkwrap",
+  "name": "empty-with-shrinkwrap-no-pj",
   "package": Object {
-    "name": "empty-with-shrinkwrap",
+    "name": "empty-with-shrinkwrap-no-pj",
     "version": undefined,
   },
   "resolved": null,
@@ -12871,6 +12885,14 @@ Node {
     },
     "tcompare" => Node {
       "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "tcompare",
+          "spec": "^4.0.1",
+          "type": "dev",
+        },
+      },
       "edgesOut": Map {
         "diff-frag" => Edge {
           "name": "diff-frag",
@@ -12923,6 +12945,12 @@ Node {
       "spec": "^1.4.0",
       "to": "node_modules/once",
       "type": "prod",
+    },
+    "tcompare" => Edge {
+      "name": "tcompare",
+      "spec": "^4.0.1",
+      "to": "node_modules/tcompare",
+      "type": "dev",
     },
   },
   "location": "",

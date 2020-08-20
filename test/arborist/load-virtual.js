@@ -8,8 +8,10 @@ const pnpmFixture = resolve(__dirname, '../fixtures/pnpm')
 const depTypesFixture = resolve(__dirname, '../fixtures/dev-deps')
 const bundleFixture = resolve(__dirname, '../fixtures/two-bundled-deps')
 const emptyFixture = resolve(__dirname, '../fixtures/empty-with-shrinkwrap')
+const emptyFixtureNoPJ = resolve(__dirname, '../fixtures/empty-with-shrinkwrap-no-pj')
 const linkedMeta = resolve(__dirname, '../fixtures/cli-750')
 const oldMeta = resolve(__dirname, '../fixtures/old-package-lock')
+const tapAndFlow = resolve(__dirname, '../fixtures/tap-and-flow')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
 const Node = require('../../lib/node.js')
 
@@ -93,13 +95,13 @@ t.test('load from fixture', t =>
   }))
 
 t.test('load from root that already has shrinkwrap', t =>
-  Shrinkwrap.load(fixture).then(meta => {
+  Shrinkwrap.load({ path: tapAndFlow }).then(meta => {
     const root = new Node({
-      path: fixture,
-      pkg: require(fixture + '/package.json'),
+      path: tapAndFlow,
+      pkg: require(tapAndFlow + '/package.json'),
       meta,
     })
-    return new Arborist({path: fixture}).loadVirtual({root})
+    return new Arborist({path: tapAndFlow}).loadVirtual({root})
       .then(virtualTree => t.equal(virtualTree, root))
   }))
 
@@ -149,9 +151,10 @@ t.test('load a tree with a bunch of bundles', t =>
   loadVirtual(bundleFixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'virtual tree with multiple bundles')))
 
-t.test('load a tree with an empty dep set and a lockfile', t =>
-  loadVirtual(emptyFixture).then(tree =>
-    t.matchSnapshot(printTree(tree), 'virtual tree with no deps')))
+t.test('load a tree with an empty root, no pj, and a lockfile', async t => {
+  const tree = await loadVirtual(emptyFixtureNoPJ)
+  t.matchSnapshot(printTree(tree), 'virtual tree with no deps')
+})
 
 t.test('load a tree with a v1 lockfile', t =>
   loadVirtual(oldMeta).then(tree =>

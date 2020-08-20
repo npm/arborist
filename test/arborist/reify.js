@@ -1054,3 +1054,10 @@ t.test('do not reify root when root matches duplicated metadep', async t => {
   const tree = await reify(path)
   fs.statSync(path + '/do-not-delete-this-file')
 })
+
+t.test('reify properly with all deps when lockfile is ancient', async t => {
+  const path = fixture(t, 'sax')
+  const tree = await reify(path)
+  t.matchSnapshot(printTree(tree))
+  fs.statSync(path + '/node_modules/tap/node_modules/.bin/nyc')
+})

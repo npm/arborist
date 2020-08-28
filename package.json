@@ -22,7 +22,7 @@
     "read-package-json-fast": "^1.2.1",
     "readdir-scoped-modules": "^1.1.0",
     "semver": "^7.1.2",
-    "treeverse": "^1.0.1",
+    "treeverse": "^1.0.4",
     "walk-up-path": "^1.0.0"
   },
   "devDependencies": {

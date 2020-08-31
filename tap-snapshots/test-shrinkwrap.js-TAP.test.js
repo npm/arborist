@@ -14120,6 +14120,55 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP loadActual tests workspaces-simple > shrinkwrap data 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "extraneous": true,
+      "requires": Object {
+        "b": "^1.0.0",
+      },
+      "version": "file:a",
+    },
+    "b": Object {
+      "extraneous": true,
+      "version": "file:b",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "workspace-simple",
+  "packages": Object {
+    "": Object {
+      "name": "workspace-simple",
+      "workspaces": Array [
+        "a",
+        "b",
+      ],
+    },
+    "a": Object {
+      "dependencies": Object {
+        "b": "^1.0.0",
+      },
+      "extraneous": true,
+      "version": "1.0.0",
+    },
+    "b": Object {
+      "extraneous": true,
+      "version": "1.0.0",
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "b",
+    },
+  },
+  "requires": true,
+}
+`
+
 exports[`test/shrinkwrap.js TAP loadActual tests yarn-lock-mkdirp-file-dep > shrinkwrap data 1`] = `
 Object {
   "dependencies": Object {

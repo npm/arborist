@@ -8452,6 +8452,244 @@ Node {
 }
 `
 
+exports[`test/arborist/load-actual.js TAP workspaces load a simple install tree containing workspaces > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "workspaces-simple",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+          "type": "workspace",
+        },
+      },
+      "extraneous": true,
+      "location": "node_modules/a",
+      "name": "a",
+      "realpath": "workspaces-simple/a",
+      "target": Object {
+        "fsParent": "workspaces-simple",
+        "name": "a",
+      },
+      "top": "workspaces-simple",
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "workspaces-simple",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "workspaces-simple/a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "node_modules/b",
+      "name": "b",
+      "realpath": "workspaces-simple/b",
+      "target": Object {
+        "fsParent": "workspaces-simple",
+        "name": "b",
+      },
+      "top": "workspaces-simple",
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+      "to": "workspaces-simple/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+      "to": "workspaces-simple/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Array [
+    "a",
+    "b",
+  ],
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {
+      "a": Object {
+        "extraneous": true,
+        "requires": Object {
+          "b": "^1.0.0",
+        },
+        "version": "file:a",
+      },
+      "b": Object {
+        "extraneous": true,
+        "version": "file:b",
+      },
+    },
+    "lockfileVersion": 2,
+    "name": "workspace-simple",
+    "packages": Object {
+      "": Object {
+        "name": "workspace-simple",
+        "workspaces": Array [
+          "a",
+          "b",
+        ],
+      },
+      "a": Object {
+        "dependencies": Object {
+          "b": "^1.0.0",
+        },
+        "extraneous": true,
+        "version": "1.0.0",
+      },
+      "b": Object {
+        "extraneous": true,
+        "version": "1.0.0",
+      },
+      "node_modules/a": Object {
+        "link": true,
+        "resolved": "a",
+      },
+      "node_modules/b": Object {
+        "link": true,
+        "resolved": "b",
+      },
+    },
+    "requires": true,
+  },
+  "name": "workspaces-simple",
+  "realpath": "workspaces-simple",
+  "top": "workspaces-simple",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP workspaces-simple > loaded tree 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "workspaces-simple",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+          "type": "workspace",
+        },
+      },
+      "extraneous": true,
+      "location": "node_modules/a",
+      "name": "a",
+      "realpath": "workspaces-simple/a",
+      "target": Object {
+        "fsParent": "workspaces-simple",
+        "name": "a",
+      },
+      "top": "workspaces-simple",
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "workspaces-simple",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "workspaces-simple/a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "node_modules/b",
+      "name": "b",
+      "realpath": "workspaces-simple/b",
+      "target": Object {
+        "fsParent": "workspaces-simple",
+        "name": "b",
+      },
+      "top": "workspaces-simple",
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+      "to": "workspaces-simple/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+      "to": "workspaces-simple/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Array [
+    "a",
+    "b",
+  ],
+  "location": "",
+  "meta": Object {
+    "dependencies": Object {
+      "a": Object {
+        "extraneous": true,
+        "requires": Object {
+          "b": "^1.0.0",
+        },
+        "version": "file:a",
+      },
+      "b": Object {
+        "extraneous": true,
+        "version": "file:b",
+      },
+    },
+    "lockfileVersion": 2,
+    "name": "workspace-simple",
+    "packages": Object {
+      "": Object {
+        "name": "workspace-simple",
+        "workspaces": Array [
+          "a",
+          "b",
+        ],
+      },
+      "a": Object {
+        "dependencies": Object {
+          "b": "^1.0.0",
+        },
+        "extraneous": true,
+        "version": "1.0.0",
+      },
+      "b": Object {
+        "extraneous": true,
+        "version": "1.0.0",
+      },
+      "node_modules/a": Object {
+        "link": true,
+        "resolved": "a",
+      },
+      "node_modules/b": Object {
+        "link": true,
+        "resolved": "b",
+      },
+    },
+    "requires": true,
+  },
+  "name": "workspaces-simple",
+  "realpath": "workspaces-simple",
+  "top": "workspaces-simple",
+}
+`
+
 exports[`test/arborist/load-actual.js TAP yarn-lock-mkdirp-file-dep > loaded tree 1`] = `
 Node {
   "children": Map {

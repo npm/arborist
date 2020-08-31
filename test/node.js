@@ -1276,3 +1276,307 @@ t.test('node.version', t => {
   t.equal(n.version, '1.2.3')
   t.end()
 })
+
+t.test('explain yourself', t => {
+  const n = new Node({ path: '/some/path', pkg: {
+    dependencies: { x: '1', y: '2' },
+  }})
+  t.strictSame(n.explain(), { location: '/some/path' })
+  t.equal(n.explain(), n.explain(), 'caches result')
+  const x = new Node({ parent: n, pkg: { name: 'x', version: '1.2.3' }})
+  t.strictSame(x.explain(), {
+    name: 'x',
+    version: '1.2.3',
+    location: 'node_modules/x',
+    dependents: [ { type: 'prod', spec: '1', from: n.explain() } ],
+  })
+
+  const virtual = new Node({
+    path: '/virtual-root',
+    sourceReference: x,
+  })
+
+  t.equal(virtual.explain(), x.explain())
+  const y = new Node({
+    parent: n,
+    pkg: { name: 'y', version: '2.3.4', dependencies: { z: '3' }},
+    children: [
+      {pkg: {name: 'z', version: '3.4.5', dependencies: { a: '4' }},
+        children: [
+          {pkg: {name: 'a', version: '4.5.6', dependencies: {}}}
+        ],
+      },
+    ],
+  })
+
+  const z = y.children.get('z')
+  const a = z.children.get('a')
+
+  t.strictSame(y.explain(), {
+    name: 'y',
+    version: '2.3.4',
+    location: 'node_modules/y',
+    dependents: [
+      {
+        type: 'prod',
+        spec: '2',
+        from: n.explain(),
+      },
+    ],
+  })
+
+  t.strictSame(z.explain(), {
+    name: 'z',
+    version: '3.4.5',
+    location: 'node_modules/y/node_modules/z',
+    dependents: [
+      {
+        type: 'prod',
+        spec: '3',
+        from: y.explain(),
+      },
+    ],
+  })
+
+  t.strictSame(a.explain(), {
+    name: 'a',
+    version: '4.5.6',
+    location: 'node_modules/y/node_modules/z/node_modules/a',
+    dependents: [
+      {
+        type: 'prod',
+        spec: '4',
+        from: z.explain(),
+      },
+    ],
+  })
+
+  // ignore invalid edgesIn except from root node
+  y.package = {
+    ...y.package,
+    dependencies: {
+      ...y.package.dependencies,
+      b: '1.2.3',
+    },
+  }
+  a.package = {
+    ...a.package,
+    dependencies: {
+      ...a.package.dependencies,
+      b: '1.2.3',
+    },
+  }
+  const b = new Node({
+    parent: n,
+    pkg: { name: 'b', version: '9.9.9' },
+  })
+  t.strictSame(b.explain(), {
+    name: 'b',
+    version: '9.9.9',
+    location: 'node_modules/b',
+    dependents: [],
+  })
+  b.package = { ...b.package }
+  n.package = {
+    ...n.package,
+    dependencies: {
+      ...n.package.dependencies,
+      b: '1.2.3',
+    },
+  }
+  t.strictSame(b.explain(), {
+    name: 'b',
+    version: '9.9.9',
+    location: 'node_modules/b',
+    dependents: [ { type: 'prod', spec: '1.2.3', error: 'INVALID', from: n.explain() } ],
+  })
+
+  // explain with a given edge
+  b.package = { ...b.package }
+  const otherNode = new Node({
+    pkg: {
+      ...n.package,
+      dependencies: {
+        ...n.package.dependencies,
+        b: '9',
+      },
+    },
+    path: '/virtual-root',
+    children: [ { pkg: { ...b.package } }],
+  })
+
+  // explain a node with respect to a specific hypothetical edge
+  t.strictSame(b.explain(otherNode.edgesOut.get('b')), {
+    name: 'b',
+    version: '9.9.9',
+    location: 'node_modules/b',
+    dependents: [
+      {
+        type: 'prod',
+        spec: '9',
+        from: { location: '/virtual-root' },
+      },
+    ],
+  })
+
+  // don't get tripped up by cycles
+  const cycle = new Node({
+    path: '/cy/cle',
+    pkg: { name: 'cycle-root', dependencies: { c: '1' } },
+    children: [
+      { pkg: { name: 'a', version: '1.1.1', dependencies: { b: '1' } } },
+      { pkg: { name: 'b', version: '1.1.1', dependencies: { a: '1' } } },
+      { pkg: { name: 'c', version: '1.1.1', dependencies: { a: '1' } } },
+    ],
+  })
+
+  t.strictSame(cycle.children.get('b').explain(), {
+    name: 'b',
+    version: '1.1.1',
+    location: 'node_modules/b',
+    dependents: [
+      {
+        type: 'prod',
+        spec: '1',
+        from: {
+          name: 'a',
+          version: '1.1.1',
+          location: 'node_modules/a',
+          dependents: [
+            {
+              type: 'prod',
+              spec: '1',
+              from: {
+                name: 'b',
+                version: '1.1.1'
+                // doesn't keep adding "from" links here.
+              }
+            },
+            {
+              type: 'prod',
+              spec: '1',
+              from: {
+                name: 'c',
+                version: '1.1.1',
+                location: 'node_modules/c',
+                dependents: [
+                  {
+                    type: 'prod',
+                    spec: '1',
+                    from: {
+                      location: '/cy/cle'
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  })
+
+  {
+    // treat a source reference by explaining the thing it's standing in for
+    const actual = new Node({
+      path: '/project',
+      pkg: { dependencies: { a: '1' } },
+      children: [
+        { pkg: { name: 'a', version: '1.2.3', dependencies: { b: '1' }}},
+        { pkg: { name: 'b', version: '1.2.3', dependencies: { c: '1', d: '1' }}},
+      ],
+    }).children.get('b')
+    const virtual = new Node({
+      path: '/virtual-root',
+      pkg: { ...actual.package },
+      sourceReference: actual,
+      children: [
+        { pkg: { name: 'c', version: '1.2.3', dependencies: { d: '1' }}},
+        { pkg: { name: 'd', version: '1.2.3' }},
+      ],
+    })
+
+    const edge = virtual.children.get('c').edgesOut.get('d')
+    t.strictSame(virtual.children.get('d').explain(edge), {
+      name: 'd',
+      version: '1.2.3',
+      whileInstalling: {
+        name: 'b',
+        version: '1.2.3'
+      },
+      location: 'node_modules/d',
+      dependents: [
+        {
+          type: 'prod',
+          spec: '1',
+          from: {
+            name: 'c',
+            version: '1.2.3',
+            whileInstalling: {
+              name: 'b',
+              version: '1.2.3'
+            },
+            location: 'node_modules/c',
+            dependents: [
+              {
+                type: 'prod',
+                spec: '1',
+                from: {
+                  name: 'b',
+                  version: '1.2.3',
+                  location: 'node_modules/b',
+                  dependents: [
+                    {
+                      type: 'prod',
+                      spec: '1',
+                      from: {
+                        name: 'a',
+                        version: '1.2.3',
+                        location: 'node_modules/a',
+                        dependents: [
+                          {
+                            type: 'prod',
+                            spec: '1',
+                            from: {
+                              location: '/project'
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    })
+  }
+
+  // explain with errors
+  const badParent = new Node({ path: '/bad/nodes' })
+  const errNode = new Node({
+    error: new Error('bad node'),
+    pkg: { name: 'bad', version: 'node' },
+    parent: badParent,
+  })
+  t.match(errNode.explain(), {
+    errors: [ { message: 'bad node' } ],
+    name: 'bad',
+    version: 'node',
+    package: { name: 'bad', version: 'node' },
+  })
+  const noPkgDep = new Node({
+    pkg: { noname: 'bad', noversion: 'node' },
+    parent: badParent,
+    path: '/bad/nodes/node_modules/noname',
+  })
+  t.match(noPkgDep.explain(), {
+    errors: [ { message: 'invalid package: lacks name and/or version' } ],
+    package: { noname: 'bad', noversion: 'node' },
+  })
+
+
+  t.end()
+})

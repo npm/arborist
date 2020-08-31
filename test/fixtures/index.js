@@ -23,6 +23,7 @@ const roots = [
   'workspace',
   'workspace2',
   'workspace3',
+  'workspaces-simple',
   'install-types',
   'pnpm',
   'external-dep/root',
@@ -64,6 +65,8 @@ const symlinks = {
   'workspace3/node_modules/a': '../packages/a',
   'workspace3/node_modules/b': '../packages/b',
   'workspace3/node_modules/c': '../packages/c',
+  'workspaces-simple/node_modules/a': '../a',
+  'workspaces-simple/node_modules/b': '../b',
 
   'links-all-over/node_modules/link-outside-nest':
     '../real',

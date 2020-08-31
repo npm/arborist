@@ -96,6 +96,9 @@ const printTree = tree => ({
   })
 })
 
+const cwd = process.cwd()
+t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
+
 t.formatSnapshot = tree => format(printTree(tree), { sort: true })
 
 const loadActual = (path, opts) => new Arborist({path}).loadActual(opts)
@@ -281,5 +284,14 @@ t.test('realpath gutchecks', t => {
       real => t.equal(real, realpathSync(resolve(d, link))),
       er => t.throws(()=> realpathSync(resolve(d, link)))
     )))
+  t.end()
+})
+
+t.test('workspaces', t => {
+  t.test('load a simple install tree containing workspaces', t =>
+    t.resolveMatchSnapshot(
+      loadActual(resolve(fixtures, 'workspaces-simple'))
+    ))
+
   t.end()
 })

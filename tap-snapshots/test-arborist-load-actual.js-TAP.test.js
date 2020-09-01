@@ -8464,7 +8464,6 @@ Node {
           "type": "workspace",
         },
       },
-      "extraneous": true,
       "location": "node_modules/a",
       "name": "a",
       "realpath": "workspaces-simple/a",
@@ -8489,7 +8488,6 @@ Node {
           "type": "prod",
         },
       },
-      "extraneous": true,
       "location": "node_modules/b",
       "name": "b",
       "realpath": "workspaces-simple/b",
@@ -8522,14 +8520,12 @@ Node {
   "meta": Object {
     "dependencies": Object {
       "a": Object {
-        "extraneous": true,
         "requires": Object {
           "b": "^1.0.0",
         },
         "version": "file:a",
       },
       "b": Object {
-        "extraneous": true,
         "version": "file:b",
       },
     },
@@ -8547,11 +8543,9 @@ Node {
         "dependencies": Object {
           "b": "^1.0.0",
         },
-        "extraneous": true,
         "version": "1.0.0",
       },
       "b": Object {
-        "extraneous": true,
         "version": "1.0.0",
       },
       "node_modules/a": Object {
@@ -8583,7 +8577,6 @@ Node {
           "type": "workspace",
         },
       },
-      "extraneous": true,
       "location": "node_modules/a",
       "name": "a",
       "realpath": "workspaces-simple/a",
@@ -8608,7 +8601,6 @@ Node {
           "type": "prod",
         },
       },
-      "extraneous": true,
       "location": "node_modules/b",
       "name": "b",
       "realpath": "workspaces-simple/b",
@@ -8641,14 +8633,12 @@ Node {
   "meta": Object {
     "dependencies": Object {
       "a": Object {
-        "extraneous": true,
         "requires": Object {
           "b": "^1.0.0",
         },
         "version": "file:a",
       },
       "b": Object {
-        "extraneous": true,
         "version": "file:b",
       },
     },
@@ -8666,11 +8656,9 @@ Node {
         "dependencies": Object {
           "b": "^1.0.0",
         },
-        "extraneous": true,
         "version": "1.0.0",
       },
       "b": Object {
-        "extraneous": true,
         "version": "1.0.0",
       },
       "node_modules/a": Object {

@@ -14124,14 +14124,12 @@ exports[`test/shrinkwrap.js TAP loadActual tests workspaces-simple > shrinkwrap 
 Object {
   "dependencies": Object {
     "a": Object {
-      "extraneous": true,
       "requires": Object {
         "b": "^1.0.0",
       },
       "version": "file:a",
     },
     "b": Object {
-      "extraneous": true,
       "version": "file:b",
     },
   },
@@ -14149,11 +14147,9 @@ Object {
       "dependencies": Object {
         "b": "^1.0.0",
       },
-      "extraneous": true,
       "version": "1.0.0",
     },
     "b": Object {
-      "extraneous": true,
       "version": "1.0.0",
     },
     "node_modules/a": Object {

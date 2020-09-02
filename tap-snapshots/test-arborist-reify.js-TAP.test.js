@@ -44423,7 +44423,7 @@ Node {
         Edge {
           "from": "",
           "name": "tap",
-          "spec": "^12.7.0",
+          "spec": "12",
           "type": "prod",
         },
       },
@@ -45587,7 +45587,7 @@ Node {
   "edgesOut": Map {
     "tap" => Edge {
       "name": "tap",
-      "spec": "^12.7.0",
+      "spec": "12",
       "to": "node_modules/tap",
       "type": "prod",
     },

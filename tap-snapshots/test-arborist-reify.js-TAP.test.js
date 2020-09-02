@@ -13254,7 +13254,12 @@ Node {
 `
 
 exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 1`] = `
-{"dependencies":{"abbrev":"^1.1.1"}}
+{
+  "dependencies": {
+    "abbrev": "^1.1.1"
+  }
+}
+
 `
 
 exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 2`] = `

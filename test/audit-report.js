@@ -9,6 +9,8 @@ const {registry, auditResponse, failAudit, advisoryBulkResponse} = registryServe
 const {resolve} = require('path')
 const fixtures = resolve(__dirname, 'fixtures')
 
+const newArb = (path, opts = {}) => new Arborist({path, registry, ...opts})
+
 t.test('setup server', { bail: true }, registryServer)
 
 t.test('audit outdated nyc and mkdirp', async t => {
@@ -16,10 +18,7 @@ t.test('audit outdated nyc and mkdirp', async t => {
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
 
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -44,10 +43,7 @@ t.test('audit outdated nyc and mkdirp with newer endpoint', async t => {
   const auditFile = resolve(path, 'advisory-bulk.json')
   t.teardown(advisoryBulkResponse(auditFile))
 
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -72,11 +68,7 @@ t.test('audit outdated nyc and mkdirp with before: option', async t => {
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
 
-  const arb = new Arborist({
-    before: new Date('2020-01-01'),
-    path,
-    registry,
-  })
+  const arb = newArb(path, { before: new Date('2020-01-01') })
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -103,10 +95,7 @@ t.test('audit returns an error', async t => {
   process.on('log', onlog)
   t.teardown(() => process.removeListener('log', onlog))
 
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -131,11 +120,7 @@ t.test('audit disabled by config', async t => {
   process.on('log', onlog)
   t.teardown(() => process.removeListener('log', onlog))
 
-  const arb = new Arborist({
-    path,
-    registry,
-    audit: false,
-  })
+  const arb = newArb(path, { audit: false })
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -151,10 +136,7 @@ t.test('get advisory about node not in tree', async t => {
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
 
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   tree.children.get('mkdirp').parent = null
@@ -184,10 +166,7 @@ t.test('metavuln where dep is not a registry dep', async t => {
   const path = resolve(fixtures, 'minimist-git-metadep')
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -202,10 +181,7 @@ t.test('metavuln where a dep is not on the registry at all', async t => {
   const path = resolve(fixtures, 'audit-missing-packument')
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -220,10 +196,7 @@ t.test('all severity levels', async t => {
   const path = resolve(fixtures, 'audit-all-severities')
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -238,10 +211,7 @@ t.test('one vulnerability', async t => {
   const path = resolve(fixtures, 'audit-one-vuln')
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -256,10 +226,7 @@ t.test('unfixable, but not a semver major forced fix', async t => {
   const path = resolve(fixtures, 'mkdirp-pinned')
   const auditFile = resolve(fixtures, 'audit-nyc-mkdirp/audit.json')
   t.teardown(auditResponse(auditFile))
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -274,10 +241,7 @@ t.test('a dep vuln that also has its own advisory against it', async t => {
   const path = resolve(fixtures, 'audit-dep-vuln-with-own-advisory')
   const auditFile = resolve(path, 'audit.json')
   t.teardown(auditResponse(auditFile))
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -302,10 +266,7 @@ t.test('error on audit response with no advisories object', async t => {
   const auditFile = resolve(dir, 'audit.json')
   t.teardown(auditResponse(auditFile))
 
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
 
   const tree = await arb.loadVirtual()
   const report = await AuditReport.load(tree, arb.options)
@@ -321,10 +282,7 @@ t.test('audit report with a lying v5 lockfile', async t => {
   // a dep may _appear_ to be a metavuln, but when we scan the
   // packument, it turns out that it matches no nodes, and gets deleted.
   const path = resolve(fixtures, 'eslintme')
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
   const auditFile = resolve(path, 'audit.json')
   t.teardown(advisoryBulkResponse(auditFile))
   const tree = await arb.loadVirtual()
@@ -349,10 +307,7 @@ t.test('omit options', async t => {
     ['peer', 'dev'],
     ['peer', 'dev', 'optional'], // empty
   ]
-  const arb = new Arborist({
-    path,
-    registry,
-  })
+  const arb = newArb(path)
   const tree = await arb.loadVirtual()
 
   const sortReport = report => {

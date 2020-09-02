@@ -12,6 +12,7 @@ const emptyFixtureNoPJ = resolve(__dirname, '../fixtures/empty-with-shrinkwrap-n
 const linkedMeta = resolve(__dirname, '../fixtures/cli-750')
 const oldMeta = resolve(__dirname, '../fixtures/old-package-lock')
 const tapAndFlow = resolve(__dirname, '../fixtures/tap-and-flow')
+const editFixture = resolve(__dirname, '../fixtures/edit-package-json')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
 const Node = require('../../lib/node.js')
 
@@ -85,7 +86,7 @@ const { format } = require('tcompare')
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-const loadVirtual = path => new Arborist({path}).loadVirtual()
+const loadVirtual = (path, opts = {}) => new Arborist({path, ...opts}).loadVirtual()
 
 t.test('load from fixture', t =>
   loadVirtual(fixture).then(virtualTree => {
@@ -159,6 +160,36 @@ t.test('load a tree with an empty root, no pj, and a lockfile', async t => {
 t.test('load a tree with a v1 lockfile', t =>
   loadVirtual(oldMeta).then(tree =>
     t.matchSnapshot(printTree(tree), 'virtual tree with v1 shronk')))
+
+t.test('load a tree where package.json edited', async t => {
+  const ok = resolve(editFixture, 'ok')
+  const removed = resolve(editFixture, 'removed')
+  const changed = resolve(editFixture, 'changed')
+  const kFlagsSuspect = Symbol.for('flagsSuspect')
+
+  const okArb = new Arborist({ path: ok })
+  await okArb.loadVirtual()
+  t.matchSnapshot(printTree(okArb.virtualTree), 'deps match')
+  t.equal(okArb[kFlagsSuspect], false, 'flags not suspect')
+
+  const rmArb = new Arborist({ path: removed })
+  await rmArb.loadVirtual()
+  t.matchSnapshot(printTree(rmArb.virtualTree), 'deps removed')
+  t.equal(rmArb[kFlagsSuspect], true, 'flags suspect')
+
+  const changeArb = new Arborist({ path: changed })
+  const root = await changeArb.loadVirtual()
+  t.matchSnapshot(printTree(root), 'deps changed')
+  t.equal(changeArb[kFlagsSuspect], true, 'flags suspect')
+
+  // pretend that it's a new root with fresh metadata
+  root.meta.loadedFromDisk = false
+  const newArb = new Arborist({ path: changed })
+  await newArb.loadVirtual({ root })
+  t.matchSnapshot(printTree(newArb.virtualTree),
+    'changed, but re-using the same root that already has meta')
+  t.equal(newArb[kFlagsSuspect], false, 'flags not suspect')
+})
 
 t.test('workspaces', t => {
   t.test('load a simple example', t =>

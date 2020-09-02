@@ -3535,7 +3535,7 @@ module.exports = t => {
   }),
   "package.json": JSON.stringify({
     "dependencies": {
-      "tap": "^12.7.0"
+      "tap": "12"
     }
   })
 })

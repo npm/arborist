@@ -39559,6 +39559,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "peer": false,
       "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "sourceReference": null,
     },
     "mkdirp" => Node {
       "children": Map {},
@@ -39585,6 +39586,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "peer": false,
       "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+      "sourceReference": null,
     },
   },
   "dev": false,
@@ -39626,6 +39628,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "peer": false,
       "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "sourceReference": null,
     },
     "node_modules/mkdirp" => Node {
       "children": Map {},
@@ -39652,6 +39655,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "peer": false,
       "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
+      "sourceReference": null,
     },
   },
   "legacyPeerDeps": false,
@@ -39720,6 +39724,7 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
   "peer": false,
   "realpath": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
   "resolved": null,
+  "sourceReference": null,
 }
 `
 

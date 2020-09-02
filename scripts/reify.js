@@ -109,4 +109,4 @@ arb.reify(options).then(tree => {
   console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[1] / 1e9}s`)
   if (tree.meta && options.save)
     tree.meta.save()
-}).catch(er => console.error(er))
+}).catch(er => console.error(require('util').inspect(er, { depth: Infinity })))

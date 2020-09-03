@@ -42,9 +42,108 @@ module.exports = t => {
     }),
     "mkdirp": {
       "bin": {
-        "cmd.js": "#!/usr/bin/env node\n\nconst usage = () => `\nusage: mkdirp [DIR1,DIR2..] {OPTIONS}\n\n  Create each supplied directory including any necessary parent directories\n  that don't yet exist.\n\n  If the directory already exists, do nothing.\n\nOPTIONS are:\n\n  -m<mode>       If a directory needs to be created, set the mode as an octal\n  --mode=<mode>  permission string.\n\n  -v --version   Print the mkdirp version number\n\n  -h --help      Print this helpful banner\n\n  -p --print     Print the first directories created for each path provided\n\n  --manual       Use manual implementation, even if native is available\n`\n\nconst dirs = []\nconst opts = {}\nlet print = false\nlet dashdash = false\nlet manual = false\nfor (const arg of process.argv.slice(2)) {\n  if (dashdash)\n    dirs.push(arg)\n  else if (arg === '--')\n    dashdash = true\n  else if (arg === '--manual')\n    manual = true\n  else if (/^-h/.test(arg) || /^--help/.test(arg)) {\n    console.log(usage())\n    process.exit(0)\n  } else if (arg === '-v' || arg === '--version') {\n    console.log(require('../package.json').version)\n    process.exit(0)\n  } else if (arg === '-p' || arg === '--print') {\n    print = true\n  } else if (/^-m/.test(arg) || /^--mode=/.test(arg)) {\n    const mode = parseInt(arg.replace(/^(-m|--mode=)/, ''), 8)\n    if (isNaN(mode)) {\n      console.error(`invalid mode argument: ${arg}\\nMust be an octal number.`)\n      process.exit(1)\n    }\n    opts.mode = mode\n  } else\n    dirs.push(arg)\n}\n\nconst mkdirp = require('../')\nconst impl = manual ? mkdirp.manual : mkdirp\nif (dirs.length === 0)\n  console.error(usage())\n\nPromise.all(dirs.map(dir => impl(dir, opts)))\n  .then(made => print ? made.forEach(m => m && console.log(m)) : null)\n  .catch(er => {\n    console.error(er.message)\n    if (er.code)\n      console.error('  code: ' + er.code)\n    process.exit(1)\n  })\n"
+        "cmd.js": `#!/usr/bin/env node
+
+const usage = () => \`
+usage: mkdirp [DIR1,DIR2..] {OPTIONS}
+
+  Create each supplied directory including any necessary parent directories
+  that don't yet exist.
+
+  If the directory already exists, do nothing.
+
+OPTIONS are:
+
+  -m<mode>       If a directory needs to be created, set the mode as an octal
+  --mode=<mode>  permission string.
+
+  -v --version   Print the mkdirp version number
+
+  -h --help      Print this helpful banner
+
+  -p --print     Print the first directories created for each path provided
+
+  --manual       Use manual implementation, even if native is available
+\`
+
+const dirs = []
+const opts = {}
+let print = false
+let dashdash = false
+let manual = false
+for (const arg of process.argv.slice(2)) {
+  if (dashdash)
+    dirs.push(arg)
+  else if (arg === '--')
+    dashdash = true
+  else if (arg === '--manual')
+    manual = true
+  else if (/^-h/.test(arg) || /^--help/.test(arg)) {
+    console.log(usage())
+    process.exit(0)
+  } else if (arg === '-v' || arg === '--version') {
+    console.log(require('../package.json').version)
+    process.exit(0)
+  } else if (arg === '-p' || arg === '--print') {
+    print = true
+  } else if (/^-m/.test(arg) || /^--mode=/.test(arg)) {
+    const mode = parseInt(arg.replace(/^(-m|--mode=)/, ''), 8)
+    if (isNaN(mode)) {
+      console.error(\`invalid mode argument: \${arg}\\nMust be an octal number.\`)
+      process.exit(1)
+    }
+    opts.mode = mode
+  } else
+    dirs.push(arg)
+}
+
+const mkdirp = require('../')
+const impl = manual ? mkdirp.manual : mkdirp
+if (dirs.length === 0)
+  console.error(usage())
+
+Promise.all(dirs.map(dir => impl(dir, opts)))
+  .then(made => print ? made.forEach(m => m && console.log(m)) : null)
+  .catch(er => {
+    console.error(er.message)
+    if (er.code)
+      console.error('  code: ' + er.code)
+    process.exit(1)
+  })
+`
       },
-      "index.js": "const optsArg = require('./lib/opts-arg.js')\nconst pathArg = require('./lib/path-arg.js')\n\nconst {mkdirpNative, mkdirpNativeSync} = require('./lib/mkdirp-native.js')\nconst {mkdirpManual, mkdirpManualSync} = require('./lib/mkdirp-manual.js')\nconst {useNative, useNativeSync} = require('./lib/use-native.js')\n\n\nconst mkdirp = (path, opts) => {\n  path = pathArg(path)\n  opts = optsArg(opts)\n  return useNative(opts)\n    ? mkdirpNative(path, opts)\n    : mkdirpManual(path, opts)\n}\n\nconst mkdirpSync = (path, opts) => {\n  path = pathArg(path)\n  opts = optsArg(opts)\n  return useNativeSync(opts)\n    ? mkdirpNativeSync(path, opts)\n    : mkdirpManualSync(path, opts)\n}\n\nmkdirp.sync = mkdirpSync\nmkdirp.native = (path, opts) => mkdirpNative(pathArg(path), optsArg(opts))\nmkdirp.manual = (path, opts) => mkdirpManual(pathArg(path), optsArg(opts))\nmkdirp.nativeSync = (path, opts) => mkdirpNativeSync(pathArg(path), optsArg(opts))\nmkdirp.manualSync = (path, opts) => mkdirpManualSync(pathArg(path), optsArg(opts))\n\nmodule.exports = mkdirp\n",
+      "index.js": `const optsArg = require('./lib/opts-arg.js')
+const pathArg = require('./lib/path-arg.js')
+
+const {mkdirpNative, mkdirpNativeSync} = require('./lib/mkdirp-native.js')
+const {mkdirpManual, mkdirpManualSync} = require('./lib/mkdirp-manual.js')
+const {useNative, useNativeSync} = require('./lib/use-native.js')
+
+
+const mkdirp = (path, opts) => {
+  path = pathArg(path)
+  opts = optsArg(opts)
+  return useNative(opts)
+    ? mkdirpNative(path, opts)
+    : mkdirpManual(path, opts)
+}
+
+const mkdirpSync = (path, opts) => {
+  path = pathArg(path)
+  opts = optsArg(opts)
+  return useNativeSync(opts)
+    ? mkdirpNativeSync(path, opts)
+    : mkdirpManualSync(path, opts)
+}
+
+mkdirp.sync = mkdirpSync
+mkdirp.native = (path, opts) => mkdirpNative(pathArg(path), optsArg(opts))
+mkdirp.manual = (path, opts) => mkdirpManual(pathArg(path), optsArg(opts))
+mkdirp.nativeSync = (path, opts) => mkdirpNativeSync(pathArg(path), optsArg(opts))
+mkdirp.manualSync = (path, opts) => mkdirpManualSync(pathArg(path), optsArg(opts))
+
+module.exports = mkdirp
+`,
       "package.json": JSON.stringify({
         "name": "mkdirp",
         "description": "Recursively mkdir, like `mkdir -p`",
@@ -92,9 +191,230 @@ module.exports = t => {
     },
     "semver": {
       "bin": {
-        "semver.js": "#!/usr/bin/env node\n// Standalone semver comparison program.\n// Exits successfully and prints matching version(s) if\n// any supplied version is valid and passes all tests.\n\nconst argv = process.argv.slice(2)\n\nlet versions = []\n\nconst range = []\n\nlet inc = null\n\nconst version = require('../package.json').version\n\nlet loose = false\n\nlet includePrerelease = false\n\nlet coerce = false\n\nlet rtl = false\n\nlet identifier\n\nconst semver = require('../')\n\nlet reverse = false\n\nconst options = {}\n\nconst main = () => {\n  if (!argv.length) return help()\n  while (argv.length) {\n    let a = argv.shift()\n    const indexOfEqualSign = a.indexOf('=')\n    if (indexOfEqualSign !== -1) {\n      a = a.slice(0, indexOfEqualSign)\n      argv.unshift(a.slice(indexOfEqualSign + 1))\n    }\n    switch (a) {\n      case '-rv': case '-rev': case '--rev': case '--reverse':\n        reverse = true\n        break\n      case '-l': case '--loose':\n        loose = true\n        break\n      case '-p': case '--include-prerelease':\n        includePrerelease = true\n        break\n      case '-v': case '--version':\n        versions.push(argv.shift())\n        break\n      case '-i': case '--inc': case '--increment':\n        switch (argv[0]) {\n          case 'major': case 'minor': case 'patch': case 'prerelease':\n          case 'premajor': case 'preminor': case 'prepatch':\n            inc = argv.shift()\n            break\n          default:\n            inc = 'patch'\n            break\n        }\n        break\n      case '--preid':\n        identifier = argv.shift()\n        break\n      case '-r': case '--range':\n        range.push(argv.shift())\n        break\n      case '-c': case '--coerce':\n        coerce = true\n        break\n      case '--rtl':\n        rtl = true\n        break\n      case '--ltr':\n        rtl = false\n        break\n      case '-h': case '--help': case '-?':\n        return help()\n      default:\n        versions.push(a)\n        break\n    }\n  }\n\n  const options = { loose: loose, includePrerelease: includePrerelease, rtl: rtl }\n\n  versions = versions.map((v) => {\n    return coerce ? (semver.coerce(v, options) || { version: v }).version : v\n  }).filter((v) => {\n    return semver.valid(v)\n  })\n  if (!versions.length) return fail()\n  if (inc && (versions.length !== 1 || range.length)) { return failInc() }\n\n  for (let i = 0, l = range.length; i < l; i++) {\n    versions = versions.filter((v) => {\n      return semver.satisfies(v, range[i], options)\n    })\n    if (!versions.length) return fail()\n  }\n  return success(versions)\n}\n\n\nconst failInc = () => {\n  console.error('--inc can only be used on a single version with no range')\n  fail()\n}\n\nconst fail = () => process.exit(1)\n\nconst success = () => {\n  const compare = reverse ? 'rcompare' : 'compare'\n  versions.sort((a, b) => {\n    return semver[compare](a, b, options)\n  }).map((v) => {\n    return semver.clean(v, options)\n  }).map((v) => {\n    return inc ? semver.inc(v, inc, options, identifier) : v\n  }).forEach((v, i, _) => { console.log(v) })\n}\n\nconst help = () => console.log(\n`SemVer ${version}\n\nA JavaScript implementation of the https://semver.org/ specification\nCopyright Isaac Z. Schlueter\n\nUsage: semver [options] <version> [<version> [...]]\nPrints valid versions sorted by SemVer precedence\n\nOptions:\n-r --range <range>\n        Print versions that match the specified range.\n\n-i --increment [<level>]\n        Increment a version by the specified level.  Level can\n        be one of: major, minor, patch, premajor, preminor,\n        prepatch, or prerelease.  Default level is 'patch'.\n        Only one version may be specified.\n\n--preid <identifier>\n        Identifier to be used to prefix premajor, preminor,\n        prepatch or prerelease version increments.\n\n-l --loose\n        Interpret versions and ranges loosely\n\n-p --include-prerelease\n        Always include prerelease versions in range matching\n\n-c --coerce\n        Coerce a string into SemVer if possible\n        (does not imply --loose)\n\n--rtl\n        Coerce version strings right to left\n\n--ltr\n        Coerce version strings left to right (default)\n\nProgram exits successfully if any valid version satisfies\nall supplied ranges, and prints all satisfying versions.\n\nIf no satisfying versions are found, then exits failure.\n\nVersions are printed in ascending order, so supplying\nmultiple versions to the utility will just sort them.`)\n\nmain()\n"
+        "semver.js": `#!/usr/bin/env node
+// Standalone semver comparison program.
+// Exits successfully and prints matching version(s) if
+// any supplied version is valid and passes all tests.
+
+const argv = process.argv.slice(2)
+
+let versions = []
+
+const range = []
+
+let inc = null
+
+const version = require('../package.json').version
+
+let loose = false
+
+let includePrerelease = false
+
+let coerce = false
+
+let rtl = false
+
+let identifier
+
+const semver = require('../')
+
+let reverse = false
+
+const options = {}
+
+const main = () => {
+  if (!argv.length) return help()
+  while (argv.length) {
+    let a = argv.shift()
+    const indexOfEqualSign = a.indexOf('=')
+    if (indexOfEqualSign !== -1) {
+      a = a.slice(0, indexOfEqualSign)
+      argv.unshift(a.slice(indexOfEqualSign + 1))
+    }
+    switch (a) {
+      case '-rv': case '-rev': case '--rev': case '--reverse':
+        reverse = true
+        break
+      case '-l': case '--loose':
+        loose = true
+        break
+      case '-p': case '--include-prerelease':
+        includePrerelease = true
+        break
+      case '-v': case '--version':
+        versions.push(argv.shift())
+        break
+      case '-i': case '--inc': case '--increment':
+        switch (argv[0]) {
+          case 'major': case 'minor': case 'patch': case 'prerelease':
+          case 'premajor': case 'preminor': case 'prepatch':
+            inc = argv.shift()
+            break
+          default:
+            inc = 'patch'
+            break
+        }
+        break
+      case '--preid':
+        identifier = argv.shift()
+        break
+      case '-r': case '--range':
+        range.push(argv.shift())
+        break
+      case '-c': case '--coerce':
+        coerce = true
+        break
+      case '--rtl':
+        rtl = true
+        break
+      case '--ltr':
+        rtl = false
+        break
+      case '-h': case '--help': case '-?':
+        return help()
+      default:
+        versions.push(a)
+        break
+    }
+  }
+
+  const options = { loose: loose, includePrerelease: includePrerelease, rtl: rtl }
+
+  versions = versions.map((v) => {
+    return coerce ? (semver.coerce(v, options) || { version: v }).version : v
+  }).filter((v) => {
+    return semver.valid(v)
+  })
+  if (!versions.length) return fail()
+  if (inc && (versions.length !== 1 || range.length)) { return failInc() }
+
+  for (let i = 0, l = range.length; i < l; i++) {
+    versions = versions.filter((v) => {
+      return semver.satisfies(v, range[i], options)
+    })
+    if (!versions.length) return fail()
+  }
+  return success(versions)
+}
+
+
+const failInc = () => {
+  console.error('--inc can only be used on a single version with no range')
+  fail()
+}
+
+const fail = () => process.exit(1)
+
+const success = () => {
+  const compare = reverse ? 'rcompare' : 'compare'
+  versions.sort((a, b) => {
+    return semver[compare](a, b, options)
+  }).map((v) => {
+    return semver.clean(v, options)
+  }).map((v) => {
+    return inc ? semver.inc(v, inc, options, identifier) : v
+  }).forEach((v, i, _) => { console.log(v) })
+}
+
+const help = () => console.log(
+\`SemVer \${version}
+
+A JavaScript implementation of the https://semver.org/ specification
+Copyright Isaac Z. Schlueter
+
+Usage: semver [options] <version> [<version> [...]]
+Prints valid versions sorted by SemVer precedence
+
+Options:
+-r --range <range>
+        Print versions that match the specified range.
+
+-i --increment [<level>]
+        Increment a version by the specified level.  Level can
+        be one of: major, minor, patch, premajor, preminor,
+        prepatch, or prerelease.  Default level is 'patch'.
+        Only one version may be specified.
+
+--preid <identifier>
+        Identifier to be used to prefix premajor, preminor,
+        prepatch or prerelease version increments.
+
+-l --loose
+        Interpret versions and ranges loosely
+
+-p --include-prerelease
+        Always include prerelease versions in range matching
+
+-c --coerce
+        Coerce a string into SemVer if possible
+        (does not imply --loose)
+
+--rtl
+        Coerce version strings right to left
+
+--ltr
+        Coerce version strings left to right (default)
+
+Program exits successfully if any valid version satisfies
+all supplied ranges, and prints all satisfying versions.
+
+If no satisfying versions are found, then exits failure.
+
+Versions are printed in ascending order, so supplying
+multiple versions to the utility will just sort them.\`)
+
+main()
+`
       },
-      "index.js": "// just pre-load all the stuff that index.js lazily exports\nconst internalRe = require('./internal/re')\nmodule.exports = {\n  re: internalRe.re,\n  src: internalRe.src,\n  tokens: internalRe.t,\n  SEMVER_SPEC_VERSION: require('./internal/constants').SEMVER_SPEC_VERSION,\n  SemVer: require('./classes/semver'),\n  compareIdentifiers: require('./internal/identifiers').compareIdentifiers,\n  rcompareIdentifiers: require('./internal/identifiers').rcompareIdentifiers,\n  parse: require('./functions/parse'),\n  valid: require('./functions/valid'),\n  clean: require('./functions/clean'),\n  inc: require('./functions/inc'),\n  diff: require('./functions/diff'),\n  major: require('./functions/major'),\n  minor: require('./functions/minor'),\n  patch: require('./functions/patch'),\n  prerelease: require('./functions/prerelease'),\n  compare: require('./functions/compare'),\n  rcompare: require('./functions/rcompare'),\n  compareLoose: require('./functions/compare-loose'),\n  compareBuild: require('./functions/compare-build'),\n  sort: require('./functions/sort'),\n  rsort: require('./functions/rsort'),\n  gt: require('./functions/gt'),\n  lt: require('./functions/lt'),\n  eq: require('./functions/eq'),\n  neq: require('./functions/neq'),\n  gte: require('./functions/gte'),\n  lte: require('./functions/lte'),\n  cmp: require('./functions/cmp'),\n  coerce: require('./functions/coerce'),\n  Comparator: require('./classes/comparator'),\n  Range: require('./classes/range'),\n  satisfies: require('./functions/satisfies'),\n  toComparators: require('./ranges/to-comparators'),\n  maxSatisfying: require('./ranges/max-satisfying'),\n  minSatisfying: require('./ranges/min-satisfying'),\n  minVersion: require('./ranges/min-version'),\n  validRange: require('./ranges/valid'),\n  outside: require('./ranges/outside'),\n  gtr: require('./ranges/gtr'),\n  ltr: require('./ranges/ltr'),\n  intersects: require('./ranges/intersects'),\n  simplifyRange: require('./ranges/simplify'),\n  subset: require('./ranges/subset'),\n}\n",
+      "index.js": `// just pre-load all the stuff that index.js lazily exports
+const internalRe = require('./internal/re')
+module.exports = {
+  re: internalRe.re,
+  src: internalRe.src,
+  tokens: internalRe.t,
+  SEMVER_SPEC_VERSION: require('./internal/constants').SEMVER_SPEC_VERSION,
+  SemVer: require('./classes/semver'),
+  compareIdentifiers: require('./internal/identifiers').compareIdentifiers,
+  rcompareIdentifiers: require('./internal/identifiers').rcompareIdentifiers,
+  parse: require('./functions/parse'),
+  valid: require('./functions/valid'),
+  clean: require('./functions/clean'),
+  inc: require('./functions/inc'),
+  diff: require('./functions/diff'),
+  major: require('./functions/major'),
+  minor: require('./functions/minor'),
+  patch: require('./functions/patch'),
+  prerelease: require('./functions/prerelease'),
+  compare: require('./functions/compare'),
+  rcompare: require('./functions/rcompare'),
+  compareLoose: require('./functions/compare-loose'),
+  compareBuild: require('./functions/compare-build'),
+  sort: require('./functions/sort'),
+  rsort: require('./functions/rsort'),
+  gt: require('./functions/gt'),
+  lt: require('./functions/lt'),
+  eq: require('./functions/eq'),
+  neq: require('./functions/neq'),
+  gte: require('./functions/gte'),
+  lte: require('./functions/lte'),
+  cmp: require('./functions/cmp'),
+  coerce: require('./functions/coerce'),
+  Comparator: require('./classes/comparator'),
+  Range: require('./classes/range'),
+  satisfies: require('./functions/satisfies'),
+  toComparators: require('./ranges/to-comparators'),
+  maxSatisfying: require('./ranges/max-satisfying'),
+  minSatisfying: require('./ranges/min-satisfying'),
+  minVersion: require('./ranges/min-version'),
+  validRange: require('./ranges/valid'),
+  outside: require('./ranges/outside'),
+  gtr: require('./ranges/gtr'),
+  ltr: require('./ranges/ltr'),
+  intersects: require('./ranges/intersects'),
+  simplifyRange: require('./ranges/simplify'),
+  subset: require('./ranges/subset'),
+}
+`,
       "package.json": JSON.stringify({
         "name": "semver",
         "version": "7.3.2",

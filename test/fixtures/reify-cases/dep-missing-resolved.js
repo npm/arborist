@@ -1,7 +1,19 @@
 // generated from test/fixtures/dep-missing-resolved
 module.exports = t => {
   const path = t.testdir({
-  "README.md": "Honestly still not exactly sure how this happened.  I was switching back\nand forth between installing and removing a variety of things with npm v6\nand v7, and somehow ended up in a case where it was trying to fetch a dep\nthat somehow did not have a resolved value.\n\nMy best guess is that it has something to do with the fact that mkdirp and\nminimist are bundled in tap 14, but not in tap 12, and npm v6 isn't as\naggressive about re-optimizing the tree for nested deps, but arborist did\npluck off the `bundled: true` when setting back to tap 12.\n\nAnyway, saved as a test case so we can verify that the defensive handling\nof this brokenness works as intended.\n",
+  "README.md": `Honestly still not exactly sure how this happened.  I was switching back
+and forth between installing and removing a variety of things with npm v6
+and v7, and somehow ended up in a case where it was trying to fetch a dep
+that somehow did not have a resolved value.
+
+My best guess is that it has something to do with the fact that mkdirp and
+minimist are bundled in tap 14, but not in tap 12, and npm v6 isn't as
+aggressive about re-optimizing the tree for nested deps, but arborist did
+pluck off the \`bundled: true\` when setting back to tap 12.
+
+Anyway, saved as a test case so we can verify that the defensive handling
+of this brokenness works as intended.
+`,
   "package-lock.json": JSON.stringify({
     "name": "foo",
     "version": "1.0.0",

@@ -71,7 +71,16 @@ module.exports = t => {
         },
         "version": "1.1.1"
       }),
-      "yes.js": "#!/usr/bin/env node\nvar msg = process.argv.length > 2 ? process.argv[2] : 'y';\n\nwhile(1){\n  if(!process.stdout.write(msg + '\\r\\n')){\n    process.exit(0);\n  }\n}\n\n"
+      "yes.js": `#!/usr/bin/env node
+var msg = process.argv.length > 2 ? process.argv[2] : 'y';
+
+while(1){
+  if(!process.stdout.write(msg + '\\r\\n')){
+    process.exit(0);
+  }
+}
+
+`
     }
   },
   "package.json": JSON.stringify({

@@ -19,7 +19,10 @@ module.exports = t => {
     })
   },
   "b": {
-    "file.js": "#!/usr/bin/env node\n\nconsole.log('foo')\n",
+    "file.js": `#!/usr/bin/env node
+
+console.log('foo')
+`,
     "package.json": JSON.stringify({
       "name": "b",
       "version": "1.0.0",

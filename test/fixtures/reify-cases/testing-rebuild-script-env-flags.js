@@ -1,8 +1,22 @@
 // generated from test/fixtures/testing-rebuild-script-env-flags
 module.exports = t => {
   const path = t.testdir({
-  "README.md": "Root has a dev dep on `devdep` and optional dep on `optdep`.\n\n`optdep` has a prod dep on `devopt`.\n\n`devdep` han an prod dep on `devopt`, and an optional dep on `opt-and-dev`.\n\ndevdep: optional false, dev true, devOpt false\ndevopt: optional false, dev false, devOpt true\noptdep: optional true, dev false, devOpt false\nopt-and-dev: optional true, dev true, devOpt false\n",
-  "env.js": "const {writeFileSync} = require('fs')\nwriteFileSync('env', Object.keys(process.env).sort()\n  .filter(k => process.env[k] === '1' && /^npm_package_(dev|optional)/.test(k))\n  .join('\\n'))\n",
+  "README.md": `Root has a dev dep on \`devdep\` and optional dep on \`optdep\`.
+
+\`optdep\` has a prod dep on \`devopt\`.
+
+\`devdep\` han an prod dep on \`devopt\`, and an optional dep on \`opt-and-dev\`.
+
+devdep: optional false, dev true, devOpt false
+devopt: optional false, dev false, devOpt true
+optdep: optional true, dev false, devOpt false
+opt-and-dev: optional true, dev true, devOpt false
+`,
+  "env.js": `const {writeFileSync} = require('fs')
+writeFileSync('env', Object.keys(process.env).sort()
+  .filter(k => process.env[k] === '1' && /^npm_package_(dev|optional)/.test(k))
+  .join('\\n'))
+`,
   "node_modules": {
     "devdep": {
       "package.json": JSON.stringify({

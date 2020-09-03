@@ -1,7 +1,13 @@
 // generated from test/fixtures/testing-rebuild-bundle-reified
 module.exports = t => {
   const path = t.testdir({
-  "README.md": "- `root` depends on `parent`\n- `parent` bundles `a`\n- `a` depends on `b`\n- `b` has a build script\n\nShould get rebuilt if `rebuildBundle` is true, otherwise not.\n",
+  "README.md": `- \`root\` depends on \`parent\`
+- \`parent\` bundles \`a\`
+- \`a\` depends on \`b\`
+- \`b\` has a build script
+
+Should get rebuilt if \`rebuildBundle\` is true, otherwise not.
+`,
   "node_modules": {
     ".package-lock.json": JSON.stringify({
       "name": "@isaacs/testing-rebuild-bundle-reified",

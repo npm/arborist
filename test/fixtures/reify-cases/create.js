@@ -19,6 +19,7 @@ const outFile = resolve(__dirname, basename(fixture)) + '.js'
 // the tokens with `t.fixture('symlink', ${symlinks.get(token)})`
 const symlinks = new Map()
 const jsonFiles = new Map()
+const longFiles = new Map()
 const buffers = new Map()
 const crypto = require('crypto')
 const token = p => p + crypto.randomBytes(8).toString('base64')
@@ -27,6 +28,9 @@ const hiddenLocks = []
 const readFixture = dir => {
   const res = {}
   for (const ent of readdirSync(dir, { withFileTypes: true })) {
+    if (/^\..*\.swp/.test(ent.name))
+      continue
+
     const p = resolve(dir, ent.name)
     if (ent.isDirectory())
       res[ent.name] = readFixture(p)
@@ -44,9 +48,15 @@ const readFixture = dir => {
         jsonFiles.set(t, o)
         res[ent.name] = t
       } catch (_) {
-        if (buf.equals(Buffer.from(content)))
-          res[ent.name] = content
-        else {
+        if (buf.equals(Buffer.from(content))) {
+          // it's a long file if it's more than one line
+          if (content.trim().includes('\n')) {
+            const t = token(p)
+            longFiles.set(t, content)
+            res[ent.name] = t
+          } else
+            res[ent.name] = content
+        } else {
           // save as a buffer if it's binary data
           const t = token(p)
           res[ent.name] = t
@@ -77,6 +87,16 @@ for (const [token, obj] of jsonFiles.entries()) {
       'JSON.stringify(' +
       JSON.stringify(obj, null, 2).replace(/^/gm, _1).trimLeft() +
       ')'
+  }
+  output = output.replace(re, replace)
+}
+for (const [token, content] of longFiles.entries()) {
+  const re = new RegExp('^([\\s]*)("[^"]+": )' + resc(JSON.stringify(token)), 'm')
+  const replace = (_0, _1, _2) => {
+    return _1 + _2 +
+      '`' +
+      content.replace(/\\/g, '\\\\').replace(/\$/g, '\\$').replace(/`/g, '\\`') +
+      '`'
   }
   output = output.replace(re, replace)
 }

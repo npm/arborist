@@ -250,7 +250,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
         }
       ],
       "effects": [],
-      "range": ">=0.0.0 || >=4.1.0",
+      "range": "*",
       "nodes": [
         "node_modules/subtext"
       ],
@@ -326,7 +326,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "nodes": [
         "node_modules/sapper"
       ],
-      "fixAvailable": false
+      "fixAvailable": true
     },
     "node-weakauras-parser": {
       "name": "node-weakauras-parser",
@@ -341,11 +341,11 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
         }
       ],
       "effects": [],
-      "range": ">=1.0.4 <1.0.5 || >=2.0.0 <2.0.2 || >=3.0.0 <3.0.1",
+      "range": "1.0.4 || 2.0.1 || 3.0.0",
       "nodes": [
         "node_modules/node-weakauras-parser"
       ],
-      "fixAvailable": false
+      "fixAvailable": true
     },
     "union-value": {
       "name": "union-value",
@@ -1513,7 +1513,7 @@ Object {
       "nodes": Array [
         "node_modules/eslint_d",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "eslint",
@@ -1825,7 +1825,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-core",
       ],
-      "range": "",
+      "range": "<=7.0.0-beta.3",
       "severity": "high",
       "via": Array [
         "babel-generator",
@@ -1868,7 +1868,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-helper-builder-react-jsx",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -1883,7 +1883,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-helpers",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-template",
@@ -1898,7 +1898,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-plugin-transform-react-jsx",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-helper-builder-react-jsx",
@@ -1913,7 +1913,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-register",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-core",
@@ -3731,7 +3731,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-core",
       ],
-      "range": "",
+      "range": "<=7.0.0-beta.3",
       "severity": "high",
       "via": Array [
         "babel-generator",
@@ -3774,7 +3774,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-helper-builder-react-jsx",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-types",
@@ -3789,7 +3789,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-helpers",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-template",
@@ -3804,7 +3804,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-plugin-transform-react-jsx",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-helper-builder-react-jsx",
@@ -3819,7 +3819,7 @@ Object {
       "nodes": Array [
         "node_modules/babel-register",
       ],
-      "range": "",
+      "range": "*",
       "severity": "high",
       "via": Array [
         "babel-core",

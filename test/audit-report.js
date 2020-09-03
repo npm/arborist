@@ -202,7 +202,7 @@ t.test('all severity levels', async t => {
   const report = await AuditReport.load(tree, arb.options)
   t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
 
-  t.equal(report.topVulns.size, 4)
+  t.equal(report.topVulns.size, 2)
   t.equal(report.advisoryVulns.size, 10)
   t.equal(report.dependencyVulns.size, 6)
 })

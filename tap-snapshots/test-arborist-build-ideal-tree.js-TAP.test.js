@@ -1609,7 +1609,7 @@ Node {
         Edge {
           "from": "node_modules/eslint_d",
           "name": "chalk",
-          "spec": "1.1.3",
+          "spec": "^1.1.1",
           "type": "prod",
         },
       },
@@ -2131,7 +2131,7 @@ Node {
         Edge {
           "from": "node_modules/eslint_d",
           "name": "eslint",
-          "spec": "4.19.1",
+          "spec": "^4.0.0",
           "type": "prod",
         },
       },
@@ -2373,31 +2373,31 @@ Node {
       "edgesOut": Map {
         "chalk" => Edge {
           "name": "chalk",
-          "spec": "1.1.3",
+          "spec": "^1.1.1",
           "to": "node_modules/chalk",
           "type": "prod",
         },
         "eslint" => Edge {
           "name": "eslint",
-          "spec": "4.19.1",
+          "spec": "^4.0.0",
           "to": "node_modules/eslint",
           "type": "prod",
         },
         "optionator" => Edge {
           "name": "optionator",
-          "spec": "0.8.2",
+          "spec": "^0.8.1",
           "to": "node_modules/optionator",
           "type": "prod",
         },
         "resolve" => Edge {
           "name": "resolve",
-          "spec": "1.6.0",
+          "spec": "^1.1.7",
           "to": "node_modules/resolve",
           "type": "prod",
         },
         "supports-color" => Edge {
           "name": "supports-color",
-          "spec": "3.2.3",
+          "spec": "^3.1.2",
           "to": "node_modules/supports-color",
           "type": "prod",
         },
@@ -3736,7 +3736,7 @@ Node {
         Edge {
           "from": "node_modules/eslint_d",
           "name": "optionator",
-          "spec": "0.8.2",
+          "spec": "^0.8.1",
           "type": "prod",
         },
       },
@@ -4078,7 +4078,7 @@ Node {
         Edge {
           "from": "node_modules/eslint_d",
           "name": "resolve",
-          "spec": "1.6.0",
+          "spec": "^1.1.7",
           "type": "prod",
         },
       },
@@ -4473,7 +4473,7 @@ Node {
         Edge {
           "from": "node_modules/eslint_d",
           "name": "supports-color",
-          "spec": "3.2.3",
+          "spec": "^3.1.2",
           "type": "prod",
         },
       },

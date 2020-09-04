@@ -69706,6 +69706,90 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP workspaces should update a simple example > expect resolving Promise 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "b" => Edge {
+          "name": "b",
+          "spec": "^1.0.0",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": null,
+    },
+    Node {
+      "location": "b",
+      "name": "b",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "workspaces-simple",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP workspaces should work with files spec > expect resolving Promise 1`] = `
 Node {
   "children": Map {

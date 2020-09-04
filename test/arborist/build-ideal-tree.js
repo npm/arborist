@@ -1262,6 +1262,11 @@ t.test('workspaces', t => {
     return t.resolveMatchSnapshot(printIdeal(path))
   })
 
+  t.test('should update a simple example', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-simple')
+    return t.resolveMatchSnapshot(printIdeal(path, { update: { all: true }}))
+  })
+
   t.test('should install a simple scoped pkg example', t => {
     const path = resolve(__dirname, '../fixtures/workspaces-scoped-pkg')
     return t.resolveMatchSnapshot(printIdeal(path))

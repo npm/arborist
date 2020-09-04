@@ -685,6 +685,153 @@ Node {
 }
 `
 
+exports[`test/arborist/load-virtual.js TAP load a tree where package.json edited > ws changed 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/edit-package-json/workspaces-changed/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "package": Object {
+        "name": "b",
+        "version": "1.0.0",
+      },
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/edit-package-json/workspaces-changed/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "c" => Edge {
+      "error": "MISSING",
+      "name": "c",
+      "spec": "file:{CWD}/test/fixtures/edit-package-json/workspaces-changed/c",
+      "to": null,
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-changed",
+  "package": Object {
+    "name": "workspace-simple",
+    "version": undefined,
+  },
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/load-virtual.js TAP load a tree where package.json edited > ws match 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "package": Object {
+        "name": "a",
+        "version": "1.0.0",
+      },
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/b",
+          "type": "workspace",
+        },
+        Edge {
+          "from": "a",
+          "name": "b",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "package": Object {
+        "name": "b",
+        "version": "1.0.0",
+      },
+      "resolved": "file:../b",
+      "target": Object {
+        "name": "b",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:{CWD}/test/fixtures/workspaces-simple-virtual/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "location": "",
+  "name": "workspaces-simple-virtual",
+  "package": Object {
+    "name": "workspace-simple",
+    "version": undefined,
+  },
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/load-virtual.js TAP load a tree with a bunch of bundles > virtual tree with multiple bundles 1`] = `
 Node {
   "children": Map {

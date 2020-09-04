@@ -165,6 +165,8 @@ t.test('load a tree where package.json edited', async t => {
   const ok = resolve(editFixture, 'ok')
   const removed = resolve(editFixture, 'removed')
   const changed = resolve(editFixture, 'changed')
+  const wsChanged = resolve(editFixture, 'workspaces-changed')
+  const ws = resolve(__dirname, '../fixtures/workspaces-simple-virtual')
   const kFlagsSuspect = Symbol.for('flagsSuspect')
 
   const okArb = new Arborist({ path: ok })
@@ -172,10 +174,20 @@ t.test('load a tree where package.json edited', async t => {
   t.matchSnapshot(printTree(okArb.virtualTree), 'deps match')
   t.equal(okArb[kFlagsSuspect], false, 'flags not suspect')
 
+  const wsArb = new Arborist({ path: ws })
+  await wsArb.loadVirtual()
+  t.matchSnapshot(printTree(wsArb.virtualTree), 'ws match')
+  t.equal(wsArb[kFlagsSuspect], false, 'flags not suspect')
+
   const rmArb = new Arborist({ path: removed })
   await rmArb.loadVirtual()
   t.matchSnapshot(printTree(rmArb.virtualTree), 'deps removed')
   t.equal(rmArb[kFlagsSuspect], true, 'flags suspect')
+
+  const wsChangedArb = new Arborist({ path: wsChanged })
+  await wsChangedArb.loadVirtual()
+  t.matchSnapshot(printTree(wsChangedArb.virtualTree), 'ws changed')
+  t.equal(wsChangedArb[kFlagsSuspect], true, 'flags suspect')
 
   const changeArb = new Arborist({ path: changed })
   const root = await changeArb.loadVirtual()

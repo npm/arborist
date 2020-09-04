@@ -1,3 +1,5 @@
+const { resolve } = require('path')
+
 const t = require('tap')
 const Arborist = require('../../lib/arborist/index.js')
 
@@ -142,9 +144,17 @@ t.test('prune omit dev with bins', async t => {
   const fs = require('fs')
   const { promisify } = require('util')
   const readdir = promisify(fs.readdir)
-
   const path = fixture(t, 'prune-dev-bins')
-  const tree = await pruneTree(path, { omit: ['dev'] })
+
+  // should have bin files
+  const reifiedBin = resolve(path, 'node_modules/.bin/yes')
+  if (process.platform === 'win32')
+    t.ok(fs.statSync(reifiedBin + '.cmd').isFile(), 'should have shim')
+  else
+    t.ok(fs.lstatSync(reifiedBin).isSymbolicLink(), 'should have symlink')
+
+  // PRUNE things
+  const tree = await pruneTree(path, { prefix: path, omit: ['dev'] })
   const dirs = await readdir(path + '/node_modules')
 
   // bindirs are never removed
@@ -153,6 +163,13 @@ t.test('prune omit dev with bins', async t => {
 
   const devDep = tree.children.get('yes')
   t.notOk(devDep, 'all listed dev deps pruned from tree')
+
+  // should also remove ./bin/* files
+  const bin = resolve(path, 'node_modules/.bin/yes')
+  if (process.platform === 'win32')
+    t.throws(() => fs.statSync(bin + '.cmd').isFile(), /ENOENT/, 'should not have shim')
+  else
+    t.throws(() => fs.lstatSync(bin).isSymbolicLink(), /ENOENT/, 'should not have symlink')
 })
 
 t.test('prune do not omit duplicated dependecy in prod and dev', async t => {

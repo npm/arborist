@@ -22,6 +22,18 @@ t.test('setup explosive server', t => {
 const registry = `http://localhost:${PORT}`
 const newArb = opt => new Arborist({...opt, registry})
 
+// track the logs that are emitted.  returns a function that removes
+// the listener and provides the list of what it saw.
+const logTracker = () => {
+  const list = []
+  const onlog = (...msg) => list.push(msg)
+  process.on('log', onlog)
+  return () => {
+    process.removeListener('log', onlog)
+    return list
+  }
+}
+
 t.test('rebuild bin links for all nodes if no nodes specified', async t => {
   const path = fixture(t, 'dep-installed-without-bin-link')
   const semver = resolve(path, 'node_modules/.bin/semver')
@@ -150,6 +162,7 @@ t.test('dont blow up if package.json is borked', async t => {
 
 t.test('verify dep flags in script environments', async t => {
   const path = fixture(t, 'testing-rebuild-script-env-flags')
+  const checkLogs = logTracker()
 
   const expect = {
     devdep: ['npm_package_dev'],
@@ -166,4 +179,43 @@ t.test('verify dep flags in script environments', async t => {
     const file = resolve(path, 'node_modules', pkg, 'env')
     t.strictSame(flags, fs.readFileSync(file, 'utf8').split('\n'), pkg)
   }
+  t.strictSame(checkLogs().sort((a, b) =>
+    a[2].localeCompare(b[2]) || (typeof a[4] === 'string' ? -1 : 1)), [
+    ['info','run','devdep@1.0.0','postinstall','node_modules/devdep','node ../../env.js'],
+    ['info','run','devdep@1.0.0','postinstall',{code: 0, signal: null}],
+    ['info','run','devopt@1.0.0','postinstall','node_modules/devopt','node ../../env.js'],
+    ['info','run','devopt@1.0.0','postinstall',{code: 0, signal: null}],
+    ['info','run','opt-and-dev@1.0.0','postinstall','node_modules/opt-and-dev','node ../../env.js'],
+    ['info','run','opt-and-dev@1.0.0','postinstall',{code: 0, signal: null}],
+    ['info','run','optdep@1.0.0','postinstall','node_modules/optdep','node ../../env.js'],
+    ['info','run','optdep@1.0.0','postinstall',{code: 0, signal: null}],
+  ], 'logged script executions at info level')
+})
+
+t.test('log failed exit codes as well, even if we dont crash', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      optionalDependencies: { optdep: '1' },
+    }),
+    node_modules: {
+      optdep: {
+        'package.json': JSON.stringify({
+          name: 'optdep',
+          version: '1.2.3',
+          scripts: {
+            preinstall: 'exit 1',
+          },
+        }),
+      }
+    }
+  })
+  const arb = new Arborist({path})
+  const checkLogs = logTracker()
+  await arb.rebuild({ handleOptionalFailure: true })
+  t.strictSame(checkLogs(), [
+    ['info', 'run', 'optdep@1.2.3', 'preinstall', 'node_modules/optdep', 'exit 1'],
+    ['info', 'run', 'optdep@1.2.3', 'preinstall', { code: 1, signal: null }],
+    ['verbose', 'reify', 'failed optional dependency', resolve(path, 'node_modules/optdep')],
+    ['silly', 'reify', 'mark', 'deleted', [resolve(path, 'node_modules/optdep')]]
+  ])
 })

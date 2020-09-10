@@ -1348,6 +1348,28 @@ t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
   })
 })
 
+t.only('resolve links in global mode', t => {
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  const path = t.testdir({
+    global: {}
+  })
+  const fixturedir = resolve(fixtures, 'root-bundler')
+  process.chdir(fixturedir)
+  const arb = new Arborist({
+    global: true,
+    path: resolve(path, 'global'),
+    ...OPT,
+  })
+  return arb.buildIdealTree({
+    add: ['file:../sax'],
+    global: true,
+  }).then(tree => {
+    const resolved = 'file:../../../../fixtures/sax'
+    t.equal(tree.children.get('sax').resolved, resolved)
+  })
+})
+
 t.test('dont get confused if root matches duped metadep', async t => {
   const path = resolve(fixtures, 'test-root-matches-metadep')
   const arb = new Arborist({ path, ...OPT })

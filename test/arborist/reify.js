@@ -821,13 +821,14 @@ t.test('rollbacks', { buffered: false }, t => {
 
 t.test('saving the ideal tree', t => {
   const kSaveIdealTree = Symbol.for('saveIdealTree')
-  t.test('save=false', t => {
+  t.test('save=false', async t => {
     // doesn't actually do anything, just for coverage.
     // if it wasn't an early exit, it'd blow up and throw
     // an error though.
     const path = t.testdir()
     const a = newArb({ path })
-    t.notOk(a[kSaveIdealTree]({ save: false }))
+    const res = await a[kSaveIdealTree]({ save: false })
+    t.notOk(res)
     t.end()
   })
 
@@ -846,9 +847,30 @@ t.test('saving the ideal tree', t => {
 
     const npa = require('npm-package-arg')
     const kResolvedAdd = Symbol.for('resolvedAdd')
-    const path = t.testdir({
-      'package.json': JSON.stringify(pkg)
+    const testdir = t.testdir({
+      'global-prefix': {
+        lib: {
+          node_modules: {
+            'e': t.fixture('symlink', '../../../linked-pkg')
+          }
+        }
+      },
+      project: {
+        // have node_modules/e here to simulate reify having put
+        // symlinks in their right place so that realpath can follow them
+        node_modules: {
+          e: t.fixture('symlink', '../../global-prefix/lib/node_modules/e')
+        },
+        'package.json': JSON.stringify(pkg),
+      },
+      'linked-pkg': {
+        'package.json': JSON.stringify({
+          name: 'e',
+          version: '1.0.0'
+        })
+      }
     })
+    const path = resolve(testdir, 'project')
     const a = newArb({ path })
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
     return a.loadActual().then(tree => Shrinkwrap.load({path}).then(meta => {
@@ -887,11 +909,29 @@ t.test('saving the ideal tree', t => {
         },
         parent: tree,
       })
+      new Node({
+        name: 'e',
+        path: `${path}/project/node_modules/e`,
+        resolved: 'file:../global-prefix/lib/node_modules/e',
+        parent: tree,
+        pkg: { name: 'e', version: '1.0.0' },
+      })
+      // non-existent link, simulates the situation in which
+      // realpath can not properly follow the symlink
+      new Node({
+        name: 'f',
+        path: `${path}/foo`,
+        resolved: 'file:../foo',
+        parent: tree,
+        pkg: { name: 'f', version: '1.0.0' },
+      })
 
       a[kResolvedAdd] = [
         npa('a@git+ssh://git@github.com:foo/bar#baz'),
         npa('b'),
         npa('d@npm:c@1.x'),
+        npa('e@file:../global-prefix/lib/node_modules/e'),
+        npa('f@file:../foo'),
         npa(`c@git+ssh://git@githost.com:a/b/c.git#master`),
       ]
       return a[kSaveIdealTree]({
@@ -905,6 +945,8 @@ t.test('saving the ideal tree', t => {
           a: 'github:foo/bar#baz',
           b: '^1.2.3',
           d: 'npm:c@^1.2.3',
+          e: 'file:../linked-pkg',
+          f: 'file:../foo',
         },
         devDependencies: {
           c: 'git+ssh://git@githost.com:a/b/c.git#master',

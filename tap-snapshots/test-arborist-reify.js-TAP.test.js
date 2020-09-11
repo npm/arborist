@@ -27030,9 +27030,17 @@ Object {
       "resolved": "https://registry.npmjs.org/c/-/c-1.2.3.tgz",
       "version": "npm:c@1.2.3",
     },
+    "e": Object {
+      "extraneous": true,
+      "version": "1.0.0",
+    },
+    "f": Object {
+      "extraneous": true,
+      "version": "1.0.0",
+    },
   },
   "lockfileVersion": 2,
-  "name": "reify-saving-the-ideal-tree-save-some-stuff",
+  "name": "project",
   "packages": Object {
     "": Object {
       "bundleDependencies": Array [
@@ -27044,10 +27052,17 @@ Object {
         "a": "github:foo/bar#baz",
         "b": "^1.2.3",
         "d": "npm:c@^1.2.3",
+        "e": "file:../linked-pkg",
+        "f": "file:../foo",
       },
       "devDependencies": Object {
         "c": "git+ssh://git@githost.com:a/b/c.git#master",
       },
+    },
+    "../linked-pkg": Object {
+      "extraneous": true,
+      "name": "e",
+      "version": "1.0.0",
     },
     "node_modules/a": Object {
       "extraneous": true,
@@ -27070,6 +27085,16 @@ Object {
       "name": "c",
       "resolved": "https://registry.npmjs.org/c/-/c-1.2.3.tgz",
       "version": "1.2.3",
+    },
+    "node_modules/e": Object {
+      "extraneous": true,
+      "resolved": "file:node_modules/global-prefix/lib/node_modules/e",
+      "version": "1.0.0",
+    },
+    "node_modules/f": Object {
+      "extraneous": true,
+      "resolved": "file:node_modules/foo",
+      "version": "1.0.0",
     },
   },
   "requires": true,

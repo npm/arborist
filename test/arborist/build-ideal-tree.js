@@ -1321,6 +1321,42 @@ t.test('workspaces', t => {
   t.end()
 })
 
+t.test('add symlink that points to a symlink', t => {
+  const fixt = t.testdir({
+    'global-prefix': {
+      lib: {
+        node_modules: {
+          a: t.fixture('symlink', '../../../linked-pkg')
+        }
+      }
+    },
+    'linked-pkg': {
+      'package.json': JSON.stringify({
+        name: 'a',
+        version: '1.0.0'
+      })
+    },
+    'my-project': {
+      'package.json': JSON.stringify({})
+    }
+  })
+  const path = resolve(fixt, 'my-project')
+  const arb = new Arborist({
+    path,
+    ...OPT,
+  })
+  return arb.buildIdealTree({
+    add: [
+      'file:../global-prefix/lib/node_modules/a'
+    ]
+  }).then(tree =>
+    t.matchSnapshot(
+      printTree(tree),
+      'should follow symlinks to find final realpath destination'
+    )
+  )
+})
+
 // if we get this wrong, it'll spin forever and use up all the memory
 t.test('pathologically nested dependency cycle', t =>
   t.resolveMatchSnapshot(printIdeal(
@@ -1349,24 +1385,35 @@ t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
 })
 
 t.only('resolve links in global mode', t => {
+  const path = t.testdir({
+    global: {},
+    lib: {
+      'my-project': {}
+    },
+    'linked-dep': {
+      'package.json': JSON.stringify({
+        name: 'linked-dep',
+        version: '1.0.0'
+      })
+    }
+  })
+  const fixturedir = resolve(path, 'lib', 'my-project')
+
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))
-  const path = t.testdir({
-    global: {}
-  })
-  const fixturedir = resolve(fixtures, 'root-bundler')
   process.chdir(fixturedir)
+
   const arb = new Arborist({
+    ...OPT,
     global: true,
     path: resolve(path, 'global'),
-    ...OPT,
   })
   return arb.buildIdealTree({
-    add: ['file:../sax'],
+    add: ['file:../../linked-dep'],
     global: true,
   }).then(tree => {
-    const resolved = 'file:../../../../fixtures/sax'
-    t.equal(tree.children.get('sax').resolved, resolved)
+    const resolved = 'file:../../linked-dep'
+    t.equal(tree.children.get('linked-dep').resolved, resolved)
   })
 })
 

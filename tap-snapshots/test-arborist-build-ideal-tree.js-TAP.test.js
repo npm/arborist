@@ -223,6 +223,41 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP add symlink that points to a symlink > should follow symlinks to find final realpath destination 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:../linked-pkg",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../../linked-pkg",
+      "target": Object {
+        "name": "a",
+        "parent": null,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:../linked-pkg",
+      "to": "node_modules/a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "my-project",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP bad shrinkwrap file > bad shrinkwrap 1`] = `
 Node {
   "children": Map {

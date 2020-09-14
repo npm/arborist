@@ -156,6 +156,14 @@ exports[`test/arborist/reify.js TAP add a dep present in the tree, with v1 shrin
 {"dependencies":{"once":"^1.4.0","wrappy":"^1.0.2"}}
 `
 
+exports[`test/arborist/reify.js TAP add multiple pkgs in a specific order > should alphabetically sort dependencies 1`] = `
+{"name":"multiple-pkgs","dependencies":{"abbrev":"^1.1.1","wrappy":"^1.0.2"}}
+`
+
+exports[`test/arborist/reify.js TAP add multiple pkgs in a specific order > should alphabetically sort new added dep 1`] = `
+{"name":"multiple-pkgs","dependencies":{"abbrev":"^1.1.1","once":"^1.4.0","wrappy":"^1.0.2"}}
+`
+
 exports[`test/arborist/reify.js TAP bad shrinkwrap file > expect resolving Promise 1`] = `
 Node {
   "children": Map {

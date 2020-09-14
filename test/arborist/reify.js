@@ -1061,3 +1061,22 @@ t.test('reify properly with all deps when lockfile is ancient', async t => {
   t.matchSnapshot(printTree(tree))
   fs.statSync(path + '/node_modules/tap/node_modules/.bin/nyc')
 })
+
+t.test('add multiple pkgs in a specific order', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'multiple-pkgs'
+    }),
+  })
+  const tree = await reify(path, { add: ['wrappy', 'abbrev'] })
+  t.matchSnapshot(
+    fs.readFileSync(path + '/package.json', 'utf8'),
+    'should alphabetically sort dependencies'
+  )
+  const newTree = await reify(path, { add: ['once'] })
+  t.matchSnapshot(
+    fs.readFileSync(path + '/package.json', 'utf8'),
+    'should alphabetically sort new added dep'
+  )
+})
+

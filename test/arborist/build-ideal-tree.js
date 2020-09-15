@@ -1347,7 +1347,9 @@ t.test('add symlink that points to a symlink', t => {
   })
   return arb.buildIdealTree({
     add: [
-      'file:../global-prefix/lib/node_modules/a'
+      // simulates the string used by `npm link <pkg>` when
+      // installing a package available in the global space
+      `file:${resolve(fixt, 'global-prefix/lib/node_modules/a')}`
     ]
   }).then(tree =>
     t.matchSnapshot(

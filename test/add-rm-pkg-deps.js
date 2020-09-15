@@ -10,7 +10,7 @@ t.test('add', t => {
   const bar = npa('bar')
   const bar1 = npa('bar@1')
   const bar2 = npa('bar@2')
-  const file = npa('file@foo.tgz', '/some/path')
+  const file = npa('file@file:/some/path/foo.tgz', '/')
 
   t.strictSame(add({
     pkg: {
@@ -23,26 +23,10 @@ t.test('add', t => {
       file,
     ],
     saveType: 'prod',
-    path: '/some/other/path',
+    path: '/',
   }), {
-    dependencies: { foo: '1', bar: '1', file: 'file:../../path/foo.tgz' },
-  }, 'move foo to prod, leave bar as-is, file is elsewhere')
-
-  t.strictSame(add({
-    pkg: {
-      dependencies: { bar: '1' },
-      devDependencies: { foo: '2' },
-    },
-    add: [
-      foo1,
-      bar,
-      file,
-    ],
-    saveType: 'prod',
-    path: '/some/path',
-  }), {
-    dependencies: { foo: '1', bar: '1', file: 'file:foo.tgz' },
-  }, 'move foo to prod, leave bar as-is, file is local')
+    dependencies: { foo: '1', bar: '1', file: 'file:/some/path/foo.tgz' },
+  }, 'move foo to prod, leave bar as-is')
 
   t.strictSame(add({
     pkg: {

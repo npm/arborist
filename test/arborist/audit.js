@@ -100,8 +100,6 @@ t.test('audit finds the bad deps', async t => {
 
   const report = await arb.audit()
   t.equal(report.topVulns.size, 0)
-  t.equal(report.dependencyVulns.size, 1)
-  t.equal(report.advisoryVulns.size, 1)
   t.equal(report.size, 2)
 })
 

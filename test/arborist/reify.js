@@ -534,7 +534,7 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
   const check = warningTracker()
   const binPath = `${path}/node_modules/tap/node_modules/.bin`
   return a.reify().then(() => t.match(check(), [
-    ['warn', { code: 'EBADENGINE' }],
+    ['warn', 'EBADENGINE'],
   ]))
   .then(() => t.throws(() => fs.readdir(binPath)))
 })
@@ -693,7 +693,8 @@ t.test('rollbacks', { buffered: false }, t => {
         t.equal(warnings.length, 1)
         t.match(warnings, [[
           'warn',
-          'Failed to clean up some directories',
+          'cleanup',
+          'Failed to remove some directories',
           [[String, new Error('rimraf fail')]],
         ]])
       })
@@ -809,7 +810,8 @@ t.test('rollbacks', { buffered: false }, t => {
       t.equal(warnings.length, 1)
       t.match(warnings, [[
         'warn',
-        'Failed to clean up some directories',
+        'cleanup',
+        'Failed to remove some directories',
         [[String, new Error('rimraf fail')]],
       ]])
     })

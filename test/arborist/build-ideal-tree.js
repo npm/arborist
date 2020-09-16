@@ -1364,11 +1364,12 @@ t.test('pathologically nested dependency cycle', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'pathological-dep-nesting-cycle'))))
 
-t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
+t.test('resolve file deps from cwd', t => {
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))
   const path = t.testdir({
-    global: {}
+    global: {},
+    local: {},
   })
   const fixturedir = resolve(fixtures, 'root-bundler')
   process.chdir(fixturedir)
@@ -1378,6 +1379,7 @@ t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
     ...OPT,
   })
   return arb.buildIdealTree({
+    path: `${path}/local`,
     add: ['child-1.2.3.tgz'],
     global: true,
   }).then(tree => {
@@ -1386,7 +1388,7 @@ t.test('resolve files from cwd in global mode, Arb path in local mode', t => {
   })
 })
 
-t.only('resolve links in global mode', t => {
+t.test('resolve links in global mode', t => {
   const path = t.testdir({
     global: {},
     lib: {
@@ -1597,4 +1599,40 @@ t.test('override a conflict with the root peer dep (with force)', async t => {
 t.test('push conflicted peer deps deeper in to the tree to solve', async t => {
   const path = resolve(fixtures, 'testing-peer-dep-conflict-chain/override-dep')
   t.matchSnapshot(await printIdeal(path))
+})
+
+t.test('do not continually re-resolve deps that failed to load', async t => {
+  const path = t.testdir({
+    node_modules: {
+      '@isaacs': {
+        'this-does-not-exist-actually': {
+          'package.json': JSON.stringify({
+            name: '@isaacs/this-does-not-exist-actually',
+            version: '1.0.0',
+          }),
+        },
+        'depends-on-load-failer': {
+          'package.json': JSON.stringify({
+            name: '@isaacs/depends-on-load-failer',
+            version: '1.0.0',
+            dependencies: {
+              '@isaacs/this-does-not-exist-actually': '1.x',
+            },
+          }),
+        },
+      },
+    },
+    'package.json': JSON.stringify({
+      name: 'my-project',
+      version: '1.2.3',
+      dependencies: {
+        '@isaacs/depends-on-load-failer': '1.x',
+        '@isaacs/this-does-not-exist-actually': '1.x',
+      },
+    }),
+  })
+  const arb = new Arborist({...OPT, path })
+  t.rejects(() => arb.buildIdealTree({ add: [
+    '@isaacs/this-does-not-exist-actually@2.x',
+  ]}), { code: 'E404' })
 })

@@ -17,6 +17,12 @@ process.on('timeEnd', name => {
   delete timers[name]
   console.error(name, res[0] * 1e3 + res[1] / 1e6)
 })
+process.on('exit', () => {
+  for (const name of Object.keys(timers)) {
+    console.error('Dangling timer: ', name)
+    process.exitCode = 1
+  }
+})
 
 const {format} = require('tcompare')
 const print = tree => console.log(format(printTree(tree), { style: 'js' }))

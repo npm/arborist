@@ -361,6 +361,7 @@ t.test('nested cyclical peer deps', t => {
         add: [ '@isaacs/peer-dep-cycle-c@2.x' ],
       }), 'upgrade c'))
       .then(() => t.rejects(printIdeal(path, {
+        strictPeerDeps: true,
         add: [
           '@isaacs/peer-dep-cycle-a@1.x',
           '@isaacs/peer-dep-cycle-c@2.x',
@@ -455,7 +456,7 @@ t.test('bundle deps example 2', t => {
 t.test('unresolveable peer deps', t => {
   const path = resolve(fixtures, 'testing-peer-deps-unresolvable')
 
-  return t.rejects(printIdeal(path), {
+  return t.rejects(printIdeal(path, { strictPeerDeps: true }), {
     message: 'unable to resolve dependency tree',
     code: 'ERESOLVE',
     dep: {
@@ -1496,7 +1497,7 @@ This is a one-time fix-up, please be patient...
 
 t.test('override a conflict with the root dep (with force)', async t => {
   const path = resolve(fixtures, 'testing-peer-dep-conflict-chain/override')
-  await t.rejects(() => buildIdeal(path), {
+  await t.rejects(() => buildIdeal(path, { strictPeerDeps: true }), {
     code: 'ERESOLVE',
     dep: {
       name: '@isaacs/testing-peer-dep-conflict-chain-a',
@@ -1542,12 +1543,13 @@ t.test('override a conflict with the root dep (with force)', async t => {
     type: 'peer',
     isPeer: true
   })
-  t.matchSnapshot(await printIdeal(path, { force: true }), 'force override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: true, force: true }), 'force override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: false }), 'non-strict (default) override')
 })
 
 t.test('override a conflict with the root peer dep (with force)', async t => {
   const path = resolve(fixtures, 'testing-peer-dep-conflict-chain/override-peer')
-  await t.rejects(() => buildIdeal(path), {
+  await t.rejects(() => buildIdeal(path, { strictPeerDeps: true }), {
     code: 'ERESOLVE',
     dep: {
       name: '@isaacs/testing-peer-dep-conflict-chain-a',
@@ -1593,7 +1595,8 @@ t.test('override a conflict with the root peer dep (with force)', async t => {
     type: 'peer',
     isPeer: true
   })
-  t.matchSnapshot(await printIdeal(path, { force: true }), 'force override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: true, force: true }), 'force override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: false }), 'non-strict (default) override')
 })
 
 t.test('push conflicted peer deps deeper in to the tree to solve', async t => {

@@ -166,6 +166,14 @@ t.test('basic vulnerability object tests', async t => {
   t.equal(v.isVulnerable(node), true)
   t.equal(v.isVulnerable(node), true)
   t.match(v.nodes, new Set([node]))
+
+  // make sure we don't infinitely loop when setting it to true
+  v.addVia(v2)
+  v2.fixAvailable = true
+  v.fixAvailable = true
+  v2.fixAvailable = true
+  v.deleteVia(v2)
+
   v2.fixAvailable = { isSemVerMajor: false }
   t.strictSame(v.fixAvailable, { isSemVerMajor: false })
   v2.fixAvailable = true
@@ -192,7 +200,6 @@ t.test('basic vulnerability object tests', async t => {
     pkg: {},
   })
   t.match(v.isVulnerable(noVersion), false, 'node without version, no opinion')
-
 
   v2.deleteAdvisory(meta2)
   v2.deleteAdvisory(meta)

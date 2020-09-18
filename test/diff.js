@@ -165,3 +165,49 @@ t.matchSnapshot(d, 'diff two trees')
 t.equal(d.parent, null, 'root has no parent')
 t.equal([...d.children][0].parent, d, 'parent of root child is root')
 t.equal(d.action, null, 'root has no action')
+
+t.test('omitOptional', t => {
+  const actual = new Node({
+    name: 'a',
+    path: '/path/to/root',
+    realpath: '/path/to/root',
+    integrity: 'sha512-aaa',
+    fsChildren: [],
+    children: [
+      {
+        name: 'b',
+        integrity: 'sha512-bbb',
+        children: [],
+      }
+    ]
+  })
+  const ideal = new Node({
+    name: 'a',
+    path: '/path/to/root',
+    realpath: '/path/to/root',
+    integrity: 'sha512-aaa',
+    fsChildren: [],
+    children: [
+      {
+        name: 'b',
+        integrity: 'sha512-bbb',
+        children: [],
+      },
+      {
+        name: 'x',
+        integrity: 'sha512-xxx',
+        optional: true,
+        children: [],
+      },
+      {
+        name: 'p',
+        integrity: 'sha512-ppp',
+        optional: false,
+        children: [],
+      }
+    ]
+  })
+  const d = Diff.calculate({actual, ideal, omitOptional: true})
+  t.matchSnapshot(d, 'diff two trees')
+  t.end()
+})

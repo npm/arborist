@@ -246,3 +246,44 @@ Diff {
   ],
 }
 `
+
+exports[`test/diff.js TAP omitOptional > diff two trees 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "a",
+    "path": "/path/to/root",
+    "integrity": "sha512-aaa",
+  },
+  "ideal": Node {
+    "name": "a",
+    "path": "/path/to/root",
+    "integrity": "sha512-aaa",
+  },
+  "leaves": Array [
+    "/path/to/root/node_modules/p",
+  ],
+  "unchanged": Array [
+    "/path/to/root/node_modules/b",
+    "/path/to/root/node_modules/x",
+  ],
+  "removed": Array [],
+  "children": Array [
+    Diff {
+      "action": "ADD",
+      "actual": undefined,
+      "ideal": Node {
+        "name": "p",
+        "path": "/path/to/root/node_modules/p",
+        "integrity": "sha512-ppp",
+      },
+      "leaves": Array [
+        "/path/to/root/node_modules/p",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`

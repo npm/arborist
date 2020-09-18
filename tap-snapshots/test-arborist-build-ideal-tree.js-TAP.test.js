@@ -28328,52 +28328,6 @@ Node {
       "name": "@types/color-name",
       "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
     },
-    "@types/prop-types" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@types/react",
-          "name": "@types/prop-types",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@types/prop-types",
-      "name": "@types/prop-types",
-      "optional": true,
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
-    },
-    "@types/react" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/tap/node_modules/ink",
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "type": "peerOptional",
-        },
-      },
-      "edgesOut": Map {
-        "@types/prop-types" => Edge {
-          "name": "@types/prop-types",
-          "spec": "*",
-          "to": "node_modules/@types/prop-types",
-          "type": "prod",
-        },
-        "csstype" => Edge {
-          "name": "csstype",
-          "spec": "^2.2.0",
-          "to": "node_modules/csstype",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@types/react",
-      "name": "@types/react",
-      "optional": true,
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
-    },
     "ajv" => Node {
       "dev": true,
       "edgesIn": Set {
@@ -29760,22 +29714,6 @@ Node {
       "location": "node_modules/cross-spawn",
       "name": "cross-spawn",
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
-    },
-    "csstype" => Node {
-      "dev": true,
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@types/react",
-          "name": "csstype",
-          "spec": "^2.2.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/csstype",
-      "name": "csstype",
-      "optional": true,
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
     },
     "dashdash" => Node {
       "dev": true,
@@ -35253,7 +35191,7 @@ Node {
             "@types/react" => Edge {
               "name": "@types/react",
               "spec": ">=16.8.0",
-              "to": "node_modules/@types/react",
+              "to": null,
               "type": "peerOptional",
             },
             "ansi-escapes" => Edge {
@@ -49434,52 +49372,6 @@ Node {
       "name": "@types/color-name",
       "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
     },
-    "@types/prop-types" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@types/react",
-          "name": "@types/prop-types",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@types/prop-types",
-      "name": "@types/prop-types",
-      "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
-    },
-    "@types/react" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/ink",
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "type": "peerOptional",
-        },
-        Edge {
-          "from": "node_modules/tap",
-          "name": "@types/react",
-          "spec": "^16.9.16",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@types/prop-types" => Edge {
-          "name": "@types/prop-types",
-          "spec": "*",
-          "to": "node_modules/@types/prop-types",
-          "type": "prod",
-        },
-        "csstype" => Edge {
-          "name": "csstype",
-          "spec": "^2.2.0",
-          "to": "node_modules/csstype",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@types/react",
-      "name": "@types/react",
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
-    },
     "ajv" => Node {
       "edgesIn": Set {
         Edge {
@@ -50833,19 +50725,6 @@ Node {
       "name": "cross-spawn",
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
     },
-    "csstype" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@types/react",
-          "name": "csstype",
-          "spec": "^2.2.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/csstype",
-      "name": "csstype",
-      "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
-    },
     "dashdash" => Node {
       "edgesIn": Set {
         Edge {
@@ -51957,7 +51836,7 @@ Node {
         "@types/react" => Edge {
           "name": "@types/react",
           "spec": ">=16.8.0",
-          "to": "node_modules/@types/react",
+          "to": null,
           "type": "peerOptional",
         },
         "ansi-escapes" => Edge {
@@ -55874,9 +55753,10 @@ Node {
       },
       "edgesOut": Map {
         "@types/react" => Edge {
+          "error": "MISSING",
           "name": "@types/react",
           "spec": "^16.9.16",
-          "to": "node_modules/@types/react",
+          "to": null,
           "type": "prod",
         },
         "async-hook-domain" => Edge {
@@ -57927,50 +57807,6 @@ Node {
       "name": "@types/color-name",
       "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
     },
-    "@types/prop-types" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@types/react",
-          "name": "@types/prop-types",
-          "spec": "*",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@types/prop-types",
-      "name": "@types/prop-types",
-      "optional": true,
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
-    },
-    "@types/react" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/ink",
-          "name": "@types/react",
-          "spec": ">=16.8.0",
-          "type": "peerOptional",
-        },
-      },
-      "edgesOut": Map {
-        "@types/prop-types" => Edge {
-          "name": "@types/prop-types",
-          "spec": "*",
-          "to": "node_modules/@types/prop-types",
-          "type": "prod",
-        },
-        "csstype" => Edge {
-          "name": "csstype",
-          "spec": "^2.2.0",
-          "to": "node_modules/csstype",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@types/react",
-      "name": "@types/react",
-      "optional": true,
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.19.tgz",
-    },
     "ajv" => Node {
       "edgesIn": Set {
         Edge {
@@ -59298,21 +59134,6 @@ Node {
       "name": "cross-spawn",
       "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
     },
-    "csstype" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "node_modules/@types/react",
-          "name": "csstype",
-          "spec": "^2.2.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/csstype",
-      "name": "csstype",
-      "optional": true,
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
-    },
     "dashdash" => Node {
       "edgesIn": Set {
         Edge {
@@ -60368,7 +60189,7 @@ Node {
         "@types/react" => Edge {
           "name": "@types/react",
           "spec": ">=16.8.0",
-          "to": "node_modules/@types/react",
+          "to": null,
           "type": "peerOptional",
         },
         "ansi-escapes" => Edge {

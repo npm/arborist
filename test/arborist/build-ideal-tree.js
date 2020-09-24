@@ -91,8 +91,6 @@ const printTree = tree => ({
   __proto__: { constructor: tree.constructor },
 })
 
-const { format } = require('tcompare')
-
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
   .split(registry).join('https://registry.npmjs.org/')

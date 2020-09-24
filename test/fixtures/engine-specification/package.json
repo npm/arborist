@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@bonkydog/test": "^1.4.0",
-    "lodash": "^4.17.20"
+    "engine-specifying-test-package": "^1.0.0"
   }
 }

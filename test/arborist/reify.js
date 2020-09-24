@@ -1,4 +1,4 @@
-const {basename, resolve} = require('path')
+const {resolve} = require('path')
 const t = require('tap')
 const requireInject = require('require-inject')
 
@@ -141,8 +141,6 @@ const printTree = tree => ({
     }),
   __proto__: { constructor: tree.constructor },
 })
-
-const { format } = require('tcompare')
 
 const cwd = process.cwd()
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')

@@ -11,7 +11,7 @@ const t = require('tap')
 
 t.cleanSnapshot = s => s.split(process.cwd()).join('{CWD}')
 
-const {relative, resolve, basename} = require('path')
+const {relative, resolve} = require('path')
 const fixture = resolve(__dirname, 'fixtures/install-types')
 const swonlyFixture = resolve(__dirname, 'fixtures/install-types-sw-only')
 const YarnLock = require('../lib/yarn-lock.js')

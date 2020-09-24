@@ -516,29 +516,6 @@ t.test('link metadep', t => {
     t.resolveMatchSnapshot(printReified(fixture(t, c)))))
 })
 
-t.test('fail on mismatched engine when engineStrict is set', t =>
-  t.rejects(printReified(fixture(t, 'tap-and-flow'), {
-    nodeVersion: '1.2.3',
-    engineStrict: true,
-  }).then(() => { throw new Error('failed to fail') }), { code: 'EBADENGINE' }))
-
-t.test('warn on mismatched engine when engineStrict is false', t => {
-  const path = fixture(t, 'tap-and-flow')
-  const a = newArb({
-    path,
-    engineStrict: false,
-    nodeVersion: '1.2.3',
-    // just to add coverage for the no-op function for bundleBinLinks
-    binLinks: false,
-  })
-  const check = warningTracker()
-  const binPath = `${path}/node_modules/tap/node_modules/.bin`
-  return a.reify().then(() => t.match(check(), [
-    ['warn', 'EBADENGINE'],
-  ]))
-  .then(() => t.throws(() => fs.readdir(binPath)))
-})
-
 t.test('warn on reifying deprecated dependency', t => {
   const a = newArb({
     path: fixture(t, 'deprecated-dep'),

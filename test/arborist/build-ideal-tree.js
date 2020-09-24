@@ -101,7 +101,37 @@ const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 
 const OPT = { cache, registry }
 const buildIdeal = (path, opt) =>
-  new Arborist({...OPT, path, ...(opt || {})}).buildIdealTree(opt)
+  new Arborist({ ...OPT, path, ...(opt || {}) }).buildIdealTree(opt)
+
+t.test('fail on mismatched engine when engineStrict is set', async t => {
+  const path = resolve(fixtures, 'engine-specification')
+
+  t.rejects(buildIdeal(path, {
+    ...OPT,
+    nodeVersion: '12.18.4',
+    engineStrict: true,
+  }).then(() => { throw new Error('failed to fail') }), { code: 'EBADENGINE' })
+})
+
+t.test('warn on mismatched engine when engineStrict is false', t => {
+  const path = resolve(fixtures, 'engine-specification')
+  const check = warningTracker()
+  return buildIdeal(path, {
+    ...OPT,
+    nodeVersion: '12.18.4',
+    engineStrict: false,
+  }).then(() => t.match(check(), [
+    ['warn', 'EBADENGINE'],
+  ]))
+})
+
+t.test('fail on mismatched platform', async t => {
+  const path = resolve(fixtures, 'platform-specification')
+  t.rejects(buildIdeal(path, {
+    ...OPT,
+    nodeVersion: '4.0.0'
+  }).then(() => { throw new Error('failed to fail') }), { code: 'EBADPLATFORM' })
+})
 
 t.test('no options', t => {
   const arb = new Arborist()

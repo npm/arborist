@@ -14276,6 +14276,16 @@ Object {
 }
 `
 
+exports[`test/shrinkwrap.js TAP saving dependency-free shrinkwrap object load file, and save it with a custom format > custom indented json output 1`] = `
+{
+	"lockfileVersion": 2,
+	"requires": true,
+	"packages": {},
+	"dependencies": {}
+}
+
+`
+
 exports[`test/shrinkwrap.js TAP saving dependency-free shrinkwrap object load the unindented file, and save it back default > indented json output 1`] = `
 {
   "lockfileVersion": 2,

@@ -27084,6 +27084,48 @@ Object {
 }
 `
 
+exports[`test/arborist/reify.js TAP store files with a custom indenting > must match snapshot 1`] = `
+{
+	"name": "tab-indented-package-json",
+	"version": "1.0.0",
+	"dependencies": {
+		"abbrev": "^1.0.0"
+	}
+}
+
+`
+
+exports[`test/arborist/reify.js TAP store files with a custom indenting > must match snapshot 2`] = `
+{
+	"name": "tab-indented-package-json",
+	"version": "1.0.0",
+	"lockfileVersion": 2,
+	"requires": true,
+	"packages": {
+		"": {
+			"name": "tab-indented-package-json",
+			"version": "1.0.0",
+			"dependencies": {
+				"abbrev": "^1.0.0"
+			}
+		},
+		"node_modules/abbrev": {
+			"version": "1.1.1",
+			"resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+			"integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+		}
+	},
+	"dependencies": {
+		"abbrev": {
+			"version": "1.1.1",
+			"resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+			"integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+		}
+	}
+}
+
+`
+
 exports[`test/arborist/reify.js TAP tarball deps with transitive tarball deps > expect resolving Promise 1`] = `
 Node {
   "children": Map {

@@ -1002,6 +1002,20 @@ t.test('add a dep present in the tree, with v1 shrinkwrap', async t => {
   t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
 })
 
+t.test('store files with a custom indenting', async t => {
+  const tabIndentedPackageJson =
+    fs.readFileSync(
+      resolve(__dirname, '../fixtures/tab-indented-package-json/package.json'),
+      'utf8'
+    )
+  const path = t.testdir({
+    'package.json': tabIndentedPackageJson
+  })
+  const tree = await reify(path)
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+  t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'))
+})
+
 t.test('modules bundled by the root should be installed', async t => {
   const path = fixture(t, 'root-bundler')
   const tree = await reify(path)

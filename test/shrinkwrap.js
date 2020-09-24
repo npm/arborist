@@ -438,6 +438,17 @@ t.test('saving dependency-free shrinkwrap object', t => {
     t.matchSnapshot(fs.readFileSync(sw.filename, 'utf8'), 'indented json output')
   })
 
+  t.test('load file, and save it with a custom format', async t => {
+    const sw = await Shrinkwrap.load({ path: dir })
+    t.equal(
+      sw.filename,
+      resolve(`${dir}/package-lock.json`),
+      'correct filepath on shrinkwrap instance'
+    )
+    await sw.save({ format: '\t' })
+    t.matchSnapshot(fs.readFileSync(sw.filename, 'utf8'), 'custom indented json output')
+  })
+
   t.end()
 })
 

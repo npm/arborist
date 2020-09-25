@@ -113,6 +113,15 @@ t.test('fail on mismatched engine when engineStrict is set', async t => {
   }).then(() => { throw new Error('failed to fail') }), { code: 'EBADENGINE' })
 })
 
+t.test('ignore mismatched engine for optional dependencies', async t => {
+  const path = resolve(fixtures, 'optional-engine-specification')
+  await buildIdeal(path, {
+    ...OPT,
+    nodeVersion: '12.18.4',
+    engineStrict: true,
+  })
+})
+
 t.test('warn on mismatched engine when engineStrict is false', t => {
   const path = resolve(fixtures, 'engine-specification')
   const check = warningTracker()
@@ -131,6 +140,15 @@ t.test('fail on mismatched platform', async t => {
     ...OPT,
     nodeVersion: '4.0.0'
   }).then(() => { throw new Error('failed to fail') }), { code: 'EBADPLATFORM' })
+})
+
+t.test('ignore mismatched platform for optional dependencies', async t => {
+  const path = resolve(fixtures, 'optional-platform-specification')
+  await buildIdeal(path, {
+    ...OPT,
+    nodeVersion: '12.18.4',
+    engineStrict: true,
+  })
 })
 
 t.test('no options', t => {

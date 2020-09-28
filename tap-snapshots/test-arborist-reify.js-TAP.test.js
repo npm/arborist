@@ -27051,7 +27051,7 @@ Object {
       "dependencies": Object {
         "a": "github:foo/bar#baz",
         "b": "^1.2.3",
-        "d": "npm:c@^1.2.3",
+        "d": "npm:c@1.x <1.9.9",
       },
       "devDependencies": Object {
         "c": "git+ssh://git@githost.com:a/b/c.git#master",

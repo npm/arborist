@@ -814,7 +814,7 @@ t.test('saving the ideal tree', t => {
       dependencies: {
         a: 'git+ssh://git@github.com:foo/bar#baz',
         b: '',
-        d: 'd@npm:c@1.x',
+        d: 'd@npm:c@1.x <1.9.9',
       },
       devDependencies: {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
@@ -868,7 +868,7 @@ t.test('saving the ideal tree', t => {
       a[kResolvedAdd] = [
         npa('a@git+ssh://git@github.com:foo/bar#baz'),
         npa('b'),
-        npa('d@npm:c@1.x'),
+        npa('d@npm:c@1.x <1.9.9'),
         npa(`c@git+ssh://git@githost.com:a/b/c.git#master`),
       ]
       return a[kSaveIdealTree]({
@@ -881,7 +881,7 @@ t.test('saving the ideal tree', t => {
         dependencies: {
           a: 'github:foo/bar#baz',
           b: '^1.2.3',
-          d: 'npm:c@^1.2.3',
+          d: 'npm:c@1.x <1.9.9',
         },
         devDependencies: {
           c: 'git+ssh://git@githost.com:a/b/c.git#master',

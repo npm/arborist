@@ -1365,6 +1365,57 @@ t.test('workspaces', t => {
     return t.resolveMatchSnapshot(printIdeal(path))
   })
 
+  t.test('should handle conflicting peer deps ranges', t => {
+    const path = resolve(__dirname, '../fixtures/workspaces-peer-ranges')
+    return t.rejects(
+      printIdeal(path),
+      {
+        code: 'ERESOLVE',
+        dep: {
+          name: '@ruyadorno/dep-bar',
+          version: '2.0.0',
+          whileInstalling: { name: 'b', version: '1.0.0' },
+          location: 'node_modules/@ruyadorno/dep-bar',
+          dependents: [
+            {
+              type: 'peer',
+              spec: '^2.0.0',
+              error: 'INVALID',
+              from: {
+                name: 'b',
+                version: '1.0.0',
+                location: 'packages/b',
+                dependents: []
+              }
+            }
+          ]
+        },
+        current: {
+          name: '@ruyadorno/dep-bar',
+          version: '1.0.0',
+          location: 'node_modules/@ruyadorno/dep-bar',
+          dependents: [
+            {
+              type: 'peer',
+              spec: '^1.0.0',
+              from: {
+                name: 'a',
+                version: '1.0.0',
+                location: 'packages/a',
+                dependents: []
+              }
+            }
+          ]
+        },
+        peerConflict: null,
+        fixWithForce: false,
+        type: 'peer',
+        isPeer: true
+      },
+      'throws ERESOLVE error'
+    )
+  })
+
   t.end()
 })
 

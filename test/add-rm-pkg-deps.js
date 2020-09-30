@@ -122,6 +122,56 @@ t.test('add', t => {
     devDependencies: { foo: '2' },
   }, 'update dev')
 
+  t.strictSame(add({
+    pkg: {
+      devDependencies: { foo: '1' },
+      peerDependencies: { foo: '1' },
+    },
+    add: [ foo2 ],
+  }), {
+    devDependencies: { foo: '2' },
+    peerDependencies: { foo: '2' },
+  }, 'update dev and peer together')
+
+  t.strictSame(add({
+    pkg: {
+      devDependencies: { foo: '1' },
+      peerDependencies: { foo: '1' },
+      peerDependenciesMeta: { foo: { optional: true }},
+    },
+    add: [ foo2 ],
+  }), {
+    devDependencies: { foo: '2' },
+    peerDependencies: { foo: '2' },
+    peerDependenciesMeta: { foo: { optional: true }},
+  }, 'update dev and peerOptional together')
+
+  t.strictSame(add({
+    pkg: {
+      devDependencies: { foo: '*' },
+      peerDependencies: { foo: '1' },
+      peerDependenciesMeta: { foo: { optional: true }},
+    },
+    add: [ foo2 ],
+  }), {
+    devDependencies: { foo: '2' },
+    peerDependencies: { foo: '2' },
+    peerDependenciesMeta: { foo: { optional: true }},
+  }, 'update dev and peerOptional together')
+
+  t.strictSame(add({
+    pkg: {
+      devDependencies: { foo: '1' },
+      peerDependencies: { foo: '*' },
+      peerDependenciesMeta: { foo: { optional: true }},
+    },
+    add: [ foo2 ],
+  }), {
+    devDependencies: { foo: '2' },
+    peerDependencies: { foo: '2' },
+    peerDependenciesMeta: { foo: { optional: true }},
+  }, 'update dev and peerOptional together')
+
   t.end()
 })
 

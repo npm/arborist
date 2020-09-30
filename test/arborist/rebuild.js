@@ -1,6 +1,7 @@
 const t = require('tap')
 const _trashList = Symbol.for('trashList')
-const Arborist = require('../../lib/arborist/index.js')
+const requireInject = require('require-inject')
+const Arborist = requireInject('../../lib/arborist/index.js')
 const {resolve, dirname} = require('path')
 const fs = require('fs')
 const fixtures = resolve(__dirname, '../fixtures')
@@ -335,4 +336,52 @@ t.test('checkBins is fine if no bins', async t => {
   })
   await arb.rebuild()
   t.equal(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
+})
+
+t.test('rebuild node-gyp dependencies lacking both preinstall and install scripts', async t => {
+  // use require-inject so we don't need an actual massive binary dep fixture
+  const RUNS = []
+  const Arborist = requireInject('../../lib/arborist/index.js', {
+    '@npmcli/run-script': async opts => {
+      RUNS.push(opts)
+      return {code: 0, signal: null}
+    }
+  })
+  const path = t.testdir({
+    node_modules: {
+      dep: {
+        'package.json': {
+          name: 'dep',
+          version: '1.0.0',
+        },
+        'binding.gyp': '',
+      },
+    },
+    'package.json': JSON.stringify({
+      name: 'project',
+      dependencies: {
+        dep: '1',
+      },
+    })
+  })
+  const arb = new Arborist({ path, registry })
+  await arb.rebuild()
+  t.match(RUNS, [
+    {
+      event: 'install',
+      path: resolve(path, 'node_modules/dep'),
+      pkg: { scripts: { install: 'node-gyp rebuild' } },
+      stdioString: true,
+      env: {
+        npm_package_resolved: null,
+        npm_package_integrity: null,
+        npm_package_json: resolve(path, 'node_modules/dep/package.json'),
+        npm_package_optional: '',
+        npm_package_dev: '',
+        npm_package_peer: '',
+        npm_package_dev_optional: ''
+      },
+      scriptShell: undefined
+    }
+  ])
 })

@@ -336,3 +336,11 @@ t.test('checkBins is fine if no bins', async t => {
   await arb.rebuild()
   t.equal(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
 })
+
+t.test('rebuild node-gyp dependencies lacking both preinstall and install scripts', async t => {
+  const path = fixture(t, 'package-with-gyp-dependency-lacking-install-script')
+  const arb = newArb({ path })
+  await arb.loadActual()
+  await arb.rebuild()
+  t.ok(fs.existsSync(path + '/node_modules/node-report/build/Release/api.node'))
+})

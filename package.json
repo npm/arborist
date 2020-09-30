@@ -4,7 +4,7 @@
   "description": "Manage node_modules trees",
   "dependencies": {
     "@npmcli/installed-package-contents": "^1.0.5",
-    "@npmcli/map-workspaces": "0.0.0-pre.1",
+    "@npmcli/map-workspaces": "^1.0.1",
     "@npmcli/metavuln-calculator": "^1.0.0",
     "@npmcli/name-from-folder": "^1.0.1",
     "@npmcli/run-script": "^1.3.1",

@@ -219,3 +219,120 @@ t.test('log failed exit codes as well, even if we dont crash', async t => {
     ['silly', 'reify', 'mark', 'deleted', [resolve(path, 'node_modules/optdep')]]
   ])
 })
+
+t.test('rebuild global top bin links', async t => {
+  const path = t.testdir({
+    lib: {
+      node_modules: {
+        foo: {
+          'package.json': JSON.stringify({
+            name: 'foo',
+            bin: 'foo.js',
+            version: '1.2.3',
+          }),
+          'foo.js': '#!/usr/local/bin node\nconsole.log("hello")\n',
+        },
+      },
+    },
+  })
+  const isWindows = process.platform === 'win32'
+  const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
+  const arb = newArb({
+    path: `${path}/lib`,
+    global: true,
+  })
+  await arb.rebuild()
+  const isCorrect = isWindows ? 'isFile' : 'isSymbolicLink'
+  t.equal(fs.lstatSync(file)[isCorrect](), true, 'bin was linked')
+})
+
+t.test('do not build if theres a conflicting globalTop bin', async t => {
+  const path = t.testdir({
+    lib: {
+      node_modules: {
+        foo: {
+          'package.json': '',
+          'foo.js': '#!/usr/local/bin node\nconsole.log("hello")\n',
+        },
+      },
+    },
+    bin: {}
+  })
+  const isWindows = process.platform === 'win32'
+  const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
+  fs.writeFileSync(file, 'this is not the linked bin')
+  fs.writeFileSync(`${path}/lib/node_modules/foo/package.json`, JSON.stringify({
+    name: 'foo',
+    bin: 'foo.js',
+    version: '1.2.3',
+    scripts: {
+      // try to get clever...
+      preinstall: `node -e 'require("fs").unlinkSync(${JSON.stringify(file)})'`,
+    },
+  }))
+
+  const arb = newArb({
+    path: `${path}/lib`,
+    global: true,
+  })
+  t.rejects(arb.rebuild(), { code: 'EEXIST' })
+  t.equal(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
+})
+
+t.test('force overwrite the conflicting globalTop bin', async t => {
+  const path = t.testdir({
+    lib: {
+      node_modules: {
+        foo: {
+          'package.json': JSON.stringify({
+            name: 'foo',
+            bin: 'foo.js',
+            version: '1.2.3',
+          }),
+          'foo.js': '#!/usr/local/bin node\nconsole.log("hello")\n',
+        },
+      },
+    },
+    bin: {}
+  })
+  const isWindows = process.platform === 'win32'
+  const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
+  fs.writeFileSync(file, 'this is not the linked bin')
+
+  const arb = newArb({
+    path: `${path}/lib`,
+    global: true,
+    force: true,
+  })
+  await arb.rebuild()
+  const isCorrect = isWindows ? 'isFile' : 'isSymbolicLink'
+  t.equal(fs.lstatSync(file)[isCorrect](), true, 'bin was linked')
+  t.notEqual(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
+})
+
+t.test('checkBins is fine if no bins', async t => {
+  const path = t.testdir({
+    lib: {
+      node_modules: {
+        foo: {
+          'package.json': JSON.stringify({
+            name: 'foo',
+            version: '1.2.3',
+          }),
+          'foo.js': '#!/usr/local/bin node\nconsole.log("hello")\n',
+        },
+      },
+    },
+    bin: {}
+  })
+  const isWindows = process.platform === 'win32'
+  const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
+  fs.writeFileSync(file, 'this is not the linked bin')
+
+  const arb = newArb({
+    path: `${path}/lib`,
+    global: true,
+  })
+  await arb.rebuild()
+  t.equal(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
+})

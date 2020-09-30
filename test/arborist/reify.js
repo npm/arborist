@@ -993,6 +993,25 @@ t.test('workspaces', t => {
   t.end()
 })
 
+t.test('fail early if bins will conflict', async t => {
+  const path = t.testdir({
+    lib: {
+      'semver.cmd': 'this is not the linked bin',
+    },
+    bin: {
+      semver: 'this is not the linked bin',
+    },
+  })
+  const arb = newArb({
+    global: true,
+    path: `${path}/lib`,
+  })
+  arb.rebuild = async () => {
+    throw Object.assign(new Error('nope'), { code: 'NOPE' })
+  }
+  await t.rejects(arb.reify({ add: ['semver'] }), { code: 'EEXIST' })
+})
+
 t.test('add a dep present in the tree, with v1 shrinkwrap', async t => {
   // https://github.com/npm/arborist/issues/70
   const path = fixture(t, 'old-package-lock')

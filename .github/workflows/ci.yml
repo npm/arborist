@@ -29,12 +29,12 @@ jobs:
 
       # Run for all environments
       - name: Run Tap Tests
-        if: matrix.os != 'macOS-latest' || matrix.node-version != '14.x'
+        if: matrix.os != 'ubuntu-latest' || matrix.node-version != '14.x'
         run: npm test -- -c -t0
 
       # Push coverage for specific environment
       - name: Run Tap Tests (push coverage results)
-        if: matrix.os == 'macOS-latest' && matrix.node-version == '14.x'
+        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         run: npm test -- -c -t0
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}

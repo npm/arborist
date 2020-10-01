@@ -350,10 +350,10 @@ t.test('rebuild node-gyp dependencies lacking both preinstall and install script
   const path = t.testdir({
     node_modules: {
       dep: {
-        'package.json': {
+        'package.json': JSON.stringify({
           name: 'dep',
           version: '1.0.0',
-        },
+        }),
         'binding.gyp': '',
       },
     },
@@ -384,4 +384,34 @@ t.test('rebuild node-gyp dependencies lacking both preinstall and install script
       scriptShell: undefined
     }
   ])
+})
+
+t.test('do not rebuild node-gyp dependencies with gypfile:false', async t => {
+  // use require-inject so we don't need an actual massive binary dep fixture
+  const RUNS = []
+  const Arborist = requireInject('../../lib/arborist/index.js', {
+    '@npmcli/run-script': async opts => {
+      throw new Error('should not run any scripts')
+    }
+  })
+  const path = t.testdir({
+    node_modules: {
+      dep: {
+        'package.json': JSON.stringify({
+          name: 'dep',
+          version: '1.0.0',
+          gypfile: false,
+        }),
+        'binding.gyp': '',
+      },
+    },
+    'package.json': JSON.stringify({
+      name: 'project',
+      dependencies: {
+        dep: '1',
+      },
+    })
+  })
+  const arb = new Arborist({ path, registry })
+  await arb.rebuild()
 })

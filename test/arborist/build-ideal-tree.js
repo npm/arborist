@@ -1736,3 +1736,25 @@ t.test('do not continually re-resolve deps that failed to load', async t => {
     '@isaacs/this-does-not-exist-actually@2.x',
   ]}), { code: 'E404' })
 })
+
+t.test('update a node if its bundled by the root project', async t => {
+  const path = t.testdir({
+    node_modules: {
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.0.0',
+        })
+      },
+    },
+    'package.json': JSON.stringify({
+      bundleDependencies: ['abbrev'],
+      dependencies: {
+        abbrev: '1',
+      },
+    }),
+  })
+  const arb = new Arborist({ ...OPT, path })
+  await arb.buildIdealTree({ update: ['abbrev'] })
+  t.equal(arb.idealTree.children.get('abbrev').version, '1.1.1')
+})

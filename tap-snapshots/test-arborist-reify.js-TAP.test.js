@@ -45648,6 +45648,110 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP workspaces reify from an actual loaded workspace env > should not clean up entire nm folder for no reason 1`] = `
+Node {
+  "children": Map {
+    "@ruyadorno/dep-bar" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "a",
+          "name": "@ruyadorno/dep-bar",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@ruyadorno/dep-foo" => Edge {
+          "name": "@ruyadorno/dep-foo",
+          "spec": "^1.0.0",
+          "to": "node_modules/@ruyadorno/dep-foo",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@ruyadorno/dep-bar",
+      "name": "@ruyadorno/dep-bar",
+      "resolved": "https://registry.npmjs.org/@ruyadorno/dep-bar/-/dep-bar-1.0.0.tgz",
+    },
+    "@ruyadorno/dep-foo" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@ruyadorno/dep-bar",
+          "name": "@ruyadorno/dep-foo",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@ruyadorno/dep-foo",
+      "name": "@ruyadorno/dep-foo",
+      "resolved": "https://registry.npmjs.org/@ruyadorno/dep-foo/-/dep-foo-1.0.0.tgz",
+    },
+    "abbrev" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.0.0",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "pkg-a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "pkg-a",
+          "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-from-an-actual-loaded-workspace-env/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/pkg-a",
+      "name": "pkg-a",
+      "resolved": "file:../a",
+      "target": Object {
+        "name": "a",
+        "parent": undefined,
+      },
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.0.0",
+      "to": "node_modules/abbrev",
+      "type": "dev",
+    },
+    "pkg-a" => Edge {
+      "name": "pkg-a",
+      "spec": "file:{CWD}/test/arborist/reify-workspaces-reify-from-an-actual-loaded-workspace-env/a",
+      "to": "node_modules/pkg-a",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    Node {
+      "edgesOut": Map {
+        "@ruyadorno/dep-bar" => Edge {
+          "name": "@ruyadorno/dep-bar",
+          "spec": "^1.0.0",
+          "to": "node_modules/@ruyadorno/dep-bar",
+          "type": "prod",
+        },
+      },
+      "location": "a",
+      "name": "a",
+      "resolved": null,
+    },
+  },
+  "location": "",
+  "name": "reify-workspaces-reify-from-an-actual-loaded-workspace-env",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/reify.js TAP workspaces reify simple-workspaces > should reify simple workspaces 1`] = `
 Node {
   "children": Map {

@@ -990,6 +990,12 @@ t.test('workspaces', t => {
       .then(checkBin)
   })
 
+  t.test('reify from an actual loaded workspace env', t =>
+    t.resolveMatchSnapshot(
+      printReified(fixture(t, 'workspaces-non-simplistic')),
+      'should not clean up entire nm folder for no reason'
+    ))
+
   t.end()
 })
 

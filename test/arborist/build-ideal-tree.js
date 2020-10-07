@@ -111,6 +111,16 @@ t.test('fail on mismatched engine when engineStrict is set', async t => {
   }).then(() => { throw new Error('failed to fail') }), { code: 'EBADENGINE' })
 })
 
+t.test('fail on malformed package.json', t => {
+  const path = resolve(fixtures, 'malformed-json')
+
+  return t.rejects(
+    buildIdeal(path),
+    { code: 'EJSONPARSE' },
+    'should fail with EJSONPARSE error'
+  )
+})
+
 t.test('ignore mismatched engine for optional dependencies', async t => {
   const path = resolve(fixtures, 'optional-engine-specification')
   await buildIdeal(path, {

@@ -199,6 +199,26 @@ t.test('packageLockOnly can add deps', async t => {
   t.throws(() => fs.statSync(path + '/node_modules'), { code: 'ENOENT' })
 })
 
+t.test('malformed package.json should not be overwitten', async t => {
+  t.plan(2)
+
+  const path = fixture(t, 'malformed-json')
+  const originalContent = fs.readFileSync(path + '/package.json', 'utf8')
+
+  try {
+    await reify(path)
+  } catch (err) {
+    t.match(err, { code: 'EJSONPARSE' }, 'should throw EJSONPARSE error')
+  }
+
+  const resultContent = fs.readFileSync(path + '/package.json', 'utf8')
+  t.equal(
+    resultContent,
+    originalContent,
+    'should not touch file contents on malformed json'
+  )
+})
+
 t.test('packageLockOnly does not work on globals', t => {
   const path = t.testdir({ 'package.json': '{}' })
   return t.rejects(() => reify(path, { global: true, packageLockOnly: true }))

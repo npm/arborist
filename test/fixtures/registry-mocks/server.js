@@ -59,12 +59,12 @@ const startServer = cb => {
           const handleUpstream = upstream => {
             res.statusCode = upstream.statusCode
             if (upstream.statusCode >= 300 || upstream.statusCode < 200) {
-              console.error('UPSTREAM ERROR', upstream.statusCode, upstream.headers)
+              console.error('UPSTREAM ERROR', upstream.statusCode)
               return upstream.pipe(res)
             }
             res.setHeader('content-encoding', upstream.headers['content-encoding'])
             const file = advisoryBulkResponse
-            console.error('PROXY', `${req.url} -> ${file}`)
+            console.error('PROXY', `${req.url} -> ${file} ${upstream.statusCode}`)
             mkdirp.sync(dirname(file))
             const data = []
             upstream.on('end', () => {
@@ -123,13 +123,13 @@ const startServer = cb => {
           }).on('response', upstream => {
             res.statusCode = upstream.statusCode
             if (upstream.statusCode >= 300 || upstream.statusCode < 200) {
-              console.error('UPSTREAM ERROR', upstream.statusCode, upstream.headers)
+              console.error('UPSTREAM ERROR', upstream.statusCode)
               // don't save if it's not a valid response
               return upstream.pipe(res)
             }
             res.setHeader('content-encoding', upstream.headers['content-encoding'])
             const file = auditResponse
-            console.error('PROXY', `${req.url} -> ${file}`)
+            console.error('PROXY', `${req.url} -> ${file} ${upstream.statusCode}`)
             mkdirp.sync(dirname(file))
             const data = []
             upstream.on('end', () => {
@@ -188,6 +188,10 @@ const startServer = cb => {
             'if-none-match': '',
           },
         }).on('response', upstream => {
+          const errorStatus = upstream.statusCode >= 300 || upstream.statusCode < 200
+          if (errorStatus) {
+            console.error('UPSTREAM ERROR', upstream.statusCode)
+          }
           const ct = upstream.headers['content-type']
           const isJson = ct.includes('application/json')
           const file = isJson ? f + '.json' : f
@@ -199,15 +203,17 @@ const startServer = cb => {
           upstream.on('end', () => {
             console.error('ENDING', req.url)
             const out = Buffer.concat(data)
-            if (isJson) {
-              const obj = JSON.parse(out.toString())
-              writeFileSync(file, JSON.stringify(obj, 0, 2) + '\n')
-              const mrm = require('minify-registry-metadata')
-              const minFile = file.replace(/\.json$/, '.min.json')
-              writeFileSync(minFile, JSON.stringify(mrm(obj), 0, 2) + '\n')
-              console.error('WROTE JSONS', [file, minFile])
-            } else
-              writeFileSync(file, out)
+            if (!errorStatus) {
+              if (isJson) {
+                const obj = JSON.parse(out.toString())
+                writeFileSync(file, JSON.stringify(obj, 0, 2) + '\n')
+                const mrm = require('minify-registry-metadata')
+                const minFile = file.replace(/\.json$/, '.min.json')
+                writeFileSync(minFile, JSON.stringify(mrm(obj), 0, 2) + '\n')
+                console.error('WROTE JSONS', [file, minFile])
+              } else
+                writeFileSync(file, out)
+            }
             res.end(out)
           })
           upstream.on('data', c => data.push(c))

@@ -269,134 +269,9 @@ t.test('nested cyclical peer deps', t => {
   const ers = {
     [paths[0]]: {
       code: 'ERESOLVE',
-      dep: {
-        name: '@isaacs/peer-dep-cycle-b',
-        version: '1.0.0',
-        whileInstalling: { name: '@isaacs/peer-dep-cycle-a', version: '1.0.0' },
-        location: 'node_modules/@isaacs/peer-dep-cycle-b',
-        dependents: [
-          {
-            type: 'peer',
-            spec: '1',
-            from: {
-              name: '@isaacs/peer-dep-cycle-a',
-              version: '1.0.0',
-              location: 'node_modules/@isaacs/peer-dep-cycle-a',
-              dependents: [
-                {
-                  type: 'prod',
-                  spec: '1.x',
-                  from: { location: paths[0] },
-                }
-              ]
-            }
-          }
-        ]
-      },
-      current: {
-        name: '@isaacs/peer-dep-cycle-c',
-        version: '2.0.0',
-        location: 'node_modules/@isaacs/peer-dep-cycle-c',
-        dependents: [
-          {
-            type: 'prod',
-            spec: '2.x',
-            from: { location: paths[0] },
-          }
-        ]
-      },
-      peerConflict: {
-        name: '@isaacs/peer-dep-cycle-c',
-        version: '1.0.0',
-        whileInstalling: { name: '@isaacs/peer-dep-cycle-a', version: '1.0.0' },
-        location: 'node_modules/@isaacs/peer-dep-cycle-c',
-        dependents: [
-          {
-            type: 'peer',
-            spec: '1',
-            from: {
-              name: '@isaacs/peer-dep-cycle-b',
-              version: '1.0.0',
-              whileInstalling: { name: '@isaacs/peer-dep-cycle-a', version: '1.0.0' },
-              location: 'node_modules/@isaacs/peer-dep-cycle-b',
-              dependents: [
-                {
-                  type: 'peer',
-                  spec: '1',
-                  from: {
-                    name: '@isaacs/peer-dep-cycle-a',
-                    version: '1.0.0',
-                    location: 'node_modules/@isaacs/peer-dep-cycle-a',
-                    dependents: [
-                      {
-                        type: 'prod',
-                        spec: '1.x',
-                        from: { location: paths[0] },
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      fixWithForce: false,
-      type: 'peer',
-      isPeer: true,
     },
     [paths[1]]: {
       code: 'ERESOLVE',
-      dep: {
-        name: '@isaacs/peer-dep-cycle-c',
-        version: '1.0.0',
-        whileInstalling: { name: '@isaacs/peer-dep-cycle-b', version: '1.0.0' },
-        location: 'node_modules/@isaacs/peer-dep-cycle-c',
-        dependents: [
-          {
-            type: 'peer',
-            spec: '1',
-            error: 'INVALID',
-            from: {
-              name: '@isaacs/peer-dep-cycle-b',
-              version: '1.0.0',
-              location: 'node_modules/@isaacs/peer-dep-cycle-b',
-              dependents: [
-                {
-                  type: 'peer',
-                  spec: '1',
-                  from: {
-                    name: '@isaacs/peer-dep-cycle-a',
-                    version: '1.0.0',
-                    location: 'node_modules/@isaacs/peer-dep-cycle-a',
-                    dependents: [
-                      {
-                        type: 'prod',
-                        spec: '1.x',
-                        from: { location: paths[1] },
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      },
-      current: {
-        name: '@isaacs/peer-dep-cycle-c',
-        version: '2.0.0',
-        location: 'node_modules/@isaacs/peer-dep-cycle-c',
-        dependents: [
-          {
-            type: 'prod',
-            spec: '2.x',
-            from: { location: paths[1] },
-          }
-        ]
-      },
-      fixWithForce: true,
-      type: 'peer',
     },
   }
 
@@ -509,52 +384,12 @@ t.test('bundle deps example 2', t => {
     }), 'remove bundled dependency a'))
 })
 
-t.test('unresolveable peer deps', t => {
+t.test('unresolvable peer deps', t => {
   const path = resolve(fixtures, 'testing-peer-deps-unresolvable')
 
   return t.rejects(printIdeal(path, { strictPeerDeps: true }), {
     message: 'unable to resolve dependency tree',
     code: 'ERESOLVE',
-    dep: {
-      name: '@isaacs/testing-peer-deps-c',
-      version: '2.0.0',
-      whileInstalling: { name: '@isaacs/testing-peer-deps-b', version: '2.0.1' },
-      location: 'node_modules/@isaacs/testing-peer-deps-c',
-      dependents: [
-        {
-          type: 'peer',
-          spec: '2',
-          error: 'INVALID',
-          from: {
-            name: '@isaacs/testing-peer-deps-b',
-            version: '2.0.1',
-            location: 'node_modules/@isaacs/testing-peer-deps-b',
-            dependents: [
-              {
-                type: 'prod',
-                spec: '2',
-                from: { location: path },
-              }
-            ]
-          }
-        }
-      ]
-    },
-    current: {
-      name: '@isaacs/testing-peer-deps-c',
-      version: '1.2.3',
-      location: 'node_modules/@isaacs/testing-peer-deps-c',
-      dependents: [
-        {
-          type: 'prod',
-          spec: '1',
-          from: { location: path },
-        }
-      ]
-    },
-    fixWithForce: true,
-    type: 'peer',
-    isPeer: true
   }, 'unacceptable')
 })
 
@@ -697,6 +532,7 @@ t.test('contrived dep placement tests', t => {
   const kCanPlaceDep = Symbol.for('canPlaceDep')
   const kPlaceDep = Symbol.for('placeDep')
   const kUpdateNames = Symbol.for('updateNames')
+  const kPeerSetSource = Symbol.for('peerSetSource')
 
   const Node = require('../../lib/node.js')
   const Link = require('../../lib/link.js')
@@ -740,8 +576,14 @@ t.test('contrived dep placement tests', t => {
         version: '1.2.3',
       },
       integrity: 'sha512-foofoofoo',
+      parent: new Node({
+        name: 'virtual-root',
+        path: '/virtual-root',
+        pkg: { ...root.package },
+      })
     })
     const a = new Arborist({ ...OPT })
+    a[kPeerSetSource].set(sameFoo, root)
     t.match(a[kCanPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
       Symbol('KEEP'), 'same integrity, keep the one we have')
 
@@ -755,7 +597,13 @@ t.test('contrived dep placement tests', t => {
         version: '1.3.9',
       },
       integrity: 'sha512-oofoofoof',
+      parent: new Node({
+        name: 'virtual-root',
+        path: '/virtual-root',
+        pkg: { ...root.package },
+      })
     })
+    a[kPeerSetSource].set(tooNew, root)
     t.match(a[kCanPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
       Symbol('KEEP'), 'keep existing, satisfies the dep anyway')
     t.strictSame(a[kPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
@@ -768,10 +616,16 @@ t.test('contrived dep placement tests', t => {
         version: '1.2.4',
       },
       integrity: 'sha512-forforfor',
+      parent: new Node({
+        name: 'virtual-root',
+        path: '/virtual-root',
+        pkg: { ...root.package },
+      })
     })
     // note: it'll actually not bother replacing in this case, because
     // the original edge is not an error, but the canPlace result is still
     // REPLACE because it's newer.
+    a[kPeerSetSource].set(newFoo, root)
     t.match(a[kCanPlaceDep](newFoo, root, existingBar.edgesOut.get('foo')),
       Symbol('REPLACE'), 'replace with newer dependency if allowed')
     t.end()
@@ -819,7 +673,13 @@ t.test('contrived dep placement tests', t => {
         version: '1.2.99',
       },
       integrity: 'sha512-oofoofoof',
+      parent: new Node({
+        name: 'virtual-root',
+        path: '/virtual-root',
+        pkg: { ...root.package },
+      })
     })
+    a[kPeerSetSource].set(newFoo, root)
 
     t.match(a[kCanPlaceDep](newFoo, root, existingBar.edgesOut.get('foo')),
       Symbol('REPLACE'), 'replace with newer node')
@@ -837,6 +697,11 @@ t.test('contrived dep placement tests', t => {
         version: '1.3.9',
       },
       integrity: 'sha512-oofoofoof',
+      parent: new Node({
+        name: 'virtual-root',
+        path: '/virtual-root',
+        pkg: { ...root.package },
+      })
     })
     t.match(a[kCanPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
       Symbol('CONFLICT'), 'conflicts with root dependency')
@@ -900,6 +765,7 @@ t.test('contrived dep placement tests', t => {
         pkg: {name:'d', version: '2.0.0'},
         parent: new Node({ path: '/virtual-root' })
       })
+      a[kPeerSetSource].set(d2, e)
 
       t.match(a[kCanPlaceDep](d2, b, edge, null), Symbol('CONFLICT'),
         'cannot place dep where it shadows a dependency creating a conflict')
@@ -964,6 +830,7 @@ t.test('contrived dep placement tests', t => {
         parent: new Node({ path: '/virtual-root' })
       })
 
+      a[kPeerSetSource].set(d2, e)
       t.match(a[kCanPlaceDep](d2, b, edge, null), Symbol('OK'),
         'can place dep where it shadows a dependency creating no conflict')
 
@@ -1009,6 +876,7 @@ t.test('contrived dep placement tests', t => {
       const edge = b.edgesOut.get('c')
       t.equal(edge.to, c1, 'gut check')
       a[kUpdateNames] = ['c']
+      a[kPeerSetSource].set(c11, dedupeUpdate)
       a[kPlaceDep](c11, b, edge)
       t.equal(c1.root, c1, 'c 1.0 removed from tree')
       t.equal(c11.parent, dedupeUpdate, 'c 1.1 placed in root node_modules')
@@ -1113,6 +981,7 @@ t.test('contrived dep placement tests', t => {
       const dupe = f.children.get('c')
       const b = root.children.get('a').children.get('b')
       const edge = b.edgesOut.get('c')
+      a[kPeerSetSource].set(c2, b)
       a[kPlaceDep](c2, b, edge)
       t.equal(c2.parent, root, 'new node landed at the root')
       t.equal(oldc.parent, e, 'old c still in the tree')
@@ -1139,6 +1008,11 @@ t.test('contrived dep placement tests', t => {
       const newb = new Node({
         path: '/virtual-root/b',
         pkg: { name: 'b', version: '2.3.3' },
+        parent: new Node({
+          name: 'virtual-root',
+          path: '/virtual-root',
+          pkg: { ...root.package },
+        }),
       })
       const anode = root.children.get('a')
       const edge = anode.edgesOut.get('b')
@@ -1177,6 +1051,7 @@ t.test('contrived dep placement tests', t => {
     })
     const edge = target.edgesOut.get('bar')
     t.equal(edge.valid, false, 'gut check')
+    a[kPeerSetSource].set(bar, root)
     a[kPlaceDep](bar, target, edge)
     t.equal(edge.valid, true, 'resolved')
     t.equal(bar.parent, target, 'installed peer locally in target top node')
@@ -1209,6 +1084,7 @@ t.test('contrived dep placement tests', t => {
     })
     const edge = target.edgesOut.get('bar')
     t.equal(edge.valid, false, 'gut check')
+    a[kPeerSetSource].set(bar, root)
     a[kPlaceDep](bar, target, edge)
     t.equal(edge.valid, true, edge.error)
     t.equal(bar.parent, root, 'installed peer in fsParent node')
@@ -1381,46 +1257,6 @@ t.test('workspaces', t => {
       printIdeal(path),
       {
         code: 'ERESOLVE',
-        dep: {
-          name: '@ruyadorno/dep-bar',
-          version: '2.0.0',
-          whileInstalling: { name: 'b', version: '1.0.0' },
-          location: 'node_modules/@ruyadorno/dep-bar',
-          dependents: [
-            {
-              type: 'peer',
-              spec: '^2.0.0',
-              error: 'INVALID',
-              from: {
-                name: 'b',
-                version: '1.0.0',
-                location: 'packages/b',
-                dependents: []
-              }
-            }
-          ]
-        },
-        current: {
-          name: '@ruyadorno/dep-bar',
-          version: '1.0.0',
-          location: 'node_modules/@ruyadorno/dep-bar',
-          dependents: [
-            {
-              type: 'peer',
-              spec: '^1.0.0',
-              from: {
-                name: 'a',
-                version: '1.0.0',
-                location: 'packages/a',
-                dependents: []
-              }
-            }
-          ]
-        },
-        peerConflict: null,
-        fixWithForce: false,
-        type: 'peer',
-        isPeer: true
       },
       'throws ERESOLVE error'
     )
@@ -1604,106 +1440,21 @@ This is a one-time fix-up, please be patient...
 
 t.test('override a conflict with the root dep (with force)', async t => {
   const path = resolve(fixtures, 'testing-peer-dep-conflict-chain/override')
-  await t.rejects(() => buildIdeal(path, { strictPeerDeps: true }), {
+  // note: fails because this is the root dep, unless --force used
+  await t.rejects(() => buildIdeal(path), {
     code: 'ERESOLVE',
-    dep: {
-      name: '@isaacs/testing-peer-dep-conflict-chain-a',
-      version: '1.0.0',
-      whileInstalling: {
-        name: '@isaacs/testing-peer-dep-conflict-chain-v',
-        version: '1.0.0'
-      },
-      location: 'node_modules/@isaacs/testing-peer-dep-conflict-chain-a',
-      dependents: [
-        {
-          type: 'peer',
-          spec: '1',
-          error: 'INVALID',
-          from: {
-            name: '@isaacs/testing-peer-dep-conflict-chain-v',
-            version: '1.0.0',
-            location: 'node_modules/@isaacs/testing-peer-dep-conflict-chain-v',
-            dependents: [
-              {
-                type: 'prod',
-                spec: '1',
-                from: { location: path },
-              }
-            ]
-          }
-        }
-      ]
-    },
-    current: {
-      name: '@isaacs/testing-peer-dep-conflict-chain-a',
-      version: '2.0.0',
-      location: 'node_modules/@isaacs/testing-peer-dep-conflict-chain-a',
-      dependents: [
-        {
-          type: 'prod',
-          spec: '2',
-          from: { location: path },
-        }
-      ]
-    },
-    fixWithForce: true,
-    type: 'peer',
-    isPeer: true
   })
-  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: true, force: true }), 'force override')
-  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: false }), 'non-strict (default) override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: true, force: true }), 'strict and force override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: false, force: true }), 'non-strict and force override')
 })
 
 t.test('override a conflict with the root peer dep (with force)', async t => {
   const path = resolve(fixtures, 'testing-peer-dep-conflict-chain/override-peer')
   await t.rejects(() => buildIdeal(path, { strictPeerDeps: true }), {
     code: 'ERESOLVE',
-    dep: {
-      name: '@isaacs/testing-peer-dep-conflict-chain-a',
-      version: '1.0.0',
-      whileInstalling: {
-        name: '@isaacs/testing-peer-dep-conflict-chain-v',
-        version: '1.0.0'
-      },
-      location: 'node_modules/@isaacs/testing-peer-dep-conflict-chain-a',
-      dependents: [
-        {
-          type: 'peer',
-          spec: '1',
-          error: 'INVALID',
-          from: {
-            name: '@isaacs/testing-peer-dep-conflict-chain-v',
-            version: '1.0.0',
-            location: 'node_modules/@isaacs/testing-peer-dep-conflict-chain-v',
-            dependents: [
-              {
-                type: 'prod',
-                spec: '1',
-                from: { location: path },
-              }
-            ]
-          }
-        }
-      ]
-    },
-    current: {
-      name: '@isaacs/testing-peer-dep-conflict-chain-a',
-      version: '2.0.0',
-      location: 'node_modules/@isaacs/testing-peer-dep-conflict-chain-a',
-      dependents: [
-        {
-          type: 'peer',
-          spec: '2',
-          from: { location: path },
-        }
-      ]
-    },
-    fixWithForce: true,
-    type: 'peer',
-    isPeer: true
   })
-  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: true, force: true }), 'force override')
-  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: false }), 'non-strict (default) override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: true, force: true }), 'strict and force override')
+  t.matchSnapshot(await printIdeal(path, { strictPeerDeps: false, force: true }), 'non-strict and force override')
 })
 
 t.test('push conflicted peer deps deeper in to the tree to solve', async t => {
@@ -1767,4 +1518,260 @@ t.test('update a node if its bundled by the root project', async t => {
   const arb = new Arborist({ ...OPT, path })
   await arb.buildIdealTree({ update: ['abbrev'] })
   t.equal(arb.idealTree.children.get('abbrev').version, '1.1.1')
+})
+
+t.test('more peer dep conflicts', t => {
+  // each of these is installed and should pass in force mode,
+  // fail in strictPeerDeps mode, and pass/fail based on the
+  // 'error' field in non-strict/non-forced mode.
+  const cases = Object.entries({
+    'this is fine': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-x': '3',
+        },
+      },
+      error: false,
+      resolvable: true,
+    },
+
+    'prod dep directly on conflicted peer, newer': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-b': '2',
+        }
+      },
+      error: true,
+    },
+    'prod dep directly on conflicted peer, older': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-b': '1',
+        }
+      },
+      error: true,
+    },
+    'prod dep directly on conflicted peer, full peer set, newer': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-b': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-c': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-d': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-e': '2',
+        }
+      },
+      error: true,
+    },
+    'prod dep directly on conflicted peer, full peer set, older': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-b': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-c': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-d': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-e': '1',
+        }
+      },
+      error: true,
+    },
+    'prod dep directly on conflicted peer, meta peer set, older': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-e': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-m': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-b': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-l': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-m': '1',
+        }
+      },
+      error: true,
+    },
+    'dep indirectly on conflicted peer': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-w': '2',
+        }
+      },
+      error: true,
+    },
+    'collision forcing duplication, order 1': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-j': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-v': '2',
+        }
+      },
+      error: false,
+      resolvable: true,
+    },
+    'collision forcing duplication, order 2': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-j': '1',
+        }
+      },
+      error: false,
+      resolvable: true,
+    },
+    'collision forcing duplication via add, order 1': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-j': '1',
+        }
+      },
+      add: [ '@isaacs/testing-peer-dep-conflict-chain-a@2' ],
+      error: false,
+      resolvable: true,
+    },
+    'collision forcing duplication via add, order 2': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-j': '1',
+        }
+      },
+      add: [ '@isaacs/testing-peer-dep-conflict-chain-v@2' ],
+      error: false,
+      resolvable: true,
+    },
+    'collision forcing metadep duplication, order 1': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-ii': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-j': '2',
+        }
+      },
+      error: false,
+      resolvable: true,
+    },
+    'collision forcing metadep duplication, order 1': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-i': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-jj': '2',
+        }
+      },
+      error: false,
+      resolvable: true,
+    },
+    'direct collision forcing metadep duplication, order 1': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-jj': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-j': '2',
+        }
+      },
+      error: false,
+      resolvable: true,
+    },
+    'direct collision forcing metadep duplication, order 2': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-j': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-jj': '2',
+        }
+      },
+      error: false,
+      resolvable: true,
+    },
+    'dep with conflicting peers': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-p': '1',
+        }
+      },
+      // XXX should this be false?  it's not OUR fault, after all?
+      // but it is a conflict in a peerSet that the root is sourcing.
+      error: true,
+    },
+    'metadeps with conflicting peers': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-p': '2',
+        }
+      },
+      error: false,
+    },
+    'metadep conflict that warns because source is target': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-i': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-p': '2',
+        },
+      },
+      error: false,
+      resolvable: false,
+    },
+    'metadep conflict triggering the peerConflict code path': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-v': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-y': '2',
+        }
+      },
+      error: true,
+      resolvable: false,
+    },
+  })
+  t.jobs = cases.length
+  t.plan(cases.length)
+
+  for (const [name, {pkg, error, resolvable, add}] of cases) {
+    t.test(name, { buffer: true }, async t => {
+      const path = t.testdir({
+        'package.json': JSON.stringify(pkg),
+      })
+      const warnings = []
+      const log = {
+        silly: () => {},
+        http: () => {},
+        info: () => {},
+        notice: () => {},
+        error: () => {},
+        warn: (...msg) => warnings.push(msg),
+      }
+      const strict = new Arborist({ ...OPT, path, strictPeerDeps: true })
+      const force = new Arborist({ ...OPT, path, force: true })
+      const def = new Arborist({ ...OPT, path, log })
+
+      const [strictRes, forceRes, defRes] = await Promise.all([
+        strict.buildIdealTree({ add }).catch(er => er),
+        force.buildIdealTree({ add }).catch(er => er),
+        def.buildIdealTree({ add }).catch(er => er),
+      ])
+
+      if (!resolvable) {
+        if (!(strictRes instanceof Error))
+          console.error(printTree(strictRes))
+        t.match(strictRes, { code: 'ERESOLVE' })
+      } else if (strictRes instanceof Error)
+        t.fail('should not get error in strict mode', strictRes)
+      else
+        t.matchSnapshot(printTree(strictRes), 'strict result')
+
+      if (forceRes instanceof Error)
+        t.fail('should not get error when forced', forceRes)
+      else
+        t.matchSnapshot(printTree(forceRes), 'force result')
+
+      if (error) {
+        if (!(defRes instanceof Error))
+          console.error(printTree(defRes))
+        t.match(defRes, { code: 'ERESOLVE' })
+      } else if (defRes instanceof Error)
+        t.fail('should not get error in default mode', defRes)
+      else {
+        if (resolvable)
+          t.strictSame(warnings, [])
+        else
+          t.matchSnapshot(warnings, 'warnings')
+        warnings.length = 0
+        t.matchSnapshot(printTree(defRes), 'default result')
+      }
+    })
+  }
 })

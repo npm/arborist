@@ -1314,7 +1314,7 @@ t.test('explain yourself', t => {
     name: 'x',
     version: '1.2.3',
     location: 'node_modules/x',
-    dependents: [ { type: 'prod', spec: '1', from: n.explain() } ],
+    dependents: [ { name: 'x', type: 'prod', spec: '1', from: n.explain() } ],
   })
 
   const virtual = new Node({
@@ -1345,6 +1345,7 @@ t.test('explain yourself', t => {
     dependents: [
       {
         type: 'prod',
+        name: 'y',
         spec: '2',
         from: n.explain(),
       },
@@ -1358,6 +1359,7 @@ t.test('explain yourself', t => {
     dependents: [
       {
         type: 'prod',
+        name: 'z',
         spec: '3',
         from: y.explain(),
       },
@@ -1371,6 +1373,7 @@ t.test('explain yourself', t => {
     dependents: [
       {
         type: 'prod',
+        name: 'a',
         spec: '4',
         from: z.explain(),
       },
@@ -1414,7 +1417,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
-    dependents: [ { type: 'prod', spec: '1.2.3', error: 'INVALID', from: n.explain() } ],
+    dependents: [ { type: 'prod', name: 'b', spec: '1.2.3', error: 'INVALID', from: n.explain() } ],
   })
 
   // explain with a given edge
@@ -1439,6 +1442,7 @@ t.test('explain yourself', t => {
     dependents: [
       {
         type: 'prod',
+        name: 'b',
         spec: '9',
         from: { location: '/virtual-root' },
       },
@@ -1463,6 +1467,7 @@ t.test('explain yourself', t => {
     dependents: [
       {
         type: 'prod',
+        name: 'b',
         spec: '1',
         from: {
           name: 'a',
@@ -1471,6 +1476,7 @@ t.test('explain yourself', t => {
           dependents: [
             {
               type: 'prod',
+              name: 'a',
               spec: '1',
               from: {
                 name: 'b',
@@ -1480,6 +1486,7 @@ t.test('explain yourself', t => {
             },
             {
               type: 'prod',
+              name: 'a',
               spec: '1',
               from: {
                 name: 'c',
@@ -1488,6 +1495,7 @@ t.test('explain yourself', t => {
                 dependents: [
                   {
                     type: 'prod',
+                    name: 'c',
                     spec: '1',
                     from: {
                       location: '/cy/cle'
@@ -1535,6 +1543,7 @@ t.test('explain yourself', t => {
       dependents: [
         {
           type: 'prod',
+          name: 'd',
           spec: '1',
           from: {
             name: 'c',
@@ -1548,6 +1557,7 @@ t.test('explain yourself', t => {
             dependents: [
               {
                 type: 'prod',
+                name: 'c',
                 spec: '1',
                 from: {
                   name: 'b',
@@ -1556,6 +1566,7 @@ t.test('explain yourself', t => {
                   dependents: [
                     {
                       type: 'prod',
+                      name: 'b',
                       spec: '1',
                       from: {
                         name: 'a',
@@ -1564,6 +1575,7 @@ t.test('explain yourself', t => {
                         dependents: [
                           {
                             type: 'prod',
+                            name: 'a',
                             spec: '1',
                             from: {
                               location: '/project'

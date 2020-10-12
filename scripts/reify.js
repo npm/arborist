@@ -100,7 +100,12 @@ const printDiff = diff => {
 }
 
 console.error(options)
-process.on('log', console.error)
+process.on('log', (level, ...args) => {
+  if (level === 'warn' && args[0] === 'ERESOLVE') {
+    args[2] = require('util').inspect(args[2], { depth: Infinity })
+  }
+  return console.error(level, ...args)
+})
 
 const start = process.hrtime()
 process.emit('time', 'install')

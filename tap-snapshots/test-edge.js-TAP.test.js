@@ -743,6 +743,7 @@ Edge {
 exports[`test/edge.js TAP convenience type getter flags > explanation 1`] = `
 Object {
   "from": "a explanation",
+  "name": "foo",
   "spec": "*",
   "type": "peerOptional",
 }

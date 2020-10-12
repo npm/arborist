@@ -34,7 +34,7 @@ process.on('log', (level, ...msg) => {
     const pad = ' '.repeat(cols - str.length)
     return process.stderr.write('\r' + str + pad)
   } else if (level === 'warn' && msg[0] === 'ERESOLVE') {
-    console.error(level, msg[0], msg[1], inspect(msg[2], { depth: Infinity }))
+    console.error(level, msg[0], msg[1], inspect(msg[2], { depth: Infinity }), ...msg.slice(3))
   } else {
     console.error(level, ...msg)
   }
@@ -138,6 +138,8 @@ new Arborist(options).buildIdealTree(options).then(tree => {
     tree.meta.save()
 }).catch(er => {
   console.error(inspect(er, { depth: Infinity, color: true }))
-  if (er.code === 'ERESOLVE')
-    console.error(explainEresolve(er))
+  //if (er.code === 'ERESOLVE') {
+    //console.error(er)
+    //console.error(explainEresolve(er))
+  //}
 })

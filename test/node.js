@@ -934,12 +934,38 @@ t.test('set workspaces', t => {
     realpath: '/home/user/projects/workspaces_root',
   })
 
+  const link = new Link({
+    parent: root,
+    target: new Node({
+      path: '/home/user/projects/workspaces_root/foo',
+      pkg: {
+        name: 'foo',
+        version: '1.2.3',
+      },
+    }),
+  })
+
+  const unknown = new Link({
+    parent: root,
+    target: new Node({
+      path: '/home/user/projects/workspaces_root/unknown',
+      pkg: {
+        name: 'unknown',
+        version: '1.2.3',
+      },
+    }),
+  })
+
   root.workspaces = new Map([
     ['foo', '/home/user/projects/workspaces_root/foo'],
     ['bar', '/home/user/projects/workspaces_root/bar'],
   ])
 
   t.matchSnapshot(root, 'should setup edges out for each workspace')
+  t.equal(link.isWorkspace, true, 'link node reports isWorkspace true')
+  t.equal(link.target.isWorkspace, true, 'target reports isWorkspace true')
+  t.equal(root.isWorkspace, false, 'root is not a workspace')
+  t.equal(unknown.isWorkspace, false, 'unknown node is not a workspace')
   t.end()
 })
 
@@ -1502,7 +1528,8 @@ t.test('explain yourself', t => {
       version: '1.2.3',
       whileInstalling: {
         name: 'b',
-        version: '1.2.3'
+        version: '1.2.3',
+        path: '/project/node_modules/b',
       },
       location: 'node_modules/d',
       dependents: [
@@ -1514,7 +1541,8 @@ t.test('explain yourself', t => {
             version: '1.2.3',
             whileInstalling: {
               name: 'b',
-              version: '1.2.3'
+              version: '1.2.3',
+              path: '/project/node_modules/b',
             },
             location: 'node_modules/c',
             dependents: [

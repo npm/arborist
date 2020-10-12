@@ -55,6 +55,7 @@ Edge {
       "c" => Edge {},
       "b" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "a",
@@ -67,6 +68,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -91,6 +93,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "b",
@@ -103,6 +106,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -130,6 +134,7 @@ Edge {
     "edgesOut": Map {
       "b" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "a",
@@ -142,6 +147,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -166,6 +172,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "b",
@@ -178,6 +185,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -205,6 +213,7 @@ Edge {
     "edgesOut": Map {
       "missing" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": true,
     "package": Object {
       "name": "top",
@@ -238,6 +247,7 @@ Edge {
     "edgesOut": Map {
       "aa" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "bb",
@@ -250,6 +260,7 @@ Edge {
       "edgesOut": Map {
         "b" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": false,
       "package": Object {
         "name": "a",
@@ -262,6 +273,7 @@ Edge {
         "edgesOut": Map {
           "missing" => Edge {},
         },
+        "explain": Function explain(),
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -288,6 +300,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "aa",
@@ -300,6 +313,7 @@ Edge {
       "edgesOut": Map {
         "b" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": false,
       "package": Object {
         "name": "a",
@@ -312,6 +326,7 @@ Edge {
         "edgesOut": Map {
           "missing" => Edge {},
         },
+        "explain": Function explain(),
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -341,6 +356,7 @@ Edge {
     "edgesOut": Map {
       "aa" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "bb",
@@ -353,6 +369,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -388,6 +405,7 @@ Edge {
     "edgesOut": Map {
       "aa" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "bb",
@@ -400,6 +418,7 @@ Edge {
         Edge {},
       },
       "edgesOut": Map {},
+      "explain": Function explain(),
       "isTop": false,
       "package": Object {
         "name": "b",
@@ -412,6 +431,7 @@ Edge {
         "edgesOut": Map {
           "missing" => Edge {},
         },
+        "explain": Function explain(),
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -438,6 +458,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "aa",
@@ -450,6 +471,7 @@ Edge {
       "edgesOut": Map {
         "b" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": false,
       "package": Object {
         "name": "a",
@@ -462,6 +484,7 @@ Edge {
         "edgesOut": Map {
           "missing" => Edge {},
         },
+        "explain": Function explain(),
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -491,6 +514,7 @@ Edge {
     "edgesOut": Map {
       "a" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": true,
     "package": Object {
       "name": "top",
@@ -513,6 +537,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "a",
@@ -525,6 +550,7 @@ Edge {
       "edgesOut": Map {
         "a" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -552,6 +578,7 @@ Edge {
     "edgesOut": Map {
       "aa" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "a",
@@ -564,6 +591,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -588,6 +616,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "aa",
@@ -600,6 +629,7 @@ Edge {
       "edgesOut": Map {
         "aa" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": false,
       "package": Object {
         "name": "a",
@@ -612,6 +642,7 @@ Edge {
         "edgesOut": Map {
           "missing" => Edge {},
         },
+        "explain": Function explain(),
         "isTop": true,
         "package": Object {
           "name": "top",
@@ -641,6 +672,7 @@ Edge {
     "edgesOut": Map {
       "b" => Edge {},
     },
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "a",
@@ -653,6 +685,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -677,6 +710,7 @@ Edge {
       Edge {},
     },
     "edgesOut": Map {},
+    "explain": Function explain(),
     "isTop": false,
     "package": Object {
       "name": "b",
@@ -689,6 +723,7 @@ Edge {
       "edgesOut": Map {
         "missing" => Edge {},
       },
+      "explain": Function explain(),
       "isTop": true,
       "package": Object {
         "name": "top",
@@ -702,5 +737,13 @@ Edge {
   "type": "peer",
   "valid": true,
   "workspace": false,
+}
+`
+
+exports[`test/edge.js TAP convenience type getter flags > explanation 1`] = `
+Object {
+  "from": "a explanation",
+  "spec": "*",
+  "type": "peerOptional",
 }
 `

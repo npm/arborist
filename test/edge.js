@@ -37,6 +37,7 @@ const reset = node => {
 const top = {
   edgesOut: new Map(),
   edgesIn: new Set(),
+  explain: () => 'top node explanation',
   package: { name: 'top', version: '1.2.3' },
   isTop: true,
   parent: null,
@@ -54,6 +55,7 @@ const top = {
 const a = {
   edgesOut: new Map(),
   edgesIn: new Set(),
+  explain: () => 'a explanation',
   package: { name: 'a', version: '1.2.3' },
   isTop: false,
   parent: top,
@@ -71,6 +73,7 @@ const a = {
 const b = {
   edgesOut: new Map(),
   edgesIn: new Set(),
+  explain: () => 'b explanation',
   package: { name: 'b', version: '1.2.3' },
   isTop: false,
   parent: top,
@@ -88,6 +91,7 @@ const b = {
 const bb = {
   edgesOut: new Map(),
   edgesIn: new Set(),
+  explain: () => 'bb explanation',
   package: { name: 'bb', version: '1.2.3' },
   isTop: false,
   parent: b,
@@ -105,6 +109,7 @@ const bb = {
 const aa = {
   edgesOut: new Map(),
   edgesIn: new Set(),
+  explain: () => 'aa explanation',
   package: { name: 'aa', version: '1.2.3' },
   isTop: false,
   parent: a,
@@ -122,6 +127,7 @@ const aa = {
 const c = {
   edgesOut: new Map(),
   edgesIn: new Set(),
+  explain: () => 'c explanation',
   package: { name: 'c', version: '2.3.4' },
   isTop: false,
   parent: top,
@@ -234,9 +240,12 @@ const moving = new Edge({
   spec: '',
   type: 'prod',
 })
+const explBeforeMove = moving.explain()
 t.matchSnapshot(moving, 'old location, missing dep')
 bb.parent = a
 moving.reload()
+const explAfterMove = moving.explain()
+t.notEqual(explBeforeMove, explAfterMove, 'moving reloads the explanation')
 t.matchSnapshot(moving, 'new location, found dep')
 bb.parent = top
 moving.reload()
@@ -345,4 +354,16 @@ t.test('convenience type getter flags', async t => {
     name: 'foo',
     spec: '*',
   }).optional, true, 'optional convenience getter for peerOptional edge')
+
+  const explainEdge = new Edge({
+    from: a,
+    type: 'peerOptional',
+    name: 'foo',
+    spec: '*',
+  })
+  const expl = explainEdge.explain([])
+  t.equal(explainEdge.explain(), expl)
+  t.matchSnapshot(expl, 'explanation')
+  explainEdge.detach()
+  t.notEqual(explainEdge.explain(), expl)
 })

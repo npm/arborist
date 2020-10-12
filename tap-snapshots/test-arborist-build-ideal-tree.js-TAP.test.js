@@ -1689,7 +1689,7 @@ Node {
         Edge {
           "from": "node_modules/external-editor",
           "name": "chardet",
-          "spec": "0.4.2",
+          "spec": "^0.4.0",
           "type": "prod",
         },
       },
@@ -2459,13 +2459,13 @@ Node {
       "edgesOut": Map {
         "esrecurse" => Edge {
           "name": "esrecurse",
-          "spec": "4.2.1",
+          "spec": "^4.1.0",
           "to": "node_modules/esrecurse",
           "type": "prod",
         },
         "estraverse" => Edge {
           "name": "estraverse",
-          "spec": "4.2.0",
+          "spec": "^4.1.1",
           "to": "node_modules/estraverse",
           "type": "prod",
         },
@@ -2539,7 +2539,7 @@ Node {
       "edgesOut": Map {
         "estraverse" => Edge {
           "name": "estraverse",
-          "spec": "4.2.0",
+          "spec": "^4.0.0",
           "to": "node_modules/estraverse",
           "type": "prod",
         },
@@ -2553,7 +2553,7 @@ Node {
         Edge {
           "from": "node_modules/eslint-scope",
           "name": "esrecurse",
-          "spec": "4.2.1",
+          "spec": "^4.1.0",
           "type": "prod",
         },
       },
@@ -2574,13 +2574,13 @@ Node {
         Edge {
           "from": "node_modules/eslint-scope",
           "name": "estraverse",
-          "spec": "4.2.0",
+          "spec": "^4.1.1",
           "type": "prod",
         },
         Edge {
           "from": "node_modules/esquery",
           "name": "estraverse",
-          "spec": "4.2.0",
+          "spec": "^4.0.0",
           "type": "prod",
         },
         Edge {
@@ -2631,19 +2631,19 @@ Node {
       "edgesOut": Map {
         "chardet" => Edge {
           "name": "chardet",
-          "spec": "0.4.2",
+          "spec": "^0.4.0",
           "to": "node_modules/chardet",
           "type": "prod",
         },
         "iconv-lite" => Edge {
           "name": "iconv-lite",
-          "spec": "0.4.19",
+          "spec": "^0.4.17",
           "to": "node_modules/iconv-lite",
           "type": "prod",
         },
         "tmp" => Edge {
           "name": "tmp",
-          "spec": "0.0.33",
+          "spec": "^0.0.33",
           "to": "node_modules/tmp",
           "type": "prod",
         },
@@ -2995,7 +2995,7 @@ Node {
         Edge {
           "from": "node_modules/external-editor",
           "name": "iconv-lite",
-          "spec": "0.4.19",
+          "spec": "^0.4.17",
           "type": "prod",
         },
       },
@@ -3822,7 +3822,7 @@ Node {
         Edge {
           "from": "node_modules/tmp",
           "name": "os-tmpdir",
-          "spec": "1.0.2",
+          "spec": "~1.0.2",
           "type": "prod",
         },
       },
@@ -4222,7 +4222,7 @@ Node {
         Edge {
           "from": "node_modules/rx-lite-aggregates",
           "name": "rx-lite",
-          "spec": "4.0.8",
+          "spec": "*",
           "type": "prod",
         },
       },
@@ -4242,7 +4242,7 @@ Node {
       "edgesOut": Map {
         "rx-lite" => Edge {
           "name": "rx-lite",
-          "spec": "4.0.8",
+          "spec": "*",
           "to": "node_modules/rx-lite",
           "type": "prod",
         },
@@ -4683,14 +4683,14 @@ Node {
         Edge {
           "from": "node_modules/external-editor",
           "name": "tmp",
-          "spec": "0.0.33",
+          "spec": "^0.0.33",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "os-tmpdir" => Edge {
           "name": "os-tmpdir",
-          "spec": "1.0.2",
+          "spec": "~1.0.2",
           "to": "node_modules/os-tmpdir",
           "type": "prod",
         },
@@ -24674,6 +24674,9743 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication via add, order 1 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-via-add-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication via add, order 1 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-via-add-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication via add, order 1 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-via-add-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication via add, order 2 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-via-add-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication via add, order 2 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-via-add-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication via add, order 2 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-via-add-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication, order 1 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication, order 1 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication, order 1 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication, order 2 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication, order 2 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing duplication, order 2 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 1 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 1 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 1 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts dep indirectly on conflicted peer > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-w",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-w" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-w",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-w",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-w",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-w/-/testing-peer-dep-conflict-chain-w-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-w" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-w",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-w",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-dep-indirectly-on-conflicted-peer",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts dep with conflicting peers > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-p/-/testing-peer-dep-conflict-chain-p-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-dep-with-conflicting-peers",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts direct collision forcing metadep duplication, order 1 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-direct-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts direct collision forcing metadep duplication, order 1 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-direct-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts direct collision forcing metadep duplication, order 1 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "peer",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-direct-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts direct collision forcing metadep duplication, order 2 > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-direct-collision-forcing-metadep-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts direct collision forcing metadep duplication, order 2 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-direct-collision-forcing-metadep-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts direct collision forcing metadep duplication, order 2 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj/node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-direct-collision-forcing-metadep-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadep conflict that warns because source is target > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "error": "INVALID",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-p/-/testing-peer-dep-conflict-chain-p-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadep conflict that warns because source is target > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "error": "INVALID",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-p/-/testing-peer-dep-conflict-chain-p-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadep conflict that warns because source is target > warnings 1`] = `
+Array [
+  Array [
+    "ERESOLVE",
+    "overriding peer dependency",
+    Object {
+      "code": "ERESOLVE",
+      "current": Object {
+        "dependents": Array [
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+                  "spec": "1",
+                  "type": "prod",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+              "version": "1.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "prod",
+          },
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                  "spec": "2",
+                  "type": "prod",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+              "version": "2.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "prod",
+          },
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "dependents": Array [
+                      Object {
+                        "from": Object {
+                          "dependents": Array [
+                            Object {
+                              "from": Object {
+                                "dependents": Array [
+                                  Object {
+                                    "from": Object {
+                                      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+                                      "version": "1.0.0",
+                                    },
+                                    "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                    "spec": "1",
+                                    "type": "peer",
+                                  },
+                                ],
+                                "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+                                "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                "version": "1.0.0",
+                              },
+                              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                              "spec": "1",
+                              "type": "peer",
+                            },
+                          ],
+                          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+                          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                          "version": "1.0.0",
+                        },
+                        "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                        "spec": "1",
+                        "type": "peer",
+                      },
+                    ],
+                    "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+                    "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                    "version": "1.0.0",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+                  "spec": "1",
+                  "type": "peer",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "version": "1.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "peer",
+          },
+        ],
+        "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+        "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+        "version": "1.0.0",
+      },
+      "edge": Object {
+        "error": "INVALID",
+        "from": Object {
+          "dependents": Array [
+            Object {
+              "from": Object {
+                "dependents": Array [
+                  Object {
+                    "from": Object {
+                      "dependents": Array [
+                        Object {
+                          "from": Object {
+                            "dependents": Array [
+                              Object {
+                                "from": Object {
+                                  "dependents": Array [
+                                    Object {
+                                      "from": Object {
+                                        "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+                                      },
+                                      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                                      "spec": "2",
+                                      "type": "prod",
+                                    },
+                                  ],
+                                  "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+                                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                                  "version": "2.0.0",
+                                },
+                                "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                "spec": "2",
+                                "type": "prod",
+                              },
+                            ],
+                            "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+                            "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                            "version": "2.0.0",
+                          },
+                          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                          "spec": "2",
+                          "type": "peer",
+                        },
+                      ],
+                      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+                      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                      "version": "2.0.0",
+                    },
+                    "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                    "spec": "2",
+                    "type": "peer",
+                  },
+                ],
+                "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+                "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                "version": "2.0.0",
+              },
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          ],
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "version": "2.0.0",
+        },
+        "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+        "spec": "2",
+        "type": "peer",
+      },
+      "peerConflict": null,
+      "strictPeerDeps": false,
+    },
+  ],
+  Array [
+    "ERESOLVE",
+    "overriding peer dependency",
+    Object {
+      "code": "ERESOLVE",
+      "current": Object {
+        "dependents": Array [
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+                  "spec": "1",
+                  "type": "prod",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+              "version": "1.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "prod",
+          },
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                  "spec": "2",
+                  "type": "prod",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+              "version": "2.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "prod",
+          },
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "dependents": Array [
+                      Object {
+                        "from": Object {
+                          "dependents": Array [
+                            Object {
+                              "from": Object {
+                                "dependents": Array [
+                                  Object {
+                                    "from": Object {
+                                      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+                                      "version": "1.0.0",
+                                    },
+                                    "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                    "spec": "1",
+                                    "type": "peer",
+                                  },
+                                ],
+                                "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+                                "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                "version": "1.0.0",
+                              },
+                              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                              "spec": "1",
+                              "type": "peer",
+                            },
+                          ],
+                          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+                          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                          "version": "1.0.0",
+                        },
+                        "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                        "spec": "1",
+                        "type": "peer",
+                      },
+                    ],
+                    "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+                    "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                    "version": "1.0.0",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+                  "spec": "1",
+                  "type": "peer",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "version": "1.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "peer",
+          },
+        ],
+        "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+        "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+        "version": "1.0.0",
+      },
+      "edge": Object {
+        "error": "INVALID",
+        "from": Object {
+          "dependents": Array [
+            Object {
+              "from": Object {
+                "dependents": Array [
+                  Object {
+                    "from": Object {
+                      "dependents": Array [
+                        Object {
+                          "from": Object {
+                            "dependents": Array [
+                              Object {
+                                "from": Object {
+                                  "dependents": Array [
+                                    Object {
+                                      "from": Object {
+                                        "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-that-warns-because-source-is-target",
+                                      },
+                                      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                                      "spec": "2",
+                                      "type": "prod",
+                                    },
+                                  ],
+                                  "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+                                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                                  "version": "2.0.0",
+                                },
+                                "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                "spec": "2",
+                                "type": "prod",
+                              },
+                            ],
+                            "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+                            "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                            "version": "2.0.0",
+                          },
+                          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                          "spec": "2",
+                          "type": "peer",
+                        },
+                      ],
+                      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+                      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                      "version": "2.0.0",
+                    },
+                    "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                    "spec": "2",
+                    "type": "peer",
+                  },
+                ],
+                "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+                "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                "version": "2.0.0",
+              },
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          ],
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "version": "2.0.0",
+        },
+        "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+        "spec": "2",
+        "type": "peer",
+      },
+      "peerConflict": null,
+      "strictPeerDeps": false,
+    },
+  ],
+]
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadep conflict triggering the peerConflict code path > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-y",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-v/-/testing-peer-dep-conflict-chain-v-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-y" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-y",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-y",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-y",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-y/-/testing-peer-dep-conflict-chain-y-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-v",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-y" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-y",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-y",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-metadep-conflict-triggering-the-peerConflict-code-path",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadeps with conflicting peers > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-p/-/testing-peer-dep-conflict-chain-p-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-metadeps-with-conflicting-peers",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadeps with conflicting peers > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-p/-/testing-peer-dep-conflict-chain-p-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-p" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-metadeps-with-conflicting-peers",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts metadeps with conflicting peers > warnings 1`] = `
+Array [
+  Array [
+    "ERESOLVE",
+    "overriding peer dependency",
+    Object {
+      "code": "ERESOLVE",
+      "current": Object {
+        "dependents": Array [
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadeps-with-conflicting-peers",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                  "spec": "2",
+                  "type": "prod",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+              "version": "2.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+            "spec": "2",
+            "type": "prod",
+          },
+        ],
+        "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+        "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+        "version": "2.0.0",
+      },
+      "edge": Object {
+        "error": "INVALID",
+        "from": Object {
+          "dependents": Array [
+            Object {
+              "from": Object {
+                "dependents": Array [
+                  Object {
+                    "from": Object {
+                      "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadeps-with-conflicting-peers",
+                    },
+                    "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                    "spec": "2",
+                    "type": "prod",
+                  },
+                ],
+                "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+                "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                "version": "2.0.0",
+              },
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "prod",
+            },
+          ],
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "version": "1.0.0",
+        },
+        "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+        "spec": "1",
+        "type": "peer",
+      },
+      "peerConflict": null,
+      "strictPeerDeps": false,
+    },
+  ],
+  Array [
+    "ERESOLVE",
+    "overriding peer dependency",
+    Object {
+      "code": "ERESOLVE",
+      "current": Object {
+        "dependents": Array [
+          Object {
+            "from": Object {
+              "dependents": Array [
+                Object {
+                  "from": Object {
+                    "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadeps-with-conflicting-peers",
+                  },
+                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                  "spec": "2",
+                  "type": "prod",
+                },
+              ],
+              "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+              "version": "2.0.0",
+            },
+            "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+            "spec": "1",
+            "type": "prod",
+          },
+        ],
+        "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+        "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+        "version": "1.0.0",
+      },
+      "edge": Object {
+        "error": "INVALID",
+        "from": Object {
+          "dependents": Array [
+            Object {
+              "from": Object {
+                "dependents": Array [
+                  Object {
+                    "from": Object {
+                      "dependents": Array [
+                        Object {
+                          "from": Object {
+                            "dependents": Array [
+                              Object {
+                                "from": Object {
+                                  "dependents": Array [
+                                    Object {
+                                      "from": Object {
+                                        "location": "{CWD}/test/arborist/build-ideal-tree-more-peer-dep-conflicts-metadeps-with-conflicting-peers",
+                                      },
+                                      "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                                      "spec": "2",
+                                      "type": "prod",
+                                    },
+                                  ],
+                                  "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-p",
+                                  "name": "@isaacs/testing-peer-dep-conflict-chain-p",
+                                  "version": "2.0.0",
+                                },
+                                "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                                "spec": "2",
+                                "type": "prod",
+                              },
+                            ],
+                            "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+                            "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+                            "version": "2.0.0",
+                          },
+                          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                          "spec": "2",
+                          "type": "peer",
+                        },
+                      ],
+                      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+                      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+                      "version": "2.0.0",
+                    },
+                    "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                    "spec": "2",
+                    "type": "peer",
+                  },
+                ],
+                "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+                "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+                "version": "2.0.0",
+              },
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          ],
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "version": "2.0.0",
+        },
+        "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+        "spec": "2",
+        "type": "peer",
+      },
+      "peerConflict": null,
+      "strictPeerDeps": false,
+    },
+  ],
+]
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts prod dep directly on conflicted peer, full peer set, newer > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-prod-dep-directly-on-conflicted-peer-full-peer-set-newer",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts prod dep directly on conflicted peer, full peer set, older > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-prod-dep-directly-on-conflicted-peer-full-peer-set-older",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts prod dep directly on conflicted peer, meta peer set, older > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-l",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-l" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-l",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-l",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-l",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-l/-/testing-peer-dep-conflict-chain-l-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-m" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "1",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-m",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-m",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-m/-/testing-peer-dep-conflict-chain-m-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-l" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-l",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-l",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-m" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-m",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-prod-dep-directly-on-conflicted-peer-meta-peer-set-older",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts prod dep directly on conflicted peer, newer > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-prod-dep-directly-on-conflicted-peer-newer",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts prod dep directly on conflicted peer, older > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-prod-dep-directly-on-conflicted-peer-older",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts this is fine > default result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-x" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+          "spec": "3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-x/-/testing-peer-dep-conflict-chain-x-3.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-x" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+      "spec": "3",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-this-is-fine",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts this is fine > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-x" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+          "spec": "3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-x/-/testing-peer-dep-conflict-chain-x-3.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-x" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+      "spec": "3",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-this-is-fine",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts this is fine > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-x" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+          "spec": "3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-x/-/testing-peer-dep-conflict-chain-x-3.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-x" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-x",
+      "spec": "3",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-x",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-this-is-fine",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP nested cyclical peer deps peer-dep-cycle-nested > nested peer deps cycle 1`] = `
 Node {
   "children": Map {
@@ -26258,7 +35995,7 @@ Node {
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root dep (with force) > force override 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root dep (with force) > non-strict and force override 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
@@ -26426,7 +36163,7 @@ Node {
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root dep (with force) > non-strict (default) override 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root dep (with force) > strict and force override 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
@@ -26594,12 +36331,13 @@ Node {
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root peer dep (with force) > force override 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root peer dep (with force) > non-strict and force override 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "2",
@@ -26608,11 +36346,10 @@ Node {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
         Edge {
-          "error": "INVALID",
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "1",
@@ -26622,7 +36359,7 @@ Node {
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
           "type": "peer",
         },
@@ -26630,21 +36367,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
       "name": "@isaacs/testing-peer-dep-conflict-chain-a",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
           "type": "peer",
         },
@@ -26652,21 +36389,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
       "name": "@isaacs/testing-peer-dep-conflict-chain-b",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
           "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
           "type": "peer",
         },
@@ -26674,21 +36411,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
       "name": "@isaacs/testing-peer-dep-conflict-chain-c",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
           "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "type": "peer",
         },
@@ -26696,21 +36433,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
       "name": "@isaacs/testing-peer-dep-conflict-chain-d",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "type": "peer",
         },
@@ -26718,7 +36455,7 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
       "name": "@isaacs/testing-peer-dep-conflict-chain-e",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
       "edgesIn": Set {
@@ -26731,7 +36468,6 @@ Node {
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
-          "error": "INVALID",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
@@ -26745,6 +36481,7 @@ Node {
   },
   "edgesOut": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "error": "INVALID",
       "name": "@isaacs/testing-peer-dep-conflict-chain-a",
       "spec": "2",
       "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
@@ -26763,12 +36500,13 @@ Node {
 }
 `
 
-exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root peer dep (with force) > non-strict (default) override 1`] = `
+exports[`test/arborist/build-ideal-tree.js TAP override a conflict with the root peer dep (with force) > strict and force override 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
       "edgesIn": Set {
         Edge {
+          "error": "INVALID",
           "from": "",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "2",
@@ -26777,11 +36515,10 @@ Node {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
         Edge {
-          "error": "INVALID",
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "1",
@@ -26791,7 +36528,7 @@ Node {
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
           "type": "peer",
         },
@@ -26799,21 +36536,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
       "name": "@isaacs/testing-peer-dep-conflict-chain-a",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
           "type": "peer",
         },
@@ -26821,21 +36558,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
       "name": "@isaacs/testing-peer-dep-conflict-chain-b",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
           "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
           "type": "peer",
         },
@@ -26843,21 +36580,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
       "name": "@isaacs/testing-peer-dep-conflict-chain-c",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
           "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "type": "peer",
         },
@@ -26865,21 +36602,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
       "name": "@isaacs/testing-peer-dep-conflict-chain-d",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "2",
+          "spec": "1",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "spec": "2",
+          "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "type": "peer",
         },
@@ -26887,7 +36624,7 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
       "name": "@isaacs/testing-peer-dep-conflict-chain-e",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-v" => Node {
       "edgesIn": Set {
@@ -26900,7 +36637,6 @@ Node {
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
-          "error": "INVALID",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
@@ -26914,6 +36650,7 @@ Node {
   },
   "edgesOut": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "error": "INVALID",
       "name": "@isaacs/testing-peer-dep-conflict-chain-a",
       "spec": "2",
       "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
@@ -27084,10 +36821,17 @@ Node {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "spec": "1",
+          "spec": "2",
           "type": "peer",
         },
         Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "error": "INVALID",
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-v",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "1",
@@ -27097,29 +36841,28 @@ Node {
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "1",
+          "spec": "2",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
           "type": "peer",
         },
       },
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
       "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-      "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "1",
+          "spec": "2",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "spec": "1",
+          "spec": "2",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
           "type": "peer",
         },
@@ -27127,21 +36870,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
       "name": "@isaacs/testing-peer-dep-conflict-chain-b",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
           "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "spec": "1",
+          "spec": "2",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "spec": "1",
+          "spec": "2",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
           "type": "peer",
         },
@@ -27149,21 +36892,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
       "name": "@isaacs/testing-peer-dep-conflict-chain-c",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
           "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "spec": "1",
+          "spec": "2",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "1",
+          "spec": "2",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "type": "peer",
         },
@@ -27171,21 +36914,21 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
       "name": "@isaacs/testing-peer-dep-conflict-chain-d",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
       "edgesIn": Set {
         Edge {
           "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "1",
+          "spec": "2",
           "type": "peer",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "spec": "1",
+          "spec": "2",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "type": "peer",
         },
@@ -27193,126 +36936,9 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
       "name": "@isaacs/testing-peer-dep-conflict-chain-e",
       "peer": true,
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-override" => Node {
-      "children": Map {
-        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-              "spec": "2",
-              "type": "prod",
-            },
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-              "spec": "2",
-              "type": "peer",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-              "spec": "2",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
-        },
-        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-              "spec": "2",
-              "type": "peer",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-              "spec": "2",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "peer": true,
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
-        },
-        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-              "spec": "2",
-              "type": "peer",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-              "spec": "2",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
-          "peer": true,
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
-        },
-        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-              "spec": "2",
-              "type": "peer",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-              "spec": "2",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
-          "peer": true,
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
-        },
-        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-              "spec": "2",
-              "type": "peer",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-              "spec": "2",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "peer": true,
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
-        },
-      },
       "edgesIn": Set {
         Edge {
           "from": "",
@@ -27325,7 +36951,7 @@ Node {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "2",
-          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-override/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
           "type": "prod",
         },
         "@isaacs/testing-peer-dep-conflict-chain-v" => Edge {
@@ -27350,6 +36976,7 @@ Node {
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
           "name": "@isaacs/testing-peer-dep-conflict-chain-a",
           "spec": "1",
           "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
@@ -48198,27 +57825,18 @@ Node {
           "spec": "0.x",
           "type": "prod",
         },
+        Edge {
+          "from": "node_modules/flow-remove-types",
+          "name": "flow-parser",
+          "spec": "^0.112.0",
+          "type": "prod",
+        },
       },
       "location": "node_modules/flow-parser",
       "name": "flow-parser",
-      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.118.0.tgz",
+      "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.112.0.tgz",
     },
     "flow-remove-types" => Node {
-      "children": Map {
-        "flow-parser" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/flow-remove-types",
-              "name": "flow-parser",
-              "spec": "^0.112.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/flow-remove-types/node_modules/flow-parser",
-          "name": "flow-parser",
-          "resolved": "https://registry.npmjs.org/flow-parser/-/flow-parser-0.112.0.tgz",
-        },
-      },
       "edgesIn": Set {
         Edge {
           "from": "",
@@ -48231,7 +57849,7 @@ Node {
         "flow-parser" => Edge {
           "name": "flow-parser",
           "spec": "^0.112.0",
-          "to": "node_modules/flow-remove-types/node_modules/flow-parser",
+          "to": "node_modules/flow-parser",
           "type": "prod",
         },
         "pirates" => Edge {

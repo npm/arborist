@@ -27084,6 +27084,10 @@ Object {
 }
 `
 
+exports[`test/arborist/reify.js TAP scoped registries > should preserve original resolved value 1`] = `
+@ruyadorno/theoretically-private-pkg@https://npm.pkg.github.com/@ruyadorno/theoretically-private-pkg/-/theoretically-private-pkg-1.2.3.tgz
+`
+
 exports[`test/arborist/reify.js TAP store files with a custom indenting > must match snapshot 1`] = `
 {
 	"name": "tab-indented-package-json",

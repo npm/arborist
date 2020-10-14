@@ -913,6 +913,47 @@ t.test('saving the ideal tree', t => {
   t.end()
 })
 
+t.test('scoped registries', t => {
+  const path = t.testdir()
+
+  // this is a very artifical test that is setting a lot of internal things
+  // up so that we assert that the intended behavior of sending right
+  // resolved data for pacote.extract is working as intended, alternatively
+  // we might prefer to replace this with a proper parallel alternative
+  // registry server so that we can have more of an integration test instead
+  t.plan(1)
+  const pacote = {
+    extract: res => {
+      t.matchSnapshot(
+        res,
+        'should preserve original resolved value'
+      )
+      return true
+    },
+  }
+  const ArboristMock = requireInject('../../lib/arborist', {
+    rimraf: rimrafMock,
+    fs: fsMock,
+    '../../lib/node.js': Node,
+    pacote,
+  })
+  const a = new ArboristMock({
+    audit: false,
+    path,
+    cache,
+    registry,
+  })
+  const kReify = Symbol.for('reifyNode')
+
+  const node = new Node({
+    name: '@ruyadorno/theoretically-private-pkg',
+    resolved: 'https://npm.pkg.github.com/@ruyadorno/' +
+      'theoretically-private-pkg/-/theoretically-private-pkg-1.2.3.tgz',
+    pkg: { version: '1.2.3', name: '@ruyadorno/theoretically-private-pkg' },
+  })
+  a[kReify](node)
+})
+
 t.test('bin links adding and removing', t => {
   const path = t.testdir({
     'package.json': JSON.stringify({}),

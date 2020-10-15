@@ -276,29 +276,35 @@ t.test('nested cyclical peer deps', t => {
   }
 
   t.plan(paths.length)
-  paths.forEach(path => t.test(basename(path), t =>
-    t.resolveMatchSnapshot(printIdeal(path), 'nested peer deps cycle')
-      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
+  paths.forEach(path => t.test(basename(path), async t => {
+    t.matchSnapshot(await printIdeal(path), 'nested peer deps cycle')
+
+    t.matchSnapshot(await printIdeal(path, {
         // just make sure it works if it gets a spec object
         add: [ npa('@isaacs/peer-dep-cycle-a@2.x') ],
-      }), 'upgrade a'))
-      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        // a dep whose name we don't yet know
-        add: [
-          `${registry}@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz`,
-        ],
-      }), 'upgrade b'))
-      .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-        add: [ '@isaacs/peer-dep-cycle-c@2.x' ],
-      }), 'upgrade c'))
-      .then(() => t.rejects(printIdeal(path, {
-        strictPeerDeps: true,
-        add: [
-          '@isaacs/peer-dep-cycle-a@1.x',
-          '@isaacs/peer-dep-cycle-c@2.x',
-        ],
-      }), ers[path], 'try (and fail) to upgrade c and a incompatibly'))
-  ))
+    }), 'upgrade a')
+
+    t.matchSnapshot(await printIdeal(path, {
+      // a dep whose name we don't yet know
+      add: [
+        '@isaacs/peer-dep-cycle-a@2.x',
+        `${registry}@isaacs/peer-dep-cycle-b/-/peer-dep-cycle-b-2.0.0.tgz`,
+      ],
+    }), 'upgrade b')
+
+    t.matchSnapshot(await printIdeal(path, {
+      force: true,
+      add: [ '@isaacs/peer-dep-cycle-c@2.x' ],
+    }), 'upgrade c, forcibly')
+
+    await t.rejects(printIdeal(path, {
+      add: [
+        '@isaacs/peer-dep-cycle-a@1.x',
+        '@isaacs/peer-dep-cycle-c@2.x',
+      ],
+    }), ers[path], 'try (and fail) to upgrade c and a incompatibly')
+
+  }))
 })
 
 t.test('dedupe example - not deduped', t => {
@@ -685,11 +691,11 @@ t.test('contrived dep placement tests', t => {
       Symbol('REPLACE'), 'replace with newer node')
     const placed = a[kPlaceDep](newFoo, existingBar, existingBar.edgesOut.get('foo'))
     t.equal(placed.length, 1, 'placed one node')
-    t.equal(placed[0], newFoo, 'placed newFoo node')
-    t.equal(newFoo.parent, root, 'placed newFoo in root')
+    t.strictSame(placed[0].package, newFoo.package, 'placed newFoo copy node')
+    t.equal(placed[0].parent, root, 'placed in root')
 
     // remove it so we can test a conflict
-    newFoo.parent = null
+    placed[0].parent = null
     const tooNew = new Node({
       name: 'foo',
       pkg: {
@@ -877,10 +883,10 @@ t.test('contrived dep placement tests', t => {
       t.equal(edge.to, c1, 'gut check')
       a[kUpdateNames] = ['c']
       a[kPeerSetSource].set(c11, dedupeUpdate)
-      a[kPlaceDep](c11, b, edge)
+      const [placedc11] = a[kPlaceDep](c11, b, edge)
       t.equal(c1.root, c1, 'c 1.0 removed from tree')
-      t.equal(c11.parent, dedupeUpdate, 'c 1.1 placed in root node_modules')
-      t.equal(edge.to, c11, 'b is resolved by c 1.1')
+      t.equal(placedc11.parent, dedupeUpdate, 'c 1.1 placed in root node_modules')
+      t.equal(edge.to, placedc11, 'b is resolved by c 1.1')
       t.equal(edge.valid, true, 'b is happy about this')
       t.equal(b.children.size, 0, 'b has no direct children now')
       t.end()
@@ -982,8 +988,8 @@ t.test('contrived dep placement tests', t => {
       const b = root.children.get('a').children.get('b')
       const edge = b.edgesOut.get('c')
       a[kPeerSetSource].set(c2, b)
-      a[kPlaceDep](c2, b, edge)
-      t.equal(c2.parent, root, 'new node landed at the root')
+      const [placedc2] = a[kPlaceDep](c2, b, edge)
+      t.equal(placedc2.parent, root, 'new node landed at the root')
       t.equal(oldc.parent, e, 'old c still in the tree')
       t.equal(dupe.parent, f, 'dupe still in tree')
       t.end()
@@ -1052,9 +1058,9 @@ t.test('contrived dep placement tests', t => {
     const edge = target.edgesOut.get('bar')
     t.equal(edge.valid, false, 'gut check')
     a[kPeerSetSource].set(bar, root)
-    a[kPlaceDep](bar, target, edge)
+    const [placedbar] = a[kPlaceDep](bar, target, edge)
     t.equal(edge.valid, true, 'resolved')
-    t.equal(bar.parent, target, 'installed peer locally in target top node')
+    t.equal(placedbar.parent, target, 'installed peer locally in target top node')
     t.end()
   })
 
@@ -1085,9 +1091,9 @@ t.test('contrived dep placement tests', t => {
     const edge = target.edgesOut.get('bar')
     t.equal(edge.valid, false, 'gut check')
     a[kPeerSetSource].set(bar, root)
-    a[kPlaceDep](bar, target, edge)
+    const [placedbar] = a[kPlaceDep](bar, target, edge)
     t.equal(edge.valid, true, edge.error)
-    t.equal(bar.parent, root, 'installed peer in fsParent node')
+    t.equal(placedbar.parent, root, 'installed peer in fsParent node')
     t.end()
   })
 
@@ -1772,6 +1778,20 @@ t.test('more peer dep conflicts', t => {
         warnings.length = 0
         t.matchSnapshot(printTree(defRes), 'default result')
       }
+    })
+  }
+})
+
+t.test('cases requiring peer sets to be nested', t => {
+  const cases = [
+    'multi',
+    'simple',
+  ]
+  t.plan(cases.length)
+  for (const c of cases) {
+    t.test(c, async t => {
+      const path = resolve(`${fixtures}/testing-peer-dep-nesting/${c}`)
+      t.matchSnapshot(await printIdeal(path))
     })
   }
 })

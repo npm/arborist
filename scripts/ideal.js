@@ -15,6 +15,9 @@ process.on('timeEnd', name => {
   }
   const res = process.hrtime(timers[name])
   delete timers[name]
+  if (options.quiet)
+    return
+
   console.error(name, res[0] * 1e3 + res[1] / 1e6)
 })
 process.on('exit', () => {
@@ -28,6 +31,9 @@ const {format} = require('tcompare')
 const print = tree => console.log(format(printTree(tree), { style: 'js' }))
 const { inspect, format: fmt } = require('util')
 process.on('log', (level, ...msg) => {
+  if (options.quiet)
+    return
+
   if (false && level === 'silly') {
     const cols = process.stdout.columns || 80
     const str = fmt(level, ...msg).replace(/\n/g, '').substr(0, cols)

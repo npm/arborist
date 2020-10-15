@@ -12991,6 +12991,7 @@ Array [
   "arborist:ctor",
   "arborist:ctor",
   "build",
+  "build:deps",
   "build:queue",
   "idealTree",
   "idealTree:#root",

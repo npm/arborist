@@ -8,6 +8,7 @@ const fixtures = resolve(__dirname, '../fixtures')
 
 const fixture = (t, p) => require(`${fixtures}/reify-cases/${p}`)(t)
 
+const isWindows = process.platform === 'win32'
 const PORT = 12345 + (+process.env.TAP_CHILD_ID || 0)
 t.test('setup explosive server', t => {
   // nothing in this should ever hit the server
@@ -236,7 +237,6 @@ t.test('rebuild global top bin links', async t => {
       },
     },
   })
-  const isWindows = process.platform === 'win32'
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   const arb = newArb({
     path: `${path}/lib`,
@@ -259,7 +259,6 @@ t.test('do not build if theres a conflicting globalTop bin', async t => {
     },
     bin: {}
   })
-  const isWindows = process.platform === 'win32'
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   fs.writeFileSync(file, 'this is not the linked bin')
   fs.writeFileSync(`${path}/lib/node_modules/foo/package.json`, JSON.stringify({
@@ -296,7 +295,6 @@ t.test('force overwrite the conflicting globalTop bin', async t => {
     },
     bin: {}
   })
-  const isWindows = process.platform === 'win32'
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   fs.writeFileSync(file, 'this is not the linked bin')
 
@@ -326,7 +324,6 @@ t.test('checkBins is fine if no bins', async t => {
     },
     bin: {}
   })
-  const isWindows = process.platform === 'win32'
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   fs.writeFileSync(file, 'this is not the linked bin')
 
@@ -414,4 +411,110 @@ t.test('do not rebuild node-gyp dependencies with gypfile:false', async t => {
   })
   const arb = new Arborist({ path, registry })
   await arb.rebuild()
+})
+
+t.test('workspaces', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'my-workspaces-powered-project',
+      workspaces: ['a', 'b'],
+    }),
+    node_modules: {
+      a: t.fixture('symlink', '../a'),
+      b: t.fixture('symlink', '../b'),
+    },
+    a: {
+      'package.json': JSON.stringify({
+        name: 'a',
+        version: '1.0.0',
+        bin: './foo',
+        scripts: {
+          prepare: `${process.execPath} -e "require('fs').writeFileSync('foo', '')"`,
+        },
+      }),
+    },
+    b: {
+      'package.json': JSON.stringify({
+        name: 'b',
+        scripts: { prepare: 'exit 0' },
+      }),
+    },
+  })
+
+  const RUNS = []
+  const Arborist = requireInject('../../lib/arborist/index.js', {
+    '@npmcli/run-script': opts => {
+      RUNS.push(opts)
+      return require('@npmcli/run-script')(opts)
+    },
+  })
+  const arb = new Arborist({ path, registry })
+
+  await arb.rebuild()
+  t.equal(RUNS.length, 2, 'should run prepare script only once per ws')
+  t.match(RUNS, [
+    {
+      event: 'prepare',
+      pkg: { name: 'a' },
+    },
+    {
+      event: 'prepare',
+      pkg: { name: 'b' },
+    },
+  ])
+
+  // should place bin links AFTER running lifecycle scripts
+  // foo is a file created during prepare script
+  const foo = resolve(path, 'node_modules/a/foo')
+  const binLink = resolve(path, 'node_modules/.bin/a')
+  t.equal(fs.statSync(foo).isFile(), true, 'foo is put into place')
+  t.equal(fs.statSync(binLink).isFile(), true, 'bin symlink is put into place')
+
+  t.test('with binLinks: false', async t => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'my-workspaces-powered-project',
+        workspaces: ['a'],
+      }),
+      node_modules: {
+        a: t.fixture('symlink', '../a'),
+      },
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.0.0',
+          bin: './foo',
+          scripts: { prepare: 'exit 0' },
+        }),
+        foo: 'foo',
+      },
+    })
+
+    const RUNS = []
+    const Arborist = requireInject('../../lib/arborist/index.js', {
+      '@npmcli/run-script': async opts => {
+        RUNS.push(opts)
+        return {code: 0, signal: null}
+      },
+    })
+    const arb = new Arborist({ path, registry, binLinks: false })
+
+    await arb.rebuild()
+    t.equal(RUNS.length, 1, 'should run prepare script only once')
+    t.match(RUNS, [
+      {
+        event: 'prepare',
+        pkg: { name: 'a' },
+      },
+    ])
+
+    // should place bin links AFTER running lifecycle scripts
+    // foo is a file created during prepare script
+    const binLink = resolve(path, 'node_modules/.bin/a')
+    t.throws(
+      () => fs.statSync(binLink),
+      /ENOENT/,
+      'bin symlink should not be put into place'
+    )
+  })
 })

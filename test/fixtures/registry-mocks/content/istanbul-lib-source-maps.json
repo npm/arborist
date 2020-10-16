@@ -1341,6 +1341,7 @@
         "source",
         "maps"
       ],
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@1.2.4",
       "_npmVersion": "5.4.2",
@@ -1421,6 +1422,7 @@
         "source",
         "maps"
       ],
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@1.2.5",
       "_npmVersion": "6.0.0",
@@ -1502,6 +1504,7 @@
         "source",
         "maps"
       ],
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@2.0.0",
       "_npmVersion": "6.1.0",
@@ -1745,6 +1748,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@3.0.0",
       "_npmVersion": "6.4.1",
@@ -1827,6 +1831,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@3.0.1",
       "_npmVersion": "6.4.1",
@@ -1985,6 +1990,7 @@
         "node": ">=6"
       },
       "gitHead": "c81b051d83217947dfd97d8d06532bd5013e98c3",
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@3.0.3",
       "_nodeVersion": "10.15.3",
@@ -2064,6 +2070,7 @@
         "node": ">=6"
       },
       "gitHead": "e8063c799d0854341cb3daaf91c58acd06bd501c",
+      "readme": "istanbul-lib-source-maps\n========================\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@3.0.4",
       "_nodeVersion": "10.15.3",
@@ -2302,6 +2309,7 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -2383,6 +2391,7 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0-alpha.1",
       "_nodeVersion": "12.11.0",
@@ -2464,6 +2473,7 @@
         "node": ">=8"
       },
       "gitHead": "a8b355732367f7c4a740677553b9785f5e9eac61",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0-alpha.2",
       "_nodeVersion": "12.11.0",
@@ -2545,6 +2555,7 @@
         "node": ">=8"
       },
       "gitHead": "886e19c078f26ab0bb3662bea8265f61a8089c2e",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0-alpha.3",
       "_nodeVersion": "12.11.0",
@@ -2626,6 +2637,7 @@
         "node": ">=8"
       },
       "gitHead": "6d0404072c692f6b5dfd79884ccf1896d44c342b",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0-alpha.4",
       "_nodeVersion": "12.11.0",
@@ -2707,6 +2719,7 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0-alpha.5",
       "_nodeVersion": "13.3.0",
@@ -2788,6 +2801,7 @@
         "node": ">=8"
       },
       "gitHead": "5319df684b508ff6fb19fe8b9a6147a3c5924e4b",
+      "readme": "# istanbul-lib-source-maps\n\n[![Build Status](https://travis-ci.org/istanbuljs/istanbuljs.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbuljs)\n\nSource map support for istanbuljs.\n\n## Debugging\n\n_istanbul-lib-source-maps_ uses the [debug](https://www.npmjs.com/package/debug) module.\nRun your application with the environment variable `DEBUG=istanbuljs`, to receive debug\noutput.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-source-maps@4.0.0",
       "_nodeVersion": "13.3.0",
@@ -2826,6 +2840,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
       "email": "ben@npmjs.com",

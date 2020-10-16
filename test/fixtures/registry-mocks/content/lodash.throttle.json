@@ -1377,6 +1377,7 @@
       "directories": {}
     }
   },
+  "readme": "# lodash.throttle v4.1.1\n\nThe [lodash](https://lodash.com/) method `_.throttle` exported as a [Node.js](https://nodejs.org/) module.\n\n## Installation\n\nUsing npm:\n```bash\n$ {sudo -H} npm i -g npm\n$ npm i --save lodash.throttle\n```\n\nIn Node.js:\n```js\nvar throttle = require('lodash.throttle');\n```\n\nSee the [documentation](https://lodash.com/docs#throttle) or [package source](https://github.com/lodash/lodash/blob/4.1.1-npm-packages/lodash.throttle) for more details.\n",
   "maintainers": [
     {
       "name": "jdalton",

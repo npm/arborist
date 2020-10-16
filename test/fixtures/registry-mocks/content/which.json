@@ -1826,7 +1826,5 @@
     "url": "https://github.com/isaacs/node-which/issues"
   },
   "readmeFilename": "README.md",
-  "license": "ISC",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "ISC"
 }

@@ -1,10 +1,10 @@
 {
   "_id": "import-jsx",
-  "_rev": "10-a0c7d965b7a7be487be1149fef399247",
+  "_rev": "11-41317773b0e7f86a44933f920086281c",
   "name": "import-jsx",
   "description": "Require and transpile JSX on the fly",
   "dist-tags": {
-    "latest": "3.1.0"
+    "latest": "4.0.0"
   },
   "versions": {
     "1.0.0": {
@@ -800,8 +800,100 @@
         "tmp": "tmp/import-jsx_3.1.0_1578842214273_0.7151759336204222"
       },
       "_hasShrinkwrap": false
+    },
+    "4.0.0": {
+      "name": "import-jsx",
+      "version": "4.0.0",
+      "description": "Require and transpile JSX on the fly",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vadimdemedes/import-jsx.git"
+      },
+      "author": {
+        "name": "Vadim Demedes",
+        "email": "vdemedes@gmail.com",
+        "url": "github.com/vadimdemedes"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && ava"
+      },
+      "keywords": [
+        "react",
+        "jsx",
+        "require",
+        "require-jsx",
+        "import"
+      ],
+      "dependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+        "@babel/plugin-transform-destructuring": "^7.5.0",
+        "@babel/plugin-transform-react-jsx": "^7.3.0",
+        "caller-path": "^2.0.0",
+        "find-cache-dir": "^3.2.0",
+        "make-dir": "^3.0.2",
+        "resolve-from": "^3.0.0",
+        "rimraf": "^3.0.0"
+      },
+      "devDependencies": {
+        "ava": "^0.19.1",
+        "prettier": "^2.0.2",
+        "xo": "^0.28.1"
+      },
+      "prettier": {
+        "tabs": true,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": false,
+        "arrowParens": "avoid"
+      },
+      "xo": {
+        "ignore": [
+          "test/fixtures"
+        ],
+        "rules": {
+          "node/no-deprecated-api": "off"
+        }
+      },
+      "gitHead": "765c39bc0f3a25e76d0a0ceb31e6c6d370e572e8",
+      "bugs": {
+        "url": "https://github.com/vadimdemedes/import-jsx/issues"
+      },
+      "homepage": "https://github.com/vadimdemedes/import-jsx#readme",
+      "_id": "import-jsx@4.0.0",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-CnjJ2BZFJzbFDmYG5S47xPQjMlSbZLyLJuG4znzL4TdPtJBxHtFP1xVmR+EYX4synFSldiY3B6m00XkPM3zVnA==",
+        "shasum": "2f31fd8e884e14f136751448841ffd2d3144dce1",
+        "tarball": "https://registry.npmjs.org/import-jsx/-/import-jsx-4.0.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 9136,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJef0i0CRA9TVsSAnZWagAAU1oP/1tavONFLitSucFDlFIf\nD8VVdvo84CML0Jc6sQwKcMyMb5ddMBvFzOE9FOxAjDWkkSZ6XiDgVd6n5Ki/\ngOPDDKQFes1VQXwKSvRmdlJa0PdIbkEJPtuSoD7i1wFKq7sKRbiqtnvSbkyQ\nPjK25f2jWGg6cXvyvGFebZn3XG0m5+RJqgUHoe5gOGc5vsXUF6mYulGBJlgt\nsr/mmedf8Zuebe0aTfjnGHQXAc+ebeGukTJnx+PVwDu1yguAcnB9u2/O9qvo\nxPAsmgy+73twmDEVEHL8ZwAlkqC5uyGgVS65iaspxEWzJJ6YrIrjKvBTqmCi\nO/om8s9ywzdFFCgjWk9ybgSxXzaEGA3VDjLDjnffox2t6R0404Nfb0t6z92r\nh43Te+VUTfFYdNKq+HeD2e6G2e1R7CpJPF+/Fm5NJK2cjXYRnSnRHsTTSJJQ\n5fAOaJ/DTJ1GA98QPTE10vyKqKmo3a275w3HHjP2sqG6epkdwQsEqRIZoL3/\nUM3S502cNVj3Jw7OInGR5T/SWVAiQJxsOwxU7QrZkBX/SztejQH1U2hqZqR/\nxWCvsngc3uAOO7kC5C2OuogziR8Fj8Es6/R7QigpABjhMdbiBq1tKWS/XEz2\nfitvhJ5HGpBap3bIZtdIxXS6OwpUuKGhJgusGjBLkYxnQY0iZYmqLXHfQLxm\nys0E\r\n=qUxe\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "vdemedes",
+          "email": "vdemedes@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "vdemedes",
+        "email": "vdemedes@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/import-jsx_4.0.0_1585399988399_0.8589871944996608"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# import-jsx ![Build Status](https://github.com/vadimdemedes/import-jsx/workflows/test/badge.svg)\n\n> Require and transpile JSX on the fly\n\n- Doesn't install any `require()` hooks\n- Auto-detects React pragma (`React.createElement`) and falls back to `h` pragma supported by Preact and others\n- Caches transpiled sources by default\n- Bundles in [object rest spread](https://babeljs.io/docs/plugins/transform-object-rest-spread/) transform\n\n## Install\n\n```\n$ npm install --save import-jsx\n```\n\n## Usage\n\n```js\nconst importJsx = require('import-jsx');\n\nconst reactComponent = importJsx('./react');\nconst preactComponent = importJsx('./preact');\nconst customComponent = importJsx('./custom', {pragma: 'x'});\n```\n\n**React**\n\n```jsx\nconst React = require('react');\n\nmodule.exports = <div />;\n```\n\n**Preact**\n\n```jsx\nconst {h} = require('preact');\n\nmodule.exports = <div />;\n```\n\n**Any JSX pragma**\n\n```jsx\nconst x = (tagName, attrs, ...children) => {};\n\nmodule.exports = <div />;\n```\n\n## API\n\n### importJsx(moduleId, [options])\n\n#### moduleId\n\nType: `string`\n\nModule id.\n\n#### options\n\n##### pragma\n\nType: `string`<br>\nDefault: `h`\n\nOverride [JSX pragma](https://jasonformat.com/wtf-is-jsx/).\n\n##### pragmaFrag\n\nType: `string`<br>\nDefault: `Fragment`\n\nOverride pragma for [JSX fragments](https://babeljs.io/docs/en/babel-plugin-transform-react-jsx#pragmafrag).\n\n##### cache\n\nType: `boolean`<br>\nDefault: `true`\n\nCache transpiled source code.\n\n### importJsx.create([options])\n\nFactory method to create a version of `importJsx()` with pre-defined options.\nUseful when you need a custom pragma, but don't want to pass it along with each `importJsx()` call.\n\n#### options\n\nType: `object`\n\nOptions to pass to `importJsx()`.\n\n```js\n// Before\nconst importJsx = require('import-jsx');\n\nimportJsx('./a', {pragma: 'x'});\nimportJsx('./b', {pragma: 'x'});\n\n// After\nconst importJsx = require('import-jsx').create({pragma: 'x'});\n\nimportJsx('./a');\nimportJsx('./b');\n```\n",
   "maintainers": [
     {
       "name": "vdemedes",
@@ -809,7 +901,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-12T15:16:58.155Z",
+    "modified": "2020-03-28T12:53:10.856Z",
     "created": "2017-06-24T09:49:14.677Z",
     "1.0.0": "2017-06-24T09:49:14.677Z",
     "1.1.0": "2017-06-25T07:26:06.102Z",
@@ -821,7 +913,8 @@
     "1.3.2": "2019-03-09T07:19:44.461Z",
     "2.0.0": "2019-03-16T00:33:13.001Z",
     "3.0.0": "2019-07-28T23:38:14.064Z",
-    "3.1.0": "2020-01-12T15:16:54.378Z"
+    "3.1.0": "2020-01-12T15:16:54.378Z",
+    "4.0.0": "2020-03-28T12:53:08.530Z"
   },
   "homepage": "https://github.com/vadimdemedes/import-jsx#readme",
   "keywords": [

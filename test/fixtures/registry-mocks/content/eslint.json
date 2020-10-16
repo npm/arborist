@@ -39139,7 +39139,5 @@
     "url": "https://github.com/eslint/eslint/issues/"
   },
   "license": "MIT",
-  "homepage": "https://eslint.org",
-  "_cached": false,
-  "_contentLength": 0
+  "homepage": "https://eslint.org"
 }

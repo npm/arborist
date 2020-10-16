@@ -856,6 +856,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs#readme",
+      "readme": "istanbul-lib-hook\n=================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@1.2.0",
       "_npmVersion": "5.4.2",
@@ -927,6 +928,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs#readme",
+      "readme": "istanbul-lib-hook\n=================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@1.2.1",
       "_npmVersion": "6.1.0",
@@ -999,6 +1001,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs#readme",
+      "readme": "istanbul-lib-hook\n=================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@2.0.0",
       "_npmVersion": "6.1.0",
@@ -1210,6 +1213,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "istanbul-lib-hook\n=================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@2.0.2",
       "_npmVersion": "6.4.1",
@@ -1347,6 +1351,7 @@
         "node": ">=6"
       },
       "gitHead": "c81b051d83217947dfd97d8d06532bd5013e98c3",
+      "readme": "istanbul-lib-hook\n=================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@2.0.4",
       "_nodeVersion": "10.15.3",
@@ -1416,6 +1421,7 @@
         "node": ">=6"
       },
       "gitHead": "e8063c799d0854341cb3daaf91c58acd06bd501c",
+      "readme": "istanbul-lib-hook\n=================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@2.0.5",
       "_nodeVersion": "10.15.3",
@@ -1626,6 +1632,7 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
+      "readme": "# istanbul-lib-hook\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@3.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -1701,6 +1708,7 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
+      "readme": "# istanbul-lib-hook\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@3.0.0-alpha.1",
       "_nodeVersion": "12.11.0",
@@ -1776,6 +1784,7 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
+      "readme": "# istanbul-lib-hook\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@3.0.0-alpha.2",
       "_nodeVersion": "13.3.0",
@@ -1851,6 +1860,7 @@
         "node": ">=8"
       },
       "gitHead": "5319df684b508ff6fb19fe8b9a6147a3c5924e4b",
+      "readme": "# istanbul-lib-hook\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-hook.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-hook.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-hook)\n\nHooks for require, vm and script used in istanbul\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-hook@3.0.0",
       "_nodeVersion": "13.3.0",
@@ -1889,6 +1899,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
       "email": "ben@npmjs.com",

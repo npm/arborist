@@ -3233,7 +3233,5 @@
   "homepage": "https://github.com/form-data/form-data#readme",
   "bugs": {
     "url": "https://github.com/form-data/form-data/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

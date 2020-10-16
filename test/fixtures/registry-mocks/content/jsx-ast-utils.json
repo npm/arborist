@@ -2462,7 +2462,5 @@
   "homepage": "https://github.com/evcohen/jsx-ast-utils#readme",
   "bugs": {
     "url": "https://github.com/evcohen/jsx-ast-utils/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

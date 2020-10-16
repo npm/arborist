@@ -262,7 +262,5 @@
   },
   "license": "MIT",
   "readme": "# @istanbuljs/schema\n\n[![Travis CI][travis-image]][travis-url]\n[![Greenkeeper badge][gk-image]](https://greenkeeper.io/)\n[![NPM Version][npm-image]][npm-url]\n[![NPM Downloads][downloads-image]][downloads-url]\n[![MIT][license-image]](LICENSE)\n\nSchemas describing various structures used by nyc and istanbuljs\n\n## Usage\n\n```js\nconst {nyc} = require('@istanbuljs/schema').defaults;\n\nconsole.log(`Default exclude list:\\n\\t* ${nyc.exclude.join('\\n\\t* ')}`);\n```\n\n[npm-image]: https://img.shields.io/npm/v/@istanbuljs/schema.svg\n[npm-url]: https://npmjs.org/package/@istanbuljs/schema\n[travis-image]: https://travis-ci.org/istanbuljs/schema.svg?branch=master\n[travis-url]: https://travis-ci.org/istanbuljs/schema\n[gk-image]: https://badges.greenkeeper.io/istanbuljs/schema.svg\n[downloads-image]: https://img.shields.io/npm/dm/@istanbuljs/schema.svg\n[downloads-url]: https://npmjs.org/package/@istanbuljs/schema\n[license-image]: https://img.shields.io/npm/l/@istanbuljs/schema.svg\n",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

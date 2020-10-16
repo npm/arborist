@@ -80,6 +80,7 @@
       "directories": {}
     }
   },
+  "readme": "# node-modules-regexp [![Build Status](https://travis-ci.org/jamestalmage/node-modules-regexp.svg?branch=master)](https://travis-ci.org/jamestalmage/node-modules-regexp)\n\n> A regular expression for file paths that contain a `node_modules` folder.\n\n\n## Install\n\n```\n$ npm install --save node-modules-regexp\n```\n\n\n## Usage\n\n```js\nconst nodeModules = require('node-modules-regexp');\n\nnodeModules.test('/foo/node_modules/bar.js');\n//=> true\n\nnodeModules.test('/foo/bar.js');\n//=> false\n```\n\n\n## API\n\nThe returned value is a regular expression, [soooo....](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).\n\n## License\n\nMIT © [James Talmage](http://github.com/jamestalmage)\n",
   "maintainers": [
     {
       "name": "jamestalmage",

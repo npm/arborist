@@ -273,7 +273,5 @@
     "url": "https://github.com/epoberezkin/fast-json-stable-stringify/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

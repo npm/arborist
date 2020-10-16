@@ -1,6 +1,6 @@
 {
   "_id": "slide",
-  "_rev": "47-643baaff6cd9f2e3ffbc1fe009fb4c5d",
+  "_rev": "51-018091b79d4795e248574383e48ac159",
   "name": "slide",
   "description": "A flow control lib small enough to fit on in a slide presentation. Derived live at Oak.JS",
   "dist-tags": {
@@ -381,16 +381,12 @@
   },
   "maintainers": [
     {
-      "email": "myles.borins@gmail.com",
-      "name": "mylesborins"
+      "email": "quitlahok@gmail.com",
+      "name": "nlf"
     },
     {
       "email": "ruyadorno@hotmail.com",
       "name": "ruyadorno"
-    },
-    {
-      "email": "cghr1990@gmail.com",
-      "name": "claudiahdz"
     },
     {
       "email": "darcy@darcyclarke.me",
@@ -411,7 +407,7 @@
     "url": "http://blog.izs.me/"
   },
   "time": {
-    "modified": "2020-07-15T22:10:26.765Z",
+    "modified": "2020-10-13T05:05:13.988Z",
     "created": "2011-01-13T21:21:32.280Z",
     "1.0.0": "2011-01-13T21:21:32.280Z",
     "1.0.1": "2011-01-13T21:21:32.280Z",

@@ -1523,7 +1523,5 @@
     "url": "https://github.com/jslicense/spdx-license-ids/issues"
   },
   "readmeFilename": "README.md",
-  "license": "CC0-1.0",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "CC0-1.0"
 }

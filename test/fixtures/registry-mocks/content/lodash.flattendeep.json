@@ -744,6 +744,7 @@
       "directories": {}
     }
   },
+  "readme": "# lodash.flattendeep v4.4.0\n\nThe [lodash](https://lodash.com/) method `_.flattenDeep` exported as a [Node.js](https://nodejs.org/) module.\n\n## Installation\n\nUsing npm:\n```bash\n$ {sudo -H} npm i -g npm\n$ npm i --save lodash.flattendeep\n```\n\nIn Node.js:\n```js\nvar flattenDeep = require('lodash.flattendeep');\n```\n\nSee the [documentation](https://lodash.com/docs#flattenDeep) or [package source](https://github.com/lodash/lodash/blob/4.4.0-npm-packages/lodash.flattendeep) for more details.\n",
   "maintainers": [
     {
       "name": "jdalton",

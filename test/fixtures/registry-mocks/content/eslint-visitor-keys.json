@@ -464,7 +464,5 @@
     "url": "https://github.com/eslint/eslint-visitor-keys/issues"
   },
   "license": "Apache-2.0",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

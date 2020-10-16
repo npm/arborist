@@ -1461,7 +1461,5 @@
   },
   "readmeFilename": "readme.md",
   "homepage": "https://github.com/zeit/ms#readme",
-  "license": "MIT",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "MIT"
 }

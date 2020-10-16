@@ -1,10 +1,10 @@
 {
   "_id": "lru-cache",
-  "_rev": "213-e1c4a87ed9081da8c187aa4cec9d6e4b",
+  "_rev": "214-3a9f695abf83047e4d63583787e92a13",
   "name": "lru-cache",
   "description": "A cache object that deletes the least-recently-used items.",
   "dist-tags": {
-    "latest": "5.1.1",
+    "latest": "6.0.0",
     "legacy": "4.1.5"
   },
   "versions": {
@@ -3097,6 +3097,7 @@
         "pseudomap": "^1.0.2",
         "yallist": "^2.1.2"
       },
+      "readme": "# lru cache\n\nA cache object that deletes the least-recently-used items.\n\n[![Build Status](https://travis-ci.org/isaacs/node-lru-cache.svg?branch=master)](https://travis-ci.org/isaacs/node-lru-cache) [![Coverage Status](https://coveralls.io/repos/isaacs/node-lru-cache/badge.svg?service=github)](https://coveralls.io/github/isaacs/node-lru-cache)\n\n## Installation:\n\n```javascript\nnpm install lru-cache --save\n```\n\n## Usage:\n\n```javascript\nvar LRU = require(\"lru-cache\")\n  , options = { max: 500\n              , length: function (n, key) { return n * 2 + key.length }\n              , dispose: function (key, n) { n.close() }\n              , maxAge: 1000 * 60 * 60 }\n  , cache = LRU(options)\n  , otherCache = LRU(50) // sets just the max size\n\ncache.set(\"key\", \"value\")\ncache.get(\"key\") // \"value\"\n\n// non-string keys ARE fully supported\n// but note that it must be THE SAME object, not\n// just a JSON-equivalent object.\nvar someObject = { a: 1 }\ncache.set(someObject, 'a value')\n// Object keys are not toString()-ed\ncache.set('[object Object]', 'a different value')\nassert.equal(cache.get(someObject), 'a value')\n// A similar object with same keys/values won't work,\n// because it's a different object identity\nassert.equal(cache.get({ a: 1 }), undefined)\n\ncache.reset()    // empty the cache\n```\n\nIf you put more stuff in it, then items will fall out.\n\nIf you try to put an oversized thing in it, then it'll fall out right\naway.\n\n## Options\n\n* `max` The maximum size of the cache, checked by applying the length\n  function to all values in the cache.  Not setting this is kind of\n  silly, since that's the whole purpose of this lib, but it defaults\n  to `Infinity`.\n* `maxAge` Maximum age in ms.  Items are not pro-actively pruned out\n  as they age, but if you try to get an item that is too old, it'll\n  drop it and return undefined instead of giving it to you.\n* `length` Function that is used to calculate the length of stored\n  items.  If you're storing strings or buffers, then you probably want\n  to do something like `function(n, key){return n.length}`.  The default is\n  `function(){return 1}`, which is fine if you want to store `max`\n  like-sized things.  The item is passed as the first argument, and\n  the key is passed as the second argumnet.\n* `dispose` Function that is called on items when they are dropped\n  from the cache.  This can be handy if you want to close file\n  descriptors or do other cleanup tasks when items are no longer\n  accessible.  Called with `key, value`.  It's called *before*\n  actually removing the item from the internal cache, so if you want\n  to immediately put it back in, you'll have to do that in a\n  `nextTick` or `setTimeout` callback or it won't do anything.\n* `stale` By default, if you set a `maxAge`, it'll only actually pull\n  stale items out of the cache when you `get(key)`.  (That is, it's\n  not pre-emptively doing a `setTimeout` or anything.)  If you set\n  `stale:true`, it'll return the stale value before deleting it.  If\n  you don't set this, then it'll return `undefined` when you try to\n  get a stale entry, as if it had already been deleted.\n* `noDisposeOnSet` By default, if you set a `dispose()` method, then\n  it'll be called whenever a `set()` operation overwrites an existing\n  key.  If you set this option, `dispose()` will only be called when a\n  key falls out of the cache, not when it is overwritten.\n\n## API\n\n* `set(key, value, maxAge)`\n* `get(key) => value`\n\n    Both of these will update the \"recently used\"-ness of the key.\n    They do what you think. `maxAge` is optional and overrides the\n    cache `maxAge` option if provided.\n\n    If the key is not found, `get()` will return `undefined`.\n\n    The key and val can be any value.\n\n* `peek(key)`\n\n    Returns the key value (or `undefined` if not found) without\n    updating the \"recently used\"-ness of the key.\n\n    (If you find yourself using this a lot, you *might* be using the\n    wrong sort of data structure, but there are some use cases where\n    it's handy.)\n\n* `del(key)`\n\n    Deletes a key out of the cache.\n\n* `reset()`\n\n    Clear the cache entirely, throwing away all values.\n\n* `has(key)`\n\n    Check if a key is in the cache, without updating the recent-ness\n    or deleting it for being stale.\n\n* `forEach(function(value,key,cache), [thisp])`\n\n    Just like `Array.prototype.forEach`.  Iterates over all the keys\n    in the cache, in order of recent-ness.  (Ie, more recently used\n    items are iterated over first.)\n\n* `rforEach(function(value,key,cache), [thisp])`\n\n    The same as `cache.forEach(...)` but items are iterated over in\n    reverse order.  (ie, less recently used items are iterated over\n    first.)\n\n* `keys()`\n\n    Return an array of the keys in the cache.\n\n* `values()`\n\n    Return an array of the values in the cache.\n\n* `length`\n\n    Return total length of objects in cache taking into account\n    `length` options function.\n\n* `itemCount`\n\n    Return total quantity of objects currently in cache. Note, that\n    `stale` (see options) items are returned as part of this item\n    count.\n\n* `dump()`\n\n    Return an array of the cache entries ready for serialization and usage\n    with 'destinationCache.load(arr)`.\n\n* `load(cacheEntriesArray)`\n\n    Loads another cache entries array, obtained with `sourceCache.dump()`,\n    into the cache. The destination cache is reset before loading new entries\n\n* `prune()`\n\n    Manually iterates over the entire cache proactively pruning old entries\n",
       "readmeFilename": "README.md",
       "gitHead": "57658f575607a44bb2fa38dd0e43d74835e42dae",
       "bugs": {
@@ -3134,6 +3135,75 @@
         "tmp": "tmp/lru-cache_4.1.5_1543513774289_0.3522451077999784"
       },
       "_hasShrinkwrap": false
+    },
+    "6.0.0": {
+      "name": "lru-cache",
+      "description": "A cache object that deletes the least-recently-used items.",
+      "version": "6.0.0",
+      "author": {
+        "name": "Isaac Z. Schlueter",
+        "email": "i@izs.me"
+      },
+      "keywords": [
+        "mru",
+        "lru",
+        "cache"
+      ],
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/isaacs/node-lru-cache.git"
+      },
+      "devDependencies": {
+        "benchmark": "^2.1.4",
+        "tap": "^14.10.7"
+      },
+      "license": "ISC",
+      "dependencies": {
+        "yallist": "^4.0.0"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "a71e08008f2d25442426d0d26e8133dccc2ca9a5",
+      "bugs": {
+        "url": "https://github.com/isaacs/node-lru-cache/issues"
+      },
+      "homepage": "https://github.com/isaacs/node-lru-cache#readme",
+      "_id": "lru-cache@6.0.0",
+      "_nodeVersion": "14.2.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==",
+        "shasum": "6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94",
+        "tarball": "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 15643,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfCQ7bCRA9TVsSAnZWagAA+F4P/jdlPS14NkOtYnSPFZMj\nDC3wsaM3hYlUtdiVJKDOTjhKdcgZ6V2FgXDq716+5rbaq5t9Von4FeweMgp8\nnloQVB1CRctlLPIZRoV4Mje9K5rA4Utb0lYqQk52SIWBN+xJDyyefZneKPnQ\nZSGaXipOLLYPF59rBaCvkxI/Sx7NKELQeXZhGeZWgUPNPejFC+qseoFfugtP\nVk2AKuejsSsdzLbdxADE53k720y/D/biUK0cmQcV7yTAqo/XaxdmRNwr34Fd\nNJ2dbm87BEjC2hGs4WS6OhoPFdIN088c6vrilKerKgrDxHCzHJi0E1oZ7IeX\nByhOLk03SScXYdmibzm0O9iWrTuBEJm6toEToJhNziv/HFTgDlhm3OajDHEz\nrb1cV38QwBcqE0O8X5uLQ0nZYCMczliwWKwMhkcsXmEA7wsiObM4Y3CVnpGl\nDurnfCmoAG0x+8NVAKeijXPgl0T/7TgtiByyfuH6kukF+URg0VYBbqFFz7AP\nbOxA7RZIDNaLeYjn86iGYyNtXQPwPtl6Q3qy7i4YlncJsQb0pDqgp8Qn2ib3\nYnGOXf+FxVYwQwGv2OCCWWCT6aT2bQk5SS1qaEOrMHNKTN5PPrXa9oXQb7I0\nnNTAy9YBjlEwfW7fHvX6xa9IH3wDT/P8MYmYHEwbpH6uB2y2u/zWCuROQMzo\nuAr8\r\n=B5wU\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/lru-cache_6.0.0_1594429147159_0.2608141604867613"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -3151,7 +3221,7 @@
     "url": "git://github.com/isaacs/node-lru-cache.git"
   },
   "time": {
-    "modified": "2019-02-21T06:20:26.615Z",
+    "modified": "2020-07-11T00:59:09.517Z",
     "created": "2011-07-16T09:09:00.041Z",
     "1.0.1": "2011-07-16T09:09:00.041Z",
     "1.0.2": "2011-07-16T09:09:00.041Z",
@@ -3203,7 +3273,8 @@
     "5.0.1": "2018-11-21T01:04:56.118Z",
     "5.1.0": "2018-11-21T01:23:13.744Z",
     "5.1.1": "2018-11-21T01:44:45.407Z",
-    "4.1.5": "2018-11-29T17:49:34.387Z"
+    "4.1.5": "2018-11-29T17:49:34.387Z",
+    "6.0.0": "2020-07-11T00:59:07.352Z"
   },
   "users": {
     "285858315": true,
@@ -3330,7 +3401,8 @@
     "zuojiang": true,
     "daizch": true
   },
-  "readmeFilename": "",
+  "readme": "# lru cache\n\nA cache object that deletes the least-recently-used items.\n\n[![Build Status](https://travis-ci.org/isaacs/node-lru-cache.svg?branch=master)](https://travis-ci.org/isaacs/node-lru-cache) [![Coverage Status](https://coveralls.io/repos/isaacs/node-lru-cache/badge.svg?service=github)](https://coveralls.io/github/isaacs/node-lru-cache)\n\n## Installation:\n\n```javascript\nnpm install lru-cache --save\n```\n\n## Usage:\n\n```javascript\nvar LRU = require(\"lru-cache\")\n  , options = { max: 500\n              , length: function (n, key) { return n * 2 + key.length }\n              , dispose: function (key, n) { n.close() }\n              , maxAge: 1000 * 60 * 60 }\n  , cache = new LRU(options)\n  , otherCache = new LRU(50) // sets just the max size\n\ncache.set(\"key\", \"value\")\ncache.get(\"key\") // \"value\"\n\n// non-string keys ARE fully supported\n// but note that it must be THE SAME object, not\n// just a JSON-equivalent object.\nvar someObject = { a: 1 }\ncache.set(someObject, 'a value')\n// Object keys are not toString()-ed\ncache.set('[object Object]', 'a different value')\nassert.equal(cache.get(someObject), 'a value')\n// A similar object with same keys/values won't work,\n// because it's a different object identity\nassert.equal(cache.get({ a: 1 }), undefined)\n\ncache.reset()    // empty the cache\n```\n\nIf you put more stuff in it, then items will fall out.\n\nIf you try to put an oversized thing in it, then it'll fall out right\naway.\n\n## Options\n\n* `max` The maximum size of the cache, checked by applying the length\n  function to all values in the cache.  Not setting this is kind of\n  silly, since that's the whole purpose of this lib, but it defaults\n  to `Infinity`.  Setting it to a non-number or negative number will\n  throw a `TypeError`.  Setting it to 0 makes it be `Infinity`.\n* `maxAge` Maximum age in ms.  Items are not pro-actively pruned out\n  as they age, but if you try to get an item that is too old, it'll\n  drop it and return undefined instead of giving it to you.\n  Setting this to a negative value will make everything seem old!\n  Setting it to a non-number will throw a `TypeError`.\n* `length` Function that is used to calculate the length of stored\n  items.  If you're storing strings or buffers, then you probably want\n  to do something like `function(n, key){return n.length}`.  The default is\n  `function(){return 1}`, which is fine if you want to store `max`\n  like-sized things.  The item is passed as the first argument, and\n  the key is passed as the second argumnet.\n* `dispose` Function that is called on items when they are dropped\n  from the cache.  This can be handy if you want to close file\n  descriptors or do other cleanup tasks when items are no longer\n  accessible.  Called with `key, value`.  It's called *before*\n  actually removing the item from the internal cache, so if you want\n  to immediately put it back in, you'll have to do that in a\n  `nextTick` or `setTimeout` callback or it won't do anything.\n* `stale` By default, if you set a `maxAge`, it'll only actually pull\n  stale items out of the cache when you `get(key)`.  (That is, it's\n  not pre-emptively doing a `setTimeout` or anything.)  If you set\n  `stale:true`, it'll return the stale value before deleting it.  If\n  you don't set this, then it'll return `undefined` when you try to\n  get a stale entry, as if it had already been deleted.\n* `noDisposeOnSet` By default, if you set a `dispose()` method, then\n  it'll be called whenever a `set()` operation overwrites an existing\n  key.  If you set this option, `dispose()` will only be called when a\n  key falls out of the cache, not when it is overwritten.\n* `updateAgeOnGet` When using time-expiring entries with `maxAge`,\n  setting this to `true` will make each item's effective time update\n  to the current time whenever it is retrieved from cache, causing it\n  to not expire.  (It can still fall out of cache based on recency of\n  use, of course.)\n\n## API\n\n* `set(key, value, maxAge)`\n* `get(key) => value`\n\n    Both of these will update the \"recently used\"-ness of the key.\n    They do what you think. `maxAge` is optional and overrides the\n    cache `maxAge` option if provided.\n\n    If the key is not found, `get()` will return `undefined`.\n\n    The key and val can be any value.\n\n* `peek(key)`\n\n    Returns the key value (or `undefined` if not found) without\n    updating the \"recently used\"-ness of the key.\n\n    (If you find yourself using this a lot, you *might* be using the\n    wrong sort of data structure, but there are some use cases where\n    it's handy.)\n\n* `del(key)`\n\n    Deletes a key out of the cache.\n\n* `reset()`\n\n    Clear the cache entirely, throwing away all values.\n\n* `has(key)`\n\n    Check if a key is in the cache, without updating the recent-ness\n    or deleting it for being stale.\n\n* `forEach(function(value,key,cache), [thisp])`\n\n    Just like `Array.prototype.forEach`.  Iterates over all the keys\n    in the cache, in order of recent-ness.  (Ie, more recently used\n    items are iterated over first.)\n\n* `rforEach(function(value,key,cache), [thisp])`\n\n    The same as `cache.forEach(...)` but items are iterated over in\n    reverse order.  (ie, less recently used items are iterated over\n    first.)\n\n* `keys()`\n\n    Return an array of the keys in the cache.\n\n* `values()`\n\n    Return an array of the values in the cache.\n\n* `length`\n\n    Return total length of objects in cache taking into account\n    `length` options function.\n\n* `itemCount`\n\n    Return total quantity of objects currently in cache. Note, that\n    `stale` (see options) items are returned as part of this item\n    count.\n\n* `dump()`\n\n    Return an array of the cache entries ready for serialization and usage\n    with 'destinationCache.load(arr)`.\n\n* `load(cacheEntriesArray)`\n\n    Loads another cache entries array, obtained with `sourceCache.dump()`,\n    into the cache. The destination cache is reset before loading new entries\n\n* `prune()`\n\n    Manually iterates over the entire cache proactively pruning old entries\n",
+  "readmeFilename": "README.md",
   "homepage": "https://github.com/isaacs/node-lru-cache#readme",
   "bugs": {
     "url": "https://github.com/isaacs/node-lru-cache/issues"

@@ -1,10 +1,10 @@
 {
   "_id": "find-cache-dir",
-  "_rev": "13-3c33dec1ad7616057715e4160efc267b",
+  "_rev": "15-27074e811e5c92cdec4edd8fd6f7cf93",
   "name": "find-cache-dir",
   "description": "Finds the common standard cache directory",
   "dist-tags": {
-    "latest": "3.2.0"
+    "latest": "3.3.1"
   },
   "versions": {
     "0.1.0": {
@@ -612,8 +612,169 @@
         "tmp": "tmp/find-cache-dir_3.2.0_1576153008480_0.5647400107765705"
       },
       "_hasShrinkwrap": false
+    },
+    "3.3.0": {
+      "name": "find-cache-dir",
+      "version": "3.3.0",
+      "description": "Finds the common standard cache directory",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/avajs/find-cache-dir.git"
+      },
+      "funding": "https://github.com/avajs/find-cache-dir?sponsor=1",
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && nyc ava"
+      },
+      "keywords": [
+        "cache",
+        "directory",
+        "dir",
+        "caching",
+        "find",
+        "search"
+      ],
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^3.0.2",
+        "pkg-dir": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "coveralls": "^3.0.9",
+        "del": "^4.0.0",
+        "nyc": "^15.0.0",
+        "tempy": "^0.4.0",
+        "xo": "^0.25.3"
+      },
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text"
+        ]
+      },
+      "gitHead": "e30f2cfa7a319aa839cef3dc790eed343825a0bb",
+      "bugs": {
+        "url": "https://github.com/avajs/find-cache-dir/issues"
+      },
+      "homepage": "https://github.com/avajs/find-cache-dir#readme",
+      "_id": "find-cache-dir@3.3.0",
+      "_nodeVersion": "10.18.1",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-PtXtQb7IrD8O+h6Cq1dbpJH5NzD8+9keN1zZ0YlpDzl1PwXEJEBj6u1Xa92t1Hwluoozd9TNKul5Hi2iqpsWwg==",
+        "shasum": "4d74ed1fe9ef1731467ca24378e8f8f5c8b6ed11",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-3.3.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 6842,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeUUTiCRA9TVsSAnZWagAAFmEQAI/XbRFD1RaW2CRi2L4Z\nzQi1ksupXpisNbHVbTlGUaqEHGzeSdIDTZ9Y5eKUm8Cc0TBiIzre7QgDx9Co\nHmC0xxnq4QmKI5itUoYGr8hyhl8NigdQviz1J+UtjHOVafRKOZGGZNMTrQsV\n1KhuS+Ph+g1/oepSne4mTA3+XzrBxERPxJSUXNwYkrwkki0dwSdB+kUqhLA0\npuxtPeLgSCkECL2ECZ7uzHd9NcaoVw+E3QG/hvhKtLNPLH5StEKvhi3lTEBJ\nPsaIg7KyE0a3Nxoxd7mwQlFitd2mWCq159vN3CaVV3sPBnuyNKYtrPC6F7lZ\nv5hcDRwgfcRc9wB3fI9qwJTb6aQXWpGqOK61o8Ps8nklyqHaIEf2vs46l79/\n/03tUWPhPlVM2KqJ2u4AOOCLmBO4ChTsAwXwYWxOR9xiBBbcSWzVD0TP+zLE\nXzggL5bE1F3buotT1QybdjBVPMBrFg4t5DoJb/lOafrUX/jgtWUQdiZND8O8\nF3wlLC4P/C3Q5LG4MIp3caI3K4QgxmvMWMeYfcvP3eJBfvIEPYpwjAuyCVNn\npBRQzJJgmcIDNXe5D3J1yF56GZiZE0cpzi+ff+J7Bdq4ZterJ5tryVkBIYwb\no6hF+Mt139fL2h/mNlyflm7Km9LpbuAqdLbh4DaJF597yjA+hZCSj8o34jKo\n41Fr\r\n=A9Ax\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jamestalmage",
+          "email": "james@talmage.io"
+        },
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/find-cache-dir_3.3.0_1582384354048_0.9904638519597573"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.3.1": {
+      "name": "find-cache-dir",
+      "version": "3.3.1",
+      "description": "Finds the common standard cache directory",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/avajs/find-cache-dir.git"
+      },
+      "funding": "https://github.com/avajs/find-cache-dir?sponsor=1",
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && nyc ava"
+      },
+      "keywords": [
+        "cache",
+        "directory",
+        "dir",
+        "caching",
+        "find",
+        "search"
+      ],
+      "dependencies": {
+        "commondir": "^1.0.1",
+        "make-dir": "^3.0.2",
+        "pkg-dir": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "coveralls": "^3.0.9",
+        "del": "^4.0.0",
+        "nyc": "^15.0.0",
+        "tempy": "^0.4.0",
+        "xo": "^0.25.3"
+      },
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text"
+        ]
+      },
+      "gitHead": "c35ae06d3ac6158d37bc8b559d54295fce40e667",
+      "bugs": {
+        "url": "https://github.com/avajs/find-cache-dir/issues"
+      },
+      "homepage": "https://github.com/avajs/find-cache-dir#readme",
+      "_id": "find-cache-dir@3.3.1",
+      "_nodeVersion": "10.18.1",
+      "_npmVersion": "6.14.0",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-t2GDMt3oGC/v+BMwzmllWDuJF/xcDtE5j/fCGbqDD7OLuJkj0cfh1YSA5VKPvwMeLFLNDBkwOKZ2X85jGLVftQ==",
+        "shasum": "89b33fad4a4670daa94f855f7fbe31d6d84fe880",
+        "tarball": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-3.3.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 6959,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeZd/fCRA9TVsSAnZWagAAVFIP/Rj1Ard6Dl/nAFryGdw8\nkY9ooRVvN9i3vzIIxnnu3ZVfmpAH9QXnr6oZPXGoh5t4Z2E5EF3gMlPGSJyj\n8MwM3RSvL1YGKVopMCLTK93VJsL44cAgo4jZ9vZcnNufstgpbp1sAUwqVFaZ\nIEa9Zkqt5PgEi/oCU5JT6QKcMZRc+OjRmAI9xRis5WNH02Tr3fV56pD8KqgC\nVIF+bJE4ipjlXwahRUOwUt1ln5Kcrx8lKt/q8dsZDlKXAcsN9rlhEEUl3EnR\nOJIT+LXPIdbDwzoZagiITKUprgRGjNrPd3MIXNtnbV1BUftNP1LqugTmGI8w\ngw51ucuRGuuUN5K0ML5P5j/GOg9qE23vDn9wt8i6bwEJED6VsUktACcdjhOf\nq07ICb/LGLV0DCi2wN2x1gJtuzsOI7nJnvL7bVC353C5APHmnDV3OZ0OXLvE\nvDj3oC+UQt5hugYjhafQRxd3ovk3kMO/BYasQHvOh+ssggU8xuFJf0VF/Ksz\nDqbHydfMmGtB+btQUccdoxxtN8Hmgf1GrqsRmFC5LmWlauAoGQ6UFuqvDggY\nTZer+XAO/uuOMmOwflqj/K6OCkdxl0GanJPO9jbcIEUjbTwxuEXOBxm81jWl\ngu6Pt9VYf94lZiticpv5/BcPmtC2dTAxTYbwxJERG+tsLbzvHuiucmk2iIVK\ndmUM\r\n=uH5O\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jamestalmage",
+          "email": "james@talmage.io"
+        },
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/find-cache-dir_3.3.1_1583734751316_0.09030633739517424"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# find-cache-dir [![Build Status](https://travis-ci.org/avajs/find-cache-dir.svg?branch=master)](https://travis-ci.org/avajs/find-cache-dir) [![Coverage Status](https://coveralls.io/repos/github/avajs/find-cache-dir/badge.svg?branch=master)](https://coveralls.io/github/avajs/find-cache-dir?branch=master)\n\n> Finds the common standard cache directory\n\nThe [`nyc`](https://github.com/istanbuljs/nyc) and [`AVA`](https://ava.li) projects decided to standardize on a common directory structure for storing cache information:\n\n```sh\n# nyc\n./node_modules/.cache/nyc\n\n# ava\n./node_modules/.cache/ava\n\n# your-module\n./node_modules/.cache/your-module\n```\n\nThis module makes it easy to correctly locate the cache directory according to this shared spec. If this pattern becomes ubiquitous, clearing the cache for multiple dependencies becomes easy and consistent:\n\n```\nrm -rf ./node_modules/.cache\n```\n\nIf you decide to adopt this pattern, please file a PR adding your name to the list of adopters below.\n\n## Install\n\n```\n$ npm install find-cache-dir\n```\n\n## Usage\n\n```js\nconst findCacheDir = require('find-cache-dir');\n\nfindCacheDir({name: 'unicorns'});\n//=> '/user/path/node-modules/.cache/unicorns'\n```\n\n## API\n\n### findCacheDir(options?)\n\nFinds the cache directory using the supplied options. The algorithm checks for the `CACHE_DIR` environmental variable and uses it if it is not set to `true`, `false`, `1` or `0`. If one is not found, it tries to find a `package.json` file, searching every parent directory of the `cwd` specified (or implied from other options). It returns a `string` containing the absolute path to the cache directory, or `undefined` if `package.json` was never found or if the `node_modules` directory is unwritable.\n\n#### options\n\nType: `object`\n\n##### name\n\n*Required*\\\nType: `string`\n\nShould be the same as your project name in `package.json`.\n\n##### files\n\nType: `string[] | string`\n\nAn array of files that will be searched for a common parent directory. This common parent directory will be used in lieu of the `cwd` option below.\n\n##### cwd\n\nType: `string`\\\nDefault `process.cwd()`\n\nDirectory to start searching for a `package.json` from.\n\n##### create\n\nType: `boolean`\\\nDefault `false`\n\nIf `true`, the directory will be created synchronously before returning.\n\n##### thunk\n\nType: `boolean`\\\nDefault `false`\n\nIf `true`, this modifies the return type to be a function that is a thunk for `path.join(theFoundCacheDirectory)`.\n\n```js\nconst thunk = findCacheDir({name: 'foo', thunk: true});\n\nthunk();\n//=> '/some/path/node_modules/.cache/foo'\n\nthunk('bar.js')\n//=> '/some/path/node_modules/.cache/foo/bar.js'\n\nthunk('baz', 'quz.js')\n//=> '/some/path/node_modules/.cache/foo/baz/quz.js'\n```\n\nThis is helpful for actually putting actual files in the cache!\n\n## Tips\n\n- To test modules using `find-cache-dir`, set the `CACHE_DIR` environment variable to temporarily override the directory that is resolved.\n\n## Adopters\n\n- [`AVA`](https://ava.li)\n- [`nyc`](https://github.com/istanbuljs/nyc)\n- [`Storybook`](https://storybook.js.org)\n- [`babel-loader`](https://github.com/babel/babel-loader)\n- [`eslint-loader`](https://github.com/MoOx/eslint-loader)\n- [`Phenomic`](https://phenomic.io)\n- [`javascripthon-loader`](https://github.com/Beg-in/javascripthon-loader)\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-find_cache-dir?utm_source=npm-find-cache-dir&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "name": "jamestalmage",
@@ -625,7 +786,7 @@
     }
   ],
   "time": {
-    "modified": "2019-12-12T12:16:51.043Z",
+    "modified": "2020-03-09T06:19:13.896Z",
     "created": "2015-12-30T05:27:14.863Z",
     "0.1.0": "2015-12-30T05:27:14.863Z",
     "0.1.1": "2015-12-30T06:15:34.620Z",
@@ -634,7 +795,9 @@
     "2.1.0": "2019-03-12T06:28:05.014Z",
     "3.0.0": "2019-04-09T17:28:45.788Z",
     "3.1.0": "2019-11-09T05:36:15.030Z",
-    "3.2.0": "2019-12-12T12:16:48.624Z"
+    "3.2.0": "2019-12-12T12:16:48.624Z",
+    "3.3.0": "2020-02-22T15:12:34.144Z",
+    "3.3.1": "2020-03-09T06:19:11.460Z"
   },
   "homepage": "https://github.com/avajs/find-cache-dir#readme",
   "keywords": [

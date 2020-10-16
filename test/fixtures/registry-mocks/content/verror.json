@@ -1041,7 +1041,5 @@
     "url": "https://github.com/davepacheco/node-verror/issues"
   },
   "license": "MIT",
-  "homepage": "https://github.com/davepacheco/node-verror",
-  "_cached": false,
-  "_contentLength": 0
+  "homepage": "https://github.com/davepacheco/node-verror"
 }

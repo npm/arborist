@@ -2281,7 +2281,5 @@
     "url": "https://github.com/json5/json5/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

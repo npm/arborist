@@ -170,6 +170,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# function-loop\n\nRun a list of functions in order in a given object context.  The\nfunctions can be callback-taking or promise-returning.\n\nThis module is\n[zalgo-exposing](http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony),\nmeaning that synchronous calls to the cb functions will result in a\nsync call to the supplied cb, and async calls will result in the cb\nbeing called asynchronously.  It does not artificially defer if\ncallbacks are called synchronously.\n\n## API\n\n`loop(context, functionList, doneCallback, errorCallback)`\n\nRun all the functions in the context of the `context` object, and then\ncall the `doneCallback` or call the `errorCallback` if there are any\nerrors.\n",
   "maintainers": [
     {
       "name": "isaacs",

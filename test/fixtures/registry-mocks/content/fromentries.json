@@ -1,9 +1,9 @@
 {
   "_id": "fromentries",
-  "_rev": "5-86f36107b13d67a1eb48639c46f045b1",
+  "_rev": "6-6e7b5912e6420f4b710bedb5bf6d916d",
   "name": "fromentries",
   "dist-tags": {
-    "latest": "1.2.0"
+    "latest": "1.2.1"
   },
   "versions": {
     "1.0.0": {
@@ -430,17 +430,103 @@
         "tmp": "tmp/fromentries_1.2.0_1565409833609_0.05555700444654277"
       },
       "_hasShrinkwrap": false
+    },
+    "1.2.1": {
+      "name": "fromentries",
+      "description": "Object.fromEntries() ponyfill (in 6 lines)",
+      "version": "1.2.1",
+      "author": {
+        "name": "Feross Aboukhadijeh",
+        "email": "feross@feross.org",
+        "url": "https://feross.org"
+      },
+      "bugs": {
+        "url": "https://github.com/feross/fromentries/issues"
+      },
+      "devDependencies": {
+        "standard": "*",
+        "tape": "^5.0.1"
+      },
+      "homepage": "https://github.com/feross/fromentries",
+      "keywords": [
+        "Object.fromEntries",
+        "Object.entries",
+        "Object.values",
+        "Object.keys",
+        "entries",
+        "values",
+        "fromEntries",
+        "ES7",
+        "ES8",
+        "shim",
+        "object",
+        "keys",
+        "polyfill",
+        "ponyfill"
+      ],
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/feross/fromentries.git"
+      },
+      "scripts": {
+        "test": "standard && tape test/**/*.js"
+      },
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/feross"
+        },
+        {
+          "type": "patreon",
+          "url": "https://www.patreon.com/feross"
+        },
+        {
+          "type": "consulting",
+          "url": "https://feross.org/support"
+        }
+      ],
+      "gitHead": "5d2cedaa77f1c1b985b5c78e84a638073366dde1",
+      "_id": "fromentries@1.2.1",
+      "_nodeVersion": "12.18.2",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-Xu2Qh8yqYuDhQGOhD5iJGninErSfI9A3FrriD3tjUgV5VbJFeH8vfgZ9HnC6jWN80QDVNQK5vmxRAmEAp7Mevw==",
+        "shasum": "64c31665630479bc993cd800d53387920dc61b4d",
+        "tarball": "https://registry.npmjs.org/fromentries/-/fromentries-1.2.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 4798,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfERF+CRA9TVsSAnZWagAAlVIP/2+2usGbOgqEL1OS7J8B\n+wbnMxxaAnOb2fvURCbC1jRxcYgBAQHkpwcyrD6duiv0lKAiBDClfu3g1rHz\ndmtg8HaDRqM2zBwcFfaqiPMEtVaMuS22dwwYze4ylQFLNQdFcjMTsczz7Niu\nrR20VxZqlIR/maHFODAvw8r0vGSSkH4sOWDhinVQ4b1y2qGB6nfPq4fFvBTJ\nZ58uIqgSn8zycfayHxQn63v5cR1/p2rR/sF6BKPAS9G1sRd+rYJIbdsr8yaD\ngNcoIZZYtx+N1xMp4wiYIyb41HahGBXH7JmLzBtfT+gfEki6H3yW2cqDqaeF\noLBba0k1VFCFgaFngzon4Yka3REFrs5CfoUMKLdXk+yRTpzU70z0w5Iea91q\nGL5hpsKTkYG3wi+5aTxVAvu1d7HvEgAlVeEl/BJCfp0+POJkz6p7VNUirLch\nMjUdrSetjpFpHUN1mCGQ05drP7te7kqZzytj4c+zZhMCu72Or+rPO5HM/B8A\nKlSggcgjNoKIwfIsB+u2Pv0QH+TpCUYkATJTuIHuvYV0BRABiDpSwLbUPDKt\ngz9mQ2/Qp94Fx7e2g8BGS4IJtCGjABLzrvEJIuwYUlGAOseWpHFcIXufR2k1\nNdIIZk1mh5P8trjqOiH0oioUMwcN0oMMIR1yMfbmRUlityJRqjqvyQH1Uv59\nhpNx\r\n=XyL0\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "feross",
+          "email": "feross@feross.org"
+        }
+      ],
+      "_npmUser": {
+        "name": "feross",
+        "email": "feross@feross.org"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/fromentries_1.2.1_1594954109861_0.025570210549232808"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2018-06-21T19:08:25.806Z",
     "1.0.0": "2018-06-21T19:08:25.881Z",
-    "modified": "2019-08-10T04:03:56.221Z",
+    "modified": "2020-07-17T02:48:33.470Z",
     "1.0.1": "2018-06-21T19:16:41.770Z",
     "1.0.2": "2018-06-21T19:18:07.604Z",
     "1.0.3": "2018-06-21T20:54:16.844Z",
     "1.1.0": "2018-09-12T19:59:43.655Z",
-    "1.2.0": "2019-08-10T04:03:53.708Z"
+    "1.2.0": "2019-08-10T04:03:53.708Z",
+    "1.2.1": "2020-07-17T02:48:29.954Z"
   },
   "maintainers": [
     {

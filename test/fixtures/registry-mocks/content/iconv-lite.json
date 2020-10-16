@@ -4817,7 +4817,5 @@
     "url": "https://github.com/ashtuchkin/iconv-lite/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

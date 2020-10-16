@@ -1,6 +1,6 @@
 {
   "_id": "arg",
-  "_rev": "106-4dee861c23aacaeefe5c5330051e6b69",
+  "_rev": "118-9f74598d173996fa297ea6774bdb32ab",
   "name": "arg",
   "description": "Another simple argument parser",
   "dist-tags": {
@@ -1849,238 +1849,243 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# Arg [![CircleCI](https://circleci.com/gh/zeit/arg.svg?style=svg)](https://circleci.com/gh/zeit/arg)\n\n`arg` is yet another command line option parser.\n\n## Installation\n\nUse Yarn or NPM to install.\n\n```console\n$ yarn add arg\n```\n\nor\n\n```console\n$ npm install arg\n```\n\n## Usage\n\n`arg()` takes either 1 or 2 arguments:\n\n1. Command line specification object (see below)\n2. Parse options (_Optional_, defaults to `{permissive: false, argv: process.argv.slice(2), stopAtPositional: false}`)\n\nIt returns an object with any values present on the command-line (missing options are thus\nmissing from the resulting object). Arg performs no validation/requirement checking - we\nleave that up to the application.\n\nAll parameters that aren't consumed by options (commonly referred to as \"extra\" parameters)\nare added to `result._`, which is _always_ an array (even if no extra parameters are passed,\nin which case an empty array is returned).\n\n```javascript\nconst arg = require('arg');\n\n// `options` is an optional parameter\nconst args = arg(spec, options = {permissive: false, argv: process.argv.slice(2)});\n```\n\nFor example:\n\n```console\n$ node ./hello.js --verbose -vvv --port=1234 -n 'My name' foo bar --tag qux --tag=qix -- --foobar\n```\n\n```javascript\n// hello.js\nconst arg = require('arg');\n\nconst args = arg({\n\t// Types\n\t'--help':    Boolean,\n\t'--version': Boolean,\n\t'--verbose': arg.COUNT,   // Counts the number of times --verbose is passed\n\t'--port':    Number,      // --port <number> or --port=<number>\n\t'--name':    String,      // --name <string> or --name=<string>\n\t'--tag':     [String],    // --tag <string> or --tag=<string>\n\n\t// Aliases\n\t'-v':        '--verbose',\n\t'-n':        '--name',    // -n <string>; result is stored in --name\n\t'--label':   '--name'     // --label <string> or --label=<string>;\n\t                          //     result is stored in --name\n});\n\nconsole.log(args);\n/*\n{\n\t_: [\"foo\", \"bar\", \"--foobar\"],\n\t'--port': 1234,\n\t'--verbose': 4,\n\t'--name': \"My name\",\n\t'--tag': [\"qux\", \"qix\"]\n}\n*/\n```\n\nThe values for each key=&gt;value pair is either a type (function or [function]) or a string (indicating an alias).\n\n- In the case of a function, the string value of the argument's value is passed to it,\n  and the return value is used as the ultimate value.\n\n- In the case of an array, the only element _must_ be a type function. Array types indicate\n  that the argument may be passed multiple times, and as such the resulting value in the returned\n  object is an array with all of the values that were passed using the specified flag.\n\n- In the case of a string, an alias is established. If a flag is passed that matches the _key_,\n  then the _value_ is substituted in its place.\n\nType functions are passed three arguments:\n\n1. The parameter value (always a string)\n2. The parameter name (e.g. `--label`)\n3. The previous value for the destination (useful for reduce-like operations or for supporting `-v` multiple times, etc.)\n\nThis means the built-in `String`, `Number`, and `Boolean` type constructors \"just work\" as type functions.\n\nNote that `Boolean` and `[Boolean]` have special treatment - an option argument is _not_ consumed or passed, but instead `true` is\nreturned. These options are called \"flags\".\n\nFor custom handlers that wish to behave as flags, you may pass the function through `arg.flag()`:\n\n```javascript\nconst arg = require('arg');\n\nconst argv = ['--foo', 'bar', '-ff', 'baz', '--foo', '--foo', 'qux', '-fff', 'qix'];\n\nfunction myHandler(value, argName, previousValue) {\n\t/* `value` is always `true` */\n\treturn 'na ' + (previousValue || 'batman!');\n}\n\nconst args = arg({\n\t'--foo': arg.flag(myHandler),\n\t'-f': '--foo'\n}, {\n\targv\n});\n\nconsole.log(args);\n/*\n{\n\t_: ['bar', 'baz', 'qux', 'qix'],\n\t'--foo': 'na na na na na na na na batman!'\n}\n*/\n```\n\nAs well, `arg` supplies a helper argument handler called `arg.COUNT`, which equivalent to a `[Boolean]` argument's `.length`\nproperty - effectively counting the number of times the boolean flag, denoted by the key, is passed on the command line..\nFor example, this is how you could implement `ssh`'s multiple levels of verbosity (`-vvvv` being the most verbose).\n\n```javascript\nconst arg = require('arg');\n\nconst argv = ['-AAAA', '-BBBB'];\n\nconst args = arg({\n\t'-A': arg.COUNT,\n\t'-B': [Boolean]\n}, {\n\targv\n});\n\nconsole.log(args);\n/*\n{\n\t_: [],\n\t'-A': 4,\n\t'-B': [true, true, true, true]\n}\n*/\n```\n\n### Options\n\nIf a second parameter is specified and is an object, it specifies parsing options to modify the behavior of `arg()`.\n\n#### `argv`\n\nIf you have already sliced or generated a number of raw arguments to be parsed (as opposed to letting `arg`\nslice them from `process.argv`) you may specify them in the `argv` option.\n\nFor example:\n\n```javascript\nconst args = arg(\n\t{\n\t\t'--foo': String\n\t}, {\n\t\targv: ['hello', '--foo', 'world']\n\t}\n);\n```\n\nresults in:\n\n```javascript\nconst args = {\n\t_: ['hello'],\n\t'--foo': 'world'\n};\n```\n\n#### `permissive`\n\nWhen `permissive` set to `true`, `arg` will push any unknown arguments\nonto the \"extra\" argument array (`result._`) instead of throwing an error about\nan unknown flag.\n\nFor example:\n\n```javascript\nconst arg = require('arg');\n\nconst argv = ['--foo', 'hello', '--qux', 'qix', '--bar', '12345', 'hello again'];\n\nconst args = arg(\n\t{\n\t\t'--foo': String,\n\t\t'--bar': Number\n\t}, {\n\t\targv,\n\t\tpermissive: true\n\t}\n);\n```\n\nresults in:\n\n```javascript\nconst args = {\n\t_:          ['--qux', 'qix', 'hello again'],\n\t'--foo':    'hello',\n\t'--bar':    12345\n}\n```\n\n#### `stopAtPositional`\n\nWhen `stopAtPositional` is set to `true`, `arg` will halt parsing at the first\npositional argument.\n\nFor example:\n\n```javascript\nconst arg = require('arg');\n\nconst argv = ['--foo', 'hello', '--bar'];\n\nconst args = arg(\n\t{\n\t\t'--foo': Boolean,\n\t\t'--bar': Boolean\n\t}, {\n\t\targv,\n\t\tstopAtPositional: true\n\t}\n);\n```\n\nresults in:\n\n```javascript\nconst args = {\n\t_: ['hello', '--bar'],\n\t'--foo': true\n};\n```\n\n### Errors\n\nSome errors that `arg` throws provide a `.code` property in order to aid in recovering from user error, or to\ndifferentiate between user error and developer error (bug).\n\n##### ARG_UNKNOWN_OPTION\n\nIf an unknown option (not defined in the spec object) is passed, an error with code `ARG_UNKNOWN_OPTION` will be thrown:\n```js\n// cli.js\ntry {\n  require('arg')({ '--hi': String });\n} catch (err) {\n  if (err.code === 'ARG_UNKNOWN_OPTION') {\n    console.log(err.message);\n  } else {\n    throw err;\n  }\n}\n```\n\n```shell\nnode cli.js --extraneous true\nUnknown or unexpected option: --extraneous\n```\n\n# License\n\nCopyright &copy; 2017-2019 by ZEIT, Inc. Released under the [MIT License](LICENSE.md).\n",
   "maintainers": [
     {
-      "email": "alexandro@phi.nz",
-      "name": "alexaltea"
+      "email": "lrobinson2011@gmail.com",
+      "name": "leerobinson"
     },
     {
-      "email": "ana.trajkovska2015@gmail.com",
-      "name": "anatrajkovska"
+      "email": "hank@vercel.com",
+      "name": "hankvercel"
     },
     {
-      "email": "artzbitz@gmail.com",
-      "name": "andybitz"
+      "email": "belen@vercel.com",
+      "name": "okbel"
     },
     {
-      "email": "arunoda.susiripala@gmail.com",
-      "name": "arunoda"
-    },
-    {
-      "email": "franco@basement.studio",
-      "name": "arzafran"
-    },
-    {
-      "email": "atcastle@gmail.com",
-      "name": "atcastle"
-    },
-    {
-      "email": "caarlos0@gmail.com",
-      "name": "caarlos0"
-    },
-    {
-      "email": "shu@chibicode.com",
-      "name": "chibicode"
+      "email": "samko9522@gmail.com",
+      "name": "samsisle"
     },
     {
       "email": "chris@leishman.org",
       "name": "cleishm"
     },
     {
-      "email": "thecodetheory@gmail.com",
-      "name": "codetheory"
+      "email": "nazareno@basement.studio",
+      "name": "nazarenooviedo"
     },
     {
-      "email": "allenhai03@gmail.com",
-      "name": "coetry"
+      "email": "maxwell.leiter@gmail.com",
+      "name": "maxleiter"
     },
     {
-      "email": "mail@connordav.is",
-      "name": "dav-is"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
-    },
-    {
-      "email": "fivepointseven@icloud.com",
-      "name": "fivepointseven"
+      "email": "shu@chibicode.com",
+      "name": "chibicode"
     },
     {
       "email": "g.cobben@gmail.com",
       "name": "gielcobben"
     },
     {
-      "email": "gbmonaco@google.com",
-      "name": "gmonaco"
-    },
-    {
-      "email": "guybedford@gmail.com",
-      "name": "guybedford"
-    },
-    {
-      "email": "houssein.djirdeh@gmail.com",
-      "name": "housseindjirdeh"
-    },
-    {
-      "email": "hello@evilrabb.it",
-      "name": "iamevilrabbit"
-    },
-    {
-      "email": "igor@klopov.com",
-      "name": "igorklopov"
-    },
-    {
-      "email": "jj@jjsweb.site",
-      "name": "ijjk"
-    },
-    {
-      "email": "janicklasralph036@gmail.com",
-      "name": "janicklas-ralph"
-    },
-    {
       "email": "jared@palmer.net",
       "name": "jaredpalmer"
-    },
-    {
-      "email": "javier.velasco86@gmail.com",
-      "name": "javivelasco"
     },
     {
       "email": "jan.krems@gmail.com",
       "name": "jkrems"
     },
     {
-      "email": "joecohenr@gmail.com",
-      "name": "joecohens"
-    },
-    {
-      "email": "juancampa@gmail.com",
-      "name": "juancampa"
-    },
-    {
-      "email": "npm@keanulee.com",
-      "name": "keanulee"
+      "email": "prateek89born@gmail.com",
+      "name": "prateekbh"
     },
     {
       "email": "josefrancisco.verdu@gmail.com",
       "name": "kikobeats"
     },
     {
-      "email": "mindrun@icloud.com",
-      "name": "leo"
+      "email": "gbmonaco@google.com",
+      "name": "gmonaco"
     },
     {
-      "email": "luisito453@gmail.com",
-      "name": "lfades"
+      "email": "houssein.djirdeh@gmail.com",
+      "name": "housseindjirdeh"
     },
     {
-      "email": "luc.leray@gmail.com",
-      "name": "lucleray"
-    },
-    {
-      "email": "manovotny@gmail.com",
-      "name": "manovotny"
-    },
-    {
-      "email": "marcosnils@gmail.com",
-      "name": "marcosnils"
-    },
-    {
-      "email": "me@matheus.top",
-      "name": "matheuss"
-    },
-    {
-      "email": "mrfix84@gmail.com",
-      "name": "mfix22"
-    },
-    {
-      "email": "mark.glagola@gmail.com",
-      "name": "mglagola"
-    },
-    {
-      "email": "mail@msweeneydev.com",
-      "name": "msweeneydev"
-    },
-    {
-      "email": "naoyuki.kanezawa@gmail.com",
-      "name": "nkzawa"
-    },
-    {
-      "email": "pvco.coursey@gmail.com",
-      "name": "paco"
-    },
-    {
-      "email": "paulogdemitri@gmail.com",
-      "name": "paulogdm"
-    },
-    {
-      "email": "prateek89born@gmail.com",
-      "name": "prateekbh"
-    },
-    {
-      "email": "i.am.qix@gmail.com",
-      "name": "qix"
-    },
-    {
-      "email": "ds303077135@gmail.com",
-      "name": "quietshu"
-    },
-    {
-      "email": "rabautse@gmail.com",
-      "name": "rabaut"
-    },
-    {
-      "email": "ragojosefrancisco@gmail.com",
-      "name": "ragojose"
-    },
-    {
-      "email": "rauchg@gmail.com",
-      "name": "rauchg"
-    },
-    {
-      "email": "sbanskota08@gmail.com",
-      "name": "sarupbanskota"
-    },
-    {
-      "email": "skllcrn@zeit.co",
-      "name": "skllcrn"
+      "email": "jason@developit.ca",
+      "name": "developit"
     },
     {
       "email": "shubhie@gmail.com",
       "name": "spanicker"
     },
     {
-      "email": "steven@ceriously.com",
-      "name": "styfle"
+      "email": "npm@keanulee.com",
+      "name": "keanulee"
     },
     {
-      "email": "timer150@gmail.com",
-      "name": "timer"
+      "email": "atcastle@gmail.com",
+      "name": "atcastle"
     },
     {
-      "email": "tim@timneutkens.nl",
-      "name": "timneutkens"
+      "email": "janicklasralph036@gmail.com",
+      "name": "janicklas-ralph"
     },
     {
-      "email": "nathan@tootallnate.net",
-      "name": "tootallnate"
+      "email": "skllcrn@zeit.co",
+      "name": "skllcrn"
     },
     {
-      "email": "iyatomi@gmail.com",
-      "name": "umegaya"
+      "email": "pvco.coursey@gmail.com",
+      "name": "paco"
+    },
+    {
+      "email": "guybedford@gmail.com",
+      "name": "guybedford"
+    },
+    {
+      "email": "ragojosefrancisco@gmail.com",
+      "name": "ragojose"
     },
     {
       "email": "williamli@bbi.io",
       "name": "williamli"
     },
     {
+      "email": "mail@msweeneydev.com",
+      "name": "msweeneydev"
+    },
+    {
+      "email": "allenhai03@gmail.com",
+      "name": "coetry"
+    },
+    {
+      "email": "rabautse@gmail.com",
+      "name": "rabaut"
+    },
+    {
+      "email": "luisito453@gmail.com",
+      "name": "lfades"
+    },
+    {
+      "email": "mrfix84@gmail.com",
+      "name": "mfix22"
+    },
+    {
+      "email": "jj@jjsweb.site",
+      "name": "ijjk"
+    },
+    {
+      "email": "franco@basement.studio",
+      "name": "arzafran"
+    },
+    {
+      "email": "iyatomi@gmail.com",
+      "name": "umegaya"
+    },
+    {
+      "email": "sbanskota08@gmail.com",
+      "name": "sarupbanskota"
+    },
+    {
+      "email": "timer150@gmail.com",
+      "name": "timer"
+    },
+    {
+      "email": "ana.trajkovska2015@gmail.com",
+      "name": "anatrajkovska"
+    },
+    {
+      "email": "paulogdemitri@gmail.com",
+      "name": "paulogdm"
+    },
+    {
+      "email": "artzbitz@gmail.com",
+      "name": "andybitz"
+    },
+    {
+      "email": "mark.glagola@gmail.com",
+      "name": "mglagola"
+    },
+    {
+      "email": "luc.leray@gmail.com",
+      "name": "lucleray"
+    },
+    {
       "email": "team@zeit.co",
       "name": "zeit-bot"
+    },
+    {
+      "email": "steven@ceriously.com",
+      "name": "styfle"
+    },
+    {
+      "email": "juancampa@gmail.com",
+      "name": "juancampa"
+    },
+    {
+      "email": "mail@connordav.is",
+      "name": "dav-is"
+    },
+    {
+      "email": "ds303077135@gmail.com",
+      "name": "quietshu"
+    },
+    {
+      "email": "fivepointseven@icloud.com",
+      "name": "fivepointseven"
+    },
+    {
+      "email": "joecohenr@gmail.com",
+      "name": "joecohens"
+    },
+    {
+      "email": "thecodetheory@gmail.com",
+      "name": "codetheory"
+    },
+    {
+      "email": "matheus.frndes@gmail.com",
+      "name": "matheuss"
+    },
+    {
+      "email": "igor@klopov.com",
+      "name": "igorklopov"
+    },
+    {
+      "email": "mindrun@icloud.com",
+      "name": "leo"
+    },
+    {
+      "email": "naoyuki.kanezawa@gmail.com",
+      "name": "nkzawa"
+    },
+    {
+      "email": "nathan@tootallnate.net",
+      "name": "tootallnate"
+    },
+    {
+      "email": "rauchg@gmail.com",
+      "name": "rauchg"
+    },
+    {
+      "email": "tim@timneutkens.nl",
+      "name": "timneutkens"
+    },
+    {
+      "email": "javier.velasco86@gmail.com",
+      "name": "javivelasco"
+    },
+    {
+      "email": "hello@evilrabb.it",
+      "name": "iamevilrabbit"
+    },
+    {
+      "email": "i.am.qix@gmail.com",
+      "name": "qix"
     }
   ],
   "time": {
-    "modified": "2020-02-02T17:53:17.045Z",
+    "modified": "2020-09-22T18:59:51.725Z",
     "created": "2012-06-01T15:39:02.676Z",
     "0.0.1": "2012-06-01T15:39:03.936Z",
     "1.0.0": "2017-10-24T07:12:48.302Z",

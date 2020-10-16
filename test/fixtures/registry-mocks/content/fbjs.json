@@ -1,9 +1,9 @@
 {
   "_id": "fbjs",
-  "_rev": "102-ba471774a35ede734cd2d00680cd5d93",
+  "_rev": "104-d11e617fadba3933a387ea9db87e5338",
   "name": "fbjs",
   "dist-tags": {
-    "latest": "1.0.0",
+    "latest": "3.0.0",
     "next": "0.9.0-alpha.2"
   },
   "versions": {
@@ -6307,44 +6307,328 @@
         "tmp": "tmp/fbjs_1.0.0_1537296156183_0.14420549477622502"
       },
       "_hasShrinkwrap": false
+    },
+    "2.0.0": {
+      "name": "fbjs",
+      "version": "2.0.0",
+      "description": "A collection of utility libraries used by other Facebook JS projects",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/fbjs.git"
+      },
+      "scripts": {
+        "build": "gulp build",
+        "postbuild": "node node_modules/fbjs-scripts/node/check-lib-requires.js lib",
+        "lint": "eslint .",
+        "prepublish": "yarn run build",
+        "pretest": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
+        "test": "NODE_ENV=test jest",
+        "test-babel-presets": "cd babel-preset && yarn install && yarn test",
+        "flow": "flow check src"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "babel-preset-fbjs": "file:../babel-preset-fbjs",
+        "del": "^2.2.0",
+        "fbjs-scripts": "file:../fbjs-scripts",
+        "flow-bin": "^0.99.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-flatten": "^0.4.0",
+        "gulp-rename": "^2.0.0",
+        "immutable": "^3.7.6",
+        "jest-cli": "^23.6.0",
+        "merge-stream": "^1.0.0"
+      },
+      "license": "MIT",
+      "jest": {
+        "automock": true,
+        "modulePathIgnorePatterns": [
+          "/lib/",
+          "/node_modules/"
+        ],
+        "rootDir": "",
+        "setupFiles": [
+          "fbjs-scripts/jest/environment.js"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "timers": "fake",
+        "transform": {
+          ".*": "fbjs-scripts/jest/preprocessor.js"
+        },
+        "transformIgnorePatterns": [
+          "/node_modules/"
+        ],
+        "unmockedModulePathPatterns": [
+          "<rootDir>/node_modules/",
+          "<rootDir>/src/(?!(__forks__/fetch.js$|fetch/))"
+        ]
+      },
+      "dependencies": {
+        "core-js": "^3.6.4",
+        "cross-fetch": "^3.0.4",
+        "fbjs-css-vars": "^1.0.0",
+        "loose-envify": "^1.0.0",
+        "object-assign": "^4.1.0",
+        "promise": "^7.1.1",
+        "setimmediate": "^1.0.5",
+        "ua-parser-js": "^0.7.18"
+      },
+      "devEngines": {
+        "node": ">=4.x",
+        "npm": ">=2.x"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "bugs": {
+        "url": "https://github.com/facebook/fbjs/issues"
+      },
+      "homepage": "https://github.com/facebook/fbjs#readme",
+      "_id": "fbjs@2.0.0",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-8XA8ny9ifxrAWlyhAbexXcs3rRMtxWcs3M0lctLfB49jRDHiaxj+Mo0XxbwE7nKZYzgCFoq64FS+WFd4IycPPQ==",
+        "shasum": "01fb812138d7e31831ed3e374afe27b9169ef442",
+        "tarball": "https://registry.npmjs.org/fbjs/-/fbjs-2.0.0.tgz",
+        "fileCount": 251,
+        "unpackedSize": 441825,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfIg6eCRA9TVsSAnZWagAANngP/0FcbwTfhQGKgSSw3kn/\naBSL/ZqafAVoLETXGQR6N4prmibD2WeTjICFeryuY6EgH7H0Ct47NnD9n53J\nMobbi98+kG6uZQVejtxoLuU3+ZXgXcYkOjIVn5ZxtGqYy5Bjz5XSqqVZZs4t\nneCUBVKDKTIkmsJoUqkP/Gx6mA8D6wnb+UFhMizTIXKgjs3sy9n6N1kJfMMu\nDhpVw1HSrg4YtFsglb5rdN24xRxt9BsBB3YYmusLsRq1psxXe3IWMOkSrEJc\nvJW7v/GCLZ+d8XkwqpVbC+uMnGr0ryuAQZTKYjqQJaJVkK2gt0NvjT2ftWIz\nlzrspoTBpAzIST9cA+K1i+NqyYCSM+fuLvUcCG06pkx0fxj96155Ze9uVCUO\nm/8fBPFZlWe2kWpixtT3XsujvGbIh1nzG8NHhydSXe8Fh0nbvhUPTwNHCKqU\n0XQ57+SxkGwLU8tfkFgpL8Wse7a4D2FGa3b6FREOPYHX9WY9+q3IiCMQX6O/\nUWdKCojR+rkf9XdtTRgtLKqxR2Q2/S7Ivkjm8P1wm39EMKaVgWzN5KWb8nXH\nnI0dbKVcY0Kv0ie0Xwtl3FZLTfCzmiBye3ypoZBN40J+LQd6+CqeWscoFRAb\nvYEUfq5gQXb1PBYpPl90kHmQ8xjgktRAyFi5IJUhMkrwInyxioSfj4soOsWY\nZjiQ\r\n=owXs\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "briandavidvaughn@gmail.com",
+          "name": "brianvaughn"
+        },
+        {
+          "email": "opensource+npm@fb.com",
+          "name": "fb"
+        },
+        {
+          "email": "joesavona@fb.com",
+          "name": "josephsavona"
+        },
+        {
+          "email": "juans.tejada@gmail.com",
+          "name": "jstejada"
+        },
+        {
+          "email": "jkassens@fb.com",
+          "name": "kassens"
+        },
+        {
+          "email": "npm@sophiebits.com",
+          "name": "sophiebits"
+        },
+        {
+          "email": "yungsters@gmail.com",
+          "name": "yungsters"
+        },
+        {
+          "email": "paul@oshannessy.com",
+          "name": "zpao"
+        }
+      ],
+      "_npmUser": {
+        "name": "zpao",
+        "email": "paul@oshannessy.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/fbjs_2.0.0_1596067486282_0.23911956278561575"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.0": {
+      "name": "fbjs",
+      "version": "3.0.0",
+      "description": "A collection of utility libraries used by other Facebook JS projects",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/fbjs.git"
+      },
+      "scripts": {
+        "build": "gulp build",
+        "postbuild": "node node_modules/fbjs-scripts/node/check-lib-requires.js lib",
+        "lint": "eslint .",
+        "prepublish": "yarn run build",
+        "pretest": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
+        "test": "NODE_ENV=test jest",
+        "test-babel-presets": "cd babel-preset && yarn install && yarn test",
+        "flow": "flow check src"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "babel-preset-fbjs": "file:../babel-preset-fbjs",
+        "del": "^2.2.0",
+        "fbjs-scripts": "file:../fbjs-scripts",
+        "flow-bin": "^0.99.0",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-flatten": "^0.4.0",
+        "gulp-rename": "^2.0.0",
+        "immutable": "^3.7.6",
+        "jest-cli": "^23.6.0",
+        "merge-stream": "^1.0.0"
+      },
+      "license": "MIT",
+      "jest": {
+        "automock": true,
+        "modulePathIgnorePatterns": [
+          "/lib/",
+          "/node_modules/"
+        ],
+        "rootDir": "",
+        "setupFiles": [
+          "fbjs-scripts/jest/environment.js"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "timers": "fake",
+        "transform": {
+          ".*": "fbjs-scripts/jest/preprocessor.js"
+        },
+        "transformIgnorePatterns": [
+          "/node_modules/"
+        ],
+        "unmockedModulePathPatterns": [
+          "<rootDir>/node_modules/",
+          "<rootDir>/src/(?!(__forks__/fetch.js$|fetch/))"
+        ]
+      },
+      "dependencies": {
+        "cross-fetch": "^3.0.4",
+        "fbjs-css-vars": "^1.0.0",
+        "loose-envify": "^1.0.0",
+        "object-assign": "^4.1.0",
+        "promise": "^7.1.1",
+        "setimmediate": "^1.0.5",
+        "ua-parser-js": "^0.7.18"
+      },
+      "devEngines": {
+        "node": ">=4.x",
+        "npm": ">=2.x"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "bugs": {
+        "url": "https://github.com/facebook/fbjs/issues"
+      },
+      "homepage": "https://github.com/facebook/fbjs#readme",
+      "_id": "fbjs@3.0.0",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-dJd4PiDOFuhe7vk4F80Mba83Vr2QuK86FoxtgPmzBqEJahncp+13YCmfoa53KHCo6OnlXLG7eeMWPfB5CrpVKg==",
+        "shasum": "0907067fb3f57a78f45d95f1eacffcacd623c165",
+        "tarball": "https://registry.npmjs.org/fbjs/-/fbjs-3.0.0.tgz",
+        "fileCount": 247,
+        "unpackedSize": 440647,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJffU35CRA9TVsSAnZWagAAW0cP/0IwlIrTegMHvcK+NCzc\nx4wsBRHYdWrnxNJONKFUTsPFD0UWte8uClHfBxh6MipEc2ge3DlhogN5hSQW\nvOtpB0e8bOf0iSbp15EdcTVypGZviOzW2HrbaBetl9gmHUUed9ftlOP3c/72\nDimhVUjk08LbheKgR4mJa2j034VhAqQH3EmNHvzZyiZmMs0bsJ8BtbDtNgNP\nFqPx9KKbW5WkgiUDxr0jgiyL1g86KCeDdGO6VbvrFEBQJmpti2yR+oTgock8\nxuODbBDGwSlwiKV5HqTWsxqThzWkO4lusc1tTcZOY/OY6jGhQy2vxmGdN+yU\nJD9jVQhj8WbjfOCjz7QqYUnUs0RuXg4z/dVrpwGRxgSafS9K6y1icXWz4nBE\nJ55A0FHtQM7QHoggxnXZLInuR7Dwbkr9vaOhqkAci1Qi51mjC8L5SSeRYtjC\nbNTP3hDgxc4EkVUs91BN0dgsgeMrXZop4eVnf6N9p0Yr3Eb+2abuwH+Ddk9m\nL3GpmQ40ZFAPIMOzX+DBPRSztXXBLNwq/aldzfblRiJAk1Dcl8fxAw5wakC3\nbt9JGzWzViCIsiIxBtX4DX4CaUpwOVjpEecIwsJd6apzGnet2i54D3V8cgSz\n1IxtsnaF+BcS5fmXF1PdBqJP1WKyJ2f4Kpf2JyTwTifMeVXIMBJf6EZ6JtZN\nDCMV\r\n=pDTa\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "zpao",
+          "email": "paul@oshannessy.com"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "cpojer",
+          "email": "christoph.pojer@gmail.com"
+        },
+        {
+          "name": "yungsters",
+          "email": "yungsters@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "josephsavona",
+          "email": "joesavona@fb.com"
+        },
+        {
+          "name": "kassens",
+          "email": "jkassens@fb.com"
+        },
+        {
+          "name": "jstejada",
+          "email": "juans.tejada@gmail.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "cpojer",
+        "email": "christoph.pojer@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/fbjs_3.0.0_1602047481181_0.5641607619293338"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# FBJS\n\n## Purpose\n\nTo make it easier for Facebook to share and consume our own JavaScript. Primarily this will allow us to ship code without worrying too much about where it lives, keeping with the spirit of `@providesModule` but working in the broader JavaScript ecosystem.\n\n**Note:** If you are consuming the code here and you are not also a Facebook project, be prepared for a bad time. APIs may appear or disappear and we may not follow semver strictly, though we will do our best to. This library is being published with our use cases in mind and is not necessarily meant to be consumed by the broader public. In order for us to move fast and ship projects like React and Relay, we've made the decision to not support everybody. We probably won't take your feature requests unless they align with our needs. There will be overlap in functionality here and in other open source projects.\n\n## Usage\n\nAny `@providesModule` modules that are used by your project should be added to `src/`. They will be built and added to `module-map.json`. This file will contain a map from `@providesModule` name to what will be published as `fbjs`. The `module-map.json` file can then be consumed in your own project, along with the [rewrite-modules](https://github.com/facebook/fbjs/blob/master/babel-preset/plugins/rewrite-modules.js) Babel plugin (which we'll publish with this), to rewrite requires in your own project. Then, just make sure `fbjs` is a dependency in your `package.json` and your package will consume the shared code.\n\n```js\n// Before transform\nconst emptyFunction = require('emptyFunction');\n// After transform\nconst emptyFunction = require('fbjs/lib/emptyFunction');\n```\n\nSee React for an example of this. *Coming soon!*\n\n## Building\n\nIt's as easy as just running gulp. This assumes you've also done `npm install -g gulp`.\n\n```sh\ngulp\n```\n\nAlternatively `npm run build` will also work.\n\n### Layout\n\nRight now these packages represent a subset of packages that we use internally at Facebook. Mostly these are support libraries used when shipping larger libraries, like React and Relay, or products. Each of these packages is in its own directory under `src/`.\n\n### Process\n\nSince we use `@providesModule`, we need to rewrite requires to be relative. Thanks to `@providesModule` requiring global uniqueness, we can do this easily. Eventually we'll try to make this part of the process go away by making more projects use CommonJS.\n\n\n## TODO\n\n- Flow: Ideally we'd ship our original files with type annotations, however that's not doable right now. We have a couple options:\n  - Make sure our transpilation step converts inline type annotations to the comment format.\n  - Make our build process also build Flow interface files which we can ship to npm.\n- Split into multiple packages. This will be better for more concise versioning, otherwise we'll likely just be shipping lots of major versions.\n",
   "maintainers": [
     {
-      "email": "paul@oshannessy.com",
-      "name": "zpao"
+      "name": "zpao",
+      "email": "paul@oshannessy.com"
     },
     {
-      "email": "briandavidvaughn@gmail.com",
-      "name": "brianvaughn"
+      "name": "brianvaughn",
+      "email": "briandavidvaughn@gmail.com"
     },
     {
-      "email": "yungsters@gmail.com",
-      "name": "yungsters"
+      "name": "cpojer",
+      "email": "christoph.pojer@gmail.com"
     },
     {
-      "email": "opensource+npm@fb.com",
-      "name": "fb"
+      "name": "yungsters",
+      "email": "yungsters@gmail.com"
     },
     {
-      "email": "joesavona@fb.com",
-      "name": "josephsavona"
+      "name": "fb",
+      "email": "opensource+npm@fb.com"
     },
     {
-      "email": "jkassens@fb.com",
-      "name": "kassens"
+      "name": "josephsavona",
+      "email": "joesavona@fb.com"
     },
     {
-      "email": "juans.tejada@gmail.com",
-      "name": "jstejada"
+      "name": "kassens",
+      "email": "jkassens@fb.com"
     },
     {
-      "email": "npm@sophiebits.com",
-      "name": "sophiebits"
+      "name": "jstejada",
+      "email": "juans.tejada@gmail.com"
+    },
+    {
+      "name": "sophiebits",
+      "email": "npm@sophiebits.com"
     }
   ],
   "time": {
-    "modified": "2019-08-09T18:07:54.595Z",
+    "modified": "2020-10-07T05:11:23.653Z",
     "created": "2015-06-12T09:05:53.476Z",
     "0.0.0": "2015-06-12T09:05:53.476Z",
     "0.1.0-alpha.0": "2015-06-18T23:17:23.155Z",
@@ -6396,7 +6680,9 @@
     "0.8.15": "2017-09-07T22:48:37.304Z",
     "0.8.16": "2017-09-25T23:17:39.468Z",
     "0.8.17": "2018-06-12T06:36:45.615Z",
-    "1.0.0": "2018-09-18T18:42:36.308Z"
+    "1.0.0": "2018-09-18T18:42:36.308Z",
+    "2.0.0": "2020-07-30T00:04:46.483Z",
+    "3.0.0": "2020-10-07T05:11:21.362Z"
   },
   "readmeFilename": "README.md",
   "description": "A collection of utility libraries used by other Facebook JS projects",

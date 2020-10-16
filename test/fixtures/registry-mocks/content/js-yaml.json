@@ -5780,7 +5780,5 @@
     "url": "https://github.com/nodeca/js-yaml/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

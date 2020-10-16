@@ -1,10 +1,10 @@
 {
   "_id": "@babel/plugin-transform-react-jsx",
-  "_rev": "67-e1308be5d223e9f91a5014b3c31939c5",
+  "_rev": "76-bc4fd6e450f99c923ae98989a39e0f7f",
   "name": "@babel/plugin-transform-react-jsx",
   "description": "Turn JSX into React function calls",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -2078,6 +2078,7 @@
         "@babel/core": "7.0.0-rc.3",
         "@babel/helper-plugin-test-runner": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-react-jsx@7.0.0-rc.3",
       "dist": {
         "shasum": "8985dd8c54367ab66f4a5f329bc31503024490c2",
@@ -2145,6 +2146,7 @@
         "@babel/core": "^7.0.0-rc.4",
         "@babel/helper-plugin-test-runner": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-react-jsx@7.0.0-rc.4",
       "dist": {
         "shasum": "85aa56045f9852933dc6a23fed6ab3783bf22f32",
@@ -2213,6 +2215,8 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/plugin-transform-react-jsx\n\n> Turn JSX into React function calls\n\nSee our website [@babel/plugin-transform-react-jsx](https://babeljs.io/docs/en/next/babel-plugin-transform-react-jsx.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/plugin-transform-react-jsx\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/plugin-transform-react-jsx --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-react-jsx@7.0.0",
       "dist": {
         "shasum": "524379e4eca5363cd10c4446ba163f093da75f3e",
@@ -2283,6 +2287,7 @@
         "@babel/core": "^7.1.6",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-react-jsx@7.1.6",
       "dist": {
         "shasum": "e6188e7d2a2dcd2796d45a87f8b0a8c906f57d1a",
@@ -2353,6 +2358,7 @@
         "@babel/core": "^7.2.0",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-react-jsx@7.2.0",
       "dist": {
         "shasum": "ca36b6561c4d3b45524f8efb6f0fbc9a0d1d622f",
@@ -2848,36 +2854,592 @@
         "tmp": "tmp/plugin-transform-react-jsx_7.8.3_1578951727448_0.12831480999552936"
       },
       "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.9.0",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.9.0",
+        "@babel/helper-builder-react-jsx-experimental": "^7.9.0",
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-jsx": "^7.8.3"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/plugin-transform-react-jsx@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-eOjxtrHDt0R3WRTyya6yxV7LkC+wRgTkiT8UGHUh7TPYVqIltDmY2djm60283OzD1R0YJB8tJij3tLNlKFgnYQ==",
+        "shasum": "d9f0e10a0a154f86fb2f3b04ef856d709284cb25",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.9.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8131,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOPaCRA9TVsSAnZWagAAt/4P/jIcbkyCdPAPtFC/bvvb\ngiM2BPGi7/9RviAQXfVQttU3IjcxbKGytaW5INkUjl3ZXql3FWESMDUQgCFW\n0vlibZLJ7Fn1SkjcdSaBvEbqlvBm2X+q/SqeezljOYWq8ji6yHfB21yVLUIP\nIaiFvngHcWEeGazsLa+nfEhuKEXm22jboFeKlcBSthjKRLLY1smJWxZe5ByH\n6TwfWFZBA5jAuREQXkf/tLf92lexscKIsBF0xjknGN6gu9IW8BL+WyJl2oh8\niVtdHZ8I5HSU9m3xWsGo18VUQjZtDruX3qW7CnPw+ygzHCW8je0z16OWT02k\nKIdokx1zlJMy3rT0UAP9m5SMmdlBEgWclCSWlpxyRNFkGvM+dIrvXr8NAOnV\nD7d8F+9yU9ffCvDkbg3xue2ktgffpazgM+Ti/dY68y2If5Pxgw+CFVD9yOIX\nOSXDasIoGhB6HHLNYtpulj5Edhh4uvqJXmxARs1aC9mr3DcAmA+daS1qKN99\nGY7e+S40RbOHcxgZFOVmS0JyoudjIJDilQai/GAVSYrGTedDaHZzsaS3o8fw\nBXFYGNiC53fPYVkjZDEt9XSX40320bZ2rPFeyzhBstzjsab5Csl29q3XmVfu\nPQwb5vRnxmYeSNRdWWfeG7LgxSTtghk/Zs5dw/q1b5Ae2nhwdQD6cJlCSErp\nrn0K\r\n=Xduo\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.9.0_1584718809836_0.9919163307718697"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.1": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.9.1",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.9.0",
+        "@babel/helper-builder-react-jsx-experimental": "^7.9.0",
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-jsx": "^7.8.3"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "220ce702a1e02f7c32728985505e0392555b0ae7",
+      "_id": "@babel/plugin-transform-react-jsx@7.9.1",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-+xIZ6fPoix7h57CNO/ZeYADchg1tFyX9NDsnmNFFua8e1JNPln156mzS+8AQe1On2X2GLlANHJWHIXbMCqWDkQ==",
+        "shasum": "d03af29396a6dc51bfa24eefd8005a9fd381152a",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.9.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8243,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedTrlCRA9TVsSAnZWagAABoEP/RSqfPpzxSAvRKZbXi3/\n42dzOLVPZzYFJPLLwshA0Aw8soPm2koOIXB4fhrotnNJ9LhYu0riYBH1FUeX\nhH1x9640aj31hu6IxRx8FATIuWVMXeyOE2xVYycsOXEzhoKxIcMmNeJbqOjz\n/cjkGTanJ02jG/kXBpY3zSvgCVHt0lync1Ccgn7PmUliTfNe48Z1PtW4iWwV\nhDH58p4bkvuUv820LkdFatLgXQFjHbBe7Ycg9XaiGwJwBzeREnxRUXBhY7Vi\nyy2lxUtgtmBHV/kbhUBUUNV3X6j6GJoQY0l6QlnJgjTY8X7LPpeEW4oC+zzr\nnqImImG/FcYT5bMRzteTc7TeHQdGTbh/ne8CBZQM134IPPWAvNKzjGnAGII4\nE6AGgJMEJPNDygfZwm/jBN8CSoK7HuF9d8HtcPsmXyr3P1ITGr35qVlwiR70\nnz94IE6jEEjA0v2FNNK/sLWdgCI+/3D42V/2e8AimmY0hGC0+usAIixnBge5\nRZIKR0zD52uKgXM12f1d70v3+04DPKoMKVZ+XmZqZVoCTPM9mZl9ddyjuhpP\nQbuVBYzbl/kb+hPW7HhDY1J2IRj5sY4y9yjNU1QQjTOy5uY8MR/tS7f+93i+\nQXgO0N/T8MuHd60xY6c/rQYTiOmRVfJtEnb6TgB1OriQxvAR7fN84NVMt1/F\nA8n4\r\n=WnSi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.9.1_1584741093357_0.8072867643448551"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.4": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.9.4",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.9.0",
+        "@babel/helper-builder-react-jsx-experimental": "^7.9.0",
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-jsx": "^7.8.3"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "d3cf5fb5f4b46a1f7e9e33f2d24a466e3ea1e50f",
+      "_id": "@babel/plugin-transform-react-jsx@7.9.4",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-Mjqf3pZBNLt854CK0C/kRuXAnE6H/bo7xYojP+WGtX8glDGSibcwnsWwhwoSuRg0+EBnxPC1ouVnuetUIlPSAw==",
+        "shasum": "86f576c8540bd06d0e95e0b61ea76d55f6cbd03f",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.9.4.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8293,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeecVXCRA9TVsSAnZWagAANt0P/juwFoFFYV0354n2EbVX\nLQH9ClVxbY6ydUSyFKoNVSxEMk8Q7wmaZaNA+3HmBf1rLa0e3wiwi3hu4j2R\nsW4oh6CmFtXOTvZB89SRh07hNRElT9K6Ei6LxBjcXiJsp3dh9S5JiMHtypPN\nIr8MTnSKbZa7o0owNF6zsB9ZEyrqA0oQIbC+dUd5aql9BK1JMz48h6USB/Wm\nle6NwygVsqnOSz7W6PSav+SJP+mCziXDC6cIQU1ODPXEWemftx+c8TX86lKx\nMFPgCLySIJtTAxloHEUDN0susj2rmYvfbrLFuAdgzUy/snXHOQeujZhIA/4M\nqq2cIrscYnGzBXxYMeR1QUmkbLBuIsl5HJMIiiemyqBw7dSsHfl0JY5z15iS\nB+3dNuDxWuIQQSjOWptfvAZD1EYtBneJZyq/m3aaD7v9zinnQzYhNjCyiUGl\nXt4r9NHkBKksAJBmx5/16AHjPt4cmtFJ9LBcOVcElYP0SNNgT7OfB6iGgdu7\n5j23zcNQu63AlsB8GvGyrJKfRE6WWRU/vD3N+LG8D1+SU7sQeESxb9OEMmmf\nGlArUIF9sdTP6P8N366NE+4+F5XUyGT8DRNQNvTHQAgw/2eO3Dmh6sE+JHqg\n+Rx7ZB45l2/46cgLA3q44DPG1ui29snp+DqeIawL435/BjVkWa9riRix8Gxm\nLPDm\r\n=hyUY\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.9.4_1585038678468_0.5090791824152814"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.10.1",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.10.1",
+        "@babel/helper-builder-react-jsx-experimental": "^7.10.1",
+        "@babel/helper-plugin-utils": "^7.10.1",
+        "@babel/plugin-syntax-jsx": "^7.10.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.1",
+        "@babel/helper-plugin-test-runner": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-transform-react-jsx@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-MBVworWiSRBap3Vs39eHt+6pJuLUAaK4oxGc8g+wY+vuSJvLiEQjW1LSTqKb8OUPtDvHCkdPhk7d6sjC19xyFw==",
+        "shasum": "91f544248ba131486decb5d9806da6a6e19a2896",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.10.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8367,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuTLCRA9TVsSAnZWagAAWSEP/3JYpGOUygHdtBWSjGoB\nIQjysi12OJSx7ktaWCuYHZ06m79mKViI1KTfhfnnJqyMlkgw2LqR1RK37dj5\nqhkdZd/4gRJuliBnGabonbhZrPr0qUI7AQ6yoPimbLtbIngczMxjDOwVs5JN\nP+dXEOjfpqNEnJDTLtIItDkTN/jMhUNWMAl+iQuHTL+WVQEIMGHkjxDb7YMT\nmq8eWHukJsUMXi1DfazH4FpCJFysvdvlbGVSoTRZfkrX2ihWGUY1YdqbeVRO\nnrIWKJeeOdg0j6kOqX3UU5x1ItnBReuJfeH3eyG/Py5lP5u6ZG77LNHbbaV5\n+y4+LxMjPSZ8Wg0wUJjkhJRxPmORIRya5UK7+oW7WqnZ9WCcGVCXGKYDJRIs\nK/ZTJtZ0EX6gFSkkeBlOTI90hmgaB73N7rOaIT1q2SjeCgN+DpPuryXK2K5o\n7OGN6DKCsCipyGL7Kr7BoHhnJMjye0oCNtWjPave2uYI/IPCQ6BGIAIYDpaf\n6XKHASiiJzupPBoY92B+PNOEJVrY4AcAlqumin9cDASokSDP+fG9PXerMCJg\nCu7gwixHPDzprAlmPPO8Kb4mB8wFauulu7/LPGolYZcYZg8urVw9McYlIR0+\nbnb1Qx4NLNtzFgqoKnHmYOQISKpRPBmlUEF4R6j/lxsGRCUJEjDDrT9Xm00e\nDLOo\r\n=N98m\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.10.1_1590617291089_0.6156745673702966"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.10.3",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.10.3",
+        "@babel/helper-builder-react-jsx-experimental": "^7.10.1",
+        "@babel/helper-plugin-utils": "^7.10.3",
+        "@babel/plugin-syntax-jsx": "^7.10.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.3",
+        "@babel/helper-plugin-test-runner": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-transform-react-jsx@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-Y21E3rZmWICRJnvbGVmDLDZ8HfNDIwjGF3DXYHx1le0v0mIHCs0Gv5SavyW5Z/jgAHLaAoJPiwt+Dr7/zZKcOQ==",
+        "shasum": "c07ad86b7c159287c89b643f201f59536231048e",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.10.3.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8348,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYMCRA9TVsSAnZWagAAWLIQAITaBUno3UIncDrxhrIa\nJggSfM1lsGj+hlk8MiK8SXgiASIn/++VoGjYUJj5bC7A6aCSb04kv5C9oHpI\nd4XBHjmnDZWlKIW7GFDaYQ55N3dGEQMvEqieAbw+XmmAAH2S6ewcigS36r6G\n8cph+YgeAZIernGpQnneU6okqD6arzooUEslCkYMa6oidzeTbZfPp+YzmjTf\nchZKyCgqQDFh30ShH7G2vqEhsDroIUUKSFeD0ccsWOne52tK3+1TfZLHFO+H\nR3kU3K8wiEbql4R5PKeHn8T232OvC5WNPoZ0KrZrr0vsnOZcQh2M5OyemBaV\n3oC9ynAKE1yJphc0AVWDkKfrmJq7ppw7n7iWLWV7umdejk/8+N7TnookTG2x\nn33vcpZYGimnH+91/ePMuHGsnJTMj3fbEo7rtWeR3h4HXozOxAKd4xt5oP/U\n65ni+wAnWqcQJUqbyFDvFBfv9/9Ng7sfXYFDhSxrSqB+9DmSn3KZ7mFZd7pp\nOyYCw7afyIzlDf2fmuu1aykO+7w4ebYdb6lunERqI5iiSmlMoqJDB6TMajVB\n/rQlILg5bXvVtl1QNVzoTHmYzJ/VfYFfqRXby1Zhz8oAE90UARRNhm5Rl2ww\n+uvOuMYUHvyXyKiyF9l2WbGKPjecVVgP5+ZX0y96r1dNJeCFZNeesPmDFw8k\nxr4b\r\n=XPZ1\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.10.3_1592600076302_0.0741068538097851"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.10.4",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.10.4",
+        "@babel/helper-builder-react-jsx-experimental": "^7.10.4",
+        "@babel/helper-plugin-utils": "^7.10.4",
+        "@babel/plugin-syntax-jsx": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-transform-react-jsx@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-L+MfRhWjX0eI7Js093MM6MacKU4M6dnCRa/QPDwYMxjljzSCzzlzKzj9Pk4P3OtrPcxr2N3znR419nr3Xw+65A==",
+        "shasum": "673c9f913948764a4421683b2bef2936968fddf2",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.10.4.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8348,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zpcCRA9TVsSAnZWagAAbbIQAIAGEVeGCHRk6TbSMdXm\nPDe6F/wdFitW69xzMuuSQnED6xAEEoYk90KIg1DqJ9x8DZRGW+OB1kagc7rP\naoV8rZq4Up9kWHUQ6JNr+PKxOvr3uugDHupGcI4Um4LwoefAthwk8oJOnCR3\nqYJi+UZIN+DOfE+xvLRHOyb1FTMf84BPPOvuCCsq+5btNguy7SSCyRcc5mIZ\nBHfV0s6h1gQRFtRsNW/qjU6pBW63jvKd1CWXKL4Wt1s+iSj83SLFwaZ7RlSL\nHpKWlI5wiaH5mXFXYU33jw4zIeEGdXXPAliwAT6KBSWMlNRRuxzfcIkwwBcz\nD+pwX6Hln0EjzRVyQ0L5JTyuJfTn9ZpUeAByv59KRaxXEU1wcIKcZoftf5PD\n11tJglviPg5EdiSnG6vdnmabCecvBfnd3W8RhWRkC/fYQCTVNN6zTpMNwGnZ\nsalvct6+6KW8UgztgAoFP29pTZNRHwKq2D0cAGav8zCO1JLgqWLCG5oQGiaE\nNncG04w0v8I5sbl33btZNHY3kTKzU0mqmPlJP4QVtzv2EUKI/dQqjb1QaWsH\nngodH9L4HXFMERz88w0MuTv/fwkfs8WPVF7OLVdQ4BRKQNHdzUGutGi61mEl\n5T1dDg8E8MGfX52pie1xiIfo6Orx5hCUP47BdFTx3GzCUghcD+CndVmU9vrn\nnNEl\r\n=pQXS\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.10.4_1593522780375_0.3387042862478631"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/plugin-transform-react-jsx",
+      "version": "7.12.1",
+      "description": "Turn JSX into React function calls",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-builder-react-jsx": "^7.10.4",
+        "@babel/helper-builder-react-jsx-experimental": "^7.12.1",
+        "@babel/helper-plugin-utils": "^7.10.4",
+        "@babel/plugin-syntax-jsx": "^7.12.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.12.1",
+        "@babel/helper-plugin-test-runner": "7.10.4"
+      },
+      "_id": "@babel/plugin-transform-react-jsx@7.12.1",
+      "dist": {
+        "shasum": "c2d96c77c2b0e4362cc4e77a43ce7c2539d478cb",
+        "integrity": "sha512-RmKejwnT0T0QzQUzcbP5p1VWlpnP8QHtdhEtLG55ZDQnJNalbF3eeDyu3dnGKvGzFIQiBzFhBYTwvv435p9Xpw==",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.12.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 8289,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiNAfCRA9TVsSAnZWagAAouoP/RuQxXJ6QAGorTIQmiwW\ngEBja+T2I6HHSPSoOdOZDQePR2geTyl6vaMce0dhqnZcdNHp2AmFRgkapWGa\nx3qonY6WijdZ5RtlIwafEkR1M4KUwqgBrs3Dj5qy4vsqwSWLe93/yAq6KaFq\nnd/qoYerCn9GBV1zw+0Nh+hIDgMqAPie+kGc4uEgjCfyDWQDTH+vfx64mtFM\ny21QbfjjGWvlC37KCvq7iL7Iq9gdZGxmJd8GfJuHrrUAcHhzK3ZVaNBfyD09\nYssXCXRGIX/IxjZ2n3jfyIyZiHsoY6LlAmidECWSOr6MVypUo5/0Ivt+niko\nVnzQXKtxPyWWokG1NTQgW/YRNSBKKrCoUURoukDxWPr/Xd8Xe3NS5AZgT9l5\n3ZYFoTbwBrSpaJFR2V/5opAIjV69YirRfanKvWuHOMKhfFaivYyzYbKKZE+R\ngrm2lStox+TLWpF4DptaK9dEvnZeg673d+EjIz9me0CeRGRjuGECpGKhUqyN\nkcZQL42RmI5vDJiua9AWVFQi3uWce7nVS2n4Q8FvzRbWWQUFHjshzuWQoUsl\nlRcP6XmUA8Lvmg9kfQbSS0sMn7LoOnAvLzzdzEFAwtLbPyxaVhEDhnTdTndi\nfn0Vlf6Kj922BfYOf+eUdD6TMOOedcQotPtrUvTXHzYeMoz3+9KuLnaphCAs\nboK3\r\n=8NAG\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-react-jsx_7.12.1_1602801695501_0.36964369747039383"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:42:11.069Z",
+    "modified": "2020-10-15T22:41:39.250Z",
     "created": "2017-10-30T18:35:43.183Z",
     "7.0.0-beta.4": "2017-10-30T18:35:43.183Z",
     "7.0.0-beta.5": "2017-10-30T20:57:22.467Z",
@@ -2920,15 +3482,23 @@
     "7.7.4": "2019-11-22T23:33:23.920Z",
     "7.7.7": "2019-12-19T00:53:06.056Z",
     "7.8.0": "2020-01-12T00:17:14.841Z",
-    "7.8.3": "2020-01-13T21:42:07.630Z"
+    "7.8.3": "2020-01-13T21:42:07.630Z",
+    "7.9.0": "2020-03-20T15:40:09.925Z",
+    "7.9.1": "2020-03-20T21:51:33.452Z",
+    "7.9.4": "2020-03-24T08:31:18.678Z",
+    "7.10.1": "2020-05-27T22:08:11.184Z",
+    "7.10.3": "2020-06-19T20:54:36.515Z",
+    "7.10.4": "2020-06-30T13:13:00.520Z",
+    "7.12.1": "2020-10-15T22:41:35.606Z"
   },
   "keywords": [
     "babel-plugin"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-transform-react-jsx"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": ""
 }

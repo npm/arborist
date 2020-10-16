@@ -1649,7 +1649,5 @@
     "url": "https://github.com/chalk/ansi-styles/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "readme.md"
 }

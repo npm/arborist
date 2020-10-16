@@ -1,10 +1,11 @@
 {
   "_id": "mem",
-  "_rev": "35-ab0710a397b23301214730a9785cf912",
+  "_rev": "42-b05027cebcbf7d078309a69c3e498a01",
   "name": "mem",
   "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
   "dist-tags": {
-    "latest": "6.1.0"
+    "latest": "8.0.0",
+    "next": "7.0.0-3"
   },
   "versions": {
     "0.1.0": {
@@ -1312,25 +1313,589 @@
         "tmp": "tmp/mem_6.1.0_1586701398069_0.07114174247388583"
       },
       "_hasShrinkwrap": false
+    },
+    "6.1.1": {
+      "name": "mem",
+      "version": "6.1.1",
+      "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mem.git"
+      },
+      "funding": "https://github.com/sindresorhus/mem?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "memoize",
+        "function",
+        "mem",
+        "memoization",
+        "cache",
+        "caching",
+        "optimize",
+        "performance",
+        "ttl",
+        "expire",
+        "promise"
+      ],
+      "dependencies": {
+        "map-age-cleaner": "^0.1.3",
+        "mimic-fn": "^3.0.0"
+      },
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "delay": "^4.1.0",
+        "serialize-javascript": "^2.1.0",
+        "tsd": "^0.11.0",
+        "xo": "^0.25.3"
+      },
+      "gitHead": "807d7c0ef27c9d76fe682103ea39e6763abcf051",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mem/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mem#readme",
+      "_id": "mem@6.1.1",
+      "_nodeVersion": "10.22.0",
+      "_npmVersion": "6.14.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-Ci6bIfq/UgcxPTYa8dQQ5FY3BzKkT894bwXWXxC/zqs0XgMO2cT20CGkOqda7gZNkmK5VP4x89IGZ6K7hfbn3Q==",
+        "shasum": "ea110c2ebc079eca3022e6b08c85a795e77f6318",
+        "tarball": "https://registry.npmjs.org/mem/-/mem-6.1.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 13465,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfSs7sCRA9TVsSAnZWagAAZK0P/3AojGIRtoW/HY2kLu0g\n2I8IZjgy7wdYMdN3AdhjqntALhmtZUL8grm91hPAzJ+M05tBvgf7WBldwHkR\nnnnLQpTW+77OQ8inHG4uWvJssDAftJnsNRubQUX59UYZ0rv7hGXTR3xRZpdk\nPrEbSq71UD6SJzSSLQeo1HMd6WUWTEQr6LlEgtnQUzuHg03vLk5pVBCm+umF\nqlVjdmM+I7XOH33eiWLszzaj1z1Aq81LxvWA/+RK9Nnjx6XdaSGv4Hh0QQjc\nBk2w7JSqkwIXpI3baJXvURmsopHmFAJdGZuhbJiX6qW2dEtjeII/0h45Mv/j\nP4rYVD5VzSdZs/1t2witt0EtrsG6MHv6Aao12Y79c0k5Mwwre63JdpiIsXU/\nA5A8zA1AHDdjQglL5Pes2fxqCgtglqsqbWoiUWbg9NuOb1PxDckiXjY6gA4k\ni7jkFk15zElx4R+sIh0oc3rJuSQzIPes8jZ4XSrLAu+cuzwSaHqBuK+Dy22X\nEQkROCQ/z2yPmJrpMEoh/O8YI0bUc3qP8bvMveiUIols9MlRiYhGnbzQDRX/\nDdz9mz56LgAw5w7e+u6jx1oAGwS8ym07j+S7lmwkLY9ITHHLjiakrCXTgtAi\nU04l7a3VvpyTtYon98vxmYp5Nj+z1S7JT2wNNMXxODY6MxglZ3lyAXCNC/ZP\nkM9k\r\n=fB+m\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "opensource@bfred.it",
+          "name": "fregante"
+        },
+        {
+          "email": "sindresorhus@gmail.com",
+          "name": "sindresorhus"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mem_6.1.1_1598738155686_0.25783327221446584"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.0-0": {
+      "name": "mem",
+      "version": "7.0.0-0",
+      "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mem.git"
+      },
+      "funding": "https://github.com/sindresorhus/mem?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && npm run build && ava",
+        "build": "del-cli dist && tsc",
+        "prepack": "npm run build"
+      },
+      "main": "dist",
+      "keywords": [
+        "memoize",
+        "function",
+        "mem",
+        "memoization",
+        "cache",
+        "caching",
+        "optimize",
+        "performance",
+        "ttl",
+        "expire",
+        "promise"
+      ],
+      "dependencies": {
+        "map-age-cleaner": "^0.1.3",
+        "mimic-fn": "^3.0.0"
+      },
+      "devDependencies": {
+        "@ava/typescript": "^1.1.1",
+        "@sindresorhus/tsconfig": "^0.7.0",
+        "ava": "^2.4.0",
+        "del-cli": "^3.0.1",
+        "delay": "^4.1.0",
+        "serialize-javascript": "^2.1.0",
+        "typescript": "^4.0.3",
+        "xo": "^0.25.3"
+      },
+      "readme": "# mem [![Build Status](https://travis-ci.org/sindresorhus/mem.svg?branch=master)](https://travis-ci.org/sindresorhus/mem)\n\n> [Memoize](https://en.wikipedia.org/wiki/Memoization) functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input\n\nMemory is automatically released when an item expires or the cache is cleared.\n\nBy default, **only the first argument is considered** and it only works with [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive). If you need to cache multiple arguments or cache `object`s *by value*, have a look at alternative [caching strategies](#caching-strategy) below.\n\n## Install\n\n```\n$ npm install mem\n```\n\n## Usage\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = () => ++i;\nconst memoized = mem(counter);\n\nmemoized('foo');\n//=> 1\n\n// Cached as it's the same argument\nmemoized('foo');\n//=> 1\n\n// Not cached anymore as the argument changed\nmemoized('bar');\n//=> 2\n\nmemoized('bar');\n//=> 2\n\n// Only the first argument is considered by default\nmemoized('bar', 'foo');\n//=> 2\n```\n\n##### Works fine with promise returning functions\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = async () => ++i;\nconst memoized = mem(counter);\n\n(async () => {\n\tconsole.log(await memoized());\n\t//=> 1\n\n\t// The return value didn't increase as it's cached\n\tconsole.log(await memoized());\n\t//=> 1\n})();\n```\n\n```js\nconst mem = require('mem');\nconst got = require('got');\nconst delay = require('delay');\n\nconst memGot = mem(got, {maxAge: 1000});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\n\t// This call is cached\n\tawait memGot('https://sindresorhus.com');\n\n\tawait delay(2000);\n\n\t// This call is not cached as the cache has expired\n\tawait memGot('https://sindresorhus.com');\n})();\n```\n\n### Caching strategy\n\nBy default, only the first argument is compared via exact equality (`===`) to determine whether a call is identical.\n\n```js\nconst power = mem((a, b) => Math.power(a, b));\n\npower(2, 2); // => 4, stored in cache with the key 2 (number)\npower(2, 3); // => 4, retrieved from cache at key 2 (number), it's wrong\n```\n\nYou will have to use the `cache` and `cacheKey` options appropriate to your function. In this specific case, the following could work:\n\n```js\nconst power = mem((a, b) => Math.power(a, b), {\n  cacheKey: arguments_ => arguments_.join(',')\n});\n\npower(2, 2); // => 4, stored in cache with the key '2,2' (both arguments as one string)\npower(2, 3); // => 8, stored in cache with the key '2,3'\n```\n\nMore advanced examples follow.\n\n#### Example: Options-like argument\n\nIf your function accepts an object, it won't be memoized out of the box:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation);\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key, again\n// The objects look the same but for JS they're two different objects\n```\n\nYou might want to serialize or hash them, for example using `JSON.stringify` or something like [serialize-javascript](https://github.com/yahoo/serialize-javascript), which can also serialize `RegExp`, `Date` and so on.\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the key '[{\"full\":true}]' (string)\nheavyMemoizedOperation({full: true}); // Retrieved from cache\n```\n\nThe same solution also works if it accepts multiple serializable objects:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation('hello', {full: true}); // Stored in cache with the key '[\"hello\",{\"full\":true}]' (string)\nheavyMemoizedOperation('hello', {full: true}); // Retrieved from cache\n```\n\n#### Example: Multiple non-serializable arguments\n\nIf your function accepts multiple arguments that aren't supported by `JSON.stringify` (e.g. DOM elements and functions), you can instead extend the initial exact equality (`===`) to work on multiple arguments using [`many-keys-map`](https://github.com/fregante/many-keys-map):\n\n```js\nconst ManyKeysMap = require('many-keys-map');\n\nconst addListener = (emitter, eventName, listener) => emitter.on(eventName, listener);\n\nconst addOneListener = mem(addListener, {\n\tcacheKey: arguments_ => arguments_, // Use *all* the arguments as key\n\tcache: new ManyKeysMap() // Correctly handles all the arguments for exact equality\n});\n\naddOneListener(header, 'click', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\naddOneListener(header, 'click', console.log); // `addListener` is not run again\naddOneListener(mainContent, 'load', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\n```\n\nBetter yet, if your function’s arguments are compatible with `WeakMap`, you should use [`deep-weak-map`](https://github.com/futpib/deep-weak-map) instead of `many-keys-map`. This will help avoid memory leaks.\n\n## API\n\n### mem(fn, options?)\n\n#### fn\n\nType: `Function`\n\nFunction to be memoized.\n\n#### options\n\nType: `object`\n\n##### maxAge\n\nType: `number`\\\nDefault: `Infinity`\n\nMilliseconds until the cache expires.\n\n##### cacheKey\n\nType: `Function`\\\nDefault: `arguments_ => arguments_[0]`\\\nExample: `arguments_ => JSON.stringify(arguments_)`\n\nDetermines the cache key for storing the result based on the function arguments. By default, **only the first argument is considered**.\n\nA `cacheKey` function can return any type supported by `Map` (or whatever structure you use in the `cache` option).\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n##### cache\n\nType: `object`\\\nDefault: `new Map()`\n\nUse a different cache storage. Must implement the following methods: `.has(key)`, `.get(key)`, `.set(key, value)`, `.delete(key)`, and optionally `.clear()`. You could for example use a `WeakMap` instead or [`quick-lru`](https://github.com/sindresorhus/quick-lru) for a LRU cache.\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n### mem.clear(fn)\n\nClear all cached data of a memoized function.\n\n#### fn\n\nType: `Function`\n\nMemoized function.\n\n## Tips\n\n### Cache statistics\n\nIf you want to know how many times your cache had a hit or a miss, you can make use of [stats-map](https://github.com/SamVerschueren/stats-map) as a replacement for the default cache.\n\n#### Example\n\n```js\nconst mem = require('mem');\nconst StatsMap = require('stats-map');\nconst got = require('got');\n\nconst cache = new StatsMap();\nconst memGot = mem(got, {cache});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\n\tconsole.log(cache.stats);\n\t//=> {hits: 2, misses: 1}\n})();\n```\n\n## Related\n\n- [p-memoize](https://github.com/sindresorhus/p-memoize) - Memoize promise-returning & async functions\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-mem?utm_source=npm-mem&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
+      "readmeFilename": "readme.md",
+      "gitHead": "c7278273a12dc52f0d31fa32618e1c0c53e5f75a",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mem/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mem#readme",
+      "_id": "mem@7.0.0-0",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-zmKeaTcfG6grdWzOPBW0Vy73/sOmyoT6lGc07uVZ9Cjn1t6XYZ9E1ieXbI5+3zZ2kX5MujBkaDJA5C6W791e9w==",
+        "shasum": "9c201deb5666116ce445083142152f2f7104d189",
+        "tarball": "https://registry.npmjs.org/mem/-/mem-7.0.0-0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 14501,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdT0mCRA9TVsSAnZWagAADrsP/13H2oo1gercgFuBkevB\nelZxcG2W8CagAsC2cOv/lgB+j4BC64ibivhew/klgvZkm5wd+IA9w8Edo7ly\npT+T8RDNNvGZmUaK7mgn9CxOgP5+dzKUMU09mfWBOvH7+ZZp3EDGAM3KmfXY\nhw1DwoWRQOhvHVLqU+EQ9wE6phohr4TgyK630Xp4BG8lbenYJIyapRZYob0N\nXwYQiASytVToetGHmjA1a2B60SK2+ccPTEgtbAX48zpsJ6rmNeVZaIHPxslb\ncSxwzwaOr7EGW3xPdffyYs5ewOqljdclWOOKeyjA/BaAdBvHtZYzOi13nb53\nycBsMr3KRGt1gtAj4xENelsy7yzpul43CoH6v1dvLEAxmqLg+Eyf0Z64OhcX\nOQ5HSWIvKpm9sR83GrUZ15XiHE9kYLqYhDPbyHZHSVMDFwQZMWpZDC++lUCI\nAAjcDXe73+7/B43JOucZvcX7kpepfe3O23VzszegUxiFxlpCb73xyfSOYrRb\ntwuFuzOzBEhGKkDGzf7Hn6fxmm2Wimd4aJJlA+mWRuX26SIdOJLGN301rJTc\nZX5t1HtwnL8b8WjQZGVSDX8Cd/oiveVnMOiSQCex5lEjByAesn0F8JUm7N8P\n37nNEObSnaAgc9WTbAhzcDSM+tdsA7OAEKf+NxZoWBv8CT9Nwvvgf4eU/3By\ng0Fd\r\n=Wr2S\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        },
+        {
+          "name": "fregante",
+          "email": "opensource@bfred.it"
+        }
+      ],
+      "_npmUser": {
+        "name": "fregante",
+        "email": "opensource@bfred.it"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mem_7.0.0-0_1601518885488_0.6127079045959467"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.0-1": {
+      "name": "mem",
+      "version": "7.0.0-1",
+      "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mem.git"
+      },
+      "funding": "https://github.com/sindresorhus/mem?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && npm run build && ava",
+        "build": "del-cli dist && tsc",
+        "prepack": "npm run build"
+      },
+      "main": "dist",
+      "keywords": [
+        "memoize",
+        "function",
+        "mem",
+        "memoization",
+        "cache",
+        "caching",
+        "optimize",
+        "performance",
+        "ttl",
+        "expire",
+        "promise"
+      ],
+      "dependencies": {
+        "map-age-cleaner": "^0.1.3",
+        "mimic-fn": "^3.0.0"
+      },
+      "devDependencies": {
+        "@ava/typescript": "^1.1.1",
+        "@sindresorhus/tsconfig": "^0.7.0",
+        "ava": "^2.4.0",
+        "del-cli": "^3.0.1",
+        "delay": "^4.1.0",
+        "serialize-javascript": "^2.1.0",
+        "typescript": "^4.0.3",
+        "xo": "^0.25.3"
+      },
+      "gitHead": "28a9618f00ec98162d26e5616595831c71a3472c",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mem/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mem#readme",
+      "_id": "mem@7.0.0-1",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-uZ27qn08m7TqY2eqjWuT/mhAPbZh384vsXEqNBLvn/4moZNPkZMaMoo06nawla+Nkk+JSMGUTgp9Hmn6QLe7Qg==",
+        "shasum": "0a98d4c7f9f06bcb8b325fe50a14174255ec6f8d",
+        "tarball": "https://registry.npmjs.org/mem/-/mem-7.0.0-1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 14553,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdUN6CRA9TVsSAnZWagAAcn0P/2f7O60bD8oX9ougzo+s\ne5nXfdqS5jEdZ7VtLYn3J/XE7cr/KBL/2eKLNKXrnON4Vx/QZAYzAUcZT3Oe\nkmPRQtoArF2p3+IQkjLzc9ZsIuJYejtb7l05Kqm+lz7CxScTbEMgvAKcws1K\nABpLuaFwkCxhaYItLTJMuIiejNa4GyNNdO+dJ83WPC0DocHDs3jd3fo6UPYe\na14UWbnsZQWIV1GCs5wsGKQchhM7d25ZKCSDDB9HHjWbMq1ghXynsedZ2Fy5\nlKm0XNtYhCBH0wChYbD1yf5St+UXfZc7zzXaxNKgpp3SEeasAxg8C3VVVjMV\n0B5MNJ29FAGFlcZDS7L7+gXPuY0qb6GKMD4/29RpIQgI1PqFUUw1ipBQDma1\n3x4xyPT2DMACvc9VyFSxONhsGxXqNUSPML3lxcsHWEQQBAfFWh/M86ZWyNE1\nuwv6pJLrNclrZz8/Zm+xp4Qd47sFq6SG8ljPJLyJpCYpTnHAo9hMuNFeq8J5\nlbaUSwEQOG6nqpc5qGVBvE9NDMzNdx1ZFQd9UOy7Mg3zL4fg3TU2C2rNlFx+\n3SMMpYGYjNF2V2adikq3Bfsoq6YOHJ2rb21weIqm6qs1sJp5icFB/c045LGw\nGp6DJ2v9r9DyAa9LrCO1meMKQ9pd5Xy1zfRG8qAHxpAkjTO84kQiv038ChOJ\naqFN\r\n=F1tS\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        },
+        {
+          "name": "fregante",
+          "email": "opensource@bfred.it"
+        }
+      ],
+      "_npmUser": {
+        "name": "fregante",
+        "email": "opensource@bfred.it"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mem_7.0.0-1_1601520505592_0.17666955862077294"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.0-2": {
+      "name": "mem",
+      "version": "7.0.0-2",
+      "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mem.git"
+      },
+      "funding": "https://github.com/sindresorhus/mem?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && npm run build && ava",
+        "build": "del-cli dist && tsc",
+        "prepack": "npm run build"
+      },
+      "main": "dist",
+      "keywords": [
+        "memoize",
+        "function",
+        "mem",
+        "memoization",
+        "cache",
+        "caching",
+        "optimize",
+        "performance",
+        "ttl",
+        "expire",
+        "promise"
+      ],
+      "dependencies": {
+        "map-age-cleaner": "^0.1.3",
+        "mimic-fn": "^3.0.0"
+      },
+      "devDependencies": {
+        "@ava/typescript": "^1.1.1",
+        "@sindresorhus/tsconfig": "^0.7.0",
+        "@types/serialize-javascript": "^4.0.0",
+        "ava": "^3.13.0",
+        "del-cli": "^3.0.1",
+        "delay": "^4.1.0",
+        "serialize-javascript": "^5.0.1",
+        "typescript": "^4.0.3",
+        "xo": "^0.33.1"
+      },
+      "ava": {
+        "files": [
+          "test.ts"
+        ],
+        "timeout": "1m",
+        "typescript": {
+          "rewritePaths": {
+            "./": "dist/"
+          }
+        }
+      },
+      "xo": {
+        "rules": {
+          "@typescript-eslint/no-var-requires": "off",
+          "@typescript-eslint/no-empty-function": "off"
+        }
+      },
+      "readme": "# mem [![Build Status](https://travis-ci.org/sindresorhus/mem.svg?branch=master)](https://travis-ci.org/sindresorhus/mem)\n\n> [Memoize](https://en.wikipedia.org/wiki/Memoization) functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input\n\nMemory is automatically released when an item expires or the cache is cleared.\n\nBy default, **only the first argument is considered** and it only works with [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive). If you need to cache multiple arguments or cache `object`s *by value*, have a look at alternative [caching strategies](#caching-strategy) below.\n\n## Install\n\n```\n$ npm install mem\n```\n\n## Usage\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = () => ++i;\nconst memoized = mem(counter);\n\nmemoized('foo');\n//=> 1\n\n// Cached as it's the same argument\nmemoized('foo');\n//=> 1\n\n// Not cached anymore as the argument changed\nmemoized('bar');\n//=> 2\n\nmemoized('bar');\n//=> 2\n\n// Only the first argument is considered by default\nmemoized('bar', 'foo');\n//=> 2\n```\n\n##### Works fine with promise returning functions\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = async () => ++i;\nconst memoized = mem(counter);\n\n(async () => {\n\tconsole.log(await memoized());\n\t//=> 1\n\n\t// The return value didn't increase as it's cached\n\tconsole.log(await memoized());\n\t//=> 1\n})();\n```\n\n```js\nconst mem = require('mem');\nconst got = require('got');\nconst delay = require('delay');\n\nconst memGot = mem(got, {maxAge: 1000});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\n\t// This call is cached\n\tawait memGot('https://sindresorhus.com');\n\n\tawait delay(2000);\n\n\t// This call is not cached as the cache has expired\n\tawait memGot('https://sindresorhus.com');\n})();\n```\n\n### Caching strategy\n\nBy default, only the first argument is compared via exact equality (`===`) to determine whether a call is identical.\n\n```js\nconst power = mem((a, b) => Math.power(a, b));\n\npower(2, 2); // => 4, stored in cache with the key 2 (number)\npower(2, 3); // => 4, retrieved from cache at key 2 (number), it's wrong\n```\n\nYou will have to use the `cache` and `cacheKey` options appropriate to your function. In this specific case, the following could work:\n\n```js\nconst power = mem((a, b) => Math.power(a, b), {\n  cacheKey: arguments_ => arguments_.join(',')\n});\n\npower(2, 2); // => 4, stored in cache with the key '2,2' (both arguments as one string)\npower(2, 3); // => 8, stored in cache with the key '2,3'\n```\n\nMore advanced examples follow.\n\n#### Example: Options-like argument\n\nIf your function accepts an object, it won't be memoized out of the box:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation);\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key, again\n// The objects look the same but for JS they're two different objects\n```\n\nYou might want to serialize or hash them, for example using `JSON.stringify` or something like [serialize-javascript](https://github.com/yahoo/serialize-javascript), which can also serialize `RegExp`, `Date` and so on.\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the key '[{\"full\":true}]' (string)\nheavyMemoizedOperation({full: true}); // Retrieved from cache\n```\n\nThe same solution also works if it accepts multiple serializable objects:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation('hello', {full: true}); // Stored in cache with the key '[\"hello\",{\"full\":true}]' (string)\nheavyMemoizedOperation('hello', {full: true}); // Retrieved from cache\n```\n\n#### Example: Multiple non-serializable arguments\n\nIf your function accepts multiple arguments that aren't supported by `JSON.stringify` (e.g. DOM elements and functions), you can instead extend the initial exact equality (`===`) to work on multiple arguments using [`many-keys-map`](https://github.com/fregante/many-keys-map):\n\n```js\nconst ManyKeysMap = require('many-keys-map');\n\nconst addListener = (emitter, eventName, listener) => emitter.on(eventName, listener);\n\nconst addOneListener = mem(addListener, {\n\tcacheKey: arguments_ => arguments_, // Use *all* the arguments as key\n\tcache: new ManyKeysMap() // Correctly handles all the arguments for exact equality\n});\n\naddOneListener(header, 'click', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\naddOneListener(header, 'click', console.log); // `addListener` is not run again\naddOneListener(mainContent, 'load', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\n```\n\nBetter yet, if your function’s arguments are compatible with `WeakMap`, you should use [`deep-weak-map`](https://github.com/futpib/deep-weak-map) instead of `many-keys-map`. This will help avoid memory leaks.\n\n## API\n\n### mem(fn, options?)\n\n#### fn\n\nType: `Function`\n\nFunction to be memoized.\n\n#### options\n\nType: `object`\n\n##### maxAge\n\nType: `number`\\\nDefault: `Infinity`\n\nMilliseconds until the cache expires.\n\n##### cacheKey\n\nType: `Function`\\\nDefault: `arguments_ => arguments_[0]`\\\nExample: `arguments_ => JSON.stringify(arguments_)`\n\nDetermines the cache key for storing the result based on the function arguments. By default, **only the first argument is considered**.\n\nA `cacheKey` function can return any type supported by `Map` (or whatever structure you use in the `cache` option).\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n##### cache\n\nType: `object`\\\nDefault: `new Map()`\n\nUse a different cache storage. Must implement the following methods: `.has(key)`, `.get(key)`, `.set(key, value)`, `.delete(key)`, and optionally `.clear()`. You could for example use a `WeakMap` instead or [`quick-lru`](https://github.com/sindresorhus/quick-lru) for a LRU cache.\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n### mem.clear(fn)\n\nClear all cached data of a memoized function.\n\n#### fn\n\nType: `Function`\n\nMemoized function.\n\n## Tips\n\n### Cache statistics\n\nIf you want to know how many times your cache had a hit or a miss, you can make use of [stats-map](https://github.com/SamVerschueren/stats-map) as a replacement for the default cache.\n\n#### Example\n\n```js\nconst mem = require('mem');\nconst StatsMap = require('stats-map');\nconst got = require('got');\n\nconst cache = new StatsMap();\nconst memGot = mem(got, {cache});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\n\tconsole.log(cache.stats);\n\t//=> {hits: 2, misses: 1}\n})();\n```\n\n## Related\n\n- [p-memoize](https://github.com/sindresorhus/p-memoize) - Memoize promise-returning & async functions\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-mem?utm_source=npm-mem&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
+      "readmeFilename": "readme.md",
+      "gitHead": "be5f6db8401486b597b280e40d18910690f6c737",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mem/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mem#readme",
+      "_id": "mem@7.0.0-2",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-Y5cusA/lEuuAC+a4JRsPsPDvCjqf1r3tdkGH7IZzSEsAoZb7vZod/xJQr2Cpybaud6QATYG+1ULce1hfu3iWMg==",
+        "shasum": "f88933ed3b7843ba1a8a89ac99c2910223711bfb",
+        "tarball": "https://registry.npmjs.org/mem/-/mem-7.0.0-2.tgz",
+        "fileCount": 5,
+        "unpackedSize": 14846,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdZw2CRA9TVsSAnZWagAAZv8P/2sMEi7zX3fIyWCohQ7h\n+Q6CVyEWMY/JVMXf59RLrdz/YW5GbrJFlCbJoO2OcIJmgjl+QQvNd/59xgxh\nwn5ttEub9E9cdQB0WE1ekmnKHxvX5JU2MAid7bWE7ZyAsVm/x1MfytOTjKuH\nKJ6Vmocln1mG7pSnRmsOV6/tY9R7+N0FgtEz/fxKguQmDHdQP7lS2jvUxdyf\nFzM86OZ8yVw4g6ktDAEruw7LyGBcYjbEeCY5rfosFU06SCEBxaFH6SJv/v/G\nMxZpJ8bTQclrAOlkyKgqe7Iir5Q9nQ0MgTwvQ9NiyjyN5pruCZCkz1ImQ3K8\nLIjkKReKMmTl8PDzGXPNXo7EY0ado4Ts3x/9HAcYEMvdM+3+bKEg67ClSgHs\n/BheWi34AHlGI5WHt13kRzp0RlCqJPXDPBzo1reVj/xYe9hoxt1Qu3nWsAh3\nQy3SUybKkqJBA1mbl+yPxtieWp3mlM07ty+njpPWkX4H6VGrmVk8Ri8TkMe8\nC07O+NVZsesLj03ITa1HVZH15r39Nk4JwK+BRRUS5MJkCnQyFwtcaqFNNKqR\n3eRwwlYsjzJ0ulrlhprqSZd/cVAY96a3T9cCwNMH3VjFYleX5wsSX5kxEBmc\neUYOKFBrOsKJ5kkAJFGh+8IJyxS5gYL3h+LYnmL3b2aCyxlX7RgDmrj01CKI\nuwEL\r\n=l7Nf\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        },
+        {
+          "name": "fregante",
+          "email": "opensource@bfred.it"
+        }
+      ],
+      "_npmUser": {
+        "name": "fregante",
+        "email": "opensource@bfred.it"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mem_7.0.0-2_1601543222172_0.814094441690246"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.0-3": {
+      "name": "mem",
+      "version": "7.0.0-3",
+      "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mem.git"
+      },
+      "funding": "https://github.com/sindresorhus/mem?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && npm run build && tsd && ava",
+        "build": "del-cli dist && tsc",
+        "prepack": "npm run build"
+      },
+      "main": "dist",
+      "types": "dist/index.d.ts",
+      "keywords": [
+        "memoize",
+        "function",
+        "mem",
+        "memoization",
+        "cache",
+        "caching",
+        "optimize",
+        "performance",
+        "ttl",
+        "expire",
+        "promise"
+      ],
+      "dependencies": {
+        "map-age-cleaner": "^0.1.3",
+        "mimic-fn": "^3.0.0"
+      },
+      "devDependencies": {
+        "@sindresorhus/tsconfig": "^0.7.0",
+        "ava": "^3.13.0",
+        "del-cli": "^3.0.1",
+        "delay": "^4.1.0",
+        "serialize-javascript": "^5.0.1",
+        "tsd": "^0.13.1",
+        "typescript": "^4.0.3",
+        "xo": "^0.33.1"
+      },
+      "readme": "# mem [![Build Status](https://travis-ci.org/sindresorhus/mem.svg?branch=master)](https://travis-ci.org/sindresorhus/mem)\n\n> [Memoize](https://en.wikipedia.org/wiki/Memoization) functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input\n\nMemory is automatically released when an item expires or the cache is cleared.\n\nBy default, **only the first argument is considered** and it only works with [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive). If you need to cache multiple arguments or cache `object`s *by value*, have a look at alternative [caching strategies](#caching-strategy) below.\n\n## Install\n\n```\n$ npm install mem\n```\n\n## Usage\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = () => ++i;\nconst memoized = mem(counter);\n\nmemoized('foo');\n//=> 1\n\n// Cached as it's the same argument\nmemoized('foo');\n//=> 1\n\n// Not cached anymore as the argument changed\nmemoized('bar');\n//=> 2\n\nmemoized('bar');\n//=> 2\n\n// Only the first argument is considered by default\nmemoized('bar', 'foo');\n//=> 2\n```\n\n##### Works fine with promise returning functions\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = async () => ++i;\nconst memoized = mem(counter);\n\n(async () => {\n\tconsole.log(await memoized());\n\t//=> 1\n\n\t// The return value didn't increase as it's cached\n\tconsole.log(await memoized());\n\t//=> 1\n})();\n```\n\n```js\nconst mem = require('mem');\nconst got = require('got');\nconst delay = require('delay');\n\nconst memGot = mem(got, {maxAge: 1000});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\n\t// This call is cached\n\tawait memGot('https://sindresorhus.com');\n\n\tawait delay(2000);\n\n\t// This call is not cached as the cache has expired\n\tawait memGot('https://sindresorhus.com');\n})();\n```\n\n### Caching strategy\n\nBy default, only the first argument is compared via exact equality (`===`) to determine whether a call is identical.\n\n```js\nconst power = mem((a, b) => Math.power(a, b));\n\npower(2, 2); // => 4, stored in cache with the key 2 (number)\npower(2, 3); // => 4, retrieved from cache at key 2 (number), it's wrong\n```\n\nYou will have to use the `cache` and `cacheKey` options appropriate to your function. In this specific case, the following could work:\n\n```js\nconst power = mem((a, b) => Math.power(a, b), {\n  cacheKey: arguments_ => arguments_.join(',')\n});\n\npower(2, 2); // => 4, stored in cache with the key '2,2' (both arguments as one string)\npower(2, 3); // => 8, stored in cache with the key '2,3'\n```\n\nMore advanced examples follow.\n\n#### Example: Options-like argument\n\nIf your function accepts an object, it won't be memoized out of the box:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation);\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key, again\n// The objects look the same but for JS they're two different objects\n```\n\nYou might want to serialize or hash them, for example using `JSON.stringify` or something like [serialize-javascript](https://github.com/yahoo/serialize-javascript), which can also serialize `RegExp`, `Date` and so on.\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the key '[{\"full\":true}]' (string)\nheavyMemoizedOperation({full: true}); // Retrieved from cache\n```\n\nThe same solution also works if it accepts multiple serializable objects:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation('hello', {full: true}); // Stored in cache with the key '[\"hello\",{\"full\":true}]' (string)\nheavyMemoizedOperation('hello', {full: true}); // Retrieved from cache\n```\n\n#### Example: Multiple non-serializable arguments\n\nIf your function accepts multiple arguments that aren't supported by `JSON.stringify` (e.g. DOM elements and functions), you can instead extend the initial exact equality (`===`) to work on multiple arguments using [`many-keys-map`](https://github.com/fregante/many-keys-map):\n\n```js\nconst ManyKeysMap = require('many-keys-map');\n\nconst addListener = (emitter, eventName, listener) => emitter.on(eventName, listener);\n\nconst addOneListener = mem(addListener, {\n\tcacheKey: arguments_ => arguments_, // Use *all* the arguments as key\n\tcache: new ManyKeysMap() // Correctly handles all the arguments for exact equality\n});\n\naddOneListener(header, 'click', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\naddOneListener(header, 'click', console.log); // `addListener` is not run again\naddOneListener(mainContent, 'load', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\n```\n\nBetter yet, if your function’s arguments are compatible with `WeakMap`, you should use [`deep-weak-map`](https://github.com/futpib/deep-weak-map) instead of `many-keys-map`. This will help avoid memory leaks.\n\n## API\n\n### mem(fn, options?)\n\n#### fn\n\nType: `Function`\n\nFunction to be memoized.\n\n#### options\n\nType: `object`\n\n##### maxAge\n\nType: `number`\\\nDefault: `Infinity`\n\nMilliseconds until the cache expires.\n\n##### cacheKey\n\nType: `Function`\\\nDefault: `arguments_ => arguments_[0]`\\\nExample: `arguments_ => JSON.stringify(arguments_)`\n\nDetermines the cache key for storing the result based on the function arguments. By default, **only the first argument is considered**.\n\nA `cacheKey` function can return any type supported by `Map` (or whatever structure you use in the `cache` option).\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n##### cache\n\nType: `object`\\\nDefault: `new Map()`\n\nUse a different cache storage. Must implement the following methods: `.has(key)`, `.get(key)`, `.set(key, value)`, `.delete(key)`, and optionally `.clear()`. You could for example use a `WeakMap` instead or [`quick-lru`](https://github.com/sindresorhus/quick-lru) for a LRU cache.\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n### mem.clear(fn)\n\nClear all cached data of a memoized function.\n\n#### fn\n\nType: `Function`\n\nMemoized function.\n\n## Tips\n\n### Cache statistics\n\nIf you want to know how many times your cache had a hit or a miss, you can make use of [stats-map](https://github.com/SamVerschueren/stats-map) as a replacement for the default cache.\n\n#### Example\n\n```js\nconst mem = require('mem');\nconst StatsMap = require('stats-map');\nconst got = require('got');\n\nconst cache = new StatsMap();\nconst memGot = mem(got, {cache});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\n\tconsole.log(cache.stats);\n\t//=> {hits: 2, misses: 1}\n})();\n```\n\n## Related\n\n- [p-memoize](https://github.com/sindresorhus/p-memoize) - Memoize promise-returning & async functions\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-mem?utm_source=npm-mem&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
+      "readmeFilename": "readme.md",
+      "gitHead": "de486e4b344fd4f4315aecb4055a8c4e8e119d86",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mem/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mem#readme",
+      "_id": "mem@7.0.0-3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-kUcydKLeeoGt0YyhawhBvZne2SlsBeXHWBKcgW7GGX3fJ3XT3ogsoCjVHkPl0Dfpz1XyZNUiZ9UcfK8nTl4Fvw==",
+        "shasum": "d3c44d02713c56eb196ed959cc530c68474ec8cd",
+        "tarball": "https://registry.npmjs.org/mem/-/mem-7.0.0-3.tgz",
+        "fileCount": 5,
+        "unpackedSize": 14571,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJffA3wCRA9TVsSAnZWagAAvrkP/jQb2B/WRzKm+OZGnMF9\nA0xWhoJpARxgYJedmzbDOXF9rdX8tFbNNfsX2ds3yUFR2Tn82XGfweUvHkp2\npsVBvZ9M2itGsVy/AMe+bAGBSSG8sXdHlTMLWna8X35xpKgXnVHCDZOl6HW1\nM6R27p2fXhpOz3o+7l+/T/vciIxYIZLFd4eZQ9Jfn6bzDnuN+Mf86Yp3vLKw\n/uAL3xXV5nsAilgR/5nWNuJB52+ce8Fj9lWXpCUIDRWRkV0Vc14bWH9R0w9y\nz5rRPTeCvspOQPO/6+1Y5sLmBoOZf7D4WdatWfh1vYOjBsNYmHN0RQtq99hm\nMFIZO+/Hf/K3wXYxOO/RHcsK2weQd5sD2u7fzjBbqqLcEUBMl8SuCK7OrQK5\nn7Y9HbwIIB+XEpSgZCYnt4NT50AwROMCcUFBLg8Cho8Omzi3PUPV9DCkXL63\ndfSpA2tbcUxHBLg34Zb14/K+QxZLM4IPj+8W0ntpLhPfDu+iQetphlr7LKDc\nR7tbNBcebZhMbuV4wA3xUizDL60HHZkkSQkN5gIftF3QYu7J4pIHXbLybVN6\nuFCsSXuwYZWSqbaNC9ZkcR6yrGYgX0Vi3JUrvkO+KU5wgbXw6fw9g83zOZ3K\nGlT0TOdnRUKsidQns1jeUW2VjdeBkP18q2CYhVnH0fFANIzIh2yyEg0qypHD\nN/Uk\r\n=1d8d\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        },
+        {
+          "name": "fregante",
+          "email": "opensource@bfred.it"
+        }
+      ],
+      "_npmUser": {
+        "name": "fregante",
+        "email": "opensource@bfred.it"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mem_7.0.0-3_1601965551939_0.5177473435317104"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.0.0": {
+      "name": "mem",
+      "version": "8.0.0",
+      "description": "Memoize functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mem.git"
+      },
+      "funding": "https://github.com/sindresorhus/mem?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && npm run build && tsd && ava",
+        "build": "del-cli dist && tsc",
+        "prepack": "npm run build"
+      },
+      "main": "dist",
+      "types": "dist/index.d.ts",
+      "keywords": [
+        "memoize",
+        "function",
+        "mem",
+        "memoization",
+        "cache",
+        "caching",
+        "optimize",
+        "performance",
+        "ttl",
+        "expire",
+        "promise"
+      ],
+      "dependencies": {
+        "map-age-cleaner": "^0.1.3",
+        "mimic-fn": "^3.1.0"
+      },
+      "devDependencies": {
+        "@ava/typescript": "^1.1.1",
+        "@sindresorhus/tsconfig": "^0.7.0",
+        "@types/serialize-javascript": "^4.0.0",
+        "ava": "^3.13.0",
+        "del-cli": "^3.0.1",
+        "delay": "^4.4.0",
+        "serialize-javascript": "^5.0.1",
+        "tsd": "^0.13.1",
+        "typescript": "^4.0.3",
+        "xo": "^0.33.1"
+      },
+      "ava": {
+        "files": [
+          "test.ts"
+        ],
+        "timeout": "1m",
+        "typescript": {
+          "rewritePaths": {
+            "./": "dist/"
+          }
+        }
+      },
+      "xo": {
+        "rules": {
+          "@typescript-eslint/member-ordering": "off",
+          "@typescript-eslint/no-var-requires": "off",
+          "@typescript-eslint/no-empty-function": "off"
+        }
+      },
+      "gitHead": "3bbfa2439df58e46ba917aa3e7eb0d9d0bccc0f2",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mem/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mem#readme",
+      "_id": "mem@8.0.0",
+      "_nodeVersion": "14.11.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-qrcJOe6uD+EW8Wrci1Vdiua/15Xw3n/QnaNXE7varnB6InxSk7nu3/i5jfy3S6kWxr8WYJ6R1o0afMUtvorTsA==",
+        "shasum": "b5e4b6d2d241c6296da05436173b4d0c7ae1f9ac",
+        "tarball": "https://registry.npmjs.org/mem/-/mem-8.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 15059,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfgeCRCRA9TVsSAnZWagAAwjsP/jh/hMLThPYEBbmz58b8\nA62N2CN+gNR/q0FWbs8A9CFzIdd0XccRXQyKjRA6Z5Sg9DMNoaGVazhBtRh+\nStjGr3JZ2ZANELeTWalZEZ+7Agql7un2VaqcmMmbyaBNgNOSxaEWNhfHiRlD\nEq9aXXSEPjIHLF6UArdQ/eqLesb40CJZJ5/mjXNtJKETJpLLOV2RWnwUuuyK\nrnXqKczmNv0n/zGk4WZh484ICggFOFnzlYpb1eaDHs0rRogx07q3cuI2jDYH\nLFRosbBIGBWUmVEfiyyapXEQYqzKZbOnyjw4IbsszAv+s4RIOJQYQVEMS7xX\nB+fFoowfqmO9KqUiWENXhFwZOd4JRGY7VsUIdb2lo3vwFyxPOleXEQ1VR9jG\nm5P2mhW2f8dqTXYXjMrYLStmpdTeH+TPtWABTRavQvz4P3aGHa9ZiMyxKGkV\ndAEEzLfPmJg94RkLgowm1coFMK09nJoeHZPoFenKusZEBWfHpgp7B6N9pw9u\n10l2BDwwDDhjXl1BjPVKcnLhhjCeGiSma9fEICbKIT7ZxJKPJb2V8IuJhYNg\nGUGUJ90LtMFaKhCMiIYgs7KFrinyBCygpsfeM20A9BfrfhSh8KyZHKbKHFq4\nk0NBKFLBgZ63TlL0Dm4DAF8IxxIMuXdQcmaRNgQWhO4C5fWpqQDKFuAtU31o\nwSW2\r\n=uC19\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        },
+        {
+          "name": "fregante",
+          "email": "opensource@bfred.it"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mem_8.0.0_1602347152712_0.37521709756771005"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "# mem [![Build Status](https://travis-ci.org/sindresorhus/mem.svg?branch=master)](https://travis-ci.org/sindresorhus/mem)\n\n> [Memoize](https://en.wikipedia.org/wiki/Memoization) functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input\n\nMemory is automatically released when an item expires or the cache is cleared.\n\nBy default, **only the first argument is considered** and it only works with [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive). If you need to cache multiple arguments or cache `object`s *by value*, have a look at alternative [caching strategies](#caching-strategy) below.\n\n\n## Install\n\n```\n$ npm install mem\n```\n\n\n## Usage\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = () => ++i;\nconst memoized = mem(counter);\n\nmemoized('foo');\n//=> 1\n\n// Cached as it's the same argument\nmemoized('foo');\n//=> 1\n\n// Not cached anymore as the argument changed\nmemoized('bar');\n//=> 2\n\nmemoized('bar');\n//=> 2\n\n// Only the first argument is considered by default\nmemoized('bar', 'foo');\n//=> 2\n```\n\n##### Works fine with promise returning functions\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = async () => ++i;\nconst memoized = mem(counter);\n\n(async () => {\n\tconsole.log(await memoized());\n\t//=> 1\n\n\t// The return value didn't increase as it's cached\n\tconsole.log(await memoized());\n\t//=> 1\n})();\n```\n\n```js\nconst mem = require('mem');\nconst got = require('got');\nconst delay = require('delay');\n\nconst memGot = mem(got, {maxAge: 1000});\n\n(async () => {\n\tawait memGot('sindresorhus.com');\n\n\t// This call is cached\n\tawait memGot('sindresorhus.com');\n\n\tawait delay(2000);\n\n\t// This call is not cached as the cache has expired\n\tawait memGot('sindresorhus.com');\n})();\n```\n\n### Caching strategy\n\nBy default, only the first argument is compared via exact equality (`===`) to determine whether a call is identical.\n\n```js\nconst power = mem((a, b) => Math.power(a, b));\n\npower(2, 2); // => 4, stored in cache with the key 2 (number)\npower(2, 3); // => 4, retrieved from cache at key 2 (number), it's wrong\n```\n\nYou will have to use the `cache` and `cacheKey` options appropriate to your function. In this specific case, the following could work:\n\n```js\nconst power = mem((a, b) => Math.power(a, b), {\n  cacheKey: arguments_ => arguments_.join(',')\n});\n\npower(2, 2); // => 4, stored in cache with the key '2,2' (both arguments as one string)\npower(2, 3); // => 8, stored in cache with the key '2,3'\n```\n\nMore advanced examples follow.\n\n#### Example: Options-like argument\n\nIf your function accepts an object, it won't be memoized out of the box:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation);\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key, again\n// The objects look the same but for JS they're two different objects\n```\n\nYou might want to serialize or hash them, for example using `JSON.stringify` or something like [serialize-javascript](https://github.com/yahoo/serialize-javascript), which can also serialize `RegExp`, `Date` and so on.\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the key '[{\"full\":true}]' (string)\nheavyMemoizedOperation({full: true}); // Retrieved from cache\n```\n\nThe same solution also works if it accepts multiple serializable objects:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation('hello', {full: true}); // Stored in cache with the key '[\"hello\",{\"full\":true}]' (string)\nheavyMemoizedOperation('hello', {full: true}); // Retrieved from cache\n```\n\n#### Example: Multiple non-serializable arguments\n\nIf your function accepts multiple arguments that aren't supported by `JSON.stringify` (e.g. DOM elements and functions), you can instead extend the initial exact equality (`===`) to work on multiple arguments using [`many-keys-map`](https://github.com/fregante/many-keys-map):\n\n```js\nconst ManyKeysMap = require('many-keys-map');\n\nconst addListener = (emitter, eventName, listener) => emitter.on(eventName, listener);\n\nconst addOneListener = mem(addListener, {\n\tcacheKey: arguments_ => arguments_, // Use *all* the arguments as key\n\tcache: new ManyKeysMap() // Correctly handles all the arguments for exact equality\n});\n\naddOneListener(header, 'click', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\naddOneListener(header, 'click', console.log); // `addListener` is not run again\naddOneListener(mainContent, 'load', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\n```\n\nBetter yet, if your function’s arguments are compatible with `WeakMap`, you should use [`deep-weak-map`](https://github.com/futpib/deep-weak-map) instead of `many-keys-map`. This will help avoid memory leaks.\n\n\n## API\n\n### mem(fn, options?)\n\n#### fn\n\nType: `Function`\n\nFunction to be memoized.\n\n#### options\n\nType: `object`\n\n##### maxAge\n\nType: `number`\\\nDefault: `Infinity`\n\nMilliseconds until the cache expires.\n\n##### cacheKey\n\nType: `Function`\\\nDefault: `arguments_ => arguments_[0]`\\\nExample: `arguments_ => JSON.stringify(arguments_)`\n\nDetermines the cache key for storing the result based on the function arguments. By default, **only the first argument is considered**.\n\nA `cacheKey` function can return any type supported by `Map` (or whatever structure you use in the `cache` option).\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n##### cache\n\nType: `object`\\\nDefault: `new Map()`, but it also intelligently uses `new WeakMap()` whenevever possible\n\nUse a different cache storage. Must implement the following methods: `.has(key)`, `.get(key)`, `.set(key, value)`, `.delete(key)`, and optionally `.clear()`. You could for example use [`quick-lru`](https://github.com/sindresorhus/quick-lru) for a LRU cache.\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n### mem.clear(fn)\n\nClear all cached data of a memoized function.\n\n#### fn\n\nType: `Function`\n\nMemoized function.\n\n\n## Tips\n\n### Cache statistics\n\nIf you want to know how many times your cache had a hit or a miss, you can make use of [stats-map](https://github.com/SamVerschueren/stats-map) as a replacement for the default cache.\n\n#### Example\n\n```js\nconst mem = require('mem');\nconst StatsMap = require('stats-map');\nconst got = require('got');\n\nconst cache = new StatsMap();\nconst memGot = mem(got, {cache});\n\n(async () => {\n\tawait memGot('sindresorhus.com');\n\tawait memGot('sindresorhus.com');\n\tawait memGot('sindresorhus.com');\n\n\tconsole.log(cache.stats);\n\t//=> {hits: 2, misses: 1}\n})();\n```\n\n\n## Related\n\n- [p-memoize](https://github.com/sindresorhus/p-memoize) - Memoize promise-returning & async functions\n\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-mem?utm_source=npm-mem&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
+  "readme": "# mem [![Build Status](https://travis-ci.com/sindresorhus/mem.svg?branch=master)](https://travis-ci.com/github/sindresorhus/mem)\n\n> [Memoize](https://en.wikipedia.org/wiki/Memoization) functions - An optimization used to speed up consecutive function calls by caching the result of calls with identical input\n\nMemory is automatically released when an item expires or the cache is cleared.\n\nBy default, **only the first argument is considered** and it only works with [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive). If you need to cache multiple arguments or cache `object`s *by value*, have a look at alternative [caching strategies](#caching-strategy) below.\n\n## Install\n\n```\n$ npm install mem\n```\n\n## Usage\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = () => ++i;\nconst memoized = mem(counter);\n\nmemoized('foo');\n//=> 1\n\n// Cached as it's the same argument\nmemoized('foo');\n//=> 1\n\n// Not cached anymore as the argument changed\nmemoized('bar');\n//=> 2\n\nmemoized('bar');\n//=> 2\n\n// Only the first argument is considered by default\nmemoized('bar', 'foo');\n//=> 2\n```\n\n##### Works fine with promise returning functions\n\n```js\nconst mem = require('mem');\n\nlet i = 0;\nconst counter = async () => ++i;\nconst memoized = mem(counter);\n\n(async () => {\n\tconsole.log(await memoized());\n\t//=> 1\n\n\t// The return value didn't increase as it's cached\n\tconsole.log(await memoized());\n\t//=> 1\n})();\n```\n\n```js\nconst mem = require('mem');\nconst got = require('got');\nconst delay = require('delay');\n\nconst memGot = mem(got, {maxAge: 1000});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\n\t// This call is cached\n\tawait memGot('https://sindresorhus.com');\n\n\tawait delay(2000);\n\n\t// This call is not cached as the cache has expired\n\tawait memGot('https://sindresorhus.com');\n})();\n```\n\n### Caching strategy\n\nBy default, only the first argument is compared via exact equality (`===`) to determine whether a call is identical.\n\n```js\nconst power = mem((a, b) => Math.power(a, b));\n\npower(2, 2); // => 4, stored in cache with the key 2 (number)\npower(2, 3); // => 4, retrieved from cache at key 2 (number), it's wrong\n```\n\nYou will have to use the `cache` and `cacheKey` options appropriate to your function. In this specific case, the following could work:\n\n```js\nconst power = mem((a, b) => Math.power(a, b), {\n  cacheKey: arguments_ => arguments_.join(',')\n});\n\npower(2, 2); // => 4, stored in cache with the key '2,2' (both arguments as one string)\npower(2, 3); // => 8, stored in cache with the key '2,3'\n```\n\nMore advanced examples follow.\n\n#### Example: Options-like argument\n\nIf your function accepts an object, it won't be memoized out of the box:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation);\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key\nheavyMemoizedOperation({full: true}); // Stored in cache with the object as key, again\n// The objects look the same but for JS they're two different objects\n```\n\nYou might want to serialize or hash them, for example using `JSON.stringify` or something like [serialize-javascript](https://github.com/yahoo/serialize-javascript), which can also serialize `RegExp`, `Date` and so on.\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation({full: true}); // Stored in cache with the key '[{\"full\":true}]' (string)\nheavyMemoizedOperation({full: true}); // Retrieved from cache\n```\n\nThe same solution also works if it accepts multiple serializable objects:\n\n```js\nconst heavyMemoizedOperation = mem(heavyOperation, {cacheKey: JSON.stringify});\n\nheavyMemoizedOperation('hello', {full: true}); // Stored in cache with the key '[\"hello\",{\"full\":true}]' (string)\nheavyMemoizedOperation('hello', {full: true}); // Retrieved from cache\n```\n\n#### Example: Multiple non-serializable arguments\n\nIf your function accepts multiple arguments that aren't supported by `JSON.stringify` (e.g. DOM elements and functions), you can instead extend the initial exact equality (`===`) to work on multiple arguments using [`many-keys-map`](https://github.com/fregante/many-keys-map):\n\n```js\nconst ManyKeysMap = require('many-keys-map');\n\nconst addListener = (emitter, eventName, listener) => emitter.on(eventName, listener);\n\nconst addOneListener = mem(addListener, {\n\tcacheKey: arguments_ => arguments_, // Use *all* the arguments as key\n\tcache: new ManyKeysMap() // Correctly handles all the arguments for exact equality\n});\n\naddOneListener(header, 'click', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\naddOneListener(header, 'click', console.log); // `addListener` is not run again\naddOneListener(mainContent, 'load', console.log); // `addListener` is run, and it's cached with the `arguments` array as key\n```\n\nBetter yet, if your function’s arguments are compatible with `WeakMap`, you should use [`deep-weak-map`](https://github.com/futpib/deep-weak-map) instead of `many-keys-map`. This will help avoid memory leaks.\n\n## API\n\n### mem(fn, options?)\n\n#### fn\n\nType: `Function`\n\nFunction to be memoized.\n\n#### options\n\nType: `object`\n\n##### maxAge\n\nType: `number`\\\nDefault: `Infinity`\n\nMilliseconds until the cache expires.\n\n##### cacheKey\n\nType: `Function`\\\nDefault: `arguments_ => arguments_[0]`\\\nExample: `arguments_ => JSON.stringify(arguments_)`\n\nDetermines the cache key for storing the result based on the function arguments. By default, **only the first argument is considered**.\n\nA `cacheKey` function can return any type supported by `Map` (or whatever structure you use in the `cache` option).\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n##### cache\n\nType: `object`\\\nDefault: `new Map()`\n\nUse a different cache storage. Must implement the following methods: `.has(key)`, `.get(key)`, `.set(key, value)`, `.delete(key)`, and optionally `.clear()`. You could for example use a `WeakMap` instead or [`quick-lru`](https://github.com/sindresorhus/quick-lru) for a LRU cache.\n\nRefer to the [caching strategies](#caching-strategy) section for more information.\n\n### mem.clear(fn)\n\nClear all cached data of a memoized function.\n\n#### fn\n\nType: `Function`\n\nMemoized function.\n\n## Tips\n\n### Cache statistics\n\nIf you want to know how many times your cache had a hit or a miss, you can make use of [stats-map](https://github.com/SamVerschueren/stats-map) as a replacement for the default cache.\n\n#### Example\n\n```js\nconst mem = require('mem');\nconst StatsMap = require('stats-map');\nconst got = require('got');\n\nconst cache = new StatsMap();\nconst memGot = mem(got, {cache});\n\n(async () => {\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\tawait memGot('https://sindresorhus.com');\n\n\tconsole.log(cache.stats);\n\t//=> {hits: 2, misses: 1}\n})();\n```\n\n## Related\n\n- [p-memoize](https://github.com/sindresorhus/p-memoize) - Memoize promise-returning & async functions\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-mem?utm_source=npm-mem&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
-      "email": "npm@bfred.it",
-      "name": "bfred-it"
+      "name": "sindresorhus",
+      "email": "sindresorhus@gmail.com"
     },
     {
-      "email": "opensource@bfred.it",
-      "name": "fregante"
-    },
-    {
-      "email": "sindresorhus@gmail.com",
-      "name": "sindresorhus"
+      "name": "fregante",
+      "email": "opensource@bfred.it"
     }
   ],
   "time": {
-    "modified": "2020-04-12T14:23:20.736Z",
+    "modified": "2020-10-10T16:25:56.714Z",
     "created": "2013-01-22T23:16:13.120Z",
     "0.0.1": "2013-01-22T23:16:15.354Z",
     "0.1.0": "2015-12-21T18:44:14.279Z",
@@ -1349,12 +1914,18 @@
     "5.1.1": "2019-06-29T20:05:51.216Z",
     "6.0.0": "2019-11-11T09:23:28.762Z",
     "6.0.1": "2019-11-29T13:29:37.074Z",
-    "6.1.0": "2020-04-12T14:23:18.378Z"
+    "6.1.0": "2020-04-12T14:23:18.378Z",
+    "6.1.1": "2020-08-29T21:55:55.811Z",
+    "7.0.0-0": "2020-10-01T02:21:25.656Z",
+    "7.0.0-1": "2020-10-01T02:48:25.698Z",
+    "7.0.0-2": "2020-10-01T09:07:02.292Z",
+    "7.0.0-3": "2020-10-06T06:25:52.072Z",
+    "8.0.0": "2020-10-10T16:25:52.870Z"
   },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "repository": {
     "type": "git",

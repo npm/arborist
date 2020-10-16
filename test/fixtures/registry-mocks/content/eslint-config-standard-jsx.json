@@ -2244,7 +2244,5 @@
     "url": "https://github.com/standard/eslint-config-standard-jsx/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

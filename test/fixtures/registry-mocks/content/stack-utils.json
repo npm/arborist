@@ -1,10 +1,10 @@
 {
   "_id": "stack-utils",
-  "_rev": "14-f91269b0eab7a1b6865d5c3b13e25d56",
+  "_rev": "15-c94731879b8e4a8dc01afe3315f25520",
   "name": "stack-utils",
   "description": "Captures and cleans stack traces",
   "dist-tags": {
-    "latest": "2.0.1"
+    "latest": "2.0.2"
   },
   "versions": {
     "0.0.1": {
@@ -685,8 +685,80 @@
         "tmp": "tmp/stack-utils_2.0.1_1576219832040_0.7200474147237628"
       },
       "_hasShrinkwrap": false
+    },
+    "2.0.2": {
+      "name": "stack-utils",
+      "version": "2.0.2",
+      "description": "Captures and cleans stack traces",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tapjs/stack-utils.git"
+      },
+      "author": {
+        "name": "James Talmage",
+        "email": "james@talmage.io",
+        "url": "github.com/jamestalmage"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "tap --no-esm --100",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "dependencies": {
+        "escape-string-regexp": "^2.0.0"
+      },
+      "devDependencies": {
+        "bluebird": "^3.7.2",
+        "coveralls": "^3.0.9",
+        "nested-error-stacks": "^2.1.0",
+        "pify": "^4.0.1",
+        "q": "^1.5.1",
+        "tap": "=14.10.2-unbundled"
+      },
+      "gitHead": "b3c146e3f157aceebe830e858eb41f1df9387f79",
+      "bugs": {
+        "url": "https://github.com/tapjs/stack-utils/issues"
+      },
+      "homepage": "https://github.com/tapjs/stack-utils#readme",
+      "_id": "stack-utils@2.0.2",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-0H7QK2ECz3fyZMzQ8rH0j2ykpfbnd20BFtfg/SqVC2+sCTtcw0aDTGB7dk+de4U4uUeuz6nOtJcrkFFLG1B0Rg==",
+        "shasum": "5cf48b4557becb4638d0bc4f21d23f5d19586593",
+        "tarball": "https://registry.npmjs.org/stack-utils/-/stack-utils-2.0.2.tgz",
+        "fileCount": 4,
+        "unpackedSize": 14223,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqEjBCRA9TVsSAnZWagAAousQAKKZPqlbu5SgG2TUAiM9\nk04+U5X7w/30OBcL8WdhEEH4LqsRAljlbVRacdBtTyk+SmsjZtb9aJgBR3tO\nL6EIrhd4zmAVTE67BT4pBBxdi3iJBPAlBqAFQzBYcRmLCxOT9Uj8U92L4WC/\np3Yb2He+HDw7NC1Jk9vU5A9xqBnB2kKsoxyBLUwg4FUdGGd2GTUU2XX05eC1\nXcSkcmFsPIJSn/4oENtaDcI/1bxhik2y0sSCgZQhQTrY8DZzkg41KK+u45qv\nN/f0Twzc/GFQLe1kJPHXEZ0LaSz4L5hH1UTXW0kPA1oiLl1W0hWgDE4ZvAnK\nokAY/iGbxK+oKk5rRF8p19CKjONeb4zQZuSuJw/uUQcPaMyEKxNWuB6Z/u6F\n1ZtMm1vXHahCLccQEJRsarRBBSMCN1R4ooNvcTySRJ3CeWu+A8sN6rbqRM0e\n9EeFmIN5aDu/LflvwQVCe9uYdz9GAFloVetPtiAWwNODQruHTX7h8zhGTDhM\niIm8yr/E3Gy5rC5iwWs1yxZUxzm1niTrO08VZiXT4Z9vcJ6O1o24WUAgxZrP\nxBwYa/oxBFqzOTgHTTQg+WQmJnK/6IJimzYUk0EMD1mgztSHKFmKUONwJuEC\nCBbZ/A/lCSS+P7bM0IzjRyksu/52cihXl+/qCLYMMUQQq9XImuUDQdXQIOtT\noC0e\r\n=FjL8\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "isaacs",
+          "email": "i@izs.me"
+        },
+        {
+          "name": "jamestalmage",
+          "email": "james@talmage.io"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/stack-utils_2.0.2_1588086977285_0.5869045456973836"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# stack-utils \n\n> Captures and cleans stack traces.\n\n[![Linux Build](https://travis-ci.org/tapjs/stack-utils.svg?branch=master)](https://travis-ci.org/tapjs/stack-utils) [![Build status](https://ci.appveyor.com/api/projects/status/fb9i157knoixe3iq/branch/master?svg=true)](https://ci.appveyor.com/project/jamestalmage/stack-utils-oiw96/branch/master)  [![Coverage](https://coveralls.io/repos/tapjs/stack-utils/badge.svg?branch=master&service=github)](https://coveralls.io/github/tapjs/stack-utils?branch=master)\n\n\nExtracted from `lib/stack.js` in the [`node-tap` project](https://github.com/tapjs/node-tap)\n\n## Install\n\n```\n$ npm install --save stack-utils\n```\n\n\n## Usage\n\n```js\nconst StackUtils = require('stack-utils');\nconst stack = new StackUtils({cwd: process.cwd(), internals: StackUtils.nodeInternals()});\n\nconsole.log(stack.clean(new Error().stack));\n// outputs a beautified stack trace\n```\n\n\n## API\n\n\n### new StackUtils([options])\n\nCreates a new `stackUtils` instance.\n\n#### options\n\n##### internals\n\nType: `array` of `RegularExpression`s  \n\nA set of regular expressions that match internal stack stack trace lines which should be culled from the stack trace.\nThe default is `StackUtils.nodeInternals()`, this can be disabled by setting `[]` or appended using\n`StackUtils.nodeInternals().concat(additionalRegExp)`.  See also `ignoredPackages`.\n\n##### ignoredPackages\n\nType: `array` of `string`s\n\nAn array of npm modules to be culled from the stack trace.  This list will mapped to regular\nexpressions and merged with the `internals`.\n\nDefault `''`.\n\n##### cwd\n\nType: `string`\n\nThe path to the current working directory. File names in the stack trace will be shown relative to this directory.\n\n##### wrapCallSite\n\nType: `function(CallSite)`\n\nA mapping function for manipulating CallSites before processing. The first argument is a CallSite instance, and the function should return a modified CallSite. This is useful for providing source map support.\n\n\n### StackUtils.nodeInternals()\n\nReturns an array of regular expressions that be used to cull lines from the stack trace that reference common Node.js internal files.\n\n\n### stackUtils.clean(stack, indent = 0)\n\nCleans up a stack trace by deleting any lines that match the `internals` passed to the constructor, and shortening file names relative to `cwd`.\n\nReturns a `string` with the cleaned up stack (always terminated with a `\\n` newline character).\nSpaces at the start of each line are trimmed, indentation can be added by setting `indent` to the desired number of spaces.\n\n#### stack\n\n*Required*  \nType: `string` or an `array` of `string`s\n\n\n### stackUtils.capture([limit], [startStackFunction])\n\nCaptures the current stack trace, returning an array of `CallSite`s. There are good overviews of the available CallSite methods [here](https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces), and [here](https://github.com/sindresorhus/callsites#api).\n\n#### limit\n\nType: `number`\nDefault: `Infinity`\n\nLimits the number of lines returned by dropping all lines in excess of the limit. This removes lines from the stack trace.\n\n#### startStackFunction\n\nType: `function`\n\nThe function where the stack trace should start. The first line of the stack trace will be the function that called `startStackFunction`. This removes lines from the end of the stack trace.\n\n\n### stackUtils.captureString([limit], [startStackFunction])\n\nCaptures the current stack trace, cleans it using `stackUtils.clean(stack)`, and returns a string with the cleaned stack trace. It takes the same arguments as `stackUtils.capture`.\n\n\n### stackUtils.at([startStackFunction])\n\nCaptures the first line of the stack trace (or the first line after `startStackFunction` if supplied), and returns a `CallSite` like object that is serialization friendly (properties are actual values instead of getter functions). \n\nThe available properties are:\n\n - `line`: `number` \n - `column`: `number`\n - `file`: `string`\n - `constructor`: `boolean`\n - `evalOrigin`: `string`\n - `native`: `boolean`\n - `type`: `string`\n - `function`: `string`\n - `method`: `string`\n\n### stackUtils.parseLine(line)\n\nParses a `string` (which should be a single line from a stack trace), and generates an object with the following properties:\n\n - `line`: `number` \n - `column`: `number`\n - `file`: `string`\n - `constructor`: `boolean`\n - `evalOrigin`: `string`\n - `evalLine`: `number`\n - `evalColumn`: `number`\n - `evalFile`: `string`\n - `native`: `boolean`\n - `function`: `string`\n - `method`: `string`\n\n\n## License\n\nMIT © [Isaac Z. Schlueter](http://github.com/isaacs), [James Talmage](http://github.com/jamestalmage)\n",
   "maintainers": [
     {
       "name": "isaacs",
@@ -698,7 +770,7 @@
     }
   ],
   "time": {
-    "modified": "2019-12-13T06:50:34.440Z",
+    "modified": "2020-04-28T15:16:21.081Z",
     "created": "2016-01-04T05:15:37.432Z",
     "0.0.1": "2016-01-04T05:15:37.432Z",
     "0.1.0": "2016-01-07T20:24:53.362Z",
@@ -709,7 +781,8 @@
     "1.0.1": "2017-04-23T20:32:26.102Z",
     "1.0.2": "2018-11-14T18:57:24.505Z",
     "2.0.0": "2019-12-13T06:49:08.966Z",
-    "2.0.1": "2019-12-13T06:50:32.156Z"
+    "2.0.1": "2019-12-13T06:50:32.156Z",
+    "2.0.2": "2020-04-28T15:16:17.414Z"
   },
   "homepage": "https://github.com/tapjs/stack-utils#readme",
   "repository": {

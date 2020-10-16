@@ -331,7 +331,5 @@
     "url": "https://github.com/kriszyp/json-schema/issues"
   },
   "readmeFilename": "README.md",
-  "license": "(AFL-2.1 OR BSD-3-Clause)",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "(AFL-2.1 OR BSD-3-Clause)"
 }

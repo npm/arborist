@@ -1,10 +1,10 @@
 {
   "_id": "tap-parser",
-  "_rev": "106-9039657a0e7736e20bbfdf7c6e4cf7c0",
+  "_rev": "107-822cae665711a53995bb13c888fa5670",
   "name": "tap-parser",
   "description": "parse the test anything protocol",
   "dist-tags": {
-    "latest": "10.0.1"
+    "latest": "10.1.0"
   },
   "versions": {
     "0.0.0": {
@@ -6750,8 +6750,102 @@
         "tmp": "tmp/tap-parser_10.0.1_1571362264999_0.4128141991389438"
       },
       "_hasShrinkwrap": false
+    },
+    "10.1.0": {
+      "name": "tap-parser",
+      "version": "10.1.0",
+      "description": "parse the test anything protocol",
+      "main": "index.js",
+      "bin": {
+        "tap-parser": "bin/cmd.js"
+      },
+      "dependencies": {
+        "events-to-array": "^1.0.1",
+        "minipass": "^3.0.0",
+        "tap-yaml": "^1.0.0"
+      },
+      "devDependencies": {
+        "glob": "^7.0.5",
+        "tap": "^14.4.1"
+      },
+      "scripts": {
+        "snap": "tap",
+        "test": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "testling": {
+        "files": "test/*.js",
+        "browsers": [
+          "ie/6..latest",
+          "chrome/10",
+          "chrome/latest",
+          "firefox/3.5",
+          "firefox/latest",
+          "opera/latest",
+          "safari/latest"
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/tapjs/tap-parser.git"
+      },
+      "homepage": "https://github.com/tapjs/tap-parser",
+      "keywords": [
+        "tap",
+        "test",
+        "parser"
+      ],
+      "license": "MIT",
+      "optionalDependencies": {},
+      "tap": {
+        "check-coverage": true
+      },
+      "nyc": {
+        "hookRunInThisContext": true
+      },
+      "engines": {
+        "node": ">= 8"
+      },
+      "gitHead": "5ad074dcee98b41dd05f06d77bd20ccdf18e6186",
+      "bugs": {
+        "url": "https://github.com/tapjs/tap-parser/issues"
+      },
+      "_id": "tap-parser@10.1.0",
+      "_nodeVersion": "14.2.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-FujQeciDaOiOvaIVGS1Rpb0v4R6XkOjvWCWowlz5oKuhPkEJ8U6pxgqt38xuzYhPt8dWEnfHn2jqpZdJEkW7pA==",
+        "shasum": "7b1aac40dbcaa4716c0b58952686eae65d2b74ad",
+        "tarball": "https://registry.npmjs.org/tap-parser/-/tap-parser-10.1.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 50544,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfF5aBCRA9TVsSAnZWagAA0TYP/0+hJ7DjuuH+6K3SHlup\nVBCorTLZ4onnuoYt4Qjnl9mWuxpdftejTAq3OIMOt+OlxIfuCcKCC+Ly+B1/\nr0g6WQa1YUCAlhu0hdk0ETUxq4+1KRd4+fYUe8cUfHQ5nRihq/A1xxcDYUyJ\ngA0cBeOkhxcjR4W09YKwWdVPvRF+x0X0Lp/FmefUAvJaAyoyMb02oqJ2BlJ3\nq2ylxzwwshijOYTLUhO2Vq2H4/7vsRYq4BH8fvYsj4VGnYlOOnXY7MYPNbq7\nKqYGG/CSEoOHziHygvcspXv5Diu0J/+4iyLdS7v5YyrC0N/XE938WkxV2H5u\nuW3PPFo2JYn7v9fJtxIHgjbhcdynABxylqCJJ3zSr9LL1iJmAswDE/gqSB/t\nQQTGT5F/Ja6NLvHsm8pArKVjitglbSTc0Ydiowo20/Hhdml61uNmdr8LVyR3\nqLxI6wOxnJ19fQ2MZoJf7HRwkOZRGLiNtjWm1jsbo4vKk6g5/h9eiWg/QZxh\nRep5jaRo6U8OG7kyWd9Pcgw1X5OrIy9FkVXYmj+byGlu5+j6Eub8372XZfFt\nWK1f2s2GOzKc5d0TaXr0rZvHdlMvmbPPSVaXWmODxsQDQ087v68d0dXl3sl4\nv2ZR/0kF/W7XCf1LFF8qwjrIQSNvNkUIXMXIabgNn1Hon41ywPj3I+0Tf5du\nT+I1\r\n=ziDR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "isaacs",
+          "email": "isaacs@npmjs.com"
+        },
+        {
+          "name": "substack",
+          "email": "mail@substack.net"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/tap-parser_10.1.0_1595381376422_0.1729401428745807"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# tap-parser\n\nparse the [test anything protocol](http://testanything.org/)\n\n[![build status](https://secure.travis-ci.org/tapjs/tap-parser.png)](http://travis-ci.org/tapjs/tap-parser)\n\n[![browser support](http://ci.testling.com/substack/tap-parser.png)](http://ci.testling.com/substack/tap-parser)\n\n[![coverage status](https://coveralls.io/repos/tapjs/tap-parser/badge.svg?branch=master&service=github)](https://coveralls.io/github/tapjs/tap-parser?branch=master)\n\n# example\n\n``` js\n// stream style\nconst Parser = require('tap-parser')\nconst p = new Parser(results => console.dir(results))\nprocess.stdin.pipe(p)\n```\n\ngiven some [TAP](http://testanything.org/)-formatted input:\n\n```\n$ node test.js\nTAP version 13\n# beep\nok 1 should be equal\nok 2 should be equivalent\n# boop\nok 3 should be equal\nok 4 (unnamed assert)\n\n1..4\n# tests 4\n# pass  4\n\n# ok\n```\n\nparse the output:\n\n```\n$ node test.js | node parse.js\n{ ok: true, count: 4, pass: 4, plan: { start: 1, end: 4 } }\n```\n\nIf you have a string, you can also turn it into an array of parse events,\nand turn such an array back into a TAP string with `Parser.parse()` and\n`Parser.stringify()`, respectively.\n\n```js\n// JSON.parse/stringify style\n\n// Note that stringifying arbitrary object types isn't supported,\n// because TAP is a streaming line-based protocol, not an object\n// serialization notation like JSON or YAML.\n\nconst { parse, stringify } = require('tap-parser')\nconst fs = require('fs')\nconst tapData = fs.readFileSync('previous-test-output.tap')\nconst result = parse(tapData)\nconsole.dir(result)\nconst reEncodedAsTap = stringify(result)\nconsole.log(reEncodedAsTap)\n```\n\n# usage\n\nThis package also has a `tap-parser` command.\n\n```\nUsage:\n  tap-parser <options>\n\nParses TAP data from stdin, and outputs the parsed result\nin the format specified by the options.  Default output\nuses node's `util.inspect()` method.\n\nOptions:\n\n  -j [<indent>] | --json[=indent]\n    Output event data as JSON with the specified indentation (default=2)\n\n  -t | --tap\n    Output data as reconstituted TAP based on parsed results\n\n  -l | --lines\n    Output each parsed line as it is recognized by the parser\n\n  -b | --bail\n    Emit a `Bail out!` at the first failed test point encountered\n\n  -B | --no-bail\n    Do not bail out at the first failed test point encountered\n    (Default)\n\n  -f | --flat\n    Flatten all assertions to the top level parser\n\n  -F | --no-flat\n    Do not flatten all assertions to the top level parser\n    (Default)\n\n  -w | --ignore-all-whitespace\n    Skip over blank lines outside of YAML blocks\n\n  -o | --omit-version\n    Ignore the `TAP version 13` line at the start of tests\n\n  --strict\n    Run the parser in strict mode\n\n  --no-strict\n    Do not run the parser in strict mode\n\n  -s | --silent\n    Do not print output, just exit success/failure based on TAP stream\n```\n\n# methods\n\n``` js\nconst Parser = require('tap-parser')\n```\n\n## `const p = new Parser(options, cb)`\n\nReturn a writable stream `p` that emits parse events.\n\nIf `cb` is given it will listen for the `'complete'` event.\n\nIf `options` is given, it may contain the following flags:\n\n- `preserveWhitespace` boolean which is `false` by default and will\n  cause the parser to emit `line` events even for lines containing\n  only whitespace.  (Whitespace lines in yaml blocks are always\n  emitted, because whitespace is semantically relevant for yaml.)\n\n- `strict` boolean which is `false` by default and causes the parser\n  to treat non-TAP input as a failure.  Strictness is heritable to\n  child subtests.  You can also turn strictness on or off by using the\n  `pragma +strict` line in the TAP data to turn strictness on, or\n  `pragma -strict` to turn strictness off.\n\n- `bail` boolean which is `false` by default and will cause the parser\n  to bail out (including emitting a synthetic `Bail out!` line)\n  whenever a failed test point is encountered.\n\n- `omitVersion` boolean which is `false` by default and will cause the\n  parser to ignore `TAP version 13` lines.  Version lines in subtests\n  cause problems with some parsers, so they are always ignored.\n\n- `passes` boolean which is false by default and will add \"passes\" property\n  for that contains the result of all passed tests\n\nThe `parent`, `level` and `buffered` options are reserved for internal\nuse.\n\n# events\n\n## `p.on('complete', function (results) {})`\n\nThe `results` object contains a summary of the number of tests\nskipped, failed, passed, etc., as well as a boolean `ok` member which\nis true if and only if the planned test were all found, and either\n\"ok\" or marked as \"TODO\".\n\n## `p.on('line', function (line) {})`\n\nAs each line of input is parsed, a `line` event is emitted.\n\n\"Synthetic\" line events will be emitted to support the `bail`\nbehavior, and to inject `1..0` plan lines in subtests that have no\ntest points.  They can be used as a sort of \"passthrough stream\" to\nsanitize and filter a TAP stream, with the caveat that, while `line`\nevents will be semantically equivalent to the TAP input, they will not\nbe a perfect replica of the input.\n\n## `p.on('assert', function (assert) {})`\n\nEvery `/^(not )?ok\\b/` line will emit an `'assert'` event.\n\nEvery `assert` object has these keys:\n\n* `assert.ok` - true if the assertion succeeded, false if failed\n* `assert.id` - the assertion number\n* `assert.name` - optional short description of the assertion\n\nand may also have\n\n* `assert.todo` - optional description of why the assertion failure is\n  not a problem.  (Boolean `true` if no explaination provided)\n* `assert.skip` - optional description of why this assertion was\n  skipped (boolean `true` if no explanation provided)\n* `assert.diag` - a diagnostic object with additional information\n  about the test point.\n\n## `p.on('comment', function (comment) {})`\n\nEvery `/^# (.+)/` line will emit the string contents of `comment`.\n\n## `p.on('plan', function (plan) {})`\n\nEvery `/^\\d+\\.\\.\\d+/` line emits a `'plan'` event for the test numbers\n`plan.start` through `plan.end`, inclusive.\n\nIf the test is [completely\nskipped](http://podwiki.hexten.net/TAP/TAP.html?page=TAP#Skippingeverything)\nthe result will look like\n\n```\n{ ok: true,\n  count: 0,\n  pass: 0,\n  plan:\n   { start: 1,\n     end: 0,\n     skipAll: true,\n     skipReason: 'This code has no seat belt' } }\n```\n\n## `p.on('version', function (version) {})`\n\nA `/^TAP version (\\d+)/` line emits a `'version'` event with a version\nnumber or string.\n\n## `p.on('bailout', function (reason) {})`\n\nA `bail out!` line will cause the parser to completely stop doing\nanything.  Child parser bailouts will bail out their parents as well.\n\n## `p.on('child', function (childParser) {})`\n\nIf a child test set is embedded in the stream like this:\n\n```\nTAP Version 13\n1..2\n# nesting\n    1..2\n    ok 1 - true is ok\n    ok 2 - doag is also okay\nok 1 - nesting\nok 2 - second\n```\n\nthen the child stream will be parsed and events will be raised on the\n`childParser` object.\n\nSince TAP streams with child tests *must* follow child test sets\nwith a pass or fail assert based on the child test's results, failing\nto handle child tests should always result in the same end result.\nHowever, additional information from those child tests will obviously\nbe lost.\n\nSee `Subtests` below for more information on which sorts of subtest\nformats are supported by this parser.\n\n## `p.on('result', function (assert) {})`\n\nThis is the same as the `assert` event, except that it only emits on the root\nparser, whenever it or any child parser has an `assert` event that is not\nmerely closing a child test block.\n\n## `p.on('pass', function (assert) {})`\n## `p.on('fail', function (assert) {})`\n## `p.on('skip', function (assert) {})`\n## `p.on('todo', function (assert) {})`\n\nEmitted on the root parser object, whenever it or any child parser has an\n`assert` event that is not merely closing a child test block, if the result is\nof the appropriate type.\n\n## `p.on('extra', function (extra) {})`\n\nAll other lines will trigger an `'extra'` event with the line text.\n\n# static method: `const results = Parser.parse(string, options = {})`\n\nThis will return an array of all the events encountered in the parsed TAP\nstring.\n\nAny options to the `Parser` constructor may be provided, in addition to the\nfollowing:\n\n* `flat`: Boolean, default false, flatten nested child tests into a single\n  level.  Note that this will lose child test information, and will result\n  in a `complete` event that may not match the counts of assertions in the\n  list.  This is useful if you are transforming TAP strings for use by a\n  parser that does not support child tests, or just simply don't care about\n  that level of detail.  Result `id` values will be coerced to an\n  incrementing numeric values, and a valid `plan` will be generated at the\n  end of the stream.\n\n# static method: `const tap = Parser.stringify(results, options = {})`\n\nTurn a `results` list of the sort returned by `Parser.parse()` into a TAP\nstring.\n\nThe following options are supported:\n\n* `flat`: Boolean, default false, flatten nested child tests into a single\n  level.  Note that this will lose child test information, and will result\n  in a `complete` event that may not match the counts of assertions in the\n  list.  This is useful if you are transforming TAP strings for use by a\n  parser that does not support child tests, or just simply don't care about\n  that level of detail.  Result `id` values will be coerced to an\n  incrementing numeric values, and a valid `plan` will be generated at the\n  end of the stream.\n\nThe `indent` and `id` options are used internally, and should not be\nmodified.\n\n# install\n\nWith [npm](https://npmjs.org) do:\n\n```\nnpm install tap-parser\n```\n\nYou can use [browserify](http://browserify.org) to `require('tap-parser')` in\nthe browser.\n\n# license\n\nMIT\n\n# subtests\n\n5 flavors of Subtests are suppored by this parser.\n\n1. Unadorned.\n   Indented TAP data with no comment, followed by a test\n   point at the parent level.\n\n    ```\n        ok 1\n        1..1\n    ok 1 - child test\n    1..1\n    ```\n\n2. Indented comment.\n   An indented `# Subtest: <name>` comment, followed by indented TAP\n   data, and then a not-indented test point with a matching name.\n   The summary test point may have yaml diagnostics.\n\n    ```\n        # Subtest: child test\n        ok 1\n        1..1\n    ok 1 - child test\n    1..1\n    ```\n\n3. Unindented comment.\n   A not-indented `# Subtest: <name>` comment, followed by indented TAP\n   content, followed by a test point with a matching name.\n   The summary test point may have yaml diagnostics.\n\n    ```\n    # Subtest: child test\n        ok 1\n        1..1\n    ok 1 - child test\n    1..1\n    ```\n\n4. Buffered, without diagnostics.\n   A test point line ending in {, followed by indented TAP content, ended\n   with a } to close the block.  todo/skip directives may come *either*\n   before or after the `{` character.  Yaml diagnostics are not allowed.\n\n    ```\n    ok 1 - child test {\n        ok 1\n        1..1\n    }\n    1..1\n    ```\n\n5. Buffered, with diagnostics.\n   A test point line with yaml diagnostics, followed by `{` alone on a\n   line, indented TAP data, and then a `}`.\n\n    ```\n    ok 1 - child test\n      ---\n      some: diagnostic\n      data: true\n      ...\n    {\n        ok 1\n        1..1\n    }\n    ```\n\nIn all cases, the parsed behavior is identical:\n\n1. The parent emits a `child` event with the `childParser` as an\n   argument.\n2. The `childParser` emits a `comment` with `# Subtest: <name>` (or\n   `(anonymous)` for Unadorned subtests.)\n3. When the test is over, the closing test point is emitted on parent\n   test.\n\nThat is, buffered and nonindented/indented comment subtests are parsed\nas if they are identical input, since their semantics are the same.  This\nsimplifies implementation of test harness and reporter modules.\n\nSince unadorned subtests have no introduction, a child event is not\nemitted until the first \"relevant tap\" line is encountered.  This can\ncause confusion if the test output contains a spurious \"    1..2\" line\nor something, but such cases are rare.\n\nSimilarly, this means that a test point ending in `{` needs to wait to\nemit *either* the 'assert' or 'child' events until an indented line is\nencountered.  *Any* test point with yaml diagnostics needs to wait to\nsee if it will be followed by a `{` indicating a subtest.\n",
   "maintainers": [
     {
       "name": "isaacs",
@@ -6763,7 +6857,7 @@
     }
   ],
   "time": {
-    "modified": "2019-10-18T01:31:07.739Z",
+    "modified": "2020-07-22T01:29:39.792Z",
     "created": "2013-01-18T07:50:33.468Z",
     "0.0.0": "2013-01-18T07:50:35.795Z",
     "0.0.1": "2013-01-18T12:13:54.608Z",
@@ -6844,7 +6938,8 @@
     "9.3.2": "2019-04-06T19:25:27.025Z",
     "9.3.3": "2019-08-12T15:54:21.006Z",
     "10.0.0": "2019-09-30T20:22:53.810Z",
-    "10.0.1": "2019-10-18T01:31:05.119Z"
+    "10.0.1": "2019-10-18T01:31:05.119Z",
+    "10.1.0": "2020-07-22T01:29:36.588Z"
   },
   "repository": {
     "type": "git",

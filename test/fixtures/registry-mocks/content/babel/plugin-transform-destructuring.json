@@ -3623,7 +3623,5 @@
     "directory": "packages/babel-plugin-transform-destructuring"
   },
   "license": "MIT",
-  "readmeFilename": "",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": ""
 }

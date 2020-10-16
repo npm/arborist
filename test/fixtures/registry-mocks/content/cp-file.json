@@ -1,10 +1,10 @@
 {
   "_id": "cp-file",
-  "_rev": "38-16359fd97d4e8177d01c8b72eed24858",
+  "_rev": "41-0823ed905862caa25c5087ff6dba7418",
   "name": "cp-file",
   "description": "Copy a file",
   "dist-tags": {
-    "latest": "7.0.0"
+    "latest": "9.0.0"
   },
   "versions": {
     "0.1.0": {
@@ -1884,8 +1884,270 @@
         "tmp": "tmp/cp-file_7.0.0_1555681149455_0.6062296166804657"
       },
       "_hasShrinkwrap": false
+    },
+    "8.0.0": {
+      "name": "cp-file",
+      "version": "8.0.0",
+      "description": "Copy a file",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/cp-file.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && nyc ava && tsd"
+      },
+      "keywords": [
+        "copy",
+        "cp",
+        "file",
+        "clone",
+        "fs",
+        "stream",
+        "file-system",
+        "ncp",
+        "fast",
+        "quick",
+        "data",
+        "content",
+        "contents"
+      ],
+      "dependencies": {
+        "graceful-fs": "^4.1.2",
+        "make-dir": "^3.0.0",
+        "nested-error-stacks": "^2.0.0",
+        "p-event": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^2.1.0",
+        "clear-module": "^3.1.0",
+        "coveralls": "^3.0.4",
+        "del": "^5.1.0",
+        "import-fresh": "^3.0.0",
+        "nyc": "^15.0.0",
+        "sinon": "^9.0.0",
+        "tsd": "^0.11.0",
+        "uuid": "^3.3.2",
+        "xo": "^0.26.1"
+      },
+      "gitHead": "11b236dc9624d17ad43dbdb0b1aada698371bb36",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/cp-file/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/cp-file#readme",
+      "_id": "cp-file@8.0.0",
+      "_nodeVersion": "10.18.1",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-HQr6YiNEXrsAdmV+mKMgM+SPdvIDqmHkcXcU5YlMM5ISRfAB9GHj/hmwnadr3khT6GlRQBsQxepmVEtjNQATFQ==",
+        "shasum": "3858e1fd3d79c281a444e22978b6675803ed9e29",
+        "tarball": "https://registry.npmjs.org/cp-file/-/cp-file-8.0.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 13043,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeU5LjCRA9TVsSAnZWagAAwKgP/0z2EFdLYbLluTn9xP+n\nq4/BAKfH/qUVTh28EpKSUIxptYt7XfMrYBH5+NUIrNHkyKYaXWQ+BcbhruMK\nvMVOaGFquB2b+rvXXHu1urmIBdAvaU/FcgkoaLNAcxUaLM4fA43/Qyi4E3X5\nPTw8uAKBBYxvPD83XgKI2bq2enUzhJphBPfJJND9FY88O1QQCDxzo9fVEOIO\ntB58qZLryhVNLzQXGIu7YfD3n96wBVkduWVe+Mlteyv/3UzWbK9pEytNP0Gi\n1kBR/EzDGN1vWwUFj+5GEGpi3Za4pnzifknO5kW5DHftn64CYZY1LooXeZd2\nlNBzoCAs4FzD7vEmrgWPAJMj4HUS6SQjJPj5B9s/JKLehcaEnEPnUugIFGoi\nQFKJqb9WyVBH4y+dGN2h++uqdpA6G6VQ1OcVdW9ByPUGA9wile7Tt2DiB0Pe\ngFBnOxoNad6NrSMZ9y40b1pBLRGEflriH8TN8pjP78J+nlNRWrvPu4IMbVXK\ngNqFDNZaeIm/+Ji6Kjc7AeWyRL9Mpe7sGA0HOdFyw42qntfhSRgnRL1CCieE\nBMdPrq73VgavT/iRbqp67vzZVfxJYCHN6HYwL3h8BM4OB2eisXvUt/9067sC\n0U516jR+72MYXrJMu49Ze3Qo0kuKAj4XZXpSP3Y/7n6b0UQ5bWidw2J1D/J8\nC9jV\r\n=YxGc\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/cp-file_8.0.0_1582535394623_0.9132727978417998"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.0.1": {
+      "name": "cp-file",
+      "version": "8.0.1",
+      "description": "Copy a file",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/cp-file.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && nyc ava && tsd"
+      },
+      "keywords": [
+        "copy",
+        "cp",
+        "file",
+        "clone",
+        "fs",
+        "stream",
+        "file-system",
+        "ncp",
+        "fast",
+        "quick",
+        "data",
+        "content",
+        "contents"
+      ],
+      "dependencies": {
+        "graceful-fs": "^4.1.2",
+        "make-dir": "^3.0.0",
+        "nested-error-stacks": "^2.0.0",
+        "p-event": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^2.1.0",
+        "clear-module": "^3.1.0",
+        "coveralls": "^3.0.4",
+        "del": "^5.1.0",
+        "import-fresh": "^3.0.0",
+        "nyc": "^15.0.0",
+        "sinon": "^9.0.0",
+        "tsd": "^0.11.0",
+        "uuid": "^3.3.2",
+        "xo": "^0.26.1"
+      },
+      "gitHead": "1cda1f2da10f1119613d064f8ae25ba0c459ee21",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/cp-file/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/cp-file#readme",
+      "_id": "cp-file@8.0.1",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-P3iYQyJegjYEoerocg071Cubh0yoebHv0ojmy499yc0YOUxatb1X5jeb9w2FmGtq7yqa1Pfq0cxmaqEzk0vMew==",
+        "shasum": "7cf382853a5a5ad2152766ab3f5a95f0189b5ccc",
+        "tarball": "https://registry.npmjs.org/cp-file/-/cp-file-8.0.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 13006,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeU5/CCRA9TVsSAnZWagAATboP/2dz9v0FRb4NGvRkNUTQ\nIxT0yW1r0CM4KL5KnjIgXbUck1Xh3Me0yLMKDvkCNRxHPrM5qYpFwHnQT0+5\ncbohaUltn1L97rYSdwnHOMZd0uJk3YwGK/BG3x/6HBfbY5KBlt1iq0QfgweX\nFGretoFgjETpa7f7lcNS6YcFgeWJGylFg5Xp71m4o1C0065v1eM86eIN6ybc\nriWU4Y3eTCKWN8fLAj+E3NDQM9dRWU6gIVcVdFR0snioTy0cKFVTF3l8RTeF\n1gk8HY7mKS+bjwBvrhF5scO0OakJAkZOk0Q6yUWDxPITmPXqqVntg+mtoJMv\n6jvNAlgUT5GjxR98unPsX8ibOqhMdS0cPfE+hGDleLZIoRFBKaT0UqefslAo\n4NaOO6sC0MLmNbqwbmoMEYnUqYysEEvAYmHWbYwGfTK8vWJ9+8X6x2JYao8P\nVZu8OkEXBIcdJonlo07XvmIxhU9YtsBZE4dcNVk0ug74/dSRcroCVVQ4feBX\nUFVTkSY+2nKL/jXhatlf+e5sJsZWMcj5ADDC/jiyDuU8wnOr/+beDhC8ziPE\nXXiOpz0G1HNzyCRZ02yT6oP711bvT8iC2mVOVRaFqMwNHb70I7Lq7RwIEVmY\nxC3pe2jdoXtCep4k2j9M0zK4r3SpuR0zQHkLtMws1tI7dY2EajKUtbCM+n2J\nBUMM\r\n=Kilk\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/cp-file_8.0.1_1582538690382_0.2895522367526855"
+      },
+      "_hasShrinkwrap": false
+    },
+    "9.0.0": {
+      "name": "cp-file",
+      "version": "9.0.0",
+      "description": "Copy a file",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/cp-file.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && nyc ava && tsd"
+      },
+      "keywords": [
+        "copy",
+        "cp",
+        "file",
+        "clone",
+        "fs",
+        "stream",
+        "file-system",
+        "ncp",
+        "fast",
+        "quick",
+        "data",
+        "content",
+        "contents"
+      ],
+      "dependencies": {
+        "graceful-fs": "^4.1.2",
+        "make-dir": "^3.0.0",
+        "nested-error-stacks": "^2.0.0",
+        "p-event": "^4.1.0"
+      },
+      "devDependencies": {
+        "ava": "^2.1.0",
+        "clear-module": "^3.1.0",
+        "coveralls": "^3.0.4",
+        "del": "^5.1.0",
+        "import-fresh": "^3.0.0",
+        "nyc": "^15.0.0",
+        "sinon": "^9.0.0",
+        "tsd": "^0.11.0",
+        "uuid": "^7.0.2",
+        "xo": "^0.27.2"
+      },
+      "gitHead": "8c7ac33c113a26b54c0a54c4bc11fe3d1646081b",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/cp-file/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/cp-file#readme",
+      "_id": "cp-file@9.0.0",
+      "_nodeVersion": "10.18.1",
+      "_npmVersion": "6.14.0",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-hNEM3AuZz84zOPgL8ozJ057+DjuD6LpwyYNiyTsLDU71Ke2E3KV909xhGYLK7WQ0srJRwzs/1+bSE1pk/HRC6w==",
+        "shasum": "11986b27fd0ea7e6eadaf8a86cf16ba7e9b830ce",
+        "tarball": "https://registry.npmjs.org/cp-file/-/cp-file-9.0.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 12331,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeYNuACRA9TVsSAnZWagAA/iwQAIUIJHlPwCXPsV0DFBi6\n379EoJ86TmysOTN5dNpr2VHX0FGHLn782bVXZwy/kJPY4Dcp6O5wQ+ifw7W2\nXhAy2GhKZ4PqpedJy3gr/oH/HOhrRqh5WbUX0Ud4dFKTpXnAI120CKtevqS9\nNu5jljI7klmyJRxx8oWICND8pBuqjoTEVcjtljRKrUzluY5V2BsYtWEP5U7h\nMaWb0SQYb2ai04Nysgkq2JBU6i7WqyrCETDDZK6yHztAVspsUcpW+s/yIzA9\nKwlz+XCW48GCfewFEPKC9FyK1k6isenu/NFnoP+F20r+R8M4wFrR+6FZx1gq\nu6yfoEs5HG/Z9i0JlOG86JioZA8t3RVEPIO9MaWUBYkRPfVUPfaDGRzmPRTg\nAUWuyVdtP0EdDFT5GlDfSN4eF5mle2YrjDJuwc0ZYpJqpyCjvj8lKPAlNxbm\nci4aWcuhGbteBPGSHORoiKRYyo2qZw5WMkOs4qhH2xygl3H48NGP5YEuFV9u\nw89sun3CCVepBp4CjpD22IfGPzFnnXCEt4r5ldAcIbhKiCoTv0fhp/Y8i/Q8\nbS3aIaic6AYNr8X1lIWh8qFv5OfF30ext3YjgEreKezSgjdqXvZcDSWRi273\nppoBncNJgGrkWKVXzuYCOP9JIgyumw6ScVe3jNNLupvOYjM+djnXT2VH4IBa\niCB0\r\n=8cT8\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/cp-file_9.0.0_1583405951556_0.21677933625521684"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# cp-file [![Build Status](https://travis-ci.org/sindresorhus/cp-file.svg?branch=master)](https://travis-ci.org/sindresorhus/cp-file) [![Coverage Status](https://coveralls.io/repos/github/sindresorhus/cp-file/badge.svg?branch=master)](https://coveralls.io/github/sindresorhus/cp-file?branch=master)\n\n> Copy a file\n\n## Highlights\n\n- Fast by using streams in the async version and [`fs.copyFileSync()`](https://nodejs.org/api/fs.html#fs_fs_copyfilesync_src_dest_flags) in the synchronous version.\n- Resilient by using [graceful-fs](https://github.com/isaacs/node-graceful-fs).\n- User-friendly by creating non-existent destination directories for you.\n- Can be safe by turning off [overwriting](#optionsoverwrite).\n- Preserves file mode, [but not ownership](https://github.com/sindresorhus/cp-file/issues/22#issuecomment-502079547).\n- User-friendly errors.\n\n## Install\n\n```\n$ npm install cp-file\n```\n\n## Usage\n\n```js\nconst cpFile = require('cp-file');\n\n(async () => {\n\tawait cpFile('source/unicorn.png', 'destination/unicorn.png');\n\tconsole.log('File copied');\n})();\n```\n\n## API\n\n### cpFile(source, destination, options?)\n\nReturns a `Promise` that resolves when the file is copied.\n\n### cpFile.sync(source, destination, options?)\n\n#### source\n\nType: `string`\n\nThe file you want to copy.\n\n#### destination\n\nType: `string`\n\nWhere you want the file copied.\n\n#### options\n\nType: `object`\n\n##### overwrite\n\nType: `boolean`\\\nDefault: `true`\n\nOverwrite existing destination file.\n\n### cpFile.on('progress', handler)\n\nProgress reporting. Only available when using the async method.\n\n#### handler(data)\n\nType: `Function`\n\n##### data\n\n```js\n{\n\tsourcePath: string,\n\tdestinationPath: string,\n\tsize: number,\n\twrittenBytes: number,\n\tpercent: number\n}\n```\n\n- `source` and `destination` are absolute paths.\n- `size` and `writtenBytes` are in bytes.\n- `percent` is a value between `0` and `1`.\n\n###### Notes\n\n- For empty files, the `progress` event is emitted only once.\n- The `.on()` method is available only right after the initial `cpFile()` call. So make sure\nyou add a `handler` before `.then()`:\n\n```js\nconst cpFile = require('cp-file');\n\n(async () => {\n\tawait cpFile(source, destination).on('progress', data => {\n\t\t// …\n\t});\n})();\n```\n\n## Related\n\n- [cpy](https://github.com/sindresorhus/cpy) - Copy files\n- [cpy-cli](https://github.com/sindresorhus/cpy-cli) - Copy files on the command-line\n- [move-file](https://github.com/sindresorhus/move-file) - Move a file\n- [make-dir](https://github.com/sindresorhus/make-dir) - Make a directory and its parents if needed\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -1893,7 +2155,7 @@
     }
   ],
   "time": {
-    "modified": "2019-04-19T13:39:13.031Z",
+    "modified": "2020-03-05T10:59:16.774Z",
     "created": "2014-06-28T22:18:25.699Z",
     "0.1.0": "2014-06-28T22:18:25.699Z",
     "0.1.1": "2014-06-28T22:19:54.182Z",
@@ -1918,7 +2180,10 @@
     "6.0.0": "2018-05-12T11:05:29.341Z",
     "6.1.0": "2019-03-04T17:12:18.857Z",
     "6.2.0": "2019-04-04T04:30:03.851Z",
-    "7.0.0": "2019-04-19T13:39:09.607Z"
+    "7.0.0": "2019-04-19T13:39:09.607Z",
+    "8.0.0": "2020-02-24T09:09:54.758Z",
+    "8.0.1": "2020-02-24T10:04:50.534Z",
+    "9.0.0": "2020-03-05T10:59:11.658Z"
   },
   "homepage": "https://github.com/sindresorhus/cp-file#readme",
   "keywords": [
@@ -1943,7 +2208,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "bugs": {
     "url": "https://github.com/sindresorhus/cp-file/issues"

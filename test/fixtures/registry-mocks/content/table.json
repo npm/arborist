@@ -1,10 +1,10 @@
 {
   "_id": "table",
-  "_rev": "91-9c3c92fe444f1e1d95ec94b26336f182",
+  "_rev": "95-d89372d650c35f82eba7b79b80e07e2e",
   "name": "table",
   "description": "Formats data into a string table.",
   "dist-tags": {
-    "latest": "5.4.6"
+    "latest": "6.0.3"
   },
   "versions": {
     "0.0.2": {
@@ -4954,6 +4954,468 @@
         "tmp": "tmp/table_5.4.6_1565881825488_0.6880771190244124"
       },
       "_hasShrinkwrap": false
+    },
+    "6.0.0": {
+      "author": {
+        "name": "Gajus Kuizinas",
+        "email": "gajus@gajus.com",
+        "url": "http://gajus.com"
+      },
+      "dependencies": {
+        "ajv": "^6.12.4",
+        "lodash": "^4.17.20",
+        "slice-ansi": "^4.0.0",
+        "string-width": "^4.2.0"
+      },
+      "description": "Formats data into a string table.",
+      "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.4",
+        "@babel/node": "^7.10.5",
+        "@babel/plugin-transform-flow-strip-types": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/register": "^7.10.5",
+        "ajv-cli": "^3.2.1",
+        "ajv-keywords": "^3.5.2",
+        "babel-plugin-istanbul": "^6.0.0",
+        "babel-plugin-lodash": "^3.3.4",
+        "babel-plugin-transform-export-default-name": "^2.0.4",
+        "chai": "^4.2.0",
+        "chalk": "^4.1.0",
+        "coveralls": "^3.1.0",
+        "eslint": "^7.7.0",
+        "eslint-config-canonical": "^23.0.1",
+        "flow-bin": "^0.132.0",
+        "flow-copy-source": "^2.0.9",
+        "gitdown": "^3.1.3",
+        "husky": "^4.2.5",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "semantic-release": "^17.1.1",
+        "sinon": "^9.0.3"
+      },
+      "engines": {
+        "node": ">=8.0.0"
+      },
+      "husky": {
+        "hooks": {
+          "post-commit": "npm run create-readme && git add README.md && git commit -m 'docs: generate docs' --no-verify",
+          "pre-commit": "npm run lint && npm run test && npm run build"
+        }
+      },
+      "keywords": [
+        "ascii",
+        "text",
+        "table",
+        "align",
+        "ansi"
+      ],
+      "license": "BSD-3-Clause",
+      "main": "./dist/index.js",
+      "name": "table",
+      "nyc": {
+        "include": [
+          "src/**/*.js"
+        ],
+        "instrument": false,
+        "reporter": [
+          "text-lcov"
+        ],
+        "require": [
+          "@babel/register"
+        ],
+        "sourceMap": false
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gajus/table.git"
+      },
+      "scripts": {
+        "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && npm run create-validators && flow-copy-source src dist",
+        "create-readme": "gitdown ./.README/README.md --output-file ./README.md",
+        "create-validators": "ajv compile --all-errors --inline-refs=false -s src/schemas/config -c ajv-keywords/keywords/typeof -o dist/validateConfig.js && ajv compile --all-errors --inline-refs=false -s src/schemas/streamConfig -c ajv-keywords/keywords/typeof -o dist/validateStreamConfig.js",
+        "lint": "npm run build && eslint ./src ./test && flow",
+        "test": "mocha --require @babel/register"
+      },
+      "version": "6.0.0",
+      "gitHead": "fab800a35940b4806fc362cc2edee7f97188f45c",
+      "bugs": {
+        "url": "https://github.com/gajus/table/issues"
+      },
+      "homepage": "https://github.com/gajus/table#readme",
+      "_id": "table@6.0.0",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-7siR+CxJMYUqgiCWyEcluxa6G7HcLmp5FsY7jO/VSqGV1g1pvsFFB/Q7o0mkiqGwSMffsRrjgUojlSKz5uMJPQ==",
+        "shasum": "6e57ff2fd3b52b90f079461b601b5c255408e6f0",
+        "tarball": "https://registry.npmjs.org/table/-/table-6.0.0.tgz",
+        "fileCount": 78,
+        "unpackedSize": 198688,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfS9xvCRA9TVsSAnZWagAAkKUP/R1oyWnNjFygUVmwcx0l\nYhA58xoUkuBk2Hkrxab+XAYRJLxiEgnNv5GrJWrpO7Yzs1w+Y6OqC1PDUqHb\nrXmHjA1K1A7B+g6pKW3EoXzI9QBprJeR/cMQmhdJXF/4GsDWChvlq7Umvaht\noM6nMV9HPEhAIrbcxCtjGHPyQp4WIqI7nMBX0fW1NdYlazTvTdRF0fqk+mfQ\n9XzkIQs1hHkj55e7+V+16eXU47iUL+rxxGOCMgfKpcq69Hv5xUSz82kD6mM0\nPUIKrYkF/C/PXMGNDv3gqGevVLJRXvtiX3sg81FBxtBQ/kDHaC7gtPLLOtAX\nj1LwQtBT9HOsCbI5fYBtxGxPQrktAvkSiJuO8PN1DeO92O8YZkL4UrwQqiiQ\n9HMXzuCgwFLu8l8ZZAz/4x7BqUjgGVVLJ95xxgnsMtA6NAuqbmK0iifaKaId\n/0nPQ5jaSvobXHnQXY9/rHMGBmcFHqatnaQssxXrdm2/Au0lXnn2v6ucApbn\no5m/dNYISuMWLLmZ3pQM7PaDn7RxGi/Ye0VjVVh7Tyb3l3uVnOl2Y8bRt123\njdxI8/AonLyd0+4rqWWUtWhm2DMsl5xKikzN2OIjP8RdnCto/6dxLBHv3DVF\nOg1woM7ihF/XG5aAs5mnmUz5SISnDpwGpmDYidaue0PnHOPLG19phuQvpG5L\nsUK/\r\n=MI9J\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "gajus@gajus.com",
+          "name": "gajus"
+        }
+      ],
+      "_npmUser": {
+        "name": "gajus",
+        "email": "gajus@gajus.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/table_6.0.0_1598807151386_0.4647386983229216"
+      },
+      "_hasShrinkwrap": false
+    },
+    "6.0.1": {
+      "author": {
+        "name": "Gajus Kuizinas",
+        "email": "gajus@gajus.com",
+        "url": "http://gajus.com"
+      },
+      "dependencies": {
+        "ajv": "^6.12.4",
+        "lodash": "^4.17.20",
+        "slice-ansi": "^4.0.0",
+        "string-width": "^4.2.0"
+      },
+      "description": "Formats data into a string table.",
+      "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.4",
+        "@babel/node": "^7.10.5",
+        "@babel/plugin-transform-flow-strip-types": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/register": "^7.10.5",
+        "ajv-cli": "^3.2.1",
+        "ajv-keywords": "^3.5.2",
+        "babel-plugin-istanbul": "^6.0.0",
+        "babel-plugin-lodash": "^3.3.4",
+        "babel-plugin-transform-export-default-name": "^2.0.4",
+        "chai": "^4.2.0",
+        "chalk": "^4.1.0",
+        "coveralls": "^3.1.0",
+        "eslint": "^7.7.0",
+        "eslint-config-canonical": "^23.0.1",
+        "flow-bin": "^0.132.0",
+        "flow-copy-source": "^2.0.9",
+        "gitdown": "^3.1.3",
+        "husky": "^4.2.5",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "semantic-release": "^17.1.1",
+        "sinon": "^9.0.3"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "husky": {
+        "hooks": {
+          "post-commit": "npm run create-readme && git add README.md && git commit -m 'docs: generate docs' --no-verify",
+          "pre-commit": "npm run lint && npm run test && npm run build"
+        }
+      },
+      "keywords": [
+        "ascii",
+        "text",
+        "table",
+        "align",
+        "ansi"
+      ],
+      "license": "BSD-3-Clause",
+      "main": "./dist/index.js",
+      "name": "table",
+      "nyc": {
+        "include": [
+          "src/**/*.js"
+        ],
+        "instrument": false,
+        "reporter": [
+          "text-lcov"
+        ],
+        "require": [
+          "@babel/register"
+        ],
+        "sourceMap": false
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gajus/table.git"
+      },
+      "scripts": {
+        "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && npm run create-validators && flow-copy-source src dist",
+        "create-readme": "gitdown ./.README/README.md --output-file ./README.md",
+        "create-validators": "ajv compile --all-errors --inline-refs=false -s src/schemas/config -c ajv-keywords/keywords/typeof -o dist/validateConfig.js && ajv compile --all-errors --inline-refs=false -s src/schemas/streamConfig -c ajv-keywords/keywords/typeof -o dist/validateStreamConfig.js",
+        "lint": "npm run build && eslint ./src ./test && flow",
+        "test": "mocha --require @babel/register"
+      },
+      "version": "6.0.1",
+      "gitHead": "a376590fc48c6f03ed3e19e9cdee367a0fa652e9",
+      "bugs": {
+        "url": "https://github.com/gajus/table/issues"
+      },
+      "homepage": "https://github.com/gajus/table#readme",
+      "_id": "table@6.0.1",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-fmr6168splcy/3XIvhSm5w6hYYOqyr3plAsd7OqoerzyoMnIpoxYuwrpdO2Cm22dh6KCnvirvigPrFZp+tdWFA==",
+        "shasum": "334fd5d74590251f6893f1296c29d533bbac1b32",
+        "tarball": "https://registry.npmjs.org/table/-/table-6.0.1.tgz",
+        "fileCount": 78,
+        "unpackedSize": 198689,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfS91DCRA9TVsSAnZWagAA2r8P/1dLjXeWEehTsZSENOaV\nVSGhgWJ7xUECQsro7cw89eMnB5R5QspSJeLxAuZmoBKHTaktPIYmU4qNIUHf\noT1F68V1PzXmwIUsrur/sFogCD68Le9WzyRWkCF5rjxZ9pP/wRSWs7kABk3Z\nop4w90hior8c99TSyP+gmO7y0nVGqwvn29Da38x+XaDJYUhOn+2rTGT1E69b\n/b3wP7hREChxWCM5ffHVshUWSrXmRdPYiO9N2Tai5ennJ14RETCsg5T+MOWo\nYmI7XM5AeMfi9G1yV2P086yil5tkIwlLfU9CN7sNyDhZ1V3ofOjfZbcyrfHv\n1HdXM/t5oINqcN4lGxyVjwRQLvwz2coKO91Ua3Ziyg81yJKwOBx7A9eHqKov\nysnkWm3dx0Qr+eV4mmbys4173AcfgXKtPLHPlgvXXvVrpSOihmPSkqQr2e9o\nb0G/pFalduSUY6Pyjg04MflnktTXxGxYi6esSk4g+6DydFo7LL4ZOsTDCTyO\nsqcI+TERXXu4NqHTi0TI5mq9q61u8fVfUqOE3z6W7w6QM0FtMtbkGh4TRFv9\ns0icUAJfm1DAjwgY5BrANF0YtnCoZCIQotl+s/GvOH7Ji057p2AgA8jbKbct\nX/Ny7WtNSY8I8doskSF4wd1Sdg82ckyiFr6f7AZksfyvwc86xn7/Sa4KyIWG\nPn52\r\n=B2rE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "gajus@gajus.com",
+          "name": "gajus"
+        }
+      ],
+      "_npmUser": {
+        "name": "gajus",
+        "email": "gajus@gajus.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/table_6.0.1_1598807362618_0.10779533946660136"
+      },
+      "_hasShrinkwrap": false
+    },
+    "6.0.2": {
+      "author": {
+        "name": "Gajus Kuizinas",
+        "email": "gajus@gajus.com",
+        "url": "http://gajus.com"
+      },
+      "dependencies": {
+        "ajv": "^6.12.4",
+        "slice-ansi": "^4.0.0",
+        "string-width": "^4.2.0"
+      },
+      "description": "Formats data into a string table.",
+      "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.4",
+        "@babel/node": "^7.10.5",
+        "@babel/plugin-transform-flow-strip-types": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/register": "^7.10.5",
+        "ajv-cli": "^3.2.1",
+        "ajv-keywords": "^3.5.2",
+        "babel-plugin-istanbul": "^6.0.0",
+        "babel-plugin-transform-export-default-name": "^2.0.4",
+        "chai": "^4.2.0",
+        "chalk": "^4.1.0",
+        "coveralls": "^3.1.0",
+        "eslint": "^7.7.0",
+        "eslint-config-canonical": "^23.0.1",
+        "flow-bin": "^0.132.0",
+        "flow-copy-source": "^2.0.9",
+        "gitdown": "^3.1.3",
+        "husky": "^4.2.5",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "semantic-release": "^17.1.1",
+        "sinon": "^9.0.3"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "husky": {
+        "hooks": {
+          "post-commit": "npm run create-readme && git add README.md && git commit -m 'docs: generate docs' --no-verify",
+          "pre-commit": "npm run lint && npm run test && npm run build"
+        }
+      },
+      "keywords": [
+        "ascii",
+        "text",
+        "table",
+        "align",
+        "ansi"
+      ],
+      "license": "BSD-3-Clause",
+      "main": "./dist/index.js",
+      "name": "table",
+      "nyc": {
+        "include": [
+          "src/**/*.js"
+        ],
+        "instrument": false,
+        "reporter": [
+          "text-lcov"
+        ],
+        "require": [
+          "@babel/register"
+        ],
+        "sourceMap": false
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gajus/table.git"
+      },
+      "scripts": {
+        "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && npm run create-validators && flow-copy-source src dist",
+        "create-readme": "gitdown ./.README/README.md --output-file ./README.md",
+        "create-validators": "ajv compile --all-errors --inline-refs=false -s src/schemas/config -c ajv-keywords/keywords/typeof -o dist/validateConfig.js && ajv compile --all-errors --inline-refs=false -s src/schemas/streamConfig -c ajv-keywords/keywords/typeof -o dist/validateStreamConfig.js",
+        "lint": "npm run build && eslint ./src ./test && flow",
+        "test": "mocha --require @babel/register"
+      },
+      "version": "6.0.2",
+      "gitHead": "49a640c4e7a5743b03533c07623527fde52f89b4",
+      "bugs": {
+        "url": "https://github.com/gajus/table/issues"
+      },
+      "homepage": "https://github.com/gajus/table#readme",
+      "_id": "table@6.0.2",
+      "_nodeVersion": "10.22.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-1Dlr1wC8+NimBPoyGLKHps7gvQjyV9H0kfsdXCmvxl7vo4ODkq0sY7ueAMjMm9YZb7dsbhRLLeK6fIxFKojxMg==",
+        "shasum": "86baa9dde3883e964c63b59f1be78789aea4c91d",
+        "tarball": "https://registry.npmjs.org/table/-/table-6.0.2.tgz",
+        "fileCount": 78,
+        "unpackedSize": 199513,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfUUEdCRA9TVsSAnZWagAA61AP/0U8cT8Jl08b9f31CIXY\nZmF6EAYktjTVJ3mMMDSgo7TP2owV6Q3HeGAE/DEentae/HB7ynFklSSqP9jh\nBdprXUbk+9Dym03Ly8qvFhfO6obmGhppCcIJoJuX0lqN6J2Yb6LEVvhJXhzA\nf6mxjv35TMtwO/x0hoNCRlgg7pxAPnB4F+qKy9mCfmuJPZNqf2QTAIjpLIDJ\nM1JNEMB/j+U7lN2ir4Jki89+a8f2mjQlnURuHA+Hx1L3/TCrpjVd7/0zh8Bz\nqAH3P9y8Fv9wuw5/Yb9qsyvizkW9jh91WLHSYECfOw4tvzQzYwCyOytw2gUp\nzV8kZoCzq5zhWDi0XmJnaBKRq2nWV8ApN9VULwn7ge5kn1rZogbb/8uVqHGM\n0gYrl0Dbknzs1racV5kOZFyoQJ0TfBV5C3Jb9Jvfv7+WMzok10PiyADQnqWo\nUtNirFJyUK2bXnTuVo9+N4p1ed6wcWdCiQ5NMy1J2TUEiWWts3mzhsB9awUL\nkI5zAsPBueVVme08+iuchPqOG2G+EqCKxOD3mBtQUecybE09HzsXouJAHAm5\nnsMpma/2NqtUl6LvJ9iPMlkqSYhK9xtf8jsBGHZIWeLXM5wo1Lx1R2/XToZa\nDcj04i61vEH04pgeVQQVUVfo8aqK0zNEGMbv7G0pi91BNejmiPOyJGDkgDEY\n9EOv\r\n=3FXK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "gajus@gajus.com",
+          "name": "gajus"
+        }
+      ],
+      "_npmUser": {
+        "name": "gajus",
+        "email": "gajus@gajus.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/table_6.0.2_1599160604488_0.3108918120799209"
+      },
+      "_hasShrinkwrap": false
+    },
+    "6.0.3": {
+      "author": {
+        "name": "Gajus Kuizinas",
+        "email": "gajus@gajus.com",
+        "url": "http://gajus.com"
+      },
+      "dependencies": {
+        "ajv": "^6.12.4",
+        "lodash": "^4.17.20",
+        "slice-ansi": "^4.0.0",
+        "string-width": "^4.2.0"
+      },
+      "description": "Formats data into a string table.",
+      "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.4",
+        "@babel/node": "^7.10.5",
+        "@babel/plugin-transform-flow-strip-types": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/register": "^7.10.5",
+        "ajv-cli": "^3.2.1",
+        "ajv-keywords": "^3.5.2",
+        "babel-plugin-istanbul": "^6.0.0",
+        "babel-plugin-lodash": "^3.3.4",
+        "babel-plugin-transform-export-default-name": "^2.0.4",
+        "chai": "^4.2.0",
+        "chalk": "^4.1.0",
+        "coveralls": "^3.1.0",
+        "eslint": "^7.7.0",
+        "eslint-config-canonical": "^23.0.1",
+        "flow-bin": "^0.132.0",
+        "flow-copy-source": "^2.0.9",
+        "gitdown": "^3.1.3",
+        "husky": "^4.2.5",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0",
+        "semantic-release": "^17.1.1",
+        "sinon": "^9.0.3"
+      },
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "husky": {
+        "hooks": {
+          "post-commit": "npm run create-readme && git add README.md && git commit -m 'docs: generate docs' --no-verify",
+          "pre-commit": "npm run lint && npm run test && npm run build"
+        }
+      },
+      "keywords": [
+        "ascii",
+        "text",
+        "table",
+        "align",
+        "ansi"
+      ],
+      "license": "BSD-3-Clause",
+      "main": "./dist/index.js",
+      "name": "table",
+      "nyc": {
+        "include": [
+          "src/**/*.js"
+        ],
+        "instrument": false,
+        "reporter": [
+          "text-lcov"
+        ],
+        "require": [
+          "@babel/register"
+        ],
+        "sourceMap": false
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gajus/table.git"
+      },
+      "scripts": {
+        "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && npm run create-validators && flow-copy-source src dist",
+        "create-readme": "gitdown ./.README/README.md --output-file ./README.md",
+        "create-validators": "ajv compile --all-errors --inline-refs=false -s src/schemas/config -c ajv-keywords/keywords/typeof -o dist/validateConfig.js && ajv compile --all-errors --inline-refs=false -s src/schemas/streamConfig -c ajv-keywords/keywords/typeof -o dist/validateStreamConfig.js",
+        "lint": "npm run build && eslint ./src ./test && flow",
+        "test": "mocha --require @babel/register"
+      },
+      "version": "6.0.3",
+      "gitHead": "8c16d6011c9db75ecfcbb3755e7a61d4bcba8b79",
+      "bugs": {
+        "url": "https://github.com/gajus/table/issues"
+      },
+      "homepage": "https://github.com/gajus/table#readme",
+      "_id": "table@6.0.3",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-8321ZMcf1B9HvVX/btKv8mMZahCjn2aYrDlpqHaBFCfnox64edeH9kEid0vTLTRR8gWR2A20aDgeuTTea4sVtw==",
+        "shasum": "e5b8a834e37e27ad06de2e0fda42b55cfd8a0123",
+        "tarball": "https://registry.npmjs.org/table/-/table-6.0.3.tgz",
+        "fileCount": 78,
+        "unpackedSize": 198689,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfUbcwCRA9TVsSAnZWagAA0BcP/17UBZd7qZ8Zj7sRibN5\nheWOlEJ7IyZ0Kmkeznjl6lOSy06VheDAp8mBGYTbVzGyW+cc6VSsUBeGdzXr\nPON2UOgwX0T2hEKKGLwE9mFEZXetLGKKfN9aWg/RHW6DJiGnmw27wNiymY3y\nJ1AIumOKkUpxCGcxV6xW8QrZ2htGES8WUcg6i6qNVO9gAzROPigYiwE1oBJw\nUEeveKIyT1jq7DWb19moOTa0S1t4Oag6msaBDWrtJiZ2ACHbk9Ue/bSqvQ8S\nRKFPpUfX9prfP536nuEEendnoAMBkUKvIHs2rEay14+XZHbSVkMVXbW6kLmf\nWeN6ZbU71TyAfStfyhDTTrb9+2cv47K2+PEq8FypSQ0VuiZSMvHbMkAUGMrm\nJeDarfKdkS+RnzkvIGgLEKDD08Pq4XIYRFAvtb3pU5Dr2e9vMtuJeof679dz\nxIOJJ4wy1OouHMz8XEatuM0Ahv21cILzq/THjbxs0pC7L7UXJ/ok6x1kveGR\n6/WznzxxkVYRCJaxBvNHccMux/oZtw7PS7SOvA87zxDabdV7lJwl6BfUFCr8\n1thhF496mxrmSuAvXe8hf06pUtBUNzhm4W5U8lPrmUGOo3Z5aNHTbWG+BMoP\nw2e0aFcncBU+HzmdP0M/b3N9Qng3P63R+TpiKHkVuVAl2TR9RuC5QE/YQQTw\nM713\r\n=lYP9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "gajus@gajus.com",
+          "name": "gajus"
+        }
+      ],
+      "_npmUser": {
+        "name": "gajus",
+        "email": "gajus@gajus.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/table_6.0.3_1599190831660_0.49038452504360763"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -4963,7 +5425,7 @@
     }
   ],
   "time": {
-    "modified": "2019-08-15T15:10:28.438Z",
+    "modified": "2020-09-04T03:40:34.071Z",
     "created": "2011-01-03T14:08:20.786Z",
     "0.0.2": "2011-01-03T14:08:21.214Z",
     "0.0.3": "2011-01-09T16:55:28.084Z",
@@ -5020,7 +5482,11 @@
     "5.4.3": "2019-07-16T12:04:38.279Z",
     "5.4.4": "2019-07-16T14:05:14.813Z",
     "5.4.5": "2019-07-31T17:23:24.393Z",
-    "5.4.6": "2019-08-15T15:10:25.635Z"
+    "5.4.6": "2019-08-15T15:10:25.635Z",
+    "6.0.0": "2020-08-30T17:05:51.533Z",
+    "6.0.1": "2020-08-30T17:09:22.822Z",
+    "6.0.2": "2020-09-03T19:16:44.588Z",
+    "6.0.3": "2020-09-04T03:40:31.781Z"
   },
   "author": {
     "name": "Gajus Kuizinas",
@@ -5038,7 +5504,7 @@
     "align",
     "ansi"
   ],
-  "readme": "<a name=\"table\"></a>\n# Table\n\n[![GitSpo Mentions](https://gitspo.com/badges/mentions/gajus/table?style=flat-square)](https://gitspo.com/mentions/gajus/table)\n[![Travis build status](http://img.shields.io/travis/gajus/table/master.svg?style=flat-square)](https://travis-ci.org/gajus/table)\n[![Coveralls](https://img.shields.io/coveralls/gajus/table.svg?style=flat-square)](https://coveralls.io/github/gajus/table)\n[![NPM version](http://img.shields.io/npm/v/table.svg?style=flat-square)](https://www.npmjs.org/package/table)\n[![Canonical Code Style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)\n[![Twitter Follow](https://img.shields.io/twitter/follow/kuizinas.svg?style=social&label=Follow)](https://twitter.com/kuizinas)\n\n* [Table](#table)\n    * [Features](#table-features)\n    * [Install](#table-install)\n    * [Usage](#table-usage)\n        * [Cell Content Alignment](#table-usage-cell-content-alignment)\n        * [Column Width](#table-usage-column-width)\n        * [Custom Border](#table-usage-custom-border)\n        * [Draw Horizontal Line](#table-usage-draw-horizontal-line)\n        * [Single Line Mode](#table-usage-single-line-mode)\n        * [Padding Cell Content](#table-usage-padding-cell-content)\n        * [Predefined Border Templates](#table-usage-predefined-border-templates)\n        * [Streaming](#table-usage-streaming)\n        * [Text Truncation](#table-usage-text-truncation)\n        * [Text Wrapping](#table-usage-text-wrapping)\n\n\nProduces a string that represents array data in a text table.\n\n![Demo of table displaying a list of missions to the Moon.](./.README/demo.png)\n\n<a name=\"table-features\"></a>\n## Features\n\n* Works with strings containing [fullwidth](https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms) characters.\n* Works with strings containing [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).\n* Configurable border characters.\n* Configurable content alignment per column.\n* Configurable content padding per column.\n* Configurable column width.\n* Text wrapping.\n\n<a name=\"table-install\"></a>\n## Install\n\n```bash\nnpm install table\n\n```\n\n[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gajus)\n[![Become a Patron](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/gajus)\n\n<a name=\"table-usage\"></a>\n## Usage\n\nTable data is described using an array (rows) of array (cells).\n\n```js\nimport {\n  table\n} from 'table';\n\n// Using commonjs?\n// const {table} = require('table');\n\nlet data,\n    output;\n\ndata = [\n    ['0A', '0B', '0C'],\n    ['1A', '1B', '1C'],\n    ['2A', '2B', '2C']\n];\n\n/**\n * @typedef {string} table~cell\n */\n\n/**\n * @typedef {table~cell[]} table~row\n */\n\n/**\n * @typedef {Object} table~columns\n * @property {string} alignment Cell content alignment (enum: left, center, right) (default: left).\n * @property {number} width Column width (default: auto).\n * @property {number} truncate Number of characters are which the content will be truncated (default: Infinity).\n * @property {number} paddingLeft Cell content padding width left (default: 1).\n * @property {number} paddingRight Cell content padding width right (default: 1).\n */\n\n/**\n * @typedef {Object} table~border\n * @property {string} topBody\n * @property {string} topJoin\n * @property {string} topLeft\n * @property {string} topRight\n * @property {string} bottomBody\n * @property {string} bottomJoin\n * @property {string} bottomLeft\n * @property {string} bottomRight\n * @property {string} bodyLeft\n * @property {string} bodyRight\n * @property {string} bodyJoin\n * @property {string} joinBody\n * @property {string} joinLeft\n * @property {string} joinRight\n * @property {string} joinJoin\n */\n\n/**\n * Used to dynamically tell table whether to draw a line separating rows or not.\n * The default behavior is to always return true.\n *\n * @typedef {function} drawHorizontalLine\n * @param {number} index\n * @param {number} size\n * @return {boolean}\n */\n\n/**\n * @typedef {Object} table~config\n * @property {table~border} border\n * @property {table~columns[]} columns Column specific configuration.\n * @property {table~columns} columnDefault Default values for all columns. Column specific settings overwrite the default values.\n * @property {table~drawHorizontalLine} drawHorizontalLine\n */\n\n/**\n * Generates a text table.\n *\n * @param {table~row[]} rows\n * @param {table~config} config\n * @return {String}\n */\noutput = table(data);\n\nconsole.log(output);\n```\n\n```\n╔════╤════╤════╗\n║ 0A │ 0B │ 0C ║\n╟────┼────┼────╢\n║ 1A │ 1B │ 1C ║\n╟────┼────┼────╢\n║ 2A │ 2B │ 2C ║\n╚════╧════╧════╝\n\n```\n\n\n<a name=\"table-usage-cell-content-alignment\"></a>\n### Cell Content Alignment\n\n`{string} config.columns[{number}].alignment` property controls content horizontal alignment within a cell.\n\nValid values are: \"left\", \"right\" and \"center\".\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  columns: {\n    0: {\n      alignment: 'left',\n      width: 10\n    },\n    1: {\n      alignment: 'center',\n      width: 10\n    },\n    2: {\n      alignment: 'right',\n      width: 10\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔════════════╤════════════╤════════════╗\n║ 0A         │     0B     │         0C ║\n╟────────────┼────────────┼────────────╢\n║ 1A         │     1B     │         1C ║\n╟────────────┼────────────┼────────────╢\n║ 2A         │     2B     │         2C ║\n╚════════════╧════════════╧════════════╝\n```\n\n<a name=\"table-usage-column-width\"></a>\n### Column Width\n\n`{number} config.columns[{number}].width` property restricts column width to a fixed width.\n\n```js\nlet data,\n  output,\n  options;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\noptions = {\n  columns: {\n    1: {\n      width: 10\n    }\n  }\n};\n\noutput = table(data, options);\n\nconsole.log(output);\n```\n\n```\n╔════╤════════════╤════╗\n║ 0A │ 0B         │ 0C ║\n╟────┼────────────┼────╢\n║ 1A │ 1B         │ 1C ║\n╟────┼────────────┼────╢\n║ 2A │ 2B         │ 2C ║\n╚════╧════════════╧════╝\n```\n\n<a name=\"table-usage-custom-border\"></a>\n### Custom Border\n\n`{object} config.border` property describes characters used to draw the table border.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  border: {\n    topBody: `─`,\n    topJoin: `┬`,\n    topLeft: `┌`,\n    topRight: `┐`,\n\n    bottomBody: `─`,\n    bottomJoin: `┴`,\n    bottomLeft: `└`,\n    bottomRight: `┘`,\n\n    bodyLeft: `│`,\n    bodyRight: `│`,\n    bodyJoin: `│`,\n\n    joinBody: `─`,\n    joinLeft: `├`,\n    joinRight: `┤`,\n    joinJoin: `┼`\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n┌────┬────┬────┐\n│ 0A │ 0B │ 0C │\n├────┼────┼────┤\n│ 1A │ 1B │ 1C │\n├────┼────┼────┤\n│ 2A │ 2B │ 2C │\n└────┴────┴────┘\n```\n\n<a name=\"table-usage-draw-horizontal-line\"></a>\n### Draw Horizontal Line\n\n`{function} config.drawHorizontalLine` property is a function that is called for every non-content row in the table. The result of the function `{boolean}` determines whether a row is drawn.\n\n```js\nlet data,\n  output,\n  options;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C'],\n  ['3A', '3B', '3C'],\n  ['4A', '4B', '4C']\n];\n\noptions = {\n  /**\n    * @typedef {function} drawHorizontalLine\n    * @param {number} index\n    * @param {number} size\n    * @return {boolean}\n    */\n  drawHorizontalLine: (index, size) => {\n    return index === 0 || index === 1 || index === size - 1 || index === size;\n  }\n};\n\noutput = table(data, options);\n\nconsole.log(output);\n\n```\n\n```\n╔════╤════╤════╗\n║ 0A │ 0B │ 0C ║\n╟────┼────┼────╢\n║ 1A │ 1B │ 1C ║\n║ 2A │ 2B │ 2C ║\n║ 3A │ 3B │ 3C ║\n╟────┼────┼────╢\n║ 4A │ 4B │ 4C ║\n╚════╧════╧════╝\n\n```\n\n<a name=\"table-usage-single-line-mode\"></a>\n### Single Line Mode\n\nHorizontal lines inside the table are not drawn.\n\n```js\nimport {\n  table,\n  getBorderCharacters\n} from 'table';\n\nconst data = [\n  ['-rw-r--r--', '1', 'pandorym', 'staff', '1529', 'May 23 11:25', 'LICENSE'],\n  ['-rw-r--r--', '1', 'pandorym', 'staff', '16327', 'May 23 11:58', 'README.md'],\n  ['drwxr-xr-x', '76', 'pandorym', 'staff', '2432', 'May 23 12:02', 'dist'],\n  ['drwxr-xr-x', '634', 'pandorym', 'staff', '20288', 'May 23 11:54', 'node_modules'],\n  ['-rw-r--r--', '1,', 'pandorym', 'staff', '525688', 'May 23 11:52', 'package-lock.json'],\n  ['-rw-r--r--@', '1', 'pandorym', 'staff', '2440', 'May 23 11:25', 'package.json'],\n  ['drwxr-xr-x', '27', 'pandorym', 'staff', '864', 'May 23 11:25', 'src'],\n  ['drwxr-xr-x', '20', 'pandorym', 'staff', '640', 'May 23 11:25', 'test'],\n];\n\nconst config = {\n  singleLine: true\n};\n\nconst output = table(data, config);\nconsole.log(output);\n```\n\n```\n╔═════════════╤═════╤══════════╤═══════╤════════╤══════════════╤═══════════════════╗\n║ -rw-r--r--  │ 1   │ pandorym │ staff │ 1529   │ May 23 11:25 │ LICENSE           ║\n║ -rw-r--r--  │ 1   │ pandorym │ staff │ 16327  │ May 23 11:58 │ README.md         ║\n║ drwxr-xr-x  │ 76  │ pandorym │ staff │ 2432   │ May 23 12:02 │ dist              ║\n║ drwxr-xr-x  │ 634 │ pandorym │ staff │ 20288  │ May 23 11:54 │ node_modules      ║\n║ -rw-r--r--  │ 1,  │ pandorym │ staff │ 525688 │ May 23 11:52 │ package-lock.json ║\n║ -rw-r--r--@ │ 1   │ pandorym │ staff │ 2440   │ May 23 11:25 │ package.json      ║\n║ drwxr-xr-x  │ 27  │ pandorym │ staff │ 864    │ May 23 11:25 │ src               ║\n║ drwxr-xr-x  │ 20  │ pandorym │ staff │ 640    │ May 23 11:25 │ test              ║\n╚═════════════╧═════╧══════════╧═══════╧════════╧══════════════╧═══════════════════╝\n```\n\n<a name=\"table-usage-padding-cell-content\"></a>\n### Padding Cell Content\n\n`{number} config.columns[{number}].paddingLeft` and `{number} config.columns[{number}].paddingRight` properties control content padding within a cell. Property value represents a number of whitespaces used to pad the content.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['0A', 'AABBCC', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  columns: {\n    0: {\n      paddingLeft: 3\n    },\n    1: {\n      width: 2,\n      paddingRight: 3\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════╤══════╤════╗\n║   0A │ AA   │ 0C ║\n║      │ BB   │    ║\n║      │ CC   │    ║\n╟──────┼──────┼────╢\n║   1A │ 1B   │ 1C ║\n╟──────┼──────┼────╢\n║   2A │ 2B   │ 2C ║\n╚══════╧══════╧════╝\n```\n\n<a name=\"table-usage-predefined-border-templates\"></a>\n### Predefined Border Templates\n\nYou can load one of the predefined border templates using `getBorderCharacters` function.\n\n```js\nimport {\n  table,\n  getBorderCharacters\n} from 'table';\n\nlet config,\n  data;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  border: getBorderCharacters(`name of the template`)\n};\n\ntable(data, config);\n```\n\n```\n# honeywell\n\n╔════╤════╤════╗\n║ 0A │ 0B │ 0C ║\n╟────┼────┼────╢\n║ 1A │ 1B │ 1C ║\n╟────┼────┼────╢\n║ 2A │ 2B │ 2C ║\n╚════╧════╧════╝\n\n# norc\n\n┌────┬────┬────┐\n│ 0A │ 0B │ 0C │\n├────┼────┼────┤\n│ 1A │ 1B │ 1C │\n├────┼────┼────┤\n│ 2A │ 2B │ 2C │\n└────┴────┴────┘\n\n# ramac (ASCII; for use in terminals that do not support Unicode characters)\n\n+----+----+----+\n| 0A | 0B | 0C |\n|----|----|----|\n| 1A | 1B | 1C |\n|----|----|----|\n| 2A | 2B | 2C |\n+----+----+----+\n\n# void (no borders; see \"bordless table\" section of the documentation)\n\n 0A  0B  0C\n\n 1A  1B  1C\n\n 2A  2B  2C\n\n```\n\nRaise [an issue](https://github.com/gajus/table/issues) if you'd like to contribute a new border template.\n\n<a name=\"table-usage-predefined-border-templates-borderless-table\"></a>\n#### Borderless Table\n\nSimply using \"void\" border character template creates a table with a lot of unnecessary spacing.\n\nTo create a more plesant to the eye table, reset the padding and remove the joining rows, e.g.\n\n```js\nlet output;\n\noutput = table(data, {\n    border: getBorderCharacters(`void`),\n    columnDefault: {\n        paddingLeft: 0,\n        paddingRight: 1\n    },\n    drawHorizontalLine: () => {\n        return false\n    }\n});\n\nconsole.log(output);\n```\n\n```\n0A 0B 0C\n1A 1B 1C\n2A 2B 2C\n```\n\n<a name=\"table-usage-streaming\"></a>\n### Streaming\n\n`table` package exports `createStream` function used to draw a table and append rows.\n\n`createStream` requires `{number} columnDefault.width` and `{number} columnCount` configuration properties.\n\n```js\nimport {\n  createStream\n} from 'table';\n\nlet config,\n  stream;\n\nconfig = {\n  columnDefault: {\n    width: 50\n  },\n  columnCount: 1\n};\n\nstream = createStream(config);\n\nsetInterval(() => {\n  stream.write([new Date()]);\n}, 500);\n```\n\n![Streaming current date.](./.README/streaming.gif)\n\n`table` package uses ANSI escape codes to overwrite the output of the last line when a new row is printed.\n\nThe underlying implementation is explained in this [Stack Overflow answer](http://stackoverflow.com/a/32938658/368691).\n\nStreaming supports all of the configuration properties and functionality of a static table (such as auto text wrapping, alignment and padding), e.g.\n\n```js\nimport {\n  createStream\n} from 'table';\n\nimport _ from 'lodash';\n\nlet config,\n  stream,\n  i;\n\nconfig = {\n  columnDefault: {\n    width: 50\n  },\n  columnCount: 3,\n  columns: {\n    0: {\n      width: 10,\n      alignment: 'right'\n    },\n    1: {\n      alignment: 'center',\n    },\n    2: {\n      width: 10\n    }\n  }\n};\n\nstream = createStream(config);\n\ni = 0;\n\nsetInterval(() => {\n  let random;\n\n  random = _.sample('abcdefghijklmnopqrstuvwxyz', _.random(1, 30)).join('');\n\n  stream.write([i++, new Date(), random]);\n}, 500);\n```\n\n![Streaming random data.](./.README/streaming-random.gif)\n\n<a name=\"table-usage-text-truncation\"></a>\n### Text Truncation\n\nTo handle a content that overflows the container width, `table` package implements [text wrapping](#table-usage-text-wrapping). However, sometimes you may want to truncate content that is too long to be displayed in the table.\n\n`{number} config.columns[{number}].truncate` property (default: `Infinity`) truncates the text at the specified length.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nibh sed mauris convallis dapibus. Nunc venenatis tempus nulla sit amet viverra.']\n];\n\nconfig = {\n  columns: {\n    0: {\n      width: 20,\n      truncate: 100\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════════════════════╗\n║ Lorem ipsum dolor si ║\n║ t amet, consectetur  ║\n║ adipiscing elit. Pha ║\n║ sellus pulvinar nibh ║\n║ sed mauris conva...  ║\n╚══════════════════════╝\n```\n\n<a name=\"table-usage-text-wrapping\"></a>\n### Text Wrapping\n\n`table` package implements auto text wrapping, i.e. text that has width greater than the container width will be separated into multiple lines, e.g.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n    ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nibh sed mauris convallis dapibus. Nunc venenatis tempus nulla sit amet viverra.']\n];\n\nconfig = {\n  columns: {\n    0: {\n      width: 20\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════════════════════╗\n║ Lorem ipsum dolor si ║\n║ t amet, consectetur  ║\n║ adipiscing elit. Pha ║\n║ sellus pulvinar nibh ║\n║ sed mauris convallis ║\n║ dapibus. Nunc venena ║\n║ tis tempus nulla sit ║\n║ amet viverra.        ║\n╚══════════════════════╝\n```\n\nWhen `wrapWord` is `true` the text is broken at the nearest space or one of the special characters (\"-\", \"_\", \"\\\", \"/\", \".\", \",\", \";\"), e.g.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nibh sed mauris convallis dapibus. Nunc venenatis tempus nulla sit amet viverra.']\n];\n\nconfig = {\n  columns: {\n    0: {\n      width: 20,\n      wrapWord: true\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════════════════════╗\n║ Lorem ipsum dolor    ║\n║ sit amet,            ║\n║ consectetur          ║\n║ adipiscing elit.     ║\n║ Phasellus pulvinar   ║\n║ nibh sed mauris      ║\n║ convallis dapibus.   ║\n║ Nunc venenatis       ║\n║ tempus nulla sit     ║\n║ amet viverra.        ║\n╚══════════════════════╝\n\n```\n\n",
+  "readme": "<a name=\"table\"></a>\n# Table\n\n[![GitSpo Mentions](https://gitspo.com/badges/mentions/gajus/table?style=flat-square)](https://gitspo.com/mentions/gajus/table)\n[![Travis build status](http://img.shields.io/travis/gajus/table/master.svg?style=flat-square)](https://travis-ci.org/gajus/table)\n[![Coveralls](https://img.shields.io/coveralls/gajus/table.svg?style=flat-square)](https://coveralls.io/github/gajus/table)\n[![NPM version](http://img.shields.io/npm/v/table.svg?style=flat-square)](https://www.npmjs.org/package/table)\n[![Canonical Code Style](https://img.shields.io/badge/code%20style-canonical-blue.svg?style=flat-square)](https://github.com/gajus/canonical)\n[![Twitter Follow](https://img.shields.io/twitter/follow/kuizinas.svg?style=social&label=Follow)](https://twitter.com/kuizinas)\n\n* [Table](#table)\n    * [Features](#table-features)\n    * [Install](#table-install)\n    * [Usage](#table-usage)\n        * [Cell Content Alignment](#table-usage-cell-content-alignment)\n        * [Column Width](#table-usage-column-width)\n        * [Custom Border](#table-usage-custom-border)\n        * [Draw Horizontal Line](#table-usage-draw-horizontal-line)\n        * [Single Line Mode](#table-usage-single-line-mode)\n        * [Padding Cell Content](#table-usage-padding-cell-content)\n        * [Predefined Border Templates](#table-usage-predefined-border-templates)\n        * [Streaming](#table-usage-streaming)\n        * [Text Truncation](#table-usage-text-truncation)\n        * [Text Wrapping](#table-usage-text-wrapping)\n\n\nProduces a string that represents array data in a text table.\n\n![Demo of table displaying a list of missions to the Moon.](./.README/demo.png)\n\n<a name=\"table-features\"></a>\n## Features\n\n* Works with strings containing [fullwidth](https://en.wikipedia.org/wiki/Halfwidth_and_fullwidth_forms) characters.\n* Works with strings containing [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code).\n* Configurable border characters.\n* Configurable content alignment per column.\n* Configurable content padding per column.\n* Configurable column width.\n* Text wrapping.\n\n<a name=\"table-install\"></a>\n## Install\n\n```bash\nnpm install table\n\n```\n\n[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gajus)\n[![Become a Patron](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/gajus)\n\n<a name=\"table-usage\"></a>\n## Usage\n\nTable data is described using an array (rows) of array (cells).\n\n```js\nimport tableImport from 'table';\nconst { table } = tableImport;\n\n// Using commonjs?\n// const {table} = require('table');\n\nlet data,\n    output;\n\ndata = [\n    ['0A', '0B', '0C'],\n    ['1A', '1B', '1C'],\n    ['2A', '2B', '2C']\n];\n\n/**\n * @typedef {string} table~cell\n */\n\n/**\n * @typedef {table~cell[]} table~row\n */\n\n/**\n * @typedef {Object} table~columns\n * @property {string} alignment Cell content alignment (enum: left, center, right) (default: left).\n * @property {number} width Column width (default: auto).\n * @property {number} truncate Number of characters are which the content will be truncated (default: Infinity).\n * @property {number} paddingLeft Cell content padding width left (default: 1).\n * @property {number} paddingRight Cell content padding width right (default: 1).\n */\n\n/**\n * @typedef {Object} table~border\n * @property {string} topBody\n * @property {string} topJoin\n * @property {string} topLeft\n * @property {string} topRight\n * @property {string} bottomBody\n * @property {string} bottomJoin\n * @property {string} bottomLeft\n * @property {string} bottomRight\n * @property {string} bodyLeft\n * @property {string} bodyRight\n * @property {string} bodyJoin\n * @property {string} joinBody\n * @property {string} joinLeft\n * @property {string} joinRight\n * @property {string} joinJoin\n */\n\n/**\n * Used to dynamically tell table whether to draw a line separating rows or not.\n * The default behavior is to always return true.\n *\n * @typedef {function} drawHorizontalLine\n * @param {number} index\n * @param {number} size\n * @return {boolean}\n */\n\n/**\n * @typedef {Object} table~config\n * @property {table~border} border\n * @property {table~columns[]} columns Column specific configuration.\n * @property {table~columns} columnDefault Default values for all columns. Column specific settings overwrite the default values.\n * @property {table~drawHorizontalLine} drawHorizontalLine\n */\n\n/**\n * Generates a text table.\n *\n * @param {table~row[]} rows\n * @param {table~config} config\n * @return {String}\n */\noutput = table(data);\n\nconsole.log(output);\n```\n\n```\n╔════╤════╤════╗\n║ 0A │ 0B │ 0C ║\n╟────┼────┼────╢\n║ 1A │ 1B │ 1C ║\n╟────┼────┼────╢\n║ 2A │ 2B │ 2C ║\n╚════╧════╧════╝\n\n```\n\n\n<a name=\"table-usage-cell-content-alignment\"></a>\n### Cell Content Alignment\n\n`{string} config.columns[{number}].alignment` property controls content horizontal alignment within a cell.\n\nValid values are: \"left\", \"right\" and \"center\".\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  columns: {\n    0: {\n      alignment: 'left',\n      width: 10\n    },\n    1: {\n      alignment: 'center',\n      width: 10\n    },\n    2: {\n      alignment: 'right',\n      width: 10\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔════════════╤════════════╤════════════╗\n║ 0A         │     0B     │         0C ║\n╟────────────┼────────────┼────────────╢\n║ 1A         │     1B     │         1C ║\n╟────────────┼────────────┼────────────╢\n║ 2A         │     2B     │         2C ║\n╚════════════╧════════════╧════════════╝\n```\n\n<a name=\"table-usage-column-width\"></a>\n### Column Width\n\n`{number} config.columns[{number}].width` property restricts column width to a fixed width.\n\n```js\nlet data,\n  output,\n  options;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\noptions = {\n  columns: {\n    1: {\n      width: 10\n    }\n  }\n};\n\noutput = table(data, options);\n\nconsole.log(output);\n```\n\n```\n╔════╤════════════╤════╗\n║ 0A │ 0B         │ 0C ║\n╟────┼────────────┼────╢\n║ 1A │ 1B         │ 1C ║\n╟────┼────────────┼────╢\n║ 2A │ 2B         │ 2C ║\n╚════╧════════════╧════╝\n```\n\n<a name=\"table-usage-custom-border\"></a>\n### Custom Border\n\n`{object} config.border` property describes characters used to draw the table border.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  border: {\n    topBody: `─`,\n    topJoin: `┬`,\n    topLeft: `┌`,\n    topRight: `┐`,\n\n    bottomBody: `─`,\n    bottomJoin: `┴`,\n    bottomLeft: `└`,\n    bottomRight: `┘`,\n\n    bodyLeft: `│`,\n    bodyRight: `│`,\n    bodyJoin: `│`,\n\n    joinBody: `─`,\n    joinLeft: `├`,\n    joinRight: `┤`,\n    joinJoin: `┼`\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n┌────┬────┬────┐\n│ 0A │ 0B │ 0C │\n├────┼────┼────┤\n│ 1A │ 1B │ 1C │\n├────┼────┼────┤\n│ 2A │ 2B │ 2C │\n└────┴────┴────┘\n```\n\n<a name=\"table-usage-draw-horizontal-line\"></a>\n### Draw Horizontal Line\n\n`{function} config.drawHorizontalLine` property is a function that is called for every non-content row in the table. The result of the function `{boolean}` determines whether a row is drawn.\n\n```js\nlet data,\n  output,\n  options;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C'],\n  ['3A', '3B', '3C'],\n  ['4A', '4B', '4C']\n];\n\noptions = {\n  /**\n    * @typedef {function} drawHorizontalLine\n    * @param {number} index\n    * @param {number} size\n    * @return {boolean}\n    */\n  drawHorizontalLine: (index, size) => {\n    return index === 0 || index === 1 || index === size - 1 || index === size;\n  }\n};\n\noutput = table(data, options);\n\nconsole.log(output);\n\n```\n\n```\n╔════╤════╤════╗\n║ 0A │ 0B │ 0C ║\n╟────┼────┼────╢\n║ 1A │ 1B │ 1C ║\n║ 2A │ 2B │ 2C ║\n║ 3A │ 3B │ 3C ║\n╟────┼────┼────╢\n║ 4A │ 4B │ 4C ║\n╚════╧════╧════╝\n\n```\n\n<a name=\"table-usage-single-line-mode\"></a>\n### Single Line Mode\n\nHorizontal lines inside the table are not drawn.\n\n```js\nimport {\n  table,\n  getBorderCharacters\n} from 'table';\n\nconst data = [\n  ['-rw-r--r--', '1', 'pandorym', 'staff', '1529', 'May 23 11:25', 'LICENSE'],\n  ['-rw-r--r--', '1', 'pandorym', 'staff', '16327', 'May 23 11:58', 'README.md'],\n  ['drwxr-xr-x', '76', 'pandorym', 'staff', '2432', 'May 23 12:02', 'dist'],\n  ['drwxr-xr-x', '634', 'pandorym', 'staff', '20288', 'May 23 11:54', 'node_modules'],\n  ['-rw-r--r--', '1,', 'pandorym', 'staff', '525688', 'May 23 11:52', 'package-lock.json'],\n  ['-rw-r--r--@', '1', 'pandorym', 'staff', '2440', 'May 23 11:25', 'package.json'],\n  ['drwxr-xr-x', '27', 'pandorym', 'staff', '864', 'May 23 11:25', 'src'],\n  ['drwxr-xr-x', '20', 'pandorym', 'staff', '640', 'May 23 11:25', 'test'],\n];\n\nconst config = {\n  singleLine: true\n};\n\nconst output = table(data, config);\nconsole.log(output);\n```\n\n```\n╔═════════════╤═════╤══════════╤═══════╤════════╤══════════════╤═══════════════════╗\n║ -rw-r--r--  │ 1   │ pandorym │ staff │ 1529   │ May 23 11:25 │ LICENSE           ║\n║ -rw-r--r--  │ 1   │ pandorym │ staff │ 16327  │ May 23 11:58 │ README.md         ║\n║ drwxr-xr-x  │ 76  │ pandorym │ staff │ 2432   │ May 23 12:02 │ dist              ║\n║ drwxr-xr-x  │ 634 │ pandorym │ staff │ 20288  │ May 23 11:54 │ node_modules      ║\n║ -rw-r--r--  │ 1,  │ pandorym │ staff │ 525688 │ May 23 11:52 │ package-lock.json ║\n║ -rw-r--r--@ │ 1   │ pandorym │ staff │ 2440   │ May 23 11:25 │ package.json      ║\n║ drwxr-xr-x  │ 27  │ pandorym │ staff │ 864    │ May 23 11:25 │ src               ║\n║ drwxr-xr-x  │ 20  │ pandorym │ staff │ 640    │ May 23 11:25 │ test              ║\n╚═════════════╧═════╧══════════╧═══════╧════════╧══════════════╧═══════════════════╝\n```\n\n<a name=\"table-usage-padding-cell-content\"></a>\n### Padding Cell Content\n\n`{number} config.columns[{number}].paddingLeft` and `{number} config.columns[{number}].paddingRight` properties control content padding within a cell. Property value represents a number of whitespaces used to pad the content.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['0A', 'AABBCC', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  columns: {\n    0: {\n      paddingLeft: 3\n    },\n    1: {\n      width: 2,\n      paddingRight: 3\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════╤══════╤════╗\n║   0A │ AA   │ 0C ║\n║      │ BB   │    ║\n║      │ CC   │    ║\n╟──────┼──────┼────╢\n║   1A │ 1B   │ 1C ║\n╟──────┼──────┼────╢\n║   2A │ 2B   │ 2C ║\n╚══════╧══════╧════╝\n```\n\n<a name=\"table-usage-predefined-border-templates\"></a>\n### Predefined Border Templates\n\nYou can load one of the predefined border templates using `getBorderCharacters` function.\n\n```js\nimport {\n  table,\n  getBorderCharacters\n} from 'table';\n\nlet config,\n  data;\n\ndata = [\n  ['0A', '0B', '0C'],\n  ['1A', '1B', '1C'],\n  ['2A', '2B', '2C']\n];\n\nconfig = {\n  border: getBorderCharacters(`name of the template`)\n};\n\ntable(data, config);\n```\n\n```\n# honeywell\n\n╔════╤════╤════╗\n║ 0A │ 0B │ 0C ║\n╟────┼────┼────╢\n║ 1A │ 1B │ 1C ║\n╟────┼────┼────╢\n║ 2A │ 2B │ 2C ║\n╚════╧════╧════╝\n\n# norc\n\n┌────┬────┬────┐\n│ 0A │ 0B │ 0C │\n├────┼────┼────┤\n│ 1A │ 1B │ 1C │\n├────┼────┼────┤\n│ 2A │ 2B │ 2C │\n└────┴────┴────┘\n\n# ramac (ASCII; for use in terminals that do not support Unicode characters)\n\n+----+----+----+\n| 0A | 0B | 0C |\n|----|----|----|\n| 1A | 1B | 1C |\n|----|----|----|\n| 2A | 2B | 2C |\n+----+----+----+\n\n# void (no borders; see \"bordless table\" section of the documentation)\n\n 0A  0B  0C\n\n 1A  1B  1C\n\n 2A  2B  2C\n\n```\n\nRaise [an issue](https://github.com/gajus/table/issues) if you'd like to contribute a new border template.\n\n<a name=\"table-usage-predefined-border-templates-borderless-table\"></a>\n#### Borderless Table\n\nSimply using \"void\" border character template creates a table with a lot of unnecessary spacing.\n\nTo create a more plesant to the eye table, reset the padding and remove the joining rows, e.g.\n\n```js\nlet output;\n\noutput = table(data, {\n    border: getBorderCharacters(`void`),\n    columnDefault: {\n        paddingLeft: 0,\n        paddingRight: 1\n    },\n    drawHorizontalLine: () => {\n        return false\n    }\n});\n\nconsole.log(output);\n```\n\n```\n0A 0B 0C\n1A 1B 1C\n2A 2B 2C\n```\n\n<a name=\"table-usage-streaming\"></a>\n### Streaming\n\n`table` package exports `createStream` function used to draw a table and append rows.\n\n`createStream` requires `{number} columnDefault.width` and `{number} columnCount` configuration properties.\n\n```js\nimport {\n  createStream\n} from 'table';\n\nlet config,\n  stream;\n\nconfig = {\n  columnDefault: {\n    width: 50\n  },\n  columnCount: 1\n};\n\nstream = createStream(config);\n\nsetInterval(() => {\n  stream.write([new Date()]);\n}, 500);\n```\n\n![Streaming current date.](./.README/streaming.gif)\n\n`table` package uses ANSI escape codes to overwrite the output of the last line when a new row is printed.\n\nThe underlying implementation is explained in this [Stack Overflow answer](http://stackoverflow.com/a/32938658/368691).\n\nStreaming supports all of the configuration properties and functionality of a static table (such as auto text wrapping, alignment and padding), e.g.\n\n```js\nimport {\n  createStream\n} from 'table';\n\nimport _ from 'lodash';\n\nlet config,\n  stream,\n  i;\n\nconfig = {\n  columnDefault: {\n    width: 50\n  },\n  columnCount: 3,\n  columns: {\n    0: {\n      width: 10,\n      alignment: 'right'\n    },\n    1: {\n      alignment: 'center',\n    },\n    2: {\n      width: 10\n    }\n  }\n};\n\nstream = createStream(config);\n\ni = 0;\n\nsetInterval(() => {\n  let random;\n\n  random = _.sample('abcdefghijklmnopqrstuvwxyz', _.random(1, 30)).join('');\n\n  stream.write([i++, new Date(), random]);\n}, 500);\n```\n\n![Streaming random data.](./.README/streaming-random.gif)\n\n<a name=\"table-usage-text-truncation\"></a>\n### Text Truncation\n\nTo handle a content that overflows the container width, `table` package implements [text wrapping](#table-usage-text-wrapping). However, sometimes you may want to truncate content that is too long to be displayed in the table.\n\n`{number} config.columns[{number}].truncate` property (default: `Infinity`) truncates the text at the specified length.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nibh sed mauris convallis dapibus. Nunc venenatis tempus nulla sit amet viverra.']\n];\n\nconfig = {\n  columns: {\n    0: {\n      width: 20,\n      truncate: 100\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════════════════════╗\n║ Lorem ipsum dolor si ║\n║ t amet, consectetur  ║\n║ adipiscing elit. Pha ║\n║ sellus pulvinar nibh ║\n║ sed mauris conva...  ║\n╚══════════════════════╝\n```\n\n<a name=\"table-usage-text-wrapping\"></a>\n### Text Wrapping\n\n`table` package implements auto text wrapping, i.e. text that has width greater than the container width will be separated into multiple lines, e.g.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n    ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nibh sed mauris convallis dapibus. Nunc venenatis tempus nulla sit amet viverra.']\n];\n\nconfig = {\n  columns: {\n    0: {\n      width: 20\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════════════════════╗\n║ Lorem ipsum dolor si ║\n║ t amet, consectetur  ║\n║ adipiscing elit. Pha ║\n║ sellus pulvinar nibh ║\n║ sed mauris convallis ║\n║ dapibus. Nunc venena ║\n║ tis tempus nulla sit ║\n║ amet viverra.        ║\n╚══════════════════════╝\n```\n\nWhen `wrapWord` is `true` the text is broken at the nearest space or one of the special characters (\"-\", \"_\", \"\\\", \"/\", \".\", \",\", \";\"), e.g.\n\n```js\nlet config,\n  data,\n  output;\n\ndata = [\n  ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nibh sed mauris convallis dapibus. Nunc venenatis tempus nulla sit amet viverra.']\n];\n\nconfig = {\n  columns: {\n    0: {\n      width: 20,\n      wrapWord: true\n    }\n  }\n};\n\noutput = table(data, config);\n\nconsole.log(output);\n```\n\n```\n╔══════════════════════╗\n║ Lorem ipsum dolor    ║\n║ sit amet,            ║\n║ consectetur          ║\n║ adipiscing elit.     ║\n║ Phasellus pulvinar   ║\n║ nibh sed mauris      ║\n║ convallis dapibus.   ║\n║ Nunc venenatis       ║\n║ tempus nulla sit     ║\n║ amet viverra.        ║\n╚══════════════════════╝\n\n```\n\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/gajus/table#readme",
   "bugs": {
@@ -5068,5 +5534,7 @@
     "tpkn": true,
     "icodeforcookies": true
   },
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "_cached": false,
+  "_contentLength": 0
 }

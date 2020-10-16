@@ -1,9 +1,9 @@
 {
   "_id": "@babel/highlight",
-  "_rev": "38-a27a5f4075cee14b8e73ca2f88b28339",
+  "_rev": "44-5405005c9d9990e06092d0743d6b0230",
   "name": "@babel/highlight",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.10.4"
   },
   "versions": {
     "7.0.0-beta.40": {
@@ -1354,6 +1354,7 @@
       "devDependencies": {
         "strip-ansi": "^4.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/highlight@7.0.0-rc.3",
       "dist": {
         "shasum": "c2ee83f8e5c0c387279a8c48e06fef2e32027004",
@@ -1419,6 +1420,7 @@
       "devDependencies": {
         "strip-ansi": "^4.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/highlight@7.0.0-rc.4",
       "dist": {
         "shasum": "63fb56721e08a166e6693ebd5ab03a08bcb370cb",
@@ -1485,6 +1487,8 @@
         "strip-ansi": "^4.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/highlight\n\n> Syntax highlight JavaScript strings for output in terminals.\n\nSee our website [@babel/highlight](https://babeljs.io/docs/en/next/babel-highlight.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/highlight\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/highlight --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/highlight@7.0.0",
       "dist": {
         "shasum": "f710c38c8d458e6dd9a201afb637fcb781ce99e4",
@@ -1748,12 +1752,320 @@
         "tmp": "tmp/highlight_7.8.3_1578951657475_0.5454292689863895"
       },
       "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/highlight",
+      "version": "7.9.0",
+      "description": "Syntax highlight JavaScript strings for output in terminals.",
+      "author": {
+        "name": "suchipi",
+        "email": "me@suchipi.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-highlight"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.9.0",
+        "chalk": "^2.0.0",
+        "js-tokens": "^4.0.0"
+      },
+      "devDependencies": {
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/highlight@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-lJZPilxX7Op3Nv/2cvFdnlepPXDxi29wxteT57Q965oc5R9v86ztx0jfxVrTcBk8C2kcPkkDa2Z4T3ZsPPVWsQ==",
+        "shasum": "4e9b45ccb82b79607271b2979ad82c7b68163079",
+        "tarball": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.9.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5502,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOO5CRA9TVsSAnZWagAAZZwP/3OQLs1p9iZjoBJKLwlT\nwmOKuiDTex5y3ziMxDXeoCW2/5dSXQlbOfGTHT4NlYJsXCXvQnU+QLIsLBi4\nm9+APe/ghT1Fvd2iKGUba1hM8mfQzuFLHmaIMdXLCv+THKzY5Mom9J4kArG/\nHW8UbylNbBShXgqp/92DsahOVUbkDTZj3IQUx2LZ9mUBEXulCdakU4WJWT2U\nsEcQ3gZuVMURH6nc/czgBsCGLO2+CRsXvfoeLfOX2BvAkz1ym7Zx5MwRM62f\ndNZ2N+qzm79w8gV8+XT7ZntkcYLd6VKL3BB6/6QfsaM5tjnjhdLRh0Y9H8Ek\nhozmCX5xm9+w5G7SqVTFKKwdj1mTjKfhl2kVrcFHcTwbHdux8fzu9zLCFPNK\nRVlcmkkrOnZNBaQAefIU+WrChoo5i8wNpE1oEQtkW86TMMp3F8r9T+qqWzeJ\nH7A0mFteaYch+1kI8l8QhIIjOnJqPt+qYZINiszkfN5wTVuVCdBEYzv8/wao\n8oVO6uJ35Ow8e5issZW87MrMfBzHtEcpkNNhAeo8dfJTshYUNzzz9aXWEOJS\nV+4sCsWlObYduZBNT50mt5lYcP3CXqxzsrQzzS35BpU105r+EpL+gDCJJX5c\nADXsNwoqFLcVbvuIUxlgPEYPDFXjC1jHAbmiez/3LFMwTFK720ljN+0D09GA\nkL0p\r\n=PMOF\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/highlight_7.9.0_1584718776769_0.2656262073091544"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/highlight",
+      "version": "7.10.1",
+      "description": "Syntax highlight JavaScript strings for output in terminals.",
+      "author": {
+        "name": "suchipi",
+        "email": "me@suchipi.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-highlight"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.1",
+        "chalk": "^2.0.0",
+        "js-tokens": "^4.0.0"
+      },
+      "devDependencies": {
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/highlight@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-8rMof+gVP8mxYZApLF/JgNDAkdKa+aJt3ZYxF8z6+j/hpeXL7iMsKCPHa2jNMHu/qqBwzQF4OHNoYi8dMA/rYg==",
+        "shasum": "841d098ba613ba1a427a2b383d79e35552c38ae0",
+        "tarball": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5552,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuSnCRA9TVsSAnZWagAAp94P/RQvPCDra6CnIH9JIgIg\nVkVCZeXaaQ34IbZ1tyn+4uCTrEVGC8SB2XHoAzeNA+U/cI/UquC5NvwA4CX7\n23Moz5ITbMFcs3w0zsNg89C9P+lzK++IXJvwrdybxJO9OLHHQalFTF6RDN6h\nnfAUbWArVPKOhjk/PvtXUBThtyM1uHvq+cdkx7b40SRWdOnzVg0Y+euFfqRb\nIZvxFCaeGbmLSjq0McXS2cKxmd5vd6eS47/VuUKtBB7nzjChxY1cyvTO5dR+\nnSjiRk08gRjr0bfAeyfkZhezKW/mr/prev71JSCXQJ0NCWgzFc+uWTINuC7/\ngUX/X/M9ABKZuZ5pYoFlL/OU5nh16Ebeq+OwNThSGYCmoRqQWIJ4I9FgCVuv\nC/NVjpsTjujIUyVXliUKrDpvOK4v3v7D/487jxjJA4Ha45xzILJpH1OPLuc/\ndt/L/BtW3p136kV4peX9IdpV02W1xGNtYoWo+dyukaCtiUnSxG9UVPeuUhfP\npgJcIbtC990xnDziXlcnAsUjgl2/DJcblSiXGJKmQFWgjptqVhGS5unKcyca\nj3cYAkEGuqg0TOk688+ATKLnF3Gzw74PUHbRkQjqW229GrDkTeJsDMIw+7ho\npsmtYjcpJ5AxFFP20fiGGywj2ZpH9AXnDrHUSUs0jmJZSI0GMwpK4Kf5TFBH\nOLpJ\r\n=myfl\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/highlight_7.10.1_1590617255346_0.873645667838616"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/highlight",
+      "version": "7.10.3",
+      "description": "Syntax highlight JavaScript strings for output in terminals.",
+      "author": {
+        "name": "suchipi",
+        "email": "me@suchipi.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-highlight"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.3",
+        "chalk": "^2.0.0",
+        "js-tokens": "^4.0.0"
+      },
+      "devDependencies": {
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/highlight@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-Ih9B/u7AtgEnySE2L2F0Xm0GaM729XqqLfHkalTsbjXGyqmf/6M0Cu0WpvqueUlW+xk88BHw9Nkpj49naU+vWw==",
+        "shasum": "c633bb34adf07c5c13156692f5922c81ec53f28d",
+        "tarball": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.10.3.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5552,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SX4CRA9TVsSAnZWagAACCAP/jLIm6Z6ysEclya2L0aD\nR3nv5ZK+AGq1HbWzaVsZ1A8Fm6qfNK5VnV1JFedSV12Fvluv2/C60ET69wTa\nplKY3pA2Pm/3biu/9XSP9nMMc2pR5KXuWYMiSYL+gnANS4AnKwpHbGcAfDF4\nmxHJ9AAzwgorD+MsrWl4c778WuOSB5e3IauwgumfJypvzz7lF2m2ZxItTaz0\nfQAxre5FemcqkBhOjzBItXTld8j5KgfKc/AXdkoSG/KRA29/RGlR1z/BxsPO\ncqhnzPkHg3P5Jje+llqL5E7ul0auaHMCZm1o1F5RsOMnZ3YHfb/18hHypTvN\nXm0UreldZsY3EIXzgFd1RNZ7F+glxqnTKVKd6yCSmQBowUYyHXssyq1VSXD+\nu85RtLRY+eb8TrPUuy2hpDVZJ7Y9Y2HgZllY1joq+Vq1WUXRO79I9eQCIsDu\nNNhfo04r1Z8YX2DDok3JQrKbtGR5gZRwdVDjbQKhM7d8ZnMg+UKRjxhnHRTg\n0s4yyBeQabRH7xMDkHw+8w6d4XOjCXmvDXI8Qki+8QvZJvzqK8NAkyTwvw+7\nd3vpjPOLFPocqlUDOMN9otZDf+GqfeD3lHT4iJ4Un+20v5s7Wk09PhCsNREh\nVTWD+LtbNhooLbEB7jEV51WFl/uO2S9ot0pdIUU+p14oC2yva8yuMlOcfAwR\nS4I/\r\n=WMNW\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/highlight_7.10.3_1592600056059_0.8067345937127146"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/highlight",
+      "version": "7.10.4",
+      "description": "Syntax highlight JavaScript strings for output in terminals.",
+      "author": {
+        "name": "suchipi",
+        "email": "me@suchipi.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-highlight"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "chalk": "^2.0.0",
+        "js-tokens": "^4.0.0"
+      },
+      "devDependencies": {
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/highlight@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-i6rgnR/YgPEQzZZnbTHHuZdlE8qyoBNalD6F+q4vAFlcMEcqmkoG+mPqJYJCo63qPf74+Y1UZsl3l6f7/RIkmA==",
+        "shasum": "7d1bdfd65753538fabe6c38596cdb76d9ac60143",
+        "tarball": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5552,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zoECRA9TVsSAnZWagAAR0UP/2YrvZbi8Ss0xd8QRQNE\n0yuTfwLGTZsiMs2x8npg9xKzIkwtwgUT1x36LPvAIb5ZJfw3IHYq7tG2RlcO\n7NY0+URUoLhcfiUSNEUdRAeh2Ko18C6D1rbQ0LDDwZzgZPOvXgAd1Zrb/ihD\ntB5BnvjZOVORGx3JthsrX8/13l0PNEYa1Bw21DOKumdISWszKwqWmkRgB2Y5\nz+icX+G8y7QY6cDte24ssX3457sqWhiuAqR7a19rWtsNCC0+P1W21uv/npoM\nc48UcfwMQU3Yo8F9fyo2tsj5su7dMb34KHiVMPqDVieXF5TgT7elRx9mE8vH\nR9niQPxCIdOmZg28b2OmzMxmDfPKME0/3XA3FFy7uh/cCmOxpMmQsMMV0455\n1S8sbk4O97H9U3GMMvgk5asbRWKh9DGr6eVFFIvJPXWGrj1fPNpHW7bd6PPK\nq4GZcnfOcQ6RazEi4ZbVS9nunXAg7hB7+hEVP0d+RAWBzxiGxBYhTaKsXcbO\nY+NKSuOWi6wJshtj1X99UYvIkHNjv8cBom5vG/evA7XfRt0HHuaEpGb8zfWu\naU0dVEz9GsgFXkuKVUvSXfHpvGN1wNw8jqRhm2OYbp6KTHLSYGtpxSfRWbtt\nwyh5H+gjOrPN74aKn0JGhqC9t/LDDJiaxgf/i96XeO4ipo3yXE1rHOwY7CDC\neYEI\r\n=OH0K\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/highlight_7.10.4_1593522691958_0.8468340087359132"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2018-02-12T16:41:16.430Z",
     "7.0.0-beta.40": "2018-02-12T16:41:16.583Z",
-    "modified": "2020-01-13T21:41:04.832Z",
+    "modified": "2020-06-30T13:11:34.239Z",
     "7.0.0-beta.41": "2018-03-14T16:25:32.240Z",
     "7.0.0-beta.42": "2018-03-15T20:50:08.280Z",
     "7.0.0-beta.43": "2018-04-02T16:47:59.783Z",
@@ -1778,16 +2090,16 @@
     "7.0.0": "2018-08-27T21:41:28.183Z",
     "7.5.0": "2019-07-04T12:57:52.105Z",
     "7.8.0": "2020-01-12T00:15:55.568Z",
-    "7.8.3": "2020-01-13T21:40:57.634Z"
+    "7.8.3": "2020-01-13T21:40:57.634Z",
+    "7.9.0": "2020-03-20T15:39:36.890Z",
+    "7.10.1": "2020-05-27T22:07:35.470Z",
+    "7.10.3": "2020-06-19T20:54:16.221Z",
+    "7.10.4": "2020-06-30T13:11:32.129Z"
   },
   "maintainers": [
     {
       "email": "daniel@tschinder.de",
       "name": "danez"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
     },
     {
       "email": "bng412@gmail.com",
@@ -1796,6 +2108,10 @@
     {
       "email": "hi@henryzoo.com",
       "name": "hzoo"
+    },
+    {
+      "email": "i@jhuang.me",
+      "name": "jlhwung"
     },
     {
       "email": "loganfsmyth@gmail.com",
@@ -1810,12 +2126,19 @@
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-highlight"
+    "url": "git+https://github.com/babel/babel.git",
+    "directory": "packages/babel-highlight"
   },
   "author": {
     "name": "suchipi",
     "email": "me@suchipi.com"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readme": "# @babel/highlight\n\n> Syntax highlight JavaScript strings for output in terminals.\n\nSee our website [@babel/highlight](https://babeljs.io/docs/en/next/babel-highlight.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/highlight\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/highlight --dev\n```\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/babel/babel/issues"
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

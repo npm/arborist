@@ -1625,7 +1625,7 @@ Object {
       "nodes": Array [
         "node_modules/lodash",
       ],
-      "range": "*",
+      "range": "<=4.17.18",
       "severity": "high",
       "via": Array [
         Object {
@@ -1849,9 +1849,9 @@ Object {
       "critical": 1,
       "high": 4,
       "info": 0,
-      "low": 10,
+      "low": 9,
       "moderate": 0,
-      "total": 15,
+      "total": 14,
     },
   },
   "vulnerabilities": Object {
@@ -1971,7 +1971,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
-      "range": "*",
+      "range": "<=4.17.18",
       "severity": "high",
       "via": Array [
         Object {
@@ -2118,9 +2118,7 @@ Object {
       ],
     },
     "nyc": Object {
-      "effects": Array [
-        "tap",
-      ],
+      "effects": Array [],
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
@@ -2129,9 +2127,8 @@ Object {
       "name": "nyc",
       "nodes": Array [
         "node_modules/nyc",
-        "node_modules/tap/node_modules/nyc",
       ],
-      "range": ">=6.0.0",
+      "range": "6.0.0 - 13.3.0",
       "severity": "low",
       "via": Array [
         "mkdirp",
@@ -2205,23 +2202,6 @@ Object {
         },
       ],
     },
-    "tap": Object {
-      "effects": Array [],
-      "fixAvailable": Object {
-        "isSemVerMajor": true,
-        "name": "tap",
-        "version": "6.2.0",
-      },
-      "name": "tap",
-      "nodes": Array [
-        "node_modules/tap",
-      ],
-      "range": "5.1.0 - 5.1.1 || >=6.3.0",
-      "severity": "low",
-      "via": Array [
-        "nyc",
-      ],
-    },
     "union-value": Object {
       "effects": Array [],
       "fixAvailable": true,
@@ -2248,7 +2228,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
-      "range": ">=4.0.0-alpha1",
+      "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
       "via": Array [
         "os-locale",
@@ -2270,7 +2250,7 @@ Object {
         "node_modules/nyc/node_modules/yargs-parser",
         "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
       ],
-      "range": "*",
+      "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
       "via": Array [
         Object {
@@ -2581,7 +2561,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
-      "range": "*",
+      "range": "<=4.17.18",
       "severity": "high",
       "via": Array [
         Object {
@@ -2738,7 +2718,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc",
       ],
-      "range": ">=6.0.0",
+      "range": "6.0.0 - 13.3.0",
       "severity": "low",
       "via": Array [
         "mkdirp",
@@ -2838,7 +2818,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
-      "range": ">=4.0.0-alpha1",
+      "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
       "via": Array [
         "os-locale",
@@ -2860,7 +2840,7 @@ Object {
         "node_modules/nyc/node_modules/yargs-parser",
         "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
       ],
-      "range": "*",
+      "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
       "via": Array [
         Object {
@@ -3191,7 +3171,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
-      "range": "*",
+      "range": "<=4.17.18",
       "severity": "high",
       "via": Array [
         Object {
@@ -3347,7 +3327,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc",
       ],
-      "range": ">=6.0.0",
+      "range": "6.0.0 - 13.3.0",
       "severity": "low",
       "via": Array [
         "mkdirp",
@@ -3442,7 +3422,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
-      "range": ">=4.0.0-alpha1",
+      "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
       "via": Array [
         "os-locale",
@@ -3464,7 +3444,7 @@ Object {
         "node_modules/nyc/node_modules/yargs-parser",
         "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
       ],
-      "range": "*",
+      "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
       "via": Array [
         Object {
@@ -3501,9 +3481,9 @@ Object {
       "critical": 1,
       "high": 4,
       "info": 0,
-      "low": 10,
+      "low": 9,
       "moderate": 0,
-      "total": 15,
+      "total": 14,
     },
   },
   "vulnerabilities": Object {
@@ -3618,7 +3598,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
-      "range": "*",
+      "range": "<=4.17.18",
       "severity": "high",
       "via": Array [
         Object {
@@ -3764,9 +3744,7 @@ Object {
       ],
     },
     "nyc": Object {
-      "effects": Array [
-        "tap",
-      ],
+      "effects": Array [],
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
@@ -3775,9 +3753,8 @@ Object {
       "name": "nyc",
       "nodes": Array [
         "node_modules/nyc",
-        "node_modules/tap/node_modules/nyc",
       ],
-      "range": ">=6.0.0",
+      "range": "6.0.0 - 13.3.0",
       "severity": "low",
       "via": Array [
         "mkdirp",
@@ -3846,23 +3823,6 @@ Object {
         },
       ],
     },
-    "tap": Object {
-      "effects": Array [],
-      "fixAvailable": Object {
-        "isSemVerMajor": true,
-        "name": "tap",
-        "version": "6.2.0",
-      },
-      "name": "tap",
-      "nodes": Array [
-        "node_modules/tap",
-      ],
-      "range": "5.1.0 - 5.1.1 || >=6.3.0",
-      "severity": "low",
-      "via": Array [
-        "nyc",
-      ],
-    },
     "union-value": Object {
       "effects": Array [],
       "fixAvailable": true,
@@ -3889,7 +3849,7 @@ Object {
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
-      "range": ">=4.0.0-alpha1",
+      "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
       "via": Array [
         "os-locale",
@@ -3911,7 +3871,7 @@ Object {
         "node_modules/nyc/node_modules/yargs-parser",
         "node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
       ],
-      "range": "*",
+      "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
       "via": Array [
         Object {

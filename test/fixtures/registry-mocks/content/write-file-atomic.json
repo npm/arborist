@@ -1,10 +1,10 @@
 {
   "_id": "write-file-atomic",
-  "_rev": "58-84d828edcad2bffcf2a5735e2fafe384",
+  "_rev": "67-117e896efb36db7d31fdd61e90e58457",
   "name": "write-file-atomic",
   "description": "Write files in an atomic fashion w/configurable ownership",
   "dist-tags": {
-    "latest": "3.0.1"
+    "latest": "3.0.3"
   },
   "versions": {
     "1.0.0": {
@@ -1644,20 +1644,219 @@
         "tmp": "tmp/write-file-atomic_3.0.1_1571199785525_0.9882528754344773"
       },
       "_hasShrinkwrap": false
+    },
+    "3.0.2": {
+      "name": "write-file-atomic",
+      "version": "3.0.2",
+      "description": "Write files in an atomic fashion w/configurable ownership",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "posttest": "npm run lint",
+        "lint": "standard",
+        "postlint": "rimraf chowncopy good nochmod nochown nofsync nofsyncopt noopen norename \"norename nounlink\" nowrite",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/npm/write-file-atomic.git"
+      },
+      "keywords": [
+        "writeFile",
+        "atomic"
+      ],
+      "author": {
+        "name": "Rebecca Turner",
+        "email": "me@re-becca.org",
+        "url": "http://re-becca.org"
+      },
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/npm/write-file-atomic/issues"
+      },
+      "homepage": "https://github.com/npm/write-file-atomic",
+      "dependencies": {
+        "imurmurhash": "^0.1.4",
+        "is-typedarray": "^1.0.0",
+        "signal-exit": "^3.0.2",
+        "typedarray-to-buffer": "^3.1.5"
+      },
+      "devDependencies": {
+        "mkdirp": "^0.5.1",
+        "require-inject": "^1.4.4",
+        "rimraf": "^2.6.3",
+        "standard": "^14.3.1",
+        "tap": "^14.10.6"
+      },
+      "tap": {
+        "100": true
+      },
+      "gitHead": "e322288d985d54992142b144ed2e6366f8865a45",
+      "_id": "write-file-atomic@3.0.2",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "6.13.6",
+      "dist": {
+        "integrity": "sha512-w+Lx4LO0eSgy3FypOovx1+vXrW+MilikDICu4sTe0YSmBT2D4MQmQ6X3wQ/gaP6TwAcsQgu03zhIfYdjYioVZQ==",
+        "shasum": "0c55003305e31dee5e62b3693dcb553410ac11e3",
+        "tarball": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.2.tgz",
+        "fileCount": 5,
+        "unpackedSize": 12019,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeVDYOCRA9TVsSAnZWagAAjOMP/RKjMDeh7vBeQ31XNb/V\njlHMoOkfDl6QSF2/81HxLsD3/f4qtNrTsrUV5yrN0BJpHJiAYrwIirCEDRWq\nggNuqBphT4JJu7UIRTHKZ1fHTLzG5Tu6+nkXfbzpNmwqLuRSuZaCT2cN+SGd\n6mpc+a12okIadFAT3bMKEScdvbKc2M6z2HpBe57UMt7ChhNUPjsvb+emrH8X\n/FDxiH+nwTiQGWQEvHKJONHoH+J3OSm5YKt6QrZ1Ry8HI0VCcZmo2fFXW325\ntG0lTtcx5wQGENjwjJxl9nj2WkBskswe0GGGpoZV6AwFafRkUbBaiwT/qD0w\nYtobkSyF4LY499CSBPlEaTCs5VDmbyRczlvFBFAwKg/OA8Dwk1SeBsyxOStk\ndEiy6xZ0J0KVcUNrfdcKWpdJBbBTdrmEeSvYt+C0SUh3qTd14/lskg/AbHxI\nlO7SIHk/y6NR1fIZY6HhgAhWpAw1eRxFwhPtdhGoxUylL3r00MFFBXUM3jQ2\nV9ouw3VzDCMX3krwcw0p6FO4rAMFv0bOBu9Le2uooF1oXB/t63i5Y8uUYr/K\n866EOJAjqCAEFCZTOnZhrCEcqSquWPMXYJe/fXtO20m4NFCu5Lzn7rKivmVo\n2Mewl91RzQjkupc4BHaA7ecmlgFH7Eh2DeF8clPz8o01/jhKncQQRJyhV4r6\naQWP\r\n=b93n\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "ahmad@ahmadnassri.com",
+          "name": "ahmadnassri"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "mike@mikecorp.ca",
+          "name": "mikemimik"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/write-file-atomic_3.0.2_1582577166119_0.8984137433054395"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.3": {
+      "name": "write-file-atomic",
+      "version": "3.0.3",
+      "description": "Write files in an atomic fashion w/configurable ownership",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "posttest": "npm run lint",
+        "lint": "standard",
+        "postlint": "rimraf chowncopy good nochmod nochown nofsync nofsyncopt noopen norename \"norename nounlink\" nowrite",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/npm/write-file-atomic.git"
+      },
+      "keywords": [
+        "writeFile",
+        "atomic"
+      ],
+      "author": {
+        "name": "Rebecca Turner",
+        "email": "me@re-becca.org",
+        "url": "http://re-becca.org"
+      },
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/npm/write-file-atomic/issues"
+      },
+      "homepage": "https://github.com/npm/write-file-atomic",
+      "dependencies": {
+        "imurmurhash": "^0.1.4",
+        "is-typedarray": "^1.0.0",
+        "signal-exit": "^3.0.2",
+        "typedarray-to-buffer": "^3.1.5"
+      },
+      "devDependencies": {
+        "mkdirp": "^0.5.1",
+        "require-inject": "^1.4.4",
+        "rimraf": "^2.6.3",
+        "standard": "^14.3.1",
+        "tap": "^14.10.6"
+      },
+      "tap": {
+        "100": true
+      },
+      "gitHead": "eb8dff15f83f16be1e0b89be54fa80200356614a",
+      "_id": "write-file-atomic@3.0.3",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "6.13.6",
+      "dist": {
+        "integrity": "sha512-AvHcyZ5JnSfq3ioSyjrBkH9yW4m7Ayk8/9My/DD9onKeu/94fwrMocemO2QAJFAlnnDN+ZDS+ZjAR5ua1/PV/Q==",
+        "shasum": "56bd5c5a5c70481cd19c571bd39ab965a5de56e8",
+        "tarball": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.3.tgz",
+        "fileCount": 5,
+        "unpackedSize": 12787,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeVE24CRA9TVsSAnZWagAAZ1oP/izZvazxVzxm9iG6jaq6\nFuYMxO/dmoTAml/sAnFtEhP/XxCn8bqzR96FCde+yeFFLHY96kRsd4fbMD6E\nJtGTVyvGxIv9T4gcjwesw/XRs28bTL8ustWDG/rFxiwR2DsPpjmmgA76LnWK\n9u0FSzz3j+XbclQxbwnjBmS+0fwZpe4JBK6ig9fp8RLc6gI8QKgvVgMgzEl4\ncPwEzDs5YrPgMnM+obzbQEegnG3JRpdcPiAY4dZEchKXfgorbxUpaGV5wZ/5\nLNqAxpIHy7mlIQAAmmbroezfOR4jq417+Ue6sjU0mz6jcGHCmM2R2tRSRaCf\nGPHKjdHA0jctoayAWZIs7wIUtQhOiOsyVqdD9JtNE431oIbzgvX//GCVJE/U\noMWKI/51WpT/X2VzU6DO7WaHwOInEykeR+EEW2TXKrWcJUu/gDoe3VL/fvTJ\njR+EUINXWWn9BC19ZNx0mOLx4HH0r6EYgGnPPeuwzaVXumc5zFYgLCOoigMi\nO19OWetKThqA0+evO7MpoZs2ea05AvIzBQYwq4cnDLsRIaeSJsYhwWB4wetY\n6yPytApnjAw6DW9Wcqu2KTeHIJ1nbCuU7p8M1wcnDq5oMoW65UrBcP2LMhSp\nNDWcmssNk0ayubl4QEZ2oKyMty9EXLj6hiXBYUk1k5NnCsYAL9LFzIiukixH\n80WP\r\n=wDSu\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "ahmad@ahmadnassri.com",
+          "name": "ahmadnassri"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "mike@mikecorp.ca",
+          "name": "mikemimik"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/write-file-atomic_3.0.3_1582583223897_0.8414533271003164"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "write-file-atomic\n-----------------\n\nThis is an extension for node's `fs.writeFile` that makes its operation\natomic and allows you set ownership (uid/gid of the file).\n\n### var writeFileAtomic = require('write-file-atomic')<br>writeFileAtomic(filename, data, [options], [callback])\n\n* filename **String**\n* data **String** | **Buffer**\n* options **Object** | **String**\n  * chown **Object** default, uid & gid of existing file, if any\n    * uid **Number**\n    * gid **Number**\n  * encoding **String** | **Null** default = 'utf8'\n  * fsync **Boolean** default = true\n  * mode **Number** default, from existing file, if any\n  * tmpfileCreated **Function** called when the tmpfile is created\n* callback **Function**\n\nAtomically and asynchronously writes data to a file, replacing the file if it already\nexists.  data can be a string or a buffer.\n\nThe file is initially named `filename + \".\" + murmurhex(__filename, process.pid, ++invocations)`.\nNote that `require('worker_threads').threadId` is used in addition to `process.pid` if running inside of a worker thread.\nIf writeFile completes successfully then, if passed the **chown** option it will change\nthe ownership of the file. Finally it renames the file back to the filename you specified. If\nit encounters errors at any of these steps it will attempt to unlink the temporary file and then\npass the error back to the caller.\nIf multiple writes are concurrently issued to the same file, the write operations are put into a queue and serialized in the order they were called, using Promises. Writes to different files are still executed in parallel.\n\nIf provided, the **chown** option requires both **uid** and **gid** properties or else\nyou'll get an error.  If **chown** is not specified it will default to using\nthe owner of the previous file.  To prevent chown from being ran you can\nalso pass `false`, in which case the file will be created with the current user's credentials.\n\nIf **mode** is not specified, it will default to using the permissions from\nan existing file, if any.  Expicitly setting this to `false` remove this default, resulting\nin a file created with the system default permissions.\n\nIf options is a String, it's assumed to be the **encoding** option. The **encoding** option is ignored if **data** is a buffer. It defaults to 'utf8'.\n\nIf the **fsync** option is **false**, writeFile will skip the final fsync call.\n\nIf the **tmpfileCreated** option is specified it will be called with the name of the tmpfile when created.\n\nExample:\n\n```javascript\nwriteFileAtomic('message.txt', 'Hello Node', {chown:{uid:100,gid:50}}, function (err) {\n  if (err) throw err;\n  console.log('It\\'s saved!');\n});\n```\n\nThis function also supports async/await:\n\n```javascript\n(async () => {\n  try {\n    await writeFileAtomic('message.txt', 'Hello Node', {chown:{uid:100,gid:50}});\n    console.log('It\\'s saved!');\n  } catch (err) {\n    console.error(err);\n    process.exit(1);\n  }\n})();\n```\n\n### var writeFileAtomicSync = require('write-file-atomic').sync<br>writeFileAtomicSync(filename, data, [options])\n\nThe synchronous version of **writeFileAtomic**.\n",
   "maintainers": [
+    {
+      "email": "quitlahok@gmail.com",
+      "name": "nlf"
+    },
     {
       "email": "ruyadorno@hotmail.com",
       "name": "ruyadorno"
-    },
-    {
-      "email": "mike@mikecorp.ca",
-      "name": "mikemimik"
-    },
-    {
-      "email": "cghr1990@gmail.com",
-      "name": "claudiahdz"
     },
     {
       "email": "darcy@darcyclarke.me",
@@ -1668,16 +1867,12 @@
       "name": "adam_baldwin"
     },
     {
-      "email": "ahmad@ahmadnassri.com",
-      "name": "ahmadnassri"
-    },
-    {
       "email": "i@izs.me",
       "name": "isaacs"
     }
   ],
   "time": {
-    "modified": "2020-01-02T04:06:35.985Z",
+    "modified": "2020-10-13T05:05:51.066Z",
     "created": "2014-09-10T23:26:27.142Z",
     "1.0.0": "2014-09-10T23:26:27.142Z",
     "1.0.1": "2014-09-10T23:27:54.551Z",
@@ -1702,7 +1897,9 @@
     "2.4.2": "2019-01-23T01:23:41.137Z",
     "2.4.3": "2019-05-24T16:48:52.689Z",
     "3.0.0": "2019-05-24T19:20:20.733Z",
-    "3.0.1": "2019-10-16T04:23:05.682Z"
+    "3.0.1": "2019-10-16T04:23:05.682Z",
+    "3.0.2": "2020-02-24T20:46:06.260Z",
+    "3.0.3": "2020-02-24T22:27:04.013Z"
   },
   "homepage": "https://github.com/npm/write-file-atomic",
   "keywords": [
@@ -1730,5 +1927,7 @@
     "iarna": true,
     "jsdnxx": true,
     "ierceg": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

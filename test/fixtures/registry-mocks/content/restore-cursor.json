@@ -386,6 +386,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# restore-cursor [![Build Status](https://travis-ci.org/sindresorhus/restore-cursor.svg?branch=master)](https://travis-ci.org/sindresorhus/restore-cursor)\n\n> Gracefully restore the CLI cursor on exit\n\nPrevent the cursor you've hidden interactively from remaining hidden if the process crashes.\n\n\n## Install\n\n```\n$ npm install restore-cursor\n```\n\n\n## Usage\n\n```js\nconst restoreCursor = require('restore-cursor');\n\nrestoreCursor();\n```\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -437,5 +438,7 @@
     "url": "https://github.com/sindresorhus/restore-cursor/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "_cached": false,
+  "_contentLength": 0
 }

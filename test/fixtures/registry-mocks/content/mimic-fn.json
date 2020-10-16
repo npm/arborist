@@ -1,10 +1,10 @@
 {
   "_id": "mimic-fn",
-  "_rev": "7-aef34834c13d3198e05598fc74fed1e4",
+  "_rev": "8-21d5f59672e958cd3ac3dc9020fd56a3",
   "name": "mimic-fn",
   "description": "Make a function mimic another one",
   "dist-tags": {
-    "latest": "3.0.0"
+    "latest": "3.1.0"
   },
   "versions": {
     "1.0.0": {
@@ -450,8 +450,86 @@
         "tmp": "tmp/mimic-fn_3.0.0_1560442040132_0.7815444311909043"
       },
       "_hasShrinkwrap": false
+    },
+    "3.1.0": {
+      "name": "mimic-fn",
+      "version": "3.1.0",
+      "description": "Make a function mimic another one",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/mimic-fn.git"
+      },
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "function",
+        "mimic",
+        "imitate",
+        "rename",
+        "copy",
+        "inherit",
+        "properties",
+        "name",
+        "func",
+        "fn",
+        "set",
+        "infer",
+        "change"
+      ],
+      "devDependencies": {
+        "ava": "^2.1.0",
+        "tsd": "^0.7.1",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "2ada36ff62c03d97da9604c8a2f22a5153c87b06",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/mimic-fn/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/mimic-fn#readme",
+      "_id": "mimic-fn@3.1.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-Ysbi9uYW9hFyfrThdDEQuykN4Ey6BuwPD2kpI5ES/nFTDn/98yxYNLZJcgUAKPT/mcrLLKaGzJR9YVxJrIdASQ==",
+        "shasum": "65755145bbf3e36954b949c16450427451d5ca74",
+        "tarball": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-3.1.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 8244,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGqZBCRA9TVsSAnZWagAA9+EP/jPxwLw6SVZTo9Z19At9\n2Uh3/V+6tLuZHOdiaSSzOhqQWHzhuXmnmLe4jNOZ4LwTN7fGaD/HEkC6NqrR\njYGRL6KHDCaArr3RffVJ5Vqy8F2xBowYPwnOIKBbkBzVvmbFHmf708b9U8ed\nTb7ZLDRdNgyCS67GoX2Bs1SCNZJrCzFcjqcY/EP4vYeTxyEljpbamrsdLvZC\nlv4NA4/zGfABgynozKa3McBplcgOmBqM1TYjsTQ00ClluUbcb8954YNEDqal\nPqBYUocgQCbsdeYIuGlQWOLbB1IgFrb0hgRpr3m7igEHK3vURN4xf5KozpWa\nC24Mc0k8Nwq5D7FJ2Sdv1oJwqJk3kA5Br1alnBO4rgoySNc0kIagznbSBk+v\nfaEsJoVzhHzmIW+27fpFs/1nDim2CnCOijsyoGccuXxd+WWH/snFq7+wBsrs\n/MIrOIu0XiSOjZRIdKQec9/5N4XvwzBCGEtmb9Ti6K9h4cLEpZY65sKfSCP+\nW2jFzVzwbTBz2sihgvxNSKIi/bJZdzb78AxF84jcxd3p2xV6OrGjPBfES8dA\nt/SGJvsc39QQZRZxxEpTXKRphlthds18thJQiE+M0c6IdoJERnXLdVu476Az\nurwci7xIkB8lJHuyRzOpKk/iW3ulzoxL1nsarpioLOK1LBFZwurUuQgj0u1s\n9/1Y\r\n=UMkg\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "ehmicky@gmail.com",
+          "name": "ehmicky"
+        },
+        {
+          "email": "sindresorhus@gmail.com",
+          "name": "sindresorhus"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mimic-fn_3.1.0_1595582016684_0.8596377806235356"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "<img src=\"media/logo.svg\" alt=\"mimic-fn\" width=\"400\">\n<br>\n\n[![Build Status](https://travis-ci.org/sindresorhus/mimic-fn.svg?branch=master)](https://travis-ci.org/sindresorhus/mimic-fn)\n\n> Make a function mimic another one\n\nUseful when you wrap a function in another function and like to preserve the original name and other properties.\n\n\n## Install\n\n```\n$ npm install mimic-fn\n```\n\n\n## Usage\n\n```js\nconst mimicFn = require('mimic-fn');\n\nfunction foo() {}\nfoo.unicorn = '🦄';\n\nfunction wrapper() {\n\treturn foo();\n}\n\nconsole.log(wrapper.name);\n//=> 'wrapper'\n\nmimicFn(wrapper, foo);\n\nconsole.log(wrapper.name);\n//=> 'foo'\n\nconsole.log(wrapper.unicorn);\n//=> '🦄'\n\nconsole.log(String(wrapper));\n//=> '/* Wrapped with wrapper() */\\nfunction foo() {}'\n```\n\n\n## API\n\n### mimicFn(to, from, options?)\n\nModifies the `to` function to mimic the `from` function. Returns the `to` function.\n\n`name`, `displayName`, and any other properties of `from` are copied. The `length` property is not copied. Prototype, class, and inherited properties are copied.\n\n`to.toString()` will return the same as `from.toString()` but prepended with a `Wrapped with to()` comment.\n\n#### to\n\nType: `Function`\n\nMimicking function.\n\n#### from\n\nType: `Function`\n\nFunction to mimic.\n\n#### options\n\nType: `object`\n\n##### ignoreNonConfigurable\n\nType: `boolean`<br>\nDefault: `false`\n\nSkip modifying [non-configurable properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor#Description) instead of throwing an error.\n\n## Related\n\n- [rename-fn](https://github.com/sindresorhus/rename-fn) - Rename a function\n- [keep-func-props](https://github.com/ehmicky/keep-func-props) - Wrap a function without changing its name and other properties\n\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-mimic-fn?utm_source=npm-mimic-fn&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "email": "ehmicky@gmail.com",
@@ -463,14 +541,15 @@
     }
   ],
   "time": {
-    "modified": "2019-06-13T16:07:23.317Z",
+    "modified": "2020-07-24T09:13:39.004Z",
     "created": "2016-10-19T17:27:32.921Z",
     "1.0.0": "2016-10-19T17:27:32.921Z",
     "1.1.0": "2016-11-01T09:35:10.608Z",
     "1.2.0": "2018-02-02T03:28:18.400Z",
     "2.0.0": "2019-03-07T19:00:04.908Z",
     "2.1.0": "2019-03-31T17:53:34.125Z",
-    "3.0.0": "2019-06-13T16:07:20.324Z"
+    "3.0.0": "2019-06-13T16:07:20.324Z",
+    "3.1.0": "2020-07-24T09:13:36.810Z"
   },
   "homepage": "https://github.com/sindresorhus/mimic-fn#readme",
   "keywords": [
@@ -501,5 +580,7 @@
     "url": "https://github.com/sindresorhus/mimic-fn/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "_cached": false,
+  "_contentLength": 0
 }

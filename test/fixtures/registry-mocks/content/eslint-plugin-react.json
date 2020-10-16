@@ -1,10 +1,10 @@
 {
   "_id": "eslint-plugin-react",
-  "_rev": "271-e264e27274303964798e5f96b0697811",
+  "_rev": "276-03fdb6657c387f401582fdf460f38838",
   "name": "eslint-plugin-react",
   "description": "React specific linting rules for ESLint",
   "dist-tags": {
-    "latest": "7.20.6",
+    "latest": "7.21.4",
     "next": "7.8.0-rc.0"
   },
   "versions": {
@@ -11984,21 +11984,585 @@
         "tmp": "tmp/eslint-plugin-react_7.20.6_1597261738153_0.99701035784863"
       },
       "_hasShrinkwrap": false
+    },
+    "7.21.0": {
+      "name": "eslint-plugin-react",
+      "version": "7.21.0",
+      "author": {
+        "name": "Yannick Croissant",
+        "email": "yannick.croissant+npm@gmail.com"
+      },
+      "description": "React specific linting rules for ESLint",
+      "main": "index.js",
+      "scripts": {
+        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "lint": "eslint ./",
+        "postlint": "npm run type-check",
+        "pretest": "npm run lint",
+        "test": "npm run unit-test",
+        "type-check": "tsc",
+        "unit-test": "istanbul cover node_modules/mocha/bin/_mocha tests/lib/**/*.js tests/util/**/*.js tests/index.js",
+        "generate-list-of-rules": "md-magic --path README.md",
+        "generate-list-of-rules:check": "npm run generate-list-of-rules && git diff --exit-code README.md"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yannickcr/eslint-plugin-react.git"
+      },
+      "homepage": "https://github.com/yannickcr/eslint-plugin-react",
+      "bugs": {
+        "url": "https://github.com/yannickcr/eslint-plugin-react/issues"
+      },
+      "dependencies": {
+        "array-includes": "^3.1.1",
+        "array.prototype.flatmap": "^1.2.3",
+        "doctrine": "^2.1.0",
+        "has": "^1.0.3",
+        "jsx-ast-utils": "^2.4.1",
+        "object.entries": "^1.1.2",
+        "object.fromentries": "^2.0.2",
+        "object.values": "^1.1.1",
+        "prop-types": "^15.7.2",
+        "resolve": "^1.17.0",
+        "string.prototype.matchall": "^4.0.2"
+      },
+      "devDependencies": {
+        "@types/eslint": "^7.2.0",
+        "@types/estree": "0.0.45",
+        "@types/node": "^14.0.14",
+        "@typescript-eslint/parser": "^2.34.0",
+        "babel-eslint": "^8.2.6",
+        "coveralls": "^3.1.0",
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-eslint-plugin": "^2.3.0",
+        "eslint-plugin-import": "^2.22.0",
+        "espree": "^3.5.4",
+        "istanbul": "^0.4.5",
+        "markdown-magic": "^1.0.0",
+        "mocha": "^5.2.0",
+        "semver": "^6.3.0",
+        "sinon": "^7.5.0",
+        "typescript": "^3.9.5",
+        "typescript-eslint-parser": "^20.1.1"
+      },
+      "peerDependencies": {
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "keywords": [
+        "eslint",
+        "eslint-plugin",
+        "eslintplugin",
+        "react"
+      ],
+      "license": "MIT",
+      "greenkeeper": {
+        "ignore": [
+          "semver"
+        ]
+      },
+      "gitHead": "0c412ef52672513cfc6fcfcf858c12ff62ed04f5",
+      "_id": "eslint-plugin-react@7.21.0",
+      "_nodeVersion": "14.10.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-WaieZZ4cayAfPBmy5KkEqFfLQf/VkzoUsvM5DfD9G1lrz+3LtZ8X6nToEUQiFe1X5ApNIzkMd+7NUy+2OmSTQQ==",
+        "shasum": "aa0699086f586d54a5005c99a703175bc5d21161",
+        "tarball": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.21.0.tgz",
+        "fileCount": 113,
+        "unpackedSize": 738036,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfauNxCRA9TVsSAnZWagAAmPMQAJImlVTFvGaChnbyHWWN\nmEOExmJIdHHuQXnwpNYL/rD2+oEbK5mj06rUxy90CM3OTDY/Yf0ZiL2skX9x\nP8fjro8uiWWPQaMkx6RyJWJVjqdETh1d0f2MT1UWHWa3akbeN59nXA85yx8J\nod33qrPzBUxAaUA+DkRO61ch+d/0XkkD71dvMeY3ew8zILNfQO9bgmUyjX95\n8d3XVRhGhl2KkSm07GGDiuJtZEU9YmIhgdTu3klOgBjXvc+vTXSHrJz54Vzu\nZmi7G0BPBHidr6bSX+x6Uw/7ivarLzAvhaKqSx764eXgQTMKcVrcFVYE+gH9\ne7D6+gbon84JefUChCUB7GnEz8NgEittoNA34bwFTcpz2T/V+Y97VgmF072R\nRWkFm+N6LZQH5i9UIOYZXeTU/0gFBTlYdCSF5UtEkDnR3yj1Lyck1kRbW57B\nMUcdhfv7OPdjh+QuxopCCEwerNvjNemrA1qK8b5zuCTZklc1N6Ybgmp07K9b\niwYmnxGBLhmxcnV3qOVQHm0ydmAj2/G2D4Uz4c0vtJtQjfoaqwUx2byeO9Av\nSxMlnktyTcOSTxoJ74zkZxQ+DqVkfyP3Nf/RmD1xIDGeLAexK/VjqI4L+KcE\ngzrUff/+JpJiJ/iO7EgL1rfQSoMRs3e+EtB1V3A+XCT8ZMqXH2Lp7xWeAajn\n2V2M\r\n=Ex9B\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "yannickcr",
+          "email": "yannick.croissant+npm@gmail.com"
+        },
+        {
+          "name": "ljharb",
+          "email": "ljharb@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "ljharb",
+        "email": "ljharb@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint-plugin-react_7.21.0_1600840560422_0.1492177545624711"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.21.1": {
+      "name": "eslint-plugin-react",
+      "version": "7.21.1",
+      "author": {
+        "name": "Yannick Croissant",
+        "email": "yannick.croissant+npm@gmail.com"
+      },
+      "description": "React specific linting rules for ESLint",
+      "main": "index.js",
+      "scripts": {
+        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "lint": "eslint ./",
+        "postlint": "npm run type-check",
+        "pretest": "npm run lint",
+        "test": "npm run unit-test",
+        "type-check": "tsc",
+        "unit-test": "istanbul cover node_modules/mocha/bin/_mocha tests/lib/**/*.js tests/util/**/*.js tests/index.js",
+        "generate-list-of-rules": "md-magic --path README.md",
+        "generate-list-of-rules:check": "npm run generate-list-of-rules && git diff --exit-code README.md"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yannickcr/eslint-plugin-react.git"
+      },
+      "homepage": "https://github.com/yannickcr/eslint-plugin-react",
+      "bugs": {
+        "url": "https://github.com/yannickcr/eslint-plugin-react/issues"
+      },
+      "dependencies": {
+        "array-includes": "^3.1.1",
+        "array.prototype.flatmap": "^1.2.3",
+        "doctrine": "^2.1.0",
+        "has": "^1.0.3",
+        "jsx-ast-utils": "^2.4.1",
+        "object.entries": "^1.1.2",
+        "object.fromentries": "^2.0.2",
+        "object.values": "^1.1.1",
+        "prop-types": "^15.7.2",
+        "resolve": "^1.17.0",
+        "string.prototype.matchall": "^4.0.2"
+      },
+      "devDependencies": {
+        "@types/eslint": "^7.2.0",
+        "@types/estree": "0.0.45",
+        "@types/node": "^14.0.14",
+        "@typescript-eslint/parser": "^2.34.0",
+        "babel-eslint": "^8.2.6",
+        "coveralls": "^3.1.0",
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-eslint-plugin": "^2.3.0",
+        "eslint-plugin-import": "^2.22.0",
+        "espree": "^3.5.4",
+        "istanbul": "^0.4.5",
+        "markdown-magic": "^1.0.0",
+        "mocha": "^5.2.0",
+        "semver": "^6.3.0",
+        "sinon": "^7.5.0",
+        "typescript": "^3.9.5",
+        "typescript-eslint-parser": "^20.1.1"
+      },
+      "peerDependencies": {
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "keywords": [
+        "eslint",
+        "eslint-plugin",
+        "eslintplugin",
+        "react"
+      ],
+      "license": "MIT",
+      "greenkeeper": {
+        "ignore": [
+          "semver"
+        ]
+      },
+      "gitHead": "8edb880797209ab2c54c68da8fc5a171851c8e08",
+      "_id": "eslint-plugin-react@7.21.1",
+      "_nodeVersion": "14.10.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-TGtWzWrFjZtrD1giMz0O6a9ul++YR9vZSzIL/a7qlb5I/ra/O5RkMGMJK+KKYnJrzz884kyAkEyWiU4Hg2HTrg==",
+        "shasum": "3d9fe506eab78756f67c671bb2a9aa9c20990a39",
+        "tarball": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.21.1.tgz",
+        "fileCount": 113,
+        "unpackedSize": 738291,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfa8h4CRA9TVsSAnZWagAAdugQAIeTOhYahOmrr04OaVrT\nTAwGySPIwEJWi1O5/8PMGS6/lKukfV3OVhNMXq+ejsZOE3x7R9v9Uab2MnZ1\nb+sMfimnWZtepUAlF2b1hT3w7Da8vpX8Yyi1JqRpWkXR/Su2K6B8fz7Lz6O6\nk7DKOokheAxZGcoqOBnFxh2PxqcEo4Qz3Hix9zGfn0yevuE6QJakcVC37C/o\nZAW6uO+Eaaj5ju931CH9w/KrMcxL94e3HPZAA7rPkTMSIpaFvKrFA0rXNEbJ\nzoQbbgIKIv9HfvAhuce9XkPMff/rv14cemmy3r14i0opH0JMX7051q3wbMX2\nYXFnEuA7zrHL/7GONYcIGHZjCJIfUQ+BcGwWh+HNQeqeRuK/tzZGJgt9dT3x\n+Jsfpq335MDlTJIYzt8rItMmm4zTQCSI284/wT6qQKlbgNEmvEEgywd9yAJc\np3CJEwlYatUmL2CGvRmdgRzobP5612sQ6OfeQ9vo4Ce60TR7khT+el1VerC4\ngnZKhBdHYxReacEdLplEANJ0HymV8McaxWjH98VPVYBsm5Uep3UtmNstzZwd\nJKJqPI53eCeh3Y6jRtYx8r7BBIe0vJycqMC2iu8N5ywKBPiyk/T9u0nK8LpA\nNrEzklG8BalMpRR8+asOIRpFqBoUIep+RnFCH/OH+dq9b5zp95imHoHs07Jp\n1RJI\r\n=jKp3\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "yannickcr",
+          "email": "yannick.croissant+npm@gmail.com"
+        },
+        {
+          "name": "ljharb",
+          "email": "ljharb@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "ljharb",
+        "email": "ljharb@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint-plugin-react_7.21.1_1600899191398_0.8098288292987323"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.21.2": {
+      "name": "eslint-plugin-react",
+      "version": "7.21.2",
+      "author": {
+        "name": "Yannick Croissant",
+        "email": "yannick.croissant+npm@gmail.com"
+      },
+      "description": "React specific linting rules for ESLint",
+      "main": "index.js",
+      "scripts": {
+        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "lint": "eslint ./",
+        "postlint": "npm run type-check",
+        "pretest": "npm run lint",
+        "test": "npm run unit-test",
+        "type-check": "tsc",
+        "unit-test": "istanbul cover node_modules/mocha/bin/_mocha tests/lib/**/*.js tests/util/**/*.js tests/index.js",
+        "generate-list-of-rules": "md-magic --path README.md",
+        "generate-list-of-rules:check": "npm run generate-list-of-rules && git diff --exit-code README.md"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yannickcr/eslint-plugin-react.git"
+      },
+      "homepage": "https://github.com/yannickcr/eslint-plugin-react",
+      "bugs": {
+        "url": "https://github.com/yannickcr/eslint-plugin-react/issues"
+      },
+      "dependencies": {
+        "array-includes": "^3.1.1",
+        "array.prototype.flatmap": "^1.2.3",
+        "doctrine": "^2.1.0",
+        "has": "^1.0.3",
+        "jsx-ast-utils": "^2.4.1",
+        "object.entries": "^1.1.2",
+        "object.fromentries": "^2.0.2",
+        "object.values": "^1.1.1",
+        "prop-types": "^15.7.2",
+        "resolve": "^1.17.0",
+        "string.prototype.matchall": "^4.0.2"
+      },
+      "devDependencies": {
+        "@types/eslint": "^7.2.3",
+        "@types/estree": "0.0.45",
+        "@types/node": "^14.11.2",
+        "@typescript-eslint/parser": "^2.34.0",
+        "babel-eslint": "^8.2.6",
+        "coveralls": "^3.1.0",
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-eslint-plugin": "^2.3.0",
+        "eslint-plugin-import": "^2.22.0",
+        "espree": "^3.5.4",
+        "istanbul": "^0.4.5",
+        "markdown-magic": "^1.0.0",
+        "mocha": "^5.2.0",
+        "semver": "^6.3.0",
+        "sinon": "^7.5.0",
+        "typescript": "^3.9.7",
+        "typescript-eslint-parser": "^20.1.1"
+      },
+      "peerDependencies": {
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "keywords": [
+        "eslint",
+        "eslint-plugin",
+        "eslintplugin",
+        "react"
+      ],
+      "license": "MIT",
+      "greenkeeper": {
+        "ignore": [
+          "semver"
+        ]
+      },
+      "gitHead": "4589522a03ca7dacb97a1e4ba17828fe0bff4655",
+      "_id": "eslint-plugin-react@7.21.2",
+      "_nodeVersion": "14.10.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-j3XKvrK3rpBzveKFbgAeGsWb9uz6iUOrR0jixRfjwdFeGSRsXvVTFtHDQYCjsd1/6Z/xvb8Vy3LiI5Reo7fDrg==",
+        "shasum": "3bd5d2c4c36d5a0428d0d6dda301ac9a84d681b2",
+        "tarball": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.21.2.tgz",
+        "fileCount": 113,
+        "unpackedSize": 738561,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfbRjJCRA9TVsSAnZWagAAWvcQAIOZN6IH860sq2MW68/r\n2N2vDgdwHWAfWFFGCS5AAulVDcelNxHOhg/uPzpBatvjBfTwesW99CTFl/ko\n3zieRq/waTaS896XUGNTMUdrKbTAi/znYkKf+DZ+D2h9JoN+32+FO9q+e34F\nNFRQmZtB4tHvFDal0qFoJuvrfziB9Xgl7lbSNm4owvOjnXSLE2IGeoK4DVoc\npzTO/KxWE5brVu/QS3Ov0TwQEmNs9gflyz+6ce8lE2r9JQLkxdxdNXkb+MAF\nW72XEBn8q88kdBYv7ukbJa530z0BC99DBb2vPanilH60L2p9YtCCrBD1gnq/\nRSUSSeiLUAFkAVpJTh/QEy+YTKeb1JtWFk7df4fJxratt0h3HpBQrFkvs8Jg\nfEANgLf5+c+z7tsSNgLLDSYO7jlqmxFWqojCyuG50OJs1DKXyTLYX6SdWJb7\njsvtgvWlDTnR5nc3BLRb2tmJslsj97Qc3OqLe+dhCQvu2Yx1uKs9cmmbX082\n74S/hZLG4JH0t/uj+BHrAa+m+xUjlchPANkHz1de6Hky+0w0oQIZ5jiX6hIA\nTjmQGVxp2gfIqCW4XQF+wQB+AenhGMN+G4lR7YcpVcQmY+3EYM+wX5vuFyiY\n2XTBLDtGJrXxioh4DJa6eAgGjOCKo7O05erJRLJjN2zXRbtepCcS41/WCbYZ\n1l4W\r\n=K3+I\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "yannickcr",
+          "email": "yannick.croissant+npm@gmail.com"
+        },
+        {
+          "name": "ljharb",
+          "email": "ljharb@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "ljharb",
+        "email": "ljharb@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint-plugin-react_7.21.2_1600985288870_0.1326622497342247"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.21.3": {
+      "name": "eslint-plugin-react",
+      "version": "7.21.3",
+      "author": {
+        "name": "Yannick Croissant",
+        "email": "yannick.croissant+npm@gmail.com"
+      },
+      "description": "React specific linting rules for ESLint",
+      "main": "index.js",
+      "scripts": {
+        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "lint": "eslint ./",
+        "postlint": "npm run type-check",
+        "pretest": "npm run lint",
+        "test": "npm run unit-test",
+        "posttest": "aud --production",
+        "type-check": "tsc",
+        "unit-test": "istanbul cover node_modules/mocha/bin/_mocha tests/lib/**/*.js tests/util/**/*.js tests/index.js",
+        "generate-list-of-rules": "md-magic --path README.md",
+        "generate-list-of-rules:check": "npm run generate-list-of-rules && git diff --exit-code README.md"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yannickcr/eslint-plugin-react.git"
+      },
+      "homepage": "https://github.com/yannickcr/eslint-plugin-react",
+      "bugs": {
+        "url": "https://github.com/yannickcr/eslint-plugin-react/issues"
+      },
+      "dependencies": {
+        "array-includes": "^3.1.1",
+        "array.prototype.flatmap": "^1.2.3",
+        "doctrine": "^2.1.0",
+        "has": "^1.0.3",
+        "jsx-ast-utils": "^2.4.1",
+        "object.entries": "^1.1.2",
+        "object.fromentries": "^2.0.2",
+        "object.values": "^1.1.1",
+        "prop-types": "^15.7.2",
+        "resolve": "^1.17.0",
+        "string.prototype.matchall": "^4.0.2"
+      },
+      "devDependencies": {
+        "@types/eslint": "^7.2.3",
+        "@types/estree": "0.0.45",
+        "@types/node": "^14.11.2",
+        "@typescript-eslint/parser": "^2.34.0",
+        "aud": "^1.1.2",
+        "babel-eslint": "^8.2.6",
+        "coveralls": "^3.1.0",
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-eslint-plugin": "^2.3.0",
+        "eslint-plugin-import": "^2.22.1",
+        "espree": "^3.5.4",
+        "istanbul": "^0.4.5",
+        "markdown-magic": "^1.0.0",
+        "mocha": "^5.2.0",
+        "semver": "^6.3.0",
+        "sinon": "^7.5.0",
+        "typescript": "^3.9.7",
+        "typescript-eslint-parser": "^20.1.1"
+      },
+      "peerDependencies": {
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "keywords": [
+        "eslint",
+        "eslint-plugin",
+        "eslintplugin",
+        "react"
+      ],
+      "license": "MIT",
+      "greenkeeper": {
+        "ignore": [
+          "semver"
+        ]
+      },
+      "gitHead": "e3e61e39685e869099be7dc7062d4924ad854443",
+      "_id": "eslint-plugin-react@7.21.3",
+      "_nodeVersion": "14.10.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-OI4GwTCqyIb4ipaOEGLWdaOHCXZZydStAsBEPB2e1ZfNM37bojpgO1BoOQbFb0eLVz3QLDx7b+6kYcrxCuJfhw==",
+        "shasum": "71655d2af5155b19285ec929dd2cdc67a4470b52",
+        "tarball": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.21.3.tgz",
+        "fileCount": 113,
+        "unpackedSize": 739465,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfd3BmCRA9TVsSAnZWagAAaAUP/iry22xL+19V2olrtLqI\nMrHJDRoYeO5NE3wR7P6F1A3/aOHifnWAD4C18gc5uY7MOgiCqhmval6UbKXY\nhCzWynGVjSE0wTnEqTikC4Wg64jsiY3DHokGxOLKw+ZQz2gfhHhF3LncmFfI\njkG8ZspJnxXq2uxGsA/75BcYDWvNMoet4tMTUA8H7oIGJgIzJ+N7NgVnuieK\nnUvHhnQ5J7auLcprqgqzHYOnu1nSKvrtDJ/8ZQiqtu0GeDQL/Y7HthwFMztN\nIkdiCA2radqX0MQULHpkAq2uUHzcSWnrIF3txqISQiIsTy3V26TeTB/TV8Rh\nO5fcs0kSZ2Q4nGdw+bRMhwefyQoQamCK/9Kg1sUms7VLRqnNdAJ/YlvtTGgH\nWw6H30tEA1GYyHAG3j2JoA2xi5mppc/y9zwT6BmtPdGN5Ev7ASY/v1FecVbo\nhEgWx2tiYFdxxCLe00a1zi48DAZgac6z57PdDewJV45y6ijTBm5Bm0azgW3k\n94qEiWNxtfFt6cogGSPQz8UdxlPg3NXJYMNDKtGb0Ns0IKNjI3XsT4/blGRB\nINyz9z/JEBwAkhkbBPN7c98YrI7FDa0s7NTaZvtXepDd1eeA4COkD3wBZOm/\nWVG9jKjdx+vhoPTOWL52AVquwpcpHK2y6eztbgu4QshfKB68SlbcGhPVFOMg\nN1yp\r\n=EqOm\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "yannickcr",
+          "email": "yannick.croissant+npm@gmail.com"
+        },
+        {
+          "name": "ljharb",
+          "email": "ljharb@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "ljharb",
+        "email": "ljharb@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint-plugin-react_7.21.3_1601663077647_0.9156967122340973"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.21.4": {
+      "name": "eslint-plugin-react",
+      "version": "7.21.4",
+      "author": {
+        "name": "Yannick Croissant",
+        "email": "yannick.croissant+npm@gmail.com"
+      },
+      "description": "React specific linting rules for ESLint",
+      "main": "index.js",
+      "scripts": {
+        "coveralls": "cat ./coverage/lcov.info | coveralls",
+        "lint": "eslint ./",
+        "postlint": "npm run type-check",
+        "pretest": "npm run lint",
+        "test": "npm run unit-test",
+        "posttest": "aud --production",
+        "type-check": "tsc",
+        "unit-test": "istanbul cover node_modules/mocha/bin/_mocha tests/lib/**/*.js tests/util/**/*.js tests/index.js",
+        "generate-list-of-rules": "md-magic --path README.md",
+        "generate-list-of-rules:check": "npm run generate-list-of-rules && git diff --exit-code README.md"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yannickcr/eslint-plugin-react.git"
+      },
+      "homepage": "https://github.com/yannickcr/eslint-plugin-react",
+      "bugs": {
+        "url": "https://github.com/yannickcr/eslint-plugin-react/issues"
+      },
+      "dependencies": {
+        "array-includes": "^3.1.1",
+        "array.prototype.flatmap": "^1.2.3",
+        "doctrine": "^2.1.0",
+        "has": "^1.0.3",
+        "jsx-ast-utils": "^2.4.1 || ^3.0.0",
+        "object.entries": "^1.1.2",
+        "object.fromentries": "^2.0.2",
+        "object.values": "^1.1.1",
+        "prop-types": "^15.7.2",
+        "resolve": "^1.17.0",
+        "string.prototype.matchall": "^4.0.2"
+      },
+      "devDependencies": {
+        "@types/eslint": "^7.2.3",
+        "@types/estree": "0.0.45",
+        "@types/node": "^14.11.2",
+        "@typescript-eslint/parser": "^2.34.0",
+        "aud": "^1.1.2",
+        "babel-eslint": "^8.2.6",
+        "coveralls": "^3.1.0",
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-eslint-plugin": "^2.3.0",
+        "eslint-plugin-import": "^2.22.1",
+        "espree": "^3.5.4",
+        "istanbul": "^0.4.5",
+        "markdown-magic": "^1.0.0",
+        "mocha": "^5.2.0",
+        "semver": "^6.3.0",
+        "sinon": "^7.5.0",
+        "typescript": "^3.9.7",
+        "typescript-eslint-parser": "^20.1.1"
+      },
+      "peerDependencies": {
+        "eslint": "^3 || ^4 || ^5 || ^6 || ^7"
+      },
+      "engines": {
+        "node": ">=4"
+      },
+      "keywords": [
+        "eslint",
+        "eslint-plugin",
+        "eslintplugin",
+        "react"
+      ],
+      "license": "MIT",
+      "greenkeeper": {
+        "ignore": [
+          "semver"
+        ]
+      },
+      "gitHead": "632639ba26f219340474e2a0a63b550af779a7eb",
+      "_id": "eslint-plugin-react@7.21.4",
+      "_nodeVersion": "14.13.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-uHeQ8A0hg0ltNDXFu3qSfFqTNPXm1XithH6/SY318UX76CMj7Q599qWpgmMhVQyvhq36pm7qvoN3pb6/3jsTFg==",
+        "shasum": "31060b2e5ff82b12e24a3cc33edb7d12f904775c",
+        "tarball": "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.21.4.tgz",
+        "fileCount": 113,
+        "unpackedSize": 741048,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfgN0QCRA9TVsSAnZWagAAVNEQAJ2JbV/AG1SnKX+krwN2\n5IzpCK5i4MiZqnRxzK9vHasKa+9rdj1q5Upmt/d+w+jgGVWn1Oalktz/Bv9a\nbiRpUZLgUssgJTYzUd/oSzGmL47vt9K1LFkmivnJJv6zvfbMFtytMpEkwNFF\n1MHIYu07TjeRAB5FVtkweFMl6eHNzG0+BpeBp7jJX9NL5SfqKkj07lPulvvB\nRTD26+xrVeAWi8jR9VRlmq+XcUfPgHOenfRXUSNYtmtgSOG+hK3z90vFVT6A\n/zdmmqAC4+cp80sPMg/f1ya2lLEGQxZVwO6KTHhc+s85H//L7F12GVlsVpLR\n91cvcQOgGM6+dPCCwdqr2ToWAeFs1niDC0+JBUywqTtNKkvBnwIAW6EI87d3\n1BqAftvwe+6bGvQdwaX7TNyTETRv+iW3ye6o236q74Z4+Tw1mocIQXZlhQAS\n1dXwfZrFyzanxEafd7B6Sksg7tK9BwvhPGgoh41zGXTuw60/PTLS5G/jRivZ\ngq7J1OHS/pfF4aU+sBqBwvS3TuPuWWjgtISXGWaCsiXM67YvhrSvNC82KGC4\nsR+sFCqeixzfdItRbiYtqNcfmP+Vh1k3aWV+zHkQe9lvrdWoLE0VFvAQyibk\n5hyAyJtN8mKWBNHcWQEcQOYAuZQp6PyIENLI6D6sRDceBehhRYk7dlb8SqgZ\nArom\r\n=/uTs\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "yannickcr",
+          "email": "yannick.croissant+npm@gmail.com"
+        },
+        {
+          "name": "ljharb",
+          "email": "ljharb@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "ljharb",
+        "email": "ljharb@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint-plugin-react_7.21.4_1602280720349_0.7556867225026156"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "ESLint-plugin-React\n===================\n\n[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url] [![Coverage Status][coverage-image]][coverage-url] [![Code Climate][climate-image]][climate-url] [![Tidelift][tidelift-image]][tidelift-url]\n\nReact specific linting rules for ESLint\n\n# Installation\n\nInstall [ESLint](https://www.github.com/eslint/eslint) either locally or globally. (Note that locally, per project, is strongly preferred)\n\n```sh\n$ npm install eslint --save-dev\n```\n\nIf you installed `ESLint` globally, you have to install React plugin globally too. Otherwise, install it locally.\n\n```sh\n$ npm install eslint-plugin-react --save-dev\n```\n\n# Configuration\n\nUse [our preset](#recommended) to get reasonable defaults:\n\n```json\n  \"extends\": [\n    \"eslint:recommended\",\n    \"plugin:react/recommended\"\n  ]\n```\n\nYou should also specify settings that will be shared across all the plugin rules. ([More about eslint shared settings](https://eslint.org/docs/user-guide/configuring#adding-shared-settings))\n\n```json5\n{\n  \"settings\": {\n    \"react\": {\n      \"createClass\": \"createReactClass\", // Regex for Component Factory to use,\n                                         // default to \"createReactClass\"\n      \"pragma\": \"React\",  // Pragma to use, default to \"React\"\n      \"version\": \"detect\", // React version. \"detect\" automatically picks the version you have installed.\n                           // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.\n                           // default to latest and warns if missing\n                           // It will default to \"detect\" in the future\n      \"flowVersion\": \"0.53\" // Flow version\n    },\n    \"propWrapperFunctions\": [\n        // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.\n        \"forbidExtraProps\",\n        {\"property\": \"freeze\", \"object\": \"Object\"},\n        {\"property\": \"myFavoriteWrapper\"}\n    ],\n    \"linkComponents\": [\n      // Components used as alternatives to <a> for linking, eg. <Link to={ url } />\n      \"Hyperlink\",\n      {\"name\": \"Link\", \"linkAttribute\": \"to\"}\n    ]\n  }\n}\n```\n\nIf you do not use a preset you will need to specify individual rules and add extra configuration.\n\nAdd \"react\" to the plugins section.\n\n```json\n{\n  \"plugins\": [\n    \"react\"\n  ]\n}\n```\n\nEnable JSX support.\n\nWith ESLint 2+\n\n```json\n{\n  \"parserOptions\": {\n    \"ecmaFeatures\": {\n      \"jsx\": true\n    }\n  }\n}\n```\n\nEnable the rules that you would like to use.\n\n```json\n  \"rules\": {\n    \"react/jsx-uses-react\": \"error\",\n    \"react/jsx-uses-vars\": \"error\",\n  }\n```\n\n# List of supported rules\n\n<!-- AUTO-GENERATED-CONTENT:START (BASIC_RULES) -->\n* [react/boolean-prop-naming](docs/rules/boolean-prop-naming.md): Enforces consistent naming for boolean props\n* [react/button-has-type](docs/rules/button-has-type.md): Forbid \"button\" element without an explicit \"type\" attribute\n* [react/default-props-match-prop-types](docs/rules/default-props-match-prop-types.md): Enforce all defaultProps are defined and not \"required\" in propTypes.\n* [react/destructuring-assignment](docs/rules/destructuring-assignment.md): Enforce consistent usage of destructuring assignment of props, state, and context\n* [react/display-name](docs/rules/display-name.md): Prevent missing displayName in a React component definition\n* [react/forbid-component-props](docs/rules/forbid-component-props.md): Forbid certain props on components\n* [react/forbid-dom-props](docs/rules/forbid-dom-props.md): Forbid certain props on DOM Nodes\n* [react/forbid-elements](docs/rules/forbid-elements.md): Forbid certain elements\n* [react/forbid-foreign-prop-types](docs/rules/forbid-foreign-prop-types.md): Forbid using another component's propTypes\n* [react/forbid-prop-types](docs/rules/forbid-prop-types.md): Forbid certain propTypes\n* [react/function-component-definition](docs/rules/function-component-definition.md): Standardize the way function component get defined (fixable)\n* [react/no-access-state-in-setstate](docs/rules/no-access-state-in-setstate.md): Reports when this.state is accessed within setState\n* [react/no-adjacent-inline-elements](docs/rules/no-adjacent-inline-elements.md): Prevent adjacent inline elements not separated by whitespace.\n* [react/no-array-index-key](docs/rules/no-array-index-key.md): Prevent usage of Array index in keys\n* [react/no-children-prop](docs/rules/no-children-prop.md): Prevent passing of children as props.\n* [react/no-danger](docs/rules/no-danger.md): Prevent usage of dangerous JSX props\n* [react/no-danger-with-children](docs/rules/no-danger-with-children.md): Report when a DOM element is using both children and dangerouslySetInnerHTML\n* [react/no-deprecated](docs/rules/no-deprecated.md): Prevent usage of deprecated methods\n* [react/no-did-mount-set-state](docs/rules/no-did-mount-set-state.md): Prevent usage of setState in componentDidMount\n* [react/no-did-update-set-state](docs/rules/no-did-update-set-state.md): Prevent usage of setState in componentDidUpdate\n* [react/no-direct-mutation-state](docs/rules/no-direct-mutation-state.md): Prevent direct mutation of this.state\n* [react/no-find-dom-node](docs/rules/no-find-dom-node.md): Prevent usage of findDOMNode\n* [react/no-is-mounted](docs/rules/no-is-mounted.md): Prevent usage of isMounted\n* [react/no-multi-comp](docs/rules/no-multi-comp.md): Prevent multiple component definition per file\n* [react/no-redundant-should-component-update](docs/rules/no-redundant-should-component-update.md): Flag shouldComponentUpdate when extending PureComponent\n* [react/no-render-return-value](docs/rules/no-render-return-value.md): Prevent usage of the return value of React.render\n* [react/no-set-state](docs/rules/no-set-state.md): Prevent usage of setState\n* [react/no-string-refs](docs/rules/no-string-refs.md): Prevent string definitions for references and prevent referencing this.refs\n* [react/no-this-in-sfc](docs/rules/no-this-in-sfc.md): Report \"this\" being used in stateless components\n* [react/no-typos](docs/rules/no-typos.md): Prevent common typos\n* [react/no-unescaped-entities](docs/rules/no-unescaped-entities.md): Detect unescaped HTML entities, which might represent malformed tags\n* [react/no-unknown-property](docs/rules/no-unknown-property.md): Prevent usage of unknown DOM property (fixable)\n* [react/no-unsafe](docs/rules/no-unsafe.md): Prevent usage of unsafe lifecycle methods\n* [react/no-unused-prop-types](docs/rules/no-unused-prop-types.md): Prevent definitions of unused prop types\n* [react/no-unused-state](docs/rules/no-unused-state.md): Prevent definition of unused state fields\n* [react/no-will-update-set-state](docs/rules/no-will-update-set-state.md): Prevent usage of setState in componentWillUpdate\n* [react/prefer-es6-class](docs/rules/prefer-es6-class.md): Enforce ES5 or ES6 class for React Components\n* [react/prefer-read-only-props](docs/rules/prefer-read-only-props.md): Require read-only props. (fixable)\n* [react/prefer-stateless-function](docs/rules/prefer-stateless-function.md): Enforce stateless components to be written as a pure function\n* [react/prop-types](docs/rules/prop-types.md): Prevent missing props validation in a React component definition\n* [react/react-in-jsx-scope](docs/rules/react-in-jsx-scope.md): Prevent missing React when using JSX\n* [react/require-default-props](docs/rules/require-default-props.md): Enforce a defaultProps definition for every prop that is not a required prop.\n* [react/require-optimization](docs/rules/require-optimization.md): Enforce React components to have a shouldComponentUpdate method\n* [react/require-render-return](docs/rules/require-render-return.md): Enforce ES5 or ES6 class for returning value in render function\n* [react/self-closing-comp](docs/rules/self-closing-comp.md): Prevent extra closing tags for components without children (fixable)\n* [react/sort-comp](docs/rules/sort-comp.md): Enforce component methods order\n* [react/sort-prop-types](docs/rules/sort-prop-types.md): Enforce propTypes declarations alphabetical sorting\n* [react/state-in-constructor](docs/rules/state-in-constructor.md): State initialization in an ES6 class component should be in a constructor\n* [react/static-property-placement](docs/rules/static-property-placement.md): Defines where React component static properties should be positioned.\n* [react/style-prop-object](docs/rules/style-prop-object.md): Enforce style prop value is an object\n* [react/void-dom-elements-no-children](docs/rules/void-dom-elements-no-children.md): Prevent passing of children to void DOM elements (e.g. `<br />`).\n<!-- AUTO-GENERATED-CONTENT:END -->\n\n## JSX-specific rules\n\n<!-- AUTO-GENERATED-CONTENT:START (JSX_RULES) -->\n* [react/jsx-boolean-value](docs/rules/jsx-boolean-value.md): Enforce boolean attributes notation in JSX (fixable)\n* [react/jsx-child-element-spacing](docs/rules/jsx-child-element-spacing.md): Ensures inline tags are not rendered without spaces between them\n* [react/jsx-closing-bracket-location](docs/rules/jsx-closing-bracket-location.md): Validate closing bracket location in JSX (fixable)\n* [react/jsx-closing-tag-location](docs/rules/jsx-closing-tag-location.md): Validate closing tag location for multiline JSX (fixable)\n* [react/jsx-curly-brace-presence](docs/rules/jsx-curly-brace-presence.md): Disallow unnecessary JSX expressions when literals alone are sufficient or enfore JSX expressions on literals in JSX children or attributes (fixable)\n* [react/jsx-curly-newline](docs/rules/jsx-curly-newline.md): Enforce consistent line breaks inside jsx curly (fixable)\n* [react/jsx-curly-spacing](docs/rules/jsx-curly-spacing.md): Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)\n* [react/jsx-equals-spacing](docs/rules/jsx-equals-spacing.md): Disallow or enforce spaces around equal signs in JSX attributes (fixable)\n* [react/jsx-filename-extension](docs/rules/jsx-filename-extension.md): Restrict file extensions that may contain JSX\n* [react/jsx-first-prop-new-line](docs/rules/jsx-first-prop-new-line.md): Ensure proper position of the first property in JSX (fixable)\n* [react/jsx-fragments](docs/rules/jsx-fragments.md): Enforce shorthand or standard form for React fragments (fixable)\n* [react/jsx-handler-names](docs/rules/jsx-handler-names.md): Enforce event handler naming conventions in JSX\n* [react/jsx-indent](docs/rules/jsx-indent.md): Validate JSX indentation (fixable)\n* [react/jsx-indent-props](docs/rules/jsx-indent-props.md): Validate props indentation in JSX (fixable)\n* [react/jsx-key](docs/rules/jsx-key.md): Report missing `key` props in iterators/collection literals\n* [react/jsx-max-depth](docs/rules/jsx-max-depth.md): Validate JSX maximum depth\n* [react/jsx-max-props-per-line](docs/rules/jsx-max-props-per-line.md): Limit maximum of props on a single line in JSX (fixable)\n* [react/jsx-no-bind](docs/rules/jsx-no-bind.md): Prevents usage of Function.prototype.bind and arrow functions in React component props\n* [react/jsx-no-comment-textnodes](docs/rules/jsx-no-comment-textnodes.md): Comments inside children section of tag should be placed inside braces\n* [react/jsx-no-duplicate-props](docs/rules/jsx-no-duplicate-props.md): Enforce no duplicate props\n* [react/jsx-no-literals](docs/rules/jsx-no-literals.md): Prevent using string literals in React component definition\n* [react/jsx-no-script-url](docs/rules/jsx-no-script-url.md): Forbid `javascript:` URLs\n* [react/jsx-no-target-blank](docs/rules/jsx-no-target-blank.md): Forbid `target=\"_blank\"` attribute without `rel=\"noreferrer\"`\n* [react/jsx-no-undef](docs/rules/jsx-no-undef.md): Disallow undeclared variables in JSX\n* [react/jsx-no-useless-fragment](docs/rules/jsx-no-useless-fragment.md): Disallow unnecessary fragments (fixable)\n* [react/jsx-one-expression-per-line](docs/rules/jsx-one-expression-per-line.md): Limit to one expression per line in JSX (fixable)\n* [react/jsx-pascal-case](docs/rules/jsx-pascal-case.md): Enforce PascalCase for user-defined JSX components\n* [react/jsx-props-no-multi-spaces](docs/rules/jsx-props-no-multi-spaces.md): Disallow multiple spaces between inline JSX props (fixable)\n* [react/jsx-props-no-spreading](docs/rules/jsx-props-no-spreading.md): Prevent JSX prop spreading\n* [react/jsx-sort-default-props](docs/rules/jsx-sort-default-props.md): Enforce default props alphabetical sorting\n* [react/jsx-sort-props](docs/rules/jsx-sort-props.md): Enforce props alphabetical sorting (fixable)\n* [react/jsx-space-before-closing](docs/rules/jsx-space-before-closing.md): Validate spacing before closing bracket in JSX (fixable)\n* [react/jsx-tag-spacing](docs/rules/jsx-tag-spacing.md): Validate whitespace in and around the JSX opening and closing brackets (fixable)\n* [react/jsx-uses-react](docs/rules/jsx-uses-react.md): Prevent React to be marked as unused\n* [react/jsx-uses-vars](docs/rules/jsx-uses-vars.md): Prevent variables used in JSX to be marked as unused\n* [react/jsx-wrap-multilines](docs/rules/jsx-wrap-multilines.md): Prevent missing parentheses around multilines JSX (fixable)\n<!-- AUTO-GENERATED-CONTENT:END -->\n\n## Other useful plugins\n\n- Rules of Hooks: [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)\n- JSX accessibility: [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)\n- React Native: [eslint-plugin-react-native](https://github.com/Intellicode/eslint-plugin-react-native)\n\n# Shareable configurations\n\n## Recommended\n\nThis plugin exports a `recommended` configuration that enforces React good practices.\n\nTo enable this configuration use the `extends` property in your `.eslintrc` config file:\n\n```json\n{\n  \"extends\": [\"eslint:recommended\", \"plugin:react/recommended\"]\n}\n```\n\nSee [ESLint documentation](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information about extending configuration files.\n\nThe rules enabled in this configuration are:\n\n* [react/display-name](docs/rules/display-name.md)\n* [react/jsx-key](docs/rules/jsx-key.md)\n* [react/jsx-no-comment-textnodes](docs/rules/jsx-no-comment-textnodes.md)\n* [react/jsx-no-duplicate-props](docs/rules/jsx-no-duplicate-props.md)\n* [react/jsx-no-target-blank](docs/rules/jsx-no-target-blank.md)\n* [react/jsx-no-undef](docs/rules/jsx-no-undef.md)\n* [react/jsx-uses-react](docs/rules/jsx-uses-react.md)\n* [react/jsx-uses-vars](docs/rules/jsx-uses-vars.md)\n* [react/no-children-prop](docs/rules/no-children-prop.md)\n* [react/no-danger-with-children](docs/rules/no-danger-with-children.md)\n* [react/no-deprecated](docs/rules/no-deprecated.md)\n* [react/no-direct-mutation-state](docs/rules/no-direct-mutation-state.md)\n* [react/no-find-dom-node](docs/rules/no-find-dom-node.md)\n* [react/no-is-mounted](docs/rules/no-is-mounted.md)\n* [react/no-render-return-value](docs/rules/no-render-return-value.md)\n* [react/no-string-refs](docs/rules/no-string-refs.md)\n* [react/no-unescaped-entities](docs/rules/no-unescaped-entities.md)\n* [react/no-unknown-property](docs/rules/no-unknown-property.md)\n* [react/prop-types](docs/rules/prop-types.md)\n* [react/react-in-jsx-scope](docs/rules/react-in-jsx-scope.md)\n* [react/require-render-return](docs/rules/require-render-return.md)\n\n## All\n\nThis plugin also exports an `all` configuration that includes every available rule.\nThis pairs well with the `eslint:all` rule.\n\n```json\n{\n  \"plugins\": [\n    \"react\"\n  ],\n  \"extends\": [\"eslint:all\", \"plugin:react/all\"]\n}\n```\n\n**Note**: These configurations will import `eslint-plugin-react` and enable JSX in [parser options](http://eslint.org/docs/user-guide/configuring#specifying-parser-options).\n\n# License\n\nESLint-plugin-React is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).\n\n\n[npm-url]: https://npmjs.org/package/eslint-plugin-react\n[npm-image]: https://img.shields.io/npm/v/eslint-plugin-react.svg\n\n[travis-url]: https://travis-ci.org/yannickcr/eslint-plugin-react\n[travis-image]: https://img.shields.io/travis/yannickcr/eslint-plugin-react/master.svg\n\n[deps-url]: https://david-dm.org/yannickcr/eslint-plugin-react\n[deps-image]: https://img.shields.io/david/dev/yannickcr/eslint-plugin-react.svg\n\n[coverage-url]: https://coveralls.io/r/yannickcr/eslint-plugin-react?branch=master\n[coverage-image]: https://img.shields.io/coveralls/yannickcr/eslint-plugin-react/master.svg\n\n[climate-url]: https://codeclimate.com/github/yannickcr/eslint-plugin-react\n[climate-image]: https://img.shields.io/codeclimate/maintainability/yannickcr/eslint-plugin-react.svg\n\n[status-url]: https://github.com/yannickcr/eslint-plugin-react/pulse\n[status-image]: https://img.shields.io/github/last-commit/yannickcr/eslint-plugin-react.svg\n\n[tidelift-url]: https://tidelift.com/subscription/pkg/npm-eslint-plugin-react?utm_source=npm-eslint-plugin-react&utm_medium=referral&utm_campaign=readme\n[tidelift-image]: https://tidelift.com/badges/github/yannickcr/eslint-plugin-react?style=flat\n",
+  "readme": "ESLint-plugin-React\n===================\n\n[![Maintenance Status][status-image]][status-url] [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url] [![Coverage Status][coverage-image]][coverage-url] [![Code Climate][climate-image]][climate-url] [![Tidelift][tidelift-image]][tidelift-url]\n\nReact specific linting rules for ESLint\n\n# Installation\n\nInstall [ESLint](https://www.github.com/eslint/eslint) either locally or globally. (Note that locally, per project, is strongly preferred)\n\n```sh\n$ npm install eslint --save-dev\n```\n\nIf you installed `ESLint` globally, you have to install React plugin globally too. Otherwise, install it locally.\n\n```sh\n$ npm install eslint-plugin-react --save-dev\n```\n\n# Configuration\n\nUse [our preset](#recommended) to get reasonable defaults:\n\n```json\n  \"extends\": [\n    \"eslint:recommended\",\n    \"plugin:react/recommended\"\n  ]\n```\n\nYou should also specify settings that will be shared across all the plugin rules. ([More about eslint shared settings](https://eslint.org/docs/user-guide/configuring#adding-shared-settings))\n\n```json5\n{\n  \"settings\": {\n    \"react\": {\n      \"createClass\": \"createReactClass\", // Regex for Component Factory to use,\n                                         // default to \"createReactClass\"\n      \"pragma\": \"React\",  // Pragma to use, default to \"React\"\n      \"fragment\": \"Fragment\",  // Fragment to use (may be a property of <pragma>), default to \"Fragment\"\n      \"version\": \"detect\", // React version. \"detect\" automatically picks the version you have installed.\n                           // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.\n                           // default to latest and warns if missing\n                           // It will default to \"detect\" in the future\n      \"flowVersion\": \"0.53\" // Flow version\n    },\n    \"propWrapperFunctions\": [\n        // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.\n        \"forbidExtraProps\",\n        {\"property\": \"freeze\", \"object\": \"Object\"},\n        {\"property\": \"myFavoriteWrapper\"}\n    ],\n    \"linkComponents\": [\n      // Components used as alternatives to <a> for linking, eg. <Link to={ url } />\n      \"Hyperlink\",\n      {\"name\": \"Link\", \"linkAttribute\": \"to\"}\n    ]\n  }\n}\n```\n\nIf you do not use a preset you will need to specify individual rules and add extra configuration.\n\nAdd \"react\" to the plugins section.\n\n```json\n{\n  \"plugins\": [\n    \"react\"\n  ]\n}\n```\n\nEnable JSX support.\n\nWith ESLint 2+\n\n```json\n{\n  \"parserOptions\": {\n    \"ecmaFeatures\": {\n      \"jsx\": true\n    }\n  }\n}\n```\n\nEnable the rules that you would like to use.\n\n```json\n  \"rules\": {\n    \"react/jsx-uses-react\": \"error\",\n    \"react/jsx-uses-vars\": \"error\",\n  }\n```\n\n# List of supported rules\n\n<!-- AUTO-GENERATED-CONTENT:START (BASIC_RULES) -->\n* [react/boolean-prop-naming](docs/rules/boolean-prop-naming.md): Enforces consistent naming for boolean props\n* [react/button-has-type](docs/rules/button-has-type.md): Forbid \"button\" element without an explicit \"type\" attribute\n* [react/default-props-match-prop-types](docs/rules/default-props-match-prop-types.md): Enforce all defaultProps are defined and not \"required\" in propTypes.\n* [react/destructuring-assignment](docs/rules/destructuring-assignment.md): Enforce consistent usage of destructuring assignment of props, state, and context\n* [react/display-name](docs/rules/display-name.md): Prevent missing displayName in a React component definition\n* [react/forbid-component-props](docs/rules/forbid-component-props.md): Forbid certain props on components\n* [react/forbid-dom-props](docs/rules/forbid-dom-props.md): Forbid certain props on DOM Nodes\n* [react/forbid-elements](docs/rules/forbid-elements.md): Forbid certain elements\n* [react/forbid-foreign-prop-types](docs/rules/forbid-foreign-prop-types.md): Forbid using another component's propTypes\n* [react/forbid-prop-types](docs/rules/forbid-prop-types.md): Forbid certain propTypes\n* [react/function-component-definition](docs/rules/function-component-definition.md): Standardize the way function component get defined (fixable)\n* [react/no-access-state-in-setstate](docs/rules/no-access-state-in-setstate.md): Reports when this.state is accessed within setState\n* [react/no-adjacent-inline-elements](docs/rules/no-adjacent-inline-elements.md): Prevent adjacent inline elements not separated by whitespace.\n* [react/no-array-index-key](docs/rules/no-array-index-key.md): Prevent usage of Array index in keys\n* [react/no-children-prop](docs/rules/no-children-prop.md): Prevent passing of children as props.\n* [react/no-danger](docs/rules/no-danger.md): Prevent usage of dangerous JSX props\n* [react/no-danger-with-children](docs/rules/no-danger-with-children.md): Report when a DOM element is using both children and dangerouslySetInnerHTML\n* [react/no-deprecated](docs/rules/no-deprecated.md): Prevent usage of deprecated methods\n* [react/no-did-mount-set-state](docs/rules/no-did-mount-set-state.md): Prevent usage of setState in componentDidMount\n* [react/no-did-update-set-state](docs/rules/no-did-update-set-state.md): Prevent usage of setState in componentDidUpdate\n* [react/no-direct-mutation-state](docs/rules/no-direct-mutation-state.md): Prevent direct mutation of this.state\n* [react/no-find-dom-node](docs/rules/no-find-dom-node.md): Prevent usage of findDOMNode\n* [react/no-is-mounted](docs/rules/no-is-mounted.md): Prevent usage of isMounted\n* [react/no-multi-comp](docs/rules/no-multi-comp.md): Prevent multiple component definition per file\n* [react/no-redundant-should-component-update](docs/rules/no-redundant-should-component-update.md): Flag shouldComponentUpdate when extending PureComponent\n* [react/no-render-return-value](docs/rules/no-render-return-value.md): Prevent usage of the return value of React.render\n* [react/no-set-state](docs/rules/no-set-state.md): Prevent usage of setState\n* [react/no-string-refs](docs/rules/no-string-refs.md): Prevent string definitions for references and prevent referencing this.refs\n* [react/no-this-in-sfc](docs/rules/no-this-in-sfc.md): Report \"this\" being used in stateless components\n* [react/no-typos](docs/rules/no-typos.md): Prevent common typos\n* [react/no-unescaped-entities](docs/rules/no-unescaped-entities.md): Detect unescaped HTML entities, which might represent malformed tags\n* [react/no-unknown-property](docs/rules/no-unknown-property.md): Prevent usage of unknown DOM property (fixable)\n* [react/no-unsafe](docs/rules/no-unsafe.md): Prevent usage of unsafe lifecycle methods\n* [react/no-unused-prop-types](docs/rules/no-unused-prop-types.md): Prevent definitions of unused prop types\n* [react/no-unused-state](docs/rules/no-unused-state.md): Prevent definition of unused state fields\n* [react/no-will-update-set-state](docs/rules/no-will-update-set-state.md): Prevent usage of setState in componentWillUpdate\n* [react/prefer-es6-class](docs/rules/prefer-es6-class.md): Enforce ES5 or ES6 class for React Components\n* [react/prefer-read-only-props](docs/rules/prefer-read-only-props.md): Require read-only props. (fixable)\n* [react/prefer-stateless-function](docs/rules/prefer-stateless-function.md): Enforce stateless components to be written as a pure function\n* [react/prop-types](docs/rules/prop-types.md): Prevent missing props validation in a React component definition\n* [react/react-in-jsx-scope](docs/rules/react-in-jsx-scope.md): Prevent missing React when using JSX\n* [react/require-default-props](docs/rules/require-default-props.md): Enforce a defaultProps definition for every prop that is not a required prop.\n* [react/require-optimization](docs/rules/require-optimization.md): Enforce React components to have a shouldComponentUpdate method\n* [react/require-render-return](docs/rules/require-render-return.md): Enforce ES5 or ES6 class for returning value in render function\n* [react/self-closing-comp](docs/rules/self-closing-comp.md): Prevent extra closing tags for components without children (fixable)\n* [react/sort-comp](docs/rules/sort-comp.md): Enforce component methods order\n* [react/sort-prop-types](docs/rules/sort-prop-types.md): Enforce propTypes declarations alphabetical sorting\n* [react/state-in-constructor](docs/rules/state-in-constructor.md): State initialization in an ES6 class component should be in a constructor\n* [react/static-property-placement](docs/rules/static-property-placement.md): Defines where React component static properties should be positioned.\n* [react/style-prop-object](docs/rules/style-prop-object.md): Enforce style prop value is an object\n* [react/void-dom-elements-no-children](docs/rules/void-dom-elements-no-children.md): Prevent passing of children to void DOM elements (e.g. `<br />`).\n<!-- AUTO-GENERATED-CONTENT:END -->\n\n## JSX-specific rules\n\n<!-- AUTO-GENERATED-CONTENT:START (JSX_RULES) -->\n* [react/jsx-boolean-value](docs/rules/jsx-boolean-value.md): Enforce boolean attributes notation in JSX (fixable)\n* [react/jsx-child-element-spacing](docs/rules/jsx-child-element-spacing.md): Ensures inline tags are not rendered without spaces between them\n* [react/jsx-closing-bracket-location](docs/rules/jsx-closing-bracket-location.md): Validate closing bracket location in JSX (fixable)\n* [react/jsx-closing-tag-location](docs/rules/jsx-closing-tag-location.md): Validate closing tag location for multiline JSX (fixable)\n* [react/jsx-curly-brace-presence](docs/rules/jsx-curly-brace-presence.md): Disallow unnecessary JSX expressions when literals alone are sufficient or enfore JSX expressions on literals in JSX children or attributes (fixable)\n* [react/jsx-curly-newline](docs/rules/jsx-curly-newline.md): Enforce consistent line breaks inside jsx curly (fixable)\n* [react/jsx-curly-spacing](docs/rules/jsx-curly-spacing.md): Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)\n* [react/jsx-equals-spacing](docs/rules/jsx-equals-spacing.md): Disallow or enforce spaces around equal signs in JSX attributes (fixable)\n* [react/jsx-filename-extension](docs/rules/jsx-filename-extension.md): Restrict file extensions that may contain JSX\n* [react/jsx-first-prop-new-line](docs/rules/jsx-first-prop-new-line.md): Ensure proper position of the first property in JSX (fixable)\n* [react/jsx-fragments](docs/rules/jsx-fragments.md): Enforce shorthand or standard form for React fragments (fixable)\n* [react/jsx-handler-names](docs/rules/jsx-handler-names.md): Enforce event handler naming conventions in JSX\n* [react/jsx-indent](docs/rules/jsx-indent.md): Validate JSX indentation (fixable)\n* [react/jsx-indent-props](docs/rules/jsx-indent-props.md): Validate props indentation in JSX (fixable)\n* [react/jsx-key](docs/rules/jsx-key.md): Report missing `key` props in iterators/collection literals\n* [react/jsx-max-depth](docs/rules/jsx-max-depth.md): Validate JSX maximum depth\n* [react/jsx-max-props-per-line](docs/rules/jsx-max-props-per-line.md): Limit maximum of props on a single line in JSX (fixable)\n* [react/jsx-no-bind](docs/rules/jsx-no-bind.md): Prevents usage of Function.prototype.bind and arrow functions in React component props\n* [react/jsx-no-comment-textnodes](docs/rules/jsx-no-comment-textnodes.md): Comments inside children section of tag should be placed inside braces\n* [react/jsx-no-duplicate-props](docs/rules/jsx-no-duplicate-props.md): Enforce no duplicate props\n* [react/jsx-no-literals](docs/rules/jsx-no-literals.md): Prevent using string literals in React component definition\n* [react/jsx-no-script-url](docs/rules/jsx-no-script-url.md): Forbid `javascript:` URLs\n* [react/jsx-no-target-blank](docs/rules/jsx-no-target-blank.md): Forbid `target=\"_blank\"` attribute without `rel=\"noreferrer\"`\n* [react/jsx-no-undef](docs/rules/jsx-no-undef.md): Disallow undeclared variables in JSX\n* [react/jsx-no-useless-fragment](docs/rules/jsx-no-useless-fragment.md): Disallow unnecessary fragments (fixable)\n* [react/jsx-one-expression-per-line](docs/rules/jsx-one-expression-per-line.md): Limit to one expression per line in JSX (fixable)\n* [react/jsx-pascal-case](docs/rules/jsx-pascal-case.md): Enforce PascalCase for user-defined JSX components\n* [react/jsx-props-no-multi-spaces](docs/rules/jsx-props-no-multi-spaces.md): Disallow multiple spaces between inline JSX props (fixable)\n* [react/jsx-props-no-spreading](docs/rules/jsx-props-no-spreading.md): Prevent JSX prop spreading\n* [react/jsx-sort-default-props](docs/rules/jsx-sort-default-props.md): Enforce default props alphabetical sorting\n* [react/jsx-sort-props](docs/rules/jsx-sort-props.md): Enforce props alphabetical sorting (fixable)\n* [react/jsx-space-before-closing](docs/rules/jsx-space-before-closing.md): Validate spacing before closing bracket in JSX (fixable)\n* [react/jsx-tag-spacing](docs/rules/jsx-tag-spacing.md): Validate whitespace in and around the JSX opening and closing brackets (fixable)\n* [react/jsx-uses-react](docs/rules/jsx-uses-react.md): Prevent React to be marked as unused\n* [react/jsx-uses-vars](docs/rules/jsx-uses-vars.md): Prevent variables used in JSX to be marked as unused\n* [react/jsx-wrap-multilines](docs/rules/jsx-wrap-multilines.md): Prevent missing parentheses around multilines JSX (fixable)\n<!-- AUTO-GENERATED-CONTENT:END -->\n\n## Other useful plugins\n\n- Rules of Hooks: [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)\n- JSX accessibility: [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)\n- React Native: [eslint-plugin-react-native](https://github.com/Intellicode/eslint-plugin-react-native)\n\n# Shareable configurations\n\n## Recommended\n\nThis plugin exports a `recommended` configuration that enforces React good practices.\n\nTo enable this configuration use the `extends` property in your `.eslintrc` config file:\n\n```json\n{\n  \"extends\": [\"eslint:recommended\", \"plugin:react/recommended\"]\n}\n```\n\nSee [ESLint documentation](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information about extending configuration files.\n\nThe rules enabled in this configuration are:\n\n* [react/display-name](docs/rules/display-name.md)\n* [react/jsx-key](docs/rules/jsx-key.md)\n* [react/jsx-no-comment-textnodes](docs/rules/jsx-no-comment-textnodes.md)\n* [react/jsx-no-duplicate-props](docs/rules/jsx-no-duplicate-props.md)\n* [react/jsx-no-target-blank](docs/rules/jsx-no-target-blank.md)\n* [react/jsx-no-undef](docs/rules/jsx-no-undef.md)\n* [react/jsx-uses-react](docs/rules/jsx-uses-react.md)\n* [react/jsx-uses-vars](docs/rules/jsx-uses-vars.md)\n* [react/no-children-prop](docs/rules/no-children-prop.md)\n* [react/no-danger-with-children](docs/rules/no-danger-with-children.md)\n* [react/no-deprecated](docs/rules/no-deprecated.md)\n* [react/no-direct-mutation-state](docs/rules/no-direct-mutation-state.md)\n* [react/no-find-dom-node](docs/rules/no-find-dom-node.md)\n* [react/no-is-mounted](docs/rules/no-is-mounted.md)\n* [react/no-render-return-value](docs/rules/no-render-return-value.md)\n* [react/no-string-refs](docs/rules/no-string-refs.md)\n* [react/no-unescaped-entities](docs/rules/no-unescaped-entities.md)\n* [react/no-unknown-property](docs/rules/no-unknown-property.md)\n* [react/prop-types](docs/rules/prop-types.md)\n* [react/react-in-jsx-scope](docs/rules/react-in-jsx-scope.md)\n* [react/require-render-return](docs/rules/require-render-return.md)\n\n## All\n\nThis plugin also exports an `all` configuration that includes every available rule.\nThis pairs well with the `eslint:all` rule.\n\n```json\n{\n  \"plugins\": [\n    \"react\"\n  ],\n  \"extends\": [\"eslint:all\", \"plugin:react/all\"]\n}\n```\n\n**Note**: These configurations will import `eslint-plugin-react` and enable JSX in [parser options](http://eslint.org/docs/user-guide/configuring#specifying-parser-options).\n\n# License\n\nESLint-plugin-React is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).\n\n\n[npm-url]: https://npmjs.org/package/eslint-plugin-react\n[npm-image]: https://img.shields.io/npm/v/eslint-plugin-react.svg\n\n[travis-url]: https://travis-ci.org/yannickcr/eslint-plugin-react\n[travis-image]: https://img.shields.io/travis/yannickcr/eslint-plugin-react/master.svg\n\n[deps-url]: https://david-dm.org/yannickcr/eslint-plugin-react\n[deps-image]: https://img.shields.io/david/dev/yannickcr/eslint-plugin-react.svg\n\n[coverage-url]: https://coveralls.io/r/yannickcr/eslint-plugin-react?branch=master\n[coverage-image]: https://img.shields.io/coveralls/yannickcr/eslint-plugin-react/master.svg\n\n[climate-url]: https://codeclimate.com/github/yannickcr/eslint-plugin-react\n[climate-image]: https://img.shields.io/codeclimate/maintainability/yannickcr/eslint-plugin-react.svg\n\n[status-url]: https://github.com/yannickcr/eslint-plugin-react/pulse\n[status-image]: https://img.shields.io/github/last-commit/yannickcr/eslint-plugin-react.svg\n\n[tidelift-url]: https://tidelift.com/subscription/pkg/npm-eslint-plugin-react?utm_source=npm-eslint-plugin-react&utm_medium=referral&utm_campaign=readme\n[tidelift-image]: https://tidelift.com/badges/github/yannickcr/eslint-plugin-react?style=flat\n",
   "maintainers": [
     {
-      "email": "ljharb@gmail.com",
-      "name": "ljharb"
+      "name": "yannickcr",
+      "email": "yannick.croissant+npm@gmail.com"
     },
     {
-      "email": "yannick.croissant+npm@gmail.com",
-      "name": "yannickcr"
+      "name": "ljharb",
+      "email": "ljharb@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-08-12T19:49:00.877Z",
+    "modified": "2020-10-09T21:58:43.094Z",
     "created": "2014-12-16T01:30:32.410Z",
     "1.0.0": "2014-12-16T01:30:32.410Z",
     "1.1.0": "2014-12-28T19:33:03.823Z",
@@ -12153,7 +12717,12 @@
     "7.20.3": "2020-06-30T20:22:25.907Z",
     "7.20.4": "2020-07-27T02:50:41.038Z",
     "7.20.5": "2020-07-28T19:23:46.152Z",
-    "7.20.6": "2020-08-12T19:48:58.341Z"
+    "7.20.6": "2020-08-12T19:48:58.341Z",
+    "7.21.0": "2020-09-23T05:56:00.570Z",
+    "7.21.1": "2020-09-23T22:13:11.615Z",
+    "7.21.2": "2020-09-24T22:08:09.106Z",
+    "7.21.3": "2020-10-02T18:24:37.841Z",
+    "7.21.4": "2020-10-09T21:58:40.507Z"
   },
   "homepage": "https://github.com/yannickcr/eslint-plugin-react",
   "keywords": [
@@ -12271,5 +12840,7 @@
     "jalik": true,
     "tcrowe": true
   },
-  "license": "MIT"
+  "license": "MIT",
+  "_cached": false,
+  "_contentLength": 0
 }

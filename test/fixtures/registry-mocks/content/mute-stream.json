@@ -1,6 +1,6 @@
 {
   "_id": "mute-stream",
-  "_rev": "30-abd865e9c7848d9441a1db6ff6ca3750",
+  "_rev": "34-b681bfd7bab862b80d35d8c6d4085fc7",
   "name": "mute-stream",
   "description": "Bytes go in, but they don't come out (when muted).",
   "dist-tags": {
@@ -444,16 +444,12 @@
   "readme": "# mute-stream\n\nBytes go in, but they don't come out (when muted).\n\nThis is a basic pass-through stream, but when muted, the bytes are\nsilently dropped, rather than being passed through.\n\n## Usage\n\n```javascript\nvar MuteStream = require('mute-stream')\n\nvar ms = new MuteStream(options)\n\nms.pipe(process.stdout)\nms.write('foo') // writes 'foo' to stdout\nms.mute()\nms.write('bar') // does not write 'bar'\nms.unmute()\nms.write('baz') // writes 'baz' to stdout\n\n// can also be used to mute incoming data\nvar ms = new MuteStream\ninput.pipe(ms)\n\nms.on('data', function (c) {\n  console.log('data: ' + c)\n})\n\ninput.emit('data', 'foo') // logs 'foo'\nms.mute()\ninput.emit('data', 'bar') // does not log 'bar'\nms.unmute()\ninput.emit('data', 'baz') // logs 'baz'\n```\n\n## Options\n\nAll options are optional.\n\n* `replace` Set to a string to replace each character with the\n  specified string when muted.  (So you can show `****` instead of the\n  password, for example.)\n\n* `prompt` If you are using a replacement char, and also using a\n  prompt with a readline stream (as for a `Password: *****` input),\n  then specify what the prompt is so that backspace will work\n  properly.  Otherwise, pressing backspace will overwrite the prompt\n  with the replacement character, which is weird.\n\n## ms.mute()\n\nSet `muted` to `true`.  Turns `.write()` into a no-op.\n\n## ms.unmute()\n\nSet `muted` to `false`\n\n## ms.isTTY\n\nTrue if the pipe destination is a TTY, or if the incoming pipe source is\na TTY.\n\n## Other stream methods...\n\nThe other standard readable and writable stream methods are all\navailable.  The MuteStream object acts as a facade to its pipe source\nand destination.\n",
   "maintainers": [
     {
-      "email": "myles.borins@gmail.com",
-      "name": "mylesborins"
+      "email": "quitlahok@gmail.com",
+      "name": "nlf"
     },
     {
       "email": "ruyadorno@hotmail.com",
       "name": "ruyadorno"
-    },
-    {
-      "email": "cghr1990@gmail.com",
-      "name": "claudiahdz"
     },
     {
       "email": "darcy@darcyclarke.me",
@@ -469,7 +465,7 @@
     }
   ],
   "time": {
-    "modified": "2020-07-15T22:09:49.190Z",
+    "modified": "2020-10-13T05:04:48.307Z",
     "created": "2012-07-24T01:27:21.585Z",
     "0.0.1": "2012-07-24T01:27:22.992Z",
     "0.0.2": "2012-07-24T22:21:44.924Z",
@@ -503,5 +499,7 @@
     "url": "https://github.com/isaacs/mute-stream/issues"
   },
   "license": "ISC",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "_cached": false,
+  "_contentLength": 0
 }

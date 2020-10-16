@@ -1,10 +1,10 @@
 {
   "_id": "@babel/traverse",
-  "_rev": "81-10752217aaae29cc2dff442db19f6a4b",
+  "_rev": "96-aba11ee74c16deb66c04693692ab616f",
   "name": "@babel/traverse",
   "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
   "dist-tags": {
-    "latest": "7.8.4"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -2233,6 +2233,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.0.0-rc.3",
       "dist": {
         "shasum": "bcf659e46d24244ab51379c849093f8c4e54d239",
@@ -2304,6 +2305,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.0.0-rc.4",
       "dist": {
         "shasum": "42d91ea7f785515496e1a1e1f5f79e39f8b1fe14",
@@ -2376,6 +2378,8 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/traverse\n\n> The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes\n\nSee our website [@babel/traverse](https://babeljs.io/docs/en/next/babel-traverse.html) for more information or the [issues](https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20traverse%22+is%3Aopen) associated with this package.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/traverse\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/traverse --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.0.0",
       "dist": {
         "shasum": "b1fe9b6567fdf3ab542cfad6f3b31f854d799a61",
@@ -2450,6 +2454,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.1.0",
       "dist": {
         "shasum": "503ec6669387efd182c3888c4eec07bcc45d91b2",
@@ -2520,6 +2525,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.1.3",
       "dist": {
         "shasum": "7a3731b5f049d1190780de7a5e7fc68357fa5e6c",
@@ -2590,6 +2596,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.1.4",
       "dist": {
         "shasum": "f4f83b93d649b4b2c91121a9087fa2fa949ec2b4",
@@ -2660,6 +2667,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.1.5",
       "dist": {
         "shasum": "5aafca2039aa058c104cf2bfeb9fc4a857ccbca9",
@@ -2730,6 +2738,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.1.6",
       "dist": {
         "shasum": "c8db9963ab4ce5b894222435482bd8ea854b7b5c",
@@ -2804,6 +2813,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.2.2",
       "dist": {
         "shasum": "961039de1f9bcb946d807efe2dba9c92e859d188",
@@ -2879,6 +2889,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "d35f2ad92b322c3bb9c6792e2683807afae0b105",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.2.3",
       "dist": {
         "shasum": "7ff50cefa9c7c0bd2d81231fdac122f3957748d8",
@@ -2954,6 +2965,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "1f6454cc90fe33e0a32260871212e2f719f35741",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.3.4",
       "dist": {
         "shasum": "1330aab72234f8dea091b08c4f8b9d05c7119e06",
@@ -3029,6 +3041,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.4.0",
       "dist": {
         "shasum": "14006967dd1d2b3494cdd650c686db9daf0ddada",
@@ -3104,6 +3117,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "508fde4009f31883f318b9e6546459ac1b086a91",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.4.3",
       "dist": {
         "shasum": "1a01f078fc575d589ff30c0f71bf3c3d9ccbad84",
@@ -3179,6 +3193,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.4.4",
       "dist": {
         "shasum": "0776f038f6d78361860b6823887d4f3937133fe8",
@@ -3254,6 +3269,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "33ab4f166117e2380de3955a0842985f578b01b8",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/traverse@7.4.5",
       "dist": {
         "shasum": "4e92d1728fd2f1897dafdd321efbff92156c3216",
@@ -4159,36 +4175,1091 @@
         "tmp": "tmp/traverse_7.8.4_1580387851672_0.7136964049409171"
       },
       "_hasShrinkwrap": false
+    },
+    "7.8.6": {
+      "name": "@babel/traverse",
+      "version": "7.8.6",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.8.6",
+        "@babel/helper-function-name": "^7.8.3",
+        "@babel/helper-split-export-declaration": "^7.8.3",
+        "@babel/parser": "^7.8.6",
+        "@babel/types": "^7.8.6",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "750d3dde3bd2d390819820fd22c05441da78751b",
+      "_id": "@babel/traverse@7.8.6",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.7.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-2B8l0db/DPi8iinITKuo7cbPznLCEk0kCxDoB9/N6gGNg/gxOXiR/IcymAFPiBwk5w6TtQ27w4wpElgp9btR9A==",
+        "shasum": "acfe0c64e1cd991b3e32eae813a6eb564954b5ff",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.8.6.tgz",
+        "fileCount": 28,
+        "unpackedSize": 154074,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeV7RSCRA9TVsSAnZWagAAq1wP+wcylGe/7tGQgd+Kdxoa\nBy2fcjLxCpCKy3fm/VW1MZBdBAvIF6RxhH2ZblaHdyHOXnYdxyTYl6bV25eU\nSZfBgQDc2bFW2jI5IR6yywevchEGWn2YoPjtjg+YGGEx3tPn93zl+2fodeYZ\nDQDa3NwQMFYFCk9MrWDjjM/OiZD3aBjNGoeeBkCibnSvf6GuEiKVfvAxU7da\nx68yzpLXE0C9NxOlQ71Ky9jkDX3+ei6xt5CObnMtgvdwUNhN8Jd1dy6Zrh9h\nxdsmPTRvVRVqjp/0ST76TYnWOR0ch9y6q32F24mU31gN8fCD1GkvmHUnlT2j\n5H68mrVwdkM0bZ1FmMxwWJMIk0s7wrRwOcN9E0SFFE5si+SUkEnEagFyFl5e\nQWm7QzCPM2aypUybrj0Ij3QRt9yC/MuWPMFWgqRz/v3q2i+esfzilWfTlrJu\nPZZJVYNPH0nGWSUqXnfcTksh5n2fMZEi6HSKbFDvo1CfiOHPW60gWLXa8Taq\nt25qhpWa203SMOxUyDWqujROnKLk+GShqaqSHqrOT8fn15mPc2Kd5FI1MNoA\nGVPV46ObZDGs0AE9LZcRrh5RDilodBsLfgHx8bxRsXbT9VahOcmkCRNyHuMB\nxKaSiGD8sGx/f7l/JBerItLkIV6PVct97Nyu5Ud9UVBmnw/ruYKR2zNVF5X1\nHpsc\r\n=/l+B\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.8.6_1582806097794_0.8858461233294774"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/traverse",
+      "version": "7.9.0",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.9.0",
+        "@babel/helper-function-name": "^7.8.3",
+        "@babel/helper-split-export-declaration": "^7.8.3",
+        "@babel/parser": "^7.9.0",
+        "@babel/types": "^7.9.0",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/traverse@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-jAZQj0+kn4WTHO5dUZkZKhbFrqZE7K5LAQ5JysMnmvGij+wOdr+8lWqPeW0BcF4wFwrEXXtdGO7wcV6YPJcf3w==",
+        "shasum": "d3882c2830e513f4fe4cec9fe76ea1cc78747892",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.9.0.tgz",
+        "fileCount": 28,
+        "unpackedSize": 155868,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOPRCRA9TVsSAnZWagAA7nsP/RtK7iX/dV/I3qbGlrI0\nnvshtrbQ7VJzcTLLcvxiZLGydv6KjoCQCaY0vPdxR4LjemMLZeNprcyllQZy\nAS1QFcuLR7xqlfKJk8W+p2DtbRKvYZqysiNiUhz10egU4Y+AfNymMglHipA+\nsZDNLAeHsRby24hLN2xKau498nNWqa13sdFzP3+3zfxv4DTt3lG3kV+dstFZ\ncFSyI7ftMH/XcveMTYNBNNi+GHehs2KZvabn/IwAFexR8G+f84KKGocYZHeA\n/dtZpYyYcM8rLqpxZ8EpBtaXDHJT70Y6eGi8PgvDfMyNpqcSqIUy4sHPsHrq\nHA2f4mc8+g7t0lSL4bob3N9EvWZJlc0MnhpluwC0g3Sa9FdqyMgWl4E5qPp8\nJWe53Vq4/IZZMHM7Maw7NrBCrndtyXRabkvwNcdnbJcAPeN+k6U0z4mRylY9\n5s6+9OPr3SXDmJLJ1VYeeSbknUjai9eth1r5FJSm3KbmYQ3poDH3KPg00MXQ\n73Y22GOan2cEI4LwVsXxebJAHIKJi3N7kXn9cJPE4prwlkRlvet4wD5mS2GC\nSO8tz6zfyvf2r1DKnmJFGdS+DF937wLwkc4x82rd+2YEIYnIvmUWXNLyzt9g\nmPf8mogNIm+9U+xa/7XttYPH/6DNjRvy/GzyntLMQzBhHls8euOFlL0soMgl\nkZ7J\r\n=bjhu\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.9.0_1584718800856_0.612569507165208"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.5": {
+      "name": "@babel/traverse",
+      "version": "7.9.5",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.9.5",
+        "@babel/helper-function-name": "^7.9.5",
+        "@babel/helper-split-export-declaration": "^7.8.3",
+        "@babel/parser": "^7.9.0",
+        "@babel/types": "^7.9.5",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5b97e77e030cf3853a147fdff81844ea4026219d",
+      "_id": "@babel/traverse@7.9.5",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "lerna/3.19.0/node@v10.19.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-c4gH3jsvSuGUezlP6rzSJ6jf8fYjLj3hsMZRx/nX0h+fmHN0w+ekubRrHPqnMec0meycA2nwCsJ7dC8IPem2FQ==",
+        "shasum": "6e7c56b44e2ac7011a948c21e283ddd9d9db97a2",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.9.5.tgz",
+        "fileCount": 28,
+        "unpackedSize": 155850,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJejNOvCRA9TVsSAnZWagAAyCUP/jEtg/9QV5ra/M1DmJgm\nzu6iQC6chX3px7YQ2I2/XKAoWfiySZsxwLU82MK8NbRQ/GIbg7m2mIHI26iU\nwEPjAAj3cXlibvvxTTKYli1jilVB5ncfMkdCgzkOUXXzjOMD3MLSweMXP7Fw\neWF4BI3PoTMFw25+Kuq2ZQ/4Hwkbq/eEL3v1W5uDkZPpnvNiqkFuqDVWLoXg\nTlVC7DA07mV2aULax5T6giZdrPKzURnU4NFG7h9ZZ8oX8QXeZ/k6C1H6l5+Y\ntz8s2nilYNiUkUri6v93KuJCmJ6V47Dc4AQ/9TwBtavH/VuBpUi8gxtXCS3H\np3MSl8OGKTfuN1PzT6WayHUpdU4fdb3N8F/uosWIE0+kD3xHa4k7aCtzS/kW\n9+PyuntaBxP8v4iHdk6kPw9zEgWrTRjV0xpmMgP7IigzQkOJQolQYkULQEDS\nnvFnDxKqnTuhRUbvxllZBOAd//Ifk7rquQGnsH2a8g5dkmusW41wEW9ZP5e+\nFqzn3apO4wqEkRses5u884xHJ8HSA6EczY7qQbD/YKoot1HVKhhuyvqyOWL6\nEur0DKkGznII8UsxpcUZQNOegFGS/yQjUCi3xg7c/lCDVg5oXA3COXnPG7c3\nsiUAITw8Apx9+eBzxyppi3rYblpNvA+vdEDO6Cm5jKduqouP8TLnZKa4eDFE\n+vm7\r\n=GWWt\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.9.5_1586287534340_0.8277856880519394"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.6": {
+      "name": "@babel/traverse",
+      "version": "7.9.6",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.9.6",
+        "@babel/helper-function-name": "^7.9.5",
+        "@babel/helper-split-export-declaration": "^7.8.3",
+        "@babel/parser": "^7.9.6",
+        "@babel/types": "^7.9.6",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "9c2846bcacc75aa931ea9d556950c2113765d43d",
+      "_id": "@babel/traverse@7.9.6",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.0.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-b3rAHSjbxy6VEAvlxM8OV/0X4XrG72zoxme6q1MOoe2vd0bEc+TwayhuC1+Dfgqh1QEG+pj7atQqvUprHIccsg==",
+        "shasum": "5540d7577697bf619cc57b92aa0f1c231a94f442",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.9.6.tgz",
+        "fileCount": 28,
+        "unpackedSize": 156843,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqcmYCRA9TVsSAnZWagAAtyoP/A86ARDfqli/tSY4ovQ+\nHlNi8QsxJUfQuLHYeLYJnaqpK4wiYNc3KRALpFxDDD2nKrFGC0QV0dKhAwzv\nhpR2H4ctbynnufxIv3hNwtwx2kpg/5Plum/Lot1qDvp2O3QZezfXIqJeYoYN\nOWhbhtH6UqEoRErGIIuiPdaoK53FwM1Gm0WAWsDc1/kMz6Y8XexWeQCCcmtb\ngpKtyPq19u/gXsPWNGHHCsdMOSGL4OHxmzE+7zh4o+tP4uh1B+gyuFyT4G77\n8Gazz+UL00YuO2Zu4QDNnurrl5wgn38ppo0Y7fThQ/6l2jYziY21/++opKXG\njG7uQTnATOfdWz8X1Frg+dWoOY/hCDMtGpOwxSeeaYnV1e0MstAJh40YfxqD\nYkwxpN4jc6CY04ozGoFG/7dlTDvJGOUbpI2Hl+J1ubewIUQTOCEZNQR42MWG\nAa0SbCiqGJsRQdAUprzLaB41JEsw8BD06fWRB+a8RnnPd/eJ73/RZTMjfkuw\n0rnb9NDB5H/fTByDhb4i2vkJCRLYtjEd1skwukra8sy+gl+kh1qAdeenuEqb\nAMUnpbgdRUw56qHodvwyA6MDvz5uDq3fVM081Fh5xkFIoYX7Mivs6m+zDJOD\nnFP+6uNy8sL18aaNj2/2b8rvuvNgv7OF0CB8S9c4sZxvikixrtVusBz5GGvL\nfHgZ\r\n=ArUi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.9.6_1588185496033_0.29329267848750895"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/traverse",
+      "version": "7.10.0",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.10.0",
+        "@babel/helper-function-name": "^7.9.5",
+        "@babel/helper-split-export-declaration": "^7.8.3",
+        "@babel/parser": "^7.10.0",
+        "@babel/types": "^7.10.0",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/traverse@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-NZsFleMaLF1zX3NxbtXI/JCs2RPOdpGru6UBdGsfhdsDsP+kFF+h2QQJnMJglxk0kc69YmMFs4A44OJY0tKo5g==",
+        "shasum": "290935529881baf619398d94fd453838bef36740",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.10.0.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157542,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY2OCRA9TVsSAnZWagAA1/EQAIgUfjX0LBycRGSs5pKA\n8SAX60tX+Z2+0cVcikYRhQNUm3xAABquf4HBAlL0yLO330Gk2T+525daRKDW\nQtqaWzMEXb6TTTRgSnFD0bj4tontV/ftJIjU2WjOjpSB/QsqGiXtPU5Y4+0/\nKTuh2hwK50gWobCstPqiV8vnFrdULckDnl0Mo3aHMkby3T3U/Q/AwXYnM+WC\nCYVB1UOhgMTM+KybL1FxOVI3wXrEKzTqtCeGfZCdDokF+JFomEVw5ODJLL94\n/XTM1j4NIjexB2Z6U042tgyj/IuWgLVd/tT/Kgkdehq07uRmD+r1LX6k4vzF\nkFcBsC0YBmyKj186BUiOO6yYKNQCA6o9+vNdZTQXjhcd/W0LYSt4J+QF5VyZ\n+BRGHrIXtKzihpRWXiRqFJwvCvK97ReAcDd+MZpnvc/L1PVM2hB77VswbEHM\n36ET6QHZWP4mD5eJ3yuj3qPGT7eFtwGw53zUrF1SBnlhKQLhH5IzqFAfI6TI\nZroN7ivRRiPyPyf2MgVDcQQ8rN2OrYP51rLbzEkcspYbRxb7SjEaacOuEfyA\nwB4p1WtYcgx3Wgb5jXSwqMNlEdROku03Bcrq3C9Aqx7sSx0zCwZAIYzX9CW+\ndYaS8f+LqL49EtKiz/11UGqc89ZA/yf7LoqvwThdPA7kOego77DAk5GToSG2\n6Djb\r\n=lguu\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.10.0_1590529421964_0.6871288777365696"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/traverse",
+      "version": "7.10.1",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.1",
+        "@babel/generator": "^7.10.1",
+        "@babel/helper-function-name": "^7.10.1",
+        "@babel/helper-split-export-declaration": "^7.10.1",
+        "@babel/parser": "^7.10.1",
+        "@babel/types": "^7.10.1",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/traverse@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-C/cTuXeKt85K+p08jN6vMDz8vSV0vZcI0wmQ36o6mjbuo++kPMdpOYw23W2XH04dbRt9/nMEfA4W3eR21CD+TQ==",
+        "shasum": "bbcef3031e4152a6c0b50147f4958df54ca0dd27",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.10.1.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157594,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuTDCRA9TVsSAnZWagAAl3wP/1L1GgzribzqeiukP+pn\nfAnUO5+LhtqbcZ7QEoLCUPDmMC8gKWVtuui0w+MRXFmalbLTmTl57Mu89ZuQ\n0SLCD5FXG/B153vFEyqliCBWQ7Iz7SeVZPzNQR7kHPETP11oWn/GdTtiBlH1\n0alIFRpST3279yjqfyoeqB9MpH+Q+yxPp/JNM7qROELbcK2WCT9CtulJP6hb\n5dOInzPhRi+r9rzN2kBRFujr46vqb7mPv18K9+62AeXyRarbnLLxcGouprcG\nV9pmuOycuM4vGkSU5TlFlXU9OR2XFhpdMJNhcEsCuM3H/F9y1MGlmeDALEYd\nwrwVnbqIbm7SATAd2cgZ+iAVgIPd/OeCf9X6hqSOfPmNVE9pXo6KTG6a2DgO\ns2ZPH1UHUIyuR0Lx9nVsns5ctFdPYIvIetF40S/3OuaB8WVxW9s4hOWVcV2M\nCVKky6ScaAOuFQltHVVnqSBVPaR0lo24E9KpslMWCh9hfqEt55HDMMVQgYCr\nkI+iZxgDwg+bDgfEyLPRvU3g1O6koMJs0xtZSc2sBHXpISEXSmzCwbrL9Hbj\nF3FLrQpbGZ0m7JVfoCtDUqzc5zrxe+l55FYQogJYa+8HoFF1iHgozHIAIyfn\ncVa1fUuDqWusdoB2JdWrxRKhsgPSeIfGS8bhznxkcHEkgZyftzVVjP9BKRgU\nh/+s\r\n=yJLA\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.10.1_1590617283127_0.9319871253397978"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/traverse",
+      "version": "7.10.3",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.3",
+        "@babel/generator": "^7.10.3",
+        "@babel/helper-function-name": "^7.10.3",
+        "@babel/helper-split-export-declaration": "^7.10.1",
+        "@babel/parser": "^7.10.3",
+        "@babel/types": "^7.10.3",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/traverse@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-qO6623eBFhuPm0TmmrUFMT1FulCmsSeJuVGhiLodk2raUDFhhTECLd9E9jC4LBIWziqt4wgF6KuXE4d+Jz9yug==",
+        "shasum": "0b01731794aa7b77b214bcd96661f18281155d7e",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.10.3.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157594,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYSCRA9TVsSAnZWagAAkMgQAJEdMcDFgBpp1FqK2Ats\nDQhpJjLsINIUmmsLZOE+xbd0D8jdrNUDhq4Fa+8Z7X5rKtAv+Vt2J1w3Mmu5\nDPvGrU3huopZ9nlWyYX6JUJvc1zRU9H6gqy49bpIhtqv1CREH7TDgNB1LA+S\nh0CIYOyJJJgsrnPsiiptHzFFmtU0KyWlLy/eW4deAMU3GgJ9rqIzlIXG+VAD\nEta2hu5e8FmjZmbvcbKauup9/JmC+vACpltVcr58H8wStVmaIsR6VA4CqJJs\nDjvJF1jFPbOwjvS8hGI94df5hLk262iQc3oYUc8sGJd0srt4+XSr53CFco9S\nVQ02MtFvNU9rNY+Tg0XPjygkoGkXkdfCtqrnKynIwnrhgq+mpo+2zkxliQDg\nwl8o4jMYAUV+0LDe6yxEKyso8Y4Xapm92PaSrpGoXc8+v2X3lcl5uiFTELMQ\nVxvqo0bWyf6NLfqV2nT5T3sVjb1xIhMRT5bwawEiOgk6DeDVZwTwHVLc7npD\nNDjrURqqsV+Wr5pUhVbjUpPF0T/ivHN7LrT2gmsIeMybVQHhR5/xkyaWJy51\nzFqzOF96C4UxQiUKpeQgxIyVURfsNdvyrcjlptUJFlhmpkjxs8SkZ/bSM1TP\nnGccC2VO6MOQBSALOV9UB+Hn7BSg3lTBsxSawJHhl9P70w9zckhbxxWEwv8u\nzctg\r\n=BPj+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.10.3_1592600082062_0.5855286878449781"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/traverse",
+      "version": "7.10.4",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.10.4",
+        "@babel/helper-function-name": "^7.10.4",
+        "@babel/helper-split-export-declaration": "^7.10.4",
+        "@babel/parser": "^7.10.4",
+        "@babel/types": "^7.10.4",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.13"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/traverse@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-aSy7p5THgSYm4YyxNGz6jZpXf+Ok40QF3aA2LyIONkDHpAcJzDUqlCKXv6peqYUs2gmic849C/t2HKw2a2K20Q==",
+        "shasum": "e642e5395a3b09cc95c8e74a27432b484b697818",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.10.4.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157594,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zpmCRA9TVsSAnZWagAAXo4P/iCR1OJGwFY10ncQwKM1\nft3arFip9vGDQFGUNfBx3TI3AmbY0qocuwuVD08QKScEWCC7/raGRbtC9fOe\nga1Br6CQA2WEk6BTorGtJ728HHqw0wuYQDzHEAV4qDyahKWNXwVUbaWb5FZo\nvgNijq0roMgYXIA+BWKNAVq7A2lX0+Mlgg5iMjAd/whlbfMbLgdKaB+nvM1d\nU36lAnrjHKViQHqnpxyNPeUvrQQvjtgI3ZjrdheBEBYP3dspXOdahe5I976S\n6Le3iTlsg57uUjnN0cJcNHfsNmfrAFoEEt22zV8PdrGj5m2RaPhnFTMxygJF\nP9bmdU53OhhuWcUYAJCndcstKs5BKozu++NZQMKP2ngp/aAvOLBE6uLs+dq4\nCwy4Bqe2r/1F5aIQgBKdF0odIbeYZTY5Y9hbsIV6lp4E+i7OsjvW96yBCEif\n6vuCnWi1FVG797NgxhhXMhgaHW1HzHJcOL25mbPB7aFOGQ6Aul15j7cqzf77\nXz7c5JxoUbDjDhGCzcfXSaQEs+6xyrX1XHOjXsoTJuMT+oFonuizKKZx4+9f\nvqXEMnAwnwEfD31NZ18dPiqonITsj4kmEa496dNGSQKD59IQaHD8QDU+kKhS\nel//4eQznsA/eeHhQPmdi8iNQzFPyKqTMPahKv58LwV1x1YjGXKWtiSCP6FC\nC4VG\r\n=j+R5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.10.4_1593522789975_0.6331147201076621"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.5": {
+      "name": "@babel/traverse",
+      "version": "7.10.5",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.10.5",
+        "@babel/helper-function-name": "^7.10.4",
+        "@babel/helper-split-export-declaration": "^7.10.4",
+        "@babel/parser": "^7.10.5",
+        "@babel/types": "^7.10.5",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.19"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "f7964a9ac51356f7df6404a25b27ba1cffba1ba7",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/traverse@7.10.5",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.5.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-yc/fyv2gUjPqzTz0WHeRJH2pv7jA9kA7mBX2tXl/x5iOE81uaVPuGPtaYk7wmkx4b67mQ7NqI8rmT2pF47KYKQ==",
+        "shasum": "77ce464f5b258be265af618d8fddf0536f20b564",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.10.5.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157022,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfDfbkCRA9TVsSAnZWagAAIP8QAKJoPNvXHU1lc89K/RQ1\nL49T3ZoiEtJYM7d7hh8zGlx7LiOXJ9iPDDn79Uh+ZjEOidDv7SRCE/pay/nU\n4qDDj7RscvxVuOyYJlG+vW53ECnvR23hKeUHo4aqm21ard1zUpODHOZmiTOo\nrXXZWHtdm82+Y1tqduTXCfdBdFqSaGKH432Nkr5srC84Vg1L/aRnavmbB7zA\nK5uVeQls70kVtymKrp9mbUhs0nbyu6xVTuSvd5yzjQpjjMxGSKIYHl0ePgel\nGub9yxGGgvtmHXNVaoZ0Va9B8z9gHc64A7ABKqZh3TOxHK51QplLXGfhq0qx\nqY5s3U0vtpYkkDsYcmD6G6wP/4SSTNpKKnFoVY2LpeNh9quFNSr+qo1RQl2z\nArAb03IIyPL55BdgIzTAL72OGxgM7xZMtAKCu4KxSyANY4EsA7teDAJa72BI\n4ZjvBGSVYW+VBgafwevu51IewhIpB5/Wg+ohCyn7YaI1Qk/cW/8z8M+w/fFg\nMPJa+CnYSeKeUm8+YkiCcbRkWMM/ocSST4U4REkoqR3L8TKcE7jUv8n9wb0k\nPqaYlTihVknb6TvZIVEo4av9NU20LGPqcS/AKtiZA5YHEPEErH5bsth2FREE\n5B2scq/NUJlpEFFdT3zvVFvZdb09XF6QXfRzVB5ulWGtHlLpeRypfu/KC7QS\n/7kf\r\n=Zkit\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.10.5_1594750691739_0.8694890080053579"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.0": {
+      "name": "@babel/traverse",
+      "version": "7.11.0",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.0",
+        "@babel/helper-function-name": "^7.10.4",
+        "@babel/helper-split-export-declaration": "^7.11.0",
+        "@babel/parser": "^7.11.0",
+        "@babel/types": "^7.11.0",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.19"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/traverse@7.11.0",
+      "_nodeVersion": "14.6.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-ZB2V+LskoWKNpMq6E5UUCrjtDUh5IOTAyIl0dTjIEoXum/iKWkoIEKIRDnUucO6f+2FzNkE0oD4RLKoPIufDtg==",
+        "shasum": "9b996ce1b98f53f7c3e4175115605d56ed07dd24",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.11.0.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157100,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfIzuNCRA9TVsSAnZWagAAY0YP/jXgIS64AGfHpbROZN6x\nHEUrkrK4dXUW2h81U8DK5Ca9EB+TKkRDpMMQOzOHMyipcyB//zd3ar4RZjlR\nfYTEItrT3u//QaNxhItCrEkY/lC8yTwRpvzA9qqS01UnYNWR5+CwvWnDu/MG\nlDi+MYBdoJ+R6ZUk/P/8C8+JVjaFPueklH3jbQJdNSOx012c5SzE9bNoGYaf\n89I98Zix/a34zX8/AaWNEF8CPrK3stickNa7FBMIma4EVfKdzDG4icjKOc0P\nMCPdHfprRJzyxVFM2hGJKjxeWd3OjcO3p2Eg6UYJ7arPsdD3ZBkjQx91FLX4\neJfR0xHw0w8ZWcCfLKAcGlJ7wdWzJDa1MkfbagoPgm4rXmC1vzSTyqMoY7uu\nUb7tk/rVONSUMKOy/ucIRqSy8+ztLjKybzolLWzC32ZiVwvRwYkn2k/Kwf8z\nqbu2cPAfZFtfXX5J7E/M1gzPBX+B5k2uKoeOwcnsNY5YwksQOeL4S+PJVVbl\nJVY9IAT7QsZ8uk/6Y6u/l35DooTH9+fjrZTkulArtkoMVBACLg5ttxfwqIaf\nCgJQnTpEz2G/SlVJGA4e3vOgQwcExMxr8973IbgAGgoG1ITT8xHgU/Bjt41t\n1MuUr2kNZ46/TyVuXgqddGHtZC/GPRUbAotH8mFfvqrz52C4T0xTHHV+6zcn\nGNLr\r\n=q3Ox\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.11.0_1596144525104_0.6359130154219113"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.5": {
+      "name": "@babel/traverse",
+      "version": "7.11.5",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.5",
+        "@babel/helper-function-name": "^7.10.4",
+        "@babel/helper-split-export-declaration": "^7.11.0",
+        "@babel/parser": "^7.11.5",
+        "@babel/types": "^7.11.5",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.19"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "af64ccb2b00bc7574943674996c2f0507cdbfb6f",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/traverse@7.11.5",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.9.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-EjiPXt+r7LiCZXEfRpSJd+jUMnBd4/9OUv7Nx3+0u9+eimMwJmG0Q98lw4/289JCoxSE8OolDMNZaaF/JZ69WQ==",
+        "shasum": "be777b93b518eb6d76ee2e1ea1d143daa11e61c3",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.11.5.tgz",
+        "fileCount": 28,
+        "unpackedSize": 157171,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfTVdTCRA9TVsSAnZWagAAb9wQAI/gKZ5fm7MJBaj8qEx/\nvHo7mLLylt2C6FsVvdC1Vy9t6LkIDq59hZ7Wj9jpxI7dPmE2J40iLEiDyvpI\n3yadHqouhX/17Kk5UW0SDCXzFuZbCb3Q7W318sCWTuctP/dyZg2kLQMLs6On\n6eVYP2+sBoThsTSFOa7/9wURpOa6ydc9+meTfNjY4dkd5pe6cxK269FtOpGd\n7JLpeRudy6Kb2hEMl5VUd3xUgNA9fygUmd4edCKPjHSMqBOwlP6xVP8XDM2O\nS/4te3rzTI/2tP+/6CcFIC0/XHdoRxPLvZ1EzsOejOnq1zJL/lGoTSvn8fLR\nmSRbUH31BiFYv2+HZNhMEaQNvT7l41/YwFTxRKjS6rySrzbXt94hYh5y99aW\nEYFUDI6Rzz4aOwvKnA9DEnUsFllymujC5dTKxW5FQ5E+GMElhv2mFvgDSOxL\nrqKSjr3QXd9ozZpKx29t8CtfqKdWAyDWD38CpH/pRcAvPoqXotM0dstvo/oe\n0TdyHpltZPqEuQSipmY7dyJ4/0uq7vn3hK47Efzn1uZTXJTk7Tg7ZtHaPn+W\ncOCTxiJsumMVAFt+jDDa1sYsVqip+WuYNJid5KnOx7Uebddpne2IL3zq2iul\nwJ1tkkX5FhsIskPGIWd69jf9fGbzbQh66rcYucoNxBjLqOXZ7MHrGkOZXbQW\nbnMM\r\n=7ss5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.11.5_1598904147436_0.1903263252780092"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.0": {
+      "name": "@babel/traverse",
+      "version": "7.12.0",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.12.0",
+        "@babel/helper-function-name": "^7.10.4",
+        "@babel/helper-split-export-declaration": "^7.11.0",
+        "@babel/parser": "^7.12.0",
+        "@babel/types": "^7.12.0",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.19"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "_id": "@babel/traverse@7.12.0",
+      "dist": {
+        "shasum": "ed31953d6e708cdd34443de2fcdb55f72cdfb266",
+        "integrity": "sha512-ZU9e79xpOukCNPkQ1UzR4gJKCruGckr6edd8v8lmKpSk8iakgUIvb+5ZtaKKV9f7O+x5r+xbMDDIbzVpUoiIuw==",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.12.0.tgz",
+        "fileCount": 28,
+        "unpackedSize": 158675,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfh1mJCRA9TVsSAnZWagAAkukQAIU+qMy+tELjPb4ciR/d\n0gAYsrNM7HuDRBcGdCsPQWUiqP5sYMzg8FKJga8bdqIyzzA0EEssivUEw8IP\ndt2jUyGD1WA2BBdg0uBkXyy5DridfLseAhyrEoFlARO1muayrm3fJc5kDpVu\ntASEEuVCi2a5xjwI0mO7TLCw6X0tE2LDk7QmrHrs7CKwTINGZW4UIyVc2ZOA\n7iea5UhDQPvHEJgmTNSNmnp0RVLpt4uHpH3OAbNanufKunvKOriIxSIYLTkq\nDl1ckmVotPIfgEKfLMuU6cHLaj57BAvZ+glivbeaPG7fTauJPEwLNWRsA06K\nF1LHKobRpLwX8AL+b3tLqpiFYcCVQnTj7Iz4sfVK/KQGpcLYTIbWNAl901Rg\n7ehH9Ctc377FZNoUgVnEDd7/u3F5p6R1UkgNWHIQevbb1J31GCduL/qhcdik\nNhS3Gu5OhwLq0D0WIR6o4GboUTq+BXsG8nSzSwUAkggnZCIv7rbKbLi+3JLF\nL+cY0D46FneADMQMkVeNZohFebj0HmnyJN6sxZ2dgWLIVlsUQPXsI6ktZ/Rs\n0/UfrnLjWjqXb9SyKMYqLivTqLYHgEQAeyQ0BCkxxYLwnDCJd0rW7QxGwZXS\njHIkZ6l9PZX1HhuRHBNggsVYDCJOXZc60Ocwera+0D2b2nVDRkSq7jfuNIjl\nFb1f\r\n=YdD3\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.12.0_1602705800986_0.06819357602357945"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/traverse",
+      "version": "7.12.1",
+      "description": "The Babel Traverse module maintains the overall tree state, and is responsible for replacing, removing, and adding nodes",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-traverse"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.12.1",
+        "@babel/helper-function-name": "^7.10.4",
+        "@babel/helper-split-export-declaration": "^7.11.0",
+        "@babel/parser": "^7.12.1",
+        "@babel/types": "^7.12.1",
+        "debug": "^4.1.0",
+        "globals": "^11.1.0",
+        "lodash": "^4.17.19"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "7.10.4"
+      },
+      "_id": "@babel/traverse@7.12.1",
+      "dist": {
+        "shasum": "941395e0c5cc86d5d3e75caa095d3924526f0c1e",
+        "integrity": "sha512-MA3WPoRt1ZHo2ZmoGKNqi20YnPt0B1S0GTZEPhhd+hw2KGUzBlHuVunj6K4sNuK+reEvyiPwtp0cpaqLzJDmAw==",
+        "tarball": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.12.1.tgz",
+        "fileCount": 28,
+        "unpackedSize": 158674,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiNAbCRA9TVsSAnZWagAAkXMQAIW8gWuu2sUkjj/Y0YRt\npCcNRKNTASPMcgjxadPZdA0Xn50RRf/c1KqZF5FO7eCF32Kr7PYFWBXoOvK9\n8SdHrSgblTvji/PFSmofzkQNV2NGQ0BEUwhGafs/y+fZjpX4b+stx4B7eBJm\n9HwUlFsZHD2poDyeL4lZ8tpmm+ODI0IEBjpoxAW3JELQHNha/ENSo45GmwER\na9QC3tV48Ac4KRmcY2T+ykwglcuQABjfHEHd/FotIWBC6H64kJW7XRAzJAud\nuFGW8H0y8zahbqyHXINEOEF/4+HYE3pUN7KPbjJeftA8BVoYTt17AL9+CLZd\nprZYS/WXDeNad/5LkHfZKSx5tMj5kFhjJBrr4B02pYYd0OGgj8bBGRn4rk1l\nrp81f/9Je1y5yBWHW2wspRHOPRDkzmjr+hv/lbJGfeiklHRZvXrJYqJdgI2H\nHTB1WVVIBs5YnZ7MWMYMHc8nVqVQgEfOaHTa/hvUrJJY/Ya7NSB4ofd3NWyO\n5AOpT2aF+I17a08cehsS/mLxy4+NEvXviGgknan0rYQUPjM+soE1rdhoYoIL\niIsBjajblJb82CQosYYvsdhmur0Wre+52QI5UcdcdPhxfOVDY6B7ezYPxGsn\nqWuwvldj1180ZZyv0+K6VuudAqoMKCxFV3Jm9LK4jyoSL8CrgBKwupZDw1E9\nQgDQ\r\n=Abrc\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/traverse_7.12.1_1602801691423_0.15241360872856258"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-30T12:37:36.007Z",
+    "modified": "2020-10-15T22:41:34.042Z",
     "created": "2017-10-30T18:36:00.929Z",
     "7.0.0-beta.4": "2017-10-30T18:36:00.929Z",
     "7.0.0-beta.5": "2017-10-30T20:57:37.675Z",
@@ -4246,17 +5317,30 @@
     "7.7.4": "2019-11-22T23:33:41.389Z",
     "7.8.0": "2020-01-12T00:17:17.532Z",
     "7.8.3": "2020-01-13T21:42:17.388Z",
-    "7.8.4": "2020-01-30T12:37:31.792Z"
+    "7.8.4": "2020-01-30T12:37:31.792Z",
+    "7.8.6": "2020-02-27T12:21:37.922Z",
+    "7.9.0": "2020-03-20T15:40:00.988Z",
+    "7.9.5": "2020-04-07T19:25:34.682Z",
+    "7.9.6": "2020-04-29T18:38:16.129Z",
+    "7.10.0": "2020-05-26T21:43:42.092Z",
+    "7.10.1": "2020-05-27T22:08:03.274Z",
+    "7.10.3": "2020-06-19T20:54:42.190Z",
+    "7.10.4": "2020-06-30T13:13:10.122Z",
+    "7.10.5": "2020-07-14T18:18:11.870Z",
+    "7.11.0": "2020-07-30T21:28:45.211Z",
+    "7.11.5": "2020-08-31T20:02:27.560Z",
+    "7.12.0": "2020-10-14T20:03:21.174Z",
+    "7.12.1": "2020-10-15T22:41:31.564Z"
   },
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-traverse"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-traverse"
   },
-  "author": {
-    "name": "Sebastian McKenzie",
-    "email": "sebmck@gmail.com"
-  },
+  "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "",
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,9 +1,9 @@
 {
   "_id": "@babel/helper-plugin-utils",
-  "_rev": "37-fafcf3db01810460e5a19c988dd126b9",
+  "_rev": "42-8ba9fa19575c1c6b36a1a1466a62d6e6",
   "name": "@babel/helper-plugin-utils",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.10.4"
   },
   "versions": {
     "7.0.0-beta.41": {
@@ -1124,6 +1124,7 @@
         "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-plugin-utils"
       },
       "main": "lib/index.js",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-plugin-utils@7.0.0-rc.3",
       "dist": {
         "shasum": "f68392896f4f3b90bdf7e72e5cc7127cdd5441fd",
@@ -1181,6 +1182,7 @@
         "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-plugin-utils"
       },
       "main": "lib/index.js",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-plugin-utils@7.0.0-rc.4",
       "dist": {
         "shasum": "75fc55485d62174787cb5edc8fad1fc375b7c48f",
@@ -1239,6 +1241,8 @@
       },
       "main": "lib/index.js",
       "readmeFilename": "README.md",
+      "readme": "# @babel/helper-plugin-utils\n\n> General utilities for plugins to use\n\nSee our website [@babel/helper-plugin-utils](https://babeljs.io/docs/en/next/babel-helper-plugin-utils.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-plugin-utils\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-plugin-utils --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-plugin-utils@7.0.0",
       "dist": {
         "shasum": "bbb3fbee98661c569034237cc03967ba99b4f250",
@@ -1415,12 +1419,221 @@
         "tmp": "tmp/helper-plugin-utils_7.8.3_1578951657344_0.9958516428875395"
       },
       "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/helper-plugin-utils",
+      "version": "7.10.1",
+      "description": "General utilities for plugins to use",
+      "author": {
+        "name": "Logan Smyth",
+        "email": "loganfsmyth@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-plugin-utils"
+      },
+      "main": "lib/index.js",
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/helper-plugin-utils@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-fvoGeXt0bJc7VMWZGCAEBEMo/HAjW2mP8apF5eXK0wSqwLAVHAISCWRoLMBMUs2kqeaG77jltVqu4Hn8Egl3nA==",
+        "shasum": "ec5a5cf0eec925b66c60580328b122c01230a127",
+        "tarball": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.10.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 6746,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuR8CRA9TVsSAnZWagAA1akP/2wgItQM67DA0kDz5qzh\n7acCrVnrNnvjGawLEb753aRAE2ayR+1gLaOUYRkQWrnP9lEQEIgC6B0cClgU\nQe+UI2HG9B9nkNDgq/F75tmbzQNNcXq013YAxe1xOi7j6mw7ZxUwkZCFFOd5\nCANoasEMKfZIjGHrKGkouM83uvpBvB1jECagHiLYpWSzDmcM2UiYgk7Y060G\nMLNynqqjtB9+3KW7Tt3URI32GS9PMt8MMwHCQkge+2BAKJHJ1W/Yy6cwm749\nOPcA8BRPZC1BltTPU6Sg1ddaKxZWTHw9Zo3rU7ZUosRkPOsIuo6yYmv026Y7\nKr0HudBITKlw40z8qjgfHFBW26xhAavMjd2LIYZDgI4Wd9Ykf2p8IdeVFd5C\nfzrLtj8QNrcUbgiIZHITpWMYZhZeJXNBaG+hnJRrX9PdNWBJtHNhDgDjTAUd\nfZzeZ9sNz8hnwO3TcR8cHODse4cr4vcg7cKWSl1rgYhhST203iob6xXh8I+p\nMG1wHFx05gFNwSaFC9yCx1H0yyUIyDj9T1n8wvyiEwrCrrHbn5I9ewbE4glu\nOoRaOkjjU1ef109J1qEjR/SR2lyUnyIbfENE7dQVFkXb5FRwZfcZYQlXVuN6\nLrQzf0EuvhYaW1ipGOkf2d0yknzZhkwMBiN0Hs2KIOuYTtaeznLhJpOIUCcQ\nJbmI\r\n=Hg46\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-plugin-utils_7.10.1_1590617211794_0.09473798339461625"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/helper-plugin-utils",
+      "version": "7.10.3",
+      "description": "General utilities for plugins to use",
+      "author": {
+        "name": "Logan Smyth",
+        "email": "loganfsmyth@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-plugin-utils"
+      },
+      "main": "lib/index.js",
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/helper-plugin-utils@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-j/+j8NAWUTxOtx4LKHybpSClxHoq6I91DQ/mKgAXn5oNUPIUiGppjPIX3TDtJWPrdfP9Kfl7e4fgVMiQR9VE/g==",
+        "shasum": "aac45cccf8bc1873b99a85f34bceef3beb5d3244",
+        "tarball": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.10.3.tgz",
+        "fileCount": 4,
+        "unpackedSize": 4055,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SXwCRA9TVsSAnZWagAACkcP/icTKMZxtD2Z6CSIniSM\nOVI5PbWFIfoXpPNzcRcSezD30zYmc2z2kgkLWMthyGGWW0yzfflD6No65+bO\nzaeyDARhax+9wsypl8cgz24QI4Jxk3qGCypWJme5v+765w7CpLa+thQrrbps\nh7xWvGHAeP1O7n2wgqeNIyQ0OZxXYkuJ7JZMTsap96AaE0PIO678uwIvo4Of\nxOWrsRBcfneJ+466AXYOUJCPwcLBnYS0CC19SSPEtoQxJOqslEnYxk67CLAV\nLFTu1++Jtn7Z9K1eRxLUuyEgJyx67hu5/xKUQ8las55CNE7wXV5iI0Q+pavb\n1oIf++76Uay+wr65/WcGB8zcmQ/LX+5dKAuEl7fWlCXUg8WvxSVQSGORMbtB\nxjhelh0CfkSC9e/3XrT5D7j6msVwnnzgJvp0/l/qvpi6n3UmGuEi8RlIBvRH\nSOu2FXlE+75gMm0nSQ9pvE6sRrI8Btr0tZXx4/W8e1lPQVVY8pqPS1OiYOTr\n3FIvHup8ruZtSqQ1EQLN4Q4ebPaxC/1FLJzAGPUDmJSU5K2JoOaVpKvePkwG\ntPCW11pRGtgLXQiVhvofpzTRQq/k7eGy/Cdf1E5P8k8EMAD9pepd4hm7ZQyk\ndsUbobzVniSZMmqiuH7zJ7jgg+hT2sS2yZeMoekgxIMQU3JSmJ5fgvEXsLAJ\ntQWY\r\n=UGXx\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-plugin-utils_7.10.3_1592600048114_0.7033064330594765"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/helper-plugin-utils",
+      "version": "7.10.4",
+      "description": "General utilities for plugins to use",
+      "author": {
+        "name": "Logan Smyth",
+        "email": "loganfsmyth@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-plugin-utils"
+      },
+      "main": "lib/index.js",
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/helper-plugin-utils@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-O4KCvQA6lLiMU9l2eawBPMf1xPP8xPfB3iEQw150hOVTqj/rfXz0ThTb4HEzqQfs2Bmo5Ay8BzxfzVtBrr9dVg==",
+        "shasum": "2f75a831269d4f677de49986dff59927533cf375",
+        "tarball": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 4055,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zn+CRA9TVsSAnZWagAAMQUQAKTRNe2MfSVW1CL4VZH5\nWOukGPKSnJSxiy/SnP1vV0j/TRhaEhaNxv9j9eEN313yhsPIFe2xREH3Wg4y\nz+bbYaKHOh7wiNx3trUoQq3QOducs3M5K8zJ9YyR5XL8EcWr2P45fIDBqdEA\n2ax8C0qkH//73YUB4lCFaYDhRZNFjC45R/0YTM8KfkhtCWEJvqlnPhEdmMda\nf0fsOO6cQUc5wniZUc0BTVRON1XhugU3yXowHd4W13aQCq7wuOFT/khZCud8\nBC3smoSBlyDtUfLU5JbQXkqQPXWNKvRi/ZvAo9XtWfsK3sdtMUwHxIXhUTXZ\nScBGu8Ur5WfPKk9wrPj2cHlIV1p/epGXpVD1OkUunmbyIU6AqwD00lsIBTIa\nWgcbtpnizOjXZErdkhNxse6+FYJoptD0sjBYnamX4muxxa3rx46o8skRQJGU\nR6mLepQjpPjne6JSXV3cFIRxkfiFgl+DgBMNcjohcQ6NJhhCwPoo7M8bZspw\nqyIOQqIIIFTMcWWiDeWvQQUMBuM+K6aAO6uVTT/tk7AD/+wF5KyNQNJK0E/9\nuZ7vf5Q7rsRdn/GWDLnO+FS0WKAwSjuSd0Mys4Ly0Pc+E3VuP3pf3fNH/vJm\nqoIvkV4z+AZ2WCvWfXZOIy8zgMYFps9rnqxq15fAjgYwv3b+TY78M4BakY+o\nYVZi\r\n=XEoC\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-plugin-utils_7.10.4_1593522678995_0.665125199733456"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2018-03-14T16:25:30.768Z",
     "7.0.0-beta.41": "2018-03-14T16:25:30.939Z",
-    "modified": "2020-01-13T21:41:01.151Z",
+    "modified": "2020-06-30T13:11:31.173Z",
     "7.0.0-beta.42": "2018-03-15T20:50:06.394Z",
     "7.0.0-beta.43": "2018-04-02T16:47:58.546Z",
     "7.0.0-beta.44": "2018-04-02T22:19:40.729Z",
@@ -1443,16 +1656,15 @@
     "7.0.0-rc.4": "2018-08-27T16:42:03.252Z",
     "7.0.0": "2018-08-27T21:41:23.600Z",
     "7.8.0": "2020-01-12T00:15:55.725Z",
-    "7.8.3": "2020-01-13T21:40:57.481Z"
+    "7.8.3": "2020-01-13T21:40:57.481Z",
+    "7.10.1": "2020-05-27T22:06:51.974Z",
+    "7.10.3": "2020-06-19T20:54:08.330Z",
+    "7.10.4": "2020-06-30T13:11:19.110Z"
   },
   "maintainers": [
     {
       "email": "daniel@tschinder.de",
       "name": "danez"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
     },
     {
       "email": "bng412@gmail.com",
@@ -1461,6 +1673,10 @@
     {
       "email": "hi@henryzoo.com",
       "name": "hzoo"
+    },
+    {
+      "email": "i@jhuang.me",
+      "name": "jlhwung"
     },
     {
       "email": "loganfsmyth@gmail.com",
@@ -1475,12 +1691,19 @@
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-plugin-utils"
+    "url": "git+https://github.com/babel/babel.git",
+    "directory": "packages/babel-helper-plugin-utils"
   },
   "author": {
     "name": "Logan Smyth",
     "email": "loganfsmyth@gmail.com"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readme": "# @babel/helper-plugin-utils\n\n> General utilities for plugins to use\n\nSee our website [@babel/helper-plugin-utils](https://babeljs.io/docs/en/next/babel-helper-plugin-utils.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-plugin-utils\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-plugin-utils --dev\n```\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/babel/babel/issues"
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,10 +1,10 @@
 {
   "_id": "rimraf",
-  "_rev": "454-4a3d7f266640a4bcf267f8ac069f63e1",
+  "_rev": "456-92fdb766ae5bf0ef4adee2a2114411c3",
   "name": "rimraf",
   "description": "A deep deletion module for node (like `rm -rf`)",
   "dist-tags": {
-    "latest": "3.0.1"
+    "latest": "3.0.2"
   },
   "versions": {
     "1.0.0": {
@@ -3244,6 +3244,73 @@
         "tmp": "tmp/rimraf_3.0.1_1580183074937_0.7895967350443918"
       },
       "_hasShrinkwrap": false
+    },
+    "3.0.2": {
+      "name": "rimraf",
+      "version": "3.0.2",
+      "main": "rimraf.js",
+      "description": "A deep deletion module for node (like `rm -rf`)",
+      "author": {
+        "name": "Isaac Z. Schlueter",
+        "email": "i@izs.me",
+        "url": "http://blog.izs.me/"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/isaacs/rimraf.git"
+      },
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags",
+        "test": "tap test/*.js"
+      },
+      "bin": {
+        "rimraf": "bin.js"
+      },
+      "dependencies": {
+        "glob": "^7.1.3"
+      },
+      "devDependencies": {
+        "mkdirp": "^0.5.1",
+        "tap": "^12.1.1"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/isaacs"
+      },
+      "gitHead": "8c10fb8d685d5cc35708e0ffc4dac9ec5dd5b444",
+      "bugs": {
+        "url": "https://github.com/isaacs/rimraf/issues"
+      },
+      "homepage": "https://github.com/isaacs/rimraf#readme",
+      "_id": "rimraf@3.0.2",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==",
+        "shasum": "f1a5402ba6220ad52cc1282bac1ae3aa49fd061a",
+        "tarball": "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz",
+        "fileCount": 6,
+        "unpackedSize": 17327,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeP6Q9CRA9TVsSAnZWagAAI3sQAJ+O4IVQxGxV4RX6G/CD\nWoVT0M6gXW1Tcs6TZ0rsbVMxJr+kDmRljThYNkrHQm01zuPXWhjNzvc2sYOD\nxsQa7w+qQEOjYvTQOb/jvcaYYNoJFfDgGjzppim4absTIllXQtIJr7/6gme1\ndye+J89fOKOoeACAgyKsAWABOn7pf6ET3OTDVV0cEHmyM3dAJlI4MfotCQl9\n7VPvG/eOGiywmCCiWLpBqRhOwnDsghnq5W/jWF4Eo4HvJm6WBEAxPPbG5YgI\nfzwdaKdk+zUsDKT3YZ8bY/KybdEB33dRcRlM5p4KTVcZx5lskl/VDo0aQPMT\nKIaYksuAxvonG4eb9j9Kd2U3CizBOWc7jUubQ6l/iZlL9k15AFKXhYvBe559\nulA9oxEVGFYL6S2YMET5cwz65WPiczOAuZiswXE+vl3LvRiDnQ33AHFkUERR\nfKODlWeZB3ym0ynTQT63QHVHsSvlMlQAn9LLz/94k37HD+H1Vnm9F2zOfM1m\nny0efijWMbLADC9lh+uQ90J4UrR6dJ/g1RegJulDBtTn5IsOZh5tAPKpJRfr\nLucpwvTmIWPjAyGr7KnTbaxmPR+dAsVAmQT6ySSNhc9hhHIJ/42+a1mhBpmx\nGgM13dNVxap29i0yMUng2WCpumVChdy8WFusWI+Fx10bc+AOKLklY3VpXDzF\nL7aY\r\n=SDBC\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "isaacs",
+          "email": "i@izs.me"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/rimraf_3.0.2_1581229117362_0.43146474897774256"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -3253,7 +3320,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-28T03:44:37.616Z",
+    "modified": "2020-08-12T23:39:58.392Z",
     "created": "2011-02-08T08:55:37.756Z",
     "1.0.0": "2011-02-08T08:55:39.437Z",
     "1.0.1": "2011-04-13T18:06:00.422Z",
@@ -3305,7 +3372,8 @@
     "2.7.0": "2019-08-14T00:04:06.905Z",
     "2.7.1": "2019-08-14T16:53:32.844Z",
     "3.0.0": "2019-08-14T18:12:42.601Z",
-    "3.0.1": "2020-01-28T03:44:35.076Z"
+    "3.0.1": "2020-01-28T03:44:35.076Z",
+    "3.0.2": "2020-02-09T06:18:37.504Z"
   },
   "author": {
     "name": "Isaac Z. Schlueter",
@@ -3636,12 +3704,16 @@
     "icodeforcookies": true,
     "cameronnokes": true,
     "waiwaiku": true,
-    "yanghcc": true
+    "yanghcc": true,
+    "shanerobinson": true
   },
+  "readme": "[![Build Status](https://travis-ci.org/isaacs/rimraf.svg?branch=master)](https://travis-ci.org/isaacs/rimraf) [![Dependency Status](https://david-dm.org/isaacs/rimraf.svg)](https://david-dm.org/isaacs/rimraf) [![devDependency Status](https://david-dm.org/isaacs/rimraf/dev-status.svg)](https://david-dm.org/isaacs/rimraf#info=devDependencies)\n\nThe [UNIX command](http://en.wikipedia.org/wiki/Rm_(Unix)) `rm -rf` for node.\n\nInstall with `npm install rimraf`, or just drop rimraf.js somewhere.\n\n## API\n\n`rimraf(f, [opts], callback)`\n\nThe first parameter will be interpreted as a globbing pattern for files. If you\nwant to disable globbing you can do so with `opts.disableGlob` (defaults to\n`false`). This might be handy, for instance, if you have filenames that contain\nglobbing wildcard characters.\n\nThe callback will be called with an error if there is one.  Certain\nerrors are handled for you:\n\n* Windows: `EBUSY` and `ENOTEMPTY` - rimraf will back off a maximum of\n  `opts.maxBusyTries` times before giving up, adding 100ms of wait\n  between each attempt.  The default `maxBusyTries` is 3.\n* `ENOENT` - If the file doesn't exist, rimraf will return\n  successfully, since your desired outcome is already the case.\n* `EMFILE` - Since `readdir` requires opening a file descriptor, it's\n  possible to hit `EMFILE` if too many file descriptors are in use.\n  In the sync case, there's nothing to be done for this.  But in the\n  async case, rimraf will gradually back off with timeouts up to\n  `opts.emfileWait` ms, which defaults to 1000.\n\n## options\n\n* unlink, chmod, stat, lstat, rmdir, readdir,\n  unlinkSync, chmodSync, statSync, lstatSync, rmdirSync, readdirSync\n\n    In order to use a custom file system library, you can override\n    specific fs functions on the options object.\n\n    If any of these functions are present on the options object, then\n    the supplied function will be used instead of the default fs\n    method.\n\n    Sync methods are only relevant for `rimraf.sync()`, of course.\n\n    For example:\n\n    ```javascript\n    var myCustomFS = require('some-custom-fs')\n\n    rimraf('some-thing', myCustomFS, callback)\n    ```\n\n* maxBusyTries\n\n    If an `EBUSY`, `ENOTEMPTY`, or `EPERM` error code is encountered\n    on Windows systems, then rimraf will retry with a linear backoff\n    wait of 100ms longer on each try.  The default maxBusyTries is 3.\n\n    Only relevant for async usage.\n\n* emfileWait\n\n    If an `EMFILE` error is encountered, then rimraf will retry\n    repeatedly with a linear backoff of 1ms longer on each try, until\n    the timeout counter hits this max.  The default limit is 1000.\n\n    If you repeatedly encounter `EMFILE` errors, then consider using\n    [graceful-fs](http://npm.im/graceful-fs) in your program.\n\n    Only relevant for async usage.\n\n* glob\n\n    Set to `false` to disable [glob](http://npm.im/glob) pattern\n    matching.\n\n    Set to an object to pass options to the glob module.  The default\n    glob options are `{ nosort: true, silent: true }`.\n\n    Glob version 6 is used in this module.\n\n    Relevant for both sync and async usage.\n\n* disableGlob\n\n    Set to any non-falsey value to disable globbing entirely.\n    (Equivalent to setting `glob: false`.)\n\n## rimraf.sync\n\nIt can remove stuff synchronously, too.  But that's not so good.  Use\nthe async API.  It's better.\n\n## CLI\n\nIf installed with `npm install rimraf -g` it can be used as a global\ncommand `rimraf <path> [<path> ...]` which is useful for cross platform support.\n\n## mkdirp\n\nIf you need to create a directory recursively, check out\n[mkdirp](https://github.com/substack/node-mkdirp).\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/isaacs/rimraf#readme",
   "bugs": {
     "url": "https://github.com/isaacs/rimraf/issues"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "_cached": false,
+  "_contentLength": 0
 }

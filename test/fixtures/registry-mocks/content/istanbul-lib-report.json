@@ -686,6 +686,7 @@
         "api",
         "lib"
       ],
+      "readme": "istanbul-lib-report\n===================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul. Docs to follow.\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@1.1.4",
       "_npmVersion": "5.4.2",
@@ -762,6 +763,7 @@
         "api",
         "lib"
       ],
+      "readme": "istanbul-lib-report\n===================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul. Docs to follow.\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@2.0.0",
       "_npmVersion": "6.1.0",
@@ -1071,6 +1073,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "istanbul-lib-report\n===================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul. Docs to follow.\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@2.0.3",
       "_npmVersion": "6.4.1",
@@ -1216,6 +1219,7 @@
         "node": ">=6"
       },
       "gitHead": "c81b051d83217947dfd97d8d06532bd5013e98c3",
+      "readme": "istanbul-lib-report\n===================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul. Docs to follow.\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@2.0.5",
       "_nodeVersion": "10.15.3",
@@ -1289,6 +1293,7 @@
         "node": ">=6"
       },
       "gitHead": "e8063c799d0854341cb3daaf91c58acd06bd501c",
+      "readme": "istanbul-lib-report\n===================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul. Docs to follow.\n\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@2.0.6",
       "_nodeVersion": "10.15.3",
@@ -1512,6 +1517,7 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
+      "readme": "# istanbul-lib-report\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul. Docs to follow.\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@3.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -1592,6 +1598,7 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
+      "readme": "# istanbul-lib-report\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul.\n\n## Example usage\n\n```js\nconst libReport = require('istanbul-lib-report');\nconst reports = require('istanbul-reports');\n\n// coverageMap, for instance, obtained from istanbul-lib-coverage\nconst coverageMap;\n\nconst configWatermarks = {\n  statements: [50, 80],\n  functions: [50, 80],\n  branches: [50, 80],\n  lines: [50, 80]\n};\n\n// create a context for report generation\nconst context = libReport.createContext({\n  dir: 'report/output/dir',\n  // The summarizer to default to (may be overridden by some reports)\n  // values can be nested/flat/pkg. Defaults to 'pkg'\n  defaultSummarizer: 'nested',\n  watermarks: configWatermarks,\n  coverageMap,\n})\n\n// create an instance of the relevant report class, passing the\n// report name e.g. json/html/html-spa/text\nconst report = reports.create('json', {\n  skipEmpty: configSkipEmpty,\n  skipFull: configSkipFull\n})\n\n// call execute to synchronously create and write the report to disk\nreport.execute(context)\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@3.0.0-alpha.1",
       "_nodeVersion": "12.11.0",
@@ -1672,6 +1679,7 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
+      "readme": "# istanbul-lib-report\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul.\n\n## Example usage\n\n```js\nconst libReport = require('istanbul-lib-report');\nconst reports = require('istanbul-reports');\n\n// coverageMap, for instance, obtained from istanbul-lib-coverage\nconst coverageMap;\n\nconst configWatermarks = {\n  statements: [50, 80],\n  functions: [50, 80],\n  branches: [50, 80],\n  lines: [50, 80]\n};\n\n// create a context for report generation\nconst context = libReport.createContext({\n  dir: 'report/output/dir',\n  // The summarizer to default to (may be overridden by some reports)\n  // values can be nested/flat/pkg. Defaults to 'pkg'\n  defaultSummarizer: 'nested',\n  watermarks: configWatermarks,\n  coverageMap,\n})\n\n// create an instance of the relevant report class, passing the\n// report name e.g. json/html/html-spa/text\nconst report = reports.create('json', {\n  skipEmpty: configSkipEmpty,\n  skipFull: configSkipFull\n})\n\n// call execute to synchronously create and write the report to disk\nreport.execute(context)\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@3.0.0-alpha.2",
       "_nodeVersion": "13.3.0",
@@ -1752,6 +1760,7 @@
         "node": ">=8"
       },
       "gitHead": "5319df684b508ff6fb19fe8b9a6147a3c5924e4b",
+      "readme": "# istanbul-lib-report\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-lib-report.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-lib-report.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-lib-report)\n\nCore reporting utilities for istanbul.\n\n## Example usage\n\n```js\nconst libReport = require('istanbul-lib-report');\nconst reports = require('istanbul-reports');\n\n// coverageMap, for instance, obtained from istanbul-lib-coverage\nconst coverageMap;\n\nconst configWatermarks = {\n  statements: [50, 80],\n  functions: [50, 80],\n  branches: [50, 80],\n  lines: [50, 80]\n};\n\n// create a context for report generation\nconst context = libReport.createContext({\n  dir: 'report/output/dir',\n  // The summarizer to default to (may be overridden by some reports)\n  // values can be nested/flat/pkg. Defaults to 'pkg'\n  defaultSummarizer: 'nested',\n  watermarks: configWatermarks,\n  coverageMap,\n})\n\n// create an instance of the relevant report class, passing the\n// report name e.g. json/html/html-spa/text\nconst report = reports.create('json', {\n  skipEmpty: configSkipEmpty,\n  skipFull: configSkipFull\n})\n\n// call execute to synchronously create and write the report to disk\nreport.execute(context)\n```\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-lib-report@3.0.0",
       "_nodeVersion": "13.3.0",
@@ -1790,6 +1799,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
       "email": "ben@npmjs.com",
@@ -1851,5 +1861,7 @@
     "url": "https://github.com/istanbuljs/istanbuljs/issues"
   },
   "license": "BSD-3-Clause",
-  "readmeFilename": ""
+  "readmeFilename": "",
+  "_cached": false,
+  "_contentLength": 0
 }

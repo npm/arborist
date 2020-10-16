@@ -1,10 +1,10 @@
 {
   "_id": "json5",
-  "_rev": "57-f595803fa75a4645ce749877136fc57c",
+  "_rev": "59-1bacc298f8ca27d54a92ed06eadbff9b",
   "name": "json5",
   "description": "JSON for humans.",
   "dist-tags": {
-    "latest": "2.1.1",
+    "latest": "2.1.3",
     "beta": "1.0.0-beta.4"
   },
   "versions": {
@@ -1954,8 +1954,235 @@
         "tmp": "tmp/json5_2.1.1_1570049433724_0.02392821940890033"
       },
       "_hasShrinkwrap": false
+    },
+    "2.1.2": {
+      "name": "json5",
+      "version": "2.1.2",
+      "description": "JSON for humans.",
+      "main": "lib/index.js",
+      "module": "dist/index.mjs",
+      "bin": {
+        "json5": "lib/cli.js"
+      },
+      "browser": "dist/index.js",
+      "engines": {
+        "node": ">=6"
+      },
+      "scripts": {
+        "build": "rollup -c",
+        "build-package": "node build/package.js",
+        "build-unicode": "node build/unicode.js",
+        "coverage": "tap --coverage-report html test",
+        "lint": "eslint --fix .",
+        "prepublishOnly": "npm run production",
+        "preversion": "npm run production",
+        "production": "npm run lint && npm test && npm run build",
+        "test": "tap -Rspec --100 test",
+        "version": "npm run build-package && git add package.json5"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/json5/json5.git"
+      },
+      "keywords": [
+        "json",
+        "json5",
+        "es5",
+        "es2015",
+        "ecmascript"
+      ],
+      "author": {
+        "name": "Aseem Kishore",
+        "email": "aseem.kishore@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Max Nanasy",
+          "email": "max.nanasy@gmail.com"
+        },
+        {
+          "name": "Andrew Eisenberg",
+          "email": "andrew@eisenberg.as"
+        },
+        {
+          "name": "Jordan Tucker",
+          "email": "jordanbtucker@gmail.com"
+        }
+      ],
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/json5/json5/issues"
+      },
+      "homepage": "http://json5.org/",
+      "dependencies": {
+        "minimist": "^1.2.5"
+      },
+      "devDependencies": {
+        "core-js": "^2.6.5",
+        "eslint": "^5.15.3",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "regenerate": "^1.4.0",
+        "rollup": "^0.64.1",
+        "rollup-plugin-buble": "^0.19.6",
+        "rollup-plugin-commonjs": "^9.2.1",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-terser": "^1.0.1",
+        "sinon": "^6.3.5",
+        "tap": "^12.6.0",
+        "unicode-10.0.0": "^0.7.5"
+      },
+      "gitHead": "d2796dd2a4db42313d755bf6b62e16110f9c0627",
+      "_id": "json5@2.1.2",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.14.1",
+      "dist": {
+        "integrity": "sha512-MoUOQ4WdiN3yxhm7NEVJSJrieAo5hNSLQ5sj05OTRHPL9HOBy8u4Bu88jsC1jvqAdN+E1bJmsUcZH+1HQxliqQ==",
+        "shasum": "43ef1f0af9835dd624751a6b7fa48874fb2d608e",
+        "tarball": "https://registry.npmjs.org/json5/-/json5-2.1.2.tgz",
+        "fileCount": 16,
+        "unpackedSize": 235557,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeb9hxCRA9TVsSAnZWagAAMz8QAJyodmBx/6/GrlNkWWe4\no+GeI3fE/VoeYPE2t6PYpIyA2jtnWfiMYbc5UEzPEFjVoVLjG9gyLyyraKNR\nVtC5tKL+J5go4QqN+GZDdxSI573fCsmHeD17LfFeMwpH3kES9ULwTmmcSz9Q\nhw15eKvTibgltXqUR9jzFFt1lQZUNtIairGhpd9fQ8+F/aZc5MVzP16B27fv\nxJzpEt6+80Taii+gxY9brZDd+ToL3K4j2ezKXQVVnwNffI1CT+WPOdYHgkes\n+9qV3WjHCO/yV8KvD4hDwrEhZa5WjpnBeSq4Yl65nlGd/gOT7bKJC2gBVyOn\nfpqb5bNfRjv9LyK/hqQcru9SzbIEy2xFYQTJaE6WnQ+DCJh85Mkns7HcLMHx\nGwviGPoVTaVpKsdQ0ZePhTZEBCZDUL/fsgKdz1XlDV8Sf7w0Vt+pdyyT3dN5\nJfatWgnKWqMryZ47fwbFv/+Z9ruRKvDkbO+jyYxr2wBrRNs1YDEbboSja8FI\nGzDq1Q4VvC6mReSq0RgmRPgfeYLge/8gDUq6D10oPKvCVV80Eduvt17pYQqc\nSSFa6KRBXe5AzRfXGUuHmigYC4yKgXm3hyvSwf02pVpjbz6mrKpn+bG4F40h\nJnIoRyNGI3r4ak/tRowodqu7cFRiU51fhgRZDEjPry/LFvMUDNi91bWeBIRs\nhzcJ\r\n=LHov\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "aseemk",
+          "email": "aseem.kishore@gmail.com"
+        },
+        {
+          "name": "jordanbtucker",
+          "email": "jordanbtucker@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "jordanbtucker",
+        "email": "jordanbtucker@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/json5_2.1.2_1584388209027_0.5538679380467166"
+      },
+      "_hasShrinkwrap": false
+    },
+    "2.1.3": {
+      "name": "json5",
+      "version": "2.1.3",
+      "description": "JSON for humans.",
+      "main": "lib/index.js",
+      "module": "dist/index.mjs",
+      "bin": {
+        "json5": "lib/cli.js"
+      },
+      "browser": "dist/index.js",
+      "engines": {
+        "node": ">=6"
+      },
+      "scripts": {
+        "build": "rollup -c",
+        "build-package": "node build/package.js",
+        "build-unicode": "node build/unicode.js",
+        "coverage": "tap --coverage-report html test",
+        "lint": "eslint --fix .",
+        "prepublishOnly": "npm run production",
+        "preversion": "npm run production",
+        "production": "npm run lint && npm test && npm run build",
+        "test": "tap -Rspec --100 test",
+        "version": "npm run build-package && git add package.json5"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/json5/json5.git"
+      },
+      "keywords": [
+        "json",
+        "json5",
+        "es5",
+        "es2015",
+        "ecmascript"
+      ],
+      "author": {
+        "name": "Aseem Kishore",
+        "email": "aseem.kishore@gmail.com"
+      },
+      "contributors": [
+        {
+          "name": "Max Nanasy",
+          "email": "max.nanasy@gmail.com"
+        },
+        {
+          "name": "Andrew Eisenberg",
+          "email": "andrew@eisenberg.as"
+        },
+        {
+          "name": "Jordan Tucker",
+          "email": "jordanbtucker@gmail.com"
+        }
+      ],
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/json5/json5/issues"
+      },
+      "homepage": "http://json5.org/",
+      "dependencies": {
+        "minimist": "^1.2.5"
+      },
+      "devDependencies": {
+        "core-js": "^2.6.5",
+        "eslint": "^5.15.3",
+        "eslint-config-standard": "^12.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-node": "^8.0.1",
+        "eslint-plugin-promise": "^4.0.1",
+        "eslint-plugin-standard": "^4.0.0",
+        "regenerate": "^1.4.0",
+        "rollup": "^0.64.1",
+        "rollup-plugin-buble": "^0.19.6",
+        "rollup-plugin-commonjs": "^9.2.1",
+        "rollup-plugin-node-resolve": "^3.4.0",
+        "rollup-plugin-terser": "^1.0.1",
+        "sinon": "^6.3.5",
+        "tap": "^12.6.0",
+        "unicode-10.0.0": "^0.7.5"
+      },
+      "gitHead": "32bb2cdae4864b2ac80a6d9b4045efc4cc54f47a",
+      "_id": "json5@2.1.3",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==",
+        "shasum": "c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43",
+        "tarball": "https://registry.npmjs.org/json5/-/json5-2.1.3.tgz",
+        "fileCount": 16,
+        "unpackedSize": 236336,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeiREsCRA9TVsSAnZWagAAlCMP/1y7UinfaaTR/JjVT5Bh\nEuSlDfdo7la2tYNEh3dwn8R6dnEPZAwdzimdJ9gzNVaQL2ICs1a4XPcgbUHM\nIkz4AQ79FoSoUkzKmkcWVSuqSIrShGh5J8iSWdQfxxzijbWyCQtq9C3YSWBl\nvNWJNBYnQ7OA/+txjWAaYI2rokcdZv3VsE/dbexxZFjboKKSsR+ZRnu9F6+t\nfqn32olMTOLSBV3g7VF+vVpdBWa3GMCKeZ7NFx05bOtost0/SAVwPXAnDZFn\nhShY7/V/VTx2tnhYaYrFogzP55vLJSru9DXnS8TVDdAbHQ6+EsLAqcPIDR7R\nsVaaxXP8fnGcL6FeLyzljUHELe2P/l7DRkaoF5vRUSTwn+MNvBV5oGaGhehi\n/0K7UYEeduKXghVa2o9bXxIItTrIjygl0bBULAgvSHD2o99OiWDbNnFWFA06\nxAJnbJ8qEZfDUYkKIryDuBvk0ROTpBTAe3PfRHNk2QD0ZFQcghXcVHCs+40X\nZ97sQ7pc4XtsOFM9FiF+rzqg3OLy7BfeADPJJxuLGxMpaFkxRw/SN5Q8e2RQ\nUVPwOBi2qihYyCRoHACkALF59U5dYQ3OTATic+jSEAyF5a26rAbfXOxpePo4\nf9GkQjTsY6f0CE/h5rCYDSFZm+6w9rODvYpXCWbosYFXYI7Dn/RCpoliRTaw\neRo5\r\n=aFBt\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "aseemk",
+          "email": "aseem.kishore@gmail.com"
+        },
+        {
+          "name": "jordanbtucker",
+          "email": "jordanbtucker@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "jordanbtucker",
+        "email": "jordanbtucker@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/json5_2.1.3_1586041132131_0.5302923352394322"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# JSON5 – JSON for Humans\n\n[![Build Status](https://travis-ci.org/json5/json5.svg)][Build Status]\n[![Coverage\nStatus](https://coveralls.io/repos/github/json5/json5/badge.svg)][Coverage\nStatus]\n\nThe JSON5 Data Interchange Format (JSON5) is a superset of [JSON] that aims to\nalleviate some of the limitations of JSON by expanding its syntax to include\nsome productions from [ECMAScript 5.1].\n\nThis JavaScript library is the official reference implementation for JSON5\nparsing and serialization libraries.\n\n[Build Status]: https://travis-ci.org/json5/json5\n\n[Coverage Status]: https://coveralls.io/github/json5/json5\n\n[JSON]: https://tools.ietf.org/html/rfc7159\n\n[ECMAScript 5.1]: https://www.ecma-international.org/ecma-262/5.1/\n\n## Summary of Features\nThe following ECMAScript 5.1 features, which are not supported in JSON, have\nbeen extended to JSON5.\n\n### Objects\n- Object keys may be an ECMAScript 5.1 _[IdentifierName]_.\n- Objects may have a single trailing comma.\n\n### Arrays\n- Arrays may have a single trailing comma.\n\n### Strings\n- Strings may be single quoted.\n- Strings may span multiple lines by escaping new line characters.\n- Strings may include character escapes.\n\n### Numbers\n- Numbers may be hexadecimal.\n- Numbers may have a leading or trailing decimal point.\n- Numbers may be [IEEE 754] positive infinity, negative infinity, and NaN.\n- Numbers may begin with an explicit plus sign.\n\n### Comments\n- Single and multi-line comments are allowed.\n\n### White Space\n- Additional white space characters are allowed.\n\n[IdentifierName]: https://www.ecma-international.org/ecma-262/5.1/#sec-7.6\n\n[IEEE 754]: http://ieeexplore.ieee.org/servlet/opac?punumber=4610933\n\n## Short Example\n```js\n{\n  // comments\n  unquoted: 'and you can quote me on that',\n  singleQuotes: 'I can use \"double quotes\" here',\n  lineBreaks: \"Look, Mom! \\\nNo \\\\n's!\",\n  hexadecimal: 0xdecaf,\n  leadingDecimalPoint: .8675309, andTrailing: 8675309.,\n  positiveSign: +1,\n  trailingComma: 'in objects', andIn: ['arrays',],\n  \"backwardsCompatible\": \"with JSON\",\n}\n```\n\n## Specification\nFor a detailed explanation of the JSON5 format, please read the [official\nspecification](https://json5.github.io/json5-spec/).\n\n## Installation\n### Node.js\n```sh\nnpm install json5\n```\n\n```js\nconst JSON5 = require('json5')\n```\n\n### Browsers\n```html\n<script src=\"https://unpkg.com/json5@^2.0.0/dist/index.min.js\"></script>\n```\n\nThis will create a global `JSON5` variable.\n\n## API\nThe JSON5 API is compatible with the [JSON API].\n\n[JSON API]:\nhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON\n\n### JSON5.parse()\nParses a JSON5 string, constructing the JavaScript value or object described by\nthe string. An optional reviver function can be provided to perform a\ntransformation on the resulting object before it is returned.\n\n#### Syntax\n    JSON5.parse(text[, reviver])\n\n#### Parameters\n- `text`: The string to parse as JSON5.\n- `reviver`: If a function, this prescribes how the value originally produced by\n  parsing is transformed, before being returned.\n\n#### Return value\nThe object corresponding to the given JSON5 text.\n\n### JSON5.stringify()\nConverts a JavaScript value to a JSON5 string, optionally replacing values if a\nreplacer function is specified, or optionally including only the specified\nproperties if a replacer array is specified.\n\n#### Syntax\n    JSON5.stringify(value[, replacer[, space]])\n    JSON5.stringify(value[, options])\n\n#### Parameters\n- `value`: The value to convert to a JSON5 string.\n- `replacer`: A function that alters the behavior of the stringification\n  process, or an array of String and Number objects that serve as a whitelist\n  for selecting/filtering the properties of the value object to be included in\n  the JSON5 string. If this value is null or not provided, all properties of the\n  object are included in the resulting JSON5 string.\n- `space`: A String or Number object that's used to insert white space into the\n  output JSON5 string for readability purposes. If this is a Number, it\n  indicates the number of space characters to use as white space; this number is\n  capped at 10 (if it is greater, the value is just 10). Values less than 1\n  indicate that no space should be used. If this is a String, the string (or the\n  first 10 characters of the string, if it's longer than that) is used as white\n  space. If this parameter is not provided (or is null), no white space is used.\n  If white space is used, trailing commas will be used in objects and arrays.\n- `options`: An object with the following properties:\n  - `replacer`: Same as the `replacer` parameter.\n  - `space`: Same as the `space` parameter.\n  - `quote`: A String representing the quote character to use when serializing\n    strings.\n\n#### Return value\nA JSON5 string representing the value.\n\n### Node.js `require()` JSON5 files\nWhen using Node.js, you can `require()` JSON5 files by adding the following\nstatement.\n\n```js\nrequire('json5/lib/register')\n```\n\nThen you can load a JSON5 file with a Node.js `require()` statement. For\nexample:\n\n```js\nconst config = require('./config.json5')\n```\n\n## CLI\nSince JSON is more widely used than JSON5, this package includes a CLI for\nconverting JSON5 to JSON and for validating the syntax of JSON5 documents.\n\n### Installation\n```sh\nnpm install --global json5\n```\n\n### Usage\n```sh\njson5 [options] <file>\n```\n\nIf `<file>` is not provided, then STDIN is used.\n\n#### Options:\n- `-s`, `--space`: The number of spaces to indent or `t` for tabs\n- `-o`, `--out-file [file]`: Output to the specified file, otherwise STDOUT\n- `-v`, `--validate`: Validate JSON5 but do not output JSON\n- `-V`, `--version`: Output the version number\n- `-h`, `--help`: Output usage information\n\n## Contributing\n### Development\n```sh\ngit clone https://github.com/json5/json5\ncd json5\nnpm install\n```\n\nWhen contributing code, please write relevant tests and run `npm test` and `npm\nrun lint` before submitting pull requests. Please use an editor that supports\n[EditorConfig](http://editorconfig.org/).\n\n### Issues\nTo report bugs or request features regarding the JSON5 data format, please\nsubmit an issue to the [official specification\nrepository](https://github.com/json5/json5-spec).\n\nTo report bugs or request features regarding the JavaScript implementation of\nJSON5, please submit an issue to this repository.\n\n## License\nMIT. See [LICENSE.md](./LICENSE.md) for details.\n\n## Credits\n[Assem Kishore](https://github.com/aseemk) founded this project.\n\n[Michael Bolin](http://bolinfest.com/) independently arrived at and published\nsome of these same ideas with awesome explanations and detail. Recommended\nreading: [Suggested Improvements to JSON](http://bolinfest.com/essays/json.html)\n\n[Douglas Crockford](http://www.crockford.com/) of course designed and built\nJSON, but his state machine diagrams on the [JSON website](http://json.org/), as\ncheesy as it may sound, gave us motivation and confidence that building a new\nparser to implement these ideas was within reach! The original\nimplementation of JSON5 was also modeled directly off of Doug’s open-source\n[json_parse.js] parser. We’re grateful for that clean and well-documented\ncode.\n\n[json_parse.js]:\nhttps://github.com/douglascrockford/JSON-js/blob/03157639c7a7cddd2e9f032537f346f1a87c0f6d/json_parse.js\n\n[Max Nanasy](https://github.com/MaxNanasy) has been an early and prolific\nsupporter, contributing multiple patches and ideas.\n\n[Andrew Eisenberg](https://github.com/aeisenberg) contributed the original\n`stringify` method.\n\n[Jordan Tucker](https://github.com/jordanbtucker) has aligned JSON5 more closely\nwith ES5, wrote the official JSON5 specification, completely rewrote the\ncodebase from the ground up, and is actively maintaining this project.\n",
   "maintainers": [
     {
       "name": "aseemk",
@@ -1967,7 +2194,7 @@
     }
   ],
   "time": {
-    "modified": "2019-10-02T20:50:38.201Z",
+    "modified": "2020-04-04T22:58:54.753Z",
     "created": "2012-05-27T20:32:39.534Z",
     "0.0.0": "2012-05-27T20:32:41.061Z",
     "0.0.1": "2012-05-28T02:13:56.934Z",
@@ -1988,7 +2215,9 @@
     "2.0.0": "2018-08-17T04:13:24.376Z",
     "2.0.1": "2018-08-18T18:41:35.320Z",
     "2.1.0": "2018-09-28T05:11:48.600Z",
-    "2.1.1": "2019-10-02T20:50:33.832Z"
+    "2.1.1": "2019-10-02T20:50:33.832Z",
+    "2.1.2": "2020-03-16T19:50:09.154Z",
+    "2.1.3": "2020-04-04T22:58:52.387Z"
   },
   "author": {
     "name": "Aseem Kishore",
@@ -2052,5 +2281,7 @@
     "url": "https://github.com/json5/json5/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "_cached": false,
+  "_contentLength": 0
 }

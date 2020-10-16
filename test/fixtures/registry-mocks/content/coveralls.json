@@ -1,10 +1,10 @@
 {
   "_id": "coveralls",
-  "_rev": "139-385e431d981701a323a9bcc6d54aa53d",
+  "_rev": "145-d6bde0f1647a5f58010de43837234ad3",
   "name": "coveralls",
   "description": "takes json-cov output into stdin and POSTs to coveralls.io",
   "dist-tags": {
-    "latest": "3.0.9"
+    "latest": "3.1.0"
   },
   "versions": {
     "1.0.0": {
@@ -6206,8 +6206,819 @@
         "tmp": "tmp/coveralls_3.0.9_1574789978917_0.2045121415081459"
       },
       "_hasShrinkwrap": false
+    },
+    "3.0.10": {
+      "name": "coveralls",
+      "description": "takes json-cov output into stdin and POSTs to coveralls.io",
+      "keywords": [
+        "coverage",
+        "coveralls"
+      ],
+      "version": "3.0.10",
+      "bugs": {
+        "url": "https://github.com/nickmerwin/node-coveralls/issues"
+      },
+      "scripts": {
+        "lint": "jshint ./lib ./test ./index.js",
+        "mocha": "_mocha -b -R spec",
+        "test-cov": "nyc npm run mocha",
+        "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+        "test": "npm run lint && npm run mocha"
+      },
+      "bin": {
+        "coveralls": "./bin/coveralls.js"
+      },
+      "maintainers": [
+        {
+          "email": "gregg@caines.ca",
+          "name": "cainus"
+        },
+        {
+          "email": "n@mer.fm",
+          "name": "nickmerwin"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Gregg Caines",
+          "email": "gregg@caines.ca",
+          "url": "http://caines.ca"
+        },
+        {
+          "name": "Joshua Ma",
+          "email": "github@joshma.com",
+          "url": "http://joshma.com"
+        },
+        {
+          "name": "Alan Gutierrez",
+          "email": "alan@prettyrobots.com",
+          "url": "http://www.prettyrobots.com/"
+        },
+        {
+          "name": "Kir Belevich",
+          "url": "https://github.com/svg"
+        },
+        {
+          "name": "elliotcable",
+          "email": "github@elliottcable.name",
+          "url": "http://elliottcable.name/"
+        },
+        {
+          "name": "Slotos",
+          "email": "slotos@gmail.com",
+          "url": "http://slotos.net"
+        },
+        {
+          "name": "mattjmorrison",
+          "email": "mattjmorrison@mattjmorrison.com",
+          "url": "http://mattjmorrison.com"
+        },
+        {
+          "name": "Arpad Borsos",
+          "email": "arpad.borsos@googlemail.com",
+          "url": "http://swatinem.de/"
+        },
+        {
+          "name": "Adam Moss",
+          "url": "https://github.com/adam-moss"
+        }
+      ],
+      "dependencies": {
+        "js-yaml": "^3.13.1",
+        "lcov-parse": "^1.0.0",
+        "log-driver": "^1.2.7",
+        "minimist": "^1.2.5",
+        "request": "^2.88.0"
+      },
+      "devDependencies": {
+        "jshint": "^2.10.3",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "should": "^9.0.2",
+        "shx": "^0.3.2",
+        "sinon-restore": "^1.0.1"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "main": "index.js",
+      "directories": {
+        "test": "test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/nickmerwin/node-coveralls.git"
+      },
+      "author": {
+        "name": "Gregg Caines"
+      },
+      "license": "BSD-2-Clause",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "2ea7be3fc03ffe9553886f738a7f8e5a75a5d5d7",
+      "homepage": "https://github.com/nickmerwin/node-coveralls#readme",
+      "_id": "coveralls@3.0.10",
+      "_nodeVersion": "10.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-HW0W5p9F95ww1mHyZP+mvIbHtz7VVwafngnR4HbNjedoH33QSpcl86hdCGBvMwnMV4ut8/Tp4IAIFpX05Kr92g==",
+        "shasum": "165a0f3395a58c26036ada82cbc81cac618a2d73",
+        "tarball": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.10.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31028,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJec6htCRA9TVsSAnZWagAA6acP/0NId4wVEyJov6++xl8l\n2u+QTG2UAIcPa1jiXKEgerNnfjqD4hoBkhfwlBeE2bRdxQCDIWsHlWaWYUcH\n1gm/DqQEcvjvFzp2Y6m88Yiyeigo2WGhUqnZ4SeNM13qBb6LzF5eORIvsXoA\nJbGtQ3SI7/+9KGzk/WFF7MhOavvXwVKab+7wWVNhgp5lhuC2NQUgU2s+TuvB\nl+08jd8fDythGc1RCZWgiew9lo0cglmxx1BusbqnAMHoT1TEjy9qHQoiWMEE\nX9Ox0sji9XBoSkOdoL4hAqdyCPDK9oBTYYYLyzjlQoPxP93xgTTPXg88OFq4\nUur29dyvx5T0BPY3xdNdDpByk7fzr+VHnPxPyoggpOWRUblyQMdhWmfPKnL9\nJhulq7tH9yk7i/piieYuFoPdWv0Z4UF7hZfxzYic1O1OJZ6S2QkrVgsKcTif\ngfr0XYSRnWADT+TAwEjIbOdC1GRua4UXO5g1WgwkQ+VHFu+4zxe5dNkIULUP\nE3qrR5cxtPQ+JkPwk/rv6i0XuaKlVRR7LhOBjcSu+txLnfyZrDUC6T3t7r8m\nLpFuLltgV7t+h7hmsfmb8c0HzP9y4igNI07kWUGozJMa3DovDT/hIbU8Tb09\nA9LdYQY3eiqnGYLfE+AwnjJVQ9cXNsKjlsq/diQrJgzEgISA892gu+puKhau\npj8D\r\n=c3eW\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "nickmerwin",
+        "email": "n@mer.fm"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/coveralls_3.0.10_1584638060583_0.9870176720761348"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.11": {
+      "name": "coveralls",
+      "description": "takes json-cov output into stdin and POSTs to coveralls.io",
+      "keywords": [
+        "coverage",
+        "coveralls"
+      ],
+      "version": "3.0.11",
+      "bugs": {
+        "url": "https://github.com/nickmerwin/node-coveralls/issues"
+      },
+      "scripts": {
+        "lint": "jshint ./lib ./test ./index.js",
+        "mocha": "_mocha -b -R spec",
+        "test-cov": "nyc npm run mocha",
+        "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+        "test": "npm run lint && npm run mocha"
+      },
+      "bin": {
+        "coveralls": "./bin/coveralls.js"
+      },
+      "maintainers": [
+        {
+          "email": "gregg@caines.ca",
+          "name": "cainus"
+        },
+        {
+          "email": "n@mer.fm",
+          "name": "nickmerwin"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Gregg Caines",
+          "email": "gregg@caines.ca",
+          "url": "http://caines.ca"
+        },
+        {
+          "name": "Joshua Ma",
+          "email": "github@joshma.com",
+          "url": "http://joshma.com"
+        },
+        {
+          "name": "Alan Gutierrez",
+          "email": "alan@prettyrobots.com",
+          "url": "http://www.prettyrobots.com/"
+        },
+        {
+          "name": "Kir Belevich",
+          "url": "https://github.com/svg"
+        },
+        {
+          "name": "elliotcable",
+          "email": "github@elliottcable.name",
+          "url": "http://elliottcable.name/"
+        },
+        {
+          "name": "Slotos",
+          "email": "slotos@gmail.com",
+          "url": "http://slotos.net"
+        },
+        {
+          "name": "mattjmorrison",
+          "email": "mattjmorrison@mattjmorrison.com",
+          "url": "http://mattjmorrison.com"
+        },
+        {
+          "name": "Arpad Borsos",
+          "email": "arpad.borsos@googlemail.com",
+          "url": "http://swatinem.de/"
+        },
+        {
+          "name": "Adam Moss",
+          "url": "https://github.com/adam-moss"
+        }
+      ],
+      "dependencies": {
+        "js-yaml": "^3.13.1",
+        "lcov-parse": "^1.0.0",
+        "log-driver": "^1.2.7",
+        "minimist": "^1.2.5",
+        "request": "^2.88.0"
+      },
+      "devDependencies": {
+        "jshint": "^2.10.3",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "should": "^9.0.2",
+        "shx": "^0.3.2",
+        "sinon-restore": "^1.0.1"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "main": "index.js",
+      "directories": {
+        "test": "test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/nickmerwin/node-coveralls.git"
+      },
+      "author": {
+        "name": "Gregg Caines"
+      },
+      "license": "BSD-2-Clause",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "21f476c8502e180a7a1e67035cba57616fecc5be",
+      "homepage": "https://github.com/nickmerwin/node-coveralls#readme",
+      "_id": "coveralls@3.0.11",
+      "_nodeVersion": "10.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-LZPWPR2NyGKyaABnc49dR0fpeP6UqhvGq4B5nUrTQ1UBy55z96+ga7r+/ChMdMJUwBgyJDXBi88UBgz2rs9IiQ==",
+        "shasum": "e141da0922b632fcc66620f334460c3f0026a4ce",
+        "tarball": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.11.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31209,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJec68BCRA9TVsSAnZWagAAw10P/0BXlgYiIQYUI1pFrIog\nioabSagC1zIq8OhuWQi2L5G/BY3Bdrh8Vy6PaI4aQuzDV5otFTl6YW75XwvN\nVw7klc3HxeGICgjsaHAgX8QkcU3h78bFM44b2fwt+aFrSraiMkyQltjhpl/e\ntawAfAkNp3dcv7yuaO13sit7Na5ARPtR/uX9djjTR7Hdv+yOH2v0Rsw767e/\n0FfaA9u79WmkK0GxV0wPpMkTkCd6yEo1frspXTrEoFlyWlZfMzSWgouauwxf\n9GcShzIKjHrLS68OIgjSCjMXhoZw4WOPm7xhjbp7+cv3lfELtQhv8v1HDPHX\ngjZgc36F8qriuLHnlxpdf0OPX53FxREAx1pw3Wkp3MZe9gG8EocU47YHRpnv\nuS42kNFfDHWp1gxR2GihtB/MxU7GL3tRDkvVT4izOQq0Nk+FmP31107buJcm\nZtgdwXkUJswPzhgHLoI+2cAdOkMDRHgaucO5XaKviogkshq9xzQ0koU2rTF0\n8ZCA7x5d69qWdggbYyR6u5chfXvydQSN2bMkGC6rBWB6DFQSdqGKVK+uLNM0\nN+qe7Q2npOrEquTFcJf57Q6oBQ8r+n7KRs7zeNoSCPyj2QyW6aRC2ZuqRvAs\n4kCLpGAfgo++Gi6ppRlL7SpMZ4WXmdr+zh+aW2uXws3isHuTiyWj1fELeipb\nMsEw\r\n=VqUM\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "nickmerwin",
+        "email": "n@mer.fm"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/coveralls_3.0.11_1584639744760_0.4422895406431102"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.12": {
+      "name": "coveralls",
+      "description": "takes json-cov output into stdin and POSTs to coveralls.io",
+      "keywords": [
+        "coverage",
+        "coveralls"
+      ],
+      "version": "3.0.12",
+      "bugs": {
+        "url": "https://github.com/nickmerwin/node-coveralls/issues"
+      },
+      "scripts": {
+        "lint": "jshint ./lib ./test ./index.js",
+        "mocha": "_mocha -b -R spec",
+        "test-cov": "nyc npm run mocha",
+        "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+        "test": "npm run lint && npm run mocha"
+      },
+      "bin": {
+        "coveralls": "./bin/coveralls.js"
+      },
+      "maintainers": [
+        {
+          "email": "gregg@caines.ca",
+          "name": "cainus"
+        },
+        {
+          "email": "n@mer.fm",
+          "name": "nickmerwin"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Gregg Caines",
+          "email": "gregg@caines.ca",
+          "url": "http://caines.ca"
+        },
+        {
+          "name": "Joshua Ma",
+          "email": "github@joshma.com",
+          "url": "http://joshma.com"
+        },
+        {
+          "name": "Alan Gutierrez",
+          "email": "alan@prettyrobots.com",
+          "url": "http://www.prettyrobots.com/"
+        },
+        {
+          "name": "Kir Belevich",
+          "url": "https://github.com/svg"
+        },
+        {
+          "name": "elliotcable",
+          "email": "github@elliottcable.name",
+          "url": "http://elliottcable.name/"
+        },
+        {
+          "name": "Slotos",
+          "email": "slotos@gmail.com",
+          "url": "http://slotos.net"
+        },
+        {
+          "name": "mattjmorrison",
+          "email": "mattjmorrison@mattjmorrison.com",
+          "url": "http://mattjmorrison.com"
+        },
+        {
+          "name": "Arpad Borsos",
+          "email": "arpad.borsos@googlemail.com",
+          "url": "http://swatinem.de/"
+        },
+        {
+          "name": "Adam Moss",
+          "url": "https://github.com/adam-moss"
+        }
+      ],
+      "dependencies": {
+        "js-yaml": "^3.13.1",
+        "lcov-parse": "^1.0.0",
+        "log-driver": "^1.2.7",
+        "minimist": "^1.2.5",
+        "request": "^2.88.0"
+      },
+      "devDependencies": {
+        "jshint": "^2.10.3",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "should": "^9.0.2",
+        "shx": "^0.3.2",
+        "sinon-restore": "^1.0.1"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "main": "index.js",
+      "directories": {
+        "test": "test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/nickmerwin/node-coveralls.git"
+      },
+      "author": {
+        "name": "Gregg Caines"
+      },
+      "license": "BSD-2-Clause",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "aaff7f813f12a046e1dab275abeb2f074c90b0c1",
+      "homepage": "https://github.com/nickmerwin/node-coveralls#readme",
+      "_id": "coveralls@3.0.12",
+      "_nodeVersion": "10.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-cDOGf4JFb1XKxT811GuLixVgJc3ZFElCLtgxkrdo0hm9Q8lmJ3cP4cZqlQTRE45MvwJNlHYwwzHPuWEv1f4f4Q==",
+        "shasum": "e5417b7ef9170ad92b40f4024fce25d65ad9c24d",
+        "tarball": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.12.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31180,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJenz2aCRA9TVsSAnZWagAA8YoQAI449cUr2nxVmCYd9BNI\nmWP9Qx/7plYrkJUbdU/1/4CvyQEayoMUvmyaCB9twoPcdUGxwOOanNa4JKOj\ni836pBH7es1pXJA1xUlhzTQawPbgmkKG6iAW9ka3FwB3l6eg9RoUs8GyZz5k\nGyk+vfxt5mhdUwh95hDyuaB3ai0UI+0PBS0tmRcfu40LSiTD6/1D1vQ5hBBP\nwHom/IQ97JHlFXY/3oBhgYF9qzuZ/D4gqsA6LMVjeCpP5/ZhmwEIV2Vw3m6Y\nLg0SO4mv0g/Eit3YSn3yPfd8wIjRvbz4gKoci44koxS57maLvVi/X1yDMj0U\n68X2e5F+sGZUJvcykoDpkO89XeFcwjOYmeuVJR2jeLDa8ZzMhjNfdqw9H6T0\nFBYNJOlaQVaIiZRZJ8SYd+UBppnisnb3XSUAv+bq4A2ZTT+Usaxs1Fo0xcbi\nid+aEGzSK63WMLfiHHbkRKq6TuPOOpgMoRPYEQsjvdS3PKosv0EVe1u0fhHD\nD9OFb8I1RKY6ZTHzEP/Y1Wf6jjTbK7Ji911joiigIZmkNNDczivLBKaRmL8y\n5sIYxoOU2fIOGK0mEgoYcZqXrY+AM7X4Def/I5Dmpi/hUp63BVQy8rXdpLjt\nHNJ1PfC5njY3WeWRedMDqtX2609gybryaNYmvb1orUKzTpta3UWCDMn8fZRp\nisCZ\r\n=LeZn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "nickmerwin",
+        "email": "n@mer.fm"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/coveralls_3.0.12_1587494296729_0.2828065691928028"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.13": {
+      "name": "coveralls",
+      "description": "takes json-cov output into stdin and POSTs to coveralls.io",
+      "keywords": [
+        "coverage",
+        "coveralls"
+      ],
+      "version": "3.0.13",
+      "bugs": {
+        "url": "https://github.com/nickmerwin/node-coveralls/issues"
+      },
+      "scripts": {
+        "lint": "jshint ./lib ./test ./index.js",
+        "mocha": "_mocha -b -R spec",
+        "test-cov": "nyc npm run mocha",
+        "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+        "test": "npm run lint && npm run mocha"
+      },
+      "bin": {
+        "coveralls": "./bin/coveralls.js"
+      },
+      "maintainers": [
+        {
+          "email": "gregg@caines.ca",
+          "name": "cainus"
+        },
+        {
+          "email": "n@mer.fm",
+          "name": "nickmerwin"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Gregg Caines",
+          "email": "gregg@caines.ca",
+          "url": "http://caines.ca"
+        },
+        {
+          "name": "Joshua Ma",
+          "email": "github@joshma.com",
+          "url": "http://joshma.com"
+        },
+        {
+          "name": "Alan Gutierrez",
+          "email": "alan@prettyrobots.com",
+          "url": "http://www.prettyrobots.com/"
+        },
+        {
+          "name": "Kir Belevich",
+          "url": "https://github.com/svg"
+        },
+        {
+          "name": "elliotcable",
+          "email": "github@elliottcable.name",
+          "url": "http://elliottcable.name/"
+        },
+        {
+          "name": "Slotos",
+          "email": "slotos@gmail.com",
+          "url": "http://slotos.net"
+        },
+        {
+          "name": "mattjmorrison",
+          "email": "mattjmorrison@mattjmorrison.com",
+          "url": "http://mattjmorrison.com"
+        },
+        {
+          "name": "Arpad Borsos",
+          "email": "arpad.borsos@googlemail.com",
+          "url": "http://swatinem.de/"
+        },
+        {
+          "name": "Adam Moss",
+          "url": "https://github.com/adam-moss"
+        }
+      ],
+      "dependencies": {
+        "js-yaml": "^3.13.1",
+        "lcov-parse": "^1.0.0",
+        "log-driver": "^1.2.7",
+        "minimist": "^1.2.5",
+        "request": "^2.88.0"
+      },
+      "devDependencies": {
+        "jshint": "^2.10.3",
+        "mocha": "^6.2.2",
+        "nyc": "^14.1.1",
+        "should": "^9.0.2",
+        "shx": "^0.3.2",
+        "sinon-restore": "^1.0.1"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "main": "index.js",
+      "directories": {
+        "test": "test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/nickmerwin/node-coveralls.git"
+      },
+      "author": {
+        "name": "Gregg Caines"
+      },
+      "license": "BSD-2-Clause",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "eaba7c60d3936ea0d73490486c36ed347149e8c0",
+      "homepage": "https://github.com/nickmerwin/node-coveralls#readme",
+      "_id": "coveralls@3.0.13",
+      "_nodeVersion": "10.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-Bch6FJI4ebK6Mwr+DjFCJbb/RayNwn5pscSDE4Ux6cgjNkAcjdgGZBRfQnuYTt5tY81MqGK8m2r+xc5FDF513A==",
+        "shasum": "64d8c99af3b8a771a2e6e5bcdf556c3c5061d29d",
+        "tarball": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.13.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31261,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJen1mlCRA9TVsSAnZWagAAEukP/iDhyKKLnOg35gtFyYoM\nQNfAfztZA0SqPoi7w+ulU7XDP9mtcrhzrNciUIIgxi9kOuRNcF5pDGICFQ2G\n2/w8ppRHKIIMeWbA66aZAdbmhfmIZ46/jIwqTqBpi9H0FqBvgKllqyHnUK3F\nl9utdkSWZRulBYiITDXauNOe99iIvMOSFrGCSQR55JbtW1YrPjDnJhTD2evr\n0dVPUNqQ1qTjXM+msDbKRopWLjh7N3bqt39LWWQQ6MrMR5rOh0l/YxeKqBPz\naWD+MCeiVtwgxwYnvVcAYcrnkxsXDs9y4o7eq8dWKndCfg3GwvnmdlrClgfe\nxt62LSxvqA+gvyaR2FIe367hqYGJoThsNQU82McJVRAyxH2nlCeuvcDZPYOH\ntU9QOUKx/F5E9+KbQHrLMWb9cPTNIxJchDB4boRGiuVSYXrCza4XcCjlYnKE\nnSipsJg0iE6JqiTy4e9V+gSic7iSPe9I+udmPpTM64GYXeYqkc7QLmBxGHrF\nNM7NtzFDeoIX7hAYFpct1lAWm6ZZYvYYPX71YV91qBlsIQK9OUChPNmYXtxW\n30IDkwOyv/v8APzhh4pTFoweg8hdv4oDEgLlGpuIcO0c7/fjL2h8LImaA5e+\nDI0ayO/GJHkIjP/ixBLJKhhN5Gox5hwDsigLYcs+4zleTDvaToK8AAu1+/L0\n+DtZ\r\n=zch+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "nickmerwin",
+        "email": "n@mer.fm"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/coveralls_3.0.13_1587501476479_0.05364278250603016"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.14": {
+      "name": "coveralls",
+      "description": "takes json-cov output into stdin and POSTs to coveralls.io",
+      "keywords": [
+        "coverage",
+        "coveralls"
+      ],
+      "version": "3.0.14",
+      "bugs": {
+        "url": "https://github.com/nickmerwin/node-coveralls/issues"
+      },
+      "scripts": {
+        "lint": "jshint ./lib ./test ./index.js",
+        "mocha": "_mocha -b -R spec",
+        "test-cov": "nyc npm run mocha",
+        "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+        "test": "npm run lint && npm run mocha"
+      },
+      "bin": {
+        "coveralls": "./bin/coveralls.js"
+      },
+      "maintainers": [
+        {
+          "email": "gregg@caines.ca",
+          "name": "cainus"
+        },
+        {
+          "email": "n@mer.fm",
+          "name": "nickmerwin"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Gregg Caines",
+          "email": "gregg@caines.ca",
+          "url": "http://caines.ca"
+        },
+        {
+          "name": "Joshua Ma",
+          "email": "github@joshma.com",
+          "url": "http://joshma.com"
+        },
+        {
+          "name": "Alan Gutierrez",
+          "email": "alan@prettyrobots.com",
+          "url": "http://www.prettyrobots.com/"
+        },
+        {
+          "name": "Kir Belevich",
+          "url": "https://github.com/svg"
+        },
+        {
+          "name": "elliotcable",
+          "email": "github@elliottcable.name",
+          "url": "http://elliottcable.name/"
+        },
+        {
+          "name": "Slotos",
+          "email": "slotos@gmail.com",
+          "url": "http://slotos.net"
+        },
+        {
+          "name": "mattjmorrison",
+          "email": "mattjmorrison@mattjmorrison.com",
+          "url": "http://mattjmorrison.com"
+        },
+        {
+          "name": "Arpad Borsos",
+          "email": "arpad.borsos@googlemail.com",
+          "url": "http://swatinem.de/"
+        },
+        {
+          "name": "Adam Moss",
+          "url": "https://github.com/adam-moss"
+        }
+      ],
+      "dependencies": {
+        "js-yaml": "^3.13.1",
+        "lcov-parse": "^1.0.0",
+        "log-driver": "^1.2.7",
+        "minimist": "^1.2.5",
+        "request": "^2.88.2"
+      },
+      "devDependencies": {
+        "jshint": "^2.11.0",
+        "mocha": "^6.2.3",
+        "nyc": "^14.1.1",
+        "should": "^9.0.2",
+        "shx": "^0.3.2",
+        "sinon-restore": "^1.0.1"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "main": "index.js",
+      "directories": {
+        "test": "test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/nickmerwin/node-coveralls.git"
+      },
+      "author": {
+        "name": "Gregg Caines"
+      },
+      "license": "BSD-2-Clause",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "844d7658677c1422e98648b8727cd421d1a83e02",
+      "homepage": "https://github.com/nickmerwin/node-coveralls#readme",
+      "_id": "coveralls@3.0.14",
+      "_nodeVersion": "10.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-nEQqCHzxiFfu1dEHYxe7xrbF5vFmx122mTWIM+BkiAOmsWbSAcucNk8stELnNk2lS1biTUjFOCIf8v8ZN225IA==",
+        "shasum": "a13c4729308e8bd1a284d7a3974eff72ce6e40c6",
+        "tarball": "https://registry.npmjs.org/coveralls/-/coveralls-3.0.14.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31193,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeog2HCRA9TVsSAnZWagAAFyoP/jnbaG9tmVEE2BCvYNX/\nM3zwNJg2Zh087wWgI3dW3BtB8A2ZlF94rNWY86002gLJY2wQg2pNEEaffMgE\nXsCbcmsTD/r5qB5RXb8AeKRQW2LvO+eAY9w0Bbo5l5wQN/ENEdkA5Jja2ekV\nB4C88qcEYdUCTU/2ovlBK18r5QwLUv/3W2Q7+UtOIC6ZeqReCp9M5OIfk+xm\n/E2Kx8ZnageuBoHomDZtawuHsEGsukM73Xi9W1igWvBQjlqNGlO9YwrGj3xQ\nH8526njytm5Ia5OysGRkMB+WcxmIRe9hkfLFmjqof8jFXcFHCDspwWnWhkWv\nVVwCXb+c1eGiJ9uQpUbW97AR1xg/CIIXUwZw7Nm91hH+g9kzedRi99b9+esr\nOItHorg6yGVEBHqh7zG56Kp0CviJ8BXhN1RShFQMwjXnzBw+BYrkwJzKzp+m\nRBXagZPvSdbBDYoXWuvnm8pE1M5MVr+2P2jcjSZ/TzuVxyxK4ff8Qu3kGUDE\n2DzrjIELiAEQmDUG9UBj14SPFjiaBy0t/6OUgRFxCluUje+li/XcPo9uPiY0\nBNjq+kZeKXFuzFiaarWDTK3wTPvtQg5rUHt6TFPsZKNKtbxW+jPPh+SPopIm\npkuza+s/PIAwtvOVi41ht76nEa/z0dgsauo4LyqzCmFrAvR+9IQImxTk4Oex\n6IsM\r\n=QlLr\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "nickmerwin",
+        "email": "n@mer.fm"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/coveralls_3.0.14_1587678597766_0.893028454376096"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.1.0": {
+      "name": "coveralls",
+      "description": "takes json-cov output into stdin and POSTs to coveralls.io",
+      "keywords": [
+        "coverage",
+        "coveralls"
+      ],
+      "version": "3.1.0",
+      "bugs": {
+        "url": "https://github.com/nickmerwin/node-coveralls/issues"
+      },
+      "scripts": {
+        "lint": "jshint ./lib ./test ./index.js",
+        "mocha": "_mocha -b -R spec",
+        "test-cov": "nyc npm run mocha",
+        "test-coveralls": "nyc npm run mocha && shx cat ./coverage/lcov.info | node ./bin/coveralls.js --verbose",
+        "test": "npm run lint && npm run mocha"
+      },
+      "bin": {
+        "coveralls": "./bin/coveralls.js"
+      },
+      "maintainers": [
+        {
+          "email": "gregg@caines.ca",
+          "name": "cainus"
+        },
+        {
+          "email": "n@mer.fm",
+          "name": "nickmerwin"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Gregg Caines",
+          "email": "gregg@caines.ca",
+          "url": "http://caines.ca"
+        },
+        {
+          "name": "Joshua Ma",
+          "email": "github@joshma.com",
+          "url": "http://joshma.com"
+        },
+        {
+          "name": "Alan Gutierrez",
+          "email": "alan@prettyrobots.com",
+          "url": "http://www.prettyrobots.com/"
+        },
+        {
+          "name": "Kir Belevich",
+          "url": "https://github.com/svg"
+        },
+        {
+          "name": "elliotcable",
+          "email": "github@elliottcable.name",
+          "url": "http://elliottcable.name/"
+        },
+        {
+          "name": "Slotos",
+          "email": "slotos@gmail.com",
+          "url": "http://slotos.net"
+        },
+        {
+          "name": "mattjmorrison",
+          "email": "mattjmorrison@mattjmorrison.com",
+          "url": "http://mattjmorrison.com"
+        },
+        {
+          "name": "Arpad Borsos",
+          "email": "arpad.borsos@googlemail.com",
+          "url": "http://swatinem.de/"
+        },
+        {
+          "name": "Adam Moss",
+          "url": "https://github.com/adam-moss"
+        }
+      ],
+      "dependencies": {
+        "js-yaml": "^3.13.1",
+        "lcov-parse": "^1.0.0",
+        "log-driver": "^1.2.7",
+        "minimist": "^1.2.5",
+        "request": "^2.88.2"
+      },
+      "devDependencies": {
+        "jshint": "^2.11.0",
+        "mocha": "^6.2.3",
+        "nyc": "^14.1.1",
+        "should": "^9.0.2",
+        "shx": "^0.3.2",
+        "sinon": "^7.5.0"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "main": "index.js",
+      "directories": {
+        "test": "test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/nickmerwin/node-coveralls.git"
+      },
+      "author": {
+        "name": "Gregg Caines"
+      },
+      "license": "BSD-2-Clause",
+      "nyc": {
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "2f95964f8a0b40f66d8376969b0b0eaa5d0d1ed1",
+      "homepage": "https://github.com/nickmerwin/node-coveralls#readme",
+      "_id": "coveralls@3.1.0",
+      "_nodeVersion": "10.9.0",
+      "_npmVersion": "6.10.2",
+      "dist": {
+        "integrity": "sha512-sHxOu2ELzW8/NC1UP5XVLbZDzO4S3VxfFye3XYCznopHy02YjNkHcj5bKaVw2O7hVaBdBjEdQGpie4II1mWhuQ==",
+        "shasum": "13c754d5e7a2dd8b44fe5269e21ca394fb4d615b",
+        "tarball": "https://registry.npmjs.org/coveralls/-/coveralls-3.1.0.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31550,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeo2pVCRA9TVsSAnZWagAAlr0P/0axvkBsuq9McU12f8SP\nW9PNPw10uIuiVwUgjV3c+LpZyiSjo/rP/PjiEX5RX0M5EYmNFkhQtgASbHF7\nRR1zq2o5mGS8E8fEwTLTP65Z5hKh7fs3Q7N6nMaHROi140CiRvVhZdsBaAPG\nRMjjbhZQ7EmVUFnwkuQSzaov64yGBMq/2d1Qe+jP0sG7gBsmJDzbhYBV6ShK\npeFH3pRe18klqMaHM/l00nQcOHiXX0gRy5xOoW/oOTLOzL0gEcPb/7TgwaHQ\nyrzoiSMYZAwskKTy7CB/KVqsLbL8huicAAE/in4HfvE54YWGU84YKmU6wEcD\ngcai/CEbthx2HO/W7ZFNRJc79WC5uLOn8brpGv0JRA4u5jjfhjBtms9qjhcg\nNxVvxjN3vu6UQV2zA/i369ga9wc4B1I4c5BcwGKBvkOTCAh2JWBJGi9Ujg4v\nBKVVlP0V6a6fMbpfPPBZn87nVpnFFjSwT4/50NoS1f84ZVBPKhVdtvh16Urh\nanzWOzfdXItCaCrQSDnSwIk2S6v4iNW/2uwBv5zytRXS+3HORVtNAz+f/h7Q\n+5mI240WCmBJtgaHmlZzKYYyXghNqjNfzTV/JDaFSyNMVRsD8CRwwJ2fLqXP\nRPvuFvm4Wnp76VbaykzCaybPtX/tOdYBnPb6Sj7jd2UtzhJL6t1OqlOyq9aT\n3ZdD\r\n=wIiy\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "nickmerwin",
+        "email": "n@mer.fm"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/coveralls_3.1.0_1587767892889_0.5884751757949702"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# node-coveralls\n\n[![Build Status][ci-image]][ci-url] [![Coverage Status][coveralls-image]][coveralls-url]\n\n[Coveralls.io](https://coveralls.io/) support for Node.js. Get the great coverage reporting of coveralls.io and add a cool coverage button (like the one above) to your README.\n\nSupported CI services: [Travis CI](https://travis-ci.org/), [CodeShip](https://codeship.com/), [CircleCI](https://circleci.com/), [Jenkins](https://jenkins.io/), [Gitlab CI](https://gitlab.com/), [AppVeyor](https://www.appveyor.com/), [Buildkite](https://buildkite.com/), [GitHub Actions CI](https://github.com/features/actions), [CodeFresh](https://codefresh.io)\n\n## Installation:\n\nAdd the latest version of `coveralls` to your package.json:\n\n```shell\nnpm install coveralls --save-dev\n```\n\nIf you're using mocha, add `mocha-lcov-reporter` to your package.json:\n\n```shell\nnpm install mocha-lcov-reporter --save-dev\n```\n\n## Usage:\n\nThis script `bin/coveralls.js` can take standard input from any tool that emits the lcov data format (including [mocha](https://mochajs.org/)'s [LCOV reporter](https://npmjs.org/package/mocha-lcov-reporter)) and send it to coveralls.io to report your code coverage there.\n\nOnce your app is instrumented for coverage, and building, you need to pipe the lcov output to `./node_modules/coveralls/bin/coveralls.js`.\n\nThis library currently supports [Travis CI](https://travis-ci.org/) with no extra effort beyond piping the lcov output to coveralls. However, if you're using a different build system, there are a few environment variables that are necessary:\n\n- `COVERALLS_SERVICE_NAME` (the name of your build system)\n- `COVERALLS_REPO_TOKEN` (the secret repo token from coveralls.io)\n- `COVERALLS_GIT_BRANCH` (the branch name)\n\nThere are optional environment variables for other build systems as well:\n\n- `COVERALLS_SERVICE_NUMBER` (an id that uniquely identifies the build)\n- `COVERALLS_SERVICE_JOB_ID` (an id that uniquely identifies the build's job)\n- `COVERALLS_RUN_AT` (a date string for the time that the job ran. RFC 3339 dates work. This defaults to your build system's date/time if you don't set it.)\n- `COVERALLS_PARALLEL` (more info here: <https://docs.coveralls.io/parallel-build-webhook>)\n\n### GitHub Actions CI\n\nIf you are using GitHub Actions CI, you should look into [coverallsapp/github-action](https://github.com/coverallsapp/github-action).\n\nIf you prefer to use this package you can do it like this:\n\n```yml\nenv:\n  COVERALLS_REPO_TOKEN: \"${{ secrets.COVERALLS_REPO_TOKEN }}\"\n  COVERALLS_GIT_BRANCH: \"${{ github.ref }}\"\n```\n\n### [Jest](https://jestjs.io/)\n\n- Install [jest](https://jestjs.io/docs/en/getting-started)\n- Use the following to run tests and push files to coveralls on success:\n\n  ```sh\n  jest --coverage && coveralls < coverage/lcov.info\n  ```\n\nCheck out an example [here](https://github.com/Ethan-Arrowood/harperdb-connect/blob/master/.travis.yml) which makes use of Travis CI build stages\n\n### [Mocha](https://mochajs.org/) + [Blanket.js](https://github.com/alex-seville/blanket)\n\n- Install [blanket.js](https://github.com/alex-seville/blanket)\n- Configure blanket according to [docs](https://github.com/alex-seville/blanket/blob/master/docs/getting_started_node.md).\n- Run your tests with a command like this:\n\n  ```sh\n  NODE_ENV=test YOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha \\\n    --require blanket \\\n    --reporter mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js\n  ```\n\n### [Mocha](https://mochajs.org/) + [JSCoverage](https://github.com/fishbar/jscoverage)\n\nInstrumenting your app for coverage is probably harder than it needs to be (read [here](http://seejohncode.com/2012/03/13/setting-up-mocha-jscoverage//)), but that's also a necessary step.\n\nIn mocha, if you've got your code instrumented for coverage, the command for a Travis CI build would look something like this:\n\n```sh\nYOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha test -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js\n```\n\nCheck out an example [Makefile](https://github.com/cainus/urlgrey/blob/master/Makefile) from one of my projects for an example, especially the test-coveralls build target. Note: Travis CI runs `npm test`, so whatever target you create in your Makefile must be the target that `npm test` runs (This is set in package.json's `scripts` property).\n\n### [Istanbul](https://github.com/gotwarlost/istanbul)\n\n#### With Mocha:\n\n```sh\nistanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage\n```\n\n#### With Jasmine:\n\n```sh\nistanbul cover jasmine-node --captureExceptions spec/ && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage\n```\n\n### [Nodeunit](https://github.com/caolan/nodeunit) + [JSCoverage](https://github.com/fishbar/jscoverage)\n\nDepend on nodeunit, jscoverage and coveralls:\n\n```sh\nnpm install nodeunit jscoverage coveralls --save-dev\n```\n\nAdd a coveralls script to \"scripts\" in your `package.json`:\n\n```json\n\"scripts\": {\n  \"test\": \"nodeunit test\",\n  \"coveralls\": \"jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test | coveralls\"\n}\n```\n\nEnsure your app requires instrumented code when `process.env.YOURPACKAGE_COVERAGE` variable is defined.\n\nRun your tests with a command like this:\n\n```sh\nnpm run coveralls\n```\n\nFor detailed instructions on requiring instrumented code, running on Travis CI and submitting to coveralls [see this guide](https://github.com/alanshaw/nodeunit-lcov-coveralls-example).\n\n### [Poncho](https://github.com/deepsweet/poncho)\n\nClient-side JS code coverage using [PhantomJS](https://github.com/ariya/phantomjs), [Mocha](https://mochajs.org/) and [Blanket](https://github.com/alex-seville/blanket):\n\n- [Configure](https://mochajs.org/#running-mocha-in-the-browser) Mocha for browser\n- [Mark](https://github.com/deepsweet/poncho#usage) target script(s) with `data-cover` HTML attribute\n- Run your tests with a command like this:\n\n  ```sh\n  ./node_modules/.bin/poncho -R lcov test/test.html | ./node_modules/coveralls/bin/coveralls.js\n  ```\n\n### [Lab](https://github.com/hapijs/lab)\n\n```sh\nlab -r lcov | ./node_modules/.bin/coveralls\n```\n\n### [nyc](https://github.com/istanbuljs/nyc)\n\nWorks with almost any testing framework. Simply execute\n`npm test` with the `nyc` bin followed by running its reporter:\n\n```shell\nnyc npm test && nyc report --reporter=text-lcov | coveralls\n```\n\n### [TAP](https://github.com/isaacs/node-tap)\n\nSimply run your tap tests with the `COVERALLS_REPO_TOKEN` environment\nvariable set and tap will automatically use `nyc` to report\ncoverage to coveralls.\n\n### Command Line Parameters\n\n```shell\nUsage: coveralls.js [-v] filepath\n```\n\n#### Optional arguments:\n\n- `-v`, `--verbose`\n- `filepath` - optionally defines the base filepath of your source files.\n\n## Running locally\n\nIf you're running locally, you must have a `.coveralls.yml` file, as documented in [their documentation](https://docs.coveralls.io/ruby-on-rails#configuration), with your `repo_token` in it; or, you must provide a `COVERALLS_REPO_TOKEN` environment variable on the command-line.\n\nIf you want to send commit data to coveralls, you can set the `COVERALLS_GIT_COMMIT` environment-variable to the commit hash you wish to reference. If you don't want to use a hash, you can set it to `HEAD` to supply coveralls with the latest commit data. This requires git to be installed and executable on the current PATH.\n\n## Contributing\n\nI generally don't accept pull requests that are untested, or break the build, because I'd like to keep the quality high (this is a coverage tool after all!).\n\nI also don't care for \"soft-versioning\" or \"optimistic versioning\" (dependencies that have ^, x, > in them, or anything other than numbers and dots). There have been too many problems with bad semantic versioning in dependencies, and I'd rather have a solid library than a bleeding edge one.\n\n\n[ci-image]: https://github.com/nickmerwin/node-coveralls/workflows/Tests/badge.svg\n[ci-url]: https://github.com/nickmerwin/node-coveralls/actions?workflow=Tests\n\n[coveralls-image]: https://coveralls.io/repos/nickmerwin/node-coveralls/badge.svg?branch=master&service=github\n[coveralls-url]: https://coveralls.io/github/nickmerwin/node-coveralls?branch=master\n",
   "maintainers": [
     {
       "email": "gregg@caines.ca",
@@ -6219,7 +7030,7 @@
     }
   ],
   "time": {
-    "modified": "2019-11-26T17:39:45.186Z",
+    "modified": "2020-04-24T22:38:15.533Z",
     "created": "2013-03-15T03:19:16.470Z",
     "1.0.0": "2013-03-15T03:19:17.963Z",
     "1.1.0": "2013-03-21T13:57:53.990Z",
@@ -6284,7 +7095,13 @@
     "3.0.6": "2019-08-06T21:29:03.262Z",
     "3.0.7": "2019-10-10T22:52:00.758Z",
     "3.0.8": "2019-11-21T01:34:00.758Z",
-    "3.0.9": "2019-11-26T17:39:39.086Z"
+    "3.0.9": "2019-11-26T17:39:39.086Z",
+    "3.0.10": "2020-03-19T17:14:20.739Z",
+    "3.0.11": "2020-03-19T17:42:24.896Z",
+    "3.0.12": "2020-04-21T18:38:17.656Z",
+    "3.0.13": "2020-04-21T20:37:56.606Z",
+    "3.0.14": "2020-04-23T21:49:57.889Z",
+    "3.1.0": "2020-04-24T22:38:13.122Z"
   },
   "author": {
     "name": "Gregg Caines"
@@ -6383,5 +7200,7 @@
     "danday74": true,
     "tombenke": true,
     "johniexu": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

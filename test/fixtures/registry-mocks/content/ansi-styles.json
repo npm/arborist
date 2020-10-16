@@ -1,10 +1,10 @@
 {
   "_id": "ansi-styles",
-  "_rev": "76-b7e59477feb22effc7d9ee381daa47f9",
+  "_rev": "77-91833b70c31b6f98d8750619515840b2",
   "name": "ansi-styles",
   "description": "ANSI escape codes for styling strings in the terminal",
   "dist-tags": {
-    "latest": "4.2.1"
+    "latest": "4.3.0"
   },
   "versions": {
     "0.1.0": {
@@ -1472,20 +1472,112 @@
         "tmp": "tmp/ansi-styles_4.2.1_1577902519016_0.16811694192100912"
       },
       "_hasShrinkwrap": false
+    },
+    "4.3.0": {
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "description": "ANSI escape codes for styling strings in the terminal",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chalk/ansi-styles.git"
+      },
+      "funding": "https://github.com/chalk/ansi-styles?sponsor=1",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd",
+        "screenshot": "svg-term --command='node screenshot' --out=screenshot.svg --padding=3 --width=55 --height=3 --at=1000 --no-cursor"
+      },
+      "keywords": [
+        "ansi",
+        "styles",
+        "color",
+        "colour",
+        "colors",
+        "terminal",
+        "console",
+        "cli",
+        "string",
+        "tty",
+        "escape",
+        "formatting",
+        "rgb",
+        "256",
+        "shell",
+        "xterm",
+        "log",
+        "logging",
+        "command-line",
+        "text"
+      ],
+      "dependencies": {
+        "color-convert": "^2.0.1"
+      },
+      "devDependencies": {
+        "@types/color-convert": "^1.9.0",
+        "ava": "^2.3.0",
+        "svg-term-cli": "^2.1.1",
+        "tsd": "^0.11.0",
+        "xo": "^0.25.3"
+      },
+      "gitHead": "2d02d5bd070f733179007f0904eb5fb41090395a",
+      "bugs": {
+        "url": "https://github.com/chalk/ansi-styles/issues"
+      },
+      "homepage": "https://github.com/chalk/ansi-styles#readme",
+      "_id": "ansi-styles@4.3.0",
+      "_nodeVersion": "14.11.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==",
+        "shasum": "edd803628ae71c04c85ae7a0906edad34b648937",
+        "tarball": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 16978,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfeiACCRA9TVsSAnZWagAA5ccP/0DWoQsxVaTeYJuAyJlY\nPaf8cCbWwUQ6ZqFPreR4yYM+mpnSLnSlo8zqctIMofG63LIic4Co358CXP8v\nv9kvZYChYKZHcW7mxzIBUklWHRlrfDfVJSHhFiyAFHAu2X0hw70CZaZEXSGK\n0BiutHMjskT2GCSkheHBtj9g1OICvGFAP3wx1RasvYH7qhXBVFFCC/3Ci/c3\ne58izr3ivXcnOwqyC1ZlFNmL0rsgt91JtMY/7dcm/TouDpwrlO2BVGgJbD0L\nAu+jvjQnBjbjQlxskuS8mu69VvovP3lauf6YP0oeRdX2/UqY8J65/eDc1MN3\nBBcD8S98VglpGM/RGJmpUlCaoWfoz7yN9YyJk6mV/+wOSS2KRhmaiPXws9xY\nXAVdgFrK2cp1qR9RhOhmNng02WCZ3i7oh/1Pvp1DWCgDtASz5YOlT6ikvyHG\nCvqs3m7vkkhrnaEK68soPmbG2Q3O92wwINk7tX4WjH8TyqBaDbu8Z6t9NOwU\noW/v+A1gxWlrtl5eqOaMxo7XYxiF9YZzWWfzk1t6bl1rPICtYVRx2fn/3qqR\n0VRmR3DulMxsyx7ZwW1C210MbuuiRrDMIJZsg/kvuaLWOmh1US+rHa1YrD6g\n8pmirVpcxxBp1Pj44ZjM7W4X6MaboTHHNiE6dtJdJdZrO66hQnB4Bu25w9uX\n10be\r\n=uXWi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        },
+        {
+          "name": "qix",
+          "email": "i.am.qix@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/ansi-styles_4.3.0_1601839105748_0.2212872458771633"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# ansi-styles [![Build Status](https://travis-ci.org/chalk/ansi-styles.svg?branch=master)](https://travis-ci.org/chalk/ansi-styles)\n\n> [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors_and_Styles) for styling strings in the terminal\n\nYou probably want the higher-level [chalk](https://github.com/chalk/chalk) module for styling your strings.\n\n<img src=\"screenshot.svg\" width=\"900\">\n\n## Install\n\n```\n$ npm install ansi-styles\n```\n\n## Usage\n\n```js\nconst style = require('ansi-styles');\n\nconsole.log(`${style.green.open}Hello world!${style.green.close}`);\n\n\n// Color conversion between 16/256/truecolor\n// NOTE: If conversion goes to 16 colors or 256 colors, the original color\n//       may be degraded to fit that color palette. This means terminals\n//       that do not support 16 million colors will best-match the\n//       original color.\nconsole.log(style.bgColor.ansi.hsl(120, 80, 72) + 'Hello world!' + style.bgColor.close);\nconsole.log(style.color.ansi256.rgb(199, 20, 250) + 'Hello world!' + style.color.close);\nconsole.log(style.color.ansi16m.hex('#abcdef') + 'Hello world!' + style.color.close);\n```\n\n## API\n\nEach style has an `open` and `close` property.\n\n## Styles\n\n### Modifiers\n\n- `reset`\n- `bold`\n- `dim`\n- `italic` *(Not widely supported)*\n- `underline`\n- `inverse`\n- `hidden`\n- `strikethrough` *(Not widely supported)*\n\n### Colors\n\n- `black`\n- `red`\n- `green`\n- `yellow`\n- `blue`\n- `magenta`\n- `cyan`\n- `white`\n- `blackBright` (alias: `gray`, `grey`)\n- `redBright`\n- `greenBright`\n- `yellowBright`\n- `blueBright`\n- `magentaBright`\n- `cyanBright`\n- `whiteBright`\n\n### Background colors\n\n- `bgBlack`\n- `bgRed`\n- `bgGreen`\n- `bgYellow`\n- `bgBlue`\n- `bgMagenta`\n- `bgCyan`\n- `bgWhite`\n- `bgBlackBright` (alias: `bgGray`, `bgGrey`)\n- `bgRedBright`\n- `bgGreenBright`\n- `bgYellowBright`\n- `bgBlueBright`\n- `bgMagentaBright`\n- `bgCyanBright`\n- `bgWhiteBright`\n\n## Advanced usage\n\nBy default, you get a map of styles, but the styles are also available as groups. They are non-enumerable so they don't show up unless you access them explicitly. This makes it easier to expose only a subset in a higher-level module.\n\n- `style.modifier`\n- `style.color`\n- `style.bgColor`\n\n###### Example\n\n```js\nconsole.log(style.color.green.open);\n```\n\nRaw escape codes (i.e. without the CSI escape prefix `\\u001B[` and render mode postfix `m`) are available under `style.codes`, which returns a `Map` with the open codes as keys and close codes as values.\n\n###### Example\n\n```js\nconsole.log(style.codes.get(36));\n//=> 39\n```\n\n## [256 / 16 million (TrueColor) support](https://gist.github.com/XVilka/8346728)\n\n`ansi-styles` uses the [`color-convert`](https://github.com/Qix-/color-convert) package to allow for converting between various colors and ANSI escapes, with support for 256 and 16 million colors.\n\nThe following color spaces from `color-convert` are supported:\n\n- `rgb`\n- `hex`\n- `keyword`\n- `hsl`\n- `hsv`\n- `hwb`\n- `ansi`\n- `ansi256`\n\nTo use these, call the associated conversion function with the intended output, for example:\n\n```js\nstyle.color.ansi.rgb(100, 200, 15); // RGB to 16 color ansi foreground code\nstyle.bgColor.ansi.rgb(100, 200, 15); // RGB to 16 color ansi background code\n\nstyle.color.ansi256.hsl(120, 100, 60); // HSL to 256 color ansi foreground code\nstyle.bgColor.ansi256.hsl(120, 100, 60); // HSL to 256 color ansi foreground code\n\nstyle.color.ansi16m.hex('#C0FFEE'); // Hex (RGB) to 16 million color foreground code\nstyle.bgColor.ansi16m.hex('#C0FFEE'); // Hex (RGB) to 16 million color background code\n```\n\n## Related\n\n- [ansi-escapes](https://github.com/sindresorhus/ansi-escapes) - ANSI escape codes for manipulating the terminal\n\n## Maintainers\n\n- [Sindre Sorhus](https://github.com/sindresorhus)\n- [Josh Junon](https://github.com/qix-)\n\n## For enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of `ansi-styles` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-ansi-styles?utm_source=npm-ansi-styles&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)\n",
   "maintainers": [
     {
-      "email": "i.am.qix@gmail.com",
-      "name": "qix"
+      "name": "sindresorhus",
+      "email": "sindresorhus@gmail.com"
     },
     {
-      "email": "sindresorhus@gmail.com",
-      "name": "sindresorhus"
+      "name": "qix",
+      "email": "i.am.qix@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-01T18:15:21.643Z",
+    "modified": "2020-10-04T19:18:28.325Z",
     "created": "2013-07-31T23:00:29.145Z",
     "0.1.0": "2013-07-31T23:00:32.552Z",
     "0.1.1": "2013-08-03T00:31:59.821Z",
@@ -1505,7 +1597,8 @@
     "4.0.0": "2019-05-31T07:09:54.329Z",
     "4.1.0": "2019-08-21T23:35:47.551Z",
     "4.2.0": "2019-11-12T11:20:05.018Z",
-    "4.2.1": "2020-01-01T18:15:19.134Z"
+    "4.2.1": "2020-01-01T18:15:19.134Z",
+    "4.3.0": "2020-10-04T19:18:25.986Z"
   },
   "author": {
     "name": "Sindre Sorhus",
@@ -1556,5 +1649,7 @@
     "url": "https://github.com/chalk/ansi-styles/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "_cached": false,
+  "_contentLength": 0
 }

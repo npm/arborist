@@ -1,10 +1,10 @@
 {
   "_id": "@babel/core",
-  "_rev": "104-f67d24bd301b3af28270b422b6b892be",
+  "_rev": "123-0afa8771c1f9d765854daed7a26ed166",
   "name": "@babel/core",
   "description": "Babel compiler core.",
   "dist-tags": {
-    "latest": "7.8.4",
+    "latest": "7.12.1",
     "bridge6": "6.0.0-bridge.1"
   },
   "versions": {
@@ -3093,6 +3093,7 @@
         "@babel/helper-transform-fixture-test-runner": "7.0.0-rc.3",
         "@babel/register": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.0.0-rc.3",
       "dist": {
         "shasum": "0c3b5c4fcc65ea3fc7c019202aca6cd0b17705e7",
@@ -3158,6 +3159,7 @@
       "publishConfig": {
         "tag": "bridge6"
       },
+      "readme": "## babel-bridge\n\nThis repo holds what we're calling a \"bridge\" package that is meant to ease the\ntransition for libraries that use \"@babel/core\" as a peer dependency for Babel 7,\nbut still want to allow users to opt into Babel 6.\n\nThe issue with Babel 7's transition to scopes is that if a package depends on\nBabel 6, they may want to add support for Babel 7 alongside. Because Babel 7\nwill be released as `@babel/core` instead of `babel-core`, maintainers have\nno way to do that transition without making a breaking change. e.g.\n\n```js\npeerDependencies: {\n  \"babel-core\": \"6.x\"\n}\n```\ncannot change to\n\n```js\npeerDependencies: {\n  \"@babel/core\": \"6.x\"\n}\n```\n\nwithout it being a breaking change.\n\n### Solution\n\nTo address this, we're releasing this bridge package, to allow users to do\n\n\n```js\npeerDependencies: {\n  \"@babel/core\": \"6 | ^7.0.0-0\"\n}\n```\n\nthen where users of this package would originally have done\n\n```sh\nnpm i some-package @babel/core\n```\n\nto install Babel 7, they could now do\n\n\n```sh\nnpm i some-package @babel/core@^6.0.0-0 babel-core\n```\n\nto install the bridge package, and install Babel 6's core to be loaded via\na peed dependency.\n",
       "readmeFilename": "README.md",
       "gitHead": "1dc6fd5cd0c449232e38887498162ae65b67945b",
       "_id": "@babel/core@6.0.0-bridge.1",
@@ -3261,6 +3263,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0-rc.4",
         "@babel/register": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.0.0-rc.4",
       "dist": {
         "shasum": "850fb36ee8b550e5c6dcc562b753f7875a2f02ef",
@@ -3361,6 +3364,8 @@
         "@babel/register": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/core\n\n> Babel compiler core.\n\nSee our website [@babel/core](https://babeljs.io/docs/en/next/babel-core.html) for more information or the [issues](https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20core%22+is%3Aopen) associated with this package.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/core\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/core --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.0.0",
       "dist": {
         "shasum": "0cb0c0fd2e78a0a2bec97698f549ae9ce0b99515",
@@ -3460,6 +3465,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.0.1",
       "dist": {
         "shasum": "406658caed0e9686fa4feb5c2f3cefb6161c0f41",
@@ -3558,6 +3564,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.1.0",
       "dist": {
         "shasum": "08958f1371179f62df6966d8a614003d11faeb04",
@@ -3656,6 +3663,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.1.1",
       "dist": {
         "shasum": "fdd176dd00a79efab4ebd650edd6508638fdcf8b",
@@ -3754,6 +3762,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.1.2",
       "dist": {
         "shasum": "f8d2a9ceb6832887329a7b60f9d035791400ba4e",
@@ -3852,6 +3861,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.1.5",
       "dist": {
         "shasum": "abb32d7aa247a91756469e788998db6a72b93090",
@@ -3950,6 +3960,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.1.6",
       "dist": {
         "shasum": "3733cbee4317429bc87c62b29cf8587dba7baeb3",
@@ -4052,6 +4063,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.2.0",
       "dist": {
         "shasum": "a4dd3814901998e93340f0086e9867fefa163ada",
@@ -4154,6 +4166,7 @@
         "@babel/helper-transform-fixture-test-runner": "^7.0.0",
         "@babel/register": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.2.2",
       "dist": {
         "shasum": "07adba6dde27bb5ad8d8672f15fde3e08184a687",
@@ -4257,6 +4270,7 @@
         "@babel/register": "^7.0.0"
       },
       "gitHead": "d1fe2d05f4c468640facf40565e30f7110757f2d",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.3.3",
       "dist": {
         "shasum": "d090d157b7c5060d05a05acaebc048bd2b037947",
@@ -4360,6 +4374,7 @@
         "@babel/register": "^7.0.0"
       },
       "gitHead": "1f6454cc90fe33e0a32260871212e2f719f35741",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.3.4",
       "dist": {
         "shasum": "921a5a13746c21e32445bf0798680e9d11a6530b",
@@ -4463,6 +4478,7 @@
         "@babel/register": "^7.4.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.4.0",
       "dist": {
         "shasum": "248fd6874b7d755010bfe61f557461d4f446d9e9",
@@ -4566,6 +4582,7 @@
         "@babel/register": "^7.4.0"
       },
       "gitHead": "508fde4009f31883f318b9e6546459ac1b086a91",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.4.3",
       "dist": {
         "shasum": "198d6d3af4567be3989550d97e068de94503074f",
@@ -4669,6 +4686,7 @@
         "@babel/register": "^7.4.4"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.4.4",
       "dist": {
         "shasum": "84055750b05fcd50f9915a826b44fa347a825250",
@@ -4772,6 +4790,7 @@
         "@babel/register": "^7.4.4"
       },
       "gitHead": "33ab4f166117e2380de3955a0842985f578b01b8",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/core@7.4.5",
       "dist": {
         "shasum": "081f97e8ffca65a9b4b0fdc7e274e703f000c06a",
@@ -6441,36 +6460,2020 @@
         "tmp": "tmp/core_7.8.4_1580387862669_0.494518131263038"
       },
       "_hasShrinkwrap": false
+    },
+    "7.8.6": {
+      "name": "@babel/core",
+      "version": "7.8.6",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.8.6",
+        "@babel/helpers": "^7.8.4",
+        "@babel/parser": "^7.8.6",
+        "@babel/template": "^7.8.6",
+        "@babel/traverse": "^7.8.6",
+        "@babel/types": "^7.8.6",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.0",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.8.3"
+      },
+      "gitHead": "750d3dde3bd2d390819820fd22c05441da78751b",
+      "_id": "@babel/core@7.8.6",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.7.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-Sheg7yEJD51YHAvLEV/7Uvw95AeWqYPL3Vk3zGujJKIhJ+8oLw2ALaf3hbucILhKsgSoADOvtKRJuNVdcJkOrg==",
+        "shasum": "27d7df9258a45c2e686b6f18b6c659e563aa4636",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.8.6.tgz",
+        "fileCount": 48,
+        "unpackedSize": 154668,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeV7RWCRA9TVsSAnZWagAAvhcP/0ncEZuKt3bcD/oE7958\nrwH5wgqKq4RJH4Y7BQ8KKqtqaK6AtRubFk+yu4SFtnANUFKwAleWQBQjPZmx\n4FbBFp8ItGjooWgjMKC86bbMe0MhzDDT8LQZj7bqGT/ypPumSwxQDPLz8z/i\ngHZ9TZuxLTifzFVZrXy19eMqqOJUGSIsXJlC4v5JJXWYjaoQnKDwrPhGBt1c\nBnpz2Umk3x9ZWGxy6SLAbUJK1mMFazEtd7PN2SRVYT1M4eRt2LIB9XI9ExKP\nenmdC1xmjd8gUMsJqu1mqMgixiuOAVoDK/BQKraBgHoPy8DM4DCmK/i34ikX\nq7ANpJ79a2EZiIHZ9QmXPBDPJ24E8osMiBd4+R1YHdZIESuO0vRNVt8Y82bE\nP6PXv4uZMvqLyDx6y0Gx9iG/ZgSV4u3Ao9+qBoAswyctu5lPGe8V5XbDTnuP\nzM6iGrKMbSRpjYyGgqlAx0ABtBMlsKKCJzCFaD/VWIR53ZvxQevp0SLKcM0/\nDTANIcVrws+bpTdGc6gIJ3Z/u/XZp7Xxr+2Dnt91E+G6asYdTsXt1ci5IVxZ\n7yH3jDVAiQ1hTJXXepZrlhwKuc3V+Pi4RhX48BFB9F2rb308TK/FJ07TWEKI\n9QiA00e5IVCryRcDOC0AQTBFDRRaN+BdXrmWsIt7QFm0Nu+s8oBfNImoVa8P\nlEFb\r\n=OTZ8\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.8.6_1582806102417_0.83630530360044"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.8.7": {
+      "name": "@babel/core",
+      "version": "7.8.7",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.8.7",
+        "@babel/helpers": "^7.8.4",
+        "@babel/parser": "^7.8.7",
+        "@babel/template": "^7.8.6",
+        "@babel/traverse": "^7.8.6",
+        "@babel/types": "^7.8.7",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.0",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.8.3"
+      },
+      "gitHead": "595f65f33b8e948e34d12be83f700cf8d070c790",
+      "_id": "@babel/core@7.8.7",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.7.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-rBlqF3Yko9cynC5CCFy6+K/w2N+Sq/ff2BPy+Krp7rHlABIr5epbA7OxVeKoMHB39LZOp1UY5SuLjy6uWi35yA==",
+        "shasum": "b69017d221ccdeb203145ae9da269d72cf102f3b",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.8.7.tgz",
+        "fileCount": 48,
+        "unpackedSize": 154809,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeYFw/CRA9TVsSAnZWagAAU9cP/iTLZnVd9naWXt9K4/uF\nCr08y+YNsdod9DdV2xw4XFnxMywHW1B66nmjrMs8x7EWvofnIj84t8wxTijq\nfW/ZMWA+dPw8scDdweV9OJJpkj6kHWB7uYOG7GcbcSxGGHoTTKwUsXY+89OJ\nwWeceVfAjI141o0mhR1a9lAgF0Z1pFh6o8XDDMa7kVFjAv97a/DM8N7W7weO\nqs8J4fmmJsybFcksN0BCMmGZAR4TLmG1qOzEdyqyyM6419YcLtNpUMtDzyxf\nUY3pdlZe1gDuVaOUMfdk5ZZsrc3pLtynRAm1M2U/tViPwtTRRqnRDPCOi3dm\nWXQFSZp/gqgKgatNJ0c14L31x3p/np4Kb3q3Csl/4Dtfw58prhfaVX+iOsco\n99adYzntjg0ANugBGopnqAoFR+mly7pGmQyaTyRISMQxRMDzm4WF2wyJzfUS\n0i1tF1tsenaxbvHgYxtUqi2oZAaJozHPdY40aTEX7aKaBZGzpWNoOluMAI8M\nQ+Fz4zNgxzoQ1vtEPLeUU9PiZPZCw/B1oug3vdRA0e15u9BmNN8p6oJ3HxCL\nqznuUoCRrg6Naw3iwS/jlbZ96fBUz2xKg0LOi68+eFNAalf6OhCuj6Ye+X9Q\nHXSTpZ6Qx+/x2Y8yXReRAfMJO1yo/4Fuuo/JrxfF8iucGtgjRt5GARGKpgxm\neJcb\r\n=q1ZR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.8.7_1583373374816_0.2665438543988181"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/core",
+      "version": "7.9.0",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.9.0",
+        "@babel/helper-module-transforms": "^7.9.0",
+        "@babel/helpers": "^7.9.0",
+        "@babel/parser": "^7.9.0",
+        "@babel/template": "^7.8.6",
+        "@babel/traverse": "^7.9.0",
+        "@babel/types": "^7.9.0",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.8.3"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/core@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-kWc7L0fw1xwvI0zi8OKVBuxRVefwGOrKSQMvrQ3dW+bIIavBY3/NpXmpjMy7bQnLgwgzWQZ8TlM57YHpHNHz4w==",
+        "shasum": "ac977b538b77e132ff706f3b8a4dbad09c03c56e",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.9.0.tgz",
+        "fileCount": 48,
+        "unpackedSize": 154562,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOPeCRA9TVsSAnZWagAA4fAP/1bd+KDl/DwIP+AR2MMS\npyci6xqJd+o1WhgquJ2+M1NZd4FtoOxqyb2Fun6Gs4DT+ETASAKLEO1s+Y3o\n24kFddzBGhU+g2jylcssGooMlS7/n7bBt1YTI8UxwUpCM+CXLZfc8Toh8fYS\nvNqSir9vd5jKDsvbKhKM5stxkvW/FgGWXUH2wQoEFT3whLlx/Iu20xJnTSnh\n4nI6LWtHeesk51SGe1W+9zLD1a+clYTAO3bOGoTVFSZgfs88nXmsIoHQUQPJ\nZUk0uaOUxylXZMipsMHJWIVL3cpRARUugUoSNrjpxmr5ccUCykzb5y2rw4UJ\nFNRCbIlNqg07CAK69eEJBG+xbZKHxDxJyX3omrpAC1fuCAONbWr+31F4x4/4\nJTM52HUeUMc1E/JQe68Kqt45BThNF/zBjPYEVj+54VyOvehlPyLS5H2ZnmEk\nKaEBZqNh8iMYWiVO/lairRv1ozBZqlEn11tGv1QB2lIx1tnH0yaq8fQatJrn\nc6T8Ybq4dNhRwM9OnfSeBJAv2/+6Rj7uvr4AgOdwS9xV7I9Q6XYXn4QnTN/X\nKy9r4UaTVpvNMzQXkYoeBdL/FE1fYzb7u7sx/h/Jm6thTtagYi5mqOZkxdKe\n+MJbURn5k9D6UxhMdxPQqxQN8FDp3gDPiHwMoCxVhhMi8+ZyarRl0y4o8/01\ntIQu\r\n=aFMk\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.9.0_1584718813590_0.5581546711508323"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.6": {
+      "name": "@babel/core",
+      "version": "7.9.6",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.9.6",
+        "@babel/helper-module-transforms": "^7.9.0",
+        "@babel/helpers": "^7.9.6",
+        "@babel/parser": "^7.9.6",
+        "@babel/template": "^7.8.6",
+        "@babel/traverse": "^7.9.6",
+        "@babel/types": "^7.9.6",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.8.3"
+      },
+      "gitHead": "9c2846bcacc75aa931ea9d556950c2113765d43d",
+      "_id": "@babel/core@7.9.6",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.0.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-nD3deLvbsApbHAHttzIssYqgb883yU/d9roe4RZymBCDaZryMJDbptVpEpeQuRh4BJ+SYI8le9YGxKvFEvl1Wg==",
+        "shasum": "d9aa1f580abf3b2286ef40b6904d390904c63376",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.9.6.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155220,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqcmgCRA9TVsSAnZWagAAUj4P/2raRN8Lr9IotlfK+85f\n87S0cAa2fpE4QeE1YGkrrm7nB/LEZC3xfTGJ3d2GazHKLA+7qEXKOYoABaF+\n2/EAm59PPuC/n376oCtLMMJ5x/qwpOIpsQ/CxO1sMrtHYpaGGufWLJFZh+fz\nGQ/tkt1IUCUkzBNue19F4o1+3aI+qOSHlAaQgIoDH5btzIm2W1VttEYPaytQ\nIgQO9nDNyNz3uDtoqsyJCVWhc/HWzXtUhnBOLBoUUi/xLM2sJlUK6biH1aDO\n3h7kat+twkiPgs/aAaKZ15B3iimg0AGy20I94j7/L8DgWnCuD3FlZaBBRHDR\nUUzy/Ei/y4iZlg2GT3t68JE66WjBLKIexMSWPtlhIUtx04jDU+/QPWqYsshs\n1EJIcvUbbXKbxVGYHtwyNwq9MMKhQRaWPTbjk6W/LuxjzGbq/TdIVTs8rPBP\nlBasR6piLQzEDtYctKKB5PDqK8vyxcXriYy4Tp44SbGpaDMgNoK1Jlr2ns6+\n3wQdje3iVMFsHdkJesWGrmXyw5/JYPJnl6agBrspGAprKnTsYkIu8cFjz08c\nePKfDU1sqkD9LMjkbu7O8mON6Hf3nDcEGJWv39+CKpaxhXsXihYW9jJBWzCj\nTK1kLOfzlDTu5Rn9ATnTfun/0GLImUHJXZm6e7AQ7Gu1SAc04GlrdHdt4RWz\nDXKh\r\n=foHE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.9.6_1588185504203_0.6034582017115457"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/core",
+      "version": "7.10.0",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/generator": "^7.10.0",
+        "@babel/helper-module-transforms": "^7.9.0",
+        "@babel/helpers": "^7.10.0",
+        "@babel/parser": "^7.10.0",
+        "@babel/template": "^7.10.0",
+        "@babel/traverse": "^7.10.0",
+        "@babel/types": "^7.10.0",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.8.3"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/core@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-FGgV2XyPoVtYDvbFXlukEWt13Afka4mBRQ2CoTsHxpgVGO6XfgtT6eI+WyjQRGGTL90IDkIVmme8riFCLZ8lUw==",
+        "shasum": "a6fe5db77ebfb61e0da6c5c36aaf14aab07b2b44",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.10.0.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155322,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY2YCRA9TVsSAnZWagAA5D8P/iGZK//OcpsmsjnwMdzZ\ncQyItaTrhfBY/QTVpKI0WnGOfue3cp3lEJmXDwV492EhjwcYZF1vfxZwDye1\nXJrfQKkJOWLZ8rt0TFA1KF73+OLRGuA2MtBVfC+dLlwxlv3rY6fq0F+5TJEh\n54tk4QMy7BOO/wb0vtGg04zh3aGkwSGbWVIrhOMcP5qM4gM7942oaUJcomkg\nRUVMwjwefTDIa6NQ92J/Uhxhv4la6qiVJsKRFirRURYSvStRLtoacJjlp8PK\ncJXjCD/Kc4oCrRSCrYMOw7yN8Hjr0EAYFEWWp9q2Yj7Qclb1f24Kr7lUuUh/\n8KPN+sVbhsPa1H1j0AlQWZ88NCQOnm/2H7M6mWfpgqRVq7D3c+taCSPyDPca\nwL9wY+Rcym44pfihROrlmQCjATXh4+5tCYO/ZfpL+u/QNGtH3tMcOnlKARpT\n7C9w14aBcdcbsQl0yeHKy4CPd9KZOSq4dq9yxSA5ifD6O9iQp+E1wz3xP775\nNiXl4OO62PajHtwrZ13J0NePCCYV7As1zuqvZempGnhajC8dTQRNk43aF1WF\nY8fpPS+NfaT4CAsgke25hsWguD6+aauuofkjoPILGghqr3XjfRUtiazUluNO\nAg2UtpSM2sJBwWiCOpn2q417qZhED4e0fMcUqb1lxNvjBkFwhmM36fZXr1jh\n65ET\r\n=z3Q1\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.10.0_1590529431604_0.5648204357719935"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/core",
+      "version": "7.10.1",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.1",
+        "@babel/generator": "^7.10.1",
+        "@babel/helper-module-transforms": "^7.10.1",
+        "@babel/helpers": "^7.10.1",
+        "@babel/parser": "^7.10.1",
+        "@babel/template": "^7.10.1",
+        "@babel/traverse": "^7.10.1",
+        "@babel/types": "^7.10.1",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-u8XiZ6sMXW/gPmoP5ijonSUln4unazG291X0XAQ5h0s8qnAFr6BRRZGUEK+jtRWdmB0NTJQt7Uga25q8GetIIg==",
+        "shasum": "2a0ad0ea693601820defebad2140206503d89af3",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.10.1.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155373,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuThCRA9TVsSAnZWagAA9RAP/1h/xbcX+X1qcsw00pb2\neKvSo1ep6bzUmiPdE2tcyByhPI3YF2LAokXVM7tyzUnZ7Pz49auCimI96fx4\nHmyCmoOlfz8VGwuy61MMRZzmhWZSJWcymp8kxLEDLvODZ4SR+RNgaEWkxq2z\nPL9RUo/VIy/aAsJPNr7Ai72SgIsrd+7S/yT/oyLcgyPb4f1xOyuXBhCRk7O6\nILMDIJcj2VuqJ66Uzqm0qKmynkcpFfqMzPkkFvmEoodnp+Xi4SVriPn3XAWd\n8Dq/K6J0ToF2QTTQB0jFS5AbLsH/wZDaUC5f99ENNsAf180xMIQgEbgOawlH\nAQuqLTuYbUs8x2MAH0vHB5j+aS7vYXv59NysxXDxGrBDWpyR6F3YxM05GFn0\nUNLKHm7UJCrwAQYmiFbE4AQiqAyY0posqGx9osgMkV6YTpDSOZAp/Rns4FCZ\nXQkKS1/hX9WO6B63KWYheayWoMXxCKaGILsfd01k0XehlTU6SbSPIG9r1FEX\nGlX95IZM23hNK9ajWu8sRhm8BofqDgIKla3NNfoG0BQmuoiCmcd540F2ODbO\nk6JUf0h1tSRklhgsOSjxxUwv1+NDQlw5yQW4yDVxex2T1p0nf4Jzu6+GUF5u\nyAUZpuOzTo62wHqKrdvvk+LbksGv6/ou5z5dbSeEx64EElPikcUXdua0gyfS\ntzQd\r\n=dRqm\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.10.1_1590617313155_0.622878932561781"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.2": {
+      "name": "@babel/core",
+      "version": "7.10.2",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.1",
+        "@babel/generator": "^7.10.2",
+        "@babel/helper-module-transforms": "^7.10.1",
+        "@babel/helpers": "^7.10.1",
+        "@babel/parser": "^7.10.2",
+        "@babel/template": "^7.10.1",
+        "@babel/traverse": "^7.10.1",
+        "@babel/types": "^7.10.2",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.1"
+      },
+      "gitHead": "b0350e5b1e86bd2d53b4a25705e39eb380ec65a2",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.10.2",
+      "_nodeVersion": "12.17.0",
+      "_npmVersion": "lerna/3.19.0/node@v12.17.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-KQmV9yguEjQsXqyOUGKjS4+3K8/DlOCE2pZcq4augdQmtTy5iv5EHtmMSJ7V4c1BIPjuwtZYqYLCq9Ga+hGBRQ==",
+        "shasum": "bd6786046668a925ac2bd2fd95b579b92a23b36a",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.10.2.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155836,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe0rMjCRA9TVsSAnZWagAAbbAP/jU4QYTHwnkFGsdNuVw0\nhgyA8XVouGtM+j9pysWNucgtKMK232p9iyKZn56S5YOgJF4Rc61rETLhy5VR\nteyqb+JlkcoMUZiONEpindknDaVh0U7nJvWMRVi8kqlp6Q4ioN0+9A+0+meT\nZHt/C27X+Vap8cnFonOFyjVwbea0SnpNv06VQHmmliHEkda2KuZtw6LHU6cy\nvwsx0dQI+JUYmTkgmZKRkfiC4PUVVIJ0KhTbgL+uGzzaiZX0KsibaF46VeHS\npcxcqlwkMAcPLh1kPyx8uiG15gLcnxVxfPWFv0mpO+WjPKPRj6LCESjLnqAR\n5eDmrSY1bXhBgDhegOoKNDd467b/J7uG8Xc9FRhAnyDKtqTwOAk/ijOihP5r\nFhQMrRCvAFbvs1Ppq5TfIT2K+c9JhlQxBEJsFP6ztu2AJKXmPB1RozPwPl+L\n4pzjc+/d03RaqZSj8YPziJ5CGPGuCy1fg/K4JBAoqXYtE0pv4PX/dI+ptqOd\nTW0w/AsI1P7lPiRE24tK5GMDoZWRh85ietUoME2uRXss/hegxMis3bgJuwJJ\nk0piKHX0PU2abFQ4I9ae0T2WsxWQs+nK9VGEywyXfrtGA3V0HRPxqtAAqYcu\neAzqj+L280yi6nsQD/UogSM/huhzM9af5ekZRk7jKU75DoKnFr/aFpsZopQf\n2ebS\r\n=+pWp\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.10.2_1590866722928_0.05488788601470307"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/core",
+      "version": "7.10.3",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.3",
+        "@babel/generator": "^7.10.3",
+        "@babel/helper-module-transforms": "^7.10.1",
+        "@babel/helpers": "^7.10.1",
+        "@babel/parser": "^7.10.3",
+        "@babel/template": "^7.10.3",
+        "@babel/traverse": "^7.10.3",
+        "@babel/types": "^7.10.3",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-5YqWxYE3pyhIi84L84YcwjeEgS+fa7ZjK6IBVGTjDVfm64njkR2lfDhVR5OudLk8x2GK59YoSyVv+L/03k1q9w==",
+        "shasum": "73b0e8ddeec1e3fdd7a2de587a60e17c440ec77e",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.10.3.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155764,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYaCRA9TVsSAnZWagAAIjcQAI43czRqeX6bPaUdphKh\nhQpiBCr3yY1npjokWRe7IyyRBSsdGX3TDCiT731q/AtbcFr2cxz1Wz5MggD5\nz/VlO37irS2fE0wy4yGKruv6yvqPHIO+JMCpYx9EiIoxwlSLEPPTeuFwZJIC\n03y9O5/qrHxBOI6R2XINaG0miBl8qXOQikyOXqX/Dw0BXo5f4LSqk9SB8Uvi\nq6/uArLwhuAw1w61NLBAPoc3V5OPLTEPSV6uQtdA5kNhTO28ncqWU8kU8kxo\nN97XjnEO81/LQ0h0rpOEj252WQZqhf13VRSZfoQ3Oga0R9taihHWj2RC7etW\nexT+L9i41/NK1QhT+A2R/fbM71XeAq5iZwrLkXoPfkClezP813lbCXs8ll3/\nLxDWMdtmKPSDyv3OZbgmgqwHSO8JyoGXCfojFuh3exQssOuWiOOJIxvEXZ3c\nc+1abUB0fA7fjnKajscPCngYT04C20QOLKDoqVp4lcwKijZAVCwgBQuvKhAl\nWDPoIBQFB/C89isJd25DTTM9HxATDjx/TAdFGKZx6GurQwEWIMUzWrS9iRk2\n/kCDTjR4IHAPsw9Dd0wW4SHNcZu1cCfAqsVelE/oeQffWj+KBGzOMMWbR4i3\n5OnBdta85MsKFVPDJDoUZ2D3UoaIfY67qLZNbnkTEi36JV984tAcWBOw/EFm\nawZj\r\n=/F3j\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.10.3_1592600090021_0.05373272456033629"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/core",
+      "version": "7.10.4",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.10.4",
+        "@babel/helper-module-transforms": "^7.10.4",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.10.4",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.10.4",
+        "@babel/types": "^7.10.4",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.13",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-3A0tS0HWpy4XujGc7QtOIHTeNwUgWaZc/WuS5YQrfhU67jnVmsD6OGPc1AKHH0LJHQICGncy3+YUjIhVlfDdcA==",
+        "shasum": "780e8b83e496152f8dd7df63892b2e052bf1d51d",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.10.4.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155883,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zp3CRA9TVsSAnZWagAA8yAP/1SXDpJhr4BA80+Y+HxL\nw2Mft+Vy4W4+2vWXBVLg+z83/rmDzTEu1jsI34LGfB5fdAHr2dyHJvvykEUL\n73lV/3BrsHp7kT5C83yqwjIHDaKXwzQHzxVUaicqxQHAxxnK3HAV5nI5CeaX\nYFYPfdQMIraRzrr/qEc1gevmIT+SVf3DjtK52Tvn7bUutadsGThcg0IsBIWv\ns/gaGpC+6MERdE0FvTqlpwNp8rlX6uIr6z5UcCK5lImH8QBTPysiFlPLI5A2\nrvA5lK+jLnvphOlWDqQ+O0NSMfnpX6qTjHJ74Xv9W9PcjrS4q0J8ajNm/H5g\nqXQI/xYdYXyecwk25ezf4aDE+qVOvWIKYFXd9Myg2BsOBcJobjAX7Ezie8UQ\nlxNI9uKysLhnbi8FwZjl/eSvg4XlEEWmS3Cd9cTvLLIhFHSP3Ho2YMrfaOBm\nefYEQSBfROFIGUwQyIW2aVR5WoTGGFRU6lzpRE2wRXER7crGxGgKBZxiMj0y\nwkmW4JLofyR7QCwnHSlOb2/0CO0M4JTIitzZ7U0X8fAUWO3xH4U/lQeAacXL\nyyOSyer87bzs/K+s5qmmMWhB2UUfOlbVydKcxUvowTggZFFU+hYVmCBhvnaM\nxdRu0mme5SFyDxuov6ScMrbqRMOq/kudDLqSmaqH3JlknW2Qk0uqBOU9wAkr\nqU1K\r\n=fAlR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.10.4_1593522807339_0.025031671285616897"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.5": {
+      "name": "@babel/core",
+      "version": "7.10.5",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.10.5",
+        "@babel/helper-module-transforms": "^7.10.5",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.10.5",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.10.5",
+        "@babel/types": "^7.10.5",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.5"
+      },
+      "gitHead": "f7964a9ac51356f7df6404a25b27ba1cffba1ba7",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.10.5",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.5.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-O34LQooYVDXPl7QWCdW9p4NR+QlzOr7xShPPJz8GsuCU3/8ua/wqTr7gmnxXv+WBESiGU/G5s16i6tUvHkNb+w==",
+        "shasum": "1f15e2cca8ad9a1d78a38ddba612f5e7cdbbd330",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.10.5.tgz",
+        "fileCount": 48,
+        "unpackedSize": 155883,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfDfbsCRA9TVsSAnZWagAA+kUP/jmllPgzLpgl7L9EGnHb\ntX7azp+SlNNMUNMN8ORpbJSc9wXYGAHVYiPS5YKkzg7PIR3QK6ZSaaKb19M9\nmPZVJTKHKtQdwgii4qEoR+/iFAgUOTgpaiupAoPBxLzHVSlIHdSy2rFQWMeN\nyGR3bS2u+yVwXXtqlPMZxV6fuWMzEtKgb7Sr6joFXKBjXxGu7xOc5RBGZnuv\nNyACGYpBCWFKVwWV/Wy+H2Lelg3se8XVg7Naiw6oQA1l8wWNFXhBuNgzTdSw\n6OJj/dZafXsaUFGe7oplLDUZ0nK9I+zhfD3Ccx7ymkV387V3eZjpN7WUaHd6\ni5zMr0d8DHYHSRjTmQWYeeOQ47JDkzP5Pin4HKfkFcYpmBjNg+Ls8QgQcm9U\nn8mZObrSi8hKlixMz5gpvTZKXaNb5T4pDsQQwkDHRqMPM9uxFOTkg6bkZgke\nRFboXKP3VjiZ6+VO+cU9fPrh/ino0C3eU5y53kHmJ/HKTJgpFYzq2U3o7X6h\nvebgJqK8uomlzcTIC4vlV0I2lDmehBUAQIHv8g7A2P+SA4fp82ITSIwgpvQd\n7JbzMc7PGFaWkvWJaHLxJkMGBCawB8EQMlppZE3s8Ji4HiiecZN6iQ0jEQt8\nf8JRrwWZrc4bJhmrK47CPLz1mNpy0i3RxjvHyEVEE3krfNKV9XJ7le2jh2r/\nOegl\r\n=E4YA\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.10.5_1594750700176_0.7869150259775028"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.0": {
+      "name": "@babel/core",
+      "version": "7.11.0",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.0",
+        "@babel/helper-module-transforms": "^7.11.0",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.11.0",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.11.0",
+        "@babel/types": "^7.11.0",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.5"
+      },
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.11.0",
+      "_nodeVersion": "14.6.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-mkLq8nwaXmDtFmRkQ8ED/eA2CnVw4zr7dCztKalZXBvdK5EeNUAesrrwUqjQEzFgomJssayzB0aqlOsP1vGLqg==",
+        "shasum": "73b9c33f1658506887f767c26dae07798b30df76",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.11.0.tgz",
+        "fileCount": 49,
+        "unpackedSize": 163467,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfIzozCRA9TVsSAnZWagAAUFwP/RxyGwZBnpntMgXwViIB\nz2b9PuFHx4IwdFjCN7CQ/6nacoYXD/Nrcs7TalocFCc3VI6LCaJct9YMkaEH\ngn4TLtxqZo5+8p9wEQtbZijDgG145k8ie1kSeWBARTThqjFxdmdbI7+A8jlK\nkHY+KBRSD8unhxGApBQVZYbX6wYJpggMc7pirEQOCp8na7X5x9YVvO4vKU1/\nAsN8kBH4Hn8LUAgLiuBJ2GCoqIhAMWsoYowl7QVv8hJGLWXPSX78Zq/5uV8i\nQV2Clrne18YBRz+dSbKKhXRMId5gcIOWP98d+yEHFAaow2oYgKzn0rXa4Zd/\nHB1K136PxOhdiYBgunwKT4HtQEPWGLiQtdJdKthY9PeEaZZI+dWbBW1t3hC5\nrGpLPm+9Rekcrh3aLzaDzkp2xJAD3X7OzhGsh+9cYLc5Tkb+mJCe1ctYaH6j\ntemuDlZaSL09XnWM0Y9sMTVa+zxwXGEUiA/8z0GysT4vSUUSEs2lr+KakW62\nUkwnRmYK0KkubzRHtj4h5c7SkzGxA2atS6at16omgavU2u5go4HJe0vxLFcS\ngf+47Pm8ZV67wGwIyc5ks36VUqTWJbDdzBOVBVAlD3PvRL81fc/C2A04aSUt\nlvoExpTFlNnC4WCe9Fdqn06uzPmZ8aCHP4L13g/qO4Fy3Sgfpa/gpT4Jstbn\nPdxo\r\n=Wsxr\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.11.0_1596144178596_0.8244325732635436"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.1": {
+      "name": "@babel/core",
+      "version": "7.11.1",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.0",
+        "@babel/helper-module-transforms": "^7.11.0",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.11.1",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.11.0",
+        "@babel/types": "^7.11.0",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.10.5"
+      },
+      "gitHead": "953ae82159b67b4487f837a17a1b8d5e305a8e5c",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.11.1",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.7.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-XqF7F6FWQdKGGWAzGELL+aCO1p+lRY5Tj5/tbT3St1G8NaH70jhhDIKknIZaDans0OQBG5wRAldROLHSt44BgQ==",
+        "shasum": "2c55b604e73a40dc21b0e52650b11c65cf276643",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.11.1.tgz",
+        "fileCount": 49,
+        "unpackedSize": 163501,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfKdvCCRA9TVsSAnZWagAA+eUQAJ4tQdMKNldzvFT3QbXa\nAG8jQ2JM1o8k/z5IHDuVIItYk8v0fuB+N/QMgSWYBF+AGt7djjAYKjIg6JPV\n0CxWcvrMcZ2h6cQqAvtS6L334u1/n6lCZgYmVpGqemGP69z2Zo4PuqHMf857\nGTeKAqCprDnOpLUl0auFF3KOAH6l26JVAK3JQd1dxzUgv6ZIckv7N+coBzGq\nLEXoO72JMK3E4De+YEDliWlKqHBXdcSiq7qPTgbXR7IqQq4t01FnZsXoY5DL\n/AZCDrX/J6Ob1jUzZ0mXsUbHwsq6Ls9FFATmG7xanc/9ML8OXzDqn5+9l7Ai\n9JL8A+/tsf0pG8G3EqkBaGyhHjw/7I5c2fJvauC705LMMa3GXqSU8gfSBJWE\nUvpxQ/vHdJSw8tvnMBIoCUzDFoB/HGQACWX7KdgEj7f8YOSKGgd2q+bbonlP\nz+JIk0jJa8QjdAu3NhYQ4EMCKfYDmc6K116Cz6erOfKELu/0fia9zYkJEstJ\n+i4VtnKf2N3agguPKROp98ja2hWLwKNgdFKC2eFFQ75nPuOE3F0rHBfLYUTW\nf3lDVGKz+zM//GyiBoYS9RTYN5Uhy9CVPxGBNDJtkXsOvsGJ5z7GKDFNjyeV\nL8XXvTuiDoS3OLmjh70gFyvMBztviCnOx3Cs5JqNrISvnSi80y0snj+hn+0d\nkWEV\r\n=aizP\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.11.1_1596578753894_0.41829588131025175"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.4": {
+      "name": "@babel/core",
+      "version": "7.11.4",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.4",
+        "@babel/helper-module-transforms": "^7.11.0",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.11.4",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.11.0",
+        "@babel/types": "^7.11.0",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.11.4"
+      },
+      "gitHead": "90b198956995195ea00e7ac9912c2260e44d8746",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.11.4",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.7.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-5deljj5HlqRXN+5oJTY7Zs37iH3z3b++KjiKtIsJy1NrjOOVSEaJHEetLBhyu0aQOSNNZ/0IuEAan9GzRuDXHg==",
+        "shasum": "4301dfdfafa01eeb97f1896c5501a3f0655d4229",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.11.4.tgz",
+        "fileCount": 49,
+        "unpackedSize": 162507,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfPsguCRA9TVsSAnZWagAAv/QP/0xGUpZGBYWkmzNIgMIS\nBpSg4ZTJ+2bksKWT2k3ZH94DEJcN52100GHzcQkb0xrz1/6E6LiQb8xlLk2F\n7oPN8Q+22fQhoiy4ibQvdCvsUuShaLCq9VIOf4O/ONSFoOY+mXhVZ7UanjeT\nvQty1uszpD9rw/TMzZjSzyfQC6JQZhnfiSxeKUrkUJSiA/PXnew8DR5gDdmX\nCLm85DSReQGshhjDHTu/RvMnfzO2NM/3DUYI3reegYRD4vkg2Bml+UsEZTHf\nEvspnhKOqyu5SkhtbzkG3jjYX0lGy4o1R6GEAp7CnQUvGP/iNml8jex2aOnU\nzNOsobTJLv2yytSfiV9DT83cEu8MaPf3fbIy0aLjA5A2vvi9uXyG7AWwOE4A\nD1VJdJ7bXqEVbtfTQORifDinxkILolxlFqRgGBQwamkZngBgwyCNv3Je4UBL\n9/nueOal3XFxbYohQXz+6KeHbSMDVtF2wWNN0h8GJaQwurKEA/VYrr02d4Ef\nEPZ2BINGkhktD3YTWlB5Xb8RPoa6zS2RavVFTsOws98slb/wzi6FIrWn2eyN\ndgJEeECZ7GdpxvHlJkb7Y/i0nxeK3PJQCbweXZLrMyxUe995vwRY07ZxbERN\nUtiWJiuGBEKtXrvQnBATjlp9tnkqtxhdrk/R9ESTei56ZDeU+nVXK29RIsLW\nkJWr\r\n=B+B1\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.11.4_1597949997949_0.791996535284377"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.5": {
+      "name": "@babel/core",
+      "version": "7.11.5",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.5",
+        "@babel/helper-module-transforms": "^7.11.0",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.11.5",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.11.5",
+        "@babel/types": "^7.11.5",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.6.1"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.11.4"
+      },
+      "gitHead": "af64ccb2b00bc7574943674996c2f0507cdbfb6f",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.11.5",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.9.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-fsEANVOcZHzrsV6dMVWqpSeXClq3lNbYrfFGme6DE25FQWe7pyeYpXyx9guqUnpy466JLzZ8z4uwSr2iv60V5Q==",
+        "shasum": "6ad96e2f71899ea3f9b651f0a911e85205d1ff6d",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.11.5.tgz",
+        "fileCount": 49,
+        "unpackedSize": 162506,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfTVdXCRA9TVsSAnZWagAAlsYQAJiH9DfDuYLX7zVw1ON2\nXcnYzdMdwMFYvI71VWjRhsYti0lqkMaApuDINWSTuBJVGih2vDbLhUEK+Bwd\nolO3dZR/w1avsQdn4cgCB4j2iiL4jhZgzKuaOELC0wOcQsExZp3on36ubCxu\niABkiYogFIal4wXfVO/mFvUtFn9bAERE4eDrP7HQNa0sI/7LwfqLEVGAoTpx\nF6zRYSiKZi4w82xyxzwZUAObBWAZ4gAk0Bmap2FG1v92KUuDFr9q1vtfPHJf\nuoHtxKYnqyxYn7zOzK0+X9pxomuln/7vxb5Xl21olpa+LiL0TrOY4PGHd2p+\nuuqVTm4iOSXlKMgADjtNC3QB6drOcNF2ApvagA34ZFfOQQjvP0oTVM8QELKd\n6e5IJQofeMgQuGeK8oSjhQiqhrmA1UpYg/p/6e1m7O81t7bzPJWdBdnS1MW5\nwNvES9I3IRafH3jKwJVapSfjfwwCorAzzJY1IYtkMBc0QsOkeMua90NKxiAk\nDsQjxiSifX0Z5wWMhtrFJQF+yYmi9gwpMdLKjb+tKrSLh+57zh+iqb1V5KsC\nNSQAPhUel7DFbCh+9/+0J/J9QYrfOwdkuaXsCAO4qxemYBCQSuaJLzWDHCQN\nBFjU79y+XANav/CvB2w6Ee5B8tr+mt2fhIAeukvO+HGw5mVoqQCGU0PZ9E9d\n5aQh\r\n=e9F7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.11.5_1598904151399_0.5112448518790171"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.6": {
+      "name": "@babel/core",
+      "version": "7.11.6",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.11.6",
+        "@babel/helper-module-transforms": "^7.11.0",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.11.5",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.11.5",
+        "@babel/types": "^7.11.5",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.11.6"
+      },
+      "gitHead": "e51139d7fd850e7f5b8cd6aafb17cc88b7010218",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/core@7.11.6",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.9.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-Wpcv03AGnmkgm6uS6k8iwhIwTrcP0m17TL1n1sy7qD0qelDu4XNeW0dN0mHfa+Gei211yDaLoEe/VlbXQzM4Bg==",
+        "shasum": "3a9455dc7387ff1bac45770650bc13ba04a15651",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.11.6.tgz",
+        "fileCount": 49,
+        "unpackedSize": 162506,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfURGyCRA9TVsSAnZWagAAesYQAJKgSk2gl1wa2isTY3S4\nXVNbiaMRk19JcE7kAM4TczvpFz/oWL84SJCTjkEci6ZGKp3/zFiaMV6RBxA0\nN7G6R83FK33e388VrtbHumEy/jAq/1uYjEge0hL57tIbnWDM+Kr/KYPwD4Di\nuQxs6tlnUeYKEb31PemIJVN5cTvmbdxfFjZhJ4lfnGs6GyFwIGWukVBr/RPK\nzQirl4rY67hMXInDF4HJCl9rN8Dvk/X9YuJNyPKANntdq1LFCpKvp0qCkvlW\n9Md3BhtiGbQp5/JN0Y1S5BCkwyAGlfCUPUDI3xx4J7yY65JVcXQmC0ioa/hq\n9UrsytVfC8PLXGiKLxaVfK3am2/W26P7nWn8Xg2+rfQEDMe2K6YvsnUk4bSd\naKWkbHd6osJIjZN9J2Kw+LZELZupj4j6hGTINo76mbOYMU3VjNoxqM3j8kxT\nBSsJXbdJP2hsaxvv2iFBLEA+2lBeCF/n4ckdEHqRHzW1YQ/3G6bksb/yd6za\nPnEILiJIfGrogxEW2viidQwHzREfoKvfOuFzCFLHfWbjBbhX7g6OLmiDMyoL\nEdAVHSBZiG7eTHOgIr5f0oHmH0adTmkILPJkXVa92l3eAm2qyRXu1WqIK2UY\nMAP27Wk/nRgbf6eRWE5T5GjxqZeI6AOu7n7IBNnbg+QfWWr/M8azOHQgo969\n1chq\r\n=l7cx\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.11.6_1599148466093_0.22538277646607163"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.0": {
+      "name": "@babel/core",
+      "version": "7.12.0",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.12.0",
+        "@babel/helper-module-transforms": "^7.12.0",
+        "@babel/helpers": "^7.10.4",
+        "@babel/parser": "^7.12.0",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.12.0",
+        "@babel/types": "^7.12.0",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.12.0"
+      },
+      "_id": "@babel/core@7.12.0",
+      "dist": {
+        "shasum": "e42e07a086e978cdd4c61f4078d8230fb817cc86",
+        "integrity": "sha512-iV7Gwg0DePKvdDZZWRTkj4MW+6/AbVWd4ZCg+zk8H1RVt5xBpUZS6vLQWwb3pyLg4BFTaGiQCPoJ4Ibmbne4fA==",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.12.0.tgz",
+        "fileCount": 53,
+        "unpackedSize": 171035,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfh1mUCRA9TVsSAnZWagAAsYoP/17LfNakQ8P8gI9Z2GOA\nWgO4H72nw/V6pm9BjPp5Ls9Ned6lsKYXOTAubZJNODbdtfj9bDHLM3TYJ3n2\nUxr6OsHdrm4AUSN2Mq9bLkzpm3QQFBnG1n0R2meBKjUECftoXuC36lFM8f+G\nEeMxG/iy6Jo38q4PpGdfsaRVoDruWlbSWHQhPF3HgfQJFD6zWxDAVrw/Lh78\nyXgU+m9Qw5xGwlFeww0hX/0SGdxwkkfxOeqlhAql7jEViSqiIXAWSnxaiGCf\nVEJPVfoS33qs8qCJoq95uwaYKWHE1DoGuDBmYAm22XCRfQ6xFqnpuZeI+69e\n5nAkEmbxg0OZwPZW1qO7HSCE1DWqcfj5KGm6gaptNMvwj2lY6fxFZMV4ZrKM\nuMvmaNmT5TTJOG4xN1OpMTr75oHfrWn5uBeYtkKZJIiJrpBi1XAzvJAlYvKv\n0rI4ZIq/I4Z/jKX52OkSMakW+lyp6AJcJRAx0aibc3gk5XLaCAQcugjrVAum\nBGiwcx28K/o71TSMlUFfLu6zrCpwWVK8ME19BiWwPJ7HELRmNPQFHB37P0wJ\ndVsTI7P68T5d7iv6MDPiLDEium8rI3AlB7ylvgseYv86BU1j9sYbLXWMIT6U\nlPSexUMh7zEG6DkCZxp6GKNlZTL4PRpbwjaUiUN8zyM6S5PDDAu2GrM4awlm\n3Mpj\r\n=vXlT\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.12.0_1602705812059_0.4034834254771069"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/core",
+      "version": "7.12.1",
+      "description": "Babel compiler core.",
+      "main": "lib/index.js",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-core"
+      },
+      "keywords": [
+        "6to5",
+        "babel",
+        "classes",
+        "const",
+        "es6",
+        "harmony",
+        "let",
+        "modules",
+        "transpile",
+        "transpiler",
+        "var",
+        "babel-core",
+        "compiler"
+      ],
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/babel"
+      },
+      "browser": {
+        "./lib/config/files/index.js": "./lib/config/files/index-browser.js",
+        "./lib/transform-file.js": "./lib/transform-file-browser.js",
+        "./src/config/files/index.js": "./src/config/files/index-browser.js",
+        "./src/transform-file.js": "./src/transform-file-browser.js"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/generator": "^7.12.1",
+        "@babel/helper-module-transforms": "^7.12.1",
+        "@babel/helpers": "^7.12.1",
+        "@babel/parser": "^7.12.1",
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.12.1",
+        "@babel/types": "^7.12.1",
+        "convert-source-map": "^1.7.0",
+        "debug": "^4.1.0",
+        "gensync": "^1.0.0-beta.1",
+        "json5": "^2.1.2",
+        "lodash": "^4.17.19",
+        "resolve": "^1.3.2",
+        "semver": "^5.4.1",
+        "source-map": "^0.5.0"
+      },
+      "devDependencies": {
+        "@babel/helper-transform-fixture-test-runner": "^7.12.1"
+      },
+      "_id": "@babel/core@7.12.1",
+      "dist": {
+        "shasum": "980b115a05929ef3ce1b6af9bf50e5a5cf668667",
+        "integrity": "sha512-6bGmltqzIJrinwRRdczQsMhruSi9Sqty9Te+/5hudn4Izx/JYRhW1QELpR+CIL0gC/c9A7WroH6FmkDGxmWx3w==",
+        "tarball": "https://registry.npmjs.org/@babel/core/-/core-7.12.1.tgz",
+        "fileCount": 53,
+        "unpackedSize": 171035,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiNA7CRA9TVsSAnZWagAADtMP/2HH4BmVubwwEB/Kb7ET\nSYMZ5jczauptppTKlHWMTa5HyUB/pAYbBPu9SMKjBjOa3MFY3DDUnr18ahWm\n6VSr4rjm4aYdksImPs0XfWrukwbaWYbPVNO19rEect6N9IyLM3TD6OkHTU3z\nBMXTwJ77dQwyHKCClxhHG05bkjJvwNjpfhoJ0QofKglS86TR38o/JVzLLbbO\nJm93ec9T300gE9HsZ2oQ/1qonaWMnSQoEgWwR9bgD1Wo1DeCirjv88Tm2zrS\nI//ubmpGIOvFy+PYVSzyAy+9RhcxULNo0WYmh99r37qP3iJDuH6NAoERey0b\nLWUfMYF/iq+Y3RoS/MU4oztRZaVdxLtkkXC/imbskUVt8cN1Nd1yizIBsyVp\nJFORIi3HF5YpztAb3/fILXexR8qQtoRNf9aKIVbCHz2mmfMiiKzqEcQe5qEe\nEIWTsP6NZ72zJajV3rFlZZhT86skTrix0cQ0i2FgR7ubQzrvLmZxbjUavDbL\n34Y49WSJyWr6ol+tZZi8d/Y1jLS5GopUBdwaO/L06gTxOhnitdwm73FEWesd\nrND2e92goJv28+hUyYpTXsDQW+LtGHL/hiUQQTLt2vMaTF+VhLtSdOyeCZNj\nUPiFBhn9FdreBDta6wdgXLz3xYRj6ztrgTzj0FPqwS8C0+TGrM09MTni7zxC\nxggt\r\n=g8SB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/core_7.12.1_1602801723418_0.8794925879297235"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-30T12:37:45.171Z",
+    "modified": "2020-10-15T22:42:09.819Z",
     "created": "2017-10-30T18:36:15.121Z",
     "7.0.0-beta.4": "2017-10-30T18:36:15.121Z",
     "7.0.0-beta.5": "2017-10-30T20:57:51.499Z",
@@ -6536,7 +8539,24 @@
     "7.7.7": "2019-12-19T00:53:22.005Z",
     "7.8.0": "2020-01-12T00:17:28.175Z",
     "7.8.3": "2020-01-13T21:42:34.177Z",
-    "7.8.4": "2020-01-30T12:37:42.835Z"
+    "7.8.4": "2020-01-30T12:37:42.835Z",
+    "7.8.6": "2020-02-27T12:21:42.563Z",
+    "7.8.7": "2020-03-05T01:56:14.922Z",
+    "7.9.0": "2020-03-20T15:40:13.722Z",
+    "7.9.6": "2020-04-29T18:38:24.371Z",
+    "7.10.0": "2020-05-26T21:43:51.772Z",
+    "7.10.1": "2020-05-27T22:08:33.294Z",
+    "7.10.2": "2020-05-30T19:25:23.141Z",
+    "7.10.3": "2020-06-19T20:54:50.179Z",
+    "7.10.4": "2020-06-30T13:13:27.496Z",
+    "7.10.5": "2020-07-14T18:18:20.314Z",
+    "7.11.0": "2020-07-30T21:22:58.749Z",
+    "7.11.1": "2020-08-04T22:05:54.060Z",
+    "7.11.4": "2020-08-20T18:59:58.118Z",
+    "7.11.5": "2020-08-31T20:02:31.548Z",
+    "7.11.6": "2020-09-03T15:54:26.206Z",
+    "7.12.0": "2020-10-14T20:03:32.199Z",
+    "7.12.1": "2020-10-15T22:42:03.565Z"
   },
   "homepage": "https://babeljs.io/",
   "keywords": [
@@ -6556,17 +8576,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-core"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-core"
   },
-  "author": {
-    "name": "Sebastian McKenzie",
-    "email": "sebmck@gmail.com"
-  },
+  "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "readmeFilename": "",
   "users": {
     "sshrike": true,
     "severen": true,
     "cfleschhut": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

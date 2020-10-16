@@ -1,10 +1,10 @@
 {
   "_id": "mime-types",
-  "_rev": "141-1f915d3c535c6552a52e3f8edd98cdd9",
+  "_rev": "143-950e3f74addc8c0ba058838870c1a09d",
   "name": "mime-types",
   "description": "The ultimate javascript content-type utility.",
   "dist-tags": {
-    "latest": "2.1.26"
+    "latest": "2.1.27"
   },
   "versions": {
     "0.1.0": {
@@ -3845,16 +3845,102 @@
         "tmp": "tmp/mime-types_2.1.26_1578282475037_0.17516931585429973"
       },
       "_hasShrinkwrap": false
+    },
+    "2.1.27": {
+      "name": "mime-types",
+      "description": "The ultimate javascript content-type utility.",
+      "version": "2.1.27",
+      "contributors": [
+        {
+          "name": "Douglas Christopher Wilson",
+          "email": "doug@somethingdoug.com"
+        },
+        {
+          "name": "Jeremiah Senkpiel",
+          "email": "fishrock123@rocketmail.com",
+          "url": "https://searchbeam.jit.su"
+        },
+        {
+          "name": "Jonathan Ong",
+          "email": "me@jongleberry.com",
+          "url": "http://jongleberry.com"
+        }
+      ],
+      "license": "MIT",
+      "keywords": [
+        "mime",
+        "types"
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jshttp/mime-types.git"
+      },
+      "dependencies": {
+        "mime-db": "1.44.0"
+      },
+      "devDependencies": {
+        "eslint": "6.8.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.20.2",
+        "eslint-plugin-markdown": "1.0.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "mocha": "7.1.1",
+        "nyc": "15.0.1"
+      },
+      "engines": {
+        "node": ">= 0.6"
+      },
+      "scripts": {
+        "lint": "eslint --plugin markdown --ext js,md .",
+        "test": "mocha --reporter spec test/test.js",
+        "test-cov": "nyc --reporter=html --reporter=text npm test",
+        "test-travis": "nyc --reporter=text npm test"
+      },
+      "gitHead": "47b62ac45e9b176a2af35532d0eea4968bb9eb6d",
+      "bugs": {
+        "url": "https://github.com/jshttp/mime-types/issues"
+      },
+      "homepage": "https://github.com/jshttp/mime-types#readme",
+      "_id": "mime-types@2.1.27",
+      "_nodeVersion": "13.12.0",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-JIhqnCasI9yD+SsmkquHBxTSEuZdQX5BuQnS2Vc7puQQQ+8yiP5AY5uWhpdv4YL4VM5c6iliiYWPgJ/nJQLp7w==",
+        "shasum": "47949f98e279ea53119f5722e0f34e529bec009f",
+        "tarball": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.27.tgz",
+        "fileCount": 5,
+        "unpackedSize": 16721,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeol6sCRA9TVsSAnZWagAAb7gP/2rhSx5SYxg68mROGmpc\nK4P6pyMxslHCfxYa4EUnJ4NmZAJKoGAeqLNxf/ty5QFlczy2kATAx6Ed/Jo9\nev4jGBiHbZ3WiTCdG9iE43fP4uKRoZ0a19suEC9t4mmx0y3VaBqGNIlEZgQM\nUZKLhbMYu8PEmA4FeFVcKOzEQVmMaNPSek9iaSNgxyD8nL6O+qEhTtH/1BHV\ng59VWglcXaKsK7sQGM4Ljn+bXqDgQhNpZqF4zoONKcxb7TrYp/NESCKk+Qdi\nlEBCaXdT++/UwnRh0p+nffllnurrE7ctt76LCJP8W9ObMqKSpmT4yQmpDp/J\n8hoRyCK+Z2Ktb8ZWkM5chHAiL9hrQVKzhKB2Cbr72itq7E+5Umv0Otis2C6b\nc7vIbbMtuui4fy7ZAo1ywoMT53jyAkqesJHjIlkBMlXoSIm3eyzKuQXDsJ1C\nRjhI6ik8j7rViDQ18TCyFeSZZw6LxB0gqTRuvLz+VbDVSLNoH6+OaY0bl62s\n4iWL4xTqm8xFsyewzt8fl7H7nIEfETjcEwcaKljjyfncjLla5iXVXOAvZ6dR\ncdLA1fMFH3YNEjVgR0g5elVHQNk6+VdN5c4lZ7vRPc3NJCTcljyTegiWCK2U\ni6/aVv6I3FiCSkegYy/E02P0UW6OcmecrMY5gnenMtAG5lqlKBHOL06aegiA\nSD9R\r\n=th56\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "doug@somethingdoug.com",
+          "name": "dougwilson"
+        },
+        {
+          "email": "jonathanrichardong@gmail.com",
+          "name": "jongleberry"
+        }
+      ],
+      "_npmUser": {
+        "name": "dougwilson",
+        "email": "doug@somethingdoug.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/mime-types_2.1.27_1587699372290_0.7009359023949084"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# mime-types\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Node.js Version][node-version-image]][node-version-url]\n[![Build Status][travis-image]][travis-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\nThe ultimate javascript content-type utility.\n\nSimilar to [the `mime@1.x` module](https://www.npmjs.com/package/mime), except:\n\n- __No fallbacks.__ Instead of naively returning the first available type,\n  `mime-types` simply returns `false`, so do\n  `var type = mime.lookup('unrecognized') || 'application/octet-stream'`.\n- No `new Mime()` business, so you could do `var lookup = require('mime-types').lookup`.\n- No `.define()` functionality\n- Bug fixes for `.lookup(path)`\n\nOtherwise, the API is compatible with `mime` 1.x.\n\n## Install\n\nThis is a [Node.js](https://nodejs.org/en/) module available through the\n[npm registry](https://www.npmjs.com/). Installation is done using the\n[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):\n\n```sh\n$ npm install mime-types\n```\n\n## Adding Types\n\nAll mime types are based on [mime-db](https://www.npmjs.com/package/mime-db),\nso open a PR there if you'd like to add mime types.\n\n## API\n\n<!-- eslint-disable no-unused-vars -->\n\n```js\nvar mime = require('mime-types')\n```\n\nAll functions return `false` if input is invalid or not found.\n\n### mime.lookup(path)\n\nLookup the content-type associated with a file.\n\n<!-- eslint-disable no-undef -->\n\n```js\nmime.lookup('json') // 'application/json'\nmime.lookup('.md') // 'text/markdown'\nmime.lookup('file.html') // 'text/html'\nmime.lookup('folder/file.js') // 'application/javascript'\nmime.lookup('folder/.htaccess') // false\n\nmime.lookup('cats') // false\n```\n\n### mime.contentType(type)\n\nCreate a full content-type header given a content-type or extension.\nWhen given an extension, `mime.lookup` is used to get the matching\ncontent-type, otherwise the given content-type is used. Then if the\ncontent-type does not already have a `charset` parameter, `mime.charset`\nis used to get the default charset and add to the returned content-type.\n\n<!-- eslint-disable no-undef -->\n\n```js\nmime.contentType('markdown') // 'text/x-markdown; charset=utf-8'\nmime.contentType('file.json') // 'application/json; charset=utf-8'\nmime.contentType('text/html') // 'text/html; charset=utf-8'\nmime.contentType('text/html; charset=iso-8859-1') // 'text/html; charset=iso-8859-1'\n\n// from a full path\nmime.contentType(path.extname('/path/to/file.json')) // 'application/json; charset=utf-8'\n```\n\n### mime.extension(type)\n\nGet the default extension for a content-type.\n\n<!-- eslint-disable no-undef -->\n\n```js\nmime.extension('application/octet-stream') // 'bin'\n```\n\n### mime.charset(type)\n\nLookup the implied default charset of a content-type.\n\n<!-- eslint-disable no-undef -->\n\n```js\nmime.charset('text/markdown') // 'UTF-8'\n```\n\n### var type = mime.types[extension]\n\nA map of content-types by extension.\n\n### [extensions...] = mime.extensions[type]\n\nA map of extensions by content-type.\n\n## License\n\n[MIT](LICENSE)\n\n[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/mime-types/master\n[coveralls-url]: https://coveralls.io/r/jshttp/mime-types?branch=master\n[node-version-image]: https://badgen.net/npm/node/mime-types\n[node-version-url]: https://nodejs.org/en/download\n[npm-downloads-image]: https://badgen.net/npm/dm/mime-types\n[npm-url]: https://npmjs.org/package/mime-types\n[npm-version-image]: https://badgen.net/npm/v/mime-types\n[travis-image]: https://badgen.net/travis/jshttp/mime-types/master\n[travis-url]: https://travis-ci.org/jshttp/mime-types\n",
   "maintainers": [
     {
       "email": "doug@somethingdoug.com",
       "name": "dougwilson"
-    },
-    {
-      "email": "fishrock123@rocketmail.com",
-      "name": "fishrock123"
     },
     {
       "email": "jonathanrichardong@gmail.com",
@@ -3862,7 +3948,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-06T03:47:57.447Z",
+    "modified": "2020-04-24T03:36:14.837Z",
     "created": "2014-05-02T15:54:00.885Z",
     "0.1.0": "2014-05-02T15:54:00.885Z",
     "1.0.0": "2014-05-12T20:00:39.325Z",
@@ -3909,7 +3995,8 @@
     "2.1.23": "2019-04-18T04:41:15.063Z",
     "2.1.24": "2019-04-21T03:46:47.001Z",
     "2.1.25": "2019-11-12T14:18:16.771Z",
-    "2.1.26": "2020-01-06T03:47:55.198Z"
+    "2.1.26": "2020-01-06T03:47:55.198Z",
+    "2.1.27": "2020-04-24T03:36:12.387Z"
   },
   "homepage": "https://github.com/jshttp/mime-types#readme",
   "repository": {
@@ -4006,5 +4093,7 @@
   "keywords": [
     "mime",
     "types"
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

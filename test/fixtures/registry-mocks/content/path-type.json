@@ -395,6 +395,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# path-type [![Build Status](https://travis-ci.org/sindresorhus/path-type.svg?branch=master)](https://travis-ci.org/sindresorhus/path-type)\n\n> Check if a path is a file, directory, or symlink\n\n\n## Install\n\n```\n$ npm install path-type\n```\n\n\n## Usage\n\n```js\nconst {isFile} = require('path-type');\n\n(async () => {\n\tconsole.log(await isFile('package.json'));\n\t//=> true\n})();\n```\n\n\n## API\n\n### isFile(path)\n\nCheck whether the passed `path` is a file.\n\nReturns a `Promise<boolean>`.\n\n#### path\n\nType: `string`\n\nThe path to check.\n\n### isDirectory(path)\n\nCheck whether the passed `path` is a directory.\n\nReturns a `Promise<boolean>`.\n\n### isSymlink(path)\n\nCheck whether the passed `path` is a symlink.\n\nReturns a `Promise<boolean>`.\n\n### isFileSync(path)\n\nSynchronously check whether the passed `path` is a file.\n\nReturns a `boolean`.\n\n### isDirectorySync(path)\n\nSynchronously check whether the passed `path` is a directory.\n\nReturns a `boolean`.\n\n### isSymlinkSync(path)\n\nSynchronously check whether the passed `path` is a symlink.\n\nReturns a `boolean`.\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -445,5 +446,7 @@
   "users": {
     "huhgawz": true,
     "rocket0191": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

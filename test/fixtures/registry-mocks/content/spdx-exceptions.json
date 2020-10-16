@@ -1,10 +1,10 @@
 {
   "_id": "spdx-exceptions",
-  "_rev": "9-249a547c0fb21d34e165cadfe5212a55",
+  "_rev": "10-13706ec0454ec8220d2b5719b7871dbb",
   "name": "spdx-exceptions",
   "description": "list of SPDX standard license exceptions",
   "dist-tags": {
-    "latest": "2.2.0"
+    "latest": "2.3.0"
   },
   "versions": {
     "1.0.0": {
@@ -439,8 +439,64 @@
         "tmp": "tmp/spdx-exceptions_2.2.0_1538410210574_0.9762521681226779"
       },
       "_hasShrinkwrap": false
+    },
+    "2.3.0": {
+      "name": "spdx-exceptions",
+      "description": "list of SPDX standard license exceptions",
+      "version": "2.3.0",
+      "author": {
+        "name": "The Linux Foundation"
+      },
+      "contributors": [
+        {
+          "name": "Kyle E. Mitchell",
+          "email": "kyle@kemitchell.com",
+          "url": "https://kemitchell.com/"
+        }
+      ],
+      "license": "CC-BY-3.0",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kemitchell/spdx-exceptions.json.git"
+      },
+      "scripts": {
+        "build": "node build.js"
+      },
+      "gitHead": "b1405b421074aae250f5cfefc1adff1c6085b293",
+      "bugs": {
+        "url": "https://github.com/kemitchell/spdx-exceptions.json/issues"
+      },
+      "homepage": "https://github.com/kemitchell/spdx-exceptions.json#readme",
+      "_id": "spdx-exceptions@2.3.0",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-/tTrYOC7PPI1nUAgx34hUpqXuyJG+DTHJTnIULG4rDygi4xu/tfgmq1e1cIRwRzwZgo4NLySi+ricLkZkw4i5A==",
+        "shasum": "3f28ce1a77a00372683eade4a433183527a2163d",
+        "tarball": "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.3.0.tgz",
+        "fileCount": 3,
+        "unpackedSize": 2660,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeniSwCRA9TVsSAnZWagAAD/gQAJ4eK83VY/bHOyOpHea+\nQilCF4y84DA3okhcryoPqYvTV3wVwMUk8Z/ClT7dPurWsVP90+878uQnF/9d\nFoPNH5Ts/9W7Ho3W1WTK03aZ4QmR7mwEKIS6+y5PMX2B86W1NjYh5S99cdfE\n70Ptunn3+yuvRnOSyy7DfcEdG3Ti91zwbHJ9GEEPF8EgCZKxZK51ZA5yVQrQ\ntWjrp1U1S4QWYQqWQ1uz5jLvNfY5C5ODYkoPpIx8628UG4zCzpJalzKT+UpD\nQfsJJseHhTkub2/Ghn0N54565ICn8szZCMk9g4hiaG9EL5uhnBv2cZwISbfG\nseD46pMjdTIDrQyv5HGNnVRhJOhCvMhvfgxzbYR8Lb2a7mTKXZXXDcOHeb8c\nJjHKT3vYRX7I5VqA3kDF/YVhTKDA4C6Ic4cTSg++AoMBPlsS1ULN5dYZ7o7z\ndT1zyFK+L7HIZ38eA4oUCFt4g0VdOTynL2JISkA4wT63hmZZqo2q3UMGXul5\norFHaOm5h+0GWzxafj1KgX1mWplO78Hcr2Th77vJ3IBi7mE97zD2maFS4eEf\nITl/G8ioc2S9ahx/lvTej6NNwDixp7Z45hVlV9rKn8LLnPDulRNwC9XypbZP\nBf/7a3buWRw3VgVJnw5N3ELm+mcKXDI4vsDbkSFSLyy3Y7tJv5J3uzeob3/8\nqEvX\r\n=asAR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "kemitchell",
+          "email": "kyle@kemitchell.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "kemitchell",
+        "email": "kyle@kemitchell.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/spdx-exceptions_2.3.0_1587422384451_0.26894111493587647"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "The package exports an array of strings. Each string is an identifier\nfor a license exception under the [Software Package Data Exchange\n(SPDX)][SPDX] software license metadata standard.\n\n[SPDX]: https://spdx.org\n\n## Copyright and Licensing\n\n### SPDX\n\n\"SPDX\" is a federally registered United States trademark of The Linux\nFoundation Corporation.\n\nFrom version 2.0 of the [SPDX] specification:\n\n> Copyright © 2010-2015 Linux Foundation and its Contributors. Licensed\n> under the Creative Commons Attribution License 3.0 Unported. All other\n> rights are expressly reserved.\n\nThe Linux Foundation and the SPDX working groups are good people. Only\nthey decide what \"SPDX\" means, as a standard and otherwise. I respect\ntheir work and their rights. You should, too.\n\n### This Package\n\n> I created this package by copying exception identifiers out of the\n> SPDX specification. That work was mechanical, routine, and required no\n> creativity whatsoever. - Kyle Mitchell, package author\n\nUnited States users concerned about intellectual property may wish to\ndiscuss the following Supreme Court decisions with their attorneys:\n\n- _Baker v. Selden_, 101 U.S. 99 (1879)\n\n- _Feist Publications, Inc., v. Rural Telephone Service Co._,\n  499 U.S. 340 (1991)\n",
   "maintainers": [
     {
       "name": "kemitchell",
@@ -448,7 +504,7 @@
     }
   ],
   "time": {
-    "modified": "2019-01-05T12:59:37.845Z",
+    "modified": "2020-04-20T22:39:46.878Z",
     "created": "2015-08-01T23:41:45.100Z",
     "1.0.0": "2015-08-01T23:41:45.100Z",
     "1.0.1": "2015-08-01T23:57:34.042Z",
@@ -458,7 +514,8 @@
     "1.0.5": "2016-07-13T21:49:05.048Z",
     "2.0.0": "2016-07-25T18:23:28.436Z",
     "2.1.0": "2018-01-09T17:18:33.930Z",
-    "2.2.0": "2018-10-01T16:10:10.667Z"
+    "2.2.0": "2018-10-01T16:10:10.667Z",
+    "2.3.0": "2020-04-20T22:39:44.559Z"
   },
   "homepage": "https://github.com/kemitchell/spdx-exceptions.json#readme",
   "repository": {
@@ -479,5 +536,7 @@
       "email": "kyle@kemitchell.com",
       "url": "https://kemitchell.com/"
     }
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

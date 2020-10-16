@@ -1,10 +1,10 @@
 {
   "_id": "emoji-regex",
-  "_rev": "32-afddfba6fa383e9d8e561a8d5e250e86",
+  "_rev": "35-e1cfc9931f78526c68839c65ccb6c798",
   "name": "emoji-regex",
   "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
   "dist-tags": {
-    "latest": "8.0.0"
+    "latest": "9.1.1"
   },
   "versions": {
     "1.0.0": {
@@ -1695,16 +1695,169 @@
         "tmp": "tmp/emoji-regex_8.0.0_1551812302894_0.8728129094317747"
       },
       "_hasShrinkwrap": false
+    },
+    "9.0.0": {
+      "name": "emoji-regex",
+      "version": "9.0.0",
+      "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
+      "homepage": "https://mths.be/emoji-regex",
+      "main": "index.js",
+      "types": "index.d.ts",
+      "keywords": [
+        "unicode",
+        "regex",
+        "regexp",
+        "regular expressions",
+        "code points",
+        "symbols",
+        "characters",
+        "emoji"
+      ],
+      "license": "MIT",
+      "author": {
+        "name": "Mathias Bynens",
+        "url": "https://mathiasbynens.be/"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mathiasbynens/emoji-regex.git"
+      },
+      "bugs": {
+        "url": "https://github.com/mathiasbynens/emoji-regex/issues"
+      },
+      "scripts": {
+        "build": "rm -rf -- es2015; babel src -d .; NODE_ENV=es2015 babel src -d ./es2015; node script/inject-sequences.js",
+        "test": "mocha",
+        "test:watch": "npm run test -- --watch"
+      },
+      "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.4",
+        "@babel/plugin-proposal-unicode-property-regex": "^7.4.4",
+        "@babel/preset-env": "^7.4.4",
+        "mocha": "^6.1.4",
+        "regexgen": "^1.3.0",
+        "unicode-13.0.0": "^0.8.0"
+      },
+      "gitHead": "cf70015c33262fdddf731cf5cda16588bb1583dc",
+      "_id": "emoji-regex@9.0.0",
+      "_nodeVersion": "12.6.0",
+      "_npmVersion": "6.13.6",
+      "dist": {
+        "integrity": "sha512-6p1NII1Vm62wni/VR/cUMauVQoxmLVb9csqQlvLz+hO2gk8U2UYDfXHQSUYIBKmZwAKz867IDqG7B+u0mj+M6w==",
+        "shasum": "48a2309cc8a1d2e9d23bc6a67c39b63032e76ea4",
+        "tarball": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.0.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 50799,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJekD3OCRA9TVsSAnZWagAAoHAP/i3cRh9dr1QX4/4OAsrx\nCFvkSG47uqDlJanm7E9xcqluYEw7ssHX3Fmb+bL1uiUkj14qCp7kHHTk44kl\nGLQnK/BJJmwwLryagKxAtc/BhaEYO1bRw53WyLFg2HrnU0zg+hlBm1oMTMkn\nbuUL9u2WnUuOjqRRKC69wZfZm3ZE69YOMQdKdsE5/fyExEbg2P09cYsnB87u\n0tzCUX6MUQTW514xTEnZUU7Xy2MnL0iSxung1yfcWrGVmMgpAIW5OIZUBmE/\nh2fdyx7b88Ymdxy/gIcQhF2K7IxnI+5h6XfNsd72QK0df+CYooDbdTmq481V\nff1e2CTO6iodZZF7r7crKoU9IiqHEDwDelv4q3ybf0nSxOuVStLMcuMDXyOD\n6XdRvIFyQ8FjOYwQc3fjVyHUNYOo/0BH+3VVManrM+ThkuGU+/5/YKZHxm/4\nFL5+mvIH1dBUZ3uPYM4cvOsoyeZBZu5J+kcQ3JXinAO5/BOVXbL2vnhvT9su\nu/2fDyiuC5qgzaMnIpwQvcoiBtXw5hQwCA1yVINHZbuK4BfaSteTzgVcQFuU\n14LrbRfxR4XuG9TO+HNAY/kNh79HF4fh5gSAi0FFuu3C7FdsTIMPgYxpFUJl\nFsyrtLxVmIX0GOJG/RLH+189CaAkxeK1CUfZxU2dNEx3fzqVpoVMsSyYBiy6\nbEYD\r\n=bYFE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "mathias",
+          "email": "mathias@qiwi.be"
+        }
+      ],
+      "_npmUser": {
+        "name": "mathias",
+        "email": "mathias@qiwi.be"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/emoji-regex_9.0.0_1586511309638_0.7386618611323867"
+      },
+      "_hasShrinkwrap": false
+    },
+    "9.1.1": {
+      "name": "emoji-regex",
+      "version": "9.1.1",
+      "description": "A regular expression to match all Emoji-only symbols as per the Unicode Standard.",
+      "homepage": "https://mths.be/emoji-regex",
+      "main": "index.js",
+      "types": "index.d.ts",
+      "keywords": [
+        "unicode",
+        "regex",
+        "regexp",
+        "regular expressions",
+        "code points",
+        "symbols",
+        "characters",
+        "emoji"
+      ],
+      "license": "MIT",
+      "author": {
+        "name": "Mathias Bynens",
+        "url": "https://mathiasbynens.be/"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mathiasbynens/emoji-regex.git"
+      },
+      "bugs": {
+        "url": "https://github.com/mathiasbynens/emoji-regex/issues"
+      },
+      "scripts": {
+        "build": "rm -rf -- es2015; babel src -d .; NODE_ENV=es2015 babel src -d ./es2015; node script/inject-sequences.js",
+        "test": "mocha",
+        "test:watch": "npm run test -- --watch"
+      },
+      "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.4",
+        "@babel/plugin-proposal-unicode-property-regex": "^7.4.4",
+        "@babel/preset-env": "^7.4.4",
+        "@unicode/unicode-13.0.0": "^1.0.1",
+        "mocha": "^6.1.4",
+        "regexgen": "^1.3.0"
+      },
+      "gitHead": "0a00b98dc1532e15d2011638127b8b2c663a3732",
+      "_id": "emoji-regex@9.1.1",
+      "_nodeVersion": "12.18.4",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-AaWyDiNO9rbtMIcGl7tdxMcNu8SOLaDLxmQEFT5JhgKufOJzPPkYmgN2QwqTgw4doWMZZQttC6sUWVQjb+1VdA==",
+        "shasum": "1d5ffce26d8191e6c3f3a9d27987b1c5bba7d20a",
+        "tarball": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-9.1.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 64385,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfhanzCRA9TVsSAnZWagAArHcP/AkgkFe6z2lsqPB49GXM\n84UWl+mCyjpKIPrrRxKEXv00WYPTOOuPyCiV1OG0Uoy4ycvAPi3uqAQenUDw\nrBgKNWcLW1ZiHcS51y5O1H7/Bu5ZdEQg9IQOmuDofAEmJ6E+hPBqXNmntQxI\nvgwG5RFvohlxPhIDRqdCpxJuM91XKg5NDyz+Pz7UoXAHimwddT/9+CkAjx00\n+OOy65lLDfG57U8sfZ9T8vzzEUBId+YoBFxHAvFfNFLSr+36Mp+YzlCrc6sW\nL1ZFJKBwGsrZCmu9qJ8RDj4CutDdvoiQTlDtVpByKO79J0xAUA5yYx4z0V0F\n4ZZDKt4VDmwfhR3VTEHO3hbnK6MKs9p+n3ZS/K2Riu7GCATlRvvLJBUi9lNB\nrtwiJGOj2/HqCKqZodQL0TaM5Ki5UBsO9cbThlWUX/FcWaGeIZHV8jOkBGVg\nHKVNfVf74QlpQ7kBoHwd9jP/s0Awhv4EXvukrjBUgaxF9pOMijylZFOSa2mr\n4q+/413YYcUpM85xEI3owx2rK5DRGmvegHHW/Ith/eW6s59AiNrBWxn7/6rM\nkZ/NYSQPR+pGAahXp/ClqdQvy8Vfgsl26nnrUS13heB0wWJB8UgDkc+Wk+iO\nAjcRYCvp6gqFspDo+Gaolm4yL3ASmLneT8iJQv//qy+pivqS0eOU0UV3hgtK\nDq6z\r\n=xDrb\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "mathias",
+          "email": "mathias@qiwi.be"
+        },
+        {
+          "name": "google-wombot",
+          "email": "node-team-npm+wombot@google.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "google-wombot",
+        "email": "node-team-npm+wombot@google.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/emoji-regex_9.1.1_1602595315386_0.32293751978809326"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# emoji-regex [![Build status](https://travis-ci.org/mathiasbynens/emoji-regex.svg?branch=master)](https://travis-ci.org/mathiasbynens/emoji-regex)\n\n_emoji-regex_ offers a regular expression to match all emoji symbols (including textual representations of emoji) as per the Unicode Standard.\n\nThis repository contains a script that generates this regular expression based on [Unicode data](https://github.com/node-unicode/node-unicode-data). Because of this, the regular expression can easily be updated whenever new emoji are added to the Unicode standard.\n\n## Installation\n\nVia [npm](https://www.npmjs.com/):\n\n```bash\nnpm install emoji-regex\n```\n\nIn [Node.js](https://nodejs.org/):\n\n```js\nconst emojiRegex = require('emoji-regex');\n// Note: because the regular expression has the global flag set, this module\n// exports a function that returns the regex rather than exporting the regular\n// expression itself, to make it impossible to (accidentally) mutate the\n// original regular expression.\n\nconst text = `\n\\u{231A}: ⌚ default emoji presentation character (Emoji_Presentation)\n\\u{2194}\\u{FE0F}: ↔️ default text presentation character rendered as emoji\n\\u{1F469}: 👩 emoji modifier base (Emoji_Modifier_Base)\n\\u{1F469}\\u{1F3FF}: 👩🏿 emoji modifier base followed by a modifier\n`;\n\nconst regex = emojiRegex();\nlet match;\nwhile (match = regex.exec(text)) {\n  const emoji = match[0];\n  console.log(`Matched sequence ${ emoji } — code points: ${ [...emoji].length }`);\n}\n```\n\nConsole output:\n\n```\nMatched sequence ⌚ — code points: 1\nMatched sequence ⌚ — code points: 1\nMatched sequence ↔️ — code points: 2\nMatched sequence ↔️ — code points: 2\nMatched sequence 👩 — code points: 1\nMatched sequence 👩 — code points: 1\nMatched sequence 👩🏿 — code points: 2\nMatched sequence 👩🏿 — code points: 2\n```\n\nTo match emoji in their textual representation as well (i.e. emoji that are not `Emoji_Presentation` symbols and that aren’t forced to render as emoji by a variation selector), `require` the other regex:\n\n```js\nconst emojiRegex = require('emoji-regex/text.js');\n```\n\nAdditionally, in environments which support ES2015 Unicode escapes, you may `require` ES2015-style versions of the regexes:\n\n```js\nconst emojiRegex = require('emoji-regex/es2015/index.js');\nconst emojiRegexText = require('emoji-regex/es2015/text.js');\n```\n\n## For maintainers\n\n### How to update emoji-regex after new Unicode Standard releases\n\n1. Update the Unicode data dependency in `package.json` by running the following commands:\n\n    ```sh\n    # Example: updating from Unicode v12 to Unicode v13.\n    npm uninstall @unicode/unicode-12.0.0\n    npm install @unicode/unicode-13.0.0 --save-dev\n    ````\n\n1. Generate the new output:\n\n    ```sh\n    npm run build\n    ```\n\n1. Verify that tests still pass:\n\n    ```sh\n    npm test\n    ```\n\n1. Send a pull request with the changes.\n\n1. In a separate pull request, bump the emoji-regex version number in `package.json`:\n\n    ```sh\n    npm version patch -m 'Release v%s'\n    ```\n\n    Instead of `patch`, use `minor` or `major` [as needed](https://semver.org/).\n\n1. Once both pull requests are merged, tag the new release:\n\n    ```sh\n    git tag v0.1.2\n    git push --tags\n    ```\n\n    Our CI then automatically publishes the new release to npm.\n\n## Author\n\n| [![twitter/mathias](https://gravatar.com/avatar/24e08a9ea84deb17ae121074d0f17125?s=70)](https://twitter.com/mathias \"Follow @mathias on Twitter\") |\n|---|\n| [Mathias Bynens](https://mathiasbynens.be/) |\n\n## License\n\n_emoji-regex_ is available under the [MIT](https://mths.be/mit) license.\n",
   "maintainers": [
     {
       "name": "mathias",
       "email": "mathias@qiwi.be"
+    },
+    {
+      "name": "google-wombot",
+      "email": "node-team-npm+wombot@google.com"
     }
   ],
   "time": {
-    "modified": "2019-03-05T18:58:27.733Z",
+    "modified": "2020-10-13T13:21:57.849Z",
     "created": "2014-09-28T11:10:47.034Z",
     "1.0.0": "2014-09-28T11:10:47.034Z",
     "1.0.1": "2014-09-29T15:38:43.645Z",
@@ -1728,7 +1881,9 @@
     "7.0.1": "2018-08-31T19:24:00.344Z",
     "7.0.2": "2018-12-20T11:08:57.200Z",
     "7.0.3": "2018-12-21T10:26:45.903Z",
-    "8.0.0": "2019-03-05T18:58:23.040Z"
+    "8.0.0": "2019-03-05T18:58:23.040Z",
+    "9.0.0": "2020-04-10T09:35:09.769Z",
+    "9.1.1": "2020-10-13T13:21:55.541Z"
   },
   "homepage": "https://mths.be/emoji-regex",
   "keywords": [
@@ -1758,5 +1913,7 @@
     "netoperatorwibby": true,
     "rocket0191": true,
     "zhenguo.zhao": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

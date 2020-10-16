@@ -1,6 +1,6 @@
 {
   "_id": "prop-types",
-  "_rev": "219-4fa7eab82a740661c49938a120791793",
+  "_rev": "220-baf558c15aa403af7587c7280615b9ac",
   "name": "prop-types",
   "description": "Runtime type checking for React props and similar objects.",
   "dist-tags": {
@@ -1711,6 +1711,7 @@
           "loose-envify"
         ]
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2013-present, Facebook, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "_id": "prop-types@15.7.0",
       "dist": {
         "shasum": "cc45233a8ccef80f4a2e3a6bf575bee4e19b4a50",
@@ -1806,6 +1807,7 @@
           "loose-envify"
         ]
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2013-present, Facebook, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "_id": "prop-types@15.7.1",
       "dist": {
         "shasum": "2fa61e0a699d428b40320127733ee2931f05d9d1",
@@ -1904,6 +1906,7 @@
           "loose-envify"
         ]
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2013-present, Facebook, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
       "_id": "prop-types@15.7.2",
       "dist": {
         "shasum": "52c41e75b8c87e72b9d9360e0206b99dcbffa6c5",
@@ -1955,30 +1958,27 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# prop-types [![Build Status](https://travis-ci.com/facebook/prop-types.svg?branch=master)](https://travis-ci.org/facebook/prop-types)\n\nRuntime type checking for React props and similar objects.\n\nYou can use prop-types to document the intended types of properties passed to\ncomponents. React (and potentially other libraries—see the checkPropTypes()\nreference below) will check props passed to your components against those\ndefinitions, and warn in development if they don’t match.\n\n## Installation\n\n```shell\nnpm install --save prop-types\n```\n\n## Importing\n\n```js\nimport PropTypes from 'prop-types'; // ES6\nvar PropTypes = require('prop-types'); // ES5 with npm\n```\n\n### CDN\n\nIf you prefer to exclude `prop-types` from your application and use it\nglobally via `window.PropTypes`, the `prop-types` package provides\nsingle-file distributions, which are hosted on the following CDNs:\n\n* [**unpkg**](https://unpkg.com/prop-types/)\n```html\n<!-- development version -->\n<script src=\"https://unpkg.com/prop-types@15.6/prop-types.js\"></script>\n\n<!-- production version -->\n<script src=\"https://unpkg.com/prop-types@15.6/prop-types.min.js\"></script>\n```\n\n* [**cdnjs**](https://cdnjs.com/libraries/prop-types)\n```html\n<!-- development version -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.0/prop-types.js\"></script>\n\n<!-- production version -->\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.0/prop-types.min.js\"></script>\n```\n\nTo load a specific version of `prop-types` replace `15.6.0` with the version number.\n\n## Usage\n\nPropTypes was originally exposed as part of the React core module, and is\ncommonly used with React components.\nHere is an example of using PropTypes with a React component, which also\ndocuments the different validators provided:\n\n```js\nimport React from 'react';\nimport PropTypes from 'prop-types';\n\nclass MyComponent extends React.Component {\n  render() {\n    // ... do things with the props\n  }\n}\n\nMyComponent.propTypes = {\n  // You can declare that a prop is a specific JS primitive. By default, these\n  // are all optional.\n  optionalArray: PropTypes.array,\n  optionalBool: PropTypes.bool,\n  optionalFunc: PropTypes.func,\n  optionalNumber: PropTypes.number,\n  optionalObject: PropTypes.object,\n  optionalString: PropTypes.string,\n  optionalSymbol: PropTypes.symbol,\n\n  // Anything that can be rendered: numbers, strings, elements or an array\n  // (or fragment) containing these types.\n  optionalNode: PropTypes.node,\n\n  // A React element (ie. <MyComponent />).\n  optionalElement: PropTypes.element,\n\n  // A React element type (ie. MyComponent).\n  optionalElementType: PropTypes.elementType,\n\n  // You can also declare that a prop is an instance of a class. This uses\n  // JS's instanceof operator.\n  optionalMessage: PropTypes.instanceOf(Message),\n\n  // You can ensure that your prop is limited to specific values by treating\n  // it as an enum.\n  optionalEnum: PropTypes.oneOf(['News', 'Photos']),\n\n  // An object that could be one of many types\n  optionalUnion: PropTypes.oneOfType([\n    PropTypes.string,\n    PropTypes.number,\n    PropTypes.instanceOf(Message)\n  ]),\n\n  // An array of a certain type\n  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),\n\n  // An object with property values of a certain type\n  optionalObjectOf: PropTypes.objectOf(PropTypes.number),\n\n  // You can chain any of the above with `isRequired` to make sure a warning\n  // is shown if the prop isn't provided.\n\n  // An object taking on a particular shape\n  optionalObjectWithShape: PropTypes.shape({\n    optionalProperty: PropTypes.string,\n    requiredProperty: PropTypes.number.isRequired\n  }),\n\n  // An object with warnings on extra properties\n  optionalObjectWithStrictShape: PropTypes.exact({\n    optionalProperty: PropTypes.string,\n    requiredProperty: PropTypes.number.isRequired\n  }),\n\n  requiredFunc: PropTypes.func.isRequired,\n\n  // A value of any data type\n  requiredAny: PropTypes.any.isRequired,\n\n  // You can also specify a custom validator. It should return an Error\n  // object if the validation fails. Don't `console.warn` or throw, as this\n  // won't work inside `oneOfType`.\n  customProp: function(props, propName, componentName) {\n    if (!/matchme/.test(props[propName])) {\n      return new Error(\n        'Invalid prop `' + propName + '` supplied to' +\n        ' `' + componentName + '`. Validation failed.'\n      );\n    }\n  },\n\n  // You can also supply a custom validator to `arrayOf` and `objectOf`.\n  // It should return an Error object if the validation fails. The validator\n  // will be called for each key in the array or object. The first two\n  // arguments of the validator are the array or object itself, and the\n  // current item's key.\n  customArrayProp: PropTypes.arrayOf(function(propValue, key, componentName, location, propFullName) {\n    if (!/matchme/.test(propValue[key])) {\n      return new Error(\n        'Invalid prop `' + propFullName + '` supplied to' +\n        ' `' + componentName + '`. Validation failed.'\n      );\n    }\n  })\n};\n```\n\nRefer to the [React documentation](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) for more information.\n\n## Migrating from React.PropTypes\n\nCheck out [Migrating from React.PropTypes](https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html#migrating-from-react.proptypes) for details on how to migrate to `prop-types` from `React.PropTypes`.\n\nNote that this blog posts **mentions a codemod script that performs the conversion automatically**.\n\nThere are also important notes below.\n\n## How to Depend on This Package?\n\nFor apps, we recommend putting it in `dependencies` with a caret range.\nFor example:\n\n```js\n  \"dependencies\": {\n    \"prop-types\": \"^15.5.7\"\n  }\n```\n\nFor libraries, we *also* recommend leaving it in `dependencies`:\n\n```js\n  \"dependencies\": {\n    \"prop-types\": \"^15.5.7\"\n  },\n  \"peerDependencies\": {\n    \"react\": \"^15.5.0\"\n  }\n```\n\n**Note:** there are known issues in versions before 15.5.7 so we recommend using it as the minimal version.\n\nMake sure that the version range uses a caret (`^`) and thus is broad enough for npm to efficiently deduplicate packages.\n\nFor UMD bundles of your components, make sure you **don’t** include `PropTypes` in the build. Usually this is done by marking it as an external (the specifics depend on your bundler), just like you do with React.\n\n## Compatibility\n\n### React 0.14\n\nThis package is compatible with **React 0.14.9**. Compared to 0.14.8 (which was released in March of 2016), there are no other changes in 0.14.9, so it should be a painless upgrade.\n\n```shell\n# ATTENTION: Only run this if you still use React 0.14!\nnpm install --save react@^0.14.9 react-dom@^0.14.9\n```\n\n### React 15+\n\nThis package is compatible with **React 15.3.0** and higher.\n\n```\nnpm install --save react@^15.3.0 react-dom@^15.3.0\n```\n\n### What happens on other React versions?\n\nIt outputs warnings with the message below even though the developer doesn’t do anything wrong. Unfortunately there is no solution for this other than updating React to either 15.3.0 or higher, or 0.14.9 if you’re using React 0.14.\n\n## Difference from `React.PropTypes`: Don’t Call Validator Functions\n\nFirst of all, **which version of React are you using**? You might be seeing this message because a component library has updated to use `prop-types` package, but your version of React is incompatible with it. See the [above section](#compatibility) for more details.\n\nAre you using either React 0.14.9 or a version higher than React 15.3.0? Read on.\n\nWhen you migrate components to use the standalone `prop-types`, **all validator functions will start throwing an error if you call them directly**. This makes sure that nobody relies on them in production code, and it is safe to strip their implementations to optimize the bundle size.\n\nCode like this is still fine:\n\n```js\nMyComponent.propTypes = {\n  myProp: PropTypes.bool\n};\n```\n\nHowever, code like this will not work with the `prop-types` package:\n\n```js\n// Will not work with `prop-types` package!\nvar errorOrNull = PropTypes.bool(42, 'myProp', 'MyComponent', 'prop');\n```\n\nIt will throw an error:\n\n```\nCalling PropTypes validators directly is not supported by the `prop-types` package.\nUse PropTypes.checkPropTypes() to call them.\n```\n\n(If you see **a warning** rather than an error with this message, please check the [above section about compatibility](#compatibility).)\n\nThis is new behavior, and you will only encounter it when you migrate from `React.PropTypes` to the `prop-types` package. For the vast majority of components, this doesn’t matter, and if you didn’t see [this warning](https://facebook.github.io/react/warnings/dont-call-proptypes.html) in your components, your code is safe to migrate. This is not a breaking change in React because you are only opting into this change for a component by explicitly changing your imports to use `prop-types`. If you temporarily need the old behavior, you can keep using `React.PropTypes` until React 16.\n\n**If you absolutely need to trigger the validation manually**, call `PropTypes.checkPropTypes()`. Unlike the validators themselves, this function is safe to call in production, as it will be replaced by an empty function:\n\n```js\n// Works with standalone PropTypes\nPropTypes.checkPropTypes(MyComponent.propTypes, props, 'prop', 'MyComponent');\n```\nSee below for more info.\n\n**You might also see this error** if you’re calling a `PropTypes` validator from your own custom `PropTypes` validator. In this case, the fix is to make sure that you are passing *all* of the arguments to the inner function. There is a more in-depth explanation of how to fix it [on this page](https://facebook.github.io/react/warnings/dont-call-proptypes.html#fixing-the-false-positive-in-third-party-proptypes). Alternatively, you can temporarily keep using `React.PropTypes` until React 16, as it would still only warn in this case.\n\nIf you use a bundler like Browserify or Webpack, don’t forget to [follow these instructions](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) to correctly bundle your application in development or production mode. Otherwise you’ll ship unnecessary code to your users.\n\n## PropTypes.checkPropTypes\n\nReact will automatically check the propTypes you set on the component, but if\nyou are using PropTypes without React then you may want to manually call\n`PropTypes.checkPropTypes`, like so:\n\n```js\nconst myPropTypes = {\n  name: PropTypes.string,\n  age: PropTypes.number,\n  // ... define your prop validations\n};\n\nconst props = {\n  name: 'hello', // is valid\n  age: 'world', // not valid\n};\n\n// Let's say your component is called 'MyComponent'\n\n// Works with standalone PropTypes\nPropTypes.checkPropTypes(myPropTypes, props, 'age', 'MyComponent');\n// This will warn as follows:\n// Warning: Failed prop type: Invalid prop `age` of type `string` supplied to\n// `MyComponent`, expected `number`.\n```\n\n## PropTypes.resetWarningCache()\n\n`PropTypes.checkPropTypes(...)` only `console.error.log(...)`s a given message once.  To reset the cache while testing call `PropTypes.resetWarningCache()`\n\n### License\n\nprop-types is [MIT licensed](./LICENSE).\n",
   "maintainers": [
+    {
+      "email": "dan.abramov@gmail.com",
+      "name": "gaearon"
+    },
     {
       "email": "npm@andrewclark.io",
       "name": "acdlite"
-    },
-    {
-      "email": "Kierkegaurd@gmail.com",
-      "name": "aweary"
     },
     {
       "email": "briandavidvaughn@gmail.com",
       "name": "brianvaughn"
     },
     {
-      "email": "opensource+npm@fb.com",
-      "name": "fb"
-    },
-    {
-      "email": "dan.abramov@gmail.com",
-      "name": "gaearon"
-    },
-    {
       "email": "ljharb@gmail.com",
       "name": "ljharb"
+    },
+    {
+      "email": "opensource+npm@fb.com",
+      "name": "fb"
     },
     {
       "email": "npm@sophiebits.com",
@@ -1986,7 +1986,7 @@
     }
   ],
   "time": {
-    "modified": "2019-11-29T09:32:43.300Z",
+    "modified": "2020-06-13T18:10:01.160Z",
     "created": "2015-02-20T02:05:31.673Z",
     "0.1.0": "2015-02-20T02:05:31.673Z",
     "0.2.0": "2016-01-24T15:36:29.906Z",
@@ -2177,5 +2177,7 @@
     "mestar": true,
     "aaronwells": true,
     "vivekrp": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

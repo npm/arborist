@@ -1,10 +1,10 @@
 {
   "_id": "espree",
-  "_rev": "116-5e979cf225a3a9b9c851f9c098400471",
+  "_rev": "117-6be816f66a8383c2749f13141259dbfe",
   "name": "espree",
   "description": "An Esprima-compatible JavaScript parser built on Acorn",
   "dist-tags": {
-    "latest": "7.2.0",
+    "latest": "7.3.0",
     "next": "6.0.0-alpha.0"
   },
   "versions": {
@@ -7477,9 +7477,107 @@
         "tmp": "tmp/espree_7.2.0_1595033623849_0.4306056585018716"
       },
       "_hasShrinkwrap": false
+    },
+    "7.3.0": {
+      "name": "espree",
+      "description": "An Esprima-compatible JavaScript parser built on Acorn",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "homepage": "https://github.com/eslint/espree",
+      "main": "espree.js",
+      "version": "7.3.0",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/espree.git"
+      },
+      "bugs": {
+        "url": "http://github.com/eslint/espree.git"
+      },
+      "license": "BSD-2-Clause",
+      "dependencies": {
+        "acorn": "^7.4.0",
+        "acorn-jsx": "^5.2.0",
+        "eslint-visitor-keys": "^1.3.0"
+      },
+      "devDependencies": {
+        "browserify": "^16.5.0",
+        "chai": "^4.2.0",
+        "eslint": "^6.0.1",
+        "eslint-config-eslint": "^5.0.1",
+        "eslint-plugin-node": "^9.1.0",
+        "eslint-release": "^1.0.0",
+        "esprima": "latest",
+        "esprima-fb": "^8001.2001.0-dev-harmony-fb",
+        "json-diff": "^0.5.4",
+        "leche": "^2.3.0",
+        "mocha": "^6.2.0",
+        "nyc": "^14.1.1",
+        "regenerate": "^1.4.0",
+        "shelljs": "^0.3.0",
+        "shelljs-nodecli": "^0.1.1",
+        "unicode-6.3.0": "^0.7.5"
+      },
+      "keywords": [
+        "ast",
+        "ecmascript",
+        "javascript",
+        "parser",
+        "syntax",
+        "acorn"
+      ],
+      "scripts": {
+        "generate-regex": "node tools/generate-identifier-regex.js",
+        "test": "npm run-script lint && node Makefile.js test",
+        "lint": "node Makefile.js lint",
+        "fixlint": "node Makefile.js lint --fix",
+        "sync-docs": "node Makefile.js docs",
+        "browserify": "node Makefile.js browserify",
+        "generate-release": "eslint-generate-release",
+        "generate-alpharelease": "eslint-generate-prerelease alpha",
+        "generate-betarelease": "eslint-generate-prerelease beta",
+        "generate-rcrelease": "eslint-generate-prerelease rc",
+        "publish-release": "eslint-publish-release"
+      },
+      "gitHead": "dbdd5a7c099547c57213e22f2c464e27ab88ae52",
+      "_id": "espree@7.3.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-dksIWsvKCixn1yrEXO8UosNSxaDoSYpq9reEjZSbHLpT5hpaCAKTLBwq0RHtLrIr+c0ByiYzWT8KTMRzoRCNlw==",
+        "shasum": "dc30437cf67947cf576121ebd780f15eeac72348",
+        "tarball": "https://registry.npmjs.org/espree/-/espree-7.3.0.tgz",
+        "fileCount": 11,
+        "unpackedSize": 72374,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfQXwBCRA9TVsSAnZWagAAf4oP/ApCCo5K3V5ZIjzSHHzB\nAsRQr4hVPwci9+qFvX7RAm8MAaSLRe3rVw5qbMqBLUifOGYxPReNMmWAKf0T\n2EQ0D1rg/qfgTuBPdmdUBurH8eQHgcD5Ic3KBTBPIWED/f6Xl5JaHxe0WSRD\nAF6cBwYNeesePlpMAe9i/hk/J4ZtJs+nAYdUTWvaPlXslNHe42FQKFL1lByr\nYCqNbwjduUEIfUiVuX78tCw1MK7zKGsScvJAUFT15R62PbnOphxMrPuMOP/2\nQ2A1d8+KdeqIfIdLN9pt+i6ti5kOnv520VPmgviAvaFa2TIy2vUyGx3B3CBJ\ngeJlVY2WHBmtRKILVnkpcvIQ88RvWFT19kWU5bVV3Okvs06vgFbRIfY1UZpn\n14gvps8igo7Y5iaiHIDdgFmqARBjnXsiwS5R0PrWI3iSYEMXD97z18zvUhO/\nwBq0uU1Y19dT6Rfp4pwfEwmr1vPzujWQdFBXpOvGzlLL2yWft6z6j9E04Dec\n0U7GgfJIS+F3wVg+6QMlk7lyo3K/PvZdzigmI2yImr5YlC1Qgl7Ca+V3eNm8\nOCrc3mLbkJd1DQEPxq8vVMDtVLn/TYfetotNrb19lhtBcL09QAf0bCReNSzN\nJ7RXOrsoObJ85POezSxjzLaBc/uedxKw7moacS40ItSH1rFv+kacbPVyVF5L\nPs5P\r\n=hMY7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "nicholas+eslint@nczconsulting.com",
+          "name": "eslintbot"
+        },
+        {
+          "email": "nicholas@nczconsulting.com",
+          "name": "nzakas"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/espree_7.3.0_1598127104842_0.42690497539447203"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "[![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)\n[![Build Status](https://travis-ci.org/eslint/espree.svg?branch=master)](https://travis-ci.org/eslint/espree)\n[![npm downloads](https://img.shields.io/npm/dm/espree.svg)](https://www.npmjs.com/package/espree)\n[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=9348450)](https://www.bountysource.com/trackers/9348450-eslint?utm_source=9348450&utm_medium=shield&utm_campaign=TRACKER_BADGE)\n\n# Espree\n\nEspree started out as a fork of [Esprima](http://esprima.org) v1.2.2, the last stable published released of Esprima before work on ECMAScript 6 began. Espree is now built on top of [Acorn](https://github.com/ternjs/acorn), which has a modular architecture that allows extension of core functionality. The goal of Espree is to produce output that is similar to Esprima with a similar API so that it can be used in place of Esprima.\n\n## Usage\n\nInstall:\n\n```\nnpm i espree\n```\n\nAnd in your Node.js code:\n\n```javascript\nconst espree = require(\"espree\");\n\nconst ast = espree.parse(code);\n```\n\n## API\n\n### `parse()`\n\n`parse` parses the given code and returns a abstract syntax tree (AST). It takes two paramenter.\n\n- `code` [string]() - the code which needs to be parsed. \n- `options (Optional)` [Object]() - read more about this [here](#options)\n\n```javascript\nconst espree = require(\"espree\");\n\nconst ast = espree.parse(code, options);\n```\n\n**Example :**\n\n```js\nconst ast = espree.parse('let foo = \"bar\"', { ecmaVersion: 6 });\nconsole.log(ast);\n```\n\n<details><summary>Output</summary>\n<p>\n\n```\nNode {\n  type: 'Program',\n  start: 0,\n  end: 15,\n  body: [\n    Node {\n      type: 'VariableDeclaration',\n      start: 0,\n      end: 15,\n      declarations: [Array],\n      kind: 'let'\n    }\n  ],\n  sourceType: 'script'\n}\n```\n\n</p>\n</details>\n\n### `tokenize()`\n\n`tokenize` returns the tokens of a give code. It takes two paramenter.\n\n- `code` [string]() - the code which needs to be parsed. \n- `options (Optional)` [Object]() - read more about this [here](#options)\n\nEven if `options` is empty or undefined or `options.tokens` is `false`, it assigns it to `true` in order to get the `tokens` array\n\n**Example :**\n\n```js\nconst tokens = espree.tokenize('let foo = \"bar\"', { ecmaVersion: 6 });\nconsole.log(tokens);\n```\n\n<details><summary>Output</summary>\n<p>\n\n```\nToken { type: 'Keyword', value: 'let', start: 0, end: 3 },\nToken { type: 'Identifier', value: 'foo', start: 4, end: 7 },\nToken { type: 'Punctuator', value: '=', start: 8, end: 9 },\nToken { type: 'String', value: '\"bar\"', start: 10, end: 15 }\n```\n\n</p>\n</details>\n\n### `version`\n\nReturns the current `espree` version\n\n### `VisitorKeys`\n\nReturns all visitor keys for traversing the AST from [eslint-visitor-keys](https://github.com/eslint/eslint-visitor-keys)\n\n### `latestEcmaVersion`\n\nReturns the latest ECMAScript supported by `espree`\n\n### `supportedEcmaVersions`\n\nReturns an array of all supported ECMAScript version \n\n## Options \n\n```js\nconst options = {\n    // attach range information to each node\n    range: false,\n\n    // attach line/column location information to each node\n    loc: false,\n\n    // create a top-level comments array containing all comments\n    comment: false,\n\n    // create a top-level tokens array containing all tokens\n    tokens: false,\n\n    // Set to 3, 5 (default), 6, 7, 8, 9, or 10 to specify the version of ECMAScript syntax you want to use.\n    // You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10), or 2020 (same as 11) to use the year-based naming.\n    ecmaVersion: 5,\n\n    // specify which type of script you're parsing (\"script\" or \"module\")\n    sourceType: \"script\",\n\n    // specify additional language features\n    ecmaFeatures: {\n\n        // enable JSX parsing\n        jsx: false,\n\n        // enable return in global scope\n        globalReturn: false,\n\n        // enable implied strict mode (if ecmaVersion >= 5)\n        impliedStrict: false\n    }\n}\n```\n\n## Esprima Compatibility Going Forward\n\nThe primary goal is to produce the exact same AST structure and tokens as Esprima, and that takes precedence over anything else. (The AST structure being the [ESTree](https://github.com/estree/estree) API with JSX extensions.) Separate from that, Espree may deviate from what Esprima outputs in terms of where and how comments are attached, as well as what additional information is available on AST nodes. That is to say, Espree may add more things to the AST nodes than Esprima does but the overall AST structure produced will be the same.\n\nEspree may also deviate from Esprima in the interface it exposes.\n\n## Contributing\n\nIssues and pull requests will be triaged and responded to as quickly as possible. We operate under the [ESLint Contributor Guidelines](http://eslint.org/docs/developer-guide/contributing), so please be sure to read them before contributing. If you're not sure where to dig in, check out the [issues](https://github.com/eslint/espree/issues).\n\nEspree is licensed under a permissive BSD 2-clause license.\n\n## Security Policy\n\nWe work hard to ensure that Espree is safe for everyone and that security issues are addressed quickly and responsibly. Read the full [security policy](https://github.com/eslint/.github/blob/master/SECURITY.md).\n\n## Build Commands\n\n* `npm test` - run all linting and tests\n* `npm run lint` - run all linting\n* `npm run browserify` - creates a version of Espree that is usable in a browser\n\n## Differences from Espree 2.x\n\n* The `tokenize()` method does not use `ecmaFeatures`. Any string will be tokenized completely based on ECMAScript 6 semantics.\n* Trailing whitespace no longer is counted as part of a node.\n* `let` and `const` declarations are no longer parsed by default. You must opt-in by using an `ecmaVersion` newer than `5` or setting `sourceType` to `module`.\n* The `esparse` and `esvalidate` binary scripts have been removed.\n* There is no `tolerant` option. We will investigate adding this back in the future.\n\n## Known Incompatibilities\n\nIn an effort to help those wanting to transition from other parsers to Espree, the following is a list of noteworthy incompatibilities with other parsers. These are known differences that we do not intend to change.\n\n### Esprima 1.2.2\n\n* Esprima counts trailing whitespace as part of each AST node while Espree does not. In Espree, the end of a node is where the last token occurs.\n* Espree does not parse `let` and `const` declarations by default.\n* Error messages returned for parsing errors are different.\n* There are two addition properties on every node and token: `start` and `end`. These represent the same data as `range` and are used internally by Acorn.\n\n### Esprima 2.x\n\n* Esprima 2.x uses a different comment attachment algorithm that results in some comments being added in different places than Espree. The algorithm Espree uses is the same one used in Esprima 1.2.2.\n\n## Frequently Asked Questions\n\n### Why another parser\n\n[ESLint](http://eslint.org) had been relying on Esprima as its parser from the beginning. While that was fine when the JavaScript language was evolving slowly, the pace of development increased dramatically and Esprima had fallen behind. ESLint, like many other tools reliant on Esprima, has been stuck in using new JavaScript language features until Esprima updates, and that caused our users frustration.\n\nWe decided the only way for us to move forward was to create our own parser, bringing us inline with JSHint and JSLint, and allowing us to keep implementing new features as we need them. We chose to fork Esprima instead of starting from scratch in order to move as quickly as possible with a compatible API.\n\nWith Espree 2.0.0, we are no longer a fork of Esprima but rather a translation layer between Acorn and Esprima syntax. This allows us to put work back into a community-supported parser (Acorn) that is continuing to grow and evolve while maintaining an Esprima-compatible parser for those utilities still built on Esprima.\n\n### Have you tried working with Esprima?\n\nYes. Since the start of ESLint, we've regularly filed bugs and feature requests with Esprima and will continue to do so. However, there are some different philosophies around how the projects work that need to be worked through. The initial goal was to have Espree track Esprima and eventually merge the two back together, but we ultimately decided that building on top of Acorn was a better choice due to Acorn's plugin support.\n\n### Why don't you just use Acorn?\n\nAcorn is a great JavaScript parser that produces an AST that is compatible with Esprima. Unfortunately, ESLint relies on more than just the AST to do its job. It relies on Esprima's tokens and comment attachment features to get a complete picture of the source code. We investigated switching to Acorn, but the inconsistencies between Esprima and Acorn created too much work for a project like ESLint.\n\nWe are building on top of Acorn, however, so that we can contribute back and help make Acorn even better.\n\n### What ECMAScript 6 features do you support?\n\nAll of them.\n\n### What ECMAScript 7/2016 features do you support?\n\nThere is only one ECMAScript 2016 syntax change: the exponentiation operator. Espree supports this.\n\n### What ECMAScript 2017 features do you support?\n\nThere are two ECMAScript 2017 syntax changes: `async` functions, and trailing commas in function declarations and calls. Espree supports both of them.\n\n### What ECMAScript 2018 features do you support?\n\nThere are seven ECMAScript 2018 syntax changes:\n\n* Invalid escape sequences in tagged template literals\n* Rest/spread properties\n* Async iteration\n* RegExp `s` flag\n* RegExp named capture groups\n* RegExp lookbehind assertions\n* RegExp Unicode property escapes\n\nEspree supports all of them.\n\n### What ECMAScript 2019 features do you support?\n\nBecause ECMAScript 2019 is still under development, we are implementing features as they are finalized. Currently, Espree supports:\n\n* Optional `catch` binding\n* JSON superset (`\\u2028` and `\\u2029` in string literals)\n\n### How do you determine which experimental features to support?\n\nIn general, we do not support experimental JavaScript features. We may make exceptions from time to time depending on the maturity of the features.\n",
+  "readme": "[![npm version](https://img.shields.io/npm/v/espree.svg)](https://www.npmjs.com/package/espree)\n[![Build Status](https://travis-ci.org/eslint/espree.svg?branch=master)](https://travis-ci.org/eslint/espree)\n[![npm downloads](https://img.shields.io/npm/dm/espree.svg)](https://www.npmjs.com/package/espree)\n[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=9348450)](https://www.bountysource.com/trackers/9348450-eslint?utm_source=9348450&utm_medium=shield&utm_campaign=TRACKER_BADGE)\n\n# Espree\n\nEspree started out as a fork of [Esprima](http://esprima.org) v1.2.2, the last stable published released of Esprima before work on ECMAScript 6 began. Espree is now built on top of [Acorn](https://github.com/ternjs/acorn), which has a modular architecture that allows extension of core functionality. The goal of Espree is to produce output that is similar to Esprima with a similar API so that it can be used in place of Esprima.\n\n## Usage\n\nInstall:\n\n```\nnpm i espree\n```\n\nAnd in your Node.js code:\n\n```javascript\nconst espree = require(\"espree\");\n\nconst ast = espree.parse(code);\n```\n\n## API\n\n### `parse()`\n\n`parse` parses the given code and returns a abstract syntax tree (AST). It takes two paramenter.\n\n- `code` [string]() - the code which needs to be parsed. \n- `options (Optional)` [Object]() - read more about this [here](#options)\n\n```javascript\nconst espree = require(\"espree\");\n\nconst ast = espree.parse(code, options);\n```\n\n**Example :**\n\n```js\nconst ast = espree.parse('let foo = \"bar\"', { ecmaVersion: 6 });\nconsole.log(ast);\n```\n\n<details><summary>Output</summary>\n<p>\n\n```\nNode {\n  type: 'Program',\n  start: 0,\n  end: 15,\n  body: [\n    Node {\n      type: 'VariableDeclaration',\n      start: 0,\n      end: 15,\n      declarations: [Array],\n      kind: 'let'\n    }\n  ],\n  sourceType: 'script'\n}\n```\n\n</p>\n</details>\n\n### `tokenize()`\n\n`tokenize` returns the tokens of a give code. It takes two paramenter.\n\n- `code` [string]() - the code which needs to be parsed. \n- `options (Optional)` [Object]() - read more about this [here](#options)\n\nEven if `options` is empty or undefined or `options.tokens` is `false`, it assigns it to `true` in order to get the `tokens` array\n\n**Example :**\n\n```js\nconst tokens = espree.tokenize('let foo = \"bar\"', { ecmaVersion: 6 });\nconsole.log(tokens);\n```\n\n<details><summary>Output</summary>\n<p>\n\n```\nToken { type: 'Keyword', value: 'let', start: 0, end: 3 },\nToken { type: 'Identifier', value: 'foo', start: 4, end: 7 },\nToken { type: 'Punctuator', value: '=', start: 8, end: 9 },\nToken { type: 'String', value: '\"bar\"', start: 10, end: 15 }\n```\n\n</p>\n</details>\n\n### `version`\n\nReturns the current `espree` version\n\n### `VisitorKeys`\n\nReturns all visitor keys for traversing the AST from [eslint-visitor-keys](https://github.com/eslint/eslint-visitor-keys)\n\n### `latestEcmaVersion`\n\nReturns the latest ECMAScript supported by `espree`\n\n### `supportedEcmaVersions`\n\nReturns an array of all supported ECMAScript version \n\n## Options \n\n```js\nconst options = {\n    // attach range information to each node\n    range: false,\n\n    // attach line/column location information to each node\n    loc: false,\n\n    // create a top-level comments array containing all comments\n    comment: false,\n\n    // create a top-level tokens array containing all tokens\n    tokens: false,\n\n    // Set to 3, 5 (default), 6, 7, 8, 9, 10, 11, or 12 to specify the version of ECMAScript syntax you want to use.\n    // You can also set to 2015 (same as 6), 2016 (same as 7), 2017 (same as 8), 2018 (same as 9), 2019 (same as 10), 2020 (same as 11), or 2021 (same as 12) to use the year-based naming.\n    ecmaVersion: 5,\n\n    // specify which type of script you're parsing (\"script\" or \"module\")\n    sourceType: \"script\",\n\n    // specify additional language features\n    ecmaFeatures: {\n\n        // enable JSX parsing\n        jsx: false,\n\n        // enable return in global scope\n        globalReturn: false,\n\n        // enable implied strict mode (if ecmaVersion >= 5)\n        impliedStrict: false\n    }\n}\n```\n\n## Esprima Compatibility Going Forward\n\nThe primary goal is to produce the exact same AST structure and tokens as Esprima, and that takes precedence over anything else. (The AST structure being the [ESTree](https://github.com/estree/estree) API with JSX extensions.) Separate from that, Espree may deviate from what Esprima outputs in terms of where and how comments are attached, as well as what additional information is available on AST nodes. That is to say, Espree may add more things to the AST nodes than Esprima does but the overall AST structure produced will be the same.\n\nEspree may also deviate from Esprima in the interface it exposes.\n\n## Contributing\n\nIssues and pull requests will be triaged and responded to as quickly as possible. We operate under the [ESLint Contributor Guidelines](http://eslint.org/docs/developer-guide/contributing), so please be sure to read them before contributing. If you're not sure where to dig in, check out the [issues](https://github.com/eslint/espree/issues).\n\nEspree is licensed under a permissive BSD 2-clause license.\n\n## Security Policy\n\nWe work hard to ensure that Espree is safe for everyone and that security issues are addressed quickly and responsibly. Read the full [security policy](https://github.com/eslint/.github/blob/master/SECURITY.md).\n\n## Build Commands\n\n* `npm test` - run all linting and tests\n* `npm run lint` - run all linting\n* `npm run browserify` - creates a version of Espree that is usable in a browser\n\n## Differences from Espree 2.x\n\n* The `tokenize()` method does not use `ecmaFeatures`. Any string will be tokenized completely based on ECMAScript 6 semantics.\n* Trailing whitespace no longer is counted as part of a node.\n* `let` and `const` declarations are no longer parsed by default. You must opt-in by using an `ecmaVersion` newer than `5` or setting `sourceType` to `module`.\n* The `esparse` and `esvalidate` binary scripts have been removed.\n* There is no `tolerant` option. We will investigate adding this back in the future.\n\n## Known Incompatibilities\n\nIn an effort to help those wanting to transition from other parsers to Espree, the following is a list of noteworthy incompatibilities with other parsers. These are known differences that we do not intend to change.\n\n### Esprima 1.2.2\n\n* Esprima counts trailing whitespace as part of each AST node while Espree does not. In Espree, the end of a node is where the last token occurs.\n* Espree does not parse `let` and `const` declarations by default.\n* Error messages returned for parsing errors are different.\n* There are two addition properties on every node and token: `start` and `end`. These represent the same data as `range` and are used internally by Acorn.\n\n### Esprima 2.x\n\n* Esprima 2.x uses a different comment attachment algorithm that results in some comments being added in different places than Espree. The algorithm Espree uses is the same one used in Esprima 1.2.2.\n\n## Frequently Asked Questions\n\n### Why another parser\n\n[ESLint](http://eslint.org) had been relying on Esprima as its parser from the beginning. While that was fine when the JavaScript language was evolving slowly, the pace of development increased dramatically and Esprima had fallen behind. ESLint, like many other tools reliant on Esprima, has been stuck in using new JavaScript language features until Esprima updates, and that caused our users frustration.\n\nWe decided the only way for us to move forward was to create our own parser, bringing us inline with JSHint and JSLint, and allowing us to keep implementing new features as we need them. We chose to fork Esprima instead of starting from scratch in order to move as quickly as possible with a compatible API.\n\nWith Espree 2.0.0, we are no longer a fork of Esprima but rather a translation layer between Acorn and Esprima syntax. This allows us to put work back into a community-supported parser (Acorn) that is continuing to grow and evolve while maintaining an Esprima-compatible parser for those utilities still built on Esprima.\n\n### Have you tried working with Esprima?\n\nYes. Since the start of ESLint, we've regularly filed bugs and feature requests with Esprima and will continue to do so. However, there are some different philosophies around how the projects work that need to be worked through. The initial goal was to have Espree track Esprima and eventually merge the two back together, but we ultimately decided that building on top of Acorn was a better choice due to Acorn's plugin support.\n\n### Why don't you just use Acorn?\n\nAcorn is a great JavaScript parser that produces an AST that is compatible with Esprima. Unfortunately, ESLint relies on more than just the AST to do its job. It relies on Esprima's tokens and comment attachment features to get a complete picture of the source code. We investigated switching to Acorn, but the inconsistencies between Esprima and Acorn created too much work for a project like ESLint.\n\nWe are building on top of Acorn, however, so that we can contribute back and help make Acorn even better.\n\n### What ECMAScript features do you support?\n\nEspree supports all ECMAScript 2020 features and partially supports ECMAScript 2021 features.\n\nBecause ECMAScript 2021 is still under development, we are implementing features as they are finalized. Currently, Espree supports:\n\n* [Logical Assignment Operators](https://github.com/tc39/proposal-logical-assignment)\n* [Numeric Separators](https://github.com/tc39/proposal-numeric-separator)\n\nSee [finished-proposals.md](https://github.com/tc39/proposals/blob/master/finished-proposals.md) to know what features are finalized.\n\n### How do you determine which experimental features to support?\n\nIn general, we do not support experimental JavaScript features. We may make exceptions from time to time depending on the maturity of the features.\n",
   "maintainers": [
     {
       "email": "nicholas+eslint@nczconsulting.com",
@@ -7491,7 +7589,7 @@
     }
   ],
   "time": {
-    "modified": "2020-07-18T00:53:46.233Z",
+    "modified": "2020-08-22T20:11:47.328Z",
     "created": "2014-12-06T03:10:12.402Z",
     "1.2.2": "2014-12-06T03:10:12.402Z",
     "1.3.0": "2014-12-21T17:53:34.206Z",
@@ -7566,7 +7664,8 @@
     "6.2.1": "2020-03-10T19:51:22.188Z",
     "7.0.0": "2020-05-07T20:58:10.418Z",
     "7.1.0": "2020-06-04T11:16:02.158Z",
-    "7.2.0": "2020-07-18T00:53:43.980Z"
+    "7.2.0": "2020-07-18T00:53:43.980Z",
+    "7.3.0": "2020-08-22T20:11:45.038Z"
   },
   "homepage": "https://github.com/eslint/espree",
   "keywords": [
@@ -7600,5 +7699,7 @@
     "brentlintner": true,
     "shuoshubao": true
   },
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "_cached": false,
+  "_contentLength": 0
 }

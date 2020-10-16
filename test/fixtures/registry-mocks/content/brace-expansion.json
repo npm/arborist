@@ -1,10 +1,10 @@
 {
   "_id": "brace-expansion",
-  "_rev": "28-0370242534b4a1a8fe8edd27fe4ac269",
+  "_rev": "29-3e350adac2df3d39987f153b466641e9",
   "name": "brace-expansion",
   "description": "Brace expansion as known from sh/bash",
   "dist-tags": {
-    "latest": "1.1.11"
+    "latest": "2.0.0"
   },
   "versions": {
     "0.0.0": {
@@ -961,7 +961,8 @@
       "_npmOperationalInternal": {
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/brace-expansion_1.1.9_1518170016033_0.0827503901708313"
-      }
+      },
+      "_hasShrinkwrap": false
     },
     "1.1.10": {
       "name": "brace-expansion",
@@ -1041,7 +1042,8 @@
       "_npmOperationalInternal": {
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/brace-expansion_1.1.10_1518210808996_0.14734749523785462"
-      }
+      },
+      "_hasShrinkwrap": false
     },
     "1.1.11": {
       "name": "brace-expansion",
@@ -1121,21 +1123,104 @@
       "_npmOperationalInternal": {
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/brace-expansion_1.1.11_1518248541320_0.33962849281003904"
-      }
+      },
+      "_hasShrinkwrap": false
+    },
+    "2.0.0": {
+      "name": "brace-expansion",
+      "description": "Brace expansion as known from sh/bash",
+      "version": "2.0.0",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/juliangruber/brace-expansion.git"
+      },
+      "homepage": "https://github.com/juliangruber/brace-expansion",
+      "main": "index.js",
+      "scripts": {
+        "test": "tape test/*.js",
+        "gentest": "bash test/generate.sh",
+        "bench": "matcha test/perf/bench.js"
+      },
+      "dependencies": {
+        "balanced-match": "^1.0.0"
+      },
+      "devDependencies": {
+        "matcha": "^0.7.0",
+        "tape": "^4.6.0"
+      },
+      "keywords": [],
+      "author": {
+        "name": "Julian Gruber",
+        "email": "mail@juliangruber.com",
+        "url": "http://juliangruber.com"
+      },
+      "license": "MIT",
+      "testling": {
+        "files": "test/*.js",
+        "browsers": [
+          "ie/8..latest",
+          "firefox/20..latest",
+          "firefox/nightly",
+          "chrome/25..latest",
+          "chrome/canary",
+          "opera/12..latest",
+          "opera/next",
+          "safari/5.1..latest",
+          "ipad/6.0..latest",
+          "iphone/6.0..latest",
+          "android-browser/4.2..latest"
+        ]
+      },
+      "gitHead": "0b6a022491103b806770bc037654744bef3e63be",
+      "bugs": {
+        "url": "https://github.com/juliangruber/brace-expansion/issues"
+      },
+      "_id": "brace-expansion@2.0.0",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-A4GHY1GpcTnp+Elcwp1CbKHY6ZQwwVR7QdjZk4fPetEh7oNBfICu+eLvvVvTEMHgC+SGn+XiLAgGo0MnPPBGOg==",
+        "shasum": "3b53b490c803c23a6a5d6c9c8b309879c37c7f98",
+        "tarball": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 11241,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfewZYCRA9TVsSAnZWagAAd70P/2QT8aQ9+pjZQwM2pk0Z\nB/jNeaDu5O0/Y06KZF3Pzcxl9SFVCWfEr+7WP5mqb+R+dbthggNppICoM2Tk\nmilkoIgrUecspuKsvnJ0qJRYDSktSwD1IgcY/V3Yr8jCW5J56tU5SiUozvuj\nl3od5svv9vsPilwIHnMoRS4p00La7dlKK6v6R9QgdIF300jd+F++5GmSZOmj\nRxQslhhmFcM0nxIrJ1Ku06Tino2o8E8R0XzBUZS42uexstrDk9DGTtQmjqUn\nvnR/KRlJVppSdOeQ5P0L1UjvDObub5XUdfRo4JnQDrPrDZMdItLZ8CeoEVPh\nIwBCNCBoeWxbbPgAr4QdYMTpyIidFpMDd2lhNB+UTibold67Of4tbOn5KcOG\nac1lCdmturxz0AkyxawmQDkelpLdnatWdBzwGmPDk/Nh6bCSR03iKEgT3oJI\nu+NtciBopPto2emV8eN6E9yvlpGz8b7qDxi7FgOSYvEZ4Vy7spRpj6mS8PYl\nXbkTFUaNDr1KIMHlvXjeYX1I0MfFeE5u1uWovNS+bRmPYqVo78kRxJmlEL/J\nsOGS+PEnPx2thCA9VU4IZ+uGn1dx5mR28xylmatytWU2o3kXF4clXVeosSOl\nZYBAoXlsicuQxhrLzwvkReVpfCYNYVLTRjjn1eLrrba+M+FxT8ULtj6Z5Zh+\nqlBk\r\n=GlK9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "juliangruber",
+          "email": "julian@juliangruber.com"
+        },
+        {
+          "name": "isaacs",
+          "email": "i@izs.me"
+        }
+      ],
+      "_npmUser": {
+        "name": "juliangruber",
+        "email": "julian@juliangruber.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/brace-expansion_2.0.0_1601898071832_0.5293279392460339"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# brace-expansion\n\n[Brace expansion](https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html), \nas known from sh/bash, in JavaScript.\n\n[![build status](https://secure.travis-ci.org/juliangruber/brace-expansion.svg)](http://travis-ci.org/juliangruber/brace-expansion)\n[![downloads](https://img.shields.io/npm/dm/brace-expansion.svg)](https://www.npmjs.org/package/brace-expansion)\n[![Greenkeeper badge](https://badges.greenkeeper.io/juliangruber/brace-expansion.svg)](https://greenkeeper.io/)\n\n[![testling badge](https://ci.testling.com/juliangruber/brace-expansion.png)](https://ci.testling.com/juliangruber/brace-expansion)\n\n## Example\n\n```js\nvar expand = require('brace-expansion');\n\nexpand('file-{a,b,c}.jpg')\n// => ['file-a.jpg', 'file-b.jpg', 'file-c.jpg']\n\nexpand('-v{,,}')\n// => ['-v', '-v', '-v']\n\nexpand('file{0..2}.jpg')\n// => ['file0.jpg', 'file1.jpg', 'file2.jpg']\n\nexpand('file-{a..c}.jpg')\n// => ['file-a.jpg', 'file-b.jpg', 'file-c.jpg']\n\nexpand('file{2..0}.jpg')\n// => ['file2.jpg', 'file1.jpg', 'file0.jpg']\n\nexpand('file{0..4..2}.jpg')\n// => ['file0.jpg', 'file2.jpg', 'file4.jpg']\n\nexpand('file-{a..e..2}.jpg')\n// => ['file-a.jpg', 'file-c.jpg', 'file-e.jpg']\n\nexpand('file{00..10..5}.jpg')\n// => ['file00.jpg', 'file05.jpg', 'file10.jpg']\n\nexpand('{{A..C},{a..c}}')\n// => ['A', 'B', 'C', 'a', 'b', 'c']\n\nexpand('ppp{,config,oe{,conf}}')\n// => ['ppp', 'pppconfig', 'pppoe', 'pppoeconf']\n```\n\n## API\n\n```js\nvar expand = require('brace-expansion');\n```\n\n### var expanded = expand(str)\n\nReturn an array of all possible and valid expansions of `str`. If none are\nfound, `[str]` is returned.\n\nValid expansions are:\n\n```js\n/^(.*,)+(.+)?$/\n// {a,b,...}\n```\n\nA comma separated list of options, like `{a,b}` or `{a,{b,c}}` or `{,a,}`.\n\n```js\n/^-?\\d+\\.\\.-?\\d+(\\.\\.-?\\d+)?$/\n// {x..y[..incr]}\n```\n\nA numeric sequence from `x` to `y` inclusive, with optional increment.\nIf `x` or `y` start with a leading `0`, all the numbers will be padded\nto have equal length. Negative numbers and backwards iteration work too.\n\n```js\n/^-?\\d+\\.\\.-?\\d+(\\.\\.-?\\d+)?$/\n// {x..y[..incr]}\n```\n\nAn alphabetic sequence from `x` to `y` inclusive, with optional increment.\n`x` and `y` must be exactly one character, and if given, `incr` must be a\nnumber.\n\nFor compatibility reasons, the string `${` is not eligible for brace expansion.\n\n## Installation\n\nWith [npm](https://npmjs.org) do:\n\n```bash\nnpm install brace-expansion\n```\n\n## Contributors\n\n- [Julian Gruber](https://github.com/juliangruber)\n- [Isaac Z. Schlueter](https://github.com/isaacs)\n\n## Sponsors\n\nThis module is proudly supported by my [Sponsors](https://github.com/juliangruber/sponsors)!\n\nDo you want to support modules like this to improve their quality, stability and weigh in on new features? Then please consider donating to my [Patreon](https://www.patreon.com/juliangruber). Not sure how much of my modules you're using? Try [feross/thanks](https://github.com/feross/thanks)!\n\n## Security contact information\n\nTo report a security vulnerability, please use the\n[Tidelift security contact](https://tidelift.com/security).\nTidelift will coordinate the fix and disclosure.\n\n## License\n\n(MIT)\n\nCopyright (c) 2013 Julian Gruber &lt;julian@juliangruber.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of\nthis software and associated documentation files (the \"Software\"), to deal in\nthe Software without restriction, including without limitation the rights to\nuse, copy, modify, merge, publish, distribute, sublicense, and/or sell copies\nof the Software, and to permit persons to whom the Software is furnished to do\nso, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
   "maintainers": [
-    {
-      "name": "isaacs",
-      "email": "isaacs@npmjs.com"
-    },
     {
       "name": "juliangruber",
       "email": "julian@juliangruber.com"
+    },
+    {
+      "name": "isaacs",
+      "email": "i@izs.me"
     }
   ],
   "time": {
-    "modified": "2018-02-10T07:42:24.286Z",
+    "modified": "2020-10-05T11:41:14.203Z",
     "created": "2013-10-13T12:58:47.118Z",
     "0.0.0": "2013-10-13T12:58:50.153Z",
     "1.0.0": "2014-11-30T09:58:55.317Z",
@@ -1151,7 +1236,8 @@
     "1.1.8": "2017-06-12T07:19:41.589Z",
     "1.1.9": "2018-02-09T09:53:36.709Z",
     "1.1.10": "2018-02-09T21:13:29.675Z",
-    "1.1.11": "2018-02-10T07:42:22.313Z"
+    "1.1.11": "2018-02-10T07:42:22.313Z",
+    "2.0.0": "2020-10-05T11:41:11.973Z"
   },
   "author": {
     "name": "Julian Gruber",
@@ -1176,5 +1262,6 @@
     "shaomingquan": true,
     "sbruchmann": true
   },
-  "_attachments": {}
+  "_cached": false,
+  "_contentLength": 0
 }

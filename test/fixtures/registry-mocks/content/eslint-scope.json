@@ -1044,5 +1044,7 @@
     "url": "https://github.com/eslint/eslint-scope/issues"
   },
   "license": "BSD-2-Clause",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "_cached": false,
+  "_contentLength": 0
 }

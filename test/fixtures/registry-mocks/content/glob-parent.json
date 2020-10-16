@@ -1,10 +1,10 @@
 {
   "_id": "glob-parent",
-  "_rev": "19-b53af161e9d535638d483114f8584fc1",
+  "_rev": "20-495ef91e221a8718bf4aa7865b0537db",
   "name": "glob-parent",
   "description": "Extract the non-magic parent path from a glob string.",
   "dist-tags": {
-    "latest": "5.1.0"
+    "latest": "5.1.1"
   },
   "versions": {
     "1.0.0": {
@@ -795,8 +795,114 @@
         "tmp": "tmp/glob-parent_5.1.0_1569107824875_0.8129032170320736"
       },
       "_hasShrinkwrap": false
+    },
+    "5.1.1": {
+      "name": "glob-parent",
+      "version": "5.1.1",
+      "description": "Extract the non-magic parent path from a glob string.",
+      "author": {
+        "name": "Gulp Team",
+        "email": "team@gulpjs.com",
+        "url": "https://gulpjs.com/"
+      },
+      "contributors": [
+        {
+          "name": "Elan Shanker",
+          "url": "https://github.com/es128"
+        },
+        {
+          "name": "Blaine Bublitz",
+          "email": "blaine.bublitz@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gulpjs/glob-parent.git"
+      },
+      "license": "ISC",
+      "engines": {
+        "node": ">= 6"
+      },
+      "main": "index.js",
+      "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint",
+        "test": "nyc mocha --async-only",
+        "azure-pipelines": "nyc mocha --async-only --reporter xunit -O output=test.xunit",
+        "coveralls": "nyc report --reporter=text-lcov | coveralls"
+      },
+      "dependencies": {
+        "is-glob": "^4.0.1"
+      },
+      "devDependencies": {
+        "coveralls": "^3.0.11",
+        "eslint": "^2.13.1",
+        "eslint-config-gulp": "^3.0.1",
+        "expect": "^1.20.2",
+        "mocha": "^6.0.2",
+        "nyc": "^13.3.0"
+      },
+      "keywords": [
+        "glob",
+        "parent",
+        "strip",
+        "path",
+        "dirname",
+        "directory",
+        "base",
+        "wildcard"
+      ],
+      "gitHead": "6ce8d11f2f1ed8e80a9526b1dc8cf3aa71f43474",
+      "bugs": {
+        "url": "https://github.com/gulpjs/glob-parent/issues"
+      },
+      "homepage": "https://github.com/gulpjs/glob-parent#readme",
+      "_id": "glob-parent@5.1.1",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.1",
+      "_npmUser": {
+        "name": "phated",
+        "email": "blaine.bublitz@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-FnI+VGOpnlGHWZxthPGR+QhR78fuiK0sNLkHQv+bL9fQi57lNNdquIbna/WrfROrolq8GK5Ek6BiMwqL/voRYQ==",
+        "shasum": "b6c1ef417c4e5663ea498f1c45afac6916bbc229",
+        "tarball": "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7610,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedqBhCRA9TVsSAnZWagAA5/AP/3rbMfJRcMrSNj0tqF0Z\nRKOf3qaKIbQTL4VfwkTi3dYHmvSgxmcfpJgSgSTQbp/jFRTpJssKGo1pRru6\nkysEd1JlYpnd4YWRIl3N2rUE1BtYb5nrwTWXYC86WcksTl/5ZNBWmVNpZRYR\nvHV8gy938OAzGYZuqbPcVhPmt3OovM8M5aarFFD1atmGcU9hfR/Ko3g2693+\nTpI0DmqoEHXcq0tl4Ll+jtvUWC1NIzGze02YXUj5nk6Ai+XKoej9XApbbb+p\nnebUurHREX72WON5KyZ12rKyfBZJriQQbGBcDg9f1/r23oqDFfDXIm3luAzy\neY+KnjDGwpHlU8n2jerk+QIeG/InNugREjxAqnX9JJHiwbXpef5tqTRwHaG7\nDDMKBw3LJJfv13O96/QfPH/novqa63c8ySul6+LmSNn3FzMvC312fVKdUou5\nbMAprqSCoGoQPutkiR8Tn6/TbYpPl1ZZWnUJffsDLTNgZGHsM5mQqzTyo0+o\nrXUDetVC2oTVXRfyF/Gu0dlLqrtgkqKwDsGmkn2hBqmvkuzO1I7QGB9b1nDb\nmvq2bLCW8kGsn/m+wCzj5/7eJREETDoDIiYedmb7IbHB30+DtktQsjtiHi5/\nHDasPTdPJjYfVbUUg7ER0EUnt/UhI6eiJYT5ly0FK42L7rLWuGEsMmwayUKG\n69z1\r\n=Q1Ue\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "yo@contra.io",
+          "name": "contra"
+        },
+        {
+          "email": "brian.woodward@gmail.com",
+          "name": "doowb"
+        },
+        {
+          "email": "elan.shanker+npm@gmail.com",
+          "name": "es128"
+        },
+        {
+          "email": "github@sellside.com",
+          "name": "jonschlinkert"
+        },
+        {
+          "email": "blaine.bublitz@gmail.com",
+          "name": "phated"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/glob-parent_5.1.1_1584832608680_0.3786335780744279"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "<p align=\"center\">\n  <a href=\"https://gulpjs.com\">\n    <img height=\"257\" width=\"114\" src=\"https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png\">\n  </a>\n</p>\n\n# glob-parent\n\n[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Azure Pipelines Build Status][azure-pipelines-image]][azure-pipelines-url] [![Travis Build Status][travis-image]][travis-url] [![AppVeyor Build Status][appveyor-image]][appveyor-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Gitter chat][gitter-image]][gitter-url]\n\nExtract the non-magic parent path from a glob string.\n\n## Usage\n\n```js\nvar globParent = require('glob-parent');\n\nglobParent('path/to/*.js'); // 'path/to'\nglobParent('/root/path/to/*.js'); // '/root/path/to'\nglobParent('/*.js'); // '/'\nglobParent('*.js'); // '.'\nglobParent('**/*.js'); // '.'\nglobParent('path/{to,from}'); // 'path'\nglobParent('path/!(to|from)'); // 'path'\nglobParent('path/?(to|from)'); // 'path'\nglobParent('path/+(to|from)'); // 'path'\nglobParent('path/*(to|from)'); // 'path'\nglobParent('path/@(to|from)'); // 'path'\nglobParent('path/**/*'); // 'path'\n\n// if provided a non-glob path, returns the nearest dir\nglobParent('path/foo/bar.js'); // 'path/foo'\nglobParent('path/foo/'); // 'path/foo'\nglobParent('path/foo'); // 'path' (see issue #3 for details)\n```\n\n## API\n\n### `globParent(maybeGlobString, [options])`\n\nTakes a string and returns the part of the path before the glob begins. Be aware of Escaping rules and Limitations below.\n\n#### options\n\n```js\n{\n  // Disables the automatic conversion of slashes for Windows\n  flipBackslashes: true\n}\n```\n\n## Escaping\n\nThe following characters have special significance in glob patterns and must be escaped if you want them to be treated as regular path characters:\n\n- `?` (question mark) unless used as a path segment alone\n- `*` (asterisk)\n- `|` (pipe)\n- `(` (opening parenthesis)\n- `)` (closing parenthesis)\n- `{` (opening curly brace)\n- `}` (closing curly brace)\n- `[` (opening bracket)\n- `]` (closing bracket)\n\n**Example**\n\n```js\nglobParent('foo/[bar]/') // 'foo'\nglobParent('foo/\\\\[bar]/') // 'foo/[bar]'\n```\n\n## Limitations\n\n### Braces & Brackets\nThis library attempts a quick and imperfect method of determining which path\nparts have glob magic without fully parsing/lexing the pattern. There are some\nadvanced use cases that can trip it up, such as nested braces where the outer\npair is escaped and the inner one contains a path separator. If you find\nyourself in the unlikely circumstance of being affected by this or need to\nensure higher-fidelity glob handling in your library, it is recommended that you\npre-process your input with [expand-braces] and/or [expand-brackets].\n\n### Windows\nBackslashes are not valid path separators for globs. If a path with backslashes\nis provided anyway, for simple cases, glob-parent will replace the path\nseparator for you and return the non-glob parent path (now with\nforward-slashes, which are still valid as Windows path separators).\n\nThis cannot be used in conjunction with escape characters.\n\n```js\n// BAD\nglobParent('C:\\\\Program Files \\\\(x86\\\\)\\\\*.ext') // 'C:/Program Files /(x86/)'\n\n// GOOD\nglobParent('C:/Program Files\\\\(x86\\\\)/*.ext') // 'C:/Program Files (x86)'\n```\n\nIf you are using escape characters for a pattern without path parts (i.e.\nrelative to `cwd`), prefix with `./` to avoid confusing glob-parent.\n\n```js\n// BAD\nglobParent('foo \\\\[bar]') // 'foo '\nglobParent('foo \\\\[bar]*') // 'foo '\n\n// GOOD\nglobParent('./foo \\\\[bar]') // 'foo [bar]'\nglobParent('./foo \\\\[bar]*') // '.'\n```\n\n## License\n\nISC\n\n[expand-braces]: https://github.com/jonschlinkert/expand-braces\n[expand-brackets]: https://github.com/jonschlinkert/expand-brackets\n\n[downloads-image]: https://img.shields.io/npm/dm/glob-parent.svg\n[npm-url]: https://www.npmjs.com/package/glob-parent\n[npm-image]: https://img.shields.io/npm/v/glob-parent.svg\n\n[azure-pipelines-url]: https://dev.azure.com/gulpjs/gulp/_build/latest?definitionId=2&branchName=master\n[azure-pipelines-image]: https://dev.azure.com/gulpjs/gulp/_apis/build/status/glob-parent?branchName=master\n\n[travis-url]: https://travis-ci.org/gulpjs/glob-parent\n[travis-image]: https://img.shields.io/travis/gulpjs/glob-parent.svg?label=travis-ci\n\n[appveyor-url]: https://ci.appveyor.com/project/gulpjs/glob-parent\n[appveyor-image]: https://img.shields.io/appveyor/ci/gulpjs/glob-parent.svg?label=appveyor\n\n[coveralls-url]: https://coveralls.io/r/gulpjs/glob-parent\n[coveralls-image]: https://img.shields.io/coveralls/gulpjs/glob-parent/master.svg\n\n[gitter-url]: https://gitter.im/gulpjs/gulp\n[gitter-image]: https://badges.gitter.im/gulpjs/gulp.svg\n",
   "maintainers": [
     {
       "email": "yo@contra.io",
@@ -820,7 +926,7 @@
     }
   ],
   "time": {
-    "modified": "2019-09-21T23:17:07.654Z",
+    "modified": "2020-03-21T23:16:51.128Z",
     "created": "2015-01-12T20:32:54.422Z",
     "1.0.0": "2015-01-12T20:32:54.422Z",
     "1.1.0": "2015-03-04T15:11:54.539Z",
@@ -832,7 +938,8 @@
     "3.1.0": "2016-12-14T15:48:47.422Z",
     "4.0.0": "2019-03-27T23:42:10.038Z",
     "5.0.0": "2019-03-29T22:38:43.850Z",
-    "5.1.0": "2019-09-21T23:17:05.017Z"
+    "5.1.0": "2019-09-21T23:17:05.017Z",
+    "5.1.1": "2020-03-21T23:16:48.765Z"
   },
   "homepage": "https://github.com/gulpjs/glob-parent#readme",
   "keywords": [
@@ -871,5 +978,7 @@
       "name": "Blaine Bublitz",
       "email": "blaine.bublitz@gmail.com"
     }
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

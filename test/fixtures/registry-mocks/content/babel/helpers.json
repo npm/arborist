@@ -1,10 +1,10 @@
 {
   "_id": "@babel/helpers",
-  "_rev": "85-168354887cf810d55ef04af36ae55303",
+  "_rev": "94-9f9f5cbac78c1205c412e4a94c01ec1b",
   "name": "@babel/helpers",
   "description": "Collection of helper functions used by Babel transforms.",
   "dist-tags": {
-    "latest": "7.8.4"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -2028,6 +2028,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.0.0-rc.3",
       "dist": {
         "shasum": "321c6b575d4d2c0e7b9f33ea085b8ecaa1965b24",
@@ -2093,6 +2094,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.0.0-rc.4",
       "dist": {
         "shasum": "01346c138757d0b0131264caf706d0d6b2d4fb42",
@@ -2159,6 +2161,8 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/helpers\n\n> Collection of helper functions used by Babel transforms.\n\nSee our website [@babel/helpers](https://babeljs.io/docs/en/next/babel-helpers.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helpers\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helpers --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.0.0",
       "dist": {
         "shasum": "7213388341eeb07417f44710fd7e1d00acfa6ac0",
@@ -2227,6 +2231,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.1.0",
       "dist": {
         "shasum": "429bf0f0020be56a4242883432084e3d70a8a141",
@@ -2291,6 +2296,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.1.1",
       "dist": {
         "shasum": "e742d49ca190ac3b5e47c030a618d4f9c51c1b8f",
@@ -2355,6 +2361,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.1.2",
       "dist": {
         "shasum": "ab752e8c35ef7d39987df4e8586c63b8846234b5",
@@ -2419,6 +2426,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.1.5",
       "dist": {
         "shasum": "68bfc1895d685f2b8f1995e788dbfe1f6ccb1996",
@@ -2483,6 +2491,7 @@
       "devDependencies": {
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.2.0",
       "dist": {
         "shasum": "8335f3140f3144270dc63c4732a4f8b0a50b7a21",
@@ -2622,6 +2631,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f2af6c1170ebbea22bd29a2bae01efaec800dfe9",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.3.1",
       "dist": {
         "shasum": "949eec9ea4b45d3210feb7dc1c22db664c9e44b9",
@@ -2691,6 +2701,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.4.0",
       "dist": {
         "shasum": "03392e52c4ce7ad2e7b1cc07d1aba867a8ce2e32",
@@ -2760,6 +2771,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "7dea0f23de51af336a2fab0286a73af30cddf3be",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.4.2",
       "dist": {
         "shasum": "3bdfa46a552ca77ef5a0f8551be5f0845ae989be",
@@ -2829,6 +2841,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "508fde4009f31883f318b9e6546459ac1b086a91",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.4.3",
       "dist": {
         "shasum": "7b1d354363494b31cb9a2417ae86af32b7853a3b",
@@ -2898,6 +2911,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helpers@7.4.4",
       "dist": {
         "shasum": "868b0ef59c1dd4e78744562d5ce1b59c89f2f2a5",
@@ -3879,36 +3893,553 @@
         "tmp": "tmp/helpers_7.8.4_1580387857072_0.5841117747640405"
       },
       "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/helpers",
+      "version": "7.9.0",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.8.3",
+        "@babel/traverse": "^7.9.0",
+        "@babel/types": "^7.9.0"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/helpers@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-/9GvfYTCG1NWCNwDj9e+XlnSCmWW/r9T794Xi58vPF9WCcnZCAZ0kWLSn54oqP40SUvh1T2G6VwKmFO5AOlW3A==",
+        "shasum": "ab2c1bc4821af766cab51d4868a5038874ea5a12",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.9.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 75514,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOPVCRA9TVsSAnZWagAA8EUQAIcz+S2Yjkgn1PGzFyX9\n7HZTaEYiSq/S5vWvagPZSrx1ocZGU10bC8i6gjZLrW5O35fu0b/HVtzxu8Qx\nuaKpLO2CBLa90qOAsp//+0YKY3GqNseQE0ckT0os30CGYgR5m6YT6zyBD3cf\n2VY+03BONxT1O7qMnv++sHGn0s/lK4pBkKRRAJI9wQW+5i1LEelKUj9Horhe\nhnkxHORm80D3k+KccKcAhVCB8U8FcOg+7+Jlt83iqTwqe/YmsrLfs9I3lHQ0\nyrGA3L7TsO6HE4xROjm1MRrqFrGw6gz91DhjuYllzX0fgNEgzlsZDOhdgmd4\nGc+PeP0WlHiDedhPul7QCOS7BQsVHA6/iDstWs+ZQ9aWoM2t5Llgd7+JQwAo\nResDhlsSbhD9bZZBeFMEOYxMIXuZpgTT3FOq3ueRObvRA09+NTp/25HegypG\nbAmUfdQ934xmdR/cSQIoEVUHr4gYd2Qy21eGnlNDt5tUZOkjROMI2Bt/TfYH\n9vMifLQ500e8siZP8+PQYjDRuXRkDqeojez+Emn9A7+QrdxQTnM+Vj9U/uPl\n+IJkhC0PqFLcPES7eN7pONigcZMEJM0WZfEtbfRFpAR59WiK2tiH4EzZGPU9\nG0fnhgAUXMkLh9057uO6FpVyBe/caEuOQqk+exx0dEskokR6Q+eKZbT4V/W2\nb5js\r\n=x70d\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.9.0_1584718804659_0.34916766323421644"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.2": {
+      "name": "@babel/helpers",
+      "version": "7.9.2",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.8.3",
+        "@babel/traverse": "^7.9.0",
+        "@babel/types": "^7.9.0"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "2399e0df23cbd574a5ab39822288c438f5380ae8",
+      "_id": "@babel/helpers@7.9.2",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-JwLvzlXVPjO8eU9c/wF9/zOIN7X6h8DYf7mG4CiFRZRvZNKEF5dQ3H3V+ASkHoIB3mWhatgl5ONhyqHRI6MppA==",
+        "shasum": "b42a81a811f1e7313b88cba8adc66b3d9ae6c09f",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.9.2.tgz",
+        "fileCount": 5,
+        "unpackedSize": 75554,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJediE5CRA9TVsSAnZWagAANr4P/1xWgxfTA4j7NrDwhQrO\noJ1rvlTXc43c9GAcYYt1ShcNRXqv3HkZFfTz2FgzqZze+WgXkqwSeYp5BE3+\nb57KKUF9NV5X5W0yzc36dHN5nA01WuJCoQrtlz1aKtSDNGKdo+q+rluim43I\nqrxYxyRag1Gn2NDccyhVuUiuT98DNjSKJme68BLxh+4bXf5r+0rv3VPt0Xhe\nZo7nxmBYaNPAlzluSn9rA4vGwDaDS72kphGUop2sWiqF6BP6lK8HjEPFRAqA\nUfxYwMGSrtxKlusycdUphHtElKbZ0Aj3Qr3NBIhqHJNNHI0W2lc3nUt7+Rfm\n/sYkyxC1mGr32/W+iUS7fzKw9hq4WekES+RYCDlJBSQ4l4TzkA/uSWanqfje\nSRUUTsWHyUPeATn/RaWHcOfZyAhcrRCBrMZffeZUe2gp+MWNq3MGnGXF2DNZ\nC0rZ66QvrZU9Puq3jy7fpRGKWFdOcFkY2GC9aJgO/5b91L2EgqwCLoMLavuK\nAYLwu2riOd8HBKhVdJBjdz5TRuE10Sf+2RTtRULaisqVuUg1W5E+GUPgqcrt\nY1E43HXtM0/b3dDl8K+jxT/NsxZ1zuGj0iCpfqmpaHQgH60HzctDn8KYqiY+\nclLL1V4zk2MA3dG7U0RwF6yo8zrKdf9jkLqXzF8e3cMNhfvSwJ7XM1ou5+hr\nh2tX\r\n=ctzZ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.9.2_1584800056925_0.8734927985002212"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.6": {
+      "name": "@babel/helpers",
+      "version": "7.9.6",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.8.3",
+        "@babel/traverse": "^7.9.6",
+        "@babel/types": "^7.9.6"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "9c2846bcacc75aa931ea9d556950c2113765d43d",
+      "_id": "@babel/helpers@7.9.6",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.0.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-tI4bUbldloLcHWoRUMAj4g1bF313M/o6fBKhIsb3QnGVPwRm9JsNf/gqMkQ7zjqReABiffPV6RWj7hEglID5Iw==",
+        "shasum": "092c774743471d0bb6c7de3ad465ab3d3486d580",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.9.6.tgz",
+        "fileCount": 5,
+        "unpackedSize": 75618,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqcmcCRA9TVsSAnZWagAAWEwP/1zamv2Ho5b0dIbdPrRS\n0DXiEMeDDrON5SCXLcvX4tyB9tkNkH9M1wVwMGsWWLcQEStSASEVb2Rb2Nqz\n/RRbQ7j+CGJy6fOowAAsIyWvj/BaGb0klcwenMheWxII9XT+xy+OwcCvx5ra\nBrQxOkz0Fx14OPtfXDm6pEvCODdkWo8TzRIzVZqQ5wLzMyty33M8VQz6jSC5\nJ6app2DcoApNgLMl8MW0HfPFasTwtyJHOGGgS/lfrFcSMay2qcVjRMR38d2Q\nGxGvhaSHzfIVr506V6b2lW/q4/7k1SQwKbuvNdYCqanAxoVvzAodw2kpSJ73\nV+WPpxtst0ymvOakGC5xghOpgboYfa6o7QhEBMqNBRKvlwlVCsps0CMLIITM\n2ya6EQe2Xj8rQGuguCsbPgwkM0toxihQn9cuTxnR4PnjtRuGsQRZbdpXkeeq\nI5LGbgwtMnfY9eBbUX3rq55BAdPkH/IP0xjZTmI1htG8iPT4RwGlO9A5FGpP\n4CqTG1IXcZbJb1tpqfRUwMUrWAGVXCs4tKnq1329AQLR5hhF4sNiYJSM0tCp\nbGyZC3b424Yu5XU9ot6EqJBqm7taO2P2Nzo2aJz1CKzN0PwBeuJpDluiJj+C\nr9ZCruo4UtbsHd4S73tUG3pdn1qvieqkQCSOFps1xWbdHFXuwUokuTSeaMYY\npl7N\r\n=T9S4\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.9.6_1588185500531_0.8080302050621739"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/helpers",
+      "version": "7.10.0",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.10.0",
+        "@babel/traverse": "^7.10.0",
+        "@babel/types": "^7.10.0"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/helpers@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-lQtFJoDZAGf/t2PgR6Z59Q2MwjvOGGsxZ0BAlsrgyDhKuMbe63EfbQmVmcLfyTBj8J4UtiadQimcotvYVg/kVQ==",
+        "shasum": "634400a0977b8dcf7b311761a77ca94ed974b3b6",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.10.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 76316,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY2RCRA9TVsSAnZWagAAQWsP/2/p2F/VCa2YDMykDjsl\nMPEBYXS34wE+wuaW6anzr4S+MUD/WTXzbpkGutli5eN2VCtdYqUNlaxYHNrI\nXAzLtzVF6lK6RWz+gY5aMozsCExLhCf4xBIuL5WXF7q38KTW3Vwrp886MW8O\nJ0kumZtikoQCb2Ixpm+97s6iPgaN9iZkyNXi9grEh6rEjqs3k31+16iswZtN\nR6KFT3AK3Oejrsq0pjfXRPWi50YCqs1zGIPVQrU36IHyo+xVzOVgewMl73jb\nXWfzvgMqoNtskHagTtf00BsT9LFR8EBNe79nrb6amlYU2lgUUSV91mgaf5Z+\nNBj2gd+yKkc882hapU9xTIx6Y7W6kLBDnVHpiI/1Pkj4uNKJFtM5LgeC3d8B\n1BZxjUg7IzGmYavZ5i15XlKyw+mtPFjyCu+sXdeuFa4yUmIDmp7lbaBX5nKU\nShLbCV+a3H4Rz4cOPmMsdwlCKVt2CLiBCeI4YqV9HynQ2eGNA9k/Ssw7eXaF\nVpJZHzqRhUi6btSElRbAU5QGuha2inH+XdzkZCb0ATTsVk8qjoDyVZb+rDxo\nEsGbuJ/iHYxpKb0sJUYrYsEIhiIwCszEXUVQAAknwjWy6UZ4vwbZvoWWKCsO\nNOxbGnByXP3Ob4nBuIK20JqweiVDTVmtEHLuwe6T0JyDQ2CADiVVd0HhsARu\nKPay\r\n=aW8E\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.10.0_1590529425284_0.9504483559752659"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/helpers",
+      "version": "7.10.1",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.10.1",
+        "@babel/traverse": "^7.10.1",
+        "@babel/types": "^7.10.1"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/helpers@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-muQNHF+IdU6wGgkaJyhhEmI54MOZBKsFfsXFhboz1ybwJ1Kl7IHlbm2a++4jwrmY5UYsgitt5lfqo1wMFcHmyw==",
+        "shasum": "a6827b7cb975c9d9cef5fd61d919f60d8844a973",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.10.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 76365,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuTRCRA9TVsSAnZWagAAPowP/iJzzkwa14YaFEPWO/6d\nIaPXWwNpQqj+omJidNrlXt74Up/dk4uwbWvmHzXf3Vqxjik+FOVWQyJeFj5l\nU3U0KoGg4jgIwBVcW1PX2lpVgh50mouMCa3t6ZtzziKqNrVeXD7dFfE78D50\nD8L3GONRWasTCqDWhspiyv3N7q3ZhwYqW3pSREXkov1gDBs0Urg3+jIDPROM\nN3/4Z90szLhVmLmy+FvMYzPHR0C18d9LJPJJMspvfopZ6yAAnIpcn7dq2mjf\nbJlw19Aizgl9QcoD3C4Zk10BBRjSg/1HUzdzH0u82vy7KfLNJ517nxVcdhHT\na7QRPLKhazm6s8BkQhmyhpUUL6ZQCcUH7nv1NFY4BCHZ2kbffMUF2r1fW+YD\nAII2DDFxXD0hWHKsoQOPG2Qa0zjAhYiaI91lhCztbUsfike+7yl+gVfJDdJm\ntZIDRwSjKpf1Axv4hmUiaO3YDN3FWsilUC19n4BDnjH6HTMrtI1vxyRk3HAr\nWAv5BR5zXeUKKzL7F2U90TeHDJcSOi5GidPFpgAmGQ7TWwGTv3mbiagxyy1X\n4fZpQrY4kKgkLJ8wU9ldAHM5kptfQLGEOzT9mZX3d+gYepiNzY5ZYLxcu9eq\nHE7RizfP4dE4PnK3aXL2GBRtmCv4o0a2TwYlsV3yg1v46NAQOMaObFDdujjB\nBPJ3\r\n=L05+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.10.1_1590617296971_0.104435304309346"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/helpers",
+      "version": "7.10.4",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.10.4",
+        "@babel/types": "^7.10.4"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/helpers@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-L2gX/XeUONeEbI78dXSrJzGdz4GQ+ZTA/aazfUsFaWjSe95kiCuOZ5HsXvkiw3iwF+mFHSRUfJU8t6YavocdXA==",
+        "shasum": "2abeb0d721aff7c0a97376b9e1f6f65d7a475044",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.10.4.tgz",
+        "fileCount": 5,
+        "unpackedSize": 76365,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zptCRA9TVsSAnZWagAAmDQP/2xR7T2bId64oQw9ba+Z\nDT63LhJKLVpaoAJDeIRnaTKvdFFnImmmqQr2BtUgYPFD83gnL7BN01qdlMLv\n7uKVfMnGFpLmerti88HU9MFfB2afb7D0lCXIu1I0q5r0JK5y9DQdf6dwoHIr\ntjiPxCXlPj33cTpHJiMbaTOtB/yasQBQT/0NjrMWLsVOecejmTp5WpIpTPrz\nOVxp4fip/ilhLlskoygptg3roPHRUJZvSmD3rBE4M6ypaJ4wR6hDjHLsZ3jw\n1u8PiOXmcxv8NelYMEgeseVRDcwRFxAfnkDDZGrEguv/mzrQEsJUgvk+KILv\nvqGOE7lBmnwZFvxglHCIpFHL5MEO8qEUBeQhuMPIYOZTEIAslpqrtuYnTJX3\nlnKx0frD8ACWbjUNY1QZf7nCR7eGE6YsbdO7iHVV+ISZ1S4mjq9/CpLye/jP\nw86YYSzKz/co3HEW8uqZ1l9fWu+UsIdAe38OfNW7S9R0a6dHuMmDIgouxToH\nec5EqZpbom5dyCDBNUYefZaPgJEgyEQwm9VvodPp3Q5sa6p1i1Z1TvPKw/Qn\ns+jF40X9+DW2yMtoMprbH8yCd0vW5ttyki1KkhFRsphQYAKiCpdVkUiW2FNG\njpB6z2CIWGEzGW1rMyymr3GOKVoT0Y+evcZIWONxhKyuWNQLGpSFlJsl+WFx\n/bec\r\n=OQVR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.10.4_1593522797178_0.34403941949869665"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/helpers",
+      "version": "7.12.1",
+      "description": "Collection of helper functions used by Babel transforms.",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-helpers"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/template": "^7.10.4",
+        "@babel/traverse": "^7.12.1",
+        "@babel/types": "^7.12.1"
+      },
+      "devDependencies": {
+        "@babel/helper-plugin-test-runner": "7.10.4"
+      },
+      "_id": "@babel/helpers@7.12.1",
+      "dist": {
+        "shasum": "8a8261c1d438ec18cb890434df4ec768734c1e79",
+        "integrity": "sha512-9JoDSBGoWtmbay98efmT2+mySkwjzeFeAL9BuWNoVQpkPFQF8SIIFUfY5os9u8wVzglzoiPRSW7cuJmBDUt43g==",
+        "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.12.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 76193,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiNAvCRA9TVsSAnZWagAAzZMP+gMlO9GnNUGuQQL5vk7T\ntl5/IvLMIQcp+h3OkfT00zxl5ZGi+jv2PTI094TbAqU3D1NbnmvIv9/pg1eK\npFb8D1J6DfhJXGM8UlpJXiabo/vVerjWFathV7oetFWaPmfJmpadGh/rmNsw\npD6BFDtZ6KDH/97WbPcvsZroZu0d8N1hST69M2M0Uqw/53yVND9+gSAqvQuP\nvgwLdrBrrpa+JZ4/GRTK2m3eGg3E9tdSxvOXdlilH6GTAbfkWFuWAXKo7z7Z\n9CL3hiTatefFYzw/IMaGKsiVUBY2y6Qx47U314MNvCG1EnEuzMRoRR9246Rq\nosthA/a9tjXbZAP9J4ZmfXTeklO9kItfhD0+1XFmanAqCx/ToKnvJ78LxPuE\nTt0DysKL0huQHm0XF4Qr5tL6gUfz263aQlQQDNXtKJYH8d6Pke0kbWEfHQFZ\ndxvU4XIvvRLqcCFpy1WuGOaCpq6XCuddati5WNFcipBxw6CspfgTDG13FKju\njnRNpt+cfdqMrz1UKVEV6EQZtwyxNZLekV7ksLYlMB2D3dC8YI+5DfsY7R4m\nLmGUh9dtNeItO4MzcjwpsdB9HmVrYGId6g8Jtc/YmoNjbHD5Ag/GHcF2XAEM\nGxrHdmFzvIZH7v8NVZCnYQ3A10XVXKwlG28zwyVLODg0IX+mM+g/X3ji+IRT\nyuZK\r\n=YXAJ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helpers_7.12.1_1602801710699_0.9199526240585529"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-30T12:37:40.965Z",
+    "modified": "2020-10-15T22:41:53.078Z",
     "created": "2017-10-30T18:36:09.655Z",
     "7.0.0-beta.4": "2017-10-30T18:36:09.655Z",
     "7.0.0-beta.5": "2017-10-30T20:57:45.757Z",
@@ -3967,17 +4498,24 @@
     "7.7.4": "2019-11-22T23:33:46.869Z",
     "7.8.0": "2020-01-12T00:17:21.143Z",
     "7.8.3": "2020-01-13T21:42:26.008Z",
-    "7.8.4": "2020-01-30T12:37:37.238Z"
+    "7.8.4": "2020-01-30T12:37:37.238Z",
+    "7.9.0": "2020-03-20T15:40:04.806Z",
+    "7.9.2": "2020-03-21T14:14:17.024Z",
+    "7.9.6": "2020-04-29T18:38:20.651Z",
+    "7.10.0": "2020-05-26T21:43:45.431Z",
+    "7.10.1": "2020-05-27T22:08:17.153Z",
+    "7.10.4": "2020-06-30T13:13:17.322Z",
+    "7.12.1": "2020-10-15T22:41:50.837Z"
   },
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-helpers"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-helpers"
   },
-  "author": {
-    "name": "Sebastian McKenzie",
-    "email": "sebmck@gmail.com"
-  },
+  "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "",
+  "_cached": false,
+  "_contentLength": 0
 }

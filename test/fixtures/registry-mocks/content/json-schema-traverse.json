@@ -4,7 +4,7 @@
   "name": "json-schema-traverse",
   "description": "Traverse JSON Schema passing each schema object to callback",
   "dist-tags": {
-    "latest": "0.4.1"
+    "latest": "0.5.0"
   },
   "versions": {
     "0.0.1": {
@@ -407,7 +407,8 @@
       "_npmOperationalInternal": {
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/json-schema-traverse_0.4.0_1525808286399_0.5813937245567184"
-      }
+      },
+      "_hasShrinkwrap": false
     },
     "0.4.1": {
       "name": "json-schema-traverse",
@@ -479,9 +480,85 @@
       "_npmOperationalInternal": {
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/json-schema-traverse_0.4.1_1528620124976_0.4290201343994062"
-      }
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.5.0": {
+      "name": "json-schema-traverse",
+      "version": "0.5.0",
+      "description": "Traverse JSON Schema passing each schema object to callback",
+      "main": "index.js",
+      "types": "index.d.ts",
+      "scripts": {
+        "eslint": "eslint index.js spec",
+        "test-spec": "mocha spec -R spec",
+        "test": "npm run eslint && nyc npm run test-spec"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/epoberezkin/json-schema-traverse.git"
+      },
+      "keywords": [
+        "JSON-Schema",
+        "traverse",
+        "iterate"
+      ],
+      "author": {
+        "name": "Evgeny Poberezkin"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/epoberezkin/json-schema-traverse/issues"
+      },
+      "homepage": "https://github.com/epoberezkin/json-schema-traverse#readme",
+      "devDependencies": {
+        "coveralls": "^3.0.1",
+        "eslint": "^7.3.1",
+        "mocha": "^8.0.1",
+        "nyc": "^15.0.0",
+        "pre-commit": "^1.2.2"
+      },
+      "nyc": {
+        "exclude": [
+          "**/spec/**",
+          "node_modules"
+        ],
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "666a85fe56ccc27a07f4d40ba52cc172406f8f17",
+      "_id": "json-schema-traverse@0.5.0",
+      "_nodeVersion": "12.12.0",
+      "_npmVersion": "6.11.3",
+      "dist": {
+        "integrity": "sha512-x+TRJIQFskrNnFKE2Viz9FCSjK1vIh+H/uaBiOYszh/IcZmAFneQ35H4osWDJp1NPXccuV2I0RMXmi2ZS6Kqcg==",
+        "shasum": "1069a6097f9e9a567bfc6cc215e85f606ebf6480",
+        "tarball": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.5.0.tgz",
+        "fileCount": 11,
+        "unpackedSize": 21098,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfU+ywCRA9TVsSAnZWagAAo4MQAJhqEwwNhHZFLPcknIez\n/fD01Vms7E0C65XAiKct2X2Pkiqpv9LqMk3cBBaPXDnVUMZeebjIjXacuN6z\nuuyIAQTjxDPZez3j2qd91lFPMSW5QXuWDK0xpnUqCINkZfrAH0g2ctZY81vW\nGVY5lutIYk6uQStlsSet/iVDWdJX4C81lmDZzew7EnNcTUi0O3TQtghOSuVG\nslnT7qpdweY+z+mNzrBwkFeMg6il5YygkHmmYz18HssNncV6+PoVdFn+XJK+\nZZ/QGXjS9IcBh+/iCgz0+2Az4bGr6UVcf2HleKBMIfjOQduLQ0zMiBy+lDMx\nhxyLmtevrqefSdkeVX7Y8tAIAhHr8Se7WMeNHjMbGQe2T+dB7PUh18zLSO8+\nQZqtOsNprGm23n5avkLORrxA7PnqGVq8BBPY3pisPv19P8ljJYbRtSrsH2Vz\nMoMUupSVaLNWeFwiUA/64WkXPVMFcxNjTQK6XDUL30JwGuE6PN/p1FGIYPXv\nByCLsZ+sumBDYF8V0jIb1AfERA143Nvgl2Pz6Ye27yAKw1hdR+d+5MTMxUWu\nmPSkSNAni33H9VMybozn3nulLHIwb+YyGJieR/iLQvoyemduoMAhwtCjK0fA\nnfRehA0Qp2hefE0AfyUb6IcPV3ROZddrDGvMgpJ5CbMNeaDoXy2T09vG/a/7\ntDlM\r\n=6n/B\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "esp",
+          "email": "e.poberezkin@me.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "esp",
+        "email": "e.poberezkin@me.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/json-schema-traverse_0.5.0_1599335600219_0.22633217841346598"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# json-schema-traverse\nTraverse JSON Schema passing each schema object to callback\n\n[![Build Status](https://travis-ci.org/epoberezkin/json-schema-traverse.svg?branch=master)](https://travis-ci.org/epoberezkin/json-schema-traverse)\n[![npm version](https://badge.fury.io/js/json-schema-traverse.svg)](https://www.npmjs.com/package/json-schema-traverse)\n[![Coverage Status](https://coveralls.io/repos/github/epoberezkin/json-schema-traverse/badge.svg?branch=master)](https://coveralls.io/github/epoberezkin/json-schema-traverse?branch=master)\n\n\n## Install\n\n```\nnpm install json-schema-traverse\n```\n\n\n## Usage\n\n```javascript\nconst traverse = require('json-schema-traverse');\nconst schema = {\n  properties: {\n    foo: {type: 'string'},\n    bar: {type: 'integer'}\n  }\n};\n\ntraverse(schema, {cb});\n// cb is called 3 times with:\n// 1. root schema\n// 2. {type: 'string'}\n// 3. {type: 'integer'}\n\n// Or:\n\ntraverse(schema, {cb: {pre, post}});\n// pre is called 3 times with:\n// 1. root schema\n// 2. {type: 'string'}\n// 3. {type: 'integer'}\n//\n// post is called 3 times with:\n// 1. {type: 'string'}\n// 2. {type: 'integer'}\n// 3. root schema\n\n```\n\nCallback function `cb` is called for each schema object (not including draft-06 boolean schemas), including the root schema, in pre-order traversal. Schema references ($ref) are not resolved, they are passed as is.  Alternatively, you can pass a `{pre, post}` object as `cb`, and then `pre` will be called before traversing child elements, and `post` will be called after all child elements have been traversed.\n\nCallback is passed these parameters:\n\n- _schema_: the current schema object\n- _JSON pointer_: from the root schema to the current schema object\n- _root schema_: the schema passed to `traverse` object\n- _parent JSON pointer_: from the root schema to the parent schema object (see below)\n- _parent keyword_: the keyword inside which this schema appears (e.g. `properties`, `anyOf`, etc.)\n- _parent schema_: not necessarily parent object/array; in the example above the parent schema for `{type: 'string'}` is the root schema\n- _index/property_: index or property name in the array/object containing multiple schemas; in the example above for `{type: 'string'}` the property name is `'foo'`\n\n\n## Traverse objects in all unknown keywords\n\n```javascript\nconst traverse = require('json-schema-traverse');\nconst schema = {\n  mySchema: {\n    minimum: 1,\n    maximum: 2\n  }\n};\n\ntraverse(schema, {allKeys: true, cb});\n// cb is called 2 times with:\n// 1. root schema\n// 2. mySchema\n```\n\nWithout option `allKeys: true` callback will be called only with root schema.\n\n\n## Enterprise support\n\njson-schema-traverse package is a part of [Tidelift enterprise subscription](https://tidelift.com/subscription/pkg/npm-json-schema-traverse?utm_source=npm-json-schema-traverse&utm_medium=referral&utm_campaign=enterprise&utm_term=repo) - it provides a centralised commercial support to open-source software users, in addition to the support provided by software maintainers.\n\n\n## Security contact\n\nTo report a security vulnerability, please use the\n[Tidelift security contact](https://tidelift.com/security).\nTidelift will coordinate the fix and disclosure. Please do NOT report security vulnerability via GitHub issues.\n\n\n## License\n\n[MIT](https://github.com/epoberezkin/json-schema-traverse/blob/master/LICENSE)\n",
   "maintainers": [
     {
       "name": "esp",
@@ -489,7 +566,7 @@
     }
   ],
   "time": {
-    "modified": "2018-06-10T08:42:08.355Z",
+    "modified": "2020-09-05T19:53:22.533Z",
     "created": "2017-06-04T18:42:17.844Z",
     "0.0.1": "2017-06-04T18:42:17.844Z",
     "0.1.0": "2017-06-05T20:19:20.802Z",
@@ -497,7 +574,8 @@
     "0.3.0": "2017-06-15T20:22:58.966Z",
     "0.3.1": "2017-06-23T23:50:57.513Z",
     "0.4.0": "2018-05-08T19:38:06.477Z",
-    "0.4.1": "2018-06-10T08:42:05.056Z"
+    "0.4.1": "2018-06-10T08:42:05.056Z",
+    "0.5.0": "2020-09-05T19:53:20.342Z"
   },
   "homepage": "https://github.com/epoberezkin/json-schema-traverse#readme",
   "keywords": [
@@ -517,5 +595,6 @@
   },
   "license": "MIT",
   "readmeFilename": "README.md",
-  "_attachments": {}
+  "_cached": false,
+  "_contentLength": 0
 }

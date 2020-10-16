@@ -1,10 +1,10 @@
 {
   "_id": "js-tokens",
-  "_rev": "28-1343ddb7bade479d77b5a8851a93b039",
+  "_rev": "29-cb72e9d735bcbaaa9dca401ccc2e0bc3",
   "name": "js-tokens",
-  "description": "A regex that tokenizes JavaScript.",
+  "description": "Tiny JavaScript tokenizer.",
   "dist-tags": {
-    "latest": "5.0.0"
+    "latest": "6.0.0"
   },
   "versions": {
     "0.1.0": {
@@ -939,8 +939,67 @@
         "tmp": "tmp/js-tokens_5.0.0_1560610465352_0.9681630780789874"
       },
       "_hasShrinkwrap": false
+    },
+    "6.0.0": {
+      "name": "js-tokens",
+      "version": "6.0.0",
+      "author": {
+        "name": "Simon Lydell"
+      },
+      "license": "MIT",
+      "description": "Tiny JavaScript tokenizer.",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lydell/js-tokens.git"
+      },
+      "type": "commonjs",
+      "exports": "./index.js",
+      "keywords": [
+        "JavaScript",
+        "js",
+        "ECMAScript",
+        "es",
+        "token",
+        "tokens",
+        "tokenize",
+        "tokenizer",
+        "regex",
+        "regexp"
+      ],
+      "bugs": {
+        "url": "https://github.com/lydell/js-tokens/issues"
+      },
+      "homepage": "https://github.com/lydell/js-tokens#readme",
+      "_id": "js-tokens@6.0.0",
+      "_nodeVersion": "13.12.0",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-QJUTLeNZNFl/w4MmhHztb1I1UzV42KV/L/zNwNVGlCNc+zl8g01Nve0hPDGU+j2N7ctFZdLot49lUSi78L7WGg==",
+        "shasum": "3c29d3a851d4bd92f86415e65997b4b46b3665cc",
+        "tarball": "https://registry.npmjs.org/js-tokens/-/js-tokens-6.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 15524,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJelJbVCRA9TVsSAnZWagAA5VQP/12XL9HznRSp3u/uWjl6\noBpvYZrU9Uf63beXbYY19RPWtOgfxAbIqD3UdYImfGXkiOK2yINTRQS+eIdN\n03j4Sl9LUiNrcK3aykni2XJ2tLOOc6hh2tG+DMsCfGDbOZnYhnFCbc0+s3V6\nYJgi7KOLE2gkcpoQOdBAK0UQr0t0NgiXtf4ocQIWa2yOFF7HjgHqNMLrargC\nK2nv6jgE4R9AoAbZHF99j3/I4He5nbygR3an2/LloLFqqFR77PYaxKGwyaDQ\nJIPGj+liipB7ZXLm5sBpMZVY8+1FJoupP8UTLQvgRzw+qRQiwxqzY8UyhrJr\ngu0DvponBttKSsW+VuyawIHUi+WgNFDVcXURl48dhE3kiSUf4IZv6TkMMf1+\nK68QohEHbHH3Z9PnHd1O9B51ZKvPqggKPXo3dvj7qcweS7dAqBi1bNq/xr+j\nO7OjfHuc1KNCRcpAczm78gn7Mt922gd4LTSZuLlEGR4+kCRQMjJELY2SDJPk\n8X8izkS/k0Bl9Lg0NMxi3VYhq/Lpjx8HgyLnvQKbLJYvNkwN5vG7dEuJr2nr\n7nvMW0xMas6RBLvqZ9wPeTrrro2Sjh3AoF4yixNEjHmXAixbp5fBxGNOyxWo\nahsZPL6qFnl5BPi2pTfzsk3d2bJSU060ctfACOomf504h0vqDtVxPls6Wwu7\nSlui\r\n=glyj\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "lydell",
+          "email": "simon.lydell@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "lydell",
+        "email": "simon.lydell@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/js-tokens_6.0.0_1586796244674_0.8455417748962879"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# js-tokens\n\nThe tiny, regex powered, lenient, _almost_ spec-compliant JavaScript tokenizer that never fails.\n\n```js\nconst jsTokens = require(\"js-tokens\");\n\nconst jsString = 'JSON.stringify({k:3.14**2}, null /*replacer*/, \"\\\\t\")';\n\nArray.from(jsTokens(jsString), (token) => token.value).join(\"|\");\n// JSON|.|stringify|(|{|k|:|3.14|**|2|}|,| |null| |/*replacer*/|,| |\"\\t\"|)\n```\n\n**[➡️ Full readme](https://github.com/lydell/js-tokens/)**",
   "maintainers": [
     {
       "name": "lydell",
@@ -948,7 +1007,7 @@
     }
   ],
   "time": {
-    "modified": "2019-06-15T14:54:27.928Z",
+    "modified": "2020-04-13T16:44:07.417Z",
     "created": "2014-03-08T22:30:50.672Z",
     "0.1.0": "2014-03-08T22:30:50.672Z",
     "0.2.0": "2014-06-19T20:20:22.938Z",
@@ -965,15 +1024,21 @@
     "3.0.1": "2017-01-30T18:28:23.511Z",
     "3.0.2": "2017-06-28T20:54:17.623Z",
     "4.0.0": "2018-01-28T11:58:58.170Z",
-    "5.0.0": "2019-06-15T14:54:25.462Z"
+    "5.0.0": "2019-06-15T14:54:25.462Z",
+    "6.0.0": "2020-04-13T16:44:04.779Z"
   },
   "homepage": "https://github.com/lydell/js-tokens#readme",
   "keywords": [
     "JavaScript",
     "js",
+    "ECMAScript",
+    "es",
     "token",
+    "tokens",
     "tokenize",
-    "regex"
+    "tokenizer",
+    "regex",
+    "regexp"
   ],
   "repository": {
     "type": "git",
@@ -993,5 +1058,7 @@
     "qingleili": true,
     "shuoshubao": true,
     "nraibaud": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

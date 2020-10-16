@@ -408,6 +408,7 @@
       }
     }
   },
+  "readme": "# path-parse [![Build Status](https://travis-ci.org/jbgutierrez/path-parse.svg?branch=master)](https://travis-ci.org/jbgutierrez/path-parse)\n\n> Node.js [`path.parse(pathString)`](https://nodejs.org/api/path.html#path_path_parse_pathstring) [ponyfill](https://ponyfill.com).\n\n## Install\n\n```\n$ npm install --save path-parse\n```\n\n## Usage\n\n```js\nvar pathParse = require('path-parse');\n\npathParse('/home/user/dir/file.txt');\n//=> {\n//       root : \"/\",\n//       dir : \"/home/user/dir\",\n//       base : \"file.txt\",\n//       ext : \".txt\",\n//       name : \"file\"\n//   }\n```\n\n## API\n\nSee [`path.parse(pathString)`](https://nodejs.org/api/path.html#path_path_parse_pathstring) docs.\n\n### pathParse(path)\n\n### pathParse.posix(path)\n\nThe Posix specific version.\n\n### pathParse.win32(path)\n\nThe Windows specific version.\n\n## License\n\nMIT © [Javier Blanco](http://jbgutierrez.info)\n",
   "maintainers": [
     {
       "name": "jbgutierrez",
@@ -459,5 +460,7 @@
     "koulmomo": true,
     "kwesi": true
   },
-  "_attachments": {}
+  "_attachments": {},
+  "_cached": false,
+  "_contentLength": 0
 }

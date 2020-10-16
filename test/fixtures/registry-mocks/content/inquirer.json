@@ -1,6 +1,6 @@
 {
   "_id": "inquirer",
-  "_rev": "628-0347c696f0bbce8f3eb4a9989f8f9eb3",
+  "_rev": "629-1fcaaab467369e731a8a95257624ccc3",
   "name": "inquirer",
   "description": "A collection of common interactive command line user interfaces.",
   "dist-tags": {
@@ -9377,7 +9377,7 @@
     }
   ],
   "time": {
-    "modified": "2020-07-23T02:32:42.819Z",
+    "modified": "2020-09-16T21:48:26.196Z",
     "created": "2013-05-19T20:15:49.971Z",
     "0.1.0": "2013-05-19T20:15:51.887Z",
     "0.1.1": "2013-05-21T23:54:07.172Z",
@@ -9934,7 +9934,8 @@
     "fremenl": true,
     "yanghcc": true,
     "jsimck": true,
-    "tjorange": true
+    "tjorange": true,
+    "nbur4556": true
   },
   "readmeFilename": "README.md",
   "keywords": [
@@ -9949,5 +9950,7 @@
   "homepage": "https://github.com/SBoudrias/Inquirer.js#readme",
   "bugs": {
     "url": "https://github.com/SBoudrias/Inquirer.js/issues"
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

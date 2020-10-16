@@ -1,10 +1,10 @@
 {
   "_id": "find-up",
-  "_rev": "27-67a554380a11bc7238ddbaaa22976474",
+  "_rev": "28-ba3e91fd89181732380e4a0332f94a4a",
   "name": "find-up",
   "description": "Find a file or directory by walking up parent directories",
   "dist-tags": {
-    "latest": "4.1.0"
+    "latest": "5.0.0"
   },
   "versions": {
     "1.0.0": {
@@ -749,8 +749,94 @@
         "tmp": "tmp/find-up_4.1.0_1560752434049_0.7412163695841496"
       },
       "_hasShrinkwrap": false
+    },
+    "5.0.0": {
+      "name": "find-up",
+      "version": "5.0.0",
+      "description": "Find a file or directory by walking up parent directories",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/find-up.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "find",
+        "up",
+        "find-up",
+        "findup",
+        "look-up",
+        "look",
+        "file",
+        "search",
+        "match",
+        "package",
+        "resolve",
+        "parent",
+        "parents",
+        "folder",
+        "directory",
+        "walk",
+        "walking",
+        "path"
+      ],
+      "dependencies": {
+        "locate-path": "^6.0.0",
+        "path-exists": "^4.0.0"
+      },
+      "devDependencies": {
+        "ava": "^2.1.0",
+        "is-path-inside": "^2.1.0",
+        "tempy": "^0.6.0",
+        "tsd": "^0.13.1",
+        "xo": "^0.33.0"
+      },
+      "gitHead": "e852e9cfd020844fac0ea2ff073c378cc302db4d",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/find-up/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/find-up#readme",
+      "_id": "find-up@5.0.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==",
+        "shasum": "4c92819ecb7083561e4f4a240a86be5198f536fc",
+        "tarball": "https://registry.npmjs.org/find-up/-/find-up-5.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 11761,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfMucJCRA9TVsSAnZWagAA6NcP/34vvIblDCnYQDSTYCrf\nZQmTpKT9t3/IdMqjEVUtoSq39MmWx1UpXL82rLIP8EkahMfwhCv+RWjGBtpw\n0wMYyyTeQ42dC1xV6FbZaTwEPle0co3soTeMSfxdHrFQxriGagsGDPEuNfXG\nlh9XXh2g6MIJ1Skyepcyz9JDVe8C1zJhQPQnGq/39hWVpaYXufra9E4HhRki\nyv204MQlkqEjuh6HK5e52u3x3bmeo/fXQEIk8jzlJB/0hQAtNULzkerZdF++\nq8uw1DHp4bgEwFVEjbepg+UR5Wqp8lCAk3lNrjzKz20DB77qCHL38CJhkg/q\nDgkU4odE7cnH8MvEqlVJSz5B91yUAplDasXVrsThBgQm6oA8olzS4D4QTjbY\nDsO/bzUKAE3PBUO9SZbfvwn6hH1ofIEcv0RFzYge99yybET1aCPB8VJ9fNZ9\n8djNIvaIoIBayfaL7hS+1ixKnA88Cav3Lk6hOkDYgcY1RI9vCRV9nLnKX7CC\ne/u0Hyr5KIRghh572akpGY3G15b6M/caSaiDrJvA2eb3PRE+SV8lx4T7CjZz\niyFQ3S1ZBUDX6XWuYGwfCn8iz3NwF4c1aVQG0AH64UlAS147rAsoiS3RE1nr\nvhsNq4pZBf3gd8jqaG5q15pahcWt4vDiXBpGmh+xl2MWpJ1v9xCPbeyNcaNv\nMh14\r\n=sIO9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/find-up_5.0.0_1597171464642_0.13015534581818233"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# find-up [![Build Status](https://travis-ci.com/sindresorhus/find-up.svg?branch=master)](https://travis-ci.com/github/sindresorhus/find-up)\n\n> Find a file or directory by walking up parent directories\n\n## Install\n\n```\n$ npm install find-up\n```\n\n## Usage\n\n```\n/\n└── Users\n    └── sindresorhus\n        ├── unicorn.png\n        └── foo\n            └── bar\n                ├── baz\n                └── example.js\n```\n\n`example.js`\n\n```js\nconst path = require('path');\nconst findUp = require('find-up');\n\n(async () => {\n\tconsole.log(await findUp('unicorn.png'));\n\t//=> '/Users/sindresorhus/unicorn.png'\n\n\tconsole.log(await findUp(['rainbow.png', 'unicorn.png']));\n\t//=> '/Users/sindresorhus/unicorn.png'\n\n\tconsole.log(await findUp(async directory => {\n\t\tconst hasUnicorns = await findUp.exists(path.join(directory, 'unicorn.png'));\n\t\treturn hasUnicorns && directory;\n\t}, {type: 'directory'}));\n\t//=> '/Users/sindresorhus'\n})();\n```\n\n## API\n\n### findUp(name, options?)\n### findUp(matcher, options?)\n\nReturns a `Promise` for either the path or `undefined` if it couldn't be found.\n\n### findUp([...name], options?)\n\nReturns a `Promise` for either the first path found (by respecting the order of the array) or `undefined` if none could be found.\n\n### findUp.sync(name, options?)\n### findUp.sync(matcher, options?)\n\nReturns a path or `undefined` if it couldn't be found.\n\n### findUp.sync([...name], options?)\n\nReturns the first path found (by respecting the order of the array) or `undefined` if none could be found.\n\n#### name\n\nType: `string`\n\nName of the file or directory to find.\n\n#### matcher\n\nType: `Function`\n\nA function that will be called with each directory until it returns a `string` with the path, which stops the search, or the root directory has been reached and nothing was found. Useful if you want to match files with certain patterns, set of permissions, or other advanced use-cases.\n\nWhen using async mode, the `matcher` may optionally be an async or promise-returning function that returns the path.\n\n#### options\n\nType: `object`\n\n##### cwd\n\nType: `string`\\\nDefault: `process.cwd()`\n\nDirectory to start from.\n\n##### type\n\nType: `string`\\\nDefault: `'file'`\\\nValues: `'file'` `'directory'`\n\nThe type of paths that can match.\n\n##### allowSymlinks\n\nType: `boolean`\\\nDefault: `true`\n\nAllow symbolic links to match if they point to the chosen path type.\n\n### findUp.exists(path)\n\nReturns a `Promise<boolean>` of whether the path exists.\n\n### findUp.sync.exists(path)\n\nReturns a `boolean` of whether the path exists.\n\n#### path\n\nType: `string`\n\nPath to a file or directory.\n\n### findUp.stop\n\nA [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that can be returned by a `matcher` function to stop the search and cause `findUp` to immediately return `undefined`. Useful as a performance optimization in case the current working directory is deeply nested in the filesystem.\n\n```js\nconst path = require('path');\nconst findUp = require('find-up');\n\n(async () => {\n\tawait findUp(directory => {\n\t\treturn path.basename(directory) === 'work' ? findUp.stop : 'logo.png';\n\t});\n})();\n```\n\n## Related\n\n- [find-up-cli](https://github.com/sindresorhus/find-up-cli) - CLI for this module\n- [pkg-up](https://github.com/sindresorhus/pkg-up) - Find the closest package.json file\n- [pkg-dir](https://github.com/sindresorhus/pkg-dir) - Find the root directory of an npm package\n- [resolve-from](https://github.com/sindresorhus/resolve-from) - Resolve the path of a module like `require.resolve()` but from a given path\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-find-up?utm_source=npm-find-up&utm_medium=referral&utm_campaign=readme\">Get professional support for 'find-up' with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -758,7 +844,7 @@
     }
   ],
   "time": {
-    "modified": "2019-06-17T06:20:37.240Z",
+    "modified": "2020-08-11T18:44:28.382Z",
     "created": "2015-09-01T07:15:16.509Z",
     "1.0.0": "2015-09-01T07:15:16.509Z",
     "1.1.0": "2015-11-14T19:05:49.453Z",
@@ -768,7 +854,8 @@
     "2.1.0": "2016-12-02T13:21:51.615Z",
     "3.0.0": "2018-06-18T09:19:21.364Z",
     "4.0.0": "2019-05-12T15:28:45.148Z",
-    "4.1.0": "2019-06-17T06:20:34.221Z"
+    "4.1.0": "2019-06-17T06:20:34.221Z",
+    "5.0.0": "2020-08-11T18:44:24.748Z"
   },
   "homepage": "https://github.com/sindresorhus/find-up#readme",
   "keywords": [
@@ -798,7 +885,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "bugs": {
     "url": "https://github.com/sindresorhus/find-up/issues"
@@ -819,5 +906,7 @@
     "losymear": true,
     "djblue": true,
     "danday74": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

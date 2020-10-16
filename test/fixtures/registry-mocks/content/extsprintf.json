@@ -1,6 +1,6 @@
 {
   "_id": "extsprintf",
-  "_rev": "38-54ef577506b919649d96eb7b98a33c3f",
+  "_rev": "41-b3144aa09b151536acc34e234a344e58",
   "name": "extsprintf",
   "description": "extended POSIX-style sprintf",
   "dist-tags": {
@@ -377,18 +377,11 @@
       "directories": {}
     }
   },
+  "readme": "# extsprintf: extended POSIX-style sprintf\n\nStripped down version of s[n]printf(3c).  We make a best effort to throw an\nexception when given a format string we don't understand, rather than ignoring\nit, so that we won't break existing programs if/when we go implement the rest\nof this.\n\nThis implementation currently supports specifying\n\n* field alignment ('-' flag),\n* zero-pad ('0' flag)\n* always show numeric sign ('+' flag),\n* field width\n* conversions for strings, decimal integers, and floats (numbers).\n* argument size specifiers.  These are all accepted but ignored, since\n  Javascript has no notion of the physical size of an argument.\n\nEverything else is currently unsupported, most notably: precision, unsigned\nnumbers, non-decimal numbers, and characters.\n\nBesides the usual POSIX conversions, this implementation supports:\n\n* `%j`: pretty-print a JSON object (using node's \"inspect\")\n* `%r`: pretty-print an Error object\n\n# Example\n\nFirst, install it:\n\n    # npm install extsprintf\n\nNow, use it:\n\n    var mod_extsprintf = require('extsprintf');\n    console.log(mod_extsprintf.sprintf('hello %25s', 'world'));\n\noutputs:\n\n    hello                     world\n\n# Also supported\n\n**printf**: same args as sprintf, but prints the result to stdout\n\n**fprintf**: same args as sprintf, preceded by a Node stream.  Prints the result\nto the given stream.\n",
   "maintainers": [
     {
-      "email": "mgerdts@gmail.com",
-      "name": "mgerdts"
-    },
-    {
-      "email": "kelly.mclaughlin@joyent.com",
-      "name": "kellymclaughlin"
-    },
-    {
-      "email": "isaac.davis@joyent.com",
-      "name": "isaacdavis"
+      "email": "jesse.butryn@live.com",
+      "name": "jesse_b"
     },
     {
       "email": "dave@daveeddy.com",
@@ -441,10 +434,14 @@
     {
       "email": "cody.mello@joyent.com",
       "name": "melloc"
+    },
+    {
+      "email": "kelly.mclaughlin@joyent.com",
+      "name": "kellymclaughlin"
     }
   ],
   "time": {
-    "modified": "2020-02-04T21:06:00.399Z",
+    "modified": "2020-10-06T20:44:24.228Z",
     "created": "2012-04-18T01:14:25.292Z",
     "1.0.0": "2012-04-18T01:14:26.459Z",
     "1.0.1": "2012-06-14T00:13:58.871Z",
@@ -470,5 +467,7 @@
   "users": {
     "mojaray2k": true,
     "andr": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

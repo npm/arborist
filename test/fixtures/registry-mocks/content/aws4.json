@@ -1,10 +1,10 @@
 {
   "_id": "aws4",
-  "_rev": "77-ef4260090239a6cdd0968f94d9e5567c",
+  "_rev": "79-7c76af691ea8da7f6c40e3923ef2850a",
   "name": "aws4",
   "description": "Signs and prepares requests using AWS Signature Version 4",
   "dist-tags": {
-    "latest": "1.9.1"
+    "latest": "1.10.1"
   },
   "versions": {
     "0.0.1": {
@@ -3462,8 +3462,121 @@
         "tmp": "tmp/aws4_1.9.1_1578957947737_0.4549390524295822"
       },
       "_hasShrinkwrap": false
+    },
+    "1.10.0": {
+      "name": "aws4",
+      "version": "1.10.0",
+      "description": "Signs and prepares requests using AWS Signature Version 4",
+      "author": {
+        "name": "Michael Hart",
+        "email": "michael.hart.au@gmail.com",
+        "url": "https://github.com/mhart"
+      },
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mhart/aws4.git"
+      },
+      "main": "aws4.js",
+      "scripts": {
+        "test": "mocha ./test/fast.js -R list",
+        "integration": "node ./test/slow.js"
+      },
+      "devDependencies": {
+        "mocha": "^7.1.2",
+        "should": "^13.2.3"
+      },
+      "gitHead": "09c55bf6d424a4b5547150f0809f854bd14f650a",
+      "bugs": {
+        "url": "https://github.com/mhart/aws4/issues"
+      },
+      "homepage": "https://github.com/mhart/aws4#readme",
+      "_id": "aws4@1.10.0",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-3YDiu347mtVtjpyV3u5kVqQLP242c06zwDOgpeRnybmXlYYsLbtTrUBUm8i8srONt+FWobl5aibnU1030PeeuA==",
+        "shasum": "a17b3a8ea811060e74d47d306122400ad4497ae2",
+        "tarball": "https://registry.npmjs.org/aws4/-/aws4-1.10.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 21087,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeyEJeCRA9TVsSAnZWagAAS9YP/0M/tlgJFdmsgCIekHyU\nRh+roU6P6vIGZQ0rpYgV6yGxRikMJjJUwRi9mi7kQWASaWlvk/LiCM3c3/PN\n/4NeIH9qX3a3/mraEZZFWu3Ot1UAZqRW2+Aa6ipN8+rGmU1+1Gh+/6ztTRTd\nagAev8J9XNL+ZMrxjNUPENhDzFMdRQpZwiqvy52dajrHMq3C2qMfoVU/+Nm0\n2LiSYcjBLpLLOIS75Ammn6kw3XzThBKMMZDBvhyimXRs1pET+Ej/6rFJKAzG\ncIueaiFLSH6ekcgLBpXf8vExlhydDRRNXcqZKEMgA8EFwzrYPRzcIgslEPvM\nLL1/shDkgLaSqyp54fhZvojcdbJiBXsmTC8jeKoIcmLXGNA1eDitESRp2QgM\nLsKkIUYwosApGBGULwjYxJCbDECq/B0o7MRIoQDuFz84ZYHEj7GBhMOvKu/a\nsTM5ocRHm+qwqhAlIlrx7hjqNE4cTMYTExynFwye+FKWrTLl6+xwyqpQpkHr\nG99SgNT1q7QUQVUF0/LM4heju/T5Qab3WGHLs+hB2ylbHwVC1ftXzvxqkQ9U\ni4t4v5fa27H4gjXCxdq2kxwtQDCup87Ta8ZLP5Prog70mLID2fT0SUTWkuDX\nThaLQO15bVyR/mQzteggv/rUujS3tdK8/jYyKR4nBIRQ+AieUZpZ3glmXF5S\ndobo\r\n=x59z\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "hichaelmart",
+          "email": "michael.hart.au@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "hichaelmart",
+        "email": "michael.hart.au@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/aws4_1.10.0_1590182493870_0.10780918062212641"
+      },
+      "_hasShrinkwrap": false
+    },
+    "1.10.1": {
+      "name": "aws4",
+      "version": "1.10.1",
+      "description": "Signs and prepares requests using AWS Signature Version 4",
+      "author": {
+        "name": "Michael Hart",
+        "email": "michael.hart.au@gmail.com",
+        "url": "https://github.com/mhart"
+      },
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mhart/aws4.git"
+      },
+      "main": "aws4.js",
+      "scripts": {
+        "test": "mocha ./test/fast.js -R list",
+        "integration": "node ./test/slow.js"
+      },
+      "devDependencies": {
+        "mocha": "^2.5.3",
+        "should": "^8.4.0"
+      },
+      "gitHead": "cfbf3e38012ab82be48518048d1ed87fbca5bf5a",
+      "bugs": {
+        "url": "https://github.com/mhart/aws4/issues"
+      },
+      "homepage": "https://github.com/mhart/aws4#readme",
+      "_id": "aws4@1.10.1",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-zg7Hz2k5lI8kb7U32998pRRFin7zJlkfezGJjUc2heaD4Pw2wObakCDVzkKztTm/Ln7eiVvYsjqak0Ed4LkMDA==",
+        "shasum": "e1e82e4f3e999e2cfd61b161280d16a111f86428",
+        "tarball": "https://registry.npmjs.org/aws4/-/aws4-1.10.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 21509,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfM+1vCRA9TVsSAnZWagAAJh0P/j7ZkqiJlGbi3tpIm5RZ\ntqkUOY3kIOa/j+1i8U4v3P1DW0tL1clJy+Yk4veVAO7gJMEwhm3OkJtz0Xh6\nzzY7QmDiKqEPHtee4Kil6p3bq/n8UiA3LHbrfKvNO8EkSFbUgFSZb2Hu/ESq\ncJP9ngERkQaEkG3ekdwNRl20ZGx/J4ymYj07ZC3fHuGitTTBWkDlXGQ7YVH7\nEZAgjSDucKjIq6nJScCIa/ehzOYVkMeGiePdv1HgXD8EyYw7wMOhX6XolYc/\nxFwLQ4vN0sjAu+EKAqXQS5ea6ZxO3WUBZs24zcN2Iiz4A0/21G7aKW4iu69D\ni6LhWRx32YwW+Rc5kd5HHpQfOYfJxjKbMli6ioxuVEA0m04EpDRQRKEng7Ms\nLfoKYymBwWG2K/x3HgeOS4PKdxYpUYLvcSlAwKv7ZOLUXG9244A4/6PRFiwr\nep3hd27/Sd/azsEzEYFt9zElIDSc3yxU3aHRkNWLikj6phnt6WnUiu8jWoQ+\na4VRWTWplHbVVvH2UHrSQdFwgGBaxxLKf8arph6mMTgZMWF4V4IgSWCgMZ9j\ns9UXAX8i+5VUhQCTK/F/Z9v671/c1qqY2lvYG+RhVoanQJM+JtFJqaf85eQq\n1N8CzMIzvweffSxjsCujt7kdhB8eipwWAZwnhRDj/TUu2jJLxZ2ljTqbXSx/\n35hI\r\n=5Dcs\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "hichaelmart",
+          "email": "michael.hart.au@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "hichaelmart",
+        "email": "michael.hart.au@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/aws4_1.10.1_1597238638752_0.4615872487755939"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "aws4\n----\n\n[![Build Status](https://api.travis-ci.org/mhart/aws4.png?branch=master)](https://travis-ci.org/github/mhart/aws4)\n\nA small utility to sign vanilla Node.js http(s) request options using Amazon's\n[AWS Signature Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html).\n\nIf you want to sign and send AWS requests in a modern browser, or an environment like [Cloudflare Workers](https://developers.cloudflare.com/workers/), then check out [aws4fetch](https://github.com/mhart/aws4fetch) – otherwise you can also bundle this library for use [in older browsers](./browser).\n\nThe only AWS service that *doesn't* support v4 as of 2020-05-22 is\n[SimpleDB](https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/SDB_API.html)\n(it only supports [AWS Signature Version 2](https://github.com/mhart/aws2)).\n\nIt also provides defaults for a number of core AWS headers and\nrequest parameters, making it very easy to query AWS services, or\nbuild out a fully-featured AWS library.\n\nExample\n-------\n\n```javascript\nvar https = require('https')\nvar aws4  = require('aws4')\n\n// to illustrate usage, we'll create a utility function to request and pipe to stdout\nfunction request(opts) { https.request(opts, function(res) { res.pipe(process.stdout) }).end(opts.body || '') }\n\n// aws4 will sign an options object as you'd pass to http.request, with an AWS service and region\nvar opts = { host: 'my-bucket.s3.us-west-1.amazonaws.com', path: '/my-object', service: 's3', region: 'us-west-1' }\n\n// aws4.sign() will sign and modify these options, ready to pass to http.request\naws4.sign(opts, { accessKeyId: '', secretAccessKey: '' })\n\n// or it can get credentials from process.env.AWS_ACCESS_KEY_ID, etc\naws4.sign(opts)\n\n// for most AWS services, aws4 can figure out the service and region if you pass a host\nopts = { host: 'my-bucket.s3.us-west-1.amazonaws.com', path: '/my-object' }\n\n// usually it will add/modify request headers, but you can also sign the query:\nopts = { host: 'my-bucket.s3.amazonaws.com', path: '/?X-Amz-Expires=12345', signQuery: true }\n\n// and for services with simple hosts, aws4 can infer the host from service and region:\nopts = { service: 'sqs', region: 'us-east-1', path: '/?Action=ListQueues' }\n\n// and if you're using us-east-1, it's the default:\nopts = { service: 'sqs', path: '/?Action=ListQueues' }\n\naws4.sign(opts)\nconsole.log(opts)\n/*\n{\n  host: 'sqs.us-east-1.amazonaws.com',\n  path: '/?Action=ListQueues',\n  headers: {\n    Host: 'sqs.us-east-1.amazonaws.com',\n    'X-Amz-Date': '20121226T061030Z',\n    Authorization: 'AWS4-HMAC-SHA256 Credential=ABCDEF/20121226/us-east-1/sqs/aws4_request, ...'\n  }\n}\n*/\n\n// we can now use this to query AWS\nrequest(opts)\n/*\n<?xml version=\"1.0\"?>\n<ListQueuesResponse xmlns=\"https://queue.amazonaws.com/doc/2012-11-05/\">\n...\n*/\n\n// aws4 can infer the HTTP method if a body is passed in\n// method will be POST and Content-Type: 'application/x-www-form-urlencoded; charset=utf-8'\nrequest(aws4.sign({ service: 'iam', body: 'Action=ListGroups&Version=2010-05-08' }))\n/*\n<ListGroupsResponse xmlns=\"https://iam.amazonaws.com/doc/2010-05-08/\">\n...\n*/\n\n// you can specify any custom option or header as per usual\nrequest(aws4.sign({\n  service: 'dynamodb',\n  region: 'ap-southeast-2',\n  method: 'POST',\n  path: '/',\n  headers: {\n    'Content-Type': 'application/x-amz-json-1.0',\n    'X-Amz-Target': 'DynamoDB_20120810.ListTables'\n  },\n  body: '{}'\n}))\n/*\n{\"TableNames\":[]}\n...\n*/\n\n// The raw RequestSigner can be used to generate CodeCommit Git passwords\nvar signer = new aws4.RequestSigner({\n  service: 'codecommit',\n  host: 'git-codecommit.us-east-1.amazonaws.com',\n  method: 'GIT',\n  path: '/v1/repos/MyAwesomeRepo',\n})\nvar password = signer.getDateTime() + 'Z' + signer.signature()\n\n// see example.js for examples with other services\n```\n\nAPI\n---\n\n### aws4.sign(requestOptions, [credentials])\n\nCalculates and populates any necessary AWS headers and/or request\noptions on `requestOptions`. Returns `requestOptions` as a convenience for chaining.\n\n`requestOptions` is an object holding the same options that the Node.js\n[http.request](https://nodejs.org/docs/latest/api/http.html#http_http_request_options_callback)\nfunction takes.\n\nThe following properties of `requestOptions` are used in the signing or\npopulated if they don't already exist:\n\n- `hostname` or `host` (will try to be determined from `service` and `region` if not given)\n- `method` (will use `'GET'` if not given or `'POST'` if there is a `body`)\n- `path` (will use `'/'` if not given)\n- `body` (will use `''` if not given)\n- `service` (will try to be calculated from `hostname` or `host` if not given)\n- `region` (will try to be calculated from `hostname` or `host` or use `'us-east-1'` if not given)\n- `signQuery` (to sign the query instead of adding an `Authorization` header, defaults to false)\n- `headers['Host']` (will use `hostname` or `host` or be calculated if not given)\n- `headers['Content-Type']` (will use `'application/x-www-form-urlencoded; charset=utf-8'`\n  if not given and there is a `body`)\n- `headers['Date']` (used to calculate the signature date if given, otherwise `new Date` is used)\n\nYour AWS credentials (which can be found in your\n[AWS console](https://portal.aws.amazon.com/gp/aws/securityCredentials))\ncan be specified in one of two ways:\n\n- As the second argument, like this:\n\n```javascript\naws4.sign(requestOptions, {\n  secretAccessKey: \"<your-secret-access-key>\",\n  accessKeyId: \"<your-access-key-id>\",\n  sessionToken: \"<your-session-token>\"\n})\n```\n\n- From `process.env`, such as this:\n\n```\nexport AWS_ACCESS_KEY_ID=\"<your-access-key-id>\"\nexport AWS_SECRET_ACCESS_KEY=\"<your-secret-access-key>\"\nexport AWS_SESSION_TOKEN=\"<your-session-token>\"\n```\n\n(will also use `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` if available)\n\nThe `sessionToken` property and `AWS_SESSION_TOKEN` environment variable are optional for signing\nwith [IAM STS temporary credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_use-resources.html).\n\nInstallation\n------------\n\nWith [npm](https://www.npmjs.com/) do:\n\n```\nnpm install aws4\n```\n\nCan also be used [in the browser](./browser).\n\nThanks\n------\n\nThanks to [@jed](https://github.com/jed) for his\n[dynamo-client](https://github.com/jed/dynamo-client) lib where I first\ncommitted and subsequently extracted this code.\n\nAlso thanks to the\n[official Node.js AWS SDK](https://github.com/aws/aws-sdk-js) for giving\nme a start on implementing the v4 signature.\n",
   "maintainers": [
     {
       "name": "hichaelmart",
@@ -3471,7 +3584,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-13T23:25:50.326Z",
+    "modified": "2020-08-12T13:24:03.165Z",
     "created": "2012-12-26T04:43:37.518Z",
     "0.0.1": "2012-12-26T04:43:41.495Z",
     "0.1.0": "2012-12-26T05:36:58.627Z",
@@ -3513,70 +3626,20 @@
     "1.7.0": "2018-04-07T22:24:14.670Z",
     "1.8.0": "2018-08-06T14:12:12.685Z",
     "1.9.0": "2019-11-26T22:30:02.810Z",
-    "1.9.1": "2020-01-13T23:25:47.909Z"
+    "1.9.1": "2020-01-13T23:25:47.909Z",
+    "1.10.0": "2020-05-22T21:21:33.965Z",
+    "1.10.1": "2020-08-12T13:23:58.846Z"
   },
   "author": {
     "name": "Michael Hart",
     "email": "michael.hart.au@gmail.com",
-    "url": "http://github.com/mhart"
+    "url": "https://github.com/mhart"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mhart/aws4.git"
   },
   "homepage": "https://github.com/mhart/aws4#readme",
-  "keywords": [
-    "amazon",
-    "aws",
-    "signature",
-    "s3",
-    "ec2",
-    "autoscaling",
-    "cloudformation",
-    "elasticloadbalancing",
-    "elb",
-    "elasticbeanstalk",
-    "cloudsearch",
-    "dynamodb",
-    "kinesis",
-    "lambda",
-    "glacier",
-    "sqs",
-    "sns",
-    "iam",
-    "sts",
-    "ses",
-    "swf",
-    "storagegateway",
-    "datapipeline",
-    "directconnect",
-    "redshift",
-    "opsworks",
-    "rds",
-    "monitoring",
-    "cloudtrail",
-    "cloudfront",
-    "codedeploy",
-    "elasticache",
-    "elasticmapreduce",
-    "elastictranscoder",
-    "emr",
-    "cloudwatch",
-    "mobileanalytics",
-    "cognitoidentity",
-    "cognitosync",
-    "cognito",
-    "containerservice",
-    "ecs",
-    "appstream",
-    "keymanagementservice",
-    "kms",
-    "config",
-    "cloudhsm",
-    "route53",
-    "route53domains",
-    "logs"
-  ],
   "bugs": {
     "url": "https://github.com/mhart/aws4/issues"
   },
@@ -3594,5 +3657,7 @@
     "necanicum": true,
     "maemichi-monosense": true,
     "jonniespratley": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1820,10 +1820,13 @@
     "evanshortiss": true,
     "daizch": true
   },
+  "readme": "# which\n\nLike the unix `which` utility.\n\nFinds the first instance of a specified executable in the PATH\nenvironment variable.  Does not cache the results, so `hash -r` is not\nneeded when the PATH changes.\n\n## USAGE\n\n```javascript\nvar which = require('which')\n\n// async usage\nwhich('node', function (er, resolvedPath) {\n  // er is returned if no \"node\" is found on the PATH\n  // if it is found, then the absolute path to the exec is returned\n})\n\n// or promise\nwhich('node').then(resolvedPath => { ... }).catch(er => { ... not found ... })\n\n// sync usage\n// throws if not found\nvar resolved = which.sync('node')\n\n// if nothrow option is used, returns null if not found\nresolved = which.sync('node', {nothrow: true})\n\n// Pass options to override the PATH and PATHEXT environment vars.\nwhich('node', { path: someOtherPath }, function (er, resolved) {\n  if (er)\n    throw er\n  console.log('found at %j', resolved)\n})\n```\n\n## CLI USAGE\n\nSame as the BSD `which(1)` binary.\n\n```\nusage: which [-as] program ...\n```\n\n## OPTIONS\n\nYou may pass an options object as the second argument.\n\n- `path`: Use instead of the `PATH` environment variable.\n- `pathExt`: Use instead of the `PATHEXT` environment variable.\n- `all`: Return all matches, instead of just the first one.  Note that\n  this means the function returns an array of strings instead of a\n  single string.\n",
   "homepage": "https://github.com/isaacs/node-which#readme",
   "bugs": {
     "url": "https://github.com/isaacs/node-which/issues"
   },
   "readmeFilename": "README.md",
-  "license": "ISC"
+  "license": "ISC",
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,10 +1,10 @@
 {
   "_id": "eslint",
-  "_rev": "742-393a02c4b6609df13beb6206ccb03171",
+  "_rev": "748-86e6949be324603151d0e81cb4801fc0",
   "name": "eslint",
   "description": "An AST-based pattern checker for JavaScript.",
   "dist-tags": {
-    "latest": "7.6.0",
+    "latest": "7.11.0",
     "es6jsx": "0.11.0-alpha.0",
     "next": "7.0.0-rc.0"
   },
@@ -37416,25 +37416,1117 @@
         "tmp": "tmp/eslint_7.6.0_1596237701404_0.030563864362887605"
       },
       "_hasShrinkwrap": false
+    },
+    "7.7.0": {
+      "name": "eslint",
+      "version": "7.7.0",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "description": "An AST-based pattern checker for JavaScript.",
+      "bin": {
+        "eslint": "bin/eslint.js"
+      },
+      "main": "./lib/api.js",
+      "scripts": {
+        "test": "node Makefile.js test",
+        "test:cli": "mocha",
+        "lint": "node Makefile.js lint",
+        "fix": "node Makefile.js lint -- fix",
+        "fuzz": "node Makefile.js fuzz",
+        "generate-release": "node Makefile.js generateRelease",
+        "generate-alpharelease": "node Makefile.js generatePrerelease -- alpha",
+        "generate-betarelease": "node Makefile.js generatePrerelease -- beta",
+        "generate-rcrelease": "node Makefile.js generatePrerelease -- rc",
+        "publish-release": "node Makefile.js publishRelease",
+        "docs": "node Makefile.js docs",
+        "gensite": "node Makefile.js gensite",
+        "webpack": "node Makefile.js webpack",
+        "perf": "node Makefile.js perf"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ],
+        "*.md": "markdownlint"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/eslint.git"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "homepage": "https://eslint.org",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "ajv": "^6.10.0",
+        "chalk": "^4.0.0",
+        "cross-spawn": "^7.0.2",
+        "debug": "^4.0.1",
+        "doctrine": "^3.0.0",
+        "enquirer": "^2.3.5",
+        "eslint-scope": "^5.1.0",
+        "eslint-utils": "^2.1.0",
+        "eslint-visitor-keys": "^1.3.0",
+        "espree": "^7.2.0",
+        "esquery": "^1.2.0",
+        "esutils": "^2.0.2",
+        "file-entry-cache": "^5.0.1",
+        "functional-red-black-tree": "^1.0.1",
+        "glob-parent": "^5.0.0",
+        "globals": "^12.1.0",
+        "ignore": "^4.0.6",
+        "import-fresh": "^3.0.0",
+        "imurmurhash": "^0.1.4",
+        "is-glob": "^4.0.0",
+        "js-yaml": "^3.13.1",
+        "json-stable-stringify-without-jsonify": "^1.0.1",
+        "levn": "^0.4.1",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.4",
+        "natural-compare": "^1.4.0",
+        "optionator": "^0.9.1",
+        "progress": "^2.0.0",
+        "regexpp": "^3.1.0",
+        "semver": "^7.2.1",
+        "strip-ansi": "^6.0.0",
+        "strip-json-comments": "^3.1.0",
+        "table": "^5.2.3",
+        "text-table": "^0.2.0",
+        "v8-compile-cache": "^2.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "acorn": "^7.2.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.0.1",
+        "cheerio": "^0.22.0",
+        "common-tags": "^1.8.0",
+        "core-js": "^3.1.3",
+        "dateformat": "^3.0.3",
+        "ejs": "^3.0.2",
+        "escape-string-regexp": "^3.0.0",
+        "eslint": "file:.",
+        "eslint-config-eslint": "file:packages/eslint-config-eslint",
+        "eslint-plugin-eslint-plugin": "^2.2.1",
+        "eslint-plugin-internal-rules": "file:tools/internal-rules",
+        "eslint-plugin-jsdoc": "^22.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-release": "^2.0.0",
+        "eslump": "^2.0.0",
+        "esprima": "^4.0.1",
+        "glob": "^7.1.6",
+        "jsdoc": "^3.5.5",
+        "karma": "^4.0.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.3",
+        "karma-webpack": "^4.0.0-rc.6",
+        "lint-staged": "^10.1.2",
+        "load-perf": "^0.2.0",
+        "markdownlint": "^0.19.0",
+        "markdownlint-cli": "^0.22.0",
+        "memfs": "^3.0.1",
+        "mocha": "^7.1.1",
+        "mocha-junit-reporter": "^1.23.0",
+        "npm-license": "^0.3.3",
+        "nyc": "^15.0.1",
+        "proxyquire": "^2.0.1",
+        "puppeteer": "^4.0.0",
+        "recast": "^0.19.0",
+        "regenerator-runtime": "^0.13.2",
+        "shelljs": "^0.8.2",
+        "sinon": "^9.0.1",
+        "temp": "^0.9.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5",
+        "yorkie": "^2.0.0"
+      },
+      "keywords": [
+        "ast",
+        "lint",
+        "javascript",
+        "ecmascript",
+        "espree"
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "gitHead": "0d905082d327c774c3d537e0300a9a752386050d",
+      "_id": "eslint@7.7.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-1KUxLzos0ZVsyL81PnRN335nDtQ8/vZUD6uMtWbF+5zDtjKcsklIi78XoE0MVL93QvWTu+E5y44VyyCsOMBrIg==",
+        "shasum": "18beba51411927c4b64da0a8ceadefe4030d6073",
+        "tarball": "https://registry.npmjs.org/eslint/-/eslint-7.7.0.tgz",
+        "fileCount": 403,
+        "unpackedSize": 3153364,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfNwIfCRA9TVsSAnZWagAALzkP/joEWPaghlFbmiW1xMNi\nfuSIxNMXccZrKhPh+lrBS296UTmMxaM+L+NQn1+O1rpr+tiiOVcG6N75u1Jq\ns4A2EdVZG8RsWYKf2USLoSNp1UzgA9fnC/u4Uq0UFPA4GWau6OU5h0tpel/e\n39Kw2O31vu9duxWB9X0wPkR3fEmms+tvIPxxRrpqjUoSc/ZvZLhT3T13dLob\n53l1m/YHBFsO+EZduGwv9UwDu7rElc8u/kChGy+4hFa2RPUiMiMdPfOlFgad\n5XJ3XGCBnrhX8sJbarzOXuTNdciqzfCqICd12ODj+4sZ8Ny7g3B4X8Vor1s1\nXZJNJj7xYKxOK1J8jhKHEV+rngOs+gwEBb3lhogGhdnLJ5zXP1qhwi1t9tBU\n7ukJNROGN0KSokh+zZ2lUSJjjAX/Y+Ve/If3Fvh8StkgDSwhWXuZ6RfZpXIo\nUh+COQqKCHPLphMKCogE7f9PDhvAOhdvw2HFEA/eX/NrW6rPu4DYJrVqi0h2\n8SZxbve4kecFT8QRgXvry9O3bA9u8pHlzk9PW0cDwhhEso+VML+5iFvTXFgF\nXqPemr/ek3nxm2CJmVq+6bUMCGjVwTXWkA5e05qw1ZyhxNfMjZ6XXswPYB3i\n3buaHbOvmLStEINtAfdkWK+L0MXLsawhi9W5bN1rVzQJiKfE+tpZQgBJmbMM\nQdLL\r\n=bcLh\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "nicholas+eslint@nczconsulting.com",
+          "name": "eslintbot"
+        },
+        {
+          "email": "ivolodin@gmail.com",
+          "name": "ivolodin"
+        },
+        {
+          "email": "nicholas@nczconsulting.com",
+          "name": "nzakas"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_7.7.0_1597440542645_0.7354100396267167"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.8.0": {
+      "name": "eslint",
+      "version": "7.8.0",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "description": "An AST-based pattern checker for JavaScript.",
+      "bin": {
+        "eslint": "bin/eslint.js"
+      },
+      "main": "./lib/api.js",
+      "scripts": {
+        "test": "node Makefile.js test",
+        "test:cli": "mocha",
+        "lint": "node Makefile.js lint",
+        "fix": "node Makefile.js lint -- fix",
+        "fuzz": "node Makefile.js fuzz",
+        "generate-release": "node Makefile.js generateRelease",
+        "generate-alpharelease": "node Makefile.js generatePrerelease -- alpha",
+        "generate-betarelease": "node Makefile.js generatePrerelease -- beta",
+        "generate-rcrelease": "node Makefile.js generatePrerelease -- rc",
+        "publish-release": "node Makefile.js publishRelease",
+        "docs": "node Makefile.js docs",
+        "gensite": "node Makefile.js gensite",
+        "webpack": "node Makefile.js webpack",
+        "perf": "node Makefile.js perf"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ],
+        "*.md": "markdownlint"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/eslint.git"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "homepage": "https://eslint.org",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "@eslint/eslintrc": "^0.1.0",
+        "ajv": "^6.10.0",
+        "chalk": "^4.0.0",
+        "cross-spawn": "^7.0.2",
+        "debug": "^4.0.1",
+        "doctrine": "^3.0.0",
+        "enquirer": "^2.3.5",
+        "eslint-scope": "^5.1.0",
+        "eslint-utils": "^2.1.0",
+        "eslint-visitor-keys": "^1.3.0",
+        "espree": "^7.3.0",
+        "esquery": "^1.2.0",
+        "esutils": "^2.0.2",
+        "file-entry-cache": "^5.0.1",
+        "functional-red-black-tree": "^1.0.1",
+        "glob-parent": "^5.0.0",
+        "globals": "^12.1.0",
+        "ignore": "^4.0.6",
+        "import-fresh": "^3.0.0",
+        "imurmurhash": "^0.1.4",
+        "is-glob": "^4.0.0",
+        "js-yaml": "^3.13.1",
+        "json-stable-stringify-without-jsonify": "^1.0.1",
+        "levn": "^0.4.1",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.4",
+        "natural-compare": "^1.4.0",
+        "optionator": "^0.9.1",
+        "progress": "^2.0.0",
+        "regexpp": "^3.1.0",
+        "semver": "^7.2.1",
+        "strip-ansi": "^6.0.0",
+        "strip-json-comments": "^3.1.0",
+        "table": "^5.2.3",
+        "text-table": "^0.2.0",
+        "v8-compile-cache": "^2.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "acorn": "^7.2.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.0.1",
+        "cheerio": "^0.22.0",
+        "common-tags": "^1.8.0",
+        "core-js": "^3.1.3",
+        "dateformat": "^3.0.3",
+        "ejs": "^3.0.2",
+        "escape-string-regexp": "^3.0.0",
+        "eslint": "file:.",
+        "eslint-config-eslint": "file:packages/eslint-config-eslint",
+        "eslint-plugin-eslint-plugin": "^2.2.1",
+        "eslint-plugin-internal-rules": "file:tools/internal-rules",
+        "eslint-plugin-jsdoc": "^22.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-release": "^2.0.0",
+        "eslump": "^2.0.0",
+        "esprima": "^4.0.1",
+        "glob": "^7.1.6",
+        "jsdoc": "^3.5.5",
+        "karma": "^4.0.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.3",
+        "karma-webpack": "^4.0.0-rc.6",
+        "lint-staged": "^10.1.2",
+        "load-perf": "^0.2.0",
+        "markdownlint": "^0.19.0",
+        "markdownlint-cli": "^0.22.0",
+        "memfs": "^3.0.1",
+        "mocha": "^7.1.1",
+        "mocha-junit-reporter": "^1.23.0",
+        "npm-license": "^0.3.3",
+        "nyc": "^15.0.1",
+        "proxyquire": "^2.0.1",
+        "puppeteer": "^4.0.0",
+        "recast": "^0.19.0",
+        "regenerator-runtime": "^0.13.2",
+        "shelljs": "^0.8.2",
+        "sinon": "^9.0.1",
+        "temp": "^0.9.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5",
+        "yorkie": "^2.0.0"
+      },
+      "keywords": [
+        "ast",
+        "lint",
+        "javascript",
+        "ecmascript",
+        "espree"
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "gitHead": "9250ab3e63836c71af87b10f29157bed278054e7",
+      "_id": "eslint@7.8.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-qgtVyLZqKd2ZXWnLQA4NtVbOyH56zivOAdBFWE54RFkSZjokzNrcP4Z0eVWsZ+84ByXv+jL9k/wE1ENYe8xRFw==",
+        "shasum": "9a3e2e6e4d0a3f8c42686073c25ebf2e91443e8a",
+        "tarball": "https://registry.npmjs.org/eslint/-/eslint-7.8.0.tgz",
+        "fileCount": 400,
+        "unpackedSize": 3156892,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfTXHaCRA9TVsSAnZWagAAjrMP/A3C7Ss+UQKa07/RubTX\nSz+L2oKrpvLtEw3L8ecIQv5zPA1RrJdF3gK3OOdS7oNsxCh8pq/tc7n5vMSx\nUX+ofC4GzWQjYitZdfpeY4rLgjn6AaF958N96cp+59/5BnFlXFyx4UKGngEk\nFSMm87GKhOh7p9WsXOi+Fy2aMao0vW4n9K7RVQ/YNgU/cndvdwlB0DuTLPMC\naycA4kMdmplFnqHSr73hjPwNDOZ5bwbzUp6rgvAHiN5cCC31zgVRdjdCGMKx\nqV1XCg3dII7bCTf9fKrB6UAg3s/effUvNtjXqy607SZ7jN95G757gBXD4cVG\nso8IZ6BnUcFSjKdMkRX5yU7omVZElKP41dsQIBKRIfg7jXxJD6Rbr6rOCL9W\nkap51G3PnFmeuMzMVnpmVxJoSDyrNR3ImXNLMJFKGjBYHVhHHtjUci3tu3HM\nPVQXD21OvLS1jTgDju/RvCDbExu4DfBPUAxrwIwzoUZmN347KJLo2P6wViVb\nBsWVwyOWlT0j/SUmINYM+xbqx0MzpQ+TNgIBhtKWXS1q47joMChuKBao7pe2\nrNazGBydG8t6vSo+sbt4TJAU8dy3FIz2iI6AXU7dk/QjBeFZIRGsqvhs57Py\nEN2Vf7gIUc05qJ+HxEKj2BX13NMR7ISkEePtHmdBwfGFBkinNBe6MakWYh6B\nfbc1\r\n=IYAV\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "nicholas+eslint@nczconsulting.com",
+          "name": "eslintbot"
+        },
+        {
+          "email": "ivolodin@gmail.com",
+          "name": "ivolodin"
+        },
+        {
+          "email": "nicholas@nczconsulting.com",
+          "name": "nzakas"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_7.8.0_1598910938145_0.7504957212807699"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.8.1": {
+      "name": "eslint",
+      "version": "7.8.1",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "description": "An AST-based pattern checker for JavaScript.",
+      "bin": {
+        "eslint": "bin/eslint.js"
+      },
+      "main": "./lib/api.js",
+      "scripts": {
+        "test": "node Makefile.js test",
+        "test:cli": "mocha",
+        "lint": "node Makefile.js lint",
+        "fix": "node Makefile.js lint -- fix",
+        "fuzz": "node Makefile.js fuzz",
+        "generate-release": "node Makefile.js generateRelease",
+        "generate-alpharelease": "node Makefile.js generatePrerelease -- alpha",
+        "generate-betarelease": "node Makefile.js generatePrerelease -- beta",
+        "generate-rcrelease": "node Makefile.js generatePrerelease -- rc",
+        "publish-release": "node Makefile.js publishRelease",
+        "docs": "node Makefile.js docs",
+        "gensite": "node Makefile.js gensite",
+        "webpack": "node Makefile.js webpack",
+        "perf": "node Makefile.js perf"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ],
+        "*.md": "markdownlint"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/eslint.git"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "homepage": "https://eslint.org",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "@eslint/eslintrc": "^0.1.3",
+        "ajv": "^6.10.0",
+        "chalk": "^4.0.0",
+        "cross-spawn": "^7.0.2",
+        "debug": "^4.0.1",
+        "doctrine": "^3.0.0",
+        "enquirer": "^2.3.5",
+        "eslint-scope": "^5.1.0",
+        "eslint-utils": "^2.1.0",
+        "eslint-visitor-keys": "^1.3.0",
+        "espree": "^7.3.0",
+        "esquery": "^1.2.0",
+        "esutils": "^2.0.2",
+        "file-entry-cache": "^5.0.1",
+        "functional-red-black-tree": "^1.0.1",
+        "glob-parent": "^5.0.0",
+        "globals": "^12.1.0",
+        "ignore": "^4.0.6",
+        "import-fresh": "^3.0.0",
+        "imurmurhash": "^0.1.4",
+        "is-glob": "^4.0.0",
+        "js-yaml": "^3.13.1",
+        "json-stable-stringify-without-jsonify": "^1.0.1",
+        "levn": "^0.4.1",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.4",
+        "natural-compare": "^1.4.0",
+        "optionator": "^0.9.1",
+        "progress": "^2.0.0",
+        "regexpp": "^3.1.0",
+        "semver": "^7.2.1",
+        "strip-ansi": "^6.0.0",
+        "strip-json-comments": "^3.1.0",
+        "table": "^5.2.3",
+        "text-table": "^0.2.0",
+        "v8-compile-cache": "^2.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "acorn": "^7.2.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.0.1",
+        "cheerio": "^0.22.0",
+        "common-tags": "^1.8.0",
+        "core-js": "^3.1.3",
+        "dateformat": "^3.0.3",
+        "ejs": "^3.0.2",
+        "escape-string-regexp": "^3.0.0",
+        "eslint": "file:.",
+        "eslint-config-eslint": "file:packages/eslint-config-eslint",
+        "eslint-plugin-eslint-plugin": "^2.2.1",
+        "eslint-plugin-internal-rules": "file:tools/internal-rules",
+        "eslint-plugin-jsdoc": "^22.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-release": "^2.0.0",
+        "eslump": "^2.0.0",
+        "esprima": "^4.0.1",
+        "glob": "^7.1.6",
+        "jsdoc": "^3.5.5",
+        "karma": "^4.0.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.3",
+        "karma-webpack": "^4.0.0-rc.6",
+        "lint-staged": "^10.1.2",
+        "load-perf": "^0.2.0",
+        "markdownlint": "^0.19.0",
+        "markdownlint-cli": "^0.22.0",
+        "memfs": "^3.0.1",
+        "mocha": "^7.1.1",
+        "mocha-junit-reporter": "^1.23.0",
+        "npm-license": "^0.3.3",
+        "nyc": "^15.0.1",
+        "proxyquire": "^2.0.1",
+        "puppeteer": "^4.0.0",
+        "recast": "^0.19.0",
+        "regenerator-runtime": "^0.13.2",
+        "shelljs": "^0.8.2",
+        "sinon": "^9.0.1",
+        "temp": "^0.9.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5",
+        "yorkie": "^2.0.0"
+      },
+      "keywords": [
+        "ast",
+        "lint",
+        "javascript",
+        "ecmascript",
+        "espree"
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "gitHead": "8961d4512e2f1134f103458f78147234d82ecdca",
+      "_id": "eslint@7.8.1",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-/2rX2pfhyUG0y+A123d0ccXtMm7DV7sH1m3lk9nk2DZ2LReq39FXHueR9xZwshE5MdfSf0xunSaMWRqyIA6M1w==",
+        "shasum": "e59de3573fb6a5be8ff526c791571646d124a8fa",
+        "tarball": "https://registry.npmjs.org/eslint/-/eslint-7.8.1.tgz",
+        "fileCount": 400,
+        "unpackedSize": 3156834,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfTqrICRA9TVsSAnZWagAAa6sP+wezVcXilvKVC2wT+Ke4\n1peW8UVJBhhKKYqZQYVdoYRN7PuDYYZulJn6PsGPlVMzgSbhBTNIBIC5qUIt\nGzyLajXRHkZ/axVfA9CnN5PcrVds8feV8c/pdPO7EKrgdAArov2nTuABDkpv\nJ+2kVo/J0w4rx9HjG1zeNu/ahg+sbDbuqCt/X1FCtL8ko1p4XEiLaINfm7tp\nOuwhjaduPyhCbgt4uGjyBqO6vBx73wY6ag7NmcIVdvC3K8c2bpBobuhmhSa0\nktMw0BFSt05FBRvMWib/Sb8tzZG4JsUDwAYI9tex/nHEYZBf7bnDjOigZJgc\n49117YZ2JY5EvUardxxxfigJXAdjqXCs8ytk5XHqmTuKf3cloOE9cjzXM0oQ\n5Vrl1YD4FXeMkvmQ5hQFoPjcxTFNqCh+XXbSwf+R0kwwa05/JFgN6IYNU+FL\nDmOyJqrmVPk28rvdIqNLqs42uUN1uY2uZF9Ck6zdmRp6WQXDG+jfu+lHSKFc\nlP8mVUpDTRroS8F2SsWV1ZIIISX6wfyp27lUrdeYd6baEZ1sZSKcxmIapa6T\nYQxCGlQv/A8/CezDDk27UorrTo81Z6OnKU+DP+MIuf6LfQVx5nO0Z7/qGW+7\naewfn4XJ173P/MiXGYtg3/x2WqmXiaM/3lbxLDoLOVzGmdrOI0ZRZa7b5KPc\nbq7Z\r\n=+X17\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "nicholas+eslint@nczconsulting.com",
+          "name": "eslintbot"
+        },
+        {
+          "email": "ivolodin@gmail.com",
+          "name": "ivolodin"
+        },
+        {
+          "email": "nicholas@nczconsulting.com",
+          "name": "nzakas"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_7.8.1_1598991048416_0.11430549953121205"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "eslint",
+      "version": "7.9.0",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "description": "An AST-based pattern checker for JavaScript.",
+      "bin": {
+        "eslint": "bin/eslint.js"
+      },
+      "main": "./lib/api.js",
+      "scripts": {
+        "test": "node Makefile.js test",
+        "test:cli": "mocha",
+        "lint": "node Makefile.js lint",
+        "fix": "node Makefile.js lint -- fix",
+        "fuzz": "node Makefile.js fuzz",
+        "generate-release": "node Makefile.js generateRelease",
+        "generate-alpharelease": "node Makefile.js generatePrerelease -- alpha",
+        "generate-betarelease": "node Makefile.js generatePrerelease -- beta",
+        "generate-rcrelease": "node Makefile.js generatePrerelease -- rc",
+        "publish-release": "node Makefile.js publishRelease",
+        "docs": "node Makefile.js docs",
+        "gensite": "node Makefile.js gensite",
+        "webpack": "node Makefile.js webpack",
+        "perf": "node Makefile.js perf"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ],
+        "*.md": "markdownlint"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/eslint.git"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "homepage": "https://eslint.org",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "@eslint/eslintrc": "^0.1.3",
+        "ajv": "^6.10.0",
+        "chalk": "^4.0.0",
+        "cross-spawn": "^7.0.2",
+        "debug": "^4.0.1",
+        "doctrine": "^3.0.0",
+        "enquirer": "^2.3.5",
+        "eslint-scope": "^5.1.0",
+        "eslint-utils": "^2.1.0",
+        "eslint-visitor-keys": "^1.3.0",
+        "espree": "^7.3.0",
+        "esquery": "^1.2.0",
+        "esutils": "^2.0.2",
+        "file-entry-cache": "^5.0.1",
+        "functional-red-black-tree": "^1.0.1",
+        "glob-parent": "^5.0.0",
+        "globals": "^12.1.0",
+        "ignore": "^4.0.6",
+        "import-fresh": "^3.0.0",
+        "imurmurhash": "^0.1.4",
+        "is-glob": "^4.0.0",
+        "js-yaml": "^3.13.1",
+        "json-stable-stringify-without-jsonify": "^1.0.1",
+        "levn": "^0.4.1",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.4",
+        "natural-compare": "^1.4.0",
+        "optionator": "^0.9.1",
+        "progress": "^2.0.0",
+        "regexpp": "^3.1.0",
+        "semver": "^7.2.1",
+        "strip-ansi": "^6.0.0",
+        "strip-json-comments": "^3.1.0",
+        "table": "^5.2.3",
+        "text-table": "^0.2.0",
+        "v8-compile-cache": "^2.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "acorn": "^7.2.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.0.1",
+        "cheerio": "^0.22.0",
+        "common-tags": "^1.8.0",
+        "core-js": "^3.1.3",
+        "dateformat": "^3.0.3",
+        "ejs": "^3.0.2",
+        "escape-string-regexp": "^3.0.0",
+        "eslint": "file:.",
+        "eslint-config-eslint": "file:packages/eslint-config-eslint",
+        "eslint-plugin-eslint-plugin": "^2.2.1",
+        "eslint-plugin-internal-rules": "file:tools/internal-rules",
+        "eslint-plugin-jsdoc": "^22.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-release": "^2.0.0",
+        "eslump": "^2.0.0",
+        "esprima": "^4.0.1",
+        "glob": "^7.1.6",
+        "jsdoc": "^3.5.5",
+        "karma": "^4.0.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.3",
+        "karma-webpack": "^4.0.0-rc.6",
+        "lint-staged": "^10.1.2",
+        "load-perf": "^0.2.0",
+        "markdownlint": "^0.19.0",
+        "markdownlint-cli": "^0.22.0",
+        "memfs": "^3.0.1",
+        "mocha": "^7.1.1",
+        "mocha-junit-reporter": "^1.23.0",
+        "npm-license": "^0.3.3",
+        "nyc": "^15.0.1",
+        "proxyquire": "^2.0.1",
+        "puppeteer": "^4.0.0",
+        "recast": "^0.19.0",
+        "regenerator-runtime": "^0.13.2",
+        "shelljs": "^0.8.2",
+        "sinon": "^9.0.1",
+        "temp": "^0.9.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5",
+        "yorkie": "^2.0.0"
+      },
+      "keywords": [
+        "ast",
+        "lint",
+        "javascript",
+        "ecmascript",
+        "espree"
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "gitHead": "022257a71b7579cf88cf3b8b936a696e8d2a09ed",
+      "_id": "eslint@7.9.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-V6QyhX21+uXp4T+3nrNfI3hQNBDa/P8ga7LoQOenwrlEFXrEnUEE+ok1dMtaS3b6rmLXhT1TkTIsG75HMLbknA==",
+        "shasum": "522aeccc5c3a19017cf0cb46ebfd660a79acf337",
+        "tarball": "https://registry.npmjs.org/eslint/-/eslint-7.9.0.tgz",
+        "fileCount": 401,
+        "unpackedSize": 3160693,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfXRcMCRA9TVsSAnZWagAA+vQP/0QlWR1AhPP6pC8yOf1f\nz5R2sZ0fzuowxfeRlUh3g4onoIhBn5LdDciCfoiRRzVMM6Jldab6KdSbkQMf\nmaqaWtd5Pj/O32gj2gC3PeHjtqAaTMx5T0i/mDgQ4kpGsTniKDSYF7xrc/7a\nh5MtRx3zn9XKBVJcCmduaEgc5YZjnqOO9VH/QyPxDMLtKzgu6E9Sn5CdMAr+\nDPE47rBLhC4/3zZaLhkMls88dlpjlHoYG5q6juA7RTJBeME+ejcXDCBFSEpB\nqap7e/aMnh92k0yJS6ptYovhy9Lm/UiC5ToN3xs7nJu/FzoYq1TFoa2yayWf\nsnPuLi0LrhbHHskvR4cFyotWVtaujJrg27DdppFwEb/rBxDM374UWwwl+Nvc\nde9C/zkY0pHhVa35jYmpkHWzPiFlyUblEqlfVTU9LL7R1p+Ykb1W0XZ3wW7r\nK4WVlBb9D1NQJBe+JwVQuvaC+WCgxrZDA7FdMCCd6ja+msB7ZhppU0lfTcIk\n4TveKw1a+3R7nqm64nQkcQmw8tB5vT4Y7i14w08LLk7bjsSyTafYPO8hsFcs\nX8cVK5m6ssipnhSIjNxzSJevS0Pmow9mXG+sCLqEvjgO0y91tYZk+onzlh0T\nQdUldsN4rftcLY15SYOXvrl5DKMa3cYSsPlG5srWiFaPnQTyBewrkpJR+VNI\nUYYN\r\n=oeBB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "eslintbot",
+          "email": "nicholas+eslint@nczconsulting.com"
+        },
+        {
+          "name": "nzakas",
+          "email": "nicholas@nczconsulting.com"
+        },
+        {
+          "name": "ivolodin",
+          "email": "ivolodin@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_7.9.0_1599936268061_0.5165628855086124"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "eslint",
+      "version": "7.10.0",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "description": "An AST-based pattern checker for JavaScript.",
+      "bin": {
+        "eslint": "bin/eslint.js"
+      },
+      "main": "./lib/api.js",
+      "scripts": {
+        "test": "node Makefile.js test",
+        "test:cli": "mocha",
+        "lint": "node Makefile.js lint",
+        "fix": "node Makefile.js lint -- fix",
+        "fuzz": "node Makefile.js fuzz",
+        "generate-release": "node Makefile.js generateRelease",
+        "generate-alpharelease": "node Makefile.js generatePrerelease -- alpha",
+        "generate-betarelease": "node Makefile.js generatePrerelease -- beta",
+        "generate-rcrelease": "node Makefile.js generatePrerelease -- rc",
+        "publish-release": "node Makefile.js publishRelease",
+        "docs": "node Makefile.js docs",
+        "gensite": "node Makefile.js gensite",
+        "webpack": "node Makefile.js webpack",
+        "perf": "node Makefile.js perf"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ],
+        "*.md": "markdownlint"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/eslint.git"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "homepage": "https://eslint.org",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "@eslint/eslintrc": "^0.1.3",
+        "ajv": "^6.10.0",
+        "chalk": "^4.0.0",
+        "cross-spawn": "^7.0.2",
+        "debug": "^4.0.1",
+        "doctrine": "^3.0.0",
+        "enquirer": "^2.3.5",
+        "eslint-scope": "^5.1.1",
+        "eslint-utils": "^2.1.0",
+        "eslint-visitor-keys": "^1.3.0",
+        "espree": "^7.3.0",
+        "esquery": "^1.2.0",
+        "esutils": "^2.0.2",
+        "file-entry-cache": "^5.0.1",
+        "functional-red-black-tree": "^1.0.1",
+        "glob-parent": "^5.0.0",
+        "globals": "^12.1.0",
+        "ignore": "^4.0.6",
+        "import-fresh": "^3.0.0",
+        "imurmurhash": "^0.1.4",
+        "is-glob": "^4.0.0",
+        "js-yaml": "^3.13.1",
+        "json-stable-stringify-without-jsonify": "^1.0.1",
+        "levn": "^0.4.1",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.4",
+        "natural-compare": "^1.4.0",
+        "optionator": "^0.9.1",
+        "progress": "^2.0.0",
+        "regexpp": "^3.1.0",
+        "semver": "^7.2.1",
+        "strip-ansi": "^6.0.0",
+        "strip-json-comments": "^3.1.0",
+        "table": "^5.2.3",
+        "text-table": "^0.2.0",
+        "v8-compile-cache": "^2.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "acorn": "^7.2.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.0.1",
+        "cheerio": "^0.22.0",
+        "common-tags": "^1.8.0",
+        "core-js": "^3.1.3",
+        "dateformat": "^3.0.3",
+        "ejs": "^3.0.2",
+        "escape-string-regexp": "^3.0.0",
+        "eslint": "file:.",
+        "eslint-config-eslint": "file:packages/eslint-config-eslint",
+        "eslint-plugin-eslint-plugin": "^2.2.1",
+        "eslint-plugin-internal-rules": "file:tools/internal-rules",
+        "eslint-plugin-jsdoc": "^22.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-release": "^2.0.0",
+        "eslump": "^2.0.0",
+        "esprima": "^4.0.1",
+        "glob": "^7.1.6",
+        "jsdoc": "^3.5.5",
+        "karma": "^4.0.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.3",
+        "karma-webpack": "^4.0.0-rc.6",
+        "lint-staged": "^10.1.2",
+        "load-perf": "^0.2.0",
+        "markdownlint": "^0.19.0",
+        "markdownlint-cli": "^0.22.0",
+        "memfs": "^3.0.1",
+        "mocha": "^7.1.1",
+        "mocha-junit-reporter": "^1.23.0",
+        "npm-license": "^0.3.3",
+        "nyc": "^15.0.1",
+        "proxyquire": "^2.0.1",
+        "puppeteer": "^4.0.0",
+        "recast": "^0.19.0",
+        "regenerator-runtime": "^0.13.2",
+        "shelljs": "^0.8.2",
+        "sinon": "^9.0.1",
+        "temp": "^0.9.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5",
+        "yorkie": "^2.0.0"
+      },
+      "keywords": [
+        "ast",
+        "lint",
+        "javascript",
+        "ecmascript",
+        "espree"
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "gitHead": "1df7fa69967cc514a541c363eb52d845e1b1d8f0",
+      "_id": "eslint@7.10.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-BDVffmqWl7JJXqCjAK6lWtcQThZB/aP1HXSH1JKwGwv0LQEdvpR7qzNrUT487RM39B5goWuboFad5ovMBmD8yA==",
+        "shasum": "494edb3e4750fb791133ca379e786a8f648c72b9",
+        "tarball": "https://registry.npmjs.org/eslint/-/eslint-7.10.0.tgz",
+        "fileCount": 401,
+        "unpackedSize": 3163568,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfb7YYCRA9TVsSAnZWagAAhG8P/jEd3L8eu1tmhkfIcqEF\nY4utMiJLych/IXXynAsFZdoblp7i4UhDiFYwpYCa0NA+ld8EclLbaStX38cJ\ncnin5zofOPhXos6mvWPlgI7AnEaCJKS7k/t0z0dVpPS7xLCMHKCS984JaGmA\nxWWVFDeW5ZlhEpvB2Uq3O+62hSUCu8lzMqWWhS5mOiXNcandTq1ehAkp8dgo\n7iWZFRGIMO8nNR/d6UPRiErhXRK3JV40TFTcUMkpsOEA+L65xX/AkFoSMu7h\nCPyFj8UfZVgBIFwMNhEiMHoMoo72kIcRUOY2IfR/S/Z4kSu4jW7OZjZDRPUc\nPp+46J4huKeWotlna/JiA3ISDK1pJKMUhIWOu84KmniATu+F/KT/kf9KXh1m\ncgaL2RzU7eBu2HbgMJDKk6Gn/DjcHCxtOJDSkIIEQMFYA0KO0G4qfDOI/8/w\neD1jhyM7X5xfRUhBlU0nxRNUFSP8DZejP9Gn6503qDqssUNsOvP1ytcOWCXM\nvm4beP8X07AX4kxWCaKGz6OW9eVzEZ84khOcePkWwTHmMCoR5YLBLeblkQSY\nCmgHwA2FSgQGtrmFAbwNbxdiWilokc6VkXxB2PZ37ciXb038E6rmzLDonbIW\ncDkYV3tEmeJN1D18eBFjfB21eDj1Y0MoGbD8ddDw5+z44+q//NKIIIWkKnoi\nG5xs\r\n=ldFz\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "eslintbot",
+          "email": "nicholas+eslint@nczconsulting.com"
+        },
+        {
+          "name": "nzakas",
+          "email": "nicholas@nczconsulting.com"
+        },
+        {
+          "name": "ivolodin",
+          "email": "ivolodin@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_7.10.0_1601156631808_0.5247961055541213"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.0": {
+      "name": "eslint",
+      "version": "7.11.0",
+      "author": {
+        "name": "Nicholas C. Zakas",
+        "email": "nicholas+npm@nczconsulting.com"
+      },
+      "description": "An AST-based pattern checker for JavaScript.",
+      "bin": {
+        "eslint": "bin/eslint.js"
+      },
+      "main": "./lib/api.js",
+      "scripts": {
+        "test": "node Makefile.js test",
+        "test:cli": "mocha",
+        "lint": "node Makefile.js lint",
+        "fix": "node Makefile.js lint -- fix",
+        "fuzz": "node Makefile.js fuzz",
+        "generate-release": "node Makefile.js generateRelease",
+        "generate-alpharelease": "node Makefile.js generatePrerelease -- alpha",
+        "generate-betarelease": "node Makefile.js generatePrerelease -- beta",
+        "generate-rcrelease": "node Makefile.js generatePrerelease -- rc",
+        "publish-release": "node Makefile.js publishRelease",
+        "docs": "node Makefile.js docs",
+        "gensite": "node Makefile.js gensite",
+        "webpack": "node Makefile.js webpack",
+        "perf": "node Makefile.js perf"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ],
+        "*.md": "markdownlint"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eslint/eslint.git"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "homepage": "https://eslint.org",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "@eslint/eslintrc": "^0.1.3",
+        "ajv": "^6.10.0",
+        "chalk": "^4.0.0",
+        "cross-spawn": "^7.0.2",
+        "debug": "^4.0.1",
+        "doctrine": "^3.0.0",
+        "enquirer": "^2.3.5",
+        "eslint-scope": "^5.1.1",
+        "eslint-utils": "^2.1.0",
+        "eslint-visitor-keys": "^2.0.0",
+        "espree": "^7.3.0",
+        "esquery": "^1.2.0",
+        "esutils": "^2.0.2",
+        "file-entry-cache": "^5.0.1",
+        "functional-red-black-tree": "^1.0.1",
+        "glob-parent": "^5.0.0",
+        "globals": "^12.1.0",
+        "ignore": "^4.0.6",
+        "import-fresh": "^3.0.0",
+        "imurmurhash": "^0.1.4",
+        "is-glob": "^4.0.0",
+        "js-yaml": "^3.13.1",
+        "json-stable-stringify-without-jsonify": "^1.0.1",
+        "levn": "^0.4.1",
+        "lodash": "^4.17.19",
+        "minimatch": "^3.0.4",
+        "natural-compare": "^1.4.0",
+        "optionator": "^0.9.1",
+        "progress": "^2.0.0",
+        "regexpp": "^3.1.0",
+        "semver": "^7.2.1",
+        "strip-ansi": "^6.0.0",
+        "strip-json-comments": "^3.1.0",
+        "table": "^5.2.3",
+        "text-table": "^0.2.0",
+        "v8-compile-cache": "^2.0.3"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.4.3",
+        "@babel/preset-env": "^7.4.3",
+        "acorn": "^7.2.0",
+        "babel-loader": "^8.0.5",
+        "chai": "^4.0.1",
+        "cheerio": "^0.22.0",
+        "common-tags": "^1.8.0",
+        "core-js": "^3.1.3",
+        "dateformat": "^3.0.3",
+        "ejs": "^3.0.2",
+        "escape-string-regexp": "^3.0.0",
+        "eslint": "file:.",
+        "eslint-config-eslint": "file:packages/eslint-config-eslint",
+        "eslint-plugin-eslint-plugin": "^2.2.1",
+        "eslint-plugin-internal-rules": "file:tools/internal-rules",
+        "eslint-plugin-jsdoc": "^22.1.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-release": "^2.0.0",
+        "eslump": "^2.0.0",
+        "esprima": "^4.0.1",
+        "fs-teardown": "^0.1.0",
+        "glob": "^7.1.6",
+        "jsdoc": "^3.5.5",
+        "karma": "^4.0.1",
+        "karma-chrome-launcher": "^3.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-mocha-reporter": "^2.2.3",
+        "karma-webpack": "^4.0.0-rc.6",
+        "lint-staged": "^10.1.2",
+        "load-perf": "^0.2.0",
+        "markdownlint": "^0.19.0",
+        "markdownlint-cli": "^0.22.0",
+        "memfs": "^3.0.1",
+        "mocha": "^7.1.1",
+        "mocha-junit-reporter": "^1.23.0",
+        "npm-license": "^0.3.3",
+        "nyc": "^15.0.1",
+        "proxyquire": "^2.0.1",
+        "puppeteer": "^4.0.0",
+        "recast": "^0.19.0",
+        "regenerator-runtime": "^0.13.2",
+        "shelljs": "^0.8.2",
+        "sinon": "^9.0.1",
+        "temp": "^0.9.0",
+        "webpack": "^4.35.0",
+        "webpack-cli": "^3.3.5",
+        "yorkie": "^2.0.0"
+      },
+      "keywords": [
+        "ast",
+        "lint",
+        "javascript",
+        "ecmascript",
+        "espree"
+      ],
+      "license": "MIT",
+      "engines": {
+        "node": "^10.12.0 || >=12.0.0"
+      },
+      "gitHead": "551b1e9fbc463db4869e738a8228868f7323788c",
+      "_id": "eslint@7.11.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-G9+qtYVCHaDi1ZuWzBsOWo2wSwd70TXnU6UHA3cTYHp7gCTXZcpggWFoUVAMRarg68qtPoNfFbzPh+VdOgmwmw==",
+        "shasum": "aaf2d23a0b5f1d652a08edacea0c19f7fadc0b3b",
+        "tarball": "https://registry.npmjs.org/eslint/-/eslint-7.11.0.tgz",
+        "fileCount": 401,
+        "unpackedSize": 3166712,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfgMVYCRA9TVsSAnZWagAA/6IQAKLtqwXeMTRXhs3nk6Hd\nQOKOqfzt0D1DMA0PwqiVBopE0c8NLdVnyauQTWz24A4BVTuGp8ZP3vplHJJG\nqQSsrvGPideEf177E69ORDoPEOaSFG8dUBUIuF7Gk/ovosqEailUFeNzY7tf\nOzctfdfCTmLEUiJy2kT0QG0oY6Z4oErWwb0IqqKvUhXrIMlculAxpMrT4pMj\nNiUXDPsgs5q9OlTt3V40/jk/VOld/C2Wc6FdbXIN6JOveoIAnBDLMzayCVU1\nQYgQv5Az6+momy41aDDoMlWSn0M20ek34tZ+XcCIUjnEkdq7pTJJFGHwA1UA\nmkU4sJiT0J4yflbKTnnrtjlYlnW1jNFmFOC8wc0k2EymPCnwD5M+ipUtxgVa\nNzagDb4rK3dtvdnspaZhvaR4/ujDPns6EwlfgpAvJaIrsQCaCvWZH+K7cuAW\naV8+eJjvJIlXKIfr8RdVkslM18dy4KZ+aeXcRTi9w9N7344g9VK+c/1IdTdi\nC+bj5QEYu0GdCYsAQbjZ/sDfzVgVhiwQsV2nQrHcR/V2o8I9eu9qLPm8aSlh\n+yB/6PdxUhB6PIyJw9Huc5+bQkszCGv/3Cal030+RoAvdRdMCmZ2r+qPHkWp\nkJfcurxDaBZm8dmWQ13Vv2S57gwGtg9O3q7M6Qqh9Oslf8ZMuY8vE5xVOaYY\niFtc\r\n=XgwT\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "eslintbot",
+          "email": "nicholas+eslint@nczconsulting.com"
+        },
+        {
+          "name": "nzakas",
+          "email": "nicholas@nczconsulting.com"
+        },
+        {
+          "name": "ivolodin",
+          "email": "ivolodin@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "eslintbot",
+        "email": "nicholas+eslint@nczconsulting.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_7.11.0_1602274647398_0.8844385923242386"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "[![NPM version](https://img.shields.io/npm/v/eslint.svg)](https://www.npmjs.com/package/eslint)\n[![Downloads](https://img.shields.io/npm/dm/eslint.svg)](https://www.npmjs.com/package/eslint)\n[![Build Status](https://github.com/eslint/eslint/workflows/CI/badge.svg)](https://github.com/eslint/eslint/actions)\n[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint?ref=badge_shield)\n<br />\n[![Open Collective Backers](https://img.shields.io/opencollective/backers/eslint)](https://opencollective.com/eslint)\n[![Open Collective Sponsors](https://img.shields.io/opencollective/sponsors/eslint)](https://opencollective.com/eslint)\n[![Follow us on Twitter](https://img.shields.io/twitter/follow/geteslint?label=Follow&style=social)](https://twitter.com/intent/user?screen_name=geteslint)\n\n# ESLint\n\n[Website](https://eslint.org) |\n[Configuring](https://eslint.org/docs/user-guide/configuring) |\n[Rules](https://eslint.org/docs/rules/) |\n[Contributing](https://eslint.org/docs/developer-guide/contributing) |\n[Reporting Bugs](https://eslint.org/docs/developer-guide/contributing/reporting-bugs) |\n[Code of Conduct](https://js.foundation/community/code-of-conduct) |\n[Twitter](https://twitter.com/geteslint) |\n[Mailing List](https://groups.google.com/group/eslint) |\n[Chat Room](https://eslint.org/chat)\n\nESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. In many ways, it is similar to JSLint and JSHint with a few exceptions:\n\n* ESLint uses [Espree](https://github.com/eslint/espree) for JavaScript parsing.\n* ESLint uses an AST to evaluate patterns in code.\n* ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.\n\n## Table of Contents\n\n1. [Installation and Usage](#installation-and-usage)\n2. [Configuration](#configuration)\n3. [Code of Conduct](#code-of-conduct)\n4. [Filing Issues](#filing-issues)\n5. [Frequently Asked Questions](#faq)\n6. [Releases](#releases)\n7. [Security Policy](#security-policy)\n8. [Semantic Versioning Policy](#semantic-versioning-policy)\n9. [License](#license)\n10. [Team](#team)\n11. [Sponsors](#sponsors)\n12. [Technology Sponsors](#technology-sponsors)\n\n## <a name=\"installation-and-usage\"></a>Installation and Usage\n\nPrerequisites: [Node.js](https://nodejs.org/) (`^10.12.0`, or `>=12.0.0`) built with SSL support. (If you are using an official Node.js distribution, SSL is always built in.)\n\nYou can install ESLint using npm:\n\n```\n$ npm install eslint --save-dev\n```\n\nYou should then set up a configuration file:\n\n```\n$ ./node_modules/.bin/eslint --init\n```\n\nAfter that, you can run ESLint on any file or directory like this:\n\n```\n$ ./node_modules/.bin/eslint yourfile.js\n```\n\n## <a name=\"configuration\"></a>Configuration\n\nAfter running `eslint --init`, you'll have a `.eslintrc` file in your directory. In it, you'll see some rules configured like this:\n\n```json\n{\n    \"rules\": {\n        \"semi\": [\"error\", \"always\"],\n        \"quotes\": [\"error\", \"double\"]\n    }\n}\n```\n\nThe names `\"semi\"` and `\"quotes\"` are the names of [rules](https://eslint.org/docs/rules) in ESLint. The first value is the error level of the rule and can be one of these values:\n\n* `\"off\"` or `0` - turn the rule off\n* `\"warn\"` or `1` - turn the rule on as a warning (doesn't affect exit code)\n* `\"error\"` or `2` - turn the rule on as an error (exit code will be 1)\n\nThe three error levels allow you fine-grained control over how ESLint applies rules (for more configuration options and details, see the [configuration docs](https://eslint.org/docs/user-guide/configuring)).\n\n## <a name=\"code-of-conduct\"></a>Code of Conduct\n\nESLint adheres to the [JS Foundation Code of Conduct](https://js.foundation/community/code-of-conduct).\n\n## <a name=\"filing-issues\"></a>Filing Issues\n\nBefore filing an issue, please be sure to read the guidelines for what you're reporting:\n\n* [Bug Report](https://eslint.org/docs/developer-guide/contributing/reporting-bugs)\n* [Propose a New Rule](https://eslint.org/docs/developer-guide/contributing/new-rules)\n* [Proposing a Rule Change](https://eslint.org/docs/developer-guide/contributing/rule-changes)\n* [Request a Change](https://eslint.org/docs/developer-guide/contributing/changes)\n\n## <a name=\"faq\"></a>Frequently Asked Questions\n\n### I'm using JSCS, should I migrate to ESLint?\n\nYes. [JSCS has reached end of life](https://eslint.org/blog/2016/07/jscs-end-of-life) and is no longer supported.\n\nWe have prepared a [migration guide](https://eslint.org/docs/user-guide/migrating-from-jscs) to help you convert your JSCS settings to an ESLint configuration.\n\nWe are now at or near 100% compatibility with JSCS. If you try ESLint and believe we are not yet compatible with a JSCS rule/configuration, please create an issue (mentioning that it is a JSCS compatibility issue) and we will evaluate it as per our normal process.\n\n### Does Prettier replace ESLint?\n\nNo, ESLint does both traditional linting (looking for problematic patterns) and style checking (enforcement of conventions). You can use ESLint for everything, or you can combine both using Prettier to format your code and ESLint to catch possible errors.\n\n### Why can't ESLint find my plugins?\n\n* Make sure your plugins (and ESLint) are both in your project's `package.json` as devDependencies (or dependencies, if your project uses ESLint at runtime).\n* Make sure you have run `npm install` and all your dependencies are installed.\n* Make sure your plugins' peerDependencies have been installed as well. You can use `npm view eslint-plugin-myplugin peerDependencies` to see what peer dependencies `eslint-plugin-myplugin` has.\n\n### Does ESLint support JSX?\n\nYes, ESLint natively supports parsing JSX syntax (this must be enabled in [configuration](https://eslint.org/docs/user-guide/configuring)). Please note that supporting JSX syntax *is not* the same as supporting React. React applies specific semantics to JSX syntax that ESLint doesn't recognize. We recommend using [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) if you are using React and want React semantics.\n\n### What ECMAScript versions does ESLint support?\n\nESLint has full support for ECMAScript 3, 5 (default), 2015, 2016, 2017, 2018, 2019, and 2020. You can set your desired ECMAScript syntax (and other settings, like global variables or your target environments) through [configuration](https://eslint.org/docs/user-guide/configuring).\n\n### What about experimental features?\n\nESLint's parser only officially supports the latest final ECMAScript standard. We will make changes to core rules in order to avoid crashes on stage 3 ECMAScript syntax proposals (as long as they are implemented using the correct experimental ESTree syntax). We may make changes to core rules to better work with language extensions (such as JSX, Flow, and TypeScript) on a case-by-case basis.\n\nIn other cases (including if rules need to warn on more or fewer cases due to new syntax, rather than just not crashing), we recommend you use other parsers and/or rule plugins. If you are using Babel, you can use the [babel-eslint](https://github.com/babel/babel-eslint) parser and [eslint-plugin-babel](https://github.com/babel/eslint-plugin-babel) to use any option available in Babel.\n\nOnce a language feature has been adopted into the ECMAScript standard (stage 4 according to the [TC39 process](https://tc39.github.io/process-document/)), we will accept issues and pull requests related to the new feature, subject to our [contributing guidelines](https://eslint.org/docs/developer-guide/contributing). Until then, please use the appropriate parser and plugin(s) for your experimental feature.\n\n### Where to ask for help?\n\nJoin our [Mailing List](https://groups.google.com/group/eslint) or [Chatroom](https://eslint.org/chat).\n\n## <a name=\"releases\"></a>Releases\n\nWe have scheduled releases every two weeks on Friday or Saturday. You can follow a [release issue](https://github.com/eslint/eslint/issues?q=is%3Aopen+is%3Aissue+label%3Arelease) for updates about the scheduling of any particular release.\n\n## <a name=\"security-policy\"></a>Security Policy\n\nESLint takes security seriously. We work hard to ensure that ESLint is safe for everyone and that security issues are addressed quickly and responsibly. Read the full [security policy](https://github.com/eslint/.github/blob/master/SECURITY.md).\n\n## <a name=\"semantic-versioning-policy\"></a>Semantic Versioning Policy\n\nESLint follows [semantic versioning](https://semver.org). However, due to the nature of ESLint as a code quality tool, it's not always clear when a minor or major version bump occurs. To help clarify this for everyone, we've defined the following semantic versioning policy for ESLint:\n\n* Patch release (intended to not break your lint build)\n    * A bug fix in a rule that results in ESLint reporting fewer errors.\n    * A bug fix to the CLI or core (including formatters).\n    * Improvements to documentation.\n    * Non-user-facing changes such as refactoring code, adding, deleting, or modifying tests, and increasing test coverage.\n    * Re-releasing after a failed release (i.e., publishing a release that doesn't work for anyone).\n* Minor release (might break your lint build)\n    * A bug fix in a rule that results in ESLint reporting more errors.\n    * A new rule is created.\n    * A new option to an existing rule that does not result in ESLint reporting more errors by default.\n    * An existing rule is deprecated.\n    * A new CLI capability is created.\n    * New capabilities to the public API are added (new classes, new methods, new arguments to existing methods, etc.).\n    * A new formatter is created.\n    * `eslint:recommended` is updated and will result in strictly fewer errors (e.g., rule removals).\n* Major release (likely to break your lint build)\n    * `eslint:recommended` is updated and may result in new errors (e.g., rule additions, most rule option updates).\n    * A new option to an existing rule that results in ESLint reporting more errors by default.\n    * An existing formatter is removed.\n    * Part of the public API is removed or changed in an incompatible way.\n\nAccording to our policy, any minor update may report more errors than the previous release (ex: from a bug fix). As such, we recommend using the tilde (`~`) in `package.json` e.g. `\"eslint\": \"~3.1.0\"` to guarantee the results of your builds.\n\n## <a name=\"license\"></a>License\n\n[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint?ref=badge_large)\n\n## <a name=\"team\"></a>Team\n\nThese folks keep the project moving and are resources for help.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--teamstart-->\n\n### Technical Steering Committee (TSC)\n\nThe people who manage releases, review feature requests, and meet regularly to ensure ESLint is properly maintained.\n\n<table><tbody><tr><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/nzakas\">\n<img src=\"https://github.com/nzakas.png?s=75\" width=\"75\" height=\"75\"><br />\nNicholas C. Zakas\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/btmills\">\n<img src=\"https://github.com/btmills.png?s=75\" width=\"75\" height=\"75\"><br />\nBrandon Mills\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/mysticatea\">\n<img src=\"https://github.com/mysticatea.png?s=75\" width=\"75\" height=\"75\"><br />\nToru Nagashima\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/kaicataldo\">\n<img src=\"https://github.com/kaicataldo.png?s=75\" width=\"75\" height=\"75\"><br />\nKai Cataldo\n</a>\n</td></tr></tbody></table>\n\n\n### Reviewers\n\nThe people who review and implement new features.\n\n<table><tbody><tr><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/aladdin-add\">\n<img src=\"https://github.com/aladdin-add.png?s=75\" width=\"75\" height=\"75\"><br />\n薛定谔的猫\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/mdjermanovic\">\n<img src=\"https://github.com/mdjermanovic.png?s=75\" width=\"75\" height=\"75\"><br />\nMilos Djermanovic\n</a>\n</td></tr></tbody></table>\n\n\n\n\n### Committers\n\nThe people who review and fix bugs and help triage issues.\n\n<table><tbody><tr><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/g-plane\">\n<img src=\"https://github.com/g-plane.png?s=75\" width=\"75\" height=\"75\"><br />\nPig Fang\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/yeonjuan\">\n<img src=\"https://github.com/yeonjuan.png?s=75\" width=\"75\" height=\"75\"><br />\nYeonJuan\n</a>\n</td></tr></tbody></table>\n\n\n<!--teamend-->\n\n## <a name=\"sponsors\"></a>Sponsors\n\nThe following companies, organizations, and individuals support ESLint's ongoing maintenance and development. [Become a Sponsor](https://opencollective.com/eslint) to get your logo on our README and website.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--sponsorsstart-->\n<h3>Gold Sponsors</h3>\n<p><a href=\"https://www.shopify.com\"><img src=\"https://images.opencollective.com/shopify/e780cd4/logo.png\" alt=\"Shopify\" height=\"96\"></a> <a href=\"https://www.salesforce.com\"><img src=\"https://images.opencollective.com/salesforce/ca8f997/logo.png\" alt=\"Salesforce\" height=\"96\"></a> <a href=\"https://www.airbnb.com/\"><img src=\"https://images.opencollective.com/airbnb/d327d66/logo.png\" alt=\"Airbnb\" height=\"96\"></a> <a href=\"https://aka.ms/microsoftfossfund\"><img src=\"https://avatars1.githubusercontent.com/u/67931232?u=7fddc652a464d7151b97e8f108392af7d54fa3e8&v=4\" alt=\"Microsoft FOSS Fund Sponsorships\" height=\"96\"></a></p><h3>Silver Sponsors</h3>\n<p><a href=\"https://liftoff.io/\"><img src=\"https://images.opencollective.com/liftoff/5c4fa84/logo.png\" alt=\"Liftoff\" height=\"64\"></a> <a href=\"https://www.ampproject.org/\"><img src=\"https://images.opencollective.com/amp/c8a3b25/logo.png\" alt=\"AMP Project\" height=\"64\"></a></p><h3>Bronze Sponsors</h3>\n<p><a href=\"https://www.veikkaajat.com\"><img src=\"https://images.opencollective.com/veikkaajat/b92b427/logo.png\" alt=\"Veikkaajat.com\" height=\"32\"></a> <a href=\"https://www.nettikasinot.media/\"><img src=\"https://images.opencollective.com/nettikasinot-media/2dba7da/logo.png\" alt=\"Nettikasinot.media\" height=\"32\"></a> <a href=\"https://mytruemedia.com/\"><img src=\"https://images.opencollective.com/my-true-media/03e2168/logo.png\" alt=\"My True Media\" height=\"32\"></a> <a href=\"https://www.norgekasino.com\"><img src=\"https://images.opencollective.com/norgekasino/ecfd57a/logo.png\" alt=\"Norgekasino\" height=\"32\"></a> <a href=\"https://www.japanesecasino.com/\"><img src=\"https://images.opencollective.com/japanesecasino/b0ffe3c/logo.png\" alt=\"Japanesecasino\" height=\"32\"></a> <a href=\"https://bruce.agency\"><img src=\"https://images.opencollective.com/brucemade/0c70c59/logo.png\" alt=\"Bruce\" height=\"32\"></a> <a href=\"https://edubirdie.com/\"><img src=\"https://images.opencollective.com/edubirdie2/b1d51ab/logo.png\" alt=\"EduBirdie\" height=\"32\"></a> <a href=\"https://www.casinotop.com/\"><img src=\"https://images.opencollective.com/casinotop-com/10fd95b/logo.png\" alt=\"CasinoTop.com\" height=\"32\"></a> <a href=\"https://www.casinotopp.net/\"><img src=\"https://images.opencollective.com/casino-topp/1dd399a/logo.png\" alt=\"Casino Topp\" height=\"32\"></a> <a href=\"https://writersperhour.com/write-my-essay\"><img src=\"https://images.opencollective.com/writersperhour/5787d4b/logo.png\" alt=\"Writers Per Hour\" height=\"32\"></a> <a href=\"https://www.crosswordsolver.org/anagram-solver/\"><img src=\"https://images.opencollective.com/anagram-solver/2666271/logo.png\" alt=\"Anagram Solver\" height=\"32\"></a> <a href=\"https://www.kasinot.fi\"><img src=\"https://images.opencollective.com/kasinot-fi/e09aa2e/logo.png\" alt=\"Kasinot.fi\" height=\"32\"></a> <a href=\"https://www.pelisivut.com\"><img src=\"https://images.opencollective.com/pelisivut/04f08f2/logo.png\" alt=\"Pelisivut\" height=\"32\"></a> <a href=\"https://www.nettikasinot.org\"><img src=\"https://images.opencollective.com/nettikasinot-org/53a4b44/logo.png\" alt=\"Nettikasinot.org\" height=\"32\"></a> <a href=\"https://www.bonus.com.de/freispiele\"><img src=\"https://images.opencollective.com/bonusfinder-deutschland/646169e/logo.png\" alt=\"BonusFinder Deutschland\" height=\"32\"></a> <a href=\"https://www.bugsnag.com/platforms?utm_source=Open Collective&utm_medium=Website&utm_content=open-source&utm_campaign=2019-community&utm_term=\"><img src=\"https://images.opencollective.com/bugsnag-stability-monitoring/c2cef36/logo.png\" alt=\"Bugsnag Stability Monitoring\" height=\"32\"></a> <a href=\"https://mixpanel.com\"><img src=\"https://images.opencollective.com/mixpanel/cd682f7/logo.png\" alt=\"Mixpanel\" height=\"32\"></a> <a href=\"https://www.vpsserver.com\"><img src=\"https://images.opencollective.com/vpsservercom/logo.png\" alt=\"VPS Server\" height=\"32\"></a> <a href=\"https://icons8.com\"><img src=\"https://images.opencollective.com/icons8/6e889f6/logo.png\" alt=\"Icons8: free icons, photos, illustrations, and music\" height=\"32\"></a> <a href=\"https://discordapp.com\"><img src=\"https://images.opencollective.com/discordapp/7e3d9a9/logo.png\" alt=\"Discord\" height=\"32\"></a> <a href=\"https://themeisle.com\"><img src=\"https://images.opencollective.com/themeisle/d5592fe/logo.png\" alt=\"ThemeIsle\" height=\"32\"></a> <a href=\"https://www.marfeel.com/\"><img src=\"https://images.opencollective.com/marfeel/4b88e30/logo.png\" alt=\"Marfeel\" height=\"32\"></a> <a href=\"http://www.firesticktricks.com\"><img src=\"https://images.opencollective.com/fire-stick-tricks/b8fbe2c/logo.png\" alt=\"Fire Stick Tricks\" height=\"32\"></a></p>\n<!--sponsorsend-->\n\n## <a name=\"technology-sponsors\"></a>Technology Sponsors\n\n* Site search ([eslint.org](https://eslint.org)) is sponsored by [Algolia](https://www.algolia.com)\n* Hosting for ([eslint.org](https://eslint.org)) is sponsored by [Netlify](https://www.netlify.com)\n* Password management is sponsored by [1Password](https://www.1password.com)\n",
+  "readme": "[![npm version](https://img.shields.io/npm/v/eslint.svg)](https://www.npmjs.com/package/eslint)\n[![Downloads](https://img.shields.io/npm/dm/eslint.svg)](https://www.npmjs.com/package/eslint)\n[![Build Status](https://github.com/eslint/eslint/workflows/CI/badge.svg)](https://github.com/eslint/eslint/actions)\n[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint?ref=badge_shield)\n<br />\n[![Open Collective Backers](https://img.shields.io/opencollective/backers/eslint)](https://opencollective.com/eslint)\n[![Open Collective Sponsors](https://img.shields.io/opencollective/sponsors/eslint)](https://opencollective.com/eslint)\n[![Follow us on Twitter](https://img.shields.io/twitter/follow/geteslint?label=Follow&style=social)](https://twitter.com/intent/user?screen_name=geteslint)\n\n# ESLint\n\n[Website](https://eslint.org) |\n[Configuring](https://eslint.org/docs/user-guide/configuring) |\n[Rules](https://eslint.org/docs/rules/) |\n[Contributing](https://eslint.org/docs/developer-guide/contributing) |\n[Reporting Bugs](https://eslint.org/docs/developer-guide/contributing/reporting-bugs) |\n[Code of Conduct](https://js.foundation/community/code-of-conduct) |\n[Twitter](https://twitter.com/geteslint) |\n[Mailing List](https://groups.google.com/group/eslint) |\n[Chat Room](https://eslint.org/chat)\n\nESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. In many ways, it is similar to JSLint and JSHint with a few exceptions:\n\n* ESLint uses [Espree](https://github.com/eslint/espree) for JavaScript parsing.\n* ESLint uses an AST to evaluate patterns in code.\n* ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.\n\n## Table of Contents\n\n1. [Installation and Usage](#installation-and-usage)\n2. [Configuration](#configuration)\n3. [Code of Conduct](#code-of-conduct)\n4. [Filing Issues](#filing-issues)\n5. [Frequently Asked Questions](#faq)\n6. [Releases](#releases)\n7. [Security Policy](#security-policy)\n8. [Semantic Versioning Policy](#semantic-versioning-policy)\n9. [License](#license)\n10. [Team](#team)\n11. [Sponsors](#sponsors)\n12. [Technology Sponsors](#technology-sponsors)\n\n## <a name=\"installation-and-usage\"></a>Installation and Usage\n\nPrerequisites: [Node.js](https://nodejs.org/) (`^10.12.0`, or `>=12.0.0`) built with SSL support. (If you are using an official Node.js distribution, SSL is always built in.)\n\nYou can install ESLint using npm:\n\n```\n$ npm install eslint --save-dev\n```\n\nYou should then set up a configuration file:\n\n```\n$ ./node_modules/.bin/eslint --init\n```\n\nAfter that, you can run ESLint on any file or directory like this:\n\n```\n$ ./node_modules/.bin/eslint yourfile.js\n```\n\n## <a name=\"configuration\"></a>Configuration\n\nAfter running `eslint --init`, you'll have a `.eslintrc` file in your directory. In it, you'll see some rules configured like this:\n\n```json\n{\n    \"rules\": {\n        \"semi\": [\"error\", \"always\"],\n        \"quotes\": [\"error\", \"double\"]\n    }\n}\n```\n\nThe names `\"semi\"` and `\"quotes\"` are the names of [rules](https://eslint.org/docs/rules) in ESLint. The first value is the error level of the rule and can be one of these values:\n\n* `\"off\"` or `0` - turn the rule off\n* `\"warn\"` or `1` - turn the rule on as a warning (doesn't affect exit code)\n* `\"error\"` or `2` - turn the rule on as an error (exit code will be 1)\n\nThe three error levels allow you fine-grained control over how ESLint applies rules (for more configuration options and details, see the [configuration docs](https://eslint.org/docs/user-guide/configuring)).\n\n## <a name=\"code-of-conduct\"></a>Code of Conduct\n\nESLint adheres to the [JS Foundation Code of Conduct](https://js.foundation/community/code-of-conduct).\n\n## <a name=\"filing-issues\"></a>Filing Issues\n\nBefore filing an issue, please be sure to read the guidelines for what you're reporting:\n\n* [Bug Report](https://eslint.org/docs/developer-guide/contributing/reporting-bugs)\n* [Propose a New Rule](https://eslint.org/docs/developer-guide/contributing/new-rules)\n* [Proposing a Rule Change](https://eslint.org/docs/developer-guide/contributing/rule-changes)\n* [Request a Change](https://eslint.org/docs/developer-guide/contributing/changes)\n\n## <a name=\"faq\"></a>Frequently Asked Questions\n\n### I'm using JSCS, should I migrate to ESLint?\n\nYes. [JSCS has reached end of life](https://eslint.org/blog/2016/07/jscs-end-of-life) and is no longer supported.\n\nWe have prepared a [migration guide](https://eslint.org/docs/user-guide/migrating-from-jscs) to help you convert your JSCS settings to an ESLint configuration.\n\nWe are now at or near 100% compatibility with JSCS. If you try ESLint and believe we are not yet compatible with a JSCS rule/configuration, please create an issue (mentioning that it is a JSCS compatibility issue) and we will evaluate it as per our normal process.\n\n### Does Prettier replace ESLint?\n\nNo, ESLint does both traditional linting (looking for problematic patterns) and style checking (enforcement of conventions). You can use ESLint for everything, or you can combine both using Prettier to format your code and ESLint to catch possible errors.\n\n### Why can't ESLint find my plugins?\n\n* Make sure your plugins (and ESLint) are both in your project's `package.json` as devDependencies (or dependencies, if your project uses ESLint at runtime).\n* Make sure you have run `npm install` and all your dependencies are installed.\n* Make sure your plugins' peerDependencies have been installed as well. You can use `npm view eslint-plugin-myplugin peerDependencies` to see what peer dependencies `eslint-plugin-myplugin` has.\n\n### Does ESLint support JSX?\n\nYes, ESLint natively supports parsing JSX syntax (this must be enabled in [configuration](https://eslint.org/docs/user-guide/configuring)). Please note that supporting JSX syntax *is not* the same as supporting React. React applies specific semantics to JSX syntax that ESLint doesn't recognize. We recommend using [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) if you are using React and want React semantics.\n\n### What ECMAScript versions does ESLint support?\n\nESLint has full support for ECMAScript 3, 5 (default), 2015, 2016, 2017, 2018, 2019, and 2020. You can set your desired ECMAScript syntax (and other settings, like global variables or your target environments) through [configuration](https://eslint.org/docs/user-guide/configuring).\n\n### What about experimental features?\n\nESLint's parser only officially supports the latest final ECMAScript standard. We will make changes to core rules in order to avoid crashes on stage 3 ECMAScript syntax proposals (as long as they are implemented using the correct experimental ESTree syntax). We may make changes to core rules to better work with language extensions (such as JSX, Flow, and TypeScript) on a case-by-case basis.\n\nIn other cases (including if rules need to warn on more or fewer cases due to new syntax, rather than just not crashing), we recommend you use other parsers and/or rule plugins. If you are using Babel, you can use the [babel-eslint](https://github.com/babel/babel-eslint) parser and [eslint-plugin-babel](https://github.com/babel/eslint-plugin-babel) to use any option available in Babel.\n\nOnce a language feature has been adopted into the ECMAScript standard (stage 4 according to the [TC39 process](https://tc39.github.io/process-document/)), we will accept issues and pull requests related to the new feature, subject to our [contributing guidelines](https://eslint.org/docs/developer-guide/contributing). Until then, please use the appropriate parser and plugin(s) for your experimental feature.\n\n### Where to ask for help?\n\nJoin our [Mailing List](https://groups.google.com/group/eslint) or [Chatroom](https://eslint.org/chat).\n\n## <a name=\"releases\"></a>Releases\n\nWe have scheduled releases every two weeks on Friday or Saturday. You can follow a [release issue](https://github.com/eslint/eslint/issues?q=is%3Aopen+is%3Aissue+label%3Arelease) for updates about the scheduling of any particular release.\n\n## <a name=\"security-policy\"></a>Security Policy\n\nESLint takes security seriously. We work hard to ensure that ESLint is safe for everyone and that security issues are addressed quickly and responsibly. Read the full [security policy](https://github.com/eslint/.github/blob/master/SECURITY.md).\n\n## <a name=\"semantic-versioning-policy\"></a>Semantic Versioning Policy\n\nESLint follows [semantic versioning](https://semver.org). However, due to the nature of ESLint as a code quality tool, it's not always clear when a minor or major version bump occurs. To help clarify this for everyone, we've defined the following semantic versioning policy for ESLint:\n\n* Patch release (intended to not break your lint build)\n    * A bug fix in a rule that results in ESLint reporting fewer linting errors.\n    * A bug fix to the CLI or core (including formatters).\n    * Improvements to documentation.\n    * Non-user-facing changes such as refactoring code, adding, deleting, or modifying tests, and increasing test coverage.\n    * Re-releasing after a failed release (i.e., publishing a release that doesn't work for anyone).\n* Minor release (might break your lint build)\n    * A bug fix in a rule that results in ESLint reporting more linting errors.\n    * A new rule is created.\n    * A new option to an existing rule that does not result in ESLint reporting more linting errors by default.\n    * An existing rule is deprecated.\n    * A new CLI capability is created.\n    * New capabilities to the public API are added (new classes, new methods, new arguments to existing methods, etc.).\n    * A new formatter is created.\n    * `eslint:recommended` is updated and will result in strictly fewer linting errors (e.g., rule removals).\n* Major release (likely to break your lint build)\n    * `eslint:recommended` is updated and may result in new linting errors (e.g., rule additions, most rule option updates).\n    * A new option to an existing rule that results in ESLint reporting more linting errors by default.\n    * An existing formatter is removed.\n    * Part of the public API is removed or changed in an incompatible way. The public API includes:\n        * Rule schemas\n        * Configuration schema\n        * Command-line options\n        * Node.js API\n        * Rule, formatter, parser, plugin APIs\n\nAccording to our policy, any minor update may report more linting errors than the previous release (ex: from a bug fix). As such, we recommend using the tilde (`~`) in `package.json` e.g. `\"eslint\": \"~3.1.0\"` to guarantee the results of your builds.\n\n## <a name=\"license\"></a>License\n\n[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feslint%2Feslint?ref=badge_large)\n\n## <a name=\"team\"></a>Team\n\nThese folks keep the project moving and are resources for help.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--teamstart-->\n\n### Technical Steering Committee (TSC)\n\nThe people who manage releases, review feature requests, and meet regularly to ensure ESLint is properly maintained.\n\n<table><tbody><tr><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/nzakas\">\n<img src=\"https://github.com/nzakas.png?s=75\" width=\"75\" height=\"75\"><br />\nNicholas C. Zakas\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/btmills\">\n<img src=\"https://github.com/btmills.png?s=75\" width=\"75\" height=\"75\"><br />\nBrandon Mills\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/mysticatea\">\n<img src=\"https://github.com/mysticatea.png?s=75\" width=\"75\" height=\"75\"><br />\nToru Nagashima\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/kaicataldo\">\n<img src=\"https://github.com/kaicataldo.png?s=75\" width=\"75\" height=\"75\"><br />\nKai Cataldo\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/mdjermanovic\">\n<img src=\"https://github.com/mdjermanovic.png?s=75\" width=\"75\" height=\"75\"><br />\nMilos Djermanovic\n</a>\n</td></tr></tbody></table>\n\n\n### Reviewers\n\nThe people who review and implement new features.\n\n<table><tbody><tr><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/aladdin-add\">\n<img src=\"https://github.com/aladdin-add.png?s=75\" width=\"75\" height=\"75\"><br />\n薛定谔的猫\n</a>\n</td></tr></tbody></table>\n\n\n\n\n### Committers\n\nThe people who review and fix bugs and help triage issues.\n\n<table><tbody><tr><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/g-plane\">\n<img src=\"https://github.com/g-plane.png?s=75\" width=\"75\" height=\"75\"><br />\nPig Fang\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/anikethsaha\">\n<img src=\"https://github.com/anikethsaha.png?s=75\" width=\"75\" height=\"75\"><br />\nAnix\n</a>\n</td><td align=\"center\" valign=\"top\" width=\"11%\">\n<a href=\"https://github.com/yeonjuan\">\n<img src=\"https://github.com/yeonjuan.png?s=75\" width=\"75\" height=\"75\"><br />\nYeonJuan\n</a>\n</td></tr></tbody></table>\n\n\n<!--teamend-->\n\n## <a name=\"sponsors\"></a>Sponsors\n\nThe following companies, organizations, and individuals support ESLint's ongoing maintenance and development. [Become a Sponsor](https://opencollective.com/eslint) to get your logo on our README and website.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--sponsorsstart-->\n<h3>Gold Sponsors</h3>\n<p><a href=\"https://www.salesforce.com\"><img src=\"https://images.opencollective.com/salesforce/ca8f997/logo.png\" alt=\"Salesforce\" height=\"96\"></a> <a href=\"https://www.airbnb.com/\"><img src=\"https://images.opencollective.com/airbnb/d327d66/logo.png\" alt=\"Airbnb\" height=\"96\"></a> <a href=\"https://aka.ms/microsoftfossfund\"><img src=\"https://avatars1.githubusercontent.com/u/67931232?u=7fddc652a464d7151b97e8f108392af7d54fa3e8&v=4\" alt=\"Microsoft FOSS Fund Sponsorships\" height=\"96\"></a></p><h3>Silver Sponsors</h3>\n<p><a href=\"https://liftoff.io/\"><img src=\"https://images.opencollective.com/liftoff/5c4fa84/logo.png\" alt=\"Liftoff\" height=\"64\"></a> <a href=\"https://www.ampproject.org/\"><img src=\"https://images.opencollective.com/amp/c8a3b25/logo.png\" alt=\"AMP Project\" height=\"64\"></a></p><h3>Bronze Sponsors</h3>\n<p><a href=\"https://writersperhour.com/write-my-essay\"><img src=\"https://images.opencollective.com/writersperhour/5787d4b/logo.png\" alt=\"Writers Per Hour\" height=\"32\"></a> <a href=\"https://www.betacalendars.com/printable-calendar\"><img src=\"https://images.opencollective.com/betacalendars/9334b33/logo.png\" alt=\"2021 calendar\" height=\"32\"></a> <a href=\"https://buy.fineproxy.org/eng/\"><img src=\"https://images.opencollective.com/buy-fineproxy-org/2002c40/logo.png\" alt=\"Buy.Fineproxy.Org\" height=\"32\"></a> <a href=\"https://www.veikkaajat.com\"><img src=\"https://images.opencollective.com/veikkaajat/b92b427/logo.png\" alt=\"Veikkaajat.com\" height=\"32\"></a> <a href=\"https://www.nettikasinot.media/\"><img src=\"https://images.opencollective.com/nettikasinot-media/2dba7da/logo.png\" alt=\"Nettikasinot.media\" height=\"32\"></a> <a href=\"https://www.norgekasino.com\"><img src=\"https://images.opencollective.com/norgekasino/ecfd57a/logo.png\" alt=\"Norgekasino\" height=\"32\"></a> <a href=\"https://www.japanesecasino.com/\"><img src=\"https://images.opencollective.com/japanesecasino/b0ffe3c/logo.png\" alt=\"Japanesecasino\" height=\"32\"></a> <a href=\"https://www.casinotop.com/\"><img src=\"https://images.opencollective.com/casinotop-com/10fd95b/logo.png\" alt=\"CasinoTop.com\" height=\"32\"></a> <a href=\"https://www.casinotopp.net/\"><img src=\"https://images.opencollective.com/casino-topp/1dd399a/logo.png\" alt=\"Casino Topp\" height=\"32\"></a> <a href=\"https://www.crosswordsolver.org/anagram-solver/\"><img src=\"https://images.opencollective.com/anagram-solver/2666271/logo.png\" alt=\"Anagram Solver\" height=\"32\"></a> <a href=\"https://www.kasinot.fi\"><img src=\"https://images.opencollective.com/kasinot-fi/e09aa2e/logo.png\" alt=\"Kasinot.fi\" height=\"32\"></a> <a href=\"https://www.pelisivut.com\"><img src=\"https://images.opencollective.com/pelisivut/04f08f2/logo.png\" alt=\"Pelisivut\" height=\"32\"></a> <a href=\"https://www.nettikasinot.org\"><img src=\"https://images.opencollective.com/nettikasinot-org/53a4b44/logo.png\" alt=\"Nettikasinot.org\" height=\"32\"></a> <a href=\"https://www.bonus.com.de/freispiele\"><img src=\"https://images.opencollective.com/bonusfinder-deutschland/646169e/logo.png\" alt=\"BonusFinder Deutschland\" height=\"32\"></a> <a href=\"null\"><img src=\"https://images.opencollective.com/bugsnag-stability-monitoring/c2cef36/logo.png\" alt=\"Bugsnag Stability Monitoring\" height=\"32\"></a> <a href=\"https://mixpanel.com\"><img src=\"https://images.opencollective.com/mixpanel/cd682f7/logo.png\" alt=\"Mixpanel\" height=\"32\"></a> <a href=\"https://www.vpsserver.com\"><img src=\"https://images.opencollective.com/vpsservercom/logo.png\" alt=\"VPS Server\" height=\"32\"></a> <a href=\"https://icons8.com\"><img src=\"https://images.opencollective.com/icons8/7fa1641/logo.png\" alt=\"Icons8: free icons, photos, illustrations, and music\" height=\"32\"></a> <a href=\"https://discordapp.com\"><img src=\"https://images.opencollective.com/discordapp/7e3d9a9/logo.png\" alt=\"Discord\" height=\"32\"></a> <a href=\"https://themeisle.com\"><img src=\"https://images.opencollective.com/themeisle/d5592fe/logo.png\" alt=\"ThemeIsle\" height=\"32\"></a> <a href=\"https://www.marfeel.com/\"><img src=\"https://images.opencollective.com/marfeel/4b88e30/logo.png\" alt=\"Marfeel\" height=\"32\"></a> <a href=\"https://www.firesticktricks.com\"><img src=\"https://images.opencollective.com/fire-stick-tricks/b8fbe2c/logo.png\" alt=\"Fire Stick Tricks\" height=\"32\"></a></p>\n<!--sponsorsend-->\n\n## <a name=\"technology-sponsors\"></a>Technology Sponsors\n\n* Site search ([eslint.org](https://eslint.org)) is sponsored by [Algolia](https://www.algolia.com)\n* Hosting for ([eslint.org](https://eslint.org)) is sponsored by [Netlify](https://www.netlify.com)\n* Password management is sponsored by [1Password](https://www.1password.com)\n",
   "maintainers": [
     {
-      "email": "nicholas+eslint@nczconsulting.com",
-      "name": "eslintbot"
+      "name": "eslintbot",
+      "email": "nicholas+eslint@nczconsulting.com"
     },
     {
-      "email": "ivolodin@gmail.com",
-      "name": "ivolodin"
+      "name": "nzakas",
+      "email": "nicholas@nczconsulting.com"
     },
     {
-      "email": "nicholas@nczconsulting.com",
-      "name": "nzakas"
+      "name": "ivolodin",
+      "email": "ivolodin@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-07-31T23:21:43.840Z",
+    "modified": "2020-10-09T20:17:30.412Z",
     "created": "2013-07-04T17:01:29.347Z",
     "0.0.4": "2013-07-04T17:01:31.141Z",
     "0.0.5": "2013-07-06T00:54:44.444Z",
@@ -37689,7 +38781,13 @@
     "7.3.1": "2020-06-23T02:37:39.224Z",
     "7.4.0": "2020-07-03T20:10:52.647Z",
     "7.5.0": "2020-07-18T18:52:49.172Z",
-    "7.6.0": "2020-07-31T23:21:41.630Z"
+    "7.6.0": "2020-07-31T23:21:41.630Z",
+    "7.7.0": "2020-08-14T21:29:02.928Z",
+    "7.8.0": "2020-08-31T21:55:38.447Z",
+    "7.8.1": "2020-09-01T20:10:48.632Z",
+    "7.9.0": "2020-09-12T18:44:28.309Z",
+    "7.10.0": "2020-09-26T21:43:52.177Z",
+    "7.11.0": "2020-10-09T20:17:27.664Z"
   },
   "author": {
     "name": "Nicholas C. Zakas",
@@ -38041,5 +39139,7 @@
     "url": "https://github.com/eslint/eslint/issues/"
   },
   "license": "MIT",
-  "homepage": "https://eslint.org"
+  "homepage": "https://eslint.org",
+  "_cached": false,
+  "_contentLength": 0
 }

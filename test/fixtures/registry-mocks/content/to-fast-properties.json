@@ -470,6 +470,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# to-fast-properties [![Build Status](https://travis-ci.org/sindresorhus/to-fast-properties.svg?branch=master)](https://travis-ci.org/sindresorhus/to-fast-properties)\n\n> Force V8 to use fast properties for an object\n\n[Read more.](https://stackoverflow.com/questions/24987896/)\n\nUse `%HasFastProperties(object)` and `--allow-natives-syntax` to check whether an object already has fast properties.\n\n## Install\n\n```\n$ npm install to-fast-properties\n```\n\n## Usage\n\n```js\nconst toFastProperties = require('to-fast-properties');\n\nconst object = {\n\tfoo: true,\n\tbar: true\n};\n\ndelete object.foo;\n// `object` now has slow properties\n\ntoFastProperties(object);\n// `object` now has fast properties\n```\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -511,5 +512,7 @@
     "url": "https://github.com/sindresorhus/to-fast-properties/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md"
+  "readmeFilename": "readme.md",
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1259,5 +1259,7 @@
     "rawphp": true,
     "nec": true
   },
-  "license": "MIT"
+  "license": "MIT",
+  "_cached": false,
+  "_contentLength": 0
 }

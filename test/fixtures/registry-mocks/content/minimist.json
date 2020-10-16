@@ -1,6 +1,6 @@
 {
   "_id": "minimist",
-  "_rev": "561-caad55d1b45c4992fce786d58f82da49",
+  "_rev": "562-0477bb98ecd50aa7342f619957dbc0c7",
   "name": "minimist",
   "description": "parse argument options",
   "dist-tags": {
@@ -1742,7 +1742,7 @@
     }
   ],
   "time": {
-    "modified": "2020-03-12T22:16:22.837Z",
+    "modified": "2020-06-16T04:12:40.399Z",
     "created": "2013-06-25T08:17:16.343Z",
     "0.0.0": "2013-06-25T08:17:18.123Z",
     "0.0.1": "2013-06-25T08:22:05.384Z",
@@ -2211,7 +2211,8 @@
     "xiechao06": true,
     "daizch": true,
     "yanghcc": true,
-    "ungurys": true
+    "ungurys": true,
+    "tjorange": true
   },
   "readmeFilename": "readme.markdown",
   "homepage": "https://github.com/substack/minimist",
@@ -2224,5 +2225,7 @@
   "bugs": {
     "url": "https://github.com/substack/minimist/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "_cached": false,
+  "_contentLength": 0
 }

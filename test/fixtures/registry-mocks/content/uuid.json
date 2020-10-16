@@ -1,10 +1,11 @@
 {
   "_id": "uuid",
-  "_rev": "403-656f959c994b2e7b36714545db0ed1fa",
+  "_rev": "417-85825b1b4e3907f98ef6a4f79a44097e",
   "name": "uuid",
   "description": "RFC4122 (v1, v4, and v5) UUIDs",
   "dist-tags": {
-    "latest": "3.4.0"
+    "latest": "8.3.1",
+    "beta": "8.3.0-beta.0"
   },
   "versions": {
     "0.0.1": {
@@ -1509,24 +1510,2505 @@
         "tmp": "tmp/uuid_3.4.0_1579208738423_0.4772515028870088"
       },
       "_hasShrinkwrap": false
+    },
+    "7.0.0-beta.0": {
+      "name": "uuid",
+      "version": "7.0.0-beta.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "dist/index.js",
+      "module": "dist/esm-browser/index.js",
+      "devDependencies": {
+        "@babel/cli": "7.8.3",
+        "@babel/core": "7.8.3",
+        "@babel/preset-env": "7.8.3",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.4",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.9.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "24.9.0",
+        "lint-staged": "10.0.1",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.30.0",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.0.1"
+      },
+      "scripts": {
+        "examples:browser-webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser-rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser-esmodules:build": "cd examples/browser-esmodules && npm install && npm run build",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:**",
+        "test:browser": "BABEL_ENV=commonjs jest --forceExit --verbose test/browser/${BROWSER:-}*",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "ci": "npm run lint && npm run test && npm run prettier:check && npm run docs:diff && npm run bundlewatch",
+        "bundlewatch": "( node --version | grep -vq 'v12' ) || ( npm run pretest:browser && CI_REPO_OWNER=uuidjs CI_REPO_NAME=uuid CI_COMMIT_SHA=$GITHUB_SHA CI_BRANCH=${GITHUB_REF##refs/heads/} bundlewatch --config bundlewatch.config.json )",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "( node --version | grep -vq 'v12' ) || ( npm run docs && git diff --quiet README.md )",
+        "build": "./scripts/build.sh",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md",
+          "postcommit": "npm run build"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "522e44c055871493303ec0158dac75d7ce1eba5b",
+      "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![Build Status](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions)\n\nSimple, fast generation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs.\n\nFeatures:\n\n- Support for version 1, 3, 4 and 5 UUIDs\n- Cross-platform: CommonJS build for Node.js and [ECMAScript Modules](#ecmascript-modules) for the\n  browser.\n- Uses cryptographically-strong random number APIs\n- Zero-dependency, small footprint\n\n⚠️⚠️⚠️ This is the README of the upcoming major version of this library. You can still [access the README\nof the current stable version](https://github.com/uuidjs/uuid/blob/v3.4.0/README.md). ⚠️⚠️⚠️\n\n## Upgrading from v3.x of this Module\n\nIn v3.x of this library we were promoting the use of deep requires to reduce bundlesize for browser\nbuilds:\n\n```javascript\nconst uuidv4 = require('uuid/v4');\nuuidv4();\n```\n\nAs of v7.x this library has been converted to ECMAScript Modules and deep requires are now\ndeprecated and may be removed in a future major version of this library.\n\nSince all modern bundlers like rollup or Webpack support tree-shaking for ECMAScript Modules out of\nthe box we now encourage you to use modern `import` syntax instead, see [ECMAScript Modules /\nESM](#ecmascript-modules--esm):\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\nFor use as CommonJS module with Node.js you can use:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n## Quickstart - Node.js/CommonJS\n\n```shell\nnpm install uuid\n```\n\nThen generate a random UUID (v4 algorithm), which is almost always what you want ...\n\nVersion 4 (random):\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\nOr generate UUIDs with other algorithms of your choice ...\n\nVersion 1 (timestamp):\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8b2d-1b9d6bcdbbfd'\n```\n\nVersion 3 (namespace):\n\n```javascript\nimport { v3 as uuidv3 } from 'uuid';\n\n// ... using predefined DNS namespace (for domain names)\nuuidv3('hello.example.com', uuidv3.DNS); // ⇨ '9125a8dc-52ee-365b-a5aa-81b0b3681cf6'\n\n// ... using predefined URL namespace (for, well, URLs)\nuuidv3('http://example.com/hello', uuidv3.URL); // ⇨ 'c6235813-3ba4-3801-ae84-e0a6ebb7d138'\n\n// ... using a custom namespace\n//\n// Note: Custom namespaces should be a UUID string specific to your application!\n// E.g. the one here was generated using this modules `uuid` CLI.\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv3('Hello, World!', MY_NAMESPACE); // ⇨ 'e8b5a51d-11c8-3310-a6ab-367563f20686'\n```\n\nVersion 5 (namespace):\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// ... using predefined DNS namespace (for domain names)\nuuidv5('hello.example.com', uuidv5.DNS); // ⇨ 'fdda765f-fc57-5604-a269-52a7df8164ec'\n\n// ... using predefined URL namespace (for, well, URLs)\nuuidv5('http://example.com/hello', uuidv5.URL); // ⇨ '3bbcee75-cecc-5b56-8031-b6641c1ed1f1'\n\n// ... using a custom namespace\n//\n// Note: Custom namespaces should be a UUID string specific to your application!\n// E.g. the one here was generated using this modules `uuid` CLI.\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\n```\n\n## Supported Platforms\n\n- Node.js: All LTS, i.e. 8.x, 10.x, 12.x\n- Browsers (with bundlers like webpack/rollup):\n  - Chrome: >= 49\n  - Safari: >= 10\n  - Firefox: >= 44\n  - Edge: >= 15\n  - IE: 11\n\n## ECMAScript Modules / ESM\n\nFor usage in the browser `uuid` provides support for [ECMAScript\nModules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) that enable\ntree-shaking for bundlers, like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking)\n([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/)\n([example](./examples/browser-webpack/)).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nThere is experimental native ESM support for [the browser](./examples/browser-esmodules/) but it\nshould not be considered ready for production use and may change or disappear in future releases.\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```\nnpm run build\n```\n\n## API\n\n### Version 4 (Random)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\n// Incantations\nuuidv4();\nuuidv4(options);\nuuidv4(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 v4 UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use in place of randomly generated values. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample: Generate string UUID with predefined `random` values\n\n```javascript\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\nExample: Generate two IDs in a single buffer\n\n```javascript\nconst buffer = new Array();\nuuidv4(null, buffer, 0); // ⇨ \n  // [\n  //   155, 29, 235,  77,  59,\n  //   125, 75, 173, 155, 221,\n  //    43, 13, 123,  61, 203,\n  //   109\n  // ]\nuuidv4(null, buffer, 16); // ⇨ \n  // [\n  //   155,  29, 235,  77,  59, 125,  75, 173,\n  //   155, 221,  43,  13, 123,  61, 203, 109,\n  //    27, 157, 107, 205, 187, 253,  75,  45,\n  //   155,  93, 171, 141, 251, 189,  75, 237\n  // ]\n```\n\n### Version 1 (Timestamp + Node)\n\n⚠️⚠️⚠️ **Please make sure to check whether you really need the timestamp properties of Version 1 UUIDs\nbefore using them. In many cases, Version 4 random UUIDs are the better choice. [This\nFAQ](https://github.com/tc39/proposal-uuid#faq) covers more details.** ⚠️⚠️⚠️\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\n// Incantations\nuuidv1();\nuuidv1(options);\nuuidv1(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 v1 (timestamp-based) UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `node` - (Array) Node id as Array of 6 bytes (per 4.1.6). Default: Randomly generated ID. See note 1.\n  - `clockseq` - (Number between 0 - 0x3fff) RFC clock sequence. Default: An internally maintained clockseq is used.\n  - `msecs` - (Number) Time in milliseconds since unix Epoch. Default: The current time is used.\n  - `nsecs` - (Number between 0-9999) additional time, in 100-nanosecond units. Ignored if `msecs` is unspecified. Default: internal uuid counter is used, as per 4.2.1.2.\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use for initialization of `node` and `clockseq` as described above. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nExample: Generate string UUID with fully-specified options\n\n```javascript\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\nExample: In-place generation of two binary IDs\n\n```javascript\n// Generate two ids in an array\nconst arr = new Array();\nuuidv1(null, arr, 0); // ⇨ \n  // [\n  //    44,  94, 164, 192,  64,\n  //   103,  17, 233, 146,  52,\n  //    27, 157, 107, 205, 187,\n  //   253\n  // ]\nuuidv1(null, arr, 16); // ⇨ \n  // [\n  //    44, 94, 164, 192,  64, 103,  17, 233,\n  //   146, 52,  27, 157, 107, 205, 187, 253,\n  //    44, 94, 164, 193,  64, 103,  17, 233,\n  //   146, 52,  27, 157, 107, 205, 187, 253\n  // ]\n```\n\n### Version 3 (Namespace)\n\n```javascript\nimport { v3 as uuidv3 } from 'uuid';\n\n// Incantations\nuuidv3(name, namespace);\nuuidv3(name, namespace, buffer);\nuuidv3(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 v3 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv3('hello world', MY_NAMESPACE); // ⇨ '042ffd34-d989-321c-ad06-f60826172424'\n```\n\n### Version 5 (Namespace)\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Incantations\nuuidv5(name, namespace);\nuuidv5(name, namespace, buffer);\nuuidv5(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 v5 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv5('hello world', MY_NAMESPACE); // ⇨ '9f282611-e0fd-5650-8953-89c8e342da0b'\n```\n\n## Command Line\n\nUUIDs can be generated from the command line with the `uuid` command.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n\n$ uuid v1\n02d37060-d446-11e7-a9fa-7bdae751ebe1\n```\n\nType `uuid --help` for usage details\n\n## UMD Build\n\nIf you want to load a minified UMD build directly in the browser you can use one of the popular npm\nCDNs:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n<script>\n  alert(uuidv4());\n</script>\n```\n\nor\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n<script>\n  alert(uuidv4());\n</script>\n```\n\nAvailable bundles:\n\n- https://unpkg.com/uuid@latest/dist/umd/\n- https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+      "readmeFilename": "README.md",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@7.0.0-beta.0",
+      "_nodeVersion": "12.15.0",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-Am22LVM3UXB0DTzQAeDSsZwP5eyqjIhmff330hqkxGvIxX8RRrUYLtKJ0eYxiBgjeQdUaMONpBZbJachMShxBw==",
+        "shasum": "7f2bd91cf896f8f3d8d911d995edd7d66d4c2651",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.0-beta.0.tgz",
+        "fileCount": 36,
+        "unpackedSize": 68693,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeSngmCRA9TVsSAnZWagAAbkwP/RXJ5KOgqWONL6GrOdrx\nRRzSvg0VlcF8bj18EAg4ZEzWjgyCtLjAKfnjlQkfj1twaxlrrgbHBiYhEzME\nPr/8tUXn6/Hix13r7Zrkw+kJdISFz2acM6u0sgGJZ+ooxgXtwP/Xs2BVVk4k\n5u5cEN9GpyPxUvrDDgE8BPTDoQ1MxTU+4DWRcb57VIki26O44vvNYZGZJteR\nD/+P/oqHWNZ0hy01Ed5yXB3V/u92E3yc7FPKgGTLmmJjAdCRNifBjcEoQT51\n3/RlPkXB/yTza6fwaiVl+DA7FypppthNbo90drJqboS5iE4B/6ZwApSRrnKf\nWnKQDFWl/XWpNjtga+TC5VjN/KQbptheM3Xus0m9KNvmHUna/5svGJBkptqV\n3TSruCViqBaML1yxD1wTiArGacVakAbZRKSbz9XunOMIf8Qq6/unnBIRQDEi\njXbi+tHmGlJ9GzGn/Z4LXf7zwPPZV796LxIfq+TUsEQVrszJ1SRTsUkZ8oMg\nWOz4DwsI6DDU3KDBNiq+FqSfULRF/TwfrcybkfZDNyfXWbFPgk6bF583fN5e\n9l2TNs30eBsoCJiaLkCGnf4oHhUSMJhzTQoV8YyU/zwq+n04jNmP9S2PnkaW\nHZ+NAiAxMdi/y/3hEiaZAaEAQYhu3VVvjjeu6WU18OApWmF6E6idnLyb+A5V\nfXdA\r\n=UYmC\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_7.0.0-beta.0_1581938725845_0.7896196061229703"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.0": {
+      "name": "uuid",
+      "version": "7.0.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "dist/index.js",
+      "module": "dist/esm-browser/index.js",
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser-webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser-rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser-esmodules:build": "cd examples/browser-esmodules && npm install && npm run build",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:**",
+        "test:browser": "BABEL_ENV=commonjs jest --forceExit --verbose test/browser/${BROWSER:-}*",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "ci": "npm run lint && npm run test && npm run prettier:check && npm run docs:diff && npm run bundlewatch",
+        "bundlewatch": "( node --version | grep -vq 'v12' ) || ( npm run pretest:browser && CI_REPO_OWNER=uuidjs CI_REPO_NAME=uuid CI_COMMIT_SHA=$GITHUB_SHA CI_BRANCH=${GITHUB_REF##refs/heads/} bundlewatch --config bundlewatch.config.json )",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "( node --version | grep -vq 'v12' ) || ( npm run docs && git diff --quiet README.md )",
+        "build": "./scripts/build.sh",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md",
+          "postcommit": "npm run build"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "63e5702d7629303a5193c4dd31825376f240f888",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@7.0.0",
+      "_nodeVersion": "12.16.0",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-LNUrNsXdI/fUsypJbWM8Jt4DgQdFAZh41p9C7WE9Cn+CULOEkoG2lgQyH68v3wnIy5K3fN4jdSt270K6IFA3MQ==",
+        "shasum": "1833d4b9ce50b732bfaa271f9cb74e974d303c79",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.0.tgz",
+        "fileCount": 36,
+        "unpackedSize": 72408,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeU85jCRA9TVsSAnZWagAAQQkP/AlIM9UlpC8m86bmakLZ\nMxFzqPOYzXwQwpm2CkjwlYzdUWxqyvPiaobBeVhP3ieMW3aD2f19+3dAwpiw\ne9G9DZrQfGMFyzXFI/wRPBspzSWe6lP+n3J6IJoienzeXkV/3oeL0IBcAvr0\n4U7g7WW+C3deUyik8uO59fB3ITRAai/BX151MNeBmp0WB8S64FMTgUstesaq\ndlsKAcFNnN075DJEzTiIVm72h7bK2A5DTrkriQspVtYaobe0NA6zLovMLjFW\nJP84qZTPAcVfxRzd/5qVpUbHKyR5NLCraBWzDw/K64nd1HS05WAWKbSNebEM\nqPrs3VV6LBVtbXRqmT+7vedFr27g8f046NCMUQb0d0InxIt9/YXp0zaa79il\nBRnYvHaNmYXy4k0u4uxSsfxfLLZ7imtLIQ9nhkqVNlWYp4LjUlZLw1cBHsZx\npZ1HQ8G8TtnXEU/6GMtCZ6hnwCtq+4Bm4s4dgxzpGexOJIpYTK4+0rtmOEgR\ntY0aR5K27N7Lm2Zo88vZUqjbcQmuKEFhX5onVuPZBGg8qTXqOsasyi6T9jJf\n3YovQYwl/TdqRv27AUWS4ZhryG6byurIOKETENv/DC6ybYa1Lvy9t77Qor6a\nTwR3+IJ3S9RP0jtC59gMoUpH078XWBEN+4gkX8sSDEewZXv3Y6u2lR7hUqEy\nQKnT\r\n=SAzF\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_7.0.0_1582550626542_0.483157796354976"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.1": {
+      "name": "uuid",
+      "version": "7.0.1",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "dist/index.js",
+      "module": "dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser-webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser-rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser-esmodules:build": "cd examples/browser-esmodules && npm install && npm run build",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:**",
+        "test:browser": "BABEL_ENV=commonjs jest --forceExit --verbose test/browser/${BROWSER:-}*",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "ci": "npm run lint && npm run test && npm run prettier:check && npm run docs:diff && npm run bundlewatch",
+        "bundlewatch": "( node --version | grep -vq 'v12' ) || ( npm run pretest:browser && CI_REPO_OWNER=uuidjs CI_REPO_NAME=uuid CI_COMMIT_SHA=$GITHUB_SHA CI_BRANCH=${GITHUB_REF##refs/heads/} bundlewatch --config bundlewatch.config.json )",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "( node --version | grep -vq 'v12' ) || ( npm run docs && git diff --quiet README.md )",
+        "build": "./scripts/build.sh",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md",
+          "postcommit": "npm run build"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "3f78220564ff2abcb06cbf5ea173513a0e0cba43",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@7.0.1",
+      "_nodeVersion": "12.16.0",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-yqjRXZzSJm9Dbl84H2VDHpM3zMjzSJQ+hn6C4zqd5ilW+7P4ZmLEEqwho9LjP+tGuZlF4xrHQXT0h9QZUS/pWA==",
+        "shasum": "95ed6ff3d8c881cbf85f0f05cc3915ef994818ef",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.1.tgz",
+        "fileCount": 49,
+        "unpackedSize": 91125,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeVYL8CRA9TVsSAnZWagAAR8UP/iKsHTGRssBfDvB2I+MD\nvActHY6aC3wf+7nxLIyfA8OVfZCt8Q/bUB+FLKgqPPkp/MKFVkvEE3aidWX+\nD9HnZm3J2/b/+iH7l+3u2J/L+Bb369p7Q6Aje0EJksO6MEA/S/1egvLxMEd/\nYi3Q2/93eZOCt5ogroCUQ9vtKxLSJRwvoHICJN04DCw96OYe+GUTB6VOQFld\n5kx+ctksSaZmXYtmmWyHyHe8z2T2GoAdWZSg4LsB7nHGVcmio8rKqJmbdesU\n0esYjkGHhZszrB4/pgNSDl4PmMIpgTtfY5moE0tvaKlgVsUBQ4G1K1bo4LzW\nAtGBwgqtf2ystzXw9AU1SXS4l3vuhdRypHJCqvEZxnLliQeCaeMtNDoGBLed\n2aZe14zcTnyem5RgOgKax5cWJWj9o/zIl2aiAG8B2pPt+bml0Z/e+dok6MRp\nMqiqqa0SqeIrVicahyWzJ+6LSssaaqhLPc171g9lv7M3ddod4910E1XxfVLU\nxCDWYn/mgoBjs/0UqcE3RIkPdOJnLGbmvT2sr/grDRBVl9aY6lL84S8h8aZx\nLdmWlpRxPjt7GWCSIg8oZgVw4B5p+qp0Th2JYSK0xYFkvj4mOi39H7tN2UCA\nAukUAz4q83b4cyJIOjVP8nR4GXt1ae+MUdNSpuTJns4n/aH/fE20SU8svkxu\nrsp9\r\n=Hfuo\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_7.0.1_1582662395609_0.09015471273563103"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.2-beta.0": {
+      "name": "uuid",
+      "version": "7.0.2-beta.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "dist/index.js",
+      "module": "dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser-webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser-rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser-esmodules:build": "cd examples/browser-esmodules && npm install && npm run build",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:**",
+        "test:browser": "BABEL_ENV=commonjs jest --forceExit --verbose test/browser/${BROWSER:-}*",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "ci": "npm run lint && npm run test && npm run prettier:check && npm run docs:diff && npm run bundlewatch",
+        "bundlewatch": "( node --version | grep -vq 'v12' ) || ( npm run pretest:browser && CI_REPO_OWNER=uuidjs CI_REPO_NAME=uuid CI_COMMIT_SHA=$GITHUB_SHA CI_BRANCH=${GITHUB_REF##refs/heads/} bundlewatch --config bundlewatch.config.json )",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "( node --version | grep -vq 'v12' ) || ( npm run docs && git diff --quiet README.md )",
+        "build": "./scripts/build.sh",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md",
+          "postcommit": "npm run build"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![Build Status](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and UMD builds\n  - Node 8, 10, 12\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - React Native ([see note](#getrandomvalues-not-supported))\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from uuid\\@3?** Your code is probably okay, but check out [Upgrading\nFrom uuid\\@3](#upgrading-from-uuid3) for details.\n\n## Quickstart - Node.js/CommonJS\n\n```shell\nnpm install uuid\n```\n\nOnce installed, decide which type of UUID you need. RFC4122 provides for four\nversions, all of which are supported here. In order of popularity, they are:\n\n- Version 4 (random) - Created from cryptographically-strong random values\n- Version 1 (timestamp) - Created from the system clock (plus random values)\n- Version 5 (namespace, SHA-1) - Created from user-supplied name and namespace strings\n- Version 3 (namespace, MD5) - Like version 5, above, but with a poorer hash algorithm\n\n**Unsure which one to use?** Use version 4 (random) unless you have a specific need for one of the other versions. See also [this FAQ](https://github.com/tc39/proposal-uuid#faq).\n\n### Create Version 4 (Random) UUIDs\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\n### Create Version 1 (Timestamp) UUIDs\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8b2d-1b9d6bcdbbfd'\n```\n\n### Create Version 3 or Version 5 (Namespace) UUIDs\n\n&#x26a0;&#xfe0f; Version 3 and Version 5 UUIDs are basically the same, differing\nonly in the underlying hash algorithm. Note that per the RFC, \"_If backward\ncompatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n&#x26a0;&#xfe0f; If using a custom namespace **be sure to generate your own\nnamespace UUID**. You can grab one [here](https://www.uuidgenerator.net/).\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid'; // For version 5\nimport { v3 as uuidv3 } from 'uuid'; // For version 3\n\n// Using predefined DNS namespace (for domain names)\nuuidv5('hello.example.com', uuidv5.DNS); // ⇨ 'fdda765f-fc57-5604-a269-52a7df8164ec'\nuuidv3('hello.example.com', uuidv3.DNS); // ⇨ '9125a8dc-52ee-365b-a5aa-81b0b3681cf6'\n\n// Using predefined URL namespace (for URLs)\nuuidv5('http://example.com/hello', uuidv5.URL); // ⇨ '3bbcee75-cecc-5b56-8031-b6641c1ed1f1'\nuuidv3('http://example.com/hello', uuidv3.URL); // ⇨ 'c6235813-3ba4-3801-ae84-e0a6ebb7d138'\n\n// Using a custom namespace (See note, above, about generating your own\n// namespace UUID)\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\nuuidv3('Hello, World!', MY_NAMESPACE); // ⇨ 'e8b5a51d-11c8-3310-a6ab-367563f20686'\n```\n\n## API\n\n### Version 4 (Random)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\n// Incantations\nuuidv4();\nuuidv4(options);\nuuidv4(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 4 UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use in place of randomly generated values. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample: Generate string UUID with predefined `random` values\n\n```javascript\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\nExample: Generate two IDs in a single buffer\n\n```javascript\nconst buffer = new Array();\nuuidv4(null, buffer, 0); // ⇨ \n  // [\n  //   155, 29, 235,  77,  59,\n  //   125, 75, 173, 155, 221,\n  //    43, 13, 123,  61, 203,\n  //   109\n  // ]\nuuidv4(null, buffer, 16); // ⇨ \n  // [\n  //   155,  29, 235,  77,  59, 125,  75, 173,\n  //   155, 221,  43,  13, 123,  61, 203, 109,\n  //    27, 157, 107, 205, 187, 253,  75,  45,\n  //   155,  93, 171, 141, 251, 189,  75, 237\n  // ]\n```\n\n### Version 1 (Timestamp)\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\n// Incantations\nuuidv1();\nuuidv1(options);\nuuidv1(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 1 (timestamp) UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `node` - (Array) Node id as Array of 6 bytes (per 4.1.6). Default: Randomly generated ID. See note 1.\n  - `clockseq` - (Number between 0 - 0x3fff) RFC clock sequence. Default: An internally maintained clockseq is used.\n  - `msecs` - (Number) Time in milliseconds since unix Epoch. Default: The current time is used.\n  - `nsecs` - (Number between 0-9999) additional time, in 100-nanosecond units. Ignored if `msecs` is unspecified. Default: internal uuid counter is used, as per 4.2.1.2.\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use for initialization of `node` and `clockseq` as described above. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nExample: Generate string UUID with fully-specified options\n\n```javascript\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\nExample: In-place generation of two binary IDs\n\n```javascript\n// Generate two ids in an array\nconst arr = new Array();\nuuidv1(null, arr, 0); // ⇨ \n  // [\n  //    44,  94, 164, 192,  64,\n  //   103,  17, 233, 146,  52,\n  //    27, 157, 107, 205, 187,\n  //   253\n  // ]\nuuidv1(null, arr, 16); // ⇨ \n  // [\n  //    44, 94, 164, 192,  64, 103,  17, 233,\n  //   146, 52,  27, 157, 107, 205, 187, 253,\n  //    44, 94, 164, 193,  64, 103,  17, 233,\n  //   146, 52,  27, 157, 107, 205, 187, 253\n  // ]\n```\n\n### Version 5 (Namespace)\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Incantations\nuuidv5(name, namespace);\nuuidv5(name, namespace, buffer);\nuuidv5(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 5 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv5('hello world', MY_NAMESPACE); // ⇨ '9f282611-e0fd-5650-8953-89c8e342da0b'\n```\n\n### Version 3 (Namespace)\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n```javascript\nimport { v3 as uuidv3 } from 'uuid';\n\n// Incantations\nuuidv3(name, namespace);\nuuidv3(name, namespace, buffer);\nuuidv3(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 3 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv3('hello world', MY_NAMESPACE); // ⇨ '042ffd34-d989-321c-ad06-f60826172424'\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nFor usage in the browser `uuid` provides support for [ECMAScript\nModules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) that enable\ntree-shaking for bundlers, like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking)\n([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/)\n([example](./examples/browser-webpack/)).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nThere is experimental native ESM support for [the browser](./examples/browser-esmodules/) but it\nshould not be considered ready for production use and may change or disappear in future releases.\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```\nnpm run build\n```\n\n## UMD Builds\n\nIf you want to load a minified UMD build directly in the browser you can use one of the popular npm\nCDNs:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n<script>\n  alert(uuidv4());\n</script>\n```\n\nor\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n<script>\n  alert(uuidv4());\n</script>\n```\n\nAvailable bundles:\n\n- https://unpkg.com/uuid@latest/dist/umd/\n- https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard\n[`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues)\nAPI is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n| Environment  | Suggested Polyfill                                                                                  |\n| ------------ | --------------------------------------------------------------------------------------------------- |\n| React Native | [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme) |\n\n## Upgrading From uuid\\@3\n\n\"_Wait... what happened to uuid\\@4 - uuid\\@6?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#version-4-random) and [version\n5](#version-5-namespace) UUIDs, and a possible [version\n6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been\nskipped. Hence, how we're now at uuid\\@7.\n\n### Deep Requires Now Deprecated\n\nuuid\\@3 encouraged the use of deep requires to minimize the bundle size of\nbrowser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of uuid\\@7 this library now provides ECMAScript modules builds, which allow\npackagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code.\nInstead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\nuuid\\@3 was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in uuid\\@3 and has been removed in uuid\\@7.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+      "readmeFilename": "README.md",
+      "gitHead": "0da6efbc703a93236087ff55cd9087d2dcdff155",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@7.0.2-beta.0",
+      "_nodeVersion": "12.16.0",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-nWN1O0baX9+xv8DxMl6O5ERk0R/4xAuCkosXBNB68m1PReciNwzBoO9xzf8wX4HrXpfbcu9Mpo5mmgLcsDTZlA==",
+        "shasum": "8cc5d456c79a9dcb527108a799639cbf2e764bab",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.2-beta.0.tgz",
+        "fileCount": 49,
+        "unpackedSize": 91761,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeXW0MCRA9TVsSAnZWagAAvn8QAJHGY0rSQicG6809E5rG\nkOMu13oLNhO27M98xi5uOak2eYG3hsKqDKnngsUDqKj7wbWWyKAEN3kbhOfS\nF97vJaf+DbxQtnbDL5YZSMtYYmOAjpTsAkYP2vnRc2ovWUXRwR0f2O5Q5idX\nHwRLIpIUUsYEwFKq8Re9oTJnLGcQWLWmIdv3lEaujX9fsEInC8hb5aFZGrJJ\nx4HA5hcNcJK6gZt4G6wAqbgqKDvouR73IDOYyFST3G6VwlXD/ZA7Gx6KGqHu\nu+okHWuKybJwK7xJzoa8qs0gdXTmqSc5a6oQGKWFj6C4oa22EMaprDTn27xv\npYf4phKKEKr2UWyhZPVfdW4oeAtinetxM6gV6vLt2f6MQizXekUibzJRzLn+\n9B8bXeEiYOXWK8RZKwPlDl20fOXdYgLjHq/uo7DCh4FOq43nf7q+1eS+r6oo\n21dYXEFvwXYgHtF2JkqfXjN0xfhyt2+JSVEiYH6DJUDC/QRPYVEeitKa6zDK\nyWBNUHP8CidgLUG4Kj3wjQKYqjoMXZNdE0QJpVZZLMj+CjfvqQSPXcLjyc8g\nhGI6B7HTRZVyqt6GyhTVM4L+lwZh79N6flLcWtKYPAv5jSTrGOFAIwWvN2Sh\nVDZJYABAVS0APfqhLV/k1U2h2qZCLWvBcBpoStr09+A77JY67DcUOzxCS2tx\nX9f0\r\n=YJwA\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_7.0.2-beta.0_1583181068234_0.11125894339297981"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.2": {
+      "name": "uuid",
+      "version": "7.0.2",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "dist/index.js",
+      "module": "dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.4",
+        "@babel/preset-env": "7.8.4",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "babel-eslint": "10.0.3",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "browserstack-local": "1.4.5",
+        "bundlewatch": "0.2.5",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "esm": "3.2.25",
+        "http-server": "0.12.1",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.7",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.31.1",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "selenium-webdriver": "3.6.0",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser-webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser-rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser-esmodules:build": "cd examples/browser-esmodules && npm install && npm run build",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:**",
+        "test:browser": "BABEL_ENV=commonjs jest --forceExit --verbose test/browser/${BROWSER:-}*",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "ci": "npm run lint && npm run test && npm run prettier:check && npm run docs:diff && npm run bundlewatch",
+        "bundlewatch": "( node --version | grep -vq 'v12' ) || ( npm run pretest:browser && CI_REPO_OWNER=uuidjs CI_REPO_NAME=uuid CI_COMMIT_SHA=$GITHUB_SHA CI_BRANCH=${GITHUB_REF##refs/heads/} bundlewatch --config bundlewatch.config.json )",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "( node --version | grep -vq 'v12' ) || ( npm run docs && git diff --quiet README.md )",
+        "build": "./scripts/build.sh",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md",
+          "postcommit": "npm run build"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "4b61be05c840ba4d6fadf89cc8d4e1bbba7b9b1a",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@7.0.2",
+      "_nodeVersion": "12.16.0",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-vy9V/+pKG+5ZTYKf+VcphF5Oc6EFiu3W8Nv3P3zIh0EqVI80ZxOzuPfe9EHjkFNvf8+xuTHVeei4Drydlx4zjw==",
+        "shasum": "7ff5c203467e91f5e0d85cfcbaaf7d2ebbca9be6",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.2.tgz",
+        "fileCount": 49,
+        "unpackedSize": 92084,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeX6O9CRA9TVsSAnZWagAAjlYQAJ5hKsHQkBAKkf1NzVvv\nQ+/w/d3YJgcfrlrDFe2jqbGqooI74L6ueVPlJs4LIKUCpVvhZIvY4yGHI2hY\nYgzFhbffp2i6E8DGKOvrVvKR6+MFh97vAcOzI2ZUAzOtea++arEJLmxcFUxr\n9VXnY7j1GztqULh0p0XPfAXFkCzm/lm/hDTnBMr0A82qGs0u1PoA5haJl2si\nNA7bFMYQX5nXYyRi/sFfLC1aPiyGDoWs5fGFKRjMSsn7gA+oiI83mpWZ5WVn\nKq28bNNDc+aqe3yG9aT7veXXv3aeUnHmEbP8u6gpswh7QG2h+gNmxvDriovy\n08BxDuR89SPwKIzOb3UF/gk6wPSCpMHZ46xqTX8nVjnEfdvZDMQnzpGCIfGz\n8++uhxIFRbAKg+tvCgClS3fFqxZ27Ai1zNBbnNfH/+XjdH+idOZbK5yglWGr\nIAnYkstMmAsSF+dS1Betk+dnHfgUKJHd2zGU8USulhWblvSW3YIpeXNaIQzB\nzWKP9a47Yp+6B33HcqhRWOSnkhj7xsoL0LEhcrYhC8Zk1KSS5uzqucLpnNfG\nDyVzlxj/BUaNUVVsP3HuayAWtkmsVOZm3O6aKXog7IX4keIw1CCcfDM6bnaD\nzd++5iyGEFfgENa7Fl7LKxAQy2Y4Olcy/aUn3S4ht9CF7GGXvuOc9fNwf2QU\nrjjb\r\n=Xkrr\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_7.0.2_1583326140504_0.43396107706675835"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.0.3": {
+      "name": "uuid",
+      "version": "7.0.3",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "dist/index.js",
+      "module": "dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.8.7",
+        "@babel/preset-env": "7.8.7",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.1",
+        "@wdio/browserstack-service": "5.18.7",
+        "@wdio/cli": "5.18.7",
+        "@wdio/jasmine-framework": "5.18.6",
+        "@wdio/local-runner": "5.18.7",
+        "@wdio/spec-reporter": "5.18.7",
+        "@wdio/static-server-service": "5.16.10",
+        "@wdio/sync": "5.18.7",
+        "babel-eslint": "10.1.0",
+        "babel-plugin-add-module-exports": "1.0.2",
+        "bundlewatch": "0.2.6",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "husky": "3.0.9",
+        "jest": "25.1.0",
+        "lint-staged": "10.0.8",
+        "npm-run-all": "4.1.5",
+        "prettier": "1.19.1",
+        "rollup": "1.32.0",
+        "rollup-plugin-terser": "5.2.0",
+        "runmd": "1.3.2",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser-webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser-rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:browser-esmodules:build": "cd examples/browser-esmodules && npm install && npm run build",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "ci": "npm run lint && npm run test && npm run prettier:check && npm run docs:diff && npm run bundlewatch",
+        "bundlewatch": "( node --version | grep -vq 'v12' ) || ( npm run pretest:browser && bundlewatch --config bundlewatch.config.json )",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "( node --version | grep -vq 'v12' ) || ( npm run docs && git diff --quiet README.md )",
+        "build": "./scripts/build.sh",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md",
+          "postcommit": "npm run build"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "4fcd881246f102239fa386f958ec0e5f83b53bbe",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@7.0.3",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.13.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==",
+        "shasum": "c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-7.0.3.tgz",
+        "fileCount": 50,
+        "unpackedSize": 92933,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeg5zlCRA9TVsSAnZWagAA67UP/0v7FNDUajl++p6xis/E\nyX/iTGa9FhCdz0usy/6trk20kx8RqF4Li0NrQ50r5GOCfFqFYgxbaweJIJM8\nZytCMDxfM4v/gVDwms92hV7BIVWcq+kPcReW8aDliUAWPIx33HnpCkPya7lG\nYbDv6vto4JJNggasmNF9dt5BTu4oof4q2t6VDXC1tMVHQ9SbsQo+0rpiTPDZ\nq+0py4XaNMKx0v1WH81pghxWr+z1AKn2pdx+24E4J4WUn/cA1Z0D7nN+HaTb\nckPlMx4yFJZDxT+EqdtQOHp7kxGht9Xk4xJD5bpUDyLcuurhQeNLLYiI/ynO\n4Txd8Tdby5INbAp9NCHMvzGmLQiZrfOLz54s2l6At3oQfDYShljIGouSgWtI\nktp7A1e5woBLk5KHTYssvDNZmFRBiL743rFGzFF+ZZ7eWT66aGqzDu52wpKF\nRcKidJp7jOgRHA3LruF9byaab6ApmO5tnNIF3qxG1DaAYIOCpHawjgcf+xAx\nDcF0cZy1jUnnOlziH3AwPfs99LlERHJViLXWReX/9jqzN9tp1R7BJQ6nIxjM\ngXp5IEjIe8r68jTbCyDMiwbfsW3//5qrSCvsOfAdQIcZBSeCWsbSblspABtS\nbM7ysSh6srvHNTj2q/zQm2zHxuGyl5beJrhP5n3jUM9IWOU1UYlhfa6nNV7T\nb7H7\r\n=76Y4\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_7.0.3_1585683684668_0.7417149445973905"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.0.0-beta.0": {
+      "name": "uuid",
+      "version": "8.0.0-beta.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        "require": "./dist/index.js",
+        "import": "./wrapper.mjs"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.9.0",
+        "@babel/preset-env": "7.9.5",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.3",
+        "@wdio/browserstack-service": "6.0.12",
+        "@wdio/cli": "6.0.15",
+        "@wdio/jasmine-framework": "6.0.15",
+        "@wdio/local-runner": "6.0.15",
+        "@wdio/spec-reporter": "6.0.14",
+        "@wdio/static-server-service": "6.0.13",
+        "@wdio/sync": "6.0.15",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.6",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.1",
+        "eslint-plugin-prettier": "3.1.3",
+        "husky": "4.2.5",
+        "jest": "25.3.0",
+        "lint-staged": "10.1.3",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.4",
+        "rollup": "2.6.1",
+        "rollup-plugin-terser": "5.3.0",
+        "runmd": "1.3.2",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![Build Status](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and UMD builds\n  - Node 8, 10, 12, 14\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - [React Native](#react-native)\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from uuid\\@3?** Your code is probably okay, but check out [Upgrading\nFrom uuid\\@3](#upgrading-from-uuid3) for details.\n\n## Quickstart\n\n```shell\nnpm install uuid\n```\n\nOnce installed, decide which type of UUID you need. RFC4122 provides for four\nversions, all of which are supported here. In order of popularity, they are:\n\n- Version 4 (random) - Created from cryptographically-strong random values\n- Version 1 (timestamp) - Created from the system clock (plus random values)\n- Version 5 (namespace, SHA-1) - Created from user-supplied name and namespace strings\n- Version 3 (namespace, MD5) - Like version 5, above, but with a poorer hash algorithm\n\n**Unsure which one to use?** Use version 4 (random) unless you have a specific need for one of the other versions. See also [this FAQ](https://github.com/tc39/proposal-uuid#faq).\n\n### Create Version 4 (Random) UUIDs\n\nECMAScript Module syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\nCommonJS syntax:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\n### Create Version 1 (Timestamp) UUIDs\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'\n```\n\n### Create Version 3 or Version 5 (Namespace) UUIDs\n\n&#x26a0;&#xfe0f; Version 3 and Version 5 UUIDs are basically the same, differing\nonly in the underlying hash algorithm. Note that per the RFC, \"_If backward\ncompatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n&#x26a0;&#xfe0f; If using a custom namespace **be sure to generate your own\nnamespace UUID**. You can grab one [here](https://www.uuidgenerator.net/).\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid'; // For version 5\nimport { v3 as uuidv3 } from 'uuid'; // For version 3\n\n// Using predefined DNS namespace (for domain names)\nuuidv5('hello.example.com', uuidv5.DNS); // ⇨ 'fdda765f-fc57-5604-a269-52a7df8164ec'\nuuidv3('hello.example.com', uuidv3.DNS); // ⇨ '9125a8dc-52ee-365b-a5aa-81b0b3681cf6'\n\n// Using predefined URL namespace (for URLs)\nuuidv5('http://example.com/hello', uuidv5.URL); // ⇨ '3bbcee75-cecc-5b56-8031-b6641c1ed1f1'\nuuidv3('http://example.com/hello', uuidv3.URL); // ⇨ 'c6235813-3ba4-3801-ae84-e0a6ebb7d138'\n\n// Using a custom namespace (See note, above, about generating your own\n// namespace UUID)\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\nuuidv3('Hello, World!', MY_NAMESPACE); // ⇨ 'e8b5a51d-11c8-3310-a6ab-367563f20686'\n```\n\n## API\n\n### Version 4 (Random)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\n// Incantations\nuuidv4();\nuuidv4(options);\nuuidv4(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 4 UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use in place of randomly generated values. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample: Generate string UUID with predefined `random` values\n\n```javascript\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\nExample: Generate two IDs in a single buffer\n\n```javascript\nconst buffer = new Array();\nuuidv4(null, buffer, 0); // ⇨ \n  // [\n  //    27, 157, 107, 205, 187,\n  //   253,  75,  45, 155,  93,\n  //   171, 141, 251, 189,  75,\n  //   237\n  // ]\nuuidv4(null, buffer, 16); // ⇨ \n  // [\n  //    27, 157, 107, 205, 187, 253,  75,  45,\n  //   155,  93, 171, 141, 251, 189,  75, 237,\n  //   155,  29, 235,  77,  59, 125,  75, 173,\n  //   155, 221,  43,  13, 123,  61, 203, 109\n  // ]\n```\n\n### Version 1 (Timestamp)\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\n// Incantations\nuuidv1();\nuuidv1(options);\nuuidv1(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 1 (timestamp) UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `node` - (Array) Node id as Array of 6 bytes (per 4.1.6). Default: Randomly generated ID. See note 1.\n  - `clockseq` - (Number between 0 - 0x3fff) RFC clock sequence. Default: An internally maintained clockseq is used.\n  - `msecs` - (Number) Time in milliseconds since unix Epoch. Default: The current time is used.\n  - `nsecs` - (Number between 0-9999) additional time, in 100-nanosecond units. Ignored if `msecs` is unspecified. Default: internal uuid counter is used, as per 4.2.1.2.\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use for initialization of `node` and `clockseq` as described above. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nExample: Generate string UUID with fully-specified options\n\n```javascript\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\nExample: In-place generation of two binary IDs\n\n```javascript\n// Generate two ids in an array\nconst arr = new Array();\nuuidv1(null, arr, 0); // ⇨ \n  // [\n  //    44,  94, 164, 192,  64, 103,\n  //    17, 233, 146,  52, 155,  29,\n  //   235,  77,  59, 125\n  // ]\nuuidv1(null, arr, 16); // ⇨ \n  // [\n  //    44, 94, 164, 192,  64, 103, 17, 233,\n  //   146, 52, 155,  29, 235,  77, 59, 125,\n  //    44, 94, 164, 193,  64, 103, 17, 233,\n  //   146, 52, 155,  29, 235,  77, 59, 125\n  // ]\n```\n\n### Version 5 (Namespace)\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Incantations\nuuidv5(name, namespace);\nuuidv5(name, namespace, buffer);\nuuidv5(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 5 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv5('hello world', MY_NAMESPACE); // ⇨ '9f282611-e0fd-5650-8953-89c8e342da0b'\n```\n\n### Version 3 (Namespace)\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n```javascript\nimport { v3 as uuidv3 } from 'uuid';\n\n// Incantations\nuuidv3(name, namespace);\nuuidv3(name, namespace, buffer);\nuuidv3(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 3 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv3('hello world', MY_NAMESPACE); // ⇨ '042ffd34-d989-321c-ad06-f60826172424'\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nThis library comes with [ECMAScript\nModules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) support for Node.js\nversions that support it ([example](./examples/node-esmodules/)) as well as bundlers like\n[rollup.js](https://rollupjs.org/guide/en/#tree-shaking) ([example](./examples/browser-rollup/))\nand [webpack](https://webpack.js.org/guides/tree-shaking/)\n([example](./examples/browser-webpack/)) (targeting both, Node.js and browser environments).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```\nnpm run build\n```\n\n## UMD Builds\n\nIf you want to load a minified UMD build directly in the browser you can use one of the popular npm\nCDNs:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n<script>\n  alert(uuidv4());\n</script>\n```\n\nor\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n<script>\n  alert(uuidv4());\n</script>\n```\n\nAvailable bundles:\n\n- https://unpkg.com/uuid@latest/dist/umd/\n- https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard\n[`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues)\nAPI is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n### React Native\n\n1. Install [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme)\n1. Import it before `uuid`:\n\n```javascript\nimport 'react-native-get-random-values';\nimport { v4 as uuidv4 } from 'uuid';\n```\n\n### Web Workers / Service Workers (Edge <= 18)\n\n[In Edge <= 18, Web Crypto is not supported in Web Workers or Service\nWorkers](https://caniuse.com/#feat=cryptography) and we are not aware of a polyfill (let us know if\nyou find one, please).\n\n## Upgrading From uuid\\@7\n\n### Only Named Exports Supported When Using with Node.js ESM\n\nuuid\\@7 did not come with native ECMAScript Module (ESM) support for Node.js. Importing it in\nNode.js ESM consequently imported the CommonJS source with a default export. This library now comes\nwith true Node.js ESM support and only provides named exports.\n\nInstead of doing:\n\n```javascript\nimport uuid from 'uuid';\nuuid.v4();\n```\n\nyou will now have to use the named exports:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n### Deep Requires No Longer Supported\n\nDeep requires like `require('uuid/v4')` [which have been deprecated in\nuuid\\@7](#deep-requires-now-deprecated) are no longer supported.\n\n## Upgrading From uuid\\@3\n\n\"_Wait... what happened to uuid\\@4 - uuid\\@6?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#version-4-random) and [version\n5](#version-5-namespace) UUIDs, and a possible [version\n6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been\nskipped. Hence, how we're now at uuid\\@7.\n\n### Deep Requires Now Deprecated\n\nuuid\\@3 encouraged the use of deep requires to minimize the bundle size of\nbrowser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of uuid\\@7 this library now provides ECMAScript modules builds, which allow\npackagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code.\nInstead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\nuuid\\@3 was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in uuid\\@3 and has been removed in uuid\\@7.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+      "readmeFilename": "README.md",
+      "gitHead": "99d65afdc42b98377842756c0743bc38dcb03570",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.0.0-beta.0",
+      "_nodeVersion": "12.16.2",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-Ql2iMiWxJYtI3biUynCFc1J1XS6rOWhv8zN60bWh0hHwJsYZQ4jM0Z2614qS6cyPRRDOu6NVz+cLmCLt6G8eMw==",
+        "shasum": "93e7d8e269022a2fa2027d6a77d4129de877fadb",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.0.0-beta.0.tgz",
+        "fileCount": 46,
+        "unpackedSize": 91304,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqeHhCRA9TVsSAnZWagAAnpkP/0679ao/BXaHII9VD9bV\noDN88fiLKeGq75k2kv10eszV2vmnkkkQI9k3609kcDSdZhamDEg5080eJpwO\nEhTBNyhYefqRiYj6Z69iw3VI3mfdRXaOtl1sFzECZVDQLX5Gd8xLhbOVlzwc\nWZyKrn58plFTuN6o6rhlZb7uWUZ11nTqW7et8Dp2b8qLXjDc6SopAQZt2TpM\neLfpe+eJoFrGHaKSUtJobXuh9gsgGttR3mk7Jnx4Py/dbgeXM5FIQlou8DzI\n+8xuud/e3IFDc/E85eLNUtJPmvDtMOxKAsr1X+/s1CxDVT2GHaw+myNFH6Gk\nk6JUmiWPwwVXt0GOQI9kgDfYEOdCtIQSt7CbjJjcjF7Ta8tlrDnqJKQCCgFl\nhXu6paimY4qgFW61/zbE3WleYMb9ktCAlrgWJtQa6Yj4LaVh+lTaPxKcgQCH\nXJAS8J4ZvR5+ixoKenX3qXogw56Z3kM3ucrXiY3iECxqOkAl1/Bl1FyJ6MN/\n7ZkcrfhZ1QFXKu2he6GmdoHUQ8N6g+33gnTYwlj2f6JsY4E1DRAC0ja08HIl\nCY9x8s6LyH+IfrJvRn1UarefQMPaYRXHadhbzjA8csPf2THV5L5zOjOQ21My\nQzu806y7mDIV2X8u37q1v6rrS6G8xvPnUpuNAUrwLL3dI12XxM3PA71xQXkZ\nw8fo\r\n=qoi5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.0.0-beta.0_1588191712623_0.4997152339873798"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.0.0": {
+      "name": "uuid",
+      "version": "8.0.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        "require": "./dist/index.js",
+        "import": "./wrapper.mjs"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.9.0",
+        "@babel/preset-env": "7.9.5",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.3",
+        "@wdio/browserstack-service": "6.0.12",
+        "@wdio/cli": "6.0.15",
+        "@wdio/jasmine-framework": "6.0.15",
+        "@wdio/local-runner": "6.0.15",
+        "@wdio/spec-reporter": "6.0.14",
+        "@wdio/static-server-service": "6.0.13",
+        "@wdio/sync": "6.0.15",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.6",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.1",
+        "eslint-plugin-prettier": "3.1.3",
+        "husky": "4.2.5",
+        "jest": "25.3.0",
+        "lint-staged": "10.1.3",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.4",
+        "rollup": "2.6.1",
+        "rollup-plugin-terser": "5.3.0",
+        "runmd": "1.3.2",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "a7d3d517382490eda6dd21158e5413261c45ccdd",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.0.0",
+      "_nodeVersion": "12.16.2",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-jOXGuXZAWdsTH7eZLtyXMqUb9EcWMGZNbL9YcGBJl4MH4nrxHmZJhEHvyLFrkxo+28uLb/NYRcStH48fnD0Vzw==",
+        "shasum": "bc6ccf91b5ff0ac07bbcdbf1c7c4e150db4dbb6c",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.0.0.tgz",
+        "fileCount": 46,
+        "unpackedSize": 92955,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqeazCRA9TVsSAnZWagAAXeAP/Rtdc7+Dt5TYs8hZ4NHM\nM/RTUFQsLzjfu6Z5Y8oFVNtRYKaAA0VrWPO6YSYs1RTF1JLRujkGrVw/rn6g\nVK7XwfJna4YS3iOLcg8r8UtNF+dSNcWNcxDF3s9c74WdU6Y4uNzx36prO738\n3XOUluCw2G82AzlY+/D7FZcMhjnDa42ZIU78NQ7NSeUBUQyLfVa+acSAALSi\nmX79a77iF/m+AVfLasb5WjYHM87IFi+HEC48ZYJN1p8rE2fRPUReZtjh7ppZ\nwCLEyyIDTagS9/1bjrP/MCzvGKoBTHl8hELRKMWnZ/aL0QFuHYd7XjFNnILN\nnoTn/B/ZRheZdywH9dh2XlyyoGEOH6UnfsBT/QWCyYrnLTRCYkBLeVUioOZr\ncvDK5Dbb1flkkbUZTfzR9bXdLhsq25c76f1DDRbz1oW3HrhrPI9BXanF3ikR\n6nfKz4vJUgU71bQevXIXjG3QTWlxWODWsb7RPfDK2XpndpBwwn1ztdMBbWBE\nhxcpzCuwfz4PU6xB930GjEw/eN3QbUL/2Ocq22TFupl5hyebg77Gm+nhENNm\nA0rpZ+6XYicFUflDFIiOyPZzu4cKup5esxfC+tJNCYaAUF0jQGmg1BdnjNqQ\n1Ifm08U/3yvft8JG6RkEWFoXqQDk6Qw+AuLfOO3YU/6Vc4Zjyp9hATZ8WvWF\nKjwJ\r\n=Hsnx\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.0.0_1588192946684_0.9321919222541137"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.1.0": {
+      "name": "uuid",
+      "version": "8.1.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "require": "./dist/index.js",
+          "import": "./wrapper.mjs"
+        }
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.8.4",
+        "@babel/core": "7.9.0",
+        "@babel/preset-env": "7.9.5",
+        "@commitlint/cli": "8.3.5",
+        "@commitlint/config-conventional": "8.3.4",
+        "@rollup/plugin-node-resolve": "7.1.3",
+        "@wdio/browserstack-service": "6.0.12",
+        "@wdio/cli": "6.0.15",
+        "@wdio/jasmine-framework": "6.0.15",
+        "@wdio/local-runner": "6.0.15",
+        "@wdio/spec-reporter": "6.0.14",
+        "@wdio/static-server-service": "6.0.13",
+        "@wdio/sync": "6.0.15",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.6",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.10.1",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.20.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.3",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.2.5",
+        "jest": "25.3.0",
+        "lint-staged": "10.1.3",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.4",
+        "rollup": "2.6.1",
+        "rollup-plugin-terser": "5.3.0",
+        "runmd": "1.3.2",
+        "standard-version": "7.1.0"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "pretest:benchmark": "npm run build",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "4124ec75f032da7b405b870b68219cda8495297f",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.1.0",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-CI18flHDznR0lq54xBycOVmphdCYnQLKn8abKn7PXUiKUGdEd+/l9LWNJmugXel4hXq7S+RMNl34ecyC9TntWg==",
+        "shasum": "6f1536eb43249f473abc6bd58ff983da1ca30d8d",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.1.0.tgz",
+        "fileCount": 46,
+        "unpackedSize": 95154,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJexXx2CRA9TVsSAnZWagAAabsP/RriwLU9HvZ0+fc/giqA\nSM/YFCU3fUv7SM7fSOnWBvkTIy3NgsqmCL0v5VsnffVZ5CZtCeF8gFQ9qWFx\ngwiZCautPzGGedJ8sP1yFNkR8QPHofjEk/e+j4CV5WY+i2FU0n3JvBehMcfT\nhTpCWSD42PG4x+HZ161Mtl9DxzXxXgGS+xw+X/kOa9m2cB8DjhPD2G+8C7ia\nmGNut2ul0py+lzsBQnWcA/fBlRZ7mR0aF7I7jGFcCt7721boIPVhyqQ/ihHq\neZI7UKwG3ofh8kHvO0wBZ9Mt/XplXFlzsBWY+gry4a2oJc+g/4AEmyVB6dQ3\neWvhCmueXSR0J4SPl2Husu9IAOofb0vwLj5VM9SUhbQAY95TD8947qHB6fFc\nBBh7OSrPjvfmYbE3Q03v8jvq1yahlBDqXD/ZVuvCVymMsFAg3mC0tai7kNbk\nbPlw+IiBt0S7xW5rmOtaLx4j4hw9YD+BtOJlgN0djbZT6qLNeBvqmYFTWE/v\nWuqUAfpEZFmnNcm5RuxxKh30WMq4Etspuag0PZ0HlIMIEZ+XOzwMD7yWM5dZ\n2pueDC5Bbq2yr0YNdTAff9s1YKdGt33ot8ugTzXdmlJu6n5e5WLr2EKb+3iD\nnLcwRHkbab2rrNPpHLfdQxsFW277oCbOxhfhMO2piwJ+wx30jD9anaYumqI5\nhbEG\r\n=3jU2\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.1.0_1590000758059_0.9915391136867249"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.2.0-beta.0": {
+      "name": "uuid",
+      "version": "8.2.0-beta.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        ".": {
+          "node": {
+            "module": "./dist/esm-node/index.js",
+            "require": "./dist/index.js",
+            "import": "./wrapper.mjs"
+          },
+          "default": "./dist/esm-browser/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.10.3",
+        "@babel/core": "7.10.3",
+        "@babel/preset-env": "7.10.3",
+        "@commitlint/cli": "9.0.1",
+        "@commitlint/config-conventional": "9.0.1",
+        "@rollup/plugin-node-resolve": "8.0.1",
+        "@wdio/browserstack-service": "6.1.15",
+        "@wdio/cli": "6.1.20",
+        "@wdio/jasmine-framework": "6.1.17",
+        "@wdio/local-runner": "6.1.20",
+        "@wdio/spec-reporter": "6.1.14",
+        "@wdio/static-server-service": "6.1.14",
+        "@wdio/sync": "6.1.14",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.7",
+        "eslint": "7.3.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.21.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.2.5",
+        "jest": "25.5.4",
+        "lint-staged": "10.2.11",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.5",
+        "rollup": "2.18.0",
+        "rollup-plugin-terser": "6.1.0",
+        "runmd": "1.3.2",
+        "standard-version": "8.0.0"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "pretest:benchmark": "npm run build",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![Build Status](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and [CDN builds (UMD)](#cdn-builds-umd)\n  - Node 8, 10, 12, 14\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - [React Native](#react-native)\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from uuid\\@3?** Your code is probably okay, but check out [Upgrading From uuid\\@3](#upgrading-from-uuid3) for details.\n\n## Quickstart\n\n```shell\nnpm install uuid\n```\n\nOnce installed, decide which type of UUID you need. RFC4122 provides for four versions, all of which are supported here. In order of popularity, they are:\n\n- Version 4 (random) - Created from cryptographically-strong random values\n- Version 1 (timestamp) - Created from the system clock (plus random values)\n- Version 5 (namespace, SHA-1) - Created from user-supplied name and namespace strings\n- Version 3 (namespace, MD5) - Like version 5, above, but with a poorer hash algorithm\n\n**Unsure which one to use?** Use version 4 (random) unless you have a specific need for one of the other versions. See also [this FAQ](https://github.com/tc39/proposal-uuid#faq).\n\n### Create Version 4 (Random) UUIDs\n\nECMAScript Module syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\nCommonJS syntax:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\n### Create Version 1 (Timestamp) UUIDs\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'\n```\n\n### Create Version 3 or Version 5 (Namespace) UUIDs\n\n&#x26a0;&#xfe0f; Version 3 and Version 5 UUIDs are basically the same, differing only in the underlying hash algorithm. Note that per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n&#x26a0;&#xfe0f; If using a custom namespace **be sure to generate your own namespace UUID**. You can grab one [here](https://www.uuidgenerator.net/).\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid'; // For version 5\nimport { v3 as uuidv3 } from 'uuid'; // For version 3\n\n// Using predefined DNS namespace (for domain names)\nuuidv5('hello.example.com', uuidv5.DNS); // ⇨ 'fdda765f-fc57-5604-a269-52a7df8164ec'\nuuidv3('hello.example.com', uuidv3.DNS); // ⇨ '9125a8dc-52ee-365b-a5aa-81b0b3681cf6'\n\n// Using predefined URL namespace (for URLs)\nuuidv5('http://example.com/hello', uuidv5.URL); // ⇨ '3bbcee75-cecc-5b56-8031-b6641c1ed1f1'\nuuidv3('http://example.com/hello', uuidv3.URL); // ⇨ 'c6235813-3ba4-3801-ae84-e0a6ebb7d138'\n\n// Using a custom namespace (See note, above, about generating your own\n// namespace UUID)\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\nuuidv3('Hello, World!', MY_NAMESPACE); // ⇨ 'e8b5a51d-11c8-3310-a6ab-367563f20686'\n```\n\n## API\n\n### Version 4 (Random)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\n// Incantations\nuuidv4();\nuuidv4(options);\nuuidv4(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 4 UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use in place of randomly generated values. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample: Generate string UUID with predefined `random` values\n\n```javascript\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\nExample: Generate two IDs in a single buffer\n\n```javascript\nconst buffer = new Array();\nuuidv4(null, buffer, 0); // ⇨ \n  // [\n  //    27, 157, 107, 205, 187,\n  //   253,  75,  45, 155,  93,\n  //   171, 141, 251, 189,  75,\n  //   237\n  // ]\nuuidv4(null, buffer, 16); // ⇨ \n  // [\n  //    27, 157, 107, 205, 187, 253,  75,  45,\n  //   155,  93, 171, 141, 251, 189,  75, 237,\n  //   155,  29, 235,  77,  59, 125,  75, 173,\n  //   155, 221,  43,  13, 123,  61, 203, 109\n  // ]\n```\n\n### Version 1 (Timestamp)\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\n// Incantations\nuuidv1();\nuuidv1(options);\nuuidv1(options, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 1 (timestamp) UUID.\n\n- `options` - (Object) Optional uuid state to apply. Properties may include:\n  - `node` - (Array) Node id as Array of 6 bytes (per 4.1.6). Default: Randomly generated ID. See note 1.\n  - `clockseq` - (Number between 0 - 0x3fff) RFC clock sequence. Default: An internally maintained clockseq is used.\n  - `msecs` - (Number) Time in milliseconds since unix Epoch. Default: The current time is used.\n  - `nsecs` - (Number between 0-9999) additional time, in 100-nanosecond units. Ignored if `msecs` is unspecified. Default: internal uuid counter is used, as per 4.2.1.2.\n  - `random` - (Number[16]) Array of 16 numbers (0-255) to use for initialization of `node` and `clockseq` as described above. Takes precedence over `options.rng`.\n  - `rng` - (Function) Random # generator function that returns an Array[16] of byte values (0-255). Alternative to `options.random`.\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing.\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nExample: Generate string UUID with fully-specified options\n\n```javascript\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\nExample: In-place generation of two binary IDs\n\n```javascript\n// Generate two ids in an array\nconst arr = new Array();\nuuidv1(null, arr, 0); // ⇨ \n  // [\n  //    44,  94, 164, 192,  64, 103,\n  //    17, 233, 146,  52, 155,  29,\n  //   235,  77,  59, 125\n  // ]\nuuidv1(null, arr, 16); // ⇨ \n  // [\n  //    44, 94, 164, 192,  64, 103, 17, 233,\n  //   146, 52, 155,  29, 235,  77, 59, 125,\n  //    44, 94, 164, 193,  64, 103, 17, 233,\n  //   146, 52, 155,  29, 235,  77, 59, 125\n  // ]\n```\n\n### Version 5 (Namespace)\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Incantations\nuuidv5(name, namespace);\nuuidv5(name, namespace, buffer);\nuuidv5(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 5 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv5('hello world', MY_NAMESPACE); // ⇨ '9f282611-e0fd-5650-8953-89c8e342da0b'\n```\n\n### Version 3 (Namespace)\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n```javascript\nimport { v3 as uuidv3 } from 'uuid';\n\n// Incantations\nuuidv3(name, namespace);\nuuidv3(name, namespace, buffer);\nuuidv3(name, namespace, buffer, offset);\n```\n\nGenerate and return a RFC4122 version 3 UUID.\n\n- `name` - (String | Array[]) \"name\" to create UUID with\n- `namespace` - (String | Array[]) \"namespace\" UUID either as a String or Array[16] of byte values\n- `buffer` - (Array | Buffer) Array or buffer where UUID bytes are to be written.\n- `offset` - (Number) Starting index in `buffer` at which to begin writing. Default = 0\n\nReturns `buffer`, if specified, otherwise the string form of the UUID\n\nExample:\n\n```javascript\nuuidv3('hello world', MY_NAMESPACE); // ⇨ '042ffd34-d989-321c-ad06-f60826172424'\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```shell\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nThis library comes with [ECMAScript Modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) support for Node.js versions that support it ([example](./examples/node-esmodules/)) as well as bundlers like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking) ([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/) ([example](./examples/browser-webpack/)) (targeting both, Node.js and browser environments).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```shell\nnpm run build\n```\n\n## CDN Builds (UMD)\n\nThis module may be loaded directly into a browser from any of the following CDNs:\n\n**Using [UNPKG](https://unpkg.com/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [jsDelivr](https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [cdnjs](https://cdnjs.com/libraries/uuid)**:\n\n```html\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js\"></script>\n```\n\nThese CDNs all provide the same [`uuidv4()`](#version-4-random) method:\n\n```html\n<script>\n  uuidv4(); // ⇨ '55af1e37-0734-46d8-b070-a1e42e4fc392'\n</script>\n```\n\nMethods for the other algorithms ([`uuidv1()`](#version-1-timestamp), [`uuidv3()`](#version-3-namespace) and [`uuidv5()`](#version-5-namespace)) are available from the files `uuidv1.min.js`, `uuidv3.min.js` and `uuidv5.min.js` respectively.\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard [`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues) API is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n### React Native\n\n1. Install [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme)\n1. Import it before `uuid`:\n\n```javascript\nimport 'react-native-get-random-values';\nimport { v4 as uuidv4 } from 'uuid';\n```\n\n### Web Workers / Service Workers (Edge <= 18)\n\n[In Edge <= 18, Web Crypto is not supported in Web Workers or Service Workers](https://caniuse.com/#feat=cryptography) and we are not aware of a polyfill (let us know if you find one, please).\n\n## Upgrading From uuid\\@7\n\n### Only Named Exports Supported When Using with Node.js ESM\n\nuuid\\@7 did not come with native ECMAScript Module (ESM) support for Node.js. Importing it in Node.js ESM consequently imported the CommonJS source with a default export. This library now comes with true Node.js ESM support and only provides named exports.\n\nInstead of doing:\n\n```javascript\nimport uuid from 'uuid';\nuuid.v4();\n```\n\nyou will now have to use the named exports:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n### Deep Requires No Longer Supported\n\nDeep requires like `require('uuid/v4')` [which have been deprecated in uuid\\@7](#deep-requires-now-deprecated) are no longer supported.\n\n## Upgrading From uuid\\@3\n\n\"_Wait... what happened to uuid\\@4 - uuid\\@6?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#version-4-random) and [version 5](#version-5-namespace) UUIDs, and a possible [version 6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been skipped. Hence, how we're now at uuid\\@7.\n\n### Deep Requires Now Deprecated\n\nuuid\\@3 encouraged the use of deep requires to minimize the bundle size of browser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of uuid\\@7 this library now provides ECMAScript modules builds, which allow packagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code. Instead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\nuuid\\@3 was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in uuid\\@3 and has been removed in uuid\\@7.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+      "readmeFilename": "README.md",
+      "gitHead": "e5075c871ad571b7e08a300b855e5a308b021aef",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.2.0-beta.0",
+      "_nodeVersion": "12.18.0",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-hwW39cDgHKtopHIRUBDMrGIpPTWOYEid17+nr9uQcuijDGMLZ9NgBZOFOfgn/UISN+3NVbXpvytwDR8WlU7RrQ==",
+        "shasum": "bbab71018e75e556381986bbaaf849648d0665c5",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.2.0-beta.0.tgz",
+        "fileCount": 46,
+        "unpackedSize": 95945,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe8bGCCRA9TVsSAnZWagAAdrQP/22jrv7ITic0g4+xXc1W\n0DFiX/wf2FRbebPCrSwgXDX0DprjToyNMOOPIvOSSv8aveUYxOTLvBUEWIDA\nwWegdJT3d+cRHgWW6ipWO8lHFEMWmil0OJXfbL5QbEQDilcfConc3JIVybh+\ngActhVsquZhD1kC1W/m3hg48jT1ku3ferfhbNVLheYjyKdzHrw4Zp+cpU9AV\nlFqKWebIj6j7+BgWVP0HDoxV9BuRE4hPtk8Gy2I6Ns3jQHHMKydjCXbk9/UE\nKYh/R5wkAimrTJiOFP7KD6YkiRnrI1TLGpOoEwfgZdh4D53JFv6dzh3Aoa2M\nSsbd+a5vY7PxtfcPbm2ljDeTfKHld/srCWZVQHoeRnq5iGbXcrNz0TPjdKE8\ndUJhGM5QR4P9xB8o/n4Rsx58xnnLcWnVjOE+cPoGRiYTAsM6/i8QIeCSe3t3\nKr+qOyk+bMAGxrnriCo4O66C4fZiFcjQftYVPc2LgzvOGWvvCSGUgfuY5H4B\nqfOBMXyfQYEMSh4Io6sYDVGMdvJcuMsXHkzz08+hqyrWWgFoy0G8tFa4JqQG\nsDttZp20egk/VsszFnbUFFZjN5mK9YzoYq4xtv+VV9jPvawSQO6UZxw4WZ6h\nLW52Su/iDTaXV3EXvzKVtP2kLIDBS+fgVtIccKmGiIDtqC63PfCgZEqOt88T\nCjMB\r\n=Qdr4\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.2.0-beta.0_1592897922131_0.21824069661026968"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.2.0": {
+      "name": "uuid",
+      "version": "8.2.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        ".": {
+          "node": {
+            "module": "./dist/esm-node/index.js",
+            "require": "./dist/index.js",
+            "import": "./wrapper.mjs"
+          },
+          "default": "./dist/esm-browser/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.10.3",
+        "@babel/core": "7.10.3",
+        "@babel/preset-env": "7.10.3",
+        "@commitlint/cli": "9.0.1",
+        "@commitlint/config-conventional": "9.0.1",
+        "@rollup/plugin-node-resolve": "8.0.1",
+        "@wdio/browserstack-service": "6.1.15",
+        "@wdio/cli": "6.1.20",
+        "@wdio/jasmine-framework": "6.1.17",
+        "@wdio/local-runner": "6.1.20",
+        "@wdio/spec-reporter": "6.1.14",
+        "@wdio/static-server-service": "6.1.14",
+        "@wdio/sync": "6.1.14",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.7",
+        "eslint": "7.3.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.21.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.2.5",
+        "jest": "25.5.4",
+        "lint-staged": "10.2.11",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.5",
+        "rollup": "2.18.0",
+        "rollup-plugin-terser": "6.1.0",
+        "runmd": "1.3.2",
+        "standard-version": "8.0.0"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "pretest:benchmark": "npm run build",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "b51f172b22580dabd382861c1a6316173244f51b",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.2.0",
+      "_nodeVersion": "12.18.0",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-CYpGiFTUrmI6OBMkAdjSDM0k5h8SkkiTP4WAjQgDgNB1S3Ou9VBEvr6q0Kv2H1mMk7IWfxYGpMH5sd5AvcIV2Q==",
+        "shasum": "cb10dd6b118e2dada7d0cd9730ba7417c93d920e",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.2.0.tgz",
+        "fileCount": 46,
+        "unpackedSize": 97285,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe8mxuCRA9TVsSAnZWagAARZsQAJz+kpmfR+I/GNkijZ0M\nmZWvdB5CuNKL/w0w4Lz7KPL43fpPSpWzmMs4uS49fXddbFPNUjO9tAYtWjD+\nuhvvWLjPcg8LNBnlWZJGLYIqjqexvERyrm+vPntComY60qwAxx2v+ZCIAeYj\nBKVXw2zUX0y1ICQWIvVpfUXXT5Zgl40CFEOSaBhewbWQuckED6g0rmlp4UTi\npNHIcrQxh/zzQjiPdQEMOf8jxMa3nbPwW62mAeIjgNiQCsqTi+9JwYDmJWaw\n2zKQu77TReMdv4IsULhgTiTXkH5LWkt+kethQhzZt5hMamRIrnAp1D6MyWoJ\nWHZYja+V54wN7lvAv2LXRfsLOEWK/7/sj2VenobnelbmhmOFKn3PrQPC9bVM\nFz9zQYuc6FpY+xHrM4kmWKuNsHcO38xgB7trsT22vWRJa930H8mjboXm2zNB\nq85115NCbZNrX9Q3vWtwPAkEXxtL3XP4h0AQcq37u2Ok7f/a7dt5+BHdOqd0\n/vazeDTgVifwKLVUCshvsZlCVD7Yc8hw16m43I4g9HlinPFXACTdLON5t0zA\nfus/e3SE2KQrw4AnzuFzF3hM2uiTWGp8agfJ6RqF2DFAFKrswA9oz7QJjT6k\n/pQhrcu9tCW0bnKYD3nT9258szQpiILve+VEUzwrlU+VR3g9nH5ef9SOOQkC\nn1aP\r\n=mMth\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.2.0_1592945774107_0.25456791127041134"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.3.0-beta.0": {
+      "name": "uuid",
+      "version": "8.3.0-beta.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        ".": {
+          "node": {
+            "module": "./dist/esm-node/index.js",
+            "require": "./dist/index.js",
+            "import": "./wrapper.mjs"
+          },
+          "default": "./dist/esm-browser/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.10.3",
+        "@babel/core": "7.10.3",
+        "@babel/preset-env": "7.10.3",
+        "@commitlint/cli": "9.1.2",
+        "@commitlint/config-conventional": "9.0.1",
+        "@rollup/plugin-node-resolve": "8.0.1",
+        "@wdio/browserstack-service": "6.1.15",
+        "@wdio/cli": "6.1.20",
+        "@wdio/jasmine-framework": "6.1.17",
+        "@wdio/local-runner": "6.1.20",
+        "@wdio/spec-reporter": "6.1.14",
+        "@wdio/static-server-service": "6.1.14",
+        "@wdio/sync": "6.1.14",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.7",
+        "eslint": "7.3.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.21.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.2.5",
+        "jest": "25.5.4",
+        "lint-staged": "10.2.11",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.5",
+        "random-seed": "0.3.0",
+        "rollup": "2.18.0",
+        "rollup-plugin-terser": "6.1.0",
+        "runmd": "1.3.2",
+        "standard-version": "8.0.2"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "pretest:benchmark": "npm run build",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![CI](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ACI) [![Browser](https://github.com/uuidjs/uuid/workflows/Browser/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ABrowser)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and [CDN builds](#cdn-builds)\n  - Node 8, 10, 12, 14\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - [React Native](#react-native)\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from `uuid@3.x`?** Your code is probably okay, but check out [Upgrading From `uuid@3.x`](#upgrading-from-uuid3x) for details.\n\n## Quickstart\n\nTo create a random UUID...\n\n**1. Install**\n\n```shell\nnpm install uuid\n```\n\n**2. Create a UUID** (ES6 module syntax)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\n... or using CommonJS syntax:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nFor timestamp UUIDs, namespace UUIDs, and other options read on ...\n\n## API Summary\n\n|  |  |  |\n| --- | --- | --- |\n| [`uuid.NIL`](#uuidnil) | The nil UUID string (all zeros) | New in `uuid@8.2` |\n| [`uuid.parse()`](#uuidparsestr) | Convert UUID string to array of bytes | New in `uuid@8.2` |\n| [`uuid.stringify()`](#uuidstringifyarr-offset) | Convert array of bytes to UUID string | New in `uuid@8.2` |\n| [`uuid.v1()`](#uuidv1options-buffer-offset) | Create a version 1 (timestamp) UUID |  |\n| [`uuid.v3()`](#uuidv3name-namespace-buffer-offset) | Create a version 3 (namespace w/ MD5) UUID |  |\n| [`uuid.v4()`](#uuidv4options-buffer-offset) | Create a version 4 (random) UUID |  |\n| [`uuid.v5()`](#uuidv5name-namespace-buffer-offset) | Create a version 5 (namespace w/ SHA-1) UUID |  |\n| [`uuid.validate()`](#uuidvalidatestr) | Test a string to see if it is a valid UUID | New in `uuid@8.2` |\n| [`uuid.version()`](#uuidversionstr) | Detect RFC version of a UUID | New in `uuid@8.2` |\n\n## API\n\n### uuid.NIL\n\nThe nil UUID string (all zeros).\n\nExample:\n\n```javascript\nimport { NIL as NIL_UUID } from 'uuid';\n\nNIL_UUID; // ⇨ '00000000-0000-0000-0000-000000000000'\n```\n\n### uuid.parse(str)\n\nConvert UUID string to array of bytes\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Uint8Array[16]`                         |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nExample:\n\n```javascript\nimport { parse as uuidParse } from 'uuid';\n\nuuidParse('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ \n  // Uint8Array(16) [\n  //   110, 192, 189, 127,  17,\n  //   192,  67, 218, 151,  94,\n  //    42, 138, 217, 235, 174,\n  //    11\n  // ]\n```\n\n### uuid.stringify(arr[, offset])\n\nConvert array of bytes to UUID string\n\n|                |                                                                             |\n| -------------- | --------------------------------------------------------------------------- |\n| `arr`          | `Array`-like collection of 16 values (starting from `offset`) between 0-255 |\n| [`offset` = 0] | `Number` Starting index in the Array                                        |\n| _returns_      | `String`                                                                    |\n| _throws_       | `TypeError` if a valid UUID string cannot be generated                      |\n\nExample:\n\n```javascript\nimport { stringify as uuidStringify } from 'uuid';\n\nconst uuidBytes = [110, 192, 189, 127, 17, 192, 67, 218, 151, 94, 42, 138, 217, 235, 174, 11];\n\nuuidStringify(uuidBytes); // ⇨ '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'\n```\n\n### uuid.v1([options[, buffer[, offset]]])\n\nCreate an RFC version 1 (timestamp) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.node` ] | RFC \"node\" field as an `Array[6]` of byte values (per 4.1.6) |\n| [`options.clockseq`] | RFC \"clock sequence\" as a `Number` between 0 - 0x3fff |\n| [`options.msecs`] | RFC \"timestamp\" field (`Number` of milliseconds, unix epoch) |\n| [`options.nsecs`] | RFC \"timestamp\" field (`Number` of nanseconds to add to `msecs`, should be 0-10,000) |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n| _throws_ | `Error` if more than 10M UUIDs/sec are requested |\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nNote: `options.random` and `options.rng` are only meaningful on the very first call to `v1()`, where they may be passed to initialize the internal `node` and `clockseq` fields.\n\nExample:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'\n```\n\nExample using `options`:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\n### uuid.v3(name, namespace[, buffer[, offset]])\n\nCreate an RFC version 3 (namespace w/ MD5) UUID\n\nAPI is identical to `v5()`, but uses \"v3\" instead.\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n### uuid.v4([options[, buffer[, offset]]])\n\nCreate an RFC version 4 (random) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nExample:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nExample using predefined `random` values:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\n### uuid.v5(name, namespace[, buffer[, offset]])\n\nCreatea an RFC version 5 (namespace w/ SHA-1) UUID\n\n|  |  |\n| --- | --- |\n| `name` | `String \\| Array` |\n| `namespace` | `String \\| Array[16]` Namespace UUID |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nNote: The RFC `DNS` and `URL` namespaces are available as `v5.DNS` and `v5.URL`.\n\nExample with custom namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Define a custom namespace.  Readers, create your own using something like\n// https://www.uuidgenerator.net/\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\n\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\n```\n\nExample with RFC `URL` namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\nuuidv5('https://www.w3.org/', uuidv5.URL); // ⇨ 'c106a26a-21bb-5538-8bf2-57095d1976c1'\n```\n\n### uuid.validate(str)\n\nTest a string to see if it is a valid UUID\n\n|           |                                                     |\n| --------- | --------------------------------------------------- |\n| `str`     | `String` to validate                                |\n| _returns_ | `true` if string is a valid UUID, `false` otherwise |\n\nExample:\n\n```javascript\nimport { validate as uuidValidate } from 'uuid';\n\nuuidValidate('not a UUID'); // ⇨ false\nuuidValidate('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ true\n```\n\n### uuid.version(str)\n\nDetect RFC version of a UUID\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Number` The RFC version of the UUID     |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nExample:\n\n```javascript\nimport { version as uuidVersion } from 'uuid';\n\nuuidVersion('45637ec4-c85f-11ea-87d0-0242ac130003'); // ⇨ 1\nuuidVersion('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ 4\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```shell\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nThis library comes with [ECMAScript Modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) support for Node.js versions that support it ([example](./examples/node-esmodules/)) as well as bundlers like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking) ([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/) ([example](./examples/browser-webpack/)) (targeting both, Node.js and browser environments).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```shell\nnpm run build\n```\n\n## CDN Builds\n\n### ECMAScript Modules\n\nTo load this module directly into modern browsers that [support loading ECMAScript Modules](https://caniuse.com/#feat=es6-module) you can make use of [jspm](https://jspm.org/):\n\n```html\n<script type=\"module\">\n  import { v4 as uuidv4 } from 'https://jspm.dev/uuid';\n  console.log(uuidv4()); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n</script>\n```\n\n### UMD\n\nTo load this module directly into older browsers you can use the [UMD (Universal Module Definition)](https://github.com/umdjs/umd) builds from any of the following CDNs:\n\n**Using [UNPKG](https://unpkg.com/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [jsDelivr](https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [cdnjs](https://cdnjs.com/libraries/uuid)**:\n\n```html\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js\"></script>\n```\n\nThese CDNs all provide the same [`uuidv4()`](#uuidv4options-buffer-offset) method:\n\n```html\n<script>\n  uuidv4(); // ⇨ '55af1e37-0734-46d8-b070-a1e42e4fc392'\n</script>\n```\n\nMethods for the other algorithms ([`uuidv1()`](#uuidv1options-buffer-offset), [`uuidv3()`](#uuidv3name-namespace-buffer-offset) and [`uuidv5()`](#uuidv5name-namespace-buffer-offset)) are available from the files `uuidv1.min.js`, `uuidv3.min.js` and `uuidv5.min.js` respectively.\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard [`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues) API is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n### React Native\n\n1. Install [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme)\n1. Import it before `uuid`:\n\n```javascript\nimport 'react-native-get-random-values';\nimport { v4 as uuidv4 } from 'uuid';\n```\n\n### Web Workers / Service Workers (Edge <= 18)\n\n[In Edge <= 18, Web Crypto is not supported in Web Workers or Service Workers](https://caniuse.com/#feat=cryptography) and we are not aware of a polyfill (let us know if you find one, please).\n\n## Upgrading From `uuid@7.x`\n\n### Only Named Exports Supported When Using with Node.js ESM\n\n`uuid@7.x` did not come with native ECMAScript Module (ESM) support for Node.js. Importing it in Node.js ESM consequently imported the CommonJS source with a default export. This library now comes with true Node.js ESM support and only provides named exports.\n\nInstead of doing:\n\n```javascript\nimport uuid from 'uuid';\nuuid.v4();\n```\n\nyou will now have to use the named exports:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n### Deep Requires No Longer Supported\n\nDeep requires like `require('uuid/v4')` [which have been deprecated in `uuid@7.x`](#deep-requires-now-deprecated) are no longer supported.\n\n## Upgrading From `uuid@3.x`\n\n\"_Wait... what happened to `uuid@4.x` - `uuid@6.x`?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#uuidv4options-buffer-offset) and [version 5](#uuidv5name-namespace-buffer-offset) UUIDs, and a possible [version 6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been skipped.\n\n### Deep Requires Now Deprecated\n\n`uuid@3.x` encouraged the use of deep requires to minimize the bundle size of browser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of `uuid@7.x` this library now provides ECMAScript modules builds, which allow packagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code. Instead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\n`uuid@3.x` was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in `uuid@3.x` and has been removed in `uuid@7.x`.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
+      "readmeFilename": "README.md",
+      "gitHead": "d6c185161b80f277ff03fc151e0f4bfb848a4570",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.3.0-beta.0",
+      "_nodeVersion": "12.18.0",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-YX12mJFOtrnE7o7GIbtYIoTrRN+5DTKLJXiUMnucohXeBPY0UYIaK2HrteuarIrWrjNvZ7FROqXMRNPKQz8wMg==",
+        "shasum": "fbe17ffc7b6214d36a52c89f9e19c82dcc0f294a",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.3.0-beta.0.tgz",
+        "fileCount": 66,
+        "unpackedSize": 112220,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGL2qCRA9TVsSAnZWagAAqYsP/iD/kd3ajMto1FoCWAiT\n4B4tJRVvY6XYxtnYSukB3C2elXkcb8qWDE60nDRq/PWqBNuKDlXnXxpgGE4C\nJcfY1i+XDP4BxTUM1FxJGhrx6uNTun5zLJnBS02oUxe4LCIeuWus+160ETtQ\ndaWsEglcDQ6yiInKkFGMHb0FdRVPJofjylbxfj/dAVrgHvnCi9obUSw/m8ua\nmrVskeJ8U/X93H4rKen4QDDGyseB3tHqkX2GhrZqdOj3zmX4QAdonBmSyTny\n97YJ5xSQ/vFTEXVAPmbjrp6M5OAGnXS3YYNl3nTUhbsrs2POgSrWCLiucwX7\n1S576Rj2PmMP1PZ6lomFd3HafAlfz9ftGii98bZrG1aWZl06K3jZahYi53tn\nAknpoKggfk/4I0UpeX5/FiO4klZcR1/ggSC2PaJCcrIalYbCdBkzcWCfzXEh\nqlYRzR3S+nqOJqL5KJmSWgZsJVXMAAmx07wyXUHyBoPUj+oitxCN0ueANTUN\nzEibvxMUtj80iUv9FfN0eQUjnyIF4n0+8yz8L6yf4zK14LyaKr16bZq/iNSM\nOVgFp5jhqcFMGnFVaheX74N6h0VezVBOr8YB75pvZGbVGR7FMg3nBLaC76A/\nQtDObF08Z096NaZZhjiZGziMj8UWwnLVPg5EXedSqZPCqclU6Jsow1MT6QHX\n7jEI\r\n=YaPl\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.3.0-beta.0_1595456937747_0.8708052138920852"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.3.0": {
+      "name": "uuid",
+      "version": "8.3.0",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        ".": {
+          "node": {
+            "module": "./dist/esm-node/index.js",
+            "require": "./dist/index.js",
+            "import": "./wrapper.mjs"
+          },
+          "default": "./dist/esm-browser/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.10.3",
+        "@babel/core": "7.10.3",
+        "@babel/preset-env": "7.10.3",
+        "@commitlint/cli": "9.1.2",
+        "@commitlint/config-conventional": "9.0.1",
+        "@rollup/plugin-node-resolve": "8.0.1",
+        "@wdio/browserstack-service": "6.1.15",
+        "@wdio/cli": "6.1.20",
+        "@wdio/jasmine-framework": "6.1.17",
+        "@wdio/local-runner": "6.1.20",
+        "@wdio/spec-reporter": "6.1.14",
+        "@wdio/static-server-service": "6.1.14",
+        "@wdio/sync": "6.1.14",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.2.7",
+        "eslint": "7.3.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.21.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.2.5",
+        "jest": "25.5.4",
+        "lint-staged": "10.2.11",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.0.5",
+        "random-seed": "0.3.0",
+        "rollup": "2.18.0",
+        "rollup-plugin-terser": "6.1.0",
+        "runmd": "1.3.2",
+        "standard-version": "8.0.2"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "pretest:benchmark": "npm run build",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "a91f78d9e593b8a9af1cfebdf33b771b82c42475",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.3.0",
+      "_nodeVersion": "12.18.0",
+      "_npmVersion": "6.14.4",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-fX6Z5o4m6XsXBdli9g7DtWgAx+osMsRRZFKma1mIUsLCz6vRvv+pz5VNbyu9UEDzpMWulZfvpgb/cmDXVulYFQ==",
+        "shasum": "ab738085ca22dc9a8c92725e459b1d507df5d6ea",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.3.0.tgz",
+        "fileCount": 66,
+        "unpackedSize": 112959,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfHySQCRA9TVsSAnZWagAABs0P/jASs5mpvF0tYjja886Z\nK7hAuenEWArgOaP5Ec7kDuwTmvq7m0sDVM630EI+oobCitzyvuN2WsjSbF6K\nobylxJb0OE24W9zy1qCIzMZdsWMWj5K9I48ZowBHUcnIRS02UbWBndNJf7d/\nyCOvP75r9O+tYSoqKdj6hQjGr+5/wQk4WX1u8EI5RT0Z33hoBZ4geFsg8XBW\nlrjKjUaePNjBFwlJxO1osSXd/H2pWEFy9olflx9owJHdscwvz5FNawTSmxaF\n55pYI7kZc3KgQBb8x/d6sYzSC0HcQ87EnZCnlm8AU4cdZQNkak9Q1MDVG9fg\n+GvFVDvrzmx77HxylrsA00HrXK2iJnwKl7rABm7BJmtNGH3FuuKAyBUaMlLl\n//7UwUqh7w0Gu2TjJpNqTkVOzRxwbrvasQEDWPjfZqYKCjpUhM2AHIkGBom6\no3qTej2yW0XcTixgQR4hGhNcyEsFNka3SVUcpek8elwFrrOMpXbnCF5pe+f9\nVwjn3Dg3Ld5vS4KNATeCg90G54MRlkHcajFutLKmmsgYrakqIdS8rbGDA0wi\n/KNYzTVW34HyIUozC4lSEIbYJluob/SqvAxQW9PLH0c/O+OcWj4jF4gHcGzU\n1oMIZvEOSp3eMPc5p9bzzqT2EAx7o5KD2LUfdYCPXQ/pnRoYNRbxHjeU7ys4\n+7pE\r\n=Cc7C\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "robert@broofa.com",
+          "name": "broofa"
+        },
+        {
+          "email": "dev@tavan.de",
+          "name": "ctavan"
+        },
+        {
+          "email": "shtylman@gmail.com",
+          "name": "defunctzombie"
+        },
+        {
+          "email": "vincent.voyer@gmail.com",
+          "name": "vvo"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.3.0_1595876496032_0.44563664352850596"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.3.1": {
+      "name": "uuid",
+      "version": "8.3.1",
+      "description": "RFC4122 (v1, v4, and v5) UUIDs",
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "keywords": [
+        "uuid",
+        "guid",
+        "rfc4122"
+      ],
+      "license": "MIT",
+      "bin": {
+        "uuid": "dist/bin/uuid"
+      },
+      "sideEffects": false,
+      "main": "./dist/index.js",
+      "exports": {
+        ".": {
+          "node": {
+            "module": "./dist/esm-node/index.js",
+            "require": "./dist/index.js",
+            "import": "./wrapper.mjs"
+          },
+          "default": "./dist/esm-browser/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "module": "./dist/esm-node/index.js",
+      "browser": {
+        "./dist/md5.js": "./dist/md5-browser.js",
+        "./dist/rng.js": "./dist/rng-browser.js",
+        "./dist/sha1.js": "./dist/sha1-browser.js",
+        "./dist/esm-node/index.js": "./dist/esm-browser/index.js"
+      },
+      "devDependencies": {
+        "@babel/cli": "7.11.6",
+        "@babel/core": "7.11.6",
+        "@babel/preset-env": "7.11.5",
+        "@commitlint/cli": "11.0.0",
+        "@commitlint/config-conventional": "11.0.0",
+        "@rollup/plugin-node-resolve": "9.0.0",
+        "babel-eslint": "10.1.0",
+        "bundlewatch": "0.3.1",
+        "eslint": "7.10.0",
+        "eslint-config-prettier": "6.12.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.22.1",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-promise": "4.2.1",
+        "eslint-plugin-standard": "4.0.1",
+        "husky": "4.3.0",
+        "jest": "25.5.4",
+        "lint-staged": "10.4.0",
+        "npm-run-all": "4.1.5",
+        "optional-dev-dependency": "2.0.1",
+        "prettier": "2.1.2",
+        "random-seed": "0.3.0",
+        "rollup": "2.28.2",
+        "rollup-plugin-terser": "7.0.2",
+        "runmd": "1.3.2",
+        "standard-version": "9.0.0"
+      },
+      "optionalDevDependencies": {
+        "@wdio/browserstack-service": "6.4.0",
+        "@wdio/cli": "6.4.0",
+        "@wdio/jasmine-framework": "6.4.0",
+        "@wdio/local-runner": "6.4.0",
+        "@wdio/spec-reporter": "6.4.0",
+        "@wdio/static-server-service": "6.4.0",
+        "@wdio/sync": "6.4.0"
+      },
+      "scripts": {
+        "examples:browser:webpack:build": "cd examples/browser-webpack && npm install && npm run build",
+        "examples:browser:rollup:build": "cd examples/browser-rollup && npm install && npm run build",
+        "examples:node:commonjs:test": "cd examples/node-commonjs && npm install && npm test",
+        "examples:node:esmodules:test": "cd examples/node-esmodules && npm install && npm test",
+        "lint": "npm run eslint:check && npm run prettier:check",
+        "eslint:check": "eslint src/ test/ examples/ *.js",
+        "eslint:fix": "eslint --fix src/ test/ examples/ *.js",
+        "pretest": "[ -n $CI ] || npm run build",
+        "test": "BABEL_ENV=commonjs node --throw-deprecation node_modules/.bin/jest test/unit/",
+        "pretest:browser": "optional-dev-dependency && npm run build && npm-run-all --parallel examples:browser:**",
+        "test:browser": "wdio run ./wdio.conf.js",
+        "pretest:node": "npm run build",
+        "test:node": "npm-run-all --parallel examples:node:**",
+        "test:pack": "./scripts/testpack.sh",
+        "pretest:benchmark": "npm run build",
+        "test:benchmark": "cd examples/benchmark && npm install && npm test",
+        "prettier:check": "prettier --ignore-path .prettierignore --check '**/*.{js,jsx,json,md}'",
+        "prettier:fix": "prettier --ignore-path .prettierignore --write '**/*.{js,jsx,json,md}'",
+        "bundlewatch": "npm run pretest:browser && bundlewatch --config bundlewatch.config.json",
+        "md": "runmd --watch --output=README.md README_js.md",
+        "docs": "( node --version | grep -q 'v12' ) && ( npm run build && runmd --output=README.md README_js.md )",
+        "docs:diff": "npm run docs && git diff --quiet README.md",
+        "build": "./scripts/build.sh",
+        "prepack": "npm run build",
+        "release": "standard-version --no-verify"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uuidjs/uuid.git"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.{js,jsx,json,md}": [
+          "prettier --write"
+        ],
+        "*.{js,jsx}": [
+          "eslint --fix"
+        ]
+      },
+      "standard-version": {
+        "scripts": {
+          "postchangelog": "prettier --write CHANGELOG.md"
+        }
+      },
+      "contributors": [
+        {
+          "name": "Robert Kieffer",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "Christoph Tavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "AJ ONeal",
+          "email": "coolaj86@gmail.com"
+        },
+        {
+          "name": "Vincent Voyer",
+          "email": "vincent@zeroload.net"
+        },
+        {
+          "name": "Roman Shtylman",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "gitHead": "252ebcfb33b2d056963a530fc02067ae3de6095a",
+      "bugs": {
+        "url": "https://github.com/uuidjs/uuid/issues"
+      },
+      "homepage": "https://github.com/uuidjs/uuid#readme",
+      "_id": "uuid@8.3.1",
+      "_nodeVersion": "12.18.4",
+      "_npmVersion": "6.14.6",
+      "_npmUser": {
+        "name": "ctavan",
+        "email": "dev@tavan.de"
+      },
+      "dist": {
+        "integrity": "sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==",
+        "shasum": "2ba2e6ca000da60fce5a196954ab241131e05a31",
+        "tarball": "https://registry.npmjs.org/uuid/-/uuid-8.3.1.tgz",
+        "fileCount": 66,
+        "unpackedSize": 114950,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfee5mCRA9TVsSAnZWagAAP8AP/RlQNqqmCN+O+fGNB+/W\n3JIWNWGPhLXMAiHDUrLxEJsCyuoG4F5fm3ouesRKUiChdptAGWKPElsuPiU2\nSONN3lZclwU8K/zc8jwde4B/4Si+UaHdtTZa8+66bseHOM0/QKNRcUVCDEk7\ndP2Y/E9yhsX4Q5f69YicVCZqBSOy+wPDjr1CHNxFJuGCZzYHu7GjBExSHE66\nrSVqsWIhIoUl1vaZP8YqlwnWQRWmbene8Muzz7EW6zM9NsXh3q1SKS2nCjZd\n/r3i/Ci4UzU7VZIiZNzUNNRwhA+474Anrq60QGS+N4ovgbfCVIxKhGQib4Rx\nFCq5LvjLR/9oH1nbM3GxpHLUz64jmVlmu0+Zj3paQNodzUK4WGN18VM1jvO5\nGMdfvGUnHiZduOpmpiXUFthapbp5js0/O8sNDaMr2rYlayz1IUUTDW1XeftE\nQ7c7SYdOvO/KGqjDTNebilJOQ4hDILbmcwZF9t1SXxmgSbpfw/2iJYzbb8LG\nVOZi/Ie1yCDdzX4qqS+/lGGI9TvkVmOYSat7gQ7NlCo3sy5fExdFDK+ewmwM\n+tNw/v1DDWaOtUqYBdgF7Vb8lj0piDy7+PH2/CvJBjdUbja4Ihv6mcuybJPw\nmKlI5EshBeaZTdtxSHcgecuAUHFCf2Z29VHpexUOrkZvi1GJzVCYFMxXX/7r\nUfDb\r\n=dV+3\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "vvo",
+          "email": "vincent.voyer@gmail.com"
+        },
+        {
+          "name": "broofa",
+          "email": "robert@broofa.com"
+        },
+        {
+          "name": "ctavan",
+          "email": "dev@tavan.de"
+        },
+        {
+          "name": "defunctzombie",
+          "email": "shtylman@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uuid_8.3.1_1601826406124_0.8839671601486778"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
     {
-      "email": "robert@broofa.com",
-      "name": "broofa"
+      "name": "vvo",
+      "email": "vincent.voyer@gmail.com"
     },
     {
-      "email": "dev@tavan.de",
-      "name": "ctavan"
+      "name": "broofa",
+      "email": "robert@broofa.com"
     },
     {
-      "email": "shtylman@gmail.com",
-      "name": "defunctzombie"
+      "name": "ctavan",
+      "email": "dev@tavan.de"
     },
     {
-      "email": "vincent.voyer@gmail.com",
-      "name": "vvo"
+      "name": "defunctzombie",
+      "email": "shtylman@gmail.com"
     }
   ],
   "repository": {
@@ -1534,7 +4016,7 @@
     "url": "git+https://github.com/uuidjs/uuid.git"
   },
   "time": {
-    "modified": "2020-01-16T21:05:41.464Z",
+    "modified": "2020-10-04T15:46:48.682Z",
     "created": "2011-03-31T08:12:51.801Z",
     "0.0.1": "2011-03-31T08:12:51.801Z",
     "0.0.2": "2011-03-31T08:12:51.801Z",
@@ -1553,7 +4035,21 @@
     "3.3.0": "2018-06-26T13:23:39.426Z",
     "3.3.2": "2018-06-28T21:29:01.853Z",
     "3.3.3": "2019-08-19T13:26:25.072Z",
-    "3.4.0": "2020-01-16T21:05:38.628Z"
+    "3.4.0": "2020-01-16T21:05:38.628Z",
+    "7.0.0-beta.0": "2020-02-17T11:25:25.965Z",
+    "7.0.0": "2020-02-24T13:23:46.712Z",
+    "7.0.1": "2020-02-25T20:26:35.800Z",
+    "7.0.2-beta.0": "2020-03-02T20:31:08.402Z",
+    "7.0.2": "2020-03-04T12:49:00.666Z",
+    "7.0.3": "2020-03-31T19:41:24.836Z",
+    "8.0.0-beta.0": "2020-04-29T20:21:52.783Z",
+    "8.0.0": "2020-04-29T20:42:26.823Z",
+    "8.1.0": "2020-05-20T18:52:38.248Z",
+    "8.2.0-beta.0": "2020-06-23T07:38:42.240Z",
+    "8.2.0": "2020-06-23T20:56:14.285Z",
+    "8.3.0-beta.0": "2020-07-22T22:28:57.880Z",
+    "8.3.0": "2020-07-27T19:01:36.217Z",
+    "8.3.1": "2020-10-04T15:46:46.276Z"
   },
   "users": {
     "luk": true,
@@ -1870,6 +4366,7 @@
     "jochemstoel": true,
     "justforuse": true
   },
+  "readme": "<!--\n  -- This file is auto-generated from README_js.md. Changes should be made there.\n  -->\n\n# uuid [![CI](https://github.com/uuidjs/uuid/workflows/CI/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ACI) [![Browser](https://github.com/uuidjs/uuid/workflows/Browser/badge.svg)](https://github.com/uuidjs/uuid/actions?query=workflow%3ABrowser)\n\nFor the creation of [RFC4122](http://www.ietf.org/rfc/rfc4122.txt) UUIDs\n\n- **Complete** - Support for RFC4122 version 1, 3, 4, and 5 UUIDs\n- **Cross-platform** - Support for ...\n  - CommonJS, [ECMAScript Modules](#ecmascript-modules) and [CDN builds](#cdn-builds)\n  - Node 8, 10, 12, 14\n  - Chrome, Safari, Firefox, Edge, IE 11 browsers\n  - Webpack and rollup.js module bundlers\n  - [React Native / Expo](#react-native-expo)\n- **Secure** - Cryptographically-strong random values\n- **Small** - Zero-dependency, small footprint, plays nice with \"tree shaking\" packagers\n- **CLI** - Includes the [`uuid` command line](#command-line) utility\n\n**Upgrading from `uuid@3.x`?** Your code is probably okay, but check out [Upgrading From `uuid@3.x`](#upgrading-from-uuid3x) for details.\n\n## Quickstart\n\nTo create a random UUID...\n\n**1. Install**\n\n```shell\nnpm install uuid\n```\n\n**2. Create a UUID** (ES6 module syntax)\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'\n```\n\n... or using CommonJS syntax:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nFor timestamp UUIDs, namespace UUIDs, and other options read on ...\n\n## API Summary\n\n|  |  |  |\n| --- | --- | --- |\n| [`uuid.NIL`](#uuidnil) | The nil UUID string (all zeros) | New in `uuid@8.3` |\n| [`uuid.parse()`](#uuidparsestr) | Convert UUID string to array of bytes | New in `uuid@8.3` |\n| [`uuid.stringify()`](#uuidstringifyarr-offset) | Convert array of bytes to UUID string | New in `uuid@8.3` |\n| [`uuid.v1()`](#uuidv1options-buffer-offset) | Create a version 1 (timestamp) UUID |  |\n| [`uuid.v3()`](#uuidv3name-namespace-buffer-offset) | Create a version 3 (namespace w/ MD5) UUID |  |\n| [`uuid.v4()`](#uuidv4options-buffer-offset) | Create a version 4 (random) UUID |  |\n| [`uuid.v5()`](#uuidv5name-namespace-buffer-offset) | Create a version 5 (namespace w/ SHA-1) UUID |  |\n| [`uuid.validate()`](#uuidvalidatestr) | Test a string to see if it is a valid UUID | New in `uuid@8.3` |\n| [`uuid.version()`](#uuidversionstr) | Detect RFC version of a UUID | New in `uuid@8.3` |\n\n## API\n\n### uuid.NIL\n\nThe nil UUID string (all zeros).\n\nExample:\n\n```javascript\nimport { NIL as NIL_UUID } from 'uuid';\n\nNIL_UUID; // ⇨ '00000000-0000-0000-0000-000000000000'\n```\n\n### uuid.parse(str)\n\nConvert UUID string to array of bytes\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Uint8Array[16]`                         |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nNote: Ordering of values in the byte arrays used by `parse()` and `stringify()` follows the left &Rarr; right order of hex-pairs in UUID strings. As shown in the example below.\n\nExample:\n\n```javascript\nimport { parse as uuidParse } from 'uuid';\n\n// Parse a UUID\nconst bytes = uuidParse('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b');\n\n// Convert to hex strings to show byte order (for documentation purposes)\n[...bytes].map((v) => v.toString(16).padStart(2, '0')); // ⇨ \n  // [\n  //   '6e', 'c0', 'bd', '7f',\n  //   '11', 'c0', '43', 'da',\n  //   '97', '5e', '2a', '8a',\n  //   'd9', 'eb', 'ae', '0b'\n  // ]\n```\n\n### uuid.stringify(arr[, offset])\n\nConvert array of bytes to UUID string\n\n|                |                                                                              |\n| -------------- | ---------------------------------------------------------------------------- |\n| `arr`          | `Array`-like collection of 16 values (starting from `offset`) between 0-255. |\n| [`offset` = 0] | `Number` Starting index in the Array                                         |\n| _returns_      | `String`                                                                     |\n| _throws_       | `TypeError` if a valid UUID string cannot be generated                       |\n\nNote: Ordering of values in the byte arrays used by `parse()` and `stringify()` follows the left &Rarr; right order of hex-pairs in UUID strings. As shown in the example below.\n\nExample:\n\n```javascript\nimport { stringify as uuidStringify } from 'uuid';\n\nconst uuidBytes = [\n  0x6e,\n  0xc0,\n  0xbd,\n  0x7f,\n  0x11,\n  0xc0,\n  0x43,\n  0xda,\n  0x97,\n  0x5e,\n  0x2a,\n  0x8a,\n  0xd9,\n  0xeb,\n  0xae,\n  0x0b,\n];\n\nuuidStringify(uuidBytes); // ⇨ '6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'\n```\n\n### uuid.v1([options[, buffer[, offset]]])\n\nCreate an RFC version 1 (timestamp) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.node` ] | RFC \"node\" field as an `Array[6]` of byte values (per 4.1.6) |\n| [`options.clockseq`] | RFC \"clock sequence\" as a `Number` between 0 - 0x3fff |\n| [`options.msecs`] | RFC \"timestamp\" field (`Number` of milliseconds, unix epoch) |\n| [`options.nsecs`] | RFC \"timestamp\" field (`Number` of nanseconds to add to `msecs`, should be 0-10,000) |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n| _throws_ | `Error` if more than 10M UUIDs/sec are requested |\n\nNote: The default [node id](https://tools.ietf.org/html/rfc4122#section-4.1.6) (the last 12 digits in the UUID) is generated once, randomly, on process startup, and then remains unchanged for the duration of the process.\n\nNote: `options.random` and `options.rng` are only meaningful on the very first call to `v1()`, where they may be passed to initialize the internal `node` and `clockseq` fields.\n\nExample:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nuuidv1(); // ⇨ '2c5ea4c0-4067-11e9-8bad-9b1deb4d3b7d'\n```\n\nExample using `options`:\n\n```javascript\nimport { v1 as uuidv1 } from 'uuid';\n\nconst v1options = {\n  node: [0x01, 0x23, 0x45, 0x67, 0x89, 0xab],\n  clockseq: 0x1234,\n  msecs: new Date('2011-11-01').getTime(),\n  nsecs: 5678,\n};\nuuidv1(v1options); // ⇨ '710b962e-041c-11e1-9234-0123456789ab'\n```\n\n### uuid.v3(name, namespace[, buffer[, offset]])\n\nCreate an RFC version 3 (namespace w/ MD5) UUID\n\nAPI is identical to `v5()`, but uses \"v3\" instead.\n\n&#x26a0;&#xfe0f; Note: Per the RFC, \"_If backward compatibility is not an issue, SHA-1 [Version 5] is preferred_.\"\n\n### uuid.v4([options[, buffer[, offset]]])\n\nCreate an RFC version 4 (random) UUID\n\n|  |  |\n| --- | --- |\n| [`options`] | `Object` with one or more of the following properties: |\n| [`options.random`] | `Array` of 16 random bytes (0-255) |\n| [`options.rng`] | Alternative to `options.random`, a `Function` that returns an `Array` of 16 random bytes (0-255) |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nExample:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nExample using predefined `random` values:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\n\nconst v4options = {\n  random: [\n    0x10,\n    0x91,\n    0x56,\n    0xbe,\n    0xc4,\n    0xfb,\n    0xc1,\n    0xea,\n    0x71,\n    0xb4,\n    0xef,\n    0xe1,\n    0x67,\n    0x1c,\n    0x58,\n    0x36,\n  ],\n};\nuuidv4(v4options); // ⇨ '109156be-c4fb-41ea-b1b4-efe1671c5836'\n```\n\n### uuid.v5(name, namespace[, buffer[, offset]])\n\nCreatea an RFC version 5 (namespace w/ SHA-1) UUID\n\n|  |  |\n| --- | --- |\n| `name` | `String \\| Array` |\n| `namespace` | `String \\| Array[16]` Namespace UUID |\n| [`buffer`] | `Array \\| Buffer` If specified, uuid will be written here in byte-form, starting at `offset` |\n| [`offset` = 0] | `Number` Index to start writing UUID bytes in `buffer` |\n| _returns_ | UUID `String` if no `buffer` is specified, otherwise returns `buffer` |\n\nNote: The RFC `DNS` and `URL` namespaces are available as `v5.DNS` and `v5.URL`.\n\nExample with custom namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\n// Define a custom namespace.  Readers, create your own using something like\n// https://www.uuidgenerator.net/\nconst MY_NAMESPACE = '1b671a64-40d5-491e-99b0-da01ff1f3341';\n\nuuidv5('Hello, World!', MY_NAMESPACE); // ⇨ '630eb68f-e0fa-5ecc-887a-7c7a62614681'\n```\n\nExample with RFC `URL` namespace:\n\n```javascript\nimport { v5 as uuidv5 } from 'uuid';\n\nuuidv5('https://www.w3.org/', uuidv5.URL); // ⇨ 'c106a26a-21bb-5538-8bf2-57095d1976c1'\n```\n\n### uuid.validate(str)\n\nTest a string to see if it is a valid UUID\n\n|           |                                                     |\n| --------- | --------------------------------------------------- |\n| `str`     | `String` to validate                                |\n| _returns_ | `true` if string is a valid UUID, `false` otherwise |\n\nExample:\n\n```javascript\nimport { validate as uuidValidate } from 'uuid';\n\nuuidValidate('not a UUID'); // ⇨ false\nuuidValidate('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ true\n```\n\n### uuid.version(str)\n\nDetect RFC version of a UUID\n\n|           |                                          |\n| --------- | ---------------------------------------- |\n| `str`     | A valid UUID `String`                    |\n| _returns_ | `Number` The RFC version of the UUID     |\n| _throws_  | `TypeError` if `str` is not a valid UUID |\n\nExample:\n\n```javascript\nimport { version as uuidVersion } from 'uuid';\n\nuuidVersion('45637ec4-c85f-11ea-87d0-0242ac130003'); // ⇨ 1\nuuidVersion('6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b'); // ⇨ 4\n```\n\n## Command Line\n\nUUIDs can be generated from the command line using `uuid`.\n\n```shell\n$ uuid\nddeb27fb-d9a0-4624-be4d-4615062daed4\n```\n\nThe default is to generate version 4 UUIDS, however the other versions are supported. Type `uuid --help` for details:\n\n```shell\n$ uuid --help\n\nUsage:\n  uuid\n  uuid v1\n  uuid v3 <name> <namespace uuid>\n  uuid v4\n  uuid v5 <name> <namespace uuid>\n  uuid --help\n\nNote: <namespace uuid> may be \"URL\" or \"DNS\" to use the corresponding UUIDs\ndefined by RFC4122\n```\n\n## ECMAScript Modules\n\nThis library comes with [ECMAScript Modules](https://www.ecma-international.org/ecma-262/6.0/#sec-modules) (ESM) support for Node.js versions that support it ([example](./examples/node-esmodules/)) as well as bundlers like [rollup.js](https://rollupjs.org/guide/en/#tree-shaking) ([example](./examples/browser-rollup/)) and [webpack](https://webpack.js.org/guides/tree-shaking/) ([example](./examples/browser-webpack/)) (targeting both, Node.js and browser environments).\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n```\n\nTo run the examples you must first create a dist build of this library in the module root:\n\n```shell\nnpm run build\n```\n\n## CDN Builds\n\n### ECMAScript Modules\n\nTo load this module directly into modern browsers that [support loading ECMAScript Modules](https://caniuse.com/#feat=es6-module) you can make use of [jspm](https://jspm.org/):\n\n```html\n<script type=\"module\">\n  import { v4 as uuidv4 } from 'https://jspm.dev/uuid';\n  console.log(uuidv4()); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'\n</script>\n```\n\n### UMD\n\nTo load this module directly into older browsers you can use the [UMD (Universal Module Definition)](https://github.com/umdjs/umd) builds from any of the following CDNs:\n\n**Using [UNPKG](https://unpkg.com/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [jsDelivr](https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/)**:\n\n```html\n<script src=\"https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js\"></script>\n```\n\n**Using [cdnjs](https://cdnjs.com/libraries/uuid)**:\n\n```html\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js\"></script>\n```\n\nThese CDNs all provide the same [`uuidv4()`](#uuidv4options-buffer-offset) method:\n\n```html\n<script>\n  uuidv4(); // ⇨ '55af1e37-0734-46d8-b070-a1e42e4fc392'\n</script>\n```\n\nMethods for the other algorithms ([`uuidv1()`](#uuidv1options-buffer-offset), [`uuidv3()`](#uuidv3name-namespace-buffer-offset) and [`uuidv5()`](#uuidv5name-namespace-buffer-offset)) are available from the files `uuidv1.min.js`, `uuidv3.min.js` and `uuidv5.min.js` respectively.\n\n## \"getRandomValues() not supported\"\n\nThis error occurs in environments where the standard [`crypto.getRandomValues()`](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues) API is not supported. This issue can be resolved by adding an appropriate polyfill:\n\n### React Native / Expo\n\n1. Install [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values#readme)\n1. Import it _before_ `uuid`. Since `uuid` might also appear as a transitive dependency of some other imports it's safest to just import `react-native-get-random-values` as the very first thing in your entry point:\n\n```javascript\nimport 'react-native-get-random-values';\nimport { v4 as uuidv4 } from 'uuid';\n```\n\nNote: If you are using Expo, you must be using at least `react-native-get-random-values@1.5.0` and `expo@39.0.0`.\n\n### Web Workers / Service Workers (Edge <= 18)\n\n[In Edge <= 18, Web Crypto is not supported in Web Workers or Service Workers](https://caniuse.com/#feat=cryptography) and we are not aware of a polyfill (let us know if you find one, please).\n\n## Upgrading From `uuid@7.x`\n\n### Only Named Exports Supported When Using with Node.js ESM\n\n`uuid@7.x` did not come with native ECMAScript Module (ESM) support for Node.js. Importing it in Node.js ESM consequently imported the CommonJS source with a default export. This library now comes with true Node.js ESM support and only provides named exports.\n\nInstead of doing:\n\n```javascript\nimport uuid from 'uuid';\nuuid.v4();\n```\n\nyou will now have to use the named exports:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n### Deep Requires No Longer Supported\n\nDeep requires like `require('uuid/v4')` [which have been deprecated in `uuid@7.x`](#deep-requires-now-deprecated) are no longer supported.\n\n## Upgrading From `uuid@3.x`\n\n\"_Wait... what happened to `uuid@4.x` - `uuid@6.x`?!?_\"\n\nIn order to avoid confusion with RFC [version 4](#uuidv4options-buffer-offset) and [version 5](#uuidv5name-namespace-buffer-offset) UUIDs, and a possible [version 6](http://gh.peabody.io/uuidv6/), releases 4 thru 6 of this module have been skipped.\n\n### Deep Requires Now Deprecated\n\n`uuid@3.x` encouraged the use of deep requires to minimize the bundle size of browser builds:\n\n```javascript\nconst uuidv4 = require('uuid/v4'); // <== NOW DEPRECATED!\nuuidv4();\n```\n\nAs of `uuid@7.x` this library now provides ECMAScript modules builds, which allow packagers like Webpack and Rollup to do \"tree-shaking\" to remove dead code. Instead, use the `import` syntax:\n\n```javascript\nimport { v4 as uuidv4 } from 'uuid';\nuuidv4();\n```\n\n... or for CommonJS:\n\n```javascript\nconst { v4: uuidv4 } = require('uuid');\nuuidv4();\n```\n\n### Default Export Removed\n\n`uuid@3.x` was exporting the Version 4 UUID method as a default export:\n\n```javascript\nconst uuid = require('uuid'); // <== REMOVED!\n```\n\nThis usage pattern was already discouraged in `uuid@3.x` and has been removed in `uuid@7.x`.\n\n----\nMarkdown generated from [README_js.md](README_js.md) by [![RunMD Logo](http://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)",
   "readmeFilename": "README.md",
   "keywords": [
     "uuid",
@@ -1902,5 +4399,7 @@
   "bugs": {
     "url": "https://github.com/uuidjs/uuid/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "_cached": false,
+  "_contentLength": 0
 }

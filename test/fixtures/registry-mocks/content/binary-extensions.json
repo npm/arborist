@@ -1,10 +1,10 @@
 {
   "_id": "binary-extensions",
-  "_rev": "33-7e66971f3ce1cf2d73115a12f43a0e5a",
+  "_rev": "34-59ce424285bb20a7f0ceff8ca9565f34",
   "name": "binary-extensions",
   "description": "List of binary file extensions",
   "dist-tags": {
-    "latest": "2.0.0"
+    "latest": "2.1.0"
   },
   "versions": {
     "1.0.0": {
@@ -1585,8 +1585,76 @@
         "tmp": "tmp/binary-extensions_2.0.0_1555613412740_0.3072676738149025"
       },
       "_hasShrinkwrap": false
+    },
+    "2.1.0": {
+      "name": "binary-extensions",
+      "version": "2.1.0",
+      "description": "List of binary file extensions",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/binary-extensions.git"
+      },
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "binary",
+        "extensions",
+        "extension",
+        "file",
+        "json",
+        "list",
+        "array"
+      ],
+      "devDependencies": {
+        "ava": "^1.4.1",
+        "tsd": "^0.7.2",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "4c81c9a9f3a4921f35bcedeb3b91e18902c859f7",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/binary-extensions/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/binary-extensions#readme",
+      "_id": "binary-extensions@2.1.0",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-1Yj8h9Q+QDF5FzhMs/c9+6UntbD5MkRfRwac8DoEm9ZfUBZ7tZ55YcGVAzEe4bXsdQHEk+s9S5wsOKVdZrw0tQ==",
+        "shasum": "30fa40c9e7fe07dbc895678cd287024dea241dd9",
+        "tarball": "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.1.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 5468,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe90MuCRA9TVsSAnZWagAA4vMQAKJIZ0x0hYZ9DvGCTdlt\n5q6/fXjlovvtL/FWssy/yasBueDf0fWk9IEJzvq9d7rozlI6khacRjiVa8c8\nij86y13/HNubK6ohhsoowxmMv5ncxnKNOP6hOmSHc9Qphv06jIGbZ2wiadnk\n3+OtvWAJXKVtyv0Bq0oPIikxBM1QK2sqhmf3GCcaRIWc+aOUyOdQow2cO+Pm\nP6KE6VwlNUkjL7oZoiHt2BZFa7NSd4DSCYFnkafF7shjWT6chHN7UcH88FBt\nOO49Pmuvop/l8pJDzAE4tjTH2354eZhV4fXDVYkDIUFb+2gNKK1r0X0VTmWa\nZQp+UyXnHdLI7qd7kRIy66UNxrmvZnb+Ek1SRCbNljtMbeHd7Y5pGjMH4/fO\nUSbdNRlql9cXKCMJzokWfn4M96Uc496CEKYZgacDcZD2Go4C6xlqljoLc0Pz\nrZYHbjYgsZ5Grx3rzA94f32IIzrxKTS5bf4MiGCetuzsYG6Du4eTQA6etbQE\nDOccbBTsGue1IOvQi3Uzhl9yq4N9rz+taFCu3dcrJ5M3uV1vmG1HClIIe/8c\nrR7IMyuO7boBwJU64r8ZXMAO5yXKwqzXrzY7M94+lm8DEcav/W4cByUk/tRK\nY4s+HacItX6lFml9AnnKLe4jOucokVQqf1t5vQcRpcEqCEh0GPVQGri6gEYA\nsxJd\r\n=Ll59\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "sindresorhus@gmail.com",
+          "name": "sindresorhus"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/binary-extensions_2.1.0_1593262894344_0.6539073910328448"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# binary-extensions [![Build Status](https://travis-ci.org/sindresorhus/binary-extensions.svg?branch=master)](https://travis-ci.org/sindresorhus/binary-extensions)\n\n> List of binary file extensions\n\nThe list is just a [JSON file](binary-extensions.json) and can be used anywhere.\n\n\n## Install\n\n```\n$ npm install binary-extensions\n```\n\n\n## Usage\n\n```js\nconst binaryExtensions = require('binary-extensions');\n\nconsole.log(binaryExtensions);\n//=> ['3ds', '3g2', …]\n```\n\n\n## Related\n\n- [is-binary-path](https://github.com/sindresorhus/is-binary-path) - Check if a filepath is a binary file\n- [text-extensions](https://github.com/sindresorhus/text-extensions) - List of text file extensions\n\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-binary-extensions?utm_source=npm-binary-extensions&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "email": "sindresorhus@gmail.com",
@@ -1594,7 +1662,7 @@
     }
   ],
   "time": {
-    "modified": "2019-04-18T18:50:15.646Z",
+    "modified": "2020-06-27T13:01:36.620Z",
     "created": "2015-01-24T09:04:29.927Z",
     "1.0.0": "2015-01-24T09:04:29.927Z",
     "1.0.1": "2015-01-26T10:56:06.676Z",
@@ -1616,7 +1684,8 @@
     "1.12.0": "2018-09-18T05:18:30.443Z",
     "1.13.0": "2019-02-03T10:03:38.268Z",
     "1.13.1": "2019-03-27T12:27:18.018Z",
-    "2.0.0": "2019-04-18T18:50:13.054Z"
+    "2.0.0": "2019-04-18T18:50:13.054Z",
+    "2.1.0": "2020-06-27T13:01:34.492Z"
   },
   "homepage": "https://github.com/sindresorhus/binary-extensions#readme",
   "keywords": [
@@ -1644,5 +1713,7 @@
   "readmeFilename": "readme.md",
   "users": {
     "faraoman": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

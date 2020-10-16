@@ -1,10 +1,10 @@
 {
   "_id": "readdirp",
-  "_rev": "106-4c9e0f5e11f219bc2f368febca669bb7",
+  "_rev": "108-12ee88b8045bb5ef67e88fd1ab426dce",
   "name": "readdirp",
   "description": "Recursive version of fs.readdir with streaming API.",
   "dist-tags": {
-    "latest": "3.3.0"
+    "latest": "3.5.0"
   },
   "versions": {
     "0.1.0": {
@@ -2668,16 +2668,338 @@
         "tmp": "tmp/readdirp_3.3.0_1575629798808_0.6718017800899874"
       },
       "_hasShrinkwrap": false
+    },
+    "3.4.0": {
+      "name": "readdirp",
+      "description": "Recursive version of fs.readdir with streaming API.",
+      "version": "3.4.0",
+      "homepage": "https://github.com/paulmillr/readdirp",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/paulmillr/readdirp.git"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/paulmillr/readdirp/issues"
+      },
+      "author": {
+        "name": "Thorsten Lorenz",
+        "email": "thlorenz@gmx.de",
+        "url": "thlorenz.com"
+      },
+      "contributors": [
+        {
+          "name": "Thorsten Lorenz",
+          "email": "thlorenz@gmx.de",
+          "url": "thlorenz.com"
+        },
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        }
+      ],
+      "main": "index.js",
+      "engines": {
+        "node": ">=8.10.0"
+      },
+      "keywords": [
+        "recursive",
+        "fs",
+        "stream",
+        "streams",
+        "readdir",
+        "filesystem",
+        "find",
+        "filter"
+      ],
+      "scripts": {
+        "dtslint": "dtslint",
+        "nyc": "nyc",
+        "mocha": "mocha --exit",
+        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+        "test": "npm run lint && nyc npm run mocha"
+      },
+      "dependencies": {
+        "picomatch": "^2.2.1"
+      },
+      "devDependencies": {
+        "@types/node": "^13",
+        "chai": "^4.2",
+        "chai-subset": "^1.6",
+        "dtslint": "^3.3.0",
+        "eslint": "^6.6.0",
+        "mocha": "^7.1.1",
+        "nyc": "^15.0.0",
+        "rimraf": "^3.0.0"
+      },
+      "nyc": {
+        "reporter": [
+          "html",
+          "text"
+        ]
+      },
+      "eslintConfig": {
+        "root": true,
+        "extends": "eslint:recommended",
+        "parserOptions": {
+          "ecmaVersion": 9,
+          "sourceType": "script"
+        },
+        "env": {
+          "node": true,
+          "es6": true
+        },
+        "rules": {
+          "array-callback-return": "error",
+          "no-empty": [
+            "error",
+            {
+              "allowEmptyCatch": true
+            }
+          ],
+          "no-else-return": [
+            "error",
+            {
+              "allowElseIf": false
+            }
+          ],
+          "no-lonely-if": "error",
+          "no-var": "error",
+          "object-shorthand": "error",
+          "prefer-arrow-callback": [
+            "error",
+            {
+              "allowNamedFunctions": true
+            }
+          ],
+          "prefer-const": [
+            "error",
+            {
+              "ignoreReadBeforeAssign": true
+            }
+          ],
+          "prefer-destructuring": [
+            "error",
+            {
+              "object": true,
+              "array": false
+            }
+          ],
+          "prefer-spread": "error",
+          "prefer-template": "error",
+          "radix": "error",
+          "semi": "error",
+          "strict": "error",
+          "quotes": [
+            "error",
+            "single"
+          ]
+        }
+      },
+      "gitHead": "d9c72137579b439fe0f8bb8d668f6b6846c75c45",
+      "_id": "readdirp@3.4.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-0xe001vZBnJEK+uKcj8qOhyAKPzIT+gStxWr3LCB0DwcXR5NZJ3IaC+yGnHCYzB/S7ov3m3EEbZI2zeNvX+hGQ==",
+        "shasum": "9fdccdf9e9155805449221ac645e8303ab5b9ada",
+        "tarball": "https://registry.npmjs.org/readdirp/-/readdirp-3.4.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 19629,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJec0KVCRA9TVsSAnZWagAALVkQAJ+3qhvu4xMlqtBj+hWj\n4tQbLIy98JPnVOUCzF09Xd3B4DHHarcbFkMIf20k9jQNtmmWmeQC5ehKXwLA\n7DiUP4fZnIsDK0MHw40LUx4NrQKe+K8s+h1Os7wcmspnAEF5mwKppcI7NHDW\nU0Gvs7txyqG5Rni+BB5EZgyibbUYBrbtxRQdmURp30cbFyXhX6GG9BqOACUp\n9dYsCXmE/uS41lDnbnIsQTpYOqS1jqyzfqoyMmMrY9nvLM/r9jkXJVXzSw61\nklzG7CzAE4m/cIUgh4PQlDqCKMYmvxCss4kHOkMbHhVXuGnme6HQWT2r61dz\nKo9KqePIcF/aZnXMSuZxibsTyBO2kAiZwAXhslX+alGJ9JUGZFKSl3tSKnph\njtoy/TMY8Uy8egAfzrNVuhsi/aH3mKJpcUIkU+XCvw9QytGPu7XO9k50x5eM\nr7ODEjfjn+ND9IdBL+cNzwJJUFnQU/RcYBUdPiqr7n1uFwz0yJBOVb92eR6Y\nvGU0Fy6GqkY52eHouvOz5t+TShqKk76TJ+B5YCcu96FdTm7gPQPgz0N07kG4\nIO/s5XXSuZ1ah4yFKEX/9bnCewzi5FB8EveL7h6NF46hyBUmGTiYeo8uCiO3\ns1T+mOTTJysOeL/pCbHeKwRkXLeLXZSnRE2iwinVkTENStU2CDpMk471m0Ot\nnuTk\r\n=z2Qn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "thlorenz",
+          "email": "thlorenz@gmx.de"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/readdirp_3.4.0_1584611988760_0.3048259818011554"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.5.0": {
+      "name": "readdirp",
+      "description": "Recursive version of fs.readdir with streaming API.",
+      "version": "3.5.0",
+      "homepage": "https://github.com/paulmillr/readdirp",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/paulmillr/readdirp.git"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/paulmillr/readdirp/issues"
+      },
+      "author": {
+        "name": "Thorsten Lorenz",
+        "email": "thlorenz@gmx.de",
+        "url": "thlorenz.com"
+      },
+      "contributors": [
+        {
+          "name": "Thorsten Lorenz",
+          "email": "thlorenz@gmx.de",
+          "url": "thlorenz.com"
+        },
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        }
+      ],
+      "main": "index.js",
+      "engines": {
+        "node": ">=8.10.0"
+      },
+      "keywords": [
+        "recursive",
+        "fs",
+        "stream",
+        "streams",
+        "readdir",
+        "filesystem",
+        "find",
+        "filter"
+      ],
+      "scripts": {
+        "dtslint": "dtslint",
+        "nyc": "nyc",
+        "mocha": "mocha --exit",
+        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+        "test": "npm run lint && nyc npm run mocha"
+      },
+      "dependencies": {
+        "picomatch": "^2.2.1"
+      },
+      "devDependencies": {
+        "@types/node": "^14",
+        "chai": "^4.2",
+        "chai-subset": "^1.6",
+        "dtslint": "^3.3.0",
+        "eslint": "^7.0.0",
+        "mocha": "^7.1.1",
+        "nyc": "^15.0.0",
+        "rimraf": "^3.0.0",
+        "typescript": "^4.0.3"
+      },
+      "nyc": {
+        "reporter": [
+          "html",
+          "text"
+        ]
+      },
+      "eslintConfig": {
+        "root": true,
+        "extends": "eslint:recommended",
+        "parserOptions": {
+          "ecmaVersion": 9,
+          "sourceType": "script"
+        },
+        "env": {
+          "node": true,
+          "es6": true
+        },
+        "rules": {
+          "array-callback-return": "error",
+          "no-empty": [
+            "error",
+            {
+              "allowEmptyCatch": true
+            }
+          ],
+          "no-else-return": [
+            "error",
+            {
+              "allowElseIf": false
+            }
+          ],
+          "no-lonely-if": "error",
+          "no-var": "error",
+          "object-shorthand": "error",
+          "prefer-arrow-callback": [
+            "error",
+            {
+              "allowNamedFunctions": true
+            }
+          ],
+          "prefer-const": [
+            "error",
+            {
+              "ignoreReadBeforeAssign": true
+            }
+          ],
+          "prefer-destructuring": [
+            "error",
+            {
+              "object": true,
+              "array": false
+            }
+          ],
+          "prefer-spread": "error",
+          "prefer-template": "error",
+          "radix": "error",
+          "semi": "error",
+          "strict": "error",
+          "quotes": [
+            "error",
+            "single"
+          ]
+        }
+      },
+      "gitHead": "887e9f38a9d7bf2a619541179d8b78950fe49b44",
+      "_id": "readdirp@3.5.0",
+      "_nodeVersion": "14.13.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==",
+        "shasum": "9ba74c019b15d365278d2e91bb8c48d7b4d42c9e",
+        "tarball": "https://registry.npmjs.org/readdirp/-/readdirp-3.5.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 20118,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfhX7WCRA9TVsSAnZWagAAj14P/39OW6eSQNZcF65ocDKQ\nsbcDmKYBabrh8A9UGks3EQimH2VhukrNfXaSYeCB8lb4WIIev7CTpC5s4hAE\n3sCKD5aJ5zY/LUcj66+tnU8qpdR8PnwgAW3hQgKTp1sin/jk5Oh8PIFTdY5j\nro0v4HWqgu81khLwBoT20EVi2Y6ijRa5CGLR1uiBDjVDywgtM64kV0ItF9iZ\ntOtQjvap42PiXp7uD8Hxy/Dbjsrr8jxb0IuPV31XQX0Nlj+RlEKfyrEtXYzO\n5F5FwERSj+SgjcVTgC3F9WNN5WIWrtbFvnRWMxbBVfRrCqz2cYsbHAlqOI+7\nI6OJGGnP1e0bmDTd6g1ORyWH25E5C5rv2aTajEY9fWDrAFKUsAzdLShtYFfF\nNqF2/xKHXkBSXfgq7MY01BF6DnxtW3TsUCiunLuD7AUsZJf+5h3Lg87unkTs\nbYelOYYqs1sk8o7kEWbloSXEm/O/Ao7X3sNc4c/QD2pWI3asVBUFJYOjAS9n\njzzBOUh91zoMHJVp8p5u7fMA5KHccHKi5aF3RsATgTTNYmbUxHJTraVwjOtr\nHwdTkwUZBBz0TIM+3k0l4W574MOrisePGt9oF+tWkREM98jsRMQYi3uzq2/W\nzxuezMOlC3A7cfrBICNOT0o8ZKnRJ4qsE4AGURVrzT9KMwU0Zq7lDSsYlCYy\n7Tqz\r\n=qceD\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "paulmillr",
+          "email": "paul@paulmillr.com"
+        },
+        {
+          "name": "thlorenz",
+          "email": "thlorenz10@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/readdirp_3.5.0_1602584277620_0.7800107918402821"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# readdirp [![Weekly downloads](https://img.shields.io/npm/dw/readdirp.svg)](https://github.com/paulmillr/readdirp)\n\nRecursive version of [fs.readdir](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback). Exposes a **stream API** and a **promise API**.\n\n\n```sh\nnpm install readdirp\n```\n\n```javascript\nconst readdirp = require('readdirp');\n\n// Use streams to achieve small RAM & CPU footprint.\n// 1) Streams example with for-await.\nfor await (const entry of readdirp('.')) {\n  const {path} = entry;\n  console.log(`${JSON.stringify({path})}`);\n}\n\n// 2) Streams example, non for-await.\n// Print out all JS files along with their size within the current folder & subfolders.\nreaddirp('.', {fileFilter: '*.js', alwaysStat: true})\n  .on('data', (entry) => {\n    const {path, stats: {size}} = entry;\n    console.log(`${JSON.stringify({path, size})}`);\n  })\n  // Optionally call stream.destroy() in `warn()` in order to abort and cause 'close' to be emitted\n  .on('warn', error => console.error('non-fatal error', error))\n  .on('error', error => console.error('fatal error', error))\n  .on('end', () => console.log('done'));\n\n// 3) Promise example. More RAM and CPU than streams / for-await.\nconst files = await readdirp.promise('.');\nconsole.log(files.map(file => file.path));\n\n// Other options.\nreaddirp('test', {\n  fileFilter: '*.js',\n  directoryFilter: ['!.git', '!*modules']\n  // directoryFilter: (di) => di.basename.length === 9\n  type: 'files_directories',\n  depth: 1\n});\n```\n\nFor more examples, check out `examples` directory.\n\n## API\n\n`const stream = readdirp(root[, options])` — **Stream API**\n\n- Reads given root recursively and returns a `stream` of [entry infos](#entryinfo)\n- Optionally can be used like `for await (const entry of stream)` with node.js 10+ (`asyncIterator`).\n- `on('data', (entry) => {})` [entry info](#entryinfo) for every file / dir.\n- `on('warn', (error) => {})` non-fatal `Error` that prevents a file / dir from being processed. Example: inaccessible to the user.\n- `on('error', (error) => {})` fatal `Error` which also ends the stream. Example: illegal options where passed.\n- `on('end')` — we are done. Called when all entries were found and no more will be emitted.\n- `on('close')` — stream is destroyed via `stream.destroy()`.\n  Could be useful if you want to manually abort even on a non fatal error.\n  At that point the stream is no longer `readable` and no more entries, warning or errors are emitted\n- To learn more about streams, consult the very detailed [nodejs streams documentation](https://nodejs.org/api/stream.html)\n  or the [stream-handbook](https://github.com/substack/stream-handbook)\n\n`const entries = await readdirp.promise(root[, options])` — **Promise API**. Returns a list of [entry infos](#entryinfo).\n\nFirst argument is awalys `root`, path in which to start reading and recursing into subdirectories.\n\n### options\n\n- `fileFilter: [\"*.js\"]`: filter to include or exclude files. A `Function`, Glob string or Array of glob strings.\n    - **Function**: a function that takes an entry info as a parameter and returns true to include or false to exclude the entry\n    - **Glob string**: a string (e.g., `*.js`) which is matched using [picomatch](https://github.com/micromatch/picomatch), so go there for more\n        information. Globstars (`**`) are not supported since specifying a recursive pattern for an already recursive function doesn't make sense. Negated globs (as explained in the minimatch documentation) are allowed, e.g., `!*.txt` matches everything but text files.\n    - **Array of glob strings**: either need to be all inclusive or all exclusive (negated) patterns otherwise an error is thrown.\n        `['*.json', '*.js']` includes all JavaScript and Json files.\n        `['!.git', '!node_modules']` includes all directories except the '.git' and 'node_modules'.\n    - Directories that do not pass a filter will not be recursed into.\n- `directoryFilter: ['!.git']`: filter to include/exclude directories found and to recurse into. Directories that do not pass a filter will not be recursed into.\n- `depth: 5`: depth at which to stop recursing even if more subdirectories are found\n- `type: 'files'`: determines if data events on the stream should be emitted for `'files'` (default), `'directories'`, `'files_directories'`, or `'all'`. Setting to `'all'` will also include entries for other types of file descriptors like character devices, unix sockets and named pipes.\n- `alwaysStat: false`: always return `stats` property for every file. Default is `false`, readdirp will return `Dirent` entries. Setting it to `true` can double readdir execution time - use it only when you need file `size`, `mtime` etc. Cannot be enabled on node <10.10.0.\n- `lstat: false`: include symlink entries in the stream along with files. When `true`, `fs.lstat` would be used instead of `fs.stat`\n\n### `EntryInfo`\n\nHas the following properties:\n\n- `path: 'assets/javascripts/react.js'`: path to the file/directory (relative to given root)\n- `fullPath: '/Users/dev/projects/app/assets/javascripts/react.js'`: full path to the file/directory found\n- `basename: 'react.js'`: name of the file/directory\n- `dirent: fs.Dirent`: built-in [dir entry object](https://nodejs.org/api/fs.html#fs_class_fs_dirent) - only with `alwaysStat: false`\n- `stats: fs.Stats`: built in [stat object](https://nodejs.org/api/fs.html#fs_class_fs_stats) - only with `alwaysStat: true`\n\n## Changelog\n\n- 3.5 (Oct 13, 2020) disallows recursive directory-based symlinks.\n  Before, it could have entered infinite loop.\n- 3.4 (Mar 19, 2020) adds support for directory-based symlinks.\n- 3.3 (Dec 6, 2019) stabilizes RAM consumption and enables perf management with `highWaterMark` option. Fixes race conditions related to `for-await` looping.\n- 3.2 (Oct 14, 2019) improves performance by 250% and makes streams implementation more idiomatic.\n- 3.1 (Jul 7, 2019) brings `bigint` support to `stat` output on Windows. This is backwards-incompatible for some cases. Be careful. It you use it incorrectly, you'll see \"TypeError: Cannot mix BigInt and other types, use explicit conversions\".\n- 3.0 brings huge performance improvements and stream backpressure support.\n- Upgrading 2.x to 3.x:\n    - Signature changed from `readdirp(options)` to `readdirp(root, options)`\n    - Replaced callback API with promise API.\n    - Renamed `entryType` option to `type`\n    - Renamed `entryType: 'both'` to `'files_directories'`\n    - `EntryInfo`\n        - Renamed `stat` to `stats`\n            - Emitted only when `alwaysStat: true`\n            - `dirent` is emitted instead of `stats` by default with `alwaysStat: false`\n        - Renamed `name` to `basename`\n        - Removed `parentDir` and `fullParentDir` properties\n- Supported node.js versions:\n    - 3.x: node 8+\n    - 2.x: node 0.6+\n\n## License\n\nCopyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (<https://paulmillr.com>)\n\nMIT License, see [LICENSE](LICENSE) file.\n",
   "maintainers": [
     {
+      "name": "paulmillr",
+      "email": "paul@paulmillr.com"
+    },
+    {
       "name": "thlorenz",
-      "email": "thlorenz@gmx.de"
+      "email": "thlorenz10@gmail.com"
     }
   ],
   "time": {
-    "modified": "2019-12-06T10:56:42.926Z",
+    "modified": "2020-10-13T10:18:00.737Z",
     "created": "2012-07-18T11:44:10.802Z",
     "0.1.0": "2012-07-18T11:44:11.200Z",
     "0.1.1": "2012-07-18T12:08:10.372Z",
@@ -2715,7 +3037,9 @@
     "3.1.2": "2019-08-14T14:03:43.139Z",
     "3.1.3": "2019-10-01T02:29:30.949Z",
     "3.2.0": "2019-10-14T00:04:52.884Z",
-    "3.3.0": "2019-12-06T10:56:38.944Z"
+    "3.3.0": "2019-12-06T10:56:38.944Z",
+    "3.4.0": "2020-03-19T09:59:49.025Z",
+    "3.5.0": "2020-10-13T10:17:57.720Z"
   },
   "author": {
     "name": "Thorsten Lorenz",
@@ -2780,5 +3104,7 @@
       "name": "Paul Miller",
       "url": "https://paulmillr.com"
     }
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

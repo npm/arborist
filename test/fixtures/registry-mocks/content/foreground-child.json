@@ -1030,6 +1030,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# foreground-child\n\n[![Build Status](https://travis-ci.org/tapjs/foreground-child.svg)](https://travis-ci.org/tapjs/foreground-child) [![Build status](https://ci.appveyor.com/api/projects/status/kq9ylvx9fyr9khx0?svg=true)](https://ci.appveyor.com/project/isaacs/foreground-child)\n\nRun a child as if it's the foreground process.  Give it stdio.  Exit\nwhen it exits.\n\nMostly this module is here to support some use cases around wrapping\nchild processes for test coverage and such.\n\n## USAGE\n\n```js\nvar foreground = require('foreground-child')\n\n// cats out this file\nvar child = foreground('cat', [__filename])\n\n// At this point, it's best to just do nothing else.\n// return or whatever.\n// If the child gets a signal, or just exits, then this\n// parent process will exit in the same way.\n```\n\nA callback can optionally be provided, if you want to perform an action\nbefore your foreground-child exits:\n\n```js\nvar child = foreground('cat', [__filename], function (done) {\n  // perform an action.\n  return done()\n})\n```\n\nThe callback can return a Promise instead of calling `done`:\n\n```js\nvar child = foreground('cat', [__filename], async function () {\n  // perform an action.\n})\n```\n\nThe callback must not throw or reject.\n\n## Caveats\n\nThe \"normal\" standard IO file descriptors (0, 1, and 2 for stdin,\nstdout, and stderr respectively) are shared with the child process.\nAdditionally, if there is an IPC channel set up in the parent, then\nmessages are proxied to the child on file descriptor 3.\n\nHowever, in Node, it's possible to also map arbitrary file descriptors\ninto a child process.  In these cases, foreground-child will not map\nthe file descriptors into the child.  If file descriptors 0, 1, or 2\nare used for the IPC channel, then strange behavior may happen (like\nprinting IPC messages to stderr, for example).\n\nNote that a SIGKILL will always kill the parent process, _and never\nthe child process_, because SIGKILL cannot be caught or proxied.  The\nonly way to do this would be if Node provided a way to truly exec a\nprocess as the new foreground program in the same process space,\nwithout forking a separate child process.\n",
   "maintainers": [
     {
       "email": "bencoe@gmail.com",
@@ -1085,5 +1086,7 @@
   "users": {
     "cef62": true,
     "johnnyscript": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

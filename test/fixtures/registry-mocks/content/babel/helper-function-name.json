@@ -1,10 +1,10 @@
 {
   "_id": "@babel/helper-function-name",
-  "_rev": "71-9c7fed2da680bb0c19bdc44d171a9aa7",
+  "_rev": "77-5ed6c528c995acf3bd34eb621db510ac",
   "name": "@babel/helper-function-name",
   "description": "Helper function to change the property 'name' of every function",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.10.4"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -1775,6 +1775,7 @@
         "@babel/template": "7.0.0-rc.3",
         "@babel/types": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-function-name@7.0.0-rc.3",
       "dist": {
         "shasum": "ddfb3793fe6ca13be7161afa045971b8e82f96e8",
@@ -1832,6 +1833,7 @@
         "@babel/template": "^7.0.0-rc.4",
         "@babel/types": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-function-name@7.0.0-rc.4",
       "dist": {
         "shasum": "1612308ef70dd79393064bc7bfa2531064078a8a",
@@ -1890,6 +1892,8 @@
         "@babel/types": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/helper-function-name\n\n> Helper function to change the property 'name' of every function\n\nSee our website [@babel/helper-function-name](https://babeljs.io/docs/en/next/babel-helper-function-name.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-function-name\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-function-name --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-function-name@7.0.0",
       "dist": {
         "shasum": "a68cc8d04420ccc663dd258f9cc41b8261efa2d4",
@@ -1950,6 +1954,7 @@
         "@babel/template": "^7.1.0",
         "@babel/types": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-function-name@7.1.0",
       "dist": {
         "shasum": "a0ceb01685f73355d4360c1247f582bfafc8ff53",
@@ -2252,16 +2257,292 @@
         "tmp": "tmp/helper-function-name_7.8.3_1578951732065_0.5336781887274178"
       },
       "_hasShrinkwrap": false
+    },
+    "7.9.5": {
+      "name": "@babel/helper-function-name",
+      "version": "7.9.5",
+      "description": "Helper function to change the property 'name' of every function",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-function-name"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-get-function-arity": "^7.8.3",
+        "@babel/template": "^7.8.3",
+        "@babel/types": "^7.9.5"
+      },
+      "gitHead": "5b97e77e030cf3853a147fdff81844ea4026219d",
+      "_id": "@babel/helper-function-name@7.9.5",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "lerna/3.19.0/node@v10.19.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-JVcQZeXM59Cd1qanDUxv9fgJpt3NeKUaqBqUEvfmQ+BCOKq2xUgaWZW2hr0dkbyJgezYuplEoh5knmrnS68efw==",
+        "shasum": "2b53820d35275120e1874a82e5aabe1376920a5c",
+        "tarball": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.9.5.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7169,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJejNOnCRA9TVsSAnZWagAALaoP/2v1HECuucZyUP5Q+1aw\n9sK+EEGp3nhk1EfWIZnEk9XY8oqrqFzIbkzT4eLd4ZoNeaelzfXh+cdpTfAk\nWSIIN+dYNJh5wLSKgdxRtxYmpSb3GWV/tXqjXqWTHlysLBxnlzZ7b4+MyPiQ\n9Crav0BRTK6hazfYR6PXbBjwx8eUe1CAIwYUXROeKwrH8H9gN5l5awOuNCjK\nyTLGoLjnocBm5qOFEubxoVwQg7I+zj7gUEWwqE3vPTkkFmpU1VamKF7H/ryu\nMpBVmnz0kPitasyD91Fd6iyJphrE0tpCNSgVamPif7UX3ublbpR4AnIYJT9M\n4rHnWUw3DNj6QZeUEBP4VIy8vAEE/Kd6qfjAfj34pOeYd88QL9Ht1rv7RoPx\nN5+m3W1ACQqIYFzvKiUhas6u673+UggJQIhzhIavNyncYMDmp+b35qJbSU8V\n1IYeqS09PMBj4mmA9EarkU9TmDRXS6AkSeO6/911aAKO47xaTAoAqoE5pt+T\ntn9+nCpXU3PZ3aucKXm29gZcthJLANzNz1dAepci3IvSGk2FFNApiW8hLluc\nA09S6iDypqKO8ZqKQhKIBL98aIiPd6/ydt/fzhDTRL/2y1exo2mMg757QGe9\nFt4YA2Z+Wzh45vUe91w+LhD/OTSNbPEmzuGYPjgDC/O8G8vekTZAO3h3bthQ\n0kb6\r\n=MpzR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-function-name_7.9.5_1586287526388_0.20705857980554"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/helper-function-name",
+      "version": "7.10.1",
+      "description": "Helper function to change the property 'name' of every function",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-function-name"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-get-function-arity": "^7.10.1",
+        "@babel/template": "^7.10.1",
+        "@babel/types": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/helper-function-name@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-fcpumwhs3YyZ/ttd5Rz0xn0TpIwVkN7X0V38B9TWNfVF42KEkhkAAuPCQ3oXmtTRtiPJrmZ0TrfS0GKF0eMaRQ==",
+        "shasum": "92bd63829bfc9215aca9d9defa85f56b539454f4",
+        "tarball": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7221,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuS8CRA9TVsSAnZWagAAKjAP/i17Qo2qg70YHdEI6FJ6\nE1YaKpwgIwiQ+2Rmv1tcxG/eKOvcZvPFXWF5aLShIUi8bHbFwy/4MnMJedR0\nEJ6fGlE+RDLJ0wE/Z7UdhAyrMlHvY+aS+ydLzsheVs/lAZqr5zd3lGzydGa5\n9RfRI1wTyykCCyUc8WSnzjq2gckCFtCmq6pRWkCYrijGSM9WAllMmaZszZv/\nHlpRQnwsbL42209cuirVVovo1H0sJT7+MB9voOufxFZKZkBnT1i9MiMW3EZ4\nRxqfN5X5nvOiyeKTu+7ToARNVW2mv86YybLYQ6L4K2h9Uwwi0k+vUuDEX872\nYTKIJxqhQRUEt79DGbNIgmt5MYXEpBpSrnFfJXb/ti7csNZlcR8RgUDLO7Ox\nHszUGLqCQzSjUgrGUr8P0o/kPFMo3Yi+d2OkZ3ajE6NnPbU9CbKWP36GMMIP\nqyeieC9AxE04zpPwy0wJ/O/XE8ZXtw+Vv7fRUwVns0yaulU7hWselssN9SOQ\norwSAHTXhDwWvcml7uxCXNGQqw29wpbHjWhHBLJmBXpzPofC2TE331kK/rAe\nNDJNj8wqezchPqLUESkt/mHKjYO2px5ntCbbVXsO1rOGru2XW7Yq+SHKkqcN\nlVVYrEASmafcr8Ai9NpuXKPayHIzQSvQdZMRnrntOLV+4Q3puRCQWTHUgR58\nIfX3\r\n=qpN/\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-function-name_7.10.1_1590617276050_0.05134911478613913"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/helper-function-name",
+      "version": "7.10.3",
+      "description": "Helper function to change the property 'name' of every function",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-function-name"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-get-function-arity": "^7.10.3",
+        "@babel/template": "^7.10.3",
+        "@babel/types": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/helper-function-name@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-FvSj2aiOd8zbeqijjgqdMDSyxsGHaMt5Tr0XjQsGKHD3/1FP3wksjnLAWzxw7lvXiej8W1Jt47SKTZ6upQNiRw==",
+        "shasum": "79316cd75a9fa25ba9787ff54544307ed444f197",
+        "tarball": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.10.3.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7221,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYNCRA9TVsSAnZWagAAy4wP/i2MqHqgo3KxUbNmUDqd\nByQxTI21lpFupGej9lMPcAOwbzMeAg+rAh5FHeccanJxFSuNl08rn2Id8XDs\n7tGj8J5VfTj50mlwrE4ACH2CPtE3UCDW0NxVTVO4TLgCP4JG8xFBbZz5ZljI\nSFcBqypVxeCmahFjpE03UcJpGDE8vunKPM+38rZn7KVj1LPfKEMcmin8d/KY\nTuQ8M9+knMqJz1QnY4jPAZXCZzxIZ+KwNHqGKTDpYLWw2z6QuJF1WRKNJoep\nhKunqgfHRV+MgRDJTYwVaAZs+5LXFXfi1/ilBBf3njAV7kcJC47hjXspRXwr\nXH/4kUedW3jXjPFgrJMp8kAsUDMHF0shy72GAo4E7ODLTlueIyStVcBRljY2\nvH7ETya5RhMAW1cO8AURNEDKqlDDwVfBpA50a+Uzy7NXhxxQwuQijy5Uy3hx\npcFEOt7Kr0tvxErrlhw6hQiP0ZC2egGjG2p+/4FO6T2wCDeW7BX0QUwGo+n5\nxnz8rMnnBItwLJGfZotOslGnOYFx9K9t1jJlClEsyzgIE5s7H40SjGEecGII\n7CKQP+O03BF7RGnxOiSTya3AyokHxkZ2KoQISN9aEbbYYTWh/hp6zn3fPv2V\nh46iDotqzk9ZUsCcSxHlz9Tk27lBClAc4os21+BJ2bKYTP7nDwp7XRLDtAeT\nGAgO\r\n=8XOJ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-function-name_7.10.3_1592600077256_0.606621675976418"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/helper-function-name",
+      "version": "7.10.4",
+      "description": "Helper function to change the property 'name' of every function",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-function-name"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-get-function-arity": "^7.10.4",
+        "@babel/template": "^7.10.4",
+        "@babel/types": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/helper-function-name@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-YdaSyz1n8gY44EmN7x44zBn9zQ1Ry2Y+3GTA+3vH6Mizke1Vw0aWDM66FOYEPw8//qKkmqOckrGgTYa+6sceqQ==",
+        "shasum": "d2d3b20c59ad8c47112fa7d2a94bc09d5ef82f1a",
+        "tarball": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7221,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zpWCRA9TVsSAnZWagAA1EsP/1QY/XNUmpHjyPRH9K/Q\ncUUiHUUrsZ84E90Wr4t5X2ofjKzmwQZtQxPjfP8SP+wLjPLXRWSG0HBzEmG7\nTM7OdZcSLOYE0zqsLsKFVjOlE2TyLNdq7f5UNhPp3Br9e1skc9V6e316Xo6m\nW067os4NAbur4bTUx6l6SUvEsDNNH0bj06ChSWeWjwOtgSwFy8idwKamc0yR\nbL7ABZJrBgqOaeQ4KyGe/lpXCfp/v2Jysh28HLui3kgIO3FWYiJssh5nmnbU\n1Uusjjje8l7k9vCYCIgnbtFfVWTmQtfonavO7/Lx8uCu2Tp7Tf+HxVxtnnKo\nEX3+DT66e/noSItbFoZ7ka4nqv33ld3tD6RbQKGE/tLSKEwvfQpSo5B63N4I\nrNOjYtzvukuFAZ0GevH+wfyleNtesJJnfXREWjEbHSJfJUUDKp865py7HCN1\nay0HTVTcnDBM20RbFs0e9n9wO6JR2oekDByeMMdI4LYA4kaNyaSt7aWnHDl+\np5P08GdztFn7OzMXpJKihcPepTFAg3xRc2OHD2pJd5ht9C71+KHi/8ydg0QJ\n6VsXFvHLzLkX9y9U6veGbzvONtdBiKbTGeWf6FI7PZOAjEZEaKL4bVBpAzL0\nlrKoSWtK1h8DtHFweIUDXOU90xycpo3qlhw1Ky0dgHQA37cohA7t5D9w0laI\nNF97\r\n=feSv\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-function-name_7.10.4_1593522773872_0.09523616498811327"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# @babel/helper-function-name\n\n> Helper function to change the property 'name' of every function\n\nSee our website [@babel/helper-function-name](https://babeljs.io/docs/en/next/babel-helper-function-name.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-function-name\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-function-name --dev\n```\n",
   "maintainers": [
     {
       "email": "daniel@tschinder.de",
       "name": "danez"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
     },
     {
       "email": "bng412@gmail.com",
@@ -2270,6 +2551,10 @@
     {
       "email": "hi@henryzoo.com",
       "name": "hzoo"
+    },
+    {
+      "email": "i@jhuang.me",
+      "name": "jlhwung"
     },
     {
       "email": "loganfsmyth@gmail.com",
@@ -2281,7 +2566,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:42:16.105Z",
+    "modified": "2020-06-30T13:13:00.606Z",
     "created": "2017-10-30T18:36:05.850Z",
     "7.0.0-beta.4": "2017-10-30T18:36:05.850Z",
     "7.0.0-beta.5": "2017-10-30T20:57:41.810Z",
@@ -2321,12 +2606,23 @@
     "7.7.0": "2019-11-05T10:53:41.574Z",
     "7.7.4": "2019-11-22T23:33:36.812Z",
     "7.8.0": "2020-01-12T00:17:09.835Z",
-    "7.8.3": "2020-01-13T21:42:12.206Z"
+    "7.8.3": "2020-01-13T21:42:12.206Z",
+    "7.9.5": "2020-04-07T19:25:26.490Z",
+    "7.10.1": "2020-05-27T22:07:56.183Z",
+    "7.10.3": "2020-06-19T20:54:37.381Z",
+    "7.10.4": "2020-06-30T13:12:54.009Z"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-function-name"
+    "url": "git+https://github.com/babel/babel.git",
+    "directory": "packages/babel-helper-function-name"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/babel/babel#readme",
+  "bugs": {
+    "url": "https://github.com/babel/babel/issues"
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

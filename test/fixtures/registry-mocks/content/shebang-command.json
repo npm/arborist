@@ -283,6 +283,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# shebang-command [![Build Status](https://travis-ci.org/kevva/shebang-command.svg?branch=master)](https://travis-ci.org/kevva/shebang-command)\n\n> Get the command from a shebang\n\n\n## Install\n\n```\n$ npm install shebang-command\n```\n\n\n## Usage\n\n```js\nconst shebangCommand = require('shebang-command');\n\nshebangCommand('#!/usr/bin/env node');\n//=> 'node'\n\nshebangCommand('#!/bin/bash');\n//=> 'bash'\n```\n\n\n## API\n\n### shebangCommand(string)\n\n#### string\n\nType: `string`\n\nString containing a shebang.\n",
   "maintainers": [
     {
       "name": "kevva",
@@ -320,5 +321,7 @@
   "readmeFilename": "readme.md",
   "users": {
     "kakaman": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

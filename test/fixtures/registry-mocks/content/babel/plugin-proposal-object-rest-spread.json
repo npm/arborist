@@ -1,10 +1,10 @@
 {
   "_id": "@babel/plugin-proposal-object-rest-spread",
-  "_rev": "79-2837479b9c7755d65deea4eeda9075e5",
+  "_rev": "90-7d533f9ecc70c8b28d6fe031fa0b58eb",
   "name": "@babel/plugin-proposal-object-rest-spread",
   "description": "Compile object rest and spread to ES5",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -2046,6 +2046,7 @@
         "@babel/core": "7.0.0-rc.3",
         "@babel/helper-plugin-test-runner": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.0.0-rc.3",
       "dist": {
         "shasum": "c51a93b86d59eb35ea4f123c5f18f0953a25d761",
@@ -2112,6 +2113,7 @@
         "@babel/core": "^7.0.0-rc.4",
         "@babel/helper-plugin-test-runner": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.0.0-rc.4",
       "dist": {
         "shasum": "b9d3c04a67b4d3399e426a74dd51e9e8bd06fd9f",
@@ -2179,6 +2181,8 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/plugin-proposal-object-rest-spread\n\n> Compile object rest and spread to ES5\n\nSee our website [@babel/plugin-proposal-object-rest-spread](https://babeljs.io/docs/en/next/babel-plugin-proposal-object-rest-spread.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/plugin-proposal-object-rest-spread\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/plugin-proposal-object-rest-spread --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.0.0",
       "dist": {
         "shasum": "9a17b547f64d0676b6c9cecd4edf74a82ab85e7e",
@@ -2248,6 +2252,7 @@
         "@babel/core": "^7.2.0",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.2.0",
       "dist": {
         "shasum": "88f5fec3e7ad019014c97f7ee3c992f0adbf7fb8",
@@ -2318,6 +2323,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f6ee26c3da4c903818fd61fd9e5e8e1970185f77",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.3.0",
       "dist": {
         "shasum": "c7411ecbb5d45e31b36d07187868783d2d738623",
@@ -2388,6 +2394,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f2af6c1170ebbea22bd29a2bae01efaec800dfe9",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.3.1",
       "dist": {
         "shasum": "f69fb6a1ea6a4e1c503994a91d9cf76f3c4b36e8",
@@ -2458,6 +2465,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "d896ce2b53f64742feeea27dd33ee45934cd041a",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.3.2",
       "dist": {
         "shasum": "6d1859882d4d778578e41f82cc5d7bf3d5daf6c1",
@@ -2528,6 +2536,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "1f6454cc90fe33e0a32260871212e2f719f35741",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.3.4",
       "dist": {
         "shasum": "47f73cf7f2a721aad5c0261205405c642e424654",
@@ -2598,6 +2607,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.4.0",
       "dist": {
         "shasum": "e4960575205eadf2a1ab4e0c79f9504d5b82a97f",
@@ -2668,6 +2678,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "508fde4009f31883f318b9e6546459ac1b086a91",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.4.3",
       "dist": {
         "shasum": "be27cd416eceeba84141305b93c282f5de23bbb4",
@@ -2738,6 +2749,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-proposal-object-rest-spread@7.4.4",
       "dist": {
         "shasum": "1ef173fcf24b3e2df92a678f027673b55e7e3005",
@@ -3588,36 +3600,735 @@
         "tmp": "tmp/plugin-proposal-object-rest-spread_7.8.3_1578951672807_0.2579929647293264"
       },
       "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.9.0",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-UgqBv6bjq4fDb8uku9f+wcm1J7YxJ5nT7WO/jBr0cl0PLKb7t1O6RNR1kZbjgx2LQtsDI9hwoQVmn0yhXeQyow==",
+        "shasum": "a28993699fc13df165995362693962ba6b061d6f",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.9.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 15988,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOOdCRA9TVsSAnZWagAAhn4P/ivpBE2P2Vng1i3Y1+IM\nZZMMQHJ7gtjJmZgH1BCABI+qjtRf7pJbuDKsfpxQPt8zVyh3x12TBwBa6kyd\ntCNogT+ijnkV0DAecaSAAcQJDyzilgg24vZKmjzdL0T9M3845diAsDul69ie\nPpkB6wKI3JwiDsTM7TRZX1JFlcqtnlPh2Z2Z7h9w1BCkNMqQ+Fl8kAP8uDkd\nMcKhd4F7gFYpkisjNkqSJJjlb93USVlEE54WuRIPxx8qrWtJwGmopLSVxaHG\nYhKca2xq+osjtruDQH7kSmxtMAK8uYrIcjMGvxTPymCDieD0x0Nd/4haBcPm\nxAe98GMv+V5mPGfhFNKMu28z1dSQbRltJtXGqG7/4jgON7eVDsEJ0GU8C+mu\n7cINFgisQa3s0eQiM1jKoFa0ZgcHfduM8aG5CeZ7eQ16ncc7knhC0zYjFZh9\nsCbsQf8kFDSaVcM33Bw6Fv/N6jSEP0lfXhUEUGvmxP2oLilvRDHDGm8xsEKj\ni1mJValgDRsxDS+0wQZDojEHEvxqbIj7Kd+yo+F2GQbIlopS3qWkSIjfPHfK\niJAfUt9UiF7p/5wpwy4Ujqqpbd0K6/0Iqjy327TMrQYhgkKGqvXGPn0PG7/q\nLyuG0B2cLxrTRfLyrnsEAffNg7jrfPIJRtpHOxk65Av7eKxyzfcnM85FFfWO\nkLPv\r\n=x4jV\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.9.0_1584718748033_0.8881237242616951"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.5": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.9.5",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.9.5"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5b97e77e030cf3853a147fdff81844ea4026219d",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.9.5",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "lerna/3.19.0/node@v10.19.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-VP2oXvAf7KCYTthbUHwBlewbl1Iq059f6seJGsxMizaCdgHIeczOr7FBqELhSqfkIl04Fi8okzWzl63UKbQmmg==",
+        "shasum": "3fd65911306d8746014ec0d0cf78f0e39a149116",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.9.5.tgz",
+        "fileCount": 4,
+        "unpackedSize": 17902,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJejNOeCRA9TVsSAnZWagAAU8YP/1nWyhIQqt5FZs4cTc2C\nIClR7z80E1GbhUwI8DkwL7IFr5rucnt5KrdKRDiWO3GfnqynCmS7Yt0n7s5M\n5d6yt/Zyiq1QxCWBSse8tRYQ3ZX4r8v1BwoSf8okW5nedYFvRO5wzxp+v4HI\ng1zlZIjBz/aU8o56YRAzZVKMm38JbRh9uey8uhT5GJs//fKCbUaRta2LvhAk\nifVy9T1t+LHrqJ8tBs/uXF9Wd9xuDDJOQKkd4QqTqrtWK1pIupqEsP2UHpHo\n1jhN/jP9IrhSV1KP8Z68zCZTQ/yukLdB+HyAwBW6TZ7u6c1+BEYQLhFnRrfL\nJKxWhzznMX7N12k1q3Ij7r0NU9zCWwtr8al2FDMakrcmMaN/zamyvANu/B3/\n7DtSMn7A+zzyd7iLp94a2TECLYULsbsPVA1HK1fjgD0zKpn7xyeSxr1URZwL\nVrAHl63LIqTqbkJPOycFqkFc1EJqBVxAeQi0vsps4gktbqNa0FAzDI9/vHBE\n7RjXykaH0Ht6qslXcbCMn9d/ZvH1hKpopT0i/RwuEuRs+cCeFxvABLYgxBr8\n4Nmg3hhQMpOsXPpyWJLIFKmNxKBBsMKYExB1lE3WSMCauG4tszxfMIi0TBjN\nesDEdzlLz0jzYn0xGXRcHyil/kBPQcDp6SWhwk+IeBfpUECPnn8E0o9qLo1a\n3dPW\r\n=THMi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.9.5_1586287518165_0.47684964626681525"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.6": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.9.6",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.9.5"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.9.6",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "9c2846bcacc75aa931ea9d556950c2113765d43d",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.9.6",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.0.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-Ga6/fhGqA9Hj+y6whNpPv8psyaK5xzrQwSPsGPloVkvmH+PqW1ixdnfJ9uIO06OjQNYol3PMnfmJ8vfZtkzF+A==",
+        "shasum": "7a093586fcb18b08266eb1a7177da671ac575b63",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.9.6.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18159,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqcmFCRA9TVsSAnZWagAAKGUP/0vEelj/2VRSXW66we0i\nLYEhiirf9EzFOp3GiOTufSZ10LmaoGf0DLaJU/o4t+m1/OMwFeD8Ykk6+uYo\npT/uYG4rVWe967MgN9BGtmgmPh97wbVeDGN6RscbtnlD0PQWC3cgd5zs19A/\n7Z7g9mpdjsprBecqx4LhLEQYiiKHFRk6gw/+rZKek/SHdejO/dB9kuqZdy9+\nFLI44c3mvXGpLW79+ff7OAGSog+rKsdtSMo7Ix4U780SvRIrzm43aAiN/Jvq\nDxgZ+OoFt2hWB9h9mItaKP8po/qlaurGLgTDI5XHov3m3Jtpoj6/LewqX8SN\nWz/zPDf/aQPHX8/wbHqBWfFV5rRV66hMiWucSre42SFRKrGpvebmqeBBvpE5\nYwBlQMDikUJbzzkgdduwgww5gvB7HdhQ0GcNnOOTLtauWCs+oMISCQtqCMkQ\n+2UtwBusnPzgpX0IGnSaDMIq8/lCKEteIZq2UGEdjTPjl/U0/OHDVj6K+FJy\ng2PiE83yeOdXS0zYfu6xJ6zHZsNBXMdt5dgqp2Y7/+cupGjUAOtp1k/A5z+S\nM9RNIBg6Kgu+HWXbyoHmG5sYPR0IFQXT1gh5zU8P4+332mIqVYtUnBs5w9Xw\nraXZeJ3BnDhJ8t9jE3ISqPxkARV96gY2Ief2QoXvtoAAecY09vqhdCRolUes\nurzr\r\n=Wa3A\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.9.6_1588185476774_0.6586721378767639"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.10.0",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.9.5"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-DOD+4TqMcRKJdAfN08+v9cciK5d0HW5hwTndOoKZEfEzU/mRrKboheD5mnWU4Q96VOnDdAj86kKjZhoQyG6s+A==",
+        "shasum": "d27b0910b637f7c9d9a5629f2adcd04dc9ea4e69",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.10.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18334,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY1zCRA9TVsSAnZWagAAppoP/21+DWA90w9QnbYVDWpO\nrKlg71suiT/HHpVCybrrVywe5rO3ZmjSmHcCUoOe7p/IEiaSux6TIM44M8vp\nrs25tPmkHd5Xp0ldyeaRZ7dIYjYqwPsuh4vz86RwpFLCFH8ZrJXQ4sq59jfN\nAeEpFgQ963SPQjzG+9qbYgsmBVK2BKxXCyFD/bpUkputFEDO0C+jbK1X9z0p\nytrAEefkXgM92JS8xRowSYM2gu5loFLdl2HsKxti7ZHHyO6c54DDxsHP9IrM\nDcFpHZU2FhpdRRKRoQXdIxRCTiPR0W5vmlO5YjjcVqspUbT0EuSjTbW14R9X\ndC8fmIryGpED2UGrn1OKHBANlwFs4LpMPAlTff4rAZWghOvoLi2XJK4A39OC\nfHkAOKHxEx4EuVT+GkD+RsX4cwUikWsTNpOU1tb4VDmdXUk/bcJ487/kgdPK\n5iEKcWlNv9DdM1Pq06aOwD6hheg1oV6euKGboycBrdIyD3ljv5/IKYlKzgmD\nh6iXRCu4pSlwAGRakgNne78IsrC1VWZEOyQUFDBMFv9RZdmg6qfz3BRbTh7M\nBi2fxUdGFkjcV81iiynPo4w/4G7CLDZGe5udnWbOX3zWVDFhyz2zRjzu1aEb\nnuKUEYMtGq5cETR+OWODfvDMxB+5lHZzrTOoL1EakB0/ghJU98dVLRmHj4GE\nTSx7\r\n=H55i\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.10.0_1590529395271_0.8856743789600372"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.10.1",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.1",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.10.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.1",
+        "@babel/helper-plugin-test-runner": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-Z+Qri55KiQkHh7Fc4BW6o+QBuTagbOp9txE+4U1i79u9oWlf2npkiDx+Rf3iK3lbcHBuNy9UOkwuR5wOMH3LIQ==",
+        "shasum": "cba44908ac9f142650b4a65b8aa06bf3478d5fb6",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18385,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuTDCRA9TVsSAnZWagAAB4kP/3F0XXORm0MTfiBALIkJ\n+x1yb/a36WjhxObiyYj+LNUA7eNkP2iinkx5gjCvBQBcfGwMv7AthHtRioAe\nGRv8vHSFNydtAEgzf4ivpZNYRWheJGsUN1G6zbEaqSC4ifPCrcnrtl6UJhwz\nDaWOQbuhg7kubpHOu7ej4tRLJF5mR7P0f4HTLQ45R6ieefw23LuAZHwGATWB\nGXbbISNk7mLILUmfkXlVZ27gct2TbnvxnxfCQ+Y3WxS3oAggweESUKo80te+\nmv6PVmwCTmYUCCs4iqVmx6j+TR7lYa24DYJl05XN7lH9bPsXIS8BgDXbuucn\nBkR8zixsAZLKfpbC1bYjb920uujlrJN+jWAo2vFRbKcX5mZxg13pTk269WAw\n+IUWsA5bsn2qJAHIgZRCeR94NLNBFynt+ng2heOTBGe8qYbThFqrTmDYFgM6\n1d2RVZMtQlr405ztNOETbjVQazusWAMHMFZpj/VNwoSFbSn6vp/RGRFbhYZM\nZBaGUNf/OVPl/x9qs4bhzYFWTsWxP5zt/h/MPzGkETs3aRFVW/PbTTm6ReUV\nbHfdURrKDoCwhsM3NDCbnUBRaQnOmdavkIsiA3C5ZVtYrtGqAAefEZwfL5J/\nTaC1hN88NNnWVNyqtAUwh4CQuIq2+NEntDY+kSQ41M7IbKEdj/hicjpYZPWe\nY0OB\r\n=A5rT\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.10.1_1590617282655_0.42340509001816873"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.10.3",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.3",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.10.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.3",
+        "@babel/helper-plugin-test-runner": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-ZZh5leCIlH9lni5bU/wB/UcjtcVLgR8gc+FAgW2OOY+m9h1II3ItTO1/cewNUcsIDZSYcSaz/rYVls+Fb0ExVQ==",
+        "shasum": "b8d0d22f70afa34ad84b7a200ff772f9b9fce474",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.10.3.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18385,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SX9CRA9TVsSAnZWagAAZtEP/Rfczq6AvdiP+eM71VA5\nyRFPM6UXpWBFQzyoLsDGEViVwiumARX+Vy7OuOBu9+eMmzyeCalo5/6XihWk\nQ6/8KxG1It57SW38LBFOrGqbAh97UrrAMUX+hGuJmEFtjlH6t8b9umUma1Vt\ntUz0oHcHpqNsbB3HeJ4WiSzkB89tAuaz4kfapPlgQ79hV74TvZa5mHUZAWvY\nCfWK0SoYxdHJtzA90DoIdrprRMsDlGuqCRDm2XoqI1KEKOod73quSZxGcxWV\nCds8+PannMiG37d9PtxzTl85PWpxK5zuN9MFudoBFUsgRyb1pTg388gkvy0k\nF1YogDzku2QP7C2xfn+iboSMh3jRXV966mxhlPqx14xR2NeBvxNTUmaCXyPk\nSh8RaHK8p4UZbo84CinlbiHjRmyog/Vi053nTwDCx8BykMdXyEQEZqUG0geH\nnJuVFej/ZqcMLAcIBd7bpCg7E4EnV9jWXRaof8LWvCb1Vynp9Kr00MPpwp6n\nvTg1QH8n52D76uupcYlK4XMXzOEOK4UPbkOhh4vVwGbvCk2v8h8QVZuUOuyV\ncuV0XL2hdBmwVWiUE+sbCNan2bKnfHB+VXtsIrdlPqlLLBZSHBvz9yfUJHY6\nw+DYvDG0c2dCrA5qs/F3a3m6lk9ypNZ8ali3P+FPa38i1JaP5aesKuX6xlje\nnp76\r\n=Vm1O\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.10.3_1592600061052_0.20076221042842635"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.10.4",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-6vh4SqRuLLarjgeOf4EaROJAHjvu9Gl+/346PbDH9yWbJyfnJ/ah3jmYKYtswEyCoWZiidvVHjHshd4WgjB9BA==",
+        "shasum": "50129ac216b9a6a55b3853fdd923e74bf553a4c0",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18385,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zpbCRA9TVsSAnZWagAAzxMP/0QH2AkdH6uqenrvfK10\nSwfks9RnjdOFUCSgJ7eJrXDM6WkSboiShv6mE9GXe1pxL9mjx5cUNnalUFOT\naLVcw1G4X/f/FhnvH1FBQuPKtgVaQSZlPTEdcCk9F3REf3ZalGQLWHUZZxsK\ntMutU4bnroFIf63yFOTlbBBLT+Q/d6YwNbHZrBrsmOf7HbXsfZnsLGZdUSXJ\nRNRHhUjR9D9w89MwE0n1kyVUg8OqZS3/oQCfDKopSgbudwFBXJGLQFrgW92S\nXuv5iEl/Xu+gdnjaCVtRFv4TOJNOcIWu/8fp0igIO1R1eO5l0OYIRKJdkhAx\nx71inBwP4yf8XKxL6JyDc0pOmNMSF1EmJvL+HCEQU78R1U0RGKvvlc+VmUHD\nWxsAruM4mCiM3MEQBEeq/gIDnZ0yceNsjbX5pbusDa7fTQFPFkGuxHR+gMbo\njEa1d9I5xaoSFUlRJbuXs/9rHCgbbXpySXj0gAI9G11f/H3oDVTWTWooZqPG\nS2oPSUrIXxO4IDkWvm3ptoC+lyHdS6NYoSMjK2Z7jPBw8EGFk5zlyFbq1PB1\nafEFxiVQwHgJXNGsghV14z3/EEEoPnKiV80Rxi5HNUFwgxtzKcRQtZPgEDMg\n1iWPyXToFsoOdKuoid6Zm0jpyGfqOyZaLiQw05jSjAjJasQDIFWKaQ1eqGVo\nS+0G\r\n=kTWE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.10.4_1593522779117_0.7642315083830677"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.0": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.11.0",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.11.0",
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "38dda069eeac2e31bce3f56290998d30bee1ed6b",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.11.0",
+      "_nodeVersion": "14.6.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.6.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-wzch41N4yztwoRw0ak+37wxwJM2oiIiy6huGCoqkvSTA9acYWcPfn9Y4aJqmFFJ70KTJUu29f3DQ43uJ9HXzEA==",
+        "shasum": "bd81f95a1f746760ea43b6c2d3d62b11790ad0af",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.11.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18385,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfIzVdCRA9TVsSAnZWagAAd18QAJSov/jZzrSmjUjXKILH\nyC6hW54AekaQBof7EoYxnpreh5K7QypXIBfS2cfgJ8upoFkdqtIPF40Ykrmh\nDHq7lQkoWgotiaE4F/MT1npDFEpVANzb34UucYTeAW8B1aq7tlwjOYnE3NDw\nGn8wkRKsC9FMeTduRzNxmlPh9/kAPA3/g3ZwXQTNmlRMhMuJIwy7Kl5DdAtV\ngbNTJcLyYHpvrtTviamG/oSSFvLQCR/IiI+Ja8DkYfKetc9iVJ2WEv4PMrPf\nYcXMfXfkCxnjRGcmzEaIdSKH/UnRCBKyucmJIoP/cOA3nbA98JuSax0Tj9cK\nUlC+kYd/SOkKkTUmT/m13vR9Xp/bDXvikgJeAx8n2OwsGT+vKUULndLxkSrl\n1nb3Cg4Fwmci5LpIamASro02MKsanD5PeztAaeXNQGZ7tZX1hxXUNXjKK//x\nPa6jU4VtJMGHcWQzy5xTS5uT68B5T4LMvTAZjC6k36/fFuqNpmN5sh4gPHOe\nyWLolD7r1pAU/ravODmfV0kHFs+sIQy0kna/N+6GeUfNsa1BFHqaOhyC/Rnu\n2fsZEVks6EtfX7xqdQDnq6g0XXT0tSsFpnc+bkDPGTw3BsUOS4jhUoK9RoGy\nmxgagznjWmtwMCwu5nYEfRUT1D8AKS+24b5lKEDR1ze4ycme43XBzTO5j7St\nUzNt\r\n=HVuX\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.11.0_1596142941348_0.4009537773865568"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/plugin-proposal-object-rest-spread",
+      "version": "7.12.1",
+      "description": "Compile object rest and spread to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-proposal-object-rest-spread"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4",
+        "@babel/plugin-syntax-object-rest-spread": "^7.8.0",
+        "@babel/plugin-transform-parameters": "^7.12.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.12.1",
+        "@babel/helper-plugin-test-runner": "7.10.4"
+      },
+      "_id": "@babel/plugin-proposal-object-rest-spread@7.12.1",
+      "dist": {
+        "shasum": "def9bd03cea0f9b72283dac0ec22d289c7691069",
+        "integrity": "sha512-s6SowJIjzlhx8o7lsFx5zmY4At6CTtDvgNQDdPzkBQucle58A6b/TTeEBYtyDgmcXjUTM+vE8YOGHZzzbc/ioA==",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.12.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 18326,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiNAECRA9TVsSAnZWagAA1u4P/3oIVQ5N2v3z7ldKg83z\nS4B0bKlaGPapgkl+zwy+tDWY+dgEXVDKIaygpOTWV1wH2SL3OT8v4BNqUbt7\nY223IFOFAHyr5tp/dMEG8YF6SZHCEzDTxGtn/duhFUw3lhga4oOCDsVbcJzB\nKJuzhxRoYNxeFCv59qICgNY3DxvWPsayV+OONEDiQezCYPhRnvwsqh1n6JEb\n2B4Ny2gwh2a3uRXYNpF5iEEgBLNkDEJRgtQJp5nU3meeZXIvwfCbcR1BBL/F\nRV8eKYoteo8qb/guJK6bPgdPWaMwMz564ikRgeJiu6yrZa8R6uxSYKoFXF1X\nLfPtJ8LByezIOz+NQqe5MWWGLwRd3OX9RZzWzKDUuns+bVrxOaxMyCtJ2NIb\njO6S3A5+LtoQ5nUKYQwf6fe9tqJq8NpRMBu4m1vqM9rILFfgjnzU+G3Y334I\n24+NLywN5h+ILGe8UgtobMsgwpzFO357eHbUd2YUxDkWyRUhT6IUyXscA+Pv\n91KCVEMxEKxW58vMICQhs1GfeWEbvip0x2RQ+n4M3BVIZ4t/h5rgHaAN4mct\nv22DjgeOhTrfffT3AAqzQk7cbjIETHzHRZdQCsRU6zZNMbUx/YUbqaC2teUV\nqVd4iM7M/ken3CeHASar726eYVmwb3OtYVgZpW/PA6c9oG0Uq+NornCi02WA\ntmN/\r\n=Bs5S\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-proposal-object-rest-spread_7.12.1_1602801667865_0.8733512037851201"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:41:17.625Z",
+    "modified": "2020-10-15T22:41:13.617Z",
     "created": "2017-10-30T18:35:15.918Z",
     "7.0.0-beta.4": "2017-10-30T18:35:15.918Z",
     "7.0.0-beta.5": "2017-10-30T20:56:53.277Z",
@@ -3671,18 +4382,30 @@
     "7.7.4": "2019-11-22T23:32:59.586Z",
     "7.7.7": "2019-12-19T00:53:06.545Z",
     "7.8.0": "2020-01-12T00:17:02.108Z",
-    "7.8.3": "2020-01-13T21:41:12.952Z"
+    "7.8.3": "2020-01-13T21:41:12.952Z",
+    "7.9.0": "2020-03-20T15:39:08.784Z",
+    "7.9.5": "2020-04-07T19:25:18.279Z",
+    "7.9.6": "2020-04-29T18:37:56.966Z",
+    "7.10.0": "2020-05-26T21:43:15.403Z",
+    "7.10.1": "2020-05-27T22:08:02.993Z",
+    "7.10.3": "2020-06-19T20:54:21.167Z",
+    "7.10.4": "2020-06-30T13:12:59.234Z",
+    "7.11.0": "2020-07-30T21:02:21.487Z",
+    "7.12.1": "2020-10-15T22:41:07.998Z"
   },
   "keywords": [
     "babel-plugin"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-object-rest-spread"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-proposal-object-rest-spread"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "readmeFilename": "",
   "users": {
     "craigmorton": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,10 +1,10 @@
 {
   "_id": "@babel/types",
-  "_rev": "82-2559bd27de6299ac38ac4e2c22a7da0c",
+  "_rev": "99-7c86c1cbe41bc5748630482350bf6a75",
   "name": "@babel/types",
   "description": "Babel Types is a Lodash-esque utility library for AST nodes",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -2083,6 +2083,7 @@
         "@babel/generator": "7.0.0-rc.3",
         "@babel/parser": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.0.0-rc.3",
       "dist": {
         "shasum": "877ebc543b139f4a1e4c9bd8849c25ab9aea8f41",
@@ -2150,6 +2151,7 @@
         "@babel/generator": "^7.0.0-rc.4",
         "@babel/parser": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.0.0-rc.4",
       "dist": {
         "shasum": "304dbb9097fadcd35a59a53859a0b4c519186b38",
@@ -2218,6 +2220,8 @@
         "@babel/parser": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/types\n\n> Babel Types is a Lodash-esque utility library for AST nodes\n\nSee our website [@babel/types](https://babeljs.io/docs/en/next/babel-types.html) for more information or the [issues](https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20types%22+is%3Aopen) associated with this package.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/types\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/types --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.0.0",
       "dist": {
         "shasum": "6e191793d3c854d19c6749989e3bc55f0e962118",
@@ -2285,6 +2289,7 @@
         "@babel/generator": "^7.0.0",
         "@babel/parser": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.1.1",
       "dist": {
         "shasum": "d4cd23395df3e2c24d398a55285a4432e8e97a46",
@@ -2348,6 +2353,7 @@
         "@babel/generator": "^7.0.0",
         "@babel/parser": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.1.2",
       "dist": {
         "shasum": "183e7952cf6691628afdc2e2b90d03240bac80c0",
@@ -2411,6 +2417,7 @@
         "@babel/generator": "^7.0.0",
         "@babel/parser": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.1.3",
       "dist": {
         "shasum": "3a767004567060c2f40fca49a304712c525ee37d",
@@ -2474,6 +2481,7 @@
         "@babel/generator": "^7.1.5",
         "@babel/parser": "^7.1.5"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.1.5",
       "dist": {
         "shasum": "12fe64e91a431234b7017b4227a78cc0eec4e081",
@@ -2537,6 +2545,7 @@
         "@babel/generator": "^7.1.6",
         "@babel/parser": "^7.1.6"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.1.6",
       "dist": {
         "shasum": "0adb330c3a281348a190263aceb540e10f04bcce",
@@ -2604,6 +2613,7 @@
         "@babel/generator": "^7.2.0",
         "@babel/parser": "^7.2.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.2.0",
       "dist": {
         "shasum": "7941c5b2d8060e06f9601d6be7c223eef906d5d8",
@@ -2671,6 +2681,7 @@
         "@babel/generator": "^7.2.2",
         "@babel/parser": "^7.2.2"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.2.2",
       "dist": {
         "shasum": "44e10fc24e33af524488b716cdaee5360ea8ed1e",
@@ -2808,6 +2819,7 @@
         "@babel/parser": "^7.3.2"
       },
       "gitHead": "d896ce2b53f64742feeea27dd33ee45934cd041a",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.3.2",
       "dist": {
         "shasum": "424f5be4be633fff33fb83ab8d67e4a8290f5a2f",
@@ -2876,6 +2888,7 @@
         "@babel/parser": "^7.3.3"
       },
       "gitHead": "d1fe2d05f4c468640facf40565e30f7110757f2d",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.3.3",
       "dist": {
         "shasum": "6c44d1cdac2a7625b624216657d5bc6c107ab436",
@@ -2944,6 +2957,7 @@
         "@babel/parser": "^7.3.4"
       },
       "gitHead": "1f6454cc90fe33e0a32260871212e2f719f35741",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.3.4",
       "dist": {
         "shasum": "bf482eaeaffb367a28abbf9357a94963235d90ed",
@@ -3012,6 +3026,7 @@
         "@babel/parser": "^7.4.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.4.0",
       "dist": {
         "shasum": "670724f77d24cce6cc7d8cf64599d511d164894c",
@@ -3080,6 +3095,7 @@
         "@babel/parser": "^7.4.4"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/types@7.4.4",
       "dist": {
         "shasum": "8db9e9a629bb7c29370009b4b779ed93fe57d5f0",
@@ -3925,36 +3941,1196 @@
         "tmp": "tmp/types_7.8.3_1578951666980_0.7213230665156058"
       },
       "_hasShrinkwrap": false
+    },
+    "7.8.6": {
+      "name": "@babel/types",
+      "version": "7.8.6",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "esutils": "^2.0.2",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.8.6",
+        "@babel/parser": "^7.8.6"
+      },
+      "gitHead": "750d3dde3bd2d390819820fd22c05441da78751b",
+      "_id": "@babel/types@7.8.6",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.7.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-wqz7pgWMIrht3gquyEFPVXeXCti72Rm8ep9b5tQKz9Yg9LzJA3HxosF1SB3Kc81KD1A3XBkkVYtJvCKS2Z/QrA==",
+        "shasum": "629ecc33c2557fcde7126e58053127afdb3e6d01",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.8.6.tgz",
+        "fileCount": 93,
+        "unpackedSize": 701635,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeV7RCCRA9TVsSAnZWagAA1woP/A3D7hUTNd8UhPI2KWqI\nOvKJu+blBgGOU3v6Yhu4QYGVOVeSxxClaKuq6CAnQfB9aMSSeb93cV8vxC5V\nAP57ABnLJFGmzKptfGUc0YWZRsjeKWC3PiuTlsO3Rl4Iv+ow3HgYQhY/KBXf\nXPIz6HXdFvkBwkbze17uXqvyaXIALEZhR1YwELnXruH4Lfstg1gINVcQzv1P\nu/WrkWNEaOgfGgWUIMTocalJTc44A36CKBMEOSL810IMZ5FynRG0FYmuDE95\nf2+m1GmVZG1OIn9LSo0GMRv7VLOerYKo9v4FA7wrKG7TJqT7SGHu9vlBGIl1\ny/hPYfq/n4alHnbBWYpirXgfnqbkGVBan96kowlAh2/zw5Jcw9fV4GG5ywDi\nEgFBtlUvJQ1RLpBDbR0ze/ey1at5Rk7zALaGxVJMv03uncyTW7/tzb22nYzK\nOfWdnyTEKe+IPR7C3ZE523NAl/bk6nlT97G9DVPDnooS3Vce31mS+qm2j0UU\nO2f2n7xSaql0JoT+NX9/Gol+K+UU6U5CJ9pSrR/7iiM3R4f04wp1/GbsedsU\nAtwquZOLfR2scyd3T3NC0JQohFb5SIF7FPbxf+yGcgO/s6jx2c+kgrzS8R7A\ncFZciTjJrjNtkDJCu9Q3PjyDwMcU/HO96jTKRQqTKwMuGGxP+L+1VyBnCcW2\nQovD\r\n=wUKt\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.8.6_1582806082259_0.9644671026378187"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.8.7": {
+      "name": "@babel/types",
+      "version": "7.8.7",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "esutils": "^2.0.2",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.8.7",
+        "@babel/parser": "^7.8.7"
+      },
+      "gitHead": "595f65f33b8e948e34d12be83f700cf8d070c790",
+      "_id": "@babel/types@7.8.7",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.7.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-k2TreEHxFA4CjGkL+GYjRyx35W0Mr7DP5+9q6WMkyKXB+904bYmG40syjMFV0oLlhhFCwWl0vA0DyzTDkwAiJw==",
+        "shasum": "1fc9729e1acbb2337d5b6977a63979b4819f5d1d",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.8.7.tgz",
+        "fileCount": 93,
+        "unpackedSize": 701727,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeYFw0CRA9TVsSAnZWagAAgzwP/iMy8kI1QIJcKyhDLcGA\nJJ/Q+CFB0QAyq4kBLgVZ5RVyD0STA9vRlI5Y63zucNzL7qHHLvPWPKVvFUSY\nKN/ATXfOhfyhmsnT1c6x1Vno3DRoqPlmCaEhNEH+Hvxa9FYaGGe6+xCAwets\nt6HGt755pmNNnI/ETB0ePWo/Zq1YBbs5dSlbtdE+bWnAZfr6ZIZ69HmXE66l\nOmzhJqpuobo18P1n5X/iraOs5fng37pTy3Vaqr5+Bm8uElBI8p5pIxLhu/UR\nI+SG+kssr+Lta2acF9avYNWZmb3zDFSQrd24NWhaEYJ2yT3DUZ7n3D0W8kBH\nKi/G8hqDRB9LqaDzjJzH9QTnrEH+9JqZEs/Vwbbsp/eQgytzWFzPRCRqD62L\n4papbwhDGiQEJO2Rzb04O7DZWAqwHzrNr9STYU46BJTJ1gfQpQmR09OrcnI6\nZYCNQhsEBwPx4EgXHCR0PkgSbrv/q5MUC90G66//6M6fr/zcSMi8YBrESWNH\nSIYxAh0dCQxVQokYw90Kkjih7mIo6sMeFnRe4Q1j/LjuLhzDd07Uf5Xd0B4z\nX9QO3+qUL1CqGBuC+n2juPD0CA8o4UO5UegHTmNvvQOV/UCApg2k0PtIvJWu\nKq3JUfloVdRozShFJPJYtLjVZfjc7aY1qZFoZ413p89sf3Yo6DZeh2DIAYLS\nRKU6\r\n=lyNx\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.8.7_1583373364155_0.28225035925123"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/types",
+      "version": "7.9.0",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.9.0",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.9.0",
+        "@babel/parser": "^7.9.0"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/types@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-BS9JKfXkzzJl8RluW4JGknzpiUV7ZrvTayM6yfqLTVBEnFtyowVIOu6rqxRd5cVO6yGoWf4T8u8dgK9oB+GCng==",
+        "shasum": "00b064c3df83ad32b2dbf5ff07312b15c7f1efb5",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.9.0.tgz",
+        "fileCount": 94,
+        "unpackedSize": 710402,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOO1CRA9TVsSAnZWagAAaWkP/2K96qP8nHBlPOKbAtgP\nFVHZvKeWKdXiVKToksWUQPVnxFKRXsQkJdV/c3Nrgl8uGIl9R7tOG9gbuaiL\n7/8iurWhwiPP5blnOJmmMUZklBAv3mVVmN9KvRxOLBN3rrIBsVlf+OyL3rq/\njw0Y/VpUyzqXOFn5t4OIckundMYksjX4YWQcGAEk14r9+XhoIfaHf5TqBdYl\nb8pM0WTjvURmSw9HSxhkCCWrQM0idbN4M44Y8a4P5YLevb5njmyosLP9KGZ1\ng99TfV3AXnnXSVBtahQ3ZZHvn2/ZP94xPnuxxcIcCTmkXxkw2koyFOIRUgeg\nTUT2R35laYWUj81hwtpoVjGBWv4xqcZt3cws8HycNKmPXTw7FqzPk2/tsq8t\nde4ts0ds12cgStnwBn7EWSbd06E3VIfSBisz7xnTXrboKTSJK9ubv4pwEmlt\nMusd9PtFqnabsLsdaIF+DliC4f6Bs9M3ZpeyM9+1uN35VtVwm5VJP4vUsltK\nuU10xRTRV4zGryLQ1NAEwCLkMs88IoxZa4fGDdBTBz0q+HZ9X9K00PmHwMnM\n7fS//42/ideEDgAnmDsQ5FMGVRlEM7SgztzeGhcpomhUfKx6c7NON0WUtbWc\nQjDmsLnycqu/aBs+RQQ/LVpXMDhxCTyLlv5lc1UPDwPcNlQoA+63Jz3ggerw\n8E6e\r\n=vjD0\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.9.0_1584718772641_0.5992065235993034"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.5": {
+      "name": "@babel/types",
+      "version": "7.9.5",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.9.5",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.9.5",
+        "@babel/parser": "^7.9.0"
+      },
+      "gitHead": "5b97e77e030cf3853a147fdff81844ea4026219d",
+      "_id": "@babel/types@7.9.5",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "lerna/3.19.0/node@v10.19.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-XjnvNqenk818r5zMaba+sLQjnbda31UfUURv3ei0qPQw4u+j2jMyJ5b11y8ZHYTRSI3NnInQkkkRT4fLqqPdHg==",
+        "shasum": "89231f82915a8a566a703b3b20133f73da6b9444",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.9.5.tgz",
+        "fileCount": 94,
+        "unpackedSize": 710444,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJejNOhCRA9TVsSAnZWagAAtlYP/1kt/o/p8hE1mFvoRdqh\n4of8Wme3fLTm+wNmFntklO7sObZFyTwZsNtYotTp3Gn+n7G5de88f3ZfwY2e\nj7muRvPHSznw2HBL78CYZ/zyvB3O/LYrIQD2HyhWIQldhlUzywyiVGt3jXla\nrasSMAb83ayXd8wl5godCPaqSbo2h0va5z2iFgtbTSkPaSKshas70VvUI5ik\nxSLCut/12Vu8/Rbzc3s7yeNSRpHlmR8zkxXZ+6JqPJMUXUPBOQww41aXI++4\ncTWNQzwZQbpLelV+LAXBengoa2zPELcdorkj4nMRfMF1QWbUTJfUIupQfHji\ndOPMFxX8RgqMXBrI8olHZ0nogJ8ni+4mDMMk0HJLc7+etJfEYbPlFkUQ20Fv\nE8s5V/BUK/zIWo3O0cfQB82NLuJbyHJkCxX34ivqkOGD4t7QkNUPPjgJObun\nJ5x9cvHEMrZsIkTXwZGWimhoMwIc4As4RjJ5fBlbg23KuWLaiLmSFEzYp1sm\nvMflEoTlzxQyTw0FS4+WxMZTfAkUNws8MGBIVrNf3pf0kb8lfqwam74vT08a\nyBSJ1LOuuoqenTkIkvsNMZ+/nccIoMODiyJX4H2N+2DOu/s4K53GH25z5Q6a\nCk+gQv7lbVHZIpFMSIuH2pHWWEsrqPs6ChZL7BLU3d3q5KEKd08voCm3MQQn\nl1p6\r\n=C1f6\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.9.5_1586287520737_0.39064718255798137"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.6": {
+      "name": "@babel/types",
+      "version": "7.9.6",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.9.5",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.9.6",
+        "@babel/parser": "^7.9.6"
+      },
+      "gitHead": "9c2846bcacc75aa931ea9d556950c2113765d43d",
+      "_id": "@babel/types@7.9.6",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.0.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-qxXzvBO//jO9ZnoasKF1uJzHd2+M6Q2ZPIVfnFps8JJvXy0ZBbwbNOmE6SGIY5XOY6d1Bo5lb9d9RJ8nv3WSeA==",
+        "shasum": "2c5502b427251e9de1bd2dff95add646d95cc9f7",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.9.6.tgz",
+        "fileCount": 96,
+        "unpackedSize": 715270,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqcmNCRA9TVsSAnZWagAAvW4QAJujWrKrx1WSVnESj0hv\nasOl/bCjZXAqB2VIFC8nbSHVfu9G5rH385/mIP1+eA+ewzf1tX01jUav932C\nRI/RRkt/vZc95a0R7yrxwCA7N29V86PSYW+s5xkc/eKX9tqZe2GDj2uNn8K3\n6HWsURMROL5QfX7ikTW0R2Ie9KTAIHkecjo7XhRAjl8uDxLgd6qQTSyHK4pb\nBcVvz+xHGXK3NPi+UL2q4Ke7vRhifoNd0tDVnurLcpqqHfysHHH5xSoK1bx3\nbmrlcT9js3v8no2ckmDUq7+LuvBjJKW60sdLNt3F95TVxZoqRINQeUyJYu0D\npxBOVr/Rr29Q4uXPt0/x+CbtM0HsqFhgz7zkZgXd2Vsj8qcjKHZ6BVEKEaLZ\nYuSzMQ7rfiYlO9qHNolprR/6K94FnXVY1HfbOyccyuJgt4Rkmg0aF2Ljff+I\npp10msDJGAQ/wzJQC+TkVjuszfotFfFNw+ROTP8okpJBs+NIRG/tEu26A8VO\nl1z9vhkUaYm0jVbrFuwebPIG3KJB1rhoIWmV3KyffD9dhDVBrR+9r5KAp5a2\nVFGGCE4DPavj8vrOymthE4EPNnOzT2rBWixSAE47UeOTd7z/9S6oBZL/9w8U\nTuFsv/RBiOURgmMKzR0MZsPeH2P/BsuswXjE0YWzIIWwmwfnZT0s0IyrhJTN\nyuJs\r\n=JXlH\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.9.6_1588185484633_0.5084400127251483"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/types",
+      "version": "7.10.0",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.9.5",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.10.0",
+        "@babel/parser": "^7.10.0"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/types@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-t41W8yWFyQFPOAAvPvjyRhejcLGnJTA3iRpFcDbEKwVJ3UnHQePFzLk8GagTsucJlImyNwrGikGsYURrWbQG8w==",
+        "shasum": "d47d92249e42393a5723aad5319035ae411e3e38",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.10.0.tgz",
+        "fileCount": 96,
+        "unpackedSize": 716191,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY17CRA9TVsSAnZWagAAOAEP/RTlelASu97+UJeBTAO1\nKBvQWndfcU7jSsbX79sU5uI9Wjn5LocN+lBlmpnHR9e6164Rqcgf8j+BZVG6\n7ygF4T5hWDzAnAAH4t/9TeA5Mq3M7zZo5A/E5gMbe+omm6MC1QMPsFaKqEDp\n0cjnZktVbXG4VqPOZssO4CjftviE2npV18BYbgRus0gsxuvvmAjbHpA9j+iY\nhkt/zRwuENB99qdTdarxkdINt3Z2Bh5PztVFv1J7fsYutbiY9BtM8ZOo4uak\nprM68XlrziVcdYrpmI1gELUKozTa70S+iwwF6YQ1sTwy2rOEeitScBJyCbZ7\nj/b6dx8Kkt/Oj0vNrv+OM2fW76LALGy7SJ50/2O2c5mJOpSMqlj/4ANRT/cP\n68vcCMCuyPZgQYEhSY4F7J1j8mxzrPJ0LfH/HWN15YfpMTsHRZvxt+bAGnNj\nO8vq2J/fwqJ41bekQGJl7GcDUCiuk1arhI5aiN4cAhlwrcXAeq2kum0WxvxX\n558RAwg3UAu+nmO33CqxG2RbSsBBUHV9Cv2X5PigY+EpEaF0JDxFklZGVF1C\ni0uu6/KYxlO5wzmlFJF4nYNrjnQhMQNKzo/lSzWmY2XQmCdHnW37nGpjTpTG\nO4+xZFXmfwO5kaltuJ4CNQ3T+dzJ+dhLpNPlXbJHebIW3R5dyFc9QuEJMflu\nSewQ\r\n=C1K8\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.10.0_1590529403387_0.2115317202546234"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/types",
+      "version": "7.10.1",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.1",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.10.1",
+        "@babel/parser": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-L2yqUOpf3tzlW9GVuipgLEcZxnO+96SzR6fjXMuxxNkIgFJ5+07mHCZ+HkHqaeZu8+3LKnNJJ1bKbjBETQAsrA==",
+        "shasum": "6886724d31c8022160a7db895e6731ca33483921",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.10.1.tgz",
+        "fileCount": 96,
+        "unpackedSize": 716240,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuSrCRA9TVsSAnZWagAAnZYP/A7N7uOB+7Pj9q3JU9lM\njnl9j/5XgZPlRgH37UZtxCNrRXus6MDzUqWWkF7P8gTY1cybskBpd4U6/Uct\nd3dmrH6EZhEkVtCNKgePThWDy2K+hC81KUZzidrlzuat9Elf09UiLea3weuO\nyLo5EmviPR5j/4Pkjobpdyee3NjUdI/+/UOlKVa4YtGMBGv4o+Qr6xFAQnDo\nZ5WJz+rryhHdyfxBQAlwLY2d6vLm9P/JiuPdWw8L/D2x1PMMv9eTuxUUsMKM\nyYLPZ8qpOZkAOqzLH0qR9KhEiaC6Qf5YDNNz+ObeMSnbecJA1b8c/OmSwCCm\neav2+NDmG6dgvM2E29aRTe4kPr01tISzeJ8NMEwM97IHd9l9ivRIbD5nRPjo\nn4gvQswgS4+ZYiZoZnh/n7HjVgOEIVsQr8zomce8rAAuiJaWZutbzHXxYul7\nYyuVZdgmuPzvtCtXxNTGXg/1OQW+npcNo9xnZQM5Nv7wTReXWkpiEIDqLyY0\n8dsgKshMb6bHsLSB4p36nluZ49yOhnmy1GYE6yLKGtPaKHTetq+bVpXDXQMG\ndoQdEdgrtapT9GSk+WBU9cRABCv4CgZIzfWeYnCQIEg11b++XhMpza2xqbhh\n+Wv6vQVRqSztSBSQ3B+mmjwF1kL0wThh6LVDSm+NUyHlyze9vckGSufOKXOU\n5U2A\r\n=+KJv\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.10.1_1590617252301_0.33483842212576165"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.2": {
+      "name": "@babel/types",
+      "version": "7.10.2",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.1",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.10.2",
+        "@babel/parser": "^7.10.2"
+      },
+      "gitHead": "b0350e5b1e86bd2d53b4a25705e39eb380ec65a2",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.10.2",
+      "_nodeVersion": "12.17.0",
+      "_npmVersion": "lerna/3.19.0/node@v12.17.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-AD3AwWBSz0AWF0AkCN9VPiWrvldXq+/e3cHa4J89vo4ymjz1XwrBFFVZmkJTsQIPNk+ZVomPSXUJqq8yyjZsng==",
+        "shasum": "30283be31cad0dbf6fb00bd40641ca0ea675172d",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.10.2.tgz",
+        "fileCount": 96,
+        "unpackedSize": 717740,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe0rMWCRA9TVsSAnZWagAAv1oQAI1/u5HWiYdbrak3DNwc\n3au4NOb0cI3SAvLYPD+ZFv7MqMbZmAckNiaibqy/e6ZVZ2oHCp605p+crYKS\nnl5yBUvx+c+f2zKEgBKqiwDoq/xu2S2B/b98ztBRRIkNn87HpY78ADssIj5t\nood9Bh5JoNZKfIYvTPVL+AyM7ZEyPHJTKlO4SUAXGyVnk4dpMCCdw4f5ZiaW\nesf06mj5Q0hMG0IUhQuarY9xbgEboeQpxEUGrPAPQgf0C6EJa/uRa/+n2n8t\nN1aABk/m9xfeCtlDY+ZcYI/CZe54ERvn2nn7aUjwtTGABDo3LsNYUu6ywx5C\np7qsSy9AQOCxsw6yyaI0B3N1ENrfpb+jNqOzpau3fsE8EQ4TFNGIflEJOaX2\nYW56s+szuP7/IMRPmMtNfRYhNtZ+jWyx9ZBmLtQ0IxGjDmczTwBe7aVu3D8b\nbcvBmiZVNOavKtSsR94nNOedHebA0WRC6EvNr7g7LrS0J6VQDc0FKfVNpfi5\n6rghibCFtaB+klvMBqrbY78UgKC+MMkhG/QhnOqx9b/uINOJCeIDVoKTdIhc\nPq6nvTFq1v1OsE1JUXuh3ShbODz8yz25wVpvhvOLx+NcJzyn12QlAPuJhCQX\nGomDGlPabZVLC7BYF9cJgAM02HuYewWXuYjJqTQBXU15WCtrn7/9arLSi/lv\nsgWF\r\n=fXCB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.10.2_1590866710352_0.2895587189141977"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/types",
+      "version": "7.10.3",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.3",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.10.3",
+        "@babel/parser": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-nZxaJhBXBQ8HVoIcGsf9qWep3Oh3jCENK54V4mRF7qaJabVsAYdbTtmSD8WmAp1R6ytPiu5apMwSXyxB1WlaBA==",
+        "shasum": "6535e3b79fea86a6b09e012ea8528f935099de8e",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.10.3.tgz",
+        "fileCount": 96,
+        "unpackedSize": 722809,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SX5CRA9TVsSAnZWagAA8PYP/3OtMDF11H1LbEAWtoK/\ny0w0hjbIQQKrQGkerlkfZQY/EO3D8oDYqCvfsvAQOCHuCKtO3NEYIClyvy7d\nwv0kx6z76EPpzUTD5ZD2/wXWFiJdm46y0PdzBbFdnaoEaRdbUejWbEfOg9BG\nAnRbwwjbxiDhFKp0VPqpN48s19iIrLehKXTCByWXw3PD/hFWcO4fyW4sGiPu\n6gsEx+BNqW3NgSHxOjEmib6as3IrAHuTObHarLl2D0ZiO0hGsF6+INnp+8UL\n8lt8Q7/Fzr+/ZO5QxpaoEdF8+wYDGtjb3T9ChwKYcomuDlAwKz46avREGiSq\nH1Pf7ZZwDPqVT52L90e5bw/ykwbepJUx7MMzhGGZZkji7Q44xZWGSmTD9BF2\n3T6W04FxyUS/Ri4XJ9AVFdrMHTWsy/e6DmEasJ+tMKACWeEe306V6hXkyvy7\nGOTKXsguN05Kfn4zs+oD6H6kgwugOuD7Gh5eqgU2NGIKNcAElFOSMkEc1GlF\nxxNgI9/BOjkcPS914b8i+ZsAEqkCl2nJy9z9/Qa4XadAeIWPJs2faZ/t+Ckv\nlipeCzvn2GC587EN6G87rKm6jfjDlwlJ2xOorRYuqGNJFKbDHnOekQchwEtJ\nq0Z4lCw/4t/d4+8jyyIk4uvSpjU/UdRoAJf2752PqqWRG0RJV01scv6QKONa\n8ZVr\r\n=IM9c\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.10.3_1592600056655_0.267123289686128"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/types",
+      "version": "7.10.4",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "lodash": "^4.17.13",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.10.4",
+        "@babel/parser": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-UTCFOxC3FsFHb7lkRMVvgLzaRVamXuAs2Tz4wajva4WxtVY82eZeaUBtC2Zt95FU9TiznuC0Zk35tsim8jeVpg==",
+        "shasum": "369517188352e18219981efd156bfdb199fff1ee",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.10.4.tgz",
+        "fileCount": 96,
+        "unpackedSize": 723053,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zoFCRA9TVsSAnZWagAAJAEP/ivOoJ8Y8GfJtL7RtpMt\nnafKpgQl6rW37nzQjhJ79jzyry8Bf2+OKZgRRRVT540hvLIO1VItIhmeKmol\nHPVco3+LmGE2ZNF5jw2m7V/La3qbCl/lc3uhaiDLnQmbo8GnED3GYZq5ALsz\nDZLsyFZkmDq4KcE+1Y+FlD3/mKVpl1vZhA0atjPD9gVkr7izTt4Q3Ry+zx5/\nokRnJM3PV8NahmHyBqSa3OnujvAGrnhDQpz12f0iCqa8vk977gcXl9eCGynT\n6ptS1W23e1p4QGs4oQKcIsGLhBXvNj1aG7JaKRHGOpXwwSA3tArnmKM74/kq\nrOLdeQfTi/Hq4enRwd/6rN1RWqssro1BqBjk2859oZeRgBpHGESuaq+KFojX\n6ruatiFGQ53nrssqWlBuTHoyZtk+Xa1vfh8kSJALMX7QbrbRCQWasY2FRpP0\nBWZ0oq4hXPsnXIuweBmvESBJ8BronMq57w7ThvaLLjtZMXbFlN6OO3EQ7ntB\nd97GIjIj/G+eBAwVj7ZmBFOUnjJ+ox4ghOBfVd7P9wX3PCzI3m/IPDR6dGpp\ni87z9LvFzM9+m+WTkubCKtP36vDybeI62eKgxRlGpA1+4a/4pmGsC+3ACnDU\neGIcYZo9FDxZYNMYGpnpfH4162PaTKvIdSFRfcQF/JzzxI/Pt1IVTvpUPQoT\nbRWu\r\n=Zj9v\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.10.4_1593522693295_0.09286984534248877"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.5": {
+      "name": "@babel/types",
+      "version": "7.10.5",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "lodash": "^4.17.19",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.10.5",
+        "@babel/parser": "^7.10.5"
+      },
+      "gitHead": "f7964a9ac51356f7df6404a25b27ba1cffba1ba7",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.10.5",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.5.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-ixV66KWfCI6GKoA/2H9v6bQdbfXEwwpOdQ8cRvb4F+eyvhlaHxWFMQB4+3d9QFJXZsiiiqVrewNV0DFEQpyT4Q==",
+        "shasum": "d88ae7e2fde86bfbfe851d4d81afa70a997b5d15",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.10.5.tgz",
+        "fileCount": 96,
+        "unpackedSize": 723578,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfDfbUCRA9TVsSAnZWagAAlBcP/A6K3SdfNa9fQgPNOB1P\ndj8vCBYEHqO2rscr+6LNTBWBWV7InbKLR4XB795BO540Og1q+ovsdxNwQJh5\nCB2hw8ClOuANgd8K7K8/U0SV1ujBFf9uKYrt2anB6eu/K3DY+f0UkUKQZ2Y1\nc8g8xgzDV/Q5ckizeXe9rkYqoAHmW/e+ntkRdwowc4NNHOAaGrHGHSr5Vnhf\nOd8Z8zqyoYBQX3gNcx59F2mVu+7+wwgth0hVXIMyvbCQXLyAmY8C85FVsPBv\ntEixcSJ6Pu37E02BntxfOacb/OBCDc7GO0ntKwDF9TzUH7ED4qKVm/U3DS11\nm1lrrN5vBsvI1B22jMSxdICTNhxT6hviPDe7NYrM2ACy0o6RrTOzauNOWzRZ\nGLOowCvqXgMlIbdYR6uqmF9bB8Ojl3htAj60zAHppM+6WWGiAIQyH+/7ZkEE\nUOLdWj7kzjdLpV1dVF+Yxh5kcQ1lfyM1QpwUhYu/nGPGQM3YtKjr9OoLi0v2\nX2yhCgWHg/Jp4tsW6+mGuuOtj9AUAidbF+nIcnLxC5DPMb/yC35IJzk2e7r+\nwwIxnnUK2LGbvxFXQz/lJsOM/sFe1zVI8A/IQ9uDCrgC9kcIyZvsVmQHpXL4\n1ipo9EsuwPU5nd1wowL5ajhCtK1UKDfg3TOxoPDGjp3lNLqU50S3C/IP6KL4\nq8Uy\r\n=mmD6\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.10.5_1594750676290_0.5005699125572154"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.0": {
+      "name": "@babel/types",
+      "version": "7.11.0",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "lodash": "^4.17.19",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.11.0",
+        "@babel/parser": "^7.11.0"
+      },
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.11.0",
+      "_nodeVersion": "14.6.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-O53yME4ZZI0jO1EVGtF1ePGl0LHirG4P1ibcD80XyzZcKhcMFeCXmh4Xb1ifGBIV233Qg12x4rBfQgA+tmOukA==",
+        "shasum": "2ae6bf1ba9ae8c3c43824e5861269871b206e90d",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.11.0.tgz",
+        "fileCount": 95,
+        "unpackedSize": 726190,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfIzuSCRA9TVsSAnZWagAAVhEP/RTBAzH18Qx7VjeuIQeC\n/Xxe96UXk2ZKRxo81aY+ZULORbVAuiC4gL/O/SWB7hkcyYIsD5Rpw1gPyAaJ\nXEGofCihQYeiAPu15JimM+1S7Hr1zFuWC9z75881KGHDOPd89eAEnRAKXJmG\nwUzHsrJx8Pa0USp5uwkjLKGS/PoX6bjDXU2lJzwhOVxnLahNIuZtpbTPzMNh\nhAnpQ7tbNnJZlBQgL4qlvuyzu5q7vCsSXWgCQr1MZtNjuTK8YyZryXPZ31zu\nTSG9rtGG/HToXBE9oi9l3lpVZ1EgH4bPRpfH5XovMwq+OQAREoIx7wiuTl8J\n/f1G2HnVgw0psZy6TSRGlDH9ojcaomLd1EqUe/BHG01HvNcA6HxeQ+R3fVNK\nKHeX9CruWCgvRVv62mfvAMbUFmcDud3jZsoERYcb5N/5Ssntg2uskq1pmpEr\nEbLG0JeH/PtqTiEkfkdGnwaCoehms3Ei/gMwcfH8XmKh+yA/m1Q8qb7RuoCm\nEQFFcqlsj0e7Xyg3UWCczk9oyWuFYTfQ4IGt0tUW/kbyaqBAtnc5ImKjcBA7\nT23UwaI0ZxcSS2lgzoVa337NH+30fGeO5GmAQX/UaOt1ick2zD4zlmcU/xmK\nOrmXDqIUY91Y/DpTqTbFRGf6nKfAp083cp/80x2DZMxzeQW2MPSeDqVizTjd\nGDLM\r\n=depS\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.11.0_1596144529669_0.01763518289709376"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.11.5": {
+      "name": "@babel/types",
+      "version": "7.11.5",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "lodash": "^4.17.19",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.11.5",
+        "@babel/parser": "^7.11.5",
+        "chalk": "^4.1.0"
+      },
+      "gitHead": "af64ccb2b00bc7574943674996c2f0507cdbfb6f",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/types@7.11.5",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.9.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-bvM7Qz6eKnJVFIn+1LPtjlBFPVN5jNDc1XmN15vWe7Q3DPBufWWsLiIvUu7xW87uTG6QoggpIDnUgLQvPheU+Q==",
+        "shasum": "d9de577d01252d77c6800cee039ee64faf75662d",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.11.5.tgz",
+        "fileCount": 95,
+        "unpackedSize": 726269,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfTVdICRA9TVsSAnZWagAABW0P/AmnnhNyUkA9FcNBWAdg\nwWFQ8WqhP8AKsIqrUpIKw0lw0ugTmLu1xu6KSJqD+i/qM3bnLiTsF2JWa2Oq\nDufmuhP/ktMDh8ANn1Rbst+bMd9dsixY7MwnQlqu1CgyR3hu0TIGofZwCBeJ\nEC8CdUqCjFZg8JmZ4zchdJUdN05Xb5cqcisqRIbHkadzCIeNpk8nwcQ780wF\n4yFvls21EISJ4YOmxZ74WyrQk5GjbGgffAFFusOuh0rNCYnFfLyt+N+VQ6IG\ntJBkf2rHz3UqKO0gUd8DMBl4w7JWJ/EOP5LHIJoGERN1gxk7dGBHdiYyo4RP\nVHA+Ua8SHQdkL/gAfUKq3forxItTEC5Lbb4Ig2kGL7rsZ/20dBZeyX2x2ggu\nPux22XZM8W9xxLPa05ogvyJleHeppm4PM9zp68/6xhYAC+nsI1o0rPwjFJJ4\nSfaOEvAV0248RUD4vE1eetCovXibD7gOZn/XeufDFMqCiwctLpYq9OlDwmp5\narM95vzT/XUIRrxpiPGpQniXI8iEyAWL0x01t0gEwj50BpBC5zUutFnZC5j/\nWb9Q8XL/+hQiReRs6HvukPk1RyaOOwbHqmuBkpTtEuVrezeIsXkGh3cYcke3\nyeCL89Vc89JxDKPck801mc/iQ0TtQv5Ur5swjp3otdWS6epWjvXPvmXIQjcz\nCcc3\r\n=hdIE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.11.5_1598904136354_0.2535421373995328"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.0": {
+      "name": "@babel/types",
+      "version": "7.12.0",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "lodash": "^4.17.19",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.12.0",
+        "@babel/parser": "^7.12.0",
+        "chalk": "^4.1.0"
+      },
+      "_id": "@babel/types@7.12.0",
+      "dist": {
+        "shasum": "b6b49f425ee59043fbc89c61b11a13d5eae7b5c6",
+        "integrity": "sha512-ggIyFmT2zMaYRheOfPDQ4gz7QqV3B+t2rjqjbttDJxMcb7/LukvWCmlIl1sWcOxrvwpTDd+z0OytzqsbGeb3/g==",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.12.0.tgz",
+        "fileCount": 95,
+        "unpackedSize": 730281,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfh1l8CRA9TVsSAnZWagAAPZ8P+gK9HFY2ibvyipd7UIcD\noznB/zE7j5CEyPxzMNpFS7W2cm72WdJOI/V7C/Sm/qWjkmkw+Sh+w7PThYsW\nMCTo1MlHYHSciiud/jQdwIwmCbQSN3QCZhCjNJrKJATCZA/SIFb8UHfvBgZ9\nbUTY/qRRMS7FRVun02JjIAcGNOV808ns6ahKfanwI+bHtMh6dem4zpVnFbCS\nu2j12DCLIzgAEQWPsAJFQ77KMOg6o4zscerfk+skF5kLwlSd8dGp9XwV2qGk\nR4xeUEECUUYoZya7+EhTpUA/rAGwv4O3rz9rQQ99mTmni0IUk8IGmn4HalfF\nswIhIeb6/iItZSmWOLA5hmH58qOHNBkrSi6dK2IDSTG1nfilrasWvf66WQWd\nhFPddva8hQLVK0mWCslhnDsITdUVMhiEkAtIcL7RWmqzmnKihsj/gAh7r/pc\nsd9b2sSOWRrSLUY8qtjSTktjIAOPafG5ipL3/OnNnWDtDhV18pIINq6meI8N\n9YDgBYkRqRmoaCQqhTlEL/uMyKyKotjpcJQnov2aLu+yEhArmrFVM3cpG5r4\nE9emlwYt53Jif8yQbpcy7Q8FQ/tHBUfZ5DI4y/yN02IIN4gkRorwvBQ1OIM4\n4EDufd+fssWpJaPROM3R2b60tQyHFPDlTOnLcZL3ZZQdFdfhTNBryBIBT9Ab\ngW6C\r\n=y2ff\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.12.0_1602705787614_0.280527988139202"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/types",
+      "version": "7.12.1",
+      "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+      "author": "Sebastian McKenzie <sebmck@gmail.com>",
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-types"
+      },
+      "main": "lib/index.js",
+      "types": "lib/index.d.ts",
+      "dependencies": {
+        "@babel/helper-validator-identifier": "^7.10.4",
+        "lodash": "^4.17.19",
+        "to-fast-properties": "^2.0.0"
+      },
+      "devDependencies": {
+        "@babel/generator": "^7.12.1",
+        "@babel/parser": "^7.12.1",
+        "chalk": "^4.1.0"
+      },
+      "_id": "@babel/types@7.12.1",
+      "dist": {
+        "shasum": "e109d9ab99a8de735be287ee3d6a9947a190c4ae",
+        "integrity": "sha512-BzSY3NJBKM4kyatSOWh3D/JJ2O3CVzBybHWxtgxnggaxEuaSTTDqeiSb/xk9lrkw2Tbqyivw5ZU4rT+EfznQsA==",
+        "tarball": "https://registry.npmjs.org/@babel/types/-/types-7.12.1.tgz",
+        "fileCount": 95,
+        "unpackedSize": 730682,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiM/rCRA9TVsSAnZWagAAMEsQAJb0y0X4USt4BUFATzJn\n4juzi/6QHIx0Kc2vd3Kg6wRfskWkrGtPH0E+79iB4NXG7xwZPy4mV4F4Cf98\nX/km5/bkTZa6LR+iVOi8xg2O/98i4SA7+3DQ+0ygygr1g2kREEXdeFrGevCF\nQoyCEecHt/yrYXP4LGxKmR6sF6yLT8J74id1cEqs1IFx5RWIuzv8Tc15kB6K\nAC3y+0q66SMRGd4RK0AuxkFyA5Rg4KzJ8IZkrtAmC3OHQcFrquHdQW4hsWK4\nLMPc/79f9uTNrY0fFNcLdFDBYwuiHGk1yLPJ2ltVirmoUV8eBwBtzV7yYPyd\nkS0V1zvKJuqjyHDfOtchLvEaG/LxVG4KXejsXydl0UGuaj9YwYzOGoYxfMII\nDPTP+6hW81SVqzrYdPRjAsxiI5M21/1bYiZn200O34hxFci7lYiXUN5BGqP2\nADyGF8p7Y4PQB0BTsC8SbPJZ950W2X7CXuU+03rXLHG68pagyIbMdLwUvRYt\nJFfezup6Asr75RLYMdabRycT21evl6DQidbDGFcFV7huxdcRdX/YbGM7e8Da\nqztJifwMaOtPNO5l/wiV9FVMpKIER+NbEtGML3pH+CP3+wgmcxeLc0MWxMg9\n1zE1vPSyiPesbG548lKWANf0JSEBDO/wkXCUL6C07OdnPib2Z19jaEfTnzHC\ntrwM\r\n=5icn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/types_7.12.1_1602801643237_0.3034789551972328"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:41:11.309Z",
+    "modified": "2020-10-15T22:40:47.266Z",
     "created": "2017-10-30T18:34:55.832Z",
     "7.0.0-beta.4": "2017-10-30T18:34:55.832Z",
     "7.0.0-beta.5": "2017-10-30T20:56:35.712Z",
@@ -4013,20 +5189,35 @@
     "7.7.2": "2019-11-06T23:27:24.629Z",
     "7.7.4": "2019-11-22T23:32:26.851Z",
     "7.8.0": "2020-01-12T00:16:04.750Z",
-    "7.8.3": "2020-01-13T21:41:07.115Z"
+    "7.8.3": "2020-01-13T21:41:07.115Z",
+    "7.8.6": "2020-02-27T12:21:22.402Z",
+    "7.8.7": "2020-03-05T01:56:04.314Z",
+    "7.9.0": "2020-03-20T15:39:32.780Z",
+    "7.9.5": "2020-04-07T19:25:20.880Z",
+    "7.9.6": "2020-04-29T18:38:04.749Z",
+    "7.10.0": "2020-05-26T21:43:23.488Z",
+    "7.10.1": "2020-05-27T22:07:32.498Z",
+    "7.10.2": "2020-05-30T19:25:10.450Z",
+    "7.10.3": "2020-06-19T20:54:17.005Z",
+    "7.10.4": "2020-06-30T13:11:33.453Z",
+    "7.10.5": "2020-07-14T18:17:56.405Z",
+    "7.11.0": "2020-07-30T21:28:49.765Z",
+    "7.11.5": "2020-08-31T20:02:16.565Z",
+    "7.12.0": "2020-10-14T20:03:07.761Z",
+    "7.12.1": "2020-10-15T22:40:43.370Z"
   },
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-types"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-types"
   },
-  "author": {
-    "name": "Sebastian McKenzie",
-    "email": "sebmck@gmail.com"
-  },
+  "author": "Sebastian McKenzie <sebmck@gmail.com>",
   "license": "MIT",
-  "readmeFilename": "README.md",
+  "readmeFilename": "",
   "users": {
     "fangbot": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

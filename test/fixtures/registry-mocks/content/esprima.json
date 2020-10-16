@@ -3746,6 +3746,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "[![NPM version](https://img.shields.io/npm/v/esprima.svg)](https://www.npmjs.com/package/esprima)\n[![npm download](https://img.shields.io/npm/dm/esprima.svg)](https://www.npmjs.com/package/esprima)\n[![Build Status](https://img.shields.io/travis/jquery/esprima/master.svg)](https://travis-ci.org/jquery/esprima)\n[![Coverage Status](https://img.shields.io/codecov/c/github/jquery/esprima/master.svg)](https://codecov.io/github/jquery/esprima)\n\n**Esprima** ([esprima.org](http://esprima.org), BSD license) is a high performance,\nstandard-compliant [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm)\nparser written in ECMAScript (also popularly known as\n[JavaScript](https://en.wikipedia.org/wiki/JavaScript)).\nEsprima is created and maintained by [Ariya Hidayat](https://twitter.com/ariyahidayat),\nwith the help of [many contributors](https://github.com/jquery/esprima/contributors).\n\n### Features\n\n- Full support for ECMAScript 2017 ([ECMA-262 8th Edition](http://www.ecma-international.org/publications/standards/Ecma-262.htm))\n- Sensible [syntax tree format](https://github.com/estree/estree/blob/master/es5.md) as standardized by [ESTree project](https://github.com/estree/estree)\n- Experimental support for [JSX](https://facebook.github.io/jsx/), a syntax extension for [React](https://facebook.github.io/react/)\n- Optional tracking of syntax node location (index-based and line-column)\n- [Heavily tested](http://esprima.org/test/ci.html) (~1500 [unit tests](https://github.com/jquery/esprima/tree/master/test/fixtures) with [full code coverage](https://codecov.io/github/jquery/esprima))\n\n### API\n\nEsprima can be used to perform [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis) (tokenization) or [syntactic analysis](https://en.wikipedia.org/wiki/Parsing) (parsing) of a JavaScript program.\n\nA simple example on Node.js REPL:\n\n```javascript\n> var esprima = require('esprima');\n> var program = 'const answer = 42';\n\n> esprima.tokenize(program);\n[ { type: 'Keyword', value: 'const' },\n  { type: 'Identifier', value: 'answer' },\n  { type: 'Punctuator', value: '=' },\n  { type: 'Numeric', value: '42' } ]\n  \n> esprima.parseScript(program);\n{ type: 'Program',\n  body:\n   [ { type: 'VariableDeclaration',\n       declarations: [Object],\n       kind: 'const' } ],\n  sourceType: 'script' }\n```\n\nFor more information, please read the [complete documentation](http://esprima.org/doc).",
   "maintainers": [
     {
       "name": "ariya",
@@ -3899,5 +3900,7 @@
   "bugs": {
     "url": "https://github.com/jquery/esprima/issues"
   },
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "_cached": false,
+  "_contentLength": 0
 }

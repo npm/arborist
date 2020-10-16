@@ -1,11 +1,11 @@
 {
   "_id": "fsevents",
-  "_rev": "176-553681363804a9fefca9c26caacb26bb",
+  "_rev": "182-f8a778f4c1c54a4bd7c9ee1f9107d39e",
   "name": "fsevents",
   "description": "Native Access to MacOS FSEvents",
   "dist-tags": {
-    "latest": "2.1.2",
-    "nan": "1.2.11"
+    "latest": "2.1.3",
+    "nan": "1.2.13"
   },
   "versions": {
     "0.1.1": {
@@ -60,7 +60,7 @@
         "email": "phidelta@phideltacity.net"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.1.3": {
       "name": "fsevents",
@@ -111,7 +111,7 @@
         "email": "phidelta@phideltacity.net"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.1.4": {
       "name": "fsevents",
@@ -162,7 +162,7 @@
         "email": "phidelta@phideltacity.net"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.1.5": {
       "name": "fsevents",
@@ -213,7 +213,7 @@
         "email": "phidelta@phideltacity.net"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.1.6": {
       "name": "fsevents",
@@ -268,7 +268,7 @@
         "email": "pip@pipobscure.com"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.2.0": {
       "name": "fsevents",
@@ -327,7 +327,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.0": {
       "name": "fsevents",
@@ -391,7 +391,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.0.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.1": {
       "name": "fsevents",
@@ -456,7 +456,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.1.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.2": {
       "name": "fsevents",
@@ -522,7 +522,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.2.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.3": {
       "name": "fsevents",
@@ -588,7 +588,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.3.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.4": {
       "name": "fsevents",
@@ -654,7 +654,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.4.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.5": {
       "name": "fsevents",
@@ -728,7 +728,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.5.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.6": {
       "name": "fsevents",
@@ -802,7 +802,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.6.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.7": {
       "name": "fsevents",
@@ -876,7 +876,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.7.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "0.3.8": {
       "name": "fsevents",
@@ -950,7 +950,7 @@
         "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-0.3.8.tgz"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.0": {
       "name": "fsevents",
@@ -1038,7 +1038,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.1": {
       "name": "fsevents",
@@ -1126,7 +1126,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.2": {
       "name": "fsevents",
@@ -1214,7 +1214,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.3": {
       "name": "fsevents",
@@ -1303,7 +1303,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.4": {
       "name": "fsevents",
@@ -1391,7 +1391,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.5": {
       "name": "fsevents",
@@ -1480,7 +1480,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.6": {
       "name": "fsevents",
@@ -1569,7 +1569,7 @@
         }
       ],
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.7": {
       "name": "fsevents",
@@ -1662,7 +1662,7 @@
         "tmp": "tmp/fsevents-1.0.7.tgz_1454512352801_0.3029270030092448"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.8": {
       "name": "fsevents",
@@ -1755,7 +1755,7 @@
         "tmp": "tmp/fsevents-1.0.8.tgz_1456223070873_0.28708522394299507"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.9": {
       "name": "fsevents",
@@ -1848,7 +1848,7 @@
         "tmp": "tmp/fsevents-1.0.9.tgz_1458765044989_0.04664572770707309"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.10": {
       "name": "fsevents",
@@ -1941,7 +1941,7 @@
         "tmp": "tmp/fsevents-1.0.10.tgz_1459448180982_0.760890387929976"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.11": {
       "name": "fsevents",
@@ -2034,7 +2034,7 @@
         "tmp": "tmp/fsevents-1.0.11.tgz_1459451879246_0.5843068221583962"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.12": {
       "name": "fsevents",
@@ -2127,7 +2127,7 @@
         "tmp": "tmp/fsevents-1.0.12.tgz_1461940443205_0.08423079713247716"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.14": {
       "name": "fsevents",
@@ -2220,7 +2220,7 @@
         "tmp": "tmp/fsevents-1.0.14.tgz_1468846610948_0.4684492303058505"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.15": {
       "name": "fsevents",
@@ -2313,7 +2313,7 @@
         "tmp": "tmp/fsevents-1.0.15.tgz_1478129886155_0.4174991014879197"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.17": {
       "name": "fsevents",
@@ -2406,7 +2406,7 @@
         "tmp": "tmp/fsevents-1.0.17.tgz_1483568750527_0.6194838422816247"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.0.18-0": {
       "name": "fsevents",
@@ -2554,7 +2554,7 @@
         "tmp": "tmp/fsevents-1.1.0.tgz_1487526454229_0.8294799609575421"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.1.1": {
       "name": "fsevents",
@@ -2631,7 +2631,7 @@
         "tmp": "tmp/fsevents-1.1.1.tgz_1487567885240_0.4353332635946572"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.1.2": {
       "name": "fsevents",
@@ -2708,7 +2708,7 @@
         "tmp": "tmp/fsevents-1.1.2.tgz_1497328838670_0.9853602922521532"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.1.3": {
       "name": "fsevents",
@@ -2801,7 +2801,7 @@
         "tmp": "tmp/fsevents-1.1.3.tgz_1510352601952_0.36498259752988815"
       },
       "directories": {},
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.2.0": {
       "name": "fsevents",
@@ -2894,7 +2894,7 @@
         "tmp": "tmp/fsevents_1.2.0_1524236364192_0.38566375459566893"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.2.2": {
       "name": "fsevents",
@@ -2987,7 +2987,7 @@
         "tmp": "tmp/fsevents_1.2.2_1524499095560_0.26087745010558705"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.2.3": {
       "name": "fsevents",
@@ -3080,7 +3080,7 @@
         "tmp": "tmp/fsevents_1.2.3_1524850208525_0.6271762666664733"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.2.4": {
       "name": "fsevents",
@@ -3173,7 +3173,7 @@
         "tmp": "tmp/fsevents_1.2.4_1526395769943_0.7765616322943785"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "2.0.0": {
       "name": "fsevents",
@@ -3402,6 +3402,7 @@
       },
       "homepage": "https://github.com/strongloop/fsevents",
       "devDependencies": {},
+      "readme": "# fsevents [![NPM](https://nodei.co/npm/fsevents.png)](https://nodei.co/npm/fsevents/)\n\nNative access to OS X FSEvents in [Node.js](http://nodejs.org/)\n\nThe FSEvents API in OS X allows applications to register for notifications of\nchanges to a given directory tree. It is a very fast and lightweight alternative\nto kqueue.\n\nThis is a low-level library. For a cross-compatible file watching module that\nuses fsevents, check out [Chokidar](https://www.npmjs.com/package/chokidar).\n\n* [Module Site & GitHub](https://github.com/strongloop/fsevents)\n* [NPM Page](https://npmjs.org/package/fsevents)\n\n## Installation\n\n\t$ npm install fsevents\n\n## Usage\n\n```js\nconst fsevents = require('fsevents');\nlet stop = fsevents.watch(__dirname, (path, flags, id)=>{\n  const info = fsevents.getInfo(path, flags, id);\n}); // To start observation\nstop(); // To end observation\n```\n\n### Callback\n\nThe callback passed as the second parameter to `.watch` get's called whenever the operating system detects a\na change in the file system. It takes three arguments:\n\n * `path` - which is a string naming the path of the item in the filesystem that changed\n * `flags` - a numeric value describing what the change was\n * `id` - a unique-id identifying this specific event\n\n### `getInfo(path, flags, id) => {info-object}`\n\nThe `getInfo` function takes the `path`, `flags` and `id` arguments and converts those parameters into a structure\nthat is easier to digest to determine what the change was.\n\nThe `info-object` has the following shape:\n\n```js\n{\n  \"event\": \"<deleted|moved|created|modified|root-changed|unknown>\",\n  \"path\": \"<path-that-this-is-about>\",\n  \"type\": \"<file|directory|symlink>\",\n  \"changes\": {\n    \"inode\": true, // Has the iNode Meta-Information changed\n    \"finder\": false, // Has the Finder Meta-Data changed\n    \"access\": false, // Have the access permissions changed\n    \"xattrs\": false // Have the xAttributes changed\n  },\n  \"flags\": <raw-flags>\n}\n```\n\n## MIT License\n\nCopyright (C) 2010-2018 by Philipp Dunkel, Ben Noordhuis, Elan Shankar\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
       "readmeFilename": "Readme.md",
       "gitHead": "b47d7926a1f9f71267b2b0e293e70151b1ce0e57",
       "_id": "fsevents@2.0.2-pre-1",
@@ -3536,7 +3537,7 @@
         "tmp": "tmp/fsevents_1.2.6_1547580155054_0.5445106106788142"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Way too old"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.2.7": {
       "name": "fsevents",
@@ -3629,7 +3630,7 @@
         "tmp": "tmp/fsevents_1.2.7_1547826867585_0.6707229969998358"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Please update: there are crash fixes"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "2.0.3": {
       "name": "fsevents",
@@ -3680,6 +3681,7 @@
       },
       "homepage": "https://github.com/fsevents/fsevents",
       "devDependencies": {},
+      "readme": "# fsevents [![NPM](https://nodei.co/npm/fsevents.png)](https://nodei.co/npm/fsevents/)\n\nNative access to MacOS FSEvents in [Node.js](https://nodejs.org/)\n\nThe FSEvents API in MacOS allows applications to register for notifications of\nchanges to a given directory tree. It is a very fast and lightweight alternative\nto kqueue.\n\nThis is a low-level library. For a cross-platform file watching module that\nuses fsevents, check out [Chokidar](https://github.com/paulmillr/chokidar).\n\n## Installation\n\n```sh\nnpm install fsevents\n```\n\n## Usage\n\n```js\nconst fsevents = require('fsevents');\nconst stop = fsevents.watch(__dirname, (path, flags, id) => {\n  const info = fsevents.getInfo(path, flags, id);\n}); // To start observation\nstop(); // To end observation\n```\n\nThe callback passed as the second parameter to `.watch` get's called whenever the operating system detects a\na change in the file system. It takes three arguments:\n\n`(path: String, flags: Number, id: String) => {}`\n\n * `path` - the item in the filesystem that have been changed\n * `flags` - a numeric value describing what the change was\n * `id` - an unique-id identifying this specific event\n\n###### `fsevents.getInfo(path, flags, id): FsEventInfo => {}`\n\nThe `getInfo` function takes the `path`, `flags` and `id` arguments and converts those parameters into a structure\nthat is easier to digest to determine what the change was.\n\nThe `FsEventsInfo` has the following shape:\n\n```js\n/**\n * @typedef {'created'|'modified'|'deleted'|'moved'|'root-changed'|'unknown'} FsEventsEvent\n * @typedef {'file'|'directory'|'symlink'} FsEventsType\n */\n{\n  \"event\": \"created\",\n  \"path\": \"file.txt\", // {FsEventsEvent}\n  \"type\": \"file\",    // {FsEventsType}\n  \"changes\": {\n    \"inode\": true,   // Had iNode Meta-Information changed\n    \"finder\": false, // Had Finder Meta-Data changed\n    \"access\": false, // Had access permissions changed\n    \"xattrs\": false  // Had xAttributes changed\n  },\n  \"flags\": 0x100000000\n}\n```\n\n## License\n\nThe MIT License Copyright (C) 2010-2018 by Philipp Dunkel, Ben Noordhuis, Elan Shankar — see LICENSE file.\n\nVisit our [GitHub page](https://github.com/fsevents/fsevents) and [NPM Page](https://npmjs.org/package/fsevents)\n",
       "readmeFilename": "README.md",
       "gitHead": "e6d9e603d76422656570615ffa27728bee8f2fe0",
       "_id": "fsevents@2.0.3",
@@ -3914,7 +3916,7 @@
         "tmp": "tmp/fsevents_1.2.8_1555433113795_0.19748415481555992"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "Please update: there are crash fixes"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "2.0.5": {
       "name": "fsevents",
@@ -3965,6 +3967,7 @@
       },
       "homepage": "https://github.com/fsevents/fsevents",
       "devDependencies": {},
+      "readme": "# fsevents [![NPM](https://nodei.co/npm/fsevents.png)](https://nodei.co/npm/fsevents/)\n\nNative access to MacOS FSEvents in [Node.js](https://nodejs.org/)\n\nThe FSEvents API in MacOS allows applications to register for notifications of\nchanges to a given directory tree. It is a very fast and lightweight alternative\nto kqueue.\n\nThis is a low-level library. For a cross-platform file watching module that\nuses fsevents, check out [Chokidar](https://github.com/paulmillr/chokidar).\n\n## Installation\n\n```sh\nnpm install fsevents\n```\n\n## Usage\n\n```js\nconst fsevents = require('fsevents');\nconst stop = fsevents.watch(__dirname, (path, flags, id) => {\n  const info = fsevents.getInfo(path, flags, id);\n}); // To start observation\nstop(); // To end observation\n```\n\nThe callback passed as the second parameter to `.watch` get's called whenever the operating system detects a\na change in the file system. It takes three arguments:\n\n`(path: String, flags: Number, id: String) => {}`\n\n * `path` - the item in the filesystem that have been changed\n * `flags` - a numeric value describing what the change was\n * `id` - an unique-id identifying this specific event\n\n###### `fsevents.getInfo(path, flags, id): FsEventInfo => {}`\n\nThe `getInfo` function takes the `path`, `flags` and `id` arguments and converts those parameters into a structure\nthat is easier to digest to determine what the change was.\n\nThe `FsEventsInfo` has the following shape:\n\n```js\n/**\n * @typedef {'created'|'modified'|'deleted'|'moved'|'root-changed'|'unknown'} FsEventsEvent\n * @typedef {'file'|'directory'|'symlink'} FsEventsType\n */\n{\n  \"event\": \"created\",\n  \"path\": \"file.txt\", // {FsEventsEvent}\n  \"type\": \"file\",    // {FsEventsType}\n  \"changes\": {\n    \"inode\": true,   // Had iNode Meta-Information changed\n    \"finder\": false, // Had Finder Meta-Data changed\n    \"access\": false, // Had access permissions changed\n    \"xattrs\": false  // Had xAttributes changed\n  },\n  \"flags\": 0x100000000\n}\n```\n\n## License\n\nThe MIT License Copyright (C) 2010-2018 by Philipp Dunkel, Ben Noordhuis, Elan Shankar — see LICENSE file.\n\nVisit our [GitHub page](https://github.com/fsevents/fsevents) and [NPM Page](https://npmjs.org/package/fsevents)\n",
       "readmeFilename": "README.md",
       "gitHead": "6e16b1a4589c422d98aa084fb450196cfefc2ed5",
       "_id": "fsevents@2.0.5",
@@ -4200,7 +4203,7 @@
         "tmp": "tmp/fsevents_1.2.9_1556554642344_0.8320581913102509"
       },
       "_hasShrinkwrap": false,
-      "deprecated": "One of your dependencies needs to upgrade to fsevents v2: 1) Proper nodejs v10+ support 2) No more fetching binaries from AWS, smaller package size"
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "2.0.7": {
       "name": "fsevents",
@@ -4687,7 +4690,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/fsevents_1.2.10_1576236304303_0.8072778213933565"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     },
     "1.2.11": {
       "name": "fsevents",
@@ -4730,6 +4734,7 @@
         "node-pre-gyp"
       ],
       "gypfile": true,
+      "readme": "# fsevents [![NPM](https://nodei.co/npm/fsevents.png)](https://nodei.co/npm/fsevents/)\n\nNative access to OS X FSEvents in [Node.js](http://nodejs.org/)\n\nThe FSEvents API in OS X allows applications to register for notifications of\nchanges to a given directory tree. It is a very fast and lightweight alternative\nto kqueue.\n\nThis is a low-level library. For a cross-compatible file watching module that\nuses fsevents, check out [Chokidar](https://www.npmjs.com/package/chokidar).\n\n* [Module Site & GitHub](https://github.com/strongloop/fsevents)\n* [NPM Page](https://npmjs.org/package/fsevents)\n\n## Installation\n\n\t$ npm install fsevents\n\n## Usage\n\n```js\nvar fsevents = require('fsevents');\nvar watcher = fsevents(__dirname);\nwatcher.on('fsevent', function(path, flags, id) { }); // RAW Event as emitted by OS-X\nwatcher.on('change', function(path, info) { }); // Common Event for all changes\nwatcher.start() // To start observation\nwatcher.stop()  // To end observation\n```\n\n### Events\n\n * *fsevent* - RAW Event as emitted by OS-X\n * *change* - Common Event for all changes\n * *created* - A File-System-Item has been created\n * *deleted* - A File-System-Item has been deleted\n * *modified* - A File-System-Item has been modified\n * *moved-out* - A File-System-Item has been moved away from this location\n * *moved-in* - A File-System-Item has been moved into this location\n\nAll events except *fsevent* take an *info* object as the second parameter of the callback. The structure of this object is:\n\n```js\n{\n  \"event\": \"<event-type>\",\n  \"id\": <eventi-id>,\n  \"path\": \"<path-that-this-is-about>\",\n  \"type\": \"<file|directory|symlink>\",\n  \"changes\": {\n    \"inode\": true, // Has the iNode Meta-Information changed\n    \"finder\": false, // Has the Finder Meta-Data changed\n    \"access\": false, // Have the access permissions changed\n    \"xattrs\": false // Have the xAttributes changed\n  },\n  \"flags\": <raw-flags>\n}\n```\n\n## MIT License\n\nCopyright (C) 2010-2014 Philipp Dunkel\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
       "readmeFilename": "Readme.md",
       "gitHead": "909af26846834642c81d19f4148afa3b7557b058",
       "_id": "fsevents@1.2.11",
@@ -4774,9 +4779,275 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/fsevents_1.2.11_1576322898717_0.4582099524787324"
       },
+      "_hasShrinkwrap": false,
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
+    },
+    "1.2.12": {
+      "name": "fsevents",
+      "version": "1.2.12",
+      "description": "Native Access to Mac OS-X FSEvents",
+      "main": "fsevents.js",
+      "dependencies": {
+        "bindings": "^1.5.0",
+        "nan": "^2.12.1",
+        "node-pre-gyp": "*"
+      },
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": ">= 4.0"
+      },
+      "scripts": {
+        "test": "node ./test/fsevents.js && node ./test/function.js 2> /dev/null",
+        "install": "node-gyp rebuild"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/strongloop/fsevents.git"
+      },
+      "keywords": [
+        "fsevents",
+        "mac"
+      ],
+      "author": {
+        "name": "Philipp Dunkel",
+        "email": "pip@pipobscure.com"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/strongloop/fsevents/issues"
+      },
+      "homepage": "https://github.com/strongloop/fsevents",
+      "bundleDependencies": [
+        "node-pre-gyp"
+      ],
+      "gypfile": true,
+      "readme": "# fsevents [![NPM](https://nodei.co/npm/fsevents.png)](https://nodei.co/npm/fsevents/)\n\nNative access to OS X FSEvents in [Node.js](http://nodejs.org/)\n\nThe FSEvents API in OS X allows applications to register for notifications of\nchanges to a given directory tree. It is a very fast and lightweight alternative\nto kqueue.\n\nThis is a low-level library. For a cross-compatible file watching module that\nuses fsevents, check out [Chokidar](https://www.npmjs.com/package/chokidar).\n\n* [Module Site & GitHub](https://github.com/strongloop/fsevents)\n* [NPM Page](https://npmjs.org/package/fsevents)\n\n## Installation\n\n\t$ npm install fsevents\n\n## Usage\n\n```js\nvar fsevents = require('fsevents');\nvar watcher = fsevents(__dirname);\nwatcher.on('fsevent', function(path, flags, id) { }); // RAW Event as emitted by OS-X\nwatcher.on('change', function(path, info) { }); // Common Event for all changes\nwatcher.start() // To start observation\nwatcher.stop()  // To end observation\n```\n\n### Events\n\n * *fsevent* - RAW Event as emitted by OS-X\n * *change* - Common Event for all changes\n * *created* - A File-System-Item has been created\n * *deleted* - A File-System-Item has been deleted\n * *modified* - A File-System-Item has been modified\n * *moved-out* - A File-System-Item has been moved away from this location\n * *moved-in* - A File-System-Item has been moved into this location\n\nAll events except *fsevent* take an *info* object as the second parameter of the callback. The structure of this object is:\n\n```js\n{\n  \"event\": \"<event-type>\",\n  \"id\": <eventi-id>,\n  \"path\": \"<path-that-this-is-about>\",\n  \"type\": \"<file|directory|symlink>\",\n  \"changes\": {\n    \"inode\": true, // Has the iNode Meta-Information changed\n    \"finder\": false, // Has the Finder Meta-Data changed\n    \"access\": false, // Have the access permissions changed\n    \"xattrs\": false // Have the xAttributes changed\n  },\n  \"flags\": <raw-flags>\n}\n```\n\n## MIT License\n\nCopyright (C) 2010-2014 Philipp Dunkel\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+      "readmeFilename": "Readme.md",
+      "gitHead": "92e40aa2a5a5bec30cf32491587b2d31ff31072c",
+      "_id": "fsevents@1.2.12",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-Ggd/Ktt7E7I8pxZRbGIs7vwqAPscSESMrCSkx2FtWeqmheJgCo2R74fTsZFCifr0VTPwqRpPv17+6b8Zp7th0Q==",
+        "shasum": "db7e0d8ec3b0b45724fd4d83d43554a8f1f0de5c",
+        "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.12.tgz",
+        "fileCount": 508,
+        "unpackedSize": 2031881,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeczgSCRA9TVsSAnZWagAAuIsP/3RaP3lk6/wR8eVJpmnP\nTE+m3WjYJ9wEdLgeGhdrnZCTmtxQxiwZggK/SYY/2tWIzOJ0QolLaSGao94y\nvYwxZmzqBe/EPcCdZOYeksDTQdVjNamdql/qubOStK7ENPYV2wRiGIHf5es/\nEE0xawbA3OeqRRm+cMheqG4ee1Nqi0ffYbFg1rr5u7+IzbEAVm9Tzbuh5IjW\nPpHp8hOI9tG+m0xm6TEycfC0rsBOaUgzCfGRvpulJOmVHUsqr1ZJsRduWH+a\nmefmD+jU1R4fwtjmzKxJcbQDExywHzcw4jGlrquBu5OjM2F4rZYYGlq1htSa\njn3XJLsbWogtmvWYKzNmtw5j4CAlldDp9qotnxXHKmGXX6pENRUd+Ik1Vuvc\n8WFfc1FYeDNm9pLB4O5C6ynHCEFqqX0DXfZvY6F8OEujTJubnQVicwlYOBzZ\n7p+T01VZZEznY6jQAvKY4DXyc7wrRBiMyIPc29Ry+FYk81NsIMs6SgAPG2xi\npgR4zRD4AsgoreX7C3mqiytpxBV7ZAqJ641yo0Bx41fiXEtTyL5Vpq4b6vpz\nxVfzX6Qiw478/gz7xoRj5SMPK0hPOr34lROC+4Xkk5KOJar7Jub3kYwzBO+y\no2SGp9/Uyg82zyO+phlQo+8UUvyldOuaRMhwynjY43vUqw00jYEaYqpLLl9Z\nMSze\r\n=BdIy\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "info@bnoordhuis.nl",
+          "name": "bnoordhuis"
+        },
+        {
+          "email": "elan.shanker+npm@gmail.com",
+          "name": "es128"
+        },
+        {
+          "email": "paul@paulmillr.com",
+          "name": "paulmillr"
+        },
+        {
+          "email": "pip@pipobscure.com",
+          "name": "pipobscure"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/fsevents_1.2.12_1584609297977_0.3619495003114137"
+      },
+      "_hasShrinkwrap": false,
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
+    },
+    "2.1.3": {
+      "name": "fsevents",
+      "version": "2.1.3",
+      "description": "Native Access to MacOS FSEvents",
+      "main": "fsevents.js",
+      "types": "fsevents.d.ts",
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
+      },
+      "scripts": {
+        "clean": "node-gyp clean && rm -f fsevents.node",
+        "build": "node-gyp clean && rm -f fsevents.node && node-gyp rebuild && node-gyp clean",
+        "test": "/bin/bash ./test.sh 2>/dev/null",
+        "prepublishOnly": "npm run build",
+        "install": "node-gyp rebuild"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fsevents/fsevents.git"
+      },
+      "keywords": [
+        "fsevents",
+        "mac"
+      ],
+      "contributors": [
+        {
+          "name": "Philipp Dunkel",
+          "email": "pip@pipobscure.com"
+        },
+        {
+          "name": "Ben Noordhuis",
+          "email": "info@bnoordhuis.nl"
+        },
+        {
+          "name": "Elan Shankar",
+          "email": "elan.shanker@gmail.com"
+        },
+        {
+          "name": "Miroslav Bajtoš",
+          "email": "mbajtoss@gmail.com"
+        },
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        }
+      ],
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/fsevents/fsevents/issues"
+      },
+      "homepage": "https://github.com/fsevents/fsevents",
+      "devDependencies": {
+        "node-gyp": "^6.1.0"
+      },
+      "gypfile": true,
+      "gitHead": "864d79b4df9d776663d389062ea5fd9324276ff6",
+      "_id": "fsevents@2.1.3",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-Auw9a4AxqWpa9GUfj370BMPzzyncfBABW8Mab7BGWBYDj4Isgq+cDKtx0i6u9jcX9pQDnswsaaOTgTmA5pEjuQ==",
+        "shasum": "fb738703ae8d2f9fe900c33836ddebee8b97f23e",
+        "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-2.1.3.tgz",
+        "fileCount": 6,
+        "unpackedSize": 44861,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeoATXCRA9TVsSAnZWagAAQlwP/iycIrVwvNXUgA4Joz+F\nWgYjJCygem2ESlxOlYy5We7I4r2e9jHOKZ2/JnwYXkiGgmPeZL4McRCxrU+0\nfhESp5mB8NJj86zTgM2U19LCn9MJIJBhczAH+ccpqAkl/Z9CdDx0Vn4B0FF7\nX3mGOtC+WTPc7Sa3Bla83swox2ox/KucO53QcWCt27cn5STsK8Or8f6Qe7sD\nQEhWc9vxxfKtbnZZC5VP5ewIUZ8qLpLLrOSh689y2HUGrt7IdOPcvdC2Z0zX\nl6VDi8+ie60DZgwXGAQ/+23crvuaY0KNkrdDNZw46tWEqwh05r5rKW0m6Wsu\nanMjZvMwgSvzH2NImyiwHc1VgLdS7Yz4MwIRqEltGz3pMwLH+0UlBxSiRI7z\nevV5LtrDe4QHEWkJ/dQC7VSlZR3OPq+Ypvjmkl1+9zi2IMzj/4ASmHrA8pLz\nIf7BAUVs5K9TqRySNbIxmyDkhprNg0H7oWk5axsBC38gK4kqUywnm7FfxaNX\nztaHiNGHuFi7HHOa/eVYrnlC0/HkI/LCBdLd8bLYYJrEofqr/j7udfdwpHVg\nCPp73btCaWvQIGezRfOXXftqeYQE+kE2qJ6BEhxFSAkDWVGz3I9d9/zXaZyY\nLRgCbkbyHi/A9roAp4avuo7abdGD5jIPTiedDans7cOacZ7UdOKHLjQEfqtX\n7vz8\r\n=92sv\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "info@bnoordhuis.nl",
+          "name": "bnoordhuis"
+        },
+        {
+          "email": "elan.shanker+npm@gmail.com",
+          "name": "es128"
+        },
+        {
+          "email": "paul@paulmillr.com",
+          "name": "paulmillr"
+        },
+        {
+          "email": "pip@pipobscure.com",
+          "name": "pipobscure"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/fsevents_2.1.3_1587545303123_0.40284197395726373"
+      },
       "_hasShrinkwrap": false
+    },
+    "1.2.13": {
+      "name": "fsevents",
+      "version": "1.2.13",
+      "description": "Native Access to Mac OS-X FSEvents",
+      "main": "fsevents.js",
+      "dependencies": {
+        "bindings": "^1.5.0",
+        "nan": "^2.12.1"
+      },
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": ">= 4.0"
+      },
+      "scripts": {
+        "test": "node ./test/fsevents.js && node ./test/function.js 2> /dev/null",
+        "install": "node install.js"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/strongloop/fsevents.git"
+      },
+      "keywords": [
+        "fsevents",
+        "mac"
+      ],
+      "author": {
+        "name": "Philipp Dunkel",
+        "email": "pip@pipobscure.com"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/strongloop/fsevents/issues"
+      },
+      "homepage": "https://github.com/strongloop/fsevents",
+      "readme": "# fsevents [![NPM](https://nodei.co/npm/fsevents.png)](https://nodei.co/npm/fsevents/)\n\nNative access to OS X FSEvents in [Node.js](http://nodejs.org/)\n\nThe FSEvents API in OS X allows applications to register for notifications of\nchanges to a given directory tree. It is a very fast and lightweight alternative\nto kqueue.\n\nThis is a low-level library. For a cross-compatible file watching module that\nuses fsevents, check out [Chokidar](https://www.npmjs.com/package/chokidar).\n\n* [Module Site & GitHub](https://github.com/strongloop/fsevents)\n* [NPM Page](https://npmjs.org/package/fsevents)\n\n## Installation\n\n\t$ npm install fsevents\n\n## Usage\n\n```js\nvar fsevents = require('fsevents');\nvar watcher = fsevents(__dirname);\nwatcher.on('fsevent', function(path, flags, id) { }); // RAW Event as emitted by OS-X\nwatcher.on('change', function(path, info) { }); // Common Event for all changes\nwatcher.start() // To start observation\nwatcher.stop()  // To end observation\n```\n\n### Events\n\n * *fsevent* - RAW Event as emitted by OS-X\n * *change* - Common Event for all changes\n * *created* - A File-System-Item has been created\n * *deleted* - A File-System-Item has been deleted\n * *modified* - A File-System-Item has been modified\n * *moved-out* - A File-System-Item has been moved away from this location\n * *moved-in* - A File-System-Item has been moved into this location\n\nAll events except *fsevent* take an *info* object as the second parameter of the callback. The structure of this object is:\n\n```js\n{\n  \"event\": \"<event-type>\",\n  \"id\": <eventi-id>,\n  \"path\": \"<path-that-this-is-about>\",\n  \"type\": \"<file|directory|symlink>\",\n  \"changes\": {\n    \"inode\": true, // Has the iNode Meta-Information changed\n    \"finder\": false, // Has the Finder Meta-Data changed\n    \"access\": false, // Have the access permissions changed\n    \"xattrs\": false // Have the xAttributes changed\n  },\n  \"flags\": <raw-flags>\n}\n```\n\n## MIT License\n\nCopyright (C) 2010-2014 Philipp Dunkel\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
+      "readmeFilename": "Readme.md",
+      "gitHead": "844a05d41fa0f764c7457dae266b0ab50384394a",
+      "_id": "fsevents@1.2.13",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.1",
+      "_npmUser": {
+        "name": "pipobscure",
+        "email": "pip@pipobscure.com"
+      },
+      "dist": {
+        "integrity": "sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==",
+        "shasum": "f325cb0455592428bcf11b383370ef70e3bfcc38",
+        "tarball": "https://registry.npmjs.org/fsevents/-/fsevents-1.2.13.tgz",
+        "fileCount": 14,
+        "unpackedSize": 25750,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJesdVWCRA9TVsSAnZWagAANXEP/1qzErlMRWCM9Rsg1lUh\ns989nuaZmfjaRemf59WeX8ifZazduUAqc6siECvhPknctwC/kra3Tl9dIKcl\n8KQ7GT/qARupPzhTSkHecE7lASKQHos5AQf2hMZ+ysUelOlrZVwqNA936FA7\nrRWO863SDlPE/rHGiUtEwBZxkojeQ6du0ETtVxteUGHBAuw+CnMxF6lBu/s7\nUhP/MMZ6ApzeXHf5zED16Kd02twWeAoK/67AzzFyBZLkZ90wZL1E47+1fv44\nRJNvWauSUE7kLgxBYpGdAvgxilkulPQ0Hpkx3V4B0ePr9rpOpeZVQeL+bz5l\nA0CN6lMK9o8AJPamrg6zztO/B1tJqex4QJ6YyI0j0Ie0muwX4cfYG2nBaCpD\nnfzmkgYQHqJHsNV2DtE+ScXOtczR3u/e7uKzrh5BTFUlw6HXzinlfuJjf2CS\nUT9dD+uPdq0U46KkV+0U3336NkZdFc0NUbZnEATMWrRF6SWiUP3FPiGxnIBa\n70gFftkX/wOKWzIPleu3B5klvcrauCMepK4Uw1fsG74veZF6VQ3isd3T6QSM\nlPNjUjQLdTOAxRXcAwFkc7td4sFGe0dXo/mjmqAt5U6M5l8yyuWxSJOZRAh9\nwVgP4EyzbAKqo3OrQi/huRRvd2pLOl3toitN+LBSNvimdwIpWgH+4c6eh4hq\nEAGO\r\n=TC7m\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "info@bnoordhuis.nl",
+          "name": "bnoordhuis"
+        },
+        {
+          "email": "elan.shanker+npm@gmail.com",
+          "name": "es128"
+        },
+        {
+          "email": "paul@paulmillr.com",
+          "name": "paulmillr"
+        },
+        {
+          "email": "pip@pipobscure.com",
+          "name": "pipobscure"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/fsevents_1.2.13_1588712790211_0.34870418787981894"
+      },
+      "_hasShrinkwrap": false,
+      "deprecated": "fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2."
     }
   },
+  "readme": "",
   "maintainers": [
     {
       "email": "info@bnoordhuis.nl",
@@ -4787,16 +5058,16 @@
       "name": "es128"
     },
     {
-      "email": "pip@pipobscure.com",
-      "name": "pipobscure"
-    },
-    {
       "email": "paul@paulmillr.com",
       "name": "paulmillr"
+    },
+    {
+      "email": "pip@pipobscure.com",
+      "name": "pipobscure"
     }
   ],
   "time": {
-    "modified": "2020-02-03T05:44:46.206Z",
+    "modified": "2020-05-06T17:49:13.604Z",
     "created": "2013-07-06T22:03:58.681Z",
     "0.1.1": "2013-07-06T22:04:02.366Z",
     "0.1.3": "2013-07-06T22:26:35.459Z",
@@ -4857,7 +5128,10 @@
     "2.1.1": "2019-10-14T00:14:41.467Z",
     "2.1.2": "2019-11-09T17:08:30.550Z",
     "1.2.10": "2019-12-13T11:25:04.547Z",
-    "1.2.11": "2019-12-14T11:28:18.959Z"
+    "1.2.11": "2019-12-14T11:28:18.959Z",
+    "1.2.12": "2020-03-19T09:14:58.168Z",
+    "2.1.3": "2020-04-22T08:48:23.251Z",
+    "1.2.13": "2020-05-05T21:06:30.384Z"
   },
   "repository": {
     "type": "git",
@@ -4915,5 +5189,7 @@
       "name": "Paul Miller",
       "url": "https://paulmillr.com"
     }
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

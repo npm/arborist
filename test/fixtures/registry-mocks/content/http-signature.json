@@ -1,10 +1,10 @@
 {
   "_id": "http-signature",
-  "_rev": "57-71ca2baffa7a698b3d794995e2d5ac04",
+  "_rev": "66-3e9af7dddbeb154c5c9e5e64080e6fd0",
   "name": "http-signature",
   "description": "Reference implementation of Joyent's HTTP Signature scheme.",
   "dist-tags": {
-    "latest": "1.3.1"
+    "latest": "1.3.5"
   },
   "versions": {
     "0.9.0": {
@@ -1472,20 +1472,564 @@
         "tmp": "tmp/http-signature_1.3.1_1572997193608_0.7262216540556601"
       },
       "_hasShrinkwrap": false
+    },
+    "1.3.2": {
+      "name": "http-signature",
+      "description": "Reference implementation of Joyent's HTTP Signature scheme.",
+      "version": "1.3.2",
+      "license": "MIT",
+      "author": {
+        "name": "Joyent, Inc"
+      },
+      "contributors": [
+        {
+          "name": "Mark Cavage",
+          "email": "mcavage@gmail.com"
+        },
+        {
+          "name": "David I. Lehn",
+          "email": "dil@lehn.org"
+        },
+        {
+          "name": "Patrick Mooney",
+          "email": "patrick.f.mooney@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/joyent/node-http-signature.git"
+      },
+      "homepage": "https://github.com/joyent/node-http-signature/",
+      "bugs": {
+        "url": "https://github.com/joyent/node-http-signature/issues"
+      },
+      "keywords": [
+        "https",
+        "request"
+      ],
+      "engines": {
+        "node": ">=0.10"
+      },
+      "main": "lib/index.js",
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "assert-plus": "^1.0.0",
+        "jsprim": "^1.2.2",
+        "sshpk": "^1.14.1"
+      },
+      "devDependencies": {
+        "tap": "0.4.2",
+        "uuid": "^2.0.2"
+      },
+      "gitHead": "28def30feff866174dfeec74a4c42e45e13d43ed",
+      "_id": "http-signature@1.3.2",
+      "_nodeVersion": "10.16.3",
+      "_npmVersion": "6.9.0",
+      "dist": {
+        "integrity": "sha512-sjgXeFLIVJ54n1+HWOvazGkIQpaawFGIQ1PYPORaFNWpPHJ28ZuDgWljvMIhAIcOelTtrh9e5wVB3IorxjiZDA==",
+        "shasum": "ae5ebf18631967a2ba660283606e336c0207c950",
+        "tarball": "https://registry.npmjs.org/http-signature/-/http-signature-1.3.2.tgz",
+        "fileCount": 9,
+        "unpackedSize": 35146,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeVFuoCRA9TVsSAnZWagAANaIP/jA7l3XND7viV/+8rD1l\njeXFsVlwjL8Q1G2o9Bud6l+4gVpefR0QseH5OCRlR9tWlVyj57izUfKMCVKP\n/sjTQDcvWED6zxLySNiWfnYHO+c2sFiDdVwJI/D/V3OWI/7yjyjF/xE1ODLy\nN9bh2U2h5z1b1COvI3RsFynhnCF3yCHZf+JI5nO0hxs8FUGPpW8ZMRjYrAPD\nm73Cuszwf68Q0fVH1d13t87J8aF7fY7L0Uycst6k255hPHwhwLj+RaBaQ13D\niNG10nzCw1qwAe1OMO3VSHo4CyL+IdOjDMrmngO0Bls0ekpD5xwabC6TeNKB\nddetsb5B4XYJCVMNSfTSEs+wLI2q4fQAv5k9X98z90jue2QZwx/+r3HIhbxu\nxbX6QoJIAAjXDg2k6BTxe8h2jFBISK5wsSIHtd8KLnau6P2coMO320QjKzYG\nt0HjlT5scmBrbi2dokFieMIT8LqoMQ0qiqo1dg5FAlwMu9VypZ3fKiPgIDSu\nbUSOjJx/apYi0lQlUULtnZL7ioxYgE4Htg4rhr1FvzIGFmNR5XPR0/o8W3Zt\nqKwSTEdNSoBkhZZrS371wCHcfJFZOFss15lWqiXbJaUnh5edB+hfbMfosYHW\n+tr2avcOwepXznKPbkSMR67saeTSXGwhzEbDtPf+L7nch7PxQfRQ9IroXMXJ\nELZA\r\n=omkd\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "alex@cooperi.net",
+          "name": "arekinath"
+        },
+        {
+          "email": "dave@daveeddy.com",
+          "name": "bahamas10"
+        },
+        {
+          "email": "bahamat@digitalelf.net",
+          "name": "bahamat"
+        },
+        {
+          "email": "aguycalledrichard@gmail.com",
+          "name": "chudley"
+        },
+        {
+          "email": "isaac.davis@joyent.com",
+          "name": "isaacdavis"
+        },
+        {
+          "email": "kelly.mclaughlin@joyent.com",
+          "name": "kellymclaughlin"
+        },
+        {
+          "email": "kody.kantor@joyent.com",
+          "name": "kkantor"
+        },
+        {
+          "email": "kusorbox@gmail.com",
+          "name": "kusor"
+        },
+        {
+          "email": "mcavage@gmail.com",
+          "name": "mcavage"
+        },
+        {
+          "email": "cody.mello@joyent.com",
+          "name": "melloc"
+        },
+        {
+          "email": "mgerdts@gmail.com",
+          "name": "mgerdts"
+        },
+        {
+          "email": "michael.hicks@joyent.com",
+          "name": "michael.hicks"
+        },
+        {
+          "email": "pmooney@pfmooney.com",
+          "name": "pfmooney"
+        },
+        {
+          "email": "todd.whiteman@joyent.com",
+          "name": "todd.whiteman"
+        },
+        {
+          "email": "trentm@gmail.com",
+          "name": "trentm"
+        },
+        {
+          "email": "wpreul@gmail.com",
+          "name": "wyatt"
+        }
+      ],
+      "_npmUser": {
+        "name": "trentm",
+        "email": "trentm@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/http-signature_1.3.2_1582586792289_0.9645761162483788"
+      },
+      "_hasShrinkwrap": false
+    },
+    "1.3.3": {
+      "name": "http-signature",
+      "description": "Reference implementation of Joyent's HTTP Signature scheme.",
+      "version": "1.3.3",
+      "license": "MIT",
+      "author": {
+        "name": "Joyent, Inc"
+      },
+      "contributors": [
+        {
+          "name": "Mark Cavage",
+          "email": "mcavage@gmail.com"
+        },
+        {
+          "name": "David I. Lehn",
+          "email": "dil@lehn.org"
+        },
+        {
+          "name": "Patrick Mooney",
+          "email": "patrick.f.mooney@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/joyent/node-http-signature.git"
+      },
+      "homepage": "https://github.com/joyent/node-http-signature/",
+      "bugs": {
+        "url": "https://github.com/joyent/node-http-signature/issues"
+      },
+      "keywords": [
+        "https",
+        "request"
+      ],
+      "engines": {
+        "node": ">=0.10"
+      },
+      "main": "lib/index.js",
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "assert-plus": "^1.0.0",
+        "jsprim": "^1.2.2",
+        "sshpk": "^1.14.1"
+      },
+      "devDependencies": {
+        "tap": "0.4.2",
+        "uuid": "^2.0.2"
+      },
+      "gitHead": "613fb310c6972d972e4f9564cace0279491c5414",
+      "_id": "http-signature@1.3.3",
+      "_nodeVersion": "10.16.3",
+      "_npmVersion": "6.9.0",
+      "dist": {
+        "integrity": "sha512-j64MZrIH1/u8h+i+BTUva530IRot66pmKjCe67JtklU0/WWs1edWo1TmsL/v67qMOZzIG9y11YkMC89E3JMOlA==",
+        "shasum": "f8afee61f8989ea60241cd0629a870413c9836e8",
+        "tarball": "https://registry.npmjs.org/http-signature/-/http-signature-1.3.3.tgz",
+        "fileCount": 9,
+        "unpackedSize": 37260,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJehPiDCRA9TVsSAnZWagAAEFYQAIVTKUxhWC/qg1sO/3I5\nE3wM0MUWXShNyk2LBpzkRFf9BXLN/LpiDEFpdNAq8HKIR4/2nRO6gC66EYv4\np2b3Hdj3Y/Pfapku89SVj3t45I93Z88WbPoC+IyWPvK7JT6uNsMG41vcH4Jn\n/zsJgIVazQiHgTdMpJzMjNaU43pD4tw3EXQGpQRzgfzmFQs6V1WNSv/qYNeS\nLhZP1yyc39n2KDDEjUqkyoiXD/w8OtG4393YBTl9qZncaKWZdEAVlH34z5Pl\nP2XJeR1LpUfJiDgEf3+gnNkaf+yAcjHgzCO0gebeJr2yXFdxRhCj28PgmkAp\n8s5zEs/ClbqIb9e0EyxyT7zjqz7UW02xjbmFp94DAfao7pajhYerURvakFpM\nAxrPVacka8/GRMxuwbbFIhrf91fB1GhTetZvSMm+GC0I2hj2csIwwvIrDUHN\nZY6LDf3iI0LX6XWmCPw+h0R41L4+BEznMZpORZD7PXPeYu/tj4KFadKcVHws\ndtfFMIwBh2fVCjSzZetlNQRpUknoXEIoNfToFLd+e3zYBiHhuhcy/N7rdOlN\nbd5HG3Ldg6Ka6uxMaVj5kIITR2zdiVdgtgliPLK3oVgbEnDuSJlk3oexuQDb\nrsKBjPMYUxsC0Wpmvp3FOyX6LVVrGETAenXUtHwZ1dmXM0LI9rE2mASYwJE4\n5UAX\r\n=j2ck\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "alex@cooperi.net",
+          "name": "arekinath"
+        },
+        {
+          "email": "dave@daveeddy.com",
+          "name": "bahamas10"
+        },
+        {
+          "email": "bahamat@digitalelf.net",
+          "name": "bahamat"
+        },
+        {
+          "email": "aguycalledrichard@gmail.com",
+          "name": "chudley"
+        },
+        {
+          "email": "isaac.davis@joyent.com",
+          "name": "isaacdavis"
+        },
+        {
+          "email": "kelly.mclaughlin@joyent.com",
+          "name": "kellymclaughlin"
+        },
+        {
+          "email": "kody.kantor@joyent.com",
+          "name": "kkantor"
+        },
+        {
+          "email": "kusorbox@gmail.com",
+          "name": "kusor"
+        },
+        {
+          "email": "mcavage@gmail.com",
+          "name": "mcavage"
+        },
+        {
+          "email": "cody.mello@joyent.com",
+          "name": "melloc"
+        },
+        {
+          "email": "mgerdts@gmail.com",
+          "name": "mgerdts"
+        },
+        {
+          "email": "michael.hicks@joyent.com",
+          "name": "michael.hicks"
+        },
+        {
+          "email": "pmooney@pfmooney.com",
+          "name": "pfmooney"
+        },
+        {
+          "email": "todd.whiteman@joyent.com",
+          "name": "todd.whiteman"
+        },
+        {
+          "email": "trentm@gmail.com",
+          "name": "trentm"
+        },
+        {
+          "email": "wpreul@gmail.com",
+          "name": "wyatt"
+        }
+      ],
+      "_npmUser": {
+        "name": "trentm",
+        "email": "trentm@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/http-signature_1.3.3_1585772674574_0.7175260728537105"
+      },
+      "_hasShrinkwrap": false
+    },
+    "1.3.4": {
+      "name": "http-signature",
+      "description": "Reference implementation of Joyent's HTTP Signature scheme.",
+      "version": "1.3.4",
+      "license": "MIT",
+      "author": {
+        "name": "Joyent, Inc"
+      },
+      "contributors": [
+        {
+          "name": "Mark Cavage",
+          "email": "mcavage@gmail.com"
+        },
+        {
+          "name": "David I. Lehn",
+          "email": "dil@lehn.org"
+        },
+        {
+          "name": "Patrick Mooney",
+          "email": "patrick.f.mooney@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/joyent/node-http-signature.git"
+      },
+      "homepage": "https://github.com/joyent/node-http-signature/",
+      "bugs": {
+        "url": "https://github.com/joyent/node-http-signature/issues"
+      },
+      "keywords": [
+        "https",
+        "request"
+      ],
+      "engines": {
+        "node": ">=0.10"
+      },
+      "main": "lib/index.js",
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "assert-plus": "^1.0.0",
+        "jsprim": "^1.2.2",
+        "sshpk": "^1.14.1"
+      },
+      "devDependencies": {
+        "tap": "0.4.2",
+        "uuid": "^2.0.2"
+      },
+      "gitHead": "205aba67fd259e21eb38090554dcd5ca05de2a38",
+      "_id": "http-signature@1.3.4",
+      "_nodeVersion": "10.16.3",
+      "_npmVersion": "6.9.0",
+      "dist": {
+        "integrity": "sha512-CbG3io8gUSIxNNSgq+XMjgpTMzAeVRipxVXjuGrDhH5M1a2kZ03w20s8FCLR1NjnnJj10KbvabvckmtQcYNb9g==",
+        "shasum": "a65b41193110b222364e776fd1ac848655a0e2f0",
+        "tarball": "https://registry.npmjs.org/http-signature/-/http-signature-1.3.4.tgz",
+        "fileCount": 9,
+        "unpackedSize": 37408,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJehYBiCRA9TVsSAnZWagAAYNEP/jLkWy47ap7acXMZEEn7\nsqiDL+S0wiPiFaBRzHLSAFn+z/5FFLrcXiNO9M20IG/Ci3L+7/LbnREM+JO6\n4O5q3SkH9MwFWZeL7VP58FVAxDQGQI/ZxmLQOaNp+mgvbTsl3Umxrj044Jfj\n4gQitIzwFR+5AR42vNjG9KsUYeat/v6kaaFpM/h6VKHKF+LDMy7G2tY6EuCP\nSuNdJNM+haTfmr2rzsxI8Lg6ZV7aP//0RQOFT91X/9lS1kFlI8N+YbqPpUDo\ny+YjO/IizOsh/ZcRChIinquEk63eDMNRI9w8t8b9vuLOchmZFkS1hXKi4yhX\nKQYmH6FywICUsIFrf24l9EI9c3Do3VWRmgmvFF12N437HoTjoVhNMtfkWycN\nh0BT02mtgNKqYTwoLmyLowNsLBnr//8FZWA/DTpi3qDOgigHbDo2CvRKGUWd\n9+GWu1qar7hD0QVe8Ew4cSdGluRufO5O7gXYClFSfFxC1PxYrj3brOE2mWAx\nCY09d4m3E0l405CueP3fZzDgGS0Da5kIgYKW38V3J2ogolWEtQ1FQ90hPBYX\nX2fWpRg+5ddC8FBEKaY6Bf/NHY6BdWh1nUdA5/FkC3kIowPnJl4TlDPwzI7u\ncigGkM4AQqC4dMRf7BRIOmjLm7g90ERYUfDZx4sDtYROrWfxmbi9w80JpfI/\nqLkE\r\n=1aBg\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "alex@cooperi.net",
+          "name": "arekinath"
+        },
+        {
+          "email": "dave@daveeddy.com",
+          "name": "bahamas10"
+        },
+        {
+          "email": "bahamat@digitalelf.net",
+          "name": "bahamat"
+        },
+        {
+          "email": "aguycalledrichard@gmail.com",
+          "name": "chudley"
+        },
+        {
+          "email": "isaac.davis@joyent.com",
+          "name": "isaacdavis"
+        },
+        {
+          "email": "kelly.mclaughlin@joyent.com",
+          "name": "kellymclaughlin"
+        },
+        {
+          "email": "kody.kantor@joyent.com",
+          "name": "kkantor"
+        },
+        {
+          "email": "kusorbox@gmail.com",
+          "name": "kusor"
+        },
+        {
+          "email": "mcavage@gmail.com",
+          "name": "mcavage"
+        },
+        {
+          "email": "cody.mello@joyent.com",
+          "name": "melloc"
+        },
+        {
+          "email": "mgerdts@gmail.com",
+          "name": "mgerdts"
+        },
+        {
+          "email": "michael.hicks@joyent.com",
+          "name": "michael.hicks"
+        },
+        {
+          "email": "pmooney@pfmooney.com",
+          "name": "pfmooney"
+        },
+        {
+          "email": "todd.whiteman@joyent.com",
+          "name": "todd.whiteman"
+        },
+        {
+          "email": "trentm@gmail.com",
+          "name": "trentm"
+        },
+        {
+          "email": "wpreul@gmail.com",
+          "name": "wyatt"
+        }
+      ],
+      "_npmUser": {
+        "name": "trentm",
+        "email": "trentm@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/http-signature_1.3.4_1585807457938_0.502220428738444"
+      },
+      "_hasShrinkwrap": false
+    },
+    "1.3.5": {
+      "name": "http-signature",
+      "description": "Reference implementation of Joyent's HTTP Signature scheme.",
+      "version": "1.3.5",
+      "license": "MIT",
+      "author": {
+        "name": "Joyent, Inc"
+      },
+      "contributors": [
+        {
+          "name": "Mark Cavage",
+          "email": "mcavage@gmail.com"
+        },
+        {
+          "name": "David I. Lehn",
+          "email": "dil@lehn.org"
+        },
+        {
+          "name": "Patrick Mooney",
+          "email": "patrick.f.mooney@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/joyent/node-http-signature.git"
+      },
+      "homepage": "https://github.com/joyent/node-http-signature/",
+      "bugs": {
+        "url": "https://github.com/joyent/node-http-signature/issues"
+      },
+      "keywords": [
+        "https",
+        "request"
+      ],
+      "engines": {
+        "node": ">=0.10"
+      },
+      "main": "lib/index.js",
+      "scripts": {
+        "test": "tap test/*.js"
+      },
+      "dependencies": {
+        "assert-plus": "^1.0.0",
+        "jsprim": "^1.2.2",
+        "sshpk": "^1.14.1"
+      },
+      "devDependencies": {
+        "tap": "0.4.2",
+        "uuid": "^2.0.2"
+      },
+      "gitHead": "868bf82ea9ccf49a69f9674b4cedb85e9d075326",
+      "_id": "http-signature@1.3.5",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-NwoTQYSJoFt34jSBbwzDHDofoA61NGXzu6wXh95o1Ry62EnmKjXb/nR/RknLeZ3G/uGwrlKNY2z7uPt+Cdl7Tw==",
+        "shasum": "9f19496ffbf3227298d7b5f156e0e1a948678683",
+        "tarball": "https://registry.npmjs.org/http-signature/-/http-signature-1.3.5.tgz",
+        "fileCount": 9,
+        "unpackedSize": 40677,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfa1c0CRA9TVsSAnZWagAAMPAP/3lomfNvE5RExfNmqbNn\n/1Uc31FkFse2VV+L+a4KODRZybe/nSa7P0cbu7KbT9aaFy+6sotwSLmKIUYT\npcXIPP7C9vG6l/riIr4BaEJqXZbJvgdfbLRABYDxBWdaQdhUwLwqIUMPNRbE\nzGRYNuAHUoNXYKAJOsr0FhzoPXmZxtku69fjYBmJro3CnzWC8l0aB/abQ9pg\nWN+P0nEiGFdXsbuO0/4Ra10xgBHdiquekcz/eJ02xWI63KRxCOo/LlRtB6F6\nGinn8kWXh1hsKxIUdsB9kY7kn0UykM2RHk34ZrgmgYNBM8w0awMptDyqF1Yv\nOzM9GSqAnwESDrGMAuFCtHK6Dyb9mAWIe/Sm7m6r9Zx3KFBhv6jVNE1OvADb\niXK+vI3MjHpin5fKPlp1Zvqvmocw1OjeS/1qbvi9GDRS+YDerhnNVauLcNQr\nFH9+VP6AFprspfETRiVJLnmuHcXEirGa3SqawEw9XliQ5GGuiT9m0WhOscJn\nlyP47+n02IqGM8XaNH3ZJWdE7Qgdkevc+EgKhF0VKxlrlYJ2FPfItRt7BPBQ\nnQAn3eXk7Q4zJrD37d/gcwWcG8n3E+vQvq1Pny0BdhhArM+xIBsSTmekSPEd\n9uz/YYCEuyH+mq80mVGPKv8UFONBDKctHK+qPH/0v/+LJ6OEjsci+lfUuH+b\nzFyw\r\n=JNme\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jesse_b",
+          "email": "jesse.butryn@live.com"
+        },
+        {
+          "name": "isaacdavis",
+          "email": "isaac.davis@joyent.com"
+        },
+        {
+          "name": "bahamas10",
+          "email": "dave@daveeddy.com"
+        },
+        {
+          "name": "chudley",
+          "email": "aguycalledrichard@gmail.com"
+        },
+        {
+          "name": "bahamat",
+          "email": "bahamat@digitalelf.net"
+        },
+        {
+          "name": "michael.hicks",
+          "email": "michael.hicks@joyent.com"
+        },
+        {
+          "name": "wyatt",
+          "email": "wpreul@gmail.com"
+        },
+        {
+          "name": "kusor",
+          "email": "kusorbox@gmail.com"
+        },
+        {
+          "name": "kkantor",
+          "email": "kody.kantor@joyent.com"
+        },
+        {
+          "name": "trentm",
+          "email": "trentm@gmail.com"
+        },
+        {
+          "name": "todd.whiteman",
+          "email": "todd.whiteman@joyent.com"
+        },
+        {
+          "name": "pfmooney",
+          "email": "pmooney@pfmooney.com"
+        },
+        {
+          "name": "mcavage",
+          "email": "mcavage@gmail.com"
+        },
+        {
+          "name": "arekinath",
+          "email": "alex@cooperi.net"
+        },
+        {
+          "name": "melloc",
+          "email": "cody.mello@joyent.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "kusor",
+        "email": "kusorbox@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/http-signature_1.3.5_1600870195646_0.9518971581016216"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
     {
-      "email": "mgerdts@gmail.com",
-      "name": "mgerdts"
-    },
-    {
-      "email": "kelly.mclaughlin@joyent.com",
-      "name": "kellymclaughlin"
-    },
-    {
-      "email": "isaac.davis@joyent.com",
-      "name": "isaacdavis"
+      "email": "jesse.butryn@live.com",
+      "name": "jesse_b"
     },
     {
       "email": "dave@daveeddy.com",
@@ -1516,10 +2060,6 @@
       "name": "kkantor"
     },
     {
-      "email": "trentm@gmail.com",
-      "name": "trentm"
-    },
-    {
       "email": "todd.whiteman@joyent.com",
       "name": "todd.whiteman"
     },
@@ -1541,7 +2081,7 @@
     }
   ],
   "time": {
-    "modified": "2020-02-04T21:06:10.997Z",
+    "modified": "2020-10-09T21:01:06.083Z",
     "created": "2011-07-14T21:21:46.738Z",
     "0.9.0": "2011-07-14T21:21:47.284Z",
     "0.9.2": "2011-09-04T01:42:03.454Z",
@@ -1564,7 +2104,11 @@
     "1.1.1": "2016-01-25T22:04:48.994Z",
     "1.2.0": "2017-08-25T19:32:03.167Z",
     "1.3.0": "2019-11-05T08:52:07.248Z",
-    "1.3.1": "2019-11-05T23:39:53.757Z"
+    "1.3.1": "2019-11-05T23:39:53.757Z",
+    "1.3.2": "2020-02-24T23:26:32.413Z",
+    "1.3.3": "2020-04-01T20:24:34.815Z",
+    "1.3.4": "2020-04-02T06:04:18.090Z",
+    "1.3.5": "2020-09-23T14:09:55.756Z"
   },
   "author": {
     "name": "Joyent, Inc"
@@ -1573,6 +2117,7 @@
     "type": "git",
     "url": "git://github.com/joyent/node-http-signature.git"
   },
+  "readme": "# node-http-signature\n\nnode-http-signature is a node.js library that has client and server components\nfor Joyent's [HTTP Signature Scheme](http_signing.md).\n\n## Usage\n\nNote the example below signs a request with the same key/cert used to start an\nHTTP server. This is almost certainly not what you actually want, but is just\nused to illustrate the API calls; you will need to provide your own key\nmanagement in addition to this library.\n\n### Client\n\n```js\nvar fs = require('fs');\nvar https = require('https');\nvar httpSignature = require('http-signature');\n\nvar key = fs.readFileSync('./key.pem', 'ascii');\n\nvar options = {\n  host: 'localhost',\n  port: 8443,\n  path: '/',\n  method: 'GET',\n  headers: {}\n};\n\n// Adds a 'Date' header in, signs it, and adds the\n// 'Authorization' header in.\nvar req = https.request(options, function(res) {\n  console.log(res.statusCode);\n});\n\n\nhttpSignature.sign(req, {\n  key: key,\n  keyId: './cert.pem',\n  keyPassphrase: 'secret' // (optional)\n});\n\nreq.end();\n```\n\n### Server\n\n```js\nvar fs = require('fs');\nvar https = require('https');\nvar httpSignature = require('http-signature');\n\nvar options = {\n  key: fs.readFileSync('./key.pem'),\n  cert: fs.readFileSync('./cert.pem')\n};\n\nhttps.createServer(options, function (req, res) {\n  var rc = 200;\n  var parsed = httpSignature.parseRequest(req);\n  var pub = fs.readFileSync(parsed.keyId, 'ascii');\n  if (!httpSignature.verifySignature(parsed, pub))\n    rc = 401;\n\n  res.writeHead(rc);\n  res.end();\n}).listen(8443);\n```\n\n## Installation\n\n    npm install http-signature\n\n## License\n\nMIT.\n\n## Bugs\n\nSee <https://github.com/joyent/node-http-signature/issues>.\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/joyent/node-http-signature/",
   "keywords": [
@@ -1604,5 +2149,7 @@
     "jteodoro": true,
     "panlw": true,
     "dpjayasekara": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

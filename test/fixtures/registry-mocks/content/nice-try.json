@@ -1,10 +1,10 @@
 {
   "_id": "nice-try",
-  "_rev": "7-739fc6b690bc9bd778edceb79c4bf6c0",
+  "_rev": "9-742d341b7c3fac6d11a50c5c0eeb04c7",
   "name": "nice-try",
   "description": "Tries to execute a function and discards any error that occurs",
   "dist-tags": {
-    "latest": "2.0.0"
+    "latest": "2.1.0"
   },
   "versions": {
     "1.0.0": {
@@ -439,8 +439,131 @@
         "tmp": "tmp/nice-try_2.0.0_1540740205675_0.9418092813552867"
       },
       "_hasShrinkwrap": false
+    },
+    "2.0.1": {
+      "name": "nice-try",
+      "version": "2.0.1",
+      "authors": [
+        "Tobias Reich <tobias@electerious.com>"
+      ],
+      "description": "Tries to execute a function and discards any error that occurs",
+      "main": "src/index.js",
+      "keywords": [
+        "try",
+        "catch",
+        "error"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/electerious/nice-try",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/electerious/nice-try.git"
+      },
+      "scripts": {
+        "coveralls": "nyc report --reporter=text-lcov | coveralls",
+        "test": "nyc node_modules/mocha/bin/_mocha"
+      },
+      "devDependencies": {
+        "chai": "^4.1.2",
+        "coveralls": "^3.0.0",
+        "nyc": "^15.0.0",
+        "mocha": "^7.0.1"
+      },
+      "gitHead": "95d9ba8f65ecb216145dc5b2695b250635daadd8",
+      "bugs": {
+        "url": "https://github.com/electerious/nice-try/issues"
+      },
+      "_id": "nice-try@2.0.1",
+      "_nodeVersion": "12.14.1",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-+F6drVcPo6ABeuxhTieYy8aH/JkyrxM0g2nNK9p9mIHAVypyKqPr2fC2qLNNmVUtMWGGXSIJSJQAjpQ+B8bllg==",
+        "shasum": "7099dfc79b1fe8ac04870288385217a48a5d6e25",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-2.0.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 3765,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedJj/CRA9TVsSAnZWagAAZBcQAI1gAYLJdKXgbaZB0OD9\n3L+Y7UdNhn9sIjNNTNv9Gz4+KG+veAejL7p8yh4qzeTde0IzWKOnDG4LElrp\npPKV8Y8ruzSTENDIUWPQTD56lQi0A5IYDKKbJsDBNRXJNQ5/Es0/Aqlg71Rq\nnUMn0Ud/akFNP+UoLiLef5H1qyn7G19Qx82oSbB0xRTiOiV305ew8pK7KYHV\nG5A4edqn7tJZfl+Kr92jJtHpLeOK9/43qLi3tfUjvTWn2xVTLYr1h3yi3+xq\n8wEmv4Ju18EcQtGJsTKkttfxEFEl5hv2OrpNwvXYSZjyu0O9Mku9HCkZDytG\nVEdMvfboa2Z99eEpkfWHdwPuOIePaCGnTHX779DH4Cf3kCfFE9Xi7//c0QXD\nHe7wx2f6f4mi2G2ffSroFqzWlcW1A1p31+QrXZXoNa+hGbwSGbS98zGJdu27\nmI5lsMFJdSAWbhp4R4x4O5RbP0dHDe05ILlwKvwpGm2ObxlIgHMWonQxB9EG\nNjcph6qPindyZ0Q0VmAfksZty7h/Me8rNHbtozBKvVs22GgxzKcs7Fe6T5UQ\ncEfvo3XpX+QGO0KExYpTooeafrBV6vO79J3BMPT+6YT4k10fbVCgs5yYENSR\nb/pHNTo6FPYn873VGtquc+DMihmjE+kK3MdFW3ZKd59o9drCMCFgQxnBdDoE\nbdwm\r\n=lGL+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "electerious",
+          "email": "tobias@electerious.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "electerious",
+        "email": "tobias@electerious.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/nice-try_2.0.1_1584699647085_0.5007244220982261"
+      },
+      "_hasShrinkwrap": false
+    },
+    "2.1.0": {
+      "name": "nice-try",
+      "version": "2.1.0",
+      "authors": [
+        "Tobias Reich <tobias@electerious.com>"
+      ],
+      "description": "Tries to execute a function and discards any error that occurs",
+      "main": "src/index.js",
+      "keywords": [
+        "try",
+        "catch",
+        "error"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/electerious/nice-try",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/electerious/nice-try.git"
+      },
+      "scripts": {
+        "coveralls": "nyc report --reporter=text-lcov | coveralls",
+        "test": "nyc node_modules/mocha/bin/_mocha"
+      },
+      "devDependencies": {
+        "chai": "^4.1.2",
+        "coveralls": "^3.1.0",
+        "mocha": "^8.1.3",
+        "nyc": "^15.1.0"
+      },
+      "gitHead": "ffb8047abf3f14c33bb4ddf5144b3e418d9eb083",
+      "bugs": {
+        "url": "https://github.com/electerious/nice-try/issues"
+      },
+      "_id": "nice-try@2.1.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-ZR863POogZo2DpqQkqeUHM01Fg73CVSVoP2Gq7Wjn8AYv7R1rRkvXx4Bf6PsXhyBGDhsN6rKCPflGDjn3+flWg==",
+        "shasum": "d818aaf628993b4de39d11e9b53be224152b38c3",
+        "tarball": "https://registry.npmjs.org/nice-try/-/nice-try-2.1.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 4368,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfgfgDCRA9TVsSAnZWagAAUv4QAInDLm44sqoqrECwAy+N\n3YECe6sECcJ55G9wKA8yqsXNgorSJDXv7kbL1Fp3ZrL4BptUvsIY0WjaZXrv\n3TaLfszLd0ZyrZzvqC/pZojIN53ZkEtOZr99qW/NSE2Gl1wf84PKiaULQPar\nRnNdAcPUwj3WsG/w2LoPuJmRq3d7GeCH9bdNpImGdGssd3xoWGW8sNCMgjdu\nbQ8wrHjRa9LvzwSBZf1K59s4tBO/3QYnIbDzUL3sgBuQVAeWbK8XTYKpiZ/U\n9siQi7naEMTUbu9+6GCp3gSall4GaQW/iPFlTYpgixfbXOAKlmokugw9IF0P\nGmJcBKO5nNa56W15kta6ctoSI2CMJKZymQyxz2oK2hy+4jIYSE2Kg3UIIKCf\nE8K4dbwBd7w3Y0wE/aqKNuEq6GoHok6Zef4ZFXQ2XHBJUSlJ1rtgsmNVVsog\nY1Whb9dxeGshgi707MscZSfi9cIhmpevMNm9O4fj+EYi4KyC3xPMvEy5sEdw\n1K7nYduLJfNXYOgcyrPJKrgrTrwo8WSSSz54o2RWk4ZgGDtMRoOO30CbyAP2\nZpw/p2Z5wJgM92LPvZtmsAfJ0rlreFGAHf/bSOi3gEXnPa8BeRf0QKW7wtSr\nl4Tj1bAKljRGLRJ7F2ax/mqpHxmUIJ2RuoB7zX4jtkhjE5UEcaoqp3ro+tge\n0xZr\r\n=QqSA\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "electerious",
+          "email": "tobias@electerious.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "electerious",
+        "email": "tobias@electerious.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/nice-try_2.1.0_1602353155224_0.6618185573080881"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# nice-try\n\n[![Travis Build Status](https://travis-ci.org/electerious/nice-try.svg?branch=master)](https://travis-ci.org/electerious/nice-try) [![Coverage Status](https://coveralls.io/repos/github/electerious/nice-try/badge.svg?branch=master)](https://coveralls.io/github/electerious/nice-try?branch=master) [![Dependencies](https://david-dm.org/electerious/nice-try.svg)](https://david-dm.org/electerious/nice-try#info=dependencies) [![Greenkeeper badge](https://badges.greenkeeper.io/electerious/nice-try.svg)](https://greenkeeper.io/)\n\nA function that tries to execute a function and discards any error that occurs.\n\n## Install\n\n```\nnpm install nice-try\n```\n\n## Usage\n\n```js\nconst niceTry = require('nice-try')\n\nniceTry(() => JSON.parse('true')) // true\nniceTry(() => JSON.parse('truee')) // undefined\nniceTry() // undefined\nniceTry(true) // undefined\n\nawait niceTry.promise(async () => JSON.parse('true')) // true\nawait niceTry.promise(async () => JSON.parse('truee')) // undefined\n```\n\n## API\n\n### Parameters\n\n- `fn` `{Function}` Function that might or might not throw an error.\n\n### Returns\n\n- `{?*}` Return-value of the function when no error occurred.",
   "maintainers": [
     {
       "name": "electerious",
@@ -448,7 +571,7 @@
     }
   ],
   "time": {
-    "modified": "2019-01-04T22:15:59.050Z",
+    "modified": "2020-10-10T18:05:57.654Z",
     "created": "2016-07-30T15:03:26.611Z",
     "1.0.0": "2016-07-30T15:03:26.611Z",
     "1.0.1": "2016-08-05T20:32:14.000Z",
@@ -456,7 +579,9 @@
     "1.0.3": "2017-06-10T19:57:46.715Z",
     "1.0.4": "2017-08-08T19:34:36.228Z",
     "1.0.5": "2018-08-25T19:03:09.537Z",
-    "2.0.0": "2018-10-28T15:23:25.854Z"
+    "2.0.0": "2018-10-28T15:23:25.854Z",
+    "2.0.1": "2020-03-20T10:20:47.213Z",
+    "2.1.0": "2020-10-10T18:05:55.358Z"
   },
   "homepage": "https://github.com/electerious/nice-try",
   "keywords": [
@@ -472,5 +597,7 @@
     "url": "https://github.com/electerious/nice-try/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "_cached": false,
+  "_contentLength": 0
 }

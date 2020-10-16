@@ -1,10 +1,10 @@
 {
   "_id": "@babel/code-frame",
-  "_rev": "73-42b332ac3cc407e024a1217329a77a2f",
+  "_rev": "78-52c529b0d331a9d1101f52d513af6e7c",
   "name": "@babel/code-frame",
   "description": "Generate errors that contain a code frame that point to source locations.",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.10.4"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -2007,6 +2007,7 @@
         "chalk": "^2.0.0",
         "strip-ansi": "^4.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/code-frame@7.0.0-rc.3",
       "dist": {
         "shasum": "d77a587401f818a3168700f596e41cd6905947b2",
@@ -2071,6 +2072,7 @@
         "chalk": "^2.0.0",
         "strip-ansi": "^4.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/code-frame@7.0.0-rc.4",
       "dist": {
         "shasum": "e15e3ba1193bbb8d474c244446bffd8c6f804556",
@@ -2136,6 +2138,8 @@
         "strip-ansi": "^4.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/code-frame\n\n> Generate errors that contain a code frame that point to source locations.\n\nSee our website [@babel/code-frame](https://babeljs.io/docs/en/next/babel-code-frame.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/code-frame\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/code-frame --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/code-frame@7.0.0",
       "dist": {
         "shasum": "06e2ab19bdb535385559aabb5ba59729482800f8",
@@ -2396,16 +2400,243 @@
         "tmp": "tmp/code-frame_7.8.3_1578951703334_0.16275252224361303"
       },
       "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/code-frame",
+      "version": "7.10.1",
+      "description": "Generate errors that contain a code frame that point to source locations.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-code-frame"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/highlight": "^7.10.1"
+      },
+      "devDependencies": {
+        "chalk": "^2.0.0",
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/code-frame@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-IGhtTmpjGbYzcEDOw7DcQtbQSXcG9ftmAXtWTu9V936vDye4xjjekktFAtgZsWpzTj/X01jocB46mTywm/4SZw==",
+        "shasum": "d5481c5095daa1c57e16e54c6f9198443afb49ff",
+        "tarball": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7738,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuSuCRA9TVsSAnZWagAAzoUP/1EKWLuLYIsPmOTI0h5c\nK2sXQ8gAySKn6sACbfT1wHm2QMnF5aw3JIPftVG04LN19Vj27uvSgUIlGiWH\nnMiNN5zD+ETfM6m7qogaquoE3TGgt3mT/kM+9xyExaMthHHd4hYqI7onhxez\nWQDDEABR+ptc2QWp5u6oReSQc/AVM8zDR1dyat0h90TBObyuI+lLDv0JpxrV\nAINq633MrQn5qAtrhPmt7iHC6HNNplWAkk/SERsr4nxzAK/UIMWWu9g2UwAX\nKU/VdoseJ539D7zmB1HxBS4MoHArHD/m6QTsW/7SI7X0XkzIaS3Tv8lca2Wa\nKGEAiJP1KHj/h62MLdujG7M1jbWzSWW0TDVRVtHfGXCcAQQf3e3u20NkPpeN\nyKZSF9769W/jFtErSA+dqeSKJmumaxELw1jDnVw7RrbmpWOfuK7JXPubFoqp\nLfDJ8+EzRgMDkJ0GfB/05MEtqRarFL3FZbkquTk0b2JfRvO4SnidK0XCxOlk\nE/5jtAUMqsrY1DEf+VY9dQNBDCrZZKfdZxoyIOpRvhLF/a6bLrhhZgQ6pHZH\nLDuz/NPZeO0Go37mA4gbcUA5LXIbPUg0s0j9up22BkP8JZY3yzSCfuVyAtYk\n9Plo2R+YHK2tcURvikaTbtz/8OgxH+dN4nGj8Y9S6JT5z7FMHsiPtHCz0ylg\nFNPE\r\n=BmN5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/code-frame_7.10.1_1590617262286_0.9342618695808165"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/code-frame",
+      "version": "7.10.3",
+      "description": "Generate errors that contain a code frame that point to source locations.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-code-frame"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/highlight": "^7.10.3"
+      },
+      "devDependencies": {
+        "chalk": "^2.0.0",
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/code-frame@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-fDx9eNW0qz0WkUeqL6tXEXzVlPh6Y5aCDEZesl0xBGA8ndRukX91Uk44ZqnkECp01NAZUdCAl+aiQNGi0k88Eg==",
+        "shasum": "324bcfd8d35cd3d47dae18cde63d752086435e9a",
+        "tarball": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.10.3.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7723,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYBCRA9TVsSAnZWagAA3mwP/2RDEznW1hEddpiqBiB7\nL0Klgwa9iKW3aZhSvcOOisvn9uwntohleTTp22dIqHj4ypQZxlCtfrRb42uT\nQC9AOm+ajyJsmX++QWwd2Tx5m37gabNrnDMXd0X8SywbB9dkMnl0xtnfFbL2\nSrvLT/pptknxRve2maNw0F3oIHX2A6mBciDsUtw13pd8saoov2Ok6cHP576+\nmQZn8jlp8Jw+qVGFNr4Og0qQWwDQIuErHAFd0LZ1RQxra5V5WSeCSphc5b7p\nJLI7xRmVSkbp8Jxgv4iDaEIddgEmhzIO86r1Cp7CSWvJZok+RA40KjotMuOV\niCZhKnBQ2KNosh7CN8M/oiAoc/jks2LRagtHRa7Ek4tSVancX006ZzO96Odm\nGxiuwhPta7cesIzuYLazoGnf2mBGlTuY9AP+escTxnxQL+dZhZChkW7iPeiX\nmHT1U8xP6dUWIh1XNlvD3/srWQNFC4IlkdXUz25KYIGaxCJQ+4j8UrHCwho/\nucbPOnGwebkqc9eCwjH+XdxnXivItTcntiKz0EDxVSV02Wxt2OT5OR2wjL90\nbQ0BmdMWgj2euCmp3m2BJykCnKFsasZcITqv1NRUYlvyHkjwwx6fKrJg5+Id\nf59pz3gKxfy4TslD0Ir4hy9pNPPv8SEOsuu/X6yx0B2N1dC/eD8QFA7Yljn2\np8/A\r\n=066+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/code-frame_7.10.3_1592600065483_0.8310540295503257"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/code-frame",
+      "version": "7.10.4",
+      "description": "Generate errors that contain a code frame that point to source locations.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-code-frame"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/highlight": "^7.10.4"
+      },
+      "devDependencies": {
+        "chalk": "^2.0.0",
+        "strip-ansi": "^4.0.0"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/code-frame@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp+tbNTynGqc6mS1d5ATd/sGyV6W0KZZnXRKMTzZDRgQT3Ou9jhpAfUg==",
+        "shasum": "168da1a36e90da68ae8d49c0f1b48c7c6249213a",
+        "tarball": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 7723,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zovCRA9TVsSAnZWagAAe8cQAKMtKF7FJx92Re+ol+4B\no0f3yGdzxWUhl8B+e8eXgjYcetMe1MZpG1oQF5ocYo45mZ+ASWMzfp1caT1p\nqt3F5rtADrL9int8ti7ICrWkIGQ3ccnrTxmtx1y9NRGANeARYjlB538xg0xy\n2Gin+2NchK2gxkxeX0nPH7LOcLlJpXecv1p2BK8gFZfabhM4fKfcMSSeljUp\ngzBGU/0CQp3++KsFAS/GMtgo6ZLw7wnHn0IVtDbwhA6A7hpDZar1Q5xsleui\nUTFIJCegGBx9exO1z0fYLGjOuvOdB5790fQnGsspbVTMwpImWpjspmuH1kWI\nTtk1ocnUnvEu1wNK2FMspUeKHNmOi5Jr6bkdGTxecXV4W/p9oEoPe3tHItL5\nbG9gNxY4IUkHeL93D86w9DtgaYtFSCYD6+sY7mQQQdhBrilR06AugBtQG3jP\nFpEsOLSn8vhYOQKv18CN//xaJM/uar40NTfZcQTn4VLXjUsuR4W+3eAv+qb+\nSKEpf8YAhgXJR5EFG1m3m4VHCp40SM1oSibh3/Ib74VZmlF/aq0VcPDs9tD2\no/MibYbQcP01cYxzpfObPXRczTH8TSl3scslcf7aVcLuhbyJtw8gblKnmXjo\njNaZrKjGKrpKRYStMBbCt8ILkL+OZTcDJcihy1x0v4oOWT43lrHnPntOAg7D\nqQbp\r\n=RhVa\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/code-frame_7.10.4_1593522734690_0.6416145193889038"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# @babel/code-frame\n\n> Generate errors that contain a code frame that point to source locations.\n\nSee our website [@babel/code-frame](https://babeljs.io/docs/en/next/babel-code-frame.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/code-frame\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/code-frame --dev\n```\n",
   "maintainers": [
     {
       "email": "daniel@tschinder.de",
       "name": "danez"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
     },
     {
       "email": "bng412@gmail.com",
@@ -2414,6 +2645,10 @@
     {
       "email": "hi@henryzoo.com",
       "name": "hzoo"
+    },
+    {
+      "email": "i@jhuang.me",
+      "name": "jlhwung"
     },
     {
       "email": "loganfsmyth@gmail.com",
@@ -2425,7 +2660,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:41:48.177Z",
+    "modified": "2020-06-30T13:12:22.221Z",
     "created": "2017-10-30T18:34:05.205Z",
     "7.0.0-beta.4": "2017-10-30T18:34:05.205Z",
     "7.0.0-beta.5": "2017-10-30T20:55:53.706Z",
@@ -2463,12 +2698,16 @@
     "7.0.0": "2018-08-27T21:42:00.298Z",
     "7.5.5": "2019-07-17T21:21:26.592Z",
     "7.8.0": "2020-01-12T00:16:04.711Z",
-    "7.8.3": "2020-01-13T21:41:43.457Z"
+    "7.8.3": "2020-01-13T21:41:43.457Z",
+    "7.10.1": "2020-05-27T22:07:42.415Z",
+    "7.10.3": "2020-06-19T20:54:25.624Z",
+    "7.10.4": "2020-06-30T13:12:14.794Z"
   },
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-code-frame"
+    "url": "git+https://github.com/babel/babel.git",
+    "directory": "packages/babel-code-frame"
   },
   "author": {
     "name": "Sebastian McKenzie",
@@ -2478,5 +2717,10 @@
   "readmeFilename": "README.md",
   "users": {
     "fangbot": true
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/babel/babel/issues"
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,9 +1,9 @@
 {
   "_id": "regenerator-runtime",
-  "_rev": "34-de35cc4462a7af894957f8016da860ce",
+  "_rev": "38-979875be04975e077cbf9dc9a7b3f0e7",
   "name": "regenerator-runtime",
   "time": {
-    "modified": "2019-07-19T15:24:24.304Z",
+    "modified": "2020-07-22T22:12:53.739Z",
     "created": "2014-07-04T06:36:41.889Z",
     "0.0.1": "2014-07-04T06:36:41.889Z",
     "0.9.0": "2016-05-02T02:32:32.344Z",
@@ -26,7 +26,11 @@
     "0.13.0": "2018-11-16T18:34:03.996Z",
     "0.13.1": "2018-11-16T18:50:12.200Z",
     "0.13.2": "2019-03-07T20:30:56.636Z",
-    "0.13.3": "2019-07-19T15:24:21.582Z"
+    "0.13.3": "2019-07-19T15:24:21.582Z",
+    "0.13.4": "2020-02-23T17:18:45.003Z",
+    "0.13.5": "2020-03-12T22:32:21.035Z",
+    "0.13.6": "2020-07-21T23:31:24.385Z",
+    "0.13.7": "2020-07-22T22:12:51.380Z"
   },
   "maintainers": [
     {
@@ -35,10 +39,11 @@
     }
   ],
   "dist-tags": {
-    "latest": "0.13.3",
-    "next": "0.13.2"
+    "latest": "0.13.7",
+    "next": "0.13.4"
   },
   "description": "Runtime for Regenerator-compiled generator and async functions.",
+  "readme": "# regenerator-runtime\n\nStandalone runtime for\n[Regenerator](https://github.com/facebook/regenerator)-compiled generator\nand `async` functions.\n\nTo import the runtime as a module (recommended), either of the following\nimport styles will work:\n```js\n// CommonJS\nconst regeneratorRuntime = require(\"regenerator-runtime\");\n\n// ECMAScript 2015\nimport regeneratorRuntime from \"regenerator-runtime\";\n```\n\nTo ensure that `regeneratorRuntime` is defined globally, either of the\nfollowing styles will work:\n```js\n// CommonJS\nrequire(\"regenerator-runtime/runtime\");\n\n// ECMAScript 2015\nimport \"regenerator-runtime/runtime.js\";\n```\n\nTo get the absolute file system path of `runtime.js`, evaluate the\nfollowing expression:\n```js\nrequire(\"regenerator-runtime/path\").path\n```\n",
   "versions": {
     "0.9.0": {
       "name": "regenerator-runtime",
@@ -939,6 +944,7 @@
         "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
       },
       "license": "MIT",
+      "readme": "# regenerator-runtime\n\nStandalone runtime for\n[Regenerator](https://github.com/facebook/regenerator)-compiled generator\nand `async` functions.\n\nTo import the runtime as a module (recommended), either of the following\nimport styles will work:\n```js\n// CommonJS\nconst regeneratorRuntime = require(\"regenerator-runtime\");\n\n// ECMAScript 2015\nimport regeneratorRuntime from \"regenerator-runtime\";\n```\n\nTo ensure that `regeneratorRuntime` is defined globally, either of the\nfollowing styles will work:\n```js\n// CommonJS\nrequire(\"regenerator-runtime/runtime\");\n\n// ECMAScript 2015\nimport \"regenerator-runtime/runtime\";\n```\n\nTo get the absolute file system path of `runtime.js`, evaluate the\nfollowing expression:\n```js\nrequire(\"regenerator-runtime/path\").path\n```\n",
       "readmeFilename": "README.md",
       "_id": "regenerator-runtime@0.13.2",
       "_nodeVersion": "8.15.1",
@@ -1016,6 +1022,204 @@
         "tmp": "tmp/regenerator-runtime_0.13.3_1563549861300_0.9905042524082779"
       },
       "_hasShrinkwrap": false
+    },
+    "0.13.4": {
+      "name": "regenerator-runtime",
+      "author": {
+        "name": "Ben Newman",
+        "email": "bn@cs.stanford.edu"
+      },
+      "description": "Runtime for Regenerator-compiled generator and async functions.",
+      "version": "0.13.4",
+      "main": "runtime.js",
+      "keywords": [
+        "regenerator",
+        "runtime",
+        "generator",
+        "async"
+      ],
+      "sideEffects": true,
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
+      },
+      "license": "MIT",
+      "readme": "# regenerator-runtime\n\nStandalone runtime for\n[Regenerator](https://github.com/facebook/regenerator)-compiled generator\nand `async` functions.\n\nTo import the runtime as a module (recommended), either of the following\nimport styles will work:\n```js\n// CommonJS\nconst regeneratorRuntime = require(\"regenerator-runtime\");\n\n// ECMAScript 2015\nimport regeneratorRuntime from \"regenerator-runtime\";\n```\n\nTo ensure that `regeneratorRuntime` is defined globally, either of the\nfollowing styles will work:\n```js\n// CommonJS\nrequire(\"regenerator-runtime/runtime\");\n\n// ECMAScript 2015\nimport \"regenerator-runtime/runtime\";\n```\n\nTo get the absolute file system path of `runtime.js`, evaluate the\nfollowing expression:\n```js\nrequire(\"regenerator-runtime/path\").path\n```\n",
+      "readmeFilename": "README.md",
+      "_id": "regenerator-runtime@0.13.4",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.13.6",
+      "_npmUser": {
+        "name": "benjamn",
+        "email": "ben@benjamn.com"
+      },
+      "dist": {
+        "integrity": "sha512-plpwicqEzfEyTQohIKktWigcLzmNStMGwbOUbykx51/29Z3JOGYldaaNGK7ngNXV+UcoqvIMmloZ48Sr74sd+g==",
+        "shasum": "e96bf612a3362d12bb69f7e8f74ffeab25c7ac91",
+        "tarball": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.4.tgz",
+        "fileCount": 5,
+        "unpackedSize": 26756,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeUrP1CRA9TVsSAnZWagAAhugP/i61w9BA4HFesU9Hn5aM\nP+RAKlJUw5dYMyxQCJj+SFuB+dAdFI6CTbmneQNHTKyk9DG4Fb6aNT9RM/ST\n3TK1LRWwKPcB/SqCa+A65FJaNs1FoLBB9jenbTGcp8QcYpncarrqEsfq0yvi\nkKTwGwykc+W0ntobsn+m5/hPjt1JCjwmU1/L7Gd78/FDAuGjA9LHbBKCVv5X\nKG9lNsb8KN+xgFkWTqXF4URXfNQ0zWA5Xy2FY+SBcFEkPkemXLYPMHWBnzyw\nkcqxvBFj7+iGpqCFzaX2nGtGPGNLyKPCmVCzmFf5vWBzVU+BGhOeCpdGW+4z\n9qfzgimqfralGm8gyckycsj1FJcyP6mhwDIXJUbk3PDovtGqs1j3U7TtP/60\nONczQLLeUmoYL6aT2D8H7SmI9dEKNsZR6+bQxYnjKu9saR29n1hshbH7ErTv\npBS+lE5vOIR7sus3H/ZuhRW++u+gw0ZCTDfahGGrYtZRiOD66DrQ4I72iIkp\nxhPRyITRuOA0uR00QoGoltkp7xYo0JB5HyZq6fb3Wmpbwx+a4KE/MhImoJh5\nr2119YuDWjB2nJ7/CAppMCG4eCa156HJrIvTIoZ2wBh8pGFuUiRvEj370H1r\n4s6nOkCqmPawjAbwneQmO0k9VAQdnweJnoT4JCZ5997Ja7shwgdIlIbLd7mr\ngb9C\r\n=4hZs\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "benjamn",
+          "email": "bn@cs.stanford.edu"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/regenerator-runtime_0.13.4_1582478324888_0.09946330951840676"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.13.5": {
+      "name": "regenerator-runtime",
+      "author": {
+        "name": "Ben Newman",
+        "email": "bn@cs.stanford.edu"
+      },
+      "description": "Runtime for Regenerator-compiled generator and async functions.",
+      "version": "0.13.5",
+      "main": "runtime.js",
+      "keywords": [
+        "regenerator",
+        "runtime",
+        "generator",
+        "async"
+      ],
+      "sideEffects": true,
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
+      },
+      "license": "MIT",
+      "_id": "regenerator-runtime@0.13.5",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.14.0",
+      "_npmUser": {
+        "name": "benjamn",
+        "email": "ben@benjamn.com"
+      },
+      "dist": {
+        "integrity": "sha512-ZS5w8CpKFinUzOwW3c83oPeVXoNsrLsaCoLtJvAClH135j/R77RuymhiSErhm2lKcwSCIpmvIWSbDkIfAqKQlA==",
+        "shasum": "d878a1d094b4306d10b9096484b33ebd55e26697",
+        "tarball": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.5.tgz",
+        "fileCount": 5,
+        "unpackedSize": 26759,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJearh1CRA9TVsSAnZWagAAWHoP/2B2G5Ugc3eUFfxIJln/\n/PHLm7YBbSqwsEJzUYZWmECCapZRdLJ0cNgVK6BJ53cX5d7N4ouSCIp5muEA\nFSXccFlzYOI9/L8gaG2QFeRIeqDrDiWVaKQkj857JkXQUtDNn5oARHTrnVDp\nizA7KqAhcVGhv9Z3C66dCmDqgbJHxGtaoHimVcE/BK3r9ldBqu4AAm+gnLks\n19WwQw24OVrBh0KtjQwYCwM4JQ3PuMp0OSzBelCl/19GgNzLtCc0S50kqJHa\njr1n/KNBZH5v8L1DZF2B1yEBlVkbZ2Lx6oHcG+7N4y6yzLLSNtRcOYofXq6U\nLi0JMv3IxykI8IKQHYg74xcMyxOh62EQzDVeHV3MbhJdiMQpO/rB4tSkiZk2\nCUQgAGCGwLbQ9tYGVbQHweR0AOp8t/6wbufPdE7SxEnflj/02E5PHilHo7mK\nr787MpZDS27eCaAMJ/nlof+PgSmPLLDzgYvjENBIeW21dAy+q+/7aZciFJAU\nBZ7DnyrIn/3AV22x4gZa4Gn7pu9R9j+fYkJcB7JcQ9IG4abywQy1S+mXPWF5\ndEHWLJjvERumYApYetb/E/7gAPWAR5Vor1DAzObEEEQNDF2ICMCfOhBWdutJ\nmxQby8qqOMGIui1dQmwd8uF/h/A0Z45I2gstU4XOqrabQIRFaS2Ukd2/vPdn\nWOb/\r\n=MCiP\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "benjamn",
+          "email": "bn@cs.stanford.edu"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/regenerator-runtime_0.13.5_1584052340867_0.2509480314182633"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.13.6": {
+      "name": "regenerator-runtime",
+      "author": {
+        "name": "Ben Newman",
+        "email": "bn@cs.stanford.edu"
+      },
+      "description": "Runtime for Regenerator-compiled generator and async functions.",
+      "version": "0.13.6",
+      "main": "runtime.js",
+      "keywords": [
+        "regenerator",
+        "runtime",
+        "generator",
+        "async"
+      ],
+      "sideEffects": true,
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
+      },
+      "license": "MIT",
+      "_id": "regenerator-runtime@0.13.6",
+      "_nodeVersion": "12.14.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-GmwlGiazQEbOwQWDdbbaP10i15pGtScYWLbMZuu+RKRz0cZ+g8IUONazBnaZqe7j1670IV1HgE4/8iy7CQPf4Q==",
+        "shasum": "d236043c46ffab2968c1ef651803d8acdea8ed65",
+        "tarball": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.6.tgz",
+        "fileCount": 5,
+        "unpackedSize": 26982,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfF3rMCRA9TVsSAnZWagAAtaQQAKOySkuPN7BlgU+SQV2p\nKmZutO4W5POcxW9oDQjJnx1+VRTIgeTEVEYUr7nqMhHEf1Z+T83+aeuro8dm\n5E6br38YcbNEZu7O+RhaoOgUN1fuAexGR/l60lXKaVJa2ntoIvoIaEdocT0h\nnzSc5d2x2xgcXQ8FWuoHEHrdcnGuoyg8QpYCsW3BT+PByBYODYFgMo+7MgXh\ne7xBsHbc4doGfDKiZwQnFsNSPEisuJMeFWO34ATDJDpQFfogNfTDxzDlYRHX\nDkth0z75UEU8Ri/X3CRGVI9MFNuc01j36VXIskLJitSgFfx73wpaFAKGikdo\nfGpMiERnwPdM6ii+/TW98EA4htL+x1uOlT9gxnFg6UaxhLlz/CRJyVmF+VEg\nSLkfBhnCaXTmDJY8LEWgixLa3kHvEOjWhJCkjxHa05iS+MwTgucuF78/yvYZ\nr2A2cwX+ZmaPKtMvT8yHnwZ39mxwO2mjyUz4d/wUpj047k9g6jL2Tv2EaODO\nPWho+wesrNC3zIgBKT45eR7YUF0NF/g1VNBNWJz6nF2HI6u7PM0OPgPQ61qA\nJZTQ3keKXFAK/TSjG8Iuey7NwXY+IGMscwVFVIsCGSxjy4eVty1wGSetxwrd\nsRFZnPOfOg71qwTCgZJGJbmjH5qJ2I8Kf9vmgW4wudreq3jiZyMk6I0+9zu3\nO+uf\r\n=ZWu7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "benjamn",
+          "email": "bn@cs.stanford.edu"
+        }
+      ],
+      "_npmUser": {
+        "name": "benjamn",
+        "email": "ben@benjamn.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/regenerator-runtime_0.13.6_1595374284282_0.9828912860213683"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.13.7": {
+      "name": "regenerator-runtime",
+      "author": {
+        "name": "Ben Newman",
+        "email": "bn@cs.stanford.edu"
+      },
+      "description": "Runtime for Regenerator-compiled generator and async functions.",
+      "version": "0.13.7",
+      "main": "runtime.js",
+      "keywords": [
+        "regenerator",
+        "runtime",
+        "generator",
+        "async"
+      ],
+      "sideEffects": true,
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/facebook/regenerator/tree/master/packages/regenerator-runtime"
+      },
+      "license": "MIT",
+      "_id": "regenerator-runtime@0.13.7",
+      "_nodeVersion": "12.14.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==",
+        "shasum": "cac2dacc8a1ea675feaabaeb8ae833898ae46f55",
+        "tarball": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz",
+        "fileCount": 5,
+        "unpackedSize": 27153,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGLnjCRA9TVsSAnZWagAAoaAP/3KfzMAdgDq8/Q2rg6IB\n4BSPFMTIkSypvPZ7PSoG4JE3eDpTaM2eVY3/B60UNCb0eLeugXyVxGkF39G5\n02Iv+kP1knXMcquetdxvTGXWhaB4A1d/dZLBHmrB0pdwo+dtl2w9237zyfyo\nH0jKNTjUW/IecvrjR/RDd2CmmPEpQUkSStkGdWj/Bjf9gmyww6lPDnNbAkCB\nOyXceLy/T5JrVtyKX/RbQWvj0osN0gB9GgJFFEEWj/BuHBLgS1+zpvX5AuSO\nXQGQ96vmjBpLWpASRIDEQKjSBKs4tFbKy4aP8VQTITvlIJHVf6dwZ+y2fEML\ntxhkk/4vMutWDXnBEKJVz9X6ISBR2nFCkrxVB5EKdSxXp/e58WV2+ou9Dq5h\ngb41g6ee1aRjfhSMM8SWjEfxHy+r2BDWLEl1mVGT8ag8r1LS1v/m1jY83NPy\nLN2eMpudjQrcc2f7X01NWDBv1K4MQfkNLeB5L4O8sVemxXLh/lEo0kDVOxO2\nl0t2tI3CXGM3a+2+sOo6jH8JwBTu2wG5DMlqnHXBH681MwfF+XMmGhTLgvkw\nLAVqCB3TalWkWXOktKGnqSkjMNoJ7UbGNfb4NEl3NPPc86eZxWh95QCyp1ep\nEH4vjqr/eKZOSMf8Wmoiohu/CdA7dGB6kCmzhF+lEu60r4mzbhkQMs6eiYni\nSRFc\r\n=JPnQ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "benjamn",
+          "email": "bn@cs.stanford.edu"
+        }
+      ],
+      "_npmUser": {
+        "name": "benjamn",
+        "email": "ben@benjamn.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/regenerator-runtime_0.13.7_1595455971250_0.14560406492092715"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "keywords": [
@@ -1040,5 +1244,7 @@
     "alexxnica": true,
     "fanyegong": true,
     "panlw": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

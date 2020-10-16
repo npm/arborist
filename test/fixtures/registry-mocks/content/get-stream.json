@@ -1,10 +1,10 @@
 {
   "_id": "get-stream",
-  "_rev": "25-2e20818a0570ba01306051aae15c37ba",
+  "_rev": "27-2c27e28c717905ebdd9ac1345f4ca3c0",
   "name": "get-stream",
   "description": "Get a stream as a string, buffer, or array",
   "dist-tags": {
-    "latest": "5.1.0"
+    "latest": "6.0.0"
   },
   "versions": {
     "1.0.0": {
@@ -1044,9 +1044,166 @@
         "tmp": "tmp/get-stream_5.1.0_1554447407803_0.8709433168609912"
       },
       "_hasShrinkwrap": false
+    },
+    "5.2.0": {
+      "name": "get-stream",
+      "version": "5.2.0",
+      "description": "Get a stream as a string, buffer, or array",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/get-stream.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "get",
+        "stream",
+        "promise",
+        "concat",
+        "string",
+        "text",
+        "buffer",
+        "read",
+        "data",
+        "consume",
+        "readable",
+        "readablestream",
+        "array",
+        "object"
+      ],
+      "dependencies": {
+        "pump": "^3.0.0"
+      },
+      "devDependencies": {
+        "@types/node": "^12.0.7",
+        "ava": "^2.0.0",
+        "into-stream": "^5.0.0",
+        "tsd": "^0.7.2",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "010d8deaa2c966f2d230cac5cacee20e29d028c6",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/get-stream/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/get-stream#readme",
+      "_id": "get-stream@5.2.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==",
+        "shasum": "4966a1795ee5ace65e706c4b7beb71257d6e22d3",
+        "tarball": "https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 12397,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfMGVdCRA9TVsSAnZWagAAjswQAJbRMkEomo1FYWd0s9QD\nBJ9yCq2Xw0q8L/9L23Gr19E3pU6cSx3QQvJUYQyiX8v0M6fUt57rF8B+C5Jq\nawcn7AposeDLVv8G1HD1gvcTX514W3qSTZAPDCK6cmVxMM1LvpwDXL35pJy9\nPJjvZefqf/WdCgWtWaugF0x9o+jz2OnXEUz4nbEwDbkcEan3AdqMNcYnUxEy\natGpbvxhEVDKkp6J0YAWK1jo0/iumu/SueCT+U+/HfA+m5zKK/x4J71OrApF\nHLt8S6I9czx7Z3Z8SQlRnJvGgdULTnX5tdCqfxiVtvRXXjwGVil51ZBqHUax\npbbCAqCmhL6QIXV5JlG2utfZMvOiKkAwc3VF4Ko1sYOANrTOIEDrEj18IuhF\niabWrw58fsxqJdwfkeLqcPpx2gDciHNBJ+/PdMSVEfUUmEySummVyvA/Cdjh\nGVvPuH0qyFRtQeft1fylRR7GibAbNEm6Ji2ASdmH4FZqJdNqX/8sKwQVB0/A\njYI3+RaSODL2EGvsRpMRfcTu/LSGETnnNrDJx/rteCOjoqJvcdsP3Y0zs82O\nemWmboF4U1FPjtFNqghN1U8AxE7MjRw+xOLzhdyztW6T4iJKCKOEQmeayrqS\nWqbsTuZ0O1H7g7hz2mt8WWFKL54IIGIzSRC1uQa18s2EB3NMAPQKJMyKOvUq\nRz7k\r\n=hjjZ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "sindresorhus@gmail.com",
+          "name": "sindresorhus"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/get-stream_5.2.0_1597007197450_0.5569560050452633"
+      },
+      "_hasShrinkwrap": false
+    },
+    "6.0.0": {
+      "name": "get-stream",
+      "version": "6.0.0",
+      "description": "Get a stream as a string, buffer, or array",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/get-stream.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "get",
+        "stream",
+        "promise",
+        "concat",
+        "string",
+        "text",
+        "buffer",
+        "read",
+        "data",
+        "consume",
+        "readable",
+        "readablestream",
+        "array",
+        "object"
+      ],
+      "devDependencies": {
+        "@types/node": "^14.0.27",
+        "ava": "^2.4.0",
+        "into-stream": "^5.0.0",
+        "tsd": "^0.13.1",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "4ff974f5025e928c183e9bf2f111b107e7b5bd53",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/get-stream/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/get-stream#readme",
+      "_id": "get-stream@6.0.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-A1B3Bh1UmL0bidM/YX2NsCOTnGJePL9rO/M+Mw3m9f2gUpfokS0hi5Eah0WSUEWZdZhIZtMjkIYS7mDfOqNHbg==",
+        "shasum": "3e0012cb6827319da2706e601a1583e8629a6718",
+        "tarball": "https://registry.npmjs.org/get-stream/-/get-stream-6.0.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 12325,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfMSyACRA9TVsSAnZWagAAT2kP/2J7YG740tovoA4SaQjn\nkL5oXBh1Nbb7V6UOCOhiooYhcvXC0ueJw+8N+iByjcxAJ510UnEHapM50Su9\nH3rZ8Afgk32f7bynWM0FTg4NU3KbQERw6Qk1iQrbNi6tYrvoGy/L9PJMQUtn\nE2aoo/7KzqP0r4Z5IlYc3PaK3AJOKjuFJKV0ZxGtcAEdoZEGNx3nLmO0eAnh\n4JplFPc24BVyLh+n0X5mOa1ZDWkZEv9mVcuYjCB6jSiClmd8SKk+ho0gQIBu\nldtjzbtd8Hbxu8ZEq4L7b/s3Sb71KCXTUZOxEpqX8nUhZIemJVVTWL3RUYXI\nMnpWgSQi9R1y9/UPKaz4bdKMwBl7ZG26+XRaXkh5zavB+MkPePtJI3n4jnSU\n3+0MszIypy4G/iRCCx9vlpsSJVpA1xXYM6YF98OCzu4kdnNz9BRPXvVaJ+uJ\ncQ1zaA8MFO/W/U8bkSCZH3qX/NuatTdK16NV+wzRLQxR+qMoKCg+lETiC6YN\nfStERz7M/p8dNv3suIQ98c2SnY5Rsbp5n/KszQhaBw8EbqUa9ugOCebUfDd4\ntNzBNw8Rk9CkWWbWt5aDrVbaJ/9TCAoHrgUCS38G+tujDcXsPGLw9gmpK3R/\nqoi535+Hf/tr+lbWXLbqmEn7MirZNYSGt1Dqj9zb6NrF3oJ7L7dAtQF8+pCq\nPXS9\r\n=0bP1\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "sindresorhus@gmail.com",
+          "name": "sindresorhus"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/get-stream_6.0.0_1597058176245_0.15129601311649044"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "# get-stream [![Build Status](https://travis-ci.org/sindresorhus/get-stream.svg?branch=master)](https://travis-ci.org/sindresorhus/get-stream)\n\n> Get a stream as a string, buffer, or array\n\n\n## Install\n\n```\n$ npm install get-stream\n```\n\n\n## Usage\n\n```js\nconst fs = require('fs');\nconst getStream = require('get-stream');\n\n(async () => {\n\tconst stream = fs.createReadStream('unicorn.txt');\n\n\tconsole.log(await getStream(stream));\n\t/*\n\t              ,,))))))));,\n\t           __)))))))))))))),\n\t\\|/       -\\(((((''''((((((((.\n\t-*-==//////((''  .     `)))))),\n\t/|\\      ))| o    ;-.    '(((((                                  ,(,\n\t         ( `|    /  )    ;))))'                               ,_))^;(~\n\t            |   |   |   ,))((((_     _____------~~~-.        %,;(;(>';'~\n\t            o_);   ;    )))(((` ~---~  `::           \\      %%~~)(v;(`('~\n\t                  ;    ''''````         `:       `:::|\\,__,%%    );`'; ~\n\t                 |   _                )     /      `:|`----'     `-'\n\t           ______/\\/~    |                 /        /\n\t         /~;;.____/;;'  /          ___--,-(   `;;;/\n\t        / //  _;______;'------~~~~~    /;;/\\    /\n\t       //  | |                        / ;   \\;;,\\\n\t      (<_  | ;                      /',/-----'  _>\n\t       \\_| ||_                     //~;~~~~~~~~~\n\t           `\\_|                   (,~~\n\t                                   \\~\\\n\t                                    ~~\n\t*/\n})();\n```\n\n\n## API\n\nThe methods returns a promise that resolves when the `end` event fires on the stream, indicating that there is no more data to be read. The stream is switched to flowing mode.\n\n### getStream(stream, [options])\n\nGet the `stream` as a string.\n\n#### options\n\nType: `Object`\n\n##### encoding\n\nType: `string`<br>\nDefault: `utf8`\n\n[Encoding](https://nodejs.org/api/buffer.html#buffer_buffer) of the incoming stream.\n\n##### maxBuffer\n\nType: `number`<br>\nDefault: `Infinity`\n\nMaximum length of the returned string. If it exceeds this value before the stream ends, the promise will be rejected with a `getStream.MaxBufferError` error.\n\n### getStream.buffer(stream, [options])\n\nGet the `stream` as a buffer.\n\nIt honors the `maxBuffer` option as above, but it refers to byte length rather than string length.\n\n### getStream.array(stream, [options])\n\nGet the `stream` as an array of values.\n\nIt honors both the `maxBuffer` and `encoding` options. The behavior changes slightly based on the encoding chosen:\n\n- When `encoding` is unset, it assumes an [object mode stream](https://nodesource.com/blog/understanding-object-streams/) and collects values emitted from `stream` unmodified. In this case `maxBuffer` refers to the number of items in the array (not the sum of their sizes).\n\n- When `encoding` is set to `buffer`, it collects an array of buffers. `maxBuffer` refers to the summed byte lengths of every buffer in the array.\n\n- When `encoding` is set to anything else, it collects an array of strings. `maxBuffer` refers to the summed character lengths of every string in the array.\n\n\n## Errors\n\nIf the input stream emits an `error` event, the promise will be rejected with the error. The buffered data will be attached to the `bufferedData` property of the error.\n\n```js\n(async () => {\n\ttry {\n\t\tawait getStream(streamThatErrorsAtTheEnd('unicorn'));\n\t} catch (error) {\n\t\tconsole.log(error.bufferedData);\n\t\t//=> 'unicorn'\n\t}\n})()\n```\n\n\n## FAQ\n\n### How is this different from [`concat-stream`](https://github.com/maxogden/concat-stream)?\n\nThis module accepts a stream instead of being one and returns a promise instead of using a callback. The API is simpler and it only supports returning a string, buffer, or array. It doesn't have a fragile type inference. You explicitly choose what you want. And it doesn't depend on the huge `readable-stream` package.\n\n\n## Related\n\n- [get-stdin](https://github.com/sindresorhus/get-stdin) - Get stdin as a string or buffer\n\n\n## License\n\nMIT © [Sindre Sorhus](https://sindresorhus.com)\n",
+  "readme": "# get-stream [![Build Status](https://travis-ci.com/sindresorhus/get-stream.svg?branch=master)](https://travis-ci.com/github/sindresorhus/get-stream)\n\n> Get a stream as a string, buffer, or array\n\n## Install\n\n```\n$ npm install get-stream\n```\n\n## Usage\n\n```js\nconst fs = require('fs');\nconst getStream = require('get-stream');\n\n(async () => {\n\tconst stream = fs.createReadStream('unicorn.txt');\n\n\tconsole.log(await getStream(stream));\n\t/*\n\t              ,,))))))));,\n\t           __)))))))))))))),\n\t\\|/       -\\(((((''''((((((((.\n\t-*-==//////((''  .     `)))))),\n\t/|\\      ))| o    ;-.    '(((((                                  ,(,\n\t         ( `|    /  )    ;))))'                               ,_))^;(~\n\t            |   |   |   ,))((((_     _____------~~~-.        %,;(;(>';'~\n\t            o_);   ;    )))(((` ~---~  `::           \\      %%~~)(v;(`('~\n\t                  ;    ''''````         `:       `:::|\\,__,%%    );`'; ~\n\t                 |   _                )     /      `:|`----'     `-'\n\t           ______/\\/~    |                 /        /\n\t         /~;;.____/;;'  /          ___--,-(   `;;;/\n\t        / //  _;______;'------~~~~~    /;;/\\    /\n\t       //  | |                        / ;   \\;;,\\\n\t      (<_  | ;                      /',/-----'  _>\n\t       \\_| ||_                     //~;~~~~~~~~~\n\t           `\\_|                   (,~~\n\t                                   \\~\\\n\t                                    ~~\n\t*/\n})();\n```\n\n## API\n\nThe methods returns a promise that resolves when the `end` event fires on the stream, indicating that there is no more data to be read. The stream is switched to flowing mode.\n\n### getStream(stream, options?)\n\nGet the `stream` as a string.\n\n#### options\n\nType: `object`\n\n##### encoding\n\nType: `string`\\\nDefault: `'utf8'`\n\n[Encoding](https://nodejs.org/api/buffer.html#buffer_buffer) of the incoming stream.\n\n##### maxBuffer\n\nType: `number`\\\nDefault: `Infinity`\n\nMaximum length of the returned string. If it exceeds this value before the stream ends, the promise will be rejected with a `getStream.MaxBufferError` error.\n\n### getStream.buffer(stream, options?)\n\nGet the `stream` as a buffer.\n\nIt honors the `maxBuffer` option as above, but it refers to byte length rather than string length.\n\n### getStream.array(stream, options?)\n\nGet the `stream` as an array of values.\n\nIt honors both the `maxBuffer` and `encoding` options. The behavior changes slightly based on the encoding chosen:\n\n- When `encoding` is unset, it assumes an [object mode stream](https://nodesource.com/blog/understanding-object-streams/) and collects values emitted from `stream` unmodified. In this case `maxBuffer` refers to the number of items in the array (not the sum of their sizes).\n\n- When `encoding` is set to `buffer`, it collects an array of buffers. `maxBuffer` refers to the summed byte lengths of every buffer in the array.\n\n- When `encoding` is set to anything else, it collects an array of strings. `maxBuffer` refers to the summed character lengths of every string in the array.\n\n## Errors\n\nIf the input stream emits an `error` event, the promise will be rejected with the error. The buffered data will be attached to the `bufferedData` property of the error.\n\n```js\n(async () => {\n\ttry {\n\t\tawait getStream(streamThatErrorsAtTheEnd('unicorn'));\n\t} catch (error) {\n\t\tconsole.log(error.bufferedData);\n\t\t//=> 'unicorn'\n\t}\n})()\n```\n\n## FAQ\n\n### How is this different from [`concat-stream`](https://github.com/maxogden/concat-stream)?\n\nThis module accepts a stream instead of being one and returns a promise instead of using a callback. The API is simpler and it only supports returning a string, buffer, or array. It doesn't have a fragile type inference. You explicitly choose what you want. And it doesn't depend on the huge `readable-stream` package.\n\n## Related\n\n- [get-stdin](https://github.com/sindresorhus/get-stdin) - Get stdin as a string or buffer\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-get-stream?utm_source=npm-get-stream&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "email": "sindresorhus@gmail.com",
@@ -1054,7 +1211,7 @@
     }
   ],
   "time": {
-    "modified": "2019-04-05T06:56:50.550Z",
+    "modified": "2020-08-10T11:16:18.683Z",
     "created": "2015-10-14T17:28:21.024Z",
     "1.0.0": "2015-10-14T17:28:21.024Z",
     "1.1.0": "2015-11-20T18:41:32.705Z",
@@ -1068,7 +1225,9 @@
     "4.0.0": "2018-08-10T07:59:07.810Z",
     "4.1.0": "2018-10-02T09:11:43.738Z",
     "5.0.0": "2019-03-11T05:00:57.346Z",
-    "5.1.0": "2019-04-05T06:56:47.933Z"
+    "5.1.0": "2019-04-05T06:56:47.933Z",
+    "5.2.0": "2020-08-09T21:06:37.591Z",
+    "6.0.0": "2020-08-10T11:16:16.361Z"
   },
   "homepage": "https://github.com/sindresorhus/get-stream#readme",
   "keywords": [
@@ -1094,7 +1253,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "bugs": {
     "url": "https://github.com/sindresorhus/get-stream/issues"
@@ -1112,5 +1271,7 @@
     "zhenguo.zhao": true,
     "bluelovers": true,
     "pftom": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

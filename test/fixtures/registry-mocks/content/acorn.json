@@ -1,12 +1,10 @@
 {
   "_id": "acorn",
-  "_rev": "175-ace3eb9b5bc0cae740b2cc1a6865be1b",
+  "_rev": "183-7f02c5e784841d3322fff6757733a3b9",
   "name": "acorn",
   "description": "ECMAScript parser",
   "dist-tags": {
-    "latest": "8.0.1",
-    "previous": "6.4.0",
-    "none": "5.7.4"
+    "latest": "8.0.4"
   },
   "versions": {
     "0.0.1": {
@@ -17574,25 +17572,637 @@
         "tmp": "tmp/acorn_8.0.1_1597237437354_0.032129772090597086"
       },
       "_hasShrinkwrap": false
+    },
+    "8.0.2": {
+      "name": "acorn",
+      "description": "ECMAScript parser",
+      "homepage": "https://github.com/acornjs/acorn",
+      "main": "dist/acorn.js",
+      "types": "dist/acorn.d.ts",
+      "module": "dist/acorn.mjs",
+      "exports": {
+        "import": "./dist/acorn.mjs",
+        "require": "./dist/acorn.js"
+      },
+      "version": "8.0.2",
+      "engines": {
+        "node": ">=0.4.0"
+      },
+      "maintainers": [
+        {
+          "name": "marijn",
+          "email": "marijnh@gmail.com"
+        },
+        {
+          "name": "adrianheine",
+          "email": "mail@adrianheine.de"
+        },
+        {
+          "name": "rreverser",
+          "email": "me@rreverser.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acornjs/acorn.git"
+      },
+      "license": "MIT",
+      "scripts": {
+        "prepare": "cd ..; npm run build:main && npm run build:bin"
+      },
+      "bin": {
+        "acorn": "bin/acorn"
+      },
+      "contributors": [
+        {
+          "name": "List of Acorn contributors. Updated before every release."
+        },
+        {
+          "name": "Adam Walsh"
+        },
+        {
+          "name": "Adrian Heine"
+        },
+        {
+          "name": "Adrian Rakovsky"
+        },
+        {
+          "name": "Alistair Braidwood"
+        },
+        {
+          "name": "Amila Welihinda"
+        },
+        {
+          "name": "Andres Suarez"
+        },
+        {
+          "name": "Angelo"
+        },
+        {
+          "name": "Aparajita Fishman"
+        },
+        {
+          "name": "Arian Stolwijk"
+        },
+        {
+          "name": "Artem Govorov"
+        },
+        {
+          "name": "Ben Page"
+        },
+        {
+          "name": "Boopesh Mahendran"
+        },
+        {
+          "name": "Bradley Heinz"
+        },
+        {
+          "name": "Brandon Mills"
+        },
+        {
+          "name": "Brian Donovan"
+        },
+        {
+          "name": "Charles Hughes"
+        },
+        {
+          "name": "Charmander"
+        },
+        {
+          "name": "Chris McKnight"
+        },
+        {
+          "name": "Conrad Irwin"
+        },
+        {
+          "name": "Cyril Auburtin"
+        },
+        {
+          "name": "Daniel Tschinder"
+        },
+        {
+          "name": "David Bonnet"
+        },
+        {
+          "name": "dnalborczyk"
+        },
+        {
+          "name": "Domenico Matteo"
+        },
+        {
+          "name": "ehmicky"
+        },
+        {
+          "name": "Eugene Obrezkov"
+        },
+        {
+          "name": "Fabien LOISON"
+        },
+        {
+          "name": "Felix Maier"
+        },
+        {
+          "name": "Forbes Lindesay"
+        },
+        {
+          "name": "Gilad Peleg"
+        },
+        {
+          "name": "Huáng Jùnliàng"
+        },
+        {
+          "name": "impinball"
+        },
+        {
+          "name": "Ingvar Stepanyan"
+        },
+        {
+          "name": "Jackson Ray Hamilton"
+        },
+        {
+          "name": "Jesse McCarthy"
+        },
+        {
+          "name": "Jiaxing Wang"
+        },
+        {
+          "name": "Joe Krump"
+        },
+        {
+          "name": "Joel Kemp"
+        },
+        {
+          "name": "Johannes Herr"
+        },
+        {
+          "name": "John-David Dalton"
+        },
+        {
+          "name": "Jordan Gensler"
+        },
+        {
+          "name": "Jordan Klassen"
+        },
+        {
+          "name": "Jürg Lehni"
+        },
+        {
+          "name": "Kai Cataldo"
+        },
+        {
+          "name": "keeyipchan"
+        },
+        {
+          "name": "Keheliya Gallaba"
+        },
+        {
+          "name": "Kevin Irish"
+        },
+        {
+          "name": "Kevin Kwok"
+        },
+        {
+          "name": "krator"
+        },
+        {
+          "name": "kyranet"
+        },
+        {
+          "name": "laosb"
+        },
+        {
+          "name": "luckyzeng"
+        },
+        {
+          "name": "Marek"
+        },
+        {
+          "name": "Marijn Haverbeke"
+        },
+        {
+          "name": "Martin Carlberg"
+        },
+        {
+          "name": "Mat Garcia"
+        },
+        {
+          "name": "Mathias Bynens"
+        },
+        {
+          "name": "Mathieu 'p01' Henri"
+        },
+        {
+          "name": "Matthew Bastien"
+        },
+        {
+          "name": "Max Schaefer"
+        },
+        {
+          "name": "Max Zerzouri"
+        },
+        {
+          "name": "Mihai Bazon"
+        },
+        {
+          "name": "Mike Rennie"
+        },
+        {
+          "name": "naoh"
+        },
+        {
+          "name": "Nicholas C. Zakas"
+        },
+        {
+          "name": "Nick Fitzgerald"
+        },
+        {
+          "name": "Olivier Thomann"
+        },
+        {
+          "name": "Oskar Schöldström"
+        },
+        {
+          "name": "Paul Harper"
+        },
+        {
+          "name": "peakchen90"
+        },
+        {
+          "name": "Peter Rust"
+        },
+        {
+          "name": "piotr"
+        },
+        {
+          "name": "PlNG"
+        },
+        {
+          "name": "Praveen N"
+        },
+        {
+          "name": "Prayag Verma"
+        },
+        {
+          "name": "ReadmeCritic"
+        },
+        {
+          "name": "r-e-d"
+        },
+        {
+          "name": "Renée Kooi"
+        },
+        {
+          "name": "Richard Gibson"
+        },
+        {
+          "name": "Rich Harris"
+        },
+        {
+          "name": "Sebastian McKenzie"
+        },
+        {
+          "name": "Shahar Soel"
+        },
+        {
+          "name": "Sheel Bedi"
+        },
+        {
+          "name": "Simen Bekkhus"
+        },
+        {
+          "name": "susiwen"
+        },
+        {
+          "name": "susiwen8"
+        },
+        {
+          "name": "Teddy Katz"
+        },
+        {
+          "name": "Timothy Gu"
+        },
+        {
+          "name": "Tim van der Lippe"
+        },
+        {
+          "name": "Tony Ross"
+        },
+        {
+          "name": "Toru Nagashima"
+        },
+        {
+          "name": "tuesmiddt"
+        },
+        {
+          "name": "Victor Homyakov"
+        },
+        {
+          "name": "Vladislav Tupikin"
+        },
+        {
+          "name": "Wexpo Lyu"
+        },
+        {
+          "name": "zsjforcn"
+        },
+        {
+          "name": "龙腾道"
+        }
+      ],
+      "bugs": {
+        "url": "https://github.com/acornjs/acorn/issues"
+      },
+      "_id": "acorn@8.0.2",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "marijn",
+        "email": "marijnh@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-t0Dw7AOyeKs4nez4dhzkBDHB28ICo1pxk3UFsLfsCHOkLW+CwbAZJPMa0vBbq0Mqsslhb7n/7H4qB5txaVQ4ew==",
+        "shasum": "f7503a253311d4af42332bc188d5713edb2e030a",
+        "tarball": "https://registry.npmjs.org/acorn/-/acorn-8.0.2.tgz",
+        "fileCount": 13,
+        "unpackedSize": 1221102,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdBwoCRA9TVsSAnZWagAAaBkP/jeN4/SWdikgvEW3E7KG\nloUql4Wo61wopAUzVEFgJUerUyQ8oYDxMg/2p3KLfcApdlpWeoMcGIEgOQqL\nVU4Ma2qGQi1SN4rl0fpLL1HWLBGY0OK5Z7Eggzf/+d25mO/3R9QB6JpD1r6t\nUnnL1/jaKtWyOp9tbkx1BQy4QJtmDtQPYiFJ0IYj2sV9J/qoePw2qh2UXdjL\nRzDFR5VURcxZxqmk34okVaM1ErnHoIRIXWO61Of7dbesq4tbtqzvs8owzjmA\nPuIpfhnB7hqJU2w9JHRg93u/RlmBzKh5mi5uXKn7e7pm0c+dxCsN8FMathPm\nV6N06FaDPBkbdZ/idogN3i9JtgwC4T7JDC9gIa6Lk1BJ3c8mzYCddLmclTCz\n1KJxGaVb3aPsrHPFrIfqNBsOplvomuKu2ukUoyoIOMdT2P8T2Bbae4gOatN6\nXCw4RGaEt6hwnoc/AdRrjB9nb0paf5CCsTggfSPXupfRcriy4j+EfKBkXS2s\n+usYuPvFi81gI/D6F8PBtKvW707XNbjd1t9upcLZ8B+yV1mpUoyNX5lwTLSY\nkG/ly/a/rsd/Z0o33trUzHLp8MQSKZVwanQzB+LTK8N1sMfiLEkLspiPHE2I\n0YrWBsK2cH3Hm6Q4DMGkQldf2MdxJIARaWR0orqHx+k0mVQNFKnhTlTAhEEQ\n7S/B\r\n=BDIi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/acorn_8.0.2_1601444903892_0.08995704828812667"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.0.3": {
+      "name": "acorn",
+      "description": "ECMAScript parser",
+      "homepage": "https://github.com/acornjs/acorn",
+      "main": "dist/acorn.js",
+      "types": "dist/acorn.d.ts",
+      "module": "dist/acorn.mjs",
+      "exports": {
+        "import": "./dist/acorn.mjs",
+        "require": "./dist/acorn.js"
+      },
+      "version": "8.0.3",
+      "engines": {
+        "node": ">=0.4.0"
+      },
+      "maintainers": [
+        {
+          "name": "marijn",
+          "email": "marijnh@gmail.com"
+        },
+        {
+          "name": "adrianheine",
+          "email": "mail@adrianheine.de"
+        },
+        {
+          "name": "rreverser",
+          "email": "me@rreverser.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acornjs/acorn.git"
+      },
+      "license": "MIT",
+      "scripts": {
+        "prepare": "cd ..; npm run build:main && npm run build:bin"
+      },
+      "bin": {
+        "acorn": "bin/acorn"
+      },
+      "bugs": {
+        "url": "https://github.com/acornjs/acorn/issues"
+      },
+      "_id": "acorn@8.0.3",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "marijn",
+        "email": "marijnh@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-uRMbCU3bM1L697KISxvkd9TA2zASoGFDODzFFdQR4qNpPffj6ZMdp5J4ffXUXR9G0PVPsN0enEkCrvssCkoPsw==",
+        "shasum": "68e78e53da020414420282428f1a4afd2075c2dc",
+        "tarball": "https://registry.npmjs.org/acorn/-/acorn-8.0.3.tgz",
+        "fileCount": 12,
+        "unpackedSize": 1219915,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdtUaCRA9TVsSAnZWagAAnXcP/A+nyWzs6lsCSxn8DiVO\nvZmVFDcntnm87+syNSExqIZOWvCbb4PEmugNjJrKmaKeznn/CzaeVHMYSVyi\nh0cf2nv9Y1aP3Y7IkHbiNjK+KYL1ZJTVUJf+zMZd54/6/DgJZblKMBFGXzgM\n1V7eFGNWfNtGE626134epYS/nDdbEOD6lMsucxf9AaJiPSPELgBim4jDwROc\nia0pCDX89q6I6gS1CSCrC++YAIoLdM7pSchdUuDDfnfKFoMTbc/zlQkrT/2e\nKDss4N1BktiEErwGFm2Xqg6QcR150jSVnamPsbazV8Bka9Lw7ohlSlpMe8Ak\nOLLnUppS+HUD8WkAPj1yIUkOA1MIyi3CkZ2ODKUrgx6Oy0swGnmxNONZo6Xq\nAtZEDt5m2rCdWqmNB2XCKsOoyvZgFFyZsw1YyA4LFgBPDUL0owRZCnRa9nk4\nIrZpwl3Y5LRjtAd25Fc19CtEj9/8dwadEH6EzAE4czT75yTwtsvEo0gajLqw\neVrRdtuf+nSjwcOMyzETiIidVRalGEvPtwKjpu/rspmqFhq0UG3m+hiuOP42\nFjyHZtk16vmoagJAMox0E6M+ebrd35hbeQFGsOrWFtAxt44F8o/YZP/MGEal\n118wDArPeI6DMkx3La9FkQBjmS5q4damCiTrno1G1toFAhcBYPfR5w1Mf6Lq\nZDCV\r\n=ZB/e\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/acorn_8.0.3_1601623322070_0.1545837103373191"
+      },
+      "_hasShrinkwrap": false
+    },
+    "8.0.4": {
+      "name": "acorn",
+      "description": "ECMAScript parser",
+      "homepage": "https://github.com/acornjs/acorn",
+      "main": "dist/acorn.js",
+      "types": "dist/acorn.d.ts",
+      "module": "dist/acorn.mjs",
+      "exports": {
+        "import": "./dist/acorn.mjs",
+        "require": "./dist/acorn.js"
+      },
+      "version": "8.0.4",
+      "engines": {
+        "node": ">=0.4.0"
+      },
+      "maintainers": [
+        {
+          "name": "marijn",
+          "email": "marijnh@gmail.com"
+        },
+        {
+          "name": "adrianheine",
+          "email": "mail@adrianheine.de"
+        },
+        {
+          "name": "rreverser",
+          "email": "me@rreverser.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acornjs/acorn.git"
+      },
+      "license": "MIT",
+      "scripts": {
+        "prepare": "cd ..; npm run build:main && npm run build:bin"
+      },
+      "bin": {
+        "acorn": "bin/acorn"
+      },
+      "bugs": {
+        "url": "https://github.com/acornjs/acorn/issues"
+      },
+      "_id": "acorn@8.0.4",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "marijn",
+        "email": "marijnh@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-XNP0PqF1XD19ZlLKvB7cMmnZswW4C/03pRHgirB30uSJTaS3A3V1/P4sS3HPvFmjoriPCJQs+JDSbm4bL1TxGQ==",
+        "shasum": "7a3ae4191466a6984eee0fe3407a4f3aa9db8354",
+        "tarball": "https://registry.npmjs.org/acorn/-/acorn-8.0.4.tgz",
+        "fileCount": 12,
+        "unpackedSize": 1220073,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJferq4CRA9TVsSAnZWagAAtlYP/12AfDBYvb0lEXB/y/wu\nIEMFE4tmFdskTYV4qmZhmetR9strQaQ8fjuMWdmqW9WFbAsNTE9ESze1uXGk\nl+KRQN9KorTfv5b0rsf0ZfPf7GePCaThWfNZdmUid8NZDaJX70AlYkDQhFLb\ng0PgXGstPAgwNKO3wteWlhIInT/omW6aCm+nsIrSsIN8P8OcPZUgNmaDhX5y\nyFfSS5YvAQrAg+XCs2mEj9Vj8YA+8suxHEJKVmEpfltH8NE9UXNG/esThvsI\nTrHo3PjtHKoN2psho0USnnkLQfwxwHmMeXeNQ1r+ZGu/wSgRXguOUHmBcrl9\nE/mTZCUBfXIKyTt2O+W9Bk9K27jXF2EYJO8BJ7clx8b4/T/lLqtwgCovULAV\n2CnNfkezF1LhVzcaoMUxVqAMsOAJ/VlIvkOxkirml9W6eIX/DglXfvNEGvt3\nAK9Mt+u5EWImIlHzHMJSQ7Wi5ER/OIb3k2n8sWJcntv9hxypMyvGrkii46oU\nnKuh+GlpQIvKBLAQ/qrWfKMlORMFTHJJlsg0/e/hyP+oSG4TxED9QECBBhwH\n9M1yd6XtRTmTHOAQfadbUZT9s+3Y3HRTafhP2x7KDbO1HzFswAiMAzuibYeI\nLiV4/izCvUSErP8Jar7Q1DT12INs0vax2hDUW9OsIcO+VzcUnw/wIB15NI+f\nTpAa\r\n=STxO\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/acorn_8.0.4_1601878711859_0.3785650952812938"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.4.1": {
+      "name": "acorn",
+      "description": "ECMAScript parser",
+      "homepage": "https://github.com/acornjs/acorn",
+      "main": "dist/acorn.js",
+      "types": "dist/acorn.d.ts",
+      "module": "dist/acorn.mjs",
+      "version": "7.4.1",
+      "engines": {
+        "node": ">=0.4.0"
+      },
+      "maintainers": [
+        {
+          "name": "marijn",
+          "email": "marijnh@gmail.com"
+        },
+        {
+          "name": "adrianheine",
+          "email": "mail@adrianheine.de"
+        },
+        {
+          "name": "rreverser",
+          "email": "me@rreverser.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acornjs/acorn.git"
+      },
+      "license": "MIT",
+      "scripts": {
+        "prepare": "cd ..; npm run build:main && npm run build:bin"
+      },
+      "bin": {
+        "acorn": "bin/acorn"
+      },
+      "bugs": {
+        "url": "https://github.com/acornjs/acorn/issues"
+      },
+      "_id": "acorn@7.4.1",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "marijn",
+        "email": "marijnh@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==",
+        "shasum": "feaed255973d2e77555b83dbc08851a6c63520fa",
+        "tarball": "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz",
+        "fileCount": 12,
+        "unpackedSize": 1209760,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfetD3CRA9TVsSAnZWagAAXJcQAJl496cHXW9dEZo2uJeI\nOess2fsBmeuWzFOwGW33mCDMGBk5RVV56YscF0RoKVR8jEp+aem6IY+Rqs1a\nThIJdlym74AMsA045lPhzztgJKnZi8u41RzDkQH3U5AMePFngpGB0t+ATvx1\n0llLdcaJujlvMQlvbln2hiOm72IdEsqPU9Bv9rhpJF3y/zW3Fi2W9jxw0+ls\neBql9dkC4u9yRboY0CYNAyKn8QRyVxqh3SaECOamyeDIoZFRUfCoNWs2uaUO\nQNn81uN6BLI+9qbK5+EFoWGmEtMsF55+7DFVPk3aoGtwt9SoIQV3LTlqEEDy\newrw4FM00tOgHVW2DmVs8iO3iTlgtm9mJh6DNDXBtLlZzzmSZnP5oGbEa9Tm\nLqHng7fyKzPn0svWQ34WQGlxLxwySp3NK+HbDiWootDupTjm6SxxBkwKeteh\nbW+nH0cHN8DGB7pfUvPtEbtH4OrFYNrp4Nr95jLh5Oo8NLr4RvZ1FwsFvNF5\nGUm+wP539xXJOAbayl2Zii3e0iROFN+54B7LPVPUpPnNUsG92g+ExpcAWy4S\ngO0Zr/592Maa8mjfEnxFe9lo8JFFakoqkue4UcWA+Q0+kFzNm1BwBen5YyOP\n9DGVD1leG9y5UiDqjTX1lYsxmOTRHR5quG8EqTujbuLplKGNKual7ujT3FGG\njrvO\r\n=Un8h\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/acorn_7.4.1_1601884406666_0.3507732536109269"
+      },
+      "_hasShrinkwrap": false
+    },
+    "6.4.2": {
+      "name": "acorn",
+      "description": "ECMAScript parser",
+      "homepage": "https://github.com/acornjs/acorn",
+      "main": "dist/acorn.js",
+      "module": "dist/acorn.mjs",
+      "version": "6.4.2",
+      "engines": {
+        "node": ">=0.4.0"
+      },
+      "maintainers": [
+        {
+          "name": "marijn",
+          "email": "marijnh@gmail.com"
+        },
+        {
+          "name": "adrianheine",
+          "email": "mail@adrianheine.de"
+        },
+        {
+          "name": "rreverser",
+          "email": "me@rreverser.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/acornjs/acorn.git"
+      },
+      "license": "MIT",
+      "scripts": {
+        "prepare": "cd ..; npm run build:main && npm run build:bin"
+      },
+      "bin": {
+        "acorn": "bin/acorn"
+      },
+      "bugs": {
+        "url": "https://github.com/acornjs/acorn/issues"
+      },
+      "_id": "acorn@6.4.2",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "marijn",
+        "email": "marijnh@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==",
+        "shasum": "35866fd710528e92de10cf06016498e47e39e1e6",
+        "tarball": "https://registry.npmjs.org/acorn/-/acorn-6.4.2.tgz",
+        "fileCount": 11,
+        "unpackedSize": 1193449,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfetYtCRA9TVsSAnZWagAAaYAP/0z1XVKjjHmktwxanOc7\nrtrV0WCKBMQKGOwppaC8mMrKrtSDkUdV1/IO5jD0AS+37YgF8JYdjTVnv1Nv\nXY7gFnpcoviTc46852B8eSrfwWmRQi/S4IoS4yum9vPJBM17FhSE1XIlBVlI\nHEDyip5gaecI9RkAjHCTuvfoIgxeCffFqnCCrKeyJbPkYXQUuZKJPY9EwLQP\n5VzskXGyl95Sn4FdnJ/AMUN1b35XD0Fvu+sC/LPaQ1wEW5usOwIHR6Sd2Sy/\n1r/gY2xzGUFSDoGA1YmIP0IcvoORyVwpXomCfEQlMnr7obnAXDRLyvsxnDtO\n9hQir8FBJ90pn++xxHTmrZO53XUNSKrAhIw6JcZC4bw8CCZbPaH9pLIwX7nv\ncN3R1z3a4LMPEaJfWmKR3ZAMmOabmH6bX1fySmOC7IPSqMj1NdmJ3RPQKWsQ\n2a+wrKGHLXxXzMTeT89AeG7hdIV1vOqoalIaYEv/fRHBYxTQYsih4HGge+Mf\nmJcgKoL9TJF5E5m3+p0m9p+OcWmfouVp0QyQu3tHWIKJDbVeoquEc21OeRcp\neJX0R8j4e/KbeZrMkcnIMciIGnYQmmp7vBy1PT+3aOGnqaBjyiEQhNxU6uV4\nvia2t2/GG+SDaR8/SVL2y70NkmZuzAEFMck2wwTDGYxCSvvd6XmZxRua65wV\nBkck\r\n=OHo2\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/acorn_6.4.2_1601885740904_0.5951674345387055"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "# Acorn\n\nA tiny, fast JavaScript parser written in JavaScript.\n\n## Community\n\nAcorn is open source software released under an\n[MIT license](https://github.com/acornjs/acorn/blob/master/acorn/LICENSE).\n\nYou are welcome to\n[report bugs](https://github.com/acornjs/acorn/issues) or create pull\nrequests on [github](https://github.com/acornjs/acorn). For questions\nand discussion, please use the\n[Tern discussion forum](https://discuss.ternjs.net).\n\n## Installation\n\nThe easiest way to install acorn is from [`npm`](https://www.npmjs.com/):\n\n```sh\nnpm install acorn\n```\n\nAlternately, you can download the source and build acorn yourself:\n\n```sh\ngit clone https://github.com/acornjs/acorn.git\ncd acorn\nnpm install\n```\n\n## Interface\n\n**parse**`(input, options)` is the main interface to the library. The\n`input` parameter is a string, `options` must be an object setting\nsome of the options listed below. The return value will be an abstract\nsyntax tree object as specified by the [ESTree\nspec](https://github.com/estree/estree).\n\n```javascript\nlet acorn = require(\"acorn\");\nconsole.log(acorn.parse(\"1 + 1\", {ecmaVersion: 2020}));\n```\n\nWhen encountering a syntax error, the parser will raise a\n`SyntaxError` object with a meaningful message. The error object will\nhave a `pos` property that indicates the string offset at which the\nerror occurred, and a `loc` object that contains a `{line, column}`\nobject referring to that same position.\n\nOptions are provided by in a second argument, which should be an\nobject containing any of these fields (only `ecmaVersion` is\nrequired):\n\n- **ecmaVersion**: Indicates the ECMAScript version to parse. Must be\n  either 3, 5, 6 (or 2015), 7 (2016), 8 (2017), 9 (2018), 10 (2019),\n  11 (2020), or 12 (2021, partial support), or `\"latest\"` (the latest\n  the library supports). This influences support for strict mode, the\n  set of reserved words, and support for new syntax features.\n\n  **NOTE**: Only 'stage 4' (finalized) ECMAScript features are being\n  implemented by Acorn. Other proposed new features must be\n  implemented through plugins.\n\n- **sourceType**: Indicate the mode the code should be parsed in. Can be\n  either `\"script\"` or `\"module\"`. This influences global strict mode\n  and parsing of `import` and `export` declarations.\n\n  **NOTE**: If set to `\"module\"`, then static `import` / `export` syntax\n  will be valid, even if `ecmaVersion` is less than 6.\n\n- **onInsertedSemicolon**: If given a callback, that callback will be\n  called whenever a missing semicolon is inserted by the parser. The\n  callback will be given the character offset of the point where the\n  semicolon is inserted as argument, and if `locations` is on, also a\n  `{line, column}` object representing this position.\n\n- **onTrailingComma**: Like `onInsertedSemicolon`, but for trailing\n  commas.\n\n- **allowReserved**: If `false`, using a reserved word will generate\n  an error. Defaults to `true` for `ecmaVersion` 3, `false` for higher\n  versions. When given the value `\"never\"`, reserved words and\n  keywords can also not be used as property names (as in Internet\n  Explorer's old parser).\n\n- **allowReturnOutsideFunction**: By default, a return statement at\n  the top level raises an error. Set this to `true` to accept such\n  code.\n\n- **allowImportExportEverywhere**: By default, `import` and `export`\n  declarations can only appear at a program's top level. Setting this\n  option to `true` allows them anywhere where a statement is allowed.\n  \n- **allowAwaitOutsideFunction**: By default, `await` expressions can\n  only appear inside `async` functions. Setting this option to\n  `true` allows to have top-level `await` expressions. They are\n  still not allowed in non-`async` functions, though.\n\n- **allowHashBang**: When this is enabled (off by default), if the\n  code starts with the characters `#!` (as in a shellscript), the\n  first line will be treated as a comment.\n\n- **locations**: When `true`, each node has a `loc` object attached\n  with `start` and `end` subobjects, each of which contains the\n  one-based line and zero-based column numbers in `{line, column}`\n  form. Default is `false`.\n\n- **onToken**: If a function is passed for this option, each found\n  token will be passed in same format as tokens returned from\n  `tokenizer().getToken()`.\n\n  If array is passed, each found token is pushed to it.\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **onComment**: If a function is passed for this option, whenever a\n  comment is encountered the function will be called with the\n  following parameters:\n\n  - `block`: `true` if the comment is a block comment, false if it\n    is a line comment.\n  - `text`: The content of the comment.\n  - `start`: Character offset of the start of the comment.\n  - `end`: Character offset of the end of the comment.\n\n  When the `locations` options is on, the `{line, column}` locations\n  of the comment’s start and end are passed as two additional\n  parameters.\n\n  If array is passed for this option, each found comment is pushed\n  to it as object in Esprima format:\n\n  ```javascript\n  {\n    \"type\": \"Line\" | \"Block\",\n    \"value\": \"comment text\",\n    \"start\": Number,\n    \"end\": Number,\n    // If `locations` option is on:\n    \"loc\": {\n      \"start\": {line: Number, column: Number}\n      \"end\": {line: Number, column: Number}\n    },\n    // If `ranges` option is on:\n    \"range\": [Number, Number]\n  }\n  ```\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **ranges**: Nodes have their start and end characters offsets\n  recorded in `start` and `end` properties (directly on the node,\n  rather than the `loc` object, which holds line/column data. To also\n  add a\n  [semi-standardized](https://bugzilla.mozilla.org/show_bug.cgi?id=745678)\n  `range` property holding a `[start, end]` array with the same\n  numbers, set the `ranges` option to `true`.\n\n- **program**: It is possible to parse multiple files into a single\n  AST by passing the tree produced by parsing the first file as the\n  `program` option in subsequent parses. This will add the toplevel\n  forms of the parsed file to the \"Program\" (top) node of an existing\n  parse tree.\n\n- **sourceFile**: When the `locations` option is `true`, you can pass\n  this option to add a `source` attribute in every node’s `loc`\n  object. Note that the contents of this option are not examined or\n  processed in any way; you are free to use whatever format you\n  choose.\n\n- **directSourceFile**: Like `sourceFile`, but a `sourceFile` property\n  will be added (regardless of the `location` option) directly to the\n  nodes, rather than the `loc` object.\n\n- **preserveParens**: If this option is `true`, parenthesized expressions\n  are represented by (non-standard) `ParenthesizedExpression` nodes\n  that have a single `expression` property containing the expression\n  inside parentheses.\n\n**parseExpressionAt**`(input, offset, options)` will parse a single\nexpression in a string, and return its AST. It will not complain if\nthere is more of the string left after the expression.\n\n**tokenizer**`(input, options)` returns an object with a `getToken`\nmethod that can be called repeatedly to get the next token, a `{start,\nend, type, value}` object (with added `loc` property when the\n`locations` option is enabled and `range` property when the `ranges`\noption is enabled). When the token's type is `tokTypes.eof`, you\nshould stop calling the method, since it will keep returning that same\ntoken forever.\n\nIn ES6 environment, returned result can be used as any other\nprotocol-compliant iterable:\n\n```javascript\nfor (let token of acorn.tokenizer(str)) {\n  // iterate over the tokens\n}\n\n// transform code to array of tokens:\nvar tokens = [...acorn.tokenizer(str)];\n```\n\n**tokTypes** holds an object mapping names to the token type objects\nthat end up in the `type` properties of tokens.\n\n**getLineInfo**`(input, offset)` can be used to get a `{line,\ncolumn}` object for a given program string and offset.\n\n### The `Parser` class\n\nInstances of the **`Parser`** class contain all the state and logic\nthat drives a parse. It has static methods `parse`,\n`parseExpressionAt`, and `tokenizer` that match the top-level\nfunctions by the same name.\n\nWhen extending the parser with plugins, you need to call these methods\non the extended version of the class. To extend a parser with plugins,\nyou can use its static `extend` method.\n\n```javascript\nvar acorn = require(\"acorn\");\nvar jsx = require(\"acorn-jsx\");\nvar JSXParser = acorn.Parser.extend(jsx());\nJSXParser.parse(\"foo(<bar/>)\", {ecmaVersion: 2020});\n```\n\nThe `extend` method takes any number of plugin values, and returns a\nnew `Parser` class that includes the extra parser logic provided by\nthe plugins.\n\n## Command line interface\n\nThe `bin/acorn` utility can be used to parse a file from the command\nline. It accepts as arguments its input file and the following\noptions:\n\n- `--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|--ecma10`: Sets the ECMAScript version\n  to parse. Default is version 9.\n\n- `--module`: Sets the parsing mode to `\"module\"`. Is set to `\"script\"` otherwise.\n\n- `--locations`: Attaches a \"loc\" object to each node with \"start\" and\n  \"end\" subobjects, each of which contains the one-based line and\n  zero-based column numbers in `{line, column}` form.\n\n- `--allow-hash-bang`: If the code starts with the characters #! (as\n  in a shellscript), the first line will be treated as a comment.\n\n- `--compact`: No whitespace is used in the AST output.\n\n- `--silent`: Do not output the AST, just return the exit status.\n\n- `--help`: Print the usage information and quit.\n\nThe utility spits out the syntax tree as JSON data.\n\n## Existing plugins\n\n - [`acorn-jsx`](https://github.com/RReverser/acorn-jsx): Parse [Facebook JSX syntax extensions](https://github.com/facebook/jsx)\n \nPlugins for ECMAScript proposals:\n \n - [`acorn-stage3`](https://github.com/acornjs/acorn-stage3): Parse most stage 3 proposals, bundling:\n   - [`acorn-class-fields`](https://github.com/acornjs/acorn-class-fields): Parse [class fields proposal](https://github.com/tc39/proposal-class-fields)\n   - [`acorn-import-meta`](https://github.com/acornjs/acorn-import-meta): Parse [import.meta proposal](https://github.com/tc39/proposal-import-meta)\n   - [`acorn-private-methods`](https://github.com/acornjs/acorn-private-methods): parse [private methods, getters and setters proposal](https://github.com/tc39/proposal-private-methods)n\n",
+  "readme": "# Acorn\n\nA tiny, fast JavaScript parser written in JavaScript.\n\n## Community\n\nAcorn is open source software released under an\n[MIT license](https://github.com/acornjs/acorn/blob/master/acorn/LICENSE).\n\nYou are welcome to\n[report bugs](https://github.com/acornjs/acorn/issues) or create pull\nrequests on [github](https://github.com/acornjs/acorn). For questions\nand discussion, please use the\n[Tern discussion forum](https://discuss.ternjs.net).\n\n## Installation\n\nThe easiest way to install acorn is from [`npm`](https://www.npmjs.com/):\n\n```sh\nnpm install acorn\n```\n\nAlternately, you can download the source and build acorn yourself:\n\n```sh\ngit clone https://github.com/acornjs/acorn.git\ncd acorn\nnpm install\n```\n\n## Interface\n\n**parse**`(input, options)` is the main interface to the library. The\n`input` parameter is a string, `options` can be undefined or an object\nsetting some of the options listed below. The return value will be an\nabstract syntax tree object as specified by the [ESTree\nspec](https://github.com/estree/estree).\n\n```javascript\nlet acorn = require(\"acorn\");\nconsole.log(acorn.parse(\"1 + 1\"));\n```\n\nWhen encountering a syntax error, the parser will raise a\n`SyntaxError` object with a meaningful message. The error object will\nhave a `pos` property that indicates the string offset at which the\nerror occurred, and a `loc` object that contains a `{line, column}`\nobject referring to that same position.\n\nOptions can be provided by passing a second argument, which should be\nan object containing any of these fields:\n\n- **ecmaVersion**: Indicates the ECMAScript version to parse. Must be\n  either 3, 5, 6 (2015), 7 (2016), 8 (2017), 9 (2018) or 10 (2019, partial\n  support). This influences support for strict mode, the set of\n  reserved words, and support for new syntax features. Default is 9.\n\n  **NOTE**: Only 'stage 4' (finalized) ECMAScript features are being\n  implemented by Acorn. Other proposed new features can be implemented\n  through plugins.\n\n- **sourceType**: Indicate the mode the code should be parsed in. Can be\n  either `\"script\"` or `\"module\"`. This influences global strict mode\n  and parsing of `import` and `export` declarations.\n\n  **NOTE**: If set to `\"module\"`, then static `import` / `export` syntax\n  will be valid, even if `ecmaVersion` is less than 6.\n\n- **onInsertedSemicolon**: If given a callback, that callback will be\n  called whenever a missing semicolon is inserted by the parser. The\n  callback will be given the character offset of the point where the\n  semicolon is inserted as argument, and if `locations` is on, also a\n  `{line, column}` object representing this position.\n\n- **onTrailingComma**: Like `onInsertedSemicolon`, but for trailing\n  commas.\n\n- **allowReserved**: If `false`, using a reserved word will generate\n  an error. Defaults to `true` for `ecmaVersion` 3, `false` for higher\n  versions. When given the value `\"never\"`, reserved words and\n  keywords can also not be used as property names (as in Internet\n  Explorer's old parser).\n\n- **allowReturnOutsideFunction**: By default, a return statement at\n  the top level raises an error. Set this to `true` to accept such\n  code.\n\n- **allowImportExportEverywhere**: By default, `import` and `export`\n  declarations can only appear at a program's top level. Setting this\n  option to `true` allows them anywhere where a statement is allowed.\n  \n- **allowAwaitOutsideFunction**: By default, `await` expressions can\n  only appear inside `async` functions. Setting this option to\n  `true` allows to have top-level `await` expressions. They are\n  still not allowed in non-`async` functions, though.\n\n- **allowHashBang**: When this is enabled (off by default), if the\n  code starts with the characters `#!` (as in a shellscript), the\n  first line will be treated as a comment.\n\n- **locations**: When `true`, each node has a `loc` object attached\n  with `start` and `end` subobjects, each of which contains the\n  one-based line and zero-based column numbers in `{line, column}`\n  form. Default is `false`.\n\n- **onToken**: If a function is passed for this option, each found\n  token will be passed in same format as tokens returned from\n  `tokenizer().getToken()`.\n\n  If array is passed, each found token is pushed to it.\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **onComment**: If a function is passed for this option, whenever a\n  comment is encountered the function will be called with the\n  following parameters:\n\n  - `block`: `true` if the comment is a block comment, false if it\n    is a line comment.\n  - `text`: The content of the comment.\n  - `start`: Character offset of the start of the comment.\n  - `end`: Character offset of the end of the comment.\n\n  When the `locations` options is on, the `{line, column}` locations\n  of the comment’s start and end are passed as two additional\n  parameters.\n\n  If array is passed for this option, each found comment is pushed\n  to it as object in Esprima format:\n\n  ```javascript\n  {\n    \"type\": \"Line\" | \"Block\",\n    \"value\": \"comment text\",\n    \"start\": Number,\n    \"end\": Number,\n    // If `locations` option is on:\n    \"loc\": {\n      \"start\": {line: Number, column: Number}\n      \"end\": {line: Number, column: Number}\n    },\n    // If `ranges` option is on:\n    \"range\": [Number, Number]\n  }\n  ```\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **ranges**: Nodes have their start and end characters offsets\n  recorded in `start` and `end` properties (directly on the node,\n  rather than the `loc` object, which holds line/column data. To also\n  add a\n  [semi-standardized](https://bugzilla.mozilla.org/show_bug.cgi?id=745678)\n  `range` property holding a `[start, end]` array with the same\n  numbers, set the `ranges` option to `true`.\n\n- **program**: It is possible to parse multiple files into a single\n  AST by passing the tree produced by parsing the first file as the\n  `program` option in subsequent parses. This will add the toplevel\n  forms of the parsed file to the \"Program\" (top) node of an existing\n  parse tree.\n\n- **sourceFile**: When the `locations` option is `true`, you can pass\n  this option to add a `source` attribute in every node’s `loc`\n  object. Note that the contents of this option are not examined or\n  processed in any way; you are free to use whatever format you\n  choose.\n\n- **directSourceFile**: Like `sourceFile`, but a `sourceFile` property\n  will be added (regardless of the `location` option) directly to the\n  nodes, rather than the `loc` object.\n\n- **preserveParens**: If this option is `true`, parenthesized expressions\n  are represented by (non-standard) `ParenthesizedExpression` nodes\n  that have a single `expression` property containing the expression\n  inside parentheses.\n\n**parseExpressionAt**`(input, offset, options)` will parse a single\nexpression in a string, and return its AST. It will not complain if\nthere is more of the string left after the expression.\n\n**tokenizer**`(input, options)` returns an object with a `getToken`\nmethod that can be called repeatedly to get the next token, a `{start,\nend, type, value}` object (with added `loc` property when the\n`locations` option is enabled and `range` property when the `ranges`\noption is enabled). When the token's type is `tokTypes.eof`, you\nshould stop calling the method, since it will keep returning that same\ntoken forever.\n\nIn ES6 environment, returned result can be used as any other\nprotocol-compliant iterable:\n\n```javascript\nfor (let token of acorn.tokenizer(str)) {\n  // iterate over the tokens\n}\n\n// transform code to array of tokens:\nvar tokens = [...acorn.tokenizer(str)];\n```\n\n**tokTypes** holds an object mapping names to the token type objects\nthat end up in the `type` properties of tokens.\n\n**getLineInfo**`(input, offset)` can be used to get a `{line,\ncolumn}` object for a given program string and offset.\n\n### The `Parser` class\n\nInstances of the **`Parser`** class contain all the state and logic\nthat drives a parse. It has static methods `parse`,\n`parseExpressionAt`, and `tokenizer` that match the top-level\nfunctions by the same name.\n\nWhen extending the parser with plugins, you need to call these methods\non the extended version of the class. To extend a parser with plugins,\nyou can use its static `extend` method.\n\n```javascript\nvar acorn = require(\"acorn\");\nvar jsx = require(\"acorn-jsx\");\nvar JSXParser = acorn.Parser.extend(jsx());\nJSXParser.parse(\"foo(<bar/>)\");\n```\n\nThe `extend` method takes any number of plugin values, and returns a\nnew `Parser` class that includes the extra parser logic provided by\nthe plugins.\n\n## Command line interface\n\nThe `bin/acorn` utility can be used to parse a file from the command\nline. It accepts as arguments its input file and the following\noptions:\n\n- `--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|--ecma10`: Sets the ECMAScript version\n  to parse. Default is version 9.\n\n- `--module`: Sets the parsing mode to `\"module\"`. Is set to `\"script\"` otherwise.\n\n- `--locations`: Attaches a \"loc\" object to each node with \"start\" and\n  \"end\" subobjects, each of which contains the one-based line and\n  zero-based column numbers in `{line, column}` form.\n\n- `--allow-hash-bang`: If the code starts with the characters #! (as\n  in a shellscript), the first line will be treated as a comment.\n\n- `--compact`: No whitespace is used in the AST output.\n\n- `--silent`: Do not output the AST, just return the exit status.\n\n- `--help`: Print the usage information and quit.\n\nThe utility spits out the syntax tree as JSON data.\n\n## Existing plugins\n\n - [`acorn-jsx`](https://github.com/RReverser/acorn-jsx): Parse [Facebook JSX syntax extensions](https://github.com/facebook/jsx)\n \nPlugins for ECMAScript proposals:\n \n - [`acorn-stage3`](https://github.com/acornjs/acorn-stage3): Parse most stage 3 proposals, bundling:\n   - [`acorn-class-fields`](https://github.com/acornjs/acorn-class-fields): Parse [class fields proposal](https://github.com/tc39/proposal-class-fields)\n   - [`acorn-import-meta`](https://github.com/acornjs/acorn-import-meta): Parse [import.meta proposal](https://github.com/tc39/proposal-import-meta)\n   - [`acorn-numeric-separator`](https://github.com/acornjs/acorn-numeric-separator): Parse [numeric separator proposal](https://github.com/tc39/proposal-numeric-separator)\n   - [`acorn-private-methods`](https://github.com/acornjs/acorn-private-methods): parse [private methods, getters and setters proposal](https://github.com/tc39/proposal-private-methods)n\n",
   "maintainers": [
     {
-      "email": "mail@adrianheine.de",
-      "name": "adrianheine"
+      "name": "marijn",
+      "email": "marijnh@gmail.com"
     },
     {
-      "email": "marijnh@gmail.com",
-      "name": "marijn"
+      "name": "adrianheine",
+      "email": "mail@adrianheine.de"
     },
     {
-      "email": "me@rreverser.com",
-      "name": "rreverser"
+      "name": "rreverser",
+      "email": "me@rreverser.com"
     }
   ],
   "time": {
-    "modified": "2020-08-12T13:03:59.753Z",
+    "modified": "2020-10-12T20:17:41.342Z",
     "created": "2012-09-24T10:10:49.310Z",
     "0.0.1": "2012-09-24T10:10:52.687Z",
     "0.1.0": "2013-02-14T08:59:47.842Z",
@@ -17696,7 +18306,12 @@
     "7.3.1": "2020-06-11T10:24:01.388Z",
     "7.4.0": "2020-08-03T10:01:23.980Z",
     "8.0.0": "2020-08-12T12:58:39.202Z",
-    "8.0.1": "2020-08-12T13:03:57.589Z"
+    "8.0.1": "2020-08-12T13:03:57.589Z",
+    "8.0.2": "2020-09-30T05:48:24.102Z",
+    "8.0.3": "2020-10-02T07:22:02.326Z",
+    "8.0.4": "2020-10-05T06:18:32.011Z",
+    "7.4.1": "2020-10-05T07:53:26.858Z",
+    "6.4.2": "2020-10-05T08:15:41.072Z"
   },
   "repository": {
     "type": "git",
@@ -17742,5 +18357,7 @@
   "bugs": {
     "url": "https://github.com/acornjs/acorn/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "_cached": false,
+  "_contentLength": 0
 }

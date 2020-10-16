@@ -1,10 +1,10 @@
 {
   "_id": "parse-json",
-  "_rev": "22-9a547557cc3728162cf3a8a695e96ba8",
+  "_rev": "24-c7ad1b850cfae2a908afdd46b758c8cd",
   "name": "parse-json",
   "description": "Parse JSON with more helpful errors",
   "dist-tags": {
-    "latest": "5.0.0"
+    "latest": "5.1.0"
   },
   "versions": {
     "1.0.0": {
@@ -598,8 +598,161 @@
         "tmp": "tmp/parse-json_5.0.0_1562090541124_0.5214942991603031"
       },
       "_hasShrinkwrap": false
+    },
+    "5.0.1": {
+      "name": "parse-json",
+      "version": "5.0.1",
+      "description": "Parse JSON with more helpful errors",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/parse-json.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && nyc ava"
+      },
+      "keywords": [
+        "parse",
+        "json",
+        "graceful",
+        "error",
+        "message",
+        "humanize",
+        "friendly",
+        "helpful",
+        "string"
+      ],
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "error-ex": "^1.3.1",
+        "json-parse-better-errors": "^1.0.1",
+        "lines-and-columns": "^1.1.6"
+      },
+      "devDependencies": {
+        "ava": "^1.4.1",
+        "nyc": "^14.1.1",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "2c8dd7e96ede24bde310bc0238678b776d3b0b90",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/parse-json/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/parse-json#readme",
+      "_id": "parse-json@5.0.1",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-ztoZ4/DYeXQq4E21v169sC8qWINGpcosGv9XhTDvg9/hWvx/zrFkc9BiWxR58OJLHGk28j5BL0SDLeV2WmFZlQ==",
+        "shasum": "7cfe35c1ccd641bce3981467e6c2ece61b3b3878",
+        "tarball": "https://registry.npmjs.org/parse-json/-/parse-json-5.0.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5138,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGm8tCRA9TVsSAnZWagAAdBAP/i6CUu20W68dHolLFMt+\n4tmfiLldBS98qJEWXwvQ2moLRwE8FF1vofPKXcQxmguKEXomVdWImfp8kS73\nITHAgw+F6ANpFDl9EonU/0rlL8+m9MLXm7dAhriO2K3Yh0BLx6m0idp5G/k3\nhCBa5VJE5UWnAYFWTsnWpIm9h0C51damuwOvQwLA6cJSXBb5UUqOJFoUM1Zh\nUMqZzBGo8MR5oKHaW5jh1vz3317crpztyXroBxOUOmKklRha320/pujzdteh\n6MT9Hq9C7FYaebmlBt+QcAG9hdPtfBhbDWHsFxaY4k+mjLHloRZXfdWdutLs\nVN3yrmdKA8s5x59MhKhqLNPDfa5XxGGOMEqzIeHNdR8N3+D4Y7pUxwmF875P\nV9MGMlp4yCLAdbOErVSzneUOCfCb1Z2wNTmth2IwR7XZgUOVUS5hMnm1FTTi\nUfIBK9UsknNgn08Ic03DNEMt8ph5/iM2KlzsnAeHD3o9iOnPVzUnswYymFe8\n27DIfTaH4PQ82Dk0/1G3Rhdsu7aY3Xqiqrhbz1T/J8KN71XAgneNQ+GPbnUl\n3xLvFgZQm/vT7QU8XyjDWBNfmfAEQu2araPTEPx07RKJroORvBOYtCidq8OS\nSv2QmOoLFnjTAHM58ISS3LIF6TkzehvpfsdRjL+Gu1YgSUmhQc4K6CTywScb\njqWN\r\n=r0qd\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/parse-json_5.0.1_1595567916652_0.7594929598672941"
+      },
+      "_hasShrinkwrap": false
+    },
+    "5.1.0": {
+      "name": "parse-json",
+      "version": "5.1.0",
+      "description": "Parse JSON with more helpful errors",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/parse-json.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && nyc ava"
+      },
+      "keywords": [
+        "parse",
+        "json",
+        "graceful",
+        "error",
+        "message",
+        "humanize",
+        "friendly",
+        "helpful",
+        "string"
+      ],
+      "dependencies": {
+        "@babel/code-frame": "^7.0.0",
+        "error-ex": "^1.3.1",
+        "json-parse-even-better-errors": "^2.3.0",
+        "lines-and-columns": "^1.1.6"
+      },
+      "devDependencies": {
+        "ava": "^1.4.1",
+        "nyc": "^14.1.1",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "0661a9c246bcec65407322126cf473dda91c0727",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/parse-json/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/parse-json#readme",
+      "_id": "parse-json@5.1.0",
+      "_nodeVersion": "12.18.2",
+      "_npmVersion": "6.14.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-+mi/lmVVNKFNVyLXV31ERiy2CY5E1/F6QtJFEzoChPRwwngMNXRDQ9GJ5WdE2Z2P4AujsOi0/+2qHID68KwfIQ==",
+        "shasum": "f96088cdf24a8faa9aea9a009f2d9d942c999646",
+        "tarball": "https://registry.npmjs.org/parse-json/-/parse-json-5.1.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 5148,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfQYNcCRA9TVsSAnZWagAAW8cQAI+SAcS2dX9tXnF7a2wn\n4tptE4MDmFrq1yxeHUYRmTy+v4DWs5Re/a6IfRYPP9KLZjAL+j2iC9vVcbvl\nAbLSL6KnQ+mlzAxv8NP/C25My0bDaMkNXjAfEPgVAqaS0ha7r3KFAi0z3YZF\n+F7S0q35gm6bJRVDVAsWLcOgeMUx6dOX/HipHspYSGv55X1xq9XMK9ajTdBR\ntDaWgHdVRFKbusFZ+cNWCj/tTu+hnDhG/rMIR6BRTRtAvFlzA05yE92AFIw1\nA3hsD07359h3HnVNeiIz3wgdaP1jcXmnETTE3UPMz/0LcmJdsWFgLMnb+ScZ\ndrDfZV/Sv+0mh1EyYYmm8oSjUiXBoajAlTXX4oeIR9TKcVTTBRf2k/kTVjl1\nVEd0XMdjWOLX88IaYcuWMGURYqyfQiCq0QKhZFr3wSvW2zSQ71EyqU7N0pC4\ni/m01lo9NspavgSBsEOkZmlWzbyA/NhEzjvtIcCidtBW39b/fXb8dgvDJuzt\nLIX18QfRAgtZYBpexVS6M4jAmY+CmKMF2fmMDs7lYpqFdfC+dYdVXNDk8NP+\ndDx9dC6oq+g5XZr2wynltH2NH4PrfCxVKzszaMDNguHYyfCNbnfascl3CUPQ\n9F+h+G4J+Bh57zLhsxcsA4lYgx6uGgAomYbv4mmGjkfudyuxzfVx+6zokGdL\nVJxG\r\n=byfQ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/parse-json_5.1.0_1598128987764_0.28417646929083196"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# parse-json [![Build Status](https://travis-ci.com/sindresorhus/parse-json.svg?branch=master)](https://travis-ci.com/github/sindresorhus/parse-json)\n\n> Parse JSON with more helpful errors\n\n## Install\n\n```\n$ npm install parse-json\n```\n\n## Usage\n\n```js\nconst parseJson = require('parse-json');\n\nconst json = '{\\n\\t\"foo\": true,\\n}';\n\n\nJSON.parse(json);\n/*\nundefined:3\n}\n^\nSyntaxError: Unexpected token }\n*/\n\n\nparseJson(json);\n/*\nJSONError: Unexpected token } in JSON at position 16 while parsing near '{      \"foo\": true,}'\n\n  1 | {\n  2 |   \"foo\": true,\n> 3 | }\n    | ^\n*/\n\n\nparseJson(json, 'foo.json');\n/*\nJSONError: Unexpected token } in JSON at position 16 while parsing near '{      \"foo\": true,}' in foo.json\n\n  1 | {\n  2 |   \"foo\": true,\n> 3 | }\n    | ^\n*/\n\n\n// You can also add the filename at a later point\ntry {\n\tparseJson(json);\n} catch (error) {\n\terror.fileName = 'foo.json';\n\tthrow error;\n}\n/*\nJSONError: Unexpected token } in JSON at position 16 while parsing near '{      \"foo\": true,}' in foo.json\n\n  1 | {\n  2 |   \"foo\": true,\n> 3 | }\n    | ^\n*/\n```\n\n## API\n\n### parseJson(string, reviver?, filename?)\n\n#### string\n\nType: `string`\n\n#### reviver\n\nType: `Function`\n\nPrescribes how the value originally produced by parsing is transformed, before being returned. See [`JSON.parse` docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter\n) for more.\n\n#### filename\n\nType: `string`\n\nFilename displayed in the error message.\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-parse-json?utm_source=npm-parse-json&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -607,7 +760,7 @@
     }
   ],
   "time": {
-    "modified": "2019-07-02T18:02:25.682Z",
+    "modified": "2020-08-22T20:43:10.211Z",
     "created": "2015-07-28T19:05:09.989Z",
     "1.0.0": "2015-07-28T19:05:09.989Z",
     "1.0.1": "2015-08-03T10:29:22.749Z",
@@ -616,7 +769,9 @@
     "2.2.0": "2015-08-31T16:36:30.005Z",
     "3.0.0": "2017-08-17T10:11:16.080Z",
     "4.0.0": "2017-11-04T07:53:50.125Z",
-    "5.0.0": "2019-07-02T18:02:21.255Z"
+    "5.0.0": "2019-07-02T18:02:21.255Z",
+    "5.0.1": "2020-07-24T05:18:36.819Z",
+    "5.1.0": "2020-08-22T20:43:07.895Z"
   },
   "homepage": "https://github.com/sindresorhus/parse-json#readme",
   "keywords": [
@@ -637,7 +792,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "bugs": {
     "url": "https://github.com/sindresorhus/parse-json/issues"
@@ -656,5 +811,7 @@
     "huuduy": true,
     "sunshine1988": true,
     "zhenguo.zhao": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,10 +1,10 @@
 {
   "_id": "istanbul-reports",
-  "_rev": "65-893ad7cb89edcf2b0bc6530a15b925c4",
+  "_rev": "69-87c56fda343ee9c2d2aac09d445b25d1",
   "name": "istanbul-reports",
   "description": "istanbul reports",
   "dist-tags": {
-    "latest": "3.0.0"
+    "latest": "3.0.2"
   },
   "versions": {
     "1.0.0-alpha.0": {
@@ -1136,6 +1136,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.2.0",
       "_npmVersion": "5.4.2",
@@ -1289,6 +1290,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.4.0",
       "_npmVersion": "5.8.0",
@@ -1367,6 +1369,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.4.1",
       "_npmVersion": "6.0.0",
@@ -1445,6 +1448,7 @@
         "url": "https://github.com/istanbuljs/istanbuljs/issues"
       },
       "homepage": "https://github.com/istanbuljs/istanbuljs",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@1.5.0",
       "_npmVersion": "6.1.0",
@@ -1759,6 +1763,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.0.2",
       "_npmVersion": "6.4.1",
@@ -1838,6 +1843,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.0.3",
       "_npmVersion": "6.4.1",
@@ -1915,6 +1921,7 @@
         "node": ">=6"
       },
       "gitHead": "7875defdc3c3640787ac5d83700246de119e8b83",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.1.0",
       "_nodeVersion": "10.14.2",
@@ -2068,6 +2075,7 @@
         "node": ">=6"
       },
       "gitHead": "c81b051d83217947dfd97d8d06532bd5013e98c3",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.0",
       "_nodeVersion": "10.15.3",
@@ -2145,6 +2153,7 @@
         "node": ">=6"
       },
       "gitHead": "e8063c799d0854341cb3daaf91c58acd06bd501c",
+      "readme": "istanbul-reports\n================\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n* node.getRelativeName\n\n* context.getSource(filePath)\n* context.classForPercent(type, percent)\n* context.console.colorize(str, class)\n* context.writer\n* context.console.write\n* context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.1",
       "_nodeVersion": "10.15.3",
@@ -2450,6 +2459,7 @@
         "node": ">=6"
       },
       "gitHead": "679fc641b691442c4e9274e07809fef35272161d",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.5",
       "_nodeVersion": "12.0.0",
@@ -2628,6 +2638,7 @@
         "node": ">=8"
       },
       "gitHead": "2e885073a9398806c9b8763dd39418398182ca34",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.0",
       "_nodeVersion": "12.3.1",
@@ -2730,6 +2741,7 @@
         "node": ">=8"
       },
       "gitHead": "371adb154f0189b793e636b5bbcc63f183d36c2b",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.1",
       "_nodeVersion": "12.3.1",
@@ -2830,6 +2842,7 @@
         "node": ">=8"
       },
       "gitHead": "4d5e777a9bc4847d178ad31f379307124cdd1e4f",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.2",
       "_nodeVersion": "12.11.0",
@@ -2930,6 +2943,7 @@
         "node": ">=8"
       },
       "gitHead": "70f48b7e6b60d17b8e2b5a03388a004deb6b8785",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.3",
       "_nodeVersion": "12.11.0",
@@ -3030,6 +3044,7 @@
         "node": ">=8"
       },
       "gitHead": "c69ce0cce10c1fb394b55ef0169e44e70f14ad24",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.4",
       "_nodeVersion": "12.11.0",
@@ -3130,6 +3145,7 @@
         "node": ">=8"
       },
       "gitHead": "bf0141b44a174626f4a3769a19b86a6c14d95a7b",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.5",
       "_nodeVersion": "12.11.0",
@@ -3230,6 +3246,7 @@
         "node": ">=8"
       },
       "gitHead": "9546946f0e4bc80714a5b318c59e459781f05550",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@3.0.0-alpha.6",
       "_nodeVersion": "13.3.0",
@@ -3405,6 +3422,7 @@
       "engines": {
         "node": ">=6"
       },
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
       "readmeFilename": "README.md",
       "_id": "istanbul-reports@2.2.7",
       "_nodeVersion": "13.6.0",
@@ -3445,8 +3463,209 @@
         "tmp": "tmp/istanbul-reports_2.2.7_1578773708458_0.027832923740840565"
       },
       "_hasShrinkwrap": false
+    },
+    "3.0.1": {
+      "name": "istanbul-reports",
+      "version": "3.0.1",
+      "description": "istanbul reports",
+      "author": {
+        "name": "Krishnan Anantheswaran",
+        "email": "kananthmail-github@yahoo.com"
+      },
+      "main": "index.js",
+      "scripts": {
+        "test": "nyc --nycrc-path=../../monorepo-per-package-nycrc.json mocha --recursive",
+        "prepare": "webpack --config lib/html-spa/webpack.config.js --mode production",
+        "prepare:watch": "webpack --config lib/html-spa/webpack.config.js --watch --mode development"
+      },
+      "dependencies": {
+        "html-escaper": "^2.0.0",
+        "istanbul-lib-report": "^3.0.0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.5",
+        "@babel/preset-react": "^7.7.4",
+        "babel-loader": "^8.0.6",
+        "chai": "^4.2.0",
+        "is-windows": "^1.0.2",
+        "istanbul-lib-coverage": "^3.0.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+      },
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/istanbuljs/istanbuljs.git",
+        "directory": "packages/istanbul-reports"
+      },
+      "keywords": [
+        "istanbul",
+        "reports"
+      ],
+      "bugs": {
+        "url": "https://github.com/istanbuljs/istanbuljs/issues"
+      },
+      "homepage": "https://istanbul.js.org/",
+      "nyc": {
+        "exclude": [
+          "lib/html/assets/**",
+          "lib/html-spa/assets/**",
+          "lib/html-spa/rollup.config.js",
+          "test/**"
+        ]
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "gitHead": "df24342395030dc2a40a7ceb0476a9897f3492a3",
+      "_id": "istanbul-reports@3.0.1",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.20.2/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-Vm9xwCiQ8t2cNNnckyeAV0UdxKpcQUz4nMxsBvIu8n2kmPSiyb5uaF/8LpmKr+yqL/MdOXaX2Nmdo4Qyxium9Q==",
+        "shasum": "1343217244ad637e0c3b18e7f6b746941a9b5e9a",
+        "tarball": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-3.0.1.tgz",
+        "fileCount": 41,
+        "unpackedSize": 284384,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJefOe4CRA9TVsSAnZWagAAHOUQAJmdYpVTZ7N+NYnaXF6M\nBd90Zoh90LAKKog9aWnb570WmZWasKBBaCOQu9VerT7fEF3cG7MTU33mzD0X\nAid5N/5au/142yVBaCl79j9Iihn2+mCLTZVcdXCobdO+kL08aaCN8zjvIhoO\nvj3TMDNNtX1mwx3cqpfmAViFZtMQMrhtJvDOfux/Wy2p4pXS65Q5XOMM83Ba\nnkElT995ia8Fn3Fq9OO1TZlSuAQ9PF3mRbcDUluYI52NeHYhmR2YNu3PwtkN\nC29597VMT6OGmDiCkdYtw3YTnt69N8XrtK81psk7xasgCzGpCsrBU66ywwOa\nh4KwCSXTGaQyHhrw3odTwsenDX43NUaKshGmkmzbMx92ClamZ0ivjsSTmJgI\nUwEkxejXczxjTNUtX4Fb1+2qOJlC2gDF1ZnZe6Ij/4vGUbicpp0sl4l6YA3u\n/Q1mC/j+9GFIcVtO2geP9cnS1cLrQM5Qv0FQPSeRksgGO95tQgIax5XNQ9hF\n3lwxYFYE+Ma9PSWGCYuxYRok80yF13bjAXuVaacRTpfsKSmTMZUhjmUtviJI\nTwZok03KzeAfrYwte3niGBN72F7MhPLyL811kFlSdsT1FrA0vIPFcCfd0GeX\nS2owdgXqd/USrSd7SnaQWQDUPMInsw0zBAtaD/PzXxhjj1AjHkAcR2Rxjpd8\nshok\r\n=rIBn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "ben@npmjs.com",
+          "name": "bcoe"
+        },
+        {
+          "email": "git@cfware.com",
+          "name": "coreyfarrell"
+        },
+        {
+          "email": "kananthmail-github@yahoo.com",
+          "name": "gotwarlost"
+        },
+        {
+          "email": "jgkurian@me.com",
+          "name": "jakxz"
+        }
+      ],
+      "_npmUser": {
+        "name": "coreyfarrell",
+        "email": "git@cfware.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/istanbul-reports_3.0.1_1585244087780_0.5530645138668164"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.2": {
+      "name": "istanbul-reports",
+      "version": "3.0.2",
+      "description": "istanbul reports",
+      "author": {
+        "name": "Krishnan Anantheswaran",
+        "email": "kananthmail-github@yahoo.com"
+      },
+      "main": "index.js",
+      "scripts": {
+        "test": "nyc --nycrc-path=../../monorepo-per-package-nycrc.json mocha --recursive",
+        "prepare": "webpack --config lib/html-spa/webpack.config.js --mode production",
+        "prepare:watch": "webpack --config lib/html-spa/webpack.config.js --watch --mode development"
+      },
+      "dependencies": {
+        "html-escaper": "^2.0.0",
+        "istanbul-lib-report": "^3.0.0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.5",
+        "@babel/preset-react": "^7.7.4",
+        "babel-loader": "^8.0.6",
+        "chai": "^4.2.0",
+        "is-windows": "^1.0.2",
+        "istanbul-lib-coverage": "^3.0.0",
+        "mocha": "^6.2.2",
+        "nyc": "^15.0.0-beta.2",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
+      },
+      "license": "BSD-3-Clause",
+      "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/istanbuljs/istanbuljs.git",
+        "directory": "packages/istanbul-reports"
+      },
+      "keywords": [
+        "istanbul",
+        "reports"
+      ],
+      "bugs": {
+        "url": "https://github.com/istanbuljs/istanbuljs/issues"
+      },
+      "homepage": "https://istanbul.js.org/",
+      "nyc": {
+        "exclude": [
+          "lib/html/assets/**",
+          "lib/html-spa/assets/**",
+          "lib/html-spa/rollup.config.js",
+          "test/**"
+        ]
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "gitHead": "73c25ce79f91010d1ff073aa6ff3fd01114f90db",
+      "readme": "# istanbul-reports\n\n[![Greenkeeper badge](https://badges.greenkeeper.io/istanbuljs/istanbul-reports.svg)](https://greenkeeper.io/)\n[![Build Status](https://travis-ci.org/istanbuljs/istanbul-reports.svg?branch=master)](https://travis-ci.org/istanbuljs/istanbul-reports)\n\n-   node.getRelativeName\n\n-   context.getSource(filePath)\n-   context.classForPercent(type, percent)\n-   context.console.colorize(str, class)\n-   context.writer\n-   context.console.write\n-   context.console.println\n",
+      "readmeFilename": "README.md",
+      "_id": "istanbul-reports@3.0.2",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.20.2/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-9tZvz7AiR3PEDNGiV9vIouQ/EAcqMXFmkcA1CDFTwOB98OZVDL0PH9glHotf5Ugp6GCOTypfzGWI/OqjWNCRUw==",
+        "shasum": "d593210e5000683750cb09fc0644e4b6e27fd53b",
+        "tarball": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-3.0.2.tgz",
+        "fileCount": 41,
+        "unpackedSize": 284875,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJehJGPCRA9TVsSAnZWagAA3wYP+gJivfMIpE1RZNgYBcbR\nSifrSPGLzdxMylVtF+KFYF82KLvJuVIZS59VyKn6a6J8/eniwSdHOJGjiN6R\nonaAit88bwwBtIU3pl0ZJ17MaoCBiaLjwddRp0qEPjNo7sSwy3fNBElA+CZQ\nxfBajMmcrl6NUlJImuXJG6QVQGR+gQczsGHtZdML7ttQ0IgVR8EDnDP2idQc\n8cXZIYy2FqQwjgdtLNiOJvlmvNmo+4AhWT+a/fr0dzBkjCLNKMhej6Ri9T5T\nRXNBdxW02YwdJz+LNZhQoKNbnOZ9JjLQUTSqM9vUIy2IxRJCgOJocAhF+8OV\nw1CaMACL3lHZykkaMeBdTaKERIdIYEwgGP+MIheiGwggBjIS4K01fB2ABltH\nDx9wxbldKrxNEsSYK/cOPqcFELjBqajMfOaY9ucnxMCHGZe7gi4XYCLxXxCJ\nDdlkLjBTJvRyaQifO6lqoaCW/Ww4bkmvtIUwjcW8OpuwuUXEOCT4APvbK2ei\nbQk+PhsInB+7WJtXeNFJ8aJCPsOkYh85IKBAm2GfELvjmX3nQ3tygrMnAih+\nrU0pvxFX3sUcEDp99lVnSbI5YpT7AkxGOVWtPlcq8MEv3gXg45bWbWTbMlkY\nIY2R93NOCDli868VrVIMlW347WA4jBE3uUfw2X+KNAdg3b7r+Z7qC+Stw8ER\nmpi8\r\n=hyj3\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "ben@npmjs.com",
+          "name": "bcoe"
+        },
+        {
+          "email": "git@cfware.com",
+          "name": "coreyfarrell"
+        },
+        {
+          "email": "kananthmail-github@yahoo.com",
+          "name": "gotwarlost"
+        },
+        {
+          "email": "jgkurian@me.com",
+          "name": "jakxz"
+        }
+      ],
+      "_npmUser": {
+        "name": "coreyfarrell",
+        "email": "git@cfware.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/istanbul-reports_3.0.2_1585746319217_0.5091698822350053"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
       "email": "ben@npmjs.com",
@@ -3466,7 +3685,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-11T20:15:44.096Z",
+    "modified": "2020-04-03T16:33:05.034Z",
     "created": "2015-11-22T07:10:57.820Z",
     "1.0.0-alpha.0": "2015-11-22T07:10:57.820Z",
     "1.0.0-alpha.1": "2015-11-24T18:38:50.184Z",
@@ -3511,7 +3730,9 @@
     "3.0.0-alpha.5": "2019-11-22T18:20:54.567Z",
     "3.0.0-alpha.6": "2019-12-07T16:42:01.115Z",
     "3.0.0": "2019-12-20T20:54:42.456Z",
-    "2.2.7": "2020-01-11T20:15:08.629Z"
+    "2.2.7": "2020-01-11T20:15:08.629Z",
+    "3.0.1": "2020-03-26T17:34:47.943Z",
+    "3.0.2": "2020-04-01T13:05:19.374Z"
   },
   "homepage": "https://istanbul.js.org/",
   "keywords": [
@@ -3531,5 +3752,7 @@
     "url": "https://github.com/istanbuljs/istanbuljs/issues"
   },
   "license": "BSD-3-Clause",
-  "readmeFilename": "README.md"
+  "readmeFilename": "",
+  "_cached": false,
+  "_contentLength": 0
 }

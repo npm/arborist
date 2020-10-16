@@ -1,6 +1,6 @@
 {
   "_id": "ms",
-  "_rev": "170-c49b1b8d21664449ad73d532a78fc311",
+  "_rev": "182-aa105a352546021303c80cf5f0943ec4",
   "name": "ms",
   "description": "Tiny millisecond conversion utility",
   "dist-tags": {
@@ -1084,7 +1084,36 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# ms\n\n[![Build Status](https://travis-ci.org/zeit/ms.svg?branch=master)](https://travis-ci.org/zeit/ms)\n[![Join the community on Spectrum](https://withspectrum.github.io/badge/badge.svg)](https://spectrum.chat/zeit)\n\nUse this package to easily convert various time formats to milliseconds.\n\n## Examples\n\n```js\nms('2 days')  // 172800000\nms('1d')      // 86400000\nms('10h')     // 36000000\nms('2.5 hrs') // 9000000\nms('2h')      // 7200000\nms('1m')      // 60000\nms('5s')      // 5000\nms('1y')      // 31557600000\nms('100')     // 100\nms('-3 days') // -259200000\nms('-1h')     // -3600000\nms('-200')    // -200\n```\n\n### Convert from Milliseconds\n\n```js\nms(60000)             // \"1m\"\nms(2 * 60000)         // \"2m\"\nms(-3 * 60000)        // \"-3m\"\nms(ms('10 hours'))    // \"10h\"\n```\n\n### Time Format Written-Out\n\n```js\nms(60000, { long: true })             // \"1 minute\"\nms(2 * 60000, { long: true })         // \"2 minutes\"\nms(-3 * 60000, { long: true })        // \"-3 minutes\"\nms(ms('10 hours'), { long: true })    // \"10 hours\"\n```\n\n## Features\n\n- Works both in [Node.js](https://nodejs.org) and in the browser\n- If a number is supplied to `ms`, a string with a unit is returned\n- If a string that contains the number is supplied, it returns it as a number (e.g.: it returns `100` for `'100'`)\n- If you pass a string with a number and a valid unit, the number of equivalent milliseconds is returned\n\n## Related Packages\n\n- [ms.macro](https://github.com/knpwrs/ms.macro) - Run `ms` as a macro at build-time.\n\n## Caught a Bug?\n\n1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device\n2. Link the package to the global module directory: `npm link`\n3. Within the module you want to test your local development instance of ms, just link it to the dependencies: `npm link ms`. Instead of the default one from npm, Node.js will now use your clone of ms!\n\nAs always, you can run the tests using: `npm test`\n",
   "maintainers": [
+    {
+      "email": "lrobinson2011@gmail.com",
+      "name": "leerobinson"
+    },
+    {
+      "email": "hank@vercel.com",
+      "name": "hankvercel"
+    },
+    {
+      "email": "belen@vercel.com",
+      "name": "okbel"
+    },
+    {
+      "email": "samko9522@gmail.com",
+      "name": "samsisle"
+    },
+    {
+      "email": "chris@leishman.org",
+      "name": "cleishm"
+    },
+    {
+      "email": "nazareno@basement.studio",
+      "name": "nazarenooviedo"
+    },
+    {
+      "email": "maxwell.leiter@gmail.com",
+      "name": "maxleiter"
+    },
     {
       "email": "shu@chibicode.com",
       "name": "chibicode"
@@ -1100,10 +1129,6 @@
     {
       "email": "jan.krems@gmail.com",
       "name": "jkrems"
-    },
-    {
-      "email": "chris@leishman.org",
-      "name": "cleishm"
     },
     {
       "email": "prateek89born@gmail.com",
@@ -1144,10 +1169,6 @@
     {
       "email": "skllcrn@zeit.co",
       "name": "skllcrn"
-    },
-    {
-      "email": "marcosnils@gmail.com",
-      "name": "marcosnils"
     },
     {
       "email": "pvco.coursey@gmail.com",
@@ -1194,10 +1215,6 @@
       "name": "arzafran"
     },
     {
-      "email": "caarlos0@gmail.com",
-      "name": "caarlos0"
-    },
-    {
       "email": "iyatomi@gmail.com",
       "name": "umegaya"
     },
@@ -1214,20 +1231,12 @@
       "name": "anatrajkovska"
     },
     {
-      "email": "manovotny@gmail.com",
-      "name": "manovotny"
-    },
-    {
       "email": "paulogdemitri@gmail.com",
       "name": "paulogdm"
     },
     {
       "email": "artzbitz@gmail.com",
       "name": "andybitz"
-    },
-    {
-      "email": "alexandro@phi.nz",
-      "name": "alexaltea"
     },
     {
       "email": "mark.glagola@gmail.com",
@@ -1270,12 +1279,8 @@
       "name": "codetheory"
     },
     {
-      "email": "me@matheus.top",
+      "email": "matheus.frndes@gmail.com",
       "name": "matheuss"
-    },
-    {
-      "email": "arunoda.susiripala@gmail.com",
-      "name": "arunoda"
     },
     {
       "email": "igor@klopov.com",
@@ -1311,7 +1316,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-30T23:07:39.118Z",
+    "modified": "2020-09-22T19:00:32.201Z",
     "created": "2011-12-21T19:38:08.664Z",
     "0.1.0": "2011-12-21T19:38:26.538Z",
     "0.2.0": "2012-09-03T20:33:06.093Z",
@@ -1456,5 +1461,7 @@
   },
   "readmeFilename": "readme.md",
   "homepage": "https://github.com/zeit/ms#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "_cached": false,
+  "_contentLength": 0
 }

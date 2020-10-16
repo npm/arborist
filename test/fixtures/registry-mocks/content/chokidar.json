@@ -1,10 +1,10 @@
 {
   "_id": "chokidar",
-  "_rev": "386-4700f569d3507576d2e4a889ddd83363",
+  "_rev": "402-4c82857497e1ad032f34bfe7f6340a95",
   "name": "chokidar",
   "description": "A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.",
   "dist-tags": {
-    "latest": "3.3.1",
+    "latest": "3.4.3",
     "node6": "2.1.8"
   },
   "versions": {
@@ -133,7 +133,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.2.1": {
       "name": "chokidar",
@@ -193,7 +194,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.2.2": {
       "name": "chokidar",
@@ -253,7 +255,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.2.3": {
       "name": "chokidar",
@@ -313,7 +316,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.2.4": {
       "name": "chokidar",
@@ -373,7 +377,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.2.5": {
       "name": "chokidar",
@@ -433,7 +438,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.2.6": {
       "name": "chokidar",
@@ -493,7 +499,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.3.0": {
       "name": "chokidar",
@@ -549,7 +556,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.4.0": {
       "name": "chokidar",
@@ -605,7 +613,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.5.0": {
       "name": "chokidar",
@@ -669,7 +678,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.5.1": {
       "name": "chokidar",
@@ -733,7 +743,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.5.2": {
       "name": "chokidar",
@@ -797,7 +808,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.5.3": {
       "name": "chokidar",
@@ -861,7 +873,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.6.0": {
       "name": "chokidar",
@@ -925,7 +938,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.6.1": {
       "name": "chokidar",
@@ -986,7 +1000,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.6.2": {
       "name": "chokidar",
@@ -1047,7 +1062,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.6.3": {
       "name": "chokidar",
@@ -1109,7 +1125,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.7.0": {
       "name": "chokidar",
@@ -1172,7 +1189,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.7.1": {
       "name": "chokidar",
@@ -1235,7 +1253,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.8.0": {
       "name": "chokidar",
@@ -1305,7 +1324,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.8.1": {
       "name": "chokidar",
@@ -1365,7 +1385,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.8.2": {
       "name": "chokidar",
@@ -1432,7 +1453,8 @@
           "email": "paul@paulmillr.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.8.3": {
       "name": "chokidar",
@@ -1502,7 +1524,8 @@
         "shasum": "2d8da709a8fe3f6072c429737d7d0175fb81bef9",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.8.3.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.8.4": {
       "name": "chokidar",
@@ -1572,7 +1595,8 @@
         "shasum": "3b2b5066817086534ba81a092bdcf4be25b8bee0",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.8.4.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.9.0": {
       "name": "chokidar",
@@ -1642,7 +1666,8 @@
         "shasum": "c1ae41561dbdb89dd5fac615453d20b48a946c2f",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.9.0.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.0": {
       "name": "chokidar",
@@ -1720,7 +1745,8 @@
         "shasum": "0079e9cd2c92f65f527893117ae63cc6fd03292e",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.0.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.1": {
       "name": "chokidar",
@@ -1798,7 +1824,8 @@
         "shasum": "ec2b4e9910c75a2b2e09ff5fdf283029b73af199",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.1.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.2": {
       "name": "chokidar",
@@ -1875,7 +1902,8 @@
         "shasum": "54b4221d6c8e0c57f2d2e432f8212d64d205b240",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.2.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.3": {
       "name": "chokidar",
@@ -1952,7 +1980,8 @@
         "shasum": "5f228db51820140d0f9f712bd2c29f4fbc1bba49",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.3.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.4": {
       "name": "chokidar",
@@ -2029,7 +2058,8 @@
         "shasum": "f223829f5511b79ac0f888e981a93b241d01c89d",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.4.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.5": {
       "name": "chokidar",
@@ -2105,7 +2135,8 @@
         "shasum": "4a5f343c4562cd2c48fa9e6531c3feebe21eaf79",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.5.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.6": {
       "name": "chokidar",
@@ -2181,7 +2212,8 @@
         "shasum": "e911c29d27bb422e61c3d2eaf621faae23c3741d",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.6.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.7": {
       "name": "chokidar",
@@ -2257,7 +2289,8 @@
         "shasum": "50a097e8bc1dd0297bc6b7d8c21aa4b9fdaa068d",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.7.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.8": {
       "name": "chokidar",
@@ -2333,7 +2366,8 @@
         "shasum": "f19abef62746ec4e252195ff1754df4351ad2ef8",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.8.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.10.9": {
       "name": "chokidar",
@@ -2409,7 +2443,8 @@
         "shasum": "7e53db756aee61a731365c00753a35d2513e4fee",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.10.9.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.11.0": {
       "name": "chokidar",
@@ -2485,7 +2520,8 @@
         "shasum": "9a556c68e426ff4d13841d4bc826819fa2f2f61d",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.11.0.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.11.1": {
       "name": "chokidar",
@@ -2561,7 +2597,8 @@
         "shasum": "b00e01717de445783782ef5c48a803e05fed0fc4",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.11.1.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.0": {
       "name": "chokidar",
@@ -2638,7 +2675,8 @@
         "shasum": "71dbee9c5c6867f6b3cab081ce9f05ef9b8a0532",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.0.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.1": {
       "name": "chokidar",
@@ -2715,7 +2753,8 @@
         "shasum": "b988914fc44d2869334fbc3b7e72256c37ab6d54",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.1.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.2": {
       "name": "chokidar",
@@ -2792,7 +2831,8 @@
         "shasum": "9ea1719bf2cc41136ea6e8a3dc7d08ecf36c8c12",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.2.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.3": {
       "name": "chokidar",
@@ -2869,7 +2909,8 @@
         "shasum": "02987da6cae9ebc012370a225a1184ad69940683",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.3.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.4": {
       "name": "chokidar",
@@ -2946,7 +2987,8 @@
         "shasum": "572e9299c5f820ebb02d2ba1e5d06a52bea75706",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.4.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.5": {
       "name": "chokidar",
@@ -3023,7 +3065,8 @@
         "shasum": "69ce0c49752dc4d32b5a45023b4b83661f858107",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.5.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "0.12.6": {
       "name": "chokidar",
@@ -3100,7 +3143,8 @@
         "shasum": "be204f5b9634e009311256e5d6e8e0e508284d2f",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-0.12.6.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.0-rc1": {
       "name": "chokidar",
@@ -3183,7 +3227,7 @@
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0-rc1.tgz"
       },
       "directories": {},
-      "deprecated": "this version has been deprecated"
+      "deprecated": "Upgrade to v3"
     },
     "1.0.0-rc1.1": {
       "name": "chokidar",
@@ -3266,7 +3310,7 @@
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0-rc1.1.tgz"
       },
       "directories": {},
-      "deprecated": "this version has been deprecated"
+      "deprecated": "Upgrade to v3"
     },
     "1.0.0-rc2": {
       "name": "chokidar",
@@ -3349,7 +3393,7 @@
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0-rc2.tgz"
       },
       "directories": {},
-      "deprecated": "this version has been deprecated"
+      "deprecated": "Upgrade to v3"
     },
     "1.0.0-rc3": {
       "name": "chokidar",
@@ -3433,7 +3477,8 @@
         "shasum": "f95d5e60c7d66eb53136c8999c47e9d4f37118f5",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0-rc3.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Upgrade to v3"
     },
     "1.0.0-rc4": {
       "name": "chokidar",
@@ -3516,7 +3561,8 @@
         "shasum": "312378ae793e6320591f230f0f69c0de93d02b6e",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0-rc4.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Upgrade to v3"
     },
     "1.0.0-rc5": {
       "name": "chokidar",
@@ -3602,7 +3648,8 @@
         "shasum": "45cb28ae7478b981d739b35f1e18d687aeb55802",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0-rc5.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Upgrade to v3"
     },
     "1.0.0": {
       "name": "chokidar",
@@ -3688,7 +3735,8 @@
         "shasum": "4af904c033eda714142b8ac371498b939923f8c9",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.0.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.1": {
       "name": "chokidar",
@@ -3774,7 +3822,8 @@
         "shasum": "b19e476a071ac0c7a01279cdc936e0d31c6ee06a",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.1.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.2": {
       "name": "chokidar",
@@ -3856,7 +3905,8 @@
         "shasum": "c5d4f226ccd0044a16278498eb009c0715ce48c1",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.2.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.3": {
       "name": "chokidar",
@@ -3938,7 +3988,8 @@
         "shasum": "ba63580caeb89bbdf869eab51bbca4f3ca441be8",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.3.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.4": {
       "name": "chokidar",
@@ -4020,7 +4071,8 @@
         "shasum": "bd9fbb1ef0cccc60e2da10c9aeafad6f2c72043f",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.4.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.5": {
       "name": "chokidar",
@@ -4102,7 +4154,8 @@
         "shasum": "f29278a36e174365da56ccad488ecacce4893494",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.0.5.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.0.6": {
       "name": "chokidar",
@@ -4184,7 +4237,8 @@
           "email": "elan.shanker+npm@gmail.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.1.0": {
       "name": "chokidar",
@@ -4266,7 +4320,8 @@
           "email": "elan.shanker+npm@gmail.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.2.0": {
       "name": "chokidar",
@@ -4349,7 +4404,8 @@
           "email": "elan.shanker+npm@gmail.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.3.0": {
       "name": "chokidar",
@@ -4430,7 +4486,8 @@
         "shasum": "a7c2af0f4234b5d83e3491e403817a88d517e4ef",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.3.0.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.4.0": {
       "name": "chokidar",
@@ -4512,7 +4569,8 @@
           "email": "elan.shanker+npm@gmail.com"
         }
       ],
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.4.1": {
       "name": "chokidar",
@@ -4595,7 +4653,8 @@
         "shasum": "df1d906769701a0f3df492c37dcc3cb35e6450e4",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.4.1.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.4.2": {
       "name": "chokidar",
@@ -4678,7 +4737,8 @@
         "shasum": "3eaea6c2898fa7208184a453d4889a9addf567d2",
         "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-1.4.2.tgz"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.4.3": {
       "name": "chokidar",
@@ -4765,7 +4825,8 @@
         "host": "packages-9-west.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.4.3.tgz_1456536294331_0.16991215758025646"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.5.0": {
       "name": "chokidar",
@@ -4852,7 +4913,8 @@
         "host": "packages-12-west.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.5.0.tgz_1462914212741_0.31828335183672607"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.5.1": {
       "name": "chokidar",
@@ -4939,7 +5001,8 @@
         "host": "packages-12-west.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.5.1.tgz_1463779048839_0.31024676584638655"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.5.2": {
       "name": "chokidar",
@@ -5027,7 +5090,8 @@
         "host": "packages-12-west.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.5.2.tgz_1465334533337_0.7033559519331902"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.6.0": {
       "name": "chokidar",
@@ -5115,7 +5179,8 @@
         "host": "packages-16-east.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.6.0.tgz_1466606619436_0.9914595072623342"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.6.1": {
       "name": "chokidar",
@@ -5203,7 +5268,8 @@
         "host": "packages-12-west.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.6.1.tgz_1476470196311_0.5785318606067449"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "1.7.0": {
       "name": "chokidar",
@@ -5291,7 +5357,8 @@
         "host": "packages-12-west.internal.npmjs.com",
         "tmp": "tmp/chokidar-1.7.0.tgz_1494269155265_0.519245742354542"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.0.0": {
       "name": "chokidar",
@@ -5382,7 +5449,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar-2.0.0.tgz_1514586868968_0.5979906069114804"
       },
-      "directories": {}
+      "directories": {},
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.0.1": {
       "name": "chokidar",
@@ -5476,7 +5544,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.0.1_1518102659398_0.20342058659857254"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.0.2": {
       "name": "chokidar",
@@ -5570,7 +5639,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.0.2_1518626967502_0.605467756614871"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.0.3": {
       "name": "chokidar",
@@ -5664,7 +5734,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.0.3_1521779380897_0.4438035536428022"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.0.4": {
       "name": "chokidar",
@@ -5759,7 +5830,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.0.4_1529340658080_0.6771647838611792"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.1.0": {
       "name": "chokidar",
@@ -5849,7 +5921,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.0_1549394781328_0.49343502331118105"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.1.1": {
       "name": "chokidar",
@@ -5939,7 +6012,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.1_1549921676540_0.7050955611597705"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.1.2": {
       "name": "chokidar",
@@ -6033,7 +6107,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.2_1550519772054_0.28873295114579767"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.1.3": {
       "name": "chokidar",
@@ -6127,7 +6202,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.3_1553249358067_0.31018037332078285"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.1.4": {
       "name": "chokidar",
@@ -6221,7 +6297,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.4_1553249533706_0.7405741868691271"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "2.1.5": {
       "name": "chokidar",
@@ -6315,7 +6392,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.5_1553289503798_0.5668650651093496"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "3.0.0": {
       "name": "chokidar",
@@ -6526,7 +6604,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.6_1557923759951_0.08921357795773344"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "3.0.1": {
       "name": "chokidar",
@@ -6822,6 +6901,7 @@
         "sinon": "^1.10.3",
         "sinon-chai": "^2.6.0"
       },
+      "readme": "# Chokidar [![Weekly downloads](https://img.shields.io/npm/dw/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Yearly downloads](https://img.shields.io/npm/dy/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Mac/Linux Build Status](https://img.shields.io/travis/paulmillr/chokidar/master.svg?label=Mac%20OSX%20%26%20Linux)](https://travis-ci.org/paulmillr/chokidar) [![Windows Build status](https://img.shields.io/appveyor/ci/paulmillr/chokidar/master.svg?label=Windows)](https://ci.appveyor.com/project/paulmillr/chokidar/branch/master) [![Coverage Status](https://coveralls.io/repos/paulmillr/chokidar/badge.svg)](https://coveralls.io/r/paulmillr/chokidar)\n\n> A neat wrapper around node.js fs.watch / fs.watchFile / FSEvents.\n\n[![NPM](https://nodei.co/npm/chokidar.png)](https://www.npmjs.com/package/chokidar)\n\n## Why?\nNode.js `fs.watch`:\n\n* Doesn't report filenames on MacOS.\n* Doesn't report events at all when using editors like Sublime on MacOS.\n* Often reports events twice.\n* Emits most changes as `rename`.\n* Has [a lot of other issues](https://github.com/nodejs/node/search?q=fs.watch&type=Issues)\n* Does not provide an easy way to recursively watch file trees.\n\nNode.js `fs.watchFile`:\n\n* Almost as bad at event handling.\n* Also does not provide any recursive watching.\n* Results in high CPU utilization.\n\nChokidar resolves these problems.\n\nInitially made for **[Brunch](http://brunch.io)** (an ultra-swift web app build tool), it is now used in\n[gulp](https://github.com/gulpjs/gulp/),\n[karma](http://karma-runner.github.io),\n[PM2](https://github.com/Unitech/PM2),\n[browserify](http://browserify.org/),\n[webpack](http://webpack.github.io/),\n[BrowserSync](http://www.browsersync.io/),\n[Microsoft's Visual Studio Code](https://github.com/microsoft/vscode),\nand [many others](https://www.npmjs.org/browse/depended/chokidar/).\nIt has proven itself in production environments.\n\n## How?\nChokidar does still rely on the Node.js core `fs` module, but when using\n`fs.watch` and `fs.watchFile` for watching, it normalizes the events it\nreceives, often checking for truth by getting file stats and/or dir contents.\n\nOn MacOS, chokidar by default uses a native extension exposing the Darwin\n`FSEvents` API. This provides very efficient recursive watching compared with\nimplementations like `kqueue` available on most \\*nix platforms. Chokidar still\ndoes have to do some work to normalize the events received that way as well.\n\nOn other platforms, the `fs.watch`-based implementation is the default, which\navoids polling and keeps CPU usage down. Be advised that chokidar will initiate\nwatchers recursively for everything within scope of the paths that have been\nspecified, so be judicious about not wasting system resources by watching much\nmore than needed.\n\n## Getting started\nInstall with npm:\n\n```sh\nnpm install chokidar\n```\n\nThen `require` and use it in your code:\n\n```javascript\nvar chokidar = require('chokidar');\n\n// One-liner for current directory, ignores .dotfiles\nchokidar.watch('.', {ignored: /(^|[\\/\\\\])\\../}).on('all', (event, path) => {\n  console.log(event, path);\n});\n```\n\n```javascript\n// Example of a more typical implementation structure:\n\n// Initialize watcher.\nvar watcher = chokidar.watch('file, dir, glob, or array', {\n  ignored: /(^|[\\/\\\\])\\../,\n  persistent: true\n});\n\n// Something to use when events are received.\nvar log = console.log.bind(console);\n// Add event listeners.\nwatcher\n  .on('add', path => log(`File ${path} has been added`))\n  .on('change', path => log(`File ${path} has been changed`))\n  .on('unlink', path => log(`File ${path} has been removed`));\n\n// More possible events.\nwatcher\n  .on('addDir', path => log(`Directory ${path} has been added`))\n  .on('unlinkDir', path => log(`Directory ${path} has been removed`))\n  .on('error', error => log(`Watcher error: ${error}`))\n  .on('ready', () => log('Initial scan complete. Ready for changes'))\n  .on('raw', (event, path, details) => {\n    log('Raw event info:', event, path, details);\n  });\n\n// 'add', 'addDir' and 'change' events also receive stat() results as second\n// argument when available: http://nodejs.org/api/fs.html#fs_class_fs_stats\nwatcher.on('change', (path, stats) => {\n  if (stats) console.log(`File ${path} changed size to ${stats.size}`);\n});\n\n// Watch new files.\nwatcher.add('new-file');\nwatcher.add(['new-file-2', 'new-file-3', '**/other-file*']);\n\n// Get list of actual paths being watched on the filesystem\nvar watchedPaths = watcher.getWatched();\n\n// Un-watch some files.\nwatcher.unwatch('new-file*');\n\n// Stop watching.\nwatcher.close();\n\n// Full list of options. See below for descriptions. (do not use this example)\nchokidar.watch('file', {\n  persistent: true,\n\n  ignored: '*.txt',\n  ignoreInitial: false,\n  followSymlinks: true,\n  cwd: '.',\n  disableGlobbing: false,\n\n  usePolling: true,\n  interval: 100,\n  binaryInterval: 300,\n  alwaysStat: false,\n  depth: 99,\n  awaitWriteFinish: {\n    stabilityThreshold: 2000,\n    pollInterval: 100\n  },\n\n  ignorePermissionErrors: false,\n  atomic: true // or a custom 'atomicity delay', in milliseconds (default 100)\n});\n\n```\n\n## API\n\n`chokidar.watch(paths, [options])`\n\n* `paths` (string or array of strings). Paths to files, dirs to be watched\nrecursively, or glob patterns.\n* `options` (object) Options object as defined below:\n\n#### Persistence\n\n* `persistent` (default: `true`). Indicates whether the process\nshould continue to run as long as files are being watched. If set to\n`false` when using `fsevents` to watch, no more events will be emitted\nafter `ready`, even if the process continues to run.\n\n#### Path filtering\n\n* `ignored` ([anymatch](https://github.com/es128/anymatch)-compatible definition)\nDefines files/paths to be ignored. The whole relative or absolute path is\ntested, not just filename. If a function with two arguments is provided, it\ngets called twice per path - once with a single argument (the path), second\ntime with two arguments (the path and the\n[`fs.Stats`](http://nodejs.org/api/fs.html#fs_class_fs_stats)\nobject of that path).\n* `ignoreInitial` (default: `false`). If set to `false` then `add`/`addDir` events are also emitted for matching paths while\ninstantiating the watching as chokidar discovers these file paths (before the `ready` event).\n* `followSymlinks` (default: `true`). When `false`, only the\nsymlinks themselves will be watched for changes instead of following\nthe link references and bubbling events through the link's path.\n* `cwd` (no default). The base directory from which watch `paths` are to be\nderived. Paths emitted with events will be relative to this.\n* `disableGlobbing` (default: `false`). If set to `true` then the strings passed to `.watch()` and `.add()` are treated as\nliteral path names, even if they look like globs.\n\n#### Performance\n\n* `usePolling` (default: `false`).\nWhether to use fs.watchFile (backed by polling), or fs.watch. If polling\nleads to high CPU utilization, consider setting this to `false`. It is\ntypically necessary to **set this to `true` to successfully watch files over\na network**, and it may be necessary to successfully watch files in other\nnon-standard situations. Setting to `true` explicitly on MacOS overrides the\n`useFsEvents` default. You may also set the CHOKIDAR_USEPOLLING env variable\nto true (1) or false (0) in order to override this option.\n* _Polling-specific settings_ (effective when `usePolling: true`)\n  * `interval` (default: `100`). Interval of file system polling. You may also\n    set the CHOKIDAR_INTERVAL env variable to override this option.\n  * `binaryInterval` (default: `300`). Interval of file system\n  polling for binary files.\n  ([see list of binary extensions](https://github.com/sindresorhus/binary-extensions/blob/master/binary-extensions.json))\n* `useFsEvents` (default: `true` on MacOS). Whether to use the\n`fsevents` watching interface if available. When set to `true` explicitly\nand `fsevents` is available this supercedes the `usePolling` setting. When\nset to `false` on MacOS, `usePolling: true` becomes the default.\n* `alwaysStat` (default: `false`). If relying upon the\n[`fs.Stats`](http://nodejs.org/api/fs.html#fs_class_fs_stats)\nobject that may get passed with `add`, `addDir`, and `change` events, set\nthis to `true` to ensure it is provided even in cases where it wasn't\nalready available from the underlying watch events.\n* `depth` (default: `undefined`). If set, limits how many levels of\nsubdirectories will be traversed.\n* `awaitWriteFinish` (default: `false`).\nBy default, the `add` event will fire when a file first appears on disk, before\nthe entire file has been written. Furthermore, in some cases some `change`\nevents will be emitted while the file is being written. In some cases,\nespecially when watching for large files there will be a need to wait for the\nwrite operation to finish before responding to a file creation or modification.\nSetting `awaitWriteFinish` to `true` (or a truthy value) will poll file size,\nholding its `add` and `change` events until the size does not change for a\nconfigurable amount of time. The appropriate duration setting is heavily\ndependent on the OS and hardware. For accurate detection this parameter should\nbe relatively high, making file watching much less responsive.\nUse with caution.\n  * *`options.awaitWriteFinish` can be set to an object in order to adjust\n  timing params:*\n  * `awaitWriteFinish.stabilityThreshold` (default: 2000). Amount of time in\n  milliseconds for a file size to remain constant before emitting its event.\n  * `awaitWriteFinish.pollInterval` (default: 100). File size polling interval.\n\n#### Errors\n* `ignorePermissionErrors` (default: `false`). Indicates whether to watch files\nthat don't have read permissions if possible. If watching fails due to `EPERM`\nor `EACCES` with this set to `true`, the errors will be suppressed silently.\n* `atomic` (default: `true` if `useFsEvents` and `usePolling` are `false`).\nAutomatically filters out artifacts that occur when using editors that use\n\"atomic writes\" instead of writing directly to the source file. If a file is\nre-added within 100 ms of being deleted, Chokidar emits a `change` event\nrather than `unlink` then `add`. If the default of 100 ms does not work well\nfor you, you can override it by setting `atomic` to a custom value, in\nmilliseconds.\n\n### Methods & Events\n\n`chokidar.watch()` produces an instance of `FSWatcher`. Methods of `FSWatcher`:\n\n* `.add(path / paths)`: Add files, directories, or glob patterns for tracking.\nTakes an array of strings or just one string.\n* `.on(event, callback)`: Listen for an FS event.\nAvailable events: `add`, `addDir`, `change`, `unlink`, `unlinkDir`, `ready`,\n`raw`, `error`.\nAdditionally `all` is available which gets emitted with the underlying event\nname and path for every event other than `ready`, `raw`, and `error`.\n* `.unwatch(path / paths)`: Stop watching files, directories, or glob patterns.\nTakes an array of strings or just one string.\n* `.close()`: Removes all listeners from watched files.\n* `.getWatched()`: Returns an object representing all the paths on the file\nsystem being watched by this `FSWatcher` instance. The object's keys are all the\ndirectories (using absolute paths unless the `cwd` option was used), and the\nvalues are arrays of the names of the items contained in each directory.\n\n## CLI\n\nIf you need a CLI interface for your file watching, check out\n[chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli), allowing you to\nexecute a command on each change, or get a stdio stream of change events.\n\n## Install Troubleshooting\n\n* `npm WARN optional dep failed, continuing fsevents@n.n.n`\n  * This message is normal part of how `npm` handles optional dependencies and is\n    not indicative of a problem. Even if accompanied by other related error messages,\n    Chokidar should function properly.\n\n* `ERR! stack Error: Python executable \"python\" is v3.4.1, which is not supported by gyp.`\n  * You should be able to resolve this by installing python 2.7 and running:\n    `npm config set python python2.7`\n\n* `gyp ERR! stack Error: not found: make`\n  * On Mac, install the XCode command-line tools\n\n## License\n\nThe MIT License (MIT)\n\nCopyright (c) 2012-2019 Paul Miller (https://paulmillr.com) & Elan Shanker\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the “Software”), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n",
       "readmeFilename": "README.md",
       "gitHead": "a60961966746b143c1cdab13b37a90b97c4fae05",
       "_id": "chokidar@2.1.8",
@@ -6854,7 +6934,8 @@
         "host": "s3://npm-registry-packages",
         "tmp": "tmp/chokidar_2.1.8_1566409705431_0.31447568058522024"
       },
-      "_hasShrinkwrap": false
+      "_hasShrinkwrap": false,
+      "deprecated": "Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies."
     },
     "3.1.0": {
       "name": "chokidar",
@@ -7926,8 +8007,665 @@
         "tmp": "tmp/chokidar_3.3.1_1576434724275_0.9223256192495166"
       },
       "_hasShrinkwrap": false
+    },
+    "3.4.0": {
+      "name": "chokidar",
+      "description": "A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.",
+      "version": "3.4.0",
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "author": {
+        "name": "Paul Miller",
+        "url": "https://paulmillr.com"
+      },
+      "contributors": [
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        },
+        {
+          "name": "Elan Shanker"
+        }
+      ],
+      "engines": {
+        "node": ">= 8.10.0"
+      },
+      "main": "index.js",
+      "dependencies": {
+        "anymatch": "~3.1.1",
+        "braces": "~3.0.2",
+        "glob-parent": "~5.1.0",
+        "is-binary-path": "~2.1.0",
+        "is-glob": "~4.0.1",
+        "normalize-path": "~3.0.0",
+        "readdirp": "~3.4.0",
+        "fsevents": "~2.1.2"
+      },
+      "optionalDependencies": {
+        "fsevents": "~2.1.2"
+      },
+      "devDependencies": {
+        "@types/node": "^13",
+        "chai": "^4.2",
+        "dtslint": "^3.3.0",
+        "eslint": "^6.6.0",
+        "mocha": "^7.0.0",
+        "nyc": "^15.0.0",
+        "rimraf": "^3.0.0",
+        "sinon": "^9.0.1",
+        "sinon-chai": "^3.3.0",
+        "upath": "^1.2.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulmillr/chokidar.git"
+      },
+      "bugs": {
+        "url": "https://github.com/paulmillr/chokidar/issues"
+      },
+      "license": "MIT",
+      "scripts": {
+        "dtslint": "dtslint types",
+        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+        "mocha": "mocha --exit --timeout 60000",
+        "test": "npm run lint && npm run mocha"
+      },
+      "keywords": [
+        "fs",
+        "watch",
+        "watchFile",
+        "watcher",
+        "watching",
+        "file",
+        "fsevents"
+      ],
+      "types": "./types/index.d.ts",
+      "eslintConfig": {
+        "extends": "eslint:recommended",
+        "parserOptions": {
+          "ecmaVersion": 9,
+          "sourceType": "script"
+        },
+        "env": {
+          "node": true,
+          "es6": true
+        },
+        "rules": {
+          "array-callback-return": "error",
+          "no-empty": [
+            "error",
+            {
+              "allowEmptyCatch": true
+            }
+          ],
+          "no-lonely-if": "error",
+          "no-var": "error",
+          "object-shorthand": "error",
+          "prefer-arrow-callback": [
+            "error",
+            {
+              "allowNamedFunctions": true
+            }
+          ],
+          "prefer-const": [
+            "error",
+            {
+              "ignoreReadBeforeAssign": true
+            }
+          ],
+          "prefer-destructuring": [
+            "error",
+            {
+              "object": true,
+              "array": false
+            }
+          ],
+          "prefer-spread": "error",
+          "prefer-template": "error",
+          "radix": "error",
+          "strict": "error",
+          "quotes": [
+            "error",
+            "single"
+          ]
+        }
+      },
+      "nyc": {
+        "include": [
+          "index.js",
+          "lib/*.js"
+        ],
+        "reporter": [
+          "html",
+          "text"
+        ]
+      },
+      "gitHead": "b67d208fbd7314dd77135adbb84e2b9c509f4345",
+      "_id": "chokidar@3.4.0",
+      "_nodeVersion": "14.0.0",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-aXAaho2VJtisB/1fg1+3nlLJqGOuewTzQpd/Tz0yTg2R0e4IGtshYvtjowyEumcBv2z+y4+kc75Mz7j5xJskcQ==",
+        "shasum": "b30611423ce376357c765b9b8f904b9fba3c0be8",
+        "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-3.4.0.tgz",
+        "fileCount": 8,
+        "unpackedSize": 88859,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJepZipCRA9TVsSAnZWagAARTIP/jqI9SO0/hOgybHfCGam\n7u3Ip+brHiO3ix/y8F7+xKbDg6/3NNmZSyxs23s1djuuuETQK7X5xPQQZaH+\nNdpbltN7OO6NkkFAkz9weZsRgWmABTlmhBibnwzXOR9WW7Ka1lTFPH3NmQ/W\nmAO2cytZkFYYxT2UlHKPUMxmv8fs97cNSDAXCtZJIcCLV0MOj1sk3VcMEuhp\nBokExObz9QTZ3LMiWLVyTyThtaD5t3VomK3HfzS31mweN7VMoz+hf0yKzITI\nnneAiRGzR0dsCtnt60aiYf3Dlc3sd05j1GOna141Q9yo6rbFMFOrVRJiBCVU\nRiJlMC/1y2eHyTnQUHOJd35kx74ugZSkr5xPDUoDETD9+8G9tMZyn/W2RmNh\nT/EkWJFGXZUoUO3Y02ASYy431Gz4G5q3e/UAFjBAebZA30Wr81iGLPlPolvo\nPuhm4NKxO5s02X9HAXxnvaG4sgMD10QyPEhC7h/2r2mX4Fr0utlBJrgI131E\nHCuMEUzl/wEdznxzLG7eflP0mQYzARbdTY3EvS4dhYFawdYiDP8Jjhzv+YD/\nMkLON6I6kGpwU4A3/kSyKyG9+mQDQRYIsZdjqa7wRaTos+SrNpiP/653wRjw\nrl7vW4m5tAii+0Jd0zoRqLwRvdCNYGIasRdtlNdUGePTF+Rld4tI9FnjMcDr\n37Gp\r\n=dLb+\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "es128",
+          "email": "elan.shanker+npm@gmail.com"
+        },
+        {
+          "name": "paulmillr",
+          "email": "paul@paulmillr.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/chokidar_3.4.0_1587910824726_0.9641785913377525"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.4.1": {
+      "name": "chokidar",
+      "description": "A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.",
+      "version": "3.4.1",
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "author": {
+        "name": "Paul Miller",
+        "url": "https://paulmillr.com"
+      },
+      "contributors": [
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        },
+        {
+          "name": "Elan Shanker"
+        }
+      ],
+      "engines": {
+        "node": ">= 8.10.0"
+      },
+      "main": "index.js",
+      "dependencies": {
+        "anymatch": "~3.1.1",
+        "braces": "~3.0.2",
+        "glob-parent": "~5.1.0",
+        "is-binary-path": "~2.1.0",
+        "is-glob": "~4.0.1",
+        "normalize-path": "~3.0.0",
+        "readdirp": "~3.4.0",
+        "fsevents": "~2.1.2"
+      },
+      "optionalDependencies": {
+        "fsevents": "~2.1.2"
+      },
+      "devDependencies": {
+        "@types/node": "^14",
+        "chai": "^4.2",
+        "dtslint": "^3.3.0",
+        "eslint": "^7.0.0",
+        "mocha": "^7.0.0",
+        "nyc": "^15.0.0",
+        "rimraf": "^3.0.0",
+        "sinon": "^9.0.1",
+        "sinon-chai": "^3.3.0",
+        "upath": "^1.2.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulmillr/chokidar.git"
+      },
+      "bugs": {
+        "url": "https://github.com/paulmillr/chokidar/issues"
+      },
+      "license": "MIT",
+      "scripts": {
+        "dtslint": "dtslint types",
+        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+        "mocha": "mocha --exit --timeout 60000",
+        "test": "npm run lint && npm run mocha"
+      },
+      "keywords": [
+        "fs",
+        "watch",
+        "watchFile",
+        "watcher",
+        "watching",
+        "file",
+        "fsevents"
+      ],
+      "types": "./types/index.d.ts",
+      "eslintConfig": {
+        "extends": "eslint:recommended",
+        "parserOptions": {
+          "ecmaVersion": 9,
+          "sourceType": "script"
+        },
+        "env": {
+          "node": true,
+          "es6": true
+        },
+        "rules": {
+          "array-callback-return": "error",
+          "no-empty": [
+            "error",
+            {
+              "allowEmptyCatch": true
+            }
+          ],
+          "no-lonely-if": "error",
+          "no-var": "error",
+          "object-shorthand": "error",
+          "prefer-arrow-callback": [
+            "error",
+            {
+              "allowNamedFunctions": true
+            }
+          ],
+          "prefer-const": [
+            "error",
+            {
+              "ignoreReadBeforeAssign": true
+            }
+          ],
+          "prefer-destructuring": [
+            "error",
+            {
+              "object": true,
+              "array": false
+            }
+          ],
+          "prefer-spread": "error",
+          "prefer-template": "error",
+          "radix": "error",
+          "strict": "error",
+          "quotes": [
+            "error",
+            "single"
+          ]
+        }
+      },
+      "nyc": {
+        "include": [
+          "index.js",
+          "lib/*.js"
+        ],
+        "reporter": [
+          "html",
+          "text"
+        ]
+      },
+      "gitHead": "06c74cadcb29aeed4f146776c44dc99dc98fd80d",
+      "_id": "chokidar@3.4.1",
+      "_nodeVersion": "14.2.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==",
+        "shasum": "e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1",
+        "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-3.4.1.tgz",
+        "fileCount": 8,
+        "unpackedSize": 89589,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfD7rqCRA9TVsSAnZWagAA5y8P/0BD0rCQWyBHanh59Ec0\nPkD7VK5jH0FhG+ZmKUQ3zH1sIM8keLQ7UWxXr2Y8iJfHJ8XB0FCp5D/XHEyo\nsKAEqVHo4PzH8dHvIR+KcyAuEJCtd7sW8Ncf94hsHbs9V8VjhVJyxVD4m0IW\nK/+Z91rJmjU4mPqHOu3vKLernkxBFVITE3tMoiJhlHsf5w0maEHNBVQ6RTG5\nY7/j6TV2VfwqcR5jnglRJiHcr+BVftNCLZoA3HCUOr00wCW5DvnfGoPdCrin\nGESAfR6ppRUSDwTLVDDPVMizBx+bzDKeKCKxf0HehHOJtwGy97m13rI9FphO\n1Q19bcH/vse0KFJFnPVg+SupCs7sKxwzJJfb9Zjq/REgz5BRxtjrBLGfaQuU\nCWWl44qBDphsFA7s6nAWttC4COIAhGFfRMywK8jtz4R96yAE8x6QHOV/Jj3x\nKFf/sB3n1uALUrUuXfm3cC02d2IXXd4bBQRYIaWQigAgiLxfjDVrsgQnZQCI\np5Z0JeIkvknaMgJHBgeukhTgG0WrFT3gmKls9m4dJgmE8td9OYPjjo8owWkW\n7qgnAf5Y+6Rt3EXYz3eolDUg5GBzAClCuqOp/bm/so7zeqXmsiM2H7Lg4EV2\nLkzi2gk73dKwJlDUuiDIl25V5zouic9KNbxFIzNiEppf/4vZimu6VFqFPu2S\nErkb\r\n=cXpg\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "es128",
+          "email": "elan.shanker+npm@gmail.com"
+        },
+        {
+          "name": "paulmillr",
+          "email": "paul@paulmillr.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/chokidar_3.4.1_1594866409709_0.2594698973354652"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.4.2": {
+      "name": "chokidar",
+      "description": "A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.",
+      "version": "3.4.2",
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "author": {
+        "name": "Paul Miller",
+        "url": "https://paulmillr.com"
+      },
+      "contributors": [
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        },
+        {
+          "name": "Elan Shanker"
+        }
+      ],
+      "engines": {
+        "node": ">= 8.10.0"
+      },
+      "main": "index.js",
+      "dependencies": {
+        "anymatch": "~3.1.1",
+        "braces": "~3.0.2",
+        "glob-parent": "~5.1.0",
+        "is-binary-path": "~2.1.0",
+        "is-glob": "~4.0.1",
+        "normalize-path": "~3.0.0",
+        "readdirp": "~3.4.0",
+        "fsevents": "~2.1.2"
+      },
+      "optionalDependencies": {
+        "fsevents": "~2.1.2"
+      },
+      "devDependencies": {
+        "@types/node": "^14",
+        "chai": "^4.2",
+        "dtslint": "^3.3.0",
+        "eslint": "^7.0.0",
+        "mocha": "^7.0.0",
+        "nyc": "^15.0.0",
+        "rimraf": "^3.0.0",
+        "sinon": "^9.0.1",
+        "sinon-chai": "^3.3.0",
+        "upath": "^1.2.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulmillr/chokidar.git"
+      },
+      "bugs": {
+        "url": "https://github.com/paulmillr/chokidar/issues"
+      },
+      "license": "MIT",
+      "scripts": {
+        "dtslint": "dtslint types",
+        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+        "mocha": "mocha --exit --timeout 60000",
+        "test": "npm run lint && npm run mocha"
+      },
+      "keywords": [
+        "fs",
+        "watch",
+        "watchFile",
+        "watcher",
+        "watching",
+        "file",
+        "fsevents"
+      ],
+      "types": "./types/index.d.ts",
+      "eslintConfig": {
+        "extends": "eslint:recommended",
+        "parserOptions": {
+          "ecmaVersion": 9,
+          "sourceType": "script"
+        },
+        "env": {
+          "node": true,
+          "es6": true
+        },
+        "rules": {
+          "array-callback-return": "error",
+          "no-empty": [
+            "error",
+            {
+              "allowEmptyCatch": true
+            }
+          ],
+          "no-lonely-if": "error",
+          "no-var": "error",
+          "object-shorthand": "error",
+          "prefer-arrow-callback": [
+            "error",
+            {
+              "allowNamedFunctions": true
+            }
+          ],
+          "prefer-const": [
+            "error",
+            {
+              "ignoreReadBeforeAssign": true
+            }
+          ],
+          "prefer-destructuring": [
+            "error",
+            {
+              "object": true,
+              "array": false
+            }
+          ],
+          "prefer-spread": "error",
+          "prefer-template": "error",
+          "radix": "error",
+          "strict": "error",
+          "quotes": [
+            "error",
+            "single"
+          ]
+        }
+      },
+      "nyc": {
+        "include": [
+          "index.js",
+          "lib/*.js"
+        ],
+        "reporter": [
+          "html",
+          "text"
+        ]
+      },
+      "gitHead": "95faa2fe42d1736b3c5bfbc0f17a9f0379b001f3",
+      "_id": "chokidar@3.4.2",
+      "_nodeVersion": "14.2.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==",
+        "shasum": "38dc8e658dec3809741eb3ef7bb0a47fe424232d",
+        "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-3.4.2.tgz",
+        "fileCount": 8,
+        "unpackedSize": 89867,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfLCYtCRA9TVsSAnZWagAAnNEP+wX0gz3UVU2cq2tykVXm\nFPawXovuSHqgBm2jybmWcjpc5K1TVPnbKcpPdfZWV4ihAntzwq8uDT0BNEbW\ns+8qUDsXKYMX+gzDSn3RIfidAydwLrC4WcjDO1zgDgm1CI3JWxyj8pcaigym\nr8wNg/EDZ2W6tqmRP/CpwaB7zJge+OQs7l2vgkVd8cR3/r9N2/EVEooDyKrv\nT+5i5ifeePDjQFe2kb5h4aVDf+8jslQr5rVVDFHoXUXdUiWLizdVuc3SyHbH\nAvBmk3baSWgSMojjqiysWoSBQcje+cBQ8ZpthMaHDv5FH+w7OBJOTWsLw83S\nq9D9GyKqaZl4LWjnpIBQQO5PPt3WxCCPyV0zZ2IYhLE1d7MKCBBwLCHw1yAx\nt+91eCnVEDxIf6NcwVCZJs1LGXTnJnjYEsCWTZuJPyo0BfHOr+yVAafIB+JO\nmbUl2m6o9epOEH2m3BL4m14ZK61hIaT05+fLQzYpVWxBxj3gpiJARetTvnc5\nUkAD9rFahZqB1ZwpHIjCevDxD+2ZOF+r5fVdCruY2UEmAa5SmKAMYXyH63qC\nhKeFUCMm6xiljuJuDfNnQZxQSohEyoMj6jvbmW8GsQiNqb//mzXIiKKAdFBJ\nySmCS8afDkYaN+PsOYcGPmfEMK5FmSZqo0VeSk7udOM2dC3ph77/v7wAqsXo\nrPQc\r\n=nZ80\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "es128",
+          "email": "elan.shanker+npm@gmail.com"
+        },
+        {
+          "name": "paulmillr",
+          "email": "paul@paulmillr.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/chokidar_3.4.2_1596728876948_0.07557304314268287"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.4.3": {
+      "name": "chokidar",
+      "description": "A neat wrapper around node.js fs.watch / fs.watchFile / fsevents.",
+      "version": "3.4.3",
+      "homepage": "https://github.com/paulmillr/chokidar",
+      "author": {
+        "name": "Paul Miller",
+        "url": "https://paulmillr.com"
+      },
+      "contributors": [
+        {
+          "name": "Paul Miller",
+          "url": "https://paulmillr.com"
+        },
+        {
+          "name": "Elan Shanker"
+        }
+      ],
+      "engines": {
+        "node": ">= 8.10.0"
+      },
+      "main": "index.js",
+      "dependencies": {
+        "anymatch": "~3.1.1",
+        "braces": "~3.0.2",
+        "glob-parent": "~5.1.0",
+        "is-binary-path": "~2.1.0",
+        "is-glob": "~4.0.1",
+        "normalize-path": "~3.0.0",
+        "readdirp": "~3.5.0",
+        "fsevents": "~2.1.2"
+      },
+      "optionalDependencies": {
+        "fsevents": "~2.1.2"
+      },
+      "devDependencies": {
+        "@types/node": "^14",
+        "chai": "^4.2",
+        "dtslint": "^3.3.0",
+        "eslint": "^7.0.0",
+        "mocha": "^7.0.0",
+        "nyc": "^15.0.0",
+        "rimraf": "^3.0.0",
+        "sinon": "^9.0.1",
+        "sinon-chai": "^3.3.0",
+        "upath": "^1.2.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulmillr/chokidar.git"
+      },
+      "bugs": {
+        "url": "https://github.com/paulmillr/chokidar/issues"
+      },
+      "license": "MIT",
+      "scripts": {
+        "dtslint": "dtslint types",
+        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+        "mocha": "mocha --exit --timeout 60000",
+        "test": "npm run lint && npm run mocha"
+      },
+      "keywords": [
+        "fs",
+        "watch",
+        "watchFile",
+        "watcher",
+        "watching",
+        "file",
+        "fsevents"
+      ],
+      "types": "./types/index.d.ts",
+      "eslintConfig": {
+        "extends": "eslint:recommended",
+        "parserOptions": {
+          "ecmaVersion": 9,
+          "sourceType": "script"
+        },
+        "env": {
+          "node": true,
+          "es6": true
+        },
+        "rules": {
+          "array-callback-return": "error",
+          "no-empty": [
+            "error",
+            {
+              "allowEmptyCatch": true
+            }
+          ],
+          "no-lonely-if": "error",
+          "no-var": "error",
+          "object-shorthand": "error",
+          "prefer-arrow-callback": [
+            "error",
+            {
+              "allowNamedFunctions": true
+            }
+          ],
+          "prefer-const": [
+            "error",
+            {
+              "ignoreReadBeforeAssign": true
+            }
+          ],
+          "prefer-destructuring": [
+            "error",
+            {
+              "object": true,
+              "array": false
+            }
+          ],
+          "prefer-spread": "error",
+          "prefer-template": "error",
+          "radix": "error",
+          "strict": "error",
+          "quotes": [
+            "error",
+            "single"
+          ]
+        }
+      },
+      "nyc": {
+        "include": [
+          "index.js",
+          "lib/*.js"
+        ],
+        "reporter": [
+          "html",
+          "text"
+        ]
+      },
+      "gitHead": "0d7287341c579a8b5f550e7c5350cd2f480db5ae",
+      "_id": "chokidar@3.4.3",
+      "_nodeVersion": "14.13.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-DtM3g7juCXQxFVSNPNByEC2+NImtBuxQQvWlHunpJIS5Ocr0lG306cC7FCi7cEA0fzmybPUIl4txBIobk1gGOQ==",
+        "shasum": "c1df38231448e45ca4ac588e6c79573ba6a57d5b",
+        "tarball": "https://registry.npmjs.org/chokidar/-/chokidar-3.4.3.tgz",
+        "fileCount": 8,
+        "unpackedSize": 89867,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfhYnaCRA9TVsSAnZWagAA5VYP/iJbpsYyBRAOv3NSWWfo\n1QpZHY8zNpzq45VS3v8YYrStHeWcV0GprKxItXrAUmWFWv4SAkSuAq9lb9oQ\nbUyDjPwfkoO+qGr87Ewvg0Y57utVjua7mdiLDe8upBfVGTQz9QohczPC35BV\neqnPVGLsZusz6Pp7vGEuRK32K1u3FfZ9HObpy12AEeL7Fj6LM6cofEvkQbDs\nNKZY9jUebAx2+eMsLPlAY6XC1FFrn8j0E8T6x90PDBpJ9O0fU0OYsgQe2F19\nYdnts/Hstw6B925UhOeAWsmyW3exC8lkf6kLqOd2bfvqaTdjRyBaGqBIY0QD\nkpS9Q4JUE/V7R3sk+tPoZCIS/Td9kvpI6IQ0gD7KMYwjZD4y8gZnYvNTRe0I\nnEKWxTs9SP0esA5KZS+tKrqrorjhNGx+36jSrz6uw2NRpSYczTEKjEa7MqQk\nv6FybuZEv6sbITIqy/4hfunwD32TnNcjsWirFb3g+6/81LFib4TSLqNIKSw8\n6wAjwtgLbug3l8esoVStIxskndyhv1dL9Cqtqd5/09XfQmti4iqL2LHTsJq7\nyEwSqqmBpjpI2zxGWgzw5KuKUn0O0QNq65oWTAFRZMCzgNQGu7qh0EQruyGK\ndta4I6LMIgGfRlcixYfie6cBSQJ9SSup5joNa6S7jW4qTeoSNw50NBV6Uh9Q\nCM7v\r\n=Ik5h\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "es128",
+          "email": "elan.shanker+npm@gmail.com"
+        },
+        {
+          "name": "paulmillr",
+          "email": "paul@paulmillr.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "paulmillr",
+        "email": "paul@paulmillr.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/chokidar_3.4.3_1602587098206_0.2543214523481734"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# Chokidar [![Weekly downloads](https://img.shields.io/npm/dw/chokidar.svg)](https://github.com/paulmillr/chokidar) [![Yearly downloads](https://img.shields.io/npm/dy/chokidar.svg)](https://github.com/paulmillr/chokidar)\n\n> A neat wrapper around Node.js fs.watch / fs.watchFile / FSEvents.\n\n[![NPM](https://nodei.co/npm/chokidar.png)](https://www.npmjs.com/package/chokidar)\n\nVersion 3 is out! Check out our blog post about it: [Chokidar 3: How to save 32TB of traffic every week](https://paulmillr.com/posts/chokidar-3-save-32tb-of-traffic/)\n\n## Why?\n\nNode.js `fs.watch`:\n\n* Doesn't report filenames on MacOS.\n* Doesn't report events at all when using editors like Sublime on MacOS.\n* Often reports events twice.\n* Emits most changes as `rename`.\n* Does not provide an easy way to recursively watch file trees.\n\nNode.js `fs.watchFile`:\n\n* Almost as bad at event handling.\n* Also does not provide any recursive watching.\n* Results in high CPU utilization.\n\nChokidar resolves these problems.\n\nInitially made for **[Brunch](https://brunch.io/)** (an ultra-swift web app build tool), it is now used in\n[Microsoft's Visual Studio Code](https://github.com/microsoft/vscode),\n[gulp](https://github.com/gulpjs/gulp/),\n[karma](https://karma-runner.github.io/),\n[PM2](https://github.com/Unitech/PM2),\n[browserify](http://browserify.org/),\n[webpack](https://webpack.github.io/),\n[BrowserSync](https://www.browsersync.io/),\nand [many others](https://www.npmjs.com/browse/depended/chokidar).\nIt has proven itself in production environments.\n\n## How?\n\nChokidar does still rely on the Node.js core `fs` module, but when using\n`fs.watch` and `fs.watchFile` for watching, it normalizes the events it\nreceives, often checking for truth by getting file stats and/or dir contents.\n\nOn MacOS, chokidar by default uses a native extension exposing the Darwin\n`FSEvents` API. This provides very efficient recursive watching compared with\nimplementations like `kqueue` available on most \\*nix platforms. Chokidar still\ndoes have to do some work to normalize the events received that way as well.\n\nOn other platforms, the `fs.watch`-based implementation is the default, which\navoids polling and keeps CPU usage down. Be advised that chokidar will initiate\nwatchers recursively for everything within scope of the paths that have been\nspecified, so be judicious about not wasting system resources by watching much\nmore than needed.\n\n## Getting started\n\nInstall with npm:\n\n```sh\nnpm install chokidar\n```\n\nThen `require` and use it in your code:\n\n```javascript\nconst chokidar = require('chokidar');\n\n// One-liner for current directory\nchokidar.watch('.').on('all', (event, path) => {\n  console.log(event, path);\n});\n```\n\n## API\n\n```javascript\n// Example of a more typical implementation structure:\n\n// Initialize watcher.\nconst watcher = chokidar.watch('file, dir, glob, or array', {\n  ignored: /(^|[\\/\\\\])\\../, // ignore dotfiles\n  persistent: true\n});\n\n// Something to use when events are received.\nconst log = console.log.bind(console);\n// Add event listeners.\nwatcher\n  .on('add', path => log(`File ${path} has been added`))\n  .on('change', path => log(`File ${path} has been changed`))\n  .on('unlink', path => log(`File ${path} has been removed`));\n\n// More possible events.\nwatcher\n  .on('addDir', path => log(`Directory ${path} has been added`))\n  .on('unlinkDir', path => log(`Directory ${path} has been removed`))\n  .on('error', error => log(`Watcher error: ${error}`))\n  .on('ready', () => log('Initial scan complete. Ready for changes'))\n  .on('raw', (event, path, details) => { // internal\n    log('Raw event info:', event, path, details);\n  });\n\n// 'add', 'addDir' and 'change' events also receive stat() results as second\n// argument when available: https://nodejs.org/api/fs.html#fs_class_fs_stats\nwatcher.on('change', (path, stats) => {\n  if (stats) console.log(`File ${path} changed size to ${stats.size}`);\n});\n\n// Watch new files.\nwatcher.add('new-file');\nwatcher.add(['new-file-2', 'new-file-3', '**/other-file*']);\n\n// Get list of actual paths being watched on the filesystem\nvar watchedPaths = watcher.getWatched();\n\n// Un-watch some files.\nawait watcher.unwatch('new-file*');\n\n// Stop watching.\n// The method is async!\nwatcher.close().then(() => console.log('closed'));\n\n// Full list of options. See below for descriptions.\n// Do not use this example!\nchokidar.watch('file', {\n  persistent: true,\n\n  ignored: '*.txt',\n  ignoreInitial: false,\n  followSymlinks: true,\n  cwd: '.',\n  disableGlobbing: false,\n\n  usePolling: false,\n  interval: 100,\n  binaryInterval: 300,\n  alwaysStat: false,\n  depth: 99,\n  awaitWriteFinish: {\n    stabilityThreshold: 2000,\n    pollInterval: 100\n  },\n\n  ignorePermissionErrors: false,\n  atomic: true // or a custom 'atomicity delay', in milliseconds (default 100)\n});\n\n```\n\n`chokidar.watch(paths, [options])`\n\n* `paths` (string or array of strings). Paths to files, dirs to be watched\nrecursively, or glob patterns.\n    - Note: globs must not contain windows separators (`\\`),\n    because that's how they work by the standard —\n    you'll need to replace them with forward slashes (`/`).\n    - Note 2: for additional glob documentation, check out low-level\n    library: [picomatch](https://github.com/micromatch/picomatch).\n* `options` (object) Options object as defined below:\n\n#### Persistence\n\n* `persistent` (default: `true`). Indicates whether the process\nshould continue to run as long as files are being watched. If set to\n`false` when using `fsevents` to watch, no more events will be emitted\nafter `ready`, even if the process continues to run.\n\n#### Path filtering\n\n* `ignored` ([anymatch](https://github.com/es128/anymatch)-compatible definition)\nDefines files/paths to be ignored. The whole relative or absolute path is\ntested, not just filename. If a function with two arguments is provided, it\ngets called twice per path - once with a single argument (the path), second\ntime with two arguments (the path and the\n[`fs.Stats`](https://nodejs.org/api/fs.html#fs_class_fs_stats)\nobject of that path).\n* `ignoreInitial` (default: `false`). If set to `false` then `add`/`addDir` events are also emitted for matching paths while\ninstantiating the watching as chokidar discovers these file paths (before the `ready` event).\n* `followSymlinks` (default: `true`). When `false`, only the\nsymlinks themselves will be watched for changes instead of following\nthe link references and bubbling events through the link's path.\n* `cwd` (no default). The base directory from which watch `paths` are to be\nderived. Paths emitted with events will be relative to this.\n* `disableGlobbing` (default: `false`). If set to `true` then the strings passed to `.watch()` and `.add()` are treated as\nliteral path names, even if they look like globs.\n\n#### Performance\n\n* `usePolling` (default: `false`).\nWhether to use fs.watchFile (backed by polling), or fs.watch. If polling\nleads to high CPU utilization, consider setting this to `false`. It is\ntypically necessary to **set this to `true` to successfully watch files over\na network**, and it may be necessary to successfully watch files in other\nnon-standard situations. Setting to `true` explicitly on MacOS overrides the\n`useFsEvents` default. You may also set the CHOKIDAR_USEPOLLING env variable\nto true (1) or false (0) in order to override this option.\n* _Polling-specific settings_ (effective when `usePolling: true`)\n  * `interval` (default: `100`). Interval of file system polling, in milliseconds. You may also\n    set the CHOKIDAR_INTERVAL env variable to override this option.\n  * `binaryInterval` (default: `300`). Interval of file system\n  polling for binary files.\n  ([see list of binary extensions](https://github.com/sindresorhus/binary-extensions/blob/master/binary-extensions.json))\n* `useFsEvents` (default: `true` on MacOS). Whether to use the\n`fsevents` watching interface if available. When set to `true` explicitly\nand `fsevents` is available this supercedes the `usePolling` setting. When\nset to `false` on MacOS, `usePolling: true` becomes the default.\n* `alwaysStat` (default: `false`). If relying upon the\n[`fs.Stats`](https://nodejs.org/api/fs.html#fs_class_fs_stats)\nobject that may get passed with `add`, `addDir`, and `change` events, set\nthis to `true` to ensure it is provided even in cases where it wasn't\nalready available from the underlying watch events.\n* `depth` (default: `undefined`). If set, limits how many levels of\nsubdirectories will be traversed.\n* `awaitWriteFinish` (default: `false`).\nBy default, the `add` event will fire when a file first appears on disk, before\nthe entire file has been written. Furthermore, in some cases some `change`\nevents will be emitted while the file is being written. In some cases,\nespecially when watching for large files there will be a need to wait for the\nwrite operation to finish before responding to a file creation or modification.\nSetting `awaitWriteFinish` to `true` (or a truthy value) will poll file size,\nholding its `add` and `change` events until the size does not change for a\nconfigurable amount of time. The appropriate duration setting is heavily\ndependent on the OS and hardware. For accurate detection this parameter should\nbe relatively high, making file watching much less responsive.\nUse with caution.\n  * *`options.awaitWriteFinish` can be set to an object in order to adjust\n  timing params:*\n  * `awaitWriteFinish.stabilityThreshold` (default: 2000). Amount of time in\n  milliseconds for a file size to remain constant before emitting its event.\n  * `awaitWriteFinish.pollInterval` (default: 100). File size polling interval, in milliseconds.\n\n#### Errors\n\n* `ignorePermissionErrors` (default: `false`). Indicates whether to watch files\nthat don't have read permissions if possible. If watching fails due to `EPERM`\nor `EACCES` with this set to `true`, the errors will be suppressed silently.\n* `atomic` (default: `true` if `useFsEvents` and `usePolling` are `false`).\nAutomatically filters out artifacts that occur when using editors that use\n\"atomic writes\" instead of writing directly to the source file. If a file is\nre-added within 100 ms of being deleted, Chokidar emits a `change` event\nrather than `unlink` then `add`. If the default of 100 ms does not work well\nfor you, you can override it by setting `atomic` to a custom value, in\nmilliseconds.\n\n### Methods & Events\n\n`chokidar.watch()` produces an instance of `FSWatcher`. Methods of `FSWatcher`:\n\n* `.add(path / paths)`: Add files, directories, or glob patterns for tracking.\nTakes an array of strings or just one string.\n* `.on(event, callback)`: Listen for an FS event.\nAvailable events: `add`, `addDir`, `change`, `unlink`, `unlinkDir`, `ready`,\n`raw`, `error`.\nAdditionally `all` is available which gets emitted with the underlying event\nname and path for every event other than `ready`, `raw`, and `error`.  `raw` is internal, use it carefully.\n* `.unwatch(path / paths)`: Stop watching files, directories, or glob patterns.\nTakes an array of strings or just one string. Use with `await` to ensure bugs don't happen.\n* `.close()`: **async** Removes all listeners from watched files. Asynchronous, returns Promise.\n* `.getWatched()`: Returns an object representing all the paths on the file\nsystem being watched by this `FSWatcher` instance. The object's keys are all the\ndirectories (using absolute paths unless the `cwd` option was used), and the\nvalues are arrays of the names of the items contained in each directory.\n\n## CLI\n\nIf you need a CLI interface for your file watching, check out\n[chokidar-cli](https://github.com/kimmobrunfeldt/chokidar-cli), allowing you to\nexecute a command on each change, or get a stdio stream of change events.\n\n## Install Troubleshooting\n\n* `npm WARN optional dep failed, continuing fsevents@n.n.n`\n  * This message is normal part of how `npm` handles optional dependencies and is\n    not indicative of a problem. Even if accompanied by other related error messages,\n    Chokidar should function properly.\n\n* `TypeError: fsevents is not a constructor`\n  * Update chokidar by doing `rm -rf node_modules package-lock.json yarn.lock && npm install`, or update your dependency that uses chokidar.\n\n* Chokidar is producing `ENOSP` error on Linux, like this:\n  * `bash: cannot set terminal process group (-1): Inappropriate ioctl for device bash: no job control in this shell`\n  `Error: watch /home/ ENOSPC`\n  * This means Chokidar ran out of file handles and you'll need to increase their count by executing the following command in Terminal:\n  `echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p`\n\n## Changelog\n\nFor more detailed changelog, see [`full_changelog.md`](.github/full_changelog.md).\n- **v3.4 (Apr 26, 2020):** Support for directory-based symlinks. Macos file replacement fixes.\n- **v3.3 (Nov 2, 2019):** `FSWatcher#close()` method became async. That fixes IO race conditions related to close method.\n- **v3.2 (Oct 1, 2019):** Improve Linux RAM usage by 50%. Race condition fixes. Windows glob fixes. Improve stability by using tight range of dependency versions.\n- **v3.1 (Sep 16, 2019):** dotfiles are no longer filtered out by default. Use `ignored` option if needed. Improve initial Linux scan time by 50%.\n- **v3 (Apr 30, 2019):** massive CPU & RAM consumption improvements; reduces deps / package size by a factor of 17x and bumps Node.js requirement to v8.16 and higher.\n- **v2 (Dec 29, 2017):** Globs are now posix-style-only; without windows support. Tons of bugfixes.\n- **v1 (Apr 7, 2015):** Glob support, symlink support, tons of bugfixes. Node 0.8+ is supported\n- **v0.1 (Apr 20, 2012):** Initial release, extracted from [Brunch](https://github.com/brunch/brunch/blob/9847a065aea300da99bd0753f90354cde9de1261/src/helpers.coffee#L66)\n\n## Also\n\nWhy was chokidar named this way? What's the meaning behind it?\n\n>Chowkidar is a transliteration of a Hindi word meaning 'watchman, gatekeeper', चौकीदार. This ultimately comes from Sanskrit _ चतुष्क_ (crossway, quadrangle, consisting-of-four).\n\n## License\n\nMIT (c) Paul Miller (<https://paulmillr.com>), see [LICENSE](LICENSE) file.\n",
   "maintainers": [
     {
       "name": "es128",
@@ -7939,7 +8677,7 @@
     }
   ],
   "time": {
-    "modified": "2019-12-15T18:32:06.695Z",
+    "modified": "2020-10-13T11:05:00.656Z",
     "created": "2012-04-26T01:32:10.158Z",
     "0.1.1": "2012-04-26T01:32:12.087Z",
     "0.2.0": "2012-05-04T13:53:24.862Z",
@@ -8037,7 +8775,11 @@
     "3.2.2": "2019-10-16T02:42:59.097Z",
     "3.2.3": "2019-10-28T01:10:03.151Z",
     "3.3.0": "2019-11-02T08:55:45.322Z",
-    "3.3.1": "2019-12-15T18:32:04.428Z"
+    "3.3.1": "2019-12-15T18:32:04.428Z",
+    "3.4.0": "2020-04-26T14:20:24.899Z",
+    "3.4.1": "2020-07-16T02:26:49.851Z",
+    "3.4.2": "2020-08-06T15:47:57.157Z",
+    "3.4.3": "2020-10-13T11:04:58.386Z"
   },
   "author": {
     "name": "Paul Miller",
@@ -8247,5 +8989,7 @@
     {
       "name": "Elan Shanker"
     }
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

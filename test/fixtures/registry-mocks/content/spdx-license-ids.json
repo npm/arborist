@@ -1,10 +1,10 @@
 {
   "_id": "spdx-license-ids",
-  "_rev": "18-c5ea233198af9e5064761898c7054759",
+  "_rev": "20-0b8a2ea80d4e8a9b87e65fff9d100c13",
   "name": "spdx-license-ids",
   "description": "A list of SPDX license identifiers",
   "dist-tags": {
-    "latest": "3.0.5",
+    "latest": "3.0.6",
     "next": "3.0.0-1"
   },
   "versions": {
@@ -1386,16 +1386,98 @@
         "tmp": "tmp/spdx-license-ids_3.0.5_1562834201821_0.7906489918867339"
       },
       "_hasShrinkwrap": false
+    },
+    "3.0.6": {
+      "name": "spdx-license-ids",
+      "version": "3.0.6",
+      "description": "A list of SPDX license identifiers",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jslicense/spdx-license-ids.git"
+      },
+      "author": {
+        "name": "Shinnosuke Watanabe",
+        "url": "https://github.com/shinnn"
+      },
+      "license": "CC0-1.0",
+      "scripts": {
+        "build": "node build.js",
+        "pretest": "eslint .",
+        "test": "node test.js"
+      },
+      "keywords": [
+        "spdx",
+        "license",
+        "licenses",
+        "id",
+        "identifier",
+        "identifiers",
+        "json",
+        "array",
+        "oss"
+      ],
+      "devDependencies": {
+        "@shinnn/eslint-config": "^6.8.7",
+        "chalk": "^2.4.1",
+        "eslint": "^5.10.0",
+        "get-spdx-license-ids": "^2.1.0",
+        "rmfr": "^2.0.0",
+        "tape": "^4.9.1"
+      },
+      "eslintConfig": {
+        "extends": "@shinnn"
+      },
+      "gitHead": "c126466620d02a453a0d4305a53c811fa1cff928",
+      "bugs": {
+        "url": "https://github.com/jslicense/spdx-license-ids/issues"
+      },
+      "homepage": "https://github.com/jslicense/spdx-license-ids#readme",
+      "_id": "spdx-license-ids@3.0.6",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-+orQK83kyMva3WyPf59k1+Y525csj5JejicWut55zeTWANuN17qSiSLUXWtzHeNWORSvT7GLDJ/E/XiIWoXBTw==",
+        "shasum": "c80757383c28abf7296744998cbc106ae8b854ce",
+        "tarball": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.6.tgz",
+        "fileCount": 4,
+        "unpackedSize": 9030,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfYm8zCRA9TVsSAnZWagAA6wkP/jqQ9sQeWBnegJAxoNCT\n5qQ4/kilj5OblLJK8nBV8nl30AseLl8K01P4R5d9GDoM99VFBlrThpNMFrOH\n3pfSMl6MqMXQDgCJ620Q5zgNaNkiUO8rcGNV3pPywfHRlESQr+vqw/ARASUA\nYyQJwwrMiX2wx/XoZwstglkLv5LIaZKfFxPC5wek/FJCME3MA3g76Ov69fpu\ng+1/MkkRvyQSxLVd4StfynAkoGzOR5jIYcRiCGtVI8sZnHooIuJDwAkc+68E\ni2hm4H1ouQxVHgHwelSpvgS0qG44MHKukZzRdljZF847/cyga4eA5dGox2/Z\nfFi4kTKFiYymm7dI9tk6GX0AhH1VdVvLjupCk57dbRzp4WumgibkTpPlYva6\nwTLFRRzF3JzroBgr2wzI58utHbPrExsppWFELRXmDcrfRzlVxKGIHcOMJYKq\nG9uwn/Pmvyphlqd8jvsUFtNPm6jaz3dbZfwFlncYBkxC+b3v7QSEpHo2k+C9\nSqpRCwxrhqqbjKhVo5QyuuGX8+2aD+qot8hmPPNLaZXAvriE5bKEp7rMCEe4\n3FExo/XeUzVQDM7YhNTKTYtT6wXXD46yssxWAplIYAq223dQILfdMz9vNu5C\nSVLzHo5fchro6SsApz8OYnf20TWFCn9Rg42QAfJ9z9SdiA21g9mKkBBlqPLT\nJnPM\r\n=7pLi\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "kemitchell",
+          "email": "kyle@kemitchell.com"
+        },
+        {
+          "name": "shinnn",
+          "email": "snnskwtnb@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "kemitchell",
+        "email": "kyle@kemitchell.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/spdx-license-ids_3.0.6_1600286515182_0.14321729541281436"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# spdx-license-ids\n\n[![npm version](https://img.shields.io/npm/v/spdx-license-ids.svg)](https://www.npmjs.com/package/spdx-license-ids)\n[![Github Actions](https://action-badges.now.sh/shinnn/spdx-license-ids)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/shinnn/spdx-license-ids)\n\nA list of [SPDX license](https://spdx.org/licenses/) identifiers\n\n## Installation\n\n[Download JSON directly](https://raw.githubusercontent.com/shinnn/spdx-license-ids/master/index.json), or [use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/):\n\n```\nnpm install spdx-license-ids\n```\n\n## [Node.js](https://nodejs.org/) API\n\n### require('spdx-license-ids')\n\nType: `string[]`\n\nAll license IDs except for the currently deprecated ones.\n\n```javascript\nconst ids = require('spdx-license-ids');\n//=> ['0BSD', 'AAL', 'ADSL', 'AFL-1.1', 'AFL-1.2', 'AFL-2.0', 'AFL-2.1', 'AFL-3.0', 'AGPL-1.0-only', ...]\n\nids.includes('BSD-3-Clause'); //=> true\nids.includes('CC-BY-1.0'); //=> true\n\nids.includes('GPL-3.0'); //=> false\n```\n\n### require('spdx-license-ids/deprecated')\n\nType: `string[]`\n\nDeprecated license IDs.\n\n```javascript\nconst deprecatedIds = require('spdx-license-ids/deprecated');\n//=> ['AGPL-1.0', 'AGPL-3.0', 'GFDL-1.1', 'GFDL-1.2', 'GFDL-1.3', 'GPL-1.0', 'GPL-2.0', ...]\n\ndeprecatedIds.includes('BSD-3-Clause'); //=> false\ndeprecatedIds.includes('CC-BY-1.0'); //=> false\n\ndeprecatedIds.includes('GPL-3.0'); //=> true\n```\n\n## License\n\n[Creative Commons Zero v1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed)\n",
   "maintainers": [
+    {
+      "name": "kemitchell",
+      "email": "kyle@kemitchell.com"
+    },
     {
       "name": "shinnn",
       "email": "snnskwtnb@gmail.com"
     }
   ],
   "time": {
-    "modified": "2019-07-11T08:36:44.490Z",
+    "modified": "2020-09-16T20:01:57.541Z",
     "created": "2015-05-02T07:59:28.765Z",
     "0.0.0": "2015-05-02T07:59:28.765Z",
     "1.0.0": "2015-05-02T08:13:14.932Z",
@@ -1414,9 +1496,10 @@
     "3.0.2": "2018-10-31T07:26:10.032Z",
     "3.0.3": "2018-12-20T17:50:11.799Z",
     "3.0.4": "2019-04-06T13:51:24.031Z",
-    "3.0.5": "2019-07-11T08:36:41.955Z"
+    "3.0.5": "2019-07-11T08:36:41.955Z",
+    "3.0.6": "2020-09-16T20:01:55.291Z"
   },
-  "homepage": "https://github.com/shinnn/spdx-license-ids#readme",
+  "homepage": "https://github.com/jslicense/spdx-license-ids#readme",
   "keywords": [
     "spdx",
     "license",
@@ -1430,15 +1513,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shinnn/spdx-license-ids.git"
+    "url": "git+https://github.com/jslicense/spdx-license-ids.git"
   },
   "author": {
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
   },
   "bugs": {
-    "url": "https://github.com/shinnn/spdx-license-ids/issues"
+    "url": "https://github.com/jslicense/spdx-license-ids/issues"
   },
   "readmeFilename": "README.md",
-  "license": "CC0-1.0"
+  "license": "CC0-1.0",
+  "_cached": false,
+  "_contentLength": 0
 }

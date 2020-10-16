@@ -780,6 +780,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# decamelize [![Build Status](https://travis-ci.org/sindresorhus/decamelize.svg?branch=master)](https://travis-ci.org/sindresorhus/decamelize)\n\n> Convert a camelized string into a lowercased one with a custom separator<br>\n> Example: `unicornRainbow` → `unicorn_rainbow`\n\n## Install\n\n```\n$ npm install decamelize\n```\n\n## Usage\n\n```js\nconst decamelize = require('decamelize');\n\ndecamelize('unicornRainbow');\n//=> 'unicorn_rainbow'\n\ndecamelize('unicornRainbow', '-');\n//=> 'unicorn-rainbow'\n```\n\n## API\n\n### decamelize(input, separator?)\n\n#### input\n\nType: `string`\n\n#### separator\n\nType: `string`\\\nDefault: `'_'`\n\n## Related\n\nSee [`camelcase`](https://github.com/sindresorhus/camelcase) for the inverse.\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-decamelize?utm_source=npm-decamelize&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -837,5 +838,7 @@
     "arefm": true,
     "esenor": true,
     "xhou": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

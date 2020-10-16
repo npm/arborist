@@ -1,6 +1,6 @@
 {
   "_id": "asn1",
-  "_rev": "53-56728c1162c6c03d853ad671abad9fbe",
+  "_rev": "58-9eaa72619ad98c94a0d48542a19da149",
   "name": "asn1",
   "description": "Contains parsers and serializers for ASN.1 (currently BER only)",
   "dist-tags": {
@@ -920,16 +920,8 @@
   },
   "maintainers": [
     {
-      "email": "mgerdts@gmail.com",
-      "name": "mgerdts"
-    },
-    {
-      "email": "kelly.mclaughlin@joyent.com",
-      "name": "kellymclaughlin"
-    },
-    {
-      "email": "isaac.davis@joyent.com",
-      "name": "isaacdavis"
+      "email": "jesse.butryn@live.com",
+      "name": "jesse_b"
     },
     {
       "email": "dave@daveeddy.com",
@@ -960,10 +952,6 @@
       "name": "kkantor"
     },
     {
-      "email": "trentm@gmail.com",
-      "name": "trentm"
-    },
-    {
       "email": "todd.whiteman@joyent.com",
       "name": "todd.whiteman"
     },
@@ -985,7 +973,7 @@
     }
   ],
   "time": {
-    "modified": "2020-02-04T21:05:51.738Z",
+    "modified": "2020-10-09T21:00:47.029Z",
     "created": "2011-07-19T19:07:06.870Z",
     "0.1.0": "2011-12-08T16:49:17.462Z",
     "0.1.1": "2011-12-08T16:49:17.462Z",
@@ -1013,6 +1001,7 @@
     "type": "git",
     "url": "git://github.com/joyent/node-asn1.git"
   },
+  "readme": "node-asn1 is a library for encoding and decoding ASN.1 datatypes in pure JS.\nCurrently BER encoding is supported; at some point I'll likely have to do DER.\n\n## Usage\n\nMostly, if you're *actually* needing to read and write ASN.1, you probably don't\nneed this readme to explain what and why.  If you have no idea what ASN.1 is,\nsee this: ftp://ftp.rsa.com/pub/pkcs/ascii/layman.asc\n\nThe source is pretty much self-explanatory, and has read/write methods for the\ncommon types out there.\n\n### Decoding\n\nThe following reads an ASN.1 sequence with a boolean.\n\n    var Ber = require('asn1').Ber;\n\n    var reader = new Ber.Reader(Buffer.from([0x30, 0x03, 0x01, 0x01, 0xff]));\n\n    reader.readSequence();\n    console.log('Sequence len: ' + reader.length);\n    if (reader.peek() === Ber.Boolean)\n      console.log(reader.readBoolean());\n\n### Encoding\n\nThe following generates the same payload as above.\n\n    var Ber = require('asn1').Ber;\n\n    var writer = new Ber.Writer();\n\n    writer.startSequence();\n    writer.writeBoolean(true);\n    writer.endSequence();\n\n    console.log(writer.buffer);\n\n## Installation\n\n    npm install asn1\n\n## License\n\nMIT.\n\n## Bugs\n\nSee <https://github.com/joyent/node-asn1/issues>.\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/joyent/node-asn1#readme",
   "contributors": [
@@ -1040,5 +1029,7 @@
   "users": {
     "shanewholloway": true,
     "sopov": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

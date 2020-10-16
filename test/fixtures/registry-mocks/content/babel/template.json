@@ -1,10 +1,10 @@
 {
   "_id": "@babel/template",
-  "_rev": "69-762dfc6627510109ae723f64624708c2",
+  "_rev": "76-a9de36f0d165fae56e1678486fba7cc9",
   "name": "@babel/template",
   "description": "Generate an AST from a string template.",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.10.4"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -1962,6 +1962,7 @@
         "@babel/parser": "7.0.0-rc.3",
         "@babel/types": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.0.0-rc.3",
       "dist": {
         "shasum": "2ba7d00f86744762632d06a0ffb0494f8443581f",
@@ -2024,6 +2025,7 @@
         "@babel/parser": "^7.0.0-rc.4",
         "@babel/types": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.0.0-rc.4",
       "dist": {
         "shasum": "695b6d9bf90ec193fd90d533a7b8b3b904f21eae",
@@ -2087,6 +2089,8 @@
         "@babel/types": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/template\n\n> Generate an AST from a string template.\n\nSee our website [@babel/template](https://babeljs.io/docs/en/next/babel-template.html) for more information or the [issues](https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20template%22+is%3Aopen) associated with this package.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/template\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/template --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.0.0",
       "dist": {
         "shasum": "c2bc9870405959c89a9c814376a2ecb247838c80",
@@ -2152,6 +2156,7 @@
         "@babel/parser": "^7.1.0",
         "@babel/types": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.1.0",
       "dist": {
         "shasum": "58cc9572e1bfe24fe1537fdf99d839d53e517e22",
@@ -2213,6 +2218,7 @@
         "@babel/parser": "^7.1.1",
         "@babel/types": "^7.1.1"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.1.1",
       "dist": {
         "shasum": "21430719f1c6cbbbcf274623b42bbe96fda896dc",
@@ -2274,6 +2280,7 @@
         "@babel/parser": "^7.1.2",
         "@babel/types": "^7.1.2"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.1.2",
       "dist": {
         "shasum": "090484a574fef5a2d2d7726a674eceda5c5b5644",
@@ -2335,6 +2342,7 @@
         "@babel/parser": "^7.2.2",
         "@babel/types": "^7.2.2"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.2.2",
       "dist": {
         "shasum": "005b3fdf0ed96e88041330379e0da9a708eb2907",
@@ -2401,6 +2409,7 @@
         "@babel/types": "^7.4.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.4.0",
       "dist": {
         "shasum": "12474e9c077bae585c5d835a95c0b0b790c25c8b",
@@ -2467,6 +2476,7 @@
         "@babel/types": "^7.4.4"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/template@7.4.4",
       "dist": {
         "shasum": "f4b88d1225689a08f5bc3a17483545be9e4ed237",
@@ -2861,16 +2871,377 @@
         "tmp": "tmp/template_7.8.3_1578951722808_0.18120116454852164"
       },
       "_hasShrinkwrap": false
+    },
+    "7.8.6": {
+      "name": "@babel/template",
+      "version": "7.8.6",
+      "description": "Generate an AST from a string template.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-template"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/parser": "^7.8.6",
+        "@babel/types": "^7.8.6"
+      },
+      "gitHead": "750d3dde3bd2d390819820fd22c05441da78751b",
+      "_id": "@babel/template@7.8.6",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.7.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-zbMsPMy/v0PWFZEhQJ66bqjhH+z0JgMoBWuikXybgG3Gkd/3t5oQ1Rw2WQhnSrsOmsKXnZOx15tkC4qON/+JPg==",
+        "shasum": "86b22af15f828dfb086474f964dcc3e39c43ce2b",
+        "tarball": "https://registry.npmjs.org/@babel/template/-/template-7.8.6.tgz",
+        "fileCount": 11,
+        "unpackedSize": 23987,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeV7RNCRA9TVsSAnZWagAACZwP+wR0bMzEV1Z5u2ym89m2\nIDfDtg2f7KUuDgqD3sj97bYq+h8qGvSDgNSmdH8RguKq9N7WUHmw4gIBKnfy\n+/Xhq8tCObZHtMXO2O6E3GMkW19Jym8etm7GFpZaBAf+7By2uqH/0/f2CIhg\nIdbtbKhqCu6IHW5y2tvB305zSgsjooLNmspph5i+Y1FNzRSzUCTp/neibY33\nEePg5/Lo5KKbmKRb4KtVQ5q0BlN75srIvwgGgfPmgwnaDSpwW2w/jJ7ftIZd\n5/YiGO3J9J27Vx1MokwypDOQy7dpTINR1v5VbLaQo7b5w1Dz5Zcb5xPdwcTe\niQSgvcU6c75Qv8hyY/PKdE6eHBI9kRqubybvVA+9gDKexCl1ijhwU7vSaDrb\nEpR7PDTIVOKrPMBwTW3yN2szB5ZO1j29/QKfRkls3zq3yQI3Z3Jr1MdtVXkc\nVCYuHGVpNCKtliY4yorMcOy4ipfP2Oqlirdf7amX1B2dhan4WvTWo1dVaPQd\nuNKHiQM2pcZ6QMsmWHNZ8v1hpOA1JM/AvpLQFmxEQlQ3gNM1NT/7E2cpaU2z\nTtC2clJrjVq77K1xCekLqqnanT5hGKmttIVvfg+XPm8UhudglL9bTgi/M4G5\n7W0xSUAmXYjzkepBCp/zETPJNi/IL8K608kbBdijYMuX0qWrclFTraL4ESLL\nqrF6\r\n=DwHT\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/template_7.8.6_1582806092994_0.12577470391090428"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/template",
+      "version": "7.10.0",
+      "description": "Generate an AST from a string template.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-template"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.8.3",
+        "@babel/parser": "^7.10.0",
+        "@babel/types": "^7.10.0"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/template@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-aMLEQn5tcG49LEWrsEwxiRTdaJmvLem3+JMCMSeCy2TILau0IDVyWdm/18ACx7XOCady64FLt6KkHy28tkDQHQ==",
+        "shasum": "f15d852ce16cd5fb3e219097a75f662710b249b1",
+        "tarball": "https://registry.npmjs.org/@babel/template/-/template-7.10.0.tgz",
+        "fileCount": 11,
+        "unpackedSize": 24086,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY2CCRA9TVsSAnZWagAAM4IP/iVEoMDot658Yx8WgTyL\n2OwnETj7MspK5GQksNtDo1F5sgxmUDjYhrgoAHBGN111At6whM2e3st/+Afl\ns0Bsq+zrLQUXyaHDyA5WEl8lcB0Y12l7bCYFBnpX4Oi/EPx3gjjsFZ7KXEok\n/+8Fex5jhJdZTIeQb5FpofNmEgSWbL0tqGH5hDqUOPfetuXVDACLx2dxoOUH\nORQ2BRETMQ+YN1whsx6FiRQyUFHX1XP8HbMTf0/sfBMLHCoTS8bZ8uE8uOcV\nwL6RuKac8sYhynwVi6s8CKXzRaxVfqAFY1q6luIIjGEEl/eG48a75HtjhCBN\n8j3MN8NkKDTejJCJHCNc4MRh2+JtxxTM0oanHyslJL1cX8EUOeWoakdn4lcD\nxzqhS4SKfsOJJXE9B4xOnEtuCE/V8BQDLDoSFG6410lTZxR3zBVYmI9goJO4\nmy+tqn5TEBTaVrEr8oOGwsvtM6gyVd3PsakHyNu+lfWL5unzrWmWVML3MTUA\nTeSHUiTQI6i24IH7l4s1+QB5fNKhum0CBW0uC1ZnEFibUzvrMtBekXMxVIK3\nZQx0uDLaSUzTCBPwi8C2Jie9BkqMjE1fRxEuAVbL0IEfWLpEmXixt0QWlYeN\nFmrrEtN+rIQOK6AUgkr6R7wTlua5+kYUcK4aXy0kc7VKeQX4PxY5oRSSnwJJ\n3cd+\r\n=7ZKl\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/template_7.10.0_1590529410194_0.654548207323411"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/template",
+      "version": "7.10.1",
+      "description": "Generate an AST from a string template.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-template"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.1",
+        "@babel/parser": "^7.10.1",
+        "@babel/types": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/template@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-OQDg6SqvFSsc9A0ej6SKINWrpJiNonRIniYondK2ViKhB06i3c0s+76XUft71iqBEe9S1OKsHwPAjfHnuvnCig==",
+        "shasum": "e167154a94cb5f14b28dc58f5356d2162f539811",
+        "tarball": "https://registry.npmjs.org/@babel/template/-/template-7.10.1.tgz",
+        "fileCount": 11,
+        "unpackedSize": 24135,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuS0CRA9TVsSAnZWagAA9s4QAJuMJChHvxAJIa3GxjMQ\nlegs3V08fRLE4wqVPRWFwCPKefrzFctNVk5a26Shi5kzVJ6hsVeDGqTsKTSJ\n4/4edyAVzHybM2O7elRZ2hqCadp8c9YgNIrnaVSsyBxgHi+sr9UhgnLYQ53M\nBAA0736UnGywWcTDZSxEDEJ5RRSFgKKg7oiukC21HARSFqsM/VOncAGPbyOC\nbOin7KyHLRUo24i1kwEZL9CtyPFZIZaflv5KkGHPtkXOLD9HQ+0f6kuonPmM\nEMSr2AONh1IAW0OWb3214C0rXnbhfPiomg0ml+Sngeb7WvQoH+2Lx4iLRW0l\nRVzwZG3HZ5SaI4Q9CImh08OxHEWy5SpgElEyu5j61Gt2lgqqEEzi21FZmjlZ\nsk0AoybNjAgmYm45A+RixtL8+G25nF2M7MoExieAytAg9LV6tuCygaY2ILOD\nQ8qBT4O7cGEV4xPrj36a/JGyIlfOesW814xjVeaFt0++PFmQ1J1aMMeU1ivU\nEgctB8Jjqjb0C5iVoTLceHl5QixvdFMuI6b+216zAuMJh2LvJYuBwEbRkPK5\nUKakQ5zxAccBe5FuQxhczWfmtdfT9zUt93QQc3FW/onFGVb5XJqr0VrPgwNg\nSpSO4shkJzqsmAkHqr+j7iCQvWWYb8SHbz5X1o47UeyWTTscJpkvK42Y8AsM\nDAs1\r\n=8/1o\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/template_7.10.1_1590617268270_0.6780331120459875"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/template",
+      "version": "7.10.3",
+      "description": "Generate an AST from a string template.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-template"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.3",
+        "@babel/parser": "^7.10.3",
+        "@babel/types": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/template@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-5BjI4gdtD+9fHZUsaxPHPNpwa+xRkDO7c7JbhYn2afvrkDu5SfAAbi9AIMXw2xEhO/BR35TqiW97IqNvCo/GqA==",
+        "shasum": "4d13bc8e30bf95b0ce9d175d30306f42a2c9a7b8",
+        "tarball": "https://registry.npmjs.org/@babel/template/-/template-7.10.3.tgz",
+        "fileCount": 11,
+        "unpackedSize": 24231,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYJCRA9TVsSAnZWagAASlkP/0fa1yFJBXIeSzwyVlt0\nhBigvF2WpL9kx8kqmZsE1t407sR0y9wMoO9S8ZmmWkyYiujP+eByUBf4WCL5\nPRv2HiakblPw2K7v+YQTaw4Rp2hM9IUZ5mSU7v8tGdqyAeO+EeAw0Ugw2MXr\nmeGYL4GD2jcvaD65MxcZa9RCDI2DAWK8S9CfwcPrtNiUFoeosqTxNSCTQH5c\nlpInDHB8jJf5T4/WdX6mXE7y+pZnQaynF2CzrB7KHTfm+ZC3X6X7BldeniAp\nlqfPMJtjBf+cu45wdDPODtQsRIv5MQ5mS4v6grSqYDnDVy8wHIMti1CpBGJx\n0s6g4TGCJ5e8AUJ1gHztrDbnsoun27MfplT2A3nvBm4cZyXTjPed9XmqQaOw\n5vR9OwWP3H9m8Gi5awGqneZxyCvy2fC5IFhtQyd9D6/K0zrWNsktoaG5yghZ\nfpaw6uh5Emto0nENbHC483eLX+XpqMUdJoeh46h/JCNzskgmdVbWTvJ1cVkK\nUJRcOiuMw+1AMpm666NgFfZcUZpyANL+iToLNXERq23VkKtzPtnr0CIwNTxY\nFvMsSlV/0DZDGn2oRY1bOv2gzh8IVz6BPvG8LSJaaZDlwBw5BOJznLzQWqIp\nxCiOg+2RYVo6cEtqibWqDtxn5CnPDixxUsWTppYi6X0zJDoMXjgn+DAphrHf\nKB+B\r\n=zMuI\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/template_7.10.3_1592600072718_0.6810434029044472"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/template",
+      "version": "7.10.4",
+      "description": "Generate an AST from a string template.",
+      "author": {
+        "name": "Sebastian McKenzie",
+        "email": "sebmck@gmail.com"
+      },
+      "homepage": "https://babeljs.io/",
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-template"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/code-frame": "^7.10.4",
+        "@babel/parser": "^7.10.4",
+        "@babel/types": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "_id": "@babel/template@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-ZCjD27cGJFUB6nmCB1Enki3r+L5kJveX9pq1SvAUKoICy6CZ9yD8xO086YXdYhvNjBdnekm4ZnaP5yC8Cs/1tA==",
+        "shasum": "3251996c4200ebc71d1a8fc405fba940f36ba278",
+        "tarball": "https://registry.npmjs.org/@babel/template/-/template-7.10.4.tgz",
+        "fileCount": 11,
+        "unpackedSize": 24231,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zpMCRA9TVsSAnZWagAABdEP/0M5zdn8brFCWtdi8GfD\n7wzOhNe4YtS5CzqnTiNRhdTQ7P/891ZaS0LD8BlNbLa3mRaMW2e+bjrXMh/h\nKJzVINfDmD1SjgN6vXFcSctt0r7hOd3uAC21edT2bckBG3vKvHqV68qMHJOM\neFJsPFrflVtmaLgqFQBL8NHWWLY3JkJaV3Y+qR0WC7bXKfC8s6vrMrPgNgWv\na9ig9keIXP+dzpLXHWLvVX53geal0tdNcBVnipfd0awuBynybzqjGYD8YfnD\nENE0pjbvPZrw3VQBMQ4hz853n6xyJUfoM797bbZ9yYH2M7gKygI4s2I3/J4M\nWFXl7H/2CVB2LYaYxPzeW6XWVbGUycF/HESEHSYa5QpnhRK27Bh9kKhWpjcW\npvIy8ek9kVKecQoIaniSCjIhhjbQ87thLDfasRtF824MClnz5XJbwgQgI22f\nyB81a9Wjm07bLFLpRwfKrDy5KtxL0OCTFmsvx4S7DYMjqEDkgXNBZWCB4Au7\nOc6XJNkcDiZ69UE9jNkjNfjBN9EcXwvmkbtYpnooDQYGKeNj10of8rBhpywU\nMaweS6wUjPK/h2JIFCwAZZiEtLAQFIs/ONRPyg22kK4oSU44VZ5tXC6+5/V9\n1mzqHrf0b2ZoXjXXqOPZb67GQBCgP3MVKbPBFDAuj4z4nykejtTDoGGA9ABi\ny/7d\r\n=+j9v\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/template_7.10.4_1593522763822_0.08416775203985671"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# @babel/template\n\n> Generate an AST from a string template.\n\nSee our website [@babel/template](https://babeljs.io/docs/en/next/babel-template.html) for more information or the [issues](https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20template%22+is%3Aopen) associated with this package.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/template\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/template --dev\n```\n",
   "maintainers": [
     {
       "email": "daniel@tschinder.de",
       "name": "danez"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
     },
     {
       "email": "bng412@gmail.com",
@@ -2879,6 +3250,10 @@
     {
       "email": "hi@henryzoo.com",
       "name": "hzoo"
+    },
+    {
+      "email": "i@jhuang.me",
+      "name": "jlhwung"
     },
     {
       "email": "loganfsmyth@gmail.com",
@@ -2890,7 +3265,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:42:08.572Z",
+    "modified": "2020-06-30T13:12:48.215Z",
     "created": "2017-10-30T18:35:33.711Z",
     "7.0.0-beta.4": "2017-10-30T18:35:33.711Z",
     "7.0.0-beta.5": "2017-10-30T20:57:10.361Z",
@@ -2936,12 +3311,18 @@
     "7.7.0": "2019-11-05T10:53:28.805Z",
     "7.7.4": "2019-11-22T23:33:28.291Z",
     "7.8.0": "2020-01-12T00:16:51.065Z",
-    "7.8.3": "2020-01-13T21:42:02.911Z"
+    "7.8.3": "2020-01-13T21:42:02.911Z",
+    "7.8.6": "2020-02-27T12:21:33.135Z",
+    "7.10.0": "2020-05-26T21:43:30.312Z",
+    "7.10.1": "2020-05-27T22:07:48.424Z",
+    "7.10.3": "2020-06-19T20:54:32.896Z",
+    "7.10.4": "2020-06-30T13:12:43.921Z"
   },
   "homepage": "https://babeljs.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-template"
+    "url": "git+https://github.com/babel/babel.git",
+    "directory": "packages/babel-template"
   },
   "author": {
     "name": "Sebastian McKenzie",
@@ -2951,5 +3332,10 @@
   "readmeFilename": "README.md",
   "users": {
     "colshacol": true
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/babel/babel/issues"
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

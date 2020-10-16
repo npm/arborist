@@ -727,6 +727,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# read-pkg-up [![Build Status](https://travis-ci.org/sindresorhus/read-pkg-up.svg?branch=master)](https://travis-ci.org/sindresorhus/read-pkg-up)\n\n> Read the closest package.json file\n\n## Why\n\n- [Finds the closest package.json](https://github.com/sindresorhus/find-up)\n- [Gracefully handles filesystem issues](https://github.com/isaacs/node-graceful-fs)\n- [Throws more helpful JSON errors](https://github.com/sindresorhus/parse-json)\n- [Normalizes the data](https://github.com/npm/normalize-package-data#what-normalization-currently-entails)\n\n## Install\n\n```\n$ npm install read-pkg-up\n```\n\n## Usage\n\n```js\nconst readPkgUp = require('read-pkg-up');\n\n(async () => {\n\tconsole.log(await readPkgUp());\n\t/*\n\t{\n\t\tpackageJson: {\n\t\t\tname: 'awesome-package',\n\t\t\tversion: '1.0.0',\n\t\t\t…\n\t\t},\n\t\tpath: '/Users/sindresorhus/dev/awesome-package/package.json'\n\t}\n\t*/\n})();\n```\n\n## API\n\n### readPkgUp(options?)\n\nReturns a `Promise<object>` or `Promise<undefined>` if no `package.json` was found.\n\n### readPkgUp.sync(options?)\n\nReturns the result object or `undefined` if no `package.json` was found.\n\n#### options\n\nType: `object`\n\n##### cwd\n\nType: `string`\\\nDefault: `process.cwd()`\n\nDirectory to start looking for a package.json file.\n\n##### normalize\n\nType: `boolean`\\\nDefault: `true`\n\n[Normalize](https://github.com/npm/normalize-package-data#what-normalization-currently-entails) the package data.\n\n## read-pkg-up for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of read-pkg-up and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-read-pkg-up?utm_source=npm-read-pkg-up&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)\n\n## Related\n\n- [read-pkg](https://github.com/sindresorhus/read-pkg) - Read a package.json file\n- [pkg-up](https://github.com/sindresorhus/pkg-up) - Find the closest package.json file\n- [find-up](https://github.com/sindresorhus/find-up) - Find a file by walking up parent directories\n- [pkg-conf](https://github.com/sindresorhus/pkg-conf) - Get namespaced config from the closest package.json\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -794,5 +795,7 @@
     "nuwaio": true,
     "isayme": true,
     "drewigg": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

@@ -1,6 +1,6 @@
 {
   "_id": "inflight",
-  "_rev": "26-74153dc84fbb0e00117e9f7c7c38b678",
+  "_rev": "33-ad7dc5aca6f9108f9bd7bc91b9e24971",
   "name": "inflight",
   "description": "Add callbacks to requests in flight to avoid async duplication",
   "dist-tags": {
@@ -413,18 +413,15 @@
       "directories": {}
     }
   },
+  "readme": "# inflight\n\nAdd callbacks to requests in flight to avoid async duplication\n\n## USAGE\n\n```javascript\nvar inflight = require('inflight')\n\n// some request that does some stuff\nfunction req(key, callback) {\n  // key is any random string.  like a url or filename or whatever.\n  //\n  // will return either a falsey value, indicating that the\n  // request for this key is already in flight, or a new callback\n  // which when called will call all callbacks passed to inflightk\n  // with the same key\n  callback = inflight(key, callback)\n\n  // If we got a falsey value back, then there's already a req going\n  if (!callback) return\n\n  // this is where you'd fetch the url or whatever\n  // callback is also once()-ified, so it can safely be assigned\n  // to multiple events etc.  First call wins.\n  setTimeout(function() {\n    callback(null, key)\n  }, 100)\n}\n\n// only assigns a single setTimeout\n// when it dings, all cbs get called\nreq('foo', cb1)\nreq('foo', cb2)\nreq('foo', cb3)\nreq('foo', cb4)\n```\n",
   "maintainers": [
+    {
+      "email": "quitlahok@gmail.com",
+      "name": "nlf"
+    },
     {
       "email": "ruyadorno@hotmail.com",
       "name": "ruyadorno"
-    },
-    {
-      "email": "mike@mikecorp.ca",
-      "name": "mikemimik"
-    },
-    {
-      "email": "cghr1990@gmail.com",
-      "name": "claudiahdz"
     },
     {
       "email": "darcy@darcyclarke.me",
@@ -435,16 +432,12 @@
       "name": "adam_baldwin"
     },
     {
-      "email": "ahmad@ahmadnassri.com",
-      "name": "ahmadnassri"
-    },
-    {
       "email": "i@izs.me",
       "name": "isaacs"
     }
   ],
   "time": {
-    "modified": "2020-01-02T04:05:35.661Z",
+    "modified": "2020-10-13T05:04:27.266Z",
     "created": "2014-05-05T03:04:32.021Z",
     "1.0.0": "2014-05-05T03:04:32.021Z",
     "1.0.1": "2014-05-05T20:14:07.678Z",
@@ -474,5 +467,7 @@
     "wenbing": true,
     "mojaray2k": true,
     "sbruchmann": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

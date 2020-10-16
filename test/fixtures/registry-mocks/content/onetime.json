@@ -1,10 +1,10 @@
 {
   "_id": "onetime",
-  "_rev": "21-31a6523ebcae103c716bbf391f1cb80a",
+  "_rev": "23-7678056a1c1df40ea4816fb6d92a7ba5",
   "name": "onetime",
   "description": "Ensure a function is only called once",
   "dist-tags": {
-    "latest": "5.1.0"
+    "latest": "5.1.2"
   },
   "versions": {
     "0.1.0": {
@@ -680,8 +680,157 @@
         "tmp": "tmp/onetime_5.1.0_1554172787964_0.04244092407114519"
       },
       "_hasShrinkwrap": false
+    },
+    "5.1.1": {
+      "name": "onetime",
+      "version": "5.1.1",
+      "description": "Ensure a function is only called once",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/onetime.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "once",
+        "function",
+        "one",
+        "onetime",
+        "func",
+        "fn",
+        "single",
+        "call",
+        "called",
+        "prevent"
+      ],
+      "dependencies": {
+        "mimic-fn": "^2.1.0"
+      },
+      "devDependencies": {
+        "ava": "^1.4.1",
+        "tsd": "^0.7.1",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "59e0ad2204b5d44b448a71afb13f228d1977f07f",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/onetime/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/onetime#readme",
+      "_id": "onetime@5.1.1",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-ZpZpjcJeugQfWsfyQlshVoowIIQ1qBGSVll4rfDq6JJVO//fesjoX808hXWfBjY+ROZgpKDI5TRSRBSoJiZ8eg==",
+        "shasum": "5c8016847b0d67fcedb7eef254751cfcdc7e9418",
+        "tarball": "https://registry.npmjs.org/onetime/-/onetime-5.1.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 6173,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfJpVjCRA9TVsSAnZWagAA2xQP/2GUXW7XqJBsodgB7rig\nzrVUJhnp0fxhrAf6zqeeCkCnBJRNGQToqg+c+wZVoMo70+r+vwH3sGbJXJLd\n7vraWS3wJBGrrImzLDGck4YF0DKQ4vzNBrWvEpdTZhiJp3/IUSY2C5GJ8CyB\nMiR8Q66/ylWf8OqbRsbCn4iGPCnm4aOGHObXVVehbHgIxPgzKnykp4bRjr3P\nDTrKolDIOGQV5poP0BK0qBeYvLcWeCDa/+nAUVxjXNVsBrpfeXeqjfUkfmAf\nuKdFiD/b0DCo4qcpKu9TNB77ZYraUDHSYrISwt7A2TffhzGzIUX1liZ5oDyh\nYrvHok8Fc7Rf0fvKpCdoNdsrkUpWtS+ESS7usSnp5c/Kb9Vq1nCPeoSyS2Kh\nswlP1n1JHzDsDUa3aeS9jZV7KxxERIJZfOXAwpzzHG3d7HaVa379C7BslKSY\nL6PhlYZesTXg/j8qRyXdOppF1T145VvV8JLHKpvj38v+F8P8t6LnHUAeFuAE\nW7c81AFYgPckuIzlu5cwY1kuFXE5y9uXv/5HxneOe1s+jjTYTM+i8BYEOMPp\nx1BTymCRNlm7X+uHQkrxsEp94UIUBXFM0XGgtf4wwr7vS/lyxVtZiADrTjlC\nccNfRI7GowFc6DFUBTqqJAUXaHfDVBapOHSuYVYRjlzXUuPznysun2tPa5PC\n8EMe\r\n=/FeN\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/onetime_5.1.1_1596364130751_0.20576953897408923"
+      },
+      "_hasShrinkwrap": false
+    },
+    "5.1.2": {
+      "name": "onetime",
+      "version": "5.1.2",
+      "description": "Ensure a function is only called once",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/onetime.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=6"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "once",
+        "function",
+        "one",
+        "onetime",
+        "func",
+        "fn",
+        "single",
+        "call",
+        "called",
+        "prevent"
+      ],
+      "dependencies": {
+        "mimic-fn": "^2.1.0"
+      },
+      "devDependencies": {
+        "ava": "^1.4.1",
+        "tsd": "^0.7.1",
+        "xo": "^0.24.0"
+      },
+      "gitHead": "4fa3c9a40798476514fec36a1720dc85b897cc04",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/onetime/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/onetime#readme",
+      "_id": "onetime@5.1.2",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==",
+        "shasum": "d0e96ebb56b07476df1dd9c4806e5237985ca45e",
+        "tarball": "https://registry.npmjs.org/onetime/-/onetime-5.1.2.tgz",
+        "fileCount": 5,
+        "unpackedSize": 6173,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfMFyRCRA9TVsSAnZWagAAInsP/RTd8G7KIVrwux1TNO4h\nS+Ymvz0874gBCS5I8tXFkdVSVAqPUNX3undeJIAHSqV7UMdAPx8wiFDqmga1\n28xR3LA8iHSyo1pxxIboH1LWJgaG2NWIfFV/fAPLvPJzEqmQ4zU0ioYhiwjj\n+MRlfRbkvFSqF9bdIm29VEKLzJPBtLM+BnHHmHigB3IA+fkhy81oo5ESmUPC\nUBeMJyXVMHU9v6r/0PQtqfTnVD68c+1o6yfevC8P0CjOCydJlWltCfKXhMNw\nxTVUxzaU4rfEHXsosGV79jCfLDcibLVdbjAMFzq1P6HaAKSl0ry2TrHKC/o/\nusdJe6U/jqxRN9moiuyh+qxR/9heTMXGgP1xrq0m9jwJlU681vlaPcQaQlM0\nZ0x3/TC1F+Nj6vOTG3lPBunne+H/0D4vu5MSDha8uzyAJ0mHarP+/hPP9gEZ\nUB9cT2djKZATqv4S+S3WKvYZa+m5pupDzVV4YbF3XgCSBe4mB23GdzllY76x\n9SCs7s7d6jUc+0FO/WhyASagXxeqqEwsrN4GRhfUB5l2y9/Le/j7sACW+YU7\nS4c6ony0Tojzb3ncc5zbebH/tskKZb6SCd6nZFBKs/CpDNqDueIkIyjbWLPH\nHUcN6AgD/j5xyIxeIbYc0HH7bc0NovpQbGeP8sIe1o+nS2WOTnjx0LPMCUP1\noLdv\r\n=J6Zn\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/onetime_5.1.2_1597004944849_0.8241938525832997"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# onetime [![Build Status](https://travis-ci.com/sindresorhus/onetime.svg?branch=master)](https://travis-ci.com/github/sindresorhus/onetime)\n\n> Ensure a function is only called once\n\nWhen called multiple times it will return the return value from the first call.\n\n*Unlike the module [once](https://github.com/isaacs/once), this one isn't naughty and extending `Function.prototype`.*\n\n## Install\n\n```\n$ npm install onetime\n```\n\n## Usage\n\n```js\nconst onetime = require('onetime');\n\nlet i = 0;\n\nconst foo = onetime(() => ++i);\n\nfoo(); //=> 1\nfoo(); //=> 1\nfoo(); //=> 1\n\nonetime.callCount(foo); //=> 3\n```\n\n```js\nconst onetime = require('onetime');\n\nconst foo = onetime(() => {}, {throw: true});\n\nfoo();\n\nfoo();\n//=> Error: Function `foo` can only be called once\n```\n\n## API\n\n### onetime(fn, options?)\n\nReturns a function that only calls `fn` once.\n\n#### fn\n\nType: `Function`\n\nFunction that should only be called once.\n\n#### options\n\nType: `object`\n\n##### throw\n\nType: `boolean`\\\nDefault: `false`\n\nThrow an error when called more than once.\n\n### onetime.callCount(fn)\n\nReturns a number representing how many times `fn` has been called.\n\nNote: It throws an error if you pass in a function that is not wrapped by `onetime`.\n\n```js\nconst onetime = require('onetime');\n\nconst foo = onetime(() => {});\n\nfoo();\nfoo();\nfoo();\n\nconsole.log(onetime.callCount(foo));\n//=> 3\n```\n\n#### fn\n\nType: `Function`\n\nFunction to get call count from.\n\n## onetime for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of onetime and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-onetime?utm_source=npm-onetime&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -689,7 +838,7 @@
     }
   ],
   "time": {
-    "modified": "2019-04-02T02:39:50.963Z",
+    "modified": "2020-08-09T20:29:07.242Z",
     "created": "2013-12-13T21:20:15.964Z",
     "0.1.0": "2013-12-13T21:20:18.951Z",
     "0.1.1": "2014-04-30T22:39:14.004Z",
@@ -700,12 +849,14 @@
     "3.0.0": "2019-01-20T15:38:13.275Z",
     "4.0.0": "2019-03-01T09:15:21.375Z",
     "5.0.0": "2019-03-08T05:58:33.472Z",
-    "5.1.0": "2019-04-02T02:39:48.168Z"
+    "5.1.0": "2019-04-02T02:39:48.168Z",
+    "5.1.1": "2020-08-02T10:28:50.856Z",
+    "5.1.2": "2020-08-09T20:29:04.963Z"
   },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "repository": {
     "type": "git",
@@ -737,5 +888,7 @@
     "rocket0191": true,
     "lamansky": true,
     "reyronald": true
-  }
+  },
+  "_cached": false,
+  "_contentLength": 0
 }

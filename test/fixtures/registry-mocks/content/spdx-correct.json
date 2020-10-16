@@ -1,10 +1,10 @@
 {
   "_id": "spdx-correct",
-  "_rev": "18-5cf6de46df191e599d69a9993d6c51ba",
+  "_rev": "19-ab1bf741fced9bd8015c1075e1885879",
   "name": "spdx-correct",
   "description": "correct invalid SPDX expressions",
   "dist-tags": {
-    "latest": "3.1.0"
+    "latest": "3.1.1"
   },
   "versions": {
     "1.0.0-prerelease-1": {
@@ -1167,8 +1167,97 @@
         "tmp": "tmp/spdx-correct_3.1.0_1544083448916_0.022631189222370507"
       },
       "_hasShrinkwrap": false
+    },
+    "3.1.1": {
+      "name": "spdx-correct",
+      "description": "correct invalid SPDX expressions",
+      "version": "3.1.1",
+      "author": {
+        "name": "Kyle E. Mitchell",
+        "email": "kyle@kemitchell.com",
+        "url": "https://kemitchell.com"
+      },
+      "contributors": [
+        {
+          "name": "Kyle E. Mitchell",
+          "email": "kyle@kemitchell.com",
+          "url": "https://kemitchell.com"
+        },
+        {
+          "name": "Christian Zommerfelds",
+          "email": "aero_super@yahoo.com"
+        },
+        {
+          "name": "Tal Einat",
+          "email": "taleinat@gmail.com"
+        },
+        {
+          "name": "Dan Butvinik",
+          "email": "butvinik@outlook.com"
+        }
+      ],
+      "dependencies": {
+        "spdx-expression-parse": "^3.0.0",
+        "spdx-license-ids": "^3.0.0"
+      },
+      "devDependencies": {
+        "defence-cli": "^2.0.1",
+        "replace-require-self": "^1.0.0",
+        "standard": "^11.0.0",
+        "standard-markdown": "^4.0.2",
+        "tape": "^4.9.0"
+      },
+      "keywords": [
+        "SPDX",
+        "law",
+        "legal",
+        "license",
+        "metadata"
+      ],
+      "license": "Apache-2.0",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jslicense/spdx-correct.js.git"
+      },
+      "scripts": {
+        "lint": "standard && standard-markdown README.md",
+        "test": "defence README.md | replace-require-self | node && node test.js"
+      },
+      "gitHead": "24954c75aba5ace68365345154ff21bcd3580302",
+      "bugs": {
+        "url": "https://github.com/jslicense/spdx-correct.js/issues"
+      },
+      "homepage": "https://github.com/jslicense/spdx-correct.js#readme",
+      "_id": "spdx-correct@3.1.1",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-cOYcUWwhCuHCXi49RhFRCyJEK3iPj1Ziz9DpViV3tbZOwXD49QzIN3MpOLJNxh2qwq2lJJZaKMVw9qNi4jTC0w==",
+        "shasum": "dece81ac9c1e6713e5f7d1b6f17d468fa53d89a9",
+        "tarball": "https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.1.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 22402,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJex/HzCRA9TVsSAnZWagAAbFUP/1aEsZtUvzt84UtSJYlu\n5/eW4wLf29kQyp5h6HNxmtKBpskdBMR64Od6ETuE3ehOesEoW9KQXWFx+T1d\nJez7nikjCuTzaTCFaiHAdhxNHniGOZMsYOTUpj+uUaLiXRBgK7Gs4anLku01\nEJu11kgb92amndfOBQd3wpFJCENbmYzILqbolHU2x78sX1MFdl/3TzjeBFur\nfDMVKQf1nZs0M9L4nJ2tY2em2xivpkavj/rLyE2a+FrU0AILlZhsDk3kx/BV\nZ0kA6oUR9DWR86W+0rvjQOlmiMoV4w8gytTUqPQZiroICpb8XqXW9aPIXhfq\nblFOsebPEmhM0NT8rUe4dG1ftHR3wCZ0IhFDJEY8IpVviZaoMeCr1haki/FO\norJsYPwb5/Dq4UGsmfNHuAV4C1MKIMLVKxnmGEl1KwwHp4YpY9sKTuBSVglL\nJb9dyeXqq2ONjEp5VUkhq5C0ag9+iUL6sjmhgChsC9x6A6y8CEP5QGqCUGYE\nHB9wRNjqL0ygyT2a+ibkVBX6TYHiZY69D6afNgirtTh1DVIgRQw6rDiEt53F\nPZaRVzr63QsnmU456FFf7JoeoLOkJVX5hvrZvBR/BebECWT0KZAopNgtt/nK\nXg+o3tuMC5GL6+TE4JH8onChki1+dVd6iAK2y0Ej92i4R9GS4gwro+CjVjoZ\nIBIt\r\n=uvm7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "kemitchell",
+          "email": "kyle@kemitchell.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "kemitchell",
+        "email": "kyle@kemitchell.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/spdx-correct_3.1.1_1590161906641_0.7585394341146188"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "```javascript\nvar correct = require('spdx-correct')\nvar assert = require('assert')\n\nassert.equal(correct('mit'), 'MIT')\n\nassert.equal(correct('Apache 2'), 'Apache-2.0')\n\nassert(correct('No idea what license') === null)\n\n// disable upgrade option\nassert(correct('GPL-3.0'), 'GPL-3.0-or-later')\nassert(correct('GPL-3.0', { upgrade: false }), 'GPL-3.0')\n```\n",
   "maintainers": [
     {
       "name": "kemitchell",
@@ -1176,7 +1265,7 @@
     }
   ],
   "time": {
-    "modified": "2019-01-05T12:59:37.466Z",
+    "modified": "2020-05-22T15:38:31.105Z",
     "created": "2015-04-29T21:43:57.752Z",
     "1.0.0-prerelease-1": "2015-04-29T21:43:57.752Z",
     "1.0.0-prerelease-2": "2015-05-03T21:24:40.155Z",
@@ -1193,7 +1282,8 @@
     "3.0.0": "2018-02-27T18:16:36.737Z",
     "3.0.1": "2018-09-27T16:45:07.731Z",
     "3.0.2": "2018-10-04T19:51:52.846Z",
-    "3.1.0": "2018-12-06T08:04:09.094Z"
+    "3.1.0": "2018-12-06T08:04:09.094Z",
+    "3.1.1": "2020-05-22T15:38:26.796Z"
   },
   "homepage": "https://github.com/jslicense/spdx-correct.js#readme",
   "keywords": [
@@ -1235,5 +1325,7 @@
       "name": "Dan Butvinik",
       "email": "butvinik@outlook.com"
     }
-  ]
+  ],
+  "_cached": false,
+  "_contentLength": 0
 }

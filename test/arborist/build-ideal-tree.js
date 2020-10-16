@@ -1795,3 +1795,11 @@ t.test('cases requiring peer sets to be nested', t => {
     })
   }
 })
+
+t.test('make sure yargs works', async t => {
+  // While I generally find it's best to use reduced unit tests, to run
+  // tests faster and force us to fully understand a problem, yargs has
+  // been a bountiful source of complicated eslint peerDep issues.
+  const yargs = resolve(fixtures, 'yargs')
+  t.matchSnapshot(await printIdeal(yargs), 'yargs should build fine')
+})

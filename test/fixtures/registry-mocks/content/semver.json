@@ -1,10 +1,10 @@
 {
   "_id": "semver",
-  "_rev": "376-6559486993c9388edf006a0b7db68a37",
+  "_rev": "392-91a4b6c5fa66cbcabfc3b7411c339f6b",
   "name": "semver",
   "description": "The semantic version parser used by npm.",
   "dist-tags": {
-    "latest": "7.1.2",
+    "latest": "7.3.2",
     "legacy": "5.7.1"
   },
   "versions": {
@@ -3776,6 +3776,7 @@
       "tap": {
         "check-coverage": true
       },
+      "readme": "semver(1) -- The semantic versioner for npm\n===========================================\n\n## Install\n\n```bash\nnpm install --save semver\n````\n\n## Usage\n\nAs a node module:\n\n```js\nconst semver = require('semver')\n\nsemver.valid('1.2.3') // '1.2.3'\nsemver.valid('a.b.c') // null\nsemver.clean('  =v1.2.3   ') // '1.2.3'\nsemver.satisfies('1.2.3', '1.x || >=2.5.0 || 5.0.0 - 7.2.3') // true\nsemver.gt('1.2.3', '9.8.7') // false\nsemver.lt('1.2.3', '9.8.7') // true\nsemver.minVersion('>=1.0.0') // '1.0.0'\nsemver.valid(semver.coerce('v2')) // '2.0.0'\nsemver.valid(semver.coerce('42.6.7.9.3-alpha')) // '42.6.7'\n```\n\nAs a command-line utility:\n\n```\n$ semver -h\n\nA JavaScript implementation of the https://semver.org/ specification\nCopyright Isaac Z. Schlueter\n\nUsage: semver [options] <version> [<version> [...]]\nPrints valid versions sorted by SemVer precedence\n\nOptions:\n-r --range <range>\n        Print versions that match the specified range.\n\n-i --increment [<level>]\n        Increment a version by the specified level.  Level can\n        be one of: major, minor, patch, premajor, preminor,\n        prepatch, or prerelease.  Default level is 'patch'.\n        Only one version may be specified.\n\n--preid <identifier>\n        Identifier to be used to prefix premajor, preminor,\n        prepatch or prerelease version increments.\n\n-l --loose\n        Interpret versions and ranges loosely\n\n-p --include-prerelease\n        Always include prerelease versions in range matching\n\n-c --coerce\n        Coerce a string into SemVer if possible\n        (does not imply --loose)\n\nProgram exits successfully if any valid version satisfies\nall supplied ranges, and prints all satisfying versions.\n\nIf no satisfying versions are found, then exits failure.\n\nVersions are printed in ascending order, so supplying\nmultiple versions to the utility will just sort them.\n```\n\n## Versions\n\nA \"version\" is described by the `v2.0.0` specification found at\n<https://semver.org/>.\n\nA leading `\"=\"` or `\"v\"` character is stripped off and ignored.\n\n## Ranges\n\nA `version range` is a set of `comparators` which specify versions\nthat satisfy the range.\n\nA `comparator` is composed of an `operator` and a `version`.  The set\nof primitive `operators` is:\n\n* `<` Less than\n* `<=` Less than or equal to\n* `>` Greater than\n* `>=` Greater than or equal to\n* `=` Equal.  If no operator is specified, then equality is assumed,\n  so this operator is optional, but MAY be included.\n\nFor example, the comparator `>=1.2.7` would match the versions\n`1.2.7`, `1.2.8`, `2.5.3`, and `1.3.9`, but not the versions `1.2.6`\nor `1.1.0`.\n\nComparators can be joined by whitespace to form a `comparator set`,\nwhich is satisfied by the **intersection** of all of the comparators\nit includes.\n\nA range is composed of one or more comparator sets, joined by `||`.  A\nversion matches a range if and only if every comparator in at least\none of the `||`-separated comparator sets is satisfied by the version.\n\nFor example, the range `>=1.2.7 <1.3.0` would match the versions\n`1.2.7`, `1.2.8`, and `1.2.99`, but not the versions `1.2.6`, `1.3.0`,\nor `1.1.0`.\n\nThe range `1.2.7 || >=1.2.9 <2.0.0` would match the versions `1.2.7`,\n`1.2.9`, and `1.4.6`, but not the versions `1.2.8` or `2.0.0`.\n\n### Prerelease Tags\n\nIf a version has a prerelease tag (for example, `1.2.3-alpha.3`) then\nit will only be allowed to satisfy comparator sets if at least one\ncomparator with the same `[major, minor, patch]` tuple also has a\nprerelease tag.\n\nFor example, the range `>1.2.3-alpha.3` would be allowed to match the\nversion `1.2.3-alpha.7`, but it would *not* be satisfied by\n`3.4.5-alpha.9`, even though `3.4.5-alpha.9` is technically \"greater\nthan\" `1.2.3-alpha.3` according to the SemVer sort rules.  The version\nrange only accepts prerelease tags on the `1.2.3` version.  The\nversion `3.4.5` *would* satisfy the range, because it does not have a\nprerelease flag, and `3.4.5` is greater than `1.2.3-alpha.7`.\n\nThe purpose for this behavior is twofold.  First, prerelease versions\nfrequently are updated very quickly, and contain many breaking changes\nthat are (by the author's design) not yet fit for public consumption.\nTherefore, by default, they are excluded from range matching\nsemantics.\n\nSecond, a user who has opted into using a prerelease version has\nclearly indicated the intent to use *that specific* set of\nalpha/beta/rc versions.  By including a prerelease tag in the range,\nthe user is indicating that they are aware of the risk.  However, it\nis still not appropriate to assume that they have opted into taking a\nsimilar risk on the *next* set of prerelease versions.\n\nNote that this behavior can be suppressed (treating all prerelease\nversions as if they were normal versions, for the purpose of range\nmatching) by setting the `includePrerelease` flag on the options\nobject to any\n[functions](https://github.com/npm/node-semver#functions) that do\nrange matching.\n\n#### Prerelease Identifiers\n\nThe method `.inc` takes an additional `identifier` string argument that\nwill append the value of the string as a prerelease identifier:\n\n```javascript\nsemver.inc('1.2.3', 'prerelease', 'beta')\n// '1.2.4-beta.0'\n```\n\ncommand-line example:\n\n```bash\n$ semver 1.2.3 -i prerelease --preid beta\n1.2.4-beta.0\n```\n\nWhich then can be used to increment further:\n\n```bash\n$ semver 1.2.4-beta.0 -i prerelease\n1.2.4-beta.1\n```\n\n### Advanced Range Syntax\n\nAdvanced range syntax desugars to primitive comparators in\ndeterministic ways.\n\nAdvanced ranges may be combined in the same way as primitive\ncomparators using white space or `||`.\n\n#### Hyphen Ranges `X.Y.Z - A.B.C`\n\nSpecifies an inclusive set.\n\n* `1.2.3 - 2.3.4` := `>=1.2.3 <=2.3.4`\n\nIf a partial version is provided as the first version in the inclusive\nrange, then the missing pieces are replaced with zeroes.\n\n* `1.2 - 2.3.4` := `>=1.2.0 <=2.3.4`\n\nIf a partial version is provided as the second version in the\ninclusive range, then all versions that start with the supplied parts\nof the tuple are accepted, but nothing that would be greater than the\nprovided tuple parts.\n\n* `1.2.3 - 2.3` := `>=1.2.3 <2.4.0`\n* `1.2.3 - 2` := `>=1.2.3 <3.0.0`\n\n#### X-Ranges `1.2.x` `1.X` `1.2.*` `*`\n\nAny of `X`, `x`, or `*` may be used to \"stand in\" for one of the\nnumeric values in the `[major, minor, patch]` tuple.\n\n* `*` := `>=0.0.0` (Any version satisfies)\n* `1.x` := `>=1.0.0 <2.0.0` (Matching major version)\n* `1.2.x` := `>=1.2.0 <1.3.0` (Matching major and minor versions)\n\nA partial version range is treated as an X-Range, so the special\ncharacter is in fact optional.\n\n* `\"\"` (empty string) := `*` := `>=0.0.0`\n* `1` := `1.x.x` := `>=1.0.0 <2.0.0`\n* `1.2` := `1.2.x` := `>=1.2.0 <1.3.0`\n\n#### Tilde Ranges `~1.2.3` `~1.2` `~1`\n\nAllows patch-level changes if a minor version is specified on the\ncomparator.  Allows minor-level changes if not.\n\n* `~1.2.3` := `>=1.2.3 <1.(2+1).0` := `>=1.2.3 <1.3.0`\n* `~1.2` := `>=1.2.0 <1.(2+1).0` := `>=1.2.0 <1.3.0` (Same as `1.2.x`)\n* `~1` := `>=1.0.0 <(1+1).0.0` := `>=1.0.0 <2.0.0` (Same as `1.x`)\n* `~0.2.3` := `>=0.2.3 <0.(2+1).0` := `>=0.2.3 <0.3.0`\n* `~0.2` := `>=0.2.0 <0.(2+1).0` := `>=0.2.0 <0.3.0` (Same as `0.2.x`)\n* `~0` := `>=0.0.0 <(0+1).0.0` := `>=0.0.0 <1.0.0` (Same as `0.x`)\n* `~1.2.3-beta.2` := `>=1.2.3-beta.2 <1.3.0` Note that prereleases in\n  the `1.2.3` version will be allowed, if they are greater than or\n  equal to `beta.2`.  So, `1.2.3-beta.4` would be allowed, but\n  `1.2.4-beta.2` would not, because it is a prerelease of a\n  different `[major, minor, patch]` tuple.\n\n#### Caret Ranges `^1.2.3` `^0.2.5` `^0.0.4`\n\nAllows changes that do not modify the left-most non-zero digit in the\n`[major, minor, patch]` tuple.  In other words, this allows patch and\nminor updates for versions `1.0.0` and above, patch updates for\nversions `0.X >=0.1.0`, and *no* updates for versions `0.0.X`.\n\nMany authors treat a `0.x` version as if the `x` were the major\n\"breaking-change\" indicator.\n\nCaret ranges are ideal when an author may make breaking changes\nbetween `0.2.4` and `0.3.0` releases, which is a common practice.\nHowever, it presumes that there will *not* be breaking changes between\n`0.2.4` and `0.2.5`.  It allows for changes that are presumed to be\nadditive (but non-breaking), according to commonly observed practices.\n\n* `^1.2.3` := `>=1.2.3 <2.0.0`\n* `^0.2.3` := `>=0.2.3 <0.3.0`\n* `^0.0.3` := `>=0.0.3 <0.0.4`\n* `^1.2.3-beta.2` := `>=1.2.3-beta.2 <2.0.0` Note that prereleases in\n  the `1.2.3` version will be allowed, if they are greater than or\n  equal to `beta.2`.  So, `1.2.3-beta.4` would be allowed, but\n  `1.2.4-beta.2` would not, because it is a prerelease of a\n  different `[major, minor, patch]` tuple.\n* `^0.0.3-beta` := `>=0.0.3-beta <0.0.4`  Note that prereleases in the\n  `0.0.3` version *only* will be allowed, if they are greater than or\n  equal to `beta`.  So, `0.0.3-pr.2` would be allowed.\n\nWhen parsing caret ranges, a missing `patch` value desugars to the\nnumber `0`, but will allow flexibility within that value, even if the\nmajor and minor versions are both `0`.\n\n* `^1.2.x` := `>=1.2.0 <2.0.0`\n* `^0.0.x` := `>=0.0.0 <0.1.0`\n* `^0.0` := `>=0.0.0 <0.1.0`\n\nA missing `minor` and `patch` values will desugar to zero, but also\nallow flexibility within those values, even if the major version is\nzero.\n\n* `^1.x` := `>=1.0.0 <2.0.0`\n* `^0.x` := `>=0.0.0 <1.0.0`\n\n### Range Grammar\n\nPutting all this together, here is a Backus-Naur grammar for ranges,\nfor the benefit of parser authors:\n\n```bnf\nrange-set  ::= range ( logical-or range ) *\nlogical-or ::= ( ' ' ) * '||' ( ' ' ) *\nrange      ::= hyphen | simple ( ' ' simple ) * | ''\nhyphen     ::= partial ' - ' partial\nsimple     ::= primitive | partial | tilde | caret\nprimitive  ::= ( '<' | '>' | '>=' | '<=' | '=' ) partial\npartial    ::= xr ( '.' xr ( '.' xr qualifier ? )? )?\nxr         ::= 'x' | 'X' | '*' | nr\nnr         ::= '0' | ['1'-'9'] ( ['0'-'9'] ) *\ntilde      ::= '~' partial\ncaret      ::= '^' partial\nqualifier  ::= ( '-' pre )? ( '+' build )?\npre        ::= parts\nbuild      ::= parts\nparts      ::= part ( '.' part ) *\npart       ::= nr | [-0-9A-Za-z]+\n```\n\n## Functions\n\nAll methods and classes take a final `options` object argument.  All\noptions in this object are `false` by default.  The options supported\nare:\n\n- `loose`  Be more forgiving about not-quite-valid semver strings.\n  (Any resulting output will always be 100% strict compliant, of\n  course.)  For backwards compatibility reasons, if the `options`\n  argument is a boolean value instead of an object, it is interpreted\n  to be the `loose` param.\n- `includePrerelease`  Set to suppress the [default\n  behavior](https://github.com/npm/node-semver#prerelease-tags) of\n  excluding prerelease tagged versions from ranges unless they are\n  explicitly opted into.\n\nStrict-mode Comparators and Ranges will be strict about the SemVer\nstrings that they parse.\n\n* `valid(v)`: Return the parsed version, or null if it's not valid.\n* `inc(v, release)`: Return the version incremented by the release\n  type (`major`,   `premajor`, `minor`, `preminor`, `patch`,\n  `prepatch`, or `prerelease`), or null if it's not valid\n  * `premajor` in one call will bump the version up to the next major\n    version and down to a prerelease of that major version.\n    `preminor`, and `prepatch` work the same way.\n  * If called from a non-prerelease version, the `prerelease` will work the\n    same as `prepatch`. It increments the patch version, then makes a\n    prerelease. If the input version is already a prerelease it simply\n    increments it.\n* `prerelease(v)`: Returns an array of prerelease components, or null\n  if none exist. Example: `prerelease('1.2.3-alpha.1') -> ['alpha', 1]`\n* `major(v)`: Return the major version number.\n* `minor(v)`: Return the minor version number.\n* `patch(v)`: Return the patch version number.\n* `intersects(r1, r2, loose)`: Return true if the two supplied ranges\n  or comparators intersect.\n* `parse(v)`: Attempt to parse a string as a semantic version, returning either\n  a `SemVer` object or `null`.\n\n### Comparison\n\n* `gt(v1, v2)`: `v1 > v2`\n* `gte(v1, v2)`: `v1 >= v2`\n* `lt(v1, v2)`: `v1 < v2`\n* `lte(v1, v2)`: `v1 <= v2`\n* `eq(v1, v2)`: `v1 == v2` This is true if they're logically equivalent,\n  even if they're not the exact same string.  You already know how to\n  compare strings.\n* `neq(v1, v2)`: `v1 != v2` The opposite of `eq`.\n* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it'll call\n  the corresponding function above.  `\"===\"` and `\"!==\"` do simple\n  string comparison, but are included for completeness.  Throws if an\n  invalid comparison string is provided.\n* `compare(v1, v2)`: Return `0` if `v1 == v2`, or `1` if `v1` is greater, or `-1` if\n  `v2` is greater.  Sorts in ascending order if passed to `Array.sort()`.\n* `rcompare(v1, v2)`: The reverse of compare.  Sorts an array of versions\n  in descending order when passed to `Array.sort()`.\n* `diff(v1, v2)`: Returns difference between two versions by the release type\n  (`major`, `premajor`, `minor`, `preminor`, `patch`, `prepatch`, or `prerelease`),\n  or null if the versions are the same.\n\n### Comparators\n\n* `intersects(comparator)`: Return true if the comparators intersect\n\n### Ranges\n\n* `validRange(range)`: Return the valid range or null if it's not valid\n* `satisfies(version, range)`: Return true if the version satisfies the\n  range.\n* `maxSatisfying(versions, range)`: Return the highest version in the list\n  that satisfies the range, or `null` if none of them do.\n* `minSatisfying(versions, range)`: Return the lowest version in the list\n  that satisfies the range, or `null` if none of them do.\n* `minVersion(range)`: Return the lowest version that can possibly match\n  the given range.\n* `gtr(version, range)`: Return `true` if version is greater than all the\n  versions possible in the range.\n* `ltr(version, range)`: Return `true` if version is less than all the\n  versions possible in the range.\n* `outside(version, range, hilo)`: Return true if the version is outside\n  the bounds of the range in either the high or low direction.  The\n  `hilo` argument must be either the string `'>'` or `'<'`.  (This is\n  the function called by `gtr` and `ltr`.)\n* `intersects(range)`: Return true if any of the ranges comparators intersect\n\nNote that, since ranges may be non-contiguous, a version might not be\ngreater than a range, less than a range, *or* satisfy a range!  For\nexample, the range `1.2 <1.2.9 || >2.0.0` would have a hole from `1.2.9`\nuntil `2.0.0`, so the version `1.2.10` would not be greater than the\nrange (because `2.0.1` satisfies, which is higher), nor less than the\nrange (since `1.2.8` satisfies, which is lower), and it also does not\nsatisfy the range.\n\nIf you want to know if a version satisfies or does not satisfy a\nrange, use the `satisfies(version, range)` function.\n\n### Coercion\n\n* `coerce(version)`: Coerces a string to semver if possible\n\nThis aims to provide a very forgiving translation of a non-semver string to\nsemver. It looks for the first digit in a string, and consumes all\nremaining characters which satisfy at least a partial semver (e.g., `1`,\n`1.2`, `1.2.3`) up to the max permitted length (256 characters).  Longer\nversions are simply truncated (`4.6.3.9.2-alpha2` becomes `4.6.3`).  All\nsurrounding text is simply ignored (`v3.4 replaces v3.3.1` becomes\n`3.4.0`).  Only text which lacks digits will fail coercion (`version one`\nis not valid).  The maximum  length for any semver component considered for\ncoercion is 16 characters; longer components will be ignored\n(`10000000000000000.4.7.4` becomes `4.7.4`).  The maximum value for any\nsemver component is `Number.MAX_SAFE_INTEGER || (2**53 - 1)`; higher value\ncomponents are invalid (`9999999999999999.4.7.4` is likely invalid).\n",
       "readmeFilename": "README.md",
       "gitHead": "c83c18cf84f9ccaea3431c929bb285fd168c01e4",
       "bugs": {
@@ -4198,40 +4199,672 @@
         "tmp": "tmp/semver_7.1.2_1580434184945_0.2853223384213779"
       },
       "_hasShrinkwrap": false
+    },
+    "7.1.3": {
+      "name": "semver",
+      "version": "7.1.3",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.2"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "6e7982f23a0f2a378dad80de6a9acb435154e652",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.1.3",
+      "_nodeVersion": "13.7.0",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-ekM0zfiA9SCBlsKa2X1hxyxiI4L3B6EbVJkkdgQXnSEEaHlGdvyodMruTiulSRWMMB4NeIuYNMC9rTKTz97GxA==",
+        "shasum": "e4345ce73071c53f336445cfc19efb1c311df2a6",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.1.3.tgz",
+        "fileCount": 49,
+        "unpackedSize": 75465,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeQyJ9CRA9TVsSAnZWagAAJHUP/09jA/fHrBZb8HLVTnTD\nuvPri2IuUTLWk5k+90yZrhzPXpO+0qpMDqBqx0x6uWIPj2z04Au2azu7RmOF\nNu99X56Zyt54IM0mHxkaLzRC8OnEbRV9nDESu7QfU7/5J/qK7gt6JyaIpW5Q\nMTc7GAQye1JaTyCMIrdh0X4/XsUs/UBcv6XFTry8eEbnHI2HUphWQg8i8YAj\nhTKJcbwGTWkeCPCBk6zpukwOtgGpfQUBXryQRQ4PCTIo1rvFpLDz1NHbmtQP\nTK4QYTK5pmKBad355PIU5gm+8RnAoMW6oSPfrL1KQeeQqnfGC6UwUeTIdQbc\nuqOiiAxi7roY1uQwSOc3ZL/aMAY2Bb4PpmrhgE+1m/fiUugconPEv+NvLvD3\nxjJrmoxSzyjXJzXlcNkq6niff5T2HEHLueZ86PZ5JhF1PIMjQ+dshjfpSc0r\nQj0imDPAoBwRzL8RNr5Od4f2PFJxNL2UBnszGS15KQnhiNv1VJDVOgBohKub\nQmLfrxC7rb7Ij867aYf4LX/xEpeSpfKEYGfX0o6Sl8JRDMJubMPHTTRnz9aH\nGvbsBJDIE2v1UwF6++cjV7mr80iXWSDK1b1if0VoCsEds1V4cvSmqRcveS11\nMzcsw/3AAAIlb9rzKzqosFfzgQCCeDVM7hphgOzWtxtXVRB6aAsNtJhJtL1a\nJH9h\r\n=CH+b\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "ahmad@ahmadnassri.com",
+          "name": "ahmadnassri"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "mike@mikecorp.ca",
+          "name": "mikemimik"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.1.3_1581458045178_0.7603358869317778"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.2.0": {
+      "name": "semver",
+      "version": "7.2.0",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.2"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "c6581a8b6bf6dac430a30eb6be60ed0e06c22f74",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.2.0",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-VOQxUCRgttu7mxuvAgselSlok1XoOXju6XSJdTBo8+8RsvnPwKXEZtZVKvzlNigT1mXH2fDupcT8oX8Vw1Vm2w==",
+        "shasum": "e4c8e6ca40b6b953175194ae89b628afdc0a20e1",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.2.0.tgz",
+        "fileCount": 51,
+        "unpackedSize": 97872,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJei7zqCRA9TVsSAnZWagAAkgQP/1tsaxpjTJitNXMYHEp9\nkr4C+ErLeUeark58A6GrXi/db+XyjT1ukLbTqJuiMYXyWQHby6LGbIuatjmm\nIipjH1DsWutZGCgglTzhLWTKXv1XWbJ4ya/iMgq7EsanwQUpSOearQZRFhok\nwCi874fWVsYG6Q0DlJBZftGZ7gSJkOG6gdhrim6QZogWJBxfwju+iNzN96KR\ns7KW5raelbcTkRKUTBnkK3JY0/PZSG2iysn11TfSggOL+oacbsKPL1vcxy/X\nV/3urAIJMsfVvktFdbTNYw6BrpL0rBgrje9VVJVd6jki75cNV3Lut7Qk1coi\ngpJ0xe2QyVXWdlWGfgbEVG4Hxm6YQuviRtIr1xZ+W2CESin5i5jcsTBiqpKd\n32jf6lQJNdYglKLAJFfw4oUFl1YHh2PzWEfICUtNsnZ0u1Pc/Hy4jnSY+ev0\n24jQ6iKDqhX5Ggrg8kisIq5Gvg1yR/DPEv+tr5oraVar0EI4wMvMeyLcg4MP\nxhcSKEpCxWVsBi9Q3Ap7vYcs3BlJULRTR+B/GoA3LP2xgd+Q6XRmX512nJyj\nPNQnvbnpMTVTElXjfl1SDfNkknA6j3TrgBjVLl6tSIjESYuhYWg7iBjcdZTj\nczhZ2dWUiT2vXXUj1jKJGqoPpmYEHJr1uhyPsjId/G+So0BsmF+KZDxWG8pf\nzzdu\r\n=x9XN\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.2.0_1586216169599_0.0732386597934036"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.2.1": {
+      "name": "semver",
+      "version": "7.2.1",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.2"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "dfe658fd611ccbf6703b1c9315f9ad8cb29db1bb",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.2.1",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-aHhm1pD02jXXkyIpq25qBZjr3CQgg8KST8uX0OWXch3xE6jw+1bfbWnCjzMwojsTquroUmKFHNzU6x26mEiRxw==",
+        "shasum": "d997aa36bdbb00b501ae4ac4c7d17e9f7a587ae5",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.2.1.tgz",
+        "fileCount": 50,
+        "unpackedSize": 77432,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJei71ICRA9TVsSAnZWagAAnT4QAKEguwNc3dASBfx2pBs3\nrQdvnu4WDjg0U8e9qdbq2/+xPAo5XgT21GYdn026CY62HdSYm8IipU3klW27\nkua+d650povuPCqFBzCrA8zD+kpkayZF6B2LrZzOYU+UzPnWQX5bcIFhuQyo\n2OimQf3jUpW5fL4roexFXeqBrgHbky1uTEBZOC92DCJ0Bd8Oi7N+6lw7Dta/\nmuPONUAICBWkumcMfyw4FCquKyb1oIgZAcTmJTgOwlTwhqZ13JItMBUll/yI\ngLnNP06f1J8fYVLO2aDd4qZQx2WrZqUr9CfhY3aRDnehmNdt6igXUAvZ/ZoL\nYqqDFQjJBNB0aAH3lgEDlqEsLd+VMGMbiPUddCtu1tgI8m8yAeFZn51S6SIQ\nTo5DEcr9+WwFgA1kQSJVmfhhc0BcedBFJn8GyGpSSodUlz/bgDg+aBfcBsdN\nywz8M4UBf01KYLih2lVaOkUhKSskc5kxTAgpbKhsR+5t2pu/vS/KNCYIL9T3\n7gEgqyjRPKguebpyziVQXxfvMGpoUUlFWkg+vziptQz0zdxeGJW05ivFxalV\nJ8bR5BWDfWea3sE3/geI+UHPwOivcOIyHmIo/JvkrtJtHKxEGCKPV2E3oSM3\nTcYAoqxKVY9B77gTYCgQV5zJhmfMgmhw4BVUNwpUVtyr+XyNQkw+2hQPu8Bu\n+BbB\r\n=4m2a\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.2.1_1586216264072_0.03363624901937112"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.2.2": {
+      "name": "semver",
+      "version": "7.2.2",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.2"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "5d0dcdac5daeef368b73b9b67d1aa6f554315e2b",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.2.2",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-Zo84u6o2PebMSK3zjJ6Zp5wi8VnQZnEaCP13Ul/lt1ANsLACxnJxq4EEm1PY94/por1Hm9+7xpIswdS5AkieMA==",
+        "shasum": "d01432d74ed3010a20ffaf909d63a691520521cd",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.2.2.tgz",
+        "fileCount": 50,
+        "unpackedSize": 77918,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJekJhNCRA9TVsSAnZWagAAQEMQAIvvL5GmSpQXuOj/ZEo1\n0trlO4l6UcdbmQwoMA6t1HeYv0jPug9WV11eh7SdlO+Rn7U49sMIV+Lpt+B9\neY/Z7tpyaXq4W1t3a3EOwux/oa8YfzN7hfhDa+QHjpc4O7JAKJWw1q8Fz3Wm\nwRYh/z75Nc2g2XxIxEXlh4qCJLHj0vXd0RDDx0/2uMV3zp47FTyFjCHHufVs\nYnRO8osqSbIouI/TGti1dEgnVsUjhzpv8l4/STCnzASLBVLJGceb8Bd4/zNO\nqN7V5pkbdbls6+42RIEYNuVxmVfUxcrRCEClBzYpJDtAqxq5aChmOvNHacTh\nM9M2v5ZZJib4PO4UL/6knArR+AtlMTsecfHfWkSOlFyDpvcBtp6ZnfVp0M9r\n2OeRekjqX+mDT/WmRjoFFV0wIUm2VMfMFguPZLhXUiLUPgHMJYIbtJIleaCq\nBKGlFrtqVUSblogdVGCKxVcRojBDjdVw0/6hh99yz7E5djkv6dmH5LfA1Scw\ne9TFoF4YQETlwpP1bJOQpABHvUybJTAi0hHsn6HITYSmaIIN3XZHQ0tgkUhg\nee5C6/O45EmON3sIk6MrDwMolDMa5RTizhOdGRma1dtSwT5VdVhXRmGSDsdP\n74SK1h7OtKrPWGTo3buE+wsgHlW10TpYvljGfCP7W5n6TfOFwPdk1+dTHdPs\ncIpo\r\n=tKmI\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.2.2_1586534476820_0.045995279100802255"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.2.3": {
+      "name": "semver",
+      "version": "7.2.3",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.7"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "45b14954eac049a1d2824fb5543753e53192216a",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.2.3",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-utbW9Z7ZxVvwiIWkdOMLOR9G/NFXh2aRucghkVrEMJWuC++r3lCkBC3LwqBinyHzGMAJxY5tn6VakZGHObq5ig==",
+        "shasum": "3641217233c6382173c76bf2c7ecd1e1c16b0d8a",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.2.3.tgz",
+        "fileCount": 50,
+        "unpackedSize": 78161,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJelLAFCRA9TVsSAnZWagAAZ/EQAJ5yOX6QZ4KUutwEUcXK\nhl9apWf8EO227V7Mfc7k1oTLGVwvhdd0uwRCKPCjd21g/hFfx9/2ozynyhVt\nVTDOZNztBzlNeSwHu/XtVFrfE0vJkpNt7/bNRnCk0jKmMsJyjAEWSrdHazPm\na9qmFSFMWVMjzr5J/lqRmzSwoRBtaKRnK0Kq5BaWY74/MaMnVZ/GdWdimgF+\nwNaqtzJIgszdSM25+dfzmQsVzA9cTA+nhH9Sa7kl9QtxZnyn+xIsa5nsfkDt\nEp9GQQTEg2bLWBFBODXnMo/k3N+CARYgvcvrnp4df3dGq/0D8ZJbr2/ESSFV\nWGVM+j9ANfWi67vfjsDaQj11pylZiYTCeRaTSbiVtxN4R4N0jn2qfB4Rx7FJ\nc8IxzROV3c+gJkWr6PCGFDDvz0MahU0wJS7Pt7UiPSyy1huiQ3Tqs0aO/4uK\n7o5Yqsu3wz4/CuC2c4j2P7iAg6a6Cp05FJAG6lk1eO+FTVhLGqANNL4HPvOO\nvxrjAZWPHx6YxHHm+ZYZsBmsCevi71VlY+/hGzhAtJhZpUvWQrE+XCikqpLl\nHbfJBXfGL0GQFDhqwjPrgTd+1S3lV1Wig0za3VYfPHA2MJUW14h6CV3RShsl\nfluLkF+Cu1yRwzJekMBualtEj6XW+vto3XE8vZZiOLwHPBdO6bo3P5+CsGSy\noXNX\r\n=Bzl9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.2.3_1586802692959_0.21135831995159804"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.3.0": {
+      "name": "semver",
+      "version": "7.3.0",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.7"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "92bccf1d0950c9bd136f58886036e8c1921cd9a1",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.3.0",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-uyvgU/igkrMgNHwLgXvlpD9jEADbJhB0+JXSywoO47JgJ6c16iau9F9cjtc/E5o0PoqRYTiTIAPRKaYe84z6eQ==",
+        "shasum": "91f7c70ec944a63e5dc7a74cde2da375d8e0853c",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.3.0.tgz",
+        "fileCount": 51,
+        "unpackedSize": 83770,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJelQ0dCRA9TVsSAnZWagAAFssP/24rlTDHxzHVxbCLJ5Ll\nienCuGoUb/leXiA6nE9xZdYUxytvxt1zgbI6PMoQRQC05p3UXhHzplPX4z7O\nVhe7AI5SpLhasSo1EkQT0eiTYT8wOnZ3oU4IK892GXjhNW2rETKu/KzyEfOD\nuOjUYaYnyOwkypbpuDd/W2Z1lThf44bv76GUVHSOcBs3FxrDzPyK/FhtRary\nYrk7cbEv0mowLsyl44Ae9JnIac/jvJWSoOoE7q5vUS3JGE66f58r1ENSVhOq\naWzh934D9lCHpBvYkVETX6j1texIyAKUaMViSLmht/iDQ7v56usxAAt/pCmb\nC24lvfgV64ZZNfxELFblT5hfyhfID+f3VuDnXty87NfQmLUMEjSXCqgDLXaH\nbkxhESvdt9wLOA4HSicDszVv99H3EYaJbqm+onljsrWyjbSEt/alOpZ9Fiew\n4GUk125mfmIHkIlTNVCJ18SWjkP7fWvMWKzZIuzLWOsjYAL3z2xLhiZ0HlNP\nW8Wx2rNexrGgN2jH3Iij2TxknpvmIg+UmpIL/MLrJKuWibSzi1+An98yiwDv\nK4iYrSBxQ1ocucQNta/CqKRLz9auN3cRQ0+yB25T8uLY/7Wm7bP1VHCVkoYe\nDGgkm3CVuOY7oEoN1BqtN18eK8eicv+DQayk/evMMxpZIeTF3DtJydnbb59b\nWHnP\r\n=uqCJ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.3.0_1586826524726_0.19048944441720184"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.3.1": {
+      "name": "semver",
+      "version": "7.3.1",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.7"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "b97044b0de1a771bff151c40695fd7e340b3a09c",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.3.1",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-r7sBEClKDfDFhPQfIk2D+EF74SS1j4uyfto50/KWQRzQj8IeKD7wqLbwkqb33289rtqQZoKzID5WOavkJ63DGg==",
+        "shasum": "8fbf3298570e73df7733f1b89e7f08e653cf1b8f",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.3.1.tgz",
+        "fileCount": 51,
+        "unpackedSize": 83792,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJelesoCRA9TVsSAnZWagAAQigQAJmWwyqPvF5L7PEFcW4A\nfHRyQw0U2G6QLI1/+hSGV39zq4D3Vs/6x1PoApXeJ49JZM8/43JXM7xYF5Eu\nto4/2s2hiO4l2aGsFHk4Le5iC9Plo3jp4TXceXmyanNzIoZT6Co51DPxqzDs\nA45TxTBFP2RMRhjPCHlDp20vEv2HZGB9TF8kt0S/JXG5tYkroL6L0HgyGSzf\noYz5xE6P7IznN7yMgnW8Lylcs3FzVs3JiG0Dg04kbsClyq4woFkvWnrtgW70\nbEUw7q3TBvimhojKTUvsHwt2uapf+mKn82bAClwDE3AAKwxSjrRsswnI/0VK\ngDVPTMF4X+5FtO6dRx7jb4r+YRn1pRh8rvWqsgzMavMxiHxay6IeBx6HzsDk\nkIdMNzUTyIz+YXo9fWFHOMToOOyBdXG1WcWiw9+4tV3aOn6YqA/z0zCvzppD\nl2mOJwlMethFeowMrb3gCX3iIkGpdtAwuQpGwHt5XHOGny6PxSZ3ywCRfqim\n5fydPf/ExWCVf8mYclhTugJgazn8YOIIB5vvFohdMQp4Yt5WuWWglOfKQluD\n2mYPQCGwRIzRLpYOckgxxLH7pKtO7uHv3kqrDYcYc86hldEBijEIyplkChL8\nnBHEgoP3Dg1dG+QaOqP/TIFRoP8BstX8x4KKpivdqsDb8IySPTIFfkcGPOc2\nOwy0\r\n=HZ2R\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.3.1_1586883367892_0.4603661322871977"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.3.2": {
+      "name": "semver",
+      "version": "7.3.2",
+      "description": "The semantic version parser used by npm.",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --follow-tags"
+      },
+      "devDependencies": {
+        "tap": "^14.10.7"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/npm/node-semver.git"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "ce978f9a58b71d22a7c303432c9a5135510e01be",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "homepage": "https://github.com/npm/node-semver#readme",
+      "_id": "semver@7.3.2",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==",
+        "shasum": "604962b052b81ed0786aae84389ffba70ffd3938",
+        "tarball": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+        "fileCount": 51,
+        "unpackedSize": 83835,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJelfZACRA9TVsSAnZWagAAgg0P/A2mGuEyc/dX9rlX3CBL\nHtzCIbwuHCUIkzdA4DOKjNRswKzPtXo9UeqqUGkXY7McRhTuFSjoXVdbTf7M\nMKm4Qb9HG3664+TvZ8wvtY9mXWfgC+V4FsBhiCm5r86ZsLvYVwaDg55ClYBT\nc5EyXV5F6/OhI7PUw+wY0B7X2A2lWcx8j1aTYG3Nd4GLAcJ58NY8Y0SeA1/w\nRkdyJr9g5G0/U0VcufUJBSEVqikg56C3BzrPRMhmTyNqYShCozhO5NnNlLfS\nt3n1n+7isMPnKb30UAJaeUAQdICqm8J9x8FgpiIv4wcvZb8qEZwXbII9TaJu\nJaHdeGUmfKALrZA3ArBJrm0OCajsNJspR+tGiZPGCLSMiZJrfnkF1dP1KcVO\naKlkHvFIglW2zvNeuclem+uiuB/0dONR9erUECgf75tY9kkORiEoT0lwptTF\nyXSs/XSW+/GQdpi2D6e4Q3sePbuWtPDdzlTYLWad7s5yn8bVrXvafljeFiKU\nIY1kjJgcuLFexHNPTVY68qZK+lK2l3/bbMnLvW9a0UNu/RFwI29/yEeOgfFW\nl9My7e5WwJSp6u8U+L5e2O1lD9k7Yq2CFsUy8Nztf6QURp0IAOd5KOQeKrEZ\nCIf+MlJXvR0/X6IwqYEGcJKcEQpZi59uwVP9KOWPmNSwk3q2QoM+pc9yjB57\n4PLX\r\n=NXIW\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "evilpacket@gmail.com",
+          "name": "adam_baldwin"
+        },
+        {
+          "email": "cghr1990@gmail.com",
+          "name": "claudiahdz"
+        },
+        {
+          "email": "darcy@darcyclarke.me",
+          "name": "darcyclarke"
+        },
+        {
+          "email": "i@izs.me",
+          "name": "isaacs"
+        },
+        {
+          "email": "ruyadorno@hotmail.com",
+          "name": "ruyadorno"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/semver_7.3.2_1586886208300_0.6137271223938625"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
     {
-      "email": "evilpacket@gmail.com",
-      "name": "adam_baldwin"
+      "email": "quitlahok@gmail.com",
+      "name": "nlf"
     },
     {
-      "email": "ahmad@ahmadnassri.com",
-      "name": "ahmadnassri"
-    },
-    {
-      "email": "cghr1990@gmail.com",
-      "name": "claudiahdz"
+      "email": "ruyadorno@hotmail.com",
+      "name": "ruyadorno"
     },
     {
       "email": "darcy@darcyclarke.me",
       "name": "darcyclarke"
     },
     {
+      "email": "evilpacket@gmail.com",
+      "name": "adam_baldwin"
+    },
+    {
       "email": "i@izs.me",
       "name": "isaacs"
-    },
-    {
-      "email": "mike@mikecorp.ca",
-      "name": "mikemimik"
-    },
-    {
-      "email": "ruyadorno@hotmail.com",
-      "name": "ruyadorno"
     }
   ],
   "time": {
-    "modified": "2020-01-31T01:29:47.570Z",
+    "modified": "2020-10-13T05:05:35.753Z",
     "created": "2011-02-12T00:20:25.690Z",
     "1.0.0": "2011-02-12T00:20:26.037Z",
     "1.0.1": "2011-02-18T17:15:49.775Z",
@@ -4314,7 +4947,15 @@
     "7.0.0": "2019-12-14T19:36:54.748Z",
     "7.1.0": "2019-12-17T01:28:48.900Z",
     "7.1.1": "2019-12-17T16:56:29.010Z",
-    "7.1.2": "2020-01-31T01:29:45.224Z"
+    "7.1.2": "2020-01-31T01:29:45.224Z",
+    "7.1.3": "2020-02-11T21:54:05.273Z",
+    "7.2.0": "2020-04-06T23:36:09.707Z",
+    "7.2.1": "2020-04-06T23:37:44.278Z",
+    "7.2.2": "2020-04-10T16:01:16.989Z",
+    "7.2.3": "2020-04-13T18:31:33.110Z",
+    "7.3.0": "2020-04-14T01:08:44.962Z",
+    "7.3.1": "2020-04-14T16:56:08.021Z",
+    "7.3.2": "2020-04-14T17:43:28.451Z"
   },
   "repository": {
     "type": "git",
@@ -4415,7 +5056,6 @@
     "dyc5828": true,
     "lichenhao": true,
     "tdreitz": true,
-    "yanrivera": true,
     "ahmed-dinar": true,
     "penglu": true,
     "lijinghust": true,
@@ -4498,10 +5138,13 @@
     "yanghcc": true,
     "tylerhaun": true
   },
+  "readme": "semver(1) -- The semantic versioner for npm\n===========================================\n\n## Install\n\n```bash\nnpm install semver\n````\n\n## Usage\n\nAs a node module:\n\n```js\nconst semver = require('semver')\n\nsemver.valid('1.2.3') // '1.2.3'\nsemver.valid('a.b.c') // null\nsemver.clean('  =v1.2.3   ') // '1.2.3'\nsemver.satisfies('1.2.3', '1.x || >=2.5.0 || 5.0.0 - 7.2.3') // true\nsemver.gt('1.2.3', '9.8.7') // false\nsemver.lt('1.2.3', '9.8.7') // true\nsemver.minVersion('>=1.0.0') // '1.0.0'\nsemver.valid(semver.coerce('v2')) // '2.0.0'\nsemver.valid(semver.coerce('42.6.7.9.3-alpha')) // '42.6.7'\n```\n\nYou can also just load the module for the function that you care about, if\nyou'd like to minimize your footprint.\n\n```js\n// load the whole API at once in a single object\nconst semver = require('semver')\n\n// or just load the bits you need\n// all of them listed here, just pick and choose what you want\n\n// classes\nconst SemVer = require('semver/classes/semver')\nconst Comparator = require('semver/classes/comparator')\nconst Range = require('semver/classes/range')\n\n// functions for working with versions\nconst semverParse = require('semver/functions/parse')\nconst semverValid = require('semver/functions/valid')\nconst semverClean = require('semver/functions/clean')\nconst semverInc = require('semver/functions/inc')\nconst semverDiff = require('semver/functions/diff')\nconst semverMajor = require('semver/functions/major')\nconst semverMinor = require('semver/functions/minor')\nconst semverPatch = require('semver/functions/patch')\nconst semverPrerelease = require('semver/functions/prerelease')\nconst semverCompare = require('semver/functions/compare')\nconst semverRcompare = require('semver/functions/rcompare')\nconst semverCompareLoose = require('semver/functions/compare-loose')\nconst semverCompareBuild = require('semver/functions/compare-build')\nconst semverSort = require('semver/functions/sort')\nconst semverRsort = require('semver/functions/rsort')\n\n// low-level comparators between versions\nconst semverGt = require('semver/functions/gt')\nconst semverLt = require('semver/functions/lt')\nconst semverEq = require('semver/functions/eq')\nconst semverNeq = require('semver/functions/neq')\nconst semverGte = require('semver/functions/gte')\nconst semverLte = require('semver/functions/lte')\nconst semverCmp = require('semver/functions/cmp')\nconst semverCoerce = require('semver/functions/coerce')\n\n// working with ranges\nconst semverSatisfies = require('semver/functions/satisfies')\nconst semverMaxSatisfying = require('semver/ranges/max-satisfying')\nconst semverMinSatisfying = require('semver/ranges/min-satisfying')\nconst semverToComparators = require('semver/ranges/to-comparators')\nconst semverMinVersion = require('semver/ranges/min-version')\nconst semverValidRange = require('semver/ranges/valid')\nconst semverOutside = require('semver/ranges/outside')\nconst semverGtr = require('semver/ranges/gtr')\nconst semverLtr = require('semver/ranges/ltr')\nconst semverIntersects = require('semver/ranges/intersects')\nconst simplifyRange = require('semver/ranges/simplify')\nconst rangeSubset = require('semver/ranges/subset')\n```\n\nAs a command-line utility:\n\n```\n$ semver -h\n\nA JavaScript implementation of the https://semver.org/ specification\nCopyright Isaac Z. Schlueter\n\nUsage: semver [options] <version> [<version> [...]]\nPrints valid versions sorted by SemVer precedence\n\nOptions:\n-r --range <range>\n        Print versions that match the specified range.\n\n-i --increment [<level>]\n        Increment a version by the specified level.  Level can\n        be one of: major, minor, patch, premajor, preminor,\n        prepatch, or prerelease.  Default level is 'patch'.\n        Only one version may be specified.\n\n--preid <identifier>\n        Identifier to be used to prefix premajor, preminor,\n        prepatch or prerelease version increments.\n\n-l --loose\n        Interpret versions and ranges loosely\n\n-p --include-prerelease\n        Always include prerelease versions in range matching\n\n-c --coerce\n        Coerce a string into SemVer if possible\n        (does not imply --loose)\n\n--rtl\n        Coerce version strings right to left\n\n--ltr\n        Coerce version strings left to right (default)\n\nProgram exits successfully if any valid version satisfies\nall supplied ranges, and prints all satisfying versions.\n\nIf no satisfying versions are found, then exits failure.\n\nVersions are printed in ascending order, so supplying\nmultiple versions to the utility will just sort them.\n```\n\n## Versions\n\nA \"version\" is described by the `v2.0.0` specification found at\n<https://semver.org/>.\n\nA leading `\"=\"` or `\"v\"` character is stripped off and ignored.\n\n## Ranges\n\nA `version range` is a set of `comparators` which specify versions\nthat satisfy the range.\n\nA `comparator` is composed of an `operator` and a `version`.  The set\nof primitive `operators` is:\n\n* `<` Less than\n* `<=` Less than or equal to\n* `>` Greater than\n* `>=` Greater than or equal to\n* `=` Equal.  If no operator is specified, then equality is assumed,\n  so this operator is optional, but MAY be included.\n\nFor example, the comparator `>=1.2.7` would match the versions\n`1.2.7`, `1.2.8`, `2.5.3`, and `1.3.9`, but not the versions `1.2.6`\nor `1.1.0`.\n\nComparators can be joined by whitespace to form a `comparator set`,\nwhich is satisfied by the **intersection** of all of the comparators\nit includes.\n\nA range is composed of one or more comparator sets, joined by `||`.  A\nversion matches a range if and only if every comparator in at least\none of the `||`-separated comparator sets is satisfied by the version.\n\nFor example, the range `>=1.2.7 <1.3.0` would match the versions\n`1.2.7`, `1.2.8`, and `1.2.99`, but not the versions `1.2.6`, `1.3.0`,\nor `1.1.0`.\n\nThe range `1.2.7 || >=1.2.9 <2.0.0` would match the versions `1.2.7`,\n`1.2.9`, and `1.4.6`, but not the versions `1.2.8` or `2.0.0`.\n\n### Prerelease Tags\n\nIf a version has a prerelease tag (for example, `1.2.3-alpha.3`) then\nit will only be allowed to satisfy comparator sets if at least one\ncomparator with the same `[major, minor, patch]` tuple also has a\nprerelease tag.\n\nFor example, the range `>1.2.3-alpha.3` would be allowed to match the\nversion `1.2.3-alpha.7`, but it would *not* be satisfied by\n`3.4.5-alpha.9`, even though `3.4.5-alpha.9` is technically \"greater\nthan\" `1.2.3-alpha.3` according to the SemVer sort rules.  The version\nrange only accepts prerelease tags on the `1.2.3` version.  The\nversion `3.4.5` *would* satisfy the range, because it does not have a\nprerelease flag, and `3.4.5` is greater than `1.2.3-alpha.7`.\n\nThe purpose for this behavior is twofold.  First, prerelease versions\nfrequently are updated very quickly, and contain many breaking changes\nthat are (by the author's design) not yet fit for public consumption.\nTherefore, by default, they are excluded from range matching\nsemantics.\n\nSecond, a user who has opted into using a prerelease version has\nclearly indicated the intent to use *that specific* set of\nalpha/beta/rc versions.  By including a prerelease tag in the range,\nthe user is indicating that they are aware of the risk.  However, it\nis still not appropriate to assume that they have opted into taking a\nsimilar risk on the *next* set of prerelease versions.\n\nNote that this behavior can be suppressed (treating all prerelease\nversions as if they were normal versions, for the purpose of range\nmatching) by setting the `includePrerelease` flag on the options\nobject to any\n[functions](https://github.com/npm/node-semver#functions) that do\nrange matching.\n\n#### Prerelease Identifiers\n\nThe method `.inc` takes an additional `identifier` string argument that\nwill append the value of the string as a prerelease identifier:\n\n```javascript\nsemver.inc('1.2.3', 'prerelease', 'beta')\n// '1.2.4-beta.0'\n```\n\ncommand-line example:\n\n```bash\n$ semver 1.2.3 -i prerelease --preid beta\n1.2.4-beta.0\n```\n\nWhich then can be used to increment further:\n\n```bash\n$ semver 1.2.4-beta.0 -i prerelease\n1.2.4-beta.1\n```\n\n### Advanced Range Syntax\n\nAdvanced range syntax desugars to primitive comparators in\ndeterministic ways.\n\nAdvanced ranges may be combined in the same way as primitive\ncomparators using white space or `||`.\n\n#### Hyphen Ranges `X.Y.Z - A.B.C`\n\nSpecifies an inclusive set.\n\n* `1.2.3 - 2.3.4` := `>=1.2.3 <=2.3.4`\n\nIf a partial version is provided as the first version in the inclusive\nrange, then the missing pieces are replaced with zeroes.\n\n* `1.2 - 2.3.4` := `>=1.2.0 <=2.3.4`\n\nIf a partial version is provided as the second version in the\ninclusive range, then all versions that start with the supplied parts\nof the tuple are accepted, but nothing that would be greater than the\nprovided tuple parts.\n\n* `1.2.3 - 2.3` := `>=1.2.3 <2.4.0-0`\n* `1.2.3 - 2` := `>=1.2.3 <3.0.0-0`\n\n#### X-Ranges `1.2.x` `1.X` `1.2.*` `*`\n\nAny of `X`, `x`, or `*` may be used to \"stand in\" for one of the\nnumeric values in the `[major, minor, patch]` tuple.\n\n* `*` := `>=0.0.0` (Any version satisfies)\n* `1.x` := `>=1.0.0 <2.0.0-0` (Matching major version)\n* `1.2.x` := `>=1.2.0 <1.3.0-0` (Matching major and minor versions)\n\nA partial version range is treated as an X-Range, so the special\ncharacter is in fact optional.\n\n* `\"\"` (empty string) := `*` := `>=0.0.0`\n* `1` := `1.x.x` := `>=1.0.0 <2.0.0-0`\n* `1.2` := `1.2.x` := `>=1.2.0 <1.3.0-0`\n\n#### Tilde Ranges `~1.2.3` `~1.2` `~1`\n\nAllows patch-level changes if a minor version is specified on the\ncomparator.  Allows minor-level changes if not.\n\n* `~1.2.3` := `>=1.2.3 <1.(2+1).0` := `>=1.2.3 <1.3.0-0`\n* `~1.2` := `>=1.2.0 <1.(2+1).0` := `>=1.2.0 <1.3.0-0` (Same as `1.2.x`)\n* `~1` := `>=1.0.0 <(1+1).0.0` := `>=1.0.0 <2.0.0-0` (Same as `1.x`)\n* `~0.2.3` := `>=0.2.3 <0.(2+1).0` := `>=0.2.3 <0.3.0-0`\n* `~0.2` := `>=0.2.0 <0.(2+1).0` := `>=0.2.0 <0.3.0-0` (Same as `0.2.x`)\n* `~0` := `>=0.0.0 <(0+1).0.0` := `>=0.0.0 <1.0.0-0` (Same as `0.x`)\n* `~1.2.3-beta.2` := `>=1.2.3-beta.2 <1.3.0-0` Note that prereleases in\n  the `1.2.3` version will be allowed, if they are greater than or\n  equal to `beta.2`.  So, `1.2.3-beta.4` would be allowed, but\n  `1.2.4-beta.2` would not, because it is a prerelease of a\n  different `[major, minor, patch]` tuple.\n\n#### Caret Ranges `^1.2.3` `^0.2.5` `^0.0.4`\n\nAllows changes that do not modify the left-most non-zero element in the\n`[major, minor, patch]` tuple.  In other words, this allows patch and\nminor updates for versions `1.0.0` and above, patch updates for\nversions `0.X >=0.1.0`, and *no* updates for versions `0.0.X`.\n\nMany authors treat a `0.x` version as if the `x` were the major\n\"breaking-change\" indicator.\n\nCaret ranges are ideal when an author may make breaking changes\nbetween `0.2.4` and `0.3.0` releases, which is a common practice.\nHowever, it presumes that there will *not* be breaking changes between\n`0.2.4` and `0.2.5`.  It allows for changes that are presumed to be\nadditive (but non-breaking), according to commonly observed practices.\n\n* `^1.2.3` := `>=1.2.3 <2.0.0-0`\n* `^0.2.3` := `>=0.2.3 <0.3.0-0`\n* `^0.0.3` := `>=0.0.3 <0.0.4-0`\n* `^1.2.3-beta.2` := `>=1.2.3-beta.2 <2.0.0-0` Note that prereleases in\n  the `1.2.3` version will be allowed, if they are greater than or\n  equal to `beta.2`.  So, `1.2.3-beta.4` would be allowed, but\n  `1.2.4-beta.2` would not, because it is a prerelease of a\n  different `[major, minor, patch]` tuple.\n* `^0.0.3-beta` := `>=0.0.3-beta <0.0.4-0`  Note that prereleases in the\n  `0.0.3` version *only* will be allowed, if they are greater than or\n  equal to `beta`.  So, `0.0.3-pr.2` would be allowed.\n\nWhen parsing caret ranges, a missing `patch` value desugars to the\nnumber `0`, but will allow flexibility within that value, even if the\nmajor and minor versions are both `0`.\n\n* `^1.2.x` := `>=1.2.0 <2.0.0-0`\n* `^0.0.x` := `>=0.0.0 <0.1.0-0`\n* `^0.0` := `>=0.0.0 <0.1.0-0`\n\nA missing `minor` and `patch` values will desugar to zero, but also\nallow flexibility within those values, even if the major version is\nzero.\n\n* `^1.x` := `>=1.0.0 <2.0.0-0`\n* `^0.x` := `>=0.0.0 <1.0.0-0`\n\n### Range Grammar\n\nPutting all this together, here is a Backus-Naur grammar for ranges,\nfor the benefit of parser authors:\n\n```bnf\nrange-set  ::= range ( logical-or range ) *\nlogical-or ::= ( ' ' ) * '||' ( ' ' ) *\nrange      ::= hyphen | simple ( ' ' simple ) * | ''\nhyphen     ::= partial ' - ' partial\nsimple     ::= primitive | partial | tilde | caret\nprimitive  ::= ( '<' | '>' | '>=' | '<=' | '=' ) partial\npartial    ::= xr ( '.' xr ( '.' xr qualifier ? )? )?\nxr         ::= 'x' | 'X' | '*' | nr\nnr         ::= '0' | ['1'-'9'] ( ['0'-'9'] ) *\ntilde      ::= '~' partial\ncaret      ::= '^' partial\nqualifier  ::= ( '-' pre )? ( '+' build )?\npre        ::= parts\nbuild      ::= parts\nparts      ::= part ( '.' part ) *\npart       ::= nr | [-0-9A-Za-z]+\n```\n\n## Functions\n\nAll methods and classes take a final `options` object argument.  All\noptions in this object are `false` by default.  The options supported\nare:\n\n- `loose`  Be more forgiving about not-quite-valid semver strings.\n  (Any resulting output will always be 100% strict compliant, of\n  course.)  For backwards compatibility reasons, if the `options`\n  argument is a boolean value instead of an object, it is interpreted\n  to be the `loose` param.\n- `includePrerelease`  Set to suppress the [default\n  behavior](https://github.com/npm/node-semver#prerelease-tags) of\n  excluding prerelease tagged versions from ranges unless they are\n  explicitly opted into.\n\nStrict-mode Comparators and Ranges will be strict about the SemVer\nstrings that they parse.\n\n* `valid(v)`: Return the parsed version, or null if it's not valid.\n* `inc(v, release)`: Return the version incremented by the release\n  type (`major`,   `premajor`, `minor`, `preminor`, `patch`,\n  `prepatch`, or `prerelease`), or null if it's not valid\n  * `premajor` in one call will bump the version up to the next major\n    version and down to a prerelease of that major version.\n    `preminor`, and `prepatch` work the same way.\n  * If called from a non-prerelease version, the `prerelease` will work the\n    same as `prepatch`. It increments the patch version, then makes a\n    prerelease. If the input version is already a prerelease it simply\n    increments it.\n* `prerelease(v)`: Returns an array of prerelease components, or null\n  if none exist. Example: `prerelease('1.2.3-alpha.1') -> ['alpha', 1]`\n* `major(v)`: Return the major version number.\n* `minor(v)`: Return the minor version number.\n* `patch(v)`: Return the patch version number.\n* `intersects(r1, r2, loose)`: Return true if the two supplied ranges\n  or comparators intersect.\n* `parse(v)`: Attempt to parse a string as a semantic version, returning either\n  a `SemVer` object or `null`.\n\n### Comparison\n\n* `gt(v1, v2)`: `v1 > v2`\n* `gte(v1, v2)`: `v1 >= v2`\n* `lt(v1, v2)`: `v1 < v2`\n* `lte(v1, v2)`: `v1 <= v2`\n* `eq(v1, v2)`: `v1 == v2` This is true if they're logically equivalent,\n  even if they're not the exact same string.  You already know how to\n  compare strings.\n* `neq(v1, v2)`: `v1 != v2` The opposite of `eq`.\n* `cmp(v1, comparator, v2)`: Pass in a comparison string, and it'll call\n  the corresponding function above.  `\"===\"` and `\"!==\"` do simple\n  string comparison, but are included for completeness.  Throws if an\n  invalid comparison string is provided.\n* `compare(v1, v2)`: Return `0` if `v1 == v2`, or `1` if `v1` is greater, or `-1` if\n  `v2` is greater.  Sorts in ascending order if passed to `Array.sort()`.\n* `rcompare(v1, v2)`: The reverse of compare.  Sorts an array of versions\n  in descending order when passed to `Array.sort()`.\n* `compareBuild(v1, v2)`: The same as `compare` but considers `build` when two versions\n  are equal.  Sorts in ascending order if passed to `Array.sort()`.\n  `v2` is greater.  Sorts in ascending order if passed to `Array.sort()`.\n* `diff(v1, v2)`: Returns difference between two versions by the release type\n  (`major`, `premajor`, `minor`, `preminor`, `patch`, `prepatch`, or `prerelease`),\n  or null if the versions are the same.\n\n### Comparators\n\n* `intersects(comparator)`: Return true if the comparators intersect\n\n### Ranges\n\n* `validRange(range)`: Return the valid range or null if it's not valid\n* `satisfies(version, range)`: Return true if the version satisfies the\n  range.\n* `maxSatisfying(versions, range)`: Return the highest version in the list\n  that satisfies the range, or `null` if none of them do.\n* `minSatisfying(versions, range)`: Return the lowest version in the list\n  that satisfies the range, or `null` if none of them do.\n* `minVersion(range)`: Return the lowest version that can possibly match\n  the given range.\n* `gtr(version, range)`: Return `true` if version is greater than all the\n  versions possible in the range.\n* `ltr(version, range)`: Return `true` if version is less than all the\n  versions possible in the range.\n* `outside(version, range, hilo)`: Return true if the version is outside\n  the bounds of the range in either the high or low direction.  The\n  `hilo` argument must be either the string `'>'` or `'<'`.  (This is\n  the function called by `gtr` and `ltr`.)\n* `intersects(range)`: Return true if any of the ranges comparators intersect\n* `simplifyRange(versions, range)`: Return a \"simplified\" range that\n  matches the same items in `versions` list as the range specified.  Note\n  that it does *not* guarantee that it would match the same versions in all\n  cases, only for the set of versions provided.  This is useful when\n  generating ranges by joining together multiple versions with `||`\n  programmatically, to provide the user with something a bit more\n  ergonomic.  If the provided range is shorter in string-length than the\n  generated range, then that is returned.\n* `subset(subRange, superRange)`: Return `true` if the `subRange` range is\n  entirely contained by the `superRange` range.\n\nNote that, since ranges may be non-contiguous, a version might not be\ngreater than a range, less than a range, *or* satisfy a range!  For\nexample, the range `1.2 <1.2.9 || >2.0.0` would have a hole from `1.2.9`\nuntil `2.0.0`, so the version `1.2.10` would not be greater than the\nrange (because `2.0.1` satisfies, which is higher), nor less than the\nrange (since `1.2.8` satisfies, which is lower), and it also does not\nsatisfy the range.\n\nIf you want to know if a version satisfies or does not satisfy a\nrange, use the `satisfies(version, range)` function.\n\n### Coercion\n\n* `coerce(version, options)`: Coerces a string to semver if possible\n\nThis aims to provide a very forgiving translation of a non-semver string to\nsemver. It looks for the first digit in a string, and consumes all\nremaining characters which satisfy at least a partial semver (e.g., `1`,\n`1.2`, `1.2.3`) up to the max permitted length (256 characters).  Longer\nversions are simply truncated (`4.6.3.9.2-alpha2` becomes `4.6.3`).  All\nsurrounding text is simply ignored (`v3.4 replaces v3.3.1` becomes\n`3.4.0`).  Only text which lacks digits will fail coercion (`version one`\nis not valid).  The maximum  length for any semver component considered for\ncoercion is 16 characters; longer components will be ignored\n(`10000000000000000.4.7.4` becomes `4.7.4`).  The maximum value for any\nsemver component is `Number.MAX_SAFE_INTEGER || (2**53 - 1)`; higher value\ncomponents are invalid (`9999999999999999.4.7.4` is likely invalid).\n\nIf the `options.rtl` flag is set, then `coerce` will return the right-most\ncoercible tuple that does not share an ending index with a longer coercible\ntuple.  For example, `1.2.3.4` will return `2.3.4` in rtl mode, not\n`4.0.0`.  `1.2.3/4` will return `4.0.0`, because the `4` is not a part of\nany other overlapping SemVer tuple.\n\n### Clean\n\n* `clean(version)`: Clean a string to be a valid semver if possible\n\nThis will return a cleaned and trimmed semver version. If the provided\nversion is not valid a null will be returned. This does not work for\nranges.\n\nex.\n* `s.clean(' = v 2.1.5foo')`: `null`\n* `s.clean(' = v 2.1.5foo', { loose: true })`: `'2.1.5-foo'`\n* `s.clean(' = v 2.1.5-foo')`: `null`\n* `s.clean(' = v 2.1.5-foo', { loose: true })`: `'2.1.5-foo'`\n* `s.clean('=v2.1.5')`: `'2.1.5'`\n* `s.clean('  =v2.1.5')`: `2.1.5`\n* `s.clean('      2.1.5   ')`: `'2.1.5'`\n* `s.clean('~1.0.0')`: `null`\n\n## Exported Modules\n\n<!--\nTODO: Make sure that all of these items are documented (classes aren't,\neg), and then pull the module name into the documentation for that specific\nthing.\n-->\n\nYou may pull in just the part of this semver utility that you need, if you\nare sensitive to packing and tree-shaking concerns.  The main\n`require('semver')` export uses getter functions to lazily load the parts\nof the API that are used.\n\nThe following modules are available:\n\n* `require('semver')`\n* `require('semver/classes')`\n* `require('semver/classes/comparator')`\n* `require('semver/classes/range')`\n* `require('semver/classes/semver')`\n* `require('semver/functions/clean')`\n* `require('semver/functions/cmp')`\n* `require('semver/functions/coerce')`\n* `require('semver/functions/compare')`\n* `require('semver/functions/compare-build')`\n* `require('semver/functions/compare-loose')`\n* `require('semver/functions/diff')`\n* `require('semver/functions/eq')`\n* `require('semver/functions/gt')`\n* `require('semver/functions/gte')`\n* `require('semver/functions/inc')`\n* `require('semver/functions/lt')`\n* `require('semver/functions/lte')`\n* `require('semver/functions/major')`\n* `require('semver/functions/minor')`\n* `require('semver/functions/neq')`\n* `require('semver/functions/parse')`\n* `require('semver/functions/patch')`\n* `require('semver/functions/prerelease')`\n* `require('semver/functions/rcompare')`\n* `require('semver/functions/rsort')`\n* `require('semver/functions/satisfies')`\n* `require('semver/functions/sort')`\n* `require('semver/functions/valid')`\n* `require('semver/ranges/gtr')`\n* `require('semver/ranges/intersects')`\n* `require('semver/ranges/ltr')`\n* `require('semver/ranges/max-satisfying')`\n* `require('semver/ranges/min-satisfying')`\n* `require('semver/ranges/min-version')`\n* `require('semver/ranges/outside')`\n* `require('semver/ranges/to-comparators')`\n* `require('semver/ranges/valid')`\n",
   "homepage": "https://github.com/npm/node-semver#readme",
   "bugs": {
     "url": "https://github.com/npm/node-semver/issues"
   },
   "license": "ISC",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "_cached": false,
+  "_contentLength": 0
 }

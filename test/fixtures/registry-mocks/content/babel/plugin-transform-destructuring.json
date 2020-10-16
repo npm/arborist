@@ -1,10 +1,10 @@
 {
   "_id": "@babel/plugin-transform-destructuring",
-  "_rev": "72-032b2a0da44568440046325b67e14e57",
+  "_rev": "80-b58b09cb1d338749526d2b472ffd6d84",
   "name": "@babel/plugin-transform-destructuring",
   "description": "Compile ES2015 destructuring to ES5",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -1990,6 +1990,7 @@
         "@babel/core": "7.0.0-rc.3",
         "@babel/helper-plugin-test-runner": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.0.0-rc.3",
       "dist": {
         "shasum": "5924f10e29a1d2017f5d970c7769d2639bf16bf1",
@@ -2055,6 +2056,7 @@
         "@babel/core": "^7.0.0-rc.4",
         "@babel/helper-plugin-test-runner": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.0.0-rc.4",
       "dist": {
         "shasum": "e3bfffd07a534986bf852b9cc944f1f458fa875c",
@@ -2121,6 +2123,8 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/plugin-transform-destructuring\n\n> Compile ES2015 destructuring to ES5\n\nSee our website [@babel/plugin-transform-destructuring](https://babeljs.io/docs/en/next/babel-plugin-transform-destructuring.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/plugin-transform-destructuring\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/plugin-transform-destructuring --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.0.0",
       "dist": {
         "shasum": "68e911e1935dda2f06b6ccbbf184ffb024e9d43a",
@@ -2189,6 +2193,7 @@
         "@babel/core": "^7.0.0",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.1.1",
       "dist": {
         "shasum": "7845ae1c52281f7dfa56d2276c0ad646a6cd61b4",
@@ -2253,6 +2258,7 @@
         "@babel/core": "^7.0.0",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.1.2",
       "dist": {
         "shasum": "5fa77d473f5a0a3f5266ad7ce2e8c995a164d60a",
@@ -2317,6 +2323,7 @@
         "@babel/core": "^7.0.0",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.1.3",
       "dist": {
         "shasum": "e69ff50ca01fac6cb72863c544e516c2b193012f",
@@ -2381,6 +2388,7 @@
         "@babel/core": "^7.2.0",
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.2.0",
       "dist": {
         "shasum": "e75269b4b7889ec3a332cd0d0c8cff8fed0dc6f3",
@@ -2450,6 +2458,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "d896ce2b53f64742feeea27dd33ee45934cd041a",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.3.2",
       "dist": {
         "shasum": "f2f5520be055ba1c38c41c0e094d8a461dd78f2d",
@@ -2519,6 +2528,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "f1328fb913b5a93d54dfc6e3728b1f56c8f4a804",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.4.0",
       "dist": {
         "shasum": "acbb9b2418d290107db333f4d6cd8aa6aea00343",
@@ -2588,6 +2598,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "508fde4009f31883f318b9e6546459ac1b086a91",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.4.3",
       "dist": {
         "shasum": "1a95f5ca2bf2f91ef0648d5de38a8d472da4350f",
@@ -2657,6 +2668,7 @@
         "@babel/helper-plugin-test-runner": "^7.0.0"
       },
       "gitHead": "2c88694388831b1e5b88e4bbed6781eb2be1edba",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-present Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-transform-destructuring@7.4.4",
       "dist": {
         "shasum": "9d964717829cc9e4b601fc82a26a71a4d8faf20f",
@@ -3066,36 +3078,487 @@
         "tmp": "tmp/plugin-transform-destructuring_7.8.3_1578951687897_0.5937231166314803"
       },
       "_hasShrinkwrap": false
+    },
+    "7.8.8": {
+      "name": "@babel/plugin-transform-destructuring",
+      "version": "7.8.8",
+      "description": "Compile ES2015 destructuring to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-destructuring"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.8.3",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "c831a2450dbf252c75750a455c63e1016c2f2244",
+      "_id": "@babel/plugin-transform-destructuring@7.8.8",
+      "_nodeVersion": "13.9.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.9.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-eRJu4Vs2rmttFCdhPUM3bV0Yo/xPSdPw6ML9KHs/bjB4bLA5HXlbvYXPOD5yASodGod+krjYx21xm1QmL8dCJQ==",
+        "shasum": "fadb2bc8e90ccaf5658de6f8d4d22ff6272a2f4b",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.8.8.tgz",
+        "fileCount": 4,
+        "unpackedSize": 19449,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeaoQbCRA9TVsSAnZWagAAU/wQAJSralSWvHIh9+cF/YTn\npQHymeU5HOk6dAc7MQLUlo3JTU/+C3IhxJMu+aEAsUC38EihlXpLl0G25B0k\nscs/XR0SAKIz65iMpM+aLammPAxcPlvDYpy4tJImwvx1IgaX3GFum5DpdGMH\nxw2oyoGFsihSu2ko7suLP1ugwhAx72Fp9ksFADerS9p+j5Ej0BEW54++IrgE\nUyw/0OCTVfieUuOFSEptariO9ZWqw363jXOzAAqMbNgddi0ulCFDFO2zp+Vb\nAX3LMSH/5LRzfk8CAlLmw2bqm1hT1TWvIX6lBG8YJmYNnInhgVhmUoh30ro7\n+d47oL+GwUEzhqzppzePLxCNjQ+nnEb1bbIfsr6WTauDW2I1cY7OmjrhdmLL\n5NMBnPuSLELVwLzgh1uZeleM+6zaAwjSQPSw9Qf7EyuasduNcyWEICtAKI7M\nHHCAGyFqvN90fg5e0gt8IYvSHTctc2A8lte50c14bMlHf0TEkQW7lY6Yqs9R\nWKA9c1XQT/kqaH9nIhhehJr0eOqH+wOPVJL/oZvFdO79vzGNGCJmJOy08nR/\nJNxOzGLSkIMcgcuHZ+lJuQst+U92X3dQSStc0ZI2lxhq46wMgGbOUhnfmpoE\neKYSSblDf0ZVBsF/HDa89zshx2lDDuHHbDYIGk+vF8Yp4gcwVDJgkeXISslY\nR0eQ\r\n=X6l0\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-destructuring_7.8.8_1584038938597_0.23257462285377328"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.9.5": {
+      "name": "@babel/plugin-transform-destructuring",
+      "version": "7.9.5",
+      "description": "Compile ES2015 destructuring to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-destructuring"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.8.3",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5b97e77e030cf3853a147fdff81844ea4026219d",
+      "_id": "@babel/plugin-transform-destructuring@7.9.5",
+      "_nodeVersion": "10.19.0",
+      "_npmVersion": "lerna/3.19.0/node@v10.19.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-j3OEsGel8nHL/iusv/mRd5fYZ3DrOxWC82x0ogmdN/vHfAP4MYw+AFKYanzWlktNwikKvlzUV//afBW5FTp17Q==",
+        "shasum": "72c97cf5f38604aea3abf3b935b0e17b1db76a50",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.9.5.tgz",
+        "fileCount": 4,
+        "unpackedSize": 19472,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJejNOaCRA9TVsSAnZWagAAg+4QAIKkpoE7wqaz60uMOmWV\nX9z2RK9fLOvoUBTnKXNNWu71PrvfGskAAszscxhTs50vqVKocVMxYYf3TR8K\n0cDeQ2/GvmPHuU9PYIyOWa9ueHemjJuBO8W0L49yQe+qBriCePwCOabIAsV0\nR0IQVJMeYJC2IaQDiwH91TQXR20He5iySLvbZzEOmaXwAFdZMBqUw+oRDY81\nKgNPq5i6uny+svCs2VkAeVd3Onb6bdpEyXLLBZXyE7bk7kaP5JpqC4Qj8p5Q\ndGh9dEHX8JIwFuMvxLcKl6VArYJ9jfnev85IKjyWhplcnB78HMArTPsaVJjP\nWSKohgdMRNzmwWZVAQ1u6xRL0RJ3WXmF0er3ldWZzdBBIM586mmI9FlIkOMm\nOyY4RLcnCo5oHRqljLd9NsiOmZ1MFbgaO1KW0PZ8lwUSln6fkHcQs3MZ3IMe\nVWnEbYsFhuZ+AXdYhouIDcX86veGCGS8X4qQ6+AajHGu1xlykc/yrCRg7up6\n/AnAMdF6JAOcpXi3sO4MH2tX9oBKxlTuuX5sW5kPU2GL33NrbA7hsWAA6ENy\n9iH078ToiP+fldBUdfvEvo6C41ocgy/+GTnDJ6bnHAExthI7KSQG64DSSzKj\nOxmptJuaXiokXUTlop0tcYuN6zlIqvKkKXTGaZD7SGthba/zy+2uJuq5jDwJ\nsVGw\r\n=Eudw\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-destructuring_7.9.5_1586287513914_0.5561453934342147"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.0": {
+      "name": "@babel/plugin-transform-destructuring",
+      "version": "7.10.0",
+      "description": "Compile ES2015 destructuring to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-destructuring"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.8.3"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.0",
+        "@babel/helper-plugin-test-runner": "^7.8.3"
+      },
+      "gitHead": "5da2440adff6f25579fb6e9a018062291c89416f",
+      "_id": "@babel/plugin-transform-destructuring@7.10.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.3.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-yKoghHpYbC0eM+6o6arPUJT9BQBvOOn8iOCEHwFvkJ5gjAxYmoUaAuLwaoA9h2YvC6dzcRI0KPQOpRXr8qQTxQ==",
+        "shasum": "59145194029721e49e511afb4bdd1d2f38369180",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.10.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 19716,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezY13CRA9TVsSAnZWagAAZcoP/21H6r70cQbCgJGm9Fr0\nWDrG74/HqV2pH2/lW7R+A4Z4C6P2lq0b8748CUdtsF7HbNaR+AOTqtwoT1Yx\n+KrSzh/vgzRzAQgAEJCa4XMc93s2Fhp73cKiJzmYqDasa1SmziafeeFQEzbv\nR/DT5tJtXV6bV3coWD+EEXpNa6aDvTOeLyn3vtkIYof2Q2iPxFRjLLthHz2C\n+f5Mn6FvuHwXPvMSVJsIwdsMozTyDeYOUY+smtrtDz1Xf1VCxsR4ZKo134kb\njGfhdfQpnbW7VtDp/qC6ZXzKGoRDc48i6KfFthUBW/jj4pkaN6P5N8HVYQsy\ntln2bCSk9alWdShhgNJ0JelXggHShe/fQQi4ToSrJ3E6HCEBtBDubRFL/QHX\ni7MDAFkQOAj8Py6WLrFtZ7f7TKmF7yZYN1BpMfL/IA3wweBarJ81cBhMAJXv\nep97HWWNmZjsPFbhg9jYQxseCdBnZGtwgAsgXEAl/VuaLRp88bjmul6z3e6y\n3pB7HxOCR5nYAth48dQ8rmGo9Hi/tLYG5/QOuQj/cCxB9e3KMh4vYT79NsD2\nsBtJ0LGI7CsM9i/mULj9Aqs8KVJMexXcyBWB4BWABtfku511Fm1n7973/g9J\nJ5cbxFIj6o5jC4yLD8BuWpoWYjL/7nzGEenC5nvbd+zCSFxcJLM5vq5rc9FP\nOpGm\r\n=Fc8y\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-destructuring_7.10.0_1590529398628_0.05657219223967269"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/plugin-transform-destructuring",
+      "version": "7.10.1",
+      "description": "Compile ES2015 destructuring to ES5",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-destructuring"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.1",
+        "@babel/helper-plugin-test-runner": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-transform-destructuring@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-V/nUc4yGWG71OhaTH705pU8ZSdM6c1KmmLP8ys59oOYbT7RpMYAR3MsVOt6OHL0WzG7BlTU076va9fjJyYzJMA==",
+        "shasum": "abd58e51337815ca3a22a336b85f62b998e71907",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 19766,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuSbCRA9TVsSAnZWagAAyYEP/21J37JewtDIsI0ohiMk\ndP4ifepQzBpM+ntBcAQEwi8/3rO9taaw7sMLVJRVIB4gYctAdcQooTjLNCvV\n8Tp2DatMdHMEAM24EZNkHqno1DoTXb/UFp8RnIFPltsgqt7oW3C8P6osWkYk\nYXbH7q6AcnOEsnnvvWJK6L7nX5qscNmDKTj92gJNkX4vl76diRlikuZ3bkmy\nS/GTBmfuHqp0itn/iH7yd1kXVZB8lUv5QlP/Tj70pGYMeOkML0xg1z0akKPR\n7Shg0iD9fHmhfoqfq+T/JFpQ6f8lvVG3hgymjvU0nfsmNV5umNWxAsoLgxIv\nm3fSzb/AMvOzzGmgDoS0hW3HGWQLVZGE+g648Yfu+GWLTyMaNe16wAGvRVpR\nbaU0mIpA8mPhbeHyvIZvQVjeFbv5Fu8K7GJmyaGTVa+7zfuXJyV5OjiHrytl\n7vrjBsGuDMhqGuTNiQEbIsQrUPTDwtmhGmdle9AnNwTE2vujlXq4i53E+yl6\nl+Ks7IKztzzm8/io94D8FX2Pa5mXDv7ONpjDgTIpWbN51LJQBeR9DiwefbEQ\n6TGlVQgCvrmT+gnWPqIEMoBC8ZBxbLTYrR1eXkxE/Y4QpJntheJVPFJkCQqJ\nxdC3CMgNSp08u2JJwpyf+vBl9TpmlFlwdgcILPj3F9npv+Wcz4ekPA7r8F2b\niUBS\r\n=RsxG\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-destructuring_7.10.1_1590617242625_0.9440939157114974"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/plugin-transform-destructuring",
+      "version": "7.10.4",
+      "description": "Compile ES2015 destructuring to ES5",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-destructuring"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.4",
+        "@babel/helper-plugin-test-runner": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-transform-destructuring@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-+WmfvyfsyF603iPa6825mq6Qrb7uLjTOsa3XOFzlYcYDHSS4QmpOWOL0NNBY5qMbvrcf3tq0Cw+v4lxswOBpgA==",
+        "shasum": "70ddd2b3d1bea83d01509e9bb25ddb3a74fc85e5",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 19728,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zofCRA9TVsSAnZWagAATrsP/33YbDcYL4CZg9CBRHC9\nBpvtNrKRCiaJN1QIlEkKlefUz/MCoBkkRPu2qyc64MtbaQtw7NrTZcuE2mWb\nfZ7Gwwzb4ZQUb0k7ksi9ZRTZlolVFFIR9yJqcoo0zGOaZ2lPmSrH0VPT1TZy\nZ5C31cYNuSmy/AUZoP7fWBbvxnFlg//fJU/JsXn0IKC7yVs0N28W+lc+Wg9Y\njxAwye3kIeWypQiIZTO9qajBYdiUJTKlvsnIJrfJ3xFrhFky1j5lyov5BAGb\n/xE3p2jDoO18+199j+eKJGy7slDcXsIrpEgeNb2XKflKWYNmt8kUVqALDvVD\n8H0EESsRws4HEXVBAEU2BBfwOyhgjQAHJgD+IXRgHXJdmjM9OIrUjr/1ED0C\ncm6kzcLlQf9xKeUO+T1Uz6S28uyckp0TOOriMHjHvun/CfDgzW8jOBaw3wEg\ncmM97Ltc/SKXR4mPgmfqhG55qyw5qVkIfK1kSztm0wWLsCoCHLzVl9WvV38w\nYfLBQPbPFASURSBsW82+ktMZCtg/xRjDjWR0NBouVJOhgtHryVtiPr2vgPiW\npXMChVbmho9MXmKP3KIJ3rpGKHw5+4l9NVHBT16dyc8gpgrT9KNKAXX28JjU\nqTaafJmk0EZ57Jou+w7cXYV1oIpquU6EdwqKvUN4FPj3vftpM7e2gjqnrcnV\n2Bs0\r\n=AiqK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-destructuring_7.10.4_1593522719102_0.6438808999037471"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/plugin-transform-destructuring",
+      "version": "7.12.1",
+      "description": "Compile ES2015 destructuring to ES5",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-transform-destructuring"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.12.1",
+        "@babel/helper-plugin-test-runner": "7.10.4"
+      },
+      "_id": "@babel/plugin-transform-destructuring@7.12.1",
+      "dist": {
+        "shasum": "b9a570fe0d0a8d460116413cb4f97e8e08b2f847",
+        "integrity": "sha512-fRMYFKuzi/rSiYb2uRLiUENJOKq4Gnl+6qOv5f8z0TZXg3llUwUhsNNwrwaT/6dUhJTzNpBr+CUvEWBtfNY1cw==",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.12.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 19669,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiM/BCRA9TVsSAnZWagAAyc4P/iLwtQX0EHxL4V9BUBWO\n232ashejwmX7duvq+3oxJYm8bPcWZ1dITaU0b6C/06Ff9p1B2T8xusatncXo\ndmUkvjgmFtEWVZXSWHJgskGebnWhnL78TMOq9uo9ZEdLsjVRfvg0uEoy1L6K\nljDQXCmR7fCUQA30zWpZ6Ijg/aV/tOf1iq1BMBLNoBlAhVg5e5j61dj4eism\nniHHZ5m9uSpUpX+nhst9kleTMquBtPYk8/OdmuU7UP1rMPE+44pvbhG2rJeg\nFZM1Ao62fvhbDX0f6peOVC7Eicdd8WsyBYcZWkCjkKTGGs3iuco9CIB6Lm9k\npmhZLnS/B1JozCyUfbTmnJWcf22XdDLkOfW7e63UYKgWOcl7m9oO1DU5AxXz\nrqhdfbv1Z3owcKX9AVzlOSp4JltMT4GUd9XtX7N/QftgBRUGc6pVNUZVNr1y\nEQGnj7ePRCmnGcgDPR26BiZWGWr1lur8JqkZBfxraEUIV7RpOv7iUgHBkVMb\n/j0hlde2ATp/bBNwL5SPewSe8vj6/b50cYcHz5CxOX/3Sf6H8mPHrqz2DW+y\nYgMHkhGe6/WCyJuY8es7KcSs8+3SwMAEXOsUSbRv5O8WyBTgTH1kwQJDbe10\nJyyUE3Fuq5m7l2lIRfyQIo2FGcZGxaUXVkls6xzDUBf7NR0+VynjhmPvg6r+\n7l67\r\n=IyDc\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-transform-destructuring_7.12.1_1602801601474_0.7709417321773318"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:41:35.374Z",
+    "modified": "2020-10-15T22:40:03.793Z",
     "created": "2017-10-30T18:34:34.846Z",
     "7.0.0-beta.4": "2017-10-30T18:34:34.846Z",
     "7.0.0-beta.5": "2017-10-30T20:56:13.327Z",
@@ -3143,15 +3606,24 @@
     "7.6.0": "2019-09-06T17:33:37.523Z",
     "7.7.4": "2019-11-22T23:32:07.816Z",
     "7.8.0": "2020-01-12T00:16:34.675Z",
-    "7.8.3": "2020-01-13T21:41:28.058Z"
+    "7.8.3": "2020-01-13T21:41:28.058Z",
+    "7.8.8": "2020-03-12T18:48:58.740Z",
+    "7.9.5": "2020-04-07T19:25:14.014Z",
+    "7.10.0": "2020-05-26T21:43:18.792Z",
+    "7.10.1": "2020-05-27T22:07:22.735Z",
+    "7.10.4": "2020-06-30T13:11:59.230Z",
+    "7.12.1": "2020-10-15T22:40:01.612Z"
   },
   "keywords": [
     "babel-plugin"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-destructuring"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-transform-destructuring"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "",
+  "_cached": false,
+  "_contentLength": 0
 }

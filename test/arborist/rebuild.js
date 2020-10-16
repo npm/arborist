@@ -517,4 +517,54 @@ t.test('workspaces', async t => {
       'bin symlink should not be put into place'
     )
   })
+
+  t.test('linked deps', async t => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'my-workspaces-powered-project',
+        dependencies: {
+          a: 'file:./a',
+        },
+      }),
+      node_modules: {
+        a: t.fixture('symlink', '../a'),
+      },
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.0.0',
+          bin: './foo',
+          scripts: { prepare: 'exit 0' },
+        }),
+        foo: 'foo',
+      },
+    })
+
+    const RUNS = []
+    const Arborist = requireInject('../../lib/arborist/index.js', {
+      '@npmcli/run-script': async opts => {
+        RUNS.push(opts)
+        return {code: 0, signal: null}
+      },
+    })
+    const arb = new Arborist({ path, registry, binLinks: false })
+
+    await arb.rebuild()
+    t.equal(RUNS.length, 1, 'should run prepare script only once')
+    t.match(RUNS, [
+      {
+        event: 'prepare',
+        pkg: { name: 'a' },
+      },
+    ])
+
+    // should place bin links AFTER running lifecycle scripts
+    // foo is a file created during prepare script
+    const binLink = resolve(path, 'node_modules/.bin/a')
+    t.throws(
+      () => fs.statSync(binLink),
+      /ENOENT/,
+      'bin symlink should not be put into place'
+    )
+  })
 })

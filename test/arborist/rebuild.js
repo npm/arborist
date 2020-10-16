@@ -508,8 +508,6 @@ t.test('workspaces', async t => {
       },
     ])
 
-    // should place bin links AFTER running lifecycle scripts
-    // foo is a file created during prepare script
     const binLink = resolve(path, 'node_modules/.bin/a')
     t.throws(
       () => fs.statSync(binLink),
@@ -547,7 +545,7 @@ t.test('workspaces', async t => {
         return {code: 0, signal: null}
       },
     })
-    const arb = new Arborist({ path, registry, binLinks: false })
+    const arb = new Arborist({ path, registry })
 
     await arb.rebuild()
     t.equal(RUNS.length, 1, 'should run prepare script only once')
@@ -559,12 +557,11 @@ t.test('workspaces', async t => {
     ])
 
     // should place bin links AFTER running lifecycle scripts
-    // foo is a file created during prepare script
     const binLink = resolve(path, 'node_modules/.bin/a')
-    t.throws(
-      () => fs.statSync(binLink),
-      /ENOENT/,
-      'bin symlink should not be put into place'
+    t.equal(
+      fs.statSync(binLink).isFile(),
+      true,
+      'bin symlink is put into place'
     )
   })
 })

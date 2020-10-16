@@ -1,10 +1,10 @@
 {
   "_id": "log-update",
-  "_rev": "45-70508e1748a6b4469ebe8003c7bed10c",
+  "_rev": "46-d9577d0a6dbc83290d0dfbf027895d03",
   "name": "log-update",
   "description": "Log by overwriting the previous output in the terminal. Useful for rendering progress bars, animations, etc.",
   "dist-tags": {
-    "latest": "3.4.0"
+    "latest": "4.0.0"
   },
   "versions": {
     "1.0.0": {
@@ -1092,8 +1092,94 @@
         "tmp": "tmp/log-update_3.4.0_1580661695979_0.7862256735678375"
       },
       "_hasShrinkwrap": false
+    },
+    "4.0.0": {
+      "name": "log-update",
+      "version": "4.0.0",
+      "description": "Log by overwriting the previous output in the terminal. Useful for rendering progress bars, animations, etc.",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/log-update.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "log",
+        "logger",
+        "logging",
+        "cli",
+        "terminal",
+        "term",
+        "console",
+        "shell",
+        "update",
+        "refresh",
+        "overwrite",
+        "output",
+        "stdout",
+        "progress",
+        "bar",
+        "animation"
+      ],
+      "dependencies": {
+        "ansi-escapes": "^4.3.0",
+        "cli-cursor": "^3.1.0",
+        "slice-ansi": "^4.0.0",
+        "wrap-ansi": "^6.2.0"
+      },
+      "devDependencies": {
+        "@types/node": "^13.7.4",
+        "ava": "^3.3.0",
+        "terminal.js": "^1.0.10",
+        "tsd": "^0.11.0",
+        "xo": "^0.26.1"
+      },
+      "gitHead": "c913bf692090d2948f2bcedfb479a1b91f899037",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/log-update/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/log-update#readme",
+      "_id": "log-update@4.0.0",
+      "_nodeVersion": "10.18.1",
+      "_npmVersion": "6.13.7",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-9fkkDevMefjg0mmzWFBW8YkFP91OrizzkW3diF7CpG+S2EYdy4+TVfGwz1zeF8x7hCx1ovSPTOE9Ngib74qqUg==",
+        "shasum": "589ecd352471f2a1c0c570287543a64dfd20e0a1",
+        "tarball": "https://registry.npmjs.org/log-update/-/log-update-4.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 7575,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeTj41CRA9TVsSAnZWagAASPoP/A5Q2OP8CfJUfs0VF9k4\n0TPz4OFYCJ5TAW0IAPxf87tu0MDfFFhDZqupm9EcGB3ujxg0CH5iSUNK8fXS\n82YtBRZMBoSgri/f7GlFWNhkOB9FgfNthHoNNl0en2yf/+ojV2WGe6WZUtHs\nVXtjdXH5lgrce0a5BVSudjcPvd1/8+/6RWDFn64baxx6RX5udICO5C1UvEQ4\nF+ID4iMiGi9I5FvW8KGsAZzO2ptipeqzXB5/MvY1PT5ruAc+FrBsVEMmYNvh\nkwN6TQGi2tZMmpzrpc38Lde9Gd3gYORv1z9meaxl7TsiEJev7UJS2eBGszbt\nL2WhPVtvxhnlII9Vqb73yarW3t4h1aCZB8iK6kdVihekPedKmjCG6XIF3fjG\nxnu4XBKLcmExGHS5MNOnOaVfhaPvG4tBNFqqa7iSKlrNlSNcj+hW11aUBT0F\nhOdZI+n/wmyVHZMmGtUIbF1/DdHQIE0Hml1vcNMrjbowDza0BFSALqeb83Wk\nQH6NNNU6XiZoLu4bUGIcdH8QsABkW3i0EXihbo89nsy2CY4bOLg03WENvb9Q\nIj0Og4DJm4bMsTsTFNvcrAlAIyKMvVxvn11OsQoHEAowRT38JhGCTaa6rk19\nhzSg1NI1JBgTZ3biJ4lPHKBX9RYyo1XsSoJoo26/B6nRx9BXHYK7abh6HCkP\n8ig7\r\n=oEUE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "sindresorhus@gmail.com",
+          "name": "sindresorhus"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/log-update_4.0.0_1582186037542_0.3543418798824487"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# log-update [![Build Status](https://travis-ci.org/sindresorhus/log-update.svg?branch=master)](https://travis-ci.org/sindresorhus/log-update)\n\n> Log by overwriting the previous output in the terminal.<br>\n> Useful for rendering progress bars, animations, etc.\n\n![](screenshot.gif)\n\n## Install\n\n```\n$ npm install log-update\n```\n\n## Usage\n\n```js\nconst logUpdate = require('log-update');\n\nconst frames = ['-', '\\\\', '|', '/'];\nlet i = 0;\n\nsetInterval(() => {\n\tconst frame = frames[i = ++i % frames.length];\n\n\tlogUpdate(\n`\n        ♥♥\n   ${frame} unicorns ${frame}\n        ♥♥\n`\n\t);\n}, 80);\n```\n\n## API\n\n### logUpdate(text…)\n\nLog to stdout.\n\n### logUpdate.clear()\n\nClear the logged output.\n\n### logUpdate.done()\n\nPersist the logged output.<br>\nUseful if you want to start a new log session below the current one.\n\n### logUpdate.stderr(text…)\n\nLog to stderr.\n\n### logUpdate.stderr.clear()\n### logUpdate.stderr.done()\n\n### logUpdate.create(stream, options?)\n\nGet a `logUpdate` method that logs to the specified stream.\n\n#### options\n\nType: `object`\n\n##### showCursor\n\nType: `boolean`\\\nDefault: `false`\n\nShow the cursor. This can be useful when a CLI accepts input from a user.\n\n```js\nconst logUpdate = require('log-update');\n\n// Write output but don't hide the cursor\nconst log = logUpdate.create(process.stdout, {\n\tshowCursor: true\n});\n```\n\n## Examples\n\n- [listr](https://github.com/SamVerschueren/listr) - Uses this module to render an interactive task list\n- [ora](https://github.com/sindresorhus/ora) - Uses this module to render awesome spinners\n- [speed-test](https://github.com/sindresorhus/speed-test) - Uses this module to render a [spinner](https://github.com/sindresorhus/elegant-spinner)\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-log-update?utm_source=npm-log-update&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "email": "sindresorhus@gmail.com",
@@ -1101,7 +1187,7 @@
     }
   ],
   "time": {
-    "modified": "2020-02-02T16:41:38.657Z",
+    "modified": "2020-02-20T08:07:20.087Z",
     "created": "2015-08-16T08:33:11.178Z",
     "1.0.0": "2015-08-16T08:33:11.178Z",
     "1.0.1": "2015-09-18T13:51:37.506Z",
@@ -1115,7 +1201,8 @@
     "3.1.1": "2019-03-31T19:14:12.659Z",
     "3.2.0": "2019-04-01T08:43:34.499Z",
     "3.3.0": "2019-09-03T14:54:23.116Z",
-    "3.4.0": "2020-02-02T16:41:36.229Z"
+    "3.4.0": "2020-02-02T16:41:36.229Z",
+    "4.0.0": "2020-02-20T08:07:17.654Z"
   },
   "homepage": "https://github.com/sindresorhus/log-update#readme",
   "keywords": [

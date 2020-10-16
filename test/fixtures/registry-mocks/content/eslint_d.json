@@ -1,10 +1,10 @@
 {
   "_id": "eslint_d",
-  "_rev": "55-9575a9a44578bf7feccec160005c8e34",
+  "_rev": "56-de9745a3f8a9006f569f1f7815cbff73",
   "name": "eslint_d",
   "description": "Makes eslint the fastest linter on the planet",
   "dist-tags": {
-    "latest": "9.1.1"
+    "latest": "9.1.2"
   },
   "versions": {
     "1.0.0": {
@@ -4585,21 +4585,156 @@
         "tmp": "tmp/eslint_d_9.1.1_1592914751457_0.8996119646660199"
       },
       "_hasShrinkwrap": false
+    },
+    "9.1.2": {
+      "name": "eslint_d",
+      "version": "9.1.2",
+      "description": "Makes eslint the fastest linter on the planet",
+      "bin": {
+        "eslint_d": "bin/eslint_d.js"
+      },
+      "keywords": [
+        "eslint",
+        "lint"
+      ],
+      "author": {
+        "name": "Maximilian Antoni",
+        "email": "mail@maxantoni.de",
+        "url": "http://maxantoni.de/"
+      },
+      "contributors": [
+        {
+          "name": "Richard Herrera",
+          "email": "rich@doctyper.com"
+        },
+        {
+          "name": "Kevin Yue",
+          "email": "yuezk001@gmail.com"
+        },
+        {
+          "name": "Roger Zurawicki",
+          "email": "roger@krypton.io"
+        },
+        {
+          "name": "jpsc",
+          "email": "joao@voorhoede.nl"
+        },
+        {
+          "name": "ruanyl",
+          "email": "ruanyu1@gmail.com"
+        },
+        {
+          "name": "Nick Hwang",
+          "email": "nhwang@hubspot.com"
+        },
+        {
+          "name": "Aaron Jensen",
+          "email": "aaronjensen@gmail.com"
+        },
+        {
+          "name": "Simen Bekkhus",
+          "email": "sbekkhus91@gmail.com"
+        },
+        {
+          "name": "Caleb Eby",
+          "email": "calebeby@users.noreply.github.com"
+        },
+        {
+          "name": "Huáng Jùnliàng",
+          "email": "JLHwung@users.noreply.github.com"
+        },
+        {
+          "name": "Joseph Frazier",
+          "email": "1212jtraceur@gmail.com"
+        },
+        {
+          "name": "Sergey Markov",
+          "email": "Mar.Ser.DLX@gmail.com"
+        }
+      ],
+      "homepage": "https://github.com/mantoni/eslint_d.js",
+      "eslintConfig": {
+        "extends": "@studio"
+      },
+      "scripts": {
+        "test": "mocha --file ./node_modules/mocha-referee-sinon",
+        "watch": "mocha --watch",
+        "lint": "eslint . --ignore-pattern '**/node_modules/**'",
+        "posttest": "npm run lint",
+        "prepare": "sh prepare.sh",
+        "preversion": "npm test",
+        "version": "changes --commits --footer",
+        "postversion": "git push --follow-tags && npm publish"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mantoni/eslint_d.js.git"
+      },
+      "dependencies": {
+        "core_d": "^2.0.0",
+        "eslint": "^7.3.0",
+        "nanolru": "^1.0.0",
+        "optionator": "^0.9.1"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@sinonjs/referee-sinon": "^7.1.0",
+        "@studio/changes": "^2.0.1",
+        "@studio/eslint-config": "^1.1.1",
+        "mocha": "^8.1.3",
+        "mocha-referee-sinon": "^1.0.0",
+        "semver": "^7.3.2"
+      },
+      "gitHead": "ab403f6c1f21b3ebcf0c18db6e175e3dd749bf53",
+      "bugs": {
+        "url": "https://github.com/mantoni/eslint_d.js/issues"
+      },
+      "_id": "eslint_d@9.1.2",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-HJ7n92z+gSBLPP/en2pse1SLsFfwOXb8aqHn3FyXwYaE+J5wSM+raBbSmvE9Ttq20IF6Rq/dXxjhiIjuxAUjpw==",
+        "shasum": "153e17d3a5a8d84e688be07b2dbd5c27304a1975",
+        "tarball": "https://registry.npmjs.org/eslint_d/-/eslint_d-9.1.2.tgz",
+        "fileCount": 9,
+        "unpackedSize": 47137,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfV5L2CRA9TVsSAnZWagAAL24P/2lycoN8Ccb773SiGp4T\nOLbEXCRfOKZEDcZnO5tGHYMJPR/qNxOnpAmuNYGBa8R5ofarlMd45IfVelXS\nxWL2Amj/5hF2lLPpP5smqZH6IyM9kHwL4kbspvhGwvkMsHp+TNgdVdirg+9W\nkbKyZQSc1WUjsGYFg/aOr7AZOzSUmQg1JWBhPRjzxqxppw7OFsIVkHpKuZwi\nMXEM9wsLZHngcXMCOi4m7JRS+52YcMcScG+ymSQhC1bhF5si6ncVLoiYZuot\noNLuoaMY39mj/kHx0NUVOsB9k8/Wv3f/wHVNx98p1MNxQp/+EOmqWMtCmUma\n+7d59shc4OwpRwTohBK2SaRMJ+sr1grnA19OiKbMi3z5mLfvpgUhxfFwhQIU\n0smBGq36MyG7flyEesgAplyiZyk8/0eN2AUTUMIFzE1DdMFEyFfDsH9YTA0B\ng9KRKv7q9WWJTqnVjmi1+sQ0g0gF0mcvnlQK+XiMF0xPyQSDPf2qem2YNb7p\nlUPQ/SluAwJevZVWfRoOzCtBaLiZXSNNegvAcdci5eQ8jK1CrLEsZfl8kl54\nxm9m0So6SUMZBv/kHLHZRjZrFiQye/6T7akBpW3jToQvfg0UMbB33KlI86gs\nG6Eyjtm84mdopj9lb/vgDwIGr4vYUfq4mRHnP0RGkyf52WosFJAT6gz4cZa+\njVRl\r\n=AzEB\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "mantoni",
+          "email": "mail@maxantoni.de"
+        },
+        {
+          "name": "aaronjensen",
+          "email": "aaronjensen@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "mantoni",
+        "email": "mail@maxantoni.de"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/eslint_d_9.1.2_1599574773785_0.7557734840171157"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "# eslint\\_d\n\n[![Build Status]](https://travis-ci.org/mantoni/eslint_d.js)\n[![SemVer]](http://semver.org)\n[![License]](https://github.com/mantoni/eslint\\_d.js/blob/master/LICENSE)\n\nMakes [eslint][] the fastest linter on the planet.\n\n## \"But eslint is pretty fast already, right?\"\n\nYes, it's really fast. But the node.js startup time and loading all the\nrequired modules slows down linting times for a single file to ~700\nmilliseconds. `eslint_d` reduces this overhead by running a server in the\nbackground. It brings the linting time down to ~160 milliseconds. If you want\nto lint from within your editor whenever you save a file, `eslint_d` is for\nyou.\n\n## Install\n\nThis will install the `eslint_d` command globally:\n\n```bash\n$ npm install -g eslint_d\n```\n\n## Usage\n\nTo start the server and lint a file, just run:\n\n```bash\n$ eslint_d file.js\n```\n\nOn the initial call, the `eslint_d` server is launched and then the given file\nis linted. Subsequent invocations are super fast.\n\n## How does this work?\n\nThe first time you use `eslint_d`, a little server is started in the background\nand bound to a random port. The port number is stored along with [a\ntoken][change401] in `~/.eslint_d`. You can then run `eslint_d` commands the\nsame way you would use `eslint` and it will delegate to the background server.\nIt will load a [separate instance][change220] of eslint for each working\ndirectory to make sure settings are kept local. If eslint is found in the\ncurrent working directories `node_modules` folder, then this version of eslint\nis going to be used. Otherwise, the version of eslint that ships with\n`eslint_d` is used as a fallback.\n\nTo keep the memory footprint low, `eslint_d` keeps only the last 10 used\ninstances in the internal [nanolru][] cache.\n\n## What if eslint or a plugin is updated?\n\nThe cached version of eslint and the Node `require` cache for the current\nworking directory are cleared whenever a change to one of these files is\ndetected: `package.json`, `package-lock.json`, `npm-shrinkwrap.json`,\n`yarn.lock` and `pnpm-lock.yaml`. If changes are not automatically detected,\nremember to run `eslint_d restart` to bounce the background server.\n\n## Which versions of eslint are supported?\n\nAs of `v7.2.0`, you can use `eslint_d` with multiple projects depending on\ndifferent versions of eslint. Supported versions are 4.0+, 5.0+ and 6.0+.\n\n## Commands\n\nControl the server like this:\n\n```bash\n$ eslint_d <command>\n```\n\nAvailable commands:\n\n- `start`: start the server\n- `stop`: stop the server\n- `status`: print out whether the server is currently running\n- `restart`: restart the server\n- `[options] file.js [file.js] [dir]`: invoke `eslint` with the given options.\n  The `eslint` engine will be created in the current directory. If the server\n  is not yet running, it is started.\n\nType `eslint_d --help` to see the supported `eslint` options.\n\n`eslint_d` will select a free port automatically and store the port number\nalong with an access token in `~/.eslint_d`.\n\n## Editor integration\n\n### Linting\n\n- __Sublime__: Check out [SublimeLinter-contrib-eslint\\_d][SublimeLinter].\n- __Vim__: Install the [syntastic][] plugin, then make sure this is in your\n  `.vimrc`:\n\n    ```vim\n    let g:syntastic_javascript_checkers = ['eslint']\n    let g:syntastic_javascript_eslint_exec = 'eslint_d'\n    ```\n\n- __WebStorm__: Configure your IDE to point to the `eslint_d` package instead\n  of `eslint`. In the ESLint configuration dialog, under 'ESLint package',\n  select your `eslint_d` package.\n- __Atom__: You will not gain any performance from this module as it already\n  avoids starting a new node instance and uses the API directly (see [this\n  AtomLinter issue](https://github.com/AtomLinter/linter-eslint/issues/215)).\n- __Emacs__: Use [flycheck](http://www.flycheck.org/) with the\n  `javascript-eslint` checker:\n\n    ```elisp\n    (setq flycheck-javascript-eslint-executable \"eslint_d\")\n    ```\n\nIf you're using `eslint_d` in any other editor, please let us know!\n\n### Automatic Fixing\n\n`eslint_d` has an additional flag that `eslint` does not have,\n`--fix-to-stdout` which prints the fixed file to stdout. This allows editors to\nadd before save hooks to automatically fix a file prior to saving. It must be\nused with `--stdin`.\n\n- __Vim__: Add this to your `.vimrc` to lint the current buffer or visual\n  selection on `<leader>f`:\n\n    ```vim\n    \" Autofix entire buffer with eslint_d:\n    nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F\n    \" Autofix visual selection with eslint_d:\n    vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv\n    ```\n\n- __Emacs__: See [eslintd-fix](https://github.com/aaronjensen/eslintd-fix)\n\n## Moar speed\n\nIf you're really into performance and want the lowest possible latency, talk to\nthe `eslint_d` server with netcat. This will also eliminate the node.js startup\ntime.\n\n```bash\n$ PORT=`cat ~/.eslint_d | cut -d\" \" -f1`\n$ TOKEN=`cat ~/.eslint_d | cut -d\" \" -f2`\n$ echo \"$TOKEN $PWD file.js\" | nc localhost $PORT\n```\n\nOr if you want to work with stdin:\n\n```bash\n$ echo \"$TOKEN $PWD --stdin\" | cat - file.js | nc localhost $PORT\n```\n\nThis runs `eslint` in under `50ms`!\n\n**Tip** For additional speed, did you know that you can lint only files that\nhave changed? This is a feature of normal `eslint`, but it also works from\n`eslint_d`. Run:\n\n```bash\n$ eslint_d . --cache\n```\n\n## References\n\nIf you're interested in building something similar to this: Most of the logic\nwas extracted to [core_d][], a library that manages the background server.\n\n## Compatibility\n\n- `9.0.0`: eslint 4.0+, 5.0+, 6.0+ and 7.0+, node 10, 12 and 14\n- `8.0.0`: eslint 4.0+, 5.0+ and 6.0+, node 8, 10 and 12\n- `7.2.0`: eslint 4.0+ and 5.0+, node 6, 8 and 10\n- `7.0.0`: eslint 5.4+, node 6, 8 and 10\n- `6.0.0`: eslint 5.0+, node 6+ (eslint dropped node 4)\n- `5.0.0`: eslint 4.0+\n- `4.0.0`: eslint 3.0+, node 4+ (eslint dropped node 0.10 and 0.12)\n- `3.0.0`: eslint 2.2+\n- `1.0.0`, `2.0.0`: eslint 1.4+, node 4 (and probably older)\n\n## License\n\nMIT\n\n[Build Status]: https://img.shields.io/travis/mantoni/eslint_d.js/master.svg\n[SemVer]: https://img.shields.io/:semver-%E2%9C%93-brightgreen.svg\n[License]: https://img.shields.io/npm/l/eslint_d.svg\n[eslint]: https://eslint.org\n[SublimeLinter]: https://github.com/roadhump/SublimeLinter-contrib-eslint_d\n[syntastic]: https://github.com/scrooloose/syntastic\n[change220]: https://github.com/mantoni/eslint_d.js/blob/master/CHANGES.md#220\n[change401]: https://github.com/mantoni/eslint_d.js/blob/master/CHANGES.md#401\n[nanolru]: https://github.com/s3ththompson/nanolru\n[core_d]: https://github.com/mantoni/core_d.js\n",
+  "readme": "# eslint\\_d\n\n[![Build Status]](https://travis-ci.org/mantoni/eslint_d.js)\n[![SemVer]](http://semver.org)\n[![License]](https://github.com/mantoni/eslint\\_d.js/blob/master/LICENSE)\n\nMakes [eslint][] the fastest linter on the planet.\n\n## \"But eslint is pretty fast already, right?\"\n\nYes, it's really fast. But the node.js startup time and loading all the\nrequired modules slows down linting times for a single file to ~700\nmilliseconds. `eslint_d` reduces this overhead by running a server in the\nbackground. It brings the linting time down to ~160 milliseconds. If you want\nto lint from within your editor whenever you save a file, `eslint_d` is for\nyou.\n\n## Install\n\nThis will install the `eslint_d` command globally:\n\n```bash\n$ npm install -g eslint_d\n```\n\n## Usage\n\nTo start the server and lint a file, just run:\n\n```bash\n$ eslint_d file.js\n```\n\nOn the initial call, the `eslint_d` server is launched and then the given file\nis linted. Subsequent invocations are super fast.\n\n## How does this work?\n\nThe first time you use `eslint_d`, a little server is started in the background\nand bound to a random port. The port number is stored along with [a\ntoken][change401] in `~/.eslint_d`. You can then run `eslint_d` commands the\nsame way you would use `eslint` and it will delegate to the background server.\nIt will load a [separate instance][change220] of eslint for each working\ndirectory to make sure settings are kept local. If eslint is found in the\ncurrent working directories `node_modules` folder, then this version of eslint\nis going to be used. Otherwise, the version of eslint that ships with\n`eslint_d` is used as a fallback.\n\nTo keep the memory footprint low, `eslint_d` keeps only the last 10 used\ninstances in the internal [nanolru][] cache.\n\n## What if eslint or a plugin is updated?\n\nThe cached version of eslint and the Node `require` cache for the current\nworking directory are cleared whenever a change to one of these files is\ndetected: `package.json`, `package-lock.json`, `npm-shrinkwrap.json`,\n`yarn.lock` and `pnpm-lock.yaml`. If changes are not automatically detected,\nremember to run `eslint_d restart` to bounce the background server.\n\n## Which versions of eslint are supported?\n\nAs of `v7.2.0`, you can use `eslint_d` with multiple projects depending on\ndifferent versions of eslint. Supported versions are 4.0+, 5.0+, 6.0+ and 7.0+.\n\n## Commands\n\nControl the server like this:\n\n```bash\n$ eslint_d <command>\n```\n\nAvailable commands:\n\n- `start`: start the server\n- `stop`: stop the server\n- `status`: print out whether the server is currently running\n- `restart`: restart the server\n- `[options] file.js [file.js] [dir]`: invoke `eslint` with the given options.\n  The `eslint` engine will be created in the current directory. If the server\n  is not yet running, it is started.\n\nType `eslint_d --help` to see the supported `eslint` options.\n\n`eslint_d` will select a free port automatically and store the port number\nalong with an access token in `~/.eslint_d`.\n\n## Editor integration\n\n### Linting\n\n- __Sublime__: Check out [SublimeLinter-contrib-eslint\\_d][SublimeLinter].\n- __Vim__: Install the [syntastic][] plugin, then make sure this is in your\n  `.vimrc`:\n\n    ```vim\n    let g:syntastic_javascript_checkers = ['eslint']\n    let g:syntastic_javascript_eslint_exec = 'eslint_d'\n    ```\n\n- __WebStorm__: Configure your IDE to point to the `eslint_d` package instead\n  of `eslint`. In the ESLint configuration dialog, under 'ESLint package',\n  select your `eslint_d` package.\n- __Atom__: You will not gain any performance from this module as it already\n  avoids starting a new node instance and uses the API directly (see [this\n  AtomLinter issue](https://github.com/AtomLinter/linter-eslint/issues/215)).\n- __Emacs__: Use [flycheck](http://www.flycheck.org/) with the\n  `javascript-eslint` checker:\n\n    ```elisp\n    (setq flycheck-javascript-eslint-executable \"eslint_d\")\n    ```\n\nIf you're using `eslint_d` in any other editor, please let us know!\n\n### Automatic Fixing\n\n`eslint_d` has an additional flag that `eslint` does not have,\n`--fix-to-stdout` which prints the fixed file to stdout. This allows editors to\nadd before save hooks to automatically fix a file prior to saving. It must be\nused with `--stdin`.\n\n- __Vim__: Add this to your `.vimrc` to lint the current buffer or visual\n  selection on `<leader>f`:\n\n    ```vim\n    \" Autofix entire buffer with eslint_d:\n    nnoremap <leader>f mF:%!eslint_d --stdin --fix-to-stdout<CR>`F\n    \" Autofix visual selection with eslint_d:\n    vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv\n    ```\n\n- __Emacs__: See [eslintd-fix](https://github.com/aaronjensen/eslintd-fix)\n\n## Moar speed\n\nIf you're really into performance and want the lowest possible latency, talk to\nthe `eslint_d` server with netcat. This will also eliminate the node.js startup\ntime.\n\n```bash\n$ PORT=`cat ~/.eslint_d | cut -d\" \" -f1`\n$ TOKEN=`cat ~/.eslint_d | cut -d\" \" -f2`\n$ echo \"$TOKEN $PWD file.js\" | nc localhost $PORT\n```\n\nOr if you want to work with stdin:\n\n```bash\n$ echo \"$TOKEN $PWD --stdin\" | cat - file.js | nc localhost $PORT\n```\n\nThis runs `eslint` in under `50ms`!\n\n**Tip** For additional speed, did you know that you can lint only files that\nhave changed? This is a feature of normal `eslint`, but it also works from\n`eslint_d`. Run:\n\n```bash\n$ eslint_d . --cache\n```\n\n## References\n\nIf you're interested in building something similar to this: Most of the logic\nwas extracted to [core_d][], a library that manages the background server.\n\n## Compatibility\n\n- `9.0.0`: eslint 4.0+, 5.0+, 6.0+ and 7.0+, node 10, 12 and 14\n- `8.0.0`: eslint 4.0+, 5.0+ and 6.0+, node 8, 10 and 12\n- `7.2.0`: eslint 4.0+ and 5.0+, node 6, 8 and 10\n- `7.0.0`: eslint 5.4+, node 6, 8 and 10\n- `6.0.0`: eslint 5.0+, node 6+ (eslint dropped node 4)\n- `5.0.0`: eslint 4.0+\n- `4.0.0`: eslint 3.0+, node 4+ (eslint dropped node 0.10 and 0.12)\n- `3.0.0`: eslint 2.2+\n- `1.0.0`, `2.0.0`: eslint 1.4+, node 4 (and probably older)\n\n## License\n\nMIT\n\n[Build Status]: https://img.shields.io/travis/mantoni/eslint_d.js/master.svg\n[SemVer]: https://img.shields.io/:semver-%E2%9C%93-brightgreen.svg\n[License]: https://img.shields.io/npm/l/eslint_d.svg\n[eslint]: https://eslint.org\n[SublimeLinter]: https://github.com/roadhump/SublimeLinter-contrib-eslint_d\n[syntastic]: https://github.com/scrooloose/syntastic\n[change220]: https://github.com/mantoni/eslint_d.js/blob/master/CHANGES.md#220\n[change401]: https://github.com/mantoni/eslint_d.js/blob/master/CHANGES.md#401\n[nanolru]: https://github.com/s3ththompson/nanolru\n[core_d]: https://github.com/mantoni/core_d.js\n",
   "maintainers": [
     {
-      "email": "aaronjensen@gmail.com",
-      "name": "aaronjensen"
+      "name": "mantoni",
+      "email": "mail@maxantoni.de"
     },
     {
-      "email": "mail@maxantoni.de",
-      "name": "mantoni"
+      "name": "aaronjensen",
+      "email": "aaronjensen@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-06-23T12:19:14.480Z",
+    "modified": "2020-09-08T14:19:36.287Z",
     "created": "2015-09-18T21:04:28.403Z",
     "1.0.0": "2015-09-18T21:04:28.403Z",
     "2.0.0": "2015-09-19T22:49:01.041Z",
@@ -4646,7 +4781,8 @@
     "8.1.1": "2020-03-21T09:19:55.004Z",
     "9.0.0": "2020-06-09T10:53:06.512Z",
     "9.1.0": "2020-06-22T08:49:59.175Z",
-    "9.1.1": "2020-06-23T12:19:11.699Z"
+    "9.1.1": "2020-06-23T12:19:11.699Z",
+    "9.1.2": "2020-09-08T14:19:33.923Z"
   },
   "homepage": "https://github.com/mantoni/eslint_d.js",
   "keywords": [

@@ -9870,7 +9870,5 @@
   "bugs": {
     "url": "https://github.com/mozilla/source-map/issues"
   },
-  "license": "BSD-3-Clause",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "BSD-3-Clause"
 }

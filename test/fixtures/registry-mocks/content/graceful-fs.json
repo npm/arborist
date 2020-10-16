@@ -3938,7 +3938,5 @@
   "bugs": {
     "url": "https://github.com/isaacs/node-graceful-fs/issues"
   },
-  "license": "ISC",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "ISC"
 }

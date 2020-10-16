@@ -1035,7 +1035,5 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/felixge/node-combined-stream/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

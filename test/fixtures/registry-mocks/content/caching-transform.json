@@ -1,6 +1,6 @@
 {
   "_id": "caching-transform",
-  "_rev": "15-948c2b649eaf8ab23ea5dd7253c81538",
+  "_rev": "16-d371e530ba061c73b58912db4526e470",
   "name": "caching-transform",
   "description": "Wraps a transform and provides caching",
   "dist-tags": {
@@ -830,30 +830,27 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# caching-transform [![Build Status](https://travis-ci.org/istanbuljs/caching-transform.svg?branch=master)](https://travis-ci.org/istanbuljs/caching-transform) [![Coverage Status](https://coveralls.io/repos/github/istanbuljs/caching-transform/badge.svg?branch=master)](https://coveralls.io/github/istanbuljs/caching-transform?branch=master)\n\n> Wraps a transform and provides caching.\n\nCaching transform results can greatly improve performance. `nyc` saw [dramatic performance increases](https://github.com/bcoe/nyc/pull/101#issuecomment-165716069) when we implemented caching.\n\n\n## Install\n\n```\n$ npm install caching-transform\n```\n\n\n## Usage\n\n```js\nconst cachingTransform = require('caching-transform');\n\nconst transform = cachingTransform({\n\tcacheDir: '/path/to/cache/directory',\n\tsalt: 'hash-salt',\n\ttransform: (input, metadata, hash) => {\n\t\t// ... Expensive operations ...\n\t\treturn transformedResult;\n\t}\n});\n\ntransform('some input for transpilation')\n// => fetch from the cache,\n//    or run the transform and save to the cache if not found there\n```\n\n\n## API\n\n### cachingTransform(options)\n\nReturns a transform callback that takes two arguments:\n\n - `input` a string to be transformed\n - `metadata` an arbitrary data object\n\nBoth arguments are passed to the wrapped transform. Results are cached in the cache directory using an `sha256` hash of `input` and an optional `salt` value. If a cache entry already exist for `input`, the wrapped transform function will never be called.\n\n#### options\n\n##### salt\n\nType: `string` `Buffer`<br>\nDefault: `''`\n\nA value that uniquely identifies your transform:\n\n```js\nconst pkg = require('my-transform/package.json');\nconst salt = pkg.name + ':' + pkg.version;\n```\n\nIncluding the version in the salt ensures existing cache entries will be automatically invalidated when you bump the version of your transform. If your transform relies on additional dependencies, and the transform output might change as those dependencies update, then your salt should incorporate the versions of those dependencies as well.\n\n##### transform\n\nType: `Function(input: string|Buffer, metadata: *, hash: string): string|Buffer`\n\n - `input`: The value to be transformed. It is passed through from the wrapper.\n - `metadata`: An arbitrary data object passed through from the wrapper. A typical value might be a string filename.\n - `hash`: The salted hash of `input`. Useful if you intend to create additional cache entries beyond the transform result (i.e. `nyc` also creates cache entries for source-map data). This value is not available if the cache is disabled, if you still need it, the default can be computed via [`hasha([input, salt])`](https://www.npmjs.com/package/hasha).\n\nThe transform function will return a `string` (or Buffer if `encoding === 'buffer'`) containing the result of transforming `input`.\n\n##### factory\n\nType: `Function(cacheDir: string): transformFunction`\n\nIf the `transform` function is expensive to create, and it is reasonable to expect that it may never be called during the life of the process, you may supply a `factory` function that will be used to create the `transform` function the first time it is needed.\n\nA typical usage would be to prevent eagerly `require`ing expensive dependencies like Babel:\n\n```js\nfunction factory() {\n\t// Using the factory function, you can avoid loading Babel until you are sure it is needed.\n\tconst babel = require('babel-core');\n\n\treturn (code, metadata) => {\n\t\treturn babel.transform(code, {filename: metadata.filename, plugins: [/* ... */]});\n\t};\n}\n```\n\n##### cacheDir\n\n*Required unless caching is disabled*<br>\nType: `string`\n\nThe directory where cached transform results will be stored. The directory is automatically created with [`mkdirp`](https://www.npmjs.com/package/mkdirp). You can set `options.createCacheDir = false` if you are certain the directory already exists.\n\n##### ext\n\nType: `string`<br>\nDefault: `''`\n\nAn extension that will be appended to the salted hash to create the filename inside your cache directory. It is not required, but recommended if you know the file type. Appending the extension allows you to easily inspect the contents of the cache directory with your file browser.\n\n##### shouldTransform\n\nType: `Function(input: string|Buffer, additionalData: *)`<br>\nDefault: Always transform\n\nA function that examines `input` and `metadata` to determine whether the transform should be applied. Returning `false` means the transform will not be applied and `input` will be returned unmodified.\n\n##### disableCache\n\nType: `boolean`<br>\nDefault: `false`\n\nIf `true`, the cache is ignored and the transform is used every time regardless of cache contents.\n\n##### hashData\n\nType: `Function(input: string|Buffer, metadata: *): string|Buffer|Array[string|Buffer]`\n\nProvide additional data that should be included in the hash.\n\nOne potential use is including the `metadata` in the hash by coercing it to a hashable string or buffer:\n\n```js\nfunction hashData(input, metadata) {\n\treturn JSON.stringify(metadata);\n}\n```\n\n(Note that `metadata` is not taken into account otherwise.)\n\n##### filenamePrefix\n\nType: `Function(metadata: *): string`\n\nProvide a filename to prefix the cache entry.  The return value may not contain any path separators.\n\n```js\nfunction filenamePrefix(metadata) {\n\treturn path.parse(metadata.filename || '').name + '-';\n}\n```\n\n##### onHash\n\nType: `Function(input: string|Buffer, metadata: *, hash: string)`\n\nFunction that is called after input is hashed.\n\n##### encoding\n\nType: `string`<br>\nDefault: `'utf8'`\n\nThe encoding to use when writing to / reading from the filesystem. If set it to `buffer`, then buffers will be returned from the cache instead of strings.\n\n\n## License\n\nMIT © [James Talmage](https://github.com/jamestalmage)\n",
   "maintainers": [
     {
-      "email": "ben@npmjs.com",
-      "name": "bcoe"
-    },
-    {
-      "email": "git@cfware.com",
-      "name": "coreyfarrell"
+      "email": "sindresorhus@gmail.com",
+      "name": "sindresorhus"
     },
     {
       "email": "mark@novemberborn.net",
       "name": "novemberborn"
     },
     {
-      "email": "sindresorhus@gmail.com",
-      "name": "sindresorhus"
+      "email": "bencoe@gmail.com",
+      "name": "bcoe"
     },
     {
-      "email": "vdemedes@gmail.com",
-      "name": "vdemedes"
+      "email": "git@cfware.com",
+      "name": "coreyfarrell"
     }
   ],
   "time": {
-    "modified": "2019-06-03T09:41:01.357Z",
+    "modified": "2020-02-12T16:19:22.041Z",
     "created": "2015-12-19T18:33:37.753Z",
     "0.0.1": "2015-12-19T18:33:37.753Z",
     "0.0.2": "2015-12-20T02:26:46.802Z",

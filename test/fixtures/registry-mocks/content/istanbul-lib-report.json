@@ -1861,7 +1861,5 @@
     "url": "https://github.com/istanbuljs/istanbuljs/issues"
   },
   "license": "BSD-3-Clause",
-  "readmeFilename": "",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": ""
 }

@@ -1,10 +1,10 @@
 {
   "_id": "hasha",
-  "_rev": "30-1a96e297d261ae3580e4497eff38e1e7",
+  "_rev": "33-3ed6623999b97741569a5e5cc5592d62",
   "name": "hasha",
   "description": "Hashing made simple. Get the hash of a buffer/string/stream/file.",
   "dist-tags": {
-    "latest": "5.1.0"
+    "latest": "5.2.2"
   },
   "versions": {
     "1.0.0": {
@@ -997,8 +997,284 @@
         "tmp": "tmp/hasha_5.1.0_1569140568742_0.3696372273130113"
       },
       "_hasShrinkwrap": false
+    },
+    "5.2.0": {
+      "name": "hasha",
+      "version": "5.2.0",
+      "description": "Hashing made simple. Get the hash of a buffer/string/stream/file.",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/hasha.git"
+      },
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "hash",
+        "hashing",
+        "crypto",
+        "hex",
+        "base64",
+        "md5",
+        "sha1",
+        "sha256",
+        "sha512",
+        "sum",
+        "stream",
+        "file",
+        "fs",
+        "buffer",
+        "string",
+        "text",
+        "rev",
+        "revving",
+        "simple",
+        "easy"
+      ],
+      "dependencies": {
+        "is-stream": "^2.0.0",
+        "type-fest": "^0.8.0"
+      },
+      "devDependencies": {
+        "@types/node": "^12.7.5",
+        "ava": "^2.4.0",
+        "proxyquire": "^2.1.0",
+        "tsd": "^0.8.0",
+        "xo": "^0.24.0"
+      },
+      "xo": {
+        "rules": {
+          "import/no-unresolved": "off"
+        }
+      },
+      "gitHead": "c93f8230153a35d1bbe5a3d274a688107792d2ec",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/hasha/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/hasha#readme",
+      "_id": "hasha@5.2.0",
+      "_nodeVersion": "13.1.0",
+      "_npmVersion": "6.12.1",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-2W+jKdQbAdSIrggA8Q35Br8qKadTrqCTC8+XZvBWepKDK6m9XkX6Iz1a2yh2KP01kzAR/dpuMeUnocoLYDcskw==",
+        "shasum": "33094d1f69c40a4a6ac7be53d5fe3ff95a269e0c",
+        "tarball": "https://registry.npmjs.org/hasha/-/hasha-5.2.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 15974,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeST3HCRA9TVsSAnZWagAASQwP/i5NxJ8GeEI4v5EmrSAE\nPNUjrjYi2qwKX4FN8c15f4n9FLafxXhzha8gxjUUARxSXZsp1+KDlBfa2lRY\n49qbyIN0LuqCeYGf7DRGJ/aMoNCrNa3tlFItd5SLqX0OoFOzPrpnl24Y2n5h\nnmr3E1/nD04jcqvFmfUoOlpq8yrmD6hZTS/nbdVrM28KNyr4B9oq9M2qw2uw\nO1pPTfUedVg1ygCqX+eTuLgWqzhIajYVnynfLUCSDI7XGGAEBXHtzWR2WYfi\nUWLTicFAJqVbj3HpkZDHbxLzOGSzLTYljamg2uZNOvN7pFMyjR3jC7orFXWY\nCOV9v7Y45t1U5rlyREqAUojiwpuyZlI7FlejFhKvTpRR9AdqizpxMVmhpJua\n0HuI73zXCCHpY0MO64W4Lx7vrWmxFm6HNHHr5HD7GQgcudHmYTdVvLg3TIbp\nQqdCGYljYAG4tHhtOJLqnDPZrFHH9k4cG7sKc4bt5xUhHtp4BraGZbfUDw7t\nSH7dvLJ/c3bNPVP4X6AkhDl2zOONsjc79jRW/zYGY+mwKx5LAIYXDxv2IAZ4\njqhXLqEZJw4f3aK9y89ib9fwRnFNvCqUoZB8NLuQ1zpP6RmP5IDB3QmNMV6m\nhHeMdzMq7AOVWA7ragbc9wZZcFY8BZ+QVYerKQ2cSsVP/U5QpaQyR8yCQcGt\nTTHy\r\n=3CLG\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/hasha_5.2.0_1581858246350_0.7998151348387368"
+      },
+      "_hasShrinkwrap": false
+    },
+    "5.2.1": {
+      "name": "hasha",
+      "version": "5.2.1",
+      "description": "Hashing made simple. Get the hash of a buffer/string/stream/file.",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/hasha.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "hash",
+        "hashing",
+        "crypto",
+        "hex",
+        "base64",
+        "md5",
+        "sha1",
+        "sha256",
+        "sha512",
+        "sum",
+        "stream",
+        "file",
+        "fs",
+        "buffer",
+        "string",
+        "text",
+        "rev",
+        "revving",
+        "simple",
+        "easy"
+      ],
+      "dependencies": {
+        "is-stream": "^2.0.0",
+        "type-fest": "^0.8.0"
+      },
+      "devDependencies": {
+        "@types/node": "^12.7.5",
+        "ava": "^2.4.0",
+        "proxyquire": "^2.1.0",
+        "tsd": "^0.8.0",
+        "xo": "^0.24.0"
+      },
+      "xo": {
+        "rules": {
+          "import/no-unresolved": "off"
+        }
+      },
+      "gitHead": "0184c7126d1ccf08ba8b28daa5355b634188bf90",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/hasha/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/hasha#readme",
+      "_id": "hasha@5.2.1",
+      "_nodeVersion": "14.11.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-x15jnRSHTi3VmH+oHtVb9kgU/HuKOK8mjK8iCL3dPQXh4YJlUb9YSI8ZLiiqLAIvY2wuDIlZYZppy8vB2XISkQ==",
+        "shasum": "0e5b492aa40de3819e80955f221d2fccef55b5aa",
+        "tarball": "https://registry.npmjs.org/hasha/-/hasha-5.2.1.tgz",
+        "fileCount": 6,
+        "unpackedSize": 15978,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfcIeXCRA9TVsSAnZWagAA4KEP/25glBpp4y6LPPQcWLxo\nisv/gw5SphiNtALv8ZfOTcpmLYWIH4009JAhbTh4pnKypxU4ZAwny8rqrhXV\nFpGpYa4tqDGekcuQFjMRszpxiWXDKvN1sT1smlCwHLBDfb0mfRAC0vkt/IrW\nYWdNxzK14hu60NZUqvlCMrTqIVJwEUXnRyx62LiuGxRbCTyYeEvEKmZELo01\nUEkRn5C0W+vqu0wBLRJiGnO7JwFEhl0PKGDtYrTBktVnMr42NbPSesx2/V2t\nMc9c0zC6IyAWba4DJrG8VKY90UMWugGLuEG0SwZuORNVCJnAS2QoVP/5DBJD\nnxUJwKk8fXTzXPt8jKR0NretOcf1eQy/XgbSiIy9VAUHEeG1FPZrdfgkYyYA\ntLcT3H71n16HQzNDVHeexk81xEz3ENzxSN/JxhSA5YIuUdGN2Vq6tCQ+HjCq\n1NaMx9Yz1IHAZvRzCu/BCz7TAoPGwwcuCMEF7262X02ttsiZqZ6X58VzyOmb\nlMC54Zik1glVNYhvvv+4MxABTjqBV4jiGYRnvTJwfnoVMzA1u25nlQvJ5fY6\ne/eDmXJeVdr85wbaJ9i4DGJOR3kGYipc/18uPw66pPmmtYgSHy75ESup5D6f\n5YWL6h6/Tt8ztWt0sAQmfp2NLQubCujB/btVr/U2ykOHbjqffyH+Awm4XPl5\nsyfp\r\n=GP6a\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/hasha_5.2.1_1601210262551_0.6942955914665843"
+      },
+      "_hasShrinkwrap": false
+    },
+    "5.2.2": {
+      "name": "hasha",
+      "version": "5.2.2",
+      "description": "Hashing made simple. Get the hash of a buffer/string/stream/file.",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/hasha.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd"
+      },
+      "keywords": [
+        "hash",
+        "hashing",
+        "crypto",
+        "hex",
+        "base64",
+        "md5",
+        "sha1",
+        "sha256",
+        "sha512",
+        "sum",
+        "stream",
+        "file",
+        "fs",
+        "buffer",
+        "string",
+        "text",
+        "rev",
+        "revving",
+        "simple",
+        "easy"
+      ],
+      "dependencies": {
+        "is-stream": "^2.0.0",
+        "type-fest": "^0.8.0"
+      },
+      "devDependencies": {
+        "@types/node": "^12.7.5",
+        "ava": "^2.4.0",
+        "proxyquire": "^2.1.0",
+        "tsd": "^0.8.0",
+        "xo": "^0.24.0"
+      },
+      "xo": {
+        "rules": {
+          "import/no-unresolved": "off"
+        }
+      },
+      "gitHead": "6e9d961913bd446167b23007e76bd00ef470736c",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/hasha/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/hasha#readme",
+      "_id": "hasha@5.2.2",
+      "_nodeVersion": "14.11.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-Hrp5vIK/xr5SkeN2onO32H0MgNZ0f17HRNH39WfL0SYUNOTZ5Lz1TJ8Pajo/87dYGEFlLMm7mIc/k/s6Bvz9HQ==",
+        "shasum": "a48477989b3b327aea3c04f53096d816d97522a1",
+        "tarball": "https://registry.npmjs.org/hasha/-/hasha-5.2.2.tgz",
+        "fileCount": 6,
+        "unpackedSize": 16011,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJff62OCRA9TVsSAnZWagAAxGQP/1rBHHi1N4Kr2nC1Vb6T\ng1hA5RHpYMHqBjHlxF596POID+OjoHnrz8/NwACyW0oLCAxrgR9HZ+ZwySaC\ns59AxdvmhpuZtbVN3+K4x/kmkkcnsGzJnfvhmk4KT4A3xJ/nNIlXgWVcLqkD\nVAFicXakd97M7h01Nsi6cE1SR1KNr0KNfZn37ixAQ5l0hnf2A60GYdKEXTjz\ngmMFIVf1b6XzrpNXeXodp8RwmugDEOoAmJky10PxjFEtHZDTYhd+7BQbskev\nj6LReSWy0mX0I6ylXSxR2ak2KaBXk3nDO+A2dmUbAsY4eVHrhDIE1e/OJ7JS\n8GzPiiYT7G50UfJOlzlB/LyoxRkayuKPZAWyRwDHuQAUxrOr0FdYfsH8yqIK\nqaNXBO6e/W9+nQ6dAYQxK3bL9I43xCTYjPqJWfCRv7i/yfFjQ+Ktifg9ldS0\nVnnfSjVp+xm/eqv+I0u3KjQaS2wb62FfbcBSb15Uld+iswHFc2wMk0Ys+IKR\ndD4rZSuBqO+9ILqv7HvlYin5UJcFVpn9wq1sU8iYSBj793WdCOL5HXU0zjM7\nIsQviHb0S4ZdxbzEbIdZO7HQRCLMsdSDyUltsJTcvfEaHZWTlRXxRKGJGONU\nH9ezDLCQZPcHxhgwxeNm7SOQh//6Za7ElGYSEWbyiE7i59Vu7+yL00Orbnnc\n2zIh\r\n=CHqp\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/hasha_5.2.2_1602203022226_0.7607685003966875"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "<h1 align=\"center\">\n\t<br>\n\t<br>\n\t<br>\n\t<img width=\"380\" src=\"media/logo.svg\" alt=\"hasha\">\n\t<br>\n\t<br>\n\t<br>\n\t<br>\n\t<br>\n</h1>\n\n> Hashing made simple. Get the hash of a buffer/string/stream/file.\n\n[![Build Status](https://travis-ci.com/sindresorhus/hasha.svg?branch=master)](https://travis-ci.com/github/sindresorhus/hasha)\n\nConvenience wrapper around the core [`crypto` Hash class](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm) with simpler API and better defaults.\n\n## Install\n\n```\n$ npm install hasha\n```\n\n## Usage\n\n```js\nconst hasha = require('hasha');\n\nhasha('unicorn');\n//=> 'e233b19aabc7d5e53826fb734d1222f1f0444c3a3fc67ff4af370a66e7cadd2cb24009f1bc86f0bed12ca5fcb226145ad10fc5f650f6ef0959f8aadc5a594b27'\n```\n\n```js\nconst hasha = require('hasha');\n\n(async () => {\n\tconsole.log(await hasha.async('unicorn'));\n\t//=> 'e233b19aabc7d5e53826fb734d1222f1f0444c3a3fc67ff4af370a66e7cadd2cb24009f1bc86f0bed12ca5fcb226145ad10fc5f650f6ef0959f8aadc5a594b27'\n})();\n```\n\n```js\nconst hasha = require('hasha');\n\n// Hash the process input and output the hash sum\nprocess.stdin.pipe(hasha.stream()).pipe(process.stdout);\n```\n\n```js\nconst hasha = require('hasha');\n\n(async () => {\n\t// Get the MD5 hash of an image\n\tconst hash = await hasha.fromFile('unicorn.png', {algorithm: 'md5'});\n\n\tconsole.log(hash);\n\t//=> '1abcb33beeb811dca15f0ac3e47b88d9'\n})();\n```\n\n## API\n\nSee the Node.js [`crypto` docs](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options) for more about hashing.\n\n### hasha(input, options?)\n\nReturns a hash.\n\n#### input\n\nType: `Buffer | string | Array<Buffer | string>`\n\nBuffer you want to hash.\n\nWhile strings are supported you should prefer buffers as they're faster to hash. Although if you already have a string you should not convert it to a buffer.\n\nPass an array instead of concatenating strings and/or buffers. The output is the same, but arrays do not incur the overhead of concatenation.\n\n#### options\n\nType: `object`\n\n##### encoding\n\nType: `string`\\\nDefault: `'hex'`\\\nValues: `'hex' | 'base64' | 'buffer' | 'latin1'`\n\nEncoding of the returned hash.\n\n##### algorithm\n\nType: `string`\\\nDefault: `'sha512'`\\\nValues: `'md5' | 'sha1' | 'sha256' | 'sha512'` *([Platform dependent](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options))*\n\n*The `md5` algorithm is good for [file revving](https://github.com/sindresorhus/rev-hash), but you should never use `md5` or `sha1` for anything sensitive. [They're insecure.](https://security.googleblog.com/2014/09/gradually-sunsetting-sha-1.html)*\n\n### hasha.async(input, options?)\n\nIn Node.js 12 or later, the operation is executed using `worker_threads`. A thread is lazily spawned on the first operation and lives until the end of the program execution. It's unrefed, so it won't keep the process alive.\n\nReturns a hash asynchronously.\n\n### hasha.stream(options?)\n\nReturns a [hash transform stream](https://nodejs.org/api/crypto.html#crypto_class_hash).\n\n### hasha.fromStream(stream, options?)\n\nReturns a `Promise` for the calculated hash.\n\n### hasha.fromFile(filepath, options?)\n\nIn Node.js 12 or later, the operation is executed using `worker_threads`. A thread is lazily spawned on the first operation and lives until the end of the program execution. It's unrefed, so it won't keep the process alive.\n\nReturns a `Promise` for the calculated file hash.\n\n### hasha.fromFileSync(filepath, options?)\n\nReturns the calculated file hash.\n\n## Related\n\n- [hasha-cli](https://github.com/sindresorhus/hasha-cli) - CLI for this module\n- [crypto-hash](https://github.com/sindresorhus/crypto-hash) - Tiny hashing module that uses the native crypto API in Node.js and the browser\n- [hash-obj](https://github.com/sindresorhus/hash-obj) - Get the hash of an object\n- [md5-hex](https://github.com/sindresorhus/md5-hex) - Create a MD5 hash with hex encoding\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -1006,7 +1282,7 @@
     }
   ],
   "time": {
-    "modified": "2019-09-22T08:22:51.529Z",
+    "modified": "2020-10-09T00:23:44.775Z",
     "created": "2015-05-23T09:32:26.579Z",
     "1.0.0": "2015-05-23T09:32:26.579Z",
     "1.0.1": "2015-06-12T18:45:29.779Z",
@@ -1019,7 +1295,10 @@
     "4.0.0": "2019-03-12T04:42:37.112Z",
     "4.0.1": "2019-03-13T11:27:42.345Z",
     "5.0.0": "2019-04-05T07:21:44.671Z",
-    "5.1.0": "2019-09-22T08:22:48.889Z"
+    "5.1.0": "2019-09-22T08:22:48.889Z",
+    "5.2.0": "2020-02-16T13:04:06.888Z",
+    "5.2.1": "2020-09-27T12:37:42.740Z",
+    "5.2.2": "2020-10-09T00:23:42.371Z"
   },
   "homepage": "https://github.com/sindresorhus/hasha#readme",
   "keywords": [
@@ -1051,7 +1330,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "bugs": {
     "url": "https://github.com/sindresorhus/hasha/issues"

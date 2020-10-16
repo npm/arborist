@@ -62,5 +62,6 @@
     }
   ],
   "description": "a package for testing dev, optional, and devOptional flags",
+  "readme": "no reason to use this.  it's for testing npm.\n",
   "readmeFilename": "README.md"
 }

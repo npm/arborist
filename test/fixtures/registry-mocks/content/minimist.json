@@ -2225,7 +2225,5 @@
   "bugs": {
     "url": "https://github.com/substack/minimist/issues"
   },
-  "license": "MIT",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "MIT"
 }

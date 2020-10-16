@@ -1755,7 +1755,5 @@
     "url": "http://github.com/runk/node-chardet/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

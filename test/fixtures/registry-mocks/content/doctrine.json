@@ -2367,7 +2367,5 @@
   "bugs": {
     "url": "https://github.com/eslint/doctrine/issues"
   },
-  "license": "Apache-2.0",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "Apache-2.0"
 }

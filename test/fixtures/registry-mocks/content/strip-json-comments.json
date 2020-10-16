@@ -1209,7 +1209,5 @@
     "url": "https://github.com/sindresorhus/strip-json-comments/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "readme.md"
 }

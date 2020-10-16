@@ -1,9 +1,9 @@
 {
   "_id": "tcompare",
-  "_rev": "21-d74085a7f9211570c99b96907d1ee3f8",
+  "_rev": "22-c868c118daa1864b20d5afadb90ecf4e",
   "name": "tcompare",
   "dist-tags": {
-    "latest": "5.0.1"
+    "latest": "5.0.2"
   },
   "versions": {
     "1.0.0": {
@@ -1353,12 +1353,80 @@
         "tmp": "tmp/tcompare_5.0.1_1576262570320_0.11260054235389205"
       },
       "_hasShrinkwrap": false
+    },
+    "5.0.2": {
+      "name": "tcompare",
+      "version": "5.0.2",
+      "description": "A comprehensive comparison library, for use in test frameworks",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tapjs/tcompare.git"
+      },
+      "author": {
+        "name": "Isaac Z. Schlueter",
+        "email": "i@izs.me",
+        "url": "https://izs.me"
+      },
+      "license": "ISC",
+      "dependencies": {
+        "diff": "^4.0.2"
+      },
+      "devDependencies": {
+        "tap": "^14.10.7"
+      },
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "tap": {
+        "check-coverage": true,
+        "coverage-map": "map.js"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "ddc4d624a11ef878826f0803aab2a5e6c41e6525",
+      "bugs": {
+        "url": "https://github.com/tapjs/tcompare/issues"
+      },
+      "homepage": "https://github.com/tapjs/tcompare#readme",
+      "_id": "tcompare@5.0.2",
+      "_nodeVersion": "13.10.1",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-mMy095iYxJ9IPneaBECzcY7vnjPqa8T2EwKJ1kc7WABqXdyYHLnM93Kz4tzX3LSFose8luP3JpZITCcRzaXagA==",
+        "shasum": "341025292be295c6951193fad7b8aef6fa47f319",
+        "tarball": "https://registry.npmjs.org/tcompare/-/tcompare-5.0.2.tgz",
+        "fileCount": 9,
+        "unpackedSize": 46462,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeoHVzCRA9TVsSAnZWagAAYRoP/1gb2WydsIVq/BXd/idh\nTSXhGxRuY0eZDUlz4746XJKiOiEJwgUkNrES/pzDEkYZ5ENj4idY6cFqh8qM\nt3oYYM7UmRpUAdWZKXiJojIE7/vmepN9RbDdcBsTjgjvF3nlTqY2UyyU/2jb\namo5kQEabMDtvu/NMbTZUMPmMthIb+Usgv8lK3cWrHbGYUDSiZBWHFMJLGsh\nR1xAz8GIicmemoe+pfWyW3phIwN8U3zpnwK9NZzP3TjKRyulRtmgmTJecZDN\nDNwfgAFixqQpT4CVJWOvSiUloRGp+MyoMjUvI13OlkVfNOfrSGPQjQlrjPPt\nKENyPtpfgxq3kibQ+PhjNn/OVHpJRpnIDWHZhgnaiNaD/J4aRGhuPhaT4JuX\nN5zeJYY/wjsGZUxWUkxpg70Rual7iDh01DWlsB6R+kZ+Bcn4u3p7o0bNkeB4\nXoYpKeFu/pJaoDmu5gfkgeGbUuhcrFfLV1EXOpDNgRd8QcJrVQgQwxDiMgyT\nydyYNa98UtHO1yZUc3NM/lyOP2mM0e0pR8kS0ya+okfpQKJ5UxaIhySO/bF3\nrHxcz+1NX97GwY8vDnNGkEbfUlXkbZJ1yzcaMG6NC3GXKbP5V7HUNQYybP5b\nq/Q2iV33jFmxRcc+UqoUe1ak15CWmuGnu+jqj42Be3aaGffwoJMCaRf9YQO7\n2v1s\r\n=yFHq\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "isaacs",
+          "email": "i@izs.me"
+        }
+      ],
+      "_npmUser": {
+        "name": "isaacs",
+        "email": "i@izs.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/tcompare_5.0.2_1587574131042_0.22408118849315994"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2019-02-14T09:12:49.186Z",
     "1.0.0": "2019-02-14T09:12:49.398Z",
-    "modified": "2019-12-13T18:42:54.153Z",
+    "modified": "2020-04-22T16:48:54.583Z",
     "1.0.1": "2019-02-14T09:24:21.625Z",
     "1.0.2": "2019-02-16T00:35:13.276Z",
     "1.0.3": "2019-02-17T05:29:54.367Z",
@@ -1379,7 +1447,8 @@
     "4.0.1": "2019-11-29T22:52:33.789Z",
     "4.1.0": "2019-12-08T20:47:45.949Z",
     "5.0.0": "2019-12-13T18:34:11.535Z",
-    "5.0.1": "2019-12-13T18:42:50.483Z"
+    "5.0.1": "2019-12-13T18:42:50.483Z",
+    "5.0.2": "2020-04-22T16:48:51.164Z"
   },
   "maintainers": [
     {
@@ -1402,5 +1471,6 @@
     "url": "https://github.com/tapjs/tcompare/issues"
   },
   "license": "ISC",
+  "readme": "# tcompare\n\nA comprehensive comparison library, for use in test frameworks.  Walks an\nobject once, generating both a simple true/false result, as well as a\nnicely formatted human-readable diff string.\n\n## USAGE\n\n```js\nconst { match, same, strict, has, hasStrict, format } = require('tcompare')\n\n// Result is an object with { Boolean match, String diff }\nconst result = match(object, pattern)\nif (!result.match) {\n  console.log(`item did not match pattern`)\n  console.log(result.diff)\n} else {\n  console.log(`it's a match!`)\n}\n```\n\n## METHODS\n\n* `format(object, [options])` - No comparisons performed.  Just print out the\n  object.  Returns just the string format.\n* `same(object, pattern, [options])` - Ensure that all items in the pattern are\n  found in the object, and vice versa, matching loosely (so, for example `1`\n  will match with `'1'`).\n* `strict(object, pattern, [options])` - Ensure that all items in the pattern\n  are found in the object, and vice versa, matching strictly (so, for example\n  `1` will not match with `'1'`).\n* `has(object, pattern, [options])` - Ensure that all items in the pattern are\n  found in the object, but ignore additional items found in the object,\n  matching loosely.\n* `hasStrict(object, pattern, [options])` - Ensure that all items in the\n  pattern are found in the object, but ignore additional items found in the\n  object, matching strictly.\n* `match(object, pattern, [options])` - Verify that all items in `pattern` are\n  found in `object`, and that they match.  This is the loosest possible\n  algorithm, allowing cases where we just want to verify that an object\n  contains a few important properties.  The algorithm is the same as\n  the one used by [tmatch](http://npm.im/tmatch).  In a nutshell:\n    * If the object and pattern are loosely equal, then pass\n    * If the object and the pattern are both Regular Expressions, Date objects\n      or Buffers, then pass if they're \"equivalent\".\n    * If the pattern is a RegExp, cast object to a string, and test against the\n      RegExp.\n    * If both are Strings, pass if pattern appears in object.\n    * If pattern is a function, and object is an instance of that function,\n      then pass.  (This also applies to Symbol, Number, String, etc.)\n    * If pattern and object are collections (object, map, set, array or\n      iterable), then compare their contents.  Each type of collection can only\n      match its same type, with the exception of non-Set iterables (including\n      `arguments` objects), which are cast to Arrays.\n\nThere are classes exported to correspond to each of these.  All of these are\ninstantiated like `new Format(object, options)`.  An `expect` option is\nrequired for all classes except `Format`.  Call `obj.print()` on the resulting\nobject to generate a diff.  Once the diff (or format) is generated, it'll have\na `match` boolean member.\n\n## OPTIONS\n\nEach method can take the following options.\n\n* `includeEnumerable` - Set to `true` to walk over _all_ enumerable\n  properties of a given object when comparing or formatting, rather than\n  the default of only showing enumerable own-properties.  Note that\n  calling getter functions may be hazardous, as they may trigger\n  side-effects.\n\n* `includeGetters` - Set to `true` to walk over all enumerable getters\n  on an object's prototype (but not from further down the prototype\n  chain), in addition to own-properties.  This is useful in cases where\n  you want to compare or print an object with enumerable getters that\n  return internal values in a read-only manner.  Note that calling\n  getter functions can be hazardous, as they may trigger side-effects.\n\n* `sort` - Set to `true` to sort object keys.  This is important when\n  serializing in a deterministic way.\n\n* `style` - Set to `pretty` for a very human-readable style of object printing.\n  Set to `js` for a copy-and-paste friendly valid JavaScript output.  Set to\n  `tight` for a minimal white-space js format.  Default is `pretty`.  Example:\n\n    ```\n    // pretty style\n    Object {\n      \"myMap\": Map {\n        Object {\n          \"a\": 1,\n        } => Object {\n          \"b\": 2,\n        }\n      }\n    }\n\n    // js style\n    {\n      \"myMap\": new Map([\n        [{\n          \"a\": 1,\n        }, {\n          \"b\": 2,\n        }]\n      ])\n    }\n\n    // tight style\n    {\"myMap\":new Map([[{\"a\":1,},{\"b\":2,}],]),}\n    ```\n\n    Note that `tight` is not suitable for comparisons, only formatting.\n\n## Circular References\n\nCircular references are displayed using YAML-like references, so it's easy to\ndetermine _which_ item is circularly referenced.\n\nWhen doing comparisons, a pattern and object will be considered matching if\nthey contain the _same_ circularity.  So, for example, if a pattern refers to\nitself, then an object should refer to itself as well.\n\n```js\nconst a = {list: [], b: {}}\na.list.push(a)\na.list.push(a.b)\na.b.a = a\nconsole.log(format(a))\n\n/*\n&ref_1 Object {\n  \"list\": Array [\n    <*ref_1>,\n    Object {\n      \"a\": <*ref_1>,\n    },\n  ],\n  \"b\": Object {\n    \"a\": <*ref_1>,\n  },\n}\n*/\n```\n\nNote that circular references are never going to be valid JavaScript, even when\nusing the `js` style.\n",
   "readmeFilename": "README.md"
 }

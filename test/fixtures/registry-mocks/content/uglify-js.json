@@ -1,9 +1,9 @@
 {
   "_id": "uglify-js",
-  "_rev": "654-9a93b9dcc396a141abb717c162fbe4a4",
+  "_rev": "665-d008a2b93ff4cdffb2213e42c17c9921",
   "name": "uglify-js",
   "dist-tags": {
-    "latest": "3.9.1",
+    "latest": "3.11.2",
     "backports": "2.8.29"
   },
   "versions": {
@@ -18343,6 +18343,1038 @@
         "tmp": "tmp/uglify-js_3.9.1_1586948798785_0.4242922647624072"
       },
       "_hasShrinkwrap": false
+    },
+    "3.9.2": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.9.2",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS2.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "dependencies": {
+        "commander": "~2.20.3"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "20f9a1d9089dca38456c8da8dcf110915967a82e",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS2/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS2#readme",
+      "_id": "uglify-js@3.9.2",
+      "_nodeVersion": "12.16.2",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-zGVwKslUAD/EeqOrD1nQaBmXIHl1Vw371we8cvS8I6mYK9rmgX5tv8AAeJdfsQ3Kk5mGax2SVV/AizxdNGhl7Q==",
+        "shasum": "012b74fb6a2e440d9ba1f79110a479d3b1f2d48d",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.9.2.tgz",
+        "fileCount": 20,
+        "unpackedSize": 824691,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJern22CRA9TVsSAnZWagAA1kEQAIzzTlgwLR4yuBvGm95p\n14jRJ0fVM3uL6UEMpKLdCKOzO2v0JTpJP8yuFNX+wVEqyoRCDfbqtsBISHlF\nxB/8QJMVW/WRQ/lNPgmm7N31c93jvBP+N1fdwQAiNFdvan3ZyAEDB5ZxPhQz\nbmZ/1Igvwy9Vp4ZjyhTw5wIs6glVLTDIqhbeSuBTrBOeYsyAgOQ0Xld6VEMo\nB1Fdc9ldCrDow4JWzA+8DJ/r8GPjFxWmqIHTWV+eHNOX3HCwIi9WhmPgaPse\niQ9Vtb6GrBGHjGOJ1oIPOoFbMSvZkLiTsS/UVGqGcfVBucLTC/qrDjBnD9ex\nr9lNFUdRrR9O51/n2A4SV2mf63fHV8vlxLhcyZnxD0uQLd863+4cu09OGqoV\nz++KpwLPIiaDqDwEPhqXx+JFfmxCE+BK+XVdnzmb4Gcm0HNfl6Lwo+QT8k4Y\nCBJNWPbob3sFMFroffC7n3WhPVnZTqO78McujkYdfDuFAmib2RCCpAmRzGj9\nShgls5ww4BBiY11PCftGhbIbRR2YB0Z6DS2GJ6+hI0TWwoQyuNQRjwm/TmGy\ng9OlpXDqKSp2arXro6+FBE/y0tAHNE5+GCdCfCk9MpUc94lOlNvkhW6JvvYM\n1ySiniPvu44soaOpFhQQ3dG6uUonRaetWaAzVH3aWFH8EXBn35wLpQ9yMneb\nQ6Xy\r\n=GXM6\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.9.2_1588493749304_0.3718492436093077"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.9.3": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.9.3",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "dependencies": {
+        "commander": "~2.20.3"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "30ed8f558038ea1017ecd8cb4a02851eaed92ac0",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.9.3",
+      "_nodeVersion": "12.16.2",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-r5ImcL6QyzQGVimQoov3aL2ZScywrOgBXGndbWrdehKoSvGe/RmiE5Jpw/v+GvxODt6l2tpBXwA7n+qZVlHBMA==",
+        "shasum": "4a285d1658b8a2ebaef9e51366b3a0f7acd79ec2",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.9.3.tgz",
+        "fileCount": 20,
+        "unpackedSize": 842200,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeu9qtCRA9TVsSAnZWagAAw1MP/2s4iVTXLQUEx/a+eJlB\nAwvPUFjaNvyMY0M2NW+s/eo7mbeRQNNu+RmVIw1+1HpeiJ/TSQa1QMg1P0Lx\nsHvCwiWUc6ERpOCGdTNQnT1tM7PIZBjiBA0qS3xOFKHV9Xa3tSUNDAnH93eq\ngmC2sCXjHAdVCXJCqermxXv7P8DAsAb7wlTPRuPkpdeEeAG4f225c0JX+xZ8\n7Dj3/rSBhxu9eokuevAMjRXn0tJ0dmCiKUw2oXOiZ0lXbMcsAoAIO/9oKksn\nsC5UUNhrds+aqK9Jet4WpaubCRPndo9/JzyJ345O5NMfPZIxUbgx4bFGm6/A\ns7rp/p7CR0xPRyfm1b/4oVbWOJ8H1erTkeu2MIAsbS46sqRWGt9oLUTgpf7H\nnJ9bDqsmfniae9kXf+b6TSniMH7eHb6bJbI0MDPS6v9K4Aa/Pmcs1IOExPWp\nkFD8LiMYrOtW/S5pr+r7c+c0y6rRuzdV/NtFi9QQaXinh7/iB9GFW2iG+Gl/\n+iVX4D34Xwm+oHYKGSPJUjuNOKETs6dZolmigNgM4sfhGl6IguF3d/8IQWjl\nylyy0PixC5XmT7Udj5awbM4HbGGt2+GHFzJn9CbhzyXYWpCleQr0+glMfzXI\n/w6GxtsS6O/wRXqOyUgKK2wzKymCzGo5UW7nBp9jVtXwpRnpJGM6WYi5KMIk\nUSeX\r\n=H72F\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.9.3_1589369516227_0.7422755133745127"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.9.4": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.9.4",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "dependencies": {
+        "commander": "~2.20.3"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "49ea629f3f33387ead05639e81eb82b5d2915de6",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.9.4",
+      "_nodeVersion": "12.16.2",
+      "_npmVersion": "6.14.4",
+      "dist": {
+        "integrity": "sha512-8RZBJq5smLOa7KslsNsVcSH+KOXf1uDU8yqLeNuVKwmT0T3FA0ZoXlinQfRad7SDcbZZRZE4ov+2v71EnxNyCA==",
+        "shasum": "867402377e043c1fc7b102253a22b64e5862401b",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.9.4.tgz",
+        "fileCount": 20,
+        "unpackedSize": 843716,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezkKqCRA9TVsSAnZWagAA9I0P/2loWiMTRSm9ytvVVxVE\nXmQkXIsF6OmM/B6Elq0Kez8P+/SMO6s5yDxnS2EX2ram8uk85DvIOZsUgVEe\nr9nL3Y3x8YaiUp05Djg2r1BiSvGu7znGb6vnS1pG0o9p4S0HxQTanv9t2sjh\nLMckgPtP9BOC/cKJ3HRiXc/L5Bo97kn3gKOlBZxqkKZhw0iK9WOas4zi446u\nVGZPFegrKX2K0J24SsUbKqERJE6/uR1xUEQyk28OwySs7i+vC7coOLZlezQq\nedS68ECkM7I/ta5uYLeZH6IUACsOSUvEKhfG/KCiX+CV424SFJhZwwzIt+4Q\n35gXgGmKLduq5Bq+i9qhn9qyS2YGi0nHBWh3Ghwp4lo5aYJktZSF00Q2exZe\nI9Sunbiat13Jt2BQXMekrwFvAyxP60rXKkG62utNsay/lFG/8GhJ96HU/c8n\nijQLN1ZBcxnL60sbsNNQiHLlDonY9YLGvoEFppmy4nUXOsdfKH2y2W5fkXsE\n4eyZmRXtsF2xHv70WNbzhzCV5TQiDWm0fgt3BxTHDYWuJaWfZGB1BRsm8V1U\n8GH2wvBUGMF6UmrQgQN7tFPOis8PafEK72DVv3EBKX3A1RqLLK9NSCZV6XKp\nEwYMMcGBQ9O5CPWftG3sKYzGAo+RpOIRzajgwftnZUCmy2V6v7KU3V3VdGlq\nKFPD\r\n=zGIq\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.9.4_1590575785951_0.4149905087594512"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.10.0": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.10.0",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "58c24f80078cd819ee1ae741655628cc6ec74c02",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.10.0",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-Esj5HG5WAyrLIdYU74Z3JdG2PxdIusvj6IWHMtlyESxc7kcDz7zYlYjpnSokn1UbpV0d/QX9fan7gkCNd/9BQA==",
+        "shasum": "397a7e6e31ce820bfd1cb55b804ee140c587a9e7",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.10.0.tgz",
+        "fileCount": 20,
+        "unpackedSize": 852417,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe71UnCRA9TVsSAnZWagAAxkAP/ikIl2vT1nEv+ik5v41t\nSwVAm/B5p1jUuGwQAWo+V35Y0o00nkLaZyRbCefYm8v1RIK2TU8xGBm7erFS\n1epJEB0jp0vulg6zTQFWstK7tmgRE/GXS4WBaIwcPp0qxlIHnHFBunk/Cdso\nYEr1cx83tcWkhuSQbqM5kwE3s4UZLzWma0zaAV51a4ssQELAjzGwzJCq4p/C\nQ7+5aAYgSPBOtilyMoWLeKE58MTuhDZIJXQFGsBYF1RGXDn7oTUwrVTAJf7Q\n4LPvuzMcjF02sFI+QEDbwD3zAM66Vi5miWHUmWYbpv94yBEGx990RQNVLzDv\nUux3PhMEhAcoUyaJ/dPHw30U57UX9/SjzRc+a6YrOtH/nRWGCSLqgaOxD77L\ndDA+Jh9i2SAzuUem5WFIwcY3wUvWyTGowBNHVQkd0w6vAXnfyqJN/QW9KMD6\nNBMX3uCrwIZ0mpJvnxlicQ7uVJChxRV2PW2JHKjwD5jYUkz7o642zCt/ePfZ\nUzU8VRk5bdrjNg8Ex4GHI+1DxULFyrVRH0ZynZ41bHWmLDrfLcmCH+tJxaNU\nr/F1yRmhezH7fnLPF05AIFE1Uy/DBEJPYpD7D+kz7T+EiXtjK5aKLzTZ4z0i\nfjveZUNIWBtyHlgDtOVkl0mPkVY9b4IwU+TZakVsec/5ymuGThNazJOLB5ft\nIW/N\r\n=qD80\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.10.0_1592743206724_0.2879690619013422"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.10.1": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.10.1",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "9d758a216bfb030f87df9864a0c5577f986e5f04",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.10.1",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-RjxApKkrPJB6kjJxQS3iZlf///REXWYxYJxO/MpmlQzVkDWVI3PSnCBWezMecmTU/TRkNxrl8bmsfFQCp+LO+Q==",
+        "shasum": "dd14767eb7150de97f2573a5ff210db14fffe4ad",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.10.1.tgz",
+        "fileCount": 20,
+        "unpackedSize": 853750,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfJu6oCRA9TVsSAnZWagAApL8QAJBvByZtu2PNmc9sqMAm\nLMKg1yOwC08xIW3ikqDsv94YfPD3qr55H0g+4lUvai/+YviYvx1wm8OsHhaH\nFjwgRWFlTsLQzS3dd+Z5IrqYlhu1Su1+x9kRnrdP8Eie0LVXfgcCW2Wexfc8\nclbe/E+UgUCqPZn/fAp0e+hhFCkTbbI8L6wxa+AxL+SYXtkVacmAryHLqdyi\nGta9GpJUlNcV9AC0indLZ+RdAm3fjGWxoI36VMU5i92fHVRcved8oRMS06kR\n9faCnTdQWyWXob+FNtQ7Clc+92TdipqGlIzgLfg1MpLSudNoveMXMa0OckVS\nDZt+gQN2tVBzlYtFlRL9UMwYNm++9hvlb1i/ZNTjPlUAoql0aYDiH2RMBuV0\nbyr+aLuv0qbyveVCdgzbOw4+HJDL65tJZ8q3y1HvCTy+lqWM16yC3EwDuCOU\nsrFzxBn6mJ2JAOiqPiPq9FgzE11BjS38BDmBCcMu7wj3DfAfUTPAEl3RQLew\nNO75yr21et722ETpWXt0nby/OejLgq1Agq5Q4C97ViEpo3FJJk/PU+oBN2GA\nrcWKa+cR/evLIiOev4mrmlroIzUFyIg1bjiP3wd7aXTdyzYC1S44IIneUvr2\nFSC6daFgzo3P61DJ/4IIDOW/6QFPrzC2LUrDq8zbBrkacolIDPXtkdEGKh6r\nbxmU\r\n=RDN5\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.10.1_1596386984078_0.7737235813563297"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.10.2": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.10.2",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "af1b2f30c9904ba69aee5a6219215f1d0e64ad2b",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.10.2",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-GXCYNwqoo0MbLARghYjxVBxDCnU0tLqN7IPLdHHbibCb1NI5zBkU2EPcy/GaVxc0BtTjqyGXJCINe6JMR2Dpow==",
+        "shasum": "8cfa1209fd04199cc8a7f9930ddedb30b0f1912d",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.10.2.tgz",
+        "fileCount": 20,
+        "unpackedSize": 889871,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfQsbZCRA9TVsSAnZWagAAFWoP/RcKECYVU/UqJkdR04p2\nXDOP/G681FbCcG4mLRvLyzpjkmaj5mx200m8qtwbZGdOUnUf/HVYKbg+gTfw\nmtCc5fdxYvNxyoBIUqtQ3MBkd0NFfJgpSuwFieAo/tocbDyWPSZjoMOFrs9n\nmSB9nDiaPO98NpDSeTjsLkNEl2BndqWxFL9BG8r2PbG4qj6qqg4CRBgRCDaN\nu7/FbpBtnacUCMbmMNHMW/G8jykV1JTQmWcpsu2uq0BIqcGH11uMxnPSOL6u\nkwSj1veY26uEcFlY9fF4mY+HOpePHzZbg8peds2BeQjw88wRbXSjtoyaWemW\nu3usn7hR+pDn/AJjl7I3f6Rxu/Snk5tmERQeSY3JZKXdzC9sy2bWea7IOqGj\nT+T9KDUWr6QifEJIP+LB8FBkO+u5Hu5oW0gmI7qKBq0+nGD+jRkIFGB+Bx5F\nbWT4LpAHdHit++73eo43vB53Emi1MBs7ILVYj18kItxbgcdzwqSCCluS/f9q\nLHJPpkfv8PQtzHUO8j+ApnGVs21H8SLSliFFlvGoqgj5zcsmleSWR5MMUVbS\n6O7Gwx0t0Ld1uKFvc9l0rFoKdZrHPtqi0SU9eh5Sh7ocDugIcDS7FpDWQ9kI\nwsfy3C8HMoIDvpKdyVPBN1YyxMPOS8/oSOjpS/ZzuUD+BBvhKQjhe0gnkyou\n/UjD\r\n=1ikV\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.10.2_1598211801061_0.4754569445205139"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.10.3": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.10.3",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "e33c727e8bf7687c827d3e88974ead18af263d12",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.10.3",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-Lh00i69Uf6G74mvYpHCI9KVVXLcHW/xu79YTvH7Mkc9zyKUeSPz0owW0dguj0Scavns3ZOh3wY63J0Zb97Za2g==",
+        "shasum": "f0d2f99736c14de46d2d24649ba328be3e71c3bf",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.10.3.tgz",
+        "fileCount": 20,
+        "unpackedSize": 888960,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfS9rKCRA9TVsSAnZWagAA9LAP/RnaOQ5TEcY/N/DAbqHc\nFdi+yS/wmPWMBLIMKlv3XDNQ1PY6pTUeDRr4oVQ9LRHJ2HqnSNU7mMAhvO18\n/NchHrASGYGBKg4zDu0HypcKVcvqzq3dCiv7qziNwTWNQ16LfjD3O4PZFHTn\nyfB7QfEKy1mr3BuLdHMois9zRufTI69gbWr0pepzxVl6Yt717KMkOUrssMkP\ne+L6MfZsMkOYElnw1KZyvlrGsHUWbCA2LHlDdam5YiKAEpvkYaUNq6dZKYBL\nxkXh2gi93By8IlL+IiKt6uG3ga7KlRz+w/rIE0WYdODulWrFVI2MKoM1L8aa\n0nMtGKj0JWnXSy6NY/83SU/p4RtlBcg2PY4BjNFnRnr0tLG2fz35E6Pttd3a\np2HHYI9/wBhzc+3oaup2XyjTKw3M3kMtrOGEXMBWZRisD35/nuS2YDuPZN/w\nuONpWwssRaPa9q8KHZVVSu/cPVkxF1JzZ9G+3hc65pEeZWEAm+FNrtU/q3fq\naKs+oDE9L87mJuNCktlC4I6Y8JjcY7IkrNBWCGZ3aQJ3R+1e+arym22DUCzk\n8STE4yPGGSK56FdusieSKc7ZBoTLbFvEH18yRQAOQR84XQ3d1W5U+k8efW2i\n90ao8W92hHtHu7VsPk83ZlV3furAoCK1+W4uJTgny39dGoUxcVKMgn/SBkB3\nYYg8\r\n=J8/y\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.10.3_1598806729378_0.8353116651081829"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.10.4": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.10.4",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "30761eede5a5f0970a5655a2288aca1734407a51",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.10.4",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-kBFT3U4Dcj4/pJ52vfjCSfyLyvG9VYYuGYPmrPvAxRw/i7xHiT4VvCev+uiEMcEEiu6UNB6KgWmGtSUYIWScbw==",
+        "shasum": "dd680f5687bc0d7a93b14a3482d16db6eba2bfbb",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.10.4.tgz",
+        "fileCount": 20,
+        "unpackedSize": 891001,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfVSDJCRA9TVsSAnZWagAAvZ4P/iZN9ms8J2EQLJK78PIP\noUIyi+FC1ZU2CyfBEUt/8mThldoE4mRqE/RFt9CuD3AKrhPPAs9q1XpY6kVS\nuDsvvangLke9jHptBUJj6ux44nKEoTmX6dy10UcrYw4U50n7Bx//gzQywbbX\nb98uRcWOKb+lE23KpB9eJRcmrflpR/6WRX99CKRPlElvWpRwGicY36wdfNeF\n+tnzX+itzWD7yXHs78nUVv/Dh6b9Z8GrnEvHl8LRHJYw5pW7kX+EENfmNliL\nTojDIdI/EM0ha0oMPFf9DgCeNU61h2y2kKDvfGWUILoC/oauyBlcqFClFG84\nAgrOYfkqs0WF/wXAyCSZK+/r1LDlAeEA4XpV+0Q9vd0l6CbsaAB7LX1XP6Jz\nAR5NGYzviSq77yOvRLzUEt6anan7R95OwDa16D4Lw7Eee+abQ1oLTkpasHIE\nR7UNuQdBv1kg/KW42hDPl+Fv5zPM/KE92NtjvtYkY/CkIgfbsZUO9hfGfJLV\nlvxrOQS5TjjB5XiQ7qcqmDDmJeS/IQXCb/d5qbUXf/xve9+eSSJbb2JTdmR6\nEkuVE9PU4/ooKyqAfhTZNTkcSf322AXaRdcKYxrxRFysEk+FPV7eZkzfEayP\n7i/iatWCSCe0psF7pvzzBHDnlT1MsBfBKqn7iI28sS11cQKojEpceWaCAp5P\nTJhw\r\n=y8YA\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.10.4_1599414472921_0.8154317592708125"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.11.0": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.11.0",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "92d1391e5e3f6d2381233fc41f31ce0b808900ae",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.11.0",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-e1KQFRCpOxnrJsJVqDUCjURq+wXvIn7cK2sRAx9XL3HYLL9aezOP4Pb1+Y3/o693EPk111Yj2Q+IUXxcpHlygQ==",
+        "shasum": "67317658d76c21e0e54d3224aee2df4ee6c3e1dc",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.11.0.tgz",
+        "fileCount": 20,
+        "unpackedSize": 902802,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfcJNhCRA9TVsSAnZWagAAaAEP/1YamGMOdhXDNb5/LY0Z\nci/JHmcJMVdWczVMHman1HwmCxTagCjXrahOjKSaF0UJkjkgNcGvxikAiF+u\n5iN61r2JKCg+d9WidEsk6EukVJBKATSd9SLCtUwdI+/nigNZZAxjFCUGQ3BL\nEI4pGkchDtRHM1xWkmueEIXX1VY0s2HgyG1xoPZqDfEhSlbxSi4NPozkQpF+\nHX7U5GzLYAX1spqjfQjSZ78w/hmaSqj+3J+4n6wfiZz1GShG2M1f/PtiFhLq\nh9wHgyXcLAh/1c4AbxoipjCbN2DrJmWpVvR7pzD8plwDoXwmRKzpgpvg/hX2\nZYr1mcs9pBeVJiCO35a/HK/noZRGWVoj6hjXaT+VVJU8zDC6AU/vO0QWOy+5\nrDpd9UhC7cXai7PL80PPw3O5gvVQHfSSqsPJ3QNc3jC9QoVcIEk0P3/NDe86\n+rIKDqM2tglliVpDfE21VnJGnt+q6/KMOhiE5WhSacHcs7pZZob/fYpn4tt0\nmO1vRaeVeCmcV+nft0hsspr75MAcrSSROKhR1fIbXK0IjB8cPjaNZs3LtJlm\nIOtXTQdpibLaq8LYR90cZIJvJsFPI1neEBfqoEuuqI3ZXFQXkqgzKU665lja\nUNVkqOVjPpjhjULwaTtPsvDSbU/oZW80RDQoPt/reWe0JOa6dej0W5yXO4b/\ntICy\r\n=s+Ob\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.11.0_1601213281278_0.26656499175095827"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.11.1": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.11.1",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "1786c6907070ee984d36548ab9941f36c524237e",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.11.1",
+      "_nodeVersion": "14.7.0",
+      "_npmVersion": "6.14.7",
+      "dist": {
+        "integrity": "sha512-OApPSuJcxcnewwjSGGfWOjx3oix5XpmrK9Z2j0fTRlHGoZ49IU6kExfZTM0++fCArOOCet+vIfWwFHbvWqwp6g==",
+        "shasum": "32d274fea8aac333293044afd7f81409d5040d38",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.11.1.tgz",
+        "fileCount": 20,
+        "unpackedSize": 904857,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfeeOKCRA9TVsSAnZWagAAJSQP/A9I69kCOa1eN84E4k0I\nIQGY4vIh7p5vBh4nuUBZKc1HRtLBiAluCvEIBhIVwZNqne9TXSeWiuK2LlaH\nw/EkjhYOF5GnzU4kl3mzhkdZIdQf1oEDU+2UVhRA6r7LCtMfQ1a0ZyiJVtVW\nefKHo/FIbl1lAYfGTYruQiNtVUF4HxlS+tUDBWAhF5xzLcpPor6wQ8YSGU0M\nkInSGGN3UpqgvsTdlrDB7CTQcrK5SCK6b0Yz+yaTGCJ8xgeuwQQQOa6qZBms\n9ZwM0arFr9qoN3Tk1hpKUhjLuMJEisp3Jut2sD14hWUYZpY9b+LbStDc/FWE\nvSjDQ6p/PQ01atwUIL2vVsW7K+IVBrhGa8MP6al9zTTRXs5LNkJRxnuJWN1P\n10j6lGSL9BqqvVJ6Ca+qUWIow8wHiGxxPjeYkm7HjUUS7F4zbQ+Uf2AY4BFA\nV4Gougw7Ap4BhWlGWk+l/SNy9XFB7XZeXZKp4DsECqvyq92LJHAbvEgw0yt/\nzoD7j0SAshyqzSG9qVniX938JOoLZqLkP984ItGyz9BcjQIXlRPsgzwx+AUE\nsqjgb7Pxd/fp5X9I4xqa5RICqbb8m6DSg3lOmAQcerqWmkVhyaut58uZKHwX\nLn67NeUwEgRpJ+OoLdgYkBB33MkPzP9A5nYOnd5J8QhZJr+pCViEhfBchRoG\nkBK8\r\n=JuOr\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.11.1_1601823625515_0.42064955190811104"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.11.2": {
+      "name": "uglify-js",
+      "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+      "author": {
+        "name": "Mihai Bazon",
+        "email": "mihai.bazon@gmail.com",
+        "url": "http://lisperator.net/"
+      },
+      "license": "BSD-2-Clause",
+      "version": "3.11.2",
+      "engines": {
+        "node": ">=0.8.0"
+      },
+      "maintainers": [
+        {
+          "name": "alexlamsl",
+          "email": "alexlamsl@gmail.com"
+        },
+        {
+          "name": "mishoo",
+          "email": "mihai.bazon@gmail.com"
+        },
+        {
+          "name": "rvanvelzen1",
+          "email": "rvanvelzen1@gmail.com"
+        }
+      ],
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mishoo/UglifyJS.git"
+      },
+      "main": "tools/node.js",
+      "bin": {
+        "uglifyjs": "bin/uglifyjs"
+      },
+      "devDependencies": {
+        "acorn": "~7.1.0",
+        "semver": "~6.3.0"
+      },
+      "scripts": {
+        "test": "node test/compress.js && node test/mocha.js"
+      },
+      "keywords": [
+        "cli",
+        "compress",
+        "compressor",
+        "ecma",
+        "ecmascript",
+        "es",
+        "es5",
+        "javascript",
+        "js",
+        "jsmin",
+        "min",
+        "minification",
+        "minifier",
+        "minify",
+        "optimize",
+        "optimizer",
+        "pack",
+        "packer",
+        "parse",
+        "parser",
+        "uglifier",
+        "uglify"
+      ],
+      "gitHead": "ffcce28ce15afe9f0b8d8a4a83b901508eb866de",
+      "bugs": {
+        "url": "https://github.com/mishoo/UglifyJS/issues"
+      },
+      "homepage": "https://github.com/mishoo/UglifyJS#readme",
+      "_id": "uglify-js@3.11.2",
+      "_nodeVersion": "14.13.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-G440NU6fewtnQftSgqRV1r2A5ChKbU1gqFCJ7I8S7MPpY/eZZfLGefaY6gUZYiWebMaO+txgiQ1ZyLDuNWJulg==",
+        "shasum": "9f50325544273c27b20e586def140e7726c525ea",
+        "tarball": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.11.2.tgz",
+        "fileCount": 20,
+        "unpackedSize": 909441,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfgxWbCRA9TVsSAnZWagAAMUsP+wd9QsrCTOASUb4kWGbd\n4cjzIQI3G1yJjpFxUr2ApQMdPOv3TCUstlXFklLf92FS3uybOAq6hE7zIyMd\n37a+3fUcaUp70Xy/hGpBoSH8I3sUmkLd5CvaDxfMMqg2nK+dwdO9j7qCQDl3\n/dNJkEhNdmFxEOV4soSFzDlRIRC1NA8RlWZWrdZ5637BcclpjIHiOxFzHf3o\nRgwFtAI6jiRme+ktpNdxXSN9FwGVbsUkNcOL9X+0WopJNE6A5XZZFmhP7Tm6\n3c5PjcwcITnP+2gnB37ooRrbj64iMWiHjPYXG7sTLaUbPbZJQ5Rl5cczF65a\nfZpUcfCwQaxTppz+PQAMah9j5jn/zuYIN8Kqa5C/351jQkHmn7yT8Tw6xRMW\nJgHEN+1g3kucNYQwkvlik2yy3I+XvXsxVNyhX5P1OCZhR6zdlSxIvPVCB3Ho\nwHizCpfRrepCRpOe59fRoTm/t3smS49B0D/elWsyu+wDIetx19TtKs7i3SlV\nbYaSyqLaJ8YPoBB7kC8mV8IYq81MNO71c3VwKe8LVqJBC7VkFX8oLj63FhUr\nHChj05KN7eqE6USHRXActgZTK7BqW/rBi6bhO9y4p/Rr+60QIpON1ypSHwrx\n4764KZprPWLpqAbm+xli/PbS5Q3TZ7+6GH18F0aPOO/Qh/hAfJFejAe+id70\ngjfy\r\n=VUwd\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "_npmUser": {
+        "name": "alexlamsl",
+        "email": "alexlamsl@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/uglify-js_3.11.2_1602426266518_0.27697066007038984"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -18360,7 +19392,7 @@
     }
   ],
   "time": {
-    "modified": "2020-04-15T11:06:44.863Z",
+    "modified": "2020-10-11T14:24:29.167Z",
     "created": "2011-01-05T17:56:48.593Z",
     "0.0.1": "2011-01-05T17:56:48.593Z",
     "0.0.2": "2011-01-09T13:47:55.729Z",
@@ -18588,11 +19620,22 @@
     "3.8.0": "2020-02-18T14:29:54.585Z",
     "3.8.1": "2020-03-28T01:03:28.990Z",
     "3.9.0": "2020-04-13T15:16:48.194Z",
-    "3.9.1": "2020-04-15T11:06:39.515Z"
+    "3.9.1": "2020-04-15T11:06:39.515Z",
+    "3.9.2": "2020-05-03T08:15:49.448Z",
+    "3.9.3": "2020-05-13T11:31:56.470Z",
+    "3.9.4": "2020-05-27T10:36:26.192Z",
+    "3.10.0": "2020-06-21T12:40:06.871Z",
+    "3.10.1": "2020-08-02T16:49:44.239Z",
+    "3.10.2": "2020-08-23T19:43:21.245Z",
+    "3.10.3": "2020-08-30T16:58:49.557Z",
+    "3.10.4": "2020-09-06T17:47:53.092Z",
+    "3.11.0": "2020-09-27T13:28:01.458Z",
+    "3.11.1": "2020-10-04T15:00:25.769Z",
+    "3.11.2": "2020-10-11T14:24:26.767Z"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mishoo/UglifyJS2.git"
+    "url": "git+https://github.com/mishoo/UglifyJS.git"
   },
   "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
   "users": {
@@ -18864,11 +19907,11 @@
     "writeosahon": true,
     "drdeathpanda": true
   },
-  "readme": "UglifyJS 3\n==========\n\nUglifyJS is a JavaScript parser, minifier, compressor and beautifier toolkit.\n\n#### Note:\n- **`uglify-js@3` has a simplified [API](#api-reference) and [CLI](#command-line-usage) that is not backwards compatible with [`uglify-js@2`](https://github.com/mishoo/UglifyJS2/tree/v2.x)**.\n- **Documentation for UglifyJS `2.x` releases can be found [here](https://github.com/mishoo/UglifyJS2/tree/v2.x)**.\n- `uglify-js` only supports JavaScript (ECMAScript 5).\n- To minify ECMAScript 2015 or above, transpile using tools like [Babel](https://babeljs.io/).\n\nInstall\n-------\n\nFirst make sure you have installed the latest version of [node.js](http://nodejs.org/)\n(You may need to restart your computer after this step).\n\nFrom NPM for use as a command line app:\n\n    npm install uglify-js -g\n\nFrom NPM for programmatic use:\n\n    npm install uglify-js\n\n# Command line usage\n\n    uglifyjs [input files] [options]\n\nUglifyJS can take multiple input files.  It's recommended that you pass the\ninput files first, then pass the options.  UglifyJS will parse input files\nin sequence and apply any compression options.  The files are parsed in the\nsame global scope, that is, a reference from a file to some\nvariable/function declared in another file will be matched properly.\n\nIf no input file is specified, UglifyJS will read from STDIN.\n\nIf you wish to pass your options before the input files, separate the two with\na double dash to prevent input files being used as option arguments:\n\n    uglifyjs --compress --mangle -- input.js\n\n### Command line options\n\n```\n    -h, --help                  Print usage information.\n                                `--help options` for details on available options.\n    -V, --version               Print version number.\n    -p, --parse <options>       Specify parser options:\n                                `acorn`  Use Acorn for parsing.\n                                `bare_returns`  Allow return outside of functions.\n                                                Useful when minifying CommonJS\n                                                modules and Userscripts that may\n                                                be anonymous function wrapped (IIFE)\n                                                by the .user.js engine `caller`.\n                                `expression`  Parse a single expression, rather than\n                                              a program (for parsing JSON).\n                                `spidermonkey`  Assume input files are SpiderMonkey\n                                                AST format (as JSON).\n    -c, --compress [options]    Enable compressor/specify compressor options:\n                                `pure_funcs`  List of functions that can be safely\n                                              removed when their return values are\n                                              not used.\n    -m, --mangle [options]      Mangle names/specify mangler options:\n                                `reserved`  List of names that should not be mangled.\n    --mangle-props [options]    Mangle properties/specify mangler options:\n                                `builtins`  Mangle property names that overlaps\n                                            with standard JavaScript globals.\n                                `debug`  Add debug prefix and suffix.\n                                `domprops`  Mangle property names that overlaps\n                                            with DOM properties.\n                                `keep_quoted`  Only mangle unquoted properties.\n                                `regex`  Only mangle matched property names.\n                                `reserved`  List of names that should not be mangled.\n    -b, --beautify [options]    Beautify output/specify output options:\n                                `beautify`  Enabled with `--beautify` by default.\n                                `preamble`  Preamble to prepend to the output. You\n                                            can use this to insert a comment, for\n                                            example for licensing information.\n                                            This will not be parsed, but the source\n                                            map will adjust for its presence.\n                                `quote_style`  Quote style:\n                                               0 - auto\n                                               1 - single\n                                               2 - double\n                                               3 - original\n                                `wrap_iife`  Wrap IIFEs in parenthesis. Note: you may\n                                             want to disable `negate_iife` under\n                                             compressor options.\n    -O, --output-opts [options] Specify output options (`beautify` disabled by default).\n    -o, --output <file>         Output file path (default STDOUT). Specify `ast` or\n                                `spidermonkey` to write UglifyJS or SpiderMonkey AST\n                                as JSON to STDOUT respectively.\n    --comments [filter]         Preserve copyright comments in the output. By\n                                default this works like Google Closure, keeping\n                                JSDoc-style comments that contain \"@license\" or\n                                \"@preserve\". You can optionally pass one of the\n                                following arguments to this flag:\n                                - \"all\" to keep all comments\n                                - a valid JS RegExp like `/foo/` or `/^!/` to\n                                keep only matching comments.\n                                Note that currently not *all* comments can be\n                                kept when compression is on, because of dead\n                                code removal or cascading statements into\n                                sequences.\n    --config-file <file>        Read `minify()` options from JSON file.\n    -d, --define <expr>[=value] Global definitions.\n    -e, --enclose [arg[:value]] Embed everything in a big function, with configurable\n                                argument(s) & value(s).\n    --ie8                       Support non-standard Internet Explorer 8.\n                                Equivalent to setting `ie8: true` in `minify()`\n                                for `compress`, `mangle` and `output` options.\n                                By default UglifyJS will not try to be IE-proof.\n    --keep-fnames               Do not mangle/drop function names.  Useful for\n                                code relying on Function.prototype.name.\n    --name-cache <file>         File to hold mangled name mappings.\n    --self                      Build UglifyJS as a library (implies --wrap UglifyJS)\n    --source-map [options]      Enable source map/specify source map options:\n                                `base`  Path to compute relative paths from input files.\n                                `content`  Input source map, useful if you're compressing\n                                           JS that was generated from some other original\n                                           code. Specify \"inline\" if the source map is\n                                           included within the sources.\n                                `filename`  Filename and/or location of the output source\n                                            (sets `file` attribute in source map).\n                                `includeSources`  Pass this flag if you want to include\n                                                  the content of source files in the\n                                                  source map as sourcesContent property.\n                                `root`  Path to the original source to be included in\n                                        the source map.\n                                `url`  If specified, path to the source map to append in\n                                       `//# sourceMappingURL`.\n    --timings                   Display operations run time on STDERR.\n    --toplevel                  Compress and/or mangle variables in top level scope.\n    --verbose                   Print diagnostic messages.\n    --warn                      Print warning messages.\n    --wrap <name>               Embed everything in a big function, making the\n                                “exports” and “global” variables available. You\n                                need to pass an argument to this option to\n                                specify the name that your module will take\n                                when included in, say, a browser.\n```\n\nSpecify `--output` (`-o`) to declare the output file.  Otherwise the output\ngoes to STDOUT.\n\n## CLI source map options\n\nUglifyJS can generate a source map file, which is highly useful for\ndebugging your compressed JavaScript.  To get a source map, pass\n`--source-map --output output.js` (source map will be written out to\n`output.js.map`).\n\nAdditional options:\n\n- `--source-map \"filename='<NAME>'\"` to specify the name of the source map. The value of\n  `filename` is only used to set `file` attribute (see [the spec][sm-spec])\n  in source map file.\n\n- `--source-map \"root='<URL>'\"` to pass the URL where the original files can be found.\n\n- `--source-map \"url='<URL>'\"` to specify the URL where the source map can be found.\n  Otherwise UglifyJS assumes HTTP `X-SourceMap` is being used and will omit the\n  `//# sourceMappingURL=` directive.\n\nFor example:\n\n    uglifyjs js/file1.js js/file2.js \\\n             -o foo.min.js -c -m \\\n             --source-map \"root='http://foo.com/src',url='foo.min.js.map'\"\n\nThe above will compress and mangle `file1.js` and `file2.js`, will drop the\noutput in `foo.min.js` and the source map in `foo.min.js.map`.  The source\nmapping will refer to `http://foo.com/src/js/file1.js` and\n`http://foo.com/src/js/file2.js` (in fact it will list `http://foo.com/src`\nas the source map root, and the original files as `js/file1.js` and\n`js/file2.js`).\n\n### Composed source map\n\nWhen you're compressing JS code that was output by a compiler such as\nCoffeeScript, mapping to the JS code won't be too helpful.  Instead, you'd\nlike to map back to the original code (i.e. CoffeeScript).  UglifyJS has an\noption to take an input source map.  Assuming you have a mapping from\nCoffeeScript → compiled JS, UglifyJS can generate a map from CoffeeScript →\ncompressed JS by mapping every token in the compiled JS to its original\nlocation.\n\nTo use this feature pass `--source-map \"content='/path/to/input/source.map'\"`\nor `--source-map \"content=inline\"` if the source map is included inline with\nthe sources.\n\n## CLI compress options\n\nYou need to pass `--compress` (`-c`) to enable the compressor.  Optionally\nyou can pass a comma-separated list of [compress options](#compress-options).\n\nOptions are in the form `foo=bar`, or just `foo` (the latter implies\na boolean option that you want to set `true`; it's effectively a\nshortcut for `foo=true`).\n\nExample:\n\n    uglifyjs file.js -c toplevel,sequences=false\n\n## CLI mangle options\n\nTo enable the mangler you need to pass `--mangle` (`-m`).  The following\n(comma-separated) options are supported:\n\n- `toplevel` (default `false`) -- mangle names declared in the top level scope.\n\n- `eval` (default `false`) -- mangle names visible in scopes where `eval` or `with` are used.\n\nWhen mangling is enabled but you want to prevent certain names from being\nmangled, you can declare those names with `--mangle reserved` — pass a\ncomma-separated list of names.  For example:\n\n    uglifyjs ... -m reserved=['$','require','exports']\n\nto prevent the `require`, `exports` and `$` names from being changed.\n\n### CLI mangling property names (`--mangle-props`)\n\n**Note:** THIS WILL PROBABLY BREAK YOUR CODE.  Mangling property names\nis a separate step, different from variable name mangling.  Pass\n`--mangle-props` to enable it.  It will mangle all properties in the\ninput code with the exception of built in DOM properties and properties\nin core JavaScript classes.  For example:\n\n```javascript\n// example.js\nvar x = {\n    baz_: 0,\n    foo_: 1,\n    calc: function() {\n        return this.foo_ + this.baz_;\n    }\n};\nx.bar_ = 2;\nx[\"baz_\"] = 3;\nconsole.log(x.calc());\n```\nMangle all properties (except for JavaScript `builtins`):\n```bash\n$ uglifyjs example.js -c -m --mangle-props\n```\n```javascript\nvar x={o:0,_:1,l:function(){return this._+this.o}};x.t=2,x.o=3,console.log(x.l());\n```\nMangle all properties except for `reserved` properties:\n```bash\n$ uglifyjs example.js -c -m --mangle-props reserved=[foo_,bar_]\n```\n```javascript\nvar x={o:0,foo_:1,_:function(){return this.foo_+this.o}};x.bar_=2,x.o=3,console.log(x._());\n```\nMangle all properties matching a `regex`:\n```bash\n$ uglifyjs example.js -c -m --mangle-props regex=/_$/\n```\n```javascript\nvar x={o:0,_:1,calc:function(){return this._+this.o}};x.l=2,x.o=3,console.log(x.calc());\n```\n\nCombining mangle properties options:\n```bash\n$ uglifyjs example.js -c -m --mangle-props regex=/_$/,reserved=[bar_]\n```\n```javascript\nvar x={o:0,_:1,calc:function(){return this._+this.o}};x.bar_=2,x.o=3,console.log(x.calc());\n```\n\nIn order for this to be of any use, we avoid mangling standard JS names by\ndefault (`--mangle-props builtins` to override).\n\nA default exclusion file is provided in `tools/domprops.json` which should\ncover most standard JS and DOM properties defined in various browsers.  Pass\n`--mangle-props domprops` to disable this feature.\n\nA regular expression can be used to define which property names should be\nmangled.  For example, `--mangle-props regex=/^_/` will only mangle property\nnames that start with an underscore.\n\nWhen you compress multiple files using this option, in order for them to\nwork together in the end we need to ensure somehow that one property gets\nmangled to the same name in all of them.  For this, pass `--name-cache filename.json`\nand UglifyJS will maintain these mappings in a file which can then be reused.\nIt should be initially empty.  Example:\n\n```bash\n$ rm -f /tmp/cache.json  # start fresh\n$ uglifyjs file1.js file2.js --mangle-props --name-cache /tmp/cache.json -o part1.js\n$ uglifyjs file3.js file4.js --mangle-props --name-cache /tmp/cache.json -o part2.js\n```\n\nNow, `part1.js` and `part2.js` will be consistent with each other in terms\nof mangled property names.\n\nUsing the name cache is not necessary if you compress all your files in a\nsingle call to UglifyJS.\n\n### Mangling unquoted names (`--mangle-props keep_quoted`)\n\nUsing quoted property name (`o[\"foo\"]`) reserves the property name (`foo`)\nso that it is not mangled throughout the entire script even when used in an\nunquoted style (`o.foo`). Example:\n\n```javascript\n// stuff.js\nvar o = {\n    \"foo\": 1,\n    bar: 3\n};\no.foo += o.bar;\nconsole.log(o.foo);\n```\n```bash\n$ uglifyjs stuff.js --mangle-props keep_quoted -c -m\n```\n```javascript\nvar o={foo:1,o:3};o.foo+=o.o,console.log(o.foo);\n```\n\n### Debugging property name mangling\n\nYou can also pass `--mangle-props debug` in order to mangle property names\nwithout completely obscuring them. For example the property `o.foo`\nwould mangle to `o._$foo$_` with this option. This allows property mangling\nof a large codebase while still being able to debug the code and identify\nwhere mangling is breaking things.\n\n```bash\n$ uglifyjs stuff.js --mangle-props debug -c -m\n```\n```javascript\nvar o={_$foo$_:1,_$bar$_:3};o._$foo$_+=o._$bar$_,console.log(o._$foo$_);\n```\n\nYou can also pass a custom suffix using `--mangle-props debug=XYZ`. This would then\nmangle `o.foo` to `o._$foo$XYZ_`. You can change this each time you compile a\nscript to identify how a property got mangled. One technique is to pass a\nrandom number on every compile to simulate mangling changing with different\ninputs (e.g. as you update the input script with new properties), and to help\nidentify mistakes like writing mangled keys to storage.\n\n\n# API Reference\n\nAssuming installation via NPM, you can load UglifyJS in your application\nlike this:\n```javascript\nvar UglifyJS = require(\"uglify-js\");\n```\n\nThere is a single high level function, **`minify(code, options)`**,\nwhich will perform all minification [phases](#minify-options) in a configurable\nmanner. By default `minify()` will enable the options [`compress`](#compress-options)\nand [`mangle`](#mangle-options). Example:\n```javascript\nvar code = \"function add(first, second) { return first + second; }\";\nvar result = UglifyJS.minify(code);\nconsole.log(result.error); // runtime error, or `undefined` if no error\nconsole.log(result.code);  // minified output: function add(n,d){return n+d}\n```\n\nYou can `minify` more than one JavaScript file at a time by using an object\nfor the first argument where the keys are file names and the values are source\ncode:\n```javascript\nvar code = {\n    \"file1.js\": \"function add(first, second) { return first + second; }\",\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n};\nvar result = UglifyJS.minify(code);\nconsole.log(result.code);\n// function add(d,n){return d+n}console.log(add(3,7));\n```\n\nThe `toplevel` option:\n```javascript\nvar code = {\n    \"file1.js\": \"function add(first, second) { return first + second; }\",\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n};\nvar options = { toplevel: true };\nvar result = UglifyJS.minify(code, options);\nconsole.log(result.code);\n// console.log(3+7);\n```\n\nThe `nameCache` option:\n```javascript\nvar options = {\n    mangle: {\n        toplevel: true,\n    },\n    nameCache: {}\n};\nvar result1 = UglifyJS.minify({\n    \"file1.js\": \"function add(first, second) { return first + second; }\"\n}, options);\nvar result2 = UglifyJS.minify({\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n}, options);\nconsole.log(result1.code);\n// function n(n,r){return n+r}\nconsole.log(result2.code);\n// console.log(n(3,7));\n```\n\nYou may persist the name cache to the file system in the following way:\n```javascript\nvar cacheFileName = \"/tmp/cache.json\";\nvar options = {\n    mangle: {\n        properties: true,\n    },\n    nameCache: JSON.parse(fs.readFileSync(cacheFileName, \"utf8\"))\n};\nfs.writeFileSync(\"part1.js\", UglifyJS.minify({\n    \"file1.js\": fs.readFileSync(\"file1.js\", \"utf8\"),\n    \"file2.js\": fs.readFileSync(\"file2.js\", \"utf8\")\n}, options).code, \"utf8\");\nfs.writeFileSync(\"part2.js\", UglifyJS.minify({\n    \"file3.js\": fs.readFileSync(\"file3.js\", \"utf8\"),\n    \"file4.js\": fs.readFileSync(\"file4.js\", \"utf8\")\n}, options).code, \"utf8\");\nfs.writeFileSync(cacheFileName, JSON.stringify(options.nameCache), \"utf8\");\n```\n\nAn example of a combination of `minify()` options:\n```javascript\nvar code = {\n    \"file1.js\": \"function add(first, second) { return first + second; }\",\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n};\nvar options = {\n    toplevel: true,\n    compress: {\n        global_defs: {\n            \"@console.log\": \"alert\"\n        },\n        passes: 2\n    },\n    output: {\n        beautify: false,\n        preamble: \"/* uglified */\"\n    }\n};\nvar result = UglifyJS.minify(code, options);\nconsole.log(result.code);\n// /* uglified */\n// alert(10);\"\n```\n\nTo produce warnings:\n```javascript\nvar code = \"function f(){ var u; return 2 + 3; }\";\nvar options = { warnings: true };\nvar result = UglifyJS.minify(code, options);\nconsole.log(result.error);    // runtime error, `undefined` in this case\nconsole.log(result.warnings); // [ 'Dropping unused variable u [0:1,18]' ]\nconsole.log(result.code);     // function f(){return 5}\n```\n\nAn error example:\n```javascript\nvar result = UglifyJS.minify({\"foo.js\" : \"if (0) else console.log(1);\"});\nconsole.log(JSON.stringify(result.error));\n// {\"message\":\"Unexpected token: keyword (else)\",\"filename\":\"foo.js\",\"line\":1,\"col\":7,\"pos\":7}\n```\nNote: unlike `uglify-js@2.x`, the `3.x` API does not throw errors. To\nachieve a similar effect one could do the following:\n```javascript\nvar result = UglifyJS.minify(code, options);\nif (result.error) throw result.error;\n```\n\n## Minify options\n\n- `compress` (default `{}`) — pass `false` to skip compressing entirely.\n  Pass an object to specify custom [compress options](#compress-options).\n\n- `ie8` (default `false`) -- set to `true` to support IE8.\n\n- `keep_fnames` (default: `false`) -- pass `true` to prevent discarding or mangling\n  of function names.  Useful for code relying on `Function.prototype.name`.\n\n- `mangle` (default `true`) — pass `false` to skip mangling names, or pass\n  an object to specify [mangle options](#mangle-options) (see below).\n\n  - `mangle.properties` (default `false`) — a subcategory of the mangle option.\n    Pass an object to specify custom [mangle property options](#mangle-properties-options).\n\n- `nameCache` (default `null`) -- pass an empty object `{}` or a previously\n  used `nameCache` object if you wish to cache mangled variable and\n  property names across multiple invocations of `minify()`. Note: this is\n  a read/write property. `minify()` will read the name cache state of this\n  object and update it during minification so that it may be\n  reused or externally persisted by the user.\n\n- `output` (default `null`) — pass an object if you wish to specify\n  additional [output options](#output-options).  The defaults are optimized\n  for best compression.\n\n- `parse` (default `{}`) — pass an object if you wish to specify some\n  additional [parse options](#parse-options).\n\n- `sourceMap` (default `false`) -- pass an object if you wish to specify\n  [source map options](#source-map-options).\n\n- `toplevel` (default `false`) -- set to `true` if you wish to enable top level\n  variable and function name mangling and to drop unused variables and functions.\n\n- `warnings` (default `false`) — pass `true` to return compressor warnings\n  in `result.warnings`. Use the value `\"verbose\"` for more detailed warnings.\n\n## Minify options structure\n\n```javascript\n{\n    parse: {\n        // parse options\n    },\n    compress: {\n        // compress options\n    },\n    mangle: {\n        // mangle options\n\n        properties: {\n            // mangle property options\n        }\n    },\n    output: {\n        // output options\n    },\n    sourceMap: {\n        // source map options\n    },\n    nameCache: null, // or specify a name cache object\n    toplevel: false,\n    ie8: false,\n    warnings: false,\n}\n```\n\n### Source map options\n\nTo generate a source map:\n```javascript\nvar result = UglifyJS.minify({\"file1.js\": \"var a = function() {};\"}, {\n    sourceMap: {\n        filename: \"out.js\",\n        url: \"out.js.map\"\n    }\n});\nconsole.log(result.code); // minified output\nconsole.log(result.map);  // source map\n```\n\nNote that the source map is not saved in a file, it's just returned in\n`result.map`.  The value passed for `sourceMap.url` is only used to set\n`//# sourceMappingURL=out.js.map` in `result.code`. The value of\n`filename` is only used to set `file` attribute (see [the spec][sm-spec])\nin source map file.\n\nYou can set option `sourceMap.url` to be `\"inline\"` and source map will\nbe appended to code.\n\nYou can also specify sourceRoot property to be included in source map:\n```javascript\nvar result = UglifyJS.minify({\"file1.js\": \"var a = function() {};\"}, {\n    sourceMap: {\n        root: \"http://example.com/src\",\n        url: \"out.js.map\"\n    }\n});\n```\n\nIf you're compressing compiled JavaScript and have a source map for it, you\ncan use `sourceMap.content`:\n```javascript\nvar result = UglifyJS.minify({\"compiled.js\": \"compiled code\"}, {\n    sourceMap: {\n        content: \"content from compiled.js.map\",\n        url: \"minified.js.map\"\n    }\n});\n// same as before, it returns `code` and `map`\n```\n\nIf you're using the `X-SourceMap` header instead, you can just omit `sourceMap.url`.\n\n## Parse options\n\n- `bare_returns` (default `false`) -- support top level `return` statements\n\n- `html5_comments` (default `true`)\n\n- `shebang` (default `true`) -- support `#!command` as the first line\n\n## Compress options\n\n- `arguments` (default: `true`) -- replace `arguments[index]` with function\n  parameter name whenever possible.\n\n- `assignments` (default: `true`) -- apply optimizations to assignment expressions.\n\n- `booleans` (default: `true`) -- various optimizations for boolean context,\n  for example `!!a ? b : c → a ? b : c`\n\n- `collapse_vars` (default: `true`) -- Collapse single-use non-constant variables,\n  side effects permitting.\n\n- `comparisons` (default: `true`) -- apply certain optimizations to binary nodes,\n  e.g. `!(a <= b) → a > b`, attempts to negate binary nodes, e.g.\n  `a = !b && !c && !d && !e → a=!(b||c||d||e)` etc.\n\n- `conditionals` (default: `true`) -- apply optimizations for `if`-s and conditional\n  expressions\n\n- `dead_code` (default: `true`) -- remove unreachable code\n\n- `directives` (default: `true`) -- remove redundant or non-standard directives\n\n- `drop_console` (default: `false`) -- Pass `true` to discard calls to\n  `console.*` functions. If you wish to drop a specific function call\n  such as `console.info` and/or retain side effects from function arguments\n  after dropping the function call then use `pure_funcs` instead.\n\n- `drop_debugger` (default: `true`) -- remove `debugger;` statements\n\n- `evaluate` (default: `true`) -- Evaluate expression for shorter constant\n  representation. Pass `\"eager\"` to always replace function calls whenever\n  possible, or a positive integer to specify an upper bound for each individual\n  evaluation in number of characters.\n\n- `expression` (default: `false`) -- Pass `true` to preserve completion values\n  from terminal statements without `return`, e.g. in bookmarklets.\n\n- `functions` (default: `true`) -- convert declarations from `var`to `function`\n  whenever possible.\n\n- `global_defs` (default: `{}`) -- see [conditional compilation](#conditional-compilation)\n\n- `hoist_funs` (default: `false`) -- hoist function declarations\n\n- `hoist_props` (default: `true`) -- hoist properties from constant object and\n  array literals into regular variables subject to a set of constraints. For example:\n  `var o={p:1, q:2}; f(o.p, o.q);` is converted to `f(1, 2);`. Note: `hoist_props`\n  works best with `mangle` enabled, the `compress` option `passes` set to `2` or higher,\n  and the `compress` option `toplevel` enabled.\n\n- `hoist_vars` (default: `false`) -- hoist `var` declarations (this is `false`\n  by default because it seems to increase the size of the output in general)\n\n- `if_return` (default: `true`) -- optimizations for if/return and if/continue\n\n- `inline` (default: `true`) -- inline calls to function with simple/`return` statement:\n  - `false` -- same as `0`\n  - `0` -- disabled inlining\n  - `1` -- inline simple functions\n  - `2` -- inline functions with arguments\n  - `3` -- inline functions with arguments and variables\n  - `true` -- same as `3`\n\n- `join_vars` (default: `true`) -- join consecutive `var` statements\n\n- `keep_fargs` (default: `strict`) -- Discard unused function arguments. Code\n  which relies on `Function.length` will break if this is done indiscriminately,\n  i.e. when passing `true`. Pass `false` to always retain function arguments.\n\n- `keep_fnames` (default: `false`) -- Pass `true` to prevent the\n  compressor from discarding function names.  Useful for code relying on\n  `Function.prototype.name`. See also: the `keep_fnames` [mangle option](#mangle-options).\n\n- `keep_infinity` (default: `false`) -- Pass `true` to prevent `Infinity` from\n  being compressed into `1/0`, which may cause performance issues on Chrome.\n\n- `loops` (default: `true`) -- optimizations for `do`, `while` and `for` loops\n  when we can statically determine the condition.\n\n- `negate_iife` (default: `true`) -- negate \"Immediately-Called Function Expressions\"\n  where the return value is discarded, to avoid the parens that the\n  code generator would insert.\n\n- `objects` (default: `true`) -- compact duplicate keys in object literals.\n\n- `passes` (default: `1`) -- The maximum number of times to run compress.\n  In some cases more than one pass leads to further compressed code.  Keep in\n  mind more passes will take more time.\n\n- `properties` (default: `true`) -- rewrite property access using the dot notation, for\n  example `foo[\"bar\"] → foo.bar`\n\n- `pure_funcs` (default: `null`) -- You can pass an array of names and\n  UglifyJS will assume that those functions do not produce side\n  effects.  DANGER: will not check if the name is redefined in scope.\n  An example case here, for instance `var q = Math.floor(a/b)`.  If\n  variable `q` is not used elsewhere, UglifyJS will drop it, but will\n  still keep the `Math.floor(a/b)`, not knowing what it does.  You can\n  pass `pure_funcs: [ 'Math.floor' ]` to let it know that this\n  function won't produce any side effect, in which case the whole\n  statement would get discarded.  The current implementation adds some\n  overhead (compression will be slower). Make sure symbols under `pure_funcs`\n  are also under `mangle.reserved` to avoid mangling.\n\n- `pure_getters` (default: `\"strict\"`) -- If you pass `true` for\n  this, UglifyJS will assume that object property access\n  (e.g. `foo.bar` or `foo[\"bar\"]`) doesn't have any side effects.\n  Specify `\"strict\"` to treat `foo.bar` as side-effect-free only when\n  `foo` is certain to not throw, i.e. not `null` or `undefined`.\n\n- `reduce_funcs` (default: `true`) -- Allows single-use functions to be\n  inlined as function expressions when permissible allowing further\n  optimization.  Enabled by default.  Option depends on `reduce_vars`\n  being enabled.  Some code runs faster in the Chrome V8 engine if this\n  option is disabled.  Does not negatively impact other major browsers.\n\n- `reduce_vars` (default: `true`) -- Improve optimization on variables assigned with and\n  used as constant values.\n\n- `sequences` (default: `true`) -- join consecutive simple statements using the\n  comma operator.  May be set to a positive integer to specify the maximum number\n  of consecutive comma sequences that will be generated. If this option is set to\n  `true` then the default `sequences` limit is `200`. Set option to `false` or `0`\n  to disable. The smallest `sequences` length is `2`. A `sequences` value of `1`\n  is grandfathered to be equivalent to `true` and as such means `200`. On rare\n  occasions the default sequences limit leads to very slow compress times in which\n  case a value of `20` or less is recommended.\n\n- `side_effects` (default: `true`) -- Pass `false` to disable potentially dropping\n  functions marked as \"pure\".  A function call is marked as \"pure\" if a comment\n  annotation `/*@__PURE__*/` or `/*#__PURE__*/` immediately precedes the call. For\n  example: `/*@__PURE__*/foo();`\n\n- `strings` (default: `true`) -- compact string concatenations.\n\n- `switches` (default: `true`) -- de-duplicate and remove unreachable `switch` branches\n\n- `toplevel` (default: `false`) -- drop unreferenced functions (`\"funcs\"`) and/or\n  variables (`\"vars\"`) in the top level scope (`false` by default, `true` to drop\n  both unreferenced functions and variables)\n\n- `top_retain` (default: `null`) -- prevent specific toplevel functions and\n  variables from `unused` removal (can be array, comma-separated, RegExp or\n  function. Implies `toplevel`)\n\n- `typeofs` (default: `true`) -- Transforms `typeof foo == \"undefined\"` into\n  `foo === void 0`.  Note: recommend to set this value to `false` for IE10 and\n  earlier versions due to known issues.\n\n- `unsafe` (default: `false`) -- apply \"unsafe\" transformations (discussion below)\n\n- `unsafe_comps` (default: `false`) -- compress expressions like `a <= b` assuming\n  none of the operands can be (coerced to) `NaN`.\n\n- `unsafe_Function` (default: `false`) -- compress and mangle `Function(args, code)`\n  when both `args` and `code` are string literals.\n\n- `unsafe_math` (default: `false`) -- optimize numerical expressions like\n  `2 * x * 3` into `6 * x`, which may give imprecise floating point results.\n\n- `unsafe_proto` (default: `false`) -- optimize expressions like\n  `Array.prototype.slice.call(a)` into `[].slice.call(a)`\n\n- `unsafe_regexp` (default: `false`) -- enable substitutions of variables with\n  `RegExp` values the same way as if they are constants.\n\n- `unsafe_undefined` (default: `false`) -- substitute `void 0` if there is a\n  variable named `undefined` in scope (variable name will be mangled, typically\n  reduced to a single character)\n\n- `unused` (default: `true`) -- drop unreferenced functions and variables (simple\n  direct variable assignments do not count as references unless set to `\"keep_assign\"`)\n\n## Mangle options\n\n- `eval` (default `false`) -- Pass `true` to mangle names visible in scopes\n  where `eval` or `with` are used.\n\n- `keep_fnames` (default `false`) -- Pass `true` to not mangle function names.\n  Useful for code relying on `Function.prototype.name`. See also: the `keep_fnames`\n  [compress option](#compress-options).\n\n- `reserved` (default `[]`) -- Pass an array of identifiers that should be\n  excluded from mangling. Example: `[\"foo\", \"bar\"]`.\n\n- `toplevel` (default `false`) -- Pass `true` to mangle names declared in the\n  top level scope.\n\nExamples:\n\n```javascript\n// test.js\nvar globalVar;\nfunction funcName(firstLongName, anotherLongName) {\n    var myVariable = firstLongName +  anotherLongName;\n}\n```\n```javascript\nvar code = fs.readFileSync(\"test.js\", \"utf8\");\n\nUglifyJS.minify(code).code;\n// 'function funcName(a,n){}var globalVar;'\n\nUglifyJS.minify(code, { mangle: { reserved: ['firstLongName'] } }).code;\n// 'function funcName(firstLongName,a){}var globalVar;'\n\nUglifyJS.minify(code, { mangle: { toplevel: true } }).code;\n// 'function n(n,a){}var a;'\n```\n\n### Mangle properties options\n\n- `builtins` (default: `false`) -- Use `true` to allow the mangling of builtin\n  DOM properties. Not recommended to override this setting.\n\n- `debug` (default: `false`) -— Mangle names with the original name still present.\n  Pass an empty string `\"\"` to enable, or a non-empty string to set the debug suffix.\n\n- `keep_quoted` (default: `false`) -— Only mangle unquoted property names.\n\n- `regex` (default: `null`) -— Pass a RegExp literal to only mangle property\n  names matching the regular expression.\n\n- `reserved` (default: `[]`) -- Do not mangle property names listed in the\n  `reserved` array.\n\n## Output options\n\nThe code generator tries to output shortest code possible by default.  In\ncase you want beautified output, pass `--beautify` (`-b`).  Optionally you\ncan pass additional arguments that control the code output:\n\n- `ascii_only` (default `false`) -- escape Unicode characters in strings and\n  regexps (affects directives with non-ascii characters becoming invalid)\n\n- `beautify` (default `true`) -- whether to actually beautify the output.\n  Passing `-b` will set this to true, but you might need to pass `-b` even\n  when you want to generate minified code, in order to specify additional\n  arguments, so you can use `-b beautify=false` to override it.\n\n- `braces` (default `false`) -- always insert braces in `if`, `for`,\n  `do`, `while` or `with` statements, even if their body is a single\n  statement.\n\n- `comments` (default `false`) -- pass `true` or `\"all\"` to preserve all\n  comments, `\"some\"` to preserve multi-line comments that contain `@cc_on`,\n  `@license`, or `@preserve` (case-insensitive), a regular expression string\n  (e.g. `/^!/`), or a function which returns `boolean`, e.g.\n  ```js\n  function(node, comment) {\n      return comment.value.indexOf(\"@type \" + node.TYPE) >= 0;\n  }\n  ```\n\n- `indent_level` (default `4`)\n\n- `indent_start` (default `0`) -- prefix all lines by that many spaces\n\n- `inline_script` (default `true`) -- escape HTML comments and the slash in\n  occurrences of `</script>` in strings\n\n- `keep_quoted_props` (default `false`) -- when turned on, prevents stripping\n  quotes from property names in object literals.\n\n- `max_line_len` (default `false`) -- maximum line length (for uglified code)\n\n- `preamble` (default `null`) -- when passed it must be a string and\n  it will be prepended to the output literally.  The source map will\n  adjust for this text.  Can be used to insert a comment containing\n  licensing information, for example.\n\n- `preserve_line` (default `false`) -- pass `true` to retain line numbering on\n  a best effort basis.\n\n- `quote_keys` (default `false`) -- pass `true` to quote all keys in literal\n  objects\n\n- `quote_style` (default `0`) -- preferred quote style for strings (affects\n  quoted property names and directives as well):\n  - `0` -- prefers double quotes, switches to single quotes when there are\n    more double quotes in the string itself. `0` is best for gzip size.\n  - `1` -- always use single quotes\n  - `2` -- always use double quotes\n  - `3` -- always use the original quotes\n\n- `semicolons` (default `true`) -- separate statements with semicolons.  If\n  you pass `false` then whenever possible we will use a newline instead of a\n  semicolon, leading to more readable output of uglified code (size before\n  gzip could be smaller; size after gzip insignificantly larger).\n\n- `shebang` (default `true`) -- preserve shebang `#!` in preamble (bash scripts)\n\n- `webkit` (default `false`) -- enable workarounds for WebKit bugs.\n  PhantomJS users should set this option to `true`.\n\n- `width` (default `80`) -- only takes effect when beautification is on, this\n  specifies an (orientative) line width that the beautifier will try to\n  obey.  It refers to the width of the line text (excluding indentation).\n  It doesn't work very well currently, but it does make the code generated\n  by UglifyJS more readable.\n\n- `wrap_iife` (default `false`) -- pass `true` to wrap immediately invoked\n  function expressions. See\n  [#640](https://github.com/mishoo/UglifyJS2/issues/640) for more details.\n\n# Miscellaneous\n\n### Keeping copyright notices or other comments\n\nYou can pass `--comments` to retain certain comments in the output.  By\ndefault it will keep JSDoc-style comments that contain \"@preserve\",\n\"@license\" or \"@cc_on\" (conditional compilation for IE).  You can pass\n`--comments all` to keep all the comments, or a valid JavaScript regexp to\nkeep only comments that match this regexp.  For example `--comments /^!/`\nwill keep comments like `/*! Copyright Notice */`.\n\nNote, however, that there might be situations where comments are lost.  For\nexample:\n```javascript\nfunction f() {\n    /** @preserve Foo Bar */\n    function g() {\n        // this function is never called\n    }\n    return something();\n}\n```\n\nEven though it has \"@preserve\", the comment will be lost because the inner\nfunction `g` (which is the AST node to which the comment is attached to) is\ndiscarded by the compressor as not referenced.\n\nThe safest comments where to place copyright information (or other info that\nneeds to be kept in the output) are comments attached to toplevel nodes.\n\n### The `unsafe` `compress` option\n\nIt enables some transformations that *might* break code logic in certain\ncontrived cases, but should be fine for most code.  You might want to try it\non your own code, it should reduce the minified size.  Here's what happens\nwhen this flag is on:\n\n- `new Array(1, 2, 3)` or `Array(1, 2, 3)` → `[ 1, 2, 3 ]`\n- `new Object()` → `{}`\n- `String(exp)` or `exp.toString()` → `\"\" + exp`\n- `new Object/RegExp/Function/Error/Array (...)` → we discard the `new`\n\n### Conditional compilation\n\nYou can use the `--define` (`-d`) switch in order to declare global\nvariables that UglifyJS will assume to be constants (unless defined in\nscope).  For example if you pass `--define DEBUG=false` then, coupled with\ndead code removal UglifyJS will discard the following from the output:\n```javascript\nif (DEBUG) {\n    console.log(\"debug stuff\");\n}\n```\n\nYou can specify nested constants in the form of `--define env.DEBUG=false`.\n\nUglifyJS will warn about the condition being always false and about dropping\nunreachable code; for now there is no option to turn off only this specific\nwarning, you can pass `warnings=false` to turn off *all* warnings.\n\nAnother way of doing that is to declare your globals as constants in a\nseparate file and include it into the build.  For example you can have a\n`build/defines.js` file with the following:\n```javascript\nvar DEBUG = false;\nvar PRODUCTION = true;\n// etc.\n```\n\nand build your code like this:\n\n    uglifyjs build/defines.js js/foo.js js/bar.js... -c\n\nUglifyJS will notice the constants and, since they cannot be altered, it\nwill evaluate references to them to the value itself and drop unreachable\ncode as usual.  The build will contain the `const` declarations if you use\nthem. If you are targeting < ES6 environments which does not support `const`,\nusing `var` with `reduce_vars` (enabled by default) should suffice.\n\n### Conditional compilation API\n\nYou can also use conditional compilation via the programmatic API. With the difference that the\nproperty name is `global_defs` and is a compressor property:\n\n```javascript\nvar result = UglifyJS.minify(fs.readFileSync(\"input.js\", \"utf8\"), {\n    compress: {\n        dead_code: true,\n        global_defs: {\n            DEBUG: false\n        }\n    }\n});\n```\n\nTo replace an identifier with an arbitrary non-constant expression it is\nnecessary to prefix the `global_defs` key with `\"@\"` to instruct UglifyJS\nto parse the value as an expression:\n```javascript\nUglifyJS.minify(\"alert('hello');\", {\n    compress: {\n        global_defs: {\n            \"@alert\": \"console.log\"\n        }\n    }\n}).code;\n// returns: 'console.log(\"hello\");'\n```\n\nOtherwise it would be replaced as string literal:\n```javascript\nUglifyJS.minify(\"alert('hello');\", {\n    compress: {\n        global_defs: {\n            \"alert\": \"console.log\"\n        }\n    }\n}).code;\n// returns: '\"console.log\"(\"hello\");'\n```\n\n### Using native Uglify AST with `minify()`\n```javascript\n// example: parse only, produce native Uglify AST\n\nvar result = UglifyJS.minify(code, {\n    parse: {},\n    compress: false,\n    mangle: false,\n    output: {\n        ast: true,\n        code: false  // optional - faster if false\n    }\n});\n\n// result.ast contains native Uglify AST\n```\n```javascript\n// example: accept native Uglify AST input and then compress and mangle\n//          to produce both code and native AST.\n\nvar result = UglifyJS.minify(ast, {\n    compress: {},\n    mangle: {},\n    output: {\n        ast: true,\n        code: true  // optional - faster if false\n    }\n});\n\n// result.ast contains native Uglify AST\n// result.code contains the minified code in string form.\n```\n\n### Working with Uglify AST\n\nTransversal and transformation of the native AST can be performed through\n[`TreeWalker`](https://github.com/mishoo/UglifyJS2/blob/master/lib/ast.js) and\n[`TreeTransformer`](https://github.com/mishoo/UglifyJS2/blob/master/lib/transform.js)\nrespectively.\n\n### ESTree / SpiderMonkey AST\n\nUglifyJS has its own abstract syntax tree format; for\n[practical reasons](http://lisperator.net/blog/uglifyjs-why-not-switching-to-spidermonkey-ast/)\nwe can't easily change to using the SpiderMonkey AST internally.  However,\nUglifyJS now has a converter which can import a SpiderMonkey AST.\n\nFor example [Acorn][acorn] is a super-fast parser that produces a\nSpiderMonkey AST.  It has a small CLI utility that parses one file and dumps\nthe AST in JSON on the standard output.  To use UglifyJS to mangle and\ncompress that:\n\n    acorn file.js | uglifyjs -p spidermonkey -m -c\n\nThe `-p spidermonkey` option tells UglifyJS that all input files are not\nJavaScript, but JS code described in SpiderMonkey AST in JSON.  Therefore we\ndon't use our own parser in this case, but just transform that AST into our\ninternal AST.\n\n### Use Acorn for parsing\n\nMore for fun, I added the `-p acorn` option which will use Acorn to do all\nthe parsing.  If you pass this option, UglifyJS will `require(\"acorn\")`.\n\nAcorn is really fast (e.g. 250ms instead of 380ms on some 650K code), but\nconverting the SpiderMonkey tree that Acorn produces takes another 150ms so\nin total it's a bit more than just using UglifyJS's own parser.\n\n[acorn]: https://github.com/ternjs/acorn\n[sm-spec]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k\n\n### Uglify Fast Minify Mode\n\nIt's not well known, but whitespace removal and symbol mangling accounts\nfor 95% of the size reduction in minified code for most JavaScript - not\nelaborate code transforms. One can simply disable `compress` to speed up\nUglify builds by 3 to 4 times. In this fast `mangle`-only mode Uglify has\ncomparable minify speeds and gzip sizes to\n[`butternut`](https://www.npmjs.com/package/butternut):\n\n| d3.js | minify size | gzip size | minify time (seconds) |\n| --- | ---: | ---: | ---: |\n| original | 451,131 | 108,733 | - |\n| uglify-js@3.0.24 mangle=false, compress=false | 316,600 | 85,245 | 0.70 |\n| uglify-js@3.0.24 mangle=true, compress=false | 220,216 | 72,730 | 1.13 |\n| butternut@0.4.6 | 217,568 | 72,738 | 1.41 |\n| uglify-js@3.0.24 mangle=true, compress=true | 212,511 | 71,560 | 3.36 |\n| babili@0.1.4 | 210,713 | 72,140 | 12.64 |\n\nTo enable fast minify mode from the CLI use:\n```\nuglifyjs file.js -m\n```\nTo enable fast minify mode with the API use:\n```js\nUglifyJS.minify(code, { compress: false, mangle: true });\n```\n\n#### Source maps and debugging\n\nVarious `compress` transforms that simplify, rearrange, inline and remove code\nare known to have an adverse effect on debugging with source maps. This is\nexpected as code is optimized and mappings are often simply not possible as\nsome code no longer exists. For highest fidelity in source map debugging\ndisable the Uglify `compress` option and just use `mangle`.\n\n### Compiler assumptions\n\nTo allow for better optimizations, the compiler makes various assumptions:\n\n- `.toString()` and `.valueOf()` don't have side effects, and for built-in\n  objects they have not been overridden.\n- `undefined`, `NaN` and `Infinity` have not been externally redefined.\n- `arguments.callee`, `arguments.caller` and `Function.prototype.caller` are not used.\n- The code doesn't expect the contents of `Function.prototype.toString()` or\n  `Error.prototype.stack` to be anything in particular.\n- Getting and setting properties on a plain object does not cause other side effects\n  (using `.watch()` or `Proxy`).\n- Object properties can be added, removed and modified (not prevented with\n  `Object.defineProperty()`, `Object.defineProperties()`, `Object.freeze()`,\n  `Object.preventExtensions()` or `Object.seal()`).\n",
+  "readme": "UglifyJS 3\n==========\n\nUglifyJS is a JavaScript parser, minifier, compressor and beautifier toolkit.\n\n#### Note:\n- **`uglify-js@3` has a simplified [API](#api-reference) and [CLI](#command-line-usage) that is not backwards compatible with [`uglify-js@2`](https://github.com/mishoo/UglifyJS/tree/v2.x)**.\n- **Documentation for UglifyJS `2.x` releases can be found [here](https://github.com/mishoo/UglifyJS/tree/v2.x)**.\n- `uglify-js` only supports JavaScript (ECMAScript 5).\n- To minify ECMAScript 2015 or above, transpile using tools like [Babel](https://babeljs.io/).\n\nInstall\n-------\n\nFirst make sure you have installed the latest version of [node.js](http://nodejs.org/)\n(You may need to restart your computer after this step).\n\nFrom NPM for use as a command line app:\n\n    npm install uglify-js -g\n\nFrom NPM for programmatic use:\n\n    npm install uglify-js\n\n# Command line usage\n\n    uglifyjs [input files] [options]\n\nUglifyJS can take multiple input files.  It's recommended that you pass the\ninput files first, then pass the options.  UglifyJS will parse input files\nin sequence and apply any compression options.  The files are parsed in the\nsame global scope, that is, a reference from a file to some\nvariable/function declared in another file will be matched properly.\n\nIf no input file is specified, UglifyJS will read from STDIN.\n\nIf you wish to pass your options before the input files, separate the two with\na double dash to prevent input files being used as option arguments:\n\n    uglifyjs --compress --mangle -- input.js\n\n### Command line options\n\n```\n    -h, --help                  Print usage information.\n                                `--help options` for details on available options.\n    -V, --version               Print version number.\n    -p, --parse <options>       Specify parser options:\n                                `acorn`  Use Acorn for parsing.\n                                `bare_returns`  Allow return outside of functions.\n                                                Useful when minifying CommonJS\n                                                modules and Userscripts that may\n                                                be anonymous function wrapped (IIFE)\n                                                by the .user.js engine `caller`.\n                                `expression`  Parse a single expression, rather than\n                                              a program (for parsing JSON).\n                                `spidermonkey`  Assume input files are SpiderMonkey\n                                                AST format (as JSON).\n    -c, --compress [options]    Enable compressor/specify compressor options:\n                                `pure_funcs`  List of functions that can be safely\n                                              removed when their return values are\n                                              not used.\n    -m, --mangle [options]      Mangle names/specify mangler options:\n                                `reserved`  List of names that should not be mangled.\n    --mangle-props [options]    Mangle properties/specify mangler options:\n                                `builtins`  Mangle property names that overlaps\n                                            with standard JavaScript globals.\n                                `debug`  Add debug prefix and suffix.\n                                `domprops`  Mangle property names that overlaps\n                                            with DOM properties.\n                                `keep_quoted`  Only mangle unquoted properties.\n                                `regex`  Only mangle matched property names.\n                                `reserved`  List of names that should not be mangled.\n    -b, --beautify [options]    Beautify output/specify output options:\n                                `beautify`  Enabled with `--beautify` by default.\n                                `preamble`  Preamble to prepend to the output. You\n                                            can use this to insert a comment, for\n                                            example for licensing information.\n                                            This will not be parsed, but the source\n                                            map will adjust for its presence.\n                                `quote_style`  Quote style:\n                                               0 - auto\n                                               1 - single\n                                               2 - double\n                                               3 - original\n                                `wrap_iife`  Wrap IIFEs in parenthesis. Note: you may\n                                             want to disable `negate_iife` under\n                                             compressor options.\n    -O, --output-opts [options] Specify output options (`beautify` disabled by default).\n    -o, --output <file>         Output file path (default STDOUT). Specify `ast` or\n                                `spidermonkey` to write UglifyJS or SpiderMonkey AST\n                                as JSON to STDOUT respectively.\n    --comments [filter]         Preserve copyright comments in the output. By\n                                default this works like Google Closure, keeping\n                                JSDoc-style comments that contain \"@license\" or\n                                \"@preserve\". You can optionally pass one of the\n                                following arguments to this flag:\n                                - \"all\" to keep all comments\n                                - a valid JS RegExp like `/foo/` or `/^!/` to\n                                keep only matching comments.\n                                Note that currently not *all* comments can be\n                                kept when compression is on, because of dead\n                                code removal or cascading statements into\n                                sequences.\n    --config-file <file>        Read `minify()` options from JSON file.\n    -d, --define <expr>[=value] Global definitions.\n    -e, --enclose [arg[:value]] Embed everything in a big function, with configurable\n                                argument(s) & value(s).\n    --ie8                       Support non-standard Internet Explorer 8.\n                                Equivalent to setting `ie8: true` in `minify()`\n                                for `compress`, `mangle` and `output` options.\n                                By default UglifyJS will not try to be IE-proof.\n    --keep-fnames               Do not mangle/drop function names.  Useful for\n                                code relying on Function.prototype.name.\n    --name-cache <file>         File to hold mangled name mappings.\n    --self                      Build UglifyJS as a library (implies --wrap UglifyJS)\n    --source-map [options]      Enable source map/specify source map options:\n                                `base`  Path to compute relative paths from input files.\n                                `content`  Input source map, useful if you're compressing\n                                           JS that was generated from some other original\n                                           code. Specify \"inline\" if the source map is\n                                           included within the sources.\n                                `filename`  Filename and/or location of the output source\n                                            (sets `file` attribute in source map).\n                                `includeSources`  Pass this flag if you want to include\n                                                  the content of source files in the\n                                                  source map as sourcesContent property.\n                                `names` Include symbol names in the source map.\n                                `root`  Path to the original source to be included in\n                                        the source map.\n                                `url`  If specified, path to the source map to append in\n                                       `//# sourceMappingURL`.\n    --timings                   Display operations run time on STDERR.\n    --toplevel                  Compress and/or mangle variables in top level scope.\n    --verbose                   Print diagnostic messages.\n    --warn                      Print warning messages.\n    --wrap <name>               Embed everything in a big function, making the\n                                “exports” and “global” variables available. You\n                                need to pass an argument to this option to\n                                specify the name that your module will take\n                                when included in, say, a browser.\n```\n\nSpecify `--output` (`-o`) to declare the output file.  Otherwise the output\ngoes to STDOUT.\n\n## CLI source map options\n\nUglifyJS can generate a source map file, which is highly useful for\ndebugging your compressed JavaScript.  To get a source map, pass\n`--source-map --output output.js` (source map will be written out to\n`output.js.map`).\n\nAdditional options:\n\n- `--source-map \"filename='<NAME>'\"` to specify the name of the source map. The value of\n  `filename` is only used to set `file` attribute (see [the spec][sm-spec])\n  in source map file.\n\n- `--source-map \"root='<URL>'\"` to pass the URL where the original files can be found.\n\n- `--source-map \"names=false\"` to omit symbol names if you want to reduce size\n  of the source map file.\n\n- `--source-map \"url='<URL>'\"` to specify the URL where the source map can be found.\n  Otherwise UglifyJS assumes HTTP `X-SourceMap` is being used and will omit the\n  `//# sourceMappingURL=` directive.\n\nFor example:\n\n    uglifyjs js/file1.js js/file2.js \\\n             -o foo.min.js -c -m \\\n             --source-map \"root='http://foo.com/src',url='foo.min.js.map'\"\n\nThe above will compress and mangle `file1.js` and `file2.js`, will drop the\noutput in `foo.min.js` and the source map in `foo.min.js.map`.  The source\nmapping will refer to `http://foo.com/src/js/file1.js` and\n`http://foo.com/src/js/file2.js` (in fact it will list `http://foo.com/src`\nas the source map root, and the original files as `js/file1.js` and\n`js/file2.js`).\n\n### Composed source map\n\nWhen you're compressing JS code that was output by a compiler such as\nCoffeeScript, mapping to the JS code won't be too helpful.  Instead, you'd\nlike to map back to the original code (i.e. CoffeeScript).  UglifyJS has an\noption to take an input source map.  Assuming you have a mapping from\nCoffeeScript → compiled JS, UglifyJS can generate a map from CoffeeScript →\ncompressed JS by mapping every token in the compiled JS to its original\nlocation.\n\nTo use this feature pass `--source-map \"content='/path/to/input/source.map'\"`\nor `--source-map \"content=inline\"` if the source map is included inline with\nthe sources.\n\n## CLI compress options\n\nYou need to pass `--compress` (`-c`) to enable the compressor.  Optionally\nyou can pass a comma-separated list of [compress options](#compress-options).\n\nOptions are in the form `foo=bar`, or just `foo` (the latter implies\na boolean option that you want to set `true`; it's effectively a\nshortcut for `foo=true`).\n\nExample:\n\n    uglifyjs file.js -c toplevel,sequences=false\n\n## CLI mangle options\n\nTo enable the mangler you need to pass `--mangle` (`-m`).  The following\n(comma-separated) options are supported:\n\n- `eval` (default `false`) -- mangle names visible in scopes where `eval` or\n  `with` are used.\n\n- `reserved` (default: `[]`) -- when mangling is enabled but you want to\n  prevent certain names from being mangled, you can declare those names with\n  `--mangle reserved` — pass a comma-separated list of names.  For example:\n\n      uglifyjs ... -m reserved=['$','require','exports']\n\n  to prevent the `require`, `exports` and `$` names from being changed.\n\n### CLI mangling property names (`--mangle-props`)\n\n**Note:** THIS WILL PROBABLY BREAK YOUR CODE.  Mangling property names\nis a separate step, different from variable name mangling.  Pass\n`--mangle-props` to enable it.  It will mangle all properties in the\ninput code with the exception of built in DOM properties and properties\nin core JavaScript classes.  For example:\n\n```javascript\n// example.js\nvar x = {\n    baz_: 0,\n    foo_: 1,\n    calc: function() {\n        return this.foo_ + this.baz_;\n    }\n};\nx.bar_ = 2;\nx[\"baz_\"] = 3;\nconsole.log(x.calc());\n```\nMangle all properties (except for JavaScript `builtins`):\n```bash\n$ uglifyjs example.js -c -m --mangle-props\n```\n```javascript\nvar x={o:0,_:1,l:function(){return this._+this.o}};x.t=2,x.o=3,console.log(x.l());\n```\nMangle all properties except for `reserved` properties:\n```bash\n$ uglifyjs example.js -c -m --mangle-props reserved=[foo_,bar_]\n```\n```javascript\nvar x={o:0,foo_:1,_:function(){return this.foo_+this.o}};x.bar_=2,x.o=3,console.log(x._());\n```\nMangle all properties matching a `regex`:\n```bash\n$ uglifyjs example.js -c -m --mangle-props regex=/_$/\n```\n```javascript\nvar x={o:0,_:1,calc:function(){return this._+this.o}};x.l=2,x.o=3,console.log(x.calc());\n```\n\nCombining mangle properties options:\n```bash\n$ uglifyjs example.js -c -m --mangle-props regex=/_$/,reserved=[bar_]\n```\n```javascript\nvar x={o:0,_:1,calc:function(){return this._+this.o}};x.bar_=2,x.o=3,console.log(x.calc());\n```\n\nIn order for this to be of any use, we avoid mangling standard JS names by\ndefault (`--mangle-props builtins` to override).\n\nA default exclusion file is provided in `tools/domprops.json` which should\ncover most standard JS and DOM properties defined in various browsers.  Pass\n`--mangle-props domprops` to disable this feature.\n\nA regular expression can be used to define which property names should be\nmangled.  For example, `--mangle-props regex=/^_/` will only mangle property\nnames that start with an underscore.\n\nWhen you compress multiple files using this option, in order for them to\nwork together in the end we need to ensure somehow that one property gets\nmangled to the same name in all of them.  For this, pass `--name-cache filename.json`\nand UglifyJS will maintain these mappings in a file which can then be reused.\nIt should be initially empty.  Example:\n\n```bash\n$ rm -f /tmp/cache.json  # start fresh\n$ uglifyjs file1.js file2.js --mangle-props --name-cache /tmp/cache.json -o part1.js\n$ uglifyjs file3.js file4.js --mangle-props --name-cache /tmp/cache.json -o part2.js\n```\n\nNow, `part1.js` and `part2.js` will be consistent with each other in terms\nof mangled property names.\n\nUsing the name cache is not necessary if you compress all your files in a\nsingle call to UglifyJS.\n\n### Mangling unquoted names (`--mangle-props keep_quoted`)\n\nUsing quoted property name (`o[\"foo\"]`) reserves the property name (`foo`)\nso that it is not mangled throughout the entire script even when used in an\nunquoted style (`o.foo`). Example:\n\n```javascript\n// stuff.js\nvar o = {\n    \"foo\": 1,\n    bar: 3\n};\no.foo += o.bar;\nconsole.log(o.foo);\n```\n```bash\n$ uglifyjs stuff.js --mangle-props keep_quoted -c -m\n```\n```javascript\nvar o={foo:1,o:3};o.foo+=o.o,console.log(o.foo);\n```\n\n### Debugging property name mangling\n\nYou can also pass `--mangle-props debug` in order to mangle property names\nwithout completely obscuring them. For example the property `o.foo`\nwould mangle to `o._$foo$_` with this option. This allows property mangling\nof a large codebase while still being able to debug the code and identify\nwhere mangling is breaking things.\n\n```bash\n$ uglifyjs stuff.js --mangle-props debug -c -m\n```\n```javascript\nvar o={_$foo$_:1,_$bar$_:3};o._$foo$_+=o._$bar$_,console.log(o._$foo$_);\n```\n\nYou can also pass a custom suffix using `--mangle-props debug=XYZ`. This would then\nmangle `o.foo` to `o._$foo$XYZ_`. You can change this each time you compile a\nscript to identify how a property got mangled. One technique is to pass a\nrandom number on every compile to simulate mangling changing with different\ninputs (e.g. as you update the input script with new properties), and to help\nidentify mistakes like writing mangled keys to storage.\n\n\n# API Reference\n\nAssuming installation via NPM, you can load UglifyJS in your application\nlike this:\n```javascript\nvar UglifyJS = require(\"uglify-js\");\n```\n\nThere is a single high level function, **`minify(code, options)`**,\nwhich will perform all minification [phases](#minify-options) in a configurable\nmanner. By default `minify()` will enable the options [`compress`](#compress-options)\nand [`mangle`](#mangle-options). Example:\n```javascript\nvar code = \"function add(first, second) { return first + second; }\";\nvar result = UglifyJS.minify(code);\nconsole.log(result.error); // runtime error, or `undefined` if no error\nconsole.log(result.code);  // minified output: function add(n,d){return n+d}\n```\n\nYou can `minify` more than one JavaScript file at a time by using an object\nfor the first argument where the keys are file names and the values are source\ncode:\n```javascript\nvar code = {\n    \"file1.js\": \"function add(first, second) { return first + second; }\",\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n};\nvar result = UglifyJS.minify(code);\nconsole.log(result.code);\n// function add(d,n){return d+n}console.log(add(3,7));\n```\n\nThe `toplevel` option:\n```javascript\nvar code = {\n    \"file1.js\": \"function add(first, second) { return first + second; }\",\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n};\nvar options = { toplevel: true };\nvar result = UglifyJS.minify(code, options);\nconsole.log(result.code);\n// console.log(3+7);\n```\n\nThe `nameCache` option:\n```javascript\nvar options = {\n    mangle: {\n        toplevel: true,\n    },\n    nameCache: {}\n};\nvar result1 = UglifyJS.minify({\n    \"file1.js\": \"function add(first, second) { return first + second; }\"\n}, options);\nvar result2 = UglifyJS.minify({\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n}, options);\nconsole.log(result1.code);\n// function n(n,r){return n+r}\nconsole.log(result2.code);\n// console.log(n(3,7));\n```\n\nYou may persist the name cache to the file system in the following way:\n```javascript\nvar cacheFileName = \"/tmp/cache.json\";\nvar options = {\n    mangle: {\n        properties: true,\n    },\n    nameCache: JSON.parse(fs.readFileSync(cacheFileName, \"utf8\"))\n};\nfs.writeFileSync(\"part1.js\", UglifyJS.minify({\n    \"file1.js\": fs.readFileSync(\"file1.js\", \"utf8\"),\n    \"file2.js\": fs.readFileSync(\"file2.js\", \"utf8\")\n}, options).code, \"utf8\");\nfs.writeFileSync(\"part2.js\", UglifyJS.minify({\n    \"file3.js\": fs.readFileSync(\"file3.js\", \"utf8\"),\n    \"file4.js\": fs.readFileSync(\"file4.js\", \"utf8\")\n}, options).code, \"utf8\");\nfs.writeFileSync(cacheFileName, JSON.stringify(options.nameCache), \"utf8\");\n```\n\nAn example of a combination of `minify()` options:\n```javascript\nvar code = {\n    \"file1.js\": \"function add(first, second) { return first + second; }\",\n    \"file2.js\": \"console.log(add(1 + 2, 3 + 4));\"\n};\nvar options = {\n    toplevel: true,\n    compress: {\n        global_defs: {\n            \"@console.log\": \"alert\"\n        },\n        passes: 2\n    },\n    output: {\n        beautify: false,\n        preamble: \"/* uglified */\"\n    }\n};\nvar result = UglifyJS.minify(code, options);\nconsole.log(result.code);\n// /* uglified */\n// alert(10);\"\n```\n\nTo produce warnings:\n```javascript\nvar code = \"function f(){ var u; return 2 + 3; }\";\nvar options = { warnings: true };\nvar result = UglifyJS.minify(code, options);\nconsole.log(result.error);    // runtime error, `undefined` in this case\nconsole.log(result.warnings); // [ 'Dropping unused variable u [0:1,18]' ]\nconsole.log(result.code);     // function f(){return 5}\n```\n\nAn error example:\n```javascript\nvar result = UglifyJS.minify({\"foo.js\" : \"if (0) else console.log(1);\"});\nconsole.log(JSON.stringify(result.error));\n// {\"message\":\"Unexpected token: keyword (else)\",\"filename\":\"foo.js\",\"line\":1,\"col\":7,\"pos\":7}\n```\nNote: unlike `uglify-js@2.x`, the `3.x` API does not throw errors. To\nachieve a similar effect one could do the following:\n```javascript\nvar result = UglifyJS.minify(code, options);\nif (result.error) throw result.error;\n```\n\n## Minify options\n\n- `compress` (default `{}`) — pass `false` to skip compressing entirely.\n  Pass an object to specify custom [compress options](#compress-options).\n\n- `ie8` (default `false`) -- set to `true` to support IE8.\n\n- `keep_fnames` (default: `false`) -- pass `true` to prevent discarding or mangling\n  of function names.  Useful for code relying on `Function.prototype.name`.\n\n- `mangle` (default `true`) — pass `false` to skip mangling names, or pass\n  an object to specify [mangle options](#mangle-options) (see below).\n\n  - `mangle.properties` (default `false`) — a subcategory of the mangle option.\n    Pass an object to specify custom [mangle property options](#mangle-properties-options).\n\n- `nameCache` (default `null`) -- pass an empty object `{}` or a previously\n  used `nameCache` object if you wish to cache mangled variable and\n  property names across multiple invocations of `minify()`. Note: this is\n  a read/write property. `minify()` will read the name cache state of this\n  object and update it during minification so that it may be\n  reused or externally persisted by the user.\n\n- `output` (default `null`) — pass an object if you wish to specify\n  additional [output options](#output-options).  The defaults are optimized\n  for best compression.\n\n- `parse` (default `{}`) — pass an object if you wish to specify some\n  additional [parse options](#parse-options).\n\n- `sourceMap` (default `false`) -- pass an object if you wish to specify\n  [source map options](#source-map-options).\n\n- `toplevel` (default `false`) -- set to `true` if you wish to enable top level\n  variable and function name mangling and to drop unused variables and functions.\n\n- `warnings` (default `false`) — pass `true` to return compressor warnings\n  in `result.warnings`. Use the value `\"verbose\"` for more detailed warnings.\n\n## Minify options structure\n\n```javascript\n{\n    parse: {\n        // parse options\n    },\n    compress: {\n        // compress options\n    },\n    mangle: {\n        // mangle options\n\n        properties: {\n            // mangle property options\n        }\n    },\n    output: {\n        // output options\n    },\n    sourceMap: {\n        // source map options\n    },\n    nameCache: null, // or specify a name cache object\n    toplevel: false,\n    ie8: false,\n    warnings: false,\n}\n```\n\n### Source map options\n\nTo generate a source map:\n```javascript\nvar result = UglifyJS.minify({\"file1.js\": \"var a = function() {};\"}, {\n    sourceMap: {\n        filename: \"out.js\",\n        url: \"out.js.map\"\n    }\n});\nconsole.log(result.code); // minified output\nconsole.log(result.map);  // source map\n```\n\nNote that the source map is not saved in a file, it's just returned in\n`result.map`.  The value passed for `sourceMap.url` is only used to set\n`//# sourceMappingURL=out.js.map` in `result.code`. The value of\n`filename` is only used to set `file` attribute (see [the spec][sm-spec])\nin source map file.\n\nYou can set option `sourceMap.url` to be `\"inline\"` and source map will\nbe appended to code.\n\nYou can also specify sourceRoot property to be included in source map:\n```javascript\nvar result = UglifyJS.minify({\"file1.js\": \"var a = function() {};\"}, {\n    sourceMap: {\n        root: \"http://example.com/src\",\n        url: \"out.js.map\"\n    }\n});\n```\n\nIf you're compressing compiled JavaScript and have a source map for it, you\ncan use `sourceMap.content`:\n```javascript\nvar result = UglifyJS.minify({\"compiled.js\": \"compiled code\"}, {\n    sourceMap: {\n        content: \"content from compiled.js.map\",\n        url: \"minified.js.map\"\n    }\n});\n// same as before, it returns `code` and `map`\n```\n\nIf you're using the `X-SourceMap` header instead, you can just omit `sourceMap.url`.\n\nIf you wish to reduce file size of the source map, set option `sourceMap.names`\nto be `false` and all symbol names will be omitted.\n\n## Parse options\n\n- `bare_returns` (default `false`) -- support top level `return` statements\n\n- `html5_comments` (default `true`)\n\n- `shebang` (default `true`) -- support `#!command` as the first line\n\n## Compress options\n\n- `arguments` (default: `true`) -- replace `arguments[index]` with function\n  parameter name whenever possible.\n\n- `assignments` (default: `true`) -- apply optimizations to assignment expressions.\n\n- `booleans` (default: `true`) -- various optimizations for boolean context,\n  for example `!!a ? b : c → a ? b : c`\n\n- `collapse_vars` (default: `true`) -- Collapse single-use non-constant variables,\n  side effects permitting.\n\n- `comparisons` (default: `true`) -- apply certain optimizations to binary nodes,\n  e.g. `!(a <= b) → a > b`, attempts to negate binary nodes, e.g.\n  `a = !b && !c && !d && !e → a=!(b||c||d||e)` etc.\n\n- `conditionals` (default: `true`) -- apply optimizations for `if`-s and conditional\n  expressions\n\n- `dead_code` (default: `true`) -- remove unreachable code\n\n- `directives` (default: `true`) -- remove redundant or non-standard directives\n\n- `drop_console` (default: `false`) -- Pass `true` to discard calls to\n  `console.*` functions. If you wish to drop a specific function call\n  such as `console.info` and/or retain side effects from function arguments\n  after dropping the function call then use `pure_funcs` instead.\n\n- `drop_debugger` (default: `true`) -- remove `debugger;` statements\n\n- `evaluate` (default: `true`) -- Evaluate expression for shorter constant\n  representation. Pass `\"eager\"` to always replace function calls whenever\n  possible, or a positive integer to specify an upper bound for each individual\n  evaluation in number of characters.\n\n- `expression` (default: `false`) -- Pass `true` to preserve completion values\n  from terminal statements without `return`, e.g. in bookmarklets.\n\n- `functions` (default: `true`) -- convert declarations from `var`to `function`\n  whenever possible.\n\n- `global_defs` (default: `{}`) -- see [conditional compilation](#conditional-compilation)\n\n- `hoist_funs` (default: `false`) -- hoist function declarations\n\n- `hoist_props` (default: `true`) -- hoist properties from constant object and\n  array literals into regular variables subject to a set of constraints. For example:\n  `var o={p:1, q:2}; f(o.p, o.q);` is converted to `f(1, 2);`. Note: `hoist_props`\n  works best with `toplevel` and `mangle` enabled, alongside with `compress` option\n  `passes` set to `2` or higher.\n\n- `hoist_vars` (default: `false`) -- hoist `var` declarations (this is `false`\n  by default because it seems to increase the size of the output in general)\n\n- `if_return` (default: `true`) -- optimizations for if/return and if/continue\n\n- `inline` (default: `true`) -- inline calls to function with simple/`return` statement:\n  - `false` -- same as `0`\n  - `0` -- disabled inlining\n  - `1` -- inline simple functions\n  - `2` -- inline functions with arguments\n  - `3` -- inline functions with arguments and variables\n  - `true` -- same as `3`\n\n- `join_vars` (default: `true`) -- join consecutive `var` statements\n\n- `keep_fargs` (default: `strict`) -- Discard unused function arguments. Code\n  which relies on `Function.length` will break if this is done indiscriminately,\n  i.e. when passing `true`. Pass `false` to always retain function arguments.\n\n- `keep_fnames` (default: `false`) -- Pass `true` to prevent the\n  compressor from discarding function names.  Useful for code relying on\n  `Function.prototype.name`. See also: the `keep_fnames` [mangle option](#mangle-options).\n\n- `keep_infinity` (default: `false`) -- Pass `true` to prevent `Infinity` from\n  being compressed into `1/0`, which may cause performance issues on Chrome.\n\n- `loops` (default: `true`) -- optimizations for `do`, `while` and `for` loops\n  when we can statically determine the condition.\n\n- `merge_vars` (default: `true`) -- combine and reuse variables.\n\n- `negate_iife` (default: `true`) -- negate \"Immediately-Called Function Expressions\"\n  where the return value is discarded, to avoid the parens that the\n  code generator would insert.\n\n- `objects` (default: `true`) -- compact duplicate keys in object literals.\n\n- `passes` (default: `1`) -- The maximum number of times to run compress.\n  In some cases more than one pass leads to further compressed code.  Keep in\n  mind more passes will take more time.\n\n- `properties` (default: `true`) -- rewrite property access using the dot notation, for\n  example `foo[\"bar\"] → foo.bar`\n\n- `pure_funcs` (default: `null`) -- You can pass an array of names and\n  UglifyJS will assume that those functions do not produce side\n  effects.  DANGER: will not check if the name is redefined in scope.\n  An example case here, for instance `var q = Math.floor(a/b)`.  If\n  variable `q` is not used elsewhere, UglifyJS will drop it, but will\n  still keep the `Math.floor(a/b)`, not knowing what it does.  You can\n  pass `pure_funcs: [ 'Math.floor' ]` to let it know that this\n  function won't produce any side effect, in which case the whole\n  statement would get discarded.  The current implementation adds some\n  overhead (compression will be slower). Make sure symbols under `pure_funcs`\n  are also under `mangle.reserved` to avoid mangling.\n\n- `pure_getters` (default: `\"strict\"`) -- If you pass `true` for\n  this, UglifyJS will assume that object property access\n  (e.g. `foo.bar` or `foo[\"bar\"]`) doesn't have any side effects.\n  Specify `\"strict\"` to treat `foo.bar` as side-effect-free only when\n  `foo` is certain to not throw, i.e. not `null` or `undefined`.\n\n- `reduce_funcs` (default: `true`) -- Allows single-use functions to be\n  inlined as function expressions when permissible allowing further\n  optimization.  Enabled by default.  Option depends on `reduce_vars`\n  being enabled.  Some code runs faster in the Chrome V8 engine if this\n  option is disabled.  Does not negatively impact other major browsers.\n\n- `reduce_vars` (default: `true`) -- Improve optimization on variables assigned with and\n  used as constant values.\n\n- `sequences` (default: `true`) -- join consecutive simple statements using the\n  comma operator.  May be set to a positive integer to specify the maximum number\n  of consecutive comma sequences that will be generated. If this option is set to\n  `true` then the default `sequences` limit is `200`. Set option to `false` or `0`\n  to disable. The smallest `sequences` length is `2`. A `sequences` value of `1`\n  is grandfathered to be equivalent to `true` and as such means `200`. On rare\n  occasions the default sequences limit leads to very slow compress times in which\n  case a value of `20` or less is recommended.\n\n- `side_effects` (default: `true`) -- Pass `false` to disable potentially dropping\n  functions marked as \"pure\".  A function call is marked as \"pure\" if a comment\n  annotation `/*@__PURE__*/` or `/*#__PURE__*/` immediately precedes the call. For\n  example: `/*@__PURE__*/foo();`\n\n- `strings` (default: `true`) -- compact string concatenations.\n\n- `switches` (default: `true`) -- de-duplicate and remove unreachable `switch` branches\n\n- `toplevel` (default: `false`) -- drop unreferenced functions (`\"funcs\"`) and/or\n  variables (`\"vars\"`) in the top level scope (`false` by default, `true` to drop\n  both unreferenced functions and variables)\n\n- `top_retain` (default: `null`) -- prevent specific toplevel functions and\n  variables from `unused` removal (can be array, comma-separated, RegExp or\n  function. Implies `toplevel`)\n\n- `typeofs` (default: `true`) -- Transforms `typeof foo == \"undefined\"` into\n  `foo === void 0`.  Note: recommend to set this value to `false` for IE10 and\n  earlier versions due to known issues.\n\n- `unsafe` (default: `false`) -- apply \"unsafe\" transformations (discussion below)\n\n- `unsafe_comps` (default: `false`) -- compress expressions like `a <= b` assuming\n  none of the operands can be (coerced to) `NaN`.\n\n- `unsafe_Function` (default: `false`) -- compress and mangle `Function(args, code)`\n  when both `args` and `code` are string literals.\n\n- `unsafe_math` (default: `false`) -- optimize numerical expressions like\n  `2 * x * 3` into `6 * x`, which may give imprecise floating point results.\n\n- `unsafe_proto` (default: `false`) -- optimize expressions like\n  `Array.prototype.slice.call(a)` into `[].slice.call(a)`\n\n- `unsafe_regexp` (default: `false`) -- enable substitutions of variables with\n  `RegExp` values the same way as if they are constants.\n\n- `unsafe_undefined` (default: `false`) -- substitute `void 0` if there is a\n  variable named `undefined` in scope (variable name will be mangled, typically\n  reduced to a single character)\n\n- `unused` (default: `true`) -- drop unreferenced functions and variables (simple\n  direct variable assignments do not count as references unless set to `\"keep_assign\"`)\n\n## Mangle options\n\n- `eval` (default `false`) -- Pass `true` to mangle names visible in scopes\n  where `eval` or `with` are used.\n\n- `keep_fnames` (default `false`) -- Pass `true` to not mangle function names.\n  Useful for code relying on `Function.prototype.name`. See also: the `keep_fnames`\n  [compress option](#compress-options).\n\n- `reserved` (default `[]`) -- Pass an array of identifiers that should be\n  excluded from mangling. Example: `[\"foo\", \"bar\"]`.\n\n- `toplevel` (default `false`) -- Pass `true` to mangle names declared in the\n  top level scope.\n\nExamples:\n\n```javascript\n// test.js\nvar globalVar;\nfunction funcName(firstLongName, anotherLongName) {\n    var myVariable = firstLongName +  anotherLongName;\n}\n```\n```javascript\nvar code = fs.readFileSync(\"test.js\", \"utf8\");\n\nUglifyJS.minify(code).code;\n// 'function funcName(a,n){}var globalVar;'\n\nUglifyJS.minify(code, { mangle: { reserved: ['firstLongName'] } }).code;\n// 'function funcName(firstLongName,a){}var globalVar;'\n\nUglifyJS.minify(code, { mangle: { toplevel: true } }).code;\n// 'function n(n,a){}var a;'\n```\n\n### Mangle properties options\n\n- `builtins` (default: `false`) -- Use `true` to allow the mangling of builtin\n  DOM properties. Not recommended to override this setting.\n\n- `debug` (default: `false`) -— Mangle names with the original name still present.\n  Pass an empty string `\"\"` to enable, or a non-empty string to set the debug suffix.\n\n- `keep_quoted` (default: `false`) -— Only mangle unquoted property names.\n\n- `regex` (default: `null`) -— Pass a RegExp literal to only mangle property\n  names matching the regular expression.\n\n- `reserved` (default: `[]`) -- Do not mangle property names listed in the\n  `reserved` array.\n\n## Output options\n\nThe code generator tries to output shortest code possible by default.  In\ncase you want beautified output, pass `--beautify` (`-b`).  Optionally you\ncan pass additional arguments that control the code output:\n\n- `ascii_only` (default `false`) -- escape Unicode characters in strings and\n  regexps (affects directives with non-ascii characters becoming invalid)\n\n- `beautify` (default `true`) -- whether to actually beautify the output.\n  Passing `-b` will set this to true, but you might need to pass `-b` even\n  when you want to generate minified code, in order to specify additional\n  arguments, so you can use `-b beautify=false` to override it.\n\n- `braces` (default `false`) -- always insert braces in `if`, `for`,\n  `do`, `while` or `with` statements, even if their body is a single\n  statement.\n\n- `comments` (default `false`) -- pass `true` or `\"all\"` to preserve all\n  comments, `\"some\"` to preserve multi-line comments that contain `@cc_on`,\n  `@license`, or `@preserve` (case-insensitive), a regular expression string\n  (e.g. `/^!/`), or a function which returns `boolean`, e.g.\n  ```js\n  function(node, comment) {\n      return comment.value.indexOf(\"@type \" + node.TYPE) >= 0;\n  }\n  ```\n\n- `indent_level` (default `4`)\n\n- `indent_start` (default `0`) -- prefix all lines by that many spaces\n\n- `inline_script` (default `true`) -- escape HTML comments and the slash in\n  occurrences of `</script>` in strings\n\n- `keep_quoted_props` (default `false`) -- when turned on, prevents stripping\n  quotes from property names in object literals.\n\n- `max_line_len` (default `false`) -- maximum line length (for uglified code)\n\n- `preamble` (default `null`) -- when passed it must be a string and\n  it will be prepended to the output literally.  The source map will\n  adjust for this text.  Can be used to insert a comment containing\n  licensing information, for example.\n\n- `preserve_line` (default `false`) -- pass `true` to retain line numbering on\n  a best effort basis.\n\n- `quote_keys` (default `false`) -- pass `true` to quote all keys in literal\n  objects\n\n- `quote_style` (default `0`) -- preferred quote style for strings (affects\n  quoted property names and directives as well):\n  - `0` -- prefers double quotes, switches to single quotes when there are\n    more double quotes in the string itself. `0` is best for gzip size.\n  - `1` -- always use single quotes\n  - `2` -- always use double quotes\n  - `3` -- always use the original quotes\n\n- `semicolons` (default `true`) -- separate statements with semicolons.  If\n  you pass `false` then whenever possible we will use a newline instead of a\n  semicolon, leading to more readable output of uglified code (size before\n  gzip could be smaller; size after gzip insignificantly larger).\n\n- `shebang` (default `true`) -- preserve shebang `#!` in preamble (bash scripts)\n\n- `webkit` (default `false`) -- enable workarounds for WebKit bugs.\n  PhantomJS users should set this option to `true`.\n\n- `width` (default `80`) -- only takes effect when beautification is on, this\n  specifies an (orientative) line width that the beautifier will try to\n  obey.  It refers to the width of the line text (excluding indentation).\n  It doesn't work very well currently, but it does make the code generated\n  by UglifyJS more readable.\n\n- `wrap_iife` (default `false`) -- pass `true` to wrap immediately invoked\n  function expressions. See\n  [#640](https://github.com/mishoo/UglifyJS/issues/640) for more details.\n\n# Miscellaneous\n\n### Keeping copyright notices or other comments\n\nYou can pass `--comments` to retain certain comments in the output.  By\ndefault it will keep JSDoc-style comments that contain \"@preserve\",\n\"@license\" or \"@cc_on\" (conditional compilation for IE).  You can pass\n`--comments all` to keep all the comments, or a valid JavaScript regexp to\nkeep only comments that match this regexp.  For example `--comments /^!/`\nwill keep comments like `/*! Copyright Notice */`.\n\nNote, however, that there might be situations where comments are lost.  For\nexample:\n```javascript\nfunction f() {\n    /** @preserve Foo Bar */\n    function g() {\n        // this function is never called\n    }\n    return something();\n}\n```\n\nEven though it has \"@preserve\", the comment will be lost because the inner\nfunction `g` (which is the AST node to which the comment is attached to) is\ndiscarded by the compressor as not referenced.\n\nThe safest comments where to place copyright information (or other info that\nneeds to be kept in the output) are comments attached to toplevel nodes.\n\n### The `unsafe` `compress` option\n\nIt enables some transformations that *might* break code logic in certain\ncontrived cases, but should be fine for most code.  You might want to try it\non your own code, it should reduce the minified size.  Here's what happens\nwhen this flag is on:\n\n- `new Array(1, 2, 3)` or `Array(1, 2, 3)` → `[ 1, 2, 3 ]`\n- `new Object()` → `{}`\n- `String(exp)` or `exp.toString()` → `\"\" + exp`\n- `new Object/RegExp/Function/Error/Array (...)` → we discard the `new`\n\n### Conditional compilation\n\nYou can use the `--define` (`-d`) switch in order to declare global\nvariables that UglifyJS will assume to be constants (unless defined in\nscope).  For example if you pass `--define DEBUG=false` then, coupled with\ndead code removal UglifyJS will discard the following from the output:\n```javascript\nif (DEBUG) {\n    console.log(\"debug stuff\");\n}\n```\n\nYou can specify nested constants in the form of `--define env.DEBUG=false`.\n\nUglifyJS will warn about the condition being always false and about dropping\nunreachable code; for now there is no option to turn off only this specific\nwarning, you can pass `warnings=false` to turn off *all* warnings.\n\nAnother way of doing that is to declare your globals as constants in a\nseparate file and include it into the build.  For example you can have a\n`build/defines.js` file with the following:\n```javascript\nvar DEBUG = false;\nvar PRODUCTION = true;\n// etc.\n```\n\nand build your code like this:\n\n    uglifyjs build/defines.js js/foo.js js/bar.js... -c\n\nUglifyJS will notice the constants and, since they cannot be altered, it\nwill evaluate references to them to the value itself and drop unreachable\ncode as usual.  The build will contain the `const` declarations if you use\nthem. If you are targeting < ES6 environments which does not support `const`,\nusing `var` with `reduce_vars` (enabled by default) should suffice.\n\n### Conditional compilation API\n\nYou can also use conditional compilation via the programmatic API. With the difference that the\nproperty name is `global_defs` and is a compressor property:\n\n```javascript\nvar result = UglifyJS.minify(fs.readFileSync(\"input.js\", \"utf8\"), {\n    compress: {\n        dead_code: true,\n        global_defs: {\n            DEBUG: false\n        }\n    }\n});\n```\n\nTo replace an identifier with an arbitrary non-constant expression it is\nnecessary to prefix the `global_defs` key with `\"@\"` to instruct UglifyJS\nto parse the value as an expression:\n```javascript\nUglifyJS.minify(\"alert('hello');\", {\n    compress: {\n        global_defs: {\n            \"@alert\": \"console.log\"\n        }\n    }\n}).code;\n// returns: 'console.log(\"hello\");'\n```\n\nOtherwise it would be replaced as string literal:\n```javascript\nUglifyJS.minify(\"alert('hello');\", {\n    compress: {\n        global_defs: {\n            \"alert\": \"console.log\"\n        }\n    }\n}).code;\n// returns: '\"console.log\"(\"hello\");'\n```\n\n### Using native Uglify AST with `minify()`\n```javascript\n// example: parse only, produce native Uglify AST\n\nvar result = UglifyJS.minify(code, {\n    parse: {},\n    compress: false,\n    mangle: false,\n    output: {\n        ast: true,\n        code: false  // optional - faster if false\n    }\n});\n\n// result.ast contains native Uglify AST\n```\n```javascript\n// example: accept native Uglify AST input and then compress and mangle\n//          to produce both code and native AST.\n\nvar result = UglifyJS.minify(ast, {\n    compress: {},\n    mangle: {},\n    output: {\n        ast: true,\n        code: true  // optional - faster if false\n    }\n});\n\n// result.ast contains native Uglify AST\n// result.code contains the minified code in string form.\n```\n\n### Working with Uglify AST\n\nTransversal and transformation of the native AST can be performed through\n[`TreeWalker`](https://github.com/mishoo/UglifyJS/blob/master/lib/ast.js) and\n[`TreeTransformer`](https://github.com/mishoo/UglifyJS/blob/master/lib/transform.js)\nrespectively.\n\n### ESTree / SpiderMonkey AST\n\nUglifyJS has its own abstract syntax tree format; for\n[practical reasons](http://lisperator.net/blog/uglifyjs-why-not-switching-to-spidermonkey-ast/)\nwe can't easily change to using the SpiderMonkey AST internally.  However,\nUglifyJS now has a converter which can import a SpiderMonkey AST.\n\nFor example [Acorn][acorn] is a super-fast parser that produces a\nSpiderMonkey AST.  It has a small CLI utility that parses one file and dumps\nthe AST in JSON on the standard output.  To use UglifyJS to mangle and\ncompress that:\n\n    acorn file.js | uglifyjs -p spidermonkey -m -c\n\nThe `-p spidermonkey` option tells UglifyJS that all input files are not\nJavaScript, but JS code described in SpiderMonkey AST in JSON.  Therefore we\ndon't use our own parser in this case, but just transform that AST into our\ninternal AST.\n\n### Use Acorn for parsing\n\nMore for fun, I added the `-p acorn` option which will use Acorn to do all\nthe parsing.  If you pass this option, UglifyJS will `require(\"acorn\")`.\n\nAcorn is really fast (e.g. 250ms instead of 380ms on some 650K code), but\nconverting the SpiderMonkey tree that Acorn produces takes another 150ms so\nin total it's a bit more than just using UglifyJS's own parser.\n\n[acorn]: https://github.com/ternjs/acorn\n[sm-spec]: https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k\n\n### Uglify Fast Minify Mode\n\nIt's not well known, but whitespace removal and symbol mangling accounts\nfor 95% of the size reduction in minified code for most JavaScript - not\nelaborate code transforms. One can simply disable `compress` to speed up\nUglify builds by 3 to 4 times. In this fast `mangle`-only mode Uglify has\ncomparable minify speeds and gzip sizes to\n[`butternut`](https://www.npmjs.com/package/butternut):\n\n| d3.js | minify size | gzip size | minify time (seconds) |\n| --- | ---: | ---: | ---: |\n| original | 451,131 | 108,733 | - |\n| uglify-js@3.0.24 mangle=false, compress=false | 316,600 | 85,245 | 0.70 |\n| uglify-js@3.0.24 mangle=true, compress=false | 220,216 | 72,730 | 1.13 |\n| butternut@0.4.6 | 217,568 | 72,738 | 1.41 |\n| uglify-js@3.0.24 mangle=true, compress=true | 212,511 | 71,560 | 3.36 |\n| babili@0.1.4 | 210,713 | 72,140 | 12.64 |\n\nTo enable fast minify mode from the CLI use:\n```\nuglifyjs file.js -m\n```\nTo enable fast minify mode with the API use:\n```js\nUglifyJS.minify(code, { compress: false, mangle: true });\n```\n\n#### Source maps and debugging\n\nVarious `compress` transforms that simplify, rearrange, inline and remove code\nare known to have an adverse effect on debugging with source maps. This is\nexpected as code is optimized and mappings are often simply not possible as\nsome code no longer exists. For highest fidelity in source map debugging\ndisable the Uglify `compress` option and just use `mangle`.\n\n### Compiler assumptions\n\nTo allow for better optimizations, the compiler makes various assumptions:\n\n- `.toString()` and `.valueOf()` don't have side effects, and for built-in\n  objects they have not been overridden.\n- `undefined`, `NaN` and `Infinity` have not been externally redefined.\n- `arguments.callee`, `arguments.caller` and `Function.prototype.caller` are not used.\n- The code doesn't expect the contents of `Function.prototype.toString()` or\n  `Error.prototype.stack` to be anything in particular.\n- Getting and setting properties on a plain object does not cause other side effects\n  (using `.watch()` or `Proxy`).\n- Object properties can be added, removed and modified (not prevented with\n  `Object.defineProperty()`, `Object.defineProperties()`, `Object.freeze()`,\n  `Object.preventExtensions()` or `Object.seal()`).\n- When `toplevel` is enabled, UglifyJS effectively assumes input code is wrapped\n  within `function(){ ... }`, thus forbids aliasing of declared global variables:\n  ```js\n  A = \"FAIL\";\n  var B = \"FAIL\";\n  // can be `global`, `self`, `window` etc.\n  var top = function() {\n      return this;\n  }();\n  // \"PASS\"\n  top.A = \"PASS\";\n  console.log(A);\n  // \"FAIL\" after compress and/or mangle\n  top.B = \"PASS\";\n  console.log(B);\n  ```\n",
   "readmeFilename": "README.md",
-  "homepage": "https://github.com/mishoo/UglifyJS2#readme",
+  "homepage": "https://github.com/mishoo/UglifyJS#readme",
   "bugs": {
-    "url": "https://github.com/mishoo/UglifyJS2/issues"
+    "url": "https://github.com/mishoo/UglifyJS/issues"
   },
   "license": "BSD-2-Clause",
   "author": {

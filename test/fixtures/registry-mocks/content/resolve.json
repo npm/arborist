@@ -6804,7 +6804,5 @@
     "url": "https://github.com/browserify/resolve/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.markdown",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "readme.markdown"
 }

@@ -1139,7 +1139,7 @@ t.test('force a new nyc (and update mkdirp nicely)', async t => {
   await arb.audit()
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
   t.equal(arb.idealTree.children.get('mkdirp').package.version, '0.5.5')
-  t.equal(arb.idealTree.children.get('nyc').package.version, '15.0.0')
+  t.equal(arb.idealTree.children.get('nyc').package.version, '15.1.0')
 })
 
 t.test('force a new mkdirp (but not semver major)', async t => {

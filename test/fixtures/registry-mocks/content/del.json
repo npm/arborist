@@ -1,10 +1,10 @@
 {
   "_id": "del",
-  "_rev": "364-b6ed567b253f06ef7128f3e92e2754a2",
+  "_rev": "365-f2912538a5ef931b9a1f194348e0a98f",
   "name": "del",
   "description": "Delete files and directories",
   "dist-tags": {
-    "latest": "5.1.0"
+    "latest": "6.0.0"
   },
   "versions": {
     "0.1.0": {
@@ -1979,9 +1979,106 @@
         "tmp": "tmp/del_5.1.0_1566558677362_0.9740054827128395"
       },
       "_hasShrinkwrap": false
+    },
+    "6.0.0": {
+      "name": "del",
+      "version": "6.0.0",
+      "description": "Delete files and directories",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sindresorhus/del.git"
+      },
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "author": {
+        "name": "Sindre Sorhus",
+        "email": "sindresorhus@gmail.com",
+        "url": "https://sindresorhus.com"
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "scripts": {
+        "test": "xo && ava && tsd",
+        "bench": "node benchmark.js"
+      },
+      "keywords": [
+        "delete",
+        "files",
+        "folders",
+        "directories",
+        "remove",
+        "destroy",
+        "trash",
+        "unlink",
+        "clean",
+        "cleaning",
+        "cleanup",
+        "rm",
+        "rmrf",
+        "rimraf",
+        "rmdir",
+        "glob",
+        "gulpfriendly",
+        "file",
+        "folder",
+        "directory",
+        "fs",
+        "filesystem"
+      ],
+      "dependencies": {
+        "globby": "^11.0.1",
+        "graceful-fs": "^4.2.4",
+        "is-glob": "^4.0.1",
+        "is-path-cwd": "^2.2.0",
+        "is-path-inside": "^3.0.2",
+        "p-map": "^4.0.0",
+        "rimraf": "^3.0.2",
+        "slash": "^3.0.0"
+      },
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "benchmark": "^2.1.4",
+        "make-dir": "^3.1.0",
+        "tempy": "^0.7.0",
+        "tsd": "^0.13.1",
+        "xo": "^0.33.1"
+      },
+      "gitHead": "cd0543eb74807173a2015002907e98094ce3a78e",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/del/issues"
+      },
+      "homepage": "https://github.com/sindresorhus/del#readme",
+      "_id": "del@6.0.0",
+      "_nodeVersion": "14.11.0",
+      "_npmVersion": "6.14.8",
+      "_npmUser": {
+        "name": "sindresorhus",
+        "email": "sindresorhus@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-1shh9DQ23L16oXSZKB2JxpL7iMy2E0S9d517ptA1P8iw0alkPtQcrKH7ru31rYtKwF499HkTu+DRzq3TCKDFRQ==",
+        "shasum": "0b40d0332cea743f1614f818be4feb717714c952",
+        "tarball": "https://registry.npmjs.org/del/-/del-6.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 11806,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfboT8CRA9TVsSAnZWagAAH2AQAJLUNwMWvC/Ixrl+w9Ft\nLpCbuZgnO7KrTMer01tiucPERNSubqy0oydKIODz+mgx6arUh3CRVEo2j2NI\nRFhOfkKJODw6yCzGmz0MiGQVK1MRDRz3QADWqFB/3Tty18IeszBK+7l53f/l\n0kqLsotIrjbx7CkvsG5jiCzYSrdP2cw51bFOwYeVqnOP07wWOdlxF1svCTmd\nTGD8yjxrRif7qQGr2RNF/JxBq/GDd1CI51TrdfA5ainjSupttH7VZBQMu7b7\nkbG3CuADDGOVq0RLqYQeP+yk9uPBkIJ/WCF95em+ua2UFXH8RdAN9hOK9DVB\nBNZfbwv+7FWkLW0KECY3DTDirNHDHJ1IDg0pdwjYA73mnVGa8s2MINuddKRo\n1lZi4/ExLwPBozdVgFLDE8mPstcszo76SATI5kq0q+siU/2ss3WfY+bdntTz\nJ0hVrkc7+tK5kUmoN8Blr9LM+aEWuOaLr9pNzNUERa+JK8rD8C/IwHLCua+y\nH2EReqXaaF6LQePJyuJkDz7WbB2aD8HUm0enNELWZFmPHa0iH3TecURYeXro\nnVkY57v42urNMIp6rNOgzFtTqZw9aOvSafYZzklU666HFxFfYGcRpvUYhIiy\n4JwRzGjBwJKO1StI8El/CjDbGyerw1lXqG5FN4MPSBNNySO6q6CmWs7Ao5I7\ntK6z\r\n=SlLE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sindresorhus",
+          "email": "sindresorhus@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/del_6.0.0_1601078523714_0.9462782987312115"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "# del [![Build Status](https://travis-ci.org/sindresorhus/del.svg?branch=master)](https://travis-ci.org/sindresorhus/del) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)\n\n> Delete files and directories using [globs](https://github.com/sindresorhus/globby#globbing-patterns)\n\nSimilar to [rimraf](https://github.com/isaacs/rimraf), but with a Promise API and support for multiple files and globbing. It also protects you against deleting the current working directory and above.\n\n\n## Install\n\n```\n$ npm install del\n```\n\n\n## Usage\n\n```js\nconst del = require('del');\n\n(async () => {\n\tconst deletedPaths = await del(['temp/*.js', '!temp/unicorn.js']);\n\n\tconsole.log('Deleted files and directories:\\n', deletedPaths.join('\\n'));\n})();\n```\n\n\n## Beware\n\nThe glob pattern `**` matches all children and *the parent*.\n\nSo this won't work:\n\n```js\ndel.sync(['public/assets/**', '!public/assets/goat.png']);\n```\n\nYou have to explicitly ignore the parent directories too:\n\n```js\ndel.sync(['public/assets/**', '!public/assets', '!public/assets/goat.png']);\n```\n\nSuggestions on how to improve this welcome!\n\n\n## API\n\nNote that glob patterns can only contain forward-slashes, not backward-slashes. Windows file paths can use backward-slashes as long as the path does not contain any glob-like characters, otherwise use `path.posix.join()` instead of `path.join()`.\n\n### del(patterns, options?)\n\nReturns `Promise<string[]>` with the deleted paths.\n\n### del.sync(patterns, options?)\n\nReturns `string[]` with the deleted paths.\n\n#### patterns\n\nType: `string | string[]`\n\nSee the supported [glob patterns](https://github.com/sindresorhus/globby#globbing-patterns).\n\n- [Pattern examples with expected matches](https://github.com/sindresorhus/multimatch/blob/master/test/test.js)\n- [Quick globbing pattern overview](https://github.com/sindresorhus/multimatch#globbing-patterns)\n\n#### options\n\nType: `object`\n\nYou can specify any of the [`globby` options](https://github.com/sindresorhus/globby#options) in addition to the below options. In contrast to the `globby` defaults, `expandDirectories`, `onlyFiles`, and `followSymbolicLinks` are `false` by default.\n\n##### force\n\nType: `boolean`<br>\nDefault: `false`\n\nAllow deleting the current working directory and outside.\n\n##### dryRun\n\nType: `boolean`<br>\nDefault: `false`\n\nSee what would be deleted.\n\n```js\nconst del = require('del');\n\n(async () => {\n\tconst deletedPaths = await del(['temp/*.js'], {dryRun: true});\n\n\tconsole.log('Files and directories that would be deleted:\\n', deletedPaths.join('\\n'));\n})();\n```\n\n##### concurrency\n\nType: `number`<br>\nDefault: `Infinity`<br>\nMinimum: `1`\n\nConcurrency limit.\n\n\n## CLI\n\nSee [del-cli](https://github.com/sindresorhus/del-cli) for a CLI for this module and [trash-cli](https://github.com/sindresorhus/trash-cli) for a safe version that is suitable for running by hand.\n\n\n## Related\n\n- [make-dir](https://github.com/sindresorhus/make-dir) - Make a directory and its parents if needed\n- [globby](https://github.com/sindresorhus/globby) - User-friendly glob matching\n\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-del?utm_source=npm-del&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
+  "readme": "# del [![Build Status](https://travis-ci.com/sindresorhus/del.svg?branch=master)](https://travis-ci.com/github/sindresorhus/del) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)\n\n> Delete files and directories using [globs](https://github.com/sindresorhus/globby#globbing-patterns)\n\nSimilar to [rimraf](https://github.com/isaacs/rimraf), but with a Promise API and support for multiple files and globbing. It also protects you against deleting the current working directory and above.\n\n## Install\n\n```\n$ npm install del\n```\n\n## Usage\n\n```js\nconst del = require('del');\n\n(async () => {\n\tconst deletedFilePaths = await del(['temp/*.js', '!temp/unicorn.js']);\n\tconst deletedDirectoryPaths = await del(['temp', 'public']);\n\n\tconsole.log('Deleted files:\\n', deletedFilePaths.join('\\n'));\n\tconsole.log('\\n\\n');\n\tconsole.log('Deleted directories:\\n', deletedDirectoryPaths.join('\\n));\n})();\n```\n\n## Beware\n\nThe glob pattern `**` matches all children and *the parent*.\n\nSo this won't work:\n\n```js\ndel.sync(['public/assets/**', '!public/assets/goat.png']);\n```\n\nYou have to explicitly ignore the parent directories too:\n\n```js\ndel.sync(['public/assets/**', '!public/assets', '!public/assets/goat.png']);\n```\n\nTo delete all subdirectories inside `public/`, you can do:\n\n```js\ndel.sync(['public/*/']);\n```\n\nSuggestions on how to improve this welcome!\n\n## API\n\nNote that glob patterns can only contain forward-slashes, not backward-slashes. Windows file paths can use backward-slashes as long as the path does not contain any glob-like characters, otherwise use `path.posix.join()` instead of `path.join()`.\n\n### del(patterns, options?)\n\nReturns `Promise<string[]>` with the deleted paths.\n\n### del.sync(patterns, options?)\n\nReturns `string[]` with the deleted paths.\n\n#### patterns\n\nType: `string | string[]`\n\nSee the supported [glob patterns](https://github.com/sindresorhus/globby#globbing-patterns).\n\n- [Pattern examples with expected matches](https://github.com/sindresorhus/multimatch/blob/master/test/test.js)\n- [Quick globbing pattern overview](https://github.com/sindresorhus/multimatch#globbing-patterns)\n\n#### options\n\nType: `object`\n\nYou can specify any of the [`globby` options](https://github.com/sindresorhus/globby#options) in addition to the below options. In contrast to the `globby` defaults, `expandDirectories`, `onlyFiles`, and `followSymbolicLinks` are `false` by default.\n\n##### force\n\nType: `boolean`\\\nDefault: `false`\n\nAllow deleting the current working directory and outside.\n\n##### dryRun\n\nType: `boolean`\\\nDefault: `false`\n\nSee what would be deleted.\n\n```js\nconst del = require('del');\n\n(async () => {\n\tconst deletedPaths = await del(['temp/*.js'], {dryRun: true});\n\n\tconsole.log('Files and directories that would be deleted:\\n', deletedPaths.join('\\n'));\n})();\n```\n\n##### concurrency\n\nType: `number`\\\nDefault: `Infinity`\\\nMinimum: `1`\n\nConcurrency limit.\n\n## CLI\n\nSee [del-cli](https://github.com/sindresorhus/del-cli) for a CLI for this module and [trash-cli](https://github.com/sindresorhus/trash-cli) for a safe version that is suitable for running by hand.\n\n## del for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of del and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-del?utm_source=npm-del&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)\n\n## Related\n\n- [make-dir](https://github.com/sindresorhus/make-dir) - Make a directory and its parents if needed\n- [globby](https://github.com/sindresorhus/globby) - User-friendly glob matching\n",
   "maintainers": [
     {
       "name": "sindresorhus",
@@ -1989,7 +2086,7 @@
     }
   ],
   "time": {
-    "modified": "2019-08-23T11:11:20.022Z",
+    "modified": "2020-09-26T00:02:06.200Z",
     "created": "2014-06-21T20:27:33.008Z",
     "0.1.0": "2014-06-21T20:27:33.008Z",
     "0.1.1": "2014-06-26T18:32:57.285Z",
@@ -2012,7 +2109,8 @@
     "4.1.0": "2019-04-01T09:07:22.464Z",
     "4.1.1": "2019-04-28T14:21:41.823Z",
     "5.0.0": "2019-07-02T18:50:04.863Z",
-    "5.1.0": "2019-08-23T11:11:17.479Z"
+    "5.1.0": "2019-08-23T11:11:17.479Z",
+    "6.0.0": "2020-09-26T00:02:03.849Z"
   },
   "homepage": "https://github.com/sindresorhus/del#readme",
   "keywords": [
@@ -2046,7 +2144,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
+    "url": "https://sindresorhus.com"
   },
   "bugs": {
     "url": "https://github.com/sindresorhus/del/issues"

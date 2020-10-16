@@ -1,10 +1,10 @@
 {
   "_id": "opener",
-  "_rev": "55-64638562a4efe14d5ab639e5a1f1ccac",
+  "_rev": "56-2ef09df859a80910c6bd92266a79ae27",
   "name": "opener",
   "description": "Opens stuff, like webpages and files and executables, cross-platform",
   "dist-tags": {
-    "latest": "1.5.1"
+    "latest": "1.5.2"
   },
   "versions": {
     "1.0.0": {
@@ -559,8 +559,66 @@
         "tmp": "tmp/opener_1.5.1_1535426810163_0.09801673221093954"
       },
       "_hasShrinkwrap": false
+    },
+    "1.5.2": {
+      "name": "opener",
+      "description": "Opens stuff, like webpages and files and executables, cross-platform",
+      "version": "1.5.2",
+      "author": {
+        "name": "Domenic Denicola",
+        "email": "d@domenic.me",
+        "url": "https://domenic.me/"
+      },
+      "license": "(WTFPL OR MIT)",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/domenic/opener.git"
+      },
+      "main": "lib/opener.js",
+      "bin": {
+        "opener": "bin/opener-bin.js"
+      },
+      "scripts": {
+        "lint": "eslint ."
+      },
+      "devDependencies": {
+        "eslint": "^7.7.0"
+      },
+      "gitHead": "24edf48a38d1e23bbc5ffbeb079c206d5565f062",
+      "bugs": {
+        "url": "https://github.com/domenic/opener/issues"
+      },
+      "homepage": "https://github.com/domenic/opener#readme",
+      "_id": "opener@1.5.2",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==",
+        "shasum": "5d37e1f35077b9dcac4301372271afdeb2a13598",
+        "tarball": "https://registry.npmjs.org/opener/-/opener-1.5.2.tgz",
+        "fileCount": 5,
+        "unpackedSize": 6213,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfSrmqCRA9TVsSAnZWagAAybMP/1Yt/nyadMJ24sVJMZ85\n4e9o8emuH550hzqEko5IT00FV40Vqnm78PLXLQqXjqcBpURYtNh+T+03haue\niZ4sLOfMlGf4Ffy5NWnm6tdirr6GKKHbDhMl2iZBXQZevQfMu280Grp2uRfF\nuF6sz/0M12XJOse7RR0N3874sroJDF/7DMcQj5mQSRfCww0s22vsfEtLtUUe\nINCTMTA4Z34Q/KQsMLMQA2cEaqzQ0bbKZpheFqTbitVFLKy5sbZZ8bvP5Geo\n8JvZ4yftgFQWaHPwUL/GGJ3uLmbiWhl/AiyBdVO8CzkfsIWWpZ9Tf/Z4zFEE\nkTaIrt8fXr0nx9231stP/CLqYO/tf+Fro6InOAvLJ5wBwEA+bskIswOFf53C\nsKReqt03jf7suScgyLXAye90Vemci+PF5UbC/E5Jt36g5ek1hDuaFMPwZrw1\naGLDJSfIuY+/jrzh0XaKspVbVsA6evaXr0GSnm2puow4M40PS9pq7lzgkMeI\n++Y1k2840JJTlmKwsjnB+1pBMI5EpEfLBSiOhqMXm096ELAdiR7rnOLYF8Ey\nHAvyisUKhj0Co+OaSDWu2shy11oQUkMCre2+aHvlHbrKCBvThLqkE97D3JED\nfm7MAooByfVzJQAGPLlshW2RCwbT4Pc8Z80/iNj0hTFDUdFz5RIADeko2Af1\nHsQR\r\n=HA6P\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "domenic",
+          "email": "domenic@domenicdenicola.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "domenic",
+        "email": "d@domenic.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/opener_1.5.2_1598732713676_0.9320761526342078"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# It Opens Stuff\n\nThat is, in your desktop environment. This will make *actual windows pop up*, with stuff in them:\n\n```bash\nnpm install opener -g\n\nopener http://google.com\nopener ./my-file.txt\nopener firefox\nopener npm run lint\n```\n\nAlso if you want to use it programmatically you can do that too:\n\n```js\nvar opener = require(\"opener\");\n\nopener(\"http://google.com\");\nopener(\"./my-file.txt\");\nopener(\"firefox\");\nopener(\"npm run lint\");\n```\n\nPlus, it returns the child process created, so you can do things like let your script exit while the window stays open:\n\n```js\nvar editor = opener(\"documentation.odt\");\neditor.unref();\n// These other unrefs may be necessary if your OS's opener process\n// exits before the process it started is complete.\neditor.stdin.unref();\neditor.stdout.unref();\neditor.stderr.unref();\n```\n\n## Use It for Good\n\nLike opening the user's browser with a test harness in your package's test script:\n\n```json\n{\n    \"scripts\": {\n        \"test\": \"opener ./test/runner.html\"\n    },\n    \"devDependencies\": {\n        \"opener\": \"*\"\n    }\n}\n```\n\n## Why\n\nBecause Windows has `start`, Macs have `open`, and *nix has `xdg-open`. At least [according to some person on StackOverflow](http://stackoverflow.com/q/1480971/3191). And I like things that work on all three. Like Node.js. And Opener.\n",
   "maintainers": [
     {
       "name": "domenic",
@@ -568,7 +626,7 @@
     }
   ],
   "time": {
-    "modified": "2019-01-05T01:30:00.247Z",
+    "modified": "2020-08-29T20:25:17.039Z",
     "created": "2012-08-06T10:58:56.840Z",
     "1.0.0": "2012-08-06T10:58:57.376Z",
     "1.0.1": "2012-08-06T11:01:23.485Z",
@@ -580,7 +638,8 @@
     "1.4.2": "2016-09-10T23:46:58.033Z",
     "1.4.3": "2017-02-15T00:33:29.546Z",
     "1.5.0": "2018-08-12T23:59:03.305Z",
-    "1.5.1": "2018-08-28T03:26:50.275Z"
+    "1.5.1": "2018-08-28T03:26:50.275Z",
+    "1.5.2": "2020-08-29T20:25:13.795Z"
   },
   "author": {
     "name": "Domenic Denicola",

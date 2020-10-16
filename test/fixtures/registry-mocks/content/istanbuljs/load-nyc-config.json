@@ -1,9 +1,9 @@
 {
   "_id": "@istanbuljs/load-nyc-config",
-  "_rev": "3-d18cd501f33981e29e42f3ce16953a83",
+  "_rev": "4-e1098627fd67866b3e9e205199c1eeac",
   "name": "@istanbuljs/load-nyc-config",
   "dist-tags": {
-    "latest": "1.0.0"
+    "latest": "1.1.0"
   },
   "versions": {
     "1.0.0-alpha.0": {
@@ -339,15 +339,105 @@
         "tmp": "tmp/load-nyc-config_1.0.0_1576874740214_0.862865850795296"
       },
       "_hasShrinkwrap": false
+    },
+    "1.1.0": {
+      "name": "@istanbuljs/load-nyc-config",
+      "version": "1.1.0",
+      "description": "Utility function to load nyc configuration",
+      "main": "index.js",
+      "scripts": {
+        "pretest": "xo",
+        "test": "tap",
+        "snap": "npm test -- --snapshot",
+        "release": "standard-version"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/istanbuljs/load-nyc-config.git"
+      },
+      "bugs": {
+        "url": "https://github.com/istanbuljs/load-nyc-config/issues"
+      },
+      "homepage": "https://github.com/istanbuljs/load-nyc-config#readme",
+      "dependencies": {
+        "camelcase": "^5.3.1",
+        "find-up": "^4.1.0",
+        "get-package-type": "^0.1.0",
+        "js-yaml": "^3.13.1",
+        "resolve-from": "^5.0.0"
+      },
+      "devDependencies": {
+        "semver": "^6.3.0",
+        "standard-version": "^7.0.0",
+        "tap": "^14.10.5",
+        "xo": "^0.25.3"
+      },
+      "xo": {
+        "ignores": [
+          "test/fixtures/extends/invalid.*"
+        ],
+        "rules": {
+          "require-atomic-updates": 0,
+          "capitalized-comments": 0,
+          "unicorn/import-index": 0,
+          "import/extensions": 0,
+          "import/no-useless-path-segments": 0
+        }
+      },
+      "gitHead": "2033a007672d90669c48c79e6a2d63a3cd0851a7",
+      "_id": "@istanbuljs/load-nyc-config@1.1.0",
+      "_nodeVersion": "14.3.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==",
+        "shasum": "fd3db1d59ecf7cf121e80650bb86712f9b55eced",
+        "tarball": "https://registry.npmjs.org/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 10873,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJexVBoCRA9TVsSAnZWagAAs2wP/2JkQfXmUFMHx4eVHB59\n2+fwTd7kXdB6npQyLFz0unXo7ja5r7Dh7dWGJNeLr2mQLvHQZRJfVDPNiS+N\nQXwHwR3pSn0lEIYekgzQ7QeZlsq7OCNkHMu+wetxCMSwdLtR1pfeuI1pk3e+\nVRqWLZNmJolubR0BorRfqgdKMM4TQBq1wqDTaHE/75wxO0qUGu7NBwBCFUio\nb2SPUmaosJ7YCaCvpNj8VUFDUu5A29XmEBcBCGy8ccwsxrWIgftUQ9XPgyvr\nTMyWl0ffw6cEcDLoAPyeRXLHam6Qjiua5DfusVyFgrbbkIAfBVihsREje7iS\nGVcOG9E7wUQQVWbANapzL3DXcJJvvA93+duhxxhVm/mPiAEqA0aeAjOKIOdD\nS+0LaPywIzsgsKSZOrRg5HFm1gIWBC57uIvJS1gAvpYp9NJedOExuJyMlQMW\nFUWId6zb369UgsNu4epKdE1DnSVa50Otmv3Ic9QTNn1+IOjVaJrPVjYKoDgV\nCKABO3Rv/FRXBJTgQ2HT17W+I8/pDvAVv8yb7GqVdqr9a2AM2Ps5gBMYiDvT\nbiZAHuKjeIxyfZXjBkVHYJLiw/nJn44+NrPCBMIsTzjRUUAWCnylzVCZXpeC\nPxK9MRb+Q11pTidGMldGZnJMuFS10YUkyIo2pVhHGmOLrkEWe7bCQ28X6h1A\ni8MD\r\n=XW3k\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "bcoe",
+          "email": "bencoe@gmail.com"
+        },
+        {
+          "name": "coreyfarrell",
+          "email": "git@cfware.com"
+        },
+        {
+          "name": "gotwarlost",
+          "email": "kananthmail-github@yahoo.com"
+        },
+        {
+          "name": "jakxz",
+          "email": "jgkurian@me.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "coreyfarrell",
+        "email": "git@cfware.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/load-nyc-config_1.1.0_1589989479472_0.5456091190008927"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2019-10-06T18:46:35.016Z",
     "1.0.0-alpha.0": "2019-10-06T18:46:35.222Z",
-    "modified": "2019-12-20T20:45:43.574Z",
+    "modified": "2020-05-20T15:44:43.589Z",
     "1.0.0-alpha.1": "2019-10-08T16:12:10.450Z",
     "1.0.0-alpha.2": "2019-11-24T01:56:07.218Z",
-    "1.0.0": "2019-12-20T20:45:40.302Z"
+    "1.0.0": "2019-12-20T20:45:40.302Z",
+    "1.1.0": "2020-05-20T15:44:39.756Z"
   },
   "maintainers": [
     {
@@ -377,6 +467,6 @@
     "url": "https://github.com/istanbuljs/load-nyc-config/issues"
   },
   "license": "ISC",
-  "readme": "# @istanbuljs/load-nyc-config\n\nThe utility function which NYC uses to load configuration.\nThis can be used by outside programs to calculate the configuration.\nCommand-line arguments are not considered by this function.\n\n```js\nconst {loadNycConfig} = require('@istanbuljs/load-nyc-config');\n\nconsole.log(loadNycConfig());\n```\n\n## loadNycConfig([options])\n\n### options.cwd\n\nType: `string`\nDefault: `cwd` from parent nyc process or `process.cwd()`\n\n### options.nycrcPath\n\nType: `string`\nDefault: `undefined`\n\nName of the file containing nyc configuration.\nThis can be a relative or absolute path.\nRelative paths can exist at `options.cwd` or any parent directory.\nIf an nycrc is specified but cannot be found an exception is thrown.\n\nIf no nycrc option is provided the default priority of config files are:\n\n* .nycrc\n* .nycrc.json\n* .nycrc.yml\n* .nycrc.yaml\n* nyc.config.js\n\n## Configuration merging\n\nConfiguration is first loaded from `package.json` if found, this serves as the package\ndefaults.  These options can be overridden by an nycrc if found.  Arrays are not merged,\nso if `package.json` sets `\"require\": [\"@babel/register\"]` and `.nycrc` sets `\"require\": [\"esm\"]`\nthe effective require setting will only include `\"esm\"`.\n\n## `@istanbuljs/load-nyc-config` for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of `@istanbuljs/load-nyc-config` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-istanbuljs-load-nyc-config?utm_source=npm-istanbuljs-load-nyc-config&utm_medium=referral&utm_campaign=enterprise)\n",
+  "readme": "# @istanbuljs/load-nyc-config\n\nThe utility function which NYC uses to load configuration.\nThis can be used by outside programs to calculate the configuration.\nCommand-line arguments are not considered by this function.\n\n```js\nconst {loadNycConfig} = require('@istanbuljs/load-nyc-config');\n\n(async () {\n  console.log(await loadNycConfig());\n})();\n```\n\n## loadNycConfig([options])\n\n### options.cwd\n\nType: `string`\nDefault: `cwd` from parent nyc process or `process.cwd()`\n\n### options.nycrcPath\n\nType: `string`\nDefault: `undefined`\n\nName of the file containing nyc configuration.\nThis can be a relative or absolute path.\nRelative paths can exist at `options.cwd` or any parent directory.\nIf an nycrc is specified but cannot be found an exception is thrown.\n\nIf no nycrc option is provided the default priority of config files are:\n\n* .nycrc\n* .nycrc.json\n* .nycrc.yml\n* .nycrc.yaml\n* nyc.config.js\n* nyc.config.cjs\n* nyc.config.mjs\n\n## Configuration merging\n\nConfiguration is first loaded from `package.json` if found, this serves as the package\ndefaults.  These options can be overridden by an nycrc if found.  Arrays are not merged,\nso if `package.json` sets `\"require\": [\"@babel/register\"]` and `.nycrc` sets `\"require\": [\"esm\"]`\nthe effective require setting will only include `\"esm\"`.\n\n## isLoading\n\n```js\nconst {isLoading} = require('@istanbuljs/load-nyc-config');\n\nconsole.log(isLoading());\n```\n\nIn some cases source transformation hooks can get installed before the configuration is\nloaded.  This allows hooks to ignore source loads that occur during configuration load.\n\n## `@istanbuljs/load-nyc-config` for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of `@istanbuljs/load-nyc-config` and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-istanbuljs-load-nyc-config?utm_source=npm-istanbuljs-load-nyc-config&utm_medium=referral&utm_campaign=enterprise)\n",
   "readmeFilename": "README.md"
 }

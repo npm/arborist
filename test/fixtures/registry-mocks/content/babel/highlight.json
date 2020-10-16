@@ -2138,7 +2138,5 @@
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/babel/babel/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

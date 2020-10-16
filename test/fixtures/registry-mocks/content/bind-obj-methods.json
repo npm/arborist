@@ -112,6 +112,7 @@
       "directories": {}
     }
   },
+  "readme": "# bind-obj-methods\n\nBind methods to an object from that object or some other source.\nOptionally specify a set of methods to skip over.\n\nAlso binds non-enumerable methods, retaining their\nnon-enumerable-ness.\n\n## API\n\n`bindObjMethods(obj, [source], [omit])`\n\nBind all the methods from source onto obj, skipping over anything in\nthe `omit` list.  `omit` can be either an array or an object of\nboolean values.  `source` defaults to `obj` if not specified.\n\n## USAGE\n\n```js\nvar bindObjMethods = require('bind-obj-methods')\n\nvar obj = {\n  method: () => this.foo,\n  foo: 'bar'\n}\n\nvar m = obj.method\nm() // undefined\n\nbindObjMethods(obj)\nm = obj.method\nm() // 'bar'\n```\n",
   "maintainers": [
     {
       "name": "isaacs",

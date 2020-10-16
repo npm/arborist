@@ -597,7 +597,5 @@
     "url": "https://github.com/electerious/nice-try/issues"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

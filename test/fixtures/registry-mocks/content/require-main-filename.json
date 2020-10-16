@@ -215,7 +215,5 @@
     "url": "https://github.com/yargs/require-main-filename/issues"
   },
   "license": "ISC",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

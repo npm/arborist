@@ -53,5 +53,6 @@
     }
   ],
   "description": "a production dep that is not satisfiable",
+  "readme": "ERROR: No README data found!",
   "readmeFilename": ""
 }

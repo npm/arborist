@@ -225,7 +225,5 @@
   },
   "bugs": {
     "url": "https://github.com/joyent/node-bcrypt-pbkdf/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

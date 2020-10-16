@@ -1,10 +1,10 @@
 {
   "_id": "@babel/helper-builder-react-jsx",
-  "_rev": "72-c202115609e234e4e5ae76e8f4d26eea",
+  "_rev": "78-228473343abad02fec489af78e682ddd",
   "name": "@babel/helper-builder-react-jsx",
   "description": "Helper function to build react jsx",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.10.4"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -1740,6 +1740,7 @@
         "@babel/types": "7.0.0-rc.3",
         "esutils": "^2.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-builder-react-jsx@7.0.0-rc.3",
       "dist": {
         "shasum": "6eb5a9138d44fa442fb381542987af6be12860b2",
@@ -1796,6 +1797,7 @@
         "@babel/types": "^7.0.0-rc.4",
         "esutils": "^2.0.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-builder-react-jsx@7.0.0-rc.4",
       "dist": {
         "shasum": "f2f419d6ef6b54bdaf17fee5a9bbcdd353686d79",
@@ -1853,6 +1855,8 @@
         "esutils": "^2.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/helper-builder-react-jsx\n\n> Helper function to build react jsx\n\nSee our website [@babel/helper-builder-react-jsx](https://babeljs.io/docs/en/next/babel-helper-builder-react-jsx.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-builder-react-jsx\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-builder-react-jsx --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/helper-builder-react-jsx@7.0.0",
       "dist": {
         "shasum": "fa154cb53eb918cf2a9a7ce928e29eb649c5acdb",
@@ -2216,16 +2220,288 @@
         "tmp": "tmp/helper-builder-react-jsx_7.8.3_1578951706684_0.5236237516097897"
       },
       "_hasShrinkwrap": false
+    },
+    "7.9.0": {
+      "name": "@babel/helper-builder-react-jsx",
+      "version": "7.9.0",
+      "description": "Helper function to build react jsx",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-builder-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-annotate-as-pure": "^7.8.3",
+        "@babel/types": "^7.9.0"
+      },
+      "gitHead": "8d5e422be27251cfaadf8dd2536b31b4a5024b02",
+      "_id": "@babel/helper-builder-react-jsx@7.9.0",
+      "_nodeVersion": "13.11.0",
+      "_npmVersion": "lerna/3.19.0/node@v13.11.0+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-weiIo4gaoGgnhff54GQ3P5wsUQmnSwpkvU0r6ZHq6TzoSzKy4JxHEgnxNytaKbov2a9z/CVNyzliuCOUPEX3Jw==",
+        "shasum": "16bf391990b57732700a3278d4d9a81231ea8d32",
+        "tarball": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.9.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 9488,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJedOO8CRA9TVsSAnZWagAA8IYP/jMmq1JXiFdhuWrzDJLK\n5xliENXwY5+sqkat+8ad9DMInKt/1OcTcfXvo9uWj310eRwGNEwM5UPg9Cku\njwon3mYaatw3vGId4JiXQoRk82X8fQ2wb20afGCD9hvgLvdWQ2bVMHLoxm6D\ncEfmmzZKVMR+YCbMrmjL0k4b+DvDzAPE4y9XYEre8OAJ3552UJzm5vvVCanK\nXTyq3z5FjnEnI97hpc3DQ8dyqIBQmq1NQ/mZ1OvNy76HO+E8V5YsWW+/19rZ\nm4qjaT+ogrzYSZV1xUZQ6thBudmGu9mvcOkQPJMwk1dnUf2rATigVfu0eOba\nv1fmLCLb6ygS7DtyqjHHscnCQ03jWdIenmgGdf6kRgw4i8zhLxxO0HL3/13S\n11bJymbeaq3udXImjWfnimhhs2J4z8C+9ITZfnM4WU/576g7h7hZVgmlTtDh\naKEaRW3Fdhh+uYJo7JrV4BLGr4ei4GlC+vZ1RC6/lU80b60V+A608auYE4To\nNIq/1i2bpn7iJpOTzcU06NYu15Jx6Vscbd394u0Xe+AjaggQaRpuau53ZOlJ\nWqlxTnkkjlxuMEMMESbpvtUQ0L9CKqvp0ULO+gbMJ77DMrDOV87aciMgR2AQ\nM8s+IJa/m/8btcjjUBD5mcPqH2iK5HLvRnhnzaM9VaI0haculDHNdEQQVLS4\nbh/X\r\n=G5kE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "jason@developit.ca",
+          "name": "developit"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-builder-react-jsx_7.9.0_1584718780090_0.9004050911701631"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/helper-builder-react-jsx",
+      "version": "7.10.1",
+      "description": "Helper function to build react jsx",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-builder-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-annotate-as-pure": "^7.10.1",
+        "@babel/types": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/helper-builder-react-jsx@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-KXzzpyWhXgzjXIlJU1ZjIXzUPdej1suE6vzqgImZ/cpAsR/CC8gUcX4EWRmDfWz/cs6HOCPMBIJ3nKoXt3BFuw==",
+        "shasum": "a327f0cf983af5554701b1215de54a019f09b532",
+        "tarball": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 9539,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuS7CRA9TVsSAnZWagAAjRYP/1I2HB0LW0mZi2gIT6tq\nCwiXJzCl41pIoy4wMYABCTCaOKXZ3hWE1recTrjgjbHFgd2Ke81sKNiRDzYH\nptlQonE9lC3CjauvYq29KxBvXIyxODWdaBKPzOBts0YF8RK20mdWcRqmQltI\nP0/LNJNpzEWp8nkWGpgMuKtU+5kp/Ha05yPx0n2yj86vO1oGcx6AOVs64NFU\nnqB+GyV0ksZ/sC6+5rWnkQ+XVspeG46kvkZrDGjmC9nKfmdV6Md8fy+vwHPK\njukiWp0P8K5SRigBwzYBHQ1+bdEUKId4Ptxi5c+zZztLyCLuhKSKgrNNjRuH\nOuahjTjFyoexqtsK8W4Pki5Ba1dlWsYFkDK0kCIzelJFubqZ7ywiM+0i/vQE\nU75NOV+rsPT/c3H53pFhNiHwK4PCoeYFp3JdVoQtZMnFk/dG1/m2ub7MHFx9\nGO4tDCbKuydeM4x/FDvJWb/TuO/VfBGK4aQmRdof1PcAYp0jR/QW6I5oZ9Z6\nSl2hYQymgs+e8NUx5cxYSxLxcxNx/X8eq3tIEJ8d7NymLiIWH1hhmi7BDMqr\nJrl1F7gBIpCtA5JeGN82rSZMa3y4D+lni2G5OPLHWwIxbmytt0Ui6gEpCO2S\nEWAyFw4dw0bn+bpB6ajEGhiBcE9xMfK2WrPhNNioEchEjbcz5Dh3mb2vNRbN\nQNfO\r\n=gY1L\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-builder-react-jsx_7.10.1_1590617275365_0.27381757551638986"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.3": {
+      "name": "@babel/helper-builder-react-jsx",
+      "version": "7.10.3",
+      "description": "Helper function to build react jsx",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-builder-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-annotate-as-pure": "^7.10.1",
+        "@babel/types": "^7.10.3"
+      },
+      "gitHead": "2787ee2f967b6d8e1121fca00a8d578d75449a53",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/helper-builder-react-jsx@7.10.3",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-vkxmuFvmovtqTZknyMGj9+uQAZzz5Z9mrbnkJnPkaYGfKTaSsYcjQdXP0lgrWLVh8wU6bCjOmXOpx+kqUi+S5Q==",
+        "shasum": "62c4b7bb381153a0a5f8d83189b94b9fb5384fc5",
+        "tarball": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.10.3.tgz",
+        "fileCount": 4,
+        "unpackedSize": 9539,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe7SYHCRA9TVsSAnZWagAAE4wP/j+HLwqwkxJBDsszXby2\nPgd9r0e3wf2/FR4UdqsvvbGFiI4/HK4ld02vRI4FH4Iw0KjieXOw3vujjBiU\ndkng6DbLtD4E9VHS42VG78GNZvxk4e392wrK0oYx7e2H5ATuhP2YUU0JaOpZ\n59WZgyEScF2npizvVTb0RWATy4BYBB0d6TqY8liDaSu3aunm9VWLhkaYYMrl\nM6hJuRmvnD/UtOjWDX1X5HvtuWRbgHyGwWLdhO4xAnhMcRwjKPA+an1jLShT\nqbrGCYO95tGTsFkL5at3pf4hqDHqpCvhEQwxAI+euA+mjII3VcAFUx7S4vFt\nEzu5OJd4EV9OuNR4Mz42N/VrMrbBbd+gcvBB+IbqJm/vNkFvOFcRp98pFNt2\nVeTT8a3evAlgGG7h0Rp4oOJLAeG1Z+FCIYMU33yyxSFPhdhfoEjh8pTLCASX\nSv5wOqNKt649s9sZ2xHfytdbEZqOc7rS5sS781hik9jc+zKLCH2npeurEc5U\n5zOxz3MnLRcoPjEhtCM4T+hIP220KUCJUiyjhqVF3ungJfzFVKrNbqr7bg/E\nRhhZGCmt5cpkMaHLKA+/EVafwxRi3yTsaPnLdIOb486FsrWPJjnwNaaLYoBG\n8gwSgx/frbnUAAnLgu2LeFubtnPA+zjxr2XSCEBu5Xd1LC3yr2etN34Kc1RG\nySSw\r\n=1D8t\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-builder-react-jsx_7.10.3_1592600070613_0.04143270517096398"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/helper-builder-react-jsx",
+      "version": "7.10.4",
+      "description": "Helper function to build react jsx",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-helper-builder-react-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "dependencies": {
+        "@babel/helper-annotate-as-pure": "^7.10.4",
+        "@babel/types": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/helper-builder-react-jsx@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-5nPcIZ7+KKDxT1427oBivl9V9YTal7qk0diccnh7RrcgrT/pGFOjgGw1dgryyx1GvHEpXVfoDF6Ak3rTiWh8Rg==",
+        "shasum": "8095cddbff858e6fa9c326daee54a2f2732c1d5d",
+        "tarball": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 9539,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zpGCRA9TVsSAnZWagAAhAwP/iesFyEQBr+gRxdWrWpB\nk1y6/umFOxPJw34ka2lKnnNTrO1MMjGpTjzMfdXqK9FwEHI/VFUzZxdmocyy\nmrksJBHCm5KDaMLSEWL8S9DohhvRIR53XfEJKta8a5xqPY6rFK4D7Rk06SXD\nWU1ZAoHXjKIJEuuTJkFPEatdhpWVwftJe0WfCJY/E8t33yVn1XdYuaGkKZw1\nMGn2YiQxZcWV8C5K60XAQrXFRE9v6zAlbROYUz8mfVmmzYmBtBeZBUgecCBk\nmkYZGYVm+hoAvvzYYJnOVZDteYr0Rr+PYBEsgkygArkNgcat383avDU1h2i3\nDRKJ05vTBMsEteH6nk2zGRWvOOV25AXK2aS3d4Stud7xI9spfK+z76UFnBgi\nZO2j+dM9raWc7ZEkbSEQ++88NG/t+I4XCCryPMfUthwxhZMIDMu5S0FMpTI1\njNK9er2MzlScoJFbTZ0fY38YTqg0WuZoYeNcmH+FkWHcJ/21f0Sbuc1yBhvl\nXyL3+eVmmQCKFY4F8HRN/azBgr6iUOqaDCaoor7woY+cdHGBsfbOah5+BqsE\n0ioEJxlkmRQ0v//ZBSc+zdBa3ytTz2DKrViulSm5P5pYFRjnfq/todT4cdJN\nsCNMrbUc6gBK6nuYFVobRkW/fE/no0uxIxNDqclcZxHgSCIjLH18YDk0ewYO\nv/03\r\n=bOpE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/helper-builder-react-jsx_7.10.4_1593522757829_0.13288591840465536"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# @babel/helper-builder-react-jsx\n\n> Helper function to build react jsx\n\nSee our website [@babel/helper-builder-react-jsx](https://babeljs.io/docs/en/next/babel-helper-builder-react-jsx.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/helper-builder-react-jsx\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/helper-builder-react-jsx --dev\n```\n",
   "maintainers": [
     {
       "email": "daniel@tschinder.de",
       "name": "danez"
-    },
-    {
-      "email": "jason@developit.ca",
-      "name": "developit"
     },
     {
       "email": "bng412@gmail.com",
@@ -2234,6 +2510,10 @@
     {
       "email": "hi@henryzoo.com",
       "name": "hzoo"
+    },
+    {
+      "email": "i@jhuang.me",
+      "name": "jlhwung"
     },
     {
       "email": "loganfsmyth@gmail.com",
@@ -2245,7 +2525,7 @@
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:41:51.361Z",
+    "modified": "2020-06-30T13:12:42.083Z",
     "created": "2017-10-30T18:35:00.731Z",
     "7.0.0-beta.4": "2017-10-30T18:35:00.731Z",
     "7.0.0-beta.5": "2017-10-30T20:56:40.717Z",
@@ -2285,12 +2565,21 @@
     "7.7.0": "2019-11-05T10:53:28.999Z",
     "7.7.4": "2019-11-22T23:33:15.488Z",
     "7.8.0": "2020-01-12T00:17:01.642Z",
-    "7.8.3": "2020-01-13T21:41:46.854Z"
+    "7.8.3": "2020-01-13T21:41:46.854Z",
+    "7.9.0": "2020-03-20T15:39:40.266Z",
+    "7.10.1": "2020-05-27T22:07:55.494Z",
+    "7.10.3": "2020-06-19T20:54:30.753Z",
+    "7.10.4": "2020-06-30T13:12:37.922Z"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-helper-builder-react-jsx"
+    "url": "git+https://github.com/babel/babel.git",
+    "directory": "packages/babel-helper-builder-react-jsx"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/babel/babel#readme",
+  "bugs": {
+    "url": "https://github.com/babel/babel/issues"
+  }
 }

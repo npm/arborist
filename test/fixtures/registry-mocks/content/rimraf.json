@@ -3713,7 +3713,5 @@
   "bugs": {
     "url": "https://github.com/isaacs/rimraf/issues"
   },
-  "license": "ISC",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "ISC"
 }

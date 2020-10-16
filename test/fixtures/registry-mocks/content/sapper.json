@@ -1,10 +1,10 @@
 {
   "_id": "sapper",
-  "_rev": "184-6c8e0bfb73c384794aa91d993232e174",
+  "_rev": "190-0ecf4c83caf367bacce1ff992f27c812",
   "name": "sapper",
   "description": "The next small thing in web development, powered by Svelte",
   "dist-tags": {
-    "latest": "0.28.4",
+    "latest": "0.28.10",
     "alpha": "0.26.0-alpha.12"
   },
   "versions": {
@@ -19746,21 +19746,788 @@
         "tmp": "tmp/sapper_0.28.4_1599155994231_0.13268729389011202"
       },
       "_hasShrinkwrap": false
+    },
+    "0.28.5": {
+      "name": "sapper",
+      "version": "0.28.5",
+      "description": "The next small thing in web development, powered by Svelte",
+      "bin": {
+        "sapper": "sapper"
+      },
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {
+        "html-minifier": "^4.0.0",
+        "http-link-header": "^1.0.2",
+        "rollup-dependency-tree": "0.0.11",
+        "shimport": "^1.0.1",
+        "source-map": "^0.6.1",
+        "sourcemap-codec": "^1.4.6",
+        "string-hash": "^1.1.3"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.0.1",
+        "@rollup/plugin-replace": "^2.3.3",
+        "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.0.0",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^10.0.0",
+        "@types/puppeteer": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "cheap-watch": "^1.0.2",
+        "cookie": "^0.4.1",
+        "cross-env": "^7.0.2",
+        "devalue": "^2.0.0",
+        "eslint": "^7.1.0",
+        "eslint-import-resolver-typescript": "^2.2.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-svelte3": "^2.7.3",
+        "kleur": "^4.0.0",
+        "mime": "^2.4.4",
+        "mocha": "^8.0.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "polka": "^0.5.2",
+        "port-authority": "^1.0.5",
+        "pretty-bytes": "^5.3.0",
+        "puppeteer": "^5.0.0",
+        "require-relative": "^0.8.7",
+        "rollup": "^2.21.0",
+        "rollup-plugin-svelte": "^5.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sade": "^1.6.1",
+        "sirv": "^1.0.0",
+        "svelte": "^3.24.0",
+        "svelte-loader": "^2.13.6",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.38.0",
+        "webpack-format-messages": "^2.0.5",
+        "webpack-modules": "^1.0.0"
+      },
+      "peerDependencies": {
+        "svelte": "^3.17.3"
+      },
+      "scripts": {
+        "test": "mocha --config=.mocharc.yml",
+        "pretest": "npm run check",
+        "build": "rm -rf dist && rollup -c",
+        "check": "rm -rf dist && cross-env TS_CHECK_ENABLED=true rollup -c",
+        "lint": "eslint \"{src,runtime}/**/*.{ts,js}\"",
+        "prepare": "npm run build",
+        "dev": "rollup -cw",
+        "prepublishOnly": "npm test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sveltejs/sapper.git"
+      },
+      "keywords": [
+        "svelte",
+        "isomorphic",
+        "universal",
+        "template",
+        "express"
+      ],
+      "author": {
+        "name": "Rich Harris"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/sveltejs/sapper/issues"
+      },
+      "homepage": "https://github.com/sveltejs/sapper#readme",
+      "gitHead": "9d46899482fb4fb24f0327daa4bd7b1977dddcb0",
+      "_id": "sapper@0.28.5",
+      "_nodeVersion": "14.9.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-pR+HZ3no95VoYfzMWv3nVZQY7vwJXF4C/vTnqMDuu7iVPm8X03pKHoXLRJZ1bREeey6Xteq7Et3RbPeXKfg5Fg==",
+        "shasum": "6a220f64fcad0e0451a825e8efea3fb212e6fa29",
+        "tarball": "https://registry.npmjs.org/sapper/-/sapper-0.28.5.tgz",
+        "fileCount": 38,
+        "unpackedSize": 407235,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfVXC8CRA9TVsSAnZWagAAXkwQAJSslTFdlqdjybbC9zc9\nIjCHE56MUCa3I86Kk3sJa58E9n4Z1tmDMI4QH/AqrbEMPajJh9B5qyE81miH\n1DVdADiXv0rU9516a6C5yP8ra1fFry4xSkxma3nBVtQ82mwvKV/H20/sXMMO\nusor6cTG6zNNK92NlmKIcivAZexWn8lLO4RoaESoTkin71Dxd4IHOwmn8Shw\ndkZ78BG1Hh2hF+QSW3Ex20qiI9uLfvlhMI4SYlPHR3ZkaxV7HHDp60KDXg3j\nfsmbJeJlhvMHj36nsHHG4XhGsgvnJDYegn1iOzN3vtOyQ52h780U6CTKkFMm\nC/QNiklUNxSfgwUulpGv/5mmDpBIzKJfoAfqKy8VbSCvTUQqv+rZ3XeMXcLi\nhLohIbChYDQRADq2SJuV9XjeRZ6x2eAX+mOGqOxr39WgzXE4vQ1Ej1xWcIqv\niHYGit0jL0c1YeeJXMXHi4YKPbZxsoLDFgYENS3dYO7scthpCm7uspX+B/5O\nb7HRGyxVK/Rx7MmzuYWVTKg3AWtgOkLroNutKfSdw2i/psIJDu5X7M1Q6nga\nzIIrQYva84MYLJzOTLteMwQxb2ocS43RU5hJd6qjGqJv3iXQFJV2+GcFrAIJ\nW7MFMdapxYr1iB5AD+N2SONwGeK3MmXVl6l5cUlMT0DYY4Uk5IcurlBD7/dA\nTfLM\r\n=A5lA\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "npm@chor.date",
+          "name": "conduitry"
+        },
+        {
+          "email": "richard.a.harris@gmail.com",
+          "name": "rich_harris"
+        }
+      ],
+      "_npmUser": {
+        "name": "conduitry",
+        "email": "npm@chor.date"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sapper_0.28.5_1599434940261_0.7475949041587546"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.28.6": {
+      "name": "sapper",
+      "version": "0.28.6",
+      "description": "The next small thing in web development, powered by Svelte",
+      "bin": {
+        "sapper": "sapper"
+      },
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {
+        "html-minifier": "^4.0.0",
+        "http-link-header": "^1.0.2",
+        "shimport": "^1.0.1",
+        "source-map": "^0.6.1",
+        "sourcemap-codec": "^1.4.6",
+        "string-hash": "^1.1.3"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.0.1",
+        "@rollup/plugin-replace": "^2.3.3",
+        "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.0.0",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^10.0.0",
+        "@types/puppeteer": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "cheap-watch": "^1.0.2",
+        "cookie": "^0.4.1",
+        "cross-env": "^7.0.2",
+        "devalue": "^2.0.0",
+        "eslint": "^7.1.0",
+        "eslint-import-resolver-typescript": "^2.2.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-svelte3": "^2.7.3",
+        "kleur": "^4.0.0",
+        "mime": "^2.4.4",
+        "mocha": "^8.0.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "polka": "^0.5.2",
+        "port-authority": "^1.0.5",
+        "pretty-bytes": "^5.3.0",
+        "puppeteer": "^5.0.0",
+        "require-relative": "^0.8.7",
+        "rollup": "^2.21.0",
+        "rollup-dependency-tree": "0.0.14",
+        "rollup-plugin-svelte": "^5.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sade": "^1.6.1",
+        "sirv": "^1.0.0",
+        "svelte": "^3.24.0",
+        "svelte-loader": "^2.13.6",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.38.0",
+        "webpack-format-messages": "^2.0.5",
+        "webpack-modules": "^1.0.0"
+      },
+      "peerDependencies": {
+        "svelte": "^3.17.3"
+      },
+      "scripts": {
+        "test": "mocha --config=.mocharc.yml",
+        "pretest": "npm run check",
+        "build": "rm -rf dist && rollup -c",
+        "check": "rm -rf dist && cross-env TS_CHECK_ENABLED=true rollup -c",
+        "lint": "eslint \"{src,runtime}/**/*.{ts,js}\"",
+        "prepare": "npm run build",
+        "dev": "rollup -cw",
+        "prepublishOnly": "npm test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sveltejs/sapper.git"
+      },
+      "keywords": [
+        "svelte",
+        "isomorphic",
+        "universal",
+        "template",
+        "express"
+      ],
+      "author": {
+        "name": "Rich Harris"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/sveltejs/sapper/issues"
+      },
+      "homepage": "https://github.com/sveltejs/sapper#readme",
+      "gitHead": "86932d6bd8b5351f0d94ff34aeb9e1a1cb404f3b",
+      "_id": "sapper@0.28.6",
+      "_nodeVersion": "14.10.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-PLCZXBcXcL2ISBh+CqoUxcT0MwMnA8N71UDNhQig0Em5Z8vqg+g2jpKfYSnnyxqB5Plwc9LipN5ZJr42Vs4hXg==",
+        "shasum": "bf5438bdef430d6ff96aa98ef652b6c810382ba2",
+        "tarball": "https://registry.npmjs.org/sapper/-/sapper-0.28.6.tgz",
+        "fileCount": 38,
+        "unpackedSize": 411155,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfWNvrCRA9TVsSAnZWagAAoowP/j5ygQcF1UJDNqC7r3c7\n+4xtjuAUirVOIXvS/DerBzMWx+apLtQp75fVGMa9TwCY2ZbESoeuyPG8YPnv\nDlDTbUoNdrRikYnOB7bjn+LcmHXEBQK1t2c1xy8jpJGgVOd26k68Mzppv9Uw\nq/o1tBORu4wHc8ZhsZiO1czKDOe8UVKlU9SJxeSKgBZCunyHlQfjrUtaKP2T\n7WZycx1+UVY1cMHsh3EfnnYFYs5BH/7PKvwQtltcVBMcso3O5WMCsvD9+G07\n6xG4THRbVQMZSR/0NjzkpA/BfKZQ8BPnUTHr/gTZiwMu/i5cXX0YvWPdwZeC\nTjZ7jzJXhsr23m4am+3AovpFP6tgGzIq0u3i3nZIVfL3nKlbDiQtHasOBJlc\n5rMmC3z7B1HY5mG0DxUy0c5fgQVL4Ng5YNIcQ8bxfWZPhj2FdU5k3O9fxSmh\noMg+fsm9nnuf8R3jImX4/UqoGAPrlN51+aCJwf46UxiJGJoDcDqkQXBjjb+Z\ny+2mW3IkAvzd1xuPxXAljXu0tAVmdkGyNkPgAcD+zJqXDKXleHTW+bvx043e\n5IjYLW050Wm1AQ32ro+nRc5+jroDqFm7/QTj+xK0AXhKrAxS99HPE2ZGa1Te\nGODFmDzUzBXieW6Tx2xbYLn9HrGridBpQo9zXEIzES8yR62uV8UaW8QgRd6m\nfxeu\r\n=YU41\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "rich_harris",
+          "email": "richard.a.harris@gmail.com"
+        },
+        {
+          "name": "conduitry",
+          "email": "npm@chor.date"
+        }
+      ],
+      "_npmUser": {
+        "name": "conduitry",
+        "email": "npm@chor.date"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sapper_0.28.6_1599658987051_0.06633973323893172"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.28.7": {
+      "name": "sapper",
+      "version": "0.28.7",
+      "description": "The next small thing in web development, powered by Svelte",
+      "bin": {
+        "sapper": "sapper"
+      },
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {
+        "html-minifier": "^4.0.0",
+        "http-link-header": "^1.0.2",
+        "shimport": "^1.0.1",
+        "source-map": "^0.6.1",
+        "sourcemap-codec": "^1.4.6",
+        "string-hash": "^1.1.3"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.0.1",
+        "@rollup/plugin-replace": "^2.3.3",
+        "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.0.0",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^10.0.0",
+        "@types/puppeteer": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "cheap-watch": "^1.0.2",
+        "cookie": "^0.4.1",
+        "cross-env": "^7.0.2",
+        "devalue": "^2.0.0",
+        "eslint": "^7.1.0",
+        "eslint-import-resolver-typescript": "^2.2.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-svelte3": "^2.7.3",
+        "kleur": "^4.0.0",
+        "mime": "^2.4.4",
+        "mocha": "^8.0.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "polka": "^0.5.2",
+        "port-authority": "^1.0.5",
+        "pretty-bytes": "^5.3.0",
+        "puppeteer": "^5.0.0",
+        "require-relative": "^0.8.7",
+        "rollup": "^2.21.0",
+        "rollup-dependency-tree": "0.0.14",
+        "rollup-plugin-css-chunks": "^1.2.6",
+        "rollup-plugin-svelte": "^5.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sade": "^1.6.1",
+        "sirv": "^1.0.0",
+        "svelte": "^3.24.0",
+        "svelte-loader": "^2.13.6",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.38.0",
+        "webpack-format-messages": "^2.0.5",
+        "webpack-modules": "^1.0.0"
+      },
+      "peerDependencies": {
+        "svelte": "^3.17.3"
+      },
+      "scripts": {
+        "test": "mocha --config=.mocharc.yml",
+        "pretest": "npm run check",
+        "build": "rm -rf dist && rollup -c",
+        "check": "rm -rf dist && cross-env TS_CHECK_ENABLED=true rollup -c",
+        "lint": "eslint \"{src,runtime}/**/*.{ts,js}\"",
+        "prepare": "npm run build",
+        "dev": "rollup -cw",
+        "prepublishOnly": "npm test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sveltejs/sapper.git"
+      },
+      "keywords": [
+        "svelte",
+        "isomorphic",
+        "universal",
+        "template",
+        "express"
+      ],
+      "author": {
+        "name": "Rich Harris"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/sveltejs/sapper/issues"
+      },
+      "homepage": "https://github.com/sveltejs/sapper#readme",
+      "gitHead": "3c34399ebed6d8598c4cd9e15193edd27ad7b0b8",
+      "_id": "sapper@0.28.7",
+      "_nodeVersion": "14.10.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-/ijwEGHY2xpo9lDF5IUPaEfS00ekXOIZqo89QJoptn3K7K2SPYPjpLK76MasDa5FlIBhWeiUwg4W67X6O4goUw==",
+        "shasum": "cfc621ddeb513f8a3852e472a7ffbae9750f48ea",
+        "tarball": "https://registry.npmjs.org/sapper/-/sapper-0.28.7.tgz",
+        "fileCount": 38,
+        "unpackedSize": 520609,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfYTMdCRA9TVsSAnZWagAAgRkP/AxzJNOm2MJhV0TaTDwF\nye78Mzvyb/gsSG8ylIP6xpflciUnyALokYEyBS1qmtSsoQctodjOJqfXffAW\nj9+WpU7yK8AwV4gT9CwvMxyQDSx3D5j9khy/gmXoJK+iiml0nFlkIRdgKRaV\nVK/6+lbI1OIMvuwKIPJA9TClMXa27vb/C77rvI2C8MzXMpCTQ30FiWF/crhp\nJco9cjiJ4qSn4I2eF3Iy7LyzLsGZCH5L+EnLEHGCuQWPbcga/5LGg1nA/bZe\n2H7dXtC2hrpufgCPqRIWc2eR22+Gr+2LY5sDlJhdQW97eDWdzRMiP5wGJ5Ez\nIp8D5NbV2/CCilgvQ+39GoO/5G6bNuuRT/ag1BGddRTyVmV6fCDzD+7qdrnI\np1Oho2du5l/y3+ddfUfuEeqOLTQd8LEbJCEQg0tsBn2eLjVXrw0xIAQRIagY\nPgl9MwLGgH92StdDnVBpDJyQfBM9/+8f3kUac6g8/sGS+IhICy1XilkoQOr+\n7XxxQoXjt++g4+vY4g2HjQAzX5Wmv2n/kAwQ/rOBpJ3/3lR5phE3fuEri/f5\nkfa29PhJRrPHhAguzDbkPbnaYlIRRIh+j7q/WGgT8yfUhtW96ZwJ9ll17LZ8\nQtRMwX1u5O79QVxUTDg1sBy9T3o/Cmuybklav62BxyWIlJzOBejPMj9cji3v\nkni/\r\n=e//Z\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "rich_harris",
+          "email": "richard.a.harris@gmail.com"
+        },
+        {
+          "name": "conduitry",
+          "email": "npm@chor.date"
+        }
+      ],
+      "_npmUser": {
+        "name": "conduitry",
+        "email": "npm@chor.date"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sapper_0.28.7_1600205597232_0.9200814871836203"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.28.8": {
+      "name": "sapper",
+      "version": "0.28.8",
+      "description": "The next small thing in web development, powered by Svelte",
+      "bin": {
+        "sapper": "sapper"
+      },
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {
+        "html-minifier": "^4.0.0",
+        "http-link-header": "^1.0.2",
+        "shimport": "^2.0.3",
+        "source-map": "^0.6.1",
+        "sourcemap-codec": "^1.4.6",
+        "string-hash": "^1.1.3"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.0.1",
+        "@rollup/plugin-replace": "^2.3.3",
+        "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.0.0",
+        "@types/cookie": "^0.4.0",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^10.0.0",
+        "@types/node-fetch": "^2.5.7",
+        "@types/puppeteer": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "cheap-watch": "^1.0.2",
+        "cookie": "^0.4.1",
+        "cross-env": "^7.0.2",
+        "devalue": "^2.0.0",
+        "eslint": "^7.1.0",
+        "eslint-import-resolver-typescript": "^2.2.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-svelte3": "^2.7.3",
+        "kleur": "^4.0.0",
+        "mime": "^2.4.4",
+        "mocha": "^8.0.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "polka": "^0.5.2",
+        "port-authority": "^1.0.5",
+        "pretty-bytes": "^5.3.0",
+        "puppeteer": "^5.0.0",
+        "require-relative": "^0.8.7",
+        "rollup": "^2.21.0",
+        "rollup-dependency-tree": "0.0.14",
+        "rollup-plugin-css-chunks": "^1.2.6",
+        "rollup-plugin-svelte": "^5.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sade": "^1.6.1",
+        "sirv": "^1.0.0",
+        "svelte": "^3.24.0",
+        "svelte-loader": "^2.13.6",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.38.0",
+        "webpack-format-messages": "^2.0.5",
+        "webpack-modules": "^1.0.0"
+      },
+      "peerDependencies": {
+        "svelte": "^3.17.3"
+      },
+      "scripts": {
+        "test": "mocha --config=.mocharc.yml",
+        "pretest": "npm run check",
+        "build": "rm -rf dist && rollup -c",
+        "check": "rm -rf dist && cross-env TS_CHECK_ENABLED=true rollup -c",
+        "lint": "eslint \"{src,runtime}/**/*.{ts,js}\"",
+        "prepare": "npm run build",
+        "dev": "rollup -cw",
+        "prepublishOnly": "npm test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sveltejs/sapper.git"
+      },
+      "keywords": [
+        "svelte",
+        "isomorphic",
+        "universal",
+        "template",
+        "express"
+      ],
+      "author": {
+        "name": "Rich Harris"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/sveltejs/sapper/issues"
+      },
+      "homepage": "https://github.com/sveltejs/sapper#readme",
+      "gitHead": "bd46ad7b2ba965a695727f7e8e66b0c4d43a7248",
+      "_id": "sapper@0.28.8",
+      "_nodeVersion": "14.11.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-CLXI2mlTBWC5ztk8l/2bqJRvzWpkZzzCDJLPOHrvU3z5pfc2M4UlENMXACDLd8kf8vq3xmWnOfmO5MmhNyJB8w==",
+        "shasum": "90674bda8bbae3f6915688421ebbeb558c51af04",
+        "tarball": "https://registry.npmjs.org/sapper/-/sapper-0.28.8.tgz",
+        "fileCount": 38,
+        "unpackedSize": 521183,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfZ2sCCRA9TVsSAnZWagAAO8EQAJjjJMhfTf4yxit6Msxp\nQgTy3su6ThuwSSST/G8E2tA/0OGo3D2/I54zUg1bXeH/4ukKWdL+RG6kbI0i\n1Z8PFXceoEdGTnP9KWVIIWxxjU1dH80uhhvdU/rXeHAoOJ6h85oDi84hW3C0\nthQrogCzw3bMQhP8zKfRDzoR9b3vj7lx1XN25WvcWk+9VEBcSwx6lJ2ZsCjf\nT56FLQIeEVFXyCgaK7CdfqAoDTn4dDtxBu0jNJez7teYhV/1spSC70Kjde0t\nIbaSQ4TqaapHtLaUXP1igP4PJkCZRdf6Zow5HNK5NtDoTlDkLub1pbF/ZRXU\nb5X8dO9VbKyRg7kSBPYFfX6SaOC1OPpLl9Yx1gykhv6/lNSoz36qxIwyFPDX\nyiZ5268sgf9LMKgsPBEIuIU6vumhmAGbTykf7NITXwnpSe6u20Ud2wDyeWnc\nA/TIRVUYNjRHvg1Y4/rcKEUyZZpLlQb9x3widwz6TLRROFbt8RD0UDRVaXlM\n3hTuyuNpkSVbvSqS+PEHeqIt6jCeoPa2Uiec3vgu457L/tkE3Rl2NOmYXHJr\nR9Uc40mdC7/Vb+8vCXsxYcbwF5KF6v/5HSvI8DERTThDMlMVMYLKLwZwN46L\n2Dd/F62VU4gXWOl1VKM7CfZME47+3FQirtMFHTvW4c5oFxWoT5eOrea4sW9u\no5kr\r\n=ThcK\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "rich_harris",
+          "email": "richard.a.harris@gmail.com"
+        },
+        {
+          "name": "conduitry",
+          "email": "npm@chor.date"
+        }
+      ],
+      "_npmUser": {
+        "name": "conduitry",
+        "email": "npm@chor.date"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sapper_0.28.8_1600613121653_0.5257674380213804"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.28.9": {
+      "name": "sapper",
+      "version": "0.28.9",
+      "description": "The next small thing in web development, powered by Svelte",
+      "bin": {
+        "sapper": "sapper"
+      },
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {
+        "html-minifier": "^4.0.0",
+        "http-link-header": "^1.0.2",
+        "shimport": "^2.0.4",
+        "source-map": "^0.6.1",
+        "sourcemap-codec": "^1.4.6",
+        "string-hash": "^1.1.3"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.0.1",
+        "@rollup/plugin-replace": "^2.3.3",
+        "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.1.0",
+        "@types/cookie": "^0.4.0",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^10.0.0",
+        "@types/node-fetch": "^2.5.7",
+        "@types/puppeteer": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^3.0.2",
+        "@typescript-eslint/parser": "^3.0.2",
+        "cheap-watch": "^1.0.2",
+        "cookie": "^0.4.1",
+        "cross-env": "^7.0.2",
+        "devalue": "^2.0.0",
+        "eslint": "^7.1.0",
+        "eslint-import-resolver-typescript": "^2.2.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-svelte3": "^2.7.3",
+        "kleur": "^4.0.0",
+        "mime": "^2.4.4",
+        "mocha": "^8.0.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "polka": "^0.5.2",
+        "port-authority": "^1.0.5",
+        "pretty-bytes": "^5.3.0",
+        "puppeteer": "^5.0.0",
+        "require-relative": "^0.8.7",
+        "rollup": "^2.21.0",
+        "rollup-dependency-tree": "0.0.14",
+        "rollup-plugin-css-chunks": "^1.2.6",
+        "rollup-plugin-svelte": "^5.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sade": "^1.6.1",
+        "sirv": "^1.0.0",
+        "svelte": "^3.24.0",
+        "svelte-loader": "^2.13.6",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.38.0",
+        "webpack-format-messages": "^2.0.5",
+        "webpack-modules": "^1.0.0"
+      },
+      "peerDependencies": {
+        "svelte": "^3.17.3"
+      },
+      "scripts": {
+        "test": "mocha --config=.mocharc.yml",
+        "pretest": "npm run check",
+        "build": "rm -rf dist && rollup -c",
+        "check": "rm -rf dist && cross-env TS_CHECK_ENABLED=true rollup -c",
+        "lint": "eslint '{src,runtime}/**/*[!.d].{ts,js}'",
+        "prepare": "npm run build",
+        "dev": "rollup -cw",
+        "prepublishOnly": "npm test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sveltejs/sapper.git"
+      },
+      "keywords": [
+        "svelte",
+        "isomorphic",
+        "universal",
+        "template",
+        "express"
+      ],
+      "author": {
+        "name": "Rich Harris"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/sveltejs/sapper/issues"
+      },
+      "homepage": "https://github.com/sveltejs/sapper#readme",
+      "gitHead": "483bbaf206069f639e592d1adae391062b824b86",
+      "_id": "sapper@0.28.9",
+      "_nodeVersion": "14.12.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-ngowemh3h4wCKE+/EYCn0OZWhuavbqYnR9O2ZavFzdlszE5AznDXuQOwEgnX73U8hS4y9kN3kOudErYmKCjdDg==",
+        "shasum": "9e1f5813df3d8a432134d3cc86ce9582cd511668",
+        "tarball": "https://registry.npmjs.org/sapper/-/sapper-0.28.9.tgz",
+        "fileCount": 38,
+        "unpackedSize": 522877,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfbfMbCRA9TVsSAnZWagAAWpcP/2EailaJxR95Jb2NtKGD\nlvn5D2BSNToowMVlVunMdjSt7iHxvszQfirxiv+o1cjmXetidrnR4mBC75ln\nljDOQmVqtD8+xeACCfx3FCRDTk5qOdzCzCNrxD4V9sxIm06PgkTBCNeoM80r\nodYTUl0PLrfMJ1HO68JOhtdREkbY1ZF9zYSgjQWIndhUgOQ2LNLUJBDTv9D3\n6QSPNP6zjaYfbSnGnoEp243T+GwtbZ+WTp8oK0fe73HrMSYlwyq83H+gGKYa\n6Vcv0AoHJnH0vO2y4MXifQaEuk8DDz0Y7N499XqBrPYcayVQ1fq58nZqBJn4\n7g0TinEGPCy6Ul9f5FnxgjkBnmZ+HFi2x639MesHp4BPcoy62Q6YhVnCsy8d\n1fYcXnrJ5j7/VrEy+40rp8d7HxgX3UCDE+Iz3xbsJq+CEjhdxVNk1pvGjuUE\nPg0QVnznc/3jB+3RAc0/P9JHba/N+uX4fEove8CJ8MajLcZrc4G/hzaMmhMp\npF0Ie8wMZE1o2OgMUD3u+xrlR7l+AFdO4AlKTF12ziBeZJc2i8csS9CiAJr3\n0HI/Oi/pIzA4/x1aNLX67A0FMbuuzCIfw0tRN1c0QrOMiFbVElnjhLwP3wk/\nQUkJr2jS9BcvsDXgYkZzAOI3lOa+e57TQWr9KlTJbfASZe5k2Qy1XOYd4gqD\nM78R\r\n=HJEU\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "rich_harris",
+          "email": "richard.a.harris@gmail.com"
+        },
+        {
+          "name": "conduitry",
+          "email": "npm@chor.date"
+        }
+      ],
+      "_npmUser": {
+        "name": "conduitry",
+        "email": "npm@chor.date"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sapper_0.28.9_1601041179350_0.36348593949435504"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.28.10": {
+      "name": "sapper",
+      "version": "0.28.10",
+      "description": "The next small thing in web development, powered by Svelte",
+      "bin": {
+        "sapper": "sapper"
+      },
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {
+        "html-minifier": "^4.0.0",
+        "http-link-header": "^1.0.2",
+        "shimport": "^2.0.4",
+        "source-map": "^0.6.1",
+        "sourcemap-codec": "^1.4.6",
+        "string-hash": "^1.1.3"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^13.0.0",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^8.0.1",
+        "@rollup/plugin-replace": "^2.3.3",
+        "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.2.0",
+        "@types/cookie": "^0.4.0",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^10.0.0",
+        "@types/node-fetch": "^2.5.7",
+        "@types/puppeteer": "^3.0.1",
+        "@typescript-eslint/eslint-plugin": "^4.3.0",
+        "@typescript-eslint/parser": "^4.3.0",
+        "cheap-watch": "^1.0.2",
+        "cookie": "^0.4.1",
+        "cross-env": "^7.0.2",
+        "devalue": "^2.0.0",
+        "eslint": "^7.10.0",
+        "eslint-import-resolver-typescript": "^2.2.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-svelte3": "^2.7.3",
+        "kleur": "^4.0.0",
+        "mime": "^2.4.4",
+        "mocha": "^8.0.0",
+        "node-fetch": "^2.6.0",
+        "npm-run-all": "^4.1.5",
+        "polka": "^0.5.2",
+        "port-authority": "^1.0.5",
+        "pretty-bytes": "^5.3.0",
+        "puppeteer": "^5.0.0",
+        "require-relative": "^0.8.7",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.21.0",
+        "rollup-dependency-tree": "0.0.14",
+        "rollup-plugin-css-chunks": "^1.2.6",
+        "rollup-plugin-svelte": "^5.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "sade": "^1.6.1",
+        "sirv": "^1.0.0",
+        "svelte": "^3.24.0",
+        "svelte-loader": "^2.13.6",
+        "ts-node": "^8.10.2",
+        "tslib": "^2.0.0",
+        "typescript": "^3.9.7",
+        "webpack": "^4.38.0",
+        "webpack-format-messages": "^2.0.5",
+        "webpack-modules": "^1.0.0"
+      },
+      "peerDependencies": {
+        "svelte": "^3.17.3"
+      },
+      "scripts": {
+        "test": "mocha --config=.mocharc.yml",
+        "pretest": "npm run check",
+        "build": "rimraf dist && rollup -c",
+        "check": "rimraf dist && cross-env TS_CHECK_ENABLED=true rollup -c",
+        "lint": "eslint '{src,runtime,test}/**/*.{ts,js,svelte}' && cd site && npm run lint",
+        "prepare": "npm run build",
+        "dev": "rollup -cw",
+        "prepublishOnly": "npm test"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sveltejs/sapper.git"
+      },
+      "keywords": [
+        "svelte",
+        "isomorphic",
+        "universal",
+        "template",
+        "express"
+      ],
+      "author": {
+        "name": "Rich Harris"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/sveltejs/sapper/issues"
+      },
+      "homepage": "https://github.com/sveltejs/sapper#readme",
+      "gitHead": "5765f6a80b1f5e8a86c0ef154046ccdc5acbfbde",
+      "_id": "sapper@0.28.10",
+      "_nodeVersion": "14.13.0",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-Z6OpuDOHxiRHKd7JCjHaDe8uOM2fFZxpTLsj/0Ib4sM034xstEvNNUtdY7Pg/a85kP3cFCnkNiM1v7W37vzDGg==",
+        "shasum": "fa3341f8e04fba7bc8b6c5faedb6cff7c3ac406b",
+        "tarball": "https://registry.npmjs.org/sapper/-/sapper-0.28.10.tgz",
+        "fileCount": 38,
+        "unpackedSize": 524562,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfd5TBCRA9TVsSAnZWagAA1NgP/iNEWMbuTJ9Tpsu6XNWU\n8kRoinRO5gKVlrgEVcxX1IPAyoLS4AnsVUDMark1HF1sAepMyR8mFE3D22qw\nKIMOUykzZmFk7Fr5I/X+vhYiOPBM0w6ai5XOMOP0p6UG8yoig6wfyxyr1jCJ\n5W8hy+Tq0Z56vDWgnkrlnBylFLe2SMZgMpQEaUfjGxkKoGdCGtUSTg02krCf\nqdPD2UhuKkLuF6N035ZZ2b/bJ/R2BaJWxdVtNLZaN9xhtyvuIqEx1oj2SGPr\nxrjaqeuYmUPs2eco+TVDHU/tBfArP2AflQ2qNcK+LgI8uj1shSKCRSSSnsIu\nCqJWTz2ndfSiDZtt3BysQDq2gwWRKOncz3GxF1kNFWJKRb9JjFk17oz473fE\nhYrPlAi3sX7p5X2OAtye1FYrzOs7MocexlnsCf1iHs7lmxNBd6r36vZHpfuF\np/XI6Oej1/WbhCdfZBsV+TFiblHMhTeM/wzul2q+++sJkF+Kb9OrEfS8Oh9Y\nDr0HQg2TXDUI61iB0XZJtN2CrE2SROG3zaQpC/ImnH1HBSr3NELngagkZQ3e\nXIx6zCD4qyFIPgm86VX0dDPbIxTVmB90kpKMg5kcFEhPQoLicycGBoJynXp5\n1l4552L7WqlWyUuIv/Tk3Q73damH/gDwE7xx/febUxj98ayMcREmMlYdlefn\nbZdr\r\n=XusW\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "rich_harris",
+          "email": "richard.a.harris@gmail.com"
+        },
+        {
+          "name": "conduitry",
+          "email": "npm@chor.date"
+        }
+      ],
+      "_npmUser": {
+        "name": "conduitry",
+        "email": "npm@chor.date"
+      },
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sapper_0.28.10_1601672384553_0.2715025324042468"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "readme": "# sapper\n\n[The next small thing in web development, powered by Svelte.](https://sapper.svelte.dev)\n\n\n## What is Sapper?\n\nSapper is a framework for building high-performance universal web apps. [Read the guide](https://sapper.svelte.dev/docs) or the [introductory blog post](https://svelte.dev/blog/sapper-towards-the-ideal-web-app-framework) to learn more.\n\n\n## Get started\n\nClone the [starter project template](https://github.com/sveltejs/sapper-template) with [degit](https://github.com/rich-harris/degit)...\nWhen cloning you have to choose between rollup or webpack:\n\n```bash\nnpx degit \"sveltejs/sapper-template#rollup\" my-app\n# or: npx degit \"sveltejs/sapper-template#webpack\" my-app\n```\n\n...then install dependencies and start the dev server...\n\n```bash\ncd my-app\nnpm install\nnpm run dev\n```\n\n...and navigate to [localhost:3000](http://localhost:3000). To build and run in production mode:\n\n```bash\nnpm run build\nnpm start\n```\n\n## Development\n\nPull requests are encouraged and always welcome. [Pick an issue](https://github.com/sveltejs/sapper/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) and help us out!\n\nTo install and work on Sapper locally:\n\n```bash\ngit clone https://github.com/sveltejs/sapper.git\ncd sapper\nnpm install\nnpm run dev\n```\n\n### Linking to a Live Project\n\nYou can make changes locally to Sapper and test it against a local Sapper project. For a quick project that takes almost no setup, use the default [sapper-template](https://github.com/sveltejs/sapper-template) project. Instruction on setup are found in that project repository.\n\nTo link Sapper to your project, from the root of your local Sapper git checkout:\n\n```bash\ncd sapper\nnpm link\n```\n\nThen, to link from `sapper-template` (or any other given project):\n\n```bash\ncd sapper-template\nnpm link sapper\n```\n\nYou should be good to test changes locally.\n\n### Running Tests\n\n```bash\nnpm run test\n```\n\n## License\n\n[MIT](LICENSE)\n",
   "maintainers": [
     {
-      "email": "npm@chor.date",
-      "name": "conduitry"
+      "name": "rich_harris",
+      "email": "richard.a.harris@gmail.com"
     },
     {
-      "email": "richard.a.harris@gmail.com",
-      "name": "rich_harris"
+      "name": "conduitry",
+      "email": "npm@chor.date"
     }
   ],
   "time": {
-    "modified": "2020-09-03T17:59:56.834Z",
+    "modified": "2020-10-02T20:59:47.436Z",
     "created": "2017-12-11T13:57:27.531Z",
     "0.0.1": "2017-12-11T13:57:27.531Z",
     "0.0.2": "2017-12-11T18:11:16.593Z",
@@ -19943,7 +20710,13 @@
     "0.28.1": "2020-08-25T21:29:20.223Z",
     "0.28.2": "2020-08-26T18:41:43.754Z",
     "0.28.3": "2020-08-30T14:44:21.138Z",
-    "0.28.4": "2020-09-03T17:59:54.439Z"
+    "0.28.4": "2020-09-03T17:59:54.439Z",
+    "0.28.5": "2020-09-06T23:29:00.366Z",
+    "0.28.6": "2020-09-09T13:43:07.222Z",
+    "0.28.7": "2020-09-15T21:33:17.425Z",
+    "0.28.8": "2020-09-20T14:45:21.771Z",
+    "0.28.9": "2020-09-25T13:39:39.548Z",
+    "0.28.10": "2020-10-02T20:59:44.674Z"
   },
   "homepage": "https://github.com/sveltejs/sapper#readme",
   "keywords": [

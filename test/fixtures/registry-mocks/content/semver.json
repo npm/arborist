@@ -5144,7 +5144,5 @@
     "url": "https://github.com/npm/node-semver/issues"
   },
   "license": "ISC",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

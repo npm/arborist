@@ -208,6 +208,7 @@
       "_hasShrinkwrap": false
     }
   },
+  "readme": "# number-is-nan [![Build Status](https://travis-ci.org/sindresorhus/number-is-nan.svg?branch=master)](https://travis-ci.org/sindresorhus/number-is-nan)\n\n> ES2015 [`Number.isNaN()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN) [ponyfill](https://ponyfill.com)\n\n## Install\n\n```\n$ npm install number-is-nan\n```\n\n## Usage\n\n```js\nconst numberIsNan = require('number-is-nan');\n\nnumberIsNan(NaN);\n//=> true\n\nnumberIsNan('unicorn');\n//=> false\n```\n\n---\n\n<div align=\"center\">\n\t<b>\n\t\t<a href=\"https://tidelift.com/subscription/pkg/npm-number-is-nan?utm_source=npm-number-is-nan&utm_medium=referral&utm_campaign=readme\">Get professional support for this package with a Tidelift subscription</a>\n\t</b>\n\t<br>\n\t<sub>\n\t\tTidelift helps make open source sustainable for maintainers while giving companies<br>assurances about security, maintenance, and licensing for their dependencies.\n\t</sub>\n</div>\n",
   "maintainers": [
     {
       "name": "sindresorhus",

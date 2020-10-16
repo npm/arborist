@@ -4399,7 +4399,5 @@
   "bugs": {
     "url": "https://github.com/uuidjs/uuid/issues"
   },
-  "license": "MIT",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "MIT"
 }

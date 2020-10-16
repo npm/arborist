@@ -2491,7 +2491,5 @@
     "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-object-rest-spread"
   },
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

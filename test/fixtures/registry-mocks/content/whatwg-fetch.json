@@ -1,10 +1,10 @@
 {
   "_id": "whatwg-fetch",
-  "_rev": "181-d620dae7da683c9824e962e15e37ae2b",
+  "_rev": "189-5d3e1768430584bafdbeaf6cbc4af28f",
   "name": "whatwg-fetch",
   "description": "A window.fetch polyfill.",
   "dist-tags": {
-    "latest": "3.0.0"
+    "latest": "3.4.1"
   },
   "versions": {
     "0.5.0": {
@@ -1185,8 +1185,625 @@
         "tmp": "tmp/whatwg-fetch_3.0.0_1536567101178_0.015735020964251056"
       },
       "_hasShrinkwrap": false
+    },
+    "3.1.0": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.1.0",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "923ed30e086ae7192917e3a6dc4e0478646ad0ea",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.1.0",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-pgmbsVWKpH9GxLXZmtdowDIqtb/rvPyjjQv3z9wLcmgWKFHilKnZD3ldgrOlwJoPGOUluQsRPWd52yVkPfmI1A==",
+        "shasum": "49d630cdfa308dba7f2819d49d09364f540dbcc6",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.1.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 49781,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+fiFCRA9TVsSAnZWagAA2AcP/3bk5WHTZuQKRFwsK2mG\nU3pSv3JUQhAFs7A4FVyFlq7ZkG98C5F5eCIxtE1bnK6LX8j/nKgWPlL0AHmk\n619EEmijUMCEAtCb6Lz5st4g0BDHP1CFFly7X8JR3TVciyI5C6RN6HRrg08b\niBFs1HFb7ff5hWa9nS5rZl3NONAuX3B0OKK1OgrMSXyJgBJPiC0ZvfwOelOa\nPFeJFuQbxv5JYul+tOIK6kuh0WEcPr2Hjcq0s4rsGpZytQU/QVQKRXvy/Evl\nAyockpyPecOZFjmqNcB6TRz2w0zdftow4wG6aHdTZ2aX2PuYgyqTCJrslTEj\nmQukCEQlXgKS+ZnG2G+N7x+nfMduGds7bh9rl45YJj5d/4SSOy9cUMDy2yrE\nYWZHbfYY6hw0wdEZ4s+DpHzxWgr3+HKR1/ymB2Zz7LRPXaxynvCofaA0shfK\nwAaqobn+rVDcZIuV2RcFgLF9j1q8UdXCZYp3upxCZwN+qIlAfTc+1pCS/XHz\nHlBpvvPp7NLUAF7Onmc9Bf3gMAySJDJ6OEzo7o8ToZBpgcJ0NDqJbjfB1VmP\nEZAqtui6+9sh2Yua80PV/J588tDDBoyzrEW4EWv8eZHUaA+gG5DwNCJXN96/\nhKj2cFTMEfoWLAchcr6v4wtHVqUundnfU1Di6Qeq2c8VlROwrbc63HyeEkUc\nA4Ur\r\n=Oiqb\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.1.0_1593440388926_0.4988777581892452"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.0.1": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.0.1",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "a29c40a4262d1824f8771fca34bc632218b5bb8a",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.0.1",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-gPeS9Ef8bSigQwAZiSbQyyU/sBQP1Qo6r112A2shGw5B6+4YT1D8O0oXXwF3zgXXLrrfxbIeP8fM3JmsoWU4Vw==",
+        "shasum": "7bc7ece49fd5bb50b75056df38578b8f29fd5019",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.0.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 49877,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfBfiACRA9TVsSAnZWagAATBEP/3duRQjeyZXt7jvp70su\nN/14k4awqdF/hNPk8B9rXyhTt5iT3pYvkagDCDCHcGebfmE9LkOGbCK9i/Wb\nHYAEsPxKM/hnezE+Hsp1k0oFTu3GzV7JMmB7FYE+LcRTtHQ9r8kBozHxMP+r\niH/mvcqG0kjOLCBlWBO414KPauckwQVDeVU0IhgT24KLuIJZEG2BQGMrGMbE\n30L4kPMFbN8sWhyq4e+QxFCHfv5TyEUQ82bZxNkOBKjqojDh0kFP2vRt71Id\nCfLxeJsd3Pkid0IgPzIIt1VUJ1Xv2HKZZCVD/wiaW2v/lTasmpEI0I/oOf1p\nFZcM1TYm3R1QQ0q0vr2SHD1g4QJ1MnINEOnlt/KFXCwMCjH0HRWWx2I7h/FQ\nUNQjP9Bv+0ECIfgom+jQPm5CtbIXtOntvooyX5Yg6XKKZ7aWklid6RHdTRpU\nBg+d8AGmfNRc3QGWS+Mh+ZuuxTHbgqmhdZJ36y4C8Lc0ejkCgXtIAXZc4dKo\nfsvZ2nLvdoJomh8BQ3fIT518SCrNpKWj6u03TcyDu0vgA7wm67mk/qgEgBx3\nNvgDbSDvSKNFt1Jt4GBQx2Q4b2OEIDKE3o7vgbitaJg4OwTJDKv2iNW7oJHz\nkeUbqDmmrSXu83lbFvWfsVQ8/qrQ3k5yCkkmE4dCaJYws969TjXgH1cU90pv\ntOtv\r\n=fAVr\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.0.1_1594226816242_0.2509392416705656"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.1.1": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.1.1",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "44a7e5e65dfdb8c6c6bb6bf49dc088f6fc02ad12",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.1.1",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-UlBvc5VApYAwNutfXFeuC9Jp3QCMazcqobfNqSK/RghRr3F8b0+i/QELUlEPsHjDHfijio6H5KPJcZwYXhuZsA==",
+        "shasum": "03f6b16271619003a5d42c1f14026523787a931e",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.1.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 49877,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfBfj+CRA9TVsSAnZWagAA4s4QAJ8nfmGgQ0Xf7jdpLpj9\nHPMr1JSYDAM5OgVYL6JaFPihie2SRfi5Tp/fUSJLsPaYhfyHkBa+BVtVtDop\nzw5z557AYqWV37d0taLYNSvUJ0OzRiEdzZhLcBh61fdQ7Xphb9cVkR5Kkwgr\n4Uu0nzYj0oEefAmMf68XEk4fTD52fIgDy6MjhxZgFBX6dIFZiZo1ptng/IlL\nW5VfUyCrDDYDoLd4xAnix4qGTL68GAUtd4aUrgohfLwqw77StQMVksO6r/D8\nDKmqiaUtTAq3a9lqsqIEr49aLIPLt/d/PnZ6Q5vFx830LAaPjVdRMaPm1y4B\nTRZPeGoQCGgWne/rhDymWC0oI8uS4NPRMydd9A6UM4EZYcPIT1s9GL7SiklH\nGPiyfXldDwxZdE+BYp7ZkYnB1ML+mbgHf9gL+Yz1U/2CzhRSo+LfOSMxozDS\ngJtPN9Fxj5ro3l7SFktxT8IEnvLJLQTPNYShJzWwiNPUR2lBGI8OGbL8ODKW\nbTZ3UO5YMrNuHnums+28iDoVSwbKRhX3YjRi/LPYJN+zQO2jXsKFvL5r4TjV\niKTeRBItLnb7SKdDeZSbsjLjO6+6zWRZura29DGbzkI8TDzvQP+g7oFnMML9\nKtf74XXyXXdnTGekO7fA1B4+mW1JYncy1pded7ZbLdG6s/FX+cMqK6tMMpUI\nvWJA\r\n=aWVj\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.1.1_1594226941901_0.5824695193300178"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.2.0": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.2.0",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "fdd09e278b1cf4625a876fc0edabcec391051850",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.2.0",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-SdGPoQMMnzVYThUbSrEvqTlkvC1Ux27NehaJ/GUHBfNrh5Mjg+1/uRyFMwVnxO2MrikMWvWAqUGgQOfVU4hT7w==",
+        "shasum": "8e134f701f0a4ab5fda82626f113e2b647fd16dc",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.2.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 51553,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfBzn4CRA9TVsSAnZWagAAdDIP/0ophxRDep6QhHcEcDQg\nu0jnQLBLPbTM94sYC84gNQfTbSHtOJGqQ3LIR0XJDbN5QqL+XVD6aeU1m4j4\ntF9yI0i4IUBF++ksJxbml1OFs6t6dMUPDMbcR8kIWWzxBoBIGrr932pPB5w1\n/dCqpjisTJRwMY9rxHSHX7p3L0BVyZiaImn9tuKbTb2yZmI1ttN3sEB3vBAV\nytsDabHTsQdhExXKVoCzZcw9hjrfdojvQMaZJPnx9hB+Ca3AkJEvMV2mG55f\n75hm3XCGABWmTuGH+4QGCWxkCBDFwvGxbyqnNB5Q08vnuyMmDt7IaEKp4S9J\nCeNrKn4hgbGi6SA+dXFieSAdyJpBevpPp6QmZna3KR4TiEAnsD8o+jfay3Yu\nAaozP1KPdmE1DWYXYRT94GAxFB9PriaafgIfyiprzjbetJyovdlavv06C/i+\na2NDeqtYBHCg5Yl6ORK8x6zdP95KxywDcXfegR/az12ksr6yd/CTHpR5wsmb\nnG1EhO3FbEwqRKZMzrbPjvv6YZOruZZ7BzstfvzLDum23F4E2H6fUVJFy4st\nvCyvxtxjbFfHThffOaqm7IpSWD5FRZfTJzacpvSzSzRKc1YGhvxonuWzgIin\nuoxqno7VeY5vfvVW8GsYj2XCDOVtSJu4aG0ec6YipCPVoEW6tSr7f9G3kOWs\ngdoD\r\n=KNkk\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.2.0_1594309111715_0.07137283376216486"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.3.0": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.3.0",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "573c5d4669be8fefd243b03b4c6dbd098605b63a",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.3.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-5nvoOtuhyA2mOH0prcVbqDO2DVZV5g+m4hKjiLkTFdLkytlG/UPv9UYa79BzAm872mRerUOPZxVtQevATN3b/w==",
+        "shasum": "b316f34303bf983439b93c6582157f81bd786110",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.3.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 53909,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfKUO2CRA9TVsSAnZWagAAj3UP+wVgMC4x7tpc8E8Q04W7\n8YDMe8jyFTgpPoJYfBVO/cJJpNUnvBJxS5JOobaB62dV/vpZGbRgVb8ugmSz\ndWytYcfqJdc8rPqrgZuKpLBMrQUDxL6AfdmuqMdGBjbrfRMqmDnP/vYNJzFR\nF+27mYxlDkvb+V5EIvYWnQp8tfGsXyjYzdBatDEzZ19KgI7bQhqbKKvjAFzd\nPHz+kU3BOWse7HsGNBr4zheSDvRSlOJrr98+pNg1zqbB+7VGu+Dq2Sbpi/2x\nmzwyvNgBQG+OEu5lO5eo4yOfk3mrkSX270j/Fe5u7yYsSYFJOcVllvzTbQX/\nL+iSVz6dHnBKKqv1nibTRkaUz0EDwj0/bin90TBMptZSI81fGF3wDqPy+UCd\nNxr+VpaLTRdHbASL9tlcp2nMF6SYAFh+F2R6a3eLVM4cy7Ej0btRfA9otfin\nZGnSkkXvsQzc+WFMiVSaqbqt5BlJy2dAiO1y2sus8zbxlQ46r1KhGda8Z8BB\nXuJF/np5yDpB6WkBanpxyFhqcb9HzVUe61Z2UwvO2SNgB8omtezdbvTsr8Gr\nmyfaRckxWN4o5xQ8BXZJ8YpfwNwQJvC0beY+rFn+W9QvgVwL3yp6G0hG+iwd\nHF2WzYkwTXtMCD8eLM44eiz9XEGndqhZbRJzO/Es+naUEugkYcXe5arfSP3x\nkpgK\r\n=oxTE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.3.0_1596539830156_0.7732149481926978"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.3.1": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.3.1",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "3129f89925d271c2f2223f855ebd79038c424284",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.3.1",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-faXTmGDcLuEPBpJwb5LQfyxvubKiE+RlbmmweFGKjvIPFj4uHTTfdtTIkdTRhC6OSH9S9eyYbx8kZ0UEaQqYTA==",
+        "shasum": "6c1acf37dec176b0fd6bc9a74b616bec2f612935",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.3.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 53920,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfKUeTCRA9TVsSAnZWagAAMHQP/2Nxf/alwEpQX9KgNbeb\ng9sVpIRVrnT3Oekfy9HWWTtE/leDBayTcy4UbXV6jqXMLzDPHkQNPp/h9pZJ\nyp2TDqdTUYM8wnD6J2/QZ42nQ6FnM8eWpsZGlRW2UQPPf9iZeZeruK+bhTTJ\nHiXnukuzVir6hFE5fCbHv2KImz6Z8AraIbpmtgIDxCB/lIWZamr3dP81JJsU\noNhOvGQzMByx4pXfWTKN4d8vwvv2KDP9Fyk8dRwLnx1pBMFeZIP7Q/86KT3r\n0NIKU+aj6RZkBtTnwEAUPPLAQjPtho7DM8MuIMnLMUrOaMCxGiSw9TGcWUGb\nlzXAxtO0lbCngTiVrs58cFQLT2gaKFwHCxxq3HUNp7pvlXZdIQRPdcDpgzdG\ndi25eWpj49XYcy/AM57icis/G11KataIol2j5TbWXfEe0rbkpQVsut03YFdz\nA9F8J1xVbNum7SqFWwARiVbNrSnk1mCZN1xmVDjfzMn6VPjRqQ797eUrTKTM\njTJBCmVx7vhvJW9WG3wktCcNXLxzoVnHmm0cl6fgV4qZcqJXAmeRDUHW0g+3\nVCfq3L4j/F8ubaq/M6G33Cy1odfek2B3BjCF75z1rUwc2gKBSNdvj65xPz7K\ncgm+TPWAn7q02W4G1JT8WDuBdYTWy+GqPALJUmLNqVsixDsFoOoeCZzHboJX\n+SBB\r\n=apXT\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.3.1_1596540818630_0.33674305741137744"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.4.0": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.4.0",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "99b26818147a4288429fcd96421cf038dccbc1ac",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.4.0",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-rsum2ulz2iuZH08mJkT0Yi6JnKhwdw4oeyMjokgxd+mmqYSd9cPpOQf01TIWgjxG/U4+QR+AwKq6lSbXVxkyoQ==",
+        "shasum": "e11de14f4878f773fbebcde8871b2c0699af8b30",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.4.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 54044,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfLXt2CRA9TVsSAnZWagAAmwgQAJ2cjhR45ay3zcKzlN1k\nQUPd2aX6ONNSnWf/j5xgKCcxA7V/WrnEmv5eI9dUnEUqoeCdfeRRPDwttQcU\nrmCoCRi1GzZG1m3AxFBIIEwws9bs89CimwBt2Z1A35hOVSF44gsW0kKnUuhk\nJBwU3l1pVT9fkIf1382GFG64OBnNfBq2b219EL68sZhSY+f0rFVvY/I+tuI5\n0HUAL+ld9BimReRUTswL/WUz2jUBiQt2sWwMDX/+nHG3K+eb67S97VIW09fk\n/6UCru5hMxO+hs5m/3NKww4juRr6F+cVoxaWr6bKeKDsx7IrV0OaJd72FOte\nUP1Rh7j8khdTTfg0a5sPH7SOoRuw4wzeNZHBn1kh80e2ix2dWRKeGDA0pnIR\nduVhxHluDRsBfi5HY9FmPGnIXn2RI5QRmCUlOO88N+FFPpGFoZSbpCYXnU7a\nL/VeLUPflEweo4tIqWmlJOmCdJFhY0QAiAHlSTQycFGlXdOuND+gE2u+6Rih\nmiFO5cFZnQX8bbXxTDWAdnUoQNQwgOYForw+ZUmBHoI8QrVBPqqM/G33TjAl\nUCNKcCEDaRspj8SJigtavYpn7/OqnQN+uXsF6wqB4kZRzK5J3a18z2MuqP6q\nH+zfFZfGM6vElGSeawzju6wctb9uPT3Ulf80VcwaOkXJltjeEReM7McRHCgL\ndbHY\r\n=ro38\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.4.0_1596816246446_0.3125195782599537"
+      },
+      "_hasShrinkwrap": false
+    },
+    "3.4.1": {
+      "name": "whatwg-fetch",
+      "description": "A window.fetch polyfill.",
+      "version": "3.4.1",
+      "main": "./dist/fetch.umd.js",
+      "module": "./fetch.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/github/fetch.git"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "abortcontroller-polyfill": "^1.1.9",
+        "chai": "^4.1.2",
+        "eslint": "^4.19.1",
+        "eslint-plugin-github": "^1.6.0",
+        "karma": "^3.0.0",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-detect-browsers": "^2.3.2",
+        "karma-firefox-launcher": "^1.1.0",
+        "karma-mocha": "^1.3.0",
+        "karma-safari-launcher": "^1.0.0",
+        "karma-safaritechpreview-launcher": "0.0.6",
+        "mocha": "^4.0.1",
+        "prettier": "^1.19.1",
+        "promise-polyfill": "6.0.2",
+        "rollup": "^0.59.1",
+        "url-search-params": "0.6.1"
+      },
+      "scripts": {
+        "karma": "karma start ./test/karma.config.js --no-single-run --auto-watch",
+        "prepare": "make dist/fetch.umd.js dist/fetch.umd.js.flow",
+        "pretest": "make",
+        "test": "karma start ./test/karma.config.js && karma start ./test/karma-worker.config.js"
+      },
+      "gitHead": "5e3aa109b5d23a982c4a01718469e2c63bc6815f",
+      "bugs": {
+        "url": "https://github.com/github/fetch/issues"
+      },
+      "homepage": "https://github.com/github/fetch#readme",
+      "_id": "whatwg-fetch@3.4.1",
+      "_nodeVersion": "14.5.0",
+      "_npmVersion": "6.14.5",
+      "dist": {
+        "integrity": "sha512-sofZVzE1wKwO+EYPbWfiwzaKovWiZXf4coEzjGP9b2GBVgQRLQUZ2QcuPpQExGDAW5GItpEm6Tl4OU5mywnAoQ==",
+        "shasum": "e5f871572d6879663fa5674c8f833f15a8425ab3",
+        "tarball": "https://registry.npmjs.org/whatwg-fetch/-/whatwg-fetch-3.4.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 54044,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfVgyPCRA9TVsSAnZWagAAKlgP/1+vAgXkFL8cRLIsZkdz\neVPAYK1gnaXslt7H3TAFXyAfeGlNF3t5e+zX1H80rVI7AHyx+qwd5QtPurSY\nCC86s2ntNmuzqw/hNR62KRo0nFxvuJGQREFqns7Y4yZorj36ddxWMNukDw91\nl9CYt+5SNYM3XuFYvHz6ZM5uvSY0uJ/R/GqN85KJHFhTHOHDQppui9dIUYg5\nt1hKsockahQOs2/bOy+9PuLaBrt/QUh9sDTxVJ8HCPlnZp9a32VOloFzSjyl\nHgNZcfV/S12QH7zncs65lC2fp0KoNZokkQ6/ocxqs4spfhufnKl0L4vLpqrI\nhq6bcAYzLT3+PQUDLMeQ+e+ku+IiSDMVTuBp645EgbIdAtG0ixfKjOx92DjB\n8ugrIytpUYc/3bukkrgK+YY3V05jwzEZOHIqbs2BuFtGO24KwhxhynrKjh2H\nEMc8END+/xp0vysi2B2230oA+qh2pjHiWMQANKrRTvsFZO4JU/UhABAfQ4dI\nZsYqaXki/20pt61a7EnVO25sF0+p5f/Hn3gu0bOw7dEPD6HCimTrCAZYPMWR\nsN2qpKgZRgf64plCHbqehcaC3h1BxbL8VLtKD6Yl1Ks2uZYh4NsjxLfsAThd\nBmZcC/g/v8Mmyl1cc64KTHY/Nqlcjth5+98QDcNXoPjnOFZvHdq2/tUkuNgB\nF/nY\r\n=/zXe\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "me@jakechampion.name",
+          "name": "jakechampion"
+        },
+        {
+          "email": "matt@mattandre.ws",
+          "name": "mattandrews"
+        },
+        {
+          "email": "mislav.marohnic@gmail.com",
+          "name": "mislav"
+        }
+      ],
+      "_npmUser": {
+        "name": "jakechampion",
+        "email": "me@jakechampion.name"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/whatwg-fetch_3.4.1_1599474831287_0.8448104967269745"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "# window.fetch polyfill\n\nThe `fetch()` function is a Promise-based mechanism for programmatically making\nweb requests in the browser. This project is a polyfill that implements a subset\nof the standard [Fetch specification][], enough to make `fetch` a viable\nreplacement for most uses of XMLHttpRequest in traditional web applications.\n\n## Table of Contents\n\n* [Read this first](#read-this-first)\n* [Installation](#installation)\n* [Usage](#usage)\n  * [Importing](#importing)\n  * [HTML](#html)\n  * [JSON](#json)\n  * [Response metadata](#response-metadata)\n  * [Post form](#post-form)\n  * [Post JSON](#post-json)\n  * [File upload](#file-upload)\n  * [Caveats](#caveats)\n    * [Handling HTTP error statuses](#handling-http-error-statuses)\n    * [Sending cookies](#sending-cookies)\n    * [Receiving cookies](#receiving-cookies)\n    * [Redirect modes](#redirect-modes)\n    * [Obtaining the Response URL](#obtaining-the-response-url)\n    * [Aborting requests](#aborting-requests)\n* [Browser Support](#browser-support)\n\n## Read this first\n\n* If you believe you found a bug with how `fetch` behaves in your browser,\n  please **don't open an issue in this repository** unless you are testing in\n  an old version of a browser that doesn't support `window.fetch` natively.\n  Make sure you read this _entire_ readme, especially the [Caveats](#caveats)\n  section, as there's probably a known work-around for an issue you've found.\n  This project is a _polyfill_, and since all modern browsers now implement the\n  `fetch` function natively, **no code from this project** actually takes any\n  effect there. See [Browser support](#browser-support) for detailed\n  information.\n\n* If you have trouble **making a request to another domain** (a different\n  subdomain or port number also constitutes another domain), please familiarize\n  yourself with all the intricacies and limitations of [CORS][] requests.\n  Because CORS requires participation of the server by implementing specific\n  HTTP response headers, it is often nontrivial to set up or debug. CORS is\n  exclusively handled by the browser's internal mechanisms which this polyfill\n  cannot influence.\n\n* This project **doesn't work under Node.js environments**. It's meant for web\n  browsers only. You should ensure that your application doesn't try to package\n  and run this on the server.\n\n* If you have an idea for a new feature of `fetch`, **submit your feature\n  requests** to the [specification's repository](https://github.com/whatwg/fetch/issues).\n  We only add features and APIs that are part of the [Fetch specification][].\n\n## Installation\n\n```\nnpm install whatwg-fetch --save\n```\n\nAs an alternative to using npm, you can obtain `fetch.umd.js` from the\n[Releases][] section. The UMD distribution is compatible with AMD and CommonJS\nmodule loaders, as well as loading directly into a page via `<script>` tag.\n\nYou will also need a Promise polyfill for [older browsers](http://caniuse.com/#feat=promises).\nWe recommend [taylorhakes/promise-polyfill](https://github.com/taylorhakes/promise-polyfill)\nfor its small size and Promises/A+ compatibility.\n\n## Usage\n\nFor a more comprehensive API reference that this polyfill supports, refer to\nhttps://github.github.io/fetch/.\n\n### Importing\n\nImporting will automatically polyfill `window.fetch` and related APIs:\n\n```javascript\nimport 'whatwg-fetch'\n\nwindow.fetch(...)\n```\n\nIf for some reason you need to access the polyfill implementation, it is\navailable via exports:\n\n```javascript\nimport {fetch as fetchPolyfill} from 'whatwg-fetch'\n\nwindow.fetch(...)   // use native browser version\nfetchPolyfill(...)  // use polyfill implementation\n```\n\nThis approach can be used to, for example, use [abort\nfunctionality](#aborting-requests) in browsers that implement a native but\noutdated version of fetch that doesn't support aborting.\n\nFor use with webpack, add this package in the `entry` configuration option\nbefore your application entry point:\n\n```javascript\nentry: ['whatwg-fetch', ...]\n```\n\n### HTML\n\n```javascript\nfetch('/users.html')\n  .then(function(response) {\n    return response.text()\n  }).then(function(body) {\n    document.body.innerHTML = body\n  })\n```\n\n### JSON\n\n```javascript\nfetch('/users.json')\n  .then(function(response) {\n    return response.json()\n  }).then(function(json) {\n    console.log('parsed json', json)\n  }).catch(function(ex) {\n    console.log('parsing failed', ex)\n  })\n```\n\n### Response metadata\n\n```javascript\nfetch('/users.json').then(function(response) {\n  console.log(response.headers.get('Content-Type'))\n  console.log(response.headers.get('Date'))\n  console.log(response.status)\n  console.log(response.statusText)\n})\n```\n\n### Post form\n\n```javascript\nvar form = document.querySelector('form')\n\nfetch('/users', {\n  method: 'POST',\n  body: new FormData(form)\n})\n```\n\n### Post JSON\n\n```javascript\nfetch('/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    name: 'Hubot',\n    login: 'hubot',\n  })\n})\n```\n\n### File upload\n\n```javascript\nvar input = document.querySelector('input[type=\"file\"]')\n\nvar data = new FormData()\ndata.append('file', input.files[0])\ndata.append('user', 'hubot')\n\nfetch('/avatars', {\n  method: 'POST',\n  body: data\n})\n```\n\n### Caveats\n\n* The Promise returned from `fetch()` **won't reject on HTTP error status**\n  even if the response is an HTTP 404 or 500. Instead, it will resolve normally,\n  and it will only reject on network failure or if anything prevented the\n  request from completing.\n\n* For maximum browser compatibility when it comes to sending & receiving\n  cookies, always supply the `credentials: 'same-origin'` option instead of\n  relying on the default. See [Sending cookies](#sending-cookies).\n\n* Not all Fetch standard options are supported in this polyfill. For instance,\n  [`redirect`](#redirect-modes) and\n  [`cache`](https://github.github.io/fetch/#caveats) directives are ignored.\n  \n* `keepalive` is not supported because it would involve making a synchronous XHR, which is something this project is not willing to do. See [issue #700](https://github.com/github/fetch/issues/700#issuecomment-484188326) for more information.\n\n#### Handling HTTP error statuses\n\nTo have `fetch` Promise reject on HTTP error statuses, i.e. on any non-2xx\nstatus, define a custom response handler:\n\n```javascript\nfunction checkStatus(response) {\n  if (response.status >= 200 && response.status < 300) {\n    return response\n  } else {\n    var error = new Error(response.statusText)\n    error.response = response\n    throw error\n  }\n}\n\nfunction parseJSON(response) {\n  return response.json()\n}\n\nfetch('/users')\n  .then(checkStatus)\n  .then(parseJSON)\n  .then(function(data) {\n    console.log('request succeeded with JSON response', data)\n  }).catch(function(error) {\n    console.log('request failed', error)\n  })\n```\n\n#### Sending cookies\n\nFor [CORS][] requests, use `credentials: 'include'` to allow sending credentials\nto other domains:\n\n```javascript\nfetch('https://example.com:1234/users', {\n  credentials: 'include'\n})\n```\n\nThe default value for `credentials` is \"same-origin\".\n\nThe default for `credentials` wasn't always the same, though. The following\nversions of browsers implemented an older version of the fetch specification\nwhere the default was \"omit\":\n\n* Firefox 39-60\n* Chrome 42-67\n* Safari 10.1-11.1.2\n\nIf you target these browsers, it's advisable to always specify `credentials:\n'same-origin'` explicitly with all fetch requests instead of relying on the\ndefault:\n\n```javascript\nfetch('/users', {\n  credentials: 'same-origin'\n})\n```\n\nNote: due to [limitations of\nXMLHttpRequest](https://github.com/github/fetch/pull/56#issuecomment-68835992),\nusing `credentials: 'omit'` is not respected for same domains in browsers where\nthis polyfill is active. Cookies will always be sent to same domains in older\nbrowsers.\n\n#### Receiving cookies\n\nAs with XMLHttpRequest, the `Set-Cookie` response header returned from the\nserver is a [forbidden header name][] and therefore can't be programmatically\nread with `response.headers.get()`. Instead, it's the browser's responsibility\nto handle new cookies being set (if applicable to the current URL). Unless they\nare HTTP-only, new cookies will be available through `document.cookie`.\n\n#### Redirect modes\n\nThe Fetch specification defines these values for [the `redirect`\noption](https://fetch.spec.whatwg.org/#concept-request-redirect-mode): \"follow\"\n(the default), \"error\", and \"manual\".\n\nDue to limitations of XMLHttpRequest, only the \"follow\" mode is available in\nbrowsers where this polyfill is active.\n\n#### Obtaining the Response URL\n\nDue to limitations of XMLHttpRequest, the `response.url` value might not be\nreliable after HTTP redirects on older browsers.\n\nThe solution is to configure the server to set the response HTTP header\n`X-Request-URL` to the current URL after any redirect that might have happened.\nIt should be safe to set it unconditionally.\n\n``` ruby\n# Ruby on Rails controller example\nresponse.headers['X-Request-URL'] = request.url\n```\n\nThis server workaround is necessary if you need reliable `response.url` in\nFirefox < 32, Chrome < 37, Safari, or IE.\n\n#### Aborting requests\n\nThis polyfill supports\n[the abortable fetch API](https://developers.google.com/web/updates/2017/09/abortable-fetch).\nHowever, aborting a fetch requires use of two additional DOM APIs:\n[AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) and\n[AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal).\nTypically, browsers that do not support fetch will also not support\nAbortController or AbortSignal. Consequently, you will need to include\n[an additional polyfill](https://www.npmjs.com/package/yet-another-abortcontroller-polyfill)\nfor these APIs to abort fetches:\n\n```js\nimport 'yet-another-abortcontroller-polyfill'\nimport {fetch} from 'whatwg-fetch'\n\n// use native browser implementation if it supports aborting\nconst abortableFetch = ('signal' in new Request('')) ? window.fetch : fetch\n\nconst controller = new AbortController()\n\nabortableFetch('/avatars', {\n  signal: controller.signal\n}).catch(function(ex) {\n  if (ex.name === 'AbortError') {\n    console.log('request aborted')\n  }\n})\n\n// some time later...\ncontroller.abort()\n```\n\n## Browser Support\n\n- Chrome\n- Firefox\n- Safari 6.1+\n- Internet Explorer 10+\n\nNote: modern browsers such as Chrome, Firefox, Microsoft Edge, and Safari contain native\nimplementations of `window.fetch`, therefore the code from this polyfill doesn't\nhave any effect on those browsers. If you believe you've encountered an error\nwith how `window.fetch` is implemented in any of these browsers, you should file\nan issue with that browser vendor instead of this project.\n\n\n  [fetch specification]: https://fetch.spec.whatwg.org\n  [cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS\n    \"Cross-origin resource sharing\"\n  [csrf]: https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet\n    \"Cross-site request forgery\"\n  [forbidden header name]: https://developer.mozilla.org/en-US/docs/Glossary/Forbidden_header_name\n  [releases]: https://github.com/github/fetch/releases\n",
   "maintainers": [
     {
       "email": "me@jakechampion.name",
@@ -1202,7 +1819,7 @@
     }
   ],
   "time": {
-    "modified": "2019-01-22T14:09:45.448Z",
+    "modified": "2020-09-07T10:33:54.609Z",
     "created": "2015-01-12T23:46:17.785Z",
     "0.5.0": "2015-01-12T23:46:17.785Z",
     "0.6.0": "2015-01-13T00:10:39.303Z",
@@ -1224,7 +1841,15 @@
     "2.0.2": "2017-01-19T17:35:51.553Z",
     "2.0.3": "2017-03-02T17:49:55.818Z",
     "2.0.4": "2018-03-30T11:23:17.581Z",
-    "3.0.0": "2018-09-10T08:11:41.299Z"
+    "3.0.0": "2018-09-10T08:11:41.299Z",
+    "3.1.0": "2020-06-29T14:19:49.065Z",
+    "3.0.1": "2020-07-08T16:46:56.422Z",
+    "3.1.1": "2020-07-08T16:49:02.082Z",
+    "3.2.0": "2020-07-09T15:38:31.814Z",
+    "3.3.0": "2020-08-04T11:17:10.320Z",
+    "3.3.1": "2020-08-04T11:33:38.765Z",
+    "3.4.0": "2020-08-07T16:04:06.553Z",
+    "3.4.1": "2020-09-07T10:33:51.492Z"
   },
   "readmeFilename": "README.md",
   "users": {

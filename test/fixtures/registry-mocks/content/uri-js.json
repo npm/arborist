@@ -1114,7 +1114,5 @@
     "url": "https://github.com/garycourt/uri-js/issues"
   },
   "license": "BSD-2-Clause",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

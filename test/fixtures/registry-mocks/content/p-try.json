@@ -348,7 +348,5 @@
     "url": "https://github.com/sindresorhus/p-try/issues"
   },
   "license": "MIT",
-  "readmeFilename": "readme.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "readme.md"
 }

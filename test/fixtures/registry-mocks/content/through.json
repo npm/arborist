@@ -1609,7 +1609,5 @@
   "readmeFilename": "readme.markdown",
   "bugs": {
     "url": "https://github.com/dominictarr/through/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

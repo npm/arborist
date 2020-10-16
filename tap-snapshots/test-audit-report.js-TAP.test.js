@@ -219,7 +219,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -248,7 +248,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -289,7 +289,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -328,7 +328,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -362,7 +362,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -469,7 +469,7 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     }
@@ -638,7 +638,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -667,7 +667,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -708,7 +708,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -726,7 +726,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -760,7 +760,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -816,7 +816,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     }
@@ -985,7 +985,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1014,7 +1014,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1055,7 +1055,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1073,7 +1073,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1107,7 +1107,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1163,7 +1163,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     }
@@ -1332,7 +1332,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1361,7 +1361,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1402,7 +1402,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1420,7 +1420,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1454,7 +1454,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     },
@@ -1510,7 +1510,7 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       ],
       "fixAvailable": {
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
         "isSemVerMajor": true
       }
     }
@@ -2019,7 +2019,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mem",
       "nodes": Array [
@@ -2050,7 +2050,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "minimist",
       "nodes": Array [
@@ -2105,7 +2105,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mkdirp",
       "nodes": Array [
@@ -2122,7 +2122,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "nyc",
       "nodes": Array [
@@ -2163,7 +2163,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "os-locale",
       "nodes": Array [
@@ -2222,7 +2222,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs",
       "nodes": Array [
@@ -2243,7 +2243,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs-parser",
       "nodes": Array [
@@ -2609,7 +2609,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mem",
       "nodes": Array [
@@ -2640,7 +2640,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "minimist",
       "nodes": Array [
@@ -2695,7 +2695,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mkdirp",
       "nodes": Array [
@@ -2712,7 +2712,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "nyc",
       "nodes": Array [
@@ -2753,7 +2753,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "os-locale",
       "nodes": Array [
@@ -2812,7 +2812,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs",
       "nodes": Array [
@@ -2833,7 +2833,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs-parser",
       "nodes": Array [
@@ -3219,7 +3219,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mem",
       "nodes": Array [
@@ -3250,7 +3250,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "minimist",
       "nodes": Array [
@@ -3304,7 +3304,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mkdirp",
       "nodes": Array [
@@ -3321,7 +3321,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "nyc",
       "nodes": Array [
@@ -3357,7 +3357,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "os-locale",
       "nodes": Array [
@@ -3416,7 +3416,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs",
       "nodes": Array [
@@ -3437,7 +3437,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs-parser",
       "nodes": Array [
@@ -3646,7 +3646,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mem",
       "nodes": Array [
@@ -3677,7 +3677,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "minimist",
       "nodes": Array [
@@ -3731,7 +3731,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "mkdirp",
       "nodes": Array [
@@ -3748,7 +3748,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "nyc",
       "nodes": Array [
@@ -3784,7 +3784,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "os-locale",
       "nodes": Array [
@@ -3843,7 +3843,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs",
       "nodes": Array [
@@ -3864,7 +3864,7 @@ Object {
       "fixAvailable": Object {
         "isSemVerMajor": true,
         "name": "nyc",
-        "version": "15.0.0",
+        "version": "15.1.0",
       },
       "name": "yargs-parser",
       "nodes": Array [

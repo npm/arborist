@@ -1956,7 +1956,5 @@
     "url": "https://github.com/nodeca/argparse/issues"
   },
   "license": "Python-2.0",
-  "readmeFilename": "README.md",
-  "_cached": false,
-  "_contentLength": 0
+  "readmeFilename": "README.md"
 }

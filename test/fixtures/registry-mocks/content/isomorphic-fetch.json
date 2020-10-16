@@ -1,10 +1,10 @@
 {
   "_id": "isomorphic-fetch",
-  "_rev": "175-adfbe3a1c25bd9d8940fb7bd0f137e4b",
+  "_rev": "176-60e4a6e90b271618b3f69a17f26ca078",
   "name": "isomorphic-fetch",
   "description": "Isomorphic WHATWG Fetch API, for Node & Browserify",
   "dist-tags": {
-    "latest": "2.2.1"
+    "latest": "3.0.0"
   },
   "versions": {
     "1.0.0": {
@@ -1256,20 +1256,88 @@
         }
       ],
       "directories": {}
+    },
+    "3.0.0": {
+      "name": "isomorphic-fetch",
+      "version": "3.0.0",
+      "description": "Isomorphic WHATWG Fetch API, for Node & Browserify",
+      "browser": "fetch-npm-browserify.js",
+      "main": "fetch-npm-node.js",
+      "scripts": {
+        "files": "find . -name '*.js' ! -path './node_modules/*' ! -path './bower_components/*'",
+        "test": "jshint `npm run -s files` && lintspaces -i js-comments -e .editorconfig `npm run -s files` && mocha"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/matthew-andrews/isomorphic-fetch.git"
+      },
+      "author": {
+        "name": "Matt Andrews",
+        "email": "matt@mattandre.ws"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/matthew-andrews/isomorphic-fetch/issues"
+      },
+      "homepage": "https://github.com/matthew-andrews/isomorphic-fetch/issues",
+      "dependencies": {
+        "node-fetch": "^2.6.1",
+        "whatwg-fetch": "^3.4.1"
+      },
+      "devDependencies": {
+        "chai": "^4.2.0",
+        "jshint": "^2.5.11",
+        "lintspaces-cli": "^0.7.1",
+        "mocha": "^8.1.3",
+        "nock": "^13.0.4"
+      },
+      "gitHead": "fc5e0d0d0b180e5b4c70b2ae7f738c50a9a51b25",
+      "_id": "isomorphic-fetch@3.0.0",
+      "_npmVersion": "5.6.0",
+      "_nodeVersion": "8.11.4",
+      "_npmUser": {
+        "name": "mattandrews",
+        "email": "matt@mattandre.ws"
+      },
+      "dist": {
+        "integrity": "sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==",
+        "shasum": "0267b005049046d2421207215d45d6a262b8b8b4",
+        "tarball": "https://registry.npmjs.org/isomorphic-fetch/-/isomorphic-fetch-3.0.0.tgz",
+        "fileCount": 11,
+        "unpackedSize": 6339,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfavjOCRA9TVsSAnZWagAAkxwP/i+eNbHEVCG0ICUOYqza\nmLSmaMfns9qjx6DEILUH0CVV6EC9Nzqp3y4oDzWg3NtNgtY1djlcKU9yJ/Ld\n00dJeO2JbFzmfciDCQAOPxRgqQz3aXTvpYfrL1tXP6Weaa0hSQTwh5wx8RMt\nL549i+SstJANemC6BjvNsK2/mpOQPuAAtgnN0CzgQ/Cx0UuzRSueVipegSB2\nyIIfRHVtNLQ5BbWJ8oTQzQEfQMupxZJoZ4OEcWYhVNLNKrTmCgg+O4rL5XIu\nKs+3kHU4JSAzOxIgukagi0A/Kwr4MklRk7+JMTTYUipfEx2qy0UUICtRfDkQ\nL2FfxSSoFDd6wynwS7rCEm3Miou3UnZ6MoVHp2n/p7PILUrKrnNUbJ0FZkuV\nzfnbLqsArJDCQDUletExt9JU7e39sYVjomxgwx93VOsHrkH838d2xHWAyzZc\njDJmPyMDB9hFFR/NS9Iwul/e+20VrvDh9U2AjM8zh9TTIsNJ9CBao2Afick/\n/JdQJ7ynoZfxzSeuc07NCtpI5wVC/W6LUMaVMLqly7wRQuD6aQEzwCfJdRRb\na96hRLxQDJTPvavxRuyW63A9jU6lKe/sq4TgEUELXiwtkCCeju+IPWpzI/vP\nH1/ChdeQdYNKSCB4xH70RvF2PESlj9klqd/sKIHjexaZFoxS6WIf3clPI2oJ\nan8h\r\n=8Jck\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "mattandrews",
+          "email": "matt@mattandre.ws"
+        },
+        {
+          "name": "the-ft",
+          "email": "strategic.products+npm@ft.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/isomorphic-fetch_3.0.0_1600846029707_0.927986891039499"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "isomorphic-fetch [![Build Status](https://travis-ci.org/matthew-andrews/isomorphic-fetch.svg?branch=master)](https://travis-ci.org/matthew-andrews/isomorphic-fetch)\n================\n\nFetch for node and Browserify.  Built on top of [GitHub's WHATWG Fetch polyfill](https://github.com/github/fetch).\n\n## Warnings\n\n- This adds `fetch` as a global so that its API is consistent between client and server.\n\nFor [ease-of-maintenance and backward-compatibility reasons][why polyfill], this library will always be a polyfill. As a \"safe\" alternative, which does not modify the global, consider [fetch-ponyfill][].\n\n[why polyfill]: https://github.com/matthew-andrews/isomorphic-fetch/issues/31#issuecomment-149668361\n[fetch-ponyfill]: https://github.com/qubyte/fetch-ponyfill\n\n## Why Use Isomorphic Fetch\n\nThe Fetch API is currently [not implemented consistently](http://caniuse.com/#search=fetch) across browsers. This module will enable you to use `fetch` in your Node code in a cross-browser compliant fashion. The Fetch API is part of the Web platform API defined by the standards bodies WHATWG and W3C.\n\n## Installation\n\n### NPM\n\n```sh\nnpm install --save isomorphic-fetch\n```\n\n### Bower\n\n```sh\nbower install --save isomorphic-fetch\n```\n\n## Usage\n\n```js\nrequire('isomorphic-fetch');\n\nfetch('//offline-news-api.herokuapp.com/stories')\n\t.then(function(response) {\n\t\tif (response.status >= 400) {\n\t\t\tthrow new Error(\"Bad response from server\");\n\t\t}\n\t\treturn response.json();\n\t})\n\t.then(function(stories) {\n\t\tconsole.log(stories);\n\t});\n```\n\n## License\n\nAll open source code released by FT Labs is licenced under the MIT licence.  Based on [the fine work by](https://github.com/github/fetch/pull/31) **[jxck](https://github.com/Jxck)**.\n\n## Alternatives\n\n- [cross-fetch](https://github.com/lquixada/cross-fetch#why-not-isomorphic-fetch)\n- Using [node-fetch](https://github.com/node-fetch/node-fetch) and the [Fetch polyfill](https://github.com/github/fetch) directly (or from [polyfill.io](https://polyfill.io), or relying on [the browser's implementation of the Fetch API](https://caniuse.com/fetch)).\n",
   "maintainers": [
-    {
-      "name": "financial-times",
-      "email": "strategic.products@ft.com"
-    },
     {
       "name": "mattandrews",
       "email": "matt@mattandre.ws"
+    },
+    {
+      "name": "the-ft",
+      "email": "strategic.products+npm@ft.com"
     }
   ],
   "time": {
-    "modified": "2018-03-20T16:31:10.941Z",
+    "modified": "2020-09-23T07:27:12.047Z",
     "created": "2014-11-07T21:18:22.127Z",
     "1.0.0": "2014-11-07T21:18:22.127Z",
     "1.0.2": "2014-12-29T15:30:19.119Z",
@@ -1292,7 +1360,8 @@
     "2.1.0": "2015-05-21T16:55:18.725Z",
     "2.1.1": "2015-07-16T12:40:02.280Z",
     "2.2.0": "2015-10-20T19:06:37.885Z",
-    "2.2.1": "2016-01-15T09:27:42.311Z"
+    "2.2.1": "2016-01-15T09:27:42.311Z",
+    "3.0.0": "2020-09-23T07:27:09.864Z"
   },
   "homepage": "https://github.com/matthew-andrews/isomorphic-fetch/issues",
   "repository": {
@@ -1426,6 +1495,5 @@
     "yjz20041": true,
     "advancedcat": true,
     "jbcurrie": true
-  },
-  "_attachments": {}
+  }
 }

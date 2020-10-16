@@ -1,10 +1,10 @@
 {
   "_id": "@babel/plugin-syntax-jsx",
-  "_rev": "63-9c978058946893fc9ee30bc2bde6dec5",
+  "_rev": "68-707eae157228afa9b4d1b9492c171bbf",
   "name": "@babel/plugin-syntax-jsx",
   "description": "Allow parsing of jsx",
   "dist-tags": {
-    "latest": "7.8.3"
+    "latest": "7.12.1"
   },
   "versions": {
     "7.0.0-beta.4": {
@@ -1948,6 +1948,7 @@
       "devDependencies": {
         "@babel/core": "7.0.0-rc.3"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-syntax-jsx@7.0.0-rc.3",
       "dist": {
         "shasum": "729759abb046444b64df3b03a84d3e536bf68685",
@@ -2012,6 +2013,7 @@
       "devDependencies": {
         "@babel/core": "^7.0.0-rc.4"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-syntax-jsx@7.0.0-rc.4",
       "dist": {
         "shasum": "b749301cd183d7538044e3cc104828c5577367fd",
@@ -2077,6 +2079,8 @@
         "@babel/core": "^7.0.0"
       },
       "readmeFilename": "README.md",
+      "readme": "# @babel/plugin-syntax-jsx\n\n> Allow parsing of jsx\n\nSee our website [@babel/plugin-syntax-jsx](https://babeljs.io/docs/en/next/babel-plugin-syntax-jsx.html) for more information.\n\n## Install\n\nUsing npm:\n\n```sh\nnpm install --save-dev @babel/plugin-syntax-jsx\n```\n\nor using yarn:\n\n```sh\nyarn add @babel/plugin-syntax-jsx --dev\n```\n",
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie <sebmck@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-syntax-jsx@7.0.0",
       "dist": {
         "shasum": "034d5e2b4e14ccaea2e4c137af7e4afb39375ffd",
@@ -2144,6 +2148,7 @@
       "devDependencies": {
         "@babel/core": "^7.2.0"
       },
+      "licenseText": "MIT License\n\nCopyright (c) 2014-2018 Sebastian McKenzie and other contributors\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
       "_id": "@babel/plugin-syntax-jsx@7.2.0",
       "dist": {
         "shasum": "0b85a3b4bc7cdf4cc4b8bf236335b907ca22e7c7",
@@ -2408,36 +2413,263 @@
         "tmp": "tmp/plugin-syntax-jsx_7.8.3_1578951679357_0.07980701298842785"
       },
       "_hasShrinkwrap": false
+    },
+    "7.10.1": {
+      "name": "@babel/plugin-syntax-jsx",
+      "version": "7.10.1",
+      "description": "Allow parsing of jsx",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-syntax-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.1"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.1"
+      },
+      "gitHead": "88f57a7ea659d25232bf62de1efceb5d6299b8cf",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-syntax-jsx@7.10.1",
+      "_nodeVersion": "12.16.3",
+      "_npmVersion": "lerna/3.19.0/node@v12.16.3+x64 (linux)",
+      "dist": {
+        "integrity": "sha512-+OxyOArpVFXQeXKLO9o+r2I4dIoVoy6+Uu0vKELrlweDM3QJADZj+Z+5ERansZqIZBcLj42vHnDI8Rz9BnRIuQ==",
+        "shasum": "0ae371134a42b91d5418feb3c8c8d43e1565d2da",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.10.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 2587,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJezuSTCRA9TVsSAnZWagAAXSoP+wQWfZmhO96rWCvhydZ+\nd0oV6tglwaiEqbJTG/FdFiYsdLTMpSvI1gfa/0jwXq3fxARYHmHy5OAzLW8U\nD3x0x0sT22Y90W4LP3dDTRw1nqers5FyUfIIy35t3hIOStBdEbnqZgrzjm7n\nH9SBhFqJjvWojZ9284zN7t+WUuWxuVP5535Vvm06ziOBwkDdncSGfOLiP5j+\nFLUC0Ws6vBTXZhw5rzPiUCzM9ZP97cLWZrOBylKg55fPbDyHskE7WZGR83v7\nckx24hMpni1Mvx7MEmBlLOyTrBE1h+BTh/c3lUBt6nmiMrUQjWO6sBUdS4Lj\ncZXdSzw5mfsgTuyP3c24uRHRpJCh4dV4YzPqeNdRzq09JVzVWO2mpTGiMI9V\nGU+MEh1P4hx70DwHpOGAV26ku2uOxs43hWImC0Uk18wNvwPen/oHA+M2LEkZ\nGuYY2IvGnFzEBcUW10Zk8xz/N96s5uLameYkQPW3CQrTVcJSMDlgk+5rhK4h\nqnl+zb1+0nF/FeJFleqE9GyMyZAuBnhm8ufHTtd1v0V/XLlpz7wPKXjFd1HK\nxRMQOCL+HxzAGZDqz7rYoKD6FE8JJgZn6lDv1Lvy0ohtqSoKoPchbdITyDL+\nWYIpxon0h4SwrzixVCB/6dUTBxkO462ILncdZaoYkfjpa5MYe4obtUwzHoVK\n4KnU\r\n=VC8t\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-syntax-jsx_7.10.1_1590617228513_0.6690040035718903"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.10.4": {
+      "name": "@babel/plugin-syntax-jsx",
+      "version": "7.10.4",
+      "description": "Allow parsing of jsx",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-syntax-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.10.4"
+      },
+      "gitHead": "7fd40d86a0d03ff0e9c3ea16b29689945433d4df",
+      "bugs": {
+        "url": "https://github.com/babel/babel/issues"
+      },
+      "homepage": "https://github.com/babel/babel#readme",
+      "_id": "@babel/plugin-syntax-jsx@7.10.4",
+      "_nodeVersion": "14.4.0",
+      "_npmVersion": "lerna/3.19.0/node@v14.4.0+x64 (darwin)",
+      "dist": {
+        "integrity": "sha512-KCg9mio9jwiARCB7WAcQ7Y1q+qicILjoK8LP/VkPkEKaf5dkaZZK1EcTe91a3JJlZ3qy6L5s9X52boEYi8DM9g==",
+        "shasum": "39abaae3cbf710c4373d8429484e6ba21340166c",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.10.4.tgz",
+        "fileCount": 4,
+        "unpackedSize": 2587,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJe+zoSCRA9TVsSAnZWagAAjUoP/R1FNK/wFK/Yh0zeTerI\nbMvqDnBmjpcSfymb0PDR4areDiKOnRWLkrt326JNov83lrpZu31VUZNww0JC\nF+7fsPJ1gK09PJkMyFxqqqsYQsbZ7UUbRC9EcpC836/5R+G81gI4T5doEpPG\ngy62kCXduwnzno7O9CmlqzYGNZY6CV8qai9/e09dWEPP+U8JXMsrEzS5mEvz\n9YFnW+WgzKgykHrY9XrX8/PIpcnQ1zYsL11HEEFZXyLPLi+2v4zdqYDaYT6q\nfA55hGVHhTTS+aWuvwltqEWwtVwIZ4YxizkDeVxvyESrbTLkFIjeVGeC2j0C\nEQ/GOFStV20dbMzEF7qkJAnK8INV4clEJGR6GRT4bQ2XWu3FjbURAsvzJtUd\nyaqJvxYpS/KMjEjZA3jJcijXqi1Pkq4PLav1dTiY6Pg9Moa331lmW2+FGntj\nuqO5ZsYRbLi2aJ6KP15swFlEHeuy09sXA45kCHducbdMQ1jRuWQbwhbu80NB\nLAXN+xGLNuTHuUgUUtLejYmE40PyA7M8yD3m2niBxU9Kqd9KmyPGyu8ObAh0\ncHLXg30KMWeWfOd5V/6SqbNXiayDpiTD35e010NMYTqJtx2AZW2UL0EojZWS\nUXMIS/vjkekJVNiAM03VJP9ZXUAmnv0NaosYfXQtavTviyIBU6ISn7MrOTHa\ncfeP\r\n=r+Ky\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "email": "daniel@tschinder.de",
+          "name": "danez"
+        },
+        {
+          "email": "bng412@gmail.com",
+          "name": "existentialism"
+        },
+        {
+          "email": "hi@henryzoo.com",
+          "name": "hzoo"
+        },
+        {
+          "email": "i@jhuang.me",
+          "name": "jlhwung"
+        },
+        {
+          "email": "loganfsmyth@gmail.com",
+          "name": "loganfsmyth"
+        },
+        {
+          "email": "nicolo.ribaudo@gmail.com",
+          "name": "nicolo-ribaudo"
+        }
+      ],
+      "_npmUser": {
+        "name": "jlhwung",
+        "email": "i@jhuang.me"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-syntax-jsx_7.10.4_1593522706605_0.36105834697799066"
+      },
+      "_hasShrinkwrap": false
+    },
+    "7.12.1": {
+      "name": "@babel/plugin-syntax-jsx",
+      "version": "7.12.1",
+      "description": "Allow parsing of jsx",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-plugin-syntax-jsx"
+      },
+      "license": "MIT",
+      "publishConfig": {
+        "access": "public"
+      },
+      "main": "lib/index.js",
+      "keywords": [
+        "babel-plugin"
+      ],
+      "dependencies": {
+        "@babel/helper-plugin-utils": "^7.10.4"
+      },
+      "peerDependencies": {
+        "@babel/core": "^7.0.0-0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.12.1"
+      },
+      "_id": "@babel/plugin-syntax-jsx@7.12.1",
+      "dist": {
+        "shasum": "9d9d357cc818aa7ae7935917c1257f67677a0926",
+        "integrity": "sha512-1yRi7yAtB0ETgxdY9ti/p2TivUxJkTdhu/ZbF9MshVGqOx1TdB3b7xCXs49Fupgg50N45KcAsRP/ZqWjs9SRjg==",
+        "tarball": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.12.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 2529,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfiM+vCRA9TVsSAnZWagAAkh8P/jokNL1mKU7D8WU9l55Y\nWtFqdt0pdVFQP536TIWWhHDMH+eKARMaXvwC22lh/F7pXrNCK3mC9ktelWjc\n6siK+FDFtuMRNNZXp4EuI+/cFtuc6iuSvyTpzQ6hBL5sC9+1qARfhG2rJmzK\nRg42J2WHs/jmTJ6h2ZkD6oxbkkrL9fTjJCAS2XkOkcwf1oZ1vKRzICN1S636\n+sN/vwFkSd0j2p9IfyCs2R3gDVpPqthPQF4XMfitPG0KAbEpdMjPKwXUKlfz\nOhDubhjfSjfmC60gb9nnnPCJWQ4wxLb8fOWcp2+yEIHlJAp1gKtPh2cAQVOS\n7B1cy3mBCeKs30394lrrrH9WWFPh/wHNVoJZSiditmLQXBbKU67/pdzoGoFJ\n7d61CipoN/Ye3lkh4K80eSeybT2Y3l+6ljFiRzY8e/2sMuWMZ8vYbEiXXbfu\n+6XzRrgKtLjVst53ljOUu2iCqUt3D6fDDghHSDGKWrRpA15tAYfdmQP4d8DG\nW1+QDxi7H86doI7m3ese6vATt7J00pf5LNL4kCDMLQ0MUQ87GEClbuqB1BHF\nWAYIeFS8GOax8dLyctnxZecodIx+d9jShledMXJcrWjJpYWuPlLo5MKBMvY4\n7ItxDXP9KiDc8LoI1cRHxy6Ukbd+VQfx4A1XOYG3dOmeNmazvyI9GyXyAb1k\ncRlx\r\n=ZtAk\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "jlhwung",
+          "email": "i@jhuang.me"
+        },
+        {
+          "name": "nicolo-ribaudo",
+          "email": "nicolo.ribaudo@gmail.com"
+        },
+        {
+          "name": "hzoo",
+          "email": "hi@henryzoo.com"
+        },
+        {
+          "name": "loganfsmyth",
+          "email": "loganfsmyth@gmail.com"
+        },
+        {
+          "name": "danez",
+          "email": "daniel@tschinder.de"
+        },
+        {
+          "name": "existentialism",
+          "email": "bng412@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "nicolo-ribaudo",
+        "email": "nicolo.ribaudo@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/plugin-syntax-jsx_7.12.1_1602801583138_0.041791233816114826"
+      },
+      "_hasShrinkwrap": false
     }
   },
+  "readme": "",
   "maintainers": [
     {
-      "email": "daniel@tschinder.de",
-      "name": "danez"
+      "name": "jlhwung",
+      "email": "i@jhuang.me"
     },
     {
-      "email": "jason@developit.ca",
-      "name": "developit"
+      "name": "nicolo-ribaudo",
+      "email": "nicolo.ribaudo@gmail.com"
     },
     {
-      "email": "bng412@gmail.com",
-      "name": "existentialism"
+      "name": "hzoo",
+      "email": "hi@henryzoo.com"
     },
     {
-      "email": "hi@henryzoo.com",
-      "name": "hzoo"
+      "name": "loganfsmyth",
+      "email": "loganfsmyth@gmail.com"
     },
     {
-      "email": "loganfsmyth@gmail.com",
-      "name": "loganfsmyth"
+      "name": "danez",
+      "email": "daniel@tschinder.de"
     },
     {
-      "email": "nicolo.ribaudo@gmail.com",
-      "name": "nicolo-ribaudo"
+      "name": "existentialism",
+      "email": "bng412@gmail.com"
     }
   ],
   "time": {
-    "modified": "2020-01-13T21:41:26.784Z",
+    "modified": "2020-10-15T22:39:48.069Z",
     "created": "2017-10-30T18:34:20.769Z",
     "7.0.0-beta.4": "2017-10-30T18:34:20.769Z",
     "7.0.0-beta.5": "2017-10-30T20:56:03.707Z",
@@ -2476,15 +2708,19 @@
     "7.2.0": "2018-12-03T19:00:54.462Z",
     "7.7.4": "2019-11-22T23:31:56.413Z",
     "7.8.0": "2020-01-12T00:16:17.557Z",
-    "7.8.3": "2020-01-13T21:41:19.470Z"
+    "7.8.3": "2020-01-13T21:41:19.470Z",
+    "7.10.1": "2020-05-27T22:07:08.652Z",
+    "7.10.4": "2020-06-30T13:11:46.747Z",
+    "7.12.1": "2020-10-15T22:39:43.266Z"
   },
   "keywords": [
     "babel-plugin"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel/tree/master/packages/babel-plugin-syntax-jsx"
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-plugin-syntax-jsx"
   },
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": ""
 }

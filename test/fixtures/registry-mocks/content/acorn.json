@@ -18357,7 +18357,5 @@
   "bugs": {
     "url": "https://github.com/acornjs/acorn/issues"
   },
-  "license": "MIT",
-  "_cached": false,
-  "_contentLength": 0
+  "license": "MIT"
 }

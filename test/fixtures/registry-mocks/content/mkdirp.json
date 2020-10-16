@@ -2151,7 +2151,5 @@
   "homepage": "https://github.com/isaacs/node-mkdirp#readme",
   "bugs": {
     "url": "https://github.com/isaacs/node-mkdirp/issues"
-  },
-  "_cached": false,
-  "_contentLength": 0
+  }
 }

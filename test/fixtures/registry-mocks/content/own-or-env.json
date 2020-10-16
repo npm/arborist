@@ -114,6 +114,7 @@
       }
     }
   },
+  "readme": "# own-or-env\n\nUse an objects own property, or an environment variable.  Optionally\ntreat as a boolean if the env should be set to 1 or 0.\n\n## API\n\n`ownOrEnv(object, field, env, boolean)`\n\nUse the `object[field]` if it's an own property, otherwise use the\nnamed environent variable.  If `boolean` is set to `true`, then cast\nto a boolean flag.\n\n## USAGE\n\n```js\n// will set doTheThing to true based on config.doThing, falling back\n// to reading process.env.DO_THING, where '0' is treated as false.\nvar doTheThing = ownOrEnv(config, 'doThing', 'DO_THING', true)\n\n// just treat this one as a string, not a boolean flag\nvar file = ownOrEnv(config, 'file', 'MY_FILE')\n```\n",
   "maintainers": [
     {
       "name": "isaacs",

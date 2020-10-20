@@ -27016,6 +27016,68 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP save complete lockfile on update-all > should have abbrev 1.0.4 1`] = `
+{
+  "name": "save-package-lock-after-update-test",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "save-package-lock-after-update-test",
+      "version": "1.0.0",
+      "dependencies": {
+        "abbrev": "^1.0.4"
+      }
+    },
+    "node_modules/abbrev": {
+      "version": "1.0.4",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+      "integrity": "sha1-vVWuXkE7oXIu5Mq6H26hBBSlns0="
+    }
+  },
+  "dependencies": {
+    "abbrev": {
+      "version": "1.0.4",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+      "integrity": "sha1-vVWuXkE7oXIu5Mq6H26hBBSlns0="
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP save complete lockfile on update-all > should update, but not drop root metadata 1`] = `
+{
+  "name": "save-package-lock-after-update-test",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "save-package-lock-after-update-test",
+      "version": "1.0.0",
+      "dependencies": {
+        "abbrev": "^1.0.4"
+      }
+    },
+    "node_modules/abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  },
+  "dependencies": {
+    "abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP saving the ideal tree save some stuff > lock after save 1`] = `
 Object {
   "dependencies": Object {
@@ -39592,7 +39654,7 @@ Node {
 `
 
 exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
-&ref_1 Node {
+Node {
   "children": Map {
     "abbrev" => Node {
       "children": Map {},
@@ -39612,7 +39674,6 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "legacyPeerDeps": false,
       "linksIn": Set {},
       "location": "node_modules/abbrev",
-      "meta": undefined,
       "name": "abbrev",
       "optional": false,
       "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
@@ -39639,7 +39700,6 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "legacyPeerDeps": false,
       "linksIn": Set {},
       "location": "node_modules/mkdirp",
-      "meta": undefined,
       "name": "mkdirp",
       "optional": false,
       "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
@@ -39681,7 +39741,6 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "legacyPeerDeps": false,
       "linksIn": Set {},
       "location": "node_modules/abbrev",
-      "meta": undefined,
       "name": "abbrev",
       "optional": false,
       "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/abbrev",
@@ -39708,7 +39767,6 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
       "legacyPeerDeps": false,
       "linksIn": Set {},
       "location": "node_modules/mkdirp",
-      "meta": undefined,
       "name": "mkdirp",
       "optional": false,
       "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/mkdirp",
@@ -39721,63 +39779,6 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > add abbrev 1`] = `
   "legacyPeerDeps": false,
   "linksIn": Set {},
   "location": "",
-  "meta": Shrinkwrap {
-    "ancientLockfile": false,
-    "data": Object {
-      "lockfileVersion": 2,
-      "name": "reify-update-a-yarn-lock-file",
-      "packages": Object {
-        "node_modules/abbrev": Object {
-          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-          "version": "1.1.1",
-        },
-        "node_modules/mkdirp": Object {
-          "bin": Object {
-            "mkdirp": "bin/cmd.js",
-          },
-          "engines": Object {
-            "node": ">=10",
-          },
-          "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
-          "version": "1.0.2",
-        },
-      },
-      "requires": true,
-    },
-    "filename": "{CWD}/test/arborist/reify-update-a-yarn-lock-file/node_modules/.package-lock.json",
-    "hiddenLockfile": true,
-    "indent": 2,
-    "loadedFromDisk": false,
-    "loadingError": null,
-    "newline": "\\n",
-    "originalLockfileVersion": undefined,
-    "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",
-    "shrinkwrapOnly": false,
-    "tree": <*ref_1>,
-    "type": "package-lock.json",
-    "yarnLock": YarnLock {
-      "current": null,
-      "entries": Map {
-        "abbrev@^1.1.1" => YarnLockEntry {
-          "dependencies": null,
-          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-          "optionalDependencies": null,
-          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-          "version": "1.1.1",
-        },
-        "mkdirp@^1.0.2" => YarnLockEntry {
-          "dependencies": null,
-          "integrity": "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==",
-          "optionalDependencies": null,
-          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz",
-          "version": "1.0.2",
-        },
-      },
-      "subkey": Symbol(null),
-    },
-  },
   "name": "reify-update-a-yarn-lock-file",
   "optional": false,
   "path": "{CWD}/test/arborist/reify-update-a-yarn-lock-file",

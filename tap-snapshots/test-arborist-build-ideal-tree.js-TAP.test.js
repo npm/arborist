@@ -65110,6 +65110,97 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP peerOptionals that are devDeps or explicit request > should install the abbrev dep 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "",
+          "type": "peerOptional",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "optional": true,
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "wrappy",
+          "spec": "",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "",
+      "to": "node_modules/abbrev",
+      "type": "peerOptional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "",
+      "to": "node_modules/wrappy",
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "peer-optional-installs",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP peerOptionals that are devDeps or explicit request > should install the wrappy dep, and not remove from peerDeps 1`] = `
+Node {
+  "children": Map {
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "wrappy",
+          "spec": "",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "",
+      "to": null,
+      "type": "peerOptional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "",
+      "to": "node_modules/wrappy",
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "peer-optional-installs",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP push conflicted peer deps deeper in to the tree to solve > must match snapshot 1`] = `
 Node {
   "children": Map {

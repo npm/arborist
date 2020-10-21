@@ -2114,3 +2114,14 @@ t.test('carbonium eslint conflicts', async t => {
     ],
   }))
 })
+
+t.test('peerOptionals that are devDeps or explicit request', async t => {
+  const path = resolve(fixtures, 'peer-optional-installs')
+  t.matchSnapshot(await printIdeal(path, {
+    add: ['abbrev'],
+  }), 'should install the abbrev dep')
+  t.matchSnapshot(await printIdeal(path, {
+    add: ['wrappy'],
+    saveType: 'dev',
+  }), 'should install the wrappy dep, and not remove from peerDeps')
+})

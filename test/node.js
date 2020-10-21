@@ -1617,6 +1617,5 @@ t.test('explain yourself', t => {
     package: { noname: 'bad', noversion: 'node' },
   })
 
-
   t.end()
 })

@@ -2125,3 +2125,25 @@ t.test('peerOptionals that are devDeps or explicit request', async t => {
     saveType: 'dev',
   }), 'should install the wrappy dep, and not remove from peerDeps')
 })
+
+t.test('weird thing when theres a link to ..', async t => {
+  // don't set the fsParent of x to y, that's just not how trees work.
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'x',
+      version: '1.2.3',
+    }),
+    y: {
+      'package.json': JSON.stringify({
+        name: 'y',
+        version: '1.2.3',
+        dependencies: {
+          x: 'file:../',
+        },
+      })
+    },
+  }) + '/y'
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree()
+  t.equal(tree.children.get('x').target.fsParent, null)
+})

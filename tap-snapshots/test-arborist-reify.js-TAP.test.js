@@ -45654,6 +45654,50 @@ Node {
 }
 `
 
+exports[`test/arborist/reify.js TAP workspaces add new workspaces dep > should update package-lock with new added dep 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "requires": Object {
+        "abbrev": "^1.1.1",
+      },
+      "version": "file:a",
+    },
+    "abbrev": Object {
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "workspaces-add-new-dep",
+  "packages": Object {
+    "": Object {
+      "name": "workspaces-add-new-dep",
+      "workspaces": Array [
+        "a",
+      ],
+    },
+    "a": Object {
+      "dependencies": Object {
+        "abbrev": "^1.1.1",
+      },
+      "version": "1.0.0",
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "a",
+    },
+    "node_modules/abbrev": Object {
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+  },
+  "requires": true,
+}
+`
+
 exports[`test/arborist/reify.js TAP workspaces reify from an actual loaded workspace env > should not clean up entire nm folder for no reason 1`] = `
 Node {
   "children": Map {

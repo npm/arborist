@@ -1057,6 +1057,14 @@ t.test('workspaces', t => {
       'should not clean up entire nm folder for no reason'
     ))
 
+  t.test('add new workspaces dep', t => {
+    const path = fixture(t, 'workspaces-add-new-dep')
+    reify(path).then(() => {
+      t.matchSnapshot(require(path + '/package-lock.json'), 'should update package-lock with new added dep')
+      t.end()
+    })
+  })
+
   t.end()
 })
 

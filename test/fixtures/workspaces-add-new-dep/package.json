@@ -1,0 +1,6 @@
+{
+  "name": "workspaces-add-new-dep",
+  "workspaces": [
+    "a"
+  ]
+}

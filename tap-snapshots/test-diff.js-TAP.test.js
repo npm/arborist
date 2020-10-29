@@ -24,6 +24,7 @@ Diff {
     "/path/to/root/node_modules/x/node_modules/y",
     "/path/to/root/node_modules/p/node_modules/q",
     "/path/to/root/node_modules/bundler/node_modules/not-bundled",
+    "/path/to/root/node_modules/should-have-bins",
     "/path/to/root/foo/node_modules/baz",
     "/path/to/root/node_modules/i/node_modules/j",
     "/path/to/root/foo/node_modules/boo",
@@ -221,6 +222,25 @@ Diff {
           "children": Array [],
         },
       ],
+    },
+    Diff {
+      "action": "CHANGE",
+      "actual": Node {
+        "name": "should-have-bins",
+        "path": "/path/to/root/node_modules/should-have-bins",
+        "integrity": "sha512-should-have-bins",
+      },
+      "ideal": Node {
+        "name": "should-have-bins",
+        "path": "/path/to/root/node_modules/should-have-bins",
+        "integrity": "sha512-should-have-bins",
+      },
+      "leaves": Array [
+        "/path/to/root/node_modules/should-have-bins",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
     },
     Diff {
       "action": "CHANGE",

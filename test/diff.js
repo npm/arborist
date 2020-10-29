@@ -99,6 +99,15 @@ const actual = new Node({
         },
       ],
     },
+    {
+      name: 'should-have-bins',
+      integrity: 'sha512-should-have-bins',
+      pkg: {
+        bin: {
+          'should-exist': 'should-exist.js'
+        }
+      },
+    },
   ],
 })
 
@@ -156,6 +165,15 @@ const ideal = new Node({
           integrity: 'sha512-NOT-BUNDLED',
         },
       ],
+    },
+    {
+      name: 'should-have-bins',
+      integrity: 'sha512-should-have-bins',
+      pkg: {
+        bin: {
+          'should-exist': 'should-exist.js'
+        }
+      },
     },
   ],
 })

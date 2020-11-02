@@ -1,11 +1,10 @@
-const {basename, resolve} = require('path')
+const {relative, basename, resolve} = require('path')
 const t = require('tap')
 const Arborist = require('../..')
 const fixtures = resolve(__dirname, '../fixtures')
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry, auditResponse} = registryServer
 const npa = require('npm-package-arg')
-const AuditReport = require('../../lib/audit-report.js')
 
 t.test('setup server', { bail: true }, registryServer)
 
@@ -334,8 +333,8 @@ t.test('dedupe example - deduped', t => {
 
 t.test('expose explicitRequest', async t => {
   const path = resolve(fixtures, 'simple')
-  const arb = new Arborist({...OPT})
-  const tree = await arb.buildIdealTree({ add: ['abbrev'] })
+  const arb = new Arborist({...OPT, path})
+  await arb.buildIdealTree({ add: ['abbrev'] })
   t.ok(arb.explicitRequests, 'exposes the explicit request')
   t.strictSame(arb.explicitRequests, new Set(['abbrev']))
   t.ok(arb.explicitRequests.has('abbrev'), 'should contain explicit item')
@@ -555,7 +554,7 @@ t.test('contrived dep placement tests', t => {
         },
       },
     })
-    const existingFoo = new Node({
+    new Node({
       name: 'foo',
       pkg: {
         name: 'foo',
@@ -650,7 +649,7 @@ t.test('contrived dep placement tests', t => {
         },
       },
     })
-    const existingFoo = new Node({
+    new Node({
       name: 'foo',
       pkg: {
         name: 'foo',
@@ -1047,7 +1046,7 @@ t.test('contrived dep placement tests', t => {
       pkg: { name: 'foo', version: '1.2.3', peerDependencies: { bar: '' }},
       root,
     })
-    const link = new Link({
+    new Link({
       parent: root,
       pkg: target.package,
       realpath: target.path,
@@ -1080,7 +1079,7 @@ t.test('contrived dep placement tests', t => {
       fsParent: root,
       root,
     })
-    const link = new Link({
+    new Link({
       parent: root,
       pkg: target.package,
       realpath: target.path,
@@ -1190,7 +1189,6 @@ t.test('no fix available, linked top package', async t => {
   })
 
   await arb.audit()
-  const v = arb.auditReport.get('mkdirp')
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
   t.strictSame(checkLogs(), [['warn', 'audit',
     'Manual fix required in linked project at ./mkdirp-unfixable for mkdirp@*.\n' +
@@ -1593,7 +1591,6 @@ t.test('more peer dep conflicts', t => {
           '@isaacs/testing-peer-dep-conflict-chain-m': '2',
           '@isaacs/testing-peer-dep-conflict-chain-b': '1',
           '@isaacs/testing-peer-dep-conflict-chain-l': '1',
-          '@isaacs/testing-peer-dep-conflict-chain-m': '1',
         },
       },
       error: true,
@@ -1657,7 +1654,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
-    'collision forcing metadep duplication, order 1': {
+    'collision forcing metadep duplication, order 2': {
       pkg: {
         dependencies: {
           '@isaacs/testing-peer-dep-conflict-chain-i': '1',
@@ -2140,7 +2137,7 @@ t.test('weird thing when theres a link to ..', async t => {
         dependencies: {
           x: 'file:../',
         },
-      })
+      }),
     },
   }) + '/y'
   const arb = new Arborist({ path, ...OPT })

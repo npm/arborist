@@ -2144,3 +2144,51 @@ t.test('weird thing when theres a link to ..', async t => {
   const tree = await arb.buildIdealTree()
   t.equal(tree.children.get('x').target.fsParent, null)
 })
+
+t.test('always prefer deduping peer deps', async t => {
+  // ink 3.8.0 peer depends on react >=16.8.0, and has deps that peerDepend
+  // on react 16.x, so we need to ensure that they get deduped up a level.
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        '@pmmmwh/react-refresh-webpack-plugin': '0.4.2',
+        'ink': '3.0.8',
+        'react-reconciler': '0.25.0',
+      },
+    }),
+  })
+  t.matchSnapshot(await printIdeal(path))
+})
+
+t.test('do not ever nest peer deps underneath their dependent ever', async t => {
+  // ink 3.8.0 peer depends on react >=16.8.0, and has deps that peerDepend
+  // on react 16.x, so we need to ensure that they fail when they cannot be
+  // deduped up a level.  Tests for a bug where react 16 would end up nested
+  // underneath ink, even though it is a peerDep.
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        'ink': '3.0.8',
+        // this peer depends on react 17
+        'react-reconciler': '0.26.0',
+      },
+    }),
+  })
+  t.rejects(printIdeal(path), { code: 'ERESOLVE' })
+})
+
+t.test('properly fail on conflicted peerOptionals', async t => {
+  // react-refresh-webpack-plugin has a peerOptional dep on
+  // type-fest 0.13.0, but the root package is stipulating 0.12
+  // we would not normally install type-fest, but if we DO install it,
+  // it must not be a version that conflicts.
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        '@pmmmwh/react-refresh-webpack-plugin': '0.4.2',
+        'type-fest': '^0.12.0',
+      },
+    }),
+  })
+  await t.rejects(printIdeal(path), { code: 'ERESOLVE' })
+})

@@ -1,11 +1,11 @@
 {
   "_id": "react",
-  "_rev": "1422-7a4b0b29ada94d46bfcb0df99b559fdd",
+  "_rev": "1429-e23a0463822971035a842609a27fe616",
   "name": "react",
   "description": "React is a JavaScript library for building user interfaces.",
   "dist-tags": {
-    "latest": "16.14.0",
-    "next": "17.0.0-rc.3",
+    "latest": "17.0.1",
+    "next": "0.0.0-8e5adfbd7",
     "experimental": "0.0.0-experimental-4ead6b530",
     "untagged": "16.14.0"
   },
@@ -25186,6 +25186,266 @@
         "tmp": "tmp/react_16.14.0_1602704285597_0.9328479370374574"
       },
       "_hasShrinkwrap": false
+    },
+    "17.0.0": {
+      "name": "react",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "keywords": [
+        "react"
+      ],
+      "version": "17.0.0",
+      "homepage": "https://reactjs.org/",
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/react"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "_id": "react@17.0.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-rG9bqS3LMuetoSUKHN8G3fMNuQOePKDThK6+2yXFWtoeTDLVNh/QCaxT+Jr+rNf4lwNXpx+atdn3Aa0oi8/6eQ==",
+        "shasum": "ad96d5fa1a33bb9b06d0cc52672f7992d84aa662",
+        "tarball": "https://registry.npmjs.org/react/-/react-17.0.0.tgz",
+        "fileCount": 18,
+        "unpackedSize": 298431,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfj0SDCRA9TVsSAnZWagAAqRcQAIns1P9FmLqA8Q7ufaER\nWCKyHe/4jbciNO8QxihWp0TA2c07OZhEG7aXe3+rkjrpm5FgYEY9p4VHpGQP\nLZprqi40T3x63/alfRZjb1qQYKSPGzzL6+7uMvQHfgJU2B64CvOaDZcu093s\n0qbj2idV6IrKxJoQQoOQzngxzlAjN/OOXV7DcRV6hRkeUI6PChiCVhiHpvrG\nRqMT/9ygNssBQiGAK3MWhN04ajyTWP6jYjLaj6W9LiREvUM3cQ+HL1uPSavj\nCI4otUAbfblzkcsj/7N6MIDnZedhQUzycPHvIujO+bFkiu2NTqGjFvQoLeaE\nq652JLaUdJmwJTj1Ki5NO5OhEknrSWCy20SDxjJxAXSUhI9LcnR1SgpHPJVN\nFDgMh1EXqzifDGH2+hXC5Bt4czKIPvPMHVtf9yMrR6DCE6ca27+rFpOGLHvC\nEfKQWk04wdKMrZJ65UfT4KsOA4TTgQc6mJIXXAQ+GY8s/0vtPlTw8qWXG9/6\nXHhHzIRbpbVR14zAJ6Sd/ep8jKnXjRqJJ6enL0z7xV3WSG43/165IHCD//B6\nDaIkOdQtKG74f5J5wRXbooEFjimit1ejUPlb/TdSUGdOPJoiYSg0zYzZTz4x\nV6iEu59RteiLV67xzlbxAjOqASwp5TtOu8gfbI47oq62PErchqDce0YIhULk\nJkZm\r\n=Tux1\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/react_17.0.0_1603224707188_0.9635823928139113"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.0-8e5adfbd7": {
+      "name": "react",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "keywords": [
+        "react"
+      ],
+      "version": "0.0.0-8e5adfbd7",
+      "homepage": "https://reactjs.org/",
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/react"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
+      "readmeFilename": "README.md",
+      "_id": "react@0.0.0-8e5adfbd7",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-MwwFdmKFQxYmy3/fuRoObusAL3ITRap8rOgH+dIc9p8YqVYqtwq7iYa+wPZZ1/qQtHI9JOaABQV/CZLHEPey0Q==",
+        "shasum": "418125f847a3dbd43300287f8b66deae59d43ed2",
+        "tarball": "https://registry.npmjs.org/react/-/react-0.0.0-8e5adfbd7.tgz",
+        "fileCount": 18,
+        "unpackedSize": 298580,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfkXcRCRA9TVsSAnZWagAAGxsP/0VqcKsqEsdq0Dt+bUNI\nEXPbCi/UF4VLZpy/R29ffHNtCbnDAK37XvB69AlPPtYXvoA7vpPEBqOpO0Xn\n9Kpx4S5jubY/1e4WMsNYAELuE91kjszfmya+lPu3J/cmqobcK5wdSak6nkKK\nL0O98t2xXdj7mmx3dgfa1wf8wQrRy+iKmIdnG17dJn52jMhv+bVEjhQdzp32\nkezSJyYJlwkhm+BiK+GA8mpjuwYzyIhcx5sfSuuQWiVKgk3bne7DjkVv/aZA\n/172JxCB2hCRPreaNYCiNZ+rvBuS57UzJq8gSMZ4Tml8q05EbFxTjXHB1jvh\nT3uUi2AmccDDVkMI2XNnzZPQPdzHBj9I/L4in9R30gm4tmDCWy1yjx2otlNB\nI8zd2NIUOnKBin72RDi7b/4N5j1xvZKiTbPUoK2BNInNBaAcBPW5C9F0IH1h\nSPjaD2MEY13ddAmWa2/fBgskxeiWyzIDVI0ZWEtOa7KZcH6Xw47se7av19Vn\nLsvMT8jJ0JJOIhBGwfWakkdYe69xRpRPzGyYN5oH6kaaQW5P50Z0aLBVPemI\nxKEKN4si+XalJlGtNbicVuHo/jugZl5KeXlQjVqdk3y3Q4prCm5lhHB+rvRr\n9W9F/GOudhS+PjLEg3Xn9CjP6/1GN19t1m8CDmWMeMu2gjEA75nNwZLJZxbF\nhO66\r\n=6Diy\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/react_0.0.0-8e5adfbd7_1603368720610_0.12780148128981694"
+      },
+      "_hasShrinkwrap": false
+    },
+    "17.0.1": {
+      "name": "react",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "keywords": [
+        "react"
+      ],
+      "version": "17.0.1",
+      "homepage": "https://reactjs.org/",
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/react"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "_id": "react@17.0.1",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==",
+        "shasum": "6e0600416bd57574e3f86d92edba3d9008726127",
+        "tarball": "https://registry.npmjs.org/react/-/react-17.0.1.tgz",
+        "fileCount": 18,
+        "unpackedSize": 298423,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfkXlZCRA9TVsSAnZWagAATFgP/RRW/Y3uxva0iqd+EfSC\nYP+Bo0VhWXb7pUszupgnnZqgHb9aJNNu/1KQaXs5Dm5NmzkCdYpec9y1N6H3\n7dtRkchqVwDf7XmgsdQBxFzlGXgvMo3KzGtfVP01iMJ1QVzwbfKh4Ng3QQZM\nsqzShgPo176HQ+P3FBVzAh3iXVlomzHzj69pI1IG8zfUgCF1WlNHPaYKctoo\nY2ImZuZ0AY0JlAARBYA3PoG8GjNOnb2n5JJ12lQnG4im8uwkQcM5njq/+qEh\njHhZLCsq9sm0BcWaxdfs2wWyIyO/KBUHHMbBY61VN6+IXZ5+26Kucfh/TIs9\nSxgFGOPkmAVeQ0k6uI82/7UxSVznY+bmTohCqzyEnOGPWhQbeqt3XyngBHBZ\nGuhQrzQKFBotfTgRLePPburS47M1QJ0M9vhJRwz3b9qcmx/XMNYSVz6oSqXS\ny65yS+d7GdTpwYqJvHr7Jmnd5FAjiL3Yux5nO7blJ0W5FYY/jQ/ycTXrPx8F\nVzgx3P1Bxnh3eUlCnF/DTTNFgX0KKlvs4dSs8zK5AUyRADKUnlHZ445NCrSI\nQaNkxYLEVW0hyT+yzqLjtNeZWh5dXOCN1wZd722oUJSwrLwq7I5oa4aiXWen\nnzkC+WvloMNjTl1zVPFT6BmiqioYwys+juCjP88hYcfla3AEFCgcTSjzANDN\nZho9\r\n=RpX9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/react_17.0.1_1603369305190_0.6085807529201266"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -25223,7 +25483,7 @@
     }
   ],
   "time": {
-    "modified": "2020-10-14T20:06:26.713Z",
+    "modified": "2020-10-22T12:21:47.541Z",
     "created": "2011-10-26T17:46:21.942Z",
     "0.0.1": "2011-10-26T17:46:22.746Z",
     "0.0.2": "2011-10-28T22:40:36.115Z",
@@ -25517,15 +25777,18 @@
     "0.0.0-experimental-4ead6b530": "2020-10-07T14:39:56.627Z",
     "0.14.10": "2020-10-14T19:12:25.426Z",
     "15.7.0": "2020-10-14T19:29:53.496Z",
-    "16.14.0": "2020-10-14T19:38:05.812Z"
+    "16.14.0": "2020-10-14T19:38:05.812Z",
+    "17.0.0": "2020-10-20T20:11:47.327Z",
+    "0.0.0-8e5adfbd7": "2020-10-22T12:12:00.720Z",
+    "17.0.1": "2020-10-22T12:21:45.340Z"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/facebook/react.git",
     "directory": "packages/react"
   },
-  "readme": "",
-  "readmeFilename": "",
+  "readme": "# `react`\n\nReact is a JavaScript library for creating user interfaces.\n\nThe `react` package contains only the functionality necessary to define React components. It is typically used together with a React renderer like `react-dom` for the web, or `react-native` for the native environments.\n\n**Note:** by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the [production build](https://reactjs.org/docs/optimizing-performance.html#use-the-production-build) when deploying your application.\n\n## Example Usage\n\n```js\nvar React = require('react');\n```\n",
+  "readmeFilename": "README.md",
   "homepage": "https://reactjs.org/",
   "keywords": [
     "react"
@@ -26291,7 +26554,9 @@
     "tsejx": true,
     "emesfun_blueraster": true,
     "soph2k": true,
-    "ofsho": true
+    "ofsho": true,
+    "andrialexandrou": true,
+    "meijin007": true
   },
   "license": "MIT"
 }

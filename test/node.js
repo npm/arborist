@@ -1632,3 +1632,25 @@ t.test('explain yourself', t => {
 
   t.end()
 })
+
+t.test('guard against setting package to something improper', t => {
+  // no pkg
+  const n = new Node({ path: '/some/path' })
+  t.strictSame(n.package, {})
+  // falsey pkg
+  const o = new Node({ path: '/some/path', pkg: null })
+  t.strictSame(o.package, {})
+  // non-object pkg
+  const p = new Node({ path: '/some/path', pkg: 'hello' })
+  t.strictSame(p.package, {})
+
+  // this will throw if we hit the debug, but it'll be an object regardless
+  try {
+    p.package = 'this is not an object'
+  } catch (er) {
+    t.match(er, { message: 'setting Node.package to non-object' })
+  } finally {
+    t.strictSame(p.package, {})
+  }
+  t.end()
+})

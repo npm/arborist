@@ -1157,3 +1157,14 @@ t.test('add multiple pkgs in a specific order', async t => {
   )
 })
 
+t.test('link type for win32', async t => {
+  t.strictEqual(newArb({}).linktype('win32'), 'junction')
+})
+
+t.test('link type for darwin', async t => {
+  t.strictEqual(newArb({}).linktype('darwin'), 'dir')
+})
+
+t.test('link type for linux', async t => {
+  t.strictEqual(newArb({}).linktype('linux'), 'dir')
+})

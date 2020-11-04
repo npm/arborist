@@ -1,3 +1,5 @@
+// always run this test in debug mode
+process.env.ARBORIST_DEBUG = '1'
 const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
@@ -414,6 +416,17 @@ t.test('load with a virtual filesystem parent', t => {
   t.equal(packages.path, root.realpath + '/link-target/packages')
   t.equal(target3.path, root.realpath + '/link-target/packages/link3')
   t.equal(link3.realpath, target3.path, 'link realpath updated')
+
+  // can't set fsParent to a link!
+  t.throws(() => packages.fsParent = link, {
+    message: 'attempting to set fsParent to link node',
+  })
+
+  // can't set fsParent on a new node such that it's outside its path
+  const outsideNode = new Node({ path: '/not/the/root/path', pkg: {} })
+  t.throws(() => outsideNode.fsParent = root, {
+    message: 'attempting to set fsParent improperly',
+  })
 
   t.equal(link.target.edgesOut.get('a').error, 'MISSING')
   t.equal(linkKid.edgesOut.get('a').error, 'MISSING')
@@ -1617,6 +1630,27 @@ t.test('explain yourself', t => {
     package: { noname: 'bad', noversion: 'node' },
   })
 
+  t.end()
+})
 
+t.test('guard against setting package to something improper', t => {
+  // no pkg
+  const n = new Node({ path: '/some/path' })
+  t.strictSame(n.package, {})
+  // falsey pkg
+  const o = new Node({ path: '/some/path', pkg: null })
+  t.strictSame(o.package, {})
+  // non-object pkg
+  const p = new Node({ path: '/some/path', pkg: 'hello' })
+  t.strictSame(p.package, {})
+
+  // this will throw if we hit the debug, but it'll be an object regardless
+  try {
+    p.package = 'this is not an object'
+  } catch (er) {
+    t.match(er, { message: 'setting Node.package to non-object' })
+  } finally {
+    t.strictSame(p.package, {})
+  }
   t.end()
 })

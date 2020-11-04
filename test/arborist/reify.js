@@ -1168,3 +1168,18 @@ t.test('link type for darwin', async t => {
 t.test('link type for linux', async t => {
   t.strictEqual(newArb({}).linktype('linux'), 'dir')
 })
+
+t.test('save complete lockfile on update-all', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'save-package-lock-after-update-test',
+      version: '1.0.0',
+    })
+  })
+  // install the older version first
+  const lock = () => fs.readFileSync(`${path}/package-lock.json`, 'utf8')
+  await reify(path, { add: ['abbrev@1.0.4'] })
+  t.matchSnapshot(lock(), 'should have abbrev 1.0.4')
+  await reify(path, { update: true })
+  t.matchSnapshot(lock(), 'should update, but not drop root metadata')
+})

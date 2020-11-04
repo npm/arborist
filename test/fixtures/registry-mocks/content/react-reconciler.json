@@ -1,10 +1,10 @@
 {
   "_id": "react-reconciler",
-  "_rev": "215-b217b1fe0ce734d8f93f1aed6f312bf9",
+  "_rev": "218-d2c1c03c7211fe3bc2e35cdcffc20a36",
   "name": "react-reconciler",
   "dist-tags": {
-    "next": "0.26.0-rc.3",
-    "latest": "0.25.1",
+    "next": "0.0.0-8e5adfbd7",
+    "latest": "0.26.1",
     "experimental": "0.0.0-experimental-4ead6b530"
   },
   "versions": {
@@ -14972,9 +14972,281 @@
         "tmp": "tmp/react-reconciler_0.0.0-experimental-4ead6b530_1602081635859_0.34397513730733986"
       },
       "_hasShrinkwrap": false
+    },
+    "0.26.0": {
+      "name": "react-reconciler",
+      "description": "React package for creating custom renderers.",
+      "version": "0.26.0",
+      "keywords": [
+        "react"
+      ],
+      "homepage": "https://reactjs.org/",
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/react-reconciler"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "peerDependencies": {
+        "react": "^17.0.0"
+      },
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "scheduler": "^0.20.0"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "_id": "react-reconciler@0.26.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-n2FJE9vPSiZ0Dn/jaV/iOAO6rXepnk74QGRcgwPSgmN/2syUJnbfEz7Bw5yodBfJhjA3L7cu1YdImYISTj4KZQ==",
+        "shasum": "053ae2fd1607e38a960e7a694ad694732e4989b6",
+        "tarball": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.26.0.tgz",
+        "fileCount": 11,
+        "unpackedSize": 836378,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfj0U7CRA9TVsSAnZWagAAyJcQAI9P7OILbmCdi/nOH5yR\ndsrHotPbDB0+sjrYhlv1QCSM05PhoYz/GYBA1Wf4JXvpBZf6nQFfyxepE25W\nNCe7GjPMMOoaWbrk9vUZ3dhp4kyGyH/0U/bBRgKV57Ot6z3Fnx1JpJXMYqS4\nNfRwEoaYRhsE9SOpQGUv+q6Ms8mgGdu7Swh+x39kOSR8rba0qYT61la3jLHA\nD5vlPJdAZCPE1j0F6dFGmPTDkzfuzPWaGiVeExFI5TAWU2PPhxQvfG3+Bajx\naRgU3zbwNY6zq3Wt9JpuKeQlMBGhO4/XNMwVqmvTK+94cTpiFuht/6LBf7JK\nOiIYy8FaXlxiUf5Qk+JRNUMPO/m6XN7cXNkpxOWcCerJ2sjP4ym7bq5kqVI1\nlws4DJBhhGnI0aG0GW4w99a6XENoAU06ejZZxw+6kPP0ExjVb6SdVUBgIXfW\nbkvMU4oYF2vy1c/YH4J3Pp9deOY+P8cq5HRE9PNruoA0uoIc2pqsboAq14oG\nISGLZf5OqETqhXKORkZlKVBjPpVe8x+Wx4bWc3mFT1Sf+pAMx+MTb+9+Ny2F\n9igciPj2JQHO2xDJ82l4a1wGFbXSC+lvdRH2bdKyKfLvXcNQiiSCdGjeKpvX\nlMJEk4JhcGUYESMB7jhKF/OSmck4mjD2A03J40ogQIzR8uM/GA9D/u5vUzb1\nbo0l\r\n=I7b7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/react-reconciler_0.26.0_1603224890676_0.03838196888257239"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.0-8e5adfbd7": {
+      "name": "react-reconciler",
+      "description": "React package for creating custom renderers.",
+      "version": "0.0.0-8e5adfbd7",
+      "keywords": [
+        "react"
+      ],
+      "homepage": "https://reactjs.org/",
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/react-reconciler"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "peerDependencies": {
+        "react": "0.0.0-8e5adfbd7"
+      },
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "scheduler": "0.0.0-8e5adfbd7"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "readme": "# react-reconciler\n\nThis is an experimental package for creating custom React renderers.\n\n**Its API is not as stable as that of React, React Native, or React DOM, and does not follow the common versioning scheme.**\n\n**Use it at your own risk.**\n\n## API\n\n```js\nconst Reconciler = require('react-reconciler');\n\nconst HostConfig = {\n  // You'll need to implement some methods here.\n  // See below for more information and examples.\n};\n\nconst MyRenderer = Reconciler(HostConfig);\n\nconst RendererPublicAPI = {\n  render(element, container, callback) {\n    // Call MyRenderer.updateContainer() to schedule changes on the roots.\n    // See ReactDOM, React Native, or React ART for practical examples.\n  }\n};\n\nmodule.exports = RendererPublicAPI;\n```\n\n## Practical Examples\n\nA \"host config\" is an object that you need to provide, and that describes how to make something happen in the \"host\" environment (e.g. DOM, canvas, console, or whatever your rendering target is). It looks like this:\n\n```js\nconst HostConfig = {\n  createInstance(type, props) {\n    // e.g. DOM renderer returns a DOM node\n  },\n  // ...\n  supportsMutation: true, // it works by mutating nodes\n  appendChild(parent, child) {\n    // e.g. DOM renderer would call .appendChild() here\n  },\n  // ...\n};\n```\n\n**For an introduction to writing a very simple custom renderer, check out this article series:**\n\n* **[Building a simple custom renderer to DOM](https://medium.com/@agent_hunt/hello-world-custom-react-renderer-9a95b7cd04bc)**\n* **[Building a simple custom renderer to native](https://medium.com/@agent_hunt/introduction-to-react-native-renderers-aka-react-native-is-the-java-and-react-native-renderers-are-828a0022f433)**\n\nThe full list of supported methods [can be found here](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/forks/ReactFiberHostConfig.custom.js). For their signatures, we recommend looking at specific examples below.\n\nThe React repository includes several renderers. Each of them has its own host config.\n\nThe examples in the React repository are declared a bit differently than a third-party renderer would be. In particular, the `HostConfig` object mentioned above is never explicitly declared, and instead is a *module* in our code. However, its exports correspond directly to properties on a `HostConfig` object you'd need to declare in your code:\n\n* [React ART](https://github.com/facebook/react/blob/master/packages/react-art/src/ReactART.js) and its [host config](https://github.com/facebook/react/blob/master/packages/react-art/src/ReactARTHostConfig.js)\n* [React DOM](https://github.com/facebook/react/blob/master/packages/react-dom/src/client/ReactDOM.js) and its [host config](https://github.com/facebook/react/blob/master/packages/react-dom/src/client/ReactDOMHostConfig.js)\n* [React Native](https://github.com/facebook/react/blob/master/packages/react-native-renderer/src/ReactNativeRenderer.js) and its [host config](https://github.com/facebook/react/blob/master/packages/react-native-renderer/src/ReactNativeHostConfig.js)\n\nIf these links break please file an issue and we’ll fix them. They intentionally link to the latest versions since the API is still evolving. If you have more questions please file an issue and we’ll try to help!\n",
+      "readmeFilename": "README.md",
+      "_id": "react-reconciler@0.0.0-8e5adfbd7",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-8692GeamhCOFRLQdwD5TAaHrwOVoXJpJQqI7T85iTFMAx50ZikqAv1qoKBlpaATeQ4Z12D+kkz7BbOekNwaJiw==",
+        "shasum": "981502f96e4caee82a9c74f8b290a19b9d879ca1",
+        "tarball": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.0.0-8e5adfbd7.tgz",
+        "fileCount": 11,
+        "unpackedSize": 836654,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfkXcnCRA9TVsSAnZWagAAWHEQAKRgDhrVTqJZGS3IIpua\nYKprcrpxA1DSq6m25b4L7CgRKQzb9Za+5VPZkOc0ESeTp9FapgUxEIdjRxMk\nKNPm00DNv3MkTHy0VHFAoLdKJj7ZwsdVPHR/o35ikJ2jbu+gb4dZZ7YcQqYr\nMeK2Xt3MgNn3fGNwDJU5+fUXJ4YVxnoWJl+cG64jp+Gv7RZd07gYA3wubAJ5\nf+YVaYrBwjvmcik+KBDGtKPrSJiXASNjTskR3wW+nEY0LrplNt2S32jyAWRX\nfMAXMxGNza/dSGnBf/+qTCwUEZpDQehRdoXCRYEEdMF/obS2Zen/9nrcnrl6\nkkfm7OR7mjWKDpfMZfJi0yP2mKnR+x2cpwS30KrTlmUoTCEkJgT1JS0ZvUMF\nFB4PJUvpZw60jpXA2qotVtEPE6hUKJCVkOLCp1UdismszHdbkOj5yCZsgEYB\naAnpinGmOtLCRfHDv3ud4Vcd8lQcrbwW2F6fMb8Ztv7p8R0Tm2N4GQwVNJOc\nxoStlanJQ1dDooZzua5oN6B43MF9AGsg96YQYnolKeDUX3BTtNzD4YOrz5n2\nwWw9H3jU71dmDV0reUqKrE+gowXDuaEf1RAE2qtjeOa3fJhKrFKjJ2szMWJh\nALR5BwbHJV1V+sIHJOiNWhh59UAPaudlIuz2K1PGV8rgugFfyOD/tGtkKHUc\nYLrd\r\n=Ih0v\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/react-reconciler_0.0.0-8e5adfbd7_1603368742665_0.276889696741206"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.26.1": {
+      "name": "react-reconciler",
+      "description": "React package for creating custom renderers.",
+      "version": "0.26.1",
+      "keywords": [
+        "react"
+      ],
+      "homepage": "https://reactjs.org/",
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/react-reconciler"
+      },
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "peerDependencies": {
+        "react": "^17.0.1"
+      },
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1",
+        "scheduler": "^0.20.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "_id": "react-reconciler@0.26.1",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-6E/CvH9zcDmHjhiNJlP0qJ8+3ufnY2b5RWs774Uy8XKWN0l6qfnlkz0XnDacxqj2rbJdq76w9dlFXjPPOQrmqA==",
+        "shasum": "860952dd359fd870f94895c254271e3a9de3b2d6",
+        "tarball": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.26.1.tgz",
+        "fileCount": 11,
+        "unpackedSize": 836584,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfkXlxCRA9TVsSAnZWagAA6HcP/3aycYzgQERe3XcRwW5m\nbBpOKl8W1JgxwZu+c0jAjlDEs9IzJNNrdaNk/WdGCM+gQnIeIht/GgpM0BFU\ng+NAwVi7Yu7EFoKfwH4vyzhx/l+Vxo44vagTZ8MOKeuSBfTOTE2QYqogwVaj\ndJzq+KbclsKXIoAN3TmCwK5xatkwfRwq+J2xhCxOadX6s34pronnZqHKoUWc\nJnpFlrcz0L8yvto5oKugKt7a7B6qrR7U03wx9cOgj8BaE6EpkhgkH476U+DP\nZHV2J3DoVadsJ2YBxb2dDxLF4UITdJUrFF/DC6XkGE/Pmqnh9AK87rkK8Sj2\nHnMyTPGetI3NWpHAUosYBbKz879QcwpfuoZDVlGpkCn1eAjTUIRFnOOrCnyV\n+GTeUcUuw7yQ4tu9G4J5uhCrRWuPdbi8PxDd67plbK1GCOKe83qhrka7p2j5\n3pO72oRqdTxatwfTKeeUjfWe2RWjgQMOWpfwClO4Q/wE2NYbthYEcBfAbatY\nNYtyfpI2RQMNIbwRtrgtaQUIRpTo8d2RmbQEKhmRPmedVrf1MsfuqfK5gGSL\nQ1HMPpcRVbAv8GedaEVYk8sHdkwmq5kZoS0hQ/7h0LGigHua85Dsexe11jyw\nSzk1foUm5uRTth7lie0CufkZAAL/03MqqRiqbQbWlZz2g9PXEqwFmXxYCzVU\n/1tY\r\n=2qTx\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/react-reconciler_0.26.1_1603369328928_0.2456133265565601"
+      },
+      "_hasShrinkwrap": false
     }
   },
-  "readme": "",
+  "readme": "# react-reconciler\n\nThis is an experimental package for creating custom React renderers.\n\n**Its API is not as stable as that of React, React Native, or React DOM, and does not follow the common versioning scheme.**\n\n**Use it at your own risk.**\n\n## API\n\n```js\nconst Reconciler = require('react-reconciler');\n\nconst HostConfig = {\n  // You'll need to implement some methods here.\n  // See below for more information and examples.\n};\n\nconst MyRenderer = Reconciler(HostConfig);\n\nconst RendererPublicAPI = {\n  render(element, container, callback) {\n    // Call MyRenderer.updateContainer() to schedule changes on the roots.\n    // See ReactDOM, React Native, or React ART for practical examples.\n  }\n};\n\nmodule.exports = RendererPublicAPI;\n```\n\n## Practical Examples\n\nA \"host config\" is an object that you need to provide, and that describes how to make something happen in the \"host\" environment (e.g. DOM, canvas, console, or whatever your rendering target is). It looks like this:\n\n```js\nconst HostConfig = {\n  createInstance(type, props) {\n    // e.g. DOM renderer returns a DOM node\n  },\n  // ...\n  supportsMutation: true, // it works by mutating nodes\n  appendChild(parent, child) {\n    // e.g. DOM renderer would call .appendChild() here\n  },\n  // ...\n};\n```\n\n**For an introduction to writing a very simple custom renderer, check out this article series:**\n\n* **[Building a simple custom renderer to DOM](https://medium.com/@agent_hunt/hello-world-custom-react-renderer-9a95b7cd04bc)**\n* **[Building a simple custom renderer to native](https://medium.com/@agent_hunt/introduction-to-react-native-renderers-aka-react-native-is-the-java-and-react-native-renderers-are-828a0022f433)**\n\nThe full list of supported methods [can be found here](https://github.com/facebook/react/blob/master/packages/react-reconciler/src/forks/ReactFiberHostConfig.custom.js). For their signatures, we recommend looking at specific examples below.\n\nThe React repository includes several renderers. Each of them has its own host config.\n\nThe examples in the React repository are declared a bit differently than a third-party renderer would be. In particular, the `HostConfig` object mentioned above is never explicitly declared, and instead is a *module* in our code. However, its exports correspond directly to properties on a `HostConfig` object you'd need to declare in your code:\n\n* [React ART](https://github.com/facebook/react/blob/master/packages/react-art/src/ReactART.js) and its [host config](https://github.com/facebook/react/blob/master/packages/react-art/src/ReactARTHostConfig.js)\n* [React DOM](https://github.com/facebook/react/blob/master/packages/react-dom/src/client/ReactDOM.js) and its [host config](https://github.com/facebook/react/blob/master/packages/react-dom/src/client/ReactDOMHostConfig.js)\n* [React Native](https://github.com/facebook/react/blob/master/packages/react-native-renderer/src/ReactNativeRenderer.js) and its [host config](https://github.com/facebook/react/blob/master/packages/react-native-renderer/src/ReactNativeHostConfig.js)\n\nIf these links break please file an issue and we’ll fix them. They intentionally link to the latest versions since the API is still evolving. If you have more questions please file an issue and we’ll try to help!\n",
   "maintainers": [
     {
       "name": "sebmarkbage",
@@ -15010,7 +15282,7 @@
     }
   ],
   "time": {
-    "modified": "2020-10-07T14:40:38.331Z",
+    "modified": "2020-10-22T12:22:11.308Z",
     "created": "2017-09-23T22:51:52.100Z",
     "0.0.0": "2017-09-23T22:51:52.100Z",
     "0.2.0": "2017-11-02T22:45:12.215Z",
@@ -15169,9 +15441,12 @@
     "0.26.0-rc.2": "2020-09-22T00:14:21.222Z",
     "0.0.0-4ead6b530": "2020-10-07T13:10:45.225Z",
     "0.26.0-rc.3": "2020-10-07T13:37:51.326Z",
-    "0.0.0-experimental-4ead6b530": "2020-10-07T14:40:36.094Z"
+    "0.0.0-experimental-4ead6b530": "2020-10-07T14:40:36.094Z",
+    "0.26.0": "2020-10-20T20:14:50.832Z",
+    "0.0.0-8e5adfbd7": "2020-10-22T12:12:23.053Z",
+    "0.26.1": "2020-10-22T12:22:09.079Z"
   },
-  "readmeFilename": "",
+  "readmeFilename": "README.md",
   "description": "React package for creating custom renderers.",
   "homepage": "https://reactjs.org/",
   "keywords": [

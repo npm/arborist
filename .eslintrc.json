@@ -157,6 +157,7 @@
     "no-void": "error",
     "no-whitespace-before-property": "error",
     "no-with": "error",
+    "nonblock-statement-body-position": [2, "below"],
     "object-curly-newline": "off",
     "object-curly-spacing": "off",
     "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],

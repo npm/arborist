@@ -258,6 +258,4381 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP allow updating when peer outside of explicit update set conflict, but resolves appropriately with --force > succeed if force applied 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "type": "peer",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-single-a/-/testing-peer-dep-conflict-chain-single-a-2.0.1.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "error": "INVALID",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-single-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-single-b/-/testing-peer-dep-conflict-chain-single-b-2.0.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-allow-updating-when-peer-outside-of-explicit-update-set-conflict-but-resolves-appropriately-with-force",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP allow updating when peer outside of explicit update set valid, no force required > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "spec": "2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "spec": "2",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-single-a/-/testing-peer-dep-conflict-chain-single-a-2.0.1.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-b",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-single-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-single-b/-/testing-peer-dep-conflict-chain-single-b-2.0.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-a" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-a",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-single-b" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-single-b",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-allow-updating-when-peer-outside-of-explicit-update-set-valid-no-force-required",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP always prefer deduping peer deps > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@pmmmwh/react-refresh-webpack-plugin" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@pmmmwh/react-refresh-webpack-plugin",
+          "spec": "0.4.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/webpack" => Edge {
+          "name": "@types/webpack",
+          "spec": "4.x",
+          "to": null,
+          "type": "peerOptional",
+        },
+        "ansi-html" => Edge {
+          "name": "ansi-html",
+          "spec": "^0.0.7",
+          "to": "node_modules/ansi-html",
+          "type": "prod",
+        },
+        "error-stack-parser" => Edge {
+          "name": "error-stack-parser",
+          "spec": "^2.0.6",
+          "to": "node_modules/error-stack-parser",
+          "type": "prod",
+        },
+        "html-entities" => Edge {
+          "name": "html-entities",
+          "spec": "^1.2.1",
+          "to": "node_modules/html-entities",
+          "type": "prod",
+        },
+        "native-url" => Edge {
+          "name": "native-url",
+          "spec": "^0.2.6",
+          "to": "node_modules/native-url",
+          "type": "prod",
+        },
+        "react-refresh" => Edge {
+          "name": "react-refresh",
+          "spec": "^0.8.3",
+          "to": "node_modules/react-refresh",
+          "type": "peer",
+        },
+        "schema-utils" => Edge {
+          "name": "schema-utils",
+          "spec": "^2.6.5",
+          "to": "node_modules/schema-utils",
+          "type": "prod",
+        },
+        "sockjs-client" => Edge {
+          "name": "sockjs-client",
+          "spec": "^1.4.0",
+          "to": null,
+          "type": "peerOptional",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "^0.7.3",
+          "to": "node_modules/source-map",
+          "type": "prod",
+        },
+        "type-fest" => Edge {
+          "error": "INVALID",
+          "name": "type-fest",
+          "spec": "^0.13.1",
+          "to": "node_modules/type-fest",
+          "type": "peerOptional",
+        },
+        "webpack" => Edge {
+          "name": "webpack",
+          "spec": ">=4.43.0 <6.0.0",
+          "to": "node_modules/webpack",
+          "type": "peer",
+        },
+        "webpack-dev-server" => Edge {
+          "name": "webpack-dev-server",
+          "spec": "3.x",
+          "to": null,
+          "type": "peerOptional",
+        },
+        "webpack-hot-middleware" => Edge {
+          "name": "webpack-hot-middleware",
+          "spec": "2.x",
+          "to": null,
+          "type": "peerOptional",
+        },
+        "webpack-plugin-serve" => Edge {
+          "name": "webpack-plugin-serve",
+          "spec": "0.x || 1.x",
+          "to": null,
+          "type": "peerOptional",
+        },
+      },
+      "location": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "resolved": "https://registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.2.tgz",
+    },
+    "@types/eslint" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@types/eslint-scope",
+          "name": "@types/eslint",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/estree" => Edge {
+          "name": "@types/estree",
+          "spec": "*",
+          "to": "node_modules/@types/estree",
+          "type": "prod",
+        },
+        "@types/json-schema" => Edge {
+          "name": "@types/json-schema",
+          "spec": "*",
+          "to": "node_modules/@types/json-schema",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/eslint",
+      "name": "@types/eslint",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@types/eslint/-/eslint-7.2.4.tgz",
+    },
+    "@types/eslint-scope" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "@types/eslint-scope",
+          "spec": "^3.7.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/eslint" => Edge {
+          "name": "@types/eslint",
+          "spec": "*",
+          "to": "node_modules/@types/eslint",
+          "type": "prod",
+        },
+        "@types/estree" => Edge {
+          "name": "@types/estree",
+          "spec": "*",
+          "to": "node_modules/@types/estree",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/eslint-scope",
+      "name": "@types/eslint-scope",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.0.tgz",
+    },
+    "@types/estree" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@types/eslint",
+          "name": "@types/estree",
+          "spec": "*",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@types/eslint-scope",
+          "name": "@types/estree",
+          "spec": "*",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "@types/estree",
+          "spec": "^0.0.45",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/estree",
+      "name": "@types/estree",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@types/estree/-/estree-0.0.45.tgz",
+    },
+    "@types/json-schema" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@types/eslint",
+          "name": "@types/json-schema",
+          "spec": "*",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/schema-utils",
+          "name": "@types/json-schema",
+          "spec": "^7.0.5",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/terser-webpack-plugin/node_modules/schema-utils",
+          "name": "@types/json-schema",
+          "spec": "^7.0.6",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack/node_modules/schema-utils",
+          "name": "@types/json-schema",
+          "spec": "^7.0.6",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/json-schema",
+      "name": "@types/json-schema",
+      "resolved": "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.6.tgz",
+    },
+    "@types/node" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/jest-worker",
+          "name": "@types/node",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/node",
+      "name": "@types/node",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-14.11.8.tgz",
+    },
+    "@types/yoga-layout" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/yoga-layout-prebuilt",
+          "name": "@types/yoga-layout",
+          "spec": "1.9.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/yoga-layout",
+      "name": "@types/yoga-layout",
+      "resolved": "https://registry.npmjs.org/@types/yoga-layout/-/yoga-layout-1.9.2.tgz",
+    },
+    "@webassemblyjs/ast" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/helper-module-context",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/helper-wasm-section",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-gen",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-opt",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-parser",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-parser",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-printer",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/helper-module-context" => Edge {
+          "name": "@webassemblyjs/helper-module-context",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-module-context",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-wasm-bytecode" => Edge {
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-wasm-bytecode",
+          "type": "prod",
+        },
+        "@webassemblyjs/wast-parser" => Edge {
+          "name": "@webassemblyjs/wast-parser",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wast-parser",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/ast",
+      "name": "@webassemblyjs/ast",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.9.0.tgz",
+    },
+    "@webassemblyjs/floating-point-hex-parser" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-parser",
+          "name": "@webassemblyjs/floating-point-hex-parser",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/floating-point-hex-parser",
+      "name": "@webassemblyjs/floating-point-hex-parser",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-api-error" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-parser",
+          "name": "@webassemblyjs/helper-api-error",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-parser",
+          "name": "@webassemblyjs/helper-api-error",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-api-error",
+      "name": "@webassemblyjs/helper-api-error",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-api-error/-/helper-api-error-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-buffer" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/helper-wasm-section",
+          "name": "@webassemblyjs/helper-buffer",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/helper-buffer",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-opt",
+          "name": "@webassemblyjs/helper-buffer",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-buffer",
+      "name": "@webassemblyjs/helper-buffer",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-buffer/-/helper-buffer-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-code-frame" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-parser",
+          "name": "@webassemblyjs/helper-code-frame",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/wast-printer" => Edge {
+          "name": "@webassemblyjs/wast-printer",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wast-printer",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-code-frame",
+      "name": "@webassemblyjs/helper-code-frame",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-code-frame/-/helper-code-frame-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-fsm" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-parser",
+          "name": "@webassemblyjs/helper-fsm",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-fsm",
+      "name": "@webassemblyjs/helper-fsm",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-fsm/-/helper-fsm-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-module-context" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/ast",
+          "name": "@webassemblyjs/helper-module-context",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "@webassemblyjs/helper-module-context",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-module-context",
+      "name": "@webassemblyjs/helper-module-context",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-module-context/-/helper-module-context-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-wasm-bytecode" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/ast",
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/helper-wasm-section",
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-gen",
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-parser",
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-wasm-bytecode",
+      "name": "@webassemblyjs/helper-wasm-bytecode",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.9.0.tgz",
+    },
+    "@webassemblyjs/helper-wasm-section" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/helper-wasm-section",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-buffer" => Edge {
+          "name": "@webassemblyjs/helper-buffer",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-buffer",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-wasm-bytecode" => Edge {
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-wasm-bytecode",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-gen" => Edge {
+          "name": "@webassemblyjs/wasm-gen",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-gen",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/helper-wasm-section",
+      "name": "@webassemblyjs/helper-wasm-section",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/helper-wasm-section/-/helper-wasm-section-1.9.0.tgz",
+    },
+    "@webassemblyjs/ieee754" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-gen",
+          "name": "@webassemblyjs/ieee754",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-parser",
+          "name": "@webassemblyjs/ieee754",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@xtuc/ieee754" => Edge {
+          "name": "@xtuc/ieee754",
+          "spec": "^1.2.0",
+          "to": "node_modules/@xtuc/ieee754",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/ieee754",
+      "name": "@webassemblyjs/ieee754",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/ieee754/-/ieee754-1.9.0.tgz",
+    },
+    "@webassemblyjs/leb128" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-gen",
+          "name": "@webassemblyjs/leb128",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-parser",
+          "name": "@webassemblyjs/leb128",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@xtuc/long" => Edge {
+          "name": "@xtuc/long",
+          "spec": "4.2.2",
+          "to": "node_modules/@xtuc/long",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/leb128",
+      "name": "@webassemblyjs/leb128",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/leb128/-/leb128-1.9.0.tgz",
+    },
+    "@webassemblyjs/utf8" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-gen",
+          "name": "@webassemblyjs/utf8",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-parser",
+          "name": "@webassemblyjs/utf8",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/utf8",
+      "name": "@webassemblyjs/utf8",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/utf8/-/utf8-1.9.0.tgz",
+    },
+    "@webassemblyjs/wasm-edit" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "@webassemblyjs/wasm-edit",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-buffer" => Edge {
+          "name": "@webassemblyjs/helper-buffer",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-buffer",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-wasm-bytecode" => Edge {
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-wasm-bytecode",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-wasm-section" => Edge {
+          "name": "@webassemblyjs/helper-wasm-section",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-wasm-section",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-gen" => Edge {
+          "name": "@webassemblyjs/wasm-gen",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-gen",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-opt" => Edge {
+          "name": "@webassemblyjs/wasm-opt",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-opt",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-parser" => Edge {
+          "name": "@webassemblyjs/wasm-parser",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-parser",
+          "type": "prod",
+        },
+        "@webassemblyjs/wast-printer" => Edge {
+          "name": "@webassemblyjs/wast-printer",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wast-printer",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/wasm-edit",
+      "name": "@webassemblyjs/wasm-edit",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-edit/-/wasm-edit-1.9.0.tgz",
+    },
+    "@webassemblyjs/wasm-gen" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/helper-wasm-section",
+          "name": "@webassemblyjs/wasm-gen",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/wasm-gen",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-opt",
+          "name": "@webassemblyjs/wasm-gen",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-wasm-bytecode" => Edge {
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-wasm-bytecode",
+          "type": "prod",
+        },
+        "@webassemblyjs/ieee754" => Edge {
+          "name": "@webassemblyjs/ieee754",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ieee754",
+          "type": "prod",
+        },
+        "@webassemblyjs/leb128" => Edge {
+          "name": "@webassemblyjs/leb128",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/leb128",
+          "type": "prod",
+        },
+        "@webassemblyjs/utf8" => Edge {
+          "name": "@webassemblyjs/utf8",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/utf8",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/wasm-gen",
+      "name": "@webassemblyjs/wasm-gen",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-gen/-/wasm-gen-1.9.0.tgz",
+    },
+    "@webassemblyjs/wasm-opt" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/wasm-opt",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-buffer" => Edge {
+          "name": "@webassemblyjs/helper-buffer",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-buffer",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-gen" => Edge {
+          "name": "@webassemblyjs/wasm-gen",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-gen",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-parser" => Edge {
+          "name": "@webassemblyjs/wasm-parser",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-parser",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/wasm-opt",
+      "name": "@webassemblyjs/wasm-opt",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-opt/-/wasm-opt-1.9.0.tgz",
+    },
+    "@webassemblyjs/wasm-parser" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/wasm-parser",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-opt",
+          "name": "@webassemblyjs/wasm-parser",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "@webassemblyjs/wasm-parser",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-api-error" => Edge {
+          "name": "@webassemblyjs/helper-api-error",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-api-error",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-wasm-bytecode" => Edge {
+          "name": "@webassemblyjs/helper-wasm-bytecode",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-wasm-bytecode",
+          "type": "prod",
+        },
+        "@webassemblyjs/ieee754" => Edge {
+          "name": "@webassemblyjs/ieee754",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ieee754",
+          "type": "prod",
+        },
+        "@webassemblyjs/leb128" => Edge {
+          "name": "@webassemblyjs/leb128",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/leb128",
+          "type": "prod",
+        },
+        "@webassemblyjs/utf8" => Edge {
+          "name": "@webassemblyjs/utf8",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/utf8",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/wasm-parser",
+      "name": "@webassemblyjs/wasm-parser",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/wasm-parser/-/wasm-parser-1.9.0.tgz",
+    },
+    "@webassemblyjs/wast-parser" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/ast",
+          "name": "@webassemblyjs/wast-parser",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-printer",
+          "name": "@webassemblyjs/wast-parser",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/floating-point-hex-parser" => Edge {
+          "name": "@webassemblyjs/floating-point-hex-parser",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/floating-point-hex-parser",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-api-error" => Edge {
+          "name": "@webassemblyjs/helper-api-error",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-api-error",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-code-frame" => Edge {
+          "name": "@webassemblyjs/helper-code-frame",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-code-frame",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-fsm" => Edge {
+          "name": "@webassemblyjs/helper-fsm",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-fsm",
+          "type": "prod",
+        },
+        "@xtuc/long" => Edge {
+          "name": "@xtuc/long",
+          "spec": "4.2.2",
+          "to": "node_modules/@xtuc/long",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/wast-parser",
+      "name": "@webassemblyjs/wast-parser",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/wast-parser/-/wast-parser-1.9.0.tgz",
+    },
+    "@webassemblyjs/wast-printer" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/helper-code-frame",
+          "name": "@webassemblyjs/wast-printer",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wasm-edit",
+          "name": "@webassemblyjs/wast-printer",
+          "spec": "1.9.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/wast-parser" => Edge {
+          "name": "@webassemblyjs/wast-parser",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wast-parser",
+          "type": "prod",
+        },
+        "@xtuc/long" => Edge {
+          "name": "@xtuc/long",
+          "spec": "4.2.2",
+          "to": "node_modules/@xtuc/long",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@webassemblyjs/wast-printer",
+      "name": "@webassemblyjs/wast-printer",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@webassemblyjs/wast-printer/-/wast-printer-1.9.0.tgz",
+    },
+    "@xtuc/ieee754" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/ieee754",
+          "name": "@xtuc/ieee754",
+          "spec": "^1.2.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@xtuc/ieee754",
+      "name": "@xtuc/ieee754",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@xtuc/ieee754/-/ieee754-1.2.0.tgz",
+    },
+    "@xtuc/long" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@webassemblyjs/leb128",
+          "name": "@xtuc/long",
+          "spec": "4.2.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-parser",
+          "name": "@xtuc/long",
+          "spec": "4.2.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@webassemblyjs/wast-printer",
+          "name": "@xtuc/long",
+          "spec": "4.2.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@xtuc/long",
+      "name": "@xtuc/long",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz",
+    },
+    "acorn" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "acorn",
+          "spec": "^8.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/acorn",
+      "name": "acorn",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/acorn/-/acorn-8.0.4.tgz",
+    },
+    "ajv" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv-keywords",
+          "name": "ajv",
+          "spec": "^6.9.1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/schema-utils",
+          "name": "ajv",
+          "spec": "^6.12.4",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/terser-webpack-plugin/node_modules/schema-utils",
+          "name": "ajv",
+          "spec": "^6.12.5",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack/node_modules/schema-utils",
+          "name": "ajv",
+          "spec": "^6.12.5",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "fast-deep-equal" => Edge {
+          "name": "fast-deep-equal",
+          "spec": "^3.1.1",
+          "to": "node_modules/fast-deep-equal",
+          "type": "prod",
+        },
+        "fast-json-stable-stringify" => Edge {
+          "name": "fast-json-stable-stringify",
+          "spec": "^2.0.0",
+          "to": "node_modules/fast-json-stable-stringify",
+          "type": "prod",
+        },
+        "json-schema-traverse" => Edge {
+          "name": "json-schema-traverse",
+          "spec": "^0.4.1",
+          "to": "node_modules/json-schema-traverse",
+          "type": "prod",
+        },
+        "uri-js" => Edge {
+          "name": "uri-js",
+          "spec": "^4.2.2",
+          "to": "node_modules/uri-js",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ajv",
+      "name": "ajv",
+      "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
+    },
+    "ajv-keywords" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/schema-utils",
+          "name": "ajv-keywords",
+          "spec": "^3.5.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/terser-webpack-plugin/node_modules/schema-utils",
+          "name": "ajv-keywords",
+          "spec": "^3.5.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack/node_modules/schema-utils",
+          "name": "ajv-keywords",
+          "spec": "^3.5.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ajv" => Edge {
+          "name": "ajv",
+          "spec": "^6.9.1",
+          "to": "node_modules/ajv",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/ajv-keywords",
+      "name": "ajv-keywords",
+      "resolved": "https://registry.npmjs.org/ajv-keywords/-/ajv-keywords-3.5.2.tgz",
+    },
+    "ansi-escapes" => Node {
+      "children": Map {
+        "type-fest" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/ansi-escapes",
+              "name": "type-fest",
+              "spec": "^0.11.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/ansi-escapes/node_modules/type-fest",
+          "name": "type-fest",
+          "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.11.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "ansi-escapes",
+          "spec": "^4.2.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "type-fest" => Edge {
+          "name": "type-fest",
+          "spec": "^0.11.0",
+          "to": "node_modules/ansi-escapes/node_modules/type-fest",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-escapes",
+      "name": "ansi-escapes",
+      "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.1.tgz",
+    },
+    "ansi-html" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "ansi-html",
+          "spec": "^0.0.7",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-html",
+      "name": "ansi-html",
+      "resolved": "https://registry.npmjs.org/ansi-html/-/ansi-html-0.0.7.tgz",
+    },
+    "ansi-regex" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/strip-ansi",
+          "name": "ansi-regex",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-regex",
+      "name": "ansi-regex",
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
+    },
+    "ansi-styles" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chalk",
+          "name": "ansi-styles",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/slice-ansi",
+          "name": "ansi-styles",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/wrap-ansi",
+          "name": "ansi-styles",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "color-convert" => Edge {
+          "name": "color-convert",
+          "spec": "^2.0.1",
+          "to": "node_modules/color-convert",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-styles",
+      "name": "ansi-styles",
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+    },
+    "astral-regex" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/slice-ansi",
+          "name": "astral-regex",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/astral-regex",
+      "name": "astral-regex",
+      "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz",
+    },
+    "auto-bind" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "auto-bind",
+          "spec": "4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/auto-bind",
+      "name": "auto-bind",
+      "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-4.0.0.tgz",
+    },
+    "browserslist" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "browserslist",
+          "spec": "^4.14.5",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "caniuse-lite" => Edge {
+          "name": "caniuse-lite",
+          "spec": "^1.0.30001135",
+          "to": "node_modules/caniuse-lite",
+          "type": "prod",
+        },
+        "electron-to-chromium" => Edge {
+          "name": "electron-to-chromium",
+          "spec": "^1.3.571",
+          "to": "node_modules/electron-to-chromium",
+          "type": "prod",
+        },
+        "escalade" => Edge {
+          "name": "escalade",
+          "spec": "^3.1.0",
+          "to": "node_modules/escalade",
+          "type": "prod",
+        },
+        "node-releases" => Edge {
+          "name": "node-releases",
+          "spec": "^1.1.61",
+          "to": "node_modules/node-releases",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/browserslist",
+      "name": "browserslist",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/browserslist/-/browserslist-4.14.5.tgz",
+    },
+    "buffer-from" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/source-map-support",
+          "name": "buffer-from",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/buffer-from",
+      "name": "buffer-from",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.1.tgz",
+    },
+    "caniuse-lite" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/browserslist",
+          "name": "caniuse-lite",
+          "spec": "^1.0.30001135",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/caniuse-lite",
+      "name": "caniuse-lite",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001148.tgz",
+    },
+    "chalk" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "chalk",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-styles" => Edge {
+          "name": "ansi-styles",
+          "spec": "^4.1.0",
+          "to": "node_modules/ansi-styles",
+          "type": "prod",
+        },
+        "supports-color" => Edge {
+          "name": "supports-color",
+          "spec": "^7.1.0",
+          "to": "node_modules/supports-color",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/chalk",
+      "name": "chalk",
+      "resolved": "https://registry.npmjs.org/chalk/-/chalk-4.1.0.tgz",
+    },
+    "chrome-trace-event" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "chrome-trace-event",
+          "spec": "^1.0.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "tslib" => Edge {
+          "name": "tslib",
+          "spec": "^1.9.0",
+          "to": "node_modules/tslib",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/chrome-trace-event",
+      "name": "chrome-trace-event",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/chrome-trace-event/-/chrome-trace-event-1.0.2.tgz",
+    },
+    "ci-info" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/is-ci",
+          "name": "ci-info",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ci-info",
+      "name": "ci-info",
+      "resolved": "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz",
+    },
+    "cli-boxes" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "cli-boxes",
+          "spec": "^2.2.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/cli-boxes",
+      "name": "cli-boxes",
+      "resolved": "https://registry.npmjs.org/cli-boxes/-/cli-boxes-2.2.1.tgz",
+    },
+    "cli-cursor" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "cli-cursor",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "restore-cursor" => Edge {
+          "name": "restore-cursor",
+          "spec": "^3.1.0",
+          "to": "node_modules/restore-cursor",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/cli-cursor",
+      "name": "cli-cursor",
+      "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz",
+    },
+    "cli-truncate" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "cli-truncate",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "slice-ansi" => Edge {
+          "name": "slice-ansi",
+          "spec": "^3.0.0",
+          "to": "node_modules/slice-ansi",
+          "type": "prod",
+        },
+        "string-width" => Edge {
+          "name": "string-width",
+          "spec": "^4.2.0",
+          "to": "node_modules/string-width",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/cli-truncate",
+      "name": "cli-truncate",
+      "resolved": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz",
+    },
+    "code-excerpt" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "code-excerpt",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "convert-to-spaces" => Edge {
+          "name": "convert-to-spaces",
+          "spec": "^1.0.1",
+          "to": "node_modules/convert-to-spaces",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/code-excerpt",
+      "name": "code-excerpt",
+      "resolved": "https://registry.npmjs.org/code-excerpt/-/code-excerpt-3.0.0.tgz",
+    },
+    "color-convert" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ansi-styles",
+          "name": "color-convert",
+          "spec": "^2.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "color-name" => Edge {
+          "name": "color-name",
+          "spec": "~1.1.4",
+          "to": "node_modules/color-name",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/color-convert",
+      "name": "color-convert",
+      "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+    },
+    "color-name" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/color-convert",
+          "name": "color-name",
+          "spec": "~1.1.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/color-name",
+      "name": "color-name",
+      "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+    },
+    "commander" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/terser",
+          "name": "commander",
+          "spec": "^2.20.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/commander",
+      "name": "commander",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
+    },
+    "convert-to-spaces" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/code-excerpt",
+          "name": "convert-to-spaces",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/convert-to-spaces",
+      "name": "convert-to-spaces",
+      "resolved": "https://registry.npmjs.org/convert-to-spaces/-/convert-to-spaces-1.0.2.tgz",
+    },
+    "electron-to-chromium" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/browserslist",
+          "name": "electron-to-chromium",
+          "spec": "^1.3.571",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/electron-to-chromium",
+      "name": "electron-to-chromium",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.582.tgz",
+    },
+    "emoji-regex" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/string-width",
+          "name": "emoji-regex",
+          "spec": "^8.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/emoji-regex",
+      "name": "emoji-regex",
+      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+    },
+    "enhanced-resolve" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "enhanced-resolve",
+          "spec": "^5.3.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "graceful-fs" => Edge {
+          "name": "graceful-fs",
+          "spec": "^4.2.4",
+          "to": "node_modules/graceful-fs",
+          "type": "prod",
+        },
+        "tapable" => Edge {
+          "name": "tapable",
+          "spec": "^2.0.0",
+          "to": "node_modules/tapable",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/enhanced-resolve",
+      "name": "enhanced-resolve",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.3.1.tgz",
+    },
+    "error-stack-parser" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "error-stack-parser",
+          "spec": "^2.0.6",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "stackframe" => Edge {
+          "name": "stackframe",
+          "spec": "^1.1.1",
+          "to": "node_modules/stackframe",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/error-stack-parser",
+      "name": "error-stack-parser",
+      "resolved": "https://registry.npmjs.org/error-stack-parser/-/error-stack-parser-2.0.6.tgz",
+    },
+    "escalade" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/browserslist",
+          "name": "escalade",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/escalade",
+      "name": "escalade",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz",
+    },
+    "escape-string-regexp" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/stack-utils",
+          "name": "escape-string-regexp",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/escape-string-regexp",
+      "name": "escape-string-regexp",
+      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz",
+    },
+    "eslint-scope" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "eslint-scope",
+          "spec": "^5.1.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "esrecurse" => Edge {
+          "name": "esrecurse",
+          "spec": "^4.3.0",
+          "to": "node_modules/esrecurse",
+          "type": "prod",
+        },
+        "estraverse" => Edge {
+          "name": "estraverse",
+          "spec": "^4.1.1",
+          "to": "node_modules/estraverse",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/eslint-scope",
+      "name": "eslint-scope",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/eslint-scope/-/eslint-scope-5.1.1.tgz",
+    },
+    "esrecurse" => Node {
+      "children": Map {
+        "estraverse" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/esrecurse",
+              "name": "estraverse",
+              "spec": "^5.2.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/esrecurse/node_modules/estraverse",
+          "name": "estraverse",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint-scope",
+          "name": "esrecurse",
+          "spec": "^4.3.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "estraverse" => Edge {
+          "name": "estraverse",
+          "spec": "^5.2.0",
+          "to": "node_modules/esrecurse/node_modules/estraverse",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/esrecurse",
+      "name": "esrecurse",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/esrecurse/-/esrecurse-4.3.0.tgz",
+    },
+    "estraverse" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint-scope",
+          "name": "estraverse",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/estraverse",
+      "name": "estraverse",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/estraverse/-/estraverse-4.3.0.tgz",
+    },
+    "events" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "events",
+          "spec": "^3.2.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/events",
+      "name": "events",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/events/-/events-3.2.0.tgz",
+    },
+    "fast-deep-equal" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "fast-deep-equal",
+          "spec": "^3.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fast-deep-equal",
+      "name": "fast-deep-equal",
+      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+    },
+    "fast-json-stable-stringify" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "fast-json-stable-stringify",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fast-json-stable-stringify",
+      "name": "fast-json-stable-stringify",
+      "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
+    },
+    "find-up" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/pkg-dir",
+          "name": "find-up",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "locate-path" => Edge {
+          "name": "locate-path",
+          "spec": "^5.0.0",
+          "to": "node_modules/locate-path",
+          "type": "prod",
+        },
+        "path-exists" => Edge {
+          "name": "path-exists",
+          "spec": "^4.0.0",
+          "to": "node_modules/path-exists",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/find-up",
+      "name": "find-up",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz",
+    },
+    "glob-to-regexp" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/watchpack",
+          "name": "glob-to-regexp",
+          "spec": "^0.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "glob-to-regexp",
+          "spec": "^0.4.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/glob-to-regexp",
+      "name": "glob-to-regexp",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/glob-to-regexp/-/glob-to-regexp-0.4.1.tgz",
+    },
+    "graceful-fs" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/enhanced-resolve",
+          "name": "graceful-fs",
+          "spec": "^4.2.4",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/watchpack",
+          "name": "graceful-fs",
+          "spec": "^4.1.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "graceful-fs",
+          "spec": "^4.2.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/graceful-fs",
+      "name": "graceful-fs",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.4.tgz",
+    },
+    "has-flag" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/supports-color",
+          "name": "has-flag",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/has-flag",
+      "name": "has-flag",
+      "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
+    },
+    "html-entities" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "html-entities",
+          "spec": "^1.2.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/html-entities",
+      "name": "html-entities",
+      "resolved": "https://registry.npmjs.org/html-entities/-/html-entities-1.3.1.tgz",
+    },
+    "indent-string" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "indent-string",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/indent-string",
+      "name": "indent-string",
+      "resolved": "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz",
+    },
+    "ink" => Node {
+      "children": Map {
+        "react-reconciler" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/ink",
+              "name": "react-reconciler",
+              "spec": "^0.24.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "loose-envify" => Edge {
+              "name": "loose-envify",
+              "spec": "^1.1.0",
+              "to": "node_modules/loose-envify",
+              "type": "prod",
+            },
+            "object-assign" => Edge {
+              "name": "object-assign",
+              "spec": "^4.1.1",
+              "to": "node_modules/object-assign",
+              "type": "prod",
+            },
+            "prop-types" => Edge {
+              "name": "prop-types",
+              "spec": "^15.6.2",
+              "to": "node_modules/prop-types",
+              "type": "prod",
+            },
+            "react" => Edge {
+              "name": "react",
+              "spec": "^16.0.0",
+              "to": "node_modules/react",
+              "type": "peer",
+            },
+            "scheduler" => Edge {
+              "name": "scheduler",
+              "spec": "^0.18.0",
+              "to": "node_modules/scheduler",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/ink/node_modules/react-reconciler",
+          "name": "react-reconciler",
+          "resolved": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.24.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "ink",
+          "spec": "3.0.8",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/react" => Edge {
+          "name": "@types/react",
+          "spec": ">=16.8.0",
+          "to": null,
+          "type": "peerOptional",
+        },
+        "ansi-escapes" => Edge {
+          "name": "ansi-escapes",
+          "spec": "^4.2.1",
+          "to": "node_modules/ansi-escapes",
+          "type": "prod",
+        },
+        "auto-bind" => Edge {
+          "name": "auto-bind",
+          "spec": "4.0.0",
+          "to": "node_modules/auto-bind",
+          "type": "prod",
+        },
+        "chalk" => Edge {
+          "name": "chalk",
+          "spec": "^4.1.0",
+          "to": "node_modules/chalk",
+          "type": "prod",
+        },
+        "cli-boxes" => Edge {
+          "name": "cli-boxes",
+          "spec": "^2.2.0",
+          "to": "node_modules/cli-boxes",
+          "type": "prod",
+        },
+        "cli-cursor" => Edge {
+          "name": "cli-cursor",
+          "spec": "^3.1.0",
+          "to": "node_modules/cli-cursor",
+          "type": "prod",
+        },
+        "cli-truncate" => Edge {
+          "name": "cli-truncate",
+          "spec": "^2.1.0",
+          "to": "node_modules/cli-truncate",
+          "type": "prod",
+        },
+        "code-excerpt" => Edge {
+          "name": "code-excerpt",
+          "spec": "^3.0.0",
+          "to": "node_modules/code-excerpt",
+          "type": "prod",
+        },
+        "indent-string" => Edge {
+          "name": "indent-string",
+          "spec": "^4.0.0",
+          "to": "node_modules/indent-string",
+          "type": "prod",
+        },
+        "is-ci" => Edge {
+          "name": "is-ci",
+          "spec": "^2.0.0",
+          "to": "node_modules/is-ci",
+          "type": "prod",
+        },
+        "lodash" => Edge {
+          "name": "lodash",
+          "spec": "^4.17.20",
+          "to": "node_modules/lodash",
+          "type": "prod",
+        },
+        "patch-console" => Edge {
+          "name": "patch-console",
+          "spec": "^1.0.0",
+          "to": "node_modules/patch-console",
+          "type": "prod",
+        },
+        "react" => Edge {
+          "name": "react",
+          "spec": ">=16.8.0",
+          "to": "node_modules/react",
+          "type": "peer",
+        },
+        "react-devtools-core" => Edge {
+          "name": "react-devtools-core",
+          "spec": "^4.6.0",
+          "to": "node_modules/react-devtools-core",
+          "type": "prod",
+        },
+        "react-reconciler" => Edge {
+          "name": "react-reconciler",
+          "spec": "^0.24.0",
+          "to": "node_modules/ink/node_modules/react-reconciler",
+          "type": "prod",
+        },
+        "scheduler" => Edge {
+          "name": "scheduler",
+          "spec": "^0.18.0",
+          "to": "node_modules/scheduler",
+          "type": "prod",
+        },
+        "signal-exit" => Edge {
+          "name": "signal-exit",
+          "spec": "^3.0.2",
+          "to": "node_modules/signal-exit",
+          "type": "prod",
+        },
+        "slice-ansi" => Edge {
+          "name": "slice-ansi",
+          "spec": "^3.0.0",
+          "to": "node_modules/slice-ansi",
+          "type": "prod",
+        },
+        "stack-utils" => Edge {
+          "name": "stack-utils",
+          "spec": "^2.0.2",
+          "to": "node_modules/stack-utils",
+          "type": "prod",
+        },
+        "string-length" => Edge {
+          "name": "string-length",
+          "spec": "^3.1.0",
+          "to": "node_modules/string-length",
+          "type": "prod",
+        },
+        "type-fest" => Edge {
+          "name": "type-fest",
+          "spec": "^0.12.0",
+          "to": "node_modules/type-fest",
+          "type": "prod",
+        },
+        "widest-line" => Edge {
+          "name": "widest-line",
+          "spec": "^3.1.0",
+          "to": "node_modules/widest-line",
+          "type": "prod",
+        },
+        "wrap-ansi" => Edge {
+          "name": "wrap-ansi",
+          "spec": "^6.2.0",
+          "to": "node_modules/wrap-ansi",
+          "type": "prod",
+        },
+        "ws" => Edge {
+          "name": "ws",
+          "spec": "^7.2.5",
+          "to": "node_modules/ws",
+          "type": "prod",
+        },
+        "yoga-layout-prebuilt" => Edge {
+          "name": "yoga-layout-prebuilt",
+          "spec": "^1.9.6",
+          "to": "node_modules/yoga-layout-prebuilt",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ink",
+      "name": "ink",
+      "resolved": "https://registry.npmjs.org/ink/-/ink-3.0.8.tgz",
+    },
+    "is-ci" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "is-ci",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ci-info" => Edge {
+          "name": "ci-info",
+          "spec": "^2.0.0",
+          "to": "node_modules/ci-info",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/is-ci",
+      "name": "is-ci",
+      "resolved": "https://registry.npmjs.org/is-ci/-/is-ci-2.0.0.tgz",
+    },
+    "is-fullwidth-code-point" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/slice-ansi",
+          "name": "is-fullwidth-code-point",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/string-width",
+          "name": "is-fullwidth-code-point",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/is-fullwidth-code-point",
+      "name": "is-fullwidth-code-point",
+      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+    },
+    "jest-worker" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/terser-webpack-plugin",
+          "name": "jest-worker",
+          "spec": "^26.6.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/node" => Edge {
+          "name": "@types/node",
+          "spec": "*",
+          "to": "node_modules/@types/node",
+          "type": "prod",
+        },
+        "merge-stream" => Edge {
+          "name": "merge-stream",
+          "spec": "^2.0.0",
+          "to": "node_modules/merge-stream",
+          "type": "prod",
+        },
+        "supports-color" => Edge {
+          "name": "supports-color",
+          "spec": "^7.0.0",
+          "to": "node_modules/supports-color",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/jest-worker",
+      "name": "jest-worker",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/jest-worker/-/jest-worker-26.6.2.tgz",
+    },
+    "js-tokens" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/loose-envify",
+          "name": "js-tokens",
+          "spec": "^3.0.0 || ^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/js-tokens",
+      "name": "js-tokens",
+      "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
+    },
+    "json-parse-better-errors" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "json-parse-better-errors",
+          "spec": "^1.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/json-parse-better-errors",
+      "name": "json-parse-better-errors",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz",
+    },
+    "json-schema-traverse" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "json-schema-traverse",
+          "spec": "^0.4.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/json-schema-traverse",
+      "name": "json-schema-traverse",
+      "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
+    },
+    "loader-runner" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "loader-runner",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/loader-runner",
+      "name": "loader-runner",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/loader-runner/-/loader-runner-4.1.0.tgz",
+    },
+    "locate-path" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/find-up",
+          "name": "locate-path",
+          "spec": "^5.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "p-locate" => Edge {
+          "name": "p-locate",
+          "spec": "^4.1.0",
+          "to": "node_modules/p-locate",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/locate-path",
+      "name": "locate-path",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz",
+    },
+    "lodash" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "lodash",
+          "spec": "^4.17.20",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/lodash",
+      "name": "lodash",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz",
+    },
+    "loose-envify" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink/node_modules/react-reconciler",
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/prop-types",
+          "name": "loose-envify",
+          "spec": "^1.4.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react",
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react-reconciler",
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react-reconciler/node_modules/scheduler",
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/scheduler",
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "js-tokens" => Edge {
+          "name": "js-tokens",
+          "spec": "^3.0.0 || ^4.0.0",
+          "to": "node_modules/js-tokens",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/loose-envify",
+      "name": "loose-envify",
+      "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
+    },
+    "merge-stream" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/jest-worker",
+          "name": "merge-stream",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/merge-stream",
+      "name": "merge-stream",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz",
+    },
+    "mime-db" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/mime-types",
+          "name": "mime-db",
+          "spec": "1.44.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mime-db",
+      "name": "mime-db",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/mime-db/-/mime-db-1.44.0.tgz",
+    },
+    "mime-types" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "mime-types",
+          "spec": "^2.1.27",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "mime-db" => Edge {
+          "name": "mime-db",
+          "spec": "1.44.0",
+          "to": "node_modules/mime-db",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mime-types",
+      "name": "mime-types",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.27.tgz",
+    },
+    "mimic-fn" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/onetime",
+          "name": "mimic-fn",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mimic-fn",
+      "name": "mimic-fn",
+      "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz",
+    },
+    "native-url" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "native-url",
+          "spec": "^0.2.6",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "querystring" => Edge {
+          "name": "querystring",
+          "spec": "^0.2.0",
+          "to": "node_modules/querystring",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/native-url",
+      "name": "native-url",
+      "resolved": "https://registry.npmjs.org/native-url/-/native-url-0.2.6.tgz",
+    },
+    "neo-async" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "neo-async",
+          "spec": "^2.6.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/neo-async",
+      "name": "neo-async",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/neo-async/-/neo-async-2.6.2.tgz",
+    },
+    "node-releases" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/browserslist",
+          "name": "node-releases",
+          "spec": "^1.1.61",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/node-releases",
+      "name": "node-releases",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/node-releases/-/node-releases-1.1.63.tgz",
+    },
+    "object-assign" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink/node_modules/react-reconciler",
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/prop-types",
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react",
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react-reconciler",
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react-reconciler/node_modules/scheduler",
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/scheduler",
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/object-assign",
+      "name": "object-assign",
+      "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
+    },
+    "onetime" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/restore-cursor",
+          "name": "onetime",
+          "spec": "^5.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "mimic-fn" => Edge {
+          "name": "mimic-fn",
+          "spec": "^2.1.0",
+          "to": "node_modules/mimic-fn",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/onetime",
+      "name": "onetime",
+      "resolved": "https://registry.npmjs.org/onetime/-/onetime-5.1.2.tgz",
+    },
+    "p-limit" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/p-locate",
+          "name": "p-limit",
+          "spec": "^2.2.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "p-try" => Edge {
+          "name": "p-try",
+          "spec": "^2.0.0",
+          "to": "node_modules/p-try",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/p-limit",
+      "name": "p-limit",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz",
+    },
+    "p-locate" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/locate-path",
+          "name": "p-locate",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "p-limit" => Edge {
+          "name": "p-limit",
+          "spec": "^2.2.0",
+          "to": "node_modules/p-limit",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/p-locate",
+      "name": "p-locate",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-4.1.0.tgz",
+    },
+    "p-try" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/p-limit",
+          "name": "p-try",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/terser-webpack-plugin/node_modules/p-limit",
+          "name": "p-try",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/p-try",
+      "name": "p-try",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",
+    },
+    "patch-console" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "patch-console",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/patch-console",
+      "name": "patch-console",
+      "resolved": "https://registry.npmjs.org/patch-console/-/patch-console-1.0.0.tgz",
+    },
+    "path-exists" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/find-up",
+          "name": "path-exists",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/path-exists",
+      "name": "path-exists",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz",
+    },
+    "pkg-dir" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "pkg-dir",
+          "spec": "^4.2.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "find-up" => Edge {
+          "name": "find-up",
+          "spec": "^4.0.0",
+          "to": "node_modules/find-up",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/pkg-dir",
+      "name": "pkg-dir",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-4.2.0.tgz",
+    },
+    "prop-types" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink/node_modules/react-reconciler",
+          "name": "prop-types",
+          "spec": "^15.6.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react",
+          "name": "prop-types",
+          "spec": "^15.6.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react-reconciler",
+          "name": "prop-types",
+          "spec": "^15.6.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "loose-envify" => Edge {
+          "name": "loose-envify",
+          "spec": "^1.4.0",
+          "to": "node_modules/loose-envify",
+          "type": "prod",
+        },
+        "object-assign" => Edge {
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "to": "node_modules/object-assign",
+          "type": "prod",
+        },
+        "react-is" => Edge {
+          "name": "react-is",
+          "spec": "^16.8.1",
+          "to": "node_modules/react-is",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/prop-types",
+      "name": "prop-types",
+      "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",
+    },
+    "punycode" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/uri-js",
+          "name": "punycode",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/punycode",
+      "name": "punycode",
+      "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
+    },
+    "querystring" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/native-url",
+          "name": "querystring",
+          "spec": "^0.2.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/querystring",
+      "name": "querystring",
+      "resolved": "https://registry.npmjs.org/querystring/-/querystring-0.2.0.tgz",
+    },
+    "randombytes" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/serialize-javascript",
+          "name": "randombytes",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "safe-buffer" => Edge {
+          "name": "safe-buffer",
+          "spec": "^5.1.0",
+          "to": "node_modules/safe-buffer",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/randombytes",
+      "name": "randombytes",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/randombytes/-/randombytes-2.1.0.tgz",
+    },
+    "react" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "react",
+          "spec": ">=16.8.0",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/ink/node_modules/react-reconciler",
+          "name": "react",
+          "spec": "^16.0.0",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/react-reconciler",
+          "name": "react",
+          "spec": "^16.0.0",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "loose-envify" => Edge {
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "to": "node_modules/loose-envify",
+          "type": "prod",
+        },
+        "object-assign" => Edge {
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "to": "node_modules/object-assign",
+          "type": "prod",
+        },
+        "prop-types" => Edge {
+          "name": "prop-types",
+          "spec": "^15.6.2",
+          "to": "node_modules/prop-types",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/react",
+      "name": "react",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/react/-/react-16.14.0.tgz",
+    },
+    "react-devtools-core" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "react-devtools-core",
+          "spec": "^4.6.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "shell-quote" => Edge {
+          "name": "shell-quote",
+          "spec": "^1.6.1",
+          "to": "node_modules/shell-quote",
+          "type": "prod",
+        },
+        "ws" => Edge {
+          "name": "ws",
+          "spec": "^7",
+          "to": "node_modules/ws",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/react-devtools-core",
+      "name": "react-devtools-core",
+      "resolved": "https://registry.npmjs.org/react-devtools-core/-/react-devtools-core-4.9.0.tgz",
+    },
+    "react-is" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/prop-types",
+          "name": "react-is",
+          "spec": "^16.8.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/react-is",
+      "name": "react-is",
+      "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz",
+    },
+    "react-reconciler" => Node {
+      "children": Map {
+        "scheduler" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/react-reconciler",
+              "name": "scheduler",
+              "spec": "^0.19.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "loose-envify" => Edge {
+              "name": "loose-envify",
+              "spec": "^1.1.0",
+              "to": "node_modules/loose-envify",
+              "type": "prod",
+            },
+            "object-assign" => Edge {
+              "name": "object-assign",
+              "spec": "^4.1.1",
+              "to": "node_modules/object-assign",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/react-reconciler/node_modules/scheduler",
+          "name": "scheduler",
+          "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.19.1.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "react-reconciler",
+          "spec": "0.25.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "loose-envify" => Edge {
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "to": "node_modules/loose-envify",
+          "type": "prod",
+        },
+        "object-assign" => Edge {
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "to": "node_modules/object-assign",
+          "type": "prod",
+        },
+        "prop-types" => Edge {
+          "name": "prop-types",
+          "spec": "^15.6.2",
+          "to": "node_modules/prop-types",
+          "type": "prod",
+        },
+        "react" => Edge {
+          "name": "react",
+          "spec": "^16.0.0",
+          "to": "node_modules/react",
+          "type": "peer",
+        },
+        "scheduler" => Edge {
+          "name": "scheduler",
+          "spec": "^0.19.0",
+          "to": "node_modules/react-reconciler/node_modules/scheduler",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/react-reconciler",
+      "name": "react-reconciler",
+      "resolved": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.25.0.tgz",
+    },
+    "react-refresh" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "react-refresh",
+          "spec": "^0.8.3",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/react-refresh",
+      "name": "react-refresh",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz",
+    },
+    "restore-cursor" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cli-cursor",
+          "name": "restore-cursor",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "onetime" => Edge {
+          "name": "onetime",
+          "spec": "^5.1.0",
+          "to": "node_modules/onetime",
+          "type": "prod",
+        },
+        "signal-exit" => Edge {
+          "name": "signal-exit",
+          "spec": "^3.0.2",
+          "to": "node_modules/signal-exit",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/restore-cursor",
+      "name": "restore-cursor",
+      "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-3.1.0.tgz",
+    },
+    "safe-buffer" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/randombytes",
+          "name": "safe-buffer",
+          "spec": "^5.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/safe-buffer",
+      "name": "safe-buffer",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz",
+    },
+    "scheduler" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "scheduler",
+          "spec": "^0.18.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/ink/node_modules/react-reconciler",
+          "name": "scheduler",
+          "spec": "^0.18.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "loose-envify" => Edge {
+          "name": "loose-envify",
+          "spec": "^1.1.0",
+          "to": "node_modules/loose-envify",
+          "type": "prod",
+        },
+        "object-assign" => Edge {
+          "name": "object-assign",
+          "spec": "^4.1.1",
+          "to": "node_modules/object-assign",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/scheduler",
+      "name": "scheduler",
+      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.18.0.tgz",
+    },
+    "schema-utils" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "schema-utils",
+          "spec": "^2.6.5",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/json-schema" => Edge {
+          "name": "@types/json-schema",
+          "spec": "^7.0.5",
+          "to": "node_modules/@types/json-schema",
+          "type": "prod",
+        },
+        "ajv" => Edge {
+          "name": "ajv",
+          "spec": "^6.12.4",
+          "to": "node_modules/ajv",
+          "type": "prod",
+        },
+        "ajv-keywords" => Edge {
+          "name": "ajv-keywords",
+          "spec": "^3.5.2",
+          "to": "node_modules/ajv-keywords",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/schema-utils",
+      "name": "schema-utils",
+      "resolved": "https://registry.npmjs.org/schema-utils/-/schema-utils-2.7.1.tgz",
+    },
+    "serialize-javascript" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/terser-webpack-plugin",
+          "name": "serialize-javascript",
+          "spec": "^5.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "randombytes" => Edge {
+          "name": "randombytes",
+          "spec": "^2.1.0",
+          "to": "node_modules/randombytes",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/serialize-javascript",
+      "name": "serialize-javascript",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-5.0.1.tgz",
+    },
+    "shell-quote" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/react-devtools-core",
+          "name": "shell-quote",
+          "spec": "^1.6.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/shell-quote",
+      "name": "shell-quote",
+      "resolved": "https://registry.npmjs.org/shell-quote/-/shell-quote-1.7.2.tgz",
+    },
+    "signal-exit" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "signal-exit",
+          "spec": "^3.0.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/restore-cursor",
+          "name": "signal-exit",
+          "spec": "^3.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/signal-exit",
+      "name": "signal-exit",
+      "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.3.tgz",
+    },
+    "slice-ansi" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cli-truncate",
+          "name": "slice-ansi",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/ink",
+          "name": "slice-ansi",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-styles" => Edge {
+          "name": "ansi-styles",
+          "spec": "^4.0.0",
+          "to": "node_modules/ansi-styles",
+          "type": "prod",
+        },
+        "astral-regex" => Edge {
+          "name": "astral-regex",
+          "spec": "^2.0.0",
+          "to": "node_modules/astral-regex",
+          "type": "prod",
+        },
+        "is-fullwidth-code-point" => Edge {
+          "name": "is-fullwidth-code-point",
+          "spec": "^3.0.0",
+          "to": "node_modules/is-fullwidth-code-point",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/slice-ansi",
+      "name": "slice-ansi",
+      "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-3.0.0.tgz",
+    },
+    "source-list-map" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack-sources",
+          "name": "source-list-map",
+          "spec": "^2.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/source-list-map",
+      "name": "source-list-map",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/source-list-map/-/source-list-map-2.0.1.tgz",
+    },
+    "source-map" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "source-map",
+          "spec": "^0.7.3",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/terser",
+          "name": "source-map",
+          "spec": "~0.7.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/source-map",
+      "name": "source-map",
+      "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz",
+    },
+    "source-map-support" => Node {
+      "children": Map {
+        "source-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/source-map-support",
+              "name": "source-map",
+              "spec": "^0.6.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/source-map-support/node_modules/source-map",
+          "name": "source-map",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/terser",
+          "name": "source-map-support",
+          "spec": "~0.5.19",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "buffer-from" => Edge {
+          "name": "buffer-from",
+          "spec": "^1.0.0",
+          "to": "node_modules/buffer-from",
+          "type": "prod",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "^0.6.0",
+          "to": "node_modules/source-map-support/node_modules/source-map",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/source-map-support",
+      "name": "source-map-support",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.19.tgz",
+    },
+    "stack-utils" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "stack-utils",
+          "spec": "^2.0.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "escape-string-regexp" => Edge {
+          "name": "escape-string-regexp",
+          "spec": "^2.0.0",
+          "to": "node_modules/escape-string-regexp",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/stack-utils",
+      "name": "stack-utils",
+      "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-2.0.2.tgz",
+    },
+    "stackframe" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/error-stack-parser",
+          "name": "stackframe",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/stackframe",
+      "name": "stackframe",
+      "resolved": "https://registry.npmjs.org/stackframe/-/stackframe-1.2.0.tgz",
+    },
+    "string-length" => Node {
+      "children": Map {
+        "astral-regex" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/string-length",
+              "name": "astral-regex",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/string-length/node_modules/astral-regex",
+          "name": "astral-regex",
+          "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "string-length",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "astral-regex" => Edge {
+          "name": "astral-regex",
+          "spec": "^1.0.0",
+          "to": "node_modules/string-length/node_modules/astral-regex",
+          "type": "prod",
+        },
+        "strip-ansi" => Edge {
+          "name": "strip-ansi",
+          "spec": "^5.2.0",
+          "to": "node_modules/strip-ansi",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/string-length",
+      "name": "string-length",
+      "resolved": "https://registry.npmjs.org/string-length/-/string-length-3.1.0.tgz",
+    },
+    "string-width" => Node {
+      "children": Map {
+        "ansi-regex" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/string-width/node_modules/strip-ansi",
+              "name": "ansi-regex",
+              "spec": "^5.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/string-width/node_modules/ansi-regex",
+          "name": "ansi-regex",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
+        },
+        "strip-ansi" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/string-width",
+              "name": "strip-ansi",
+              "spec": "^6.0.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "ansi-regex" => Edge {
+              "name": "ansi-regex",
+              "spec": "^5.0.0",
+              "to": "node_modules/string-width/node_modules/ansi-regex",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/string-width/node_modules/strip-ansi",
+          "name": "strip-ansi",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cli-truncate",
+          "name": "string-width",
+          "spec": "^4.2.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/widest-line",
+          "name": "string-width",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/wrap-ansi",
+          "name": "string-width",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "emoji-regex" => Edge {
+          "name": "emoji-regex",
+          "spec": "^8.0.0",
+          "to": "node_modules/emoji-regex",
+          "type": "prod",
+        },
+        "is-fullwidth-code-point" => Edge {
+          "name": "is-fullwidth-code-point",
+          "spec": "^3.0.0",
+          "to": "node_modules/is-fullwidth-code-point",
+          "type": "prod",
+        },
+        "strip-ansi" => Edge {
+          "name": "strip-ansi",
+          "spec": "^6.0.0",
+          "to": "node_modules/string-width/node_modules/strip-ansi",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/string-width",
+      "name": "string-width",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.0.tgz",
+    },
+    "strip-ansi" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/string-length",
+          "name": "strip-ansi",
+          "spec": "^5.2.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-regex" => Edge {
+          "name": "ansi-regex",
+          "spec": "^4.1.0",
+          "to": "node_modules/ansi-regex",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/strip-ansi",
+      "name": "strip-ansi",
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
+    },
+    "supports-color" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chalk",
+          "name": "supports-color",
+          "spec": "^7.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/jest-worker",
+          "name": "supports-color",
+          "spec": "^7.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "has-flag" => Edge {
+          "name": "has-flag",
+          "spec": "^4.0.0",
+          "to": "node_modules/has-flag",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/supports-color",
+      "name": "supports-color",
+      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz",
+    },
+    "tapable" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/enhanced-resolve",
+          "name": "tapable",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "tapable",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/tapable",
+      "name": "tapable",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/tapable/-/tapable-2.0.0.tgz",
+    },
+    "terser" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/terser-webpack-plugin",
+          "name": "terser",
+          "spec": "^5.3.8",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "commander" => Edge {
+          "name": "commander",
+          "spec": "^2.20.0",
+          "to": "node_modules/commander",
+          "type": "prod",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "~0.7.2",
+          "to": "node_modules/source-map",
+          "type": "prod",
+        },
+        "source-map-support" => Edge {
+          "name": "source-map-support",
+          "spec": "~0.5.19",
+          "to": "node_modules/source-map-support",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/terser",
+      "name": "terser",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/terser/-/terser-5.3.8.tgz",
+    },
+    "terser-webpack-plugin" => Node {
+      "children": Map {
+        "p-limit" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/terser-webpack-plugin",
+              "name": "p-limit",
+              "spec": "^3.0.2",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "p-try" => Edge {
+              "name": "p-try",
+              "spec": "^2.0.0",
+              "to": "node_modules/p-try",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/terser-webpack-plugin/node_modules/p-limit",
+          "name": "p-limit",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-3.0.2.tgz",
+        },
+        "schema-utils" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/terser-webpack-plugin",
+              "name": "schema-utils",
+              "spec": "^3.0.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@types/json-schema" => Edge {
+              "name": "@types/json-schema",
+              "spec": "^7.0.6",
+              "to": "node_modules/@types/json-schema",
+              "type": "prod",
+            },
+            "ajv" => Edge {
+              "name": "ajv",
+              "spec": "^6.12.5",
+              "to": "node_modules/ajv",
+              "type": "prod",
+            },
+            "ajv-keywords" => Edge {
+              "name": "ajv-keywords",
+              "spec": "^3.5.2",
+              "to": "node_modules/ajv-keywords",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/terser-webpack-plugin/node_modules/schema-utils",
+          "name": "schema-utils",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/schema-utils/-/schema-utils-3.0.0.tgz",
+        },
+        "source-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/terser-webpack-plugin",
+              "name": "source-map",
+              "spec": "^0.6.1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/terser-webpack-plugin/node_modules/source-map",
+          "name": "source-map",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "terser-webpack-plugin",
+          "spec": "^5.0.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "jest-worker" => Edge {
+          "name": "jest-worker",
+          "spec": "^26.6.1",
+          "to": "node_modules/jest-worker",
+          "type": "prod",
+        },
+        "p-limit" => Edge {
+          "name": "p-limit",
+          "spec": "^3.0.2",
+          "to": "node_modules/terser-webpack-plugin/node_modules/p-limit",
+          "type": "prod",
+        },
+        "schema-utils" => Edge {
+          "name": "schema-utils",
+          "spec": "^3.0.0",
+          "to": "node_modules/terser-webpack-plugin/node_modules/schema-utils",
+          "type": "prod",
+        },
+        "serialize-javascript" => Edge {
+          "name": "serialize-javascript",
+          "spec": "^5.0.1",
+          "to": "node_modules/serialize-javascript",
+          "type": "prod",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "^0.6.1",
+          "to": "node_modules/terser-webpack-plugin/node_modules/source-map",
+          "type": "prod",
+        },
+        "terser" => Edge {
+          "name": "terser",
+          "spec": "^5.3.8",
+          "to": "node_modules/terser",
+          "type": "prod",
+        },
+        "webpack" => Edge {
+          "name": "webpack",
+          "spec": "^5.1.0",
+          "to": "node_modules/webpack",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/terser-webpack-plugin",
+      "name": "terser-webpack-plugin",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.0.3.tgz",
+    },
+    "tslib" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chrome-trace-event",
+          "name": "tslib",
+          "spec": "^1.9.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/tslib",
+      "name": "tslib",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz",
+    },
+    "type-fest" => Node {
+      "edgesIn": Set {
+        Edge {
+          "error": "INVALID",
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "type-fest",
+          "spec": "^0.13.1",
+          "type": "peerOptional",
+        },
+        Edge {
+          "from": "node_modules/ink",
+          "name": "type-fest",
+          "spec": "^0.12.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/type-fest",
+      "name": "type-fest",
+      "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.12.0.tgz",
+    },
+    "uri-js" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "uri-js",
+          "spec": "^4.2.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "punycode" => Edge {
+          "name": "punycode",
+          "spec": "^2.1.0",
+          "to": "node_modules/punycode",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/uri-js",
+      "name": "uri-js",
+      "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.4.0.tgz",
+    },
+    "watchpack" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "watchpack",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "glob-to-regexp" => Edge {
+          "name": "glob-to-regexp",
+          "spec": "^0.4.1",
+          "to": "node_modules/glob-to-regexp",
+          "type": "prod",
+        },
+        "graceful-fs" => Edge {
+          "name": "graceful-fs",
+          "spec": "^4.1.2",
+          "to": "node_modules/graceful-fs",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/watchpack",
+      "name": "watchpack",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/watchpack/-/watchpack-2.0.1.tgz",
+    },
+    "webpack" => Node {
+      "children": Map {
+        "schema-utils" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/webpack",
+              "name": "schema-utils",
+              "spec": "^3.0.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "@types/json-schema" => Edge {
+              "name": "@types/json-schema",
+              "spec": "^7.0.6",
+              "to": "node_modules/@types/json-schema",
+              "type": "prod",
+            },
+            "ajv" => Edge {
+              "name": "ajv",
+              "spec": "^6.12.5",
+              "to": "node_modules/ajv",
+              "type": "prod",
+            },
+            "ajv-keywords" => Edge {
+              "name": "ajv-keywords",
+              "spec": "^3.5.2",
+              "to": "node_modules/ajv-keywords",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/webpack/node_modules/schema-utils",
+          "name": "schema-utils",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/schema-utils/-/schema-utils-3.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+          "name": "webpack",
+          "spec": ">=4.43.0 <6.0.0",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/terser-webpack-plugin",
+          "name": "webpack",
+          "spec": "^5.1.0",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@types/eslint-scope" => Edge {
+          "name": "@types/eslint-scope",
+          "spec": "^3.7.0",
+          "to": "node_modules/@types/eslint-scope",
+          "type": "prod",
+        },
+        "@types/estree" => Edge {
+          "name": "@types/estree",
+          "spec": "^0.0.45",
+          "to": "node_modules/@types/estree",
+          "type": "prod",
+        },
+        "@webassemblyjs/ast" => Edge {
+          "name": "@webassemblyjs/ast",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/ast",
+          "type": "prod",
+        },
+        "@webassemblyjs/helper-module-context" => Edge {
+          "name": "@webassemblyjs/helper-module-context",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/helper-module-context",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-edit" => Edge {
+          "name": "@webassemblyjs/wasm-edit",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-edit",
+          "type": "prod",
+        },
+        "@webassemblyjs/wasm-parser" => Edge {
+          "name": "@webassemblyjs/wasm-parser",
+          "spec": "1.9.0",
+          "to": "node_modules/@webassemblyjs/wasm-parser",
+          "type": "prod",
+        },
+        "acorn" => Edge {
+          "name": "acorn",
+          "spec": "^8.0.4",
+          "to": "node_modules/acorn",
+          "type": "prod",
+        },
+        "browserslist" => Edge {
+          "name": "browserslist",
+          "spec": "^4.14.5",
+          "to": "node_modules/browserslist",
+          "type": "prod",
+        },
+        "chrome-trace-event" => Edge {
+          "name": "chrome-trace-event",
+          "spec": "^1.0.2",
+          "to": "node_modules/chrome-trace-event",
+          "type": "prod",
+        },
+        "enhanced-resolve" => Edge {
+          "name": "enhanced-resolve",
+          "spec": "^5.3.1",
+          "to": "node_modules/enhanced-resolve",
+          "type": "prod",
+        },
+        "eslint-scope" => Edge {
+          "name": "eslint-scope",
+          "spec": "^5.1.1",
+          "to": "node_modules/eslint-scope",
+          "type": "prod",
+        },
+        "events" => Edge {
+          "name": "events",
+          "spec": "^3.2.0",
+          "to": "node_modules/events",
+          "type": "prod",
+        },
+        "glob-to-regexp" => Edge {
+          "name": "glob-to-regexp",
+          "spec": "^0.4.1",
+          "to": "node_modules/glob-to-regexp",
+          "type": "prod",
+        },
+        "graceful-fs" => Edge {
+          "name": "graceful-fs",
+          "spec": "^4.2.4",
+          "to": "node_modules/graceful-fs",
+          "type": "prod",
+        },
+        "json-parse-better-errors" => Edge {
+          "name": "json-parse-better-errors",
+          "spec": "^1.0.2",
+          "to": "node_modules/json-parse-better-errors",
+          "type": "prod",
+        },
+        "loader-runner" => Edge {
+          "name": "loader-runner",
+          "spec": "^4.1.0",
+          "to": "node_modules/loader-runner",
+          "type": "prod",
+        },
+        "mime-types" => Edge {
+          "name": "mime-types",
+          "spec": "^2.1.27",
+          "to": "node_modules/mime-types",
+          "type": "prod",
+        },
+        "neo-async" => Edge {
+          "name": "neo-async",
+          "spec": "^2.6.2",
+          "to": "node_modules/neo-async",
+          "type": "prod",
+        },
+        "pkg-dir" => Edge {
+          "name": "pkg-dir",
+          "spec": "^4.2.0",
+          "to": "node_modules/pkg-dir",
+          "type": "prod",
+        },
+        "schema-utils" => Edge {
+          "name": "schema-utils",
+          "spec": "^3.0.0",
+          "to": "node_modules/webpack/node_modules/schema-utils",
+          "type": "prod",
+        },
+        "tapable" => Edge {
+          "name": "tapable",
+          "spec": "^2.0.0",
+          "to": "node_modules/tapable",
+          "type": "prod",
+        },
+        "terser-webpack-plugin" => Edge {
+          "name": "terser-webpack-plugin",
+          "spec": "^5.0.3",
+          "to": "node_modules/terser-webpack-plugin",
+          "type": "prod",
+        },
+        "watchpack" => Edge {
+          "name": "watchpack",
+          "spec": "^2.0.0",
+          "to": "node_modules/watchpack",
+          "type": "prod",
+        },
+        "webpack-sources" => Edge {
+          "name": "webpack-sources",
+          "spec": "^2.1.1",
+          "to": "node_modules/webpack-sources",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/webpack",
+      "name": "webpack",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/webpack/-/webpack-5.3.2.tgz",
+    },
+    "webpack-sources" => Node {
+      "children": Map {
+        "source-map" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/webpack-sources",
+              "name": "source-map",
+              "spec": "^0.6.1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/webpack-sources/node_modules/source-map",
+          "name": "source-map",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/webpack",
+          "name": "webpack-sources",
+          "spec": "^2.1.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "source-list-map" => Edge {
+          "name": "source-list-map",
+          "spec": "^2.0.1",
+          "to": "node_modules/source-list-map",
+          "type": "prod",
+        },
+        "source-map" => Edge {
+          "name": "source-map",
+          "spec": "^0.6.1",
+          "to": "node_modules/webpack-sources/node_modules/source-map",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/webpack-sources",
+      "name": "webpack-sources",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/webpack-sources/-/webpack-sources-2.2.0.tgz",
+    },
+    "widest-line" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "widest-line",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "string-width" => Edge {
+          "name": "string-width",
+          "spec": "^4.0.0",
+          "to": "node_modules/string-width",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/widest-line",
+      "name": "widest-line",
+      "resolved": "https://registry.npmjs.org/widest-line/-/widest-line-3.1.0.tgz",
+    },
+    "wrap-ansi" => Node {
+      "children": Map {
+        "ansi-regex" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/wrap-ansi/node_modules/strip-ansi",
+              "name": "ansi-regex",
+              "spec": "^5.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/wrap-ansi/node_modules/ansi-regex",
+          "name": "ansi-regex",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
+        },
+        "strip-ansi" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/wrap-ansi",
+              "name": "strip-ansi",
+              "spec": "^6.0.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "ansi-regex" => Edge {
+              "name": "ansi-regex",
+              "spec": "^5.0.0",
+              "to": "node_modules/wrap-ansi/node_modules/ansi-regex",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/wrap-ansi/node_modules/strip-ansi",
+          "name": "strip-ansi",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "wrap-ansi",
+          "spec": "^6.2.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-styles" => Edge {
+          "name": "ansi-styles",
+          "spec": "^4.0.0",
+          "to": "node_modules/ansi-styles",
+          "type": "prod",
+        },
+        "string-width" => Edge {
+          "name": "string-width",
+          "spec": "^4.1.0",
+          "to": "node_modules/string-width",
+          "type": "prod",
+        },
+        "strip-ansi" => Edge {
+          "name": "strip-ansi",
+          "spec": "^6.0.0",
+          "to": "node_modules/wrap-ansi/node_modules/strip-ansi",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrap-ansi",
+      "name": "wrap-ansi",
+      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz",
+    },
+    "ws" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "ws",
+          "spec": "^7.2.5",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/react-devtools-core",
+          "name": "ws",
+          "spec": "^7",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "bufferutil" => Edge {
+          "name": "bufferutil",
+          "spec": "^4.0.1",
+          "to": null,
+          "type": "peerOptional",
+        },
+        "utf-8-validate" => Edge {
+          "name": "utf-8-validate",
+          "spec": "^5.0.2",
+          "to": null,
+          "type": "peerOptional",
+        },
+      },
+      "location": "node_modules/ws",
+      "name": "ws",
+      "resolved": "https://registry.npmjs.org/ws/-/ws-7.3.1.tgz",
+    },
+    "yoga-layout-prebuilt" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ink",
+          "name": "yoga-layout-prebuilt",
+          "spec": "^1.9.6",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/yoga-layout" => Edge {
+          "name": "@types/yoga-layout",
+          "spec": "1.9.2",
+          "to": "node_modules/@types/yoga-layout",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/yoga-layout-prebuilt",
+      "name": "yoga-layout-prebuilt",
+      "resolved": "https://registry.npmjs.org/yoga-layout-prebuilt/-/yoga-layout-prebuilt-1.10.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@pmmmwh/react-refresh-webpack-plugin" => Edge {
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "spec": "0.4.2",
+      "to": "node_modules/@pmmmwh/react-refresh-webpack-plugin",
+      "type": "prod",
+    },
+    "ink" => Edge {
+      "name": "ink",
+      "spec": "3.0.8",
+      "to": "node_modules/ink",
+      "type": "prod",
+    },
+    "react-reconciler" => Edge {
+      "name": "react-reconciler",
+      "spec": "0.25.0",
+      "to": "node_modules/react-reconciler",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-always-prefer-deduping-peer-deps",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP bad shrinkwrap file > bad shrinkwrap 1`] = `
 Node {
   "children": Map {
@@ -1257,6 +5632,3679 @@ Node {
   },
   "location": "",
   "name": "testing-bundledeps-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP carbonium eslint conflicts > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "@babel/code-frame" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "@babel/code-frame",
+          "spec": "^7.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@babel/highlight" => Edge {
+          "name": "@babel/highlight",
+          "spec": "^7.10.4",
+          "to": "node_modules/@babel/highlight",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@babel/code-frame",
+      "name": "@babel/code-frame",
+      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.10.4.tgz",
+    },
+    "@babel/helper-validator-identifier" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@babel/highlight",
+          "name": "@babel/helper-validator-identifier",
+          "spec": "^7.10.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@babel/helper-validator-identifier",
+      "name": "@babel/helper-validator-identifier",
+      "resolved": "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.10.4.tgz",
+    },
+    "@babel/highlight" => Node {
+      "children": Map {
+        "ansi-styles" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight/node_modules/chalk",
+              "name": "ansi-styles",
+              "spec": "^3.2.1",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "color-convert" => Edge {
+              "name": "color-convert",
+              "spec": "^1.9.0",
+              "to": "node_modules/@babel/highlight/node_modules/color-convert",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/ansi-styles",
+          "name": "ansi-styles",
+          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
+        },
+        "chalk" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight",
+              "name": "chalk",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "ansi-styles" => Edge {
+              "name": "ansi-styles",
+              "spec": "^3.2.1",
+              "to": "node_modules/@babel/highlight/node_modules/ansi-styles",
+              "type": "prod",
+            },
+            "escape-string-regexp" => Edge {
+              "name": "escape-string-regexp",
+              "spec": "^1.0.5",
+              "to": "node_modules/escape-string-regexp",
+              "type": "prod",
+            },
+            "supports-color" => Edge {
+              "name": "supports-color",
+              "spec": "^5.3.0",
+              "to": "node_modules/@babel/highlight/node_modules/supports-color",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/chalk",
+          "name": "chalk",
+          "resolved": "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz",
+        },
+        "color-convert" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight/node_modules/ansi-styles",
+              "name": "color-convert",
+              "spec": "^1.9.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "color-name" => Edge {
+              "name": "color-name",
+              "spec": "1.1.3",
+              "to": "node_modules/@babel/highlight/node_modules/color-name",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/color-convert",
+          "name": "color-convert",
+          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
+        },
+        "color-name" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight/node_modules/color-convert",
+              "name": "color-name",
+              "spec": "1.1.3",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/color-name",
+          "name": "color-name",
+          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
+        },
+        "has-flag" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight/node_modules/supports-color",
+              "name": "has-flag",
+              "spec": "^3.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/has-flag",
+          "name": "has-flag",
+          "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz",
+        },
+        "supports-color" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@babel/highlight/node_modules/chalk",
+              "name": "supports-color",
+              "spec": "^5.3.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "has-flag" => Edge {
+              "name": "has-flag",
+              "spec": "^3.0.0",
+              "to": "node_modules/@babel/highlight/node_modules/has-flag",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@babel/highlight/node_modules/supports-color",
+          "name": "supports-color",
+          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@babel/code-frame",
+          "name": "@babel/highlight",
+          "spec": "^7.10.4",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@babel/helper-validator-identifier" => Edge {
+          "name": "@babel/helper-validator-identifier",
+          "spec": "^7.10.4",
+          "to": "node_modules/@babel/helper-validator-identifier",
+          "type": "prod",
+        },
+        "chalk" => Edge {
+          "name": "chalk",
+          "spec": "^2.0.0",
+          "to": "node_modules/@babel/highlight/node_modules/chalk",
+          "type": "prod",
+        },
+        "js-tokens" => Edge {
+          "name": "js-tokens",
+          "spec": "^4.0.0",
+          "to": "node_modules/js-tokens",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@babel/highlight",
+      "name": "@babel/highlight",
+      "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.10.4.tgz",
+    },
+    "@eslint/eslintrc" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "@eslint/eslintrc",
+          "spec": "^0.1.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ajv" => Edge {
+          "name": "ajv",
+          "spec": "^6.12.4",
+          "to": "node_modules/ajv",
+          "type": "prod",
+        },
+        "debug" => Edge {
+          "name": "debug",
+          "spec": "^4.1.1",
+          "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "espree" => Edge {
+          "name": "espree",
+          "spec": "^7.3.0",
+          "to": "node_modules/espree",
+          "type": "prod",
+        },
+        "globals" => Edge {
+          "name": "globals",
+          "spec": "^12.1.0",
+          "to": "node_modules/globals",
+          "type": "prod",
+        },
+        "ignore" => Edge {
+          "name": "ignore",
+          "spec": "^4.0.6",
+          "to": "node_modules/ignore",
+          "type": "prod",
+        },
+        "import-fresh" => Edge {
+          "name": "import-fresh",
+          "spec": "^3.2.1",
+          "to": "node_modules/import-fresh",
+          "type": "prod",
+        },
+        "js-yaml" => Edge {
+          "name": "js-yaml",
+          "spec": "^3.13.1",
+          "to": "node_modules/js-yaml",
+          "type": "prod",
+        },
+        "lodash" => Edge {
+          "name": "lodash",
+          "spec": "^4.17.19",
+          "to": "node_modules/lodash",
+          "type": "prod",
+        },
+        "minimatch" => Edge {
+          "name": "minimatch",
+          "spec": "^3.0.4",
+          "to": "node_modules/minimatch",
+          "type": "prod",
+        },
+        "strip-json-comments" => Edge {
+          "name": "strip-json-comments",
+          "spec": "^3.1.1",
+          "to": "node_modules/strip-json-comments",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@eslint/eslintrc",
+      "name": "@eslint/eslintrc",
+      "resolved": "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-0.1.3.tgz",
+    },
+    "@nodelib/fs.scandir" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@nodelib/fs.walk",
+          "name": "@nodelib/fs.scandir",
+          "spec": "2.1.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@nodelib/fs.stat" => Edge {
+          "name": "@nodelib/fs.stat",
+          "spec": "2.0.3",
+          "to": "node_modules/@nodelib/fs.stat",
+          "type": "prod",
+        },
+        "run-parallel" => Edge {
+          "name": "run-parallel",
+          "spec": "^1.1.9",
+          "to": "node_modules/run-parallel",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@nodelib/fs.scandir",
+      "name": "@nodelib/fs.scandir",
+      "resolved": "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz",
+    },
+    "@nodelib/fs.stat" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@nodelib/fs.scandir",
+          "name": "@nodelib/fs.stat",
+          "spec": "2.0.3",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/fast-glob",
+          "name": "@nodelib/fs.stat",
+          "spec": "^2.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@nodelib/fs.stat",
+      "name": "@nodelib/fs.stat",
+      "resolved": "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.3.tgz",
+    },
+    "@nodelib/fs.walk" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/fast-glob",
+          "name": "@nodelib/fs.walk",
+          "spec": "^1.2.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@nodelib/fs.scandir" => Edge {
+          "name": "@nodelib/fs.scandir",
+          "spec": "2.1.3",
+          "to": "node_modules/@nodelib/fs.scandir",
+          "type": "prod",
+        },
+        "fastq" => Edge {
+          "name": "fastq",
+          "spec": "^1.6.0",
+          "to": "node_modules/fastq",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@nodelib/fs.walk",
+      "name": "@nodelib/fs.walk",
+      "resolved": "https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.4.tgz",
+    },
+    "@types/json-schema" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "@types/json-schema",
+          "spec": "^7.0.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@types/json-schema",
+      "name": "@types/json-schema",
+      "resolved": "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.6.tgz",
+    },
+    "@typescript-eslint/eslint-plugin" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@typescript-eslint/eslint-plugin",
+          "spec": "4",
+          "type": "dev",
+        },
+      },
+      "edgesOut": Map {
+        "@typescript-eslint/experimental-utils" => Edge {
+          "name": "@typescript-eslint/experimental-utils",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/experimental-utils",
+          "type": "prod",
+        },
+        "@typescript-eslint/parser" => Edge {
+          "name": "@typescript-eslint/parser",
+          "spec": "^4.0.0",
+          "to": "node_modules/@typescript-eslint/parser",
+          "type": "peer",
+        },
+        "@typescript-eslint/scope-manager" => Edge {
+          "name": "@typescript-eslint/scope-manager",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/scope-manager",
+          "type": "prod",
+        },
+        "debug" => Edge {
+          "name": "debug",
+          "spec": "^4.1.1",
+          "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "eslint" => Edge {
+          "name": "eslint",
+          "spec": "^5.0.0 || ^6.0.0 || ^7.0.0",
+          "to": "node_modules/eslint",
+          "type": "peer",
+        },
+        "functional-red-black-tree" => Edge {
+          "name": "functional-red-black-tree",
+          "spec": "^1.0.1",
+          "to": "node_modules/functional-red-black-tree",
+          "type": "prod",
+        },
+        "regexpp" => Edge {
+          "name": "regexpp",
+          "spec": "^3.0.0",
+          "to": "node_modules/regexpp",
+          "type": "prod",
+        },
+        "semver" => Edge {
+          "name": "semver",
+          "spec": "^7.3.2",
+          "to": "node_modules/semver",
+          "type": "prod",
+        },
+        "tsutils" => Edge {
+          "name": "tsutils",
+          "spec": "^3.17.1",
+          "to": "node_modules/tsutils",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/eslint-plugin",
+      "name": "@typescript-eslint/eslint-plugin",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.4.1.tgz",
+    },
+    "@typescript-eslint/experimental-utils" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "@typescript-eslint/experimental-utils",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@types/json-schema" => Edge {
+          "name": "@types/json-schema",
+          "spec": "^7.0.3",
+          "to": "node_modules/@types/json-schema",
+          "type": "prod",
+        },
+        "@typescript-eslint/scope-manager" => Edge {
+          "name": "@typescript-eslint/scope-manager",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/scope-manager",
+          "type": "prod",
+        },
+        "@typescript-eslint/types" => Edge {
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/types",
+          "type": "prod",
+        },
+        "@typescript-eslint/typescript-estree" => Edge {
+          "name": "@typescript-eslint/typescript-estree",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/typescript-estree",
+          "type": "prod",
+        },
+        "eslint" => Edge {
+          "name": "eslint",
+          "spec": "*",
+          "to": "node_modules/eslint",
+          "type": "peer",
+        },
+        "eslint-scope" => Edge {
+          "name": "eslint-scope",
+          "spec": "^5.0.0",
+          "to": "node_modules/eslint-scope",
+          "type": "prod",
+        },
+        "eslint-utils" => Edge {
+          "name": "eslint-utils",
+          "spec": "^2.0.0",
+          "to": "node_modules/eslint-utils",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/experimental-utils",
+      "name": "@typescript-eslint/experimental-utils",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/experimental-utils/-/experimental-utils-4.4.1.tgz",
+    },
+    "@typescript-eslint/parser" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@typescript-eslint/parser",
+          "spec": "4",
+          "type": "dev",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "@typescript-eslint/parser",
+          "spec": "^4.0.0",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@typescript-eslint/scope-manager" => Edge {
+          "name": "@typescript-eslint/scope-manager",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/scope-manager",
+          "type": "prod",
+        },
+        "@typescript-eslint/types" => Edge {
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/types",
+          "type": "prod",
+        },
+        "@typescript-eslint/typescript-estree" => Edge {
+          "name": "@typescript-eslint/typescript-estree",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/typescript-estree",
+          "type": "prod",
+        },
+        "debug" => Edge {
+          "name": "debug",
+          "spec": "^4.1.1",
+          "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "eslint" => Edge {
+          "name": "eslint",
+          "spec": "^5.0.0 || ^6.0.0 || ^7.0.0",
+          "to": "node_modules/eslint",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/parser",
+      "name": "@typescript-eslint/parser",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/parser/-/parser-4.4.1.tgz",
+    },
+    "@typescript-eslint/scope-manager" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "@typescript-eslint/scope-manager",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "@typescript-eslint/scope-manager",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/parser",
+          "name": "@typescript-eslint/scope-manager",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@typescript-eslint/types" => Edge {
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/types",
+          "type": "prod",
+        },
+        "@typescript-eslint/visitor-keys" => Edge {
+          "name": "@typescript-eslint/visitor-keys",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/visitor-keys",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/scope-manager",
+      "name": "@typescript-eslint/scope-manager",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/scope-manager/-/scope-manager-4.4.1.tgz",
+    },
+    "@typescript-eslint/types" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/parser",
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/scope-manager",
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/visitor-keys",
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/types",
+      "name": "@typescript-eslint/types",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/types/-/types-4.4.1.tgz",
+    },
+    "@typescript-eslint/typescript-estree" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "@typescript-eslint/typescript-estree",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/parser",
+          "name": "@typescript-eslint/typescript-estree",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@typescript-eslint/types" => Edge {
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/types",
+          "type": "prod",
+        },
+        "@typescript-eslint/visitor-keys" => Edge {
+          "name": "@typescript-eslint/visitor-keys",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/visitor-keys",
+          "type": "prod",
+        },
+        "debug" => Edge {
+          "name": "debug",
+          "spec": "^4.1.1",
+          "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "globby" => Edge {
+          "name": "globby",
+          "spec": "^11.0.1",
+          "to": "node_modules/globby",
+          "type": "prod",
+        },
+        "is-glob" => Edge {
+          "name": "is-glob",
+          "spec": "^4.0.1",
+          "to": "node_modules/is-glob",
+          "type": "prod",
+        },
+        "lodash" => Edge {
+          "name": "lodash",
+          "spec": "^4.17.15",
+          "to": "node_modules/lodash",
+          "type": "prod",
+        },
+        "semver" => Edge {
+          "name": "semver",
+          "spec": "^7.3.2",
+          "to": "node_modules/semver",
+          "type": "prod",
+        },
+        "tsutils" => Edge {
+          "name": "tsutils",
+          "spec": "^3.17.1",
+          "to": "node_modules/tsutils",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/typescript-estree",
+      "name": "@typescript-eslint/typescript-estree",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-4.4.1.tgz",
+    },
+    "@typescript-eslint/visitor-keys" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/scope-manager",
+          "name": "@typescript-eslint/visitor-keys",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "@typescript-eslint/visitor-keys",
+          "spec": "4.4.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@typescript-eslint/types" => Edge {
+          "name": "@typescript-eslint/types",
+          "spec": "4.4.1",
+          "to": "node_modules/@typescript-eslint/types",
+          "type": "prod",
+        },
+        "eslint-visitor-keys" => Edge {
+          "name": "eslint-visitor-keys",
+          "spec": "^2.0.0",
+          "to": "node_modules/eslint-visitor-keys",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@typescript-eslint/visitor-keys",
+      "name": "@typescript-eslint/visitor-keys",
+      "resolved": "https://registry.npmjs.org/@typescript-eslint/visitor-keys/-/visitor-keys-4.4.1.tgz",
+    },
+    "acorn" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/acorn-jsx",
+          "name": "acorn",
+          "spec": "^6.0.0 || ^7.0.0 || ^8.0.0",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/espree",
+          "name": "acorn",
+          "spec": "^7.4.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/acorn",
+      "name": "acorn",
+      "resolved": "https://registry.npmjs.org/acorn/-/acorn-7.4.1.tgz",
+    },
+    "acorn-jsx" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/espree",
+          "name": "acorn-jsx",
+          "spec": "^5.2.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "acorn" => Edge {
+          "name": "acorn",
+          "spec": "^6.0.0 || ^7.0.0 || ^8.0.0",
+          "to": "node_modules/acorn",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/acorn-jsx",
+      "name": "acorn-jsx",
+      "resolved": "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.1.tgz",
+    },
+    "ajv" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "ajv",
+          "spec": "^6.12.4",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "ajv",
+          "spec": "^6.10.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/table",
+          "name": "ajv",
+          "spec": "^6.10.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "fast-deep-equal" => Edge {
+          "name": "fast-deep-equal",
+          "spec": "^3.1.1",
+          "to": "node_modules/fast-deep-equal",
+          "type": "prod",
+        },
+        "fast-json-stable-stringify" => Edge {
+          "name": "fast-json-stable-stringify",
+          "spec": "^2.0.0",
+          "to": "node_modules/fast-json-stable-stringify",
+          "type": "prod",
+        },
+        "json-schema-traverse" => Edge {
+          "name": "json-schema-traverse",
+          "spec": "^0.4.1",
+          "to": "node_modules/json-schema-traverse",
+          "type": "prod",
+        },
+        "uri-js" => Edge {
+          "name": "uri-js",
+          "spec": "^4.2.2",
+          "to": "node_modules/uri-js",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ajv",
+      "name": "ajv",
+      "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.12.6.tgz",
+    },
+    "ansi-colors" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/enquirer",
+          "name": "ansi-colors",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-colors",
+      "name": "ansi-colors",
+      "resolved": "https://registry.npmjs.org/ansi-colors/-/ansi-colors-4.1.1.tgz",
+    },
+    "ansi-regex" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/strip-ansi",
+          "name": "ansi-regex",
+          "spec": "^5.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-regex",
+      "name": "ansi-regex",
+      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
+    },
+    "ansi-styles" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chalk",
+          "name": "ansi-styles",
+          "spec": "^4.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "color-convert" => Edge {
+          "name": "color-convert",
+          "spec": "^2.0.1",
+          "to": "node_modules/color-convert",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ansi-styles",
+      "name": "ansi-styles",
+      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+    },
+    "argparse" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/js-yaml",
+          "name": "argparse",
+          "spec": "^1.0.7",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "sprintf-js" => Edge {
+          "name": "sprintf-js",
+          "spec": "~1.0.2",
+          "to": "node_modules/sprintf-js",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/argparse",
+      "name": "argparse",
+      "resolved": "https://registry.npmjs.org/argparse/-/argparse-1.0.10.tgz",
+    },
+    "array-union" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/globby",
+          "name": "array-union",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/array-union",
+      "name": "array-union",
+      "resolved": "https://registry.npmjs.org/array-union/-/array-union-2.1.0.tgz",
+    },
+    "astral-regex" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/slice-ansi",
+          "name": "astral-regex",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/astral-regex",
+      "name": "astral-regex",
+      "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz",
+    },
+    "balanced-match" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/brace-expansion",
+          "name": "balanced-match",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/balanced-match",
+      "name": "balanced-match",
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+    },
+    "brace-expansion" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/minimatch",
+          "name": "brace-expansion",
+          "spec": "^1.1.7",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "balanced-match" => Edge {
+          "name": "balanced-match",
+          "spec": "^1.0.0",
+          "to": "node_modules/balanced-match",
+          "type": "prod",
+        },
+        "concat-map" => Edge {
+          "name": "concat-map",
+          "spec": "0.0.1",
+          "to": "node_modules/concat-map",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/brace-expansion",
+      "name": "brace-expansion",
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+    },
+    "braces" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/micromatch",
+          "name": "braces",
+          "spec": "^3.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "fill-range" => Edge {
+          "name": "fill-range",
+          "spec": "^7.0.1",
+          "to": "node_modules/fill-range",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/braces",
+      "name": "braces",
+      "resolved": "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz",
+    },
+    "callsites" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/parent-module",
+          "name": "callsites",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/callsites",
+      "name": "callsites",
+      "resolved": "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz",
+    },
+    "chalk" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "chalk",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-styles" => Edge {
+          "name": "ansi-styles",
+          "spec": "^4.1.0",
+          "to": "node_modules/ansi-styles",
+          "type": "prod",
+        },
+        "supports-color" => Edge {
+          "name": "supports-color",
+          "spec": "^7.1.0",
+          "to": "node_modules/supports-color",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/chalk",
+      "name": "chalk",
+      "resolved": "https://registry.npmjs.org/chalk/-/chalk-4.1.0.tgz",
+    },
+    "color-convert" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ansi-styles",
+          "name": "color-convert",
+          "spec": "^2.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "color-name" => Edge {
+          "name": "color-name",
+          "spec": "~1.1.4",
+          "to": "node_modules/color-name",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/color-convert",
+      "name": "color-convert",
+      "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+    },
+    "color-name" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/color-convert",
+          "name": "color-name",
+          "spec": "~1.1.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/color-name",
+      "name": "color-name",
+      "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+    },
+    "concat-map" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/brace-expansion",
+          "name": "concat-map",
+          "spec": "0.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/concat-map",
+      "name": "concat-map",
+      "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+    },
+    "cross-spawn" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "cross-spawn",
+          "spec": "^7.0.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "path-key" => Edge {
+          "name": "path-key",
+          "spec": "^3.1.0",
+          "to": "node_modules/path-key",
+          "type": "prod",
+        },
+        "shebang-command" => Edge {
+          "name": "shebang-command",
+          "spec": "^2.0.0",
+          "to": "node_modules/shebang-command",
+          "type": "prod",
+        },
+        "which" => Edge {
+          "name": "which",
+          "spec": "^2.0.1",
+          "to": "node_modules/which",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/cross-spawn",
+      "name": "cross-spawn",
+      "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz",
+    },
+    "debug" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "debug",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "debug",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/parser",
+          "name": "debug",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "debug",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "debug",
+          "spec": "^4.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ms" => Edge {
+          "name": "ms",
+          "spec": "2.1.2",
+          "to": "node_modules/ms",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/debug",
+      "name": "debug",
+      "resolved": "https://registry.npmjs.org/debug/-/debug-4.2.0.tgz",
+    },
+    "deep-is" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/optionator",
+          "name": "deep-is",
+          "spec": "^0.1.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/deep-is",
+      "name": "deep-is",
+      "resolved": "https://registry.npmjs.org/deep-is/-/deep-is-0.1.3.tgz",
+    },
+    "dir-glob" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/globby",
+          "name": "dir-glob",
+          "spec": "^3.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "path-type" => Edge {
+          "name": "path-type",
+          "spec": "^4.0.0",
+          "to": "node_modules/path-type",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/dir-glob",
+      "name": "dir-glob",
+      "resolved": "https://registry.npmjs.org/dir-glob/-/dir-glob-3.0.1.tgz",
+    },
+    "doctrine" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "doctrine",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "esutils" => Edge {
+          "name": "esutils",
+          "spec": "^2.0.2",
+          "to": "node_modules/esutils",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/doctrine",
+      "name": "doctrine",
+      "resolved": "https://registry.npmjs.org/doctrine/-/doctrine-3.0.0.tgz",
+    },
+    "emoji-regex" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/string-width",
+          "name": "emoji-regex",
+          "spec": "^7.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/emoji-regex",
+      "name": "emoji-regex",
+      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
+    },
+    "enquirer" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "enquirer",
+          "spec": "^2.3.5",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-colors" => Edge {
+          "name": "ansi-colors",
+          "spec": "^4.1.1",
+          "to": "node_modules/ansi-colors",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/enquirer",
+      "name": "enquirer",
+      "resolved": "https://registry.npmjs.org/enquirer/-/enquirer-2.3.6.tgz",
+    },
+    "escape-string-regexp" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@babel/highlight/node_modules/chalk",
+          "name": "escape-string-regexp",
+          "spec": "^1.0.5",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/escape-string-regexp",
+      "name": "escape-string-regexp",
+      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+    },
+    "eslint" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "eslint",
+          "spec": "^7",
+          "type": "dev",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "eslint",
+          "spec": "^5.0.0 || ^6.0.0 || ^7.0.0",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "eslint",
+          "spec": "*",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/parser",
+          "name": "eslint",
+          "spec": "^5.0.0 || ^6.0.0 || ^7.0.0",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@babel/code-frame" => Edge {
+          "name": "@babel/code-frame",
+          "spec": "^7.0.0",
+          "to": "node_modules/@babel/code-frame",
+          "type": "prod",
+        },
+        "@eslint/eslintrc" => Edge {
+          "name": "@eslint/eslintrc",
+          "spec": "^0.1.3",
+          "to": "node_modules/@eslint/eslintrc",
+          "type": "prod",
+        },
+        "ajv" => Edge {
+          "name": "ajv",
+          "spec": "^6.10.0",
+          "to": "node_modules/ajv",
+          "type": "prod",
+        },
+        "chalk" => Edge {
+          "name": "chalk",
+          "spec": "^4.0.0",
+          "to": "node_modules/chalk",
+          "type": "prod",
+        },
+        "cross-spawn" => Edge {
+          "name": "cross-spawn",
+          "spec": "^7.0.2",
+          "to": "node_modules/cross-spawn",
+          "type": "prod",
+        },
+        "debug" => Edge {
+          "name": "debug",
+          "spec": "^4.0.1",
+          "to": "node_modules/debug",
+          "type": "prod",
+        },
+        "doctrine" => Edge {
+          "name": "doctrine",
+          "spec": "^3.0.0",
+          "to": "node_modules/doctrine",
+          "type": "prod",
+        },
+        "enquirer" => Edge {
+          "name": "enquirer",
+          "spec": "^2.3.5",
+          "to": "node_modules/enquirer",
+          "type": "prod",
+        },
+        "eslint-scope" => Edge {
+          "name": "eslint-scope",
+          "spec": "^5.1.1",
+          "to": "node_modules/eslint-scope",
+          "type": "prod",
+        },
+        "eslint-utils" => Edge {
+          "name": "eslint-utils",
+          "spec": "^2.1.0",
+          "to": "node_modules/eslint-utils",
+          "type": "prod",
+        },
+        "eslint-visitor-keys" => Edge {
+          "name": "eslint-visitor-keys",
+          "spec": "^2.0.0",
+          "to": "node_modules/eslint-visitor-keys",
+          "type": "prod",
+        },
+        "espree" => Edge {
+          "name": "espree",
+          "spec": "^7.3.0",
+          "to": "node_modules/espree",
+          "type": "prod",
+        },
+        "esquery" => Edge {
+          "name": "esquery",
+          "spec": "^1.2.0",
+          "to": "node_modules/esquery",
+          "type": "prod",
+        },
+        "esutils" => Edge {
+          "name": "esutils",
+          "spec": "^2.0.2",
+          "to": "node_modules/esutils",
+          "type": "prod",
+        },
+        "file-entry-cache" => Edge {
+          "name": "file-entry-cache",
+          "spec": "^5.0.1",
+          "to": "node_modules/file-entry-cache",
+          "type": "prod",
+        },
+        "functional-red-black-tree" => Edge {
+          "name": "functional-red-black-tree",
+          "spec": "^1.0.1",
+          "to": "node_modules/functional-red-black-tree",
+          "type": "prod",
+        },
+        "glob-parent" => Edge {
+          "name": "glob-parent",
+          "spec": "^5.0.0",
+          "to": "node_modules/glob-parent",
+          "type": "prod",
+        },
+        "globals" => Edge {
+          "name": "globals",
+          "spec": "^12.1.0",
+          "to": "node_modules/globals",
+          "type": "prod",
+        },
+        "ignore" => Edge {
+          "name": "ignore",
+          "spec": "^4.0.6",
+          "to": "node_modules/ignore",
+          "type": "prod",
+        },
+        "import-fresh" => Edge {
+          "name": "import-fresh",
+          "spec": "^3.0.0",
+          "to": "node_modules/import-fresh",
+          "type": "prod",
+        },
+        "imurmurhash" => Edge {
+          "name": "imurmurhash",
+          "spec": "^0.1.4",
+          "to": "node_modules/imurmurhash",
+          "type": "prod",
+        },
+        "is-glob" => Edge {
+          "name": "is-glob",
+          "spec": "^4.0.0",
+          "to": "node_modules/is-glob",
+          "type": "prod",
+        },
+        "js-yaml" => Edge {
+          "name": "js-yaml",
+          "spec": "^3.13.1",
+          "to": "node_modules/js-yaml",
+          "type": "prod",
+        },
+        "json-stable-stringify-without-jsonify" => Edge {
+          "name": "json-stable-stringify-without-jsonify",
+          "spec": "^1.0.1",
+          "to": "node_modules/json-stable-stringify-without-jsonify",
+          "type": "prod",
+        },
+        "levn" => Edge {
+          "name": "levn",
+          "spec": "^0.4.1",
+          "to": "node_modules/levn",
+          "type": "prod",
+        },
+        "lodash" => Edge {
+          "name": "lodash",
+          "spec": "^4.17.19",
+          "to": "node_modules/lodash",
+          "type": "prod",
+        },
+        "minimatch" => Edge {
+          "name": "minimatch",
+          "spec": "^3.0.4",
+          "to": "node_modules/minimatch",
+          "type": "prod",
+        },
+        "natural-compare" => Edge {
+          "name": "natural-compare",
+          "spec": "^1.4.0",
+          "to": "node_modules/natural-compare",
+          "type": "prod",
+        },
+        "optionator" => Edge {
+          "name": "optionator",
+          "spec": "^0.9.1",
+          "to": "node_modules/optionator",
+          "type": "prod",
+        },
+        "progress" => Edge {
+          "name": "progress",
+          "spec": "^2.0.0",
+          "to": "node_modules/progress",
+          "type": "prod",
+        },
+        "regexpp" => Edge {
+          "name": "regexpp",
+          "spec": "^3.1.0",
+          "to": "node_modules/regexpp",
+          "type": "prod",
+        },
+        "semver" => Edge {
+          "name": "semver",
+          "spec": "^7.2.1",
+          "to": "node_modules/semver",
+          "type": "prod",
+        },
+        "strip-ansi" => Edge {
+          "name": "strip-ansi",
+          "spec": "^6.0.0",
+          "to": "node_modules/strip-ansi",
+          "type": "prod",
+        },
+        "strip-json-comments" => Edge {
+          "name": "strip-json-comments",
+          "spec": "^3.1.0",
+          "to": "node_modules/strip-json-comments",
+          "type": "prod",
+        },
+        "table" => Edge {
+          "name": "table",
+          "spec": "^5.2.3",
+          "to": "node_modules/table",
+          "type": "prod",
+        },
+        "text-table" => Edge {
+          "name": "text-table",
+          "spec": "^0.2.0",
+          "to": "node_modules/text-table",
+          "type": "prod",
+        },
+        "v8-compile-cache" => Edge {
+          "name": "v8-compile-cache",
+          "spec": "^2.0.3",
+          "to": "node_modules/v8-compile-cache",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/eslint",
+      "name": "eslint",
+      "resolved": "https://registry.npmjs.org/eslint/-/eslint-7.11.0.tgz",
+    },
+    "eslint-scope" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "eslint-scope",
+          "spec": "^5.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "eslint-scope",
+          "spec": "^5.1.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "esrecurse" => Edge {
+          "name": "esrecurse",
+          "spec": "^4.3.0",
+          "to": "node_modules/esrecurse",
+          "type": "prod",
+        },
+        "estraverse" => Edge {
+          "name": "estraverse",
+          "spec": "^4.1.1",
+          "to": "node_modules/estraverse",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/eslint-scope",
+      "name": "eslint-scope",
+      "resolved": "https://registry.npmjs.org/eslint-scope/-/eslint-scope-5.1.1.tgz",
+    },
+    "eslint-utils" => Node {
+      "children": Map {
+        "eslint-visitor-keys" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/eslint-utils",
+              "name": "eslint-visitor-keys",
+              "spec": "^1.1.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/eslint-utils/node_modules/eslint-visitor-keys",
+          "name": "eslint-visitor-keys",
+          "resolved": "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/experimental-utils",
+          "name": "eslint-utils",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "eslint-utils",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "eslint-visitor-keys" => Edge {
+          "name": "eslint-visitor-keys",
+          "spec": "^1.1.0",
+          "to": "node_modules/eslint-utils/node_modules/eslint-visitor-keys",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/eslint-utils",
+      "name": "eslint-utils",
+      "resolved": "https://registry.npmjs.org/eslint-utils/-/eslint-utils-2.1.0.tgz",
+    },
+    "eslint-visitor-keys" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/visitor-keys",
+          "name": "eslint-visitor-keys",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "eslint-visitor-keys",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/eslint-visitor-keys",
+      "name": "eslint-visitor-keys",
+      "resolved": "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz",
+    },
+    "espree" => Node {
+      "children": Map {
+        "eslint-visitor-keys" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/espree",
+              "name": "eslint-visitor-keys",
+              "spec": "^1.3.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/espree/node_modules/eslint-visitor-keys",
+          "name": "eslint-visitor-keys",
+          "resolved": "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "espree",
+          "spec": "^7.3.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "espree",
+          "spec": "^7.3.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "acorn" => Edge {
+          "name": "acorn",
+          "spec": "^7.4.0",
+          "to": "node_modules/acorn",
+          "type": "prod",
+        },
+        "acorn-jsx" => Edge {
+          "name": "acorn-jsx",
+          "spec": "^5.2.0",
+          "to": "node_modules/acorn-jsx",
+          "type": "prod",
+        },
+        "eslint-visitor-keys" => Edge {
+          "name": "eslint-visitor-keys",
+          "spec": "^1.3.0",
+          "to": "node_modules/espree/node_modules/eslint-visitor-keys",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/espree",
+      "name": "espree",
+      "resolved": "https://registry.npmjs.org/espree/-/espree-7.3.0.tgz",
+    },
+    "esprima" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/js-yaml",
+          "name": "esprima",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/esprima",
+      "name": "esprima",
+      "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
+    },
+    "esquery" => Node {
+      "children": Map {
+        "estraverse" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/esquery",
+              "name": "estraverse",
+              "spec": "^5.1.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/esquery/node_modules/estraverse",
+          "name": "estraverse",
+          "resolved": "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "esquery",
+          "spec": "^1.2.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "estraverse" => Edge {
+          "name": "estraverse",
+          "spec": "^5.1.0",
+          "to": "node_modules/esquery/node_modules/estraverse",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/esquery",
+      "name": "esquery",
+      "resolved": "https://registry.npmjs.org/esquery/-/esquery-1.3.1.tgz",
+    },
+    "esrecurse" => Node {
+      "children": Map {
+        "estraverse" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/esrecurse",
+              "name": "estraverse",
+              "spec": "^5.2.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/esrecurse/node_modules/estraverse",
+          "name": "estraverse",
+          "resolved": "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint-scope",
+          "name": "esrecurse",
+          "spec": "^4.3.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "estraverse" => Edge {
+          "name": "estraverse",
+          "spec": "^5.2.0",
+          "to": "node_modules/esrecurse/node_modules/estraverse",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/esrecurse",
+      "name": "esrecurse",
+      "resolved": "https://registry.npmjs.org/esrecurse/-/esrecurse-4.3.0.tgz",
+    },
+    "estraverse" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint-scope",
+          "name": "estraverse",
+          "spec": "^4.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/estraverse",
+      "name": "estraverse",
+      "resolved": "https://registry.npmjs.org/estraverse/-/estraverse-4.3.0.tgz",
+    },
+    "esutils" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/doctrine",
+          "name": "esutils",
+          "spec": "^2.0.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "esutils",
+          "spec": "^2.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/esutils",
+      "name": "esutils",
+      "resolved": "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz",
+    },
+    "fast-deep-equal" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "fast-deep-equal",
+          "spec": "^3.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fast-deep-equal",
+      "name": "fast-deep-equal",
+      "resolved": "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz",
+    },
+    "fast-glob" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/globby",
+          "name": "fast-glob",
+          "spec": "^3.1.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@nodelib/fs.stat" => Edge {
+          "name": "@nodelib/fs.stat",
+          "spec": "^2.0.2",
+          "to": "node_modules/@nodelib/fs.stat",
+          "type": "prod",
+        },
+        "@nodelib/fs.walk" => Edge {
+          "name": "@nodelib/fs.walk",
+          "spec": "^1.2.3",
+          "to": "node_modules/@nodelib/fs.walk",
+          "type": "prod",
+        },
+        "glob-parent" => Edge {
+          "name": "glob-parent",
+          "spec": "^5.1.0",
+          "to": "node_modules/glob-parent",
+          "type": "prod",
+        },
+        "merge2" => Edge {
+          "name": "merge2",
+          "spec": "^1.3.0",
+          "to": "node_modules/merge2",
+          "type": "prod",
+        },
+        "micromatch" => Edge {
+          "name": "micromatch",
+          "spec": "^4.0.2",
+          "to": "node_modules/micromatch",
+          "type": "prod",
+        },
+        "picomatch" => Edge {
+          "name": "picomatch",
+          "spec": "^2.2.1",
+          "to": "node_modules/picomatch",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fast-glob",
+      "name": "fast-glob",
+      "resolved": "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.4.tgz",
+    },
+    "fast-json-stable-stringify" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "fast-json-stable-stringify",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fast-json-stable-stringify",
+      "name": "fast-json-stable-stringify",
+      "resolved": "https://registry.npmjs.org/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz",
+    },
+    "fast-levenshtein" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/optionator",
+          "name": "fast-levenshtein",
+          "spec": "^2.0.6",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fast-levenshtein",
+      "name": "fast-levenshtein",
+      "resolved": "https://registry.npmjs.org/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz",
+    },
+    "fastq" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@nodelib/fs.walk",
+          "name": "fastq",
+          "spec": "^1.6.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "reusify" => Edge {
+          "name": "reusify",
+          "spec": "^1.0.4",
+          "to": "node_modules/reusify",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fastq",
+      "name": "fastq",
+      "resolved": "https://registry.npmjs.org/fastq/-/fastq-1.8.0.tgz",
+    },
+    "file-entry-cache" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "file-entry-cache",
+          "spec": "^5.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "flat-cache" => Edge {
+          "name": "flat-cache",
+          "spec": "^2.0.1",
+          "to": "node_modules/flat-cache",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/file-entry-cache",
+      "name": "file-entry-cache",
+      "resolved": "https://registry.npmjs.org/file-entry-cache/-/file-entry-cache-5.0.1.tgz",
+    },
+    "fill-range" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/braces",
+          "name": "fill-range",
+          "spec": "^7.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "to-regex-range" => Edge {
+          "name": "to-regex-range",
+          "spec": "^5.0.1",
+          "to": "node_modules/to-regex-range",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fill-range",
+      "name": "fill-range",
+      "resolved": "https://registry.npmjs.org/fill-range/-/fill-range-7.0.1.tgz",
+    },
+    "flat-cache" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/file-entry-cache",
+          "name": "flat-cache",
+          "spec": "^2.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "flatted" => Edge {
+          "name": "flatted",
+          "spec": "^2.0.0",
+          "to": "node_modules/flatted",
+          "type": "prod",
+        },
+        "rimraf" => Edge {
+          "name": "rimraf",
+          "spec": "2.6.3",
+          "to": "node_modules/rimraf",
+          "type": "prod",
+        },
+        "write" => Edge {
+          "name": "write",
+          "spec": "1.0.3",
+          "to": "node_modules/write",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/flat-cache",
+      "name": "flat-cache",
+      "resolved": "https://registry.npmjs.org/flat-cache/-/flat-cache-2.0.1.tgz",
+    },
+    "flatted" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/flat-cache",
+          "name": "flatted",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/flatted",
+      "name": "flatted",
+      "resolved": "https://registry.npmjs.org/flatted/-/flatted-2.0.2.tgz",
+    },
+    "fs.realpath" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/glob",
+          "name": "fs.realpath",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/fs.realpath",
+      "name": "fs.realpath",
+      "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+    },
+    "functional-red-black-tree" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "functional-red-black-tree",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "functional-red-black-tree",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/functional-red-black-tree",
+      "name": "functional-red-black-tree",
+      "resolved": "https://registry.npmjs.org/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz",
+    },
+    "glob" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/rimraf",
+          "name": "glob",
+          "spec": "^7.1.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "fs.realpath" => Edge {
+          "name": "fs.realpath",
+          "spec": "^1.0.0",
+          "to": "node_modules/fs.realpath",
+          "type": "prod",
+        },
+        "inflight" => Edge {
+          "name": "inflight",
+          "spec": "^1.0.4",
+          "to": "node_modules/inflight",
+          "type": "prod",
+        },
+        "inherits" => Edge {
+          "name": "inherits",
+          "spec": "2",
+          "to": "node_modules/inherits",
+          "type": "prod",
+        },
+        "minimatch" => Edge {
+          "name": "minimatch",
+          "spec": "^3.0.4",
+          "to": "node_modules/minimatch",
+          "type": "prod",
+        },
+        "once" => Edge {
+          "name": "once",
+          "spec": "^1.3.0",
+          "to": "node_modules/once",
+          "type": "prod",
+        },
+        "path-is-absolute" => Edge {
+          "name": "path-is-absolute",
+          "spec": "^1.0.0",
+          "to": "node_modules/path-is-absolute",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/glob",
+      "name": "glob",
+      "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.6.tgz",
+    },
+    "glob-parent" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "glob-parent",
+          "spec": "^5.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/fast-glob",
+          "name": "glob-parent",
+          "spec": "^5.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "is-glob" => Edge {
+          "name": "is-glob",
+          "spec": "^4.0.1",
+          "to": "node_modules/is-glob",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/glob-parent",
+      "name": "glob-parent",
+      "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.1.tgz",
+    },
+    "globals" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "globals",
+          "spec": "^12.1.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "globals",
+          "spec": "^12.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "type-fest" => Edge {
+          "name": "type-fest",
+          "spec": "^0.8.1",
+          "to": "node_modules/type-fest",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/globals",
+      "name": "globals",
+      "resolved": "https://registry.npmjs.org/globals/-/globals-12.4.0.tgz",
+    },
+    "globby" => Node {
+      "children": Map {
+        "ignore" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/globby",
+              "name": "ignore",
+              "spec": "^5.1.4",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/globby/node_modules/ignore",
+          "name": "ignore",
+          "resolved": "https://registry.npmjs.org/ignore/-/ignore-5.1.8.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "globby",
+          "spec": "^11.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "array-union" => Edge {
+          "name": "array-union",
+          "spec": "^2.1.0",
+          "to": "node_modules/array-union",
+          "type": "prod",
+        },
+        "dir-glob" => Edge {
+          "name": "dir-glob",
+          "spec": "^3.0.1",
+          "to": "node_modules/dir-glob",
+          "type": "prod",
+        },
+        "fast-glob" => Edge {
+          "name": "fast-glob",
+          "spec": "^3.1.1",
+          "to": "node_modules/fast-glob",
+          "type": "prod",
+        },
+        "ignore" => Edge {
+          "name": "ignore",
+          "spec": "^5.1.4",
+          "to": "node_modules/globby/node_modules/ignore",
+          "type": "prod",
+        },
+        "merge2" => Edge {
+          "name": "merge2",
+          "spec": "^1.3.0",
+          "to": "node_modules/merge2",
+          "type": "prod",
+        },
+        "slash" => Edge {
+          "name": "slash",
+          "spec": "^3.0.0",
+          "to": "node_modules/slash",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/globby",
+      "name": "globby",
+      "resolved": "https://registry.npmjs.org/globby/-/globby-11.0.1.tgz",
+    },
+    "has-flag" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/supports-color",
+          "name": "has-flag",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/has-flag",
+      "name": "has-flag",
+      "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
+    },
+    "ignore" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "ignore",
+          "spec": "^4.0.6",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "ignore",
+          "spec": "^4.0.6",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ignore",
+      "name": "ignore",
+      "resolved": "https://registry.npmjs.org/ignore/-/ignore-4.0.6.tgz",
+    },
+    "import-fresh" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "import-fresh",
+          "spec": "^3.2.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "import-fresh",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "parent-module" => Edge {
+          "name": "parent-module",
+          "spec": "^1.0.0",
+          "to": "node_modules/parent-module",
+          "type": "prod",
+        },
+        "resolve-from" => Edge {
+          "name": "resolve-from",
+          "spec": "^4.0.0",
+          "to": "node_modules/resolve-from",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/import-fresh",
+      "name": "import-fresh",
+      "resolved": "https://registry.npmjs.org/import-fresh/-/import-fresh-3.2.1.tgz",
+    },
+    "imurmurhash" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "imurmurhash",
+          "spec": "^0.1.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/imurmurhash",
+      "name": "imurmurhash",
+      "resolved": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
+    },
+    "inflight" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/glob",
+          "name": "inflight",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "once" => Edge {
+          "name": "once",
+          "spec": "^1.3.0",
+          "to": "node_modules/once",
+          "type": "prod",
+        },
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/inflight",
+      "name": "inflight",
+      "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+    },
+    "inherits" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/glob",
+          "name": "inherits",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/inherits",
+      "name": "inherits",
+      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+    },
+    "is-extglob" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/is-glob",
+          "name": "is-extglob",
+          "spec": "^2.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/is-extglob",
+      "name": "is-extglob",
+      "resolved": "https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz",
+    },
+    "is-fullwidth-code-point" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/slice-ansi",
+          "name": "is-fullwidth-code-point",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/string-width",
+          "name": "is-fullwidth-code-point",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/is-fullwidth-code-point",
+      "name": "is-fullwidth-code-point",
+      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
+    },
+    "is-glob" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "is-glob",
+          "spec": "^4.0.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "is-glob",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/glob-parent",
+          "name": "is-glob",
+          "spec": "^4.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "is-extglob" => Edge {
+          "name": "is-extglob",
+          "spec": "^2.1.1",
+          "to": "node_modules/is-extglob",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/is-glob",
+      "name": "is-glob",
+      "resolved": "https://registry.npmjs.org/is-glob/-/is-glob-4.0.1.tgz",
+    },
+    "is-number" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/to-regex-range",
+          "name": "is-number",
+          "spec": "^7.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/is-number",
+      "name": "is-number",
+      "resolved": "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz",
+    },
+    "isexe" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/which",
+          "name": "isexe",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/isexe",
+      "name": "isexe",
+      "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
+    },
+    "js-tokens" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@babel/highlight",
+          "name": "js-tokens",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/js-tokens",
+      "name": "js-tokens",
+      "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
+    },
+    "js-yaml" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "js-yaml",
+          "spec": "^3.13.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "js-yaml",
+          "spec": "^3.13.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "argparse" => Edge {
+          "name": "argparse",
+          "spec": "^1.0.7",
+          "to": "node_modules/argparse",
+          "type": "prod",
+        },
+        "esprima" => Edge {
+          "name": "esprima",
+          "spec": "^4.0.0",
+          "to": "node_modules/esprima",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/js-yaml",
+      "name": "js-yaml",
+      "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.0.tgz",
+    },
+    "json-schema-traverse" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "json-schema-traverse",
+          "spec": "^0.4.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/json-schema-traverse",
+      "name": "json-schema-traverse",
+      "resolved": "https://registry.npmjs.org/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz",
+    },
+    "json-stable-stringify-without-jsonify" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "json-stable-stringify-without-jsonify",
+          "spec": "^1.0.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/json-stable-stringify-without-jsonify",
+      "name": "json-stable-stringify-without-jsonify",
+      "resolved": "https://registry.npmjs.org/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz",
+    },
+    "levn" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "levn",
+          "spec": "^0.4.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/optionator",
+          "name": "levn",
+          "spec": "^0.4.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "prelude-ls" => Edge {
+          "name": "prelude-ls",
+          "spec": "^1.2.1",
+          "to": "node_modules/prelude-ls",
+          "type": "prod",
+        },
+        "type-check" => Edge {
+          "name": "type-check",
+          "spec": "~0.4.0",
+          "to": "node_modules/type-check",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/levn",
+      "name": "levn",
+      "resolved": "https://registry.npmjs.org/levn/-/levn-0.4.1.tgz",
+    },
+    "lodash" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "lodash",
+          "spec": "^4.17.19",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "lodash",
+          "spec": "^4.17.15",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "lodash",
+          "spec": "^4.17.19",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/table",
+          "name": "lodash",
+          "spec": "^4.17.14",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/lodash",
+      "name": "lodash",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz",
+    },
+    "merge2" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/fast-glob",
+          "name": "merge2",
+          "spec": "^1.3.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/globby",
+          "name": "merge2",
+          "spec": "^1.3.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/merge2",
+      "name": "merge2",
+      "resolved": "https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz",
+    },
+    "micromatch" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/fast-glob",
+          "name": "micromatch",
+          "spec": "^4.0.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "braces" => Edge {
+          "name": "braces",
+          "spec": "^3.0.1",
+          "to": "node_modules/braces",
+          "type": "prod",
+        },
+        "picomatch" => Edge {
+          "name": "picomatch",
+          "spec": "^2.0.5",
+          "to": "node_modules/picomatch",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/micromatch",
+      "name": "micromatch",
+      "resolved": "https://registry.npmjs.org/micromatch/-/micromatch-4.0.2.tgz",
+    },
+    "minimatch" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "minimatch",
+          "spec": "^3.0.4",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "minimatch",
+          "spec": "^3.0.4",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/glob",
+          "name": "minimatch",
+          "spec": "^3.0.4",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "brace-expansion" => Edge {
+          "name": "brace-expansion",
+          "spec": "^1.1.7",
+          "to": "node_modules/brace-expansion",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/minimatch",
+      "name": "minimatch",
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+    },
+    "minimist" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "^1.2.5",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/minimist",
+      "name": "minimist",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+    },
+    "mkdirp" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/write",
+          "name": "mkdirp",
+          "spec": "^0.5.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "minimist" => Edge {
+          "name": "minimist",
+          "spec": "^1.2.5",
+          "to": "node_modules/minimist",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+    },
+    "ms" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/debug",
+          "name": "ms",
+          "spec": "2.1.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/ms",
+      "name": "ms",
+      "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
+    },
+    "natural-compare" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "natural-compare",
+          "spec": "^1.4.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/natural-compare",
+      "name": "natural-compare",
+      "resolved": "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz",
+    },
+    "once" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/glob",
+          "name": "once",
+          "spec": "^1.3.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/inflight",
+          "name": "once",
+          "spec": "^1.3.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+    "optionator" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "optionator",
+          "spec": "^0.9.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "deep-is" => Edge {
+          "name": "deep-is",
+          "spec": "^0.1.3",
+          "to": "node_modules/deep-is",
+          "type": "prod",
+        },
+        "fast-levenshtein" => Edge {
+          "name": "fast-levenshtein",
+          "spec": "^2.0.6",
+          "to": "node_modules/fast-levenshtein",
+          "type": "prod",
+        },
+        "levn" => Edge {
+          "name": "levn",
+          "spec": "^0.4.1",
+          "to": "node_modules/levn",
+          "type": "prod",
+        },
+        "prelude-ls" => Edge {
+          "name": "prelude-ls",
+          "spec": "^1.2.1",
+          "to": "node_modules/prelude-ls",
+          "type": "prod",
+        },
+        "type-check" => Edge {
+          "name": "type-check",
+          "spec": "^0.4.0",
+          "to": "node_modules/type-check",
+          "type": "prod",
+        },
+        "word-wrap" => Edge {
+          "name": "word-wrap",
+          "spec": "^1.2.3",
+          "to": "node_modules/word-wrap",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/optionator",
+      "name": "optionator",
+      "resolved": "https://registry.npmjs.org/optionator/-/optionator-0.9.1.tgz",
+    },
+    "parent-module" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/import-fresh",
+          "name": "parent-module",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "callsites" => Edge {
+          "name": "callsites",
+          "spec": "^3.0.0",
+          "to": "node_modules/callsites",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/parent-module",
+      "name": "parent-module",
+      "resolved": "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz",
+    },
+    "path-is-absolute" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/glob",
+          "name": "path-is-absolute",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/path-is-absolute",
+      "name": "path-is-absolute",
+      "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+    },
+    "path-key" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cross-spawn",
+          "name": "path-key",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/path-key",
+      "name": "path-key",
+      "resolved": "https://registry.npmjs.org/path-key/-/path-key-3.1.1.tgz",
+    },
+    "path-type" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/dir-glob",
+          "name": "path-type",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/path-type",
+      "name": "path-type",
+      "resolved": "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz",
+    },
+    "picomatch" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/fast-glob",
+          "name": "picomatch",
+          "spec": "^2.2.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/micromatch",
+          "name": "picomatch",
+          "spec": "^2.0.5",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/picomatch",
+      "name": "picomatch",
+      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-2.2.2.tgz",
+    },
+    "prelude-ls" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/levn",
+          "name": "prelude-ls",
+          "spec": "^1.2.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/optionator",
+          "name": "prelude-ls",
+          "spec": "^1.2.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/type-check",
+          "name": "prelude-ls",
+          "spec": "^1.2.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/prelude-ls",
+      "name": "prelude-ls",
+      "resolved": "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz",
+    },
+    "progress" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "progress",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/progress",
+      "name": "progress",
+      "resolved": "https://registry.npmjs.org/progress/-/progress-2.0.3.tgz",
+    },
+    "punycode" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/uri-js",
+          "name": "punycode",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/punycode",
+      "name": "punycode",
+      "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
+    },
+    "regexpp" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "regexpp",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "regexpp",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/regexpp",
+      "name": "regexpp",
+      "resolved": "https://registry.npmjs.org/regexpp/-/regexpp-3.1.0.tgz",
+    },
+    "resolve-from" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/import-fresh",
+          "name": "resolve-from",
+          "spec": "^4.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/resolve-from",
+      "name": "resolve-from",
+      "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz",
+    },
+    "reusify" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/fastq",
+          "name": "reusify",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/reusify",
+      "name": "reusify",
+      "resolved": "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz",
+    },
+    "rimraf" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/flat-cache",
+          "name": "rimraf",
+          "spec": "2.6.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "glob" => Edge {
+          "name": "glob",
+          "spec": "^7.1.3",
+          "to": "node_modules/glob",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/rimraf",
+      "name": "rimraf",
+      "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.6.3.tgz",
+    },
+    "run-parallel" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@nodelib/fs.scandir",
+          "name": "run-parallel",
+          "spec": "^1.1.9",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/run-parallel",
+      "name": "run-parallel",
+      "resolved": "https://registry.npmjs.org/run-parallel/-/run-parallel-1.1.9.tgz",
+    },
+    "semver" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "semver",
+          "spec": "^7.3.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "semver",
+          "spec": "^7.3.2",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "semver",
+          "spec": "^7.2.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/semver",
+      "name": "semver",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+    },
+    "shebang-command" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cross-spawn",
+          "name": "shebang-command",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "shebang-regex" => Edge {
+          "name": "shebang-regex",
+          "spec": "^3.0.0",
+          "to": "node_modules/shebang-regex",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/shebang-command",
+      "name": "shebang-command",
+      "resolved": "https://registry.npmjs.org/shebang-command/-/shebang-command-2.0.0.tgz",
+    },
+    "shebang-regex" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/shebang-command",
+          "name": "shebang-regex",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/shebang-regex",
+      "name": "shebang-regex",
+      "resolved": "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz",
+    },
+    "slash" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/globby",
+          "name": "slash",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/slash",
+      "name": "slash",
+      "resolved": "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz",
+    },
+    "slice-ansi" => Node {
+      "children": Map {
+        "ansi-styles" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/slice-ansi",
+              "name": "ansi-styles",
+              "spec": "^3.2.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "color-convert" => Edge {
+              "name": "color-convert",
+              "spec": "^1.9.0",
+              "to": "node_modules/slice-ansi/node_modules/color-convert",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/slice-ansi/node_modules/ansi-styles",
+          "name": "ansi-styles",
+          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
+        },
+        "color-convert" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/slice-ansi/node_modules/ansi-styles",
+              "name": "color-convert",
+              "spec": "^1.9.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "color-name" => Edge {
+              "name": "color-name",
+              "spec": "1.1.3",
+              "to": "node_modules/slice-ansi/node_modules/color-name",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/slice-ansi/node_modules/color-convert",
+          "name": "color-convert",
+          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
+        },
+        "color-name" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/slice-ansi/node_modules/color-convert",
+              "name": "color-name",
+              "spec": "1.1.3",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/slice-ansi/node_modules/color-name",
+          "name": "color-name",
+          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/table",
+          "name": "slice-ansi",
+          "spec": "^2.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-styles" => Edge {
+          "name": "ansi-styles",
+          "spec": "^3.2.0",
+          "to": "node_modules/slice-ansi/node_modules/ansi-styles",
+          "type": "prod",
+        },
+        "astral-regex" => Edge {
+          "name": "astral-regex",
+          "spec": "^1.0.0",
+          "to": "node_modules/astral-regex",
+          "type": "prod",
+        },
+        "is-fullwidth-code-point" => Edge {
+          "name": "is-fullwidth-code-point",
+          "spec": "^2.0.0",
+          "to": "node_modules/is-fullwidth-code-point",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/slice-ansi",
+      "name": "slice-ansi",
+      "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-2.1.0.tgz",
+    },
+    "sprintf-js" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/argparse",
+          "name": "sprintf-js",
+          "spec": "~1.0.2",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/sprintf-js",
+      "name": "sprintf-js",
+      "resolved": "https://registry.npmjs.org/sprintf-js/-/sprintf-js-1.0.3.tgz",
+    },
+    "string-width" => Node {
+      "children": Map {
+        "ansi-regex" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/string-width/node_modules/strip-ansi",
+              "name": "ansi-regex",
+              "spec": "^4.1.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/string-width/node_modules/ansi-regex",
+          "name": "ansi-regex",
+          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
+        },
+        "strip-ansi" => Node {
+          "dev": true,
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/string-width",
+              "name": "strip-ansi",
+              "spec": "^5.1.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "ansi-regex" => Edge {
+              "name": "ansi-regex",
+              "spec": "^4.1.0",
+              "to": "node_modules/string-width/node_modules/ansi-regex",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/string-width/node_modules/strip-ansi",
+          "name": "strip-ansi",
+          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
+        },
+      },
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/table",
+          "name": "string-width",
+          "spec": "^3.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "emoji-regex" => Edge {
+          "name": "emoji-regex",
+          "spec": "^7.0.1",
+          "to": "node_modules/emoji-regex",
+          "type": "prod",
+        },
+        "is-fullwidth-code-point" => Edge {
+          "name": "is-fullwidth-code-point",
+          "spec": "^2.0.0",
+          "to": "node_modules/is-fullwidth-code-point",
+          "type": "prod",
+        },
+        "strip-ansi" => Edge {
+          "name": "strip-ansi",
+          "spec": "^5.1.0",
+          "to": "node_modules/string-width/node_modules/strip-ansi",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/string-width",
+      "name": "string-width",
+      "resolved": "https://registry.npmjs.org/string-width/-/string-width-3.1.0.tgz",
+    },
+    "strip-ansi" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "strip-ansi",
+          "spec": "^6.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ansi-regex" => Edge {
+          "name": "ansi-regex",
+          "spec": "^5.0.0",
+          "to": "node_modules/ansi-regex",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/strip-ansi",
+      "name": "strip-ansi",
+      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
+    },
+    "strip-json-comments" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@eslint/eslintrc",
+          "name": "strip-json-comments",
+          "spec": "^3.1.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "strip-json-comments",
+          "spec": "^3.1.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/strip-json-comments",
+      "name": "strip-json-comments",
+      "resolved": "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-3.1.1.tgz",
+    },
+    "supports-color" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/chalk",
+          "name": "supports-color",
+          "spec": "^7.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "has-flag" => Edge {
+          "name": "has-flag",
+          "spec": "^4.0.0",
+          "to": "node_modules/has-flag",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/supports-color",
+      "name": "supports-color",
+      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz",
+    },
+    "table" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "table",
+          "spec": "^5.2.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "ajv" => Edge {
+          "name": "ajv",
+          "spec": "^6.10.2",
+          "to": "node_modules/ajv",
+          "type": "prod",
+        },
+        "lodash" => Edge {
+          "name": "lodash",
+          "spec": "^4.17.14",
+          "to": "node_modules/lodash",
+          "type": "prod",
+        },
+        "slice-ansi" => Edge {
+          "name": "slice-ansi",
+          "spec": "^2.1.0",
+          "to": "node_modules/slice-ansi",
+          "type": "prod",
+        },
+        "string-width" => Edge {
+          "name": "string-width",
+          "spec": "^3.0.0",
+          "to": "node_modules/string-width",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/table",
+      "name": "table",
+      "resolved": "https://registry.npmjs.org/table/-/table-5.4.6.tgz",
+    },
+    "text-table" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "text-table",
+          "spec": "^0.2.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/text-table",
+      "name": "text-table",
+      "resolved": "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz",
+    },
+    "to-regex-range" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/fill-range",
+          "name": "to-regex-range",
+          "spec": "^5.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "is-number" => Edge {
+          "name": "is-number",
+          "spec": "^7.0.0",
+          "to": "node_modules/is-number",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/to-regex-range",
+      "name": "to-regex-range",
+      "resolved": "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz",
+    },
+    "tslib" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/tsutils",
+          "name": "tslib",
+          "spec": "^1.8.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/tslib",
+      "name": "tslib",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz",
+    },
+    "tsutils" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@typescript-eslint/eslint-plugin",
+          "name": "tsutils",
+          "spec": "^3.17.1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/@typescript-eslint/typescript-estree",
+          "name": "tsutils",
+          "spec": "^3.17.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "tslib" => Edge {
+          "name": "tslib",
+          "spec": "^1.8.1",
+          "to": "node_modules/tslib",
+          "type": "prod",
+        },
+        "typescript" => Edge {
+          "name": "typescript",
+          "spec": ">=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta",
+          "to": "node_modules/typescript",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/tsutils",
+      "name": "tsutils",
+      "resolved": "https://registry.npmjs.org/tsutils/-/tsutils-3.17.1.tgz",
+    },
+    "type-check" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/levn",
+          "name": "type-check",
+          "spec": "~0.4.0",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/optionator",
+          "name": "type-check",
+          "spec": "^0.4.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "prelude-ls" => Edge {
+          "name": "prelude-ls",
+          "spec": "^1.2.1",
+          "to": "node_modules/prelude-ls",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/type-check",
+      "name": "type-check",
+      "resolved": "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz",
+    },
+    "type-fest" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/globals",
+          "name": "type-fest",
+          "spec": "^0.8.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/type-fest",
+      "name": "type-fest",
+      "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz",
+    },
+    "typescript" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/tsutils",
+          "name": "typescript",
+          "spec": ">=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/typescript",
+      "name": "typescript",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-4.0.3.tgz",
+    },
+    "uri-js" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/ajv",
+          "name": "uri-js",
+          "spec": "^4.2.2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "punycode" => Edge {
+          "name": "punycode",
+          "spec": "^2.1.0",
+          "to": "node_modules/punycode",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/uri-js",
+      "name": "uri-js",
+      "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.4.0.tgz",
+    },
+    "v8-compile-cache" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/eslint",
+          "name": "v8-compile-cache",
+          "spec": "^2.0.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/v8-compile-cache",
+      "name": "v8-compile-cache",
+      "resolved": "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.1.1.tgz",
+    },
+    "which" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/cross-spawn",
+          "name": "which",
+          "spec": "^2.0.1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "isexe" => Edge {
+          "name": "isexe",
+          "spec": "^2.0.0",
+          "to": "node_modules/isexe",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/which",
+      "name": "which",
+      "resolved": "https://registry.npmjs.org/which/-/which-2.0.2.tgz",
+    },
+    "word-wrap" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/optionator",
+          "name": "word-wrap",
+          "spec": "^1.2.3",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/word-wrap",
+      "name": "word-wrap",
+      "resolved": "https://registry.npmjs.org/word-wrap/-/word-wrap-1.2.3.tgz",
+    },
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/inflight",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+    "write" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/flat-cache",
+          "name": "write",
+          "spec": "1.0.3",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "mkdirp" => Edge {
+          "name": "mkdirp",
+          "spec": "^0.5.1",
+          "to": "node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/write",
+      "name": "write",
+      "resolved": "https://registry.npmjs.org/write/-/write-1.0.3.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@typescript-eslint/eslint-plugin" => Edge {
+      "name": "@typescript-eslint/eslint-plugin",
+      "spec": "4",
+      "to": "node_modules/@typescript-eslint/eslint-plugin",
+      "type": "dev",
+    },
+    "@typescript-eslint/parser" => Edge {
+      "name": "@typescript-eslint/parser",
+      "spec": "4",
+      "to": "node_modules/@typescript-eslint/parser",
+      "type": "dev",
+    },
+    "eslint" => Edge {
+      "name": "eslint",
+      "spec": "^7",
+      "to": "node_modules/eslint",
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "carbonium",
   "resolved": null,
 }
 `
@@ -52606,7 +60654,7 @@ Node {
     "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
       "edgesIn": Set {
         Edge {
-          "from": "",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
           "name": "@isaacs/testing-peer-dep-conflict-chain-i",
           "spec": "1",
           "type": "prod",
@@ -52623,6 +60671,27 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
       "name": "@isaacs/testing-peer-dep-conflict-chain-i",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-ii" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-ii/-/testing-peer-dep-conflict-chain-ii-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
       "children": Map {
@@ -52744,7 +60813,7 @@ Node {
       },
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "from": "",
           "name": "@isaacs/testing-peer-dep-conflict-chain-j",
           "spec": "2",
           "type": "prod",
@@ -52762,39 +60831,18 @@ Node {
       "name": "@isaacs/testing-peer-dep-conflict-chain-j",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
     },
-    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
-          "spec": "2",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
-          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
-          "spec": "2",
-          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
-      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
-    },
   },
   "edgesOut": Map {
-    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
-      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+    "@isaacs/testing-peer-dep-conflict-chain-ii" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
       "spec": "1",
-      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
       "type": "prod",
     },
-    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
-      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
       "spec": "2",
-      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
       "type": "prod",
     },
   },
@@ -52925,7 +60973,7 @@ Node {
     "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
       "edgesIn": Set {
         Edge {
-          "from": "",
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
           "name": "@isaacs/testing-peer-dep-conflict-chain-i",
           "spec": "1",
           "type": "prod",
@@ -52942,6 +60990,27 @@ Node {
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
       "name": "@isaacs/testing-peer-dep-conflict-chain-i",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-ii" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-ii/-/testing-peer-dep-conflict-chain-ii-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
       "children": Map {
@@ -53063,7 +61132,7 @@ Node {
       },
       "edgesIn": Set {
         Edge {
-          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "from": "",
           "name": "@isaacs/testing-peer-dep-conflict-chain-j",
           "spec": "2",
           "type": "prod",
@@ -53081,39 +61150,18 @@ Node {
       "name": "@isaacs/testing-peer-dep-conflict-chain-j",
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
     },
-    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
-      "edgesIn": Set {
-        Edge {
-          "from": "",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
-          "spec": "2",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
-          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
-          "spec": "2",
-          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
-      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
-    },
   },
   "edgesOut": Map {
-    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
-      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+    "@isaacs/testing-peer-dep-conflict-chain-ii" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
       "spec": "1",
-      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
       "type": "prod",
     },
-    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
-      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
       "spec": "2",
-      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
       "type": "prod",
     },
   },
@@ -53124,6 +61172,325 @@ Node {
 `
 
 exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 1 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-ii" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-ii/-/testing-peer-dep-conflict-chain-ii-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-ii" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-ii",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-ii",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-1",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 2 > default result 1`] = `
 Node {
   "children": Map {
     "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
@@ -53437,7 +61804,645 @@ Node {
     },
   },
   "location": "",
-  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-1",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 2 > force result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-2",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP more peer dep conflicts collision forcing metadep duplication, order 2 > strict result 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "peer",
+        },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "1",
+          "type": "peer",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "peer",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "spec": "1",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-i/-/testing-peer-dep-conflict-chain-i-1.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-j" => Node {
+      "children": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "prod",
+            },
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-b/-/testing-peer-dep-conflict-chain-b-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-c" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-d" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-c",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-c/-/testing-peer-dep-conflict-chain-c-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-d" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-c",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-d",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-d/-/testing-peer-dep-conflict-chain-d-2.0.0.tgz",
+        },
+        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-d",
+              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+              "spec": "2",
+              "type": "peer",
+            },
+          },
+          "edgesOut": Map {
+            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
+              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
+              "spec": "2",
+              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
+              "type": "peer",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "peer": true,
+          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-2.0.0.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j/node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-j/-/testing-peer-dep-conflict-chain-j-2.0.0.tgz",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+          "spec": "2",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@isaacs/testing-peer-dep-conflict-chain-j" => Edge {
+          "name": "@isaacs/testing-peer-dep-conflict-chain-j",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-j",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-jj/-/testing-peer-dep-conflict-chain-jj-2.0.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-peer-dep-conflict-chain-i" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-i",
+      "spec": "1",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-i",
+      "type": "prod",
+    },
+    "@isaacs/testing-peer-dep-conflict-chain-jj" => Edge {
+      "name": "@isaacs/testing-peer-dep-conflict-chain-jj",
+      "spec": "2",
+      "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-jj",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-more-peer-dep-conflicts-collision-forcing-metadep-duplication-order-2",
   "resolved": null,
 }
 `
@@ -57573,12 +66578,6 @@ Node {
           "spec": "2",
           "type": "peer",
         },
-        Edge {
-          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-          "spec": "1",
-          "type": "peer",
-        },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-c" => Edge {
@@ -57657,6 +66656,12 @@ Node {
           "spec": "1",
           "type": "peer",
         },
+        Edge {
+          "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
+          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "type": "prod",
+        },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
@@ -57692,70 +66697,25 @@ Node {
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-l/-/testing-peer-dep-conflict-chain-l-1.0.0.tgz",
     },
     "@isaacs/testing-peer-dep-conflict-chain-m" => Node {
-      "children": Map {
-        "@isaacs/testing-peer-dep-conflict-chain-a" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-              "spec": "1",
-              "type": "peer",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-b" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-b",
-              "spec": "1",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-b",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-          "peer": true,
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-a/-/testing-peer-dep-conflict-chain-a-1.0.0.tgz",
-        },
-        "@isaacs/testing-peer-dep-conflict-chain-e" => Node {
-          "edgesIn": Set {
-            Edge {
-              "from": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
-              "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-              "spec": "1",
-              "type": "prod",
-            },
-          },
-          "edgesOut": Map {
-            "@isaacs/testing-peer-dep-conflict-chain-a" => Edge {
-              "name": "@isaacs/testing-peer-dep-conflict-chain-a",
-              "spec": "1",
-              "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-a",
-              "type": "peer",
-            },
-          },
-          "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
-          "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-e/-/testing-peer-dep-conflict-chain-e-1.0.0.tgz",
-        },
-      },
       "edgesIn": Set {
         Edge {
           "from": "",
           "name": "@isaacs/testing-peer-dep-conflict-chain-m",
-          "spec": "1",
+          "spec": "2",
           "type": "prod",
         },
       },
       "edgesOut": Map {
         "@isaacs/testing-peer-dep-conflict-chain-e" => Edge {
           "name": "@isaacs/testing-peer-dep-conflict-chain-e",
-          "spec": "1",
-          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m/node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
+          "spec": "2",
+          "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-e",
           "type": "prod",
         },
       },
       "location": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
       "name": "@isaacs/testing-peer-dep-conflict-chain-m",
-      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-m/-/testing-peer-dep-conflict-chain-m-1.0.0.tgz",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-dep-conflict-chain-m/-/testing-peer-dep-conflict-chain-m-2.0.0.tgz",
     },
   },
   "edgesOut": Map {
@@ -57779,7 +66739,7 @@ Node {
     },
     "@isaacs/testing-peer-dep-conflict-chain-m" => Edge {
       "name": "@isaacs/testing-peer-dep-conflict-chain-m",
-      "spec": "1",
+      "spec": "2",
       "to": "node_modules/@isaacs/testing-peer-dep-conflict-chain-m",
       "type": "prod",
     },
@@ -61007,6 +69967,97 @@ Node {
   },
   "location": "",
   "name": "pathological-dep-nesting-cycle",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP peerOptionals that are devDeps or explicit request > should install the abbrev dep 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "",
+          "type": "peerOptional",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "optional": true,
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "wrappy",
+          "spec": "",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "",
+      "to": "node_modules/abbrev",
+      "type": "peerOptional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "",
+      "to": "node_modules/wrappy",
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "peer-optional-installs",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP peerOptionals that are devDeps or explicit request > should install the wrappy dep, and not remove from peerDeps 1`] = `
+Node {
+  "children": Map {
+    "wrappy" => Node {
+      "dev": true,
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "wrappy",
+          "spec": "",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "",
+      "to": null,
+      "type": "peerOptional",
+    },
+    "wrappy" => Edge {
+      "name": "wrappy",
+      "spec": "",
+      "to": "node_modules/wrappy",
+      "type": "dev",
+    },
+  },
+  "location": "",
+  "name": "peer-optional-installs",
   "resolved": null,
 }
 `

@@ -35,6 +35,201 @@ exports[`test/node.js TAP basic instantiation > just a lone root node 1`] = `
 }
 `
 
+exports[`test/node.js TAP printable Node extraneous tree > should print human readable representation of node tree 1`] = `
+{
+name: 'printable-node',
+version: '1.1.1',
+location: '',
+path: '/home/user/projects/root',
+realpath: '/home/user/projects/root',
+extraneous: true,
+error: { code: 'ERR', path: '/' },
+edgesOut: Map {
+'b' => {
+name: 'b',
+spec: '',
+type: 'prod',
+from: '',
+to: 'node_modules/b' },
+'missing' => {
+name: 'missing',
+spec: '',
+type: 'prod',
+from: '',
+error: 'MISSING' },
+'prod' => {
+name: 'prod',
+spec: '1.x',
+type: 'prod',
+from: '',
+to: 'node_modules/prod' } },
+children: Map {
+'b' => {
+name: 'b',
+version: '1.2.3',
+location: 'node_modules/b',
+path: '/home/user/projects/root/node_modules/b',
+realpath: '/home/user/projects/root/node_modules/b',
+resolved: 'b',
+extraneous: true,
+edgesIn: Set {
+{
+name: 'b',
+spec: '',
+type: 'prod',
+from: '',
+to: 'node_modules/b' },
+{
+name: 'b',
+spec: '',
+type: 'prod',
+from: 'node_modules/prod',
+to: 'node_modules/b' } } },
+'c' => {
+name: 'c',
+location: 'node_modules/c',
+path: '/home/user/projects/root/node_modules/c',
+realpath: '/home/user/projects/root/node_modules/c',
+resolved: 'c',
+extraneous: true },
+'prod' => {
+name: 'prod',
+version: '1.2.3',
+location: 'node_modules/prod',
+path: '/home/user/projects/root/node_modules/prod',
+realpath: '/home/user/projects/root/node_modules/prod',
+resolved: 'prod',
+extraneous: true,
+edgesIn: Set {
+{
+name: 'prod',
+spec: '1.x',
+type: 'prod',
+from: '',
+to: 'node_modules/prod' } },
+edgesOut: Map {
+'b' => {
+name: 'b',
+spec: '',
+type: 'prod',
+from: 'node_modules/prod',
+to: 'node_modules/b' },
+'meta' => {
+name: 'meta',
+spec: '',
+type: 'prod',
+from: 'node_modules/prod',
+error: 'MISSING' },
+'peer' => {
+name: 'peer',
+spec: '',
+type: 'peer',
+from: 'node_modules/prod',
+error: 'MISSING' } },
+fsChildren: Set {
+{
+name: 'bar',
+version: '1.0.0',
+location: 'node_modules/prod/bar',
+path: '/home/user/projects/root/node_modules/prod/bar',
+realpath: '/home/user/projects/root/node_modules/prod/bar',
+extraneous: true },
+{
+name: 'foo',
+version: '1.2.3',
+location: 'node_modules/prod/foo',
+path: '/home/user/projects/root/node_modules/prod/foo',
+realpath: '/home/user/projects/root/node_modules/prod/foo',
+extraneous: true,
+edgesOut: Map {
+'meta' => {
+name: 'meta',
+spec: '',
+type: 'prod',
+from: 'node_modules/prod/foo',
+error: 'MISSING' } } } } } } }
+`
+
+exports[`test/node.js TAP printable Node variations > should match non-extraneous tree representation 1`] = `
+{
+name: 'variations',
+version: '1.0.0',
+location: '',
+path: '/home/user/projects/root',
+realpath: '/home/user/projects/root',
+dev: true,
+optional: true,
+peer: true,
+error: { code: 'ERR' },
+edgesOut: Map {
+'a' => {
+name: 'a',
+spec: '^1.0.0',
+type: 'prod',
+from: '',
+to: 'node_modules/a' },
+'b' => {
+name: 'b',
+spec: '^1.0.0',
+type: 'prod',
+from: '',
+to: 'node_modules/b' } },
+fsChildren: Set {
+{
+name: 'c',
+version: '1.0.0',
+location: 'c',
+path: '/home/user/projects/root/c',
+realpath: '/home/user/projects/root/c',
+extraneous: true } },
+children: Map {
+'a' => {
+name: 'a',
+version: '1.1.1',
+location: 'node_modules/a',
+path: '/home/user/projects/root/node_modules/a',
+realpath: '/home/user/projects/root/node_modules/a',
+dev: true,
+optional: true,
+peer: true,
+bundled: true,
+errors: [ { code: 'ERR' } ],
+edgesIn: Set {
+{
+name: 'a',
+spec: '^1.0.0',
+type: 'prod',
+from: '',
+to: 'node_modules/a' } } },
+'b' => {
+name: 'b',
+version: '1.0.0',
+location: 'node_modules/b',
+path: '/home/user/projects/root/node_modules/b',
+realpath: '/home/user/projects/root/c',
+target: { location: 'c' },
+resolved: 'file:../c',
+devOptional: true,
+errors: [ { code: 'ERR',
+path: '/home/users/projects/root/node_modules/b' } ],
+edgesIn: Set {
+{
+name: 'b',
+spec: '^1.0.0',
+type: 'prod',
+from: '',
+to: 'node_modules/b' } } },
+'d' => {
+name: 'd',
+version: '1.0.0',
+location: 'node_modules/d',
+path: '/home/user/projects/root/node_modules/d',
+realpath: '/home/user/projects/root/c',
+target: { location: 'c' },
+resolved: 'file:../c',
+extraneous: true } } }
+`
+
 exports[`test/node.js TAP set workspaces > should setup edges out for each workspace 1`] = `
 &ref_1 Node {
   "children": Map {

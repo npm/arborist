@@ -775,6 +775,15 @@ Edge {
 }
 `
 
+exports[`test/edge.js TAP > should return a human-readable representation of the edge obj 1`] = `
+{
+name: 'b',
+spec: '1.2.3',
+type: 'prod',
+from: '',
+to: '/node_modules/b' }
+`
+
 exports[`test/edge.js TAP convenience type getter flags > explanation 1`] = `
 Object {
   "from": "a explanation",

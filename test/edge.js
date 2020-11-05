@@ -1,3 +1,4 @@
+const util = require('util')
 const Edge = require('../lib/edge.js')
 const t = require('tap')
 
@@ -373,3 +374,57 @@ t.test('convenience type getter flags', async t => {
   explainEdge.detach()
   t.notEqual(explainEdge.explain(), expl)
 })
+
+// FIXME: once we drop support to node10 we can remove this
+const normalizeNode10compatSnapshots = str =>
+  str
+    .replace(/\n +/g, '\n')
+    .replace(/\n\}/g, ' }')
+    .replace(/ArboristEdge /g, '')
+
+const printableTo = {
+  ...b,
+  location: '/node_modules/b',
+}
+const printableFrom = {
+  ...a,
+  resolve () {
+    return printableTo
+  },
+  location: '',
+}
+const printable = new Edge({
+  from: printableFrom,
+  type: 'prod',
+  name: 'b',
+  spec: '1.2.3',
+})
+t.matchSnapshot(
+  normalizeNode10compatSnapshots(
+    util.inspect(printable)
+  ),
+  'should return a human-readable representation of the edge obj'
+)
+
+const minimalPrintableFrom = {
+  ...a,
+  resolve () {
+    return null
+  },
+}
+const minimalPrintable = new Edge({
+  from: minimalPrintableFrom,
+  type: 'dev',
+  name: 'b',
+  spec: '1.2.3',
+})
+t.match(
+  minimalPrintable.toJSON(),
+  {
+    name: 'b',
+    spec: '1.2.3',
+    type: 'dev',
+    error: 'MISSING',
+  },
+  'should return a minimal human-readable representation of the edge obj'
+)

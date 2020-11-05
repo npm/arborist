@@ -1,4 +1,4 @@
-// always run this test in debug mode
+const util = require('util')
 const t = require('tap')
 const Node = require('../lib/node.js')
 const requireInject = require('require-inject')
@@ -1986,5 +1986,155 @@ t.test('changing path to a node_modules folder sets name if necessary', t => {
   t.equal(node.name, 'bar')
   node[_changePath]('/path/to/node_modules/foo/node_modules/@bar/baz')
   t.equal(node.name, '@bar/baz')
+  t.end()
+})
+
+t.test('printable Node', t => {
+  // FIXME: once we drop support to node10 we can remove this
+  const normalizeNode10compatSnapshots = str =>
+    str
+      .replace(/:\n +Map/g, ': Map')
+      .replace(/:\n +Set/g, ': Set')
+      .replace(/\n +/g, '\n')
+      .replace(/\n\}/g, ' }')
+      .replace(/\n\]/g, ' ]')
+      .replace(/\n\[/g, ' [')
+      .replace(/\n\{\n/g, ' { ')
+      .replace(/Map\([0-9]\)/g, 'Map')
+      .replace(/Set\([0-9]\)/g, 'Set')
+      .replace(/ArboristNode /g, '')
+      .replace(/ArboristEdge /g, '')
+
+  t.test('extraneous tree', t => {
+    const tree = new Node({
+      name: 'printable-node',
+      pkg: {
+        name: 'printable-node',
+        version: '1.1.1',
+        dependencies: { prod: '1.x', b: '', missing: '' },
+      },
+      path: '/home/user/projects/root',
+      realpath: '/home/user/projects/root',
+      children: [{
+        pkg: {
+          name: 'prod',
+          version: '1.2.3',
+          dependencies: { meta: '', b: '' },
+          peerDependencies: { peer: '' },
+        },
+        fsChildren: [{
+          realpath: '/home/user/projects/root/node_modules/prod/foo',
+          path: '/home/user/projects/root/node_modules/prod/foo',
+          name: 'foo',
+          pkg: { name: 'foo', version: '1.2.3', dependencies: {meta: ''}},
+        }, {
+          realpath: '/home/user/projects/root/node_modules/prod/bar',
+          path: '/home/user/projects/root/node_modules/prod/bar',
+          name: 'bar',
+          pkg: { name: 'bar', version: '1.0.0'},
+        }],
+        resolved: 'prod',
+        integrity: 'prod',
+      }, {
+        pkg: {
+          name: 'b',
+          version: '1.2.3',
+        },
+        resolved: 'b',
+        integrity: 'b',
+      }, {
+        pkg: {
+          name: 'c',
+        },
+        resolved: 'c',
+        integrity: 'c',
+      }],
+    })
+    tree.error = { code: 'ERR', path: '/' }
+    t.matchSnapshot(
+      normalizeNode10compatSnapshots(
+        util.inspect(tree, { depth: 6 })
+      ),
+      'should print human readable representation of node tree'
+    )
+    t.end()
+  })
+
+  t.test('variations', t => {
+    // manually tweaked variations in the tree to reach for
+    // possible different trees output
+    const tree = new Node({
+      name: 'variations',
+      pkg: {
+        name: 'variations',
+        version: '1.0.0',
+        dependencies: { a: '^1.0.0', b: '^1.0.0' },
+      },
+      extraneous: false,
+      path: '/home/user/projects/root',
+      realpath: '/home/user/projects/root',
+    })
+    // append nodes
+    const a = new Node({
+      name: 'a',
+      pkg: {
+        name: 'a',
+        version: '1.1.1',
+      },
+      path: '/home/users/projects/root/node_modules/a',
+      realpath: '/home/users/projects/root/node_modules/a',
+      parent: tree,
+    })
+    a.extraneous = false
+    a.dev = true
+    a.optional = true
+    a.getBundler = () => true
+    a.errors = [Object.assign(new Error('ERR'), { code: 'ERR' })]
+    const b = new Link({
+      name: 'b',
+      pkg: {
+        name: 'b',
+        version: '1.0.0',
+      },
+      optional: true,
+      path: '/home/users/projects/root/c-link',
+      realpath: '/home/users/projects/root/c',
+      parent: tree,
+    })
+    const c = new Node({
+      name: 'c',
+      pkg: { name: 'c', version: '1.0.0' },
+      path: '/home/user/projects/root/c',
+      realpath: '/home/user/projects/root/c',
+      fsParent: tree,
+    })
+    b.target = c
+    b.extraneous = false
+    b.dev = false
+    b.optional = false
+    b.peer = false
+    b.errors = [Object.assign(new Error('ERR'), {
+      code: 'ERR',
+      path: '/home/users/projects/root/node_modules/b',
+    })]
+
+    // another link to c
+    new Link({
+      name: 'd',
+      realpath: '/home/users/projects/root/c',
+      target: c,
+      parent: tree,
+    })
+
+    tree.error = a.errors[0]
+
+    t.matchSnapshot(
+      normalizeNode10compatSnapshots(
+        util.inspect(tree, { depth: 6 })
+      ),
+      'should match non-extraneous tree representation'
+    )
+    t.end()
+  })
   t.end()
 })

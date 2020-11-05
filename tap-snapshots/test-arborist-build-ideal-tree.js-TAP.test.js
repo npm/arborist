@@ -32851,7 +32851,7 @@ Node {
       "name": "aaaaaa",
       "resolved": "file:abbrev",
       "target": Object {
-        "name": "aaaaaa",
+        "name": "zzzzzz",
         "parent": null,
       },
     },
@@ -33058,7 +33058,7 @@ Node {
       "name": "aaaaaa",
       "resolved": "file:abbrev",
       "target": Object {
-        "name": "aaaaaa",
+        "name": "zzzzzz",
         "parent": null,
       },
     },

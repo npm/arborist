@@ -1,5 +1,6 @@
 // always run this test in debug mode
 process.env.ARBORIST_DEBUG = '1'
+const util = require('util')
 const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
@@ -1652,5 +1653,298 @@ t.test('guard against setting package to something improper', t => {
   } finally {
     t.strictSame(p.package, {})
   }
+  t.end()
+})
+
+t.test('printable Node', t => {
+  t.test('extraneous tree', t => {
+    const tree = new Node({
+      name: 'printable-node',
+      pkg: {
+        name: 'printable-node',
+        version: '1.1.1',
+        dependencies: { prod: '1.x', b: '', missing: '' },
+      },
+      path: '/home/user/projects/root',
+      realpath: '/home/user/projects/root',
+      children: [{
+        pkg: {
+          name: 'prod',
+          version: '1.2.3',
+          dependencies: { meta: '', b: '' },
+          peerDependencies: { peer: '' },
+        },
+        fsChildren: [{
+          realpath: '/home/user/projects/root/node_modules/prod/foo',
+          path: '/home/user/projects/root/node_modules/prod/foo',
+          name: 'foo',
+          pkg: { name: 'foo', version: '1.2.3', dependencies: {meta: ''}},
+        }, {
+          realpath: '/home/user/projects/root/node_modules/prod/bar',
+          path: '/home/user/projects/root/node_modules/prod/bar',
+          name: 'bar',
+          pkg: { name: 'bar', version: '1.0.0'},
+        }],
+        resolved: 'prod',
+        integrity: 'prod',
+      }, {
+        pkg: {
+          name: 'b',
+          version: '1.2.3',
+        },
+        resolved: 'b',
+        integrity: 'b',
+      }],
+    })
+    tree.error = { code: 'ERR', path: '/' }
+    t.match(
+      util.inspect(tree, { depth: 6 })
+        .replace(/ArboristNode /g, '')
+        .replace(/ArboristEdge /g, ''),
+      util.inspect({
+        name: 'printable-node',
+        location: '',
+        extraneous: true,
+        error: { code: 'ERR', path: '/' },
+        edgesOut: new Map(Object.entries({
+          b: {
+            name: 'b',
+            spec: '',
+            type: 'prod',
+            from: '',
+            to: 'node_modules/b',
+          },
+          missing: {
+            name: 'missing',
+            spec: '',
+            type: 'prod',
+            from: '',
+            error: 'MISSING',
+          },
+          prod: {
+            name: 'prod',
+            spec: '1.x',
+            type: 'prod',
+            from: '',
+            to: 'node_modules/prod',
+          },
+        })),
+        children: new Map(Object.entries({
+          b: {
+            name: 'b',
+            location: 'node_modules/b',
+            resolved: 'b',
+            extraneous: true,
+            edgesIn: new Set([
+              {
+                name: 'b',
+                spec: '',
+                type: 'prod',
+                from: '',
+                to: 'node_modules/b',
+              },
+              {
+                name: 'b',
+                spec: '',
+                type: 'prod',
+                from: 'node_modules/prod',
+                to: 'node_modules/b',
+              },
+            ]),
+          },
+          prod: {
+            name: 'prod',
+            location: 'node_modules/prod',
+            resolved: 'prod',
+            extraneous: true,
+            edgesIn: new Set([
+              {
+                name: 'prod',
+                spec: '1.x',
+                type: 'prod',
+                from: '',
+                to: 'node_modules/prod',
+              },
+            ]),
+            edgesOut: new Map(Object.entries({
+              b: {
+                name: 'b',
+                spec: '',
+                type: 'prod',
+                from: 'node_modules/prod',
+                to: 'node_modules/b',
+              },
+              meta: {
+                name: 'meta',
+                spec: '',
+                type: 'prod',
+                from: 'node_modules/prod',
+                error: 'MISSING',
+              },
+              peer: {
+                name: 'peer',
+                spec: '',
+                type: 'peer',
+                from: 'node_modules/prod',
+                error: 'MISSING',
+              },
+            })),
+            fsChildren: new Set([
+              {
+                name: 'bar',
+                location: 'node_modules/prod/bar',
+                extraneous: true,
+              },
+              {
+                name: 'foo',
+                location: 'node_modules/prod/foo',
+                extraneous: true,
+                edgesOut: new Map(Object.entries({
+                  meta: {
+                    name: 'meta',
+                    spec: '',
+                    type: 'prod',
+                    from: 'node_modules/prod/foo',
+                    error: 'MISSING',
+                  },
+                })),
+              },
+            ]),
+          },
+        })),
+      }, { depth: 6 }),
+      'should print human readable representation of node tree'
+    )
+    t.end()
+  })
+
+  t.test('variations', t => {
+    // manually tweaked variations in the tree to reach for
+    // possible different trees output
+    const tree = new Node({
+      name: 'variations',
+      pkg: {
+        name: 'variations',
+        version: '1.0.0',
+        dependencies: { a: '^1.0.0', b: '^1.0.0' },
+      },
+      extraneous: false,
+      path: '/home/user/projects/root',
+      realpath: '/home/user/projects/root',
+    })
+    // append nodes
+    const a = new Node({
+      name: 'a',
+      pkg: {
+        name: 'a',
+        version: '1.1.1',
+      },
+      path: '/home/users/projects/root/node_modules/a',
+      realpath: '/home/users/projects/root/node_modules/a',
+      parent: tree,
+    })
+    a.extraneous = false
+    a.dev = true
+    a.optional = true
+    a.getBundler = () => true
+    a.errors = [Object.assign(new Error('ERR'), { code: 'ERR' })]
+    const b = new Node({
+      name: 'b',
+      pkg: {
+        name: 'b',
+        version: '1.0.0',
+      },
+      optional: true,
+      path: '/home/users/projects/root/node_modules/b',
+      realpath: '/home/users/projects/root/node_modules/b',
+      parent: tree,
+    })
+    Object.defineProperty(b, 'isLink', {
+      value: true,
+    })
+    b.target = { name: 'c', parent: { location: '/home/users/project/root/c' } }
+    b.extraneous = false
+    b.dev = false
+    b.optional = false
+    b.peer = false
+    b.errors = [Object.assign(new Error('ERR'), {
+      code: 'ERR',
+      path: '/home/users/projects/root/node_modules/b',
+    })]
+    tree.error = a.errors[0]
+
+    t.match(
+      util.inspect(tree, { depth: 6 })
+        .replace(/ArboristNode /g, '')
+        .replace(/ArboristEdge /g, ''),
+      util.inspect({
+        name: 'variations',
+        location: '',
+        dev: true,
+        optional: true,
+        peer: true,
+        error: { code: 'ERR' },
+        edgesOut: new Map(Object.entries({
+          a: {
+            name: 'a',
+            spec: '^1.0.0',
+            type: 'prod',
+            from: '',
+            to: 'node_modules/a',
+          },
+          b: {
+            name: 'b',
+            spec: '^1.0.0',
+            type: 'prod',
+            from: '',
+            to: 'node_modules/b',
+          },
+        })),
+        children: new Map(Object.entries({
+          a: {
+            name: 'a',
+            location: 'node_modules/a',
+            dev: true,
+            optional: true,
+            peer: true,
+            bundled: true,
+            errors: [{ code: 'ERR' }],
+            edgesIn: new Set([
+              {
+                name: 'a',
+                spec: '^1.0.0',
+                type: 'prod',
+                from: '',
+                to: 'node_modules/a',
+              },
+            ]),
+          },
+          b: {
+            name: 'b',
+            location: 'node_modules/b',
+            devOptional: true,
+            errors: [
+              {
+                code: 'ERR',
+                path: '/home/users/projects/root/node_modules/b',
+              },
+            ],
+            target: { name: 'c', parent: '/home/users/project/root/c' },
+            edgesIn: new Set([
+              {
+                name: 'b',
+                spec: '^1.0.0',
+                type: 'prod',
+                from: '',
+                to: 'node_modules/b',
+              },
+            ]),
+          },
+        })),
+      }, { depth: 6 }),
+      'should match non-extraneous tree representation'
+    )
+    t.end()
+  })
   t.end()
 })

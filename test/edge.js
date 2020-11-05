@@ -1,3 +1,4 @@
+const util = require('util')
 const Edge = require('../lib/edge.js')
 const t = require('tap')
 
@@ -367,3 +368,55 @@ t.test('convenience type getter flags', async t => {
   explainEdge.detach()
   t.notEqual(explainEdge.explain(), expl)
 })
+
+const printableTo = {
+  ...b,
+  location: '/node_modules/b',
+}
+const printableFrom = {
+  ...a,
+  resolve () {
+    return printableTo
+  },
+  location: '',
+}
+const printable = new Edge({
+  from: printableFrom,
+  type: 'prod',
+  name: 'b',
+  spec: '1.2.3',
+})
+t.match(
+  util.inspect(printable, {compact: true}),
+  util.inspect({
+    name: 'b',
+    spec: '1.2.3',
+    type: 'prod',
+    from: '',
+    to: '/node_modules/b',
+  }, {compact: true}),
+  'should return a human-readable representation of the edge obj'
+)
+
+const minimalPrintableFrom = {
+  ...a,
+  resolve () {
+    return null
+  },
+}
+const minimalPrintable = new Edge({
+  from: minimalPrintableFrom,
+  type: 'dev',
+  name: 'b',
+  spec: '1.2.3',
+})
+t.match(
+  minimalPrintable.toJSON(),
+  {
+    name: 'b',
+    spec: '1.2.3',
+    type: 'dev',
+    error: 'MISSING',
+  },
+  'should return a minimal human-readable representation of the edge obj'
+)

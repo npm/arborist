@@ -93,6 +93,15 @@ t.test('load from fixture', t =>
       .then(tree2 => t.equal(tree2, virtualTree, 'same tree reused'))
   }))
 
+t.test('load from fixture using filesystem root path', t => {
+  const root = new Node({
+    path: '/',
+    pkg: require(fixture + '/package.json'),
+  })
+  return new Arborist({path: '/'}).loadVirtual({root})
+    .then(virtualTree => t.equal(virtualTree, root))
+})
+
 t.test('load from root that already has shrinkwrap', t =>
   Shrinkwrap.load({ path: tapAndFlow }).then(meta => {
     const root = new Node({

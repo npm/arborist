@@ -1,7 +1,7 @@
 // always run this test in debug mode
-process.env.ARBORIST_DEBUG = '1'
 const t = require('tap')
 const Node = require('../lib/node.js')
+const requireInject = require('require-inject')
 const Link = require('../lib/link.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 
@@ -521,6 +521,22 @@ t.test('changing root', t => {
   t.equal(a.root, root2, 'root is set when parent is changed')
   t.equal(b.root, root2, 'root is set on children when parent is changed')
   t.end()
+})
+
+t.test('attempt to assign parent to self on root node', t => {
+  // turn off debugging for this one so we don't throw
+  const Node = requireInject('../lib/node.js', {
+    '../lib/debug.js': () => {},
+  })
+  const root = new Node({
+    pkg: { name: 'root' },
+    path: '/',
+    realpath: '/'
+  })
+  root.parent = root.fsParent = root;
+  t.equal(root.parent, undefined, 'root node parent should be empty')
+  t.equal(root.fsParent, null, 'root node fsParent should be empty')
+  t.end();
 })
 
 t.test('bundled dependencies logic', t => {

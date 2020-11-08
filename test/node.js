@@ -514,6 +514,17 @@ t.test('changing root', t => {
   t.end()
 })
 
+t.test('attempt to assign fsParent to self on root node', t => {
+  const root = new Node({
+    pkg: { name: 'root', dependencies: { a: '' }},
+    path: '/',
+    realpath: '/'
+  })
+  root.fsParent = root;
+  t.equal(root.fsParent, null, 'root node fsParent should be empty')
+  t.end();
+})
+
 t.test('bundled dependencies logic', t => {
   const root = new Node({
     pkg: {

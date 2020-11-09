@@ -516,7 +516,7 @@ t.test('changing root', t => {
 
 t.test('attempt to assign parent to self on root node', t => {
   const root = new Node({
-    pkg: { name: 'root', dependencies: { a: '' }},
+    pkg: { name: 'root' },
     path: '/',
     realpath: '/'
   })

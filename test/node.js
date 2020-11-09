@@ -520,8 +520,7 @@ t.test('attempt to assign parent to self on root node', t => {
     path: '/',
     realpath: '/'
   })
-  root.parent = root;
-  root.fsParent = root;
+  root.parent = root.fsParent = root;
   t.equal(root.parent, undefined, 'root node parent should be empty')
   t.equal(root.fsParent, null, 'root node fsParent should be empty')
   t.end();

@@ -5,8 +5,22 @@ const requireInject = require('require-inject')
 const Link = require('../lib/link.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 
+const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
+const normalizePaths = obj => {
+  for (const key in obj) {
+    if (['path', 'location'].includes(key)) {
+      obj[key] = normalizePath(obj[key])
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      obj[key] = normalizePaths(obj[key])
+    }
+  }
+  return obj
+}
+
 t.cleanSnapshot = str =>
-  str.split(process.cwd()).join('{CWD}').replace('\\', '/')
+  str.split(process.cwd()).join('{CWD}')
+  .replace(/[A-Z]:/g, '')
+  .replace(/\\\\?/g, '/')
 
 t.test('basic instantiation', t => {
   const root = new Node({
@@ -410,11 +424,11 @@ t.test('load with a virtual filesystem parent', t => {
   // set initially
   packages.fsParent = root
   // XXX probably broken test on Windows
-  t.equal(target3.path, root.realpath + '/packages/link3')
+  t.equal(normalizePath(target3.path), normalizePath(root.realpath) + '/packages/link3')
   // now move it
   packages.fsParent = link.target
-  t.equal(packages.path, root.realpath + '/link-target/packages')
-  t.equal(target3.path, root.realpath + '/link-target/packages/link3')
+  t.equal(normalizePath(packages.path), normalizePath(root.realpath) + '/link-target/packages')
+  t.equal(normalizePath(target3.path), normalizePath(root.realpath) + '/link-target/packages/link3')
   t.equal(link3.realpath, target3.path, 'link realpath updated')
 
   // can't set fsParent to a link!
@@ -618,14 +632,14 @@ t.test('check if a node is in a node_modules folder or not', t => {
     realpath: '/path/to/foo/node_modules/a',
     pkg: { name: 'a' },
   })
-  t.equal(a.inNodeModules(), '/path/to/foo', 'basic obvious case')
+  t.equal(normalizePath(a.inNodeModules()), '/path/to/foo', 'basic obvious case')
 
   const b = new Node({
     path: '/path/to/foo/node_modules/a',
     realpath: '/path/to/foo/node_modules/a',
     pkg: { name: 'b' },
   })
-  t.equal(b.inNodeModules(), '/path/to/foo', 'based on path name, not pkg name')
+  t.equal(normalizePath(b.inNodeModules()), '/path/to/foo', 'based on path name, not pkg name')
 
   const c = new Node({
     path: '/path/to/foo/node_modules/a/b/c',
@@ -639,7 +653,7 @@ t.test('check if a node is in a node_modules folder or not', t => {
     realpath: '/path/to/foo/node_modules/@c/d',
     pkg: { name: '@a/b/c/d/e' },
   })
-  t.equal(d.inNodeModules(), '/path/to/foo', 'scoped package in node_modules')
+  t.equal(normalizePath(d.inNodeModules()), '/path/to/foo', 'scoped package in node_modules')
 
   t.end()
 })
@@ -883,30 +897,39 @@ t.test('binPaths, but global', t => {
   const { resolve: r } = require('path')
 
   t.strictSame(root.binPaths, [])
-  t.strictSame(link.binPaths, [
-    r('/usr/local/bin/d'),
-    ...(process.platform !== 'win32' ? [] : [
-      r('/usr/local/bin/d.cmd'),
-      r('/usr/local/bin/d.ps1'),
-    ]),
-  ])
+  t.strictSame(link.binPaths, process.platform === 'win32'
+    ? [
+      r('/usr/local/lib/d'),
+      r('/usr/local/lib/d.cmd'),
+      r('/usr/local/lib/d.ps1'),
+    ]
+    : [
+      r('/usr/local/bin/d'),
+    ]
+  )
   t.strictSame(link.target.binPaths, [])
   const scoped = root.children.get('@foo/bar')
-  t.strictSame(scoped.binPaths, [
-    r('/usr/local/bin/bar'),
-    ...(process.platform !== 'win32' ? [] : [
-      r('/usr/local/bin/bar.cmd'),
-      r('/usr/local/bin/bar.ps1'),
-    ]),
-  ])
+  t.strictSame(scoped.binPaths, process.platform === 'win32'
+    ? [
+      r('/usr/local/lib/bar'),
+      r('/usr/local/lib/bar.cmd'),
+      r('/usr/local/lib/bar.ps1'),
+    ]
+    : [
+      r('/usr/local/bin/bar'),
+    ]
+  )
   const unscoped = root.children.get('foo')
-  t.strictSame(unscoped.binPaths, [
-    r('/usr/local/bin/foo'),
-    ...(process.platform !== 'win32' ? [] : [
-      r('/usr/local/bin/foo.cmd'),
-      r('/usr/local/bin/foo.ps1'),
-    ]),
-  ])
+  t.strictSame(unscoped.binPaths, process.platform === 'win32'
+    ? [
+      r('/usr/local/lib/foo'),
+      r('/usr/local/lib/foo.cmd'),
+      r('/usr/local/lib/foo.ps1'),
+    ]
+    : [
+      r('/usr/local/bin/foo'),
+    ]
+  )
   const nested = unscoped.children.get('bar')
   t.strictSame(nested.binPaths, [
     r('/usr/local/lib/node_modules/foo/node_modules/.bin/bar'),
@@ -1345,7 +1368,7 @@ t.test('explain yourself', t => {
   const n = new Node({ path: '/some/path', pkg: {
     dependencies: { x: '1', y: '2' },
   }})
-  t.strictSame(n.explain(), { location: '/some/path' })
+  t.strictSame(normalizePaths(n.explain()), { location: '/some/path' })
   t.equal(n.explain(), n.explain(), 'caches result')
   const x = new Node({ parent: n, pkg: { name: 'x', version: '1.2.3' }})
   t.strictSame(x.explain(), {
@@ -1473,7 +1496,7 @@ t.test('explain yourself', t => {
   })
 
   // explain a node with respect to a specific hypothetical edge
-  t.strictSame(b.explain(otherNode.edgesOut.get('b')), {
+  t.strictSame(normalizePaths(b.explain(otherNode.edgesOut.get('b'))), {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
@@ -1498,7 +1521,7 @@ t.test('explain yourself', t => {
     ],
   })
 
-  t.strictSame(cycle.children.get('b').explain(), {
+  t.strictSame(normalizePaths(cycle.children.get('b').explain()), {
     name: 'b',
     version: '1.1.1',
     location: 'node_modules/b',
@@ -1569,7 +1592,7 @@ t.test('explain yourself', t => {
     })
 
     const edge = virtual.children.get('c').edgesOut.get('d')
-    t.strictSame(virtual.children.get('d').explain(edge), {
+    t.strictSame(normalizePaths(virtual.children.get('d').explain(edge)), {
       name: 'd',
       version: '1.2.3',
       whileInstalling: {

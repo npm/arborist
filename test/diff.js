@@ -6,16 +6,17 @@ const Node = require('../lib/node.js')
 // don't print the full node objects because we don't need to track that
 // for this test and it makes the snapshot unnecessarily noisy.
 
+const normalizePath = path => path.replace(/^\w:/, '').replace(/\\/g, '/')
 const formatNode = node =>
   node && Object.assign(Object.create(node.constructor.prototype), {
     name: node.name,
-    path: node.path,
+    path: normalizePath(node.path),
     integrity: node.integrity,
   })
 
 const {format} = require('tcompare')
 
-const path = diff => (diff.actual || diff.ideal).path
+const path = diff => normalizePath((diff.actual || diff.ideal).path)
 
 const formatDiff = obj =>
   Object.assign(Object.create(obj.constructor.prototype), {
@@ -23,8 +24,8 @@ const formatDiff = obj =>
     actual: formatNode(obj.actual),
     ideal: formatNode(obj.ideal),
     leaves: obj.leaves.map(d => path(d)),
-    unchanged: obj.unchanged.map(d => d.path),
-    removed: obj.removed.map(d => d.path),
+    unchanged: obj.unchanged.map(d => normalizePath(d.path)),
+    removed: obj.removed.map(d => normalizePath(d.path)),
     children: [...obj.children]
       .map(formatDiff)
       .sort((a, b) => path(a).localeCompare(path(b))),

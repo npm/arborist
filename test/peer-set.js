@@ -2,6 +2,8 @@ const peerSet = require('../lib/peer-set.js')
 const Node = require('../lib/node.js')
 const t = require('tap')
 
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
+
 const tree = new Node({
   path: '/root/path',
   pkg: {
@@ -81,7 +83,7 @@ const cases = {
 
 for (const [node, expect] of Object.entries(cases)) {
   t.test(`set from ${node}`, t => {
-    const actual = [...peerSet(tree.children.get(node))].map(n => n.path).sort()
+    const actual = [...peerSet(tree.children.get(node))].map(n => normalizePath(n.path)).sort()
     t.strictSame(actual, expect)
     t.end()
   })

@@ -72,12 +72,13 @@ const cache = t.testdir()
 
 t.test('setup server', { bail: true, buffered: false }, registryServer)
 
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
 const printEdge = (edge, inout) => ({
   name: edge.name,
   type: edge.type,
-  spec: edge.spec,
+  spec: normalizePath(edge.spec),
   ...(inout === 'in' ? {
     from: edge.from && edge.from.location,
   } : {
@@ -91,7 +92,7 @@ const printEdge = (edge, inout) => ({
 const printTree = tree => ({
   name: tree.name,
   location: tree.location,
-  resolved: tree.resolved,
+  resolved: tree.resolved && normalizePath(tree.resolved),
   // 'package': tree.package,
   ...(tree.extraneous ? { extraneous: true } : {
     ...(tree.dev ? { dev: true } : {}),
@@ -105,7 +106,7 @@ const printTree = tree => ({
     ? {
       error: {
         code: tree.error.code,
-        ...(tree.error.path ? { path: relative(__dirname, tree.error.path) }
+        ...(tree.error.path ? { path: normalizePath(relative(__dirname, tree.error.path)) }
           : {}),
       }
     } : {}),
@@ -142,7 +143,7 @@ const printTree = tree => ({
   __proto__: { constructor: tree.constructor },
 })
 
-const cwd = process.cwd()
+const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
@@ -163,7 +164,8 @@ t.test('tarball deps with transitive tarball deps', t =>
 
 t.test('update a yarn.lock file', async t => {
   const path = fixture(t, 'yarn-lock-mkdirp')
-  t.matchSnapshot(await reify(path, { add: ['abbrev'] }), 'add abbrev')
+  const tree = await reify(path, { add: ['abbrev'] })
+  t.matchSnapshot(printTree(tree), 'add abbrev')
   t.matchSnapshot(fs.readFileSync(path + '/yarn.lock', 'utf8'), 'updated yarn lock')
 })
 
@@ -1115,7 +1117,7 @@ t.test('store files with a custom indenting', async t => {
     fs.readFileSync(
       resolve(__dirname, '../fixtures/tab-indented-package-json/package.json'),
       'utf8'
-    )
+    ).replace(/\r\n/g, '\n')
   const path = t.testdir({
     'package.json': tabIndentedPackageJson
   })

@@ -9,6 +9,7 @@ const rimraf = require('rimraf')
 
 const t = require('tap')
 
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 t.cleanSnapshot = s => s.split(process.cwd()).join('{CWD}')
 
 const {relative, resolve} = require('path')
@@ -1117,7 +1118,7 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(bar.integrity, barEntry.integrity, 'bar integrity from yarn.lock')
-  t.equal(bar.resolved, 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved from yarn.lock')
+  t.equal(normalizePath(bar.resolved), 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved from yarn.lock')
 
   bar.parent = null
 
@@ -1171,7 +1172,7 @@ t.test('get meta from yarn.lock', t => {
     },
   })
   t.equal(barSameIntegrity.integrity, barEntry.integrity, 'bar integrity still matches')
-  t.equal(barSameIntegrity.resolved, 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved from yarn.lock')
+  t.equal(normalizePath(barSameIntegrity.resolved), 'file:/path/to/root/bar-2.3.4.tgz', 'bar resolved from yarn.lock')
 
   const barSameResolved = new Node({
     resolved: 'file:/path/to/root/bar-2.3.4.tgz',
@@ -1267,7 +1268,7 @@ t.test('metadata that only has one of resolved/integrity', t => {
   t.equal(integrity.integrity, 'has integrity no resolved', 'integrity only')
   t.equal(integrity.resolved, null, 'integrity only')
 
-  t.equal(resolved.resolved, 'file:/path/to/root/has-resolved-no-integrity.tgz',
+  t.equal(normalizePath(resolved.resolved), 'file:/path/to/root/has-resolved-no-integrity.tgz',
     'resolved only')
   t.equal(resolved.integrity, null, 'resolved only')
 

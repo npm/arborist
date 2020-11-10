@@ -16,12 +16,13 @@ const editFixture = resolve(__dirname, '../fixtures/edit-package-json')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
 const Node = require('../../lib/node.js')
 
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
 const printEdge = (edge, inout) => ({
   name: edge.name,
   type: edge.type,
-  spec: edge.spec,
+  spec: normalizePath(edge.spec),
   ...(inout === 'in' ? {
     from: edge.from && edge.from.location,
   } : {
@@ -38,7 +39,7 @@ const printTree = tree => ({
     version: tree.package.version,
   },
   location: tree.location,
-  resolved: tree.resolved,
+  resolved: tree.resolved && normalizePath(tree.resolved),
   ...(tree.extraneous ? { extraneous: true } : {
     ...(tree.dev ? { dev: true } : {}),
     ...(tree.optional ? { optional: true } : {}),
@@ -81,7 +82,7 @@ const printTree = tree => ({
   __proto__: { constructor: tree.constructor },
 })
 
-const cwd = process.cwd()
+const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 const loadVirtual = (path, opts = {}) => new Arborist({path, ...opts}).loadVirtual()

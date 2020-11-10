@@ -2,6 +2,19 @@ const t = require('tap')
 const Link = require('../lib/link.js')
 const Node = require('../lib/node.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
+
+const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
+const normalizePaths = obj => {
+  obj.path = obj.path && normalizePath(obj.path)
+  obj.realpath = obj.realpath && normalizePath(obj.realpath)
+  for (const key of obj.inventory.keys()) {
+    const member = obj.inventory.get(key)
+    member.path = member.path && normalizePath(member.path)
+    member.realpath = member.realpath && normalizePath(member.realpath)
+  }
+  return obj
+}
+
 const meta = new Shrinkwrap({ path: '/home/user/projects/some/kind/of/path' })
 meta.data = {
   lockfileVersion: 2,
@@ -22,7 +35,7 @@ const l1 = new Link({
   meta,
 })
 
-t.matchSnapshot(l1, 'instantiate without providing target')
+t.matchSnapshot(normalizePaths(l1), 'instantiate without providing target')
 t.equal(l1.isLink, true, 'link is a link')
 t.same(l1.children.size, 0, 'children is empty')
 l1.children = new Map([[1,2],[3,4]])
@@ -45,10 +58,10 @@ t.equal(resolver.resolved, null, 'link resolved depends on path')
 resolver.path = '/x/z/y/a/b/d'
 t.equal(resolver.resolved, 'file:c', 'updates when path changes')
 
-t.matchSnapshot(new Link({
+t.matchSnapshot(normalizePaths(new Link({
   path: '/home/user/some/other/path',
   target: root,
-}), 'instantiate with target specified')
+})), 'instantiate with target specified')
 
 t.test('link.target setter', t => {
   const link = new Link({

@@ -1,6 +1,11 @@
 const t = require('tap')
 const cr = require('../lib/consistent-resolve.js')
 
+// normalize windows paths to unix ones
+// we only need this when the relpaths parameter is falsey and the
+// spec is a relative path
+const normalizePath = path => path.replace(/^file:\w:(.*)/g, 'file:$1').replace(/\\/g, '/')
+
 t.test('file and directories resolved to toPath', t => {
   const tp = '/foo'
   const fp = '/foo/bar'
@@ -8,25 +13,25 @@ t.test('file and directories resolved to toPath', t => {
   t.equal(cr('/foo/bar/baz', fp, tp), 'file:/foo/bar/baz')
 
   t.equal(cr('./baz', fp, tp, true), 'file:bar/baz')
-  t.equal(cr('./baz', fp, tp), 'file:/foo/bar/baz')
+  t.equal(normalizePath(cr('./baz', fp, tp)), 'file:/foo/bar/baz')
 
   t.equal(cr('/foo/bar/baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
   t.equal(cr('/foo/bar/baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
 
   t.equal(cr('baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
-  t.equal(cr('baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
+  t.equal(normalizePath(cr('baz.tgz', fp, tp)), 'file:/foo/bar/baz.tgz')
 
   t.equal(cr('file:/foo/bar/baz', fp, tp, true), 'file:bar/baz')
   t.equal(cr('file:/foo/bar/baz', fp, tp), 'file:/foo/bar/baz')
 
   t.equal(cr('file:baz', fp, tp, true), 'file:bar/baz')
-  t.equal(cr('file:baz', fp, tp), 'file:/foo/bar/baz')
+  t.equal(normalizePath(cr('file:baz', fp, tp)), 'file:/foo/bar/baz')
 
   t.equal(cr('file:/foo/bar/baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
   t.equal(cr('file:/foo/bar/baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
 
   t.equal(cr('file:baz.tgz', fp, tp, true), 'file:bar/baz.tgz')
-  t.equal(cr('file:baz.tgz', fp, tp), 'file:/foo/bar/baz.tgz')
+  t.equal(normalizePath(cr('file:baz.tgz', fp, tp)), 'file:/foo/bar/baz.tgz')
   t.end()
 })
 
@@ -36,13 +41,13 @@ t.test('file and directories made consistent if toPath not set', t => {
     // relative doesn't matter if toPath not set
     t.test(`rel=${rel}`, t => {
       t.equal(cr('/foo/bar/baz', fp, null, rel), 'file:/foo/bar/baz')
-      t.equal(cr('./baz', fp, null, rel), 'file:/foo/bar/baz')
+      t.equal(normalizePath(cr('./baz', fp, null, rel)), 'file:/foo/bar/baz')
       t.equal(cr('/foo/bar/baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
-      t.equal(cr('baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
+      t.equal(normalizePath(cr('baz.tgz', fp, null, rel)), 'file:/foo/bar/baz.tgz')
       t.equal(cr('file:/foo/bar/baz', fp, null, rel), 'file:/foo/bar/baz')
-      t.equal(cr('file:baz', fp, null, rel), 'file:/foo/bar/baz')
+      t.equal(normalizePath(cr('file:baz', fp, null, rel)), 'file:/foo/bar/baz')
       t.equal(cr('file:/foo/bar/baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
-      t.equal(cr('file:baz.tgz', fp, null, rel), 'file:/foo/bar/baz.tgz')
+      t.equal(normalizePath(cr('file:baz.tgz', fp, null, rel)), 'file:/foo/bar/baz.tgz')
       t.end()
     })
   }

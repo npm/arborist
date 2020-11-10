@@ -3,10 +3,23 @@ const t = require('tap')
 const cwd = process.cwd()
 const dirname = require('path').dirname(cwd)
 
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
+const normalizePaths = obj => {
+  for (const key in obj) {
+    if (['where', 'fetchSpec', 'saveSpec'].includes(key) && obj[key]) {
+      obj[key] = normalizePath(obj[key])
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      obj[key] = normalizePaths(obj[key])
+    }
+  }
+  return obj
+}
+
+t.formatSnapshot = obj => normalizePaths(obj)
 t.cleanSnapshot = s => s
-  .split(cwd).join('{CWD}')
-  .split(dirname).join('{..}')
   .split(/\s+"pathmatch": .*/g).join('\n{pathmatch regexp},')
+  .split(normalizePath(cwd)).join('{CWD}')
+  .split(normalizePath(dirname)).join('{..}')
 
 t.matchSnapshot(sfl('x', {
   version: '1.2.3',

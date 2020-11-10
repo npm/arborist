@@ -15,12 +15,13 @@ const {
 
 // little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
-const pp = path => path && path.substr(fixtures.length + 1).replace(/\\/g, '/')
+const pp = path => path && normalizePath(path.substr(fixtures.length + 1))
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 
 const printEdge = (edge, inout) => ({
   name: edge.name,
   type: edge.type,
-  spec: edge.spec,
+  spec: normalizePath(edge.spec),
   ...(inout === 'in' ? {
     from: edge.from && pp(edge.from.realpath),
   } : {
@@ -55,7 +56,7 @@ const printTree = tree => ({
           message: error.message,
           stack: ('' + error.stack).split('\n'),
         }),
-        ...(error.path ? { path: relative(__dirname, error.path) }
+        ...(error.path ? { path: normalizePath(relative(__dirname, error.path)) }
           : {}),
       })),
     } : {}),
@@ -96,7 +97,7 @@ const printTree = tree => ({
   })
 })
 
-const cwd = process.cwd()
+const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 t.formatSnapshot = tree => format(printTree(tree), { sort: true })
@@ -267,25 +268,6 @@ t.test('load a global space with a filter', t =>
     global: true,
     filter: (parent, kid) => parent.parent || kid === 'semver'
   })))
-
-t.test('realpath gutchecks', t => {
-  // the realpath module is tested pretty thoroughly, but
-  // while we've got a bunch of symlinks being created, may as well
-  // give it a quick integration pass.
-  const d = resolve(__dirname, '../fixtures')
-  const realpath = require('../../lib/realpath.js')
-  Object.keys(symlinks).map(link => t.test(link, t =>
-    realpath(
-      resolve(d, link),
-      new Map(),
-      new Map(),
-      0
-    ).then(
-      real => t.equal(real, realpathSync(resolve(d, link))),
-      er => t.throws(()=> realpathSync(resolve(d, link)))
-    )))
-  t.end()
-})
 
 t.test('workspaces', t => {
   t.test('load a simple install tree containing workspaces', t =>

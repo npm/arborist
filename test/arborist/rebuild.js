@@ -429,7 +429,7 @@ t.test('workspaces', async t => {
         version: '1.0.0',
         bin: './foo',
         scripts: {
-          prepare: `${process.execPath} -e "require('fs').writeFileSync('foo', '')"`,
+          prepare: `node -e "require('fs').writeFileSync('foo', '')"`,
         },
       }),
     },

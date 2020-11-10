@@ -3,7 +3,25 @@ module.exports = t => {
   const path = t.testdir({
   "node_modules": {
     ".bin": {
-      "ruy": t.fixture('symlink', "../ruy/bin/index.js")
+      "ruy": t.fixture('symlink', "../ruy/bin/index.js"),
+      "ruy.cmd": `@ECHO off
+SETLOCAL
+CALL :find_dp0
+
+IF EXIST "%dp0%\\node.exe" (
+  SET "_prog=%dp0%\\node.exe"
+) ELSE (
+  SET "_prog=node"
+  SET PATHEXT=%PATHEXT:;.JS;=;%
+)
+
+"%_prog%"  "%dp0%\\..\\ruy\\bin\\index.js" %*
+ENDLOCAL
+EXIT /b %errorlevel%
+:find_dp0
+SET dp0=%~dp0
+EXIT /b
+`
     },
     "ruy": {
       "README.md": `[npm] card for Ruy Adorno

@@ -91620,6 +91620,185 @@ Node {
 }
 `
 
+exports[`test/arborist/build-ideal-tree.js TAP update global > update a single dep 1`] = `
+Node {
+  "children": Map {
+    "once" => Node {
+      "children": Map {
+        "wrappy" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/once",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/once/node_modules/wrappy",
+          "name": "wrappy",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "once",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/once/node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "once" => Edge {
+      "name": "once",
+      "spec": "*",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-update-global",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP update global > update all the deps 1`] = `
+Node {
+  "children": Map {
+    "@isaacs/testing-dev-optional-flags" => Node {
+      "children": Map {
+        "own-or" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-dev-optional-flags",
+              "name": "own-or",
+              "spec": "^1.0.0",
+              "type": "optional",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-dev-optional-flags/node_modules/own-or",
+          "name": "own-or",
+          "optional": true,
+          "resolved": "https://registry.npmjs.org/own-or/-/own-or-1.0.0.tgz",
+        },
+        "wrappy" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/@isaacs/testing-dev-optional-flags",
+              "name": "wrappy",
+              "spec": "^1.0.2",
+              "type": "optional",
+            },
+          },
+          "location": "node_modules/@isaacs/testing-dev-optional-flags/node_modules/wrappy",
+          "name": "wrappy",
+          "optional": true,
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "@isaacs/testing-dev-optional-flags",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "own-or" => Edge {
+          "name": "own-or",
+          "spec": "^1.0.0",
+          "to": "node_modules/@isaacs/testing-dev-optional-flags/node_modules/own-or",
+          "type": "optional",
+        },
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "^1.0.2",
+          "to": "node_modules/@isaacs/testing-dev-optional-flags/node_modules/wrappy",
+          "type": "optional",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-dev-optional-flags",
+      "name": "@isaacs/testing-dev-optional-flags",
+      "resolved": "https://registry.npmjs.org/@isaacs/testing-dev-optional-flags/-/testing-dev-optional-flags-1.0.0.tgz",
+    },
+    "once" => Node {
+      "children": Map {
+        "wrappy" => Node {
+          "edgesIn": Set {
+            Edge {
+              "from": "node_modules/once",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/once/node_modules/wrappy",
+          "name": "wrappy",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+        },
+      },
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "once",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => Edge {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/once/node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-dev-optional-flags" => Edge {
+      "name": "@isaacs/testing-dev-optional-flags",
+      "spec": "*",
+      "to": "node_modules/@isaacs/testing-dev-optional-flags",
+      "type": "prod",
+    },
+    "once" => Edge {
+      "name": "once",
+      "spec": "*",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "build-ideal-tree-update-global",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP update global > updating sub-dep has no effect 1`] = `
+Node {
+  "location": "",
+  "name": "build-ideal-tree-update-global",
+  "resolved": null,
+}
+`
+
 exports[`test/arborist/build-ideal-tree.js TAP update mkdirp to non-minimist-using version > must match snapshot 1`] = `
 Node {
   "children": Map {

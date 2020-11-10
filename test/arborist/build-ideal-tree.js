@@ -2154,7 +2154,7 @@ t.test('always prefer deduping peer deps', async t => {
     'package.json': JSON.stringify({
       dependencies: {
         '@pmmmwh/react-refresh-webpack-plugin': '0.4.2',
-        'ink': '3.0.8',
+        ink: '3.0.8',
         'react-reconciler': '0.25.0',
       },
     }),
@@ -2170,7 +2170,7 @@ t.test('do not ever nest peer deps underneath their dependent ever', async t => 
   const path = t.testdir({
     'package.json': JSON.stringify({
       dependencies: {
-        'ink': '3.0.8',
+        ink: '3.0.8',
         // this peer depends on react 17
         'react-reconciler': '0.26.0',
       },
@@ -2211,4 +2211,67 @@ t.test('properly assign fsParent when paths have .. in them', async t => {
     else
       t.equal(tree.inventory.has(target.fsParent), true, 'other targets have fsParent')
   }
+})
+
+t.test('update global', async t => {
+  // global root
+  // ├─┬ @isaacs/testing-dev-optional-flags@1.0.0
+  // │ ├── own-or@1.0.0
+  // │ └── wrappy@1.0.2
+  // └─┬ once@1.3.1
+  //   └── wrappy@1.0.1
+
+  const path = t.testdir({
+    node_modules: {
+      '@isaacs': {
+        'testing-dev-optional-flags': {
+          'package.json': JSON.stringify({
+            name: '@isaacs/testing-dev-optional-flags',
+            version: '1.0.0',
+            dependencies: {
+              wrappy: '^1.0.2',
+              'own-or': '^1.0.0',
+            },
+          }),
+          node_modules: {
+            'own-or': {
+              'package.json': JSON.stringify({
+                name: 'own-or',
+                version: '1.0.0',
+              }),
+            },
+            wrappy: {
+              'package.json': JSON.stringify({
+                name: 'wrappy',
+                version: '1.0.0',
+              }),
+            },
+          },
+        },
+      },
+      once: {
+        'package.json': JSON.stringify({
+          name: 'once',
+          version: '1.3.1',
+          dependencies: {
+            wrappy: '1',
+          },
+        }),
+        node_modules: {
+          wrappy: {
+            'package.json': JSON.stringify({
+              name: 'wrappy',
+              version: '1.0.1',
+            }),
+          },
+        },
+      },
+    },
+  })
+  t.matchSnapshot(await printIdeal(path, { global: true, update: ['wrappy'] }),
+    'updating sub-dep has no effect')
+  t.matchSnapshot(await printIdeal(path, { global: true, update: ['once'] }),
+    'update a single dep')
+  t.matchSnapshot(await printIdeal(path, { global: true, update: true }),
+    'update all the deps')
 })

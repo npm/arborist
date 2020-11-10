@@ -7,13 +7,21 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
-        # todo: add windows-latest to this list.
-        # Right now, it's just too flaky and hard to get PWD and HOME out
-        # of all the snapshots properly.
-        os: [ubuntu-latest, macOS-latest]
+        platform:
+        - os: ubuntu-latest
+          shell: bash
+        - os: macos-latest
+          shell: bash
+        - os: windows-latest
+          shell: bash
+        - os: windows-latest
+          shell: powershell
       fail-fast: false
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.platform.os }}
+    defaults:
+      run:
+        shell: ${{ matrix.platform.shell }}
 
     steps:
       - name: Checkout Repository
@@ -29,12 +37,12 @@ jobs:
 
       # Run for all environments
       - name: Run Tap Tests
-        if: matrix.os != 'ubuntu-latest' || matrix.node-version != '14.x'
+        if: matrix.platform.os != 'ubuntu-latest' || matrix.node-version != '14.x'
         run: npm test -- -c -t0
 
       # Push coverage for specific environment
       - name: Run Tap Tests (push coverage results)
-        if: matrix.os == 'ubuntu-latest' && matrix.node-version == '14.x'
+        if: matrix.platform.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         run: npm test -- -c -t0
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}

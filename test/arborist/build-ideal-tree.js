@@ -61,7 +61,9 @@ const printTree = tree => ({
   ...(tree.isLink ? {
     target: {
       name: tree.target.name,
-      parent: tree.target.parent && tree.target.parent.location,
+      location: tree.target.location,
+      ...(tree.target.parent ? { parent: tree.target.parent.location } : {}),
+      ...(tree.target.fsParent ? { fsParent: tree.target.fsParent.location } : {}),
     },
   } : {}),
   ...(tree.inBundle ? { bundled: true } : {}),
@@ -2191,4 +2193,22 @@ t.test('properly fail on conflicted peerOptionals', async t => {
     }),
   })
   await t.rejects(printIdeal(path), { code: 'ERESOLVE' })
+})
+
+t.test('properly assign fsParent when paths have .. in them', async t => {
+  const path = resolve(fixtures, 'fs-parent-dots/x/y/z')
+  const arb = new Arborist({ ...OPT, path })
+  const tree = await arb.buildIdealTree()
+  t.matchSnapshot(printTree(tree))
+  for (const child of tree.children.values()) {
+    t.equal(child.isLink, true, 'all children should be links')
+    t.equal(tree.inventory.has(child.target), true, 'target should be known')
+  }
+  for (const node of tree.inventory.filter(n => n.isLink)) {
+    const { target } = node
+    if (target.location === '../..')
+      t.equal(target.fsParent, null, '../.. has no fsParent')
+    else
+      t.equal(tree.inventory.has(target.fsParent), true, 'other targets have fsParent')
+  }
 })

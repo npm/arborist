@@ -419,13 +419,22 @@ t.test('load with a virtual filesystem parent', t => {
 
   // can't set fsParent to a link!
   t.throws(() => packages.fsParent = link, {
-    message: 'attempting to set fsParent to link node',
+    message: 'setting fsParent to link node',
+  })
+
+  // can't set fsParent to the same node
+  t.throws(() => packages.fsParent = packages, {
+    message: 'setting node to its own fsParent',
+  })
+
+  t.throws(() => packages.fsParent = new Node({ path: packages.path }), {
+    message: 'setting fsParent to same path',
   })
 
   // can't set fsParent on a new node such that it's outside its path
   const outsideNode = new Node({ path: '/not/the/root/path', pkg: {} })
   t.throws(() => outsideNode.fsParent = root, {
-    message: 'attempting to set fsParent improperly',
+    message: 'setting fsParent improperly',
   })
 
   t.equal(link.target.edgesOut.get('a').error, 'MISSING')

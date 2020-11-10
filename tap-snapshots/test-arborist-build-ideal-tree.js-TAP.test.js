@@ -98,8 +98,9 @@ Node {
       "name": "bar",
       "resolved": "file:../packages/bar",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/bar",
         "name": "bar",
-        "parent": null,
       },
     },
     "foo" => Link {
@@ -115,8 +116,9 @@ Node {
       "name": "foo",
       "resolved": "file:../packages/foo",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/foo",
         "name": "foo",
-        "parent": null,
       },
     },
     "minimist" => Node {
@@ -239,8 +241,8 @@ Node {
       "name": "a",
       "resolved": "file:../../linked-pkg",
       "target": Object {
+        "location": "../linked-pkg",
         "name": "a",
-        "parent": null,
       },
     },
   },
@@ -14309,8 +14311,9 @@ Node {
       "name": "a",
       "resolved": "file:../a",
       "target": Object {
+        "fsParent": "",
+        "location": "a",
         "name": "a",
-        "parent": undefined,
       },
     },
     "b" => Link {
@@ -14326,8 +14329,9 @@ Node {
       "name": "b",
       "resolved": "file:../b",
       "target": Object {
+        "fsParent": "",
+        "location": "b",
         "name": "b",
-        "parent": undefined,
       },
     },
   },
@@ -14438,8 +14442,9 @@ Node {
       "name": "a",
       "resolved": "file:../a",
       "target": Object {
+        "fsParent": "",
+        "location": "a",
         "name": "a",
-        "parent": null,
       },
     },
     "b" => Link {
@@ -14455,8 +14460,9 @@ Node {
       "name": "b",
       "resolved": "file:../b",
       "target": Object {
+        "fsParent": "",
+        "location": "b",
         "name": "b",
-        "parent": null,
       },
     },
   },
@@ -32607,8 +32613,9 @@ Node {
       "name": "app",
       "resolved": "file:../app",
       "target": Object {
+        "fsParent": "",
+        "location": "app",
         "name": "app",
-        "parent": undefined,
       },
     },
     "lib" => Link {
@@ -32624,8 +32631,9 @@ Node {
       "name": "lib",
       "resolved": "file:../lib",
       "target": Object {
+        "fsParent": "",
+        "location": "lib",
         "name": "lib",
-        "parent": undefined,
       },
     },
   },
@@ -32679,8 +32687,9 @@ Node {
       "name": "app",
       "resolved": "file:../app",
       "target": Object {
+        "fsParent": "",
+        "location": "app",
         "name": "app",
-        "parent": null,
       },
     },
     "lib" => Link {
@@ -32696,8 +32705,9 @@ Node {
       "name": "lib",
       "resolved": "file:../lib",
       "target": Object {
+        "fsParent": "",
+        "location": "lib",
         "name": "lib",
-        "parent": null,
       },
     },
   },
@@ -32751,6 +32761,7 @@ Node {
       "name": "aaaaaa",
       "resolved": "file:abbrev",
       "target": Object {
+        "location": "node_modules/abbrev",
         "name": "abbrev",
         "parent": "",
       },
@@ -32781,8 +32792,8 @@ Node {
       "name": "monorepo",
       "resolved": "file:../../cli-750",
       "target": Object {
+        "location": "../cli-750",
         "name": "cli-750",
-        "parent": undefined,
       },
     },
     "zzzzzz" => Link {
@@ -32798,6 +32809,7 @@ Node {
       "name": "zzzzzz",
       "resolved": "file:abbrev",
       "target": Object {
+        "location": "node_modules/abbrev",
         "name": "abbrev",
         "parent": "",
       },
@@ -32851,8 +32863,9 @@ Node {
       "name": "aaaaaa",
       "resolved": "file:abbrev",
       "target": Object {
+        "fsParent": "",
+        "location": "node_modules/abbrev",
         "name": "zzzzzz",
-        "parent": null,
       },
     },
     "abbrev" => Node {
@@ -32881,8 +32894,8 @@ Node {
       "name": "monorepo",
       "resolved": "file:../../cli-750",
       "target": Object {
+        "location": "../cli-750",
         "name": "monorepo",
-        "parent": null,
       },
     },
     "zzzzzz" => Link {
@@ -32898,8 +32911,9 @@ Node {
       "name": "zzzzzz",
       "resolved": "file:abbrev",
       "target": Object {
+        "fsParent": "",
+        "location": "node_modules/abbrev",
         "name": "zzzzzz",
-        "parent": null,
       },
     },
   },
@@ -32958,6 +32972,7 @@ Node {
       "name": "aaaaaa",
       "resolved": "file:abbrev",
       "target": Object {
+        "location": "node_modules/abbrev",
         "name": "abbrev",
         "parent": "",
       },
@@ -32988,8 +33003,8 @@ Node {
       "name": "monorepo",
       "resolved": "file:../../cli-750",
       "target": Object {
+        "location": "../cli-750",
         "name": "cli-750",
-        "parent": undefined,
       },
     },
     "zzzzzz" => Link {
@@ -33005,6 +33020,7 @@ Node {
       "name": "zzzzzz",
       "resolved": "file:abbrev",
       "target": Object {
+        "location": "node_modules/abbrev",
         "name": "abbrev",
         "parent": "",
       },
@@ -33058,8 +33074,9 @@ Node {
       "name": "aaaaaa",
       "resolved": "file:abbrev",
       "target": Object {
+        "fsParent": "",
+        "location": "node_modules/abbrev",
         "name": "zzzzzz",
-        "parent": null,
       },
     },
     "abbrev" => Node {
@@ -33088,8 +33105,8 @@ Node {
       "name": "monorepo",
       "resolved": "file:../../cli-750",
       "target": Object {
+        "location": "../cli-750",
         "name": "monorepo",
-        "parent": null,
       },
     },
     "zzzzzz" => Link {
@@ -33105,8 +33122,9 @@ Node {
       "name": "zzzzzz",
       "resolved": "file:abbrev",
       "target": Object {
+        "fsParent": "",
+        "location": "node_modules/abbrev",
         "name": "zzzzzz",
-        "parent": null,
       },
     },
   },
@@ -33206,8 +33224,9 @@ Node {
       "name": "linked-dep",
       "resolved": "file:@isaacs/testing-link-dep/target",
       "target": Object {
+        "fsParent": "node_modules/@isaacs/testing-link-dep",
+        "location": "node_modules/@isaacs/testing-link-dep/target",
         "name": "linked-dep",
-        "parent": null,
       },
     },
   },
@@ -69023,8 +69042,9 @@ Node {
       "name": "mkdirp-unfixable",
       "resolved": "file:../mkdirp-unfixable",
       "target": Object {
+        "fsParent": "",
+        "location": "mkdirp-unfixable",
         "name": "mkdirp-unfixable",
-        "parent": undefined,
       },
     },
   },
@@ -69910,6 +69930,7 @@ Node {
               "name": "@isaacs/pathological-dep-nesting-b",
               "resolved": "file:../../../../..",
               "target": Object {
+                "location": "node_modules/@isaacs/pathological-dep-nesting-b",
                 "name": "@isaacs/pathological-dep-nesting-b",
                 "parent": "",
               },
@@ -70058,6 +70079,113 @@ Node {
   },
   "location": "",
   "name": "peer-optional-installs",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/build-ideal-tree.js TAP properly assign fsParent when paths have .. in them > must match snapshot 1`] = `
+Node {
+  "children": Map {
+    "a" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "a",
+          "spec": "file:../../a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "resolved": "file:../../../a",
+      "target": Object {
+        "fsParent": "../..",
+        "location": "../../a",
+        "name": "a",
+      },
+    },
+    "b" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "b",
+          "spec": "file:../b",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "resolved": "file:../../b",
+      "target": Object {
+        "fsParent": "..",
+        "location": "../b",
+        "name": "b",
+      },
+    },
+    "x" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "x",
+          "spec": "file:../..",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "resolved": "file:../../..",
+      "target": Object {
+        "location": "../..",
+        "name": "x",
+      },
+    },
+    "y" => Link {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "y",
+          "spec": "file:..",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/y",
+      "name": "y",
+      "resolved": "file:../..",
+      "target": Object {
+        "fsParent": "../..",
+        "location": "..",
+        "name": "y",
+      },
+    },
+  },
+  "edgesOut": Map {
+    "a" => Edge {
+      "name": "a",
+      "spec": "file:../../a",
+      "to": "node_modules/a",
+      "type": "prod",
+    },
+    "b" => Edge {
+      "name": "b",
+      "spec": "file:../b",
+      "to": "node_modules/b",
+      "type": "prod",
+    },
+    "x" => Edge {
+      "name": "x",
+      "spec": "file:../..",
+      "to": "node_modules/x",
+      "type": "prod",
+    },
+    "y" => Edge {
+      "name": "y",
+      "spec": "file:..",
+      "to": "node_modules/y",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "z",
   "resolved": null,
 }
 `
@@ -112609,8 +112737,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
   },
@@ -112651,8 +112780,9 @@ Node {
       "name": "a",
       "resolved": "file:../a",
       "target": Object {
+        "fsParent": "",
+        "location": "a",
         "name": "a",
-        "parent": null,
       },
     },
     "b" => Link {
@@ -112674,8 +112804,9 @@ Node {
       "name": "b",
       "resolved": "file:../b",
       "target": Object {
+        "fsParent": "",
+        "location": "b",
         "name": "b",
-        "parent": null,
       },
     },
   },
@@ -112735,8 +112866,9 @@ Node {
       "name": "@ruyadorno/scoped-a",
       "resolved": "file:../../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "@ruyadorno/scoped-a",
-        "parent": null,
       },
     },
     "@ruyadorno/scoped-b" => Link {
@@ -112758,8 +112890,9 @@ Node {
       "name": "@ruyadorno/scoped-b",
       "resolved": "file:../../packages/b",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/b",
         "name": "@ruyadorno/scoped-b",
-        "parent": null,
       },
     },
   },
@@ -112819,8 +112952,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
     "abbrev" => Node {
@@ -112849,8 +112983,9 @@ Node {
       "name": "b",
       "resolved": "file:../packages/b",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/b",
         "name": "b",
-        "parent": null,
       },
     },
   },
@@ -112954,8 +113089,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
     "abbrev" => Link {
@@ -112971,8 +113107,9 @@ Node {
       "name": "abbrev",
       "resolved": "file:../packages/abbrev",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/abbrev",
         "name": "abbrev",
-        "parent": null,
       },
     },
   },
@@ -113047,8 +113184,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
     "abbrev" => Node {
@@ -113083,8 +113221,9 @@ Node {
       "name": "b",
       "resolved": "file:../packages/b",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/b",
         "name": "b",
-        "parent": null,
       },
     },
     "c" => Link {
@@ -113100,8 +113239,9 @@ Node {
       "name": "c",
       "resolved": "file:../packages/c",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/c",
         "name": "c",
-        "parent": null,
       },
     },
     "uuid" => Node {
@@ -113201,8 +113341,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
     "once" => Node {
@@ -113287,8 +113428,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
   },
@@ -113329,8 +113471,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
     "abbrev" => Link {
@@ -113352,8 +113495,9 @@ Node {
       "name": "abbrev",
       "resolved": "file:../packages/abbrev",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/abbrev",
         "name": "abbrev",
-        "parent": null,
       },
     },
   },
@@ -113413,8 +113557,9 @@ Node {
       "name": "a",
       "resolved": "file:../a",
       "target": Object {
+        "fsParent": "",
+        "location": "a",
         "name": "a",
-        "parent": null,
       },
     },
     "b" => Link {
@@ -113436,8 +113581,9 @@ Node {
       "name": "b",
       "resolved": "file:../b",
       "target": Object {
+        "fsParent": "",
+        "location": "b",
         "name": "b",
-        "parent": null,
       },
     },
   },
@@ -113497,8 +113643,9 @@ Node {
       "name": "a",
       "resolved": "file:../packages/a",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/a",
         "name": "a",
-        "parent": null,
       },
     },
     "b" => Link {
@@ -113520,8 +113667,9 @@ Node {
       "name": "b",
       "resolved": "file:../packages/b",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/b",
         "name": "b",
-        "parent": null,
       },
     },
     "c" => Link {
@@ -113537,8 +113685,9 @@ Node {
       "name": "c",
       "resolved": "file:../packages/c",
       "target": Object {
+        "fsParent": "",
+        "location": "packages/c",
         "name": "c",
-        "parent": null,
       },
     },
     "d" => Link {
@@ -113560,8 +113709,9 @@ Node {
       "name": "d",
       "resolved": "file:../d",
       "target": Object {
+        "fsParent": "",
+        "location": "d",
         "name": "d",
-        "parent": null,
       },
     },
   },

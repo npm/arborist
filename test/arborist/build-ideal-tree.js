@@ -2275,3 +2275,34 @@ t.test('update global', async t => {
   t.matchSnapshot(await printIdeal(path, { global: true, update: true }),
     'update all the deps')
 })
+
+t.test('peer dep that needs to be replaced', async t => {
+  // this verifies that the webpack 5 that gets placed by default for
+  // the initial dep will be successfully replaced by webpack 4 that
+  // webpack-dev-server needs, even though webpack 5 has a dep that
+  // peer-depends back on it.
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+        "webpack-dev-server": "^3.11.0"
+      },
+    }),
+  })
+  t.matchSnapshot(await printIdeal(path))
+})
+
+t.test('peer dep override with dep sets being replaced', async t => {
+  // in this case, because our root depends on webpack 5, and on something
+  // that has a peer dependency on webpack 4, it overrides but otherwise fails.
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      "devDependencies": {
+        "webpack": "^5.0.0",
+        "webpack-dev-server": "^3.11.0"
+      }
+    })
+  })
+  await t.rejects(printIdeal(path), { code: 'ERESOLVE' })
+  t.matchSnapshot(await printIdeal(path, { force: true }))
+})

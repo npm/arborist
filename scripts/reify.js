@@ -15,6 +15,10 @@ process.on('timeEnd', name => {
   }
   const res = process.hrtime(timers[name])
   delete timers[name]
+
+  if (options.quiet)
+    return
+
   console.error(name, res[0] * 1e3 + res[1] / 1e6)
 })
 process.on('exit', () => {
@@ -104,6 +108,8 @@ process.on('log', (level, ...args) => {
   if (level === 'warn' && args[0] === 'ERESOLVE') {
     args[2] = require('util').inspect(args[2], { depth: Infinity })
   }
+  if (options.quiet)
+    return
   return console.error(level, ...args)
 })
 

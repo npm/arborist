@@ -1068,6 +1068,22 @@ t.test('workspaces', t => {
   t.end()
 })
 
+t.test('reify from old package-lock with bins', async t => {
+  const path = fixture(t, 'old-package-lock-with-bins')
+  await reify(path, {})
+
+  t.matchSnapshot(
+    require(resolve(path, 'package-lock.json')),
+    'should add bins entry to package-lock packages entry'
+  )
+
+  const bin = resolve(path, 'node_modules/.bin/ruy')
+  if (process.platform === 'win32')
+    t.ok(fs.statSync(`${bin}.cmd`).isFile(), 'created shim')
+  else
+    t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+})
+
 t.test('fail early if bins will conflict', async t => {
   const path = t.testdir({
     lib: {
@@ -1178,4 +1194,18 @@ t.test('save complete lockfile on update-all', async t => {
   t.matchSnapshot(lock(), 'should have abbrev 1.0.4')
   await reify(path, { update: true })
   t.matchSnapshot(lock(), 'should update, but not drop root metadata')
+})
+
+t.test('save proper lockfile with bins when upgrading lockfile', t => {
+  const completeOpts = [ true, false ]
+  completeOpts.forEach(complete => {
+    t.test(`complete=${complete}`, async t => {
+      const path = fixture(t, 'semver-installed-with-old-package-lock')
+      const lock = () => fs.readFileSync(`${path}/package-lock.json`, 'utf8')
+      await reify(path, { complete })
+      t.matchSnapshot(lock(), 'should upgrade, with bins in place')
+    })
+  })
+
+  t.end()
 })

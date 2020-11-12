@@ -38,6 +38,7 @@
 /test/fixtures/links-all-over/node_modules/link-link
 /test/fixtures/links-all-over/node_modules/link-outside-nest
 /test/fixtures/links-all-over/node_modules/nest/node_modules/link-in-nest
+/test/fixtures/old-package-lock-with-bins/node_modules/.bin/ruy
 /test/fixtures/other/node_modules/glob
 /test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a
 /test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b

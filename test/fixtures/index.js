@@ -125,6 +125,8 @@ const symlinks = {
   'link-meta-deps/node_modules/@isaacs/testing-link-dep/node_modules/linked-dep':
     '../target',
   'prune-dev-bins/node_modules/.bin/yes': '../yes/yes.js',
+  'old-package-lock-with-bins/node_modules/.bin/ruy':
+    '../ruy/bin/index.js',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

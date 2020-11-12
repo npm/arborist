@@ -13299,6 +13299,39 @@ exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match sn
 
 `
 
+exports[`test/arborist/reify.js TAP reify from old package-lock with bins > should add bins entry to package-lock packages entry 1`] = `
+Object {
+  "dependencies": Object {
+    "ruy": Object {
+      "integrity": "sha512-VYppDTCM6INWUMKlWiKws4nVMuCNU5h+xjF6lj/0y90rLq017/m8aEpNy4zQSZFV2qz66U/hRZwwlSLJ5l5JMQ==",
+      "resolved": "https://registry.npmjs.org/ruy/-/ruy-1.0.0.tgz",
+      "version": "1.0.0",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "old-package-lock-with-bins",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "ruy": "^1.0.0",
+      },
+      "name": "old-package-lock-with-bins",
+      "version": "1.0.0",
+    },
+    "node_modules/ruy": Object {
+      "bin": Object {
+        "ruy": "bin/index.js",
+      },
+      "integrity": "sha512-VYppDTCM6INWUMKlWiKws4nVMuCNU5h+xjF6lj/0y90rLq017/m8aEpNy4zQSZFV2qz66U/hRZwwlSLJ5l5JMQ==",
+      "resolved": "https://registry.npmjs.org/ruy/-/ruy-1.0.0.tgz",
+      "version": "1.0.0",
+    },
+  },
+  "requires": true,
+  "version": "1.0.0",
+}
+`
+
 exports[`test/arborist/reify.js TAP reify properly with all deps when lockfile is ancient > must match snapshot 1`] = `
 Node {
   "children": Map {
@@ -27072,6 +27105,74 @@ exports[`test/arborist/reify.js TAP save complete lockfile on update-all > shoul
       "version": "1.1.1",
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP save proper lockfile with bins when upgrading lockfile complete=false > should upgrade, with bins in place 1`] = `
+{
+  "name": "reify-save-proper-lockfile-with-bins-when-upgrading-lockfile-complete-false",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "semver": "^7.3.2"
+      }
+    },
+    "node_modules/semver": {
+      "version": "7.3.2",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+      "integrity": "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==",
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+    }
+  },
+  "dependencies": {
+    "semver": {
+      "version": "7.3.2",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+      "integrity": "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ=="
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP save proper lockfile with bins when upgrading lockfile complete=true > should upgrade, with bins in place 1`] = `
+{
+  "name": "reify-save-proper-lockfile-with-bins-when-upgrading-lockfile-complete-true",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "semver": "^7.3.2"
+      }
+    },
+    "node_modules/semver": {
+      "version": "7.3.2",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+      "integrity": "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ==",
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+    }
+  },
+  "dependencies": {
+    "semver": {
+      "version": "7.3.2",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+      "integrity": "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ=="
     }
   }
 }

@@ -1192,7 +1192,7 @@ t.test('no fix available, linked top package', async t => {
 
   await arb.audit()
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
-  t.strictSame(checkLogs(), [['warn', 'audit',
+  t.match(checkLogs(), [['warn', 'audit',
     'Manual fix required in linked project at ./mkdirp-unfixable for mkdirp@*.\n' +
     "'cd ./mkdirp-unfixable' and run 'npm audit' for details.",
   ]])

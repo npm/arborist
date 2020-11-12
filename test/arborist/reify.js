@@ -70,7 +70,7 @@ const {registry} = registryServer
 
 const cache = t.testdir()
 
-t.test('setup server', { bail: true, buffered: false }, registryServer)
+t.only('setup server', { bail: true, buffered: false }, registryServer)
 
 // two little helper functions to make the loaded trees
 // easier to look at in the snapshot results.
@@ -685,8 +685,12 @@ t.test('rollbacks', { buffered: false }, t => {
     }).then(tree => 'it worked'), new Error('poop'))
       .then(() => {
         const warnings = check()
-        t.equal(warnings.length, 1)
+        t.equal(warnings.length, 2)
         t.match(warnings, [[
+          'warn',
+          'old lockfile',
+          '\nThe package-lock.json file was created with an old version of npm,\nso supplemental metadata must be fetched from the registry.\n\nThis is a one-time fix-up, please be patient...\n',
+        ]], [[
           'warn',
           'cleanup',
           'Failed to remove some directories',
@@ -802,8 +806,12 @@ t.test('rollbacks', { buffered: false }, t => {
       update: ['@isaacs/testing-bundledeps-parent'],
     }).then(tree => printTree(tree))).then(() => {
       const warnings = check()
-      t.equal(warnings.length, 1)
+      t.equal(warnings.length, 2)
       t.match(warnings, [[
+        'warn',
+        'old lockfile',
+        '\nThe package-lock.json file was created with an old version of npm,\nso supplemental metadata must be fetched from the registry.\n\nThis is a one-time fix-up, please be patient...\n',
+      ], [
         'warn',
         'cleanup',
         'Failed to remove some directories',
@@ -1066,6 +1074,22 @@ t.test('workspaces', t => {
   })
 
   t.end()
+})
+
+t.only('reify from old package-lock with bins', async t => {
+  const path = fixture(t, 'old-package-lock-with-bins')
+  await reify(path, {})
+
+  t.matchSnapshot(
+    require(resolve(path, 'package-lock.json')),
+    'should add bins entry to package-lock packages entry'
+  )
+
+  const bin = resolve(path, 'node_modules/.bin/ruy')
+  if (process.platform === 'win32')
+    t.ok(fs.statSync(`${bin}.cmd`).isFile(), 'created shim')
+  else
+    t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
 })
 
 t.test('fail early if bins will conflict', async t => {

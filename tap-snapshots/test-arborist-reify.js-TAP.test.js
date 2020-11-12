@@ -13299,6 +13299,39 @@ exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match sn
 
 `
 
+exports[`test/arborist/reify.js TAP reify from old package-lock with bins > should add bins entry to package-lock packages entry 1`] = `
+Object {
+  "dependencies": Object {
+    "ruy": Object {
+      "integrity": "sha512-VYppDTCM6INWUMKlWiKws4nVMuCNU5h+xjF6lj/0y90rLq017/m8aEpNy4zQSZFV2qz66U/hRZwwlSLJ5l5JMQ==",
+      "resolved": "https://registry.npmjs.org/ruy/-/ruy-1.0.0.tgz",
+      "version": "1.0.0",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "old-package-lock-with-bins",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "ruy": "^1.0.0",
+      },
+      "name": "old-package-lock-with-bins",
+      "version": "1.0.0",
+    },
+    "node_modules/ruy": Object {
+      "bin": Object {
+        "ruy": "bin/index.js",
+      },
+      "integrity": "sha512-VYppDTCM6INWUMKlWiKws4nVMuCNU5h+xjF6lj/0y90rLq017/m8aEpNy4zQSZFV2qz66U/hRZwwlSLJ5l5JMQ==",
+      "resolved": "https://registry.npmjs.org/ruy/-/ruy-1.0.0.tgz",
+      "version": "1.0.0",
+    },
+  },
+  "requires": true,
+  "version": "1.0.0",
+}
+`
+
 exports[`test/arborist/reify.js TAP reify properly with all deps when lockfile is ancient > must match snapshot 1`] = `
 Node {
   "children": Map {
@@ -38484,6 +38517,12 @@ Node {
           "to": "node_modules/source-map-support",
           "type": "prod",
         },
+        "typescript" => Edge {
+          "name": "typescript",
+          "spec": ">=2.0",
+          "to": "node_modules/typescript",
+          "type": "peer",
+        },
         "yn" => Edge {
           "name": "yn",
           "spec": "^3.0.0",
@@ -38567,6 +38606,12 @@ Node {
           "name": "typescript",
           "spec": "^3.7.2",
           "type": "prod",
+        },
+        Edge {
+          "from": "node_modules/ts-node",
+          "name": "typescript",
+          "spec": ">=2.0",
+          "type": "peer",
         },
       },
       "location": "node_modules/typescript",
@@ -39364,6 +39409,7 @@ Node {
     "@isaacs/testing-bundledeps" => Node {
       "children": Map {
         "@isaacs/testing-bundledeps-a" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/@isaacs/testing-bundledeps",
@@ -39385,6 +39431,7 @@ Node {
           "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
         },
         "@isaacs/testing-bundledeps-b" => Node {
+          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",

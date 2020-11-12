@@ -1,11 +1,11 @@
 {
   "_id": "scheduler",
-  "_rev": "208-0d23ce5fcddc02b5f121efe54b09cb5f",
+  "_rev": "211-64b323cebb47c10bb4af017802e51433",
   "name": "scheduler",
   "description": "Cooperative scheduler for the browser environment.",
   "dist-tags": {
-    "latest": "0.19.1",
-    "next": "0.20.0-rc.3",
+    "latest": "0.20.1",
+    "next": "0.0.0-8e5adfbd7",
     "experimental": "0.0.0-experimental-4ead6b530"
   },
   "versions": {
@@ -12321,6 +12321,257 @@
         "tmp": "tmp/scheduler_0.0.0-experimental-4ead6b530_1602081658122_0.904876709235543"
       },
       "_hasShrinkwrap": false
+    },
+    "0.20.0": {
+      "name": "scheduler",
+      "version": "0.20.0",
+      "description": "Cooperative scheduler for the browser environment.",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/scheduler"
+      },
+      "license": "MIT",
+      "keywords": [
+        "react"
+      ],
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "homepage": "https://reactjs.org/",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "_id": "scheduler@0.20.0",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-XegIgta1bIaz2LdaL6eg1GEcE42g0BY9qFXCqlZ/+s2MuEKfigFCW6DEGBlZzeVFlwDmVusrWEyFtBo4sbkkdA==",
+        "shasum": "3ff543696b169613afadb09d3fb3fe998d234dd2",
+        "tarball": "https://registry.npmjs.org/scheduler/-/scheduler-0.20.0.tgz",
+        "fileCount": 26,
+        "unpackedSize": 130274,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfj0PgCRA9TVsSAnZWagAAYfIP/RO8EjBoAMK5avQ3uENd\n2K53CvNlshenZbbrwdh39dOgc6IcGO7wha+gz3l3jpFKFN3KYbFqVR9/IYkw\nYj+1b2fCFZGEGhHiSNo2eunlcywhFjoxNdQxY67yQCuqypUDkMEmjDbkpdlh\ne+MllKqii6/HLi9l3U0gShGMdHSKWZz5etx9YOXg1lS+Wy4abRbgy7iGASHc\nYfz7+YtaYbq05YveMVJPKqeVI+IOmOd23HFe0xzhQ2Hl/PF5fYIcSBC75DIT\nUjBpEN4oiytI4MG6flfym0dERHx/9IBMpSuFl/jloeU7tmYlEdtiZbxFlXHo\nEqkgzSV6QNY0eOeczf3bZgTs50W31HpXyHWGC1KyCTiyCygrJ9bq6N0a7cVs\nFl8lUjtV/5eIsY30hmnpTqzFI7w6sIsrx1kZBLQyLWtMSB9JbXhbARgtHhgN\nnQfqis4gUgFmpaER8cJTvKg0rchyZjMBiV/qVPTe/mVBpwFe4Z+JtjPauorD\nANz2wlL5jFO28GA4IVhDUVfJJqmE1A3bDo1FCNhuQywcH8hvXqQD0Goy6vII\n0wpOS9uzRzHdasRzwqoNU/xdPXDOyhHLlJTAjBiXOr6h4l8sKYFbW8L8RGfJ\n9gE3CEUtCy31EgAPus04T4SUE6ECSRXpqIL9UiY5VQJS3FpC/RI5/CIqSTLl\nsV8e\r\n=E45E\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/scheduler_0.20.0_1603224544160_0.022044052860771934"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.0-8e5adfbd7": {
+      "name": "scheduler",
+      "version": "0.0.0-8e5adfbd7",
+      "description": "Cooperative scheduler for the browser environment.",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/scheduler"
+      },
+      "license": "MIT",
+      "keywords": [
+        "react"
+      ],
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "homepage": "https://reactjs.org/",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "readme": "# `scheduler`\n\nThis is a package for cooperative scheduling in a browser environment. It is currently used internally by React, but we plan to make it more generic.\n\nThe public API for this package is not yet finalized.\n\n### Thanks\n\nThe React team thanks [Anton Podviaznikov](https://podviaznikov.com/) for donating the `scheduler` package name.\n",
+      "readmeFilename": "README.md",
+      "_id": "scheduler@0.0.0-8e5adfbd7",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-Q5ipj3teMJXYf+8FTBWyVGSAnRyxXPlGQ5mpS+G56/aKdo9Ky9CM2/g1NCaYJGdnoUTjFpwG/Ws5gD5S7azK4Q==",
+        "shasum": "2ff67c3a13f6cd7336faf8832c4a1cce001e3108",
+        "tarball": "https://registry.npmjs.org/scheduler/-/scheduler-0.0.0-8e5adfbd7.tgz",
+        "fileCount": 26,
+        "unpackedSize": 130374,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfkXc3CRA9TVsSAnZWagAAuk8P/3gQBZs43LHfSbIvvJCu\nGhlfIBKUQ1POJxmx4amKxQ5hpQYsNcqI8y13HsZWmWnqWhJn+SIWcDozl1Vv\nbEL5hASDskdqA5S2ENc7977vHPec4OKk8T0uckJNpJQzrjcWv2QeYFdxX4Dy\nY+OdD5M+gdpVjhEq2EXrY+MUUec7i+rIitlZsIkUncAyEBDEaYLyTEFq5HTG\nSgAtLX+P9GG6FZd35/OtdU/4UIA5+oIy3loEGyxMB2ZkAZ76zAeeTdWKfOEy\n/lPK953to1sbYml2gt39Du0yJ8IqaTcMOt+MaitPrdfiyjLbrPEHCZhcZDYc\ntRPpRwkS2C4P+WRfpnh+vcMLh3IasSOBAd4D479wZv34OGmcCBHyb/JGMQCB\nEhHQNa9P/lBv9FXfW3BFas70WEyBSJ/uUCiUySbEnitBZnnXGp462WrWRE7l\nGsOrYPz3qPaTGtNWiRqmabuHTab/pW+e2XFVmjq2VtKyA7jm4B1HMWB8OzxM\ni1mLZn8WX8vB0lAc6Leq5zZZIVzGxm85JItdHtsOy4us6+lhMlITC5j3YHZ3\nh78NVPpFCE/8j/yEuCtUZbuW8Z8hewQ30fLgm0ywUorjrlZTxkrOsx6+tUm+\n+Iru5VQEqvVx9wsy2+QDXwr2y9WhY9DvgNb6/VJ1MBdG4wTi2+iM0geGbm4R\nEJyU\r\n=8szD\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/scheduler_0.0.0-8e5adfbd7_1603368758879_0.5667051462678618"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.20.1": {
+      "name": "scheduler",
+      "version": "0.20.1",
+      "description": "Cooperative scheduler for the browser environment.",
+      "main": "index.js",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/facebook/react.git",
+        "directory": "packages/scheduler"
+      },
+      "license": "MIT",
+      "keywords": [
+        "react"
+      ],
+      "bugs": {
+        "url": "https://github.com/facebook/react/issues"
+      },
+      "homepage": "https://reactjs.org/",
+      "dependencies": {
+        "loose-envify": "^1.1.0",
+        "object-assign": "^4.1.1"
+      },
+      "browserify": {
+        "transform": [
+          "loose-envify"
+        ]
+      },
+      "_id": "scheduler@0.20.1",
+      "_nodeVersion": "12.18.3",
+      "_npmVersion": "6.14.6",
+      "dist": {
+        "integrity": "sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==",
+        "shasum": "da0b907e24026b01181ecbc75efdc7f27b5a000c",
+        "tarball": "https://registry.npmjs.org/scheduler/-/scheduler-0.20.1.tgz",
+        "fileCount": 26,
+        "unpackedSize": 130266,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfkXl7CRA9TVsSAnZWagAABx0P/iPE49eLVWbrV3YrS0fU\nfcQaHBRMIhJ4eoFJAF41eWIuPZ7gK8ELrBtSTjDB9e6MaSDaqSY9attQZzgl\nIrtoa7spadUrXGYNmc17YpQJhVGsHCDIYHLV1jcHwGatd5eS5r34q/pbimE3\nwvcutUjBorIiaWNiysrvs1daZ1QSu8qxfEGYEY9Z8wc1C/uWhhAzNAPdmzfJ\nDoFWIrdFiLVLBrTjGmETdeoyqhE6tillZgusmWot7YhvJfgZmQpnN0Sluw4f\nY5DHxeZwKtymtBrCcM2fDsVxwzYz0nhAEWVnBvBpEw2X0cYgqHiOPFq72ZjJ\nDhuuVGSgw5vCCgvEg1+uGgJG2HzeGmV9PYi/svnRfnQjdhILMkaTjzI7T1P6\nsl5HWhzbWxQ6RFzQ9vcKl0Fqgvn/XVSsWGBH4N7+Y2oB4zDVi4yc4lEeEZ61\noNZzBF2+Jx5VbUXN+nwC171W8V4lD6IjoUim9FVq6D7LYk8SjaNRBJt9xMcZ\n7TgBX7PX5NT4UZHDI02219szIhAJpRdFkyPOc2pAHyZRWLLIp56iUF+WKEj8\nl7tOXQpSefZc87Srmv/zx46fBigOpKq2NlW1VQZC6vn3fDhI2NqyqMTZm7Y8\navKOilDFNQYJzOMQ5BZI9tVCk8OJDDzr/hGw2PaS9fm9PgmuorOh4LGZZLPx\nxpNZ\r\n=rm+g\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "sebmarkbage",
+          "email": "sebastian@calyptus.eu"
+        },
+        {
+          "name": "gaearon",
+          "email": "dan.abramov@gmail.com"
+        },
+        {
+          "name": "acdlite",
+          "email": "npm@andrewclark.io"
+        },
+        {
+          "name": "brianvaughn",
+          "email": "briandavidvaughn@gmail.com"
+        },
+        {
+          "name": "fb",
+          "email": "opensource+npm@fb.com"
+        },
+        {
+          "name": "trueadm",
+          "email": "dg@domgan.com"
+        },
+        {
+          "name": "sophiebits",
+          "email": "npm@sophiebits.com"
+        },
+        {
+          "name": "lunaruan",
+          "email": "lunaris.ruan@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "gaearon",
+        "email": "dan.abramov@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/scheduler_0.20.1_1603369339128_0.7549729994473013"
+      },
+      "_hasShrinkwrap": false
     }
   },
   "maintainers": [
@@ -12358,7 +12609,7 @@
     }
   ],
   "time": {
-    "modified": "2020-10-07T14:41:02.671Z",
+    "modified": "2020-10-22T12:22:23.173Z",
     "created": "2011-01-11T11:22:36.888Z",
     "0.1.0": "2011-01-11T11:22:36.888Z",
     "0.1.1": "2011-01-11T11:22:36.888Z",
@@ -12509,7 +12760,10 @@
     "0.20.0-rc.2": "2020-09-22T00:14:37.891Z",
     "0.0.0-4ead6b530": "2020-10-07T13:11:01.496Z",
     "0.20.0-rc.3": "2020-10-07T13:38:10.775Z",
-    "0.0.0-experimental-4ead6b530": "2020-10-07T14:40:58.233Z"
+    "0.0.0-experimental-4ead6b530": "2020-10-07T14:40:58.233Z",
+    "0.20.0": "2020-10-20T20:09:04.343Z",
+    "0.0.0-8e5adfbd7": "2020-10-22T12:12:39.024Z",
+    "0.20.1": "2020-10-22T12:22:19.306Z"
   },
   "repository": {
     "type": "git",
@@ -12527,6 +12781,6 @@
     "url": "https://github.com/facebook/react/issues"
   },
   "license": "MIT",
-  "readme": "",
-  "readmeFilename": ""
+  "readme": "# `scheduler`\n\nThis is a package for cooperative scheduling in a browser environment. It is currently used internally by React, but we plan to make it more generic.\n\nThe public API for this package is not yet finalized.\n\n### Thanks\n\nThe React team thanks [Anton Podviaznikov](https://podviaznikov.com/) for donating the `scheduler` package name.\n",
+  "readmeFilename": "README.md"
 }

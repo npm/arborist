@@ -118,6 +118,13 @@ const symlinks = {
 
   'external-link-cached-dummy-dep/root/node_modules/z': '../../a/t/u/v/w/x/y/z',
   'external-link-cached-dummy-dep/root/node_modules/x': '../../a/node_modules/b/node_modules/x',
+  'cli-750/node_modules/app': '../app',
+  'cli-750/node_modules/lib': '../lib',
+  'link-dep/node_modules/linked-dep': '../target',
+  'link-dev-dep/node_modules/linked-dev-dep': '../target',
+  'link-meta-deps/node_modules/@isaacs/testing-link-dep/node_modules/linked-dep':
+    '../target',
+  'prune-dev-bins/node_modules/.bin/yes': '../yes/yes.js',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {
@@ -139,7 +146,7 @@ const setup = () => {
     // it's fine for this to throw, since it typically means
     // that the links already exist, and that's fine.
     try {
-      symlinkSync(symlinks[s], p, 'dir')
+      symlinkSync(symlinks[s], p, 'junction')
       didSomething = true
     } catch (_) {}
   })
@@ -156,7 +163,10 @@ ${links.sort((a,b) => a.localeCompare(b)).join('\n')}
   }
 }
 
-if (process.argv[2] === 'cleanup' && require.main === module)
+const doCleanup = process.argv[2] === 'cleanup' && require.main === module ||
+  process.env.ARBORIST_FIXTURE_CLEANUP === '1'
+
+if (doCleanup)
   cleanup()
 else
   setup()

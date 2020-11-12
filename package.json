@@ -69,6 +69,7 @@
     "node-arg": [
       "--unhandled-rejections=strict"
     ],
+    "after": "test/fixtures/cleanup.js",
     "coverage-map": "map.js",
     "esm": false,
     "timeout": "120"

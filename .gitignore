@@ -11,6 +11,8 @@
 ### update it by running `node test/fixtures/index.js`
 /test/fixtures/badlink/node_modules/bar
 /test/fixtures/badlink/node_modules/foo
+/test/fixtures/cli-750/node_modules/app
+/test/fixtures/cli-750/node_modules/lib
 /test/fixtures/deep/root
 /test/fixtures/deeproot
 /test/fixtures/external-link-cached-dummy-dep/root/node_modules/x
@@ -28,6 +30,9 @@
 /test/fixtures/link-dep-nested/node_modules/foo
 /test/fixtures/link-dep-nested/node_modules/once
 /test/fixtures/link-dep-nested/root/node_modules/bork
+/test/fixtures/link-dep/node_modules/linked-dep
+/test/fixtures/link-dev-dep/node_modules/linked-dev-dep
+/test/fixtures/link-meta-deps/node_modules/@isaacs/testing-link-dep/node_modules/linked-dep
 /test/fixtures/linkedroot
 /test/fixtures/links-all-over/node_modules/link-deep
 /test/fixtures/links-all-over/node_modules/link-link
@@ -43,6 +48,7 @@
 /test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x
 /test/fixtures/pnpm/node_modules/@scope/x
 /test/fixtures/pnpm/node_modules/a
+/test/fixtures/prune-dev-bins/node_modules/.bin/yes
 /test/fixtures/selflink/node_modules/@scope/z/node_modules/glob
 /test/fixtures/selflink/node_modules/foo/node_modules/selflink
 /test/fixtures/symlinked-node-modules/example/node_modules

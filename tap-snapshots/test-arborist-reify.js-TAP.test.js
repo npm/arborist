@@ -38517,12 +38517,6 @@ Node {
           "to": "node_modules/source-map-support",
           "type": "prod",
         },
-        "typescript" => Edge {
-          "name": "typescript",
-          "spec": ">=2.0",
-          "to": "node_modules/typescript",
-          "type": "peer",
-        },
         "yn" => Edge {
           "name": "yn",
           "spec": "^3.0.0",
@@ -38606,12 +38600,6 @@ Node {
           "name": "typescript",
           "spec": "^3.7.2",
           "type": "prod",
-        },
-        Edge {
-          "from": "node_modules/ts-node",
-          "name": "typescript",
-          "spec": ">=2.0",
-          "type": "peer",
         },
       },
       "location": "node_modules/typescript",
@@ -39409,7 +39397,6 @@ Node {
     "@isaacs/testing-bundledeps" => Node {
       "children": Map {
         "@isaacs/testing-bundledeps-a" => Node {
-          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/@isaacs/testing-bundledeps",
@@ -39431,7 +39418,6 @@ Node {
           "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
         },
         "@isaacs/testing-bundledeps-b" => Node {
-          "bundled": true,
           "edgesIn": Set {
             Edge {
               "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",

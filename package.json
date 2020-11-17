@@ -9,7 +9,7 @@
     "@npmcli/move-file": "^1.0.1",
     "@npmcli/name-from-folder": "^1.0.1",
     "@npmcli/node-gyp": "^1.0.0",
-    "@npmcli/run-script": "^1.7.2",
+    "@npmcli/run-script": "^1.8.0",
     "bin-links": "^2.2.1",
     "cacache": "^15.0.3",
     "common-ancestor-path": "^1.0.1",

@@ -38,7 +38,7 @@
     "minify-registry-metadata": "^2.1.0",
     "mutate-fs": "^2.1.1",
     "require-inject": "^1.4.4",
-    "tap": "^14.10.7",
+    "tap": "^14.11.0",
     "tcompare": "^3.0.4"
   },
   "scripts": {

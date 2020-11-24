@@ -46015,3 +46015,22 @@ Object {
   "requires": true,
 }
 `
+
+exports[`test/arborist/reify.js TAP workspaces root as-a-workspace > should produce expected package-lock file 1`] = `
+Object {
+  "lockfileVersion": 2,
+  "name": "workspaces-root-linked",
+  "packages": Object {
+    "": Object {
+      "version": "1.0.0",
+      "workspaces": Array [
+        ".",
+        "a",
+        "b",
+      ],
+    },
+  },
+  "requires": true,
+  "version": "1.0.0",
+}
+`

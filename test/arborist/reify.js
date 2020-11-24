@@ -1126,6 +1126,14 @@ t.test('store files with a custom indenting', async t => {
   t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'))
 })
 
+t.test('do not rewrite valid package.json shorthands', async t => {
+  const path = fixture(t, 'package-json-shorthands')
+  const tree = await reify(path)
+  const res = require(path + '/package.json')
+  t.equal(res.bin, './index.js', 'should not rewrite bin property')
+  t.equal(res.funding, 'https://example.com', 'should not rewrite funding')
+})
+
 t.test('modules bundled by the root should be installed', async t => {
   const path = fixture(t, 'root-bundler')
   const tree = await reify(path)

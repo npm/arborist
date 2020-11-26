@@ -4,6 +4,7 @@ const Node = require('../lib/node.js')
 const requireInject = require('require-inject')
 const Link = require('../lib/link.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
+const { resolve } = require('path')
 
 const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
@@ -371,7 +372,21 @@ t.test('tracks the loading error encountered', t => {
 t.throws(() => new Node({pkg: {}}), TypeError(
   'could not detect node name from path or package'))
 
+t.test('load from system-root path', t => {
+  const root = new Node({
+    path: resolve('/'),
+  })
+  t.equal(root.name, null, 'ok to have a nameless node in system root')
+  t.end()
+})
+
 t.test('load with a virtual filesystem parent', t => {
+  const Node = requireInject('../lib/node.js', {
+    '../lib/debug.js': a => a(),
+  })
+  const Link = requireInject('../lib/link.js', {
+    '../lib/node.js': Node,
+  })
   const root = new Node({
     pkg: { name: 'root', dependencies: { a: '', link: '', link2: '', link3: '' }},
     path: '/home/user/projects/root',

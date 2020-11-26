@@ -2,11 +2,11 @@ const {resolve} = require('path')
 
 const t = require('tap')
 
-const savePackageJson = require('../lib/save-package-json.js')
+const updateRootPackageJson = require('../lib/update-root-package-json.js')
 
 t.test('missing package.json', async t => {
   const path = t.testdir({})
-  await savePackageJson({
+  await updateRootPackageJson({
     tree: {
       path: path,
       package: {
@@ -43,7 +43,7 @@ t.test('existing package.json', async t => {
       },
     }),
   })
-  await savePackageJson({
+  await updateRootPackageJson({
     tree: {
       path: path,
       package: {
@@ -73,7 +73,7 @@ t.test('custom formatting', async t => {
       version: '1.0.0',
     }),
   })
-  await savePackageJson({
+  await updateRootPackageJson({
     tree: {
       path: path,
       package: {

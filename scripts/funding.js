@@ -25,5 +25,5 @@ a.loadVirtual().then(tree => {
         console.log(node.name, node.location, node.package.funding)
     }
   }
-  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[0] / 1000}ms`)
+  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 1e6}ms`)
 })

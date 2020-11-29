@@ -16,5 +16,5 @@ new Arborist({path}).loadVirtual().then(tree => {
     print(tree)
   if (process.argv.includes('--save'))
     tree.meta.save()
-  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[0] / 1000}ms`)
+  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 1e6}ms`)
 }).catch(er => console.error(er))

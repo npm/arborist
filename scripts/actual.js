@@ -29,7 +29,7 @@ new Arborist(options).loadActual(options).then(tree => {
   if (!process.argv.includes('--quiet')) {
     print(tree)
   }
-  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 10e6}ms`)
+  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 1e6}ms`)
   if (options.save)
     tree.meta.save()
   if (options.saveHidden) {

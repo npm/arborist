@@ -8,12 +8,14 @@ t.ok(depValid({
   package: {
     version: '1.2.3',
   },
+  get version () { return this.package.version },
 }, '1.x', null, {}), 'range that is satisfied')
 
 t.ok(depValid({
   package: {
     version: '2.2.3',
   },
+  get version () { return this.package.version },
 }, '1.x', '2.x', {}), 'range that is acceptable')
 
 t.ok(depValid({
@@ -37,6 +39,7 @@ t.ok(depValid({
   package: {
     version: '1.2.3',
   },
+  get version () { return this.package.version },
 }, 'git://host/repo#semver:1.x', null, {}), 'git url with semver range')
 
 t.ok(depValid({
@@ -45,25 +48,30 @@ t.ok(depValid({
     name: 'bar',
     version: '1.2.3',
   },
+  get version () { return this.package.version },
 }, 'npm:bar@1.2.3', null, {}), 'alias is ok')
 
 t.ok(depValid({
   resolved: 'https://registry/abbrev-1.1.1.tgz',
   package: {},
+  get version () { return this.package.version },
 }, 'https://registry/abbrev-1.1.1.tgz', null, {}), 'remote url match')
 
 t.ok(depValid({
   resolved: 'git+ssh://git@github.com/foo/bar',
   package: {},
+  get version () { return this.package.version },
 }, 'git+ssh://git@github.com/foo/bar.git', null, {}), 'matching _from saveSpec')
 
 t.notOk(depValid({
   resolved: 'git+ssh://git@github.com/foo/bar',
   package: {},
+  get version () { return this.package.version },
 }, 'git+ssh://git@github.com/bar/foo.git', null, {}), 'different repo')
 
 t.notOk(depValid({
   package: {},
+  get version () { return this.package.version },
 }, 'git+ssh://git@github.com/bar/foo.git', null, {}), 'missing repo')
 
 t.ok(depValid({
@@ -84,9 +92,13 @@ t.ok(depValid({
       saveSpec: 'file:tarball.tgz',
     },
   },
+  get version () { return this.package.version },
 }, './tarball.tgz', null, {}), 'probably the same-ish, hopefully')
 
-t.notOk(depValid({package:{}}, './tarball.tgz', null, {}), 'too uncertain, nope')
+t.notOk(depValid({
+  package: {},
+  get version () { return this.package.version },
+}, './tarball.tgz', null, {}), 'too uncertain, nope')
 
 t.ok(depValid({
   resolved: 'https://registry.npmjs.org/foo/foo-1.2.3.tgz',

@@ -65,12 +65,12 @@ exports[`test/audit-report.js TAP a dep vuln that also has its own advisory agai
       "total": 2
     },
     "dependencies": {
-      "prod": 2,
+      "prod": 3,
       "dev": 0,
       "optional": 0,
       "peer": 0,
       "peerOptional": 0,
-      "total": 2
+      "total": 3
     }
   }
 }
@@ -484,12 +484,12 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
       "total": 16
     },
     "dependencies": {
-      "prod": 506,
+      "prod": 507,
       "dev": 0,
       "optional": 12,
       "peer": 0,
       "peerOptional": 0,
-      "total": 518
+      "total": 519
     }
   }
 }
@@ -831,12 +831,12 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
       "total": 13
     },
     "dependencies": {
-      "prod": 317,
+      "prod": 318,
       "dev": 0,
       "optional": 12,
       "peer": 0,
       "peerOptional": 0,
-      "total": 329
+      "total": 330
     }
   }
 }
@@ -1178,12 +1178,12 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
       "total": 13
     },
     "dependencies": {
-      "prod": 317,
+      "prod": 318,
       "dev": 0,
       "optional": 12,
       "peer": 0,
       "peerOptional": 0,
-      "total": 329
+      "total": 330
     }
   }
 }
@@ -1525,12 +1525,12 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
       "total": 13
     },
     "dependencies": {
-      "prod": 317,
+      "prod": 318,
       "dev": 0,
       "optional": 12,
       "peer": 0,
       "peerOptional": 0,
-      "total": 329
+      "total": 330
     }
   }
 }
@@ -1545,8 +1545,8 @@ Object {
       "optional": 0,
       "peer": 0,
       "peerOptional": 0,
-      "prod": 155,
-      "total": 156,
+      "prod": 156,
+      "total": 157,
     },
     "vulnerabilities": Object {
       "critical": 0,
@@ -1760,12 +1760,12 @@ exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at
       "total": 2
     },
     "dependencies": {
-      "prod": 0,
+      "prod": 1,
       "dev": 0,
       "optional": 2,
       "peer": 0,
       "peerOptional": 0,
-      "total": 2
+      "total": 3
     }
   }
 }
@@ -1822,12 +1822,12 @@ exports[`test/audit-report.js TAP metavuln where dep is not a registry dep > jso
       "total": 2
     },
     "dependencies": {
-      "prod": 1,
+      "prod": 2,
       "dev": 2,
       "optional": 0,
       "peer": 0,
       "peerOptional": 0,
-      "total": 3
+      "total": 4
     }
   }
 }
@@ -1842,8 +1842,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 1,
@@ -2280,8 +2280,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 1,
@@ -2432,8 +2432,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 1,
@@ -2870,8 +2870,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 1,
@@ -3022,8 +3022,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 0,
@@ -3047,8 +3047,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 1,
@@ -3474,8 +3474,8 @@ Object {
       "optional": 351,
       "peer": 26,
       "peerOptional": 0,
-      "prod": 2,
-      "total": 751,
+      "prod": 3,
+      "total": 752,
     },
     "vulnerabilities": Object {
       "critical": 1,
@@ -3928,12 +3928,12 @@ exports[`test/audit-report.js TAP one vulnerability > json version 1`] = `
       "total": 1
     },
     "dependencies": {
-      "prod": 1,
+      "prod": 2,
       "dev": 0,
       "optional": 0,
       "peer": 0,
       "peerOptional": 0,
-      "total": 1
+      "total": 2
     }
   }
 }
@@ -3998,12 +3998,12 @@ exports[`test/audit-report.js TAP unfixable, but not a semver major forced fix >
       "total": 2
     },
     "dependencies": {
-      "prod": 2,
+      "prod": 3,
       "dev": 0,
       "optional": 0,
       "peer": 0,
       "peerOptional": 0,
-      "total": 2
+      "total": 3
     }
   }
 }
@@ -4045,12 +4045,12 @@ exports[`test/audit-report.js TAP vulnerable dep not from registry > json versio
       "total": 1
     },
     "dependencies": {
-      "prod": 0,
+      "prod": 1,
       "dev": 0,
       "optional": 0,
       "peer": 1,
       "peerOptional": 0,
-      "total": 1
+      "total": 2
     }
   }
 }

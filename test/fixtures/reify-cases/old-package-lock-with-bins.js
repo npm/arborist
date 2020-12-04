@@ -3,7 +3,7 @@ module.exports = t => {
   const path = t.testdir({
   "node_modules": {
     ".bin": {
-      "ruy": t.fixture('symlink', "../ruy/bin/index.js"),
+      "ruy": process.platform === 'win32' ? '' : t.fixture('symlink', "../ruy/bin/index.js"),
       "ruy.cmd": `@ECHO off
 SETLOCAL
 CALL :find_dp0

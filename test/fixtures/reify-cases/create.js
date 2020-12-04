@@ -2,7 +2,13 @@
 // In order to support symlinks with the t.fixture(), it creates a
 // function that takes a tap test object as an argument.
 // usage: t.testdir(require(testCase)(t))
-const {readdirSync, readFileSync, readlinkSync, writeFileSync} = require('fs')
+const {
+  statSync,
+  readdirSync,
+  readFileSync,
+  readlinkSync,
+  writeFileSync,
+} = require('fs')
 
 const {resolve, relative, basename} = require('path')
 
@@ -66,7 +72,8 @@ const readFixture = dir => {
     } else if (ent.isSymbolicLink()) {
       const t = token(p)
       const v = readlinkSync(p)
-      symlinks.set(t, v)
+      const st = statSync(p)
+      symlinks.set(t, [v, st.isDirectory()])
       res[ent.name] = t
     }
   }
@@ -74,10 +81,11 @@ const readFixture = dir => {
 }
 
 let output = JSON.stringify(readFixture(fixture), null, 2)
-for (const [token, value] of symlinks.entries()) {
+for (const [token, [value, winOk]] of symlinks.entries()) {
+  const winGuard = winOk ? '' : `process.platform === 'win32' ? '' : `
   output = output
     .split(JSON.stringify(token))
-    .join(`t.fixture('symlink', ${JSON.stringify(value)})`)
+    .join(`${winGuard}t.fixture('symlink', ${JSON.stringify(value)})`)
 }
 const resc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 for (const [token, obj] of jsonFiles.entries()) {

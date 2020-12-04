@@ -25,7 +25,8 @@ module.exports = t => {
         }
       }
     }),
-    "a": t.fixture('symlink', "../a")
+    "a": t.fixture('symlink', "../a"),
+    "pkg-a": t.fixture('symlink', "../a")
   },
   "package-lock.json": JSON.stringify({
     "name": "workspaces-add-new-dep",

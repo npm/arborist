@@ -3,8 +3,8 @@ module.exports = t => {
   const path = t.testdir({
   "node_modules": {
     ".bin": {
-      "yes": t.fixture('symlink', "../yes/yes.js"),
-      "yes.cmd": t.fixture('file', "PLAIN FILE"),
+      "yes": process.platform === 'win32' ? '' : t.fixture('symlink', "../yes/yes.js"),
+      "yes.cmd": "PLAIN FILE\n"
     },
     "yes": {
       "package.json": JSON.stringify({

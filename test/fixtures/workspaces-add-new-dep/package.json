@@ -1,6 +1,1 @@
-{
-  "name": "workspaces-add-new-dep",
-  "workspaces": [
-    "a"
-  ]
-}
+{"name":"workspaces-add-new-dep","workspaces":["a"]}

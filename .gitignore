@@ -71,6 +71,9 @@ scripts/benchmark/*/
 /test/fixtures/workspace3/node_modules/app
 /test/fixtures/workspace3/node_modules/b
 /test/fixtures/workspace3/node_modules/c
+/test/fixtures/workspaces-add-new-dep/node_modules/a
+/test/fixtures/workspaces-add-new-dep/node_modules/pkg-a
+/test/fixtures/workspaces-non-simplistic/node_modules/pkg-a
 /test/fixtures/workspaces-simple/node_modules/a
 /test/fixtures/workspaces-simple/node_modules/b
 ### END IGNORED SYMLINKS ###

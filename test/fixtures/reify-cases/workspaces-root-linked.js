@@ -1,4 +1,4 @@
-// generated from test/fixtures/workspaces-simple
+// generated from test/fixtures/workspaces-root-linked
 module.exports = t => {
   const path = t.testdir({
   "a": {
@@ -6,7 +6,7 @@ module.exports = t => {
       "name": "a",
       "version": "1.0.0",
       "dependencies": {
-        "b": "^1.0.0"
+        "abbrev": "^1.0.0"
       }
     })
   },
@@ -16,13 +16,11 @@ module.exports = t => {
       "version": "1.0.0"
     })
   },
-  "node_modules": {
-    "a": t.fixture('symlink', "../a"),
-    "b": t.fixture('symlink', "../b")
-  },
   "package.json": JSON.stringify({
-    "name": "workspace-simple",
+    "name": "workspaces-root-linked",
+    "version": "1.0.0",
     "workspaces": [
+      ".",
       "a",
       "b"
     ]

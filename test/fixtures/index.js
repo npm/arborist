@@ -127,6 +127,11 @@ const symlinks = {
   'prune-dev-bins/node_modules/.bin/yes': '../yes/yes.js',
   'old-package-lock-with-bins/node_modules/.bin/ruy':
     '../ruy/bin/index.js',
+
+  'workspaces-add-new-dep/node_modules/pkg-a': '../a',
+  'workspaces-add-new-dep/node_modules/a': '../a',
+
+  'workspaces-non-simplistic/node_modules/pkg-a': '../a',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

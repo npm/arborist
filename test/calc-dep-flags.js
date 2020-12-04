@@ -26,7 +26,7 @@ const printTree = tree => depth({
 
 t.test('flag stuff', t => {
   const root = new Node({
-    path: '.',
+    path: '/x',
     realpath: '/x',
     pkg: {
       dependencies: { prod: '' },

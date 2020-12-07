@@ -340,3 +340,29 @@ t.test('omit options', async t => {
   }
   t.end()
 })
+
+t.test('audit when tree is empty', async t => {
+  const tree = new Node({
+    path: '/path/to/tree',
+  })
+  const auditReport = new AuditReport(tree)
+  const { report } = await auditReport.run()
+  t.strictSame(report, null)
+})
+
+t.test('audit when bulk report doenst have anything in it', async t => {
+  const tree = new Node({
+    path: '/path/to/tree',
+    pkg: {
+      name: 'tree',
+      version: '1.2.3',
+      devDependencies: { something: '1.2.3' },
+    },
+    children: [
+      { pkg: { name: 'something', version: '1.2.3' } },
+    ],
+  })
+  const auditReport = new AuditReport(tree, { omit: ['dev'] })
+  const { report } = await auditReport.run()
+  t.strictSame(report, null)
+})

@@ -57,7 +57,7 @@ const printTree = tree => ({
       }
     } : {}),
   ...(tree.isLink ? {
-    target: {
+    target: tree.target && {
       name: tree.target.name,
       parent: tree.target.parent && tree.target.parent.location
     }

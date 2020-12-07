@@ -706,7 +706,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "b" => Link {
@@ -727,7 +727,7 @@ Node {
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -777,7 +777,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "b" => Link {
@@ -804,7 +804,7 @@ Node {
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -13919,15 +13919,6 @@ Node {
           "type": "prod",
         },
       },
-      "edgesOut": Map {
-        "tap" => Edge {
-          "error": "MISSING",
-          "name": "tap",
-          "spec": "^10.1",
-          "to": null,
-          "type": "dev",
-        },
-      },
       "location": "node_modules/abbrev",
       "name": "abbrev",
       "package": Object {
@@ -14455,7 +14446,7 @@ Node {
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "symlink-in-tree" => Link {
@@ -14663,15 +14654,6 @@ Node {
           "type": "prod",
         },
       },
-      "edgesOut": Map {
-        "tap" => Edge {
-          "error": "MISSING",
-          "name": "tap",
-          "spec": "^10.1",
-          "to": null,
-          "type": "dev",
-        },
-      },
       "location": "node_modules/abbrev",
       "name": "abbrev",
       "package": Object {
@@ -15199,7 +15181,7 @@ Node {
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "symlink-in-tree" => Link {
@@ -15934,7 +15916,7 @@ Node {
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "symlink-in-tree" => Link {
@@ -16597,7 +16579,7 @@ Node {
       "resolved": "file:../abbrev-link-target",
       "target": Object {
         "name": "abbrev-link-target",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "symlink-in-tree" => Link {
@@ -16697,7 +16679,7 @@ Node {
       "resolved": "file:../app",
       "target": Object {
         "name": "app",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "lib" => Link {
@@ -16718,7 +16700,7 @@ Node {
       "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -16761,7 +16743,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "b" => Link {
@@ -16788,7 +16770,7 @@ Node {
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -16837,7 +16819,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "abbrev" => Node {
@@ -16875,7 +16857,7 @@ Node {
       "resolved": "file:../packages/b",
       "target": Object {
         "name": "b",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -16930,7 +16912,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "abbrev" => Link {
@@ -16951,7 +16933,7 @@ Node {
       "resolved": "file:../packages/abbrev",
       "target": Object {
         "name": "abbrev",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -17000,7 +16982,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -17043,7 +17025,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "once" => Node {
@@ -17130,7 +17112,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -17173,7 +17155,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "abbrev" => Link {
@@ -17200,7 +17182,7 @@ Node {
       "resolved": "file:../packages/abbrev",
       "target": Object {
         "name": "abbrev",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -17249,7 +17231,7 @@ Node {
       "resolved": "file:../packages/a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "abbrev" => Node {
@@ -17293,7 +17275,7 @@ Node {
       "resolved": "file:../packages/b",
       "target": Object {
         "name": "b",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "c" => Link {
@@ -17314,7 +17296,7 @@ Node {
       "resolved": "file:../packages/c",
       "target": Object {
         "name": "c",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "uuid" => Node {

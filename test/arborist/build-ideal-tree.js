@@ -1440,7 +1440,7 @@ This is a one-time fix-up, please be patient...
 
 t.test('complete build for project with old lockfile', async t => {
   const checkLogs = warningTracker()
-  const path = resolve(fixtures, 'eslintme')
+  const path = resolve(fixtures, 'link-dep-empty')
   const arb = new Arborist({ path, ...OPT })
   const tree = await arb.buildIdealTree({ complete: true })
   t.matchSnapshot(printTree(tree))
@@ -2181,7 +2181,7 @@ t.test('do not ever nest peer deps underneath their dependent ever', async t => 
   const path = t.testdir({
     'package.json': JSON.stringify({
       dependencies: {
-        ink: '3.0.8',
+        treport: '1.0.2',
         // this peer depends on react 17
         'react-reconciler': '0.26.0',
       },
@@ -2309,8 +2309,8 @@ t.test('peer dep override with dep sets being replaced', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({
       "devDependencies": {
-        "webpack": "^5.0.0",
-        "webpack-dev-server": "^3.11.0"
+        "webpack": "5.0.0",
+        "webpack-dev-server": "3.11.0"
       }
     })
   })

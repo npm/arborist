@@ -61,7 +61,7 @@ const printTree = tree => ({
       })),
     } : {}),
   ...(tree.isLink ? {
-    target: {
+    target: tree.target && {
       name: tree.target.name,
       ...(tree.target.parent ? { parent: pp(tree.target.parent.realpath) } : {}),
       ...(tree.target.fsParent ? { fsParent: pp(tree.target.fsParent.realpath) } : {}),
@@ -167,6 +167,9 @@ t.test('load a tree rooted on a different node', async t => {
   t.equal(transp.children.get('a').path, resolve(other, 'node_modules/a'))
   t.equal(transp.children.get('b').path, resolve(other, 'node_modules/b'))
   t.equal(transp.children.get('c').path, resolve(other, 'node_modules/c'))
+  t.notEqual(transp.children.get('a').target, null, 'did not break link')
+  t.notEqual(transp.children.get('b').target, null, 'did not break link')
+  t.notEqual(transp.children.get('c').target, null, 'did not break link')
   t.equal(transp.children.get('a').realpath, resolve(other, 'packages/a'))
   t.equal(transp.children.get('b').realpath, resolve(other, 'packages/b'))
   t.equal(transp.children.get('c').realpath, resolve(other, 'packages/c'))

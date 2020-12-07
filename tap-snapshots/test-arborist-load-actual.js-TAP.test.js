@@ -952,7 +952,7 @@ Node {
 
 exports[`test/arborist/load-actual.js TAP deeproot/root > loaded tree 1`] = `
 Link {
-  "location": "",
+  "location": "../deeproot/root",
   "meta": Object {
     "dependencies": Object {
       "@scope/x": Object {
@@ -3006,7 +3006,6 @@ Node {
       "type": "prod",
     },
   },
-  "fsParent": "link-dep-nested",
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -3099,7 +3098,7 @@ Node {
 
 exports[`test/arborist/load-actual.js TAP linkedroot > loaded tree 1`] = `
 Link {
-  "location": "",
+  "location": "../linkedroot",
   "meta": Object {
     "dependencies": Object {
       "@scope/x": Object {
@@ -4061,7 +4060,7 @@ Node {
 
 exports[`test/arborist/load-actual.js TAP load a global space symlink > expect resolving Promise 1`] = `
 Link {
-  "location": "",
+  "location": "../lib-link",
   "name": "lib-link",
   "realpath": "global-style/lib",
   "target": Object {
@@ -5691,6 +5690,7 @@ Node {
     "lockfileVersion": 2,
     "name": "noname",
     "packages": Object {
+      "": Object {},
       "node_modules/foo": Object {
         "extraneous": true,
       },
@@ -6178,6 +6178,7 @@ Node {
     "lockfileVersion": 2,
     "name": "other",
     "packages": Object {
+      "": Object {},
       "../root/node_modules/@scope/x/node_modules/glob": Object {
         "dependencies": Object {
           "graceful-fs": "",
@@ -6284,6 +6285,12 @@ Node {
       "type": "prod",
     },
   },
+  "fsChildren": Array [
+    "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
+    "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
+    "node_modules/.pnpm/registry.npmjs.org/b/1.0.0",
+    "node_modules/.pnpm/registry.npmjs.org/c/1.0.0",
+  ],
   "location": "",
   "meta": Object {
     "dependencies": Object {
@@ -8374,6 +8381,7 @@ Node {
     "lockfileVersion": 2,
     "name": "workspace3",
     "packages": Object {
+      "": Object {},
       "app": Object {
         "dependencies": Object {
           "a": "",

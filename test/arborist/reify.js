@@ -1067,6 +1067,14 @@ t.test('workspaces', t => {
     })
   })
 
+  t.test('root as-a-workspace', t => {
+    const path = fixture(t, 'workspaces-root-linked')
+    reify(path).then(() => {
+      t.matchSnapshot(require(path + '/package-lock.json'), 'should produce expected package-lock file')
+      t.end()
+    })
+  })
+
   t.end()
 })
 

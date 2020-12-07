@@ -320,7 +320,7 @@ Node {
       "resolved": "file:../target",
       "target": Object {
         "name": "target",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -957,7 +957,7 @@ Node {
       "resolved": "file:../target",
       "target": Object {
         "name": "target",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -1506,7 +1506,7 @@ Node {
       "resolved": "file:../target",
       "target": Object {
         "name": "target",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -1632,7 +1632,7 @@ Node {
           "resolved": "file:../target",
           "target": Object {
             "name": "target",
-            "parent": undefined,
+            "parent": null,
           },
         },
       },
@@ -1714,7 +1714,7 @@ Node {
       "resolved": "file:../app",
       "target": Object {
         "name": "app",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "lib" => Link {
@@ -1731,7 +1731,7 @@ Node {
       "resolved": "file:../lib",
       "target": Object {
         "name": "lib",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -27943,7 +27943,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
     "b" => Link {
@@ -27960,7 +27960,7 @@ Node {
       "resolved": "file:../b",
       "target": Object {
         "name": "b",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -45778,7 +45778,7 @@ Node {
       "resolved": "file:../a",
       "target": Object {
         "name": "a",
-        "parent": undefined,
+        "parent": null,
       },
     },
   },
@@ -46013,5 +46013,91 @@ Object {
     },
   },
   "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP workspaces root as-a-workspace > should produce expected package-lock file 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "requires": Object {
+        "abbrev": "^1.0.0",
+      },
+      "version": "file:a",
+    },
+    "abbrev": Object {
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+    "b": Object {
+      "version": "file:b",
+    },
+    "workspaces-root-linked": Object {
+      "dependencies": Object {
+        "a": Object {
+          "requires": Object {
+            "abbrev": "^1.0.0",
+          },
+          "version": "file:a",
+        },
+        "abbrev": Object {
+          "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "version": "1.1.1",
+        },
+        "b": Object {
+          "version": "file:b",
+        },
+      },
+      "requires": Object {
+        "a": "file:a",
+        "b": "file:b",
+        "workspaces-root-linked": "file:",
+      },
+      "version": "file:",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "workspaces-root-linked",
+  "packages": Object {
+    "": Object {
+      "name": "workspaces-root-linked",
+      "version": "1.0.0",
+      "workspaces": Array [
+        ".",
+        "a",
+        "b",
+      ],
+    },
+    "a": Object {
+      "dependencies": Object {
+        "abbrev": "^1.0.0",
+      },
+      "version": "1.0.0",
+    },
+    "b": Object {
+      "version": "1.0.0",
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "a",
+    },
+    "node_modules/abbrev": Object {
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "b",
+    },
+    "node_modules/workspaces-root-linked": Object {
+      "link": true,
+      "resolved": "",
+    },
+  },
+  "requires": true,
+  "version": "1.0.0",
 }
 `

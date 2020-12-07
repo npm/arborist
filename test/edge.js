@@ -39,6 +39,7 @@ const top = {
   edgesIn: new Set(),
   explain: () => 'top node explanation',
   package: { name: 'top', version: '1.2.3' },
+  get version () { return this.package.version },
   isTop: true,
   parent: null,
   resolve (n) {
@@ -57,6 +58,7 @@ const a = {
   edgesIn: new Set(),
   explain: () => 'a explanation',
   package: { name: 'a', version: '1.2.3' },
+  get version () { return this.package.version },
   isTop: false,
   parent: top,
   resolve (n) {
@@ -75,6 +77,7 @@ const b = {
   edgesIn: new Set(),
   explain: () => 'b explanation',
   package: { name: 'b', version: '1.2.3' },
+  get version () { return this.package.version },
   isTop: false,
   parent: top,
   resolve (n) {
@@ -93,6 +96,7 @@ const bb = {
   edgesIn: new Set(),
   explain: () => 'bb explanation',
   package: { name: 'bb', version: '1.2.3' },
+  get version () { return this.package.version },
   isTop: false,
   parent: b,
   resolve (n) {
@@ -111,6 +115,7 @@ const aa = {
   edgesIn: new Set(),
   explain: () => 'aa explanation',
   package: { name: 'aa', version: '1.2.3' },
+  get version () { return this.package.version },
   isTop: false,
   parent: a,
   resolve (n) {
@@ -129,6 +134,7 @@ const c = {
   edgesIn: new Set(),
   explain: () => 'c explanation',
   package: { name: 'c', version: '2.3.4' },
+  get version () { return this.package.version },
   isTop: false,
   parent: top,
   resolve (n) {

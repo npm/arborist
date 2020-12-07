@@ -3,6 +3,7 @@ const Link = require('../lib/link.js')
 const Node = require('../lib/node.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 
+const { resolve } = require('path')
 const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
   obj.path = obj.path && normalizePath(obj.path)
@@ -63,7 +64,7 @@ t.matchSnapshot(normalizePaths(new Link({
   target: root,
 })), 'instantiate with target specified')
 
-t.test('link.target setter', t => {
+t.test('link.target setter', async t => {
   const link = new Link({
     path: '/path/to/link',
     realpath: '/node-a',
@@ -98,8 +99,124 @@ t.test('link.target setter', t => {
     }))))
   link.target = laterTarget
   t.equal(link.target, laterTarget, 'waiting for a new target to resolve')
-  return laterTarget.then(node => {
-    t.equal(link.target, node, 'target resolved and assigned')
-    t.equal(link.package, node.package, 'took on new targets package')
+  t.throws(() => link.target = oldTarget, {
+    message: 'cannot set target while awaiting',
+    path: link.path,
+    realpath: link.realpath,
   })
+  const node = await laterTarget
+  t.equal(link.target, node, 'target resolved and assigned')
+  t.equal(link.package, node.package, 'took on new targets package')
+  t.equal(node.linksIn.has(link), true, 'link in node.linksIn')
+  link.target = null
+  t.equal(link.target, null, 'target is now null')
+  t.strictSame(link.package, {}, 'removed target, package is now empty')
+  // just test the guard that setting to a different falsey value is fine
+  link.target = undefined
+  t.equal(link.target, null, 'target is still null')
+  t.strictSame(link.package, {}, 'removed target, package is now empty')
+})
+
+t.test('get root from various places', t => {
+  const root = new Node({
+    path: '/path/to/root',
+  })
+
+  t.test('get from root', t => {
+    const fromRoot = new Link({
+      pkg: { name: 'from-root' },
+      path: '/path/to/root/from-root',
+      realpath: '/path/to/root/from-root-target',
+      root,
+    })
+    t.equal(fromRoot.root, root)
+    t.equal(fromRoot.fsParent, root)
+    t.equal(fromRoot.parent, null)
+    t.equal(fromRoot.target.root, root)
+    t.equal(fromRoot.target.fsParent, root)
+    t.equal(fromRoot.target.parent, null)
+    t.end()
+  })
+
+  t.test('get from fsParent', t => {
+    const fromFsParent = new Link({
+      pkg: { name: 'from-fs-parent' },
+      path: '/path/to/root/from-fs-parent',
+      realpath: '/path/to/root/from-root-fs-parent',
+      fsParent: root,
+    })
+    t.equal(fromFsParent.root, root)
+    t.equal(fromFsParent.fsParent, root)
+    t.equal(fromFsParent.parent, null)
+    t.equal(fromFsParent.target.root, root)
+    t.equal(fromFsParent.target.fsParent, root)
+    t.equal(fromFsParent.target.parent, null)
+    t.end()
+  })
+
+  t.test('get from parent', t => {
+    const fromParent = new Link({
+      pkg: { name: 'from-parent' },
+      parent: root,
+      realpath: '/path/to/root/from-root-parent',
+    })
+    t.equal(fromParent.root, root)
+    t.equal(fromParent.fsParent, null)
+    t.equal(fromParent.parent, root)
+    t.equal(fromParent.target.root, root)
+    t.equal(fromParent.target.fsParent, root)
+    t.equal(fromParent.target.parent, null)
+    t.end()
+  })
+
+  t.end()
+})
+
+t.test('temporary link node pending attachment to a tree', t => {
+  const root = new Node({ path: '/path/to/node' })
+  const link = new Link({ name: 'foo', realpath: '/this/will/change' })
+  const target = new Node({ path: '/path/to/node/foo' })
+  t.equal(link.root, link)
+  t.equal(target.root, target)
+  t.equal(normalizePath(link.realpath), normalizePath('/this/will/change'))
+  link.target = target
+  t.equal(target.root, link)
+  t.equal(link.realpath, target.path)
+  t.equal(link.path, null)
+  link.parent = root
+  t.equal(normalizePath(link.realpath), normalizePath(target.path))
+  t.equal(normalizePath(link.path), normalizePath(root.path + '/node_modules/foo'))
+  t.equal(link.root, root)
+  t.equal(target.root, root)
+  t.equal(target.fsParent, root)
+
+  const link2 = new Link({ name: 'bar', realpath: '/this/will/change' })
+  const target2 = new Node({ name: 'bar' })
+  link2.target = target2
+  t.equal(normalizePath(target2.path), normalizePath('/this/will/change'))
+  link2.target = null
+  target2.realpath = target2.path = resolve('/path/to/node/bar')
+  link2.target = target2
+  t.equal(normalizePath(link2.realpath), normalizePath(target2.path))
+  link2.parent = root
+  t.equal(target2.fsParent, root)
+
+  t.end()
+})
+
+t.test('link gets version from target', t => {
+  const link = new Link({ realpath: '/some/real/path', path: '/other/path' })
+  t.equal(link.version, '')
+  link.target = null
+  link.package = {name: 'bar', version: '2.3.4' }
+  t.equal(link.version, '2.3.4')
+  link.package = {}
+  t.equal(link.version, '')
+  const target = new Node({
+    pkg: { name: 'foo', version: '1.2.3' },
+    path: '/some/real/path',
+    root: link,
+  })
+  t.equal(link.version, '1.2.3')
+  t.end()
 })

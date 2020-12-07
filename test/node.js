@@ -5,6 +5,7 @@ const requireInject = require('require-inject')
 const Link = require('../lib/link.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 const { resolve } = require('path')
+const treeCheck = require('../lib/tree-check.js')
 
 const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
@@ -233,6 +234,7 @@ t.test('testing with dep tree', t => {
       realpath: meta.realpath,
       target: meta,
     })
+    t.equal(metaMeta.root, root, 'link takes root of target if unspecified')
     metaMeta.parent = newMeta
     t.equal(metaMeta.root, root)
     t.equal(meta.root, root)
@@ -244,6 +246,7 @@ t.test('testing with dep tree', t => {
 
     t.equal(meta.parent, root, 'old meta parent is root before assigning')
     newMeta.parent = root
+
     t.equal(meta.parent, null, 'old meta parent removed')
     t.notEqual(root.children.get('meta'), meta,
       'root.children no longer has old meta')
@@ -254,12 +257,14 @@ t.test('testing with dep tree', t => {
 
     t.test('replacement tests', t => {
       const newProd = new Node({
+        name: 'prod',
         pkg: {
           name: 'prod',
           version: '1.2.3',
           dependencies: { meta: '' },
           peerDependencies: { peer: '' },
         },
+        path: '/some/path',
         resolved: 'prod',
         integrity: 'prod',
       })
@@ -270,21 +275,24 @@ t.test('testing with dep tree', t => {
       t.equal(prod.children.size, 0, 'kids moved to newProd')
       t.equal(prod.root, prod, 'prod excised from tree')
       t.equal(newProd.root, root, 'newProd in the tree')
-      t.equal(newProd.fsChildren.size, 1, 'newProd takes over fsChildren')
-      t.equal(prod.fsChildren.size, 0, 'prod has no fsChildren now')
-      t.equal([...newProd.fsChildren][0], foo, 'foo in newProd fsChildren set')
-      t.notEqual(foo.fsParent, prod, 'prod is not foos fsParent')
-      t.equal(foo.fsParent, newProd, 'foo fsParent is now newProd')
+      // XXX seems like these should be flipped, taking over fsChildren is weird?
+      t.equal(newProd.fsChildren.size, 0, 'fsChildren replaced by replacement node')
+      t.equal(prod.fsChildren.size, 1, 'fsChildren go along with fsParent')
+      t.equal([...prod.fsChildren][0], foo, 'foo still in old prod fsChildren set')
+      t.equal(foo.fsParent, prod, 'prod is still foos fsParent')
 
       const notProd = new Node({
         pkg: {
           name: 'notprod',
           version: '1.2.3',
         },
+        path: '/some/path',
       })
       t.equal(notProd.canReplace(newProd), false, 'cannot replace with different name')
 
       const prodV2 = new Node({
+        name: 'prod',
+        path: '/path/to/prod',
         pkg: {
           name: 'prod',
           version: '2.3.4',
@@ -305,7 +313,8 @@ t.test('testing with dep tree', t => {
         path: '/home/user/projects/root',
         meta: rootMetadata,
       })
-      root2.replace(root)
+      // call the inverse function, for coverage
+      root.replaceWith(root2)
       t.equal(root2.root, root2, 'replacing root preserves self-rootedness')
       root.replace(root2)
 
@@ -318,7 +327,8 @@ t.test('testing with dep tree', t => {
       t.equal(prodLink.canReplace(newProd), true, 'link can replace node')
       prodLink.replace(newProd)
       t.equal(newProd.parent, null, 'newProd removed from tree')
-      t.equal(prodLink.path, newProd.path, 'replaced link')
+      t.equal(newProd.root, newProd, 'newProd removed from tree')
+      t.equal(normalizePath(prodLink.path), normalizePath(newProd.path), 'replaced link')
       t.equal(newProd.children.size, 0, 'newProd kids moved over')
       t.equal(prodLink.children.size, 0, 'links do not have child nodes')
       t.equal(prodLink.target.children.size, kidCount, 'link target has children')
@@ -338,6 +348,43 @@ t.test('testing with dep tree', t => {
   }
   t.test('with meta', runTest(meta))
 
+  t.end()
+})
+
+
+t.test('adding two children that both have links into them', t => {
+  const root = new Node({
+    path: '/path/to/root',
+  })
+  const o1 = new Link({
+    parent: root,
+    realpath: '/path/m/node_modules/n/o1',
+    name: 'o1',
+  })
+  const t1 = new Node({
+    path: o1.realpath,
+    root,
+  })
+  const o2 = new Link({
+    parent: root,
+    realpath: '/path/m/node_modules/n/o2',
+    name: 'o2',
+  })
+  const t2 = new Node({
+    path: o2.realpath,
+    root,
+  })
+  const m = new Node({
+    path: '/path/m',
+    dummy: true,
+    root,
+  })
+  t.equal(o1.target, t1)
+  t.equal(o2.target, t2)
+  t.equal(t1.linksIn.has(o1), true)
+  t.equal(t2.linksIn.has(o2), true)
+  t.equal(t1.fsParent, m)
+  t.equal(t2.fsParent, m)
   t.end()
 })
 
@@ -402,6 +449,7 @@ t.test('load with a virtual filesystem parent', t => {
     realpath: root.realpath + '/link-target',
     parent: root,
   })
+  t.ok(link.target, 'link has a target')
   const linkKid = new Node({
     pkg: { name: 'kid', dependencies: {'a': ''} },
     parent: link.target,
@@ -435,21 +483,62 @@ t.test('load with a virtual filesystem parent', t => {
     pkg: { name: 'link3', version: '1.2.3', dependencies: { link2: '' }},
     realpath: root.realpath + '/packages/link3',
     target: target3,
+    parent: root,
   })
-  // set initially
-  packages.fsParent = root
-  // XXX probably broken test on Windows
-  t.equal(normalizePath(target3.path), normalizePath(root.realpath) + '/packages/link3')
-  // now move it
-  packages.fsParent = link.target
-  t.equal(normalizePath(packages.path), normalizePath(root.realpath) + '/link-target/packages')
-  t.equal(normalizePath(target3.path), normalizePath(root.realpath) + '/link-target/packages/link3')
-  t.equal(link3.realpath, target3.path, 'link realpath updated')
+  t.equal(target3.root, root)
+  t.equal(packages.fsChildren.size, 0)
 
-  // can't set fsParent to a link!
-  t.throws(() => packages.fsParent = link, {
-    message: 'setting fsParent to link node',
+  packages.root = root
+
+  t.equal(normalizePath(target3.fsParent.path), normalizePath(packages.path))
+  t.equal(packages.fsChildren.size, 1)
+
+  t.equal(packages.location, 'packages')
+  t.equal(target3.location, 'packages/link3')
+  t.equal(normalizePath(target3.realpath), normalizePath(root.path + '/packages/link3'))
+  t.equal(target3.fsParent, packages)
+  t.equal(packages.fsChildren.size, 1)
+  t.equal(normalizePath(link3.realpath), normalizePath(target3.realpath))
+  t.equal(link3.root, target3.root)
+  t.equal(link3.target, target3, 'before fsParent move')
+
+  packages.fsParent = link.target
+  t.equal(packages.location, 'link-target/packages')
+  t.equal(target3.location, 'link-target/packages/link3')
+  t.equal(normalizePath(target3.realpath), normalizePath(root.path + '/link-target/packages/link3'))
+  t.equal(target3.fsParent, packages)
+  t.equal(packages.fsChildren.size, 1)
+  t.equal(normalizePath(link3.realpath), normalizePath(target3.realpath))
+  t.equal(link3.root, target3.root)
+  t.equal(link3.target, target3, 'after fsParent move')
+
+  // do it again so we can verify nothing changed.  this should be a no-op.
+  packages.fsParent = link.target
+  t.equal(packages.location, 'link-target/packages')
+  t.equal(target3.location, 'link-target/packages/link3')
+  t.equal(normalizePath(target3.realpath), normalizePath(root.path + '/link-target/packages/link3'))
+  t.equal(target3.fsParent, packages)
+  t.equal(packages.fsChildren.size, 1)
+  t.equal(normalizePath(link3.realpath), normalizePath(target3.realpath))
+  t.equal(link3.root, target3.root)
+  t.equal(link3.target, target3, 'after fsParent move')
+
+  t.equal(normalizePath(packages.path), normalizePath(root.realpath + '/link-target/packages'))
+  t.equal(normalizePath(target3.path), normalizePath(root.realpath + '/link-target/packages/link3'))
+  t.equal(link3.target, target3, 'still targetting the right node 4')
+  t.equal(target3.fsParent, packages, 'link3 target under packages')
+  t.equal(normalizePath(link3.realpath), normalizePath(target3.path), 'link realpath updated')
+
+  // can't set fsParent to a link!  set to the target instead.
+  const linkChild = new Node({
+    path: target3.path + '/linkchild',
+    pkg: { name: 'linkchild', version: '1.2.3' },
   })
+  linkChild.fsParent = link3
+  t.equal(linkChild.fsParent, link3.target)
+  t.equal(linkChild.root, root)
+
+  t.equal(target3.fsParent, packages, 'link3 target under packages')
 
   // can't set fsParent to the same node
   t.throws(() => packages.fsParent = packages, {
@@ -466,25 +555,123 @@ t.test('load with a virtual filesystem parent', t => {
     message: 'setting fsParent improperly',
   })
 
-  t.equal(link.target.edgesOut.get('a').error, 'MISSING')
-  t.equal(linkKid.edgesOut.get('a').error, 'MISSING')
-  link.target.fsParent = root
+  // automatically set fsParent based on path calculations
+  t.equal(link.target.fsParent, root)
   t.equal(link.target.resolveParent, root, 'resolveParent is fsParent')
   t.equal(link.target.edgesOut.get('a').error, null)
   t.equal(linkKid.edgesOut.get('a').error, null)
-  link.target.fsParent = null
-  t.equal(link.target.fsParent, null)
-  t.equal(link.target.edgesOut.get('a').error, 'MISSING')
+  t.equal(linkKid.parent, link.target)
+
+  const target = link.target
+  link.target.root = null
+  t.equal(link.target, null)
+  t.equal(target.edgesOut.get('a').error, 'MISSING')
   t.equal(linkKid.edgesOut.get('a').error, 'MISSING')
-  link.target.fsParent = root
+
+  target.fsParent = link.root
+  t.equal(link.target, target)
   t.equal(link.target.fsParent, root)
   t.equal(link.target.edgesOut.get('a').error, null)
   t.equal(linkKid.edgesOut.get('a').error, null)
+
   // move it under this other one for some reason
   link.target.fsParent = link2.target
   t.equal(link.target.fsParent, link2.target)
   t.equal(link.target.edgesOut.get('a').error, null)
   t.equal(linkKid.edgesOut.get('a').error, null)
+
+  // move it into node_modules
+  link.target.parent = link2.target
+  t.equal(link.target.fsParent, null, 'lost fsParent for parent')
+  t.equal(link.target.edgesOut.get('a').error, null)
+  t.equal(linkKid.edgesOut.get('a').error, null)
+  t.equal(normalizePath(link.realpath), normalizePath(link2.realpath + '/node_modules/link-target'))
+
+  const linkLoc = link.location
+  const linkTarget = link.target
+  link.parent = null
+  t.equal(link.root, link, 'removed from parent, removed from root')
+  t.equal(root.inventory.get(linkLoc), undefined, 'removed from root inventory')
+  t.equal(link.inventory.has(link), true, 'link added to own inventory')
+  t.equal(link.target, linkTarget, 'target taken along for the ride')
+  t.equal(linkTarget.root, link, 'target rooted on link')
+  t.equal(link.inventory.get(''), linkTarget)
+  t.equal(root.edgesOut.get('link').error, 'MISSING')
+
+  packages.fsParent = null
+  t.equal(packages.root, packages, 'removed from fsParent, removed from root')
+
+  // now replace the real node with a link
+  // ensure that everything underneath it is removed from root
+  const aChild = new Node({
+    parent: a,
+    pkg: { name: 'achild', version: '1.2.3' },
+  })
+  t.equal(aChild.parent, a)
+  t.equal(a.children.get('achild'), aChild)
+  const underA = [...root.inventory.values()]
+    .filter(node => node.path.startsWith(a.path) && node !== a)
+  const aLoc = a.location
+  const aLink = new Link({
+    path: a.path,
+    target: new Node({
+      path: '/some/other/a',
+      pkg: a.package,
+    })
+  })
+  aLink.root = root
+  t.equal(root.inventory.get(aLoc), aLink)
+  t.equal(a.root, a)
+  for (const node of underA)
+    t.notEqual(node.root, root, `${node.path} still under old root`)
+
+  // create a new fsChild several steps below the root, then shove
+  // a link in the way of it, removing it.
+  const fsD = new Node({
+    path: root.path + '/a/b/c/d',
+    pkg: {name: 'd', version: '1.2.3'},
+    root,
+  })
+  t.equal(fsD.fsParent, root, 'root should be fsParent')
+  const linkBlocker = new Link({
+    path: root.path + '/a/b',
+    target: new Node({
+      path: '/some/exotic/location',
+      pkg: {name:'b',version:'1.2.3'},
+    }),
+    root,
+  })
+  t.notEqual(fsD.root, root, 'fsD removed from root')
+
+  // add a node completely outside the root folder, as a link
+  // target, then add a new node that takes over as its parent,
+  // to exercise the code path where a top node has no fsParent
+  const remoteLink = new Link({
+    parent: root,
+    name: 'x',
+    realpath: '/remote/node_modules/a/node_modules/x',
+  })
+  const remoteTarget = new Node({
+    path: '/remote/node_modules/a/node_modules/x',
+    realpath: '/remote/node_modules/a/node_modules/x',
+    pkg: {name:'x',version:'1.2.3'},
+    root,
+  })
+  t.equal(remoteLink.target, remoteTarget, 'automatically found target')
+  t.equal(remoteTarget.fsParent, null, 'remote target has no fsParent')
+  t.equal(remoteTarget.parent, null, 'remote target has no parent')
+  root.tops.has(remoteTarget, 'remote target in root.tops')
+  const remoteParent = new Node({
+    path: '/remote/node_modules/a',
+    pkg: {name: 'a',version:'1.2.3'},
+    root,
+  })
+  t.throws(() => remoteParent.target = remoteTarget, {
+    message: 'cannot set target on non-Link Nodes',
+    path: remoteParent.path,
+  })
+  t.equal(remoteParent.children.get('x'), remoteTarget)
+  treeCheck(root)
 
   t.end()
 })
@@ -511,7 +698,7 @@ t.test('child of link target has path, like parent', t => {
     parent: link,
   })
   t.equal(linkKid.parent, link.target, 'setting link as parent sets target instead')
-  t.equal(linkKid.path, linkKid.realpath, 'child of link target path is realpath')
+  t.equal(normalizePath(linkKid.path), normalizePath(linkKid.realpath), 'child of link target path is realpath')
   t.end()
 })
 
@@ -562,8 +749,8 @@ t.test('attempt to assign parent to self on root node', t => {
     path: '/',
     realpath: '/'
   })
-  root.parent = root.fsParent = root;
-  t.equal(root.parent, undefined, 'root node parent should be empty')
+  root.parent = root.fsParent = root
+  t.equal(root.parent, null, 'root node parent should be empty')
   t.equal(root.fsParent, null, 'root node fsParent should be empty')
   t.end();
 })
@@ -638,6 +825,30 @@ t.test('bundled dependencies logic', t => {
   t.equal(e.inBundle, false, 'deduped dep of bundled dep of metadep is not bundled')
   t.equal(fb.inBundle, true, 'bundled dep of dep is bundled')
   t.equal(fb.inDepBundle, true, 'bundled dep of dep is dep bundled (not by root)')
+  t.end()
+})
+
+t.test('move fsChildren when moving to a new fsParent in same root', t => {
+  const root = new Node({
+    path: '/path/to/root',
+  })
+  const p1 = new Node({
+    path: '/path/to/root/p1',
+    root: root,
+  })
+  t.equal(p1.fsParent, root)
+  const p2 = new Node({
+    path: '/path/to/root/p2',
+    root: root,
+  })
+  t.equal(p2.fsParent, root)
+  const c2 = new Node({
+    path: '/path/to/root/p2/c2',
+    root: root,
+  })
+  t.equal(c2.fsParent, p2)
+  p2.fsParent = p1
+  t.equal(normalizePath(c2.path), normalizePath('/path/to/root/p1/p2/c2'))
   t.end()
 })
 
@@ -1142,7 +1353,7 @@ t.test('reparenting keeps children in root inventory', async t => {
 
   // now reparent, and make sure the kids are still accounted for
   const parent = new Node({ name: 'parent', parent: root })
-  nested.parent = parent
+  t.equal(nested.parent, parent)
 
   t.equal(root.inventory.has(kid), true)
   t.equal(root.inventory.has(fsNested), true)
@@ -1257,9 +1468,10 @@ t.test('detect that two nodes are the same thing', async t => {
   }
 
   {
-    const target = new Node({ path:'/foo', pkg:{name:'x', version:'1.2.3'}})
-    const a = new Link({ path: '/a/x', target: target })
-    const b = new Link({ path: '/b/x', target: target })
+    const root = new Node({ path: '/root' })
+    const target = new Node({ root, path:'/foo', pkg:{name:'x', version:'1.2.3'}})
+    const a = new Link({ root, path: '/a/x', target })
+    const b = new Link({ root, path: '/b/x', target })
     check(a, b, true, 'links match if targets match')
   }
 
@@ -1715,5 +1927,64 @@ t.test('guard against setting package to something improper', t => {
   } finally {
     t.strictSame(p.package, {})
   }
+  t.end()
+})
+
+t.test('clear inventory when changing root', t => {
+  const r1 = new Node({ path: '/root1' })
+  const r2 = new Node({ path: '/root1/root2', children: [
+    { pkg: { name: 'foo', version: '1.2.3' } },
+  ]})
+  const r3 = new Node({ path: '/root1/root3' })
+  // child3 gets munged together with the foo module in root2,
+  // because the paths are the same
+  const child3 = new Node({ path: '/root1/root2/node_modules/foo',
+    pkg: { name: 'foo', version: '1.2.3' },
+    root: r3,
+  })
+  const child = r2.children.get('foo')
+  t.equal(r1.inventory.size, 1)
+  t.equal(r2.inventory.size, 2)
+  t.equal(r1.inventory.has(child), false)
+  t.equal(r2.inventory.has(child), true)
+  r2.root = r1
+  t.equal(r1.inventory.size, 3)
+  t.equal(r2.inventory.size, 0)
+  t.equal(r1.inventory.has(child), true)
+  t.equal(r2.inventory.has(child), false)
+  t.equal(r3.inventory.size, 2)
+  r3.root = r1
+  t.equal(r1.inventory.size, 4)
+  t.equal(r3.inventory.size, 0)
+  t.equal(r1.inventory.has(child3), true)
+  t.equal(child3.root, r1)
+  t.end()
+})
+
+t.test('create a node that doesnt get added to a root until later', t => {
+  const root = new Node({ path: '/path/to/root' })
+  const foo = new Node({ name: 'foo' })
+  t.equal(foo.root, foo, 'other is self-rooted at first')
+  t.equal(foo.path, null, 'foo has null path')
+  foo.parent = root
+  t.equal(foo.root, root, 'foo is rooted on root after parent assignment')
+  t.equal(normalizePath(foo.path), normalizePath('/path/to/root/node_modules/foo'), 'foo has updated path')
+  t.end()
+})
+
+t.test('changing path to a node_modules folder sets name if necessary', t => {
+  const node = new Node({
+    path: '/some/random/path',
+  })
+  t.equal(node.name, 'path')
+  const _changePath = Symbol.for('_changePath')
+  node[_changePath]('/path/to/node_modules/foo')
+  t.equal(node.name, 'foo')
+  node[_changePath]('/path/to/node_modules/foo/node_modules/bar')
+  t.equal(node.name, 'bar')
+  node[_changePath]('/path/to/node_modules/foo/node_modules/@bar/baz/node_modules')
+  t.equal(node.name, 'bar')
+  node[_changePath]('/path/to/node_modules/foo/node_modules/@bar/baz')
+  t.equal(node.name, '@bar/baz')
   t.end()
 })

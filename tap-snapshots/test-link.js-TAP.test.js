@@ -6,7 +6,7 @@
  */
 'use strict'
 exports[`test/link.js TAP > instantiate with target specified 1`] = `
-&ref_1 Link {
+Link {
   "dev": true,
   "devOptional": true,
   "dummy": false,
@@ -17,43 +17,17 @@ exports[`test/link.js TAP > instantiate with target specified 1`] = `
   "fsChildren": Set {},
   "hasShrinkwrap": false,
   "integrity": null,
-  "inventory": Inventory {
-    "" => Node {
-      "children": Map {},
-      "dev": true,
-      "devOptional": true,
-      "dummy": false,
-      "edgesIn": Set {},
-      "edgesOut": Map {},
-      "errors": Array [],
-      "extraneous": true,
-      "fsChildren": Set {},
-      "hasShrinkwrap": false,
-      "integrity": null,
-      "inventory": Inventory {},
-      "legacyPeerDeps": false,
-      "linksIn": Set {
-        <*ref_1>,
-      },
-      "location": "",
-      "name": "path",
-      "optional": true,
-      "path": "/home/user/projects/some/kind/of/path",
-      "peer": true,
-      "realpath": "/home/user/projects/some/kind/of/path",
-      "resolved": null,
-      "sourceReference": null,
-    },
-  },
+  "inventory": Inventory {},
   "legacyPeerDeps": false,
   "linksIn": Set {},
-  "location": "",
+  "location": "../../../../../some/other/path",
   "name": "path",
   "optional": true,
   "path": "/home/user/some/other/path",
   "peer": true,
   "realpath": "/home/user/projects/some/kind/of/path",
   "sourceReference": null,
+  "tops": Set {},
 }
 `
 
@@ -70,6 +44,7 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "../../../../../some/other/path" => <*ref_1>,
     "" => Node {
       "children": Map {},
       "dev": true,
@@ -95,16 +70,46 @@ exports[`test/link.js TAP > instantiate without providing target 1`] = `
       "realpath": "/home/user/projects/some/kind/of/path",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
   "linksIn": Set {},
-  "location": "",
+  "location": "../../../../../some/other/path",
   "name": "path",
   "optional": true,
   "path": "/home/user/some/other/path",
   "peer": true,
   "realpath": "/home/user/projects/some/kind/of/path",
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        <*ref_1>,
+      },
+      "location": "",
+      "name": "path",
+      "optional": true,
+      "path": "/home/user/projects/some/kind/of/path",
+      "peer": true,
+      "realpath": "/home/user/projects/some/kind/of/path",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `

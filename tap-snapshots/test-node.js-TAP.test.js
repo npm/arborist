@@ -6,7 +6,7 @@
  */
 'use strict'
 exports[`test/node.js TAP basic instantiation > just a lone root node 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {},
   "dev": true,
   "devOptional": true,
@@ -18,7 +18,9 @@ Node {
   "fsChildren": Set {},
   "hasShrinkwrap": false,
   "integrity": null,
-  "inventory": Inventory {},
+  "inventory": Inventory {
+    "" => <*ref_1>,
+  },
   "legacyPeerDeps": false,
   "linksIn": Set {},
   "location": "",
@@ -29,11 +31,12 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {},
 }
 `
 
 exports[`test/node.js TAP set workspaces > should setup edges out for each workspace 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "foo" => Link {
       "dev": true,
@@ -58,6 +61,7 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/workspaces_root/foo",
       "sourceReference": null,
+      "tops": Set {},
     },
     "unknown" => Link {
       "dev": true,
@@ -80,6 +84,7 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/workspaces_root/unknown",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -92,10 +97,112 @@ Node {
   },
   "errors": Array [],
   "extraneous": true,
-  "fsChildren": Set {},
+  "fsChildren": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {
+            Edge {},
+          },
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": null,
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/foo",
+          "name": "foo",
+          "optional": true,
+          "path": "/home/user/projects/workspaces_root/node_modules/foo",
+          "peer": true,
+          "realpath": "/home/user/projects/workspaces_root/foo",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
+      "location": "foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/workspaces_root/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/workspaces_root/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": null,
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/unknown",
+          "name": "unknown",
+          "optional": true,
+          "path": "/home/user/projects/workspaces_root/node_modules/unknown",
+          "peer": true,
+          "realpath": "/home/user/projects/workspaces_root/unknown",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
+      "location": "unknown",
+      "name": "unknown",
+      "optional": true,
+      "path": "/home/user/projects/workspaces_root/unknown",
+      "peer": true,
+      "realpath": "/home/user/projects/workspaces_root/unknown",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/foo" => Link {
       "dev": true,
       "devOptional": true,
@@ -119,6 +226,7 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/workspaces_root/foo",
       "sourceReference": null,
+      "tops": Set {},
     },
     "foo" => Node {
       "children": Map {},
@@ -158,6 +266,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/workspaces_root/foo",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "location": "foo",
@@ -168,6 +277,7 @@ Node {
       "realpath": "/home/user/projects/workspaces_root/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/unknown" => Link {
       "dev": true,
@@ -190,6 +300,7 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/workspaces_root/unknown",
       "sourceReference": null,
+      "tops": Set {},
     },
     "unknown" => Node {
       "children": Map {},
@@ -227,6 +338,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/workspaces_root/unknown",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "location": "unknown",
@@ -237,6 +349,7 @@ Node {
       "realpath": "/home/user/projects/workspaces_root/unknown",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -249,11 +362,113 @@ Node {
   "realpath": "/home/user/projects/workspaces_root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {
+            Edge {},
+          },
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": null,
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/foo",
+          "name": "foo",
+          "optional": true,
+          "path": "/home/user/projects/workspaces_root/node_modules/foo",
+          "peer": true,
+          "realpath": "/home/user/projects/workspaces_root/foo",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
+      "location": "foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/workspaces_root/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/workspaces_root/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": null,
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/unknown",
+          "name": "unknown",
+          "optional": true,
+          "path": "/home/user/projects/workspaces_root/node_modules/unknown",
+          "peer": true,
+          "realpath": "/home/user/projects/workspaces_root/unknown",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
+      "location": "unknown",
+      "name": "unknown",
+      "optional": true,
+      "path": "/home/user/projects/workspaces_root/unknown",
+      "peer": true,
+      "realpath": "/home/user/projects/workspaces_root/unknown",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > add new meta under prod 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {
@@ -280,6 +495,7 @@ Node {
               "peer": true,
               "realpath": "/home/user/projects/root/node_modules/meta",
               "sourceReference": null,
+              "tops": Set {},
             },
           },
           "dev": true,
@@ -308,6 +524,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "newMeta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -348,6 +565,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -363,6 +581,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -392,6 +611,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -418,6 +638,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -444,6 +665,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -470,6 +692,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -494,6 +717,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {},
@@ -535,6 +759,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "location": "node_modules/meta",
@@ -545,6 +770,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -566,6 +792,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {
         "meta" => Node {
@@ -591,6 +818,7 @@ Node {
               "peer": true,
               "realpath": "/home/user/projects/root/node_modules/meta",
               "sourceReference": null,
+              "tops": Set {},
             },
           },
           "dev": true,
@@ -619,6 +847,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "newMeta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -659,6 +888,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -674,6 +904,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -700,6 +931,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -729,6 +961,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -755,6 +988,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -781,6 +1015,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -807,6 +1042,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -831,6 +1067,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {},
@@ -872,6 +1109,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "location": "node_modules/meta",
@@ -882,6 +1120,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/node_modules/meta" => Node {
       "children": Map {
@@ -906,6 +1145,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -934,6 +1174,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/node_modules/meta/node_modules/metameta" => Link {
       "dev": true,
@@ -956,6 +1197,7 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -968,11 +1210,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > initial load with some deps 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {
@@ -1004,6 +1275,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -1044,6 +1316,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -1059,6 +1332,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -1088,6 +1362,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -1114,6 +1389,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -1140,6 +1416,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -1166,6 +1443,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -1190,6 +1468,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -1211,6 +1490,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {
         "meta" => Node {
@@ -1241,6 +1521,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -1281,6 +1562,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -1296,6 +1578,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -1322,6 +1605,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/node_modules/meta" => Node {
       "children": Map {},
@@ -1351,6 +1635,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -1380,6 +1665,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -1406,6 +1692,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -1432,6 +1719,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -1458,6 +1746,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -1482,6 +1771,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -1494,11 +1784,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > move meta to top level, update stuff 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -1540,6 +1859,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -1555,6 +1875,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -1584,6 +1905,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -1610,6 +1932,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -1636,6 +1959,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -1662,6 +1986,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -1686,6 +2011,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {},
@@ -1716,6 +2042,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -1737,6 +2064,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {},
       "dev": true,
@@ -1777,6 +2105,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -1792,6 +2121,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -1818,6 +2148,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -1847,6 +2178,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -1873,6 +2205,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -1899,6 +2232,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -1925,6 +2259,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -1949,6 +2284,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {},
@@ -1979,6 +2315,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -1991,11 +2328,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > move new meta to top level 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -2037,6 +2403,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -2052,6 +2419,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -2080,6 +2448,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -2106,6 +2475,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -2132,6 +2502,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -2158,6 +2529,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -2182,6 +2554,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {
@@ -2206,6 +2579,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -2226,7 +2600,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -2235,6 +2633,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -2256,6 +2655,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {},
       "dev": true,
@@ -2296,6 +2696,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -2311,6 +2712,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -2337,6 +2739,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -2365,6 +2768,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -2391,6 +2795,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -2417,6 +2822,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -2443,6 +2849,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -2467,6 +2874,30 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
+      "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {
@@ -2491,6 +2922,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -2511,7 +2943,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -2520,28 +2976,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
-    },
-    "node_modules/meta/node_modules/metameta" => Link {
-      "dev": true,
-      "devOptional": true,
-      "dummy": false,
-      "edgesIn": Set {},
-      "edgesOut": Map {},
-      "errors": Array [],
-      "extraneous": true,
-      "fsChildren": Set {},
-      "hasShrinkwrap": false,
-      "integrity": "metameta",
-      "inventory": Inventory {},
-      "legacyPeerDeps": false,
-      "linksIn": Set {},
-      "location": "node_modules/meta/node_modules/metameta",
-      "name": "metameta",
-      "optional": true,
-      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
-      "peer": true,
-      "realpath": "/home/user/projects/root/node_modules/meta",
-      "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -2554,11 +2989,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree with meta > move new meta to top level second time (no-op) 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -2600,6 +3064,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -2615,6 +3080,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -2643,6 +3109,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -2669,6 +3136,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -2695,6 +3163,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -2721,6 +3190,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -2745,6 +3215,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {
@@ -2769,6 +3240,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -2789,7 +3261,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -2798,6 +3294,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -2819,6 +3316,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {},
       "dev": true,
@@ -2859,6 +3357,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -2874,6 +3373,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -2900,6 +3400,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -2928,6 +3429,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -2954,6 +3456,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -2980,6 +3483,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -3006,6 +3510,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -3030,59 +3535,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
-    },
-    "node_modules/meta" => Node {
-      "children": Map {
-        "metameta" => Link {
-          "dev": true,
-          "devOptional": true,
-          "dummy": false,
-          "edgesIn": Set {},
-          "edgesOut": Map {},
-          "errors": Array [],
-          "extraneous": true,
-          "fsChildren": Set {},
-          "hasShrinkwrap": false,
-          "integrity": "metameta",
-          "inventory": Inventory {},
-          "legacyPeerDeps": false,
-          "linksIn": Set {},
-          "location": "node_modules/meta/node_modules/metameta",
-          "name": "metameta",
-          "optional": true,
-          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
-          "peer": true,
-          "realpath": "/home/user/projects/root/node_modules/meta",
-          "sourceReference": null,
-        },
-      },
-      "dev": true,
-      "devOptional": true,
-      "dummy": false,
-      "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
-      },
-      "edgesOut": Map {
-        "asdf" => Edge {},
-      },
-      "errors": Array [],
-      "extraneous": true,
-      "fsChildren": Set {},
-      "hasShrinkwrap": false,
-      "integrity": "newMeta",
-      "inventory": Inventory {},
-      "legacyPeerDeps": false,
-      "linksIn": Set {},
-      "location": "node_modules/meta",
-      "name": "meta",
-      "optional": true,
-      "path": "/home/user/projects/root/node_modules/meta",
-      "peer": true,
-      "realpath": "/home/user/projects/root/node_modules/meta",
-      "resolved": "newMeta",
-      "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta/node_modules/metameta" => Link {
       "dev": true,
@@ -3105,6 +3558,86 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "sourceReference": null,
+      "tops": Set {},
+    },
+    "node_modules/meta" => Node {
+      "children": Map {
+        "metameta" => Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {
+        Edge {},
+        Edge {},
+        Edge {},
+      },
+      "edgesOut": Map {
+        "asdf" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "newMeta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
+      "location": "node_modules/meta",
+      "name": "meta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
+      "resolved": "newMeta",
+      "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -3117,11 +3650,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree without meta > add new meta under prod 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {
@@ -3148,6 +3710,7 @@ Node {
               "peer": true,
               "realpath": "/home/user/projects/root/node_modules/meta",
               "sourceReference": null,
+              "tops": Set {},
             },
           },
           "dev": true,
@@ -3176,6 +3739,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "newMeta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -3216,6 +3780,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -3231,6 +3796,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -3260,6 +3826,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -3286,6 +3853,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -3312,6 +3880,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -3338,6 +3907,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -3362,6 +3932,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {},
@@ -3403,6 +3974,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "location": "node_modules/meta",
@@ -3413,6 +3985,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -3434,6 +4007,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {
         "meta" => Node {
@@ -3459,6 +4033,7 @@ Node {
               "peer": true,
               "realpath": "/home/user/projects/root/node_modules/meta",
               "sourceReference": null,
+              "tops": Set {},
             },
           },
           "dev": true,
@@ -3487,6 +4062,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "newMeta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -3527,6 +4103,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -3542,6 +4119,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -3568,6 +4146,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -3597,6 +4176,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -3623,6 +4203,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -3649,6 +4230,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -3675,6 +4257,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -3699,6 +4282,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {},
@@ -3740,6 +4324,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "location": "node_modules/meta",
@@ -3750,6 +4335,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/node_modules/meta" => Node {
       "children": Map {
@@ -3774,6 +4360,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -3802,6 +4389,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/node_modules/meta/node_modules/metameta" => Link {
       "dev": true,
@@ -3824,6 +4412,7 @@ Node {
       "peer": true,
       "realpath": "/home/user/projects/root/node_modules/meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -3836,11 +4425,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree without meta > initial load with some deps 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {
@@ -3872,6 +4490,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -3912,6 +4531,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -3927,6 +4547,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -3956,6 +4577,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -3982,6 +4604,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -4008,6 +4631,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -4034,6 +4658,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -4058,6 +4683,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -4079,6 +4705,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {
         "meta" => Node {
@@ -4109,6 +4736,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
           "resolved": "meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -4149,6 +4777,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -4164,6 +4793,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -4190,6 +4820,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/node_modules/meta" => Node {
       "children": Map {},
@@ -4219,6 +4850,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -4248,6 +4880,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -4274,6 +4907,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -4300,6 +4934,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -4326,6 +4961,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -4350,6 +4986,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -4362,11 +4999,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree without meta > move meta to top level, update stuff 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -4408,6 +5074,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -4423,6 +5090,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -4452,6 +5120,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -4478,6 +5147,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -4504,6 +5174,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -4530,6 +5201,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -4554,6 +5226,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {},
@@ -4584,6 +5257,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -4605,6 +5279,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {},
       "dev": true,
@@ -4645,6 +5320,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -4660,6 +5336,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -4686,6 +5363,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -4715,6 +5393,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -4741,6 +5420,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -4767,6 +5447,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -4793,6 +5474,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -4817,6 +5499,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {},
@@ -4847,6 +5530,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "meta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -4859,11 +5543,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree without meta > move new meta to top level 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -4905,6 +5618,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -4920,6 +5634,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -4948,6 +5663,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -4974,6 +5690,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -5000,6 +5717,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -5026,6 +5744,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -5050,6 +5769,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {
@@ -5074,6 +5794,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -5094,7 +5815,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -5103,6 +5848,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -5124,6 +5870,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {},
       "dev": true,
@@ -5164,6 +5911,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -5179,6 +5927,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -5205,6 +5954,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -5233,6 +5983,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -5259,6 +6010,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -5285,6 +6037,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -5311,6 +6064,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -5335,6 +6089,30 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
+      "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {
@@ -5359,6 +6137,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -5379,7 +6158,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -5388,28 +6191,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
-    },
-    "node_modules/meta/node_modules/metameta" => Link {
-      "dev": true,
-      "devOptional": true,
-      "dummy": false,
-      "edgesIn": Set {},
-      "edgesOut": Map {},
-      "errors": Array [],
-      "extraneous": true,
-      "fsChildren": Set {},
-      "hasShrinkwrap": false,
-      "integrity": "metameta",
-      "inventory": Inventory {},
-      "legacyPeerDeps": false,
-      "linksIn": Set {},
-      "location": "node_modules/meta/node_modules/metameta",
-      "name": "metameta",
-      "optional": true,
-      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
-      "peer": true,
-      "realpath": "/home/user/projects/root/node_modules/meta",
-      "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -5422,11 +6204,40 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
 exports[`test/node.js TAP testing with dep tree without meta > move new meta to top level second time (no-op) 1`] = `
-Node {
+&ref_1 Node {
   "children": Map {
     "prod" => Node {
       "children": Map {},
@@ -5468,6 +6279,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -5483,6 +6295,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "bundled" => Node {
       "children": Map {},
@@ -5511,6 +6324,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "dev" => Node {
       "children": Map {},
@@ -5537,6 +6351,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "optional" => Node {
       "children": Map {},
@@ -5563,6 +6378,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "peer" => Node {
       "children": Map {},
@@ -5589,6 +6405,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "extraneous" => Node {
       "children": Map {},
@@ -5613,6 +6430,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
     },
     "meta" => Node {
       "children": Map {
@@ -5637,6 +6455,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -5657,7 +6476,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -5666,6 +6509,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
+      "tops": Set {},
     },
   },
   "dev": true,
@@ -5687,6 +6531,7 @@ Node {
   "hasShrinkwrap": false,
   "integrity": null,
   "inventory": Inventory {
+    "" => <*ref_1>,
     "node_modules/prod" => Node {
       "children": Map {},
       "dev": true,
@@ -5727,6 +6572,7 @@ Node {
           "realpath": "/home/user/projects/root/node_modules/prod/foo",
           "resolved": null,
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "hasShrinkwrap": false,
@@ -5742,6 +6588,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod",
       "resolved": "prod",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/prod/foo" => Node {
       "children": Map {},
@@ -5768,6 +6615,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/prod/foo",
       "resolved": null,
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/bundled" => Node {
       "children": Map {},
@@ -5796,6 +6644,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/bundled",
       "resolved": "bundled",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/dev" => Node {
       "children": Map {},
@@ -5822,6 +6671,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/dev",
       "resolved": "dev",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/optional" => Node {
       "children": Map {},
@@ -5848,6 +6698,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/optional",
       "resolved": "opt",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/peer" => Node {
       "children": Map {},
@@ -5874,6 +6725,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/peer",
       "resolved": "peer",
       "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/extraneous" => Node {
       "children": Map {},
@@ -5898,6 +6750,30 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/extraneous",
       "resolved": "extraneous",
       "sourceReference": null,
+      "tops": Set {},
+    },
+    "node_modules/meta/node_modules/metameta" => Link {
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {},
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": "metameta",
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/meta/node_modules/metameta",
+      "name": "metameta",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/meta",
+      "sourceReference": null,
+      "tops": Set {},
     },
     "node_modules/meta" => Node {
       "children": Map {
@@ -5922,6 +6798,7 @@ Node {
           "peer": true,
           "realpath": "/home/user/projects/root/node_modules/meta",
           "sourceReference": null,
+          "tops": Set {},
         },
       },
       "dev": true,
@@ -5942,7 +6819,31 @@ Node {
       "integrity": "newMeta",
       "inventory": Inventory {},
       "legacyPeerDeps": false,
-      "linksIn": Set {},
+      "linksIn": Set {
+        Link {
+          "dev": true,
+          "devOptional": true,
+          "dummy": false,
+          "edgesIn": Set {},
+          "edgesOut": Map {},
+          "errors": Array [],
+          "extraneous": true,
+          "fsChildren": Set {},
+          "hasShrinkwrap": false,
+          "integrity": "metameta",
+          "inventory": Inventory {},
+          "legacyPeerDeps": false,
+          "linksIn": Set {},
+          "location": "node_modules/meta/node_modules/metameta",
+          "name": "metameta",
+          "optional": true,
+          "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
+          "peer": true,
+          "realpath": "/home/user/projects/root/node_modules/meta",
+          "sourceReference": null,
+          "tops": Set {},
+        },
+      },
       "location": "node_modules/meta",
       "name": "meta",
       "optional": true,
@@ -5951,28 +6852,7 @@ Node {
       "realpath": "/home/user/projects/root/node_modules/meta",
       "resolved": "newMeta",
       "sourceReference": null,
-    },
-    "node_modules/meta/node_modules/metameta" => Link {
-      "dev": true,
-      "devOptional": true,
-      "dummy": false,
-      "edgesIn": Set {},
-      "edgesOut": Map {},
-      "errors": Array [],
-      "extraneous": true,
-      "fsChildren": Set {},
-      "hasShrinkwrap": false,
-      "integrity": "metameta",
-      "inventory": Inventory {},
-      "legacyPeerDeps": false,
-      "linksIn": Set {},
-      "location": "node_modules/meta/node_modules/metameta",
-      "name": "metameta",
-      "optional": true,
-      "path": "/home/user/projects/root/node_modules/meta/node_modules/metameta",
-      "peer": true,
-      "realpath": "/home/user/projects/root/node_modules/meta",
-      "sourceReference": null,
+      "tops": Set {},
     },
   },
   "legacyPeerDeps": false,
@@ -5985,6 +6865,35 @@ Node {
   "realpath": "/home/user/projects/root",
   "resolved": null,
   "sourceReference": null,
+  "tops": Set {
+    Node {
+      "children": Map {},
+      "dev": true,
+      "devOptional": true,
+      "dummy": false,
+      "edgesIn": Set {},
+      "edgesOut": Map {
+        "meta" => Edge {},
+      },
+      "errors": Array [],
+      "extraneous": true,
+      "fsChildren": Set {},
+      "hasShrinkwrap": false,
+      "integrity": null,
+      "inventory": Inventory {},
+      "legacyPeerDeps": false,
+      "linksIn": Set {},
+      "location": "node_modules/prod/foo",
+      "name": "foo",
+      "optional": true,
+      "path": "/home/user/projects/root/node_modules/prod/foo",
+      "peer": true,
+      "realpath": "/home/user/projects/root/node_modules/prod/foo",
+      "resolved": null,
+      "sourceReference": null,
+      "tops": Set {},
+    },
+  },
 }
 `
 
@@ -6009,15 +6918,7 @@ Object {
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > metadata from top1 1`] = `
-Object {
-  "dependencies": Object {
-    "child2": "2",
-  },
-  "extraneous": true,
-  "integrity": "sha512-blortzeyblartzeyfartz",
-  "resolved": "https://child.com/-/child-1.2.3.tgz",
-  "version": "1.2.3",
-}
+Object {}
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new child location 1`] = `
@@ -6029,24 +6930,11 @@ exports[`test/node.js TAP update metadata when moving between linked top-of-tree
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new top metadata updated 1`] = `
-Object {
-  "dependencies": Object {
-    "child2": "2",
-  },
-  "extraneous": true,
-  "integrity": "sha512-blortzeyblartzeyfartz",
-  "resolved": "https://child.com/-/child-1.2.3.tgz",
-  "version": "1.2.3",
-}
+Object {}
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > new top metadata updated 2`] = `
-Object {
-  "extraneous": true,
-  "integrity": "sha512-a childs child is a kidkid",
-  "resolved": "https://child.com/-/child-2.3.4.tgz",
-  "version": "2.3.4",
-}
+Object {}
 `
 
 exports[`test/node.js TAP update metadata when moving between linked top-of-tree parents > old location deleted from root 1`] = `

@@ -1,10 +1,11 @@
 const Inventory = require('../lib/inventory.js')
 const t = require('tap')
+const requireInject = require('require-inject')
 
 t.test('basic operations', t => {
   const i = new Inventory()
   t.equal(i.primaryKey, 'location')
-  t.same(i.indexes, ['name', 'license', 'funding'])
+  t.same(i.indexes, ['name', 'license', 'funding', 'realpath'])
 
   i.add({ location: 'x', name: 'x', 'package': { license: 'MIT', funding: 'foo' }})
   i.add({ location: 'y', name: 'x', 'package': { license: 'ISC', funding: { url: 'foo' } }})
@@ -89,5 +90,31 @@ t.test('basic operations', t => {
       }
     }) , 'doesnt throw on falsy license info')
 
+  t.end()
+})
+
+t.test('dont allow external nodes to be added to inventory', t => {
+  const i = new Inventory()
+  const root = { location: '', path: 'rootpath' }
+  i.add(root)
+  t.throws(() => i.add({root: {path: 'otherroot'}, location: 'adsf', path: 'nodepath'}), {
+    message: 'adding external node to inventory',
+    root: 'rootpath',
+    node: 'nodepath',
+    nodeRoot: 'otherroot',
+  })
+  t.end()
+})
+
+t.test('adding external nodes is no-op outside debug mode', t => {
+  const Inventory = requireInject('../lib/inventory.js', {
+    '../lib/debug.js': () => {},
+  })
+  const i = new Inventory()
+  const root = { location: '', path: 'rootpath' }
+  i.add(root)
+  other = {root: {path: 'otherroot'}, location: 'adsf', path: 'nodepath'}
+  i.add(other)
+  t.equal(i.has(other), false, 'did not add external node to inventory')
   t.end()
 })

@@ -6,6 +6,8 @@
 /*.js
 !map.js
 
+scripts/benchmark/*/
+
 ### BEGIN IGNORED SYMLINKS ###
 ### this list is generated automatically, do not edit directly
 ### update it by running `node test/fixtures/index.js`

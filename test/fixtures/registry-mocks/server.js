@@ -261,6 +261,9 @@ module.exports.failAdvisoryBulk = () => {
 
 module.exports.registry = `http://localhost:${PORT}/`
 
+module.exports.start = startServer
+module.exports.stop = () => module.exports.server.close()
+
 if (require.main === module) {
   startServer(() => {
     console.log(`Mock registry live at:

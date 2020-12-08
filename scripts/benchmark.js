@@ -149,7 +149,8 @@ const suite = new Suite({
     }, { date: this.date, sha: this.sha })) + '\n'
     writeFileSync(saveThis, data)
     if (options.save) {
-      const saveExplicit = resolve(__dirname, 'benchmark/saved', options.save)
+      const saveFile = `benchmark/saved/${options.save}.json`
+      const saveExplicit = resolve(__dirname, saveFile)
       writeFileSync(saveExplicit, data)
     }
 

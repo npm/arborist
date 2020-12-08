@@ -1283,3 +1283,52 @@ t.test('metadata that only has one of resolved/integrity', t => {
 
 t.test('load an ancient lockfile', async t =>
   t.match(await Shrinkwrap.load({ path: saxFixture }), { ancientLockfile: true }))
+
+t.only('shrinkwrap where root is a link node', async t => {
+  const meta = await Shrinkwrap.reset({ path: '/actual/project/path' })
+  const root = new Link({
+    path: '/some/link/path',
+    realpath: '/actual/project/path',
+    meta,
+  })
+
+  new Node({
+    root,
+    path: '/actual/project/path',
+    pkg: {
+      name: 'path',
+      version: '1.2.3',
+      dependencies: { kid: '' },
+    },
+    children: [
+      {pkg: {name: 'kid', version: '1.2.3'}},
+    ],
+  })
+
+  t.strictSame(root.meta.commit(), {
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": {
+      "": {
+        "version": "1.2.3",
+        "dependencies": {
+          "kid": ""
+        },
+        "extraneous": true
+      },
+      "node_modules/kid": {
+        "version": "1.2.3",
+        "extraneous": true
+      }
+    },
+    "dependencies": {
+      "kid": {
+        "version": "1.2.3",
+        "extraneous": true
+      }
+    },
+    "name": "path",
+    "version": "1.2.3",
+    "extraneous": true
+  })
+})

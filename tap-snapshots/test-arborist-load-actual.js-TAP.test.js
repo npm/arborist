@@ -1026,10 +1026,6 @@ Link {
     "name": "root",
     "packages": Object {
       "": Object {
-        "link": true,
-        "resolved": "../../root",
-      },
-      "../../root": Object {
         "dependencies": Object {
           "@scope/x": "1",
           "notinstalledhere": "",
@@ -3172,10 +3168,6 @@ Link {
     "name": "root",
     "packages": Object {
       "": Object {
-        "link": true,
-        "resolved": "../root",
-      },
-      "../root": Object {
         "dependencies": Object {
           "@scope/x": "1",
           "notinstalledhere": "",

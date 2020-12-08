@@ -86,21 +86,28 @@ for (let i = 2; i < process.argv.length; i++) {
 if (suites.size === 0)
   allSuites.forEach(s => suites.add(s))
 
+const suiteName = suite => {
+  const name = suite.saveName ? ` (${suite.saveName})` : ''
+  return `${suite.sha} ${suite.date}${name}`
+}
+
 const suite = new Suite({
   onStart () {
     try {
       const prevName = options.previous || 'last-benchmark'
       const prev = `./benchmark/saved/${prevName}.json`
       this.previous = require(prev)
+      if (!this.previous.saveName)
+        this.previous.saveName = prevName
     } catch (e) {
       this.previous = null
     }
     this.date = new Date().toISOString()
     this.sha = currentSha
     this.cache = options.cache
-    const msg = `test: ${this.sha} ${this.date}`
-    const prev = !this.previous ? ''
-      : `  vs: ${this.previous.sha} ${this.previous.date}`
+    this.saveName = options.save
+    const msg = `test: ${suiteName(this)}`
+    const prev = !this.previous ? '' : `  vs: ${suiteName(this.previous)}`
     console.log('')
     console.log('ARBORIST BENCHMARKS')
     console.log(msg)
@@ -148,8 +155,8 @@ const suite = new Suite({
       return acc
     }, { date: this.date, sha: this.sha })) + '\n'
     writeFileSync(saveThis, data)
-    if (options.save) {
-      const saveFile = `benchmark/saved/${options.save}.json`
+    if (this.saveName) {
+      const saveFile = `benchmark/saved/${this.saveName}.json`
       const saveExplicit = resolve(__dirname, saveFile)
       writeFileSync(saveExplicit, data)
     }

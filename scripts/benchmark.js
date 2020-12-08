@@ -5,8 +5,8 @@ const { relative, resolve } = require('path')
 const rimraf = require('rimraf')
 const { execSync } = require('child_process')
 const shaCmd = 'git show --no-patch --pretty=%H HEAD'
-const currentSha = String(execSync(shaCmd)).trim() +
-  (String(execSync('git status -s -uno')).trim() ? '-dirty' : '')
+const dirty = !!String(execSync('git status -s -uno')).trim()
+const currentSha = String(execSync(shaCmd)).trim() + (dirty ? '-dirty' : '')
 const { green, red } = require('chalk')
 const lastBenchmark = resolve(__dirname, 'benchmark/saved/last-benchmark.json')
 const mkdirp = require('mkdirp')
@@ -22,7 +22,9 @@ const options = {
   // node scripts/benchmark.js --save=without-foobles
   // ... put foobles in ...
   // node scripts/benchmark.js --previous=without-foobles --save=with-foobles
-  save: null,
+  save: String(execSync('git branch --show-current'))
+    .trim()
+    .replace(/\.|\//, '-') + (dirty ? '-dirty' : '')
 }
 
 const allSuites = readdirSync(resolve(__dirname, 'benchmark'))

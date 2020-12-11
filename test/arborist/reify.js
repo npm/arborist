@@ -55,14 +55,20 @@ const warningTracker = () => {
 }
 
 const Node = requireInject('../../lib/node.js', { fs: fsMock })
+const Link = requireInject('../../lib/link.js', {
+  fs: fsMock,
+  '../../lib/node.js': Node,
+})
 const Shrinkwrap = requireInject('../../lib/shrinkwrap.js', {
   fs: fsMock,
   '../../lib/node.js': Node,
+  '../../lib/link.js': Link,
 })
 const Arborist = requireInject('../../lib/arborist', {
   rimraf: rimrafMock,
   fs: fsMock,
   '../../lib/node.js': Node,
+  '../../lib/link.js': Link,
 })
 
 const registryServer = require('../fixtures/registry-mocks/server.js')
@@ -837,16 +843,26 @@ t.test('saving the ideal tree', t => {
         a: 'git+ssh://git@github.com:foo/bar#baz',
         b: '',
         d: 'd@npm:c@1.x <1.9.9',
+        e: 'file:e',
       },
       devDependencies: {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
       },
+      workspaces: [
+        'e',
+      ],
     }
 
     const npa = require('npm-package-arg')
     const kResolvedAdd = Symbol.for('resolvedAdd')
     const path = t.testdir({
-      'package.json': JSON.stringify(pkg)
+      'package.json': JSON.stringify(pkg),
+      e: {
+        'package.json': JSON.stringify({name: 'e'}),
+      },
+      node_modules: {
+        e: t.fixture('symlink', '../e'),
+      },
     })
     const a = newArb({ path })
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
@@ -886,12 +902,30 @@ t.test('saving the ideal tree', t => {
         },
         parent: tree,
       })
+      const target = new Node({
+        name: 'e',
+        pkg: {
+          name: 'e',
+        },
+        path: resolve(tree.path, 'e'),
+        fsParent: tree,
+      })
+      new Link({
+        name: 'e',
+        realpath: target.path,
+        path: resolve(tree.path, 'node_modules/e'),
+        resolved: 'file:../e',
+        pkg: {
+          name: 'e',
+        },
+      })
 
       a[kResolvedAdd] = [
         npa('a@git+ssh://git@github.com:foo/bar#baz'),
         npa('b'),
         npa('d@npm:c@1.x <1.9.9'),
-        npa(`c@git+ssh://git@githost.com:a/b/c.git#master`),
+        npa('c@git+ssh://git@githost.com:a/b/c.git#master'),
+        npa('e'),
       ]
       return a[kSaveIdealTree]({
         savePrefix: '~',
@@ -904,7 +938,11 @@ t.test('saving the ideal tree', t => {
           a: 'github:foo/bar#baz',
           b: '^1.2.3',
           d: 'npm:c@1.x <1.9.9',
+          e: '*',
         },
+        workspaces: [
+          'e',
+        ],
         devDependencies: {
           c: 'git+ssh://git@githost.com:a/b/c.git#master',
         },

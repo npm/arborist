@@ -27202,6 +27202,9 @@ Object {
       "resolved": "https://registry.npmjs.org/c/-/c-1.2.3.tgz",
       "version": "npm:c@1.2.3",
     },
+    "e": Object {
+      "version": "file:e",
+    },
   },
   "lockfileVersion": 2,
   "name": "reify-saving-the-ideal-tree-save-some-stuff",
@@ -27216,10 +27219,17 @@ Object {
         "a": "github:foo/bar#baz",
         "b": "^1.2.3",
         "d": "npm:c@1.x <1.9.9",
+        "e": "*",
       },
       "devDependencies": Object {
         "c": "git+ssh://git@githost.com:a/b/c.git#master",
       },
+      "workspaces": Array [
+        "e",
+      ],
+    },
+    "e": Object {
+      "extraneous": true,
     },
     "node_modules/a": Object {
       "extraneous": true,
@@ -27242,6 +27252,10 @@ Object {
       "name": "c",
       "resolved": "https://registry.npmjs.org/c/-/c-1.2.3.tgz",
       "version": "1.2.3",
+    },
+    "node_modules/e": Object {
+      "link": true,
+      "resolved": "e",
     },
   },
   "requires": true,

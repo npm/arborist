@@ -2317,3 +2317,20 @@ t.test('peer dep override with dep sets being replaced', async t => {
   await t.rejects(printIdeal(path), { code: 'ERESOLVE' })
   t.matchSnapshot(await printIdeal(path, { force: true }))
 })
+
+t.test('remove deps when initializing tree from actual tree', async t => {
+  const path = t.testdir({
+    node_modules: {
+      foo: {
+        'package.json': JSON.stringify({
+          name: 'foo',
+          version: '1.2.3',
+        }),
+      },
+    },
+  })
+
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree({ rm: ['foo'] })
+  t.equal(tree.children.get('foo'), undefined, 'removed foo child')
+})

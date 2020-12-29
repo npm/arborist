@@ -55,33 +55,45 @@ t.test('file and directories made consistent if toPath not set', t => {
 })
 
 t.test('consistent hosted git info urls', t => {
-  const expect = 'git+ssh://git@github.com/a/b.git'
-  t.equal(cr('a/b'), expect)
-  t.equal(cr('github:a/b'), expect)
-  t.equal(cr('git+https://github.com/a/b'), expect)
-  t.equal(cr('git://github.com/a/b'), expect)
-  t.equal(cr('git+ssh://git@github.com/a/b'), expect)
-  t.equal(cr('git+https://github.com/a/b.git'), expect)
-  t.equal(cr('git://github.com/a/b.git'), expect)
-  t.equal(cr('git+ssh://git@github.com/a/b.git'), expect)
+  const auth_user = 'git@'
+  const variations = [
+    {},
+    { auth: auth_user },
+    { hash: '#0000000000000000000000000000000000000000' },
+  ]
 
-  const hash = '#0000000000000000000000000000000000000000'
-  t.equal(cr('a/b' + hash), expect + hash)
-  t.equal(cr('github:a/b' + hash), expect + hash)
-  t.equal(cr('git+https://github.com/a/b' + hash), expect + hash)
-  t.equal(cr('git://github.com/a/b' + hash), expect + hash)
-  t.equal(cr('git+ssh://git@github.com/a/b' + hash), expect + hash)
-  t.equal(cr('git+https://github.com/a/b.git' + hash), expect + hash)
-  t.equal(cr('git://github.com/a/b.git' + hash), expect + hash)
-  t.equal(cr('git+ssh://git@github.com/a/b.git' + hash), expect + hash)
-  t.equal(cr('xyz@a/b' + hash), expect + hash)
-  t.equal(cr('xyz@github:a/b' + hash), expect + hash)
-  t.equal(cr('xyz@git+https://github.com/a/b' + hash), expect + hash)
-  t.equal(cr('xyz@git://github.com/a/b' + hash), expect + hash)
-  t.equal(cr('xyz@git+ssh://git@github.com/a/b' + hash), expect + hash)
-  t.equal(cr('xyz@git+https://github.com/a/b.git' + hash), expect + hash)
-  t.equal(cr('xyz@git://github.com/a/b.git' + hash), expect + hash)
-  t.equal(cr('xyz@git+ssh://git@github.com/a/b.git' + hash), expect + hash)
+  let auth, hash;
+  const expect_url = 'github.com/a/b.git';
+
+  variations.forEach((opts) => {
+    auth = opts.auth ? opts.auth : '';
+    hash = opts.hash ? opts.hash : '';
+
+    let expect_github = 'github:' + 'a/b' + hash
+    t.equal(cr('a/b' + hash), expect_github)
+    t.equal(cr('github:a/b' + hash), expect_github)
+    t.equal(cr('xyz@a/b' + hash), expect_github)
+    t.equal(cr('xyz@github:a/b' + hash), expect_github)
+
+    let expect_git = 'git://' + auth + expect_url + hash
+    t.equal(cr('git://' + auth + 'github.com/a/b' + hash), expect_git)
+    t.equal(cr('git://' + auth + 'github.com/a/b.git' + hash), expect_git)
+    t.equal(cr('xyz@git://' + auth + 'github.com/a/b' + hash), expect_git)
+    t.equal(cr('xyz@git://' + auth + 'github.com/a/b.git' + hash), expect_git)
+
+    let expect_https = 'git+https://' + auth + expect_url + hash
+    t.equal(cr('git+https://' + auth + 'github.com/a/b' + hash), expect_https)
+    t.equal(cr('git+https://' + auth + 'github.com/a/b.git' + hash), expect_https)
+    t.equal(cr('xyz@git+https://' + auth + 'github.com/a/b' + hash), expect_https)
+    t.equal(cr('xyz@git+https://' + auth + 'github.com/a/b.git' + hash), expect_https)
+
+    let expect_ssh = 'git+ssh://' + auth_user + expect_url + hash // always has an auth
+    t.equal(cr('git+ssh://' + auth + 'github.com/a/b' + hash), expect_ssh)
+    t.equal(cr('git+ssh://' + auth + 'github.com/a/b.git' + hash), expect_ssh)
+    t.equal(cr('xyz@git+ssh://' + auth + 'github.com/a/b' + hash), expect_ssh)
+    t.equal(cr('xyz@git+ssh://' + auth + 'github.com/a/b.git' + hash), expect_ssh)
+  });
+
   t.end()
 })
 

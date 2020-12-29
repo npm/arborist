@@ -2340,11 +2340,11 @@ Node {
       },
       "full-git-url": Object {
         "from": "full-git-url@git+https://github.com/isaacs/abbrev-js.git",
-        "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "version": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "ghshort": Object {
         "from": "ghshort@github:isaacs/abbrev-js",
-        "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "version": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
       },
       "ghtgz": Object {
         "extraneous": true,
@@ -2551,13 +2551,13 @@ Node {
       "node_modules/full-git-url": Object {
         "license": "ISC",
         "name": "abbrev",
-        "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "resolved": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "1.1.1",
       },
       "node_modules/ghshort": Object {
         "license": "ISC",
         "name": "abbrev",
-        "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+        "resolved": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
         "version": "1.1.1",
       },
       "node_modules/ghtgz": Object {

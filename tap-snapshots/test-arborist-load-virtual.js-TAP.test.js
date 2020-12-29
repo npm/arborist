@@ -14125,7 +14125,7 @@ Node {
         "name": "full-git-url",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
       "edgesIn": Set {
@@ -14142,7 +14142,7 @@ Node {
         "name": "ghshort",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
@@ -14860,7 +14860,7 @@ Node {
         "name": "full-git-url",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
       "edgesIn": Set {
@@ -14877,7 +14877,7 @@ Node {
         "name": "ghshort",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
@@ -15595,7 +15595,7 @@ Node {
         "name": "full-git-url",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
       "edgesIn": Set {
@@ -15612,7 +15612,7 @@ Node {
         "name": "ghshort",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",
@@ -16306,7 +16306,7 @@ Node {
         "name": "full-git-url",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "git+https://github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghshort" => Node {
       "location": "node_modules/ghshort",
@@ -16315,7 +16315,7 @@ Node {
         "name": "ghshort",
         "version": undefined,
       },
-      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "resolved": "github:isaacs/abbrev-js#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
     },
     "ghtgz" => Node {
       "location": "node_modules/ghtgz",

@@ -194,6 +194,44 @@ t.test('verify dep flags in script environments', async t => {
   ], 'logged script executions at info level')
 })
 
+
+t.test('run scripts in foreground if foregroundScripts set', async t => {
+  const path = fixture(t, 'rebuild-foreground-scripts')
+  const RUNS = []
+  let tick = 0
+  const Arborist = requireInject('../../lib/arborist/index.js', {
+    '@npmcli/run-script': async opts => {
+      // ensure that they don't get parallelized
+      const run = tick++
+      RUNS.push({opts, run})
+      await new Promise(res => setTimeout(res))
+      RUNS.push({opts, finished: true, run})
+      return {code: 0, signal: null}
+    }
+  })
+
+  const arb = new Arborist({path, foregroundScripts: true})
+  await arb.rebuild()
+  // add a sentinel to make sure we didn't get too many entries, since
+  // t.match() will allow trailing/extra values in the test object.
+  RUNS.push(undefined)
+  t.match(RUNS, [
+    { run: 0, opts: { event: 'preinstall', stdio: 'inherit' }, finished: undefined },
+    { run: 0, opts: { event: 'preinstall', stdio: 'inherit' }, finished: true },
+    { run: 1, opts: { event: 'preinstall', stdio: 'inherit' }, finished: undefined },
+    { run: 1, opts: { event: 'preinstall', stdio: 'inherit' }, finished: true },
+    { run: 2, opts: { event: 'install', stdio: 'inherit' }, finished: undefined },
+    { run: 2, opts: { event: 'install', stdio: 'inherit' }, finished: true },
+    { run: 3, opts: { event: 'install', stdio: 'inherit' }, finished: undefined },
+    { run: 3, opts: { event: 'install', stdio: 'inherit' }, finished: true },
+    { run: 4, opts: { event: 'postinstall', stdio: 'inherit' }, finished: undefined },
+    { run: 4, opts: { event: 'postinstall', stdio: 'inherit' }, finished: true },
+    { run: 5, opts: { event: 'postinstall', stdio: 'inherit' }, finished: undefined },
+    { run: 5, opts: { event: 'postinstall', stdio: 'inherit' }, finished: true },
+    undefined,
+  ])
+})
+
 t.test('log failed exit codes as well, even if we dont crash', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({

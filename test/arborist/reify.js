@@ -1186,6 +1186,39 @@ t.test('modules bundled by the root should be installed', async t => {
   t.matchSnapshot(fs.readFileSync(path + '/node_modules/child/package.json', 'utf8'))
 })
 
+t.test('add a new pkg to a prefix that needs to be mkdirpd', async t => {
+  const path = resolve(t.testdir(), 'missing/path/to/root')
+  const tree = await reify(path, { add: ['abbrev'] })
+  t.matchSnapshot(
+    printTree(tree),
+    'should output a successful tree in mkdirp folder'
+  )
+  t.matchSnapshot(
+    fs.readFileSync(path + '/package.json', 'utf8'),
+    'should place expected package.json file into place'
+  )
+  t.matchSnapshot(
+    fs.readFileSync(path + '/package-lock.json', 'utf8'),
+    'should place expected lockfile file into place'
+  )
+
+  t.test('dry run scenarios', async t => {
+    const path = resolve(t.testdir(), 'missing/path/to/root')
+
+    try {
+      await reify(path, { add: ['abbrev'], dryRun: true })
+    } catch (e) {
+      // TODO: should this be throwing?
+    }
+
+    t.throws(() =>
+      fs.statSync(resolve(path, 'node_modules')), { code: 'ENOENT' })
+
+    t.throws(() =>
+      fs.statSync(resolve(path, 'package.json')), { code: 'ENOENT' })
+  })
+})
+
 t.test('do not delete root-bundled deps in global update', async t => {
   const path = t.testdir()
   const file = resolve(__dirname, '../fixtures/bundle.tgz')

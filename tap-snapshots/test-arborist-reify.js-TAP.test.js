@@ -156,6 +156,74 @@ exports[`test/arborist/reify.js TAP add a dep present in the tree, with v1 shrin
 {"dependencies":{"once":"^1.4.0","wrappy":"^1.0.2"}}
 `
 
+exports[`test/arborist/reify.js TAP add a new pkg to a prefix that needs to be mkdirpd > should output a successful tree in mkdirp folder 1`] = `
+Node {
+  "children": Map {
+    "abbrev" => Node {
+      "edgesIn": Set {
+        Edge {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => Edge {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "root",
+  "resolved": null,
+}
+`
+
+exports[`test/arborist/reify.js TAP add a new pkg to a prefix that needs to be mkdirpd > should place expected lockfile file into place 1`] = `
+{
+  "name": "root",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "abbrev": "^1.1.1"
+      }
+    },
+    "node_modules/abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  },
+  "dependencies": {
+    "abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP add a new pkg to a prefix that needs to be mkdirpd > should place expected package.json file into place 1`] = `
+{
+  "dependencies": {
+    "abbrev": "^1.1.1"
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP add multiple pkgs in a specific order > should alphabetically sort dependencies 1`] = `
 {"name":"multiple-pkgs","dependencies":{"abbrev":"^1.1.1","wrappy":"^1.0.2"}}
 `

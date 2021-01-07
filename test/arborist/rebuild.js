@@ -177,6 +177,15 @@ t.test('verify dep flags in script environments', async t => {
   // just set this so it calls the fn, the actual test of this function
   // is in the reify rollback tests.
   await arb.rebuild({ handleOptionalFailure: true })
+  // sort into a predictable order and pull out the fields we wanna test
+  // don't include path or env, because that's going to be platform-specific
+  const saved = [...arb.scriptsRun]
+    .sort(({path:patha,event:eventa}, {path:pathb,event:eventb}) =>
+      patha.localeCompare(pathb) || eventa.localeCompare(eventb))
+    .map(({pkg, event, cmd, code, signal, stdout, stderr}) =>
+      ({pkg, event, cmd, code, signal, stdout, stderr}))
+  t.matchSnapshot(saved, 'saved script results')
+
   for (const [pkg, flags] of Object.entries(expect)) {
     const file = resolve(path, 'node_modules', pkg, 'env')
     t.strictSame(flags, fs.readFileSync(file, 'utf8').split('\n'), pkg)

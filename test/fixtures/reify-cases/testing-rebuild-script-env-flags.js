@@ -13,9 +13,12 @@ optdep: optional true, dev false, devOpt false
 opt-and-dev: optional true, dev true, devOpt false
 `,
   "env.js": `const {writeFileSync} = require('fs')
-writeFileSync('env', Object.keys(process.env).sort()
+const output = Object.keys(process.env).sort()
   .filter(k => process.env[k] === '1' && /^npm_package_(dev|optional)/.test(k))
-  .join('\\n'))
+  .join('\\n')
+writeFileSync('env', output)
+console.log(output)
+console.error('stderr')
 `,
   "node_modules": {
     "devdep": {

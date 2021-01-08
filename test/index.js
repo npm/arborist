@@ -6,3 +6,4 @@ const {Node} = Arborist
 t.equal(Arborist, require('../lib/arborist'), 'default esm import')
 t.equal(Node, require('../lib/node.js'), 'node is exported')
 t.equal(Arborist.Link, require('../lib/link.js'), 'link is exported')
+t.equal(Arborist.Edge, require('../lib/edge.js'), 'edge is exported')

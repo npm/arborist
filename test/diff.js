@@ -1,6 +1,7 @@
 const Diff = require('../lib/diff.js')
 const t = require('tap')
 const Node = require('../lib/node.js')
+const Link = require('../lib/link.js')
 
 
 // don't print the full node objects because we don't need to track that
@@ -184,3 +185,34 @@ t.matchSnapshot(d, 'diff two trees')
 t.equal(d.parent, null, 'root has no parent')
 t.equal([...d.children][0].parent, d, 'parent of root child is root')
 t.equal(d.action, null, 'root has no action')
+
+t.test('when a global root is a link, traverse the target children', async (t) => {
+  const actual = new Link({
+    global: true,
+    path: '/some/linked/path',
+    realpath: '/some/real/path',
+  })
+
+  actual.target = new Node({
+    global: true,
+    path: '/some/real/path',
+    pkg: {},
+    children: [{
+      name: 'child',
+      pkg: {
+        name: 'child',
+        version: '1.2.3'
+      }
+    }]
+  })
+
+  const ideal = new Node({
+    path: '/some/real/path',
+    realpath: '/some/real/path',
+    children: []
+  })
+
+  const diff = Diff.calculate({ actual, ideal })
+  t.matchSnapshot(diff, 'correctly removes the child node')
+  t.equal(diff.removed.length, 1, 'identifies the need to remove the child')
+})

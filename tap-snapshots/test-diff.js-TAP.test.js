@@ -266,3 +266,43 @@ Diff {
   ],
 }
 `
+
+exports[`test/diff.js TAP when a global root is a link, traverse the target children > correctly removes the child node 1`] = `
+Diff {
+  "action": null,
+  "actual": Link {
+    "name": "path",
+    "path": "/some/linked/path",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "path",
+    "path": "/some/real/path",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "/some/real/path/node_modules/child",
+  ],
+  "unchanged": Array [],
+  "removed": Array [
+    "/some/real/path/node_modules/child",
+  ],
+  "children": Array [
+    Diff {
+      "action": "REMOVE",
+      "actual": Node {
+        "name": "child",
+        "path": "/some/real/path/node_modules/child",
+        "integrity": null,
+      },
+      "ideal": undefined,
+      "leaves": Array [
+        "/some/real/path/node_modules/child",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`

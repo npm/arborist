@@ -1332,3 +1332,13 @@ t.only('shrinkwrap where root is a link node', async t => {
     "extraneous": true
   })
 })
+
+t.test('prioritize npm-shrinkwrap.json over package-lock.json', async t => {
+  const path = t.testdir({
+    'npm-shrinkwrap.json': '{}',
+    'package-lock.json': '{}',
+    'package.json': '{}',
+  })
+  const sw = await Shrinkwrap.load({path})
+  t.equal(sw.type, 'npm-shrinkwrap.json')
+})

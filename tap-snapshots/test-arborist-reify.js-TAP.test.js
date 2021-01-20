@@ -27273,6 +27273,11 @@ Object {
     "e": Object {
       "version": "file:e",
     },
+    "f": Object {
+      "extraneous": true,
+      "from": "f@git+https://user:pass@github.com/baz/quux.git#asdf",
+      "version": "git+https://user:pass@github.com/baz/quux#71f3ccfefba85d2048484569dba8c1829f6f41d7",
+    },
   },
   "lockfileVersion": 2,
   "name": "reify-saving-the-ideal-tree-save-some-stuff",
@@ -27288,6 +27293,7 @@ Object {
         "b": "^1.2.3",
         "d": "npm:c@1.x <1.9.9",
         "e": "*",
+        "f": "git+https://user:pass@github.com/baz/quux.git#asdf",
       },
       "devDependencies": Object {
         "c": "git+ssh://git@githost.com:a/b/c.git#master",
@@ -27324,6 +27330,11 @@ Object {
     "node_modules/e": Object {
       "link": true,
       "resolved": "e",
+    },
+    "node_modules/f": Object {
+      "extraneous": true,
+      "resolved": "git+https://user:pass@github.com/baz/quux.git#71f3ccfefba85d2048484569dba8c1829f6f41d7",
+      "version": "1.2.3",
     },
   },
   "requires": true,

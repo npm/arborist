@@ -56,6 +56,7 @@ t.test('file and directories made consistent if toPath not set', t => {
 
 t.test('consistent hosted git info urls', t => {
   const expect = 'git+ssh://git@github.com/a/b.git'
+  const expectAuth = 'git+https://user:pass@github.com/a/b.git'
   t.equal(cr('a/b'), expect)
   t.equal(cr('github:a/b'), expect)
   t.equal(cr('git+https://github.com/a/b'), expect)
@@ -64,6 +65,7 @@ t.test('consistent hosted git info urls', t => {
   t.equal(cr('git+https://github.com/a/b.git'), expect)
   t.equal(cr('git://github.com/a/b.git'), expect)
   t.equal(cr('git+ssh://git@github.com/a/b.git'), expect)
+  t.equal(cr('git+https://user:pass@github.com/a/b.git'), expectAuth)
 
   const hash = '#0000000000000000000000000000000000000000'
   t.equal(cr('a/b' + hash), expect + hash)

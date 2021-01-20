@@ -844,6 +844,7 @@ t.test('saving the ideal tree', t => {
         b: '',
         d: 'd@npm:c@1.x <1.9.9',
         e: 'file:e',
+        f: 'git+https://user:pass@github.com/baz/quux#asdf',
       },
       devDependencies: {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
@@ -875,6 +876,9 @@ t.test('saving the ideal tree', t => {
       a.idealTree = tree
 
       // simulated child nodes
+      // Note: these all show up as "extraneous" in the lockfile,
+      // because we don't do the calcDepFlags step in this simulation,
+      // but since we're only testing the saving step, that's fine.
       new Node({
         name: 'a',
         resolved: `git+ssh://git@github.com:foo/bar#${hash}`,
@@ -898,6 +902,15 @@ t.test('saving the ideal tree', t => {
         resolved: 'https://registry.npmjs.org/c/-/c-1.2.3.tgz',
         pkg: {
           name: 'c',
+          version: '1.2.3',
+        },
+        parent: tree,
+      })
+      new Node({
+        name: 'f',
+        resolved: `git+https://user:pass@github.com/baz/quux#${hash}`,
+        pkg: {
+          name: 'f',
           version: '1.2.3',
         },
         parent: tree,
@@ -926,6 +939,7 @@ t.test('saving the ideal tree', t => {
         npa('d@npm:c@1.x <1.9.9'),
         npa('c@git+ssh://git@githost.com:a/b/c.git#master'),
         npa('e'),
+        npa('f@git+https://user:pass@github.com/baz/quux#asdf'),
       ]
       return a[kSaveIdealTree]({
         savePrefix: '~',
@@ -939,6 +953,7 @@ t.test('saving the ideal tree', t => {
           b: '^1.2.3',
           d: 'npm:c@1.x <1.9.9',
           e: '*',
+          f: 'git+https://user:pass@github.com/baz/quux.git#asdf',
         },
         workspaces: [
           'e',

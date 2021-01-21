@@ -56,6 +56,7 @@ scripts/benchmark/*/
 /test/fixtures/selflink/node_modules/foo/node_modules/selflink
 /test/fixtures/symlinked-node-modules/example/node_modules
 /test/fixtures/symlinked-node-modules/linked-node-modules/bar
+/test/fixtures/testing-peer-deps-link
 /test/fixtures/workspace/node_modules/a
 /test/fixtures/workspace/node_modules/b
 /test/fixtures/workspace/node_modules/c

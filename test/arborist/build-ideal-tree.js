@@ -152,6 +152,16 @@ t.test('testing-peer-deps package', t => {
     .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')))
 })
 
+t.test('testing-peer-deps package with symlinked root', t => {
+  const path = resolve(fixtures, 'testing-peer-deps-link')
+  return buildIdeal(path).then(idealTree => {
+    t.ok(idealTree.isLink, 'ideal tree is rooted on a Link')
+    return new Arborist({path, idealTree, ...OPT})
+      .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
+      .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps'))
+  })
+})
+
 t.test('testing-peer-deps nested', t => {
   const path = resolve(fixtures, 'testing-peer-deps-nested')
   return t.resolveMatchSnapshot(printIdeal(path), 'build ideal tree')

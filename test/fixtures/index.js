@@ -47,6 +47,7 @@ const symlinks = {
   'deeproot': 'deep',
   'badlink/node_modules/foo': 'foo',
   'badlink/node_modules/bar': 'baz',
+  'testing-peer-deps-link': 'testing-peer-deps',
 
   'workspace/node_modules/a': '../packages/a',
   'workspace/node_modules/b': '../packages/b',

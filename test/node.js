@@ -1991,19 +1991,18 @@ t.test('changing path to a node_modules folder sets name if necessary', t => {
 
 t.test('printable Node', t => {
   // FIXME: once we drop support to node10 we can remove this
-  const normalizeNode10compatSnapshots = str =>
-    str
-      .replace(/:\n +Map/g, ': Map')
-      .replace(/:\n +Set/g, ': Set')
-      .replace(/\n +/g, '\n')
-      .replace(/\n\}/g, ' }')
-      .replace(/\n\]/g, ' ]')
-      .replace(/\n\[/g, ' [')
-      .replace(/\n\{\n/g, ' { ')
-      .replace(/Map\([0-9]\)/g, 'Map')
-      .replace(/Set\([0-9]\)/g, 'Set')
-      .replace(/ArboristNode /g, '')
-      .replace(/ArboristEdge /g, '')
+  t.cleanSnapshot = str => str
+    .replace(/:\n +Map/g, ': Map')
+    .replace(/:\n +Set/g, ': Set')
+    .replace(/\n +/g, '\n')
+    .replace(/\n\}/g, ' }')
+    .replace(/\n\]/g, ' ]')
+    .replace(/\n\[/g, ' [')
+    .replace(/\n\{\n/g, ' { ')
+    .replace(/Map\([0-9]\)/g, 'Map')
+    .replace(/Set\([0-9]\)/g, 'Set')
+    .replace(/ArboristNode /g, '')
+    .replace(/ArboristEdge /g, '')
 
   t.test('extraneous tree', t => {
     const tree = new Node({
@@ -2051,12 +2050,8 @@ t.test('printable Node', t => {
       }],
     })
     tree.error = { code: 'ERR', path: '/' }
-    t.matchSnapshot(
-      normalizeNode10compatSnapshots(
-        util.inspect(tree, { depth: 6 })
-      ),
-      'should print human readable representation of node tree'
-    )
+    t.matchSnapshot(util.inspect(tree, { depth: 6 }),
+      'should print human readable representation of node tree')
     t.end()
   })
 
@@ -2128,12 +2123,9 @@ t.test('printable Node', t => {
 
     tree.error = a.errors[0]
 
-    t.matchSnapshot(
-      normalizeNode10compatSnapshots(
-        util.inspect(tree, { depth: 6 })
-      ),
-      'should match non-extraneous tree representation'
-    )
+    t.matchSnapshot(util.inspect(tree, { depth: 6 }),
+      'should match non-extraneous tree representation')
+
     t.end()
   })
   t.end()

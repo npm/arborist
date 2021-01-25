@@ -9,10 +9,10 @@ t.cleanSnapshot = str => str
   .split(process.cwd()).join('{CWD}')
   .replace(/[A-Z]:/g, '')
   .replace(/\\+/g, '/')
-  .replace(/: ?[\n\r]+/g, ': ')
-  // FIXME: once we drop support to node10 we can remove this
+  // FIXME: once we drop support to node10 we can remove some of this
   .replace(/:\n +Map/g, ': Map')
   .replace(/:\n +Set/g, ': Set')
+  .replace(/: *[\n\r]+/g, ':')
   .replace(/\n +/g, '\n')
   .replace(/\n\}/g, ' }')
   .replace(/\n\]/g, ' ]')

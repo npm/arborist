@@ -69,6 +69,8 @@ const Arborist = requireInject('../../lib/arborist', {
   fs: fsMock,
   '../../lib/node.js': Node,
   '../../lib/link.js': Link,
+  // need to not mock this one, so we still can swap the process object
+  '../../lib/signal-handling.js': require('../../lib/signal-handling.js'),
 })
 
 const registryServer = require('../fixtures/registry-mocks/server.js')
@@ -1312,4 +1314,105 @@ t.test('save proper lockfile with bins when upgrading lockfile', t => {
   })
 
   t.end()
+})
+
+t.test('rollback if process is terminated during reify process', async t => {
+  const onExit = require('../../lib/signal-handling.js')
+  // mock the process so we don't have to kill this test
+  // copy-pasta from signal-handling test
+  const EE = require('events')
+  const proc = onExit.process = new class MockProcess extends EE {
+    constructor () {
+      super()
+      this.pid = process.pid
+    }
+
+    // ignore the beforeExit handler, since we won't actually let that happen
+    once (ev, ...args) {
+      if (ev !== 'beforeExit')
+        return super.once(ev, ...args)
+    }
+
+    kill (pid, signal) {
+      if (pid !== this.pid) {
+        throw Object.assign(new Error('wrong pid sent to kill() method'), {
+          expect: this.pid,
+          actual: pid,
+        })
+      }
+      return new Promise(res => process.nextTick(() => {
+        this.emit(signal)
+        res()
+      }))
+    }
+  }
+
+  t.teardown(() => onExit.process = process)
+
+  const methods = [
+    Symbol.for('retireShallowNodes'),
+    Symbol.for('createSparseTree'),
+    Symbol.for('loadShrinkwrapsAndUpdateTrees'),
+    Symbol.for('loadBundlesAndUpdateTrees'),
+    Symbol.for('unpackNewModules'),
+    Symbol.for('moveBackRetiredUnchanged'),
+    Symbol.for('build'),
+    Symbol.for('removeTrash'),
+  ]
+
+  t.plan(methods.length)
+  for (const method of methods) {
+    t.test(Symbol.keyFor(method), t => {
+      const orig = Arborist.prototype[method]
+      t.teardown(() => Arborist.prototype[method] = orig)
+      Arborist.prototype[method] = async function (...args) {
+        return Promise.resolve(orig.call(this, ...args)).then(() =>
+          proc.kill(process.pid, 'SIGINT'))
+      }
+      const path = t.testdir({
+        'package.json': JSON.stringify({ dependencies: { abbrev: '' }}),
+      })
+
+      t.test('clean install', async t => {
+        const arb = newArb({ path })
+        // starting from an empty folder, ends up empty
+        await t.rejects(arb.reify(), {
+          message: 'process terminated',
+          signal: 'SIGINT',
+        })
+        // if it fails while removing trash well... it's already over.
+        // we can't actually roll back at that point, because "trash" is gone
+        if (method !== Symbol.for('removeTrash'))
+          t.throws(() => fs.statSync(path + '/node_modules'), { code: 'ENOENT' })
+      })
+
+      t.test('upgrade install', async t => {
+        // ensure that we end up with the same thing we started with,
+        // if it was something other than we're installing
+        const a = resolve(path, 'node_modules/abbrev')
+        fs.mkdirSync(a, { recursive: true })
+        const pj = resolve(a, 'package.json')
+        fs.writeFileSync(pj, JSON.stringify({
+          name: 'abbrev',
+          version: '0.0.0',
+        }))
+        const arb = newArb({path})
+        await t.rejects(arb.reify({ add: ['abbrev@1.1.1'] }), {
+          message: 'process terminated',
+          signal: 'SIGINT',
+        })
+
+        // if it fails while removing trash well... it's already over.
+        // we can't actually roll back at that point, because "trash" is gone
+        if (method !== Symbol.for('removeTrash')) {
+          t.deepEqual(JSON.parse(fs.readFileSync(pj, 'utf8')), {
+            name: 'abbrev',
+            version: '0.0.0',
+          })
+        }
+      })
+
+      t.end()
+    })
+  }
 })

@@ -8,7 +8,8 @@ t.cleanSnapshot = str => str
   // normalize paths
   .split(process.cwd()).join('{CWD}')
   .replace(/[A-Z]:/g, '')
-  .replace(/\\\\?/g, '/')
+  .replace(/\\+/g, '/')
+  .replace(/: ?[\n\r]+/g, ': ')
   // FIXME: once we drop support to node10 we can remove this
   .replace(/:\n +Map/g, ': Map')
   .replace(/:\n +Set/g, ': Set')

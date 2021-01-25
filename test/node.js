@@ -1990,10 +1990,15 @@ t.test('changing path to a node_modules folder sets name if necessary', t => {
 })
 
 t.test('printable Node', t => {
-  // FIXME: once we drop support to node10 we can remove this
   t.cleanSnapshot = str => str
+    // normalize paths
+    .split(process.cwd()).join('{CWD}')
+    .replace(/[A-Z]:/g, '')
+    .replace(/\\+/g, '/')
+    // FIXME: once we drop support to node10 we can remove some of this
     .replace(/:\n +Map/g, ': Map')
     .replace(/:\n +Set/g, ': Set')
+    .replace(/:\n? +/g, ':')
     .replace(/\n +/g, '\n')
     .replace(/\n\}/g, ' }')
     .replace(/\n\]/g, ' ]')
@@ -2002,7 +2007,7 @@ t.test('printable Node', t => {
     .replace(/Map\([0-9]\)/g, 'Map')
     .replace(/Set\([0-9]\)/g, 'Set')
     .replace(/ArboristNode /g, '')
-    .replace(/ArboristEdge /g, '')
+    .replace(/Edge /g, '')
 
   t.test('extraneous tree', t => {
     const tree = new Node({

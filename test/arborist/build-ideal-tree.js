@@ -2283,3 +2283,26 @@ t.test('remove deps when initializing tree from actual tree', async t => {
   const tree = await arb.buildIdealTree({ rm: ['foo'] })
   t.equal(tree.children.get('foo'), undefined, 'removed foo child')
 })
+
+t.test('detect conflicts in transitive peerOptional deps', t => {
+  t.plan(2)
+  const base = resolve(fixtures, 'test-conflicted-optional-peer-dep')
+
+  t.test('nest when peerOptional conflicts', async t => {
+    const path = resolve(base, 'nest-peer-optional')
+    const tree = await buildIdeal(path)
+    t.matchSnapshot(printTree(tree))
+    const name = '@isaacs/test-conflicted-optional-peer-dep-peer'
+    const peers = tree.inventory.query('name', name)
+    t.equal(peers.size, 2, 'installed the peer dep twice to avoid conflict')
+  })
+
+  t.test('omit peerOptionals when not needed for conflicts', async t => {
+    const path = resolve(base, 'omit-peer-optional')
+    const tree = await buildIdeal(path)
+    t.matchSnapshot(printTree(tree))
+    const name = '@isaacs/test-conflicted-optional-peer-dep-peer'
+    const peers = tree.inventory.query('name', name)
+    t.equal(peers.size, 0, 'omit peerOptional, not needed')
+  })
+})

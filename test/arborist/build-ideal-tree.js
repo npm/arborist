@@ -24,8 +24,14 @@ const warningTracker = () => {
 
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
+  if (obj instanceof Set)
+    return new Set([...obj].map(normalizePaths))
+
+  if (obj instanceof Map)
+    return new Map([...obj].map(([name, val]) => [name, normalizePaths(val)]))
+
   for (const key in obj) {
-    if (key === 'location') {
+    if (['location', 'path', 'realpath', 'resolved', 'spec'].includes(key)) {
       obj[key] = normalizePath(obj[key])
     } else if (typeof obj[key] === 'object' && obj[key] !== null) {
       obj[key] = normalizePaths(obj[key])
@@ -34,74 +40,7 @@ const normalizePaths = obj => {
   return obj
 }
 
-// two little helper functions to make the loaded trees
-// easier to look at in the snapshot results.
-const printEdge = (edge, inout) => ({
-  name: edge.name,
-  type: edge.type,
-  spec: normalizePath(edge.spec),
-  ...(inout === 'in' ? {
-    from: edge.from && edge.from.location,
-  } : {
-    to: edge.to && edge.to.location,
-  }),
-  ...(edge.error ? { error: edge.error } : {}),
-  __proto__: { constructor: edge.constructor },
-})
-
-const printTree = tree => ({
-  name: tree.name,
-  location: tree.location,
-  resolved: tree.resolved && normalizePath(tree.resolved),
-  // 'package': tree.package,
-  ...(tree.extraneous ? { extraneous: true } : {
-    ...(tree.dev ? { dev: true } : {}),
-    ...(tree.optional ? { optional: true } : {}),
-    ...(tree.devOptional && !tree.dev && !tree.optional
-      ? { devOptional: true } : {}),
-    ...(tree.peer ? { peer: true } : {}),
-  }),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.error
-    ? {
-      error: {
-        code: tree.error.code,
-        ...(tree.error.path ? { path: relative(__dirname, tree.error.path) }
-        : {}),
-      },
-    } : {}),
-  ...(tree.isLink ? {
-    target: {
-      name: tree.target.name,
-      location: tree.target.location,
-      ...(tree.target.parent ? { parent: tree.target.parent.location } : {}),
-      ...(tree.target.fsParent ? { fsParent: tree.target.fsParent.location } : {}),
-    },
-  } : {}),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.edgesIn.size ? {
-    edgesIn: new Set([...tree.edgesIn]
-      .sort((a, b) => a.from.location.localeCompare(b.from.location))
-      .map(edge => printEdge(edge, 'in'))),
-  } : {}),
-  ...(tree.edgesOut.size ? {
-    edgesOut: new Map([...tree.edgesOut.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([name, edge]) => [name, printEdge(edge, 'out')])),
-  } : {}),
-  ...(!tree.fsChildren.size ? {} : {
-    fsChildren: new Set([...tree.fsChildren]
-      .sort((a, b) => normalizePath(a.path).localeCompare(normalizePath(b.path)))
-      .map(tree => printTree(tree))),
-  }),
-  ...(tree.target || !tree.children.size ? {}
-  : {
-    children: new Map([...tree.children.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([name, tree]) => [name, printTree(tree)])),
-  }),
-  __proto__: { constructor: tree.constructor },
-})
+const printTree = tree => normalizePaths(tree.toJSON())
 
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')

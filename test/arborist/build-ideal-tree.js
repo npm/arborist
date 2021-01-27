@@ -2324,3 +2324,22 @@ t.test('do not fail if root peerDep looser than meta peerDep', async t => {
   const path = resolve(fixtures, 'test-peer-looser-than-dev')
   t.matchSnapshot(await printIdeal(path))
 })
+
+t.test('adding existing dep with updateable version in package.json', async t => {
+  const path = t.testdir({
+    node_modules: {
+      lodash: {
+        'package.json': JSON.stringify({
+          version: '3.9.1'
+        })
+      }
+    },
+    'package.json': JSON.stringify({
+      devDependencies: {
+        lodash: '^3.9.1'
+      },
+    })
+  })
+
+  t.matchSnapshot(await printIdeal(path, { add: ['lodash'] }))
+})

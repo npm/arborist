@@ -2319,3 +2319,8 @@ t.test('detect conflicts in transitive peerOptional deps', t => {
     t.equal(peers.size, 0, 'omit peerOptional, not needed')
   })
 })
+
+t.test('do not fail if root peerDep looser than meta peerDep', async t => {
+  const path = resolve(fixtures, 'test-peer-looser-than-dev')
+  t.matchSnapshot(await printIdeal(path))
+})

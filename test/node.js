@@ -2135,3 +2135,15 @@ t.test('printable Node', t => {
   })
   t.end()
 })
+
+t.test('isProjectRoot shows if the node is the root link target', async t => {
+  const link = new Link({
+    path: '/link',
+    realpath: '/actual',
+  })
+  const n = new Node({ path: '/actual', root: link })
+  t.equal(n.isProjectRoot, true)
+  t.equal(link.isProjectRoot, true)
+  t.equal(link.isRoot, true)
+  t.equal(n.isRoot, false)
+})

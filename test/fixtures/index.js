@@ -133,6 +133,8 @@ const symlinks = {
   'workspaces-add-new-dep/node_modules/a': '../a',
 
   'workspaces-non-simplistic/node_modules/pkg-a': '../a',
+
+  'testing-bundledeps-link': './testing-bundledeps-2',
 }
 
 const cleanup = () => Object.keys(symlinks).forEach(s => {

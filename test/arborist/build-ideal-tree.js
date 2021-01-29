@@ -1,7 +1,9 @@
-const {relative, basename, resolve} = require('path')
+const {basename, resolve} = require('path')
 const t = require('tap')
 const Arborist = require('../..')
 const fixtures = resolve(__dirname, '../fixtures')
+// load the symbolic links that we depend on
+require(fixtures)
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry, auditResponse} = registryServer
 const npa = require('npm-package-arg')
@@ -31,11 +33,10 @@ const normalizePaths = obj => {
     return new Map([...obj].map(([name, val]) => [name, normalizePaths(val)]))
 
   for (const key in obj) {
-    if (['location', 'path', 'realpath', 'resolved', 'spec'].includes(key)) {
+    if (['location', 'path', 'realpath', 'resolved', 'spec'].includes(key))
       obj[key] = normalizePath(obj[key])
-    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+    else if (typeof obj[key] === 'object' && obj[key] !== null)
       obj[key] = normalizePaths(obj[key])
-    }
   }
   return obj
 }
@@ -2257,8 +2258,8 @@ t.test('peer dep that needs to be replaced', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({
       dependencies: {
-        "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
-        "webpack-dev-server": "^3.11.0"
+        '@pmmmwh/react-refresh-webpack-plugin': '^0.4.3',
+        'webpack-dev-server': '^3.11.0',
       },
     }),
   })
@@ -2270,11 +2271,11 @@ t.test('peer dep override with dep sets being replaced', async t => {
   // that has a peer dependency on webpack 4, it overrides but otherwise fails.
   const path = t.testdir({
     'package.json': JSON.stringify({
-      "devDependencies": {
-        "webpack": "5.0.0",
-        "webpack-dev-server": "3.11.0"
-      }
-    })
+      devDependencies: {
+        webpack: '5.0.0',
+        'webpack-dev-server': '3.11.0',
+      },
+    }),
   })
   await t.rejects(printIdeal(path), { code: 'ERESOLVE' })
   t.matchSnapshot(await printIdeal(path, { force: true }))
@@ -2330,16 +2331,46 @@ t.test('adding existing dep with updateable version in package.json', async t =>
     node_modules: {
       lodash: {
         'package.json': JSON.stringify({
-          version: '3.9.1'
-        })
-      }
+          version: '3.9.1',
+        }),
+      },
     },
     'package.json': JSON.stringify({
       devDependencies: {
-        lodash: '^3.9.1'
+        lodash: '^3.9.1',
       },
-    })
+    }),
   })
 
   t.matchSnapshot(await printIdeal(path, { add: ['lodash'] }))
+})
+
+t.test('set the current on ERESOLVE triggered by devDeps', async t => {
+  // fixes a bug where the dev deps are not loaded properly in the
+  // virtual root, leading to incomprehensible ERESOLVE explanations
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'root-dev-peer-conflict',
+      version: '1.0.0',
+      devDependencies: {
+        eslint: '^4.19.1',
+        'eslint-config-standard': '^11.0.0',
+      },
+    }),
+  })
+
+  const arb = new Arborist({ path, ...OPT })
+  t.rejects(arb.buildIdealTree(), {
+    code: 'ERESOLVE',
+    current: {
+      name: 'eslint',
+      version: '4.19.1',
+      whileInstalling: {
+        name: 'root-dev-peer-conflict',
+        version: '1.0.0',
+        path: resolve(path),
+      },
+      location: 'node_modules/eslint',
+    },
+  })
 })

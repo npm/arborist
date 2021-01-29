@@ -2147,3 +2147,19 @@ t.test('isProjectRoot shows if the node is the root link target', async t => {
   t.equal(link.isRoot, true)
   t.equal(n.isRoot, false)
 })
+
+t.test('virtual references to root node has devDep edges', async t => {
+  const root = new Node({
+    path: '/some/project/path',
+    pkg: {
+      devDependencies: {
+        a: '1',
+      },
+    },
+  })
+  const virtualRoot = new Node({
+    path: '/virtual-root',
+    sourceReference: root,
+  })
+  t.equal(virtualRoot.edgesOut.get('a').type, 'dev')
+})

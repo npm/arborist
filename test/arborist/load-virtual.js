@@ -16,71 +16,10 @@ const editFixture = resolve(__dirname, '../fixtures/edit-package-json')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
 const Node = require('../../lib/node.js')
 
-const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
-// two little helper functions to make the loaded trees
-// easier to look at in the snapshot results.
-const printEdge = (edge, inout) => ({
-  name: edge.name,
-  type: edge.type,
-  spec: normalizePath(edge.spec),
-  ...(inout === 'in' ? {
-    from: edge.from && edge.from.location,
-  } : {
-    to: edge.to && edge.to.location,
-  }),
-  ...(edge.error ? { error: edge.error } : {}),
-  __proto__: { constructor: edge.constructor },
-})
-
-const printTree = tree => ({
-  name: tree.name,
-  package: {
-    name: tree.package.name,
-    version: tree.package.version,
-  },
-  location: tree.location,
-  resolved: tree.resolved && normalizePath(tree.resolved),
-  ...(tree.extraneous ? { extraneous: true } : {
-    ...(tree.dev ? { dev: true } : {}),
-    ...(tree.optional ? { optional: true } : {}),
-    ...(tree.devOptional && !tree.dev && !tree.optional
-      ? { devOptional: true } : {}),
-    ...(tree.peer ? { peer: true } : {}),
-  }),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.error
-    ? {
-      error: {
-        code: tree.error.code,
-        ...(tree.error.path ? { path: relative(__dirname, tree.error.path) }
-          : {}),
-      }
-    } : {}),
-  ...(tree.isLink ? {
-    target: tree.target && {
-      name: tree.target.name,
-      parent: tree.target.parent && tree.target.parent.location
-    }
-  } : {}),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.edgesIn.size ? {
-    edgesIn: new Set([...tree.edgesIn]
-      .sort((a, b) => a.from.location.localeCompare(b.from.location))
-      .map(edge => printEdge(edge, 'in'))),
-  } : {}),
-  ...(tree.edgesOut.size ? {
-    edgesOut: new Map([...tree.edgesOut.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([name, edge]) => [name, printEdge(edge, 'out')]))
-  } : {}),
-  ...( tree.target || !tree.children.size ? {}
-    : {
-      children: new Map([...tree.children.entries()]
-        .sort((a, b) => a[0].localeCompare(b[0]))
-        .map(([name, tree]) => [name, printTree(tree)]))
-    }),
-  __proto__: { constructor: tree.constructor },
-})
+const {
+  normalizePath,
+  printTree,
+} = require('../utils.js')
 
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
@@ -132,7 +71,6 @@ t.test('loading without a package-lock fails', t =>
   }))
 
 t.test('load from npm-shrinkwrap.json', t => {
-  const fs = require('fs')
   const lock = require(fixture + '/package-lock.json')
   const pkg = require(fixture + '/package.json')
   const path = t.testdir({
@@ -159,6 +97,11 @@ t.test('load a tree with optional and dev dependencies', t =>
 t.test('load a tree with a bunch of bundles', t =>
   loadVirtual(bundleFixture).then(tree =>
     t.matchSnapshot(printTree(tree), 'virtual tree with multiple bundles')))
+
+t.test('load a tree with an empty root, pj, and a lockfile', async t => {
+  const tree = await loadVirtual(emptyFixture)
+  t.matchSnapshot(printTree(tree), 'virtual tree with no deps')
+})
 
 t.test('load a tree with an empty root, no pj, and a lockfile', async t => {
   const tree = await loadVirtual(emptyFixtureNoPJ)
@@ -224,13 +167,13 @@ t.test('workspaces', t => {
     ).then(tree =>
       t.matchSnapshot(printTree(tree), 'virtual tree with shared dependencies')))
 
-  t.test('load conflicting dep versions example', t => 
+  t.test('load conflicting dep versions example', t =>
     loadVirtual(
       resolve(__dirname, '../fixtures/workspaces-conflicting-versions-virtual')
     ).then(tree =>
       t.matchSnapshot(printTree(tree), 'virtual tree with resolved conflicting dependencies')))
 
-  t.test('load prefer linking nested workspaces', t => 
+  t.test('load prefer linking nested workspaces', t =>
     loadVirtual(
       resolve(__dirname, '../fixtures/workspaces-prefer-linking-virtual')
     ).then(tree =>
@@ -241,7 +184,6 @@ t.test('workspaces', t => {
       resolve(__dirname, '../fixtures/workspaces-version-unsatisfied-virtual')
     ).then(tree =>
       t.matchSnapshot(printTree(tree), 'virtual tree with deduped dep')))
-
 
   t.test('load linked top level nested workspaces', t =>
     loadVirtual(

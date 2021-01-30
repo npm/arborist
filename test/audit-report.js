@@ -2,7 +2,6 @@ const t = require('tap')
 const AuditReport = require('../lib/audit-report.js')
 const {auditToBulk} = AuditReport
 const Node = require('../lib/node.js')
-const Vuln = require('../lib/vuln.js')
 const Arborist = require('../')
 const registryServer = require('./fixtures/registry-mocks/server.js')
 const {registry, auditResponse, failAudit, advisoryBulkResponse} = registryServer
@@ -15,15 +14,15 @@ const newArb = (path, opts = {}) => new Arborist({path, registry, cache, ...opts
 const sortReport = report => {
   const entries = Object.entries(report.vulnerabilities)
   const vulns = entries.sort(([a], [b]) => a.localeCompare(b))
-  .map(([name, vuln]) => [
-    name,
-    {
-      ...vuln,
-      via: (vuln.via || []).sort((a, b) =>
-        String(a.source || a).localeCompare(String(b.source || b))),
-      effects: (vuln.effects || []).sort((a, b) => a.localeCompare(b)),
-    }
-  ])
+    .map(([name, vuln]) => [
+      name,
+      {
+        ...vuln,
+        via: (vuln.via || []).sort((a, b) =>
+          String(a.source || a).localeCompare(String(b.source || b))),
+        effects: (vuln.effects || []).sort((a, b) => a.localeCompare(b)),
+      },
+    ])
   report.vulnerabilities = vulns.reduce((set, [k, v]) => {
     set[k] = v
     return set
@@ -103,7 +102,7 @@ t.test('get advisory about node not in tree', async t => {
     pkg: { name: 'fooo', version: '1.2.3' },
   })
   tree.package = { dependencies: {
-    fooo: ''
+    fooo: '',
   }}
 
   const report = await AuditReport.load(tree, arb.options)
@@ -216,7 +215,7 @@ t.test('audit returns an error', async t => {
       'audit error',
       report.error,
     ],
-    [ 'silly', 'audit error', 'no audit for you' ],
+    ['silly', 'audit error', 'no audit for you'],
   ], 'logged audit failure')
   t.match(report.error, Error)
 })
@@ -273,7 +272,7 @@ t.test('get default opts when loaded without opts', async t => {
 
 t.test('error on audit response with no advisories object', async t => {
   const dir = t.testdir({
-    'audit.json': JSON.stringify({no:'advisories',at:'all'})
+    'audit.json': JSON.stringify({no: 'advisories', at: 'all'}),
   })
   const path = resolve(fixtures, 'audit-nyc-mkdirp')
   const auditFile = resolve(dir, 'audit.json')
@@ -285,7 +284,7 @@ t.test('error on audit response with no advisories object', async t => {
   const report = await AuditReport.load(tree, arb.options)
   t.match(report.error, {
     message: 'Invalid advisory report',
-    body: JSON.stringify({no:'advisories',at:'all'}),
+    body: JSON.stringify({no: 'advisories', at: 'all'}),
   })
 })
 

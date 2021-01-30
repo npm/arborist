@@ -10,19 +10,18 @@ const treeCheck = require('../lib/tree-check.js')
 const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
   for (const key in obj) {
-    if (['path', 'location'].includes(key)) {
+    if (['path', 'location'].includes(key))
       obj[key] = normalizePath(obj[key])
-    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+    else if (typeof obj[key] === 'object' && obj[key] !== null)
       obj[key] = normalizePaths(obj[key])
-    }
   }
   return obj
 }
 
 t.cleanSnapshot = str =>
   str.split(process.cwd()).join('{CWD}')
-  .replace(/[A-Z]:/g, '')
-  .replace(/\\\\?/g, '/')
+    .replace(/[A-Z]:/g, '')
+    .replace(/\\\\?/g, '/')
 
 t.test('basic instantiation', t => {
   const root = new Node({
@@ -72,7 +71,7 @@ t.test('testing with dep tree', t => {
     const root = new Node({
       pkg: {
         name: 'root',
-        bundleDependencies: [ 'bundled' ],
+        bundleDependencies: ['bundled'],
         dependencies: { prod: '1.x', bundled: '', missing: '' },
         devDependencies: { dev: '', overlap: '' },
         optionalDependencies: { optional: '', overlap: '', optMissing: '' },
@@ -91,11 +90,11 @@ t.test('testing with dep tree', t => {
           realpath: '/home/user/projects/root/node_modules/prod/foo',
           path: '/home/user/projects/root/node_modules/prod/foo',
           name: 'foo',
-          pkg: { name: 'foo', version: '1.2.3', dependencies: {meta:''}},
+          pkg: { name: 'foo', version: '1.2.3', dependencies: {meta: ''}},
         }],
         resolved: 'prod',
         integrity: 'prod',
-      }]
+      }],
     })
     t.equal(root.root, root, 'root is its own root node')
     const prod = root.children.get('prod')
@@ -304,7 +303,7 @@ t.test('testing with dep tree', t => {
       const root2 = new Node({
         pkg: {
           name: 'root',
-          bundleDependencies: [ 'bundled' ],
+          bundleDependencies: ['bundled'],
           dependencies: { prod: '1.x', bundled: '', missing: '' },
           devDependencies: { dev: '', overlap: '' },
           optionalDependencies: { optional: '', overlap: '', optMissing: '' },
@@ -350,7 +349,6 @@ t.test('testing with dep tree', t => {
 
   t.end()
 })
-
 
 t.test('adding two children that both have links into them', t => {
   const root = new Node({
@@ -451,7 +449,7 @@ t.test('load with a virtual filesystem parent', t => {
   })
   t.ok(link.target, 'link has a target')
   const linkKid = new Node({
-    pkg: { name: 'kid', dependencies: {'a': ''} },
+    pkg: { name: 'kid', dependencies: {a: ''} },
     parent: link.target,
   })
 
@@ -475,7 +473,7 @@ t.test('load with a virtual filesystem parent', t => {
       path: root.realpath + '/packages',
       realpath: root.realpath + '/packages',
       pkg: { name: 'packages', version: '2.3.4', dependencies: { link: '' }},
-    })
+    }),
   })
   const packages = target3.fsParent
 
@@ -617,7 +615,7 @@ t.test('load with a virtual filesystem parent', t => {
     target: new Node({
       path: '/some/other/a',
       pkg: a.package,
-    })
+    }),
   })
   aLink.root = root
   t.equal(root.inventory.get(aLoc), aLink)
@@ -633,11 +631,11 @@ t.test('load with a virtual filesystem parent', t => {
     root,
   })
   t.equal(fsD.fsParent, root, 'root should be fsParent')
-  const linkBlocker = new Link({
+  new Link({
     path: root.path + '/a/b',
     target: new Node({
       path: '/some/exotic/location',
-      pkg: {name:'b',version:'1.2.3'},
+      pkg: {name: 'b', version: '1.2.3'},
     }),
     root,
   })
@@ -654,7 +652,7 @@ t.test('load with a virtual filesystem parent', t => {
   const remoteTarget = new Node({
     path: '/remote/node_modules/a/node_modules/x',
     realpath: '/remote/node_modules/a/node_modules/x',
-    pkg: {name:'x',version:'1.2.3'},
+    pkg: {name: 'x', version: '1.2.3'},
     root,
   })
   t.equal(remoteLink.target, remoteTarget, 'automatically found target')
@@ -663,7 +661,7 @@ t.test('load with a virtual filesystem parent', t => {
   root.tops.has(remoteTarget, 'remote target in root.tops')
   const remoteParent = new Node({
     path: '/remote/node_modules/a',
-    pkg: {name: 'a',version:'1.2.3'},
+    pkg: {name: 'a', version: '1.2.3'},
     root,
   })
   t.throws(() => remoteParent.target = remoteTarget, {
@@ -682,7 +680,7 @@ t.test('child of link target has path, like parent', t => {
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
   })
-  const a = new Node({
+  new Node({
     pkg: { name: 'a', version: '1.2.3' },
     parent: root,
     name: 'a',
@@ -716,7 +714,7 @@ t.test('changing root', t => {
     parent: root,
     name: 'a',
     resolved: 'https://example.com/a-1.2.3.tgz',
-    integrity: 'sha512-asdfasdfasdf'
+    integrity: 'sha512-asdfasdfasdf',
   })
   const b = new Node({
     pkg: { name: 'b', version: '1.2.3' },
@@ -747,12 +745,12 @@ t.test('attempt to assign parent to self on root node', t => {
   const root = new Node({
     pkg: { name: 'root' },
     path: '/',
-    realpath: '/'
+    realpath: '/',
   })
   root.parent = root.fsParent = root
   t.equal(root.parent, null, 'root node parent should be empty')
   t.equal(root.fsParent, null, 'root node fsParent should be empty')
-  t.end();
+  t.end()
 })
 
 t.test('bundled dependencies logic', t => {
@@ -781,7 +779,7 @@ t.test('bundled dependencies logic', t => {
     pkg: { name: 'c', version: '1.2.3', dependencies: { cc: '' }},
     parent: root,
   })
-  const cc = new Node({
+  new Node({
     pkg: { name: 'cc', version: '1.2.3', dependencies: { d: '' }},
     parent: c,
   })
@@ -802,7 +800,7 @@ t.test('bundled dependencies logic', t => {
     },
     parent: root,
   })
-  const fa = new Node({
+  new Node({
     pkg: { name: 'fa', version: '1.2.3' },
     parent: f,
   })
@@ -810,7 +808,7 @@ t.test('bundled dependencies logic', t => {
     pkg: { name: 'fb', version: '1.2.3', dependencies: { e: '', fc: '' }},
     parent: f,
   })
-  const fc = new Node({
+  new Node({
     pkg: { name: 'fc', version: '1.2.3', dependencies: { fb: '' }},
     parent: f,
   })
@@ -908,7 +906,7 @@ t.test('update metadata when moving between linked top-of-tree parents', t => {
     meta: top1Meta,
   })
 
-  const link1 = new Link({
+  new Link({
     name: 'link1',
     parent: root,
     realpath: top1.path,
@@ -1016,7 +1014,7 @@ t.test('nodes in shrinkwraps', t => {
         pkg: {
           name: 'a',
           version: '1.2.3',
-          dependencies: {b:''},
+          dependencies: {b: ''},
           _hasShrinkwrap: true,
         },
         children: [
@@ -1024,9 +1022,10 @@ t.test('nodes in shrinkwraps', t => {
             name: 'b',
             pkg: {
               version: '1.2.3',
-              name: 'b', dependencies: { c: '' },
+              name: 'b',
+              dependencies: { c: '' },
             },
-            children: [ {name: 'c', pkg: {name: 'c', version: '1.2.3' }} ],
+            children: [{name: 'c', pkg: {name: 'c', version: '1.2.3' }}],
           },
         ],
       },
@@ -1184,14 +1183,13 @@ t.test('has install script', t => {
   t.end()
 })
 
-
 t.test('legacy peer dependencies', t => {
   const root = new Node({
     pkg: {
       name: 'root',
       peerDependencies: {
-        'foo': '1.x'
-      }
+        foo: '1.x',
+      },
     },
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
@@ -1206,7 +1204,7 @@ t.test('legacy peer dependencies', t => {
     path: '/home/user/projects/root/foo',
     realpath: '/home/user/projects/root/foo',
     legacyPeerDeps: true,
-    parent: root
+    parent: root,
   })
 
   t.equal(root.children.get('foo'), foo, 'should be a children')
@@ -1391,14 +1389,14 @@ t.test('reloading named edges should refresh edgesIn', t => {
     pkg: { name: 'x', version: '1.0.0', dependencies: {y: '1'} },
     parent: root,
   })
-  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(root.edgesOut.get('x'), { spec: '1', invalid: false, to: x1 })
   t.match(x1.edgesOut.get('y'), { spec: '1', missing: true })
 
   const y1 = new Node({
     pkg: { name: 'y', version: '1.0.0', dependencies: {x: '2'} },
     parent: root,
   })
-  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(root.edgesOut.get('x'), { spec: '1', invalid: false, to: x1 })
   t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
   t.match(y1.edgesOut.get('x'), { spec: '2', invalid: true, to: x1 })
 
@@ -1406,7 +1404,7 @@ t.test('reloading named edges should refresh edgesIn', t => {
     pkg: { name: 'x', version: '2.0.0', dependencies: {y: '2'} },
     parent: y1,
   })
-  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(root.edgesOut.get('x'), { spec: '1', invalid: false, to: x1 })
   t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
   t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
   t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: true, to: y1 })
@@ -1415,7 +1413,7 @@ t.test('reloading named edges should refresh edgesIn', t => {
     pkg: { name: 'y', version: '2.0.0', dependencies: {x: '1'} },
     parent: y1,
   })
-  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(root.edgesOut.get('x'), { spec: '1', invalid: false, to: x1 })
   t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
   t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
   t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: false, to: y1y2 })
@@ -1425,7 +1423,7 @@ t.test('reloading named edges should refresh edgesIn', t => {
     pkg: { name: 'x', version: '1.0.0', dependencies: {y: '1'} },
     parent: y1y2,
   })
-  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(root.edgesOut.get('x'), { spec: '1', invalid: false, to: x1 })
   t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
   t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
   t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: false, to: y1y2 })
@@ -1437,7 +1435,7 @@ t.test('reloading named edges should refresh edgesIn', t => {
     pkg: { name: 'y', version: '1.0.0', dependencies: {x: '2'} },
     parent: y1y2,
   })
-  t.match(root.edgesOut.get('x'),  { spec: '1', invalid: false, to: x1 })
+  t.match(root.edgesOut.get('x'), { spec: '1', invalid: false, to: x1 })
   t.match(x1.edgesOut.get('y'), { spec: '1', invalid: false, to: y1 })
   t.match(y1.edgesOut.get('x'), { spec: '2', invalid: false, to: y1x2 })
   t.match(y1x2.edgesOut.get('y'), { spec: '2', invalid: false, to: y1y2 })
@@ -1469,21 +1467,21 @@ t.test('detect that two nodes are the same thing', async t => {
 
   {
     const root = new Node({ path: '/root' })
-    const target = new Node({ root, path:'/foo', pkg:{name:'x', version:'1.2.3'}})
+    const target = new Node({ root, path: '/foo', pkg: {name: 'x', version: '1.2.3'}})
     const a = new Link({ root, path: '/a/x', target })
     const b = new Link({ root, path: '/b/x', target })
     check(a, b, true, 'links match if targets match')
   }
 
   {
-    const a = new Node({ path: '/foo', pkg: {name:'x',version:'1.2.3'}})
-    const b = new Node({ path: '/foo', pkg: {name:'x',version:'1.2.3'}})
+    const a = new Node({ path: '/foo', pkg: {name: 'x', version: '1.2.3'}})
+    const b = new Node({ path: '/foo', pkg: {name: 'x', version: '1.2.3'}})
     check(a, b, true, 'root nodes match if paths patch')
   }
 
   {
-    const a = new Node({ path: '/a/x', pkg: {name:'x',version:'1.2.3'}})
-    const b = new Node({ path: '/b/x', pkg: {name:'x',version:'1.2.3'}})
+    const a = new Node({ path: '/a/x', pkg: {name: 'x', version: '1.2.3'}})
+    const b = new Node({ path: '/b/x', pkg: {name: 'x', version: '1.2.3'}})
     check(a, b, false, 'root nodes do not match if paths differ')
   }
 
@@ -1545,7 +1543,7 @@ t.test('node.satisfies(requested)', t => {
     resolved: 'https://registry.npmjs.org/foo/-/foo-1.2.3.tgz',
     pkg: {
       name: 'foo',
-      version: '1.2.3'
+      version: '1.2.3',
     },
   })
   t.equal(node.satisfies('foo'), true)
@@ -1592,9 +1590,10 @@ t.test('node.version', t => {
 })
 
 t.test('explain yourself', t => {
-  const n = new Node({ path: '/some/path', pkg: {
-    dependencies: { x: '1', y: '2' },
-  }})
+  const n = new Node({ path: '/some/path',
+    pkg: {
+      dependencies: { x: '1', y: '2' },
+    }})
   t.strictSame(normalizePaths(n.explain()), { location: '/some/path' })
   t.equal(n.explain(), n.explain(), 'caches result')
   const x = new Node({ parent: n, pkg: { name: 'x', version: '1.2.3' }})
@@ -1602,7 +1601,7 @@ t.test('explain yourself', t => {
     name: 'x',
     version: '1.2.3',
     location: 'node_modules/x',
-    dependents: [ { name: 'x', type: 'prod', spec: '1', from: n.explain() } ],
+    dependents: [{ name: 'x', type: 'prod', spec: '1', from: n.explain() }],
   })
 
   const virtual = new Node({
@@ -1617,7 +1616,7 @@ t.test('explain yourself', t => {
     children: [
       {pkg: {name: 'z', version: '3.4.5', dependencies: { a: '4' }},
         children: [
-          {pkg: {name: 'a', version: '4.5.6', dependencies: {}}}
+          {pkg: {name: 'a', version: '4.5.6', dependencies: {}}},
         ],
       },
     ],
@@ -1705,7 +1704,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
-    dependents: [ { type: 'prod', name: 'b', spec: '1.2.3', error: 'INVALID', from: n.explain() } ],
+    dependents: [{ type: 'prod', name: 'b', spec: '1.2.3', error: 'INVALID', from: n.explain() }],
   })
 
   // explain with a given edge
@@ -1719,7 +1718,7 @@ t.test('explain yourself', t => {
       },
     },
     path: '/virtual-root',
-    children: [ { pkg: { ...b.package } }],
+    children: [{ pkg: { ...b.package } }],
   })
 
   // explain a node with respect to a specific hypothetical edge
@@ -1768,9 +1767,9 @@ t.test('explain yourself', t => {
               spec: '1',
               from: {
                 name: 'b',
-                version: '1.1.1'
+                version: '1.1.1',
                 // doesn't keep adding "from" links here.
-              }
+              },
             },
             {
               type: 'prod',
@@ -1786,16 +1785,16 @@ t.test('explain yourself', t => {
                     name: 'c',
                     spec: '1',
                     from: {
-                      location: '/cy/cle'
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      }
-    ]
+                      location: '/cy/cle',
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    ],
   })
 
   {
@@ -1866,19 +1865,19 @@ t.test('explain yourself', t => {
                             name: 'a',
                             spec: '1',
                             from: {
-                              location: '/project'
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
+                              location: '/project',
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ],
     })
   }
 
@@ -1890,7 +1889,7 @@ t.test('explain yourself', t => {
     parent: badParent,
   })
   t.match(errNode.explain(), {
-    errors: [ { message: 'bad node' } ],
+    errors: [{ message: 'bad node' }],
     name: 'bad',
     version: 'node',
     package: { name: 'bad', version: 'node' },
@@ -1901,7 +1900,7 @@ t.test('explain yourself', t => {
     path: '/bad/nodes/node_modules/noname',
   })
   t.match(noPkgDep.explain(), {
-    errors: [ { message: 'invalid package: lacks name and/or version' } ],
+    errors: [{ message: 'invalid package: lacks name and/or version' }],
     package: { noname: 'bad', noversion: 'node' },
   })
 
@@ -1932,9 +1931,10 @@ t.test('guard against setting package to something improper', t => {
 
 t.test('clear inventory when changing root', t => {
   const r1 = new Node({ path: '/root1' })
-  const r2 = new Node({ path: '/root1/root2', children: [
-    { pkg: { name: 'foo', version: '1.2.3' } },
-  ]})
+  const r2 = new Node({ path: '/root1/root2',
+    children: [
+      { pkg: { name: 'foo', version: '1.2.3' } },
+    ]})
   const r3 = new Node({ path: '/root1/root3' })
   // child3 gets munged together with the foo module in root2,
   // because the paths are the same

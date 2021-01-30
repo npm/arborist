@@ -6,10 +6,12 @@
  */
 'use strict'
 exports[`test/arborist/pruner.js TAP prune with actual tree > must match snapshot 1`] = `
-Node {
+ArboristNode {
   "location": "",
   "name": "pruner-prune-with-actual-tree",
-  "resolved": null,
+  "packageName": "prune-actual",
+  "path": "{CWD}/test/arborist/pruner-prune-with-actual-tree",
+  "version": "1.0.0",
 }
 `
 
@@ -42,9 +44,9 @@ Object {
 `
 
 exports[`test/arborist/pruner.js TAP prune with actual tree omit dev > should remove all deps from reified tree 1`] = `
-Node {
+ArboristNode {
   "edgesOut": Map {
-    "once" => Edge {
+    "once" => EdgeOut {
       "error": "MISSING",
       "name": "once",
       "spec": "^1.4.0",
@@ -54,15 +56,19 @@ Node {
   },
   "location": "",
   "name": "pruner-prune-with-actual-tree-omit-dev",
-  "resolved": null,
+  "packageName": "prune-actual",
+  "path": "{CWD}/test/arborist/pruner-prune-with-actual-tree-omit-dev",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/pruner.js TAP prune with lockfile > must match snapshot 1`] = `
-Node {
+ArboristNode {
   "location": "",
   "name": "pruner-prune-with-lockfile",
-  "resolved": null,
+  "packageName": "prune-actual",
+  "path": "{CWD}/test/arborist/pruner-prune-with-lockfile",
+  "version": "1.0.0",
 }
 `
 
@@ -95,9 +101,9 @@ Object {
 `
 
 exports[`test/arborist/pruner.js TAP prune with lockfile omit dev > should remove all deps from reified tree 1`] = `
-Node {
+ArboristNode {
   "edgesOut": Map {
-    "once" => Edge {
+    "once" => EdgeOut {
       "error": "MISSING",
       "name": "once",
       "spec": "^1.4.0",
@@ -107,6 +113,8 @@ Node {
   },
   "location": "",
   "name": "pruner-prune-with-lockfile-omit-dev",
-  "resolved": null,
+  "packageName": "prune-actual",
+  "path": "{CWD}/test/arborist/pruner-prune-with-lockfile-omit-dev",
+  "version": "1.0.0",
 }
 `

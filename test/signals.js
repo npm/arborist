@@ -3,7 +3,7 @@ const requireInject = require('require-inject')
 
 const runTest = platform => async t => {
   global.__ARBORIST_FAKE_PLATFORM__ = process.platform === platform ? null
-  : platform
+    : platform
   t.matchSnapshot(requireInject('../lib/signals.js'))
 }
 

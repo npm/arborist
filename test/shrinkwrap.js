@@ -2,7 +2,6 @@ const Shrinkwrap = require('../lib/shrinkwrap.js')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
 const calcDepFlags = require('../lib/calc-dep-flags.js')
-const mutateFS = require('mutate-fs')
 const fs = require('fs')
 const Arborist = require('../lib/arborist/index.js')
 const rimraf = require('rimraf')
@@ -12,7 +11,7 @@ const t = require('tap')
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 t.cleanSnapshot = s => s.split(process.cwd()).join('{CWD}')
 
-const {relative, resolve} = require('path')
+const {resolve} = require('path')
 const fixture = resolve(__dirname, 'fixtures/install-types')
 const swonlyFixture = resolve(__dirname, 'fixtures/install-types-sw-only')
 const YarnLock = require('../lib/yarn-lock.js')
@@ -111,16 +110,16 @@ t.test('look up from locks and such', t =>
       name: 'a',
       version: '1.2.3',
       dependencies: {
-        "abbrev": "^1.1.1",
-        "full-git-url": "git+https://github.com/isaacs/abbrev-js.git",
-        "ghshort": "github:isaacs/abbrev-js",
-        "old": "npm:abbrev@^1.0.3",
-        "pinned": "npm:abbrev@^1.1.1",
-        "reg": "npm:abbrev@^1.1.1",
-        "remote": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "symlink": "file:./abbrev-link-target",
-        "tarball": "file:abbrev-1.1.1.tgz",
-        "bundler": "1.2.3",
+        abbrev: '^1.1.1',
+        'full-git-url': 'git+https://github.com/isaacs/abbrev-js.git',
+        ghshort: 'github:isaacs/abbrev-js',
+        old: 'npm:abbrev@^1.0.3',
+        pinned: 'npm:abbrev@^1.1.1',
+        reg: 'npm:abbrev@^1.1.1',
+        remote: 'https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz',
+        symlink: 'file:./abbrev-link-target',
+        tarball: 'file:abbrev-1.1.1.tgz',
+        bundler: '1.2.3',
       },
     }, 'root metadata')
     t.match(m.data, {
@@ -392,8 +391,8 @@ t.test('saving dependency-free shrinkwrap object', t => {
     'package.json': JSON.stringify({
       name: 'badsave',
       version: '1.0.0',
-      description: 'no node_modules/ will fail'
-    })
+      description: 'no node_modules/ will fail',
+    }),
   })
 
   t.test('save meta lockfile into node_modules directory', async t => {
@@ -480,7 +479,6 @@ t.test('write the shrinkwrap back to disk', t => {
       s.delete(node.location)
       s.add(node)
       return s.save().then(() => {
-        const loc = relative(fixture, node.path).replace(/\\/g, '/')
         t.strictSame(s.data, postCommit, 'committed changes to data')
         t.strictSame(require(s.filename), s.data, 'saved json matches data')
       })
@@ -494,7 +492,7 @@ t.test('load shrinkwrap if no package-lock.json present', t => {
       lockfileVersion: 1,
       name: 'foo',
       version: '1.2.3',
-    })
+    }),
   })
   return Promise.all([
     Shrinkwrap.load({ path: dir, shrinkwrapOnly: true }).then(s =>
@@ -795,7 +793,7 @@ mkdirp@^1.0.2:
           version: '1.0.2',
           _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz',
           // integrity mismatch
-          _integrity: 'sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA=='
+          _integrity: 'sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==',
         }),
       },
     },
@@ -872,7 +870,6 @@ mkdirp@file:mkdirp:
   t.matchSnapshot(tree.meta.data, 'lockfile')
   t.matchSnapshot(tree.meta.yarnLock.toString(), 'yarn.lock')
 })
-
 
 t.test('a yarn.lock entry with no integrity', async t => {
   const path = t.testdir({
@@ -969,8 +966,8 @@ t.test('set integrity because location and resolved match', async t => {
         resolved: 'https://registry.npmjs.org/foo/foo-1.2.3.tgz',
         version: '1.2.3',
         integrity: 'sha512-happyhappyjoyjoy',
-      }
-    }
+      },
+    },
   }
   const root = new Node({
     path: '/some/path',
@@ -982,7 +979,7 @@ t.test('set integrity because location and resolved match', async t => {
     pkg: {
       version: '1.2.3',
       _resolved: 'https://registry.npmjs.org/foo/foo-1.2.3.tgz',
-    }
+    },
   })
   t.equal(foo.integrity, 'sha512-happyhappyjoyjoy')
 })
@@ -997,8 +994,8 @@ t.test('set integrity because location matches and no resolved', async t => {
         resolved: 'https://registry.npmjs.org/foo/foo-1.2.3.tgz',
         version: '1.2.3',
         integrity: 'sha512-happyhappyjoyjoy',
-      }
-    }
+      },
+    },
   }
   const root = new Node({
     path: '/some/path',
@@ -1009,7 +1006,7 @@ t.test('set integrity because location matches and no resolved', async t => {
     name: 'foo',
     pkg: {
       version: '1.2.3',
-    }
+    },
   })
   t.equal(foo.resolved, 'https://registry.npmjs.org/foo/foo-1.2.3.tgz')
   t.equal(foo.integrity, 'sha512-happyhappyjoyjoy')
@@ -1024,8 +1021,8 @@ t.test('set integrity but no resolved', async t => {
       'node_modules/foo': {
         version: '1.2.3',
         integrity: 'sha512-happyhappyjoyjoy',
-      }
-    }
+      },
+    },
   }
   const root = new Node({
     path: '/some/path',
@@ -1036,7 +1033,7 @@ t.test('set integrity but no resolved', async t => {
     name: 'foo',
     pkg: {
       version: '1.2.3',
-    }
+    },
   })
   t.equal(foo.resolved, null)
   t.equal(foo.integrity, 'sha512-happyhappyjoyjoy')
@@ -1092,8 +1089,8 @@ t.test('get meta from yarn.lock', t => {
       },
       devDependencies: {
         bar: '2.x',
-      }
-    }
+      },
+    },
   })
 
   const foo = new Node({
@@ -1209,7 +1206,7 @@ t.test('get meta from yarn.lock', t => {
       name: 'foo',
       version: '2.3.4',
     },
-    parent: tree
+    parent: tree,
   })
   t.equal(foo2.integrity, null, 'no integrity, entry invalid')
   t.equal(foo2.resolved, null, 'no resolved, entry invalid')
@@ -1306,30 +1303,30 @@ t.only('shrinkwrap where root is a link node', async t => {
   })
 
   t.strictSame(root.meta.commit(), {
-    "lockfileVersion": 2,
-    "requires": true,
-    "packages": {
-      "": {
-        "version": "1.2.3",
-        "dependencies": {
-          "kid": ""
+    lockfileVersion: 2,
+    requires: true,
+    packages: {
+      '': {
+        version: '1.2.3',
+        dependencies: {
+          kid: '',
         },
-        "extraneous": true
+        extraneous: true,
       },
-      "node_modules/kid": {
-        "version": "1.2.3",
-        "extraneous": true
-      }
+      'node_modules/kid': {
+        version: '1.2.3',
+        extraneous: true,
+      },
     },
-    "dependencies": {
-      "kid": {
-        "version": "1.2.3",
-        "extraneous": true
-      }
+    dependencies: {
+      kid: {
+        version: '1.2.3',
+        extraneous: true,
+      },
     },
-    "name": "path",
-    "version": "1.2.3",
-    "extraneous": true
+    name: 'path',
+    version: '1.2.3',
+    extraneous: true,
   })
 })
 

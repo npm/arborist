@@ -25,9 +25,9 @@ const {rename: realRename, mkdir: realMkdir} = fs
 const fsMock = {
   ...fs,
   mkdir (...args) {
-    if (failMkdir) {
+    if (failMkdir)
       process.nextTick(() => args.pop()(failMkdir))
-    }
+
     realMkdir(...args)
   },
   rename (...args) {
@@ -80,79 +80,14 @@ const cache = t.testdir()
 
 t.test('setup server', { bail: true, buffered: false }, registryServer)
 
-const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
-// two little helper functions to make the loaded trees
-// easier to look at in the snapshot results.
-const printEdge = (edge, inout) => ({
-  name: edge.name,
-  type: edge.type,
-  spec: normalizePath(edge.spec),
-  ...(inout === 'in' ? {
-    from: edge.from && edge.from.location,
-  } : {
-    to: !edge.to || edge.to.name === 'fsevents' ? null
-      : edge.to.location,
-  }),
-  ...(edge.error ? { error: edge.error } : {}),
-  __proto__: { constructor: edge.constructor },
-})
-
-const printTree = tree => ({
-  name: tree.name,
-  location: tree.location,
-  resolved: tree.resolved && normalizePath(tree.resolved),
-  // 'package': tree.package,
-  ...(tree.extraneous ? { extraneous: true } : {
-    ...(tree.dev ? { dev: true } : {}),
-    ...(tree.optional ? { optional: true } : {}),
-    ...(tree.devOptional && !tree.dev && !tree.optional
-      ? { devOptional: true } : {}),
-    ...(tree.peer ? { peer: true } : {}),
-  }),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.error
-    ? {
-      error: {
-        code: tree.error.code,
-        ...(tree.error.path ? { path: normalizePath(relative(__dirname, tree.error.path)) }
-          : {}),
-      }
-    } : {}),
-  ...(tree.isLink ? {
-    target: {
-      name: tree.target.name,
-      parent: tree.target.parent && tree.target.parent.location
-    }
-  } : {}),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.edgesIn.size ? {
-    edgesIn: new Set([...tree.edgesIn]
-      .sort((a, b) => a.from.location.localeCompare(b.from.location))
-      .map(edge => printEdge(edge, 'in'))),
-  } : {}),
-  ...(tree.edgesOut.size ? {
-    edgesOut: new Map([...tree.edgesOut.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([name, edge]) => [name, printEdge(edge, 'out')]))
-  } : {}),
-  ...( !tree.fsChildren.size ? {} : {
-    fsChildren: new Set([...tree.fsChildren]
-      .sort((a, b) => a.path.localeCompare(b.path))
-      .map(tree => printTree(tree))),
-  }),
-  ...( tree.target || !tree.children.size ? {}
-    : {
-      children: new Map([...tree.children.entries()]
-        // this one is specific to darwin, filter it out so CI doesn't fail
-        .filter(([name, node]) => name !== 'fsevents')
-        .sort((a, b) => a[0].localeCompare(b[0]))
-        .map(([name, tree]) => [name, printTree(tree)]))
-    }),
-  __proto__: { constructor: tree.constructor },
-})
+const {
+  normalizePath,
+  printTree,
+} = require('../utils.js')
 
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
+  .split(registry).join('https://registry.npmjs.org/')
 
 const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
 
@@ -253,9 +188,9 @@ t.test('omit peer deps', t => {
 
   return reify(path, { omit: ['peer'] })
     .then(tree => {
-      for (const node of tree.inventory.values()) {
+      for (const node of tree.inventory.values())
         t.equal(node.peer, false, 'did not reify any peer nodes')
-      }
+
       const lock = require(tree.path + '/package-lock.json')
       for (const [loc, meta] of Object.entries(lock.packages)) {
         if (meta.peer)
@@ -300,7 +235,7 @@ t.test('update a bundling node without updating all of its deps', t => {
 
   return t.resolveMatchSnapshot(printReified(path, {
     saveType: 'dev',
-    add: [ 'tap@14.10.5' ],
+    add: ['tap@14.10.5'],
   }))
     .then(checkBin)
     .then(checkPackageLock)
@@ -361,7 +296,7 @@ t.test('omit optional dep', t => {
     .then(tree => {
       t.equal(tree.children.get('fsevents'), undefined, 'no fsevents in tree')
       t.throws(() => fs.statSync(path + '/node_modules/fsevents'), 'no fsevents unpacked')
-      t.match(require(path +'/package-lock.json').dependencies.fsevents, {
+      t.match(require(path + '/package-lock.json').dependencies.fsevents, {
         dev: true,
         optional: true,
       }, 'fsevents present in lockfile')
@@ -404,9 +339,10 @@ t.test('multiple bundles at the same level', t => {
         t.equal(n.root, root, 'in same tree')
       else {
         for (const e of n.edgesIn) {
-          if (e.from.root !== root)
+          if (e.from.root !== root) {
             t.equal(e.from.root, root,
               `edge in same tree ${e.from.location} -> ${n.location}`)
+          }
         }
       }
     }
@@ -633,7 +569,6 @@ t.test('rollbacks', { buffered: false }, t => {
     }
     const kRollback = Symbol.for('rollbackRetireShallowNodes')
     const rollbackRetireShallowNodes = a[kRollback]
-    let rolledBack = false
     a[kRollback] = er => {
       t.fail('should not roll back!')
       a[kRollback] = rollbackRetireShallowNodes
@@ -820,7 +755,7 @@ t.test('rollbacks', { buffered: false }, t => {
         [[String, new Error('rimraf fail')]],
       ]])
     })
-    .then(() => failRimraf = false)
+      .then(() => failRimraf = false)
   })
 
   t.end()
@@ -949,7 +884,7 @@ t.test('saving the ideal tree', t => {
     }).then(() => {
       t.matchSnapshot(require(path + '/package-lock.json'), 'lock after save')
       t.strictSame(require(path + '/package.json'), {
-        bundleDependencies: [ 'a', 'b', 'c' ],
+        bundleDependencies: ['a', 'b', 'c'],
         dependencies: {
           a: 'github:foo/bar#baz',
           b: '^1.2.3',
@@ -1016,7 +951,7 @@ t.test('bin links adding and removing', t => {
     'package.json': JSON.stringify({}),
   })
   const rbin = resolve(path, 'node_modules/.bin/rimraf')
-  return reify(path, { add: [ 'rimraf@2.7.1' ]})
+  return reify(path, { add: ['rimraf@2.7.1']})
     .then(() => fs.statSync(rbin)) // should be there
     .then(() => reify(path, { rm: ['rimraf'] }))
     .then(() => t.throws(() => fs.statSync(rbin))) // should be gone
@@ -1028,7 +963,7 @@ t.test('global style', t => {
   const rbinPart = '.bin/rimraf' +
     (process.platform === 'win32' ? '.cmd' : '')
   const rbin = resolve(nm, rbinPart)
-  return reify(path, { add: [ 'rimraf@2' ], globalStyle: true})
+  return reify(path, { add: ['rimraf@2'], globalStyle: true})
     .then(() => fs.statSync(rbin))
     .then(() => t.strictSame(fs.readdirSync(nm).sort(), ['.bin', '.package-lock.json', 'rimraf']))
 })
@@ -1045,30 +980,30 @@ t.test('global', t => {
   const semverBin = resolve(binTarget, isWindows ? 'semver.cmd' : 'semver')
 
   t.test('add rimraf', t =>
-    reify(lib, { add:  [ 'rimraf@2' ], global: true})
+    reify(lib, { add: ['rimraf@2'], global: true})
       .then(() => fs.statSync(rimrafBin))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
 
   t.test('add semver', t =>
-    reify(lib, { add: [ 'semver@6.3.0' ], global: true})
+    reify(lib, { add: ['semver@6.3.0'], global: true})
       .then(() => fs.statSync(rimrafBin))
       .then(() => fs.statSync(semverBin))
-      .then(() => t.strictSame(fs.readdirSync(nm).sort(), [ 'rimraf', 'semver' ])))
+      .then(() => t.strictSame(fs.readdirSync(nm).sort(), ['rimraf', 'semver'])))
 
   t.test('remove semver', t =>
-    reify(lib, { rm: [ 'semver' ], global: true})
+    reify(lib, { rm: ['semver'], global: true})
       .then(() => fs.statSync(rimrafBin))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
 
   t.test('remove rimraf', t =>
-    reify(lib, { rm: [ 'rimraf' ], global: true})
+    reify(lib, { rm: ['rimraf'], global: true})
       .then(() => t.throws(() => fs.statSync(rimrafBin)))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), [])))
 
   t.test('add without bin links', t =>
-    reify(lib, { add: [ 'rimraf@2' ], global: true, binLinks: false})
+    reify(lib, { add: ['rimraf@2'], global: true, binLinks: false})
       .then(() => t.throws(() => fs.statSync(rimrafBin)))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
@@ -1097,11 +1032,12 @@ t.test('workspaces', t => {
     ]
 
     const checkBin = () => {
-      for (const bin of bins)
+      for (const bin of bins) {
         if (process.platform === 'win32')
           t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
         else
           t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+      }
     }
 
     return t.resolveMatchSnapshot(printReified(path, {}))
@@ -1171,7 +1107,7 @@ t.test('fail early if bins will conflict', async t => {
 t.test('add a dep present in the tree, with v1 shrinkwrap', async t => {
   // https://github.com/npm/arborist/issues/70
   const path = fixture(t, 'old-package-lock')
-  const tree = await reify(path, { add: ['wrappy'] })
+  await reify(path, { add: ['wrappy'] })
   t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
 })
 
@@ -1182,16 +1118,16 @@ t.test('store files with a custom indenting', async t => {
       'utf8'
     ).replace(/\r\n/g, '\n')
   const path = t.testdir({
-    'package.json': tabIndentedPackageJson
+    'package.json': tabIndentedPackageJson,
   })
-  const tree = await reify(path)
+  await reify(path)
   t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
   t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'))
 })
 
 t.test('do not rewrite valid package.json shorthands', async t => {
   const path = fixture(t, 'package-json-shorthands')
-  const tree = await reify(path)
+  await reify(path)
   const res = require(path + '/package.json')
   t.equal(res.bin, './index.js', 'should not rewrite bin property')
   t.equal(res.funding, 'https://example.com', 'should not rewrite funding')
@@ -1199,7 +1135,7 @@ t.test('do not rewrite valid package.json shorthands', async t => {
 
 t.test('modules bundled by the root should be installed', async t => {
   const path = fixture(t, 'root-bundler')
-  const tree = await reify(path)
+  await reify(path)
   t.matchSnapshot(fs.readFileSync(path + '/node_modules/child/package.json', 'utf8'))
 })
 
@@ -1239,10 +1175,10 @@ t.test('add a new pkg to a prefix that needs to be mkdirpd', async t => {
 t.test('do not delete root-bundled deps in global update', async t => {
   const path = t.testdir()
   const file = resolve(__dirname, '../fixtures/bundle.tgz')
-  const firstTree = await reify(path, { global: true, add: [`file:${file}`] })
+  await reify(path, { global: true, add: [`file:${file}`] })
   const depPJ = resolve(path, 'node_modules/bundle/node_modules/dep/package.json')
   t.matchSnapshot(fs.readFileSync(depPJ, 'utf8'), 'after first install')
-  const secondTree = await reify(path, { global: true, add: [`file:${file}`] })
+  await reify(path, { global: true, add: [`file:${file}`] })
   t.matchSnapshot(fs.readFileSync(depPJ, 'utf8'), 'after second install')
 })
 
@@ -1258,7 +1194,7 @@ t.test('do not excessively duplicate bundled metadeps', async t => {
 
 t.test('do not reify root when root matches duplicated metadep', async t => {
   const path = fixture(t, 'test-root-matches-metadep')
-  const tree = await reify(path)
+  await reify(path)
   fs.statSync(path + '/do-not-delete-this-file')
 })
 
@@ -1272,15 +1208,15 @@ t.test('reify properly with all deps when lockfile is ancient', async t => {
 t.test('add multiple pkgs in a specific order', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({
-      name: 'multiple-pkgs'
+      name: 'multiple-pkgs',
     }),
   })
-  const tree = await reify(path, { add: ['wrappy', 'abbrev'] })
+  await reify(path, { add: ['wrappy', 'abbrev'] })
   t.matchSnapshot(
     fs.readFileSync(path + '/package.json', 'utf8'),
     'should alphabetically sort dependencies'
   )
-  const newTree = await reify(path, { add: ['once'] })
+  await reify(path, { add: ['once'] })
   t.matchSnapshot(
     fs.readFileSync(path + '/package.json', 'utf8'),
     'should alphabetically sort new added dep'
@@ -1292,7 +1228,7 @@ t.test('save complete lockfile on update-all', async t => {
     'package.json': JSON.stringify({
       name: 'save-package-lock-after-update-test',
       version: '1.0.0',
-    })
+    }),
   })
   // install the older version first
   const lock = () => fs.readFileSync(`${path}/package-lock.json`, 'utf8')
@@ -1303,7 +1239,7 @@ t.test('save complete lockfile on update-all', async t => {
 })
 
 t.test('save proper lockfile with bins when upgrading lockfile', t => {
-  const completeOpts = [ true, false ]
+  const completeOpts = [true, false]
   completeOpts.forEach(complete => {
     t.test(`complete=${complete}`, async t => {
       const path = fixture(t, 'semver-installed-with-old-package-lock')
@@ -1345,7 +1281,7 @@ t.test('rollback if process is terminated during reify process', async t => {
         res()
       }))
     }
-  }
+  }()
 
   t.teardown(() => onExit.process = process)
 

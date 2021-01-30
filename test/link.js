@@ -39,7 +39,7 @@ const l1 = new Link({
 t.matchSnapshot(normalizePaths(l1), 'instantiate without providing target')
 t.equal(l1.isLink, true, 'link is a link')
 t.same(l1.children.size, 0, 'children is empty')
-l1.children = new Map([[1,2],[3,4]])
+l1.children = new Map([[1, 2], [3, 4]])
 t.same(l1.children.size, 0, 'children still empty after being sasigned')
 l1.children.set('asdf', 'foo')
 t.same(l1.children.size, 0, 'children still empty after setting value')
@@ -212,7 +212,7 @@ t.test('link gets version from target', t => {
   t.equal(link.version, '2.3.4')
   link.package = {}
   t.equal(link.version, '')
-  const target = new Node({
+  new Node({
     pkg: { name: 'foo', version: '1.2.3' },
     path: '/some/real/path',
     root: link,

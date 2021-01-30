@@ -6,11 +6,10 @@ const dirname = require('path').dirname(cwd)
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
   for (const key in obj) {
-    if (['where', 'fetchSpec', 'saveSpec'].includes(key) && obj[key]) {
+    if (['where', 'fetchSpec', 'saveSpec'].includes(key) && obj[key])
       obj[key] = normalizePath(obj[key])
-    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+    else if (typeof obj[key] === 'object' && obj[key] !== null)
       obj[key] = normalizePaths(obj[key])
-    }
   }
   return obj
 }

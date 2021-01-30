@@ -180,7 +180,7 @@ t.test('verify dep flags in script environments', async t => {
   // sort into a predictable order and pull out the fields we wanna test
   // don't include path or env, because that's going to be platform-specific
   const saved = [...arb.scriptsRun]
-    .sort(({path:patha,event:eventa}, {path:pathb,event:eventb}) =>
+    .sort(({path: patha, event: eventa}, {path: pathb, event: eventb}) =>
       patha.localeCompare(pathb) || eventa.localeCompare(eventb))
     .map(({pkg, event, cmd, code, signal, stdout, stderr}) =>
       ({pkg, event, cmd, code, signal, stdout, stderr}))
@@ -192,17 +192,16 @@ t.test('verify dep flags in script environments', async t => {
   }
   t.strictSame(checkLogs().sort((a, b) =>
     a[2].localeCompare(b[2]) || (typeof a[4] === 'string' ? -1 : 1)), [
-    ['info','run','devdep@1.0.0','postinstall','node_modules/devdep','node ../../env.js'],
-    ['info','run','devdep@1.0.0','postinstall',{code: 0, signal: null}],
-    ['info','run','devopt@1.0.0','postinstall','node_modules/devopt','node ../../env.js'],
-    ['info','run','devopt@1.0.0','postinstall',{code: 0, signal: null}],
-    ['info','run','opt-and-dev@1.0.0','postinstall','node_modules/opt-and-dev','node ../../env.js'],
-    ['info','run','opt-and-dev@1.0.0','postinstall',{code: 0, signal: null}],
-    ['info','run','optdep@1.0.0','postinstall','node_modules/optdep','node ../../env.js'],
-    ['info','run','optdep@1.0.0','postinstall',{code: 0, signal: null}],
+    ['info', 'run', 'devdep@1.0.0', 'postinstall', 'node_modules/devdep', 'node ../../env.js'],
+    ['info', 'run', 'devdep@1.0.0', 'postinstall', {code: 0, signal: null}],
+    ['info', 'run', 'devopt@1.0.0', 'postinstall', 'node_modules/devopt', 'node ../../env.js'],
+    ['info', 'run', 'devopt@1.0.0', 'postinstall', {code: 0, signal: null}],
+    ['info', 'run', 'opt-and-dev@1.0.0', 'postinstall', 'node_modules/opt-and-dev', 'node ../../env.js'],
+    ['info', 'run', 'opt-and-dev@1.0.0', 'postinstall', {code: 0, signal: null}],
+    ['info', 'run', 'optdep@1.0.0', 'postinstall', 'node_modules/optdep', 'node ../../env.js'],
+    ['info', 'run', 'optdep@1.0.0', 'postinstall', {code: 0, signal: null}],
   ], 'logged script executions at info level')
 })
-
 
 t.test('run scripts in foreground if foregroundScripts set', async t => {
   const path = fixture(t, 'rebuild-foreground-scripts')
@@ -216,7 +215,7 @@ t.test('run scripts in foreground if foregroundScripts set', async t => {
       await new Promise(res => setTimeout(res))
       RUNS.push({opts, finished: true, run})
       return {code: 0, signal: null}
-    }
+    },
   })
 
   const arb = new Arborist({path, foregroundScripts: true})
@@ -255,8 +254,8 @@ t.test('log failed exit codes as well, even if we dont crash', async t => {
             preinstall: 'exit 1',
           },
         }),
-      }
-    }
+      },
+    },
   })
   const arb = new Arborist({path})
   const checkLogs = logTracker()
@@ -265,7 +264,7 @@ t.test('log failed exit codes as well, even if we dont crash', async t => {
     ['info', 'run', 'optdep@1.2.3', 'preinstall', 'node_modules/optdep', 'exit 1'],
     ['info', 'run', 'optdep@1.2.3', 'preinstall', { code: 1, signal: null }],
     ['verbose', 'reify', 'failed optional dependency', resolve(path, 'node_modules/optdep')],
-    ['silly', 'reify', 'mark', 'deleted', [resolve(path, 'node_modules/optdep')]]
+    ['silly', 'reify', 'mark', 'deleted', [resolve(path, 'node_modules/optdep')]],
   ])
 })
 
@@ -304,7 +303,7 @@ t.test('do not build if theres a conflicting globalTop bin', async t => {
         },
       },
     },
-    bin: {}
+    bin: {},
   })
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   fs.writeFileSync(file, 'this is not the linked bin')
@@ -340,7 +339,7 @@ t.test('force overwrite the conflicting globalTop bin', async t => {
         },
       },
     },
-    bin: {}
+    bin: {},
   })
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   fs.writeFileSync(file, 'this is not the linked bin')
@@ -369,7 +368,7 @@ t.test('checkBins is fine if no bins', async t => {
         },
       },
     },
-    bin: {}
+    bin: {},
   })
   const file = isWindows ? `${path}/lib/foo.cmd` : `${path}/bin/foo`
   fs.writeFileSync(file, 'this is not the linked bin')
@@ -389,7 +388,7 @@ t.test('rebuild node-gyp dependencies lacking both preinstall and install script
     '@npmcli/run-script': async opts => {
       RUNS.push(opts)
       return {code: 0, signal: null}
-    }
+    },
   })
   const path = t.testdir({
     node_modules: {
@@ -406,7 +405,7 @@ t.test('rebuild node-gyp dependencies lacking both preinstall and install script
       dependencies: {
         dep: '1',
       },
-    })
+    }),
   })
   const arb = new Arborist({ path, registry })
   await arb.rebuild()
@@ -423,20 +422,19 @@ t.test('rebuild node-gyp dependencies lacking both preinstall and install script
         npm_package_optional: '',
         npm_package_dev: '',
         npm_package_peer: '',
-        npm_package_dev_optional: ''
+        npm_package_dev_optional: '',
       },
-      scriptShell: undefined
-    }
+      scriptShell: undefined,
+    },
   ])
 })
 
 t.test('do not rebuild node-gyp dependencies with gypfile:false', async t => {
   // use require-inject so we don't need an actual massive binary dep fixture
-  const RUNS = []
   const Arborist = requireInject('../../lib/arborist/index.js', {
     '@npmcli/run-script': async opts => {
       throw new Error('should not run any scripts')
-    }
+    },
   })
   const path = t.testdir({
     node_modules: {
@@ -454,7 +452,7 @@ t.test('do not rebuild node-gyp dependencies with gypfile:false', async t => {
       dependencies: {
         dep: '1',
       },
-    })
+    }),
   })
   const arb = new Arborist({ path, registry })
   await arb.rebuild()

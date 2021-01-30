@@ -2,105 +2,42 @@ const t = require('tap')
 const { format } = require('tcompare')
 const Arborist = require('../../lib/arborist')
 
-const { resolve, relative } = require('path')
-const { realpathSync } = require('fs')
+const { resolve } = require('path')
 const Node = require('../../lib/node.js')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
 
 const {
   fixtures,
   roots,
-  symlinks,
 } = require('../fixtures/index.js')
 
-// little helper functions to make the loaded trees
-// easier to look at in the snapshot results.
+// strip the fixtures path off of the trees in snapshots
 const pp = path => path && normalizePath(path.substr(fixtures.length + 1))
-const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
+const defixture = obj => {
+  if (obj instanceof Set)
+    return new Set([...obj].map(defixture))
 
-const printEdge = (edge, inout) => ({
-  name: edge.name,
-  type: edge.type,
-  spec: normalizePath(edge.spec),
-  ...(inout === 'in' ? {
-    from: edge.from && pp(edge.from.realpath),
-  } : {
-    to: edge.to && pp(edge.to.realpath),
-  }),
-  ...(edge.from && edge.from.dummy ? { FROM_DUMMY: true } : {}),
-  ...(edge.to && edge.to.dummy ? { TO_DUMMY: true } : {}),
-  ...(edge.error ? { error: edge.error } : {}),
-  __proto__: { constructor: edge.constructor },
-})
+  if (obj instanceof Map)
+    return new Map([...obj].map(([name, val]) => [name, defixture(val)]))
 
-const stringify = require('json-stringify-nice')
-const printTree = tree => ({
-  name: tree.name,
-  location: tree.location,
-  realpath: pp(tree.realpath),
-  top: pp(tree.top.realpath),
-  ...(tree.extraneous ? { extraneous: true } : {
-    ...(tree.dev ? { dev: true } : {}),
-    ...(tree.optional ? { optional: true } : {}),
-    ...(tree.devOptional && !tree.dev && !tree.optional
-      ? { devOptional: true } : {}),
-    ...(tree.peer ? { peer: true } : {}),
-  }),
-  ...(tree.fsParent ? { fsParent: pp(tree.fsParent.path) } : {}),
-  ...(tree.errors.length
-    ? {
-      errors: tree.errors.map(error => ({
-        code: error.code,
-        ...(error.code ? {} : {
-          code: 'no code, wtf???',
-          message: error.message,
-          stack: ('' + error.stack).split('\n'),
-        }),
-        ...(error.path ? { path: normalizePath(relative(__dirname, error.path)) }
-          : {}),
-      })),
-    } : {}),
-  ...(tree.isLink ? {
-    target: tree.target && {
-      name: tree.target.name,
-      ...(tree.target.parent ? { parent: pp(tree.target.parent.realpath) } : {}),
-      ...(tree.target.fsParent ? { fsParent: pp(tree.target.fsParent.realpath) } : {}),
-    }
-  } : {}),
-  ...(tree.inBundle ? { bundled: true } : {}),
-  ...(tree.edgesIn.size ? {
-    edgesIn: new Set([...tree.edgesIn]
-      .sort((a, b) => pp(a.from.realpath).localeCompare(pp(b.from.realpath)))
-      .map(edge => printEdge(edge, 'in'))),
-  } : {}),
-  ...(tree.edgesOut.size ? {
-    edgesOut: new Map([...tree.edgesOut.entries()]
-      .sort((a, b) => a[0].localeCompare(b[0]))
-      .map(([name, edge]) => [name, printEdge(edge, 'out')]))
-  } : {}),
-  ...( tree.target || !tree.children.size ? {}
-    : {
-      children: new Map([...tree.children.entries()]
-        .sort((a, b) => a[0].localeCompare(b[0]))
-        .map(([name, tree]) => [name, printTree(tree)]))
-    }),
-  ...(tree.target || !tree.fsChildren.size ? {}
-    : {
-      fsChildren: [...tree.fsChildren]
-        .sort((a, b) => a.path.localeCompare(b.path))
-        .map(tree => tree.location)
-    }),
-  __proto__: { constructor: tree.constructor },
-  ...( !tree.meta ? {} : {
-    // stringify and re-parse to sort consistently
-    meta: JSON.parse(stringify(tree.meta.commit())),
-  })
-})
+  for (const key in obj) {
+    if (['path', 'realpath'].includes(key))
+      obj[key] = pp(obj[key])
+    else if (typeof obj[key] === 'object' && obj[key] !== null)
+      obj[key] = defixture(obj[key])
+  }
+  return obj
+}
+
+const {
+  normalizePath,
+  printTree,
+} = require('../utils.js')
 
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-t.formatSnapshot = tree => format(printTree(tree), { sort: true })
+t.formatSnapshot = tree => format(defixture(printTree(tree)), { sort: true })
 
 const loadActual = (path, opts) => new Arborist({path}).loadActual(opts)
 
@@ -175,7 +112,7 @@ t.test('load a tree rooted on a different node', async t => {
   t.equal(transp.children.get('c').realpath, resolve(other, 'packages/c'))
 
   // should look the same, once we strip off the other/fixture paths
-  t.equal(format(printTree(actual)), format(printTree(transp)), 'similar trees')
+  t.equal(format(defixture(printTree(actual))), format(defixture(printTree(transp))), 'similar trees')
 
   // now try with a transplant filter that keeps out the 'a' module
   const rootFiltered = new Node({
@@ -191,7 +128,7 @@ t.test('load a tree rooted on a different node', async t => {
   rootFiltered.peer = false
   const transpFilter = await new Arborist({path}).loadActual({
     root: rootFiltered,
-    transplantFilter: n => n.name !== 'a'
+    transplantFilter: n => n.name !== 'a',
   })
   t.equal(transpFilter.children.get('a'), undefined)
   t.equal(transpFilter.children.get('b').path, resolve(other, 'node_modules/b'))
@@ -243,7 +180,7 @@ t.test('missing json does not obscure deeper errors', t =>
 
 t.test('missing folder', t =>
   t.rejects(loadActual(resolve(fixtures, 'does-not-exist')), {
-    code: 'ENOENT'
+    code: 'ENOENT',
   }))
 
 t.test('missing symlinks', t =>
@@ -269,7 +206,7 @@ t.test('load a global space symlink', t =>
 t.test('load a global space with a filter', t =>
   t.resolveMatchSnapshot(loadActual(resolve(fixtures, 'global-style/lib'), {
     global: true,
-    filter: (parent, kid) => parent.parent || kid === 'semver'
+    filter: (parent, kid) => parent.parent || kid === 'semver',
   })))
 
 t.test('workspaces', t => {

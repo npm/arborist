@@ -97,18 +97,18 @@ t.test('load a yarn lock from an actual tree', t => {
 t.test('yarn lock with dedupes yarn wouldnt do', async t => {
   const tree = new Node({
     path: '/my/project',
-    pkg: { dependencies: {x:'1.x', y:'1.x', z:'1.x' } },
+    pkg: { dependencies: {x: '1.x', y: '1.x', z: '1.x' } },
     children: [
-      { pkg: {name:'x', version:'1.2.0'}},
-      { pkg: {name:'y', version:'1.0.0', dependencies: {x:'1.1',z:'2.x'}},
+      { pkg: {name: 'x', version: '1.2.0'}},
+      { pkg: {name: 'y', version: '1.0.0', dependencies: {x: '1.1', z: '2.x'}},
         children: [
           { pkg: {name: 'x', version: '1.1.0'}},
-          { pkg: {name: 'z', version:'2.0.0', dependencies: {x:'1.x'}}},
+          { pkg: {name: 'z', version: '2.0.0', dependencies: {x: '1.x'}}},
           // note: yarn nests another x@1.2.0 here, because it locks
           // the 1.x resolution to 1.2.0 even when unnecessary
-        ]
+        ],
       },
-      { pkg: {name:'z', version:'1.0.0'}},
+      { pkg: {name: 'z', version: '1.0.0'}},
     ],
   })
 
@@ -119,32 +119,32 @@ t.test('yarn lock with dedupes yarn wouldnt do', async t => {
 t.test('deduped prior entries that dont match one another', async t => {
   const tree = new Node({
     path: '/my/project',
-    pkg: { dependencies: {a:'', b:''}},
+    pkg: { dependencies: {a: '', b: ''}},
     children: [
-      { pkg: { name: 'a', dependencies: {i:'', x:'1.x', y:'1.x', z:'1.x' }},
+      { pkg: { name: 'a', dependencies: {i: '', x: '1.x', y: '1.x', z: '1.x' }},
         children: [
-          { pkg: {name:'i', version:'1.0.0', dependencies: {x:'1.2.0'}}},
-          { pkg: {name:'x', version:'1.2.0'}, integrity:'x120'},
-          { pkg: {name:'y', version:'1.0.0', dependencies: {x:'1.1',z:'2.x'}},
+          { pkg: {name: 'i', version: '1.0.0', dependencies: {x: '1.2.0'}}},
+          { pkg: {name: 'x', version: '1.2.0'}, integrity: 'x120'},
+          { pkg: {name: 'y', version: '1.0.0', dependencies: {x: '1.1', z: '2.x'}},
             children: [
               { pkg: {name: 'x', version: '1.1.0'}},
-              { pkg: {name: 'z', version:'2.0.0', dependencies: {x:'1.x'}}},
-            ]
+              { pkg: {name: 'z', version: '2.0.0', dependencies: {x: '1.x'}}},
+            ],
           },
-          { pkg: {name:'z', version:'1.0.0'}},
+          { pkg: {name: 'z', version: '1.0.0'}},
         ],
       },
-      { pkg: { name: 'b', dependencies: {j:'', x:'1.x', y:'1.x', z:'1.x' }},
+      { pkg: { name: 'b', dependencies: {j: '', x: '1.x', y: '1.x', z: '1.x' }},
         children: [
-          { pkg: {name:'j', version:'1.0.0', dependencies: {x:'1.3.0'}}},
-          { pkg: {name:'x', version:'1.3.0'}, integrity:'x130'},
-          { pkg: {name:'y', version:'1.0.0', dependencies: {x:'1.1',z:'2.x'}},
+          { pkg: {name: 'j', version: '1.0.0', dependencies: {x: '1.3.0'}}},
+          { pkg: {name: 'x', version: '1.3.0'}, integrity: 'x130'},
+          { pkg: {name: 'y', version: '1.0.0', dependencies: {x: '1.1', z: '2.x'}},
             children: [
               { pkg: {name: 'x', version: '1.1.0'}},
-              { pkg: {name: 'z', version:'2.0.0', dependencies: {x:'1.x'}}},
-            ]
+              { pkg: {name: 'z', version: '2.0.0', dependencies: {x: '1.x'}}},
+            ],
           },
-          { pkg: {name:'z', version:'1.0.0'}},
+          { pkg: {name: 'z', version: '1.0.0'}},
         ],
       },
     ],
@@ -157,51 +157,51 @@ t.test('deduped prior entries that dont match one another', async t => {
 t.test('more nesting tree complications', async t => {
   const tree = new Node({
     path: '/my/project',
-    pkg: { dependencies: {a:'', b:'', c:'', c2:'', d3:''}},
+    pkg: { dependencies: {a: '', b: '', c: '', c2: '', d3: ''}},
     children: [
-      { pkg: { name: 'a', dependencies: {x:'',g:'',h:'',i:'',j:'',k:''}},
+      { pkg: { name: 'a', dependencies: {x: '', g: '', h: '', i: '', j: '', k: ''}},
         children: [
-          { pkg: {name:'x', version:'1.0.0'}, resolved:'https://x100.xyz'},
-          { pkg: {name:'g', version:'1.0.0', dependencies: {x:'^1.0.0'}}},
-          { pkg: {name:'h', version:'1.0.0', dependencies: {x:'1.0.0'}}},
-          { pkg: {name:'i', version:'1.0.0', dependencies: {x:'1.0'}}},
-          { pkg: {name:'j', version:'1.0.0', dependencies: {x:'1'}}},
-          { pkg: {name:'k', version:'1.0.0', dependencies: {x:''}}},
+          { pkg: {name: 'x', version: '1.0.0'}, resolved: 'https://x100.xyz'},
+          { pkg: {name: 'g', version: '1.0.0', dependencies: {x: '^1.0.0'}}},
+          { pkg: {name: 'h', version: '1.0.0', dependencies: {x: '1.0.0'}}},
+          { pkg: {name: 'i', version: '1.0.0', dependencies: {x: '1.0'}}},
+          { pkg: {name: 'j', version: '1.0.0', dependencies: {x: '1'}}},
+          { pkg: {name: 'k', version: '1.0.0', dependencies: {x: ''}}},
         ],
       },
       // previously-seen specs that don't match
-      { pkg: { name: 'b', dependencies: {x:'',l:'',m:'',n:'',n2:'',o:'',p:''}},
+      { pkg: { name: 'b', dependencies: {x: '', l: '', m: '', n: '', n2: '', o: '', p: ''}},
         children: [
-          { pkg: {name:'x', version:'1.0.1'}},
-          { pkg: {name:'l', version:'1.0.0', dependencies: {x:'^1.0.1'}}},
-          { pkg: {name:'m', version:'1.0.0', dependencies: {x:'1.0.1'}}},
-          { pkg: {name:'n', version:'1.0.0', dependencies: {x:'1.0'}}},
-          { pkg: {name:'n2', version:'1.0.0', dependencies: {x:'>=1.0'}}},
-          { pkg: {name:'o', version:'1.0.0', dependencies: {x:'1'}}},
-          { pkg: {name:'p', version:'1.0.0', dependencies: {x:''}}},
+          { pkg: {name: 'x', version: '1.0.1'}},
+          { pkg: {name: 'l', version: '1.0.0', dependencies: {x: '^1.0.1'}}},
+          { pkg: {name: 'm', version: '1.0.0', dependencies: {x: '1.0.1'}}},
+          { pkg: {name: 'n', version: '1.0.0', dependencies: {x: '1.0'}}},
+          { pkg: {name: 'n2', version: '1.0.0', dependencies: {x: '>=1.0'}}},
+          { pkg: {name: 'o', version: '1.0.0', dependencies: {x: '1'}}},
+          { pkg: {name: 'p', version: '1.0.0', dependencies: {x: ''}}},
         ],
       },
       // new specs that get added right away to the entry
-      { pkg: { name: 'c', dependencies: {d:'',e:'',f:''}},
+      { pkg: { name: 'c', dependencies: {d: '', e: '', f: ''}},
         children: [
-          { pkg: {name:'x', version:'1.0.1'}, integrity:'x101', resolved:'https://x101.xyz'},
-          { pkg: {name:'d', version:'1.0.0', dependencies: {x:'^1.0.1'}}},
-          { pkg: {name:'e', version:'1.0.0', dependencies: {x:'>=1.0.1 <2'}}},
-          { pkg: {name:'f', version:'1.0.0', dependencies: {x:'>=1.0'}}},
+          { pkg: {name: 'x', version: '1.0.1'}, integrity: 'x101', resolved: 'https://x101.xyz'},
+          { pkg: {name: 'd', version: '1.0.0', dependencies: {x: '^1.0.1'}}},
+          { pkg: {name: 'e', version: '1.0.0', dependencies: {x: '>=1.0.1 <2'}}},
+          { pkg: {name: 'f', version: '1.0.0', dependencies: {x: '>=1.0'}}},
         ],
       },
       // new specs that later match
-      { pkg: {name: 'c2', dependencies:{d2:'',e2:'',f2:''}},
+      { pkg: {name: 'c2', dependencies: {d2: '', e2: '', f2: ''}},
         children: [
-          { pkg: {name:'x', version:'1.0.1'}, resolved:'https://x101.xyz'},
-          { pkg: {name:'d2', version:'1.0.0', dependencies: {x:'^1.0.0-x'}}},
-          { pkg: {name:'e2', version:'1.0.0', dependencies: {x:'>=1.0.0'}}},
-          { pkg: {name:'f2', version:'1.0.0', dependencies: {x:'1.0.1'}}},
+          { pkg: {name: 'x', version: '1.0.1'}, resolved: 'https://x101.xyz'},
+          { pkg: {name: 'd2', version: '1.0.0', dependencies: {x: '^1.0.0-x'}}},
+          { pkg: {name: 'e2', version: '1.0.0', dependencies: {x: '>=1.0.0'}}},
+          { pkg: {name: 'f2', version: '1.0.0', dependencies: {x: '1.0.1'}}},
         ],
       },
       // no version, resolved, or integrity, we assume a match
-      { pkg: {name: 'd3', dependencies:{x:''}},
-        children: [ {pkg: {name:'x'}} ],
+      { pkg: {name: 'd3', dependencies: {x: ''}},
+        children: [{pkg: {name: 'x'}}],
       },
     ],
   })

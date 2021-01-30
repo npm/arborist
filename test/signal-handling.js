@@ -26,7 +26,7 @@ const proc = onExit.process = new class MockProcess extends EE {
       res()
     }))
   }
-}
+}()
 
 t.test('load and unload', async t => {
   t.plan(2)
@@ -51,7 +51,7 @@ t.test('load and unload', async t => {
 
 t.test('load only listens to one event', async t => {
   t.plan(2)
-  const unload = onExit(({ signal }) => t.equal(signal, 'SIGINT'))
+  onExit(({ signal }) => t.equal(signal, 'SIGINT'))
   await proc.kill(process.pid, 'SIGINT')
   // should not trigger our onExit handler, but WILL call this one,
   // since the beforeExit handler was assigned
@@ -63,7 +63,7 @@ t.test('load only listens to one event', async t => {
 
 t.test('only respond to first signal', async t => {
   t.plan(5)
-  const unload = onExit(({ signal }) => t.equal(signal, 'SIGINT'))
+  onExit(({ signal }) => t.equal(signal, 'SIGINT'))
   await proc.kill(process.pid, 'SIGINT')
   await proc.kill(process.pid, 'SIGHUP')
   await proc.kill(process.pid, 'SIGTERM')
@@ -79,8 +79,8 @@ t.test('can do multiple loads in parallel', t => {
 
   t.test('running two handlers', async t => {
     t.plan(3)
-    const unload1 = onExit(({ signal }) => t.equal(signal, 'SIGINT', '1'))
-    const unload2 = onExit(({ signal }) => t.equal(signal, 'SIGINT', '2'))
+    onExit(({ signal }) => t.equal(signal, 'SIGINT', '1'))
+    onExit(({ signal }) => t.equal(signal, 'SIGINT', '2'))
     await proc.kill(process.pid, 'SIGINT')
     // should not trigger our onExit handler, but WILL call this one,
     // since the beforeExit handler was assigned

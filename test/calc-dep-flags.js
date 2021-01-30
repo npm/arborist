@@ -2,27 +2,14 @@ const t = require('tap')
 const calcDepFlags = require('../lib/calc-dep-flags.js')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
-const { depth } = require('treeverse')
 
-const printTree = tree => depth({
-  tree,
-  visit: node => ({
-    _: node.name,
-    ...(!node.extraneous && node.dev ? { _dev: true } : {}),
-    ...(!node.extraneous && node.optional ? { _optional: true } : {}),
-    ...(!node.extraneous && node.devOptional && !node.optional && !node.dev
-      ? { _devOptional: true } : {}),
-    ...(node.extraneous ? { _extraneous: true } : {}),
-    ...(node.target ? { _target: printTree(node.target) } : {}),
-    __proto__ : { constructor: node.constructor },
-  }),
-  leave: (node, children) => {
-    if (children.length)
-      node.children = children
-    return node
-  },
-  getChildren: node => [...node.children.values()],
-})
+const {
+  normalizePath,
+  printTree,
+} = require('./utils.js')
+
+const cwd = normalizePath(process.cwd())
+t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 t.test('flag stuff', t => {
   const root = new Node({
@@ -36,7 +23,7 @@ t.test('flag stuff', t => {
     },
   })
 
-  const optional = new Node({
+  new Node({
     pkg: {
       name: 'optional',
       version: '1.2.3',
@@ -45,7 +32,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const devoptional = new Node({
+  new Node({
     pkg: {
       name: 'devoptional',
       version: '1.2.3',
@@ -53,14 +40,14 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const extraneous = new Node({
+  new Node({
     pkg: {
       name: 'extraneous',
     },
     parent: root,
   })
 
-  const peer = new Node({
+  new Node({
     pkg: {
       name: 'peer',
       version: '1.2.3',
@@ -69,7 +56,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const peerdep = new Node({
+  new Node({
     pkg: {
       name: 'peerdep',
       version: '1.2.3',
@@ -77,7 +64,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const prod = new Node({
+  new Node({
     pkg: {
       name: 'prod',
       version: '1.2.3',
@@ -87,7 +74,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const metapeer = new Node({
+  new Node({
     pkg: {
       name: 'metapeer',
       version: '1.2.3',
@@ -96,7 +83,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const metapeerdep = new Node({
+  new Node({
     pkg: {
       name: 'metapeerdep',
       version: '1.2.3',
@@ -104,7 +91,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const proddep = new Node({
+  new Node({
     pkg: {
       name: 'proddep',
       version: '1.2.3',
@@ -113,7 +100,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const dev = new Node({
+  new Node({
     pkg: {
       name: 'dev',
       version: '1.2.3',
@@ -132,7 +119,7 @@ t.test('flag stuff', t => {
     parent: root,
   })
 
-  const devandoptional = new Node({
+  new Node({
     pkg: {
       name: 'devandoptional',
       version: '1.2.3',
@@ -151,7 +138,7 @@ t.test('flag stuff', t => {
   })
 
   // a link dep depended upon by the target of a linked dep
-  const linklink = new Link({
+  new Link({
     pkg: {
       name: 'linklink',
       version: '1.2.3',

@@ -70,36 +70,29 @@ const tree = new Node({
     pkg: {
       name,
       version: '1.0.0',
-      dependencies: deps.reduce((d, n) => (d[n] = '', d), {}),
-    }
+      dependencies: deps.reduce((d, n) => {
+        d[n] = ''
+        return d
+      }, {}),
+    },
   })),
 })
 
-const printTree = tree => ({
-  name: tree.name,
-  location: tree.location,
-  children: [...tree.children.values()]
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .map(n => printTree(n)),
-  edgesOut: [...tree.edgesOut.values()]
-    .sort((a, b) => a.name.localeCompare(b.name))
-    .map(e => e.to && e.to.location),
-})
+const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 
 const printSet = set => [...set]
   .sort((a, b) => a.name.localeCompare(b.name))
   .map(n => n.location)
 
-t.formatSnapshot = obj => obj instanceof Node ? printTree(obj)
-  : obj instanceof Set ? printSet(obj)
-  : obj
+const cwd = normalizePath(process.cwd())
+t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
+
+t.formatSnapshot = obj => obj instanceof Set ? printSet(obj) : obj
 
 const nodeA = tree.children.get('a')
 const nodeB = tree.children.get('b')
 const nodeC = tree.children.get('c')
 const nodeX = tree.children.get('x')
-const nodeI = tree.children.get('i')
-const nodeR = tree.children.get('r')
 
 const f = edge => edge.from !== tree && edge.to !== tree
 

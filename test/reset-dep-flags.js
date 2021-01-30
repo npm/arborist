@@ -13,5 +13,5 @@ t.match(tree, {
   inventory: new Map([
     ['x', {extraneous: true, dev: true, devOptional: true, peer: true, optional: true}],
     ['y', {extraneous: true, dev: true, devOptional: true, peer: true, optional: true}],
-  ])
+  ]),
 })

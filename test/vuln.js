@@ -2,10 +2,6 @@ const t = require('tap')
 const Vuln = require('../lib/vuln.js')
 const Node = require('../lib/node.js')
 
-const Calculator = require('@npmcli/metavuln-calculator')
-
-const cache = t.testdir()
-
 const semver = require('semver')
 const semverOpt = { includePrerelease: true, loose: true }
 class MockAdvisory {
@@ -14,6 +10,7 @@ class MockAdvisory {
     this.vulnerableVersions = this.versions.filter(v =>
       semver.satisfies(v, this.range, semverOpt))
   }
+
   testVersion (v) {
     return this.vulnerableVersions.includes(v)
   }

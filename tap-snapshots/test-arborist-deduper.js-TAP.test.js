@@ -6,11 +6,11 @@
  */
 'use strict'
 exports[`test/arborist/deduper.js TAP dedupes with actual tree > must match snapshot 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@isaacs/dedupe-tests-a" => Node {
+    "@isaacs/dedupe-tests-a" => ArboristNode {
       "edgesIn": Set {
-        Edge {
+        EdgeIn {
           "from": "",
           "name": "@isaacs/dedupe-tests-a",
           "spec": "1.0.1",
@@ -18,7 +18,7 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@isaacs/dedupe-tests-b" => Edge {
+        "@isaacs/dedupe-tests-b" => EdgeOut {
           "name": "@isaacs/dedupe-tests-b",
           "spec": "1",
           "to": "node_modules/@isaacs/dedupe-tests-b",
@@ -27,17 +27,18 @@ Node {
       },
       "location": "node_modules/@isaacs/dedupe-tests-a",
       "name": "@isaacs/dedupe-tests-a",
-      "resolved": null,
+      "path": "{CWD}/test/arborist/deduper-dedupes-with-actual-tree/node_modules/@isaacs/dedupe-tests-a",
+      "version": "1.0.1",
     },
-    "@isaacs/dedupe-tests-b" => Node {
+    "@isaacs/dedupe-tests-b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
+        EdgeIn {
           "from": "",
           "name": "@isaacs/dedupe-tests-b",
           "spec": "1||2",
           "type": "prod",
         },
-        Edge {
+        EdgeIn {
           "from": "node_modules/@isaacs/dedupe-tests-a",
           "name": "@isaacs/dedupe-tests-b",
           "spec": "1",
@@ -46,17 +47,19 @@ Node {
       },
       "location": "node_modules/@isaacs/dedupe-tests-b",
       "name": "@isaacs/dedupe-tests-b",
+      "path": "{CWD}/test/arborist/deduper-dedupes-with-actual-tree/node_modules/@isaacs/dedupe-tests-b",
       "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-b/-/dedupe-tests-b-1.0.0.tgz",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "@isaacs/dedupe-tests-a" => Edge {
+    "@isaacs/dedupe-tests-a" => EdgeOut {
       "name": "@isaacs/dedupe-tests-a",
       "spec": "1.0.1",
       "to": "node_modules/@isaacs/dedupe-tests-a",
       "type": "prod",
     },
-    "@isaacs/dedupe-tests-b" => Edge {
+    "@isaacs/dedupe-tests-b" => EdgeOut {
       "name": "@isaacs/dedupe-tests-b",
       "spec": "1||2",
       "to": "node_modules/@isaacs/dedupe-tests-b",
@@ -65,16 +68,18 @@ Node {
   },
   "location": "",
   "name": "deduper-dedupes-with-actual-tree",
-  "resolved": null,
+  "packageName": "dedupe-actual",
+  "path": "{CWD}/test/arborist/deduper-dedupes-with-actual-tree",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/deduper.js TAP dedupes with lockfile > must match snapshot 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@isaacs/dedupe-tests-a" => Node {
+    "@isaacs/dedupe-tests-a" => ArboristNode {
       "edgesIn": Set {
-        Edge {
+        EdgeIn {
           "from": "",
           "name": "@isaacs/dedupe-tests-a",
           "spec": "1.0.1",
@@ -82,7 +87,7 @@ Node {
         },
       },
       "edgesOut": Map {
-        "@isaacs/dedupe-tests-b" => Edge {
+        "@isaacs/dedupe-tests-b" => EdgeOut {
           "name": "@isaacs/dedupe-tests-b",
           "spec": "1",
           "to": "node_modules/@isaacs/dedupe-tests-b",
@@ -91,17 +96,19 @@ Node {
       },
       "location": "node_modules/@isaacs/dedupe-tests-a",
       "name": "@isaacs/dedupe-tests-a",
+      "path": "{CWD}/test/arborist/deduper-dedupes-with-lockfile/node_modules/@isaacs/dedupe-tests-a",
       "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-a/-/dedupe-tests-a-1.0.1.tgz",
+      "version": "1.0.1",
     },
-    "@isaacs/dedupe-tests-b" => Node {
+    "@isaacs/dedupe-tests-b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
+        EdgeIn {
           "from": "",
           "name": "@isaacs/dedupe-tests-b",
           "spec": "1||2",
           "type": "prod",
         },
-        Edge {
+        EdgeIn {
           "from": "node_modules/@isaacs/dedupe-tests-a",
           "name": "@isaacs/dedupe-tests-b",
           "spec": "1",
@@ -110,17 +117,19 @@ Node {
       },
       "location": "node_modules/@isaacs/dedupe-tests-b",
       "name": "@isaacs/dedupe-tests-b",
+      "path": "{CWD}/test/arborist/deduper-dedupes-with-lockfile/node_modules/@isaacs/dedupe-tests-b",
       "resolved": "https://registry.npmjs.org/@isaacs/dedupe-tests-b/-/dedupe-tests-b-1.0.0.tgz",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "@isaacs/dedupe-tests-a" => Edge {
+    "@isaacs/dedupe-tests-a" => EdgeOut {
       "name": "@isaacs/dedupe-tests-a",
       "spec": "1.0.1",
       "to": "node_modules/@isaacs/dedupe-tests-a",
       "type": "prod",
     },
-    "@isaacs/dedupe-tests-b" => Edge {
+    "@isaacs/dedupe-tests-b" => EdgeOut {
       "name": "@isaacs/dedupe-tests-b",
       "spec": "1||2",
       "to": "node_modules/@isaacs/dedupe-tests-b",
@@ -129,6 +138,8 @@ Node {
   },
   "location": "",
   "name": "deduper-dedupes-with-lockfile",
-  "resolved": null,
+  "packageName": "dedupe-lockfile",
+  "path": "{CWD}/test/arborist/deduper-dedupes-with-lockfile",
+  "version": "1.0.0",
 }
 `

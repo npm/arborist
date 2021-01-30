@@ -3,7 +3,6 @@ const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
 
-
 // don't print the full node objects because we don't need to track that
 // for this test and it makes the snapshot unnecessarily noisy.
 
@@ -55,7 +54,8 @@ const actual = new Node({
       integrity: 'sha512-bbb',
       children: [
         { name: 'c', integrity: 'sha512-ccc' },
-        { name: 'd', integrity: 'sha512-ddd',
+        { name: 'd',
+          integrity: 'sha512-ddd',
           children: [{ name: 'e', integrity: 'sha512-eee'}],
         },
         { name: 'f', integrity: 'sha512-fff' },
@@ -65,9 +65,11 @@ const actual = new Node({
       name: 'x',
       integrity: 'sha512-xxx',
       children: [
-        { name: 'y', integrity: 'sha512-yyy', children: [
-          { name: 'z', integrity: null, resolved: 'foobarbaz' },
-        ]},
+        { name: 'y',
+          integrity: 'sha512-yyy',
+          children: [
+            { name: 'z', integrity: null, resolved: 'foobarbaz' },
+          ]},
       ],
     },
     {
@@ -92,8 +94,8 @@ const actual = new Node({
           name: 'metabundled',
           pkg: {
             name: 'metabundled',
-            version: '1.2.3'
-          }
+            version: '1.2.3',
+          },
         },
         {
           name: 'not-bundled',
@@ -106,8 +108,8 @@ const actual = new Node({
       integrity: 'sha512-should-have-bins',
       pkg: {
         bin: {
-          'should-exist': 'should-exist.js'
-        }
+          'should-exist': 'should-exist.js',
+        },
       },
     },
   ],
@@ -135,7 +137,8 @@ const ideal = new Node({
       integrity: 'sha512-BBB',
       children: [
         { name: 'c', integrity: 'sha512-CCC' },
-        { name: 'd', integrity: 'sha512-ddd',
+        { name: 'd',
+          integrity: 'sha512-ddd',
           children: [{ name: 'e', integrity: 'sha512-EEE'}],
         },
         { name: 'f', integrity: 'sha512-fff' },
@@ -145,9 +148,11 @@ const ideal = new Node({
       name: 'x',
       integrity: 'sha512-xxx',
       children: [
-        { name: 'y', integrity: 'sha512-YYY', children: [
-          { name: 'z', integrity: null, resolved: 'foobarbaz' },
-        ]},
+        { name: 'y',
+          integrity: 'sha512-YYY',
+          children: [
+            { name: 'z', integrity: null, resolved: 'foobarbaz' },
+          ]},
       ],
     },
     {
@@ -173,8 +178,8 @@ const ideal = new Node({
       integrity: 'sha512-should-have-bins',
       pkg: {
         bin: {
-          'should-exist': 'should-exist.js'
-        }
+          'should-exist': 'should-exist.js',
+        },
       },
     },
   ],
@@ -201,15 +206,15 @@ t.test('when a global root is a link, traverse the target children', async (t) =
       name: 'child',
       pkg: {
         name: 'child',
-        version: '1.2.3'
-      }
-    }]
+        version: '1.2.3',
+      },
+    }],
   })
 
   const ideal = new Node({
     path: '/some/real/path',
     realpath: '/some/real/path',
-    children: []
+    children: [],
   })
 
   const diff = Diff.calculate({ actual, ideal })

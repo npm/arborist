@@ -48,7 +48,7 @@ t.test('break some stuff', t => {
       { pkg: { name: 'disowned', version: '1.2.3' } },
     ],
   })
-  const link = new Link({
+  new Link({
     parent: tree,
     name: 'glorb',
     target: new Node({
@@ -119,7 +119,7 @@ t.test('break some stuff', t => {
 
 t.test('just return the tree if not in debug mode', t => {
   const treeCheck = requireInject('../lib/tree-check.js', {
-    '../lib/debug.js': () => {}
+    '../lib/debug.js': () => {},
   })
   const tree = new Node({
     path: '/some/path',

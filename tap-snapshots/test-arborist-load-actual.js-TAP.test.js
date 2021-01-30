@@ -6,307 +6,284 @@
  */
 'use strict'
 exports[`test/arborist/load-actual.js TAP bundle > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "dep" => Node {
+    "dep" => ArboristNode {
       "bundled": true,
       "edgesIn": Set {
-        Edge {
-          "from": "bundle",
+        EdgeIn {
+          "from": "",
           "name": "dep",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/dep",
       "name": "dep",
-      "realpath": "bundle/node_modules/dep",
-      "top": "bundle",
+      "path": "bundle/node_modules/dep",
     },
   },
   "edgesOut": Map {
-    "dep" => Edge {
+    "dep" => EdgeOut {
       "name": "dep",
-      "spec": "",
-      "to": "bundle/node_modules/dep",
+      "spec": "*",
+      "to": "node_modules/dep",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "dep": Object {},
-    },
-    "lockfileVersion": 2,
-    "name": "bundle",
-    "packages": Object {
-      "": Object {
-        "bundleDependencies": Array [
-          "dep",
-        ],
-        "dependencies": Object {
-          "dep": "",
-        },
-      },
-      "node_modules/dep": Object {
-        "inBundle": true,
-      },
-    },
-    "requires": true,
-  },
   "name": "bundle",
-  "realpath": "bundle",
-  "top": "bundle",
+  "path": "bundle",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP cwd is default root > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@scope/x" => Node {
+    "@scope/x" => ArboristNode {
       "children": Map {
-        "glob" => Node {
+        "glob" => ArboristNode {
           "children": Map {
-            "graceful-fs" => Node {
+            "graceful-fs" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "graceful-fs",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "name": "graceful-fs",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "version": "3.0.2",
             },
-            "inherits" => Node {
+            "inherits" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "inherits",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "name": "inherits",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "version": "2.0.1",
             },
-            "minimatch" => Node {
+            "minimatch" => ArboristNode {
               "children": Map {
-                "lru-cache" => Node {
+                "lru-cache" => ArboristNode {
                   "edgesIn": Set {
-                    Edge {
-                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    EdgeIn {
+                      "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                       "name": "lru-cache",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "name": "lru-cache",
-                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "top": "root",
+                  "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "version": "2.5.0",
                 },
-                "sigmund" => Node {
+                "sigmund" => ArboristNode {
                   "edgesIn": Set {
-                    Edge {
-                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    EdgeIn {
+                      "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                       "name": "sigmund",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "name": "sigmund",
-                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "top": "root",
+                  "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "version": "1.0.0",
                 },
               },
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "minimatch",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "edgesOut": Map {
-                "lru-cache" => Edge {
+                "lru-cache" => EdgeOut {
                   "name": "lru-cache",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "type": "prod",
                 },
-                "once" => Edge {
+                "once" => EdgeOut {
                   "name": "once",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
                   "type": "prod",
                 },
-                "sigmund" => Edge {
+                "sigmund" => EdgeOut {
                   "name": "sigmund",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "name": "minimatch",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "version": "1.0.0",
             },
-            "once" => Node {
+            "once" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "once",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                   "name": "once",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
               "name": "once",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "version": "1.3.0",
             },
           },
           "edgesIn": Set {
-            Edge {
-              "from": "root/node_modules/@scope/x",
+            EdgeIn {
+              "from": "node_modules/@scope/x",
               "name": "glob",
               "spec": "4",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "graceful-fs" => Edge {
+            "graceful-fs" => EdgeOut {
               "name": "graceful-fs",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "type": "prod",
             },
-            "inherits" => Edge {
+            "inherits" => EdgeOut {
               "name": "inherits",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "type": "prod",
             },
-            "minimatch" => Edge {
+            "minimatch" => EdgeOut {
               "name": "minimatch",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "type": "prod",
             },
-            "once" => Edge {
+            "once" => EdgeOut {
               "name": "once",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
               "type": "prod",
             },
           },
           "location": "node_modules/@scope/x/node_modules/glob",
           "name": "glob",
-          "realpath": "root/node_modules/@scope/x/node_modules/glob",
-          "top": "root",
+          "path": "root/node_modules/@scope/x/node_modules/glob",
+          "version": "4.0.5",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "@scope/x",
           "spec": "1",
           "type": "prod",
         },
-        Edge {
-          "from": "root/node_modules/@scope/x",
+        EdgeIn {
+          "from": "node_modules/@scope/x",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "peer",
         },
-        Edge {
-          "from": "root/node_modules/foo",
+        EdgeIn {
+          "from": "node_modules/foo",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "@scope/x" => Edge {
+        "@scope/x" => EdgeOut {
           "name": "@scope/x",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "spec": "*",
+          "to": "node_modules/@scope/x",
           "type": "peer",
         },
-        "@scope/y" => Edge {
+        "@scope/y" => EdgeOut {
           "name": "@scope/y",
-          "spec": "",
-          "to": "root/node_modules/@scope/y",
+          "spec": "*",
+          "to": "node_modules/@scope/y",
           "type": "optional",
         },
-        "express" => Edge {
+        "express" => EdgeOut {
           "error": "MISSING",
           "name": "express",
           "spec": "420.69.0-nice",
           "to": null,
           "type": "peer",
         },
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "root/node_modules/@scope/x/node_modules/glob",
+          "to": "node_modules/@scope/x/node_modules/glob",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
-      "realpath": "root/node_modules/@scope/x",
-      "top": "root",
+      "path": "root/node_modules/@scope/x",
+      "version": "1.2.3",
     },
-    "@scope/y" => Node {
+    "@scope/y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "@scope/y",
           "spec": ">0.99.0",
           "type": "peer",
         },
-        Edge {
-          "from": "root/node_modules/@scope/x",
+        EdgeIn {
+          "from": "node_modules/@scope/x",
           "name": "@scope/y",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "foo" => Edge {
+        "foo" => EdgeOut {
           "error": "INVALID",
           "name": "foo",
           "spec": "99.x",
-          "to": "root/node_modules/foo",
+          "to": "node_modules/foo",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/y",
       "name": "@scope/y",
-      "realpath": "root/node_modules/@scope/y",
-      "top": "root",
+      "path": "root/node_modules/@scope/y",
+      "version": "1.2.3",
     },
-    "foo" => Node {
+    "foo" => ArboristNode {
       "children": Map {
-        "express" => Node {
+        "express" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "root/node_modules/foo",
+            EdgeIn {
+              "from": "node_modules/foo",
               "name": "express",
               "spec": "npm:abbrev@*",
               "type": "prod",
@@ -314,1160 +291,910 @@ Node {
           },
           "location": "node_modules/foo/node_modules/express",
           "name": "express",
-          "realpath": "root/node_modules/foo/node_modules/express",
-          "top": "root",
+          "packageName": "abbrev",
+          "path": "root/node_modules/foo/node_modules/express",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "version": "1.1.1",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "foo",
           "spec": "*",
           "type": "dev",
         },
-        Edge {
+        EdgeIn {
           "error": "INVALID",
-          "from": "root/node_modules/@scope/y",
+          "from": "node_modules/@scope/y",
           "name": "foo",
           "spec": "99.x",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "@scope/x" => Edge {
+        "@scope/x" => EdgeOut {
           "name": "@scope/x",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "spec": "*",
+          "to": "node_modules/@scope/x",
           "type": "optional",
         },
-        "express" => Edge {
+        "express" => EdgeOut {
           "name": "express",
           "spec": "npm:abbrev@*",
-          "to": "root/node_modules/foo/node_modules/express",
+          "to": "node_modules/foo/node_modules/express",
           "type": "prod",
         },
       },
       "location": "node_modules/foo",
       "name": "foo",
-      "realpath": "root/node_modules/foo",
-      "top": "root",
+      "path": "root/node_modules/foo",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "@scope/x" => Edge {
+    "@scope/x" => EdgeOut {
       "name": "@scope/x",
       "spec": "1",
-      "to": "root/node_modules/@scope/x",
+      "to": "node_modules/@scope/x",
       "type": "prod",
     },
-    "@scope/y" => Edge {
+    "@scope/y" => EdgeOut {
       "name": "@scope/y",
       "spec": ">0.99.0",
-      "to": "root/node_modules/@scope/y",
+      "to": "node_modules/@scope/y",
       "type": "peer",
     },
-    "foo" => Edge {
+    "foo" => EdgeOut {
       "name": "foo",
       "spec": "*",
-      "to": "root/node_modules/foo",
+      "to": "node_modules/foo",
       "type": "dev",
     },
-    "notinstalledhere" => Edge {
+    "notinstalledhere" => EdgeOut {
       "name": "notinstalledhere",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "optional",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "version": "1.0.0",
-                  },
-                },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
-                },
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "version": "1.3.0",
-              },
-            },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
-        },
-        "devDependencies": Object {
-          "foo": "*",
-        },
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "optionalDependencies": Object {
-          "@scope/x": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
-  },
   "name": "root",
-  "realpath": "root",
-  "top": "root",
+  "path": "root",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP deepmixedloop > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Node {
+    "a" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/z",
+        EdgeIn {
+          "from": "node_modules/z",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
       "optional": true,
-      "realpath": "deepmixedloop/node_modules/a",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/a",
+      "version": "1.2.3",
     },
-    "b" => Node {
+    "b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "c" => Edge {
+        "c" => EdgeOut {
           "name": "c",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/c",
+          "spec": "*",
+          "to": "node_modules/c",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
       "optional": true,
-      "realpath": "deepmixedloop/node_modules/b",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/b",
+      "version": "1.2.3",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/b",
+        EdgeIn {
+          "from": "node_modules/b",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
       "optional": true,
-      "realpath": "deepmixedloop/node_modules/c",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/c",
+      "version": "1.2.3",
     },
-    "d" => Node {
+    "d" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/c",
+        EdgeIn {
+          "from": "node_modules/c",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "e" => Edge {
+        "e" => EdgeOut {
           "name": "e",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/e",
+          "spec": "*",
+          "to": "node_modules/e",
           "type": "prod",
         },
       },
       "location": "node_modules/d",
       "name": "d",
       "optional": true,
-      "realpath": "deepmixedloop/node_modules/d",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/d",
+      "version": "1.2.3",
     },
-    "e" => Node {
+    "e" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/d",
+        EdgeIn {
+          "from": "node_modules/d",
           "name": "e",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/e",
       "name": "e",
       "optional": true,
-      "realpath": "deepmixedloop/node_modules/e",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/e",
+      "version": "1.2.3",
     },
-    "i" => Node {
+    "i" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop",
+        EdgeIn {
+          "from": "",
           "name": "i",
-          "spec": "",
+          "spec": "*",
           "type": "dev",
         },
       },
       "edgesOut": Map {
-        "j" => Edge {
+        "j" => EdgeOut {
           "name": "j",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/j",
+          "spec": "*",
+          "to": "node_modules/j",
           "type": "prod",
         },
       },
       "location": "node_modules/i",
       "name": "i",
-      "realpath": "deepmixedloop/node_modules/i",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/i",
     },
-    "j" => Node {
+    "j" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/i",
+        EdgeIn {
+          "from": "node_modules/i",
           "name": "j",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "k" => Edge {
+        "k" => EdgeOut {
           "name": "k",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/k",
+          "spec": "*",
+          "to": "node_modules/k",
           "type": "prod",
         },
       },
       "location": "node_modules/j",
       "name": "j",
-      "realpath": "deepmixedloop/node_modules/j",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/j",
     },
-    "k" => Node {
+    "k" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/j",
+        EdgeIn {
+          "from": "node_modules/j",
           "name": "k",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/k",
       "name": "k",
-      "realpath": "deepmixedloop/node_modules/k",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/k",
     },
-    "x" => Node {
+    "x" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop",
+        EdgeIn {
+          "from": "",
           "name": "x",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "y" => Edge {
+        "y" => EdgeOut {
           "name": "y",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/y",
+          "spec": "*",
+          "to": "node_modules/y",
           "type": "prod",
         },
       },
       "location": "node_modules/x",
       "name": "x",
-      "realpath": "deepmixedloop/node_modules/x",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/x",
     },
-    "y" => Node {
+    "y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/x",
+        EdgeIn {
+          "from": "node_modules/x",
           "name": "y",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "z" => Edge {
+        "z" => EdgeOut {
           "name": "z",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/z",
+          "spec": "*",
+          "to": "node_modules/z",
           "type": "prod",
         },
       },
       "location": "node_modules/y",
       "name": "y",
-      "realpath": "deepmixedloop/node_modules/y",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/y",
     },
-    "z" => Node {
+    "z" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "deepmixedloop/node_modules/y",
+        EdgeIn {
+          "from": "node_modules/y",
           "name": "z",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "a" => Edge {
+        "a" => EdgeOut {
           "name": "a",
-          "spec": "",
-          "to": "deepmixedloop/node_modules/a",
+          "spec": "*",
+          "to": "node_modules/a",
           "type": "optional",
         },
       },
       "location": "node_modules/z",
       "name": "z",
-      "realpath": "deepmixedloop/node_modules/z",
-      "top": "deepmixedloop",
+      "path": "deepmixedloop/node_modules/z",
     },
   },
   "edgesOut": Map {
-    "i" => Edge {
+    "i" => EdgeOut {
       "name": "i",
-      "spec": "",
-      "to": "deepmixedloop/node_modules/i",
+      "spec": "*",
+      "to": "node_modules/i",
       "type": "dev",
     },
-    "x" => Edge {
+    "x" => EdgeOut {
       "name": "x",
-      "spec": "",
-      "to": "deepmixedloop/node_modules/x",
+      "spec": "*",
+      "to": "node_modules/x",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "optional": true,
-        "requires": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-      "b": Object {
-        "optional": true,
-        "requires": Object {
-          "c": "",
-        },
-        "version": "1.2.3",
-      },
-      "c": Object {
-        "optional": true,
-        "requires": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "d": Object {
-        "optional": true,
-        "requires": Object {
-          "e": "",
-        },
-        "version": "1.2.3",
-      },
-      "e": Object {
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "i": Object {
-        "dev": true,
-        "requires": Object {
-          "j": "",
-        },
-      },
-      "j": Object {
-        "dev": true,
-        "requires": Object {
-          "k": "",
-        },
-      },
-      "k": Object {
-        "dev": true,
-      },
-      "x": Object {
-        "requires": Object {
-          "y": "",
-        },
-      },
-      "y": Object {
-        "requires": Object {
-          "z": "",
-        },
-      },
-      "z": Object {
-        "requires": Object {
-          "a": "",
-        },
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "x": "",
-        },
-        "devDependencies": Object {
-          "i": "",
-        },
-        "name": "root",
-      },
-      "node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/c": Object {
-        "dependencies": Object {
-          "d": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/d": Object {
-        "dependencies": Object {
-          "e": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/e": Object {
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/i": Object {
-        "dependencies": Object {
-          "j": "",
-        },
-        "dev": true,
-      },
-      "node_modules/j": Object {
-        "dependencies": Object {
-          "k": "",
-        },
-        "dev": true,
-      },
-      "node_modules/k": Object {
-        "dev": true,
-      },
-      "node_modules/x": Object {
-        "dependencies": Object {
-          "y": "",
-        },
-      },
-      "node_modules/y": Object {
-        "dependencies": Object {
-          "z": "",
-        },
-      },
-      "node_modules/z": Object {
-        "dependencies": Object {
-          "a": "",
-        },
-        "optionalDependencies": Object {
-          "a": "",
-        },
-      },
-    },
-    "requires": true,
-  },
   "name": "deepmixedloop",
-  "realpath": "deepmixedloop",
-  "top": "deepmixedloop",
+  "packageName": "root",
+  "path": "deepmixedloop",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP deeproot/root > loaded tree 1`] = `
-Link {
+ArboristLink {
   "location": "../deeproot/root",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
+  "name": "root",
+  "path": "deeproot/root",
+  "realpath": "root",
+  "resolved": "file:../root",
+  "target": ArboristNode {
+    "children": Map {
+      "@scope/x" => ArboristNode {
+        "children": Map {
+          "glob" => ArboristNode {
+            "children": Map {
+              "graceful-fs" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "graceful-fs",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+                "name": "graceful-fs",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
                 "version": "3.0.2",
               },
-              "inherits": Object {
+              "inherits" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "inherits",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+                "name": "inherits",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
                 "version": "2.0.1",
               },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
+              "minimatch" => ArboristNode {
+                "children": Map {
+                  "lru-cache" => ArboristNode {
+                    "edgesIn": Set {
+                      EdgeIn {
+                        "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                        "name": "lru-cache",
+                        "spec": "*",
+                        "type": "prod",
+                      },
+                    },
+                    "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "name": "lru-cache",
+                    "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                     "version": "2.5.0",
                   },
-                  "sigmund": Object {
+                  "sigmund" => ArboristNode {
+                    "edgesIn": Set {
+                      EdgeIn {
+                        "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                        "name": "sigmund",
+                        "spec": "*",
+                        "type": "prod",
+                      },
+                    },
+                    "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "name": "sigmund",
+                    "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                     "version": "1.0.0",
                   },
                 },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "minimatch",
+                    "spec": "*",
+                    "type": "prod",
+                  },
                 },
+                "edgesOut": Map {
+                  "lru-cache" => EdgeOut {
+                    "name": "lru-cache",
+                    "spec": "*",
+                    "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "type": "prod",
+                  },
+                  "once" => EdgeOut {
+                    "name": "once",
+                    "spec": "*",
+                    "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+                    "type": "prod",
+                  },
+                  "sigmund" => EdgeOut {
+                    "name": "sigmund",
+                    "spec": "*",
+                    "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                "name": "minimatch",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 "version": "1.0.0",
               },
-              "once": Object {
+              "once" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "once",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    "name": "once",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+                "name": "once",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 "version": "1.3.0",
               },
             },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/@scope/x",
+                "name": "glob",
+                "spec": "4",
+                "type": "prod",
+              },
             },
+            "edgesOut": Map {
+              "graceful-fs" => EdgeOut {
+                "name": "graceful-fs",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+                "type": "prod",
+              },
+              "inherits" => EdgeOut {
+                "name": "inherits",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+                "type": "prod",
+              },
+              "minimatch" => EdgeOut {
+                "name": "minimatch",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                "type": "prod",
+              },
+              "once" => EdgeOut {
+                "name": "once",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/@scope/x/node_modules/glob",
+            "name": "glob",
+            "path": "root/node_modules/@scope/x/node_modules/glob",
             "version": "4.0.5",
           },
         },
-        "requires": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "peer": true,
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "@scope/x",
+            "spec": "1",
+            "type": "prod",
+          },
+          EdgeIn {
+            "from": "node_modules/@scope/x",
+            "name": "@scope/x",
+            "spec": "*",
+            "type": "peer",
+          },
+          EdgeIn {
+            "from": "node_modules/foo",
+            "name": "@scope/x",
+            "spec": "*",
+            "type": "optional",
           },
         },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
+        "edgesOut": Map {
+          "@scope/x" => EdgeOut {
+            "name": "@scope/x",
+            "spec": "*",
+            "to": "node_modules/@scope/x",
+            "type": "peer",
+          },
+          "@scope/y" => EdgeOut {
+            "name": "@scope/y",
+            "spec": "*",
+            "to": "node_modules/@scope/y",
+            "type": "optional",
+          },
+          "express" => EdgeOut {
+            "error": "MISSING",
+            "name": "express",
+            "spec": "420.69.0-nice",
+            "to": null,
+            "type": "peer",
+          },
+          "glob" => EdgeOut {
+            "name": "glob",
+            "spec": "4",
+            "to": "node_modules/@scope/x/node_modules/glob",
+            "type": "prod",
+          },
         },
+        "location": "node_modules/@scope/x",
+        "name": "@scope/x",
+        "path": "root/node_modules/@scope/x",
         "version": "1.2.3",
       },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
+      "@scope/y" => ArboristNode {
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "@scope/y",
+            "spec": ">0.99.0",
+            "type": "peer",
+          },
+          EdgeIn {
+            "from": "node_modules/@scope/x",
+            "name": "@scope/y",
+            "spec": "*",
+            "type": "optional",
+          },
         },
-        "devDependencies": Object {
-          "foo": "*",
+        "edgesOut": Map {
+          "foo" => EdgeOut {
+            "error": "INVALID",
+            "name": "foo",
+            "spec": "99.x",
+            "to": "node_modules/foo",
+            "type": "prod",
+          },
         },
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
-      "../../root/node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "../../root/node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "../../root/node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
+        "location": "node_modules/@scope/y",
+        "name": "@scope/y",
+        "path": "root/node_modules/@scope/y",
         "peer": true,
         "version": "1.2.3",
       },
-      "../../root/node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
+      "foo" => ArboristNode {
+        "children": Map {
+          "express" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/foo",
+                "name": "express",
+                "spec": "npm:abbrev@*",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/foo/node_modules/express",
+            "name": "express",
+            "packageName": "abbrev",
+            "path": "root/node_modules/foo/node_modules/express",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "version": "1.1.1",
+          },
         },
-        "optionalDependencies": Object {
-          "@scope/x": "",
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "foo",
+            "spec": "*",
+            "type": "dev",
+          },
+          EdgeIn {
+            "error": "INVALID",
+            "from": "node_modules/@scope/y",
+            "name": "foo",
+            "spec": "99.x",
+            "type": "prod",
+          },
         },
+        "edgesOut": Map {
+          "@scope/x" => EdgeOut {
+            "name": "@scope/x",
+            "spec": "*",
+            "to": "node_modules/@scope/x",
+            "type": "optional",
+          },
+          "express" => EdgeOut {
+            "name": "express",
+            "spec": "npm:abbrev@*",
+            "to": "node_modules/foo/node_modules/express",
+            "type": "prod",
+          },
+        },
+        "location": "node_modules/foo",
+        "name": "foo",
+        "path": "root/node_modules/foo",
         "version": "1.2.3",
       },
-      "../../root/node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
+    },
+    "edgesOut": Map {
+      "@scope/x" => EdgeOut {
+        "name": "@scope/x",
+        "spec": "1",
+        "to": "node_modules/@scope/x",
+        "type": "prod",
+      },
+      "@scope/y" => EdgeOut {
+        "name": "@scope/y",
+        "spec": ">0.99.0",
+        "to": "node_modules/@scope/y",
+        "type": "peer",
+      },
+      "foo" => EdgeOut {
+        "name": "foo",
+        "spec": "*",
+        "to": "node_modules/foo",
+        "type": "dev",
+      },
+      "notinstalledhere" => EdgeOut {
+        "name": "notinstalledhere",
+        "spec": "*",
+        "to": null,
+        "type": "optional",
       },
     },
-    "requires": true,
-    "version": "file:../../root",
-  },
-  "name": "root",
-  "realpath": "root",
-  "target": Object {
+    "location": "",
     "name": "root",
+    "path": "root",
+    "version": "1.2.3",
   },
-  "top": "root",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP devloop > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Node {
+    "a" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "devloop",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "dev",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "devloop/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "devloop/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
-      "realpath": "devloop/node_modules/a",
-      "top": "devloop",
+      "path": "devloop/node_modules/a",
+      "version": "1.2.3",
     },
-    "b" => Node {
+    "b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "devloop/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "devloop/node_modules/d",
+        EdgeIn {
+          "from": "node_modules/d",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
-      "realpath": "devloop/node_modules/b",
-      "top": "devloop",
+      "path": "devloop/node_modules/b",
+      "version": "1.2.3",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "devloop",
+        EdgeIn {
+          "from": "",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "devloop/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
-      "realpath": "devloop/node_modules/c",
-      "top": "devloop",
+      "path": "devloop/node_modules/c",
+      "version": "1.2.3",
     },
-    "d" => Node {
+    "d" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "devloop/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "devloop/node_modules/c",
+        EdgeIn {
+          "from": "node_modules/c",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "devloop/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/d",
       "name": "d",
-      "realpath": "devloop/node_modules/d",
-      "top": "devloop",
+      "path": "devloop/node_modules/d",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "devloop/node_modules/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "dev",
     },
-    "c" => Edge {
+    "c" => EdgeOut {
       "name": "c",
-      "spec": "",
-      "to": "devloop/node_modules/c",
+      "spec": "*",
+      "to": "node_modules/c",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "dev": true,
-        "requires": Object {
-          "b": "",
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "b": Object {
-        "version": "1.2.3",
-      },
-      "c": Object {
-        "requires": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "d": Object {
-        "requires": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "devloop",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "devDependencies": Object {
-          "a": "",
-        },
-      },
-      "node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-          "d": "",
-        },
-        "dev": true,
-        "version": "1.2.3",
-      },
-      "node_modules/b": Object {
-        "version": "1.2.3",
-      },
-      "node_modules/c": Object {
-        "dependencies": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/d": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "requires": true,
-  },
   "name": "devloop",
-  "realpath": "devloop",
-  "top": "devloop",
+  "path": "devloop",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP external-dep/root > loaded tree 1`] = `
-Node {
+ArboristNode {
   "edgesOut": Map {
-    "dep" => Edge {
+    "dep" => EdgeOut {
       "error": "MISSING",
       "name": "dep",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "dep": "",
-        },
-        "version": "1.0.0",
-      },
-    },
-    "requires": true,
-    "version": "1.0.0",
-  },
   "name": "root",
-  "realpath": "external-dep/root",
-  "top": "external-dep/root",
+  "path": "external-dep/root",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP external-link-cached-dummy-dep/root > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "x" => Link {
+    "x" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link-cached-dummy-dep/root",
+        EdgeIn {
+          "from": "",
           "name": "x",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/x",
       "name": "x",
+      "path": "external-link-cached-dummy-dep/root/node_modules/x",
       "realpath": "external-link-cached-dummy-dep/a/node_modules/b/node_modules/x",
-      "target": Object {
+      "resolved": "file:../../a/node_modules/b/node_modules/x",
+      "target": ArboristNode {
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "../a/node_modules/b",
+            "name": "x",
+            "spec": "*",
+            "type": "prod",
+          },
+        },
+        "edgesOut": Map {
+          "y" => EdgeOut {
+            "name": "y",
+            "spec": "*",
+            "to": "../a/node_modules/b/node_modules/y",
+            "type": "prod",
+          },
+        },
+        "location": "../a/node_modules/b/node_modules/x",
         "name": "x",
-        "parent": "external-link-cached-dummy-dep/a/node_modules/b",
+        "path": "external-link-cached-dummy-dep/a/node_modules/b/node_modules/x",
+        "version": "1.0.0",
       },
-      "top": "external-link-cached-dummy-dep/root",
+      "version": "1.0.0",
     },
-    "z" => Link {
+    "z" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link-cached-dummy-dep/root",
+        EdgeIn {
+          "from": "",
           "name": "z",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/z",
       "name": "z",
+      "path": "external-link-cached-dummy-dep/root/node_modules/z",
       "realpath": "external-link-cached-dummy-dep/a/t/u/v/w/x/y/z",
-      "target": Object {
-        "fsParent": "external-link-cached-dummy-dep/a",
+      "resolved": "file:../../a/t/u/v/w/x/y/z",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "b" => EdgeOut {
+            "name": "b",
+            "spec": "*",
+            "to": "../a/node_modules/b",
+            "type": "prod",
+          },
+        },
+        "location": "../a/t/u/v/w/x/y/z",
         "name": "z",
+        "path": "external-link-cached-dummy-dep/a/t/u/v/w/x/y/z",
+        "version": "1.0.0",
       },
-      "top": "external-link-cached-dummy-dep/root",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "x" => Edge {
+    "x" => EdgeOut {
       "name": "x",
-      "spec": "",
-      "to": "external-link-cached-dummy-dep/a/node_modules/b/node_modules/x",
+      "spec": "*",
+      "to": "node_modules/x",
       "type": "prod",
     },
-    "z" => Edge {
+    "z" => EdgeOut {
       "name": "z",
-      "spec": "",
-      "to": "external-link-cached-dummy-dep/a/t/u/v/w/x/y/z",
+      "spec": "*",
+      "to": "node_modules/z",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "x": Object {
-        "requires": Object {
-          "y": "",
-        },
-        "version": "file:../a/node_modules/b/node_modules/x",
-      },
-      "z": Object {
-        "requires": Object {
-          "b": "",
-        },
-        "version": "file:../a/t/u/v/w/x/y/z",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "x": "",
-          "z": "",
-        },
-      },
-      "../a": Object {},
-      "../a/node_modules/b": Object {
-        "dependencies": Object {
-          "x": "",
-        },
-        "version": "1.0.0",
-      },
-      "../a/node_modules/b/node_modules/x": Object {
-        "dependencies": Object {
-          "y": "",
-        },
-        "version": "1.0.0",
-      },
-      "../a/node_modules/b/node_modules/y": Object {
-        "version": "1.0.0",
-      },
-      "../a/t/u/v/w/x/y/z": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/x": Object {
-        "link": true,
-        "resolved": "../a/node_modules/b/node_modules/x",
-      },
-      "node_modules/z": Object {
-        "link": true,
-        "resolved": "../a/t/u/v/w/x/y/z",
-      },
-    },
-    "requires": true,
-  },
   "name": "root",
-  "realpath": "external-link-cached-dummy-dep/root",
-  "top": "external-link-cached-dummy-dep/root",
+  "path": "external-link-cached-dummy-dep/root",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP external-link/root > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "j" => Link {
+    "j" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "j",
           "spec": "file:../i/j",
           "type": "prod",
@@ -1475,17 +1202,29 @@ Node {
       },
       "location": "node_modules/j",
       "name": "j",
+      "path": "external-link/root/node_modules/j",
       "realpath": "external-link/i/j",
-      "target": Object {
-        "fsParent": "external-link/i",
+      "resolved": "file:../../i/j",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "k" => EdgeOut {
+            "name": "k",
+            "spec": "*",
+            "to": "../i/node_modules/k",
+            "type": "prod",
+          },
+        },
+        "location": "../i/j",
         "name": "j",
+        "path": "external-link/i/j",
+        "version": "1.0.0",
       },
-      "top": "external-link/root",
+      "version": "1.0.0",
     },
-    "o" => Link {
+    "o" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "o",
           "spec": "file:../m/node_modules/n/o",
           "type": "prod",
@@ -1493,17 +1232,29 @@ Node {
       },
       "location": "node_modules/o",
       "name": "o",
+      "path": "external-link/root/node_modules/o",
       "realpath": "external-link/m/node_modules/n/o",
-      "target": Object {
-        "fsParent": "external-link/m",
+      "resolved": "file:../../m/node_modules/n/o",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "p" => EdgeOut {
+            "name": "p",
+            "spec": "*",
+            "to": "../m/node_modules/p",
+            "type": "prod",
+          },
+        },
+        "location": "../m/node_modules/n/o",
         "name": "o",
+        "path": "external-link/m/node_modules/n/o",
+        "version": "1.0.0",
       },
-      "top": "external-link/root",
+      "version": "1.0.0",
     },
-    "o2" => Link {
+    "o2" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "o2",
           "spec": "file:../m/node_modules/n/o2",
           "type": "prod",
@@ -1511,19 +1262,31 @@ Node {
       },
       "location": "node_modules/o2",
       "name": "o2",
+      "path": "external-link/root/node_modules/o2",
       "realpath": "external-link/m/node_modules/n/o2",
-      "target": Object {
-        "fsParent": "external-link/m",
+      "resolved": "file:../../m/node_modules/n/o2",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "p" => EdgeOut {
+            "name": "p",
+            "spec": "*",
+            "to": "../m/node_modules/p",
+            "type": "prod",
+          },
+        },
+        "location": "../m/node_modules/n/o2",
         "name": "o2",
+        "path": "external-link/m/node_modules/n/o2",
+        "version": "1.0.0",
       },
-      "top": "external-link/root",
+      "version": "1.0.0",
     },
-    "x" => Node {
+    "x" => ArboristNode {
       "children": Map {
-        "b" => Link {
+        "b" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "external-link/root/node_modules/x",
+            EdgeIn {
+              "from": "node_modules/x",
               "name": "b",
               "spec": "file:../../../a/node_modules/b",
               "type": "prod",
@@ -1531,185 +1294,88 @@ Node {
           },
           "location": "node_modules/x/node_modules/b",
           "name": "b",
+          "path": "external-link/root/node_modules/x/node_modules/b",
           "realpath": "external-link/a/node_modules/b",
-          "target": Object {
+          "resolved": "file:../../../../a/node_modules/b",
+          "target": ArboristNode {
+            "edgesOut": Map {
+              "c" => EdgeOut {
+                "name": "c",
+                "spec": "*",
+                "to": "../a/node_modules/c",
+                "type": "prod",
+              },
+            },
+            "location": "../a/node_modules/b",
             "name": "b",
-            "parent": "external-link/a",
+            "path": "external-link/a/node_modules/b",
+            "version": "1.0.0",
           },
-          "top": "external-link/root",
+          "version": "1.0.0",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "x",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
           "spec": "file:../../../a/node_modules/b",
-          "to": "external-link/a/node_modules/b",
+          "to": "node_modules/x/node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/x",
       "name": "x",
-      "realpath": "external-link/root/node_modules/x",
-      "top": "external-link/root",
+      "path": "external-link/root/node_modules/x",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "j" => Edge {
+    "j" => EdgeOut {
       "name": "j",
       "spec": "file:../i/j",
-      "to": "external-link/i/j",
+      "to": "node_modules/j",
       "type": "prod",
     },
-    "o" => Edge {
+    "o" => EdgeOut {
       "name": "o",
       "spec": "file:../m/node_modules/n/o",
-      "to": "external-link/m/node_modules/n/o",
+      "to": "node_modules/o",
       "type": "prod",
     },
-    "o2" => Edge {
+    "o2" => EdgeOut {
       "name": "o2",
       "spec": "file:../m/node_modules/n/o2",
-      "to": "external-link/m/node_modules/n/o2",
+      "to": "node_modules/o2",
       "type": "prod",
     },
-    "x" => Edge {
+    "x" => EdgeOut {
       "name": "x",
-      "spec": "",
-      "to": "external-link/root/node_modules/x",
+      "spec": "*",
+      "to": "node_modules/x",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "j": Object {
-        "requires": Object {
-          "k": "",
-        },
-        "version": "file:../i/j",
-      },
-      "o": Object {
-        "requires": Object {
-          "p": "",
-        },
-        "version": "file:../m/node_modules/n/o",
-      },
-      "o2": Object {
-        "requires": Object {
-          "p": "",
-        },
-        "version": "file:../m/node_modules/n/o2",
-      },
-      "x": Object {
-        "dependencies": Object {
-          "b": Object {
-            "requires": Object {
-              "c": "",
-            },
-            "version": "file:../a/node_modules/b",
-          },
-        },
-        "requires": Object {
-          "b": "file:../../../a/node_modules/b",
-        },
-        "version": "1.0.0",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "j": "file:../i/j",
-          "o": "file:../m/node_modules/n/o",
-          "o2": "file:../m/node_modules/n/o2",
-          "x": "",
-        },
-        "version": "1.0.0",
-      },
-      "../a": Object {},
-      "../a/node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "version": "1.0.0",
-      },
-      "../a/node_modules/c": Object {
-        "version": "1.0.0",
-      },
-      "../i": Object {},
-      "../i/j": Object {
-        "dependencies": Object {
-          "k": "",
-        },
-        "version": "1.0.0",
-      },
-      "../i/node_modules/k": Object {
-        "version": "1.0.0",
-      },
-      "../m": Object {},
-      "../m/node_modules/n/o": Object {
-        "dependencies": Object {
-          "p": "",
-        },
-        "version": "1.0.0",
-      },
-      "../m/node_modules/n/o2": Object {
-        "dependencies": Object {
-          "p": "",
-        },
-        "version": "1.0.0",
-      },
-      "../m/node_modules/p": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/j": Object {
-        "link": true,
-        "resolved": "../i/j",
-      },
-      "node_modules/o": Object {
-        "link": true,
-        "resolved": "../m/node_modules/n/o",
-      },
-      "node_modules/o2": Object {
-        "link": true,
-        "resolved": "../m/node_modules/n/o2",
-      },
-      "node_modules/x": Object {
-        "dependencies": Object {
-          "b": "file:../../../a/node_modules/b",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/x/node_modules/b": Object {
-        "link": true,
-        "resolved": "../a/node_modules/b",
-      },
-    },
-    "requires": true,
-    "version": "1.0.0",
-  },
   "name": "root",
-  "realpath": "external-link/root",
-  "top": "external-link/root",
+  "path": "external-link/root",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP install-types > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "abbrev" => Node {
+    "abbrev" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "abbrev",
           "spec": "^1.1.1",
           "type": "prod",
@@ -1717,13 +1383,15 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
-      "realpath": "install-types/node_modules/abbrev",
-      "top": "install-types",
+      "path": "install-types/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
     },
-    "balanced-match" => Node {
+    "balanced-match" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/brace-expansion",
+        EdgeIn {
+          "from": "node_modules/brace-expansion",
           "name": "balanced-match",
           "spec": "^1.0.0",
           "type": "prod",
@@ -1732,127 +1400,139 @@ Node {
       "extraneous": true,
       "location": "node_modules/balanced-match",
       "name": "balanced-match",
-      "realpath": "install-types/node_modules/balanced-match",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/balanced-match",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
+      "version": "1.0.0",
     },
-    "brace-expansion" => Node {
+    "brace-expansion" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/minimatch",
+        EdgeIn {
+          "from": "node_modules/minimatch",
           "name": "brace-expansion",
           "spec": "^1.1.7",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "balanced-match" => Edge {
+        "balanced-match" => EdgeOut {
           "name": "balanced-match",
           "spec": "^1.0.0",
-          "to": "install-types/node_modules/balanced-match",
+          "to": "node_modules/balanced-match",
           "type": "prod",
         },
-        "concat-map" => Edge {
+        "concat-map" => EdgeOut {
           "name": "concat-map",
           "spec": "0.0.1",
-          "to": "install-types/node_modules/concat-map",
+          "to": "node_modules/concat-map",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/brace-expansion",
       "name": "brace-expansion",
-      "realpath": "install-types/node_modules/brace-expansion",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/brace-expansion",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
+      "version": "1.1.11",
     },
-    "bundler" => Node {
+    "bundler" => ArboristNode {
       "children": Map {
-        "a" => Node {
+        "a" => ArboristNode {
           "bundled": true,
           "edgesIn": Set {
-            Edge {
-              "from": "install-types/node_modules/bundler",
+            EdgeIn {
+              "from": "node_modules/bundler",
               "name": "a",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "b" => Edge {
+            "b" => EdgeOut {
               "name": "b",
-              "spec": "",
-              "to": "install-types/node_modules/bundler/node_modules/b",
+              "spec": "*",
+              "to": "node_modules/bundler/node_modules/b",
               "type": "prod",
             },
           },
           "location": "node_modules/bundler/node_modules/a",
           "name": "a",
-          "realpath": "install-types/node_modules/bundler/node_modules/a",
-          "top": "install-types",
+          "path": "install-types/node_modules/bundler/node_modules/a",
+          "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
+          "version": "1.2.3",
         },
-        "b" => Node {
+        "b" => ArboristNode {
           "bundled": true,
           "edgesIn": Set {
-            Edge {
-              "from": "install-types/node_modules/bundler/node_modules/a",
+            EdgeIn {
+              "from": "node_modules/bundler/node_modules/a",
               "name": "b",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "c" => Edge {
+            "c" => EdgeOut {
               "name": "c",
-              "spec": "",
-              "to": "install-types/node_modules/bundler/node_modules/c",
+              "spec": "*",
+              "to": "node_modules/bundler/node_modules/c",
               "type": "prod",
             },
           },
           "location": "node_modules/bundler/node_modules/b",
           "name": "b",
-          "realpath": "install-types/node_modules/bundler/node_modules/b",
-          "top": "install-types",
+          "path": "install-types/node_modules/bundler/node_modules/b",
+          "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
+          "version": "1.2.3",
         },
-        "c" => Node {
+        "c" => ArboristNode {
           "bundled": true,
           "edgesIn": Set {
-            Edge {
-              "from": "install-types/node_modules/bundler/node_modules/b",
+            EdgeIn {
+              "from": "node_modules/bundler/node_modules/b",
               "name": "c",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "location": "node_modules/bundler/node_modules/c",
           "name": "c",
-          "realpath": "install-types/node_modules/bundler/node_modules/c",
-          "top": "install-types",
+          "path": "install-types/node_modules/bundler/node_modules/c",
+          "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
+          "version": "1.2.3",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "bundler",
           "spec": "1.2.3",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "a" => Edge {
+        "a" => EdgeOut {
           "name": "a",
-          "spec": "",
-          "to": "install-types/node_modules/bundler/node_modules/a",
+          "spec": "*",
+          "to": "node_modules/bundler/node_modules/a",
           "type": "prod",
         },
       },
       "location": "node_modules/bundler",
       "name": "bundler",
-      "realpath": "install-types/node_modules/bundler",
-      "top": "install-types",
+      "path": "install-types/node_modules/bundler",
+      "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
+      "version": "1.2.3",
     },
-    "concat-map" => Node {
+    "concat-map" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/brace-expansion",
+        EdgeIn {
+          "from": "node_modules/brace-expansion",
           "name": "concat-map",
           "spec": "0.0.1",
           "type": "prod",
@@ -1861,13 +1541,17 @@ Node {
       "extraneous": true,
       "location": "node_modules/concat-map",
       "name": "concat-map",
-      "realpath": "install-types/node_modules/concat-map",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/concat-map",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
+      "version": "0.0.1",
     },
-    "fs.realpath" => Node {
+    "fs.realpath" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/glob",
+        EdgeIn {
+          "from": "node_modules/glob",
           "name": "fs.realpath",
           "spec": "^1.0.0",
           "type": "prod",
@@ -1876,13 +1560,16 @@ Node {
       "extraneous": true,
       "location": "node_modules/fs.realpath",
       "name": "fs.realpath",
-      "realpath": "install-types/node_modules/fs.realpath",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/fs.realpath",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
+      "version": "1.0.0",
     },
-    "full-git-url" => Node {
+    "full-git-url" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "full-git-url",
           "spec": "git+https://github.com/isaacs/abbrev-js.git",
           "type": "prod",
@@ -1890,13 +1577,15 @@ Node {
       },
       "location": "node_modules/full-git-url",
       "name": "full-git-url",
-      "realpath": "install-types/node_modules/full-git-url",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/full-git-url",
+      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "version": "1.1.1",
     },
-    "ghshort" => Node {
+    "ghshort" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "ghshort",
           "spec": "github:isaacs/abbrev-js",
           "type": "prod",
@@ -1904,102 +1593,118 @@ Node {
       },
       "location": "node_modules/ghshort",
       "name": "ghshort",
-      "realpath": "install-types/node_modules/ghshort",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/ghshort",
+      "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "version": "1.1.1",
     },
-    "ghtgz" => Node {
+    "ghtgz" => ArboristNode {
+      "dev": true,
       "extraneous": true,
       "location": "node_modules/ghtgz",
       "name": "ghtgz",
-      "realpath": "install-types/node_modules/ghtgz",
-      "top": "install-types",
+      "optional": true,
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/ghtgz",
+      "peer": true,
+      "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
+      "version": "1.1.1",
     },
-    "glob" => Node {
+    "glob" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/rimraf",
+        EdgeIn {
+          "from": "node_modules/rimraf",
           "name": "glob",
           "spec": "^7.1.3",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "fs.realpath" => Edge {
+        "fs.realpath" => EdgeOut {
           "name": "fs.realpath",
           "spec": "^1.0.0",
-          "to": "install-types/node_modules/fs.realpath",
+          "to": "node_modules/fs.realpath",
           "type": "prod",
         },
-        "inflight" => Edge {
+        "inflight" => EdgeOut {
           "name": "inflight",
           "spec": "^1.0.4",
-          "to": "install-types/node_modules/inflight",
+          "to": "node_modules/inflight",
           "type": "prod",
         },
-        "inherits" => Edge {
+        "inherits" => EdgeOut {
           "name": "inherits",
           "spec": "2",
-          "to": "install-types/node_modules/inherits",
+          "to": "node_modules/inherits",
           "type": "prod",
         },
-        "minimatch" => Edge {
+        "minimatch" => EdgeOut {
           "name": "minimatch",
           "spec": "^3.0.4",
-          "to": "install-types/node_modules/minimatch",
+          "to": "node_modules/minimatch",
           "type": "prod",
         },
-        "once" => Edge {
+        "once" => EdgeOut {
           "name": "once",
           "spec": "^1.3.0",
-          "to": "install-types/node_modules/once",
+          "to": "node_modules/once",
           "type": "prod",
         },
-        "path-is-absolute" => Edge {
+        "path-is-absolute" => EdgeOut {
           "name": "path-is-absolute",
           "spec": "^1.0.0",
-          "to": "install-types/node_modules/path-is-absolute",
+          "to": "node_modules/path-is-absolute",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/glob",
       "name": "glob",
-      "realpath": "install-types/node_modules/glob",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/glob",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
+      "version": "7.1.4",
     },
-    "inflight" => Node {
+    "inflight" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/glob",
+        EdgeIn {
+          "from": "node_modules/glob",
           "name": "inflight",
           "spec": "^1.0.4",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "once" => Edge {
+        "once" => EdgeOut {
           "name": "once",
           "spec": "^1.3.0",
-          "to": "install-types/node_modules/once",
+          "to": "node_modules/once",
           "type": "prod",
         },
-        "wrappy" => Edge {
+        "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "1",
-          "to": "install-types/node_modules/wrappy",
+          "to": "node_modules/wrappy",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/inflight",
       "name": "inflight",
-      "realpath": "install-types/node_modules/inflight",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/inflight",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
+      "version": "1.0.6",
     },
-    "inherits" => Node {
+    "inherits" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/glob",
+        EdgeIn {
+          "from": "node_modules/glob",
           "name": "inherits",
           "spec": "2",
           "type": "prod",
@@ -2008,36 +1713,43 @@ Node {
       "extraneous": true,
       "location": "node_modules/inherits",
       "name": "inherits",
-      "realpath": "install-types/node_modules/inherits",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/inherits",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+      "version": "2.0.4",
     },
-    "minimatch" => Node {
+    "minimatch" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/glob",
+        EdgeIn {
+          "from": "node_modules/glob",
           "name": "minimatch",
           "spec": "^3.0.4",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "brace-expansion" => Edge {
+        "brace-expansion" => EdgeOut {
           "name": "brace-expansion",
           "spec": "^1.1.7",
-          "to": "install-types/node_modules/brace-expansion",
+          "to": "node_modules/brace-expansion",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/minimatch",
       "name": "minimatch",
-      "realpath": "install-types/node_modules/minimatch",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/minimatch",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
+      "version": "3.0.4",
     },
-    "old" => Node {
+    "old" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "old",
           "spec": "npm:abbrev@^1.0.3",
           "type": "prod",
@@ -2045,42 +1757,49 @@ Node {
       },
       "location": "node_modules/old",
       "name": "old",
-      "realpath": "install-types/node_modules/old",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/old",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
+      "version": "1.0.3",
     },
-    "once" => Node {
+    "once" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/glob",
+        EdgeIn {
+          "from": "node_modules/glob",
           "name": "once",
           "spec": "^1.3.0",
           "type": "prod",
         },
-        Edge {
-          "from": "install-types/node_modules/inflight",
+        EdgeIn {
+          "from": "node_modules/inflight",
           "name": "once",
           "spec": "^1.3.0",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "wrappy" => Edge {
+        "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "1",
-          "to": "install-types/node_modules/wrappy",
+          "to": "node_modules/wrappy",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/once",
       "name": "once",
-      "realpath": "install-types/node_modules/once",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/once",
+      "peer": true,
+      "resolved": "file:{CWD}/test/fixtures/install-types/once-1.4.0.tgz",
+      "version": "1.4.0",
     },
-    "path-is-absolute" => Node {
+    "path-is-absolute" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/glob",
+        EdgeIn {
+          "from": "node_modules/glob",
           "name": "path-is-absolute",
           "spec": "^1.0.0",
           "type": "prod",
@@ -2089,13 +1808,16 @@ Node {
       "extraneous": true,
       "location": "node_modules/path-is-absolute",
       "name": "path-is-absolute",
-      "realpath": "install-types/node_modules/path-is-absolute",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/path-is-absolute",
+      "peer": true,
+      "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
+      "version": "1.0.1",
     },
-    "pinned" => Node {
+    "pinned" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "pinned",
           "spec": "npm:abbrev@^1.1.1",
           "type": "prod",
@@ -2103,13 +1825,15 @@ Node {
       },
       "location": "node_modules/pinned",
       "name": "pinned",
-      "realpath": "install-types/node_modules/pinned",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/pinned",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
     },
-    "reg" => Node {
+    "reg" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "reg",
           "spec": "npm:abbrev@^1.1.1",
           "type": "prod",
@@ -2117,13 +1841,15 @@ Node {
       },
       "location": "node_modules/reg",
       "name": "reg",
-      "realpath": "install-types/node_modules/reg",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/reg",
+      "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
     },
-    "remote" => Node {
+    "remote" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "remote",
           "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
           "type": "prod",
@@ -2131,28 +1857,34 @@ Node {
       },
       "location": "node_modules/remote",
       "name": "remote",
-      "realpath": "install-types/node_modules/remote",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/remote",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
     },
-    "rimraf" => Node {
+    "rimraf" => ArboristNode {
+      "dev": true,
       "edgesOut": Map {
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "^7.1.3",
-          "to": "install-types/node_modules/glob",
+          "to": "node_modules/glob",
           "type": "optional",
         },
       },
       "extraneous": true,
       "location": "node_modules/rimraf",
       "name": "rimraf",
-      "realpath": "install-types/node_modules/rimraf",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/rimraf",
+      "peer": true,
+      "resolved": "file:{CWD}/test/fixtures/install-types/rimraf-2.6.3.tgz",
+      "version": "2.6.3",
     },
-    "symlink" => Link {
+    "symlink" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "symlink",
           "spec": "file:./abbrev-link-target",
           "type": "prod",
@@ -2160,17 +1892,19 @@ Node {
       },
       "location": "node_modules/symlink",
       "name": "symlink",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/symlink",
       "realpath": "install-types/abbrev-link-target",
+      "resolved": "file:../abbrev-link-target",
       "target": Object {
-        "fsParent": "install-types",
-        "name": "abbrev-link-target",
+        "location": "abbrev-link-target",
       },
-      "top": "install-types",
+      "version": "1.1.1",
     },
-    "tarball" => Node {
+    "tarball" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "install-types",
+        EdgeIn {
+          "from": "",
           "name": "tarball",
           "spec": "file:abbrev-1.1.1.tgz",
           "type": "prod",
@@ -2178,19 +1912,22 @@ Node {
       },
       "location": "node_modules/tarball",
       "name": "tarball",
-      "realpath": "install-types/node_modules/tarball",
-      "top": "install-types",
+      "packageName": "abbrev",
+      "path": "install-types/node_modules/tarball",
+      "resolved": "file:{CWD}/test/fixtures/install-types/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
     },
-    "wrappy" => Node {
+    "wrappy" => ArboristNode {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "install-types/node_modules/inflight",
+        EdgeIn {
+          "from": "node_modules/inflight",
           "name": "wrappy",
           "spec": "1",
           "type": "prod",
         },
-        Edge {
-          "from": "install-types/node_modules/once",
+        EdgeIn {
+          "from": "node_modules/once",
           "name": "wrappy",
           "spec": "1",
           "type": "prod",
@@ -2199,525 +1936,108 @@ Node {
       "extraneous": true,
       "location": "node_modules/wrappy",
       "name": "wrappy",
-      "realpath": "install-types/node_modules/wrappy",
-      "top": "install-types",
+      "optional": true,
+      "path": "install-types/node_modules/wrappy",
+      "peer": true,
+      "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
+      "version": "1.0.2",
     },
   },
   "edgesOut": Map {
-    "abbrev" => Edge {
+    "abbrev" => EdgeOut {
       "name": "abbrev",
       "spec": "^1.1.1",
-      "to": "install-types/node_modules/abbrev",
+      "to": "node_modules/abbrev",
       "type": "prod",
     },
-    "bundler" => Edge {
+    "bundler" => EdgeOut {
       "name": "bundler",
       "spec": "1.2.3",
-      "to": "install-types/node_modules/bundler",
+      "to": "node_modules/bundler",
       "type": "prod",
     },
-    "full-git-url" => Edge {
+    "full-git-url" => EdgeOut {
       "name": "full-git-url",
       "spec": "git+https://github.com/isaacs/abbrev-js.git",
-      "to": "install-types/node_modules/full-git-url",
+      "to": "node_modules/full-git-url",
       "type": "prod",
     },
-    "ghshort" => Edge {
+    "ghshort" => EdgeOut {
       "name": "ghshort",
       "spec": "github:isaacs/abbrev-js",
-      "to": "install-types/node_modules/ghshort",
+      "to": "node_modules/ghshort",
       "type": "prod",
     },
-    "old" => Edge {
+    "old" => EdgeOut {
       "name": "old",
       "spec": "npm:abbrev@^1.0.3",
-      "to": "install-types/node_modules/old",
+      "to": "node_modules/old",
       "type": "prod",
     },
-    "pinned" => Edge {
+    "pinned" => EdgeOut {
       "name": "pinned",
       "spec": "npm:abbrev@^1.1.1",
-      "to": "install-types/node_modules/pinned",
+      "to": "node_modules/pinned",
       "type": "prod",
     },
-    "reg" => Edge {
+    "reg" => EdgeOut {
       "name": "reg",
       "spec": "npm:abbrev@^1.1.1",
-      "to": "install-types/node_modules/reg",
+      "to": "node_modules/reg",
       "type": "prod",
     },
-    "remote" => Edge {
+    "remote" => EdgeOut {
       "name": "remote",
       "spec": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-      "to": "install-types/node_modules/remote",
+      "to": "node_modules/remote",
       "type": "prod",
     },
-    "symlink" => Edge {
+    "symlink" => EdgeOut {
       "name": "symlink",
       "spec": "file:./abbrev-link-target",
-      "to": "install-types/abbrev-link-target",
+      "to": "node_modules/symlink",
       "type": "prod",
     },
-    "tarball" => Edge {
+    "tarball" => EdgeOut {
       "name": "tarball",
       "spec": "file:abbrev-1.1.1.tgz",
-      "to": "install-types/node_modules/tarball",
+      "to": "node_modules/tarball",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "abbrev-link-target",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "abbrev": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-      "balanced-match": Object {
-        "extraneous": true,
-        "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
-        "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
-        "version": "1.0.0",
-      },
-      "brace-expansion": Object {
-        "extraneous": true,
-        "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
-        "requires": Object {
-          "balanced-match": "^1.0.0",
-          "concat-map": "0.0.1",
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "tap" => EdgeOut {
+          "error": "MISSING",
+          "name": "tap",
+          "spec": "^14.4.1",
+          "to": null,
+          "type": "dev",
         },
-        "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
-        "version": "1.1.11",
       },
-      "bundler": Object {
-        "dependencies": Object {
-          "a": Object {
-            "bundled": true,
-            "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
-            "requires": Object {
-              "b": "",
-            },
-            "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
-            "version": "1.2.3",
-          },
-          "b": Object {
-            "bundled": true,
-            "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
-            "requires": Object {
-              "c": "",
-            },
-            "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
-            "version": "1.2.3",
-          },
-          "c": Object {
-            "bundled": true,
-            "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
-            "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
-            "version": "1.2.3",
-          },
-        },
-        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "requires": Object {
-          "a": "",
-        },
-        "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
-        "version": "1.2.3",
-      },
-      "concat-map": Object {
-        "extraneous": true,
-        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
-        "version": "0.0.1",
-      },
-      "fs.realpath": Object {
-        "extraneous": true,
-        "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
-        "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
-        "version": "1.0.0",
-      },
-      "full-git-url": Object {
-        "from": "full-git-url@git+https://github.com/isaacs/abbrev-js.git",
-        "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-      },
-      "ghshort": Object {
-        "from": "ghshort@github:isaacs/abbrev-js",
-        "version": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-      },
-      "ghtgz": Object {
-        "extraneous": true,
-        "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
-        "version": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-      },
-      "glob": Object {
-        "extraneous": true,
-        "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
-        "requires": Object {
-          "fs.realpath": "^1.0.0",
-          "inflight": "^1.0.4",
-          "inherits": "2",
-          "minimatch": "^3.0.4",
-          "once": "^1.3.0",
-          "path-is-absolute": "^1.0.0",
-        },
-        "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
-        "version": "7.1.4",
-      },
-      "inflight": Object {
-        "extraneous": true,
-        "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
-        "requires": Object {
-          "once": "^1.3.0",
-          "wrappy": "1",
-        },
-        "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
-        "version": "1.0.6",
-      },
-      "inherits": Object {
-        "extraneous": true,
-        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
-        "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
-        "version": "2.0.4",
-      },
-      "minimatch": Object {
-        "extraneous": true,
-        "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
-        "requires": Object {
-          "brace-expansion": "^1.1.7",
-        },
-        "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
-        "version": "3.0.4",
-      },
-      "old": Object {
-        "integrity": "sha1-qgScln+ZkiKqQuFENPDFYu9GgkE=",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
-        "version": "npm:abbrev@1.0.3",
-      },
-      "once": Object {
-        "extraneous": true,
-        "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
-        "requires": Object {
-          "wrappy": "1",
-        },
-        "version": "1.4.0",
-      },
-      "path-is-absolute": Object {
-        "extraneous": true,
-        "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
-        "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
-        "version": "1.0.1",
-      },
-      "pinned": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "npm:abbrev@1.1.1",
-      },
-      "reg": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "npm:abbrev@1.1.1",
-      },
-      "remote": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "version": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-      },
-      "rimraf": Object {
-        "extraneous": true,
-        "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
-        "requires": Object {
-          "glob": "^7.1.3",
-        },
-        "version": "file:rimraf-2.6.3.tgz",
-      },
-      "symlink": Object {
-        "requires": Object {
-          "tap": "^14.4.1",
-        },
-        "version": "file:abbrev-link-target",
-      },
-      "tarball": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "version": "file:abbrev-1.1.1.tgz",
-      },
-      "wrappy": Object {
-        "extraneous": true,
-        "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
-        "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
-        "version": "1.0.2",
-      },
+      "location": "abbrev-link-target",
+      "name": "abbrev-link-target",
+      "packageName": "abbrev",
+      "path": "install-types/abbrev-link-target",
+      "version": "1.1.1",
     },
-    "lockfileVersion": 2,
-    "name": "a",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "abbrev": "^1.1.1",
-          "bundler": "1.2.3",
-          "full-git-url": "git+https://github.com/isaacs/abbrev-js.git",
-          "ghshort": "github:isaacs/abbrev-js",
-          "old": "npm:abbrev@^1.0.3",
-          "pinned": "npm:abbrev@^1.1.1",
-          "reg": "npm:abbrev@^1.1.1",
-          "remote": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-          "symlink": "file:./abbrev-link-target",
-          "tarball": "file:abbrev-1.1.1.tgz",
-        },
-        "name": "a",
-        "version": "1.2.3",
-      },
-      "abbrev-link-target": Object {
-        "devDependencies": Object {
-          "tap": "^14.4.1",
-        },
-        "license": "ISC",
-        "name": "abbrev",
-        "version": "1.1.1",
-      },
-      "node_modules/abbrev": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-      "node_modules/balanced-match": Object {
-        "extraneous": true,
-        "integrity": "sha1-ibTRmasr7kneFk6gK4nORi1xt2c=",
-        "license": "MIT",
-        "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz",
-        "version": "1.0.0",
-      },
-      "node_modules/brace-expansion": Object {
-        "dependencies": Object {
-          "balanced-match": "^1.0.0",
-          "concat-map": "0.0.1",
-        },
-        "extraneous": true,
-        "integrity": "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==",
-        "license": "MIT",
-        "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
-        "version": "1.1.11",
-      },
-      "node_modules/bundler": Object {
-        "bundleDependencies": Array [
-          "a",
-        ],
-        "dependencies": Object {
-          "a": "",
-        },
-        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "resolved": "https://registry.internal/bundler/-/bundler-1.2.3.tgz",
-        "version": "1.2.3",
-      },
-      "node_modules/bundler/node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "inBundle": true,
-        "integrity": "sha1-3Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "resolved": "https://registry.internal/a/-/a-1.2.3.tgz",
-        "version": "1.2.3",
-      },
-      "node_modules/bundler/node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "inBundle": true,
-        "integrity": "sha1-4Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "resolved": "https://registry.internal/b/-/b-1.2.3.tgz",
-        "version": "1.2.3",
-      },
-      "node_modules/bundler/node_modules/c": Object {
-        "inBundle": true,
-        "integrity": "sha1-5Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "resolved": "https://registry.internal/c/-/c-1.2.3.tgz",
-        "version": "1.2.3",
-      },
-      "node_modules/concat-map": Object {
-        "extraneous": true,
-        "integrity": "sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=",
-        "license": "MIT",
-        "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
-        "version": "0.0.1",
-      },
-      "node_modules/fs.realpath": Object {
-        "extraneous": true,
-        "integrity": "sha1-FQStJSMVjKpA20onh8sBQRmU6k8=",
-        "license": "ISC",
-        "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
-        "version": "1.0.0",
-      },
-      "node_modules/full-git-url": Object {
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-        "version": "1.1.1",
-      },
-      "node_modules/ghshort": Object {
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "git+ssh://git@github.com/isaacs/abbrev-js.git#a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-        "version": "1.1.1",
-      },
-      "node_modules/ghtgz": Object {
-        "extraneous": true,
-        "integrity": "sha512-yowslMd9y/lGBCDVO0RwZoXRK5X0zMsf6XECM6DdeqN7qwVnFQ6IAwJai7BD4mVe1xOdWWqWNkuzyuStvSBnHw==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://codeload.github.com/isaacs/abbrev-js/tar.gz/a9ee72ebc8fe3975f1b0c7aeb3a8f2a806a432eb",
-        "version": "1.1.1",
-      },
-      "node_modules/glob": Object {
-        "dependencies": Object {
-          "fs.realpath": "^1.0.0",
-          "inflight": "^1.0.4",
-          "inherits": "2",
-          "minimatch": "^3.0.4",
-          "once": "^1.3.0",
-          "path-is-absolute": "^1.0.0",
-        },
-        "engines": Object {
-          "node": "*",
-        },
-        "extraneous": true,
-        "integrity": "sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==",
-        "license": "ISC",
-        "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.4.tgz",
-        "version": "7.1.4",
-      },
-      "node_modules/inflight": Object {
-        "dependencies": Object {
-          "once": "^1.3.0",
-          "wrappy": "1",
-        },
-        "extraneous": true,
-        "integrity": "sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=",
-        "license": "ISC",
-        "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
-        "version": "1.0.6",
-      },
-      "node_modules/inherits": Object {
-        "extraneous": true,
-        "integrity": "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==",
-        "license": "ISC",
-        "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
-        "version": "2.0.4",
-      },
-      "node_modules/minimatch": Object {
-        "dependencies": Object {
-          "brace-expansion": "^1.1.7",
-        },
-        "engines": Object {
-          "node": "*",
-        },
-        "extraneous": true,
-        "integrity": "sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==",
-        "license": "ISC",
-        "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
-        "version": "3.0.4",
-      },
-      "node_modules/old": Object {
-        "engines": Object {
-          "node": "*",
-        },
-        "integrity": "sha1-qgScln+ZkiKqQuFENPDFYu9GgkE=",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.3.tgz",
-        "version": "1.0.3",
-      },
-      "node_modules/once": Object {
-        "dependencies": Object {
-          "wrappy": "1",
-        },
-        "extraneous": true,
-        "integrity": "sha512-oic2VxBO6ZRyhk4W/amcN3D4tGpSELjpXwShWPBHNVDvVXo2+JcNnNx6Dth+Y961vfz7SmCCc6RP2oNQE2yVwQ==",
-        "license": "ISC",
-        "resolved": "file:once-1.4.0.tgz",
-        "version": "1.4.0",
-      },
-      "node_modules/path-is-absolute": Object {
-        "engines": Object {
-          "node": ">=0.10.0",
-        },
-        "extraneous": true,
-        "integrity": "sha1-F0uSaHNVNP+8es5r9TpanhtcX18=",
-        "license": "MIT",
-        "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
-        "version": "1.0.1",
-      },
-      "node_modules/pinned": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-      "node_modules/reg": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://localhost:8080/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-      "node_modules/remote": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-      "node_modules/rimraf": Object {
-        "bin": Object {
-          "rimraf": "bin.js",
-        },
-        "dependencies": Object {
-          "glob": "^7.1.3",
-        },
-        "extraneous": true,
-        "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
-        "license": "ISC",
-        "optionalDependencies": Object {
-          "glob": "^7.1.3",
-        },
-        "resolved": "file:rimraf-2.6.3.tgz",
-        "version": "2.6.3",
-      },
-      "node_modules/symlink": Object {
-        "link": true,
-        "resolved": "abbrev-link-target",
-      },
-      "node_modules/tarball": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "file:abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-      "node_modules/wrappy": Object {
-        "extraneous": true,
-        "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
-        "license": "ISC",
-        "resolved": "https://localhost:8080/wrappy/-/wrappy-1.0.2.tgz",
-        "version": "1.0.2",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
   },
+  "location": "",
   "name": "install-types",
-  "realpath": "install-types",
-  "top": "install-types",
+  "packageName": "a",
+  "path": "install-types",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP link-dep-cycle > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Link {
+    "a" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "link-dep-cycle",
+        EdgeIn {
+          "from": "",
           "name": "a",
           "spec": "file:a",
           "type": "prod",
@@ -2725,17 +2045,17 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "path": "link-dep-cycle/node_modules/a",
       "realpath": "link-dep-cycle/a",
+      "resolved": "file:../a",
       "target": Object {
-        "fsParent": "link-dep-cycle",
-        "name": "a",
+        "location": "a",
       },
-      "top": "link-dep-cycle",
     },
-    "b" => Link {
+    "b" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "link-dep-cycle",
+        EdgeIn {
+          "from": "",
           "name": "b",
           "spec": "file:b",
           "type": "prod",
@@ -2743,115 +2063,109 @@ Node {
       },
       "location": "node_modules/b",
       "name": "b",
+      "path": "link-dep-cycle/node_modules/b",
       "realpath": "link-dep-cycle/b",
+      "resolved": "file:../b",
       "target": Object {
-        "fsParent": "link-dep-cycle",
-        "name": "b",
+        "location": "b",
       },
-      "top": "link-dep-cycle",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
       "spec": "file:a",
-      "to": "link-dep-cycle/a",
+      "to": "node_modules/a",
       "type": "prod",
     },
-    "b" => Edge {
+    "b" => EdgeOut {
       "name": "b",
       "spec": "file:b",
-      "to": "link-dep-cycle/b",
+      "to": "node_modules/b",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "a",
-    "b",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "dependencies": Object {
-          "b": Object {
-            "requires": Object {
-              "a": "file:../a",
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "b" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "a",
+              "name": "b",
+              "spec": "file:../b",
+              "type": "prod",
             },
-            "version": "file:b",
+          },
+          "location": "a/node_modules/b",
+          "name": "b",
+          "path": "link-dep-cycle/a/node_modules/b",
+          "realpath": "link-dep-cycle/b",
+          "resolved": "file:../../b",
+          "target": ArboristNode {
+            "children": Map {
+              "a" => ArboristLink {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "b",
+                    "name": "a",
+                    "spec": "file:../a",
+                    "type": "prod",
+                  },
+                },
+                "location": "b/node_modules/a",
+                "name": "a",
+                "path": "link-dep-cycle/b/node_modules/a",
+                "realpath": "link-dep-cycle/a",
+                "resolved": "file:../../a",
+                "target": Object {
+                  "location": "a",
+                },
+              },
+            },
+            "edgesOut": Map {
+              "a" => EdgeOut {
+                "name": "a",
+                "spec": "file:../a",
+                "to": "b/node_modules/a",
+                "type": "prod",
+              },
+            },
+            "location": "b",
+            "name": "b",
+            "path": "link-dep-cycle/b",
           },
         },
-        "requires": Object {
-          "b": "file:../b",
-        },
-        "version": "file:a",
       },
-      "b": Object {
-        "dependencies": Object {
-          "a": Object {
-            "requires": Object {
-              "b": "file:../b",
-            },
-            "version": "file:a",
-          },
+      "edgesOut": Map {
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "file:../b",
+          "to": "a/node_modules/b",
+          "type": "prod",
         },
-        "requires": Object {
-          "a": "file:../a",
-        },
-        "version": "file:b",
       },
+      "location": "a",
+      "name": "a",
+      "path": "link-dep-cycle/a",
     },
-    "lockfileVersion": 2,
-    "name": "link-dep-cycle",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "a": "file:a",
-          "b": "file:b",
-        },
-      },
-      "a": Object {
-        "dependencies": Object {
-          "b": "file:../b",
-        },
-      },
-      "a/node_modules/b": Object {
-        "link": true,
-        "resolved": "b",
-      },
-      "b": Object {
-        "dependencies": Object {
-          "a": "file:../a",
-        },
-      },
-      "b/node_modules/a": Object {
-        "link": true,
-        "resolved": "a",
-      },
-      "node_modules/a": Object {
-        "link": true,
-        "resolved": "a",
-      },
-      "node_modules/b": Object {
-        "link": true,
-        "resolved": "b",
-      },
+    Object {
+      "location": "b",
     },
-    "requires": true,
   },
+  "location": "",
   "name": "link-dep-cycle",
-  "realpath": "link-dep-cycle",
-  "top": "link-dep-cycle",
+  "path": "link-dep-cycle",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP link-dep-nested > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "foo" => Link {
+    "foo" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "link-dep-nested",
+        EdgeIn {
+          "from": "",
           "name": "foo",
           "spec": "file:once",
           "type": "prod",
@@ -2859,17 +2173,19 @@ Node {
       },
       "location": "node_modules/foo",
       "name": "foo",
+      "packageName": "once",
+      "path": "link-dep-nested/node_modules/foo",
       "realpath": "link-dep-nested/once",
+      "resolved": "file:../once",
       "target": Object {
-        "fsParent": "link-dep-nested",
-        "name": "once",
+        "location": "once",
       },
-      "top": "link-dep-nested",
+      "version": "1.4.0",
     },
-    "once" => Link {
+    "once" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "link-dep-nested",
+        EdgeIn {
+          "from": "",
           "name": "once",
           "spec": "file:once",
           "type": "prod",
@@ -2877,109 +2193,83 @@ Node {
       },
       "location": "node_modules/once",
       "name": "once",
+      "path": "link-dep-nested/node_modules/once",
       "realpath": "link-dep-nested/once",
+      "resolved": "file:../once",
       "target": Object {
-        "fsParent": "link-dep-nested",
-        "name": "once",
+        "location": "once",
       },
-      "top": "link-dep-nested",
+      "version": "1.4.0",
     },
   },
   "edgesOut": Map {
-    "foo" => Edge {
+    "foo" => EdgeOut {
       "name": "foo",
       "spec": "file:once",
-      "to": "link-dep-nested/once",
+      "to": "node_modules/foo",
       "type": "prod",
     },
-    "once" => Edge {
+    "once" => EdgeOut {
       "name": "once",
       "spec": "file:once",
-      "to": "link-dep-nested/once",
+      "to": "node_modules/once",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "once",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "foo": Object {
-        "dependencies": Object {
-          "wrappy": Object {
-            "version": "1.0.2",
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "wrappy" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "once",
+              "name": "wrappy",
+              "spec": "1",
+              "type": "prod",
+            },
           },
+          "location": "once/node_modules/wrappy",
+          "name": "wrappy",
+          "path": "link-dep-nested/once/node_modules/wrappy",
+          "version": "1.0.2",
         },
-        "requires": Object {
-          "tap": "^7.0.1",
-          "wrappy": "1",
-        },
-        "version": "file:once",
       },
-      "once": Object {
-        "dependencies": Object {
-          "wrappy": Object {
-            "version": "1.0.2",
-          },
+      "edgesOut": Map {
+        "tap" => EdgeOut {
+          "error": "MISSING",
+          "name": "tap",
+          "spec": "^7.0.1",
+          "to": null,
+          "type": "dev",
         },
-        "requires": Object {
-          "tap": "^7.0.1",
-          "wrappy": "1",
+        "wrappy" => EdgeOut {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "once/node_modules/wrappy",
+          "type": "prod",
         },
-        "version": "file:once",
       },
+      "location": "once",
+      "name": "once",
+      "path": "link-dep-nested/once",
+      "version": "1.4.0",
     },
-    "lockfileVersion": 2,
-    "name": "nested-thingies",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "foo": "file:once",
-          "once": "file:once",
-        },
-        "name": "nested-thingies",
-        "version": "1.2.3",
-      },
-      "node_modules/foo": Object {
-        "link": true,
-        "resolved": "once",
-      },
-      "node_modules/once": Object {
-        "link": true,
-        "resolved": "once",
-      },
-      "once": Object {
-        "dependencies": Object {
-          "wrappy": "1",
-        },
-        "devDependencies": Object {
-          "tap": "^7.0.1",
-        },
-        "license": "ISC",
-        "version": "1.4.0",
-      },
-      "once/node_modules/wrappy": Object {
-        "license": "ISC",
-        "version": "1.0.2",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
   },
+  "location": "",
   "name": "link-dep-nested",
-  "realpath": "link-dep-nested",
-  "top": "link-dep-nested",
+  "packageName": "nested-thingies",
+  "path": "link-dep-nested",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP link-dep-nested/root > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "bork" => Link {
+    "bork" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "link-dep-nested/root",
+        EdgeIn {
+          "from": "",
           "name": "bork",
           "spec": "file:..",
           "type": "prod",
@@ -2987,759 +2277,791 @@ Node {
       },
       "location": "node_modules/bork",
       "name": "bork",
+      "packageName": "nested-thingies",
+      "path": "link-dep-nested/root/node_modules/bork",
       "realpath": "link-dep-nested",
-      "target": Object {
+      "resolved": "file:../..",
+      "target": ArboristNode {
+        "children": Map {
+          "foo" => ArboristLink {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "..",
+                "name": "foo",
+                "spec": "file:once",
+                "type": "prod",
+              },
+            },
+            "location": "../node_modules/foo",
+            "name": "foo",
+            "packageName": "once",
+            "path": "link-dep-nested/node_modules/foo",
+            "realpath": "link-dep-nested/once",
+            "resolved": "file:../once",
+            "target": Object {
+              "location": "../once",
+            },
+            "version": "1.4.0",
+          },
+          "once" => ArboristLink {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "..",
+                "name": "once",
+                "spec": "file:once",
+                "type": "prod",
+              },
+            },
+            "location": "../node_modules/once",
+            "name": "once",
+            "path": "link-dep-nested/node_modules/once",
+            "realpath": "link-dep-nested/once",
+            "resolved": "file:../once",
+            "target": Object {
+              "location": "../once",
+            },
+            "version": "1.4.0",
+          },
+        },
+        "edgesOut": Map {
+          "foo" => EdgeOut {
+            "name": "foo",
+            "spec": "file:once",
+            "to": "../node_modules/foo",
+            "type": "prod",
+          },
+          "once" => EdgeOut {
+            "name": "once",
+            "spec": "file:once",
+            "to": "../node_modules/once",
+            "type": "prod",
+          },
+        },
+        "fsChildren": Set {
+          ArboristNode {
+            "children": Map {
+              "wrappy" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "../once",
+                    "name": "wrappy",
+                    "spec": "1",
+                    "type": "prod",
+                  },
+                },
+                "location": "../once/node_modules/wrappy",
+                "name": "wrappy",
+                "path": "link-dep-nested/once/node_modules/wrappy",
+                "version": "1.0.2",
+              },
+            },
+            "edgesOut": Map {
+              "tap" => EdgeOut {
+                "error": "MISSING",
+                "name": "tap",
+                "spec": "^7.0.1",
+                "to": null,
+                "type": "dev",
+              },
+              "wrappy" => EdgeOut {
+                "name": "wrappy",
+                "spec": "1",
+                "to": "../once/node_modules/wrappy",
+                "type": "prod",
+              },
+            },
+            "location": "../once",
+            "name": "once",
+            "path": "link-dep-nested/once",
+            "version": "1.4.0",
+          },
+        },
+        "location": "..",
         "name": "link-dep-nested",
+        "packageName": "nested-thingies",
+        "path": "link-dep-nested",
+        "version": "1.2.3",
       },
-      "top": "link-dep-nested/root",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "bork" => Edge {
+    "bork" => EdgeOut {
       "name": "bork",
       "spec": "file:..",
-      "to": "link-dep-nested",
+      "to": "node_modules/bork",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "bork": Object {
-        "dependencies": Object {
-          "foo": Object {
-            "dependencies": Object {
-              "wrappy": Object {
-                "version": "1.0.2",
-              },
-            },
-            "requires": Object {
-              "tap": "^7.0.1",
-              "wrappy": "1",
-            },
-            "version": "file:../once",
-          },
-          "once": Object {
-            "dependencies": Object {
-              "wrappy": Object {
-                "version": "1.0.2",
-              },
-            },
-            "requires": Object {
-              "tap": "^7.0.1",
-              "wrappy": "1",
-            },
-            "version": "file:../once",
-          },
-        },
-        "requires": Object {
-          "foo": "file:once",
-          "once": "file:once",
-        },
-        "version": "file:..",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "bork": "file:..",
-        },
-        "version": "1.2.3",
-      },
-      "..": Object {
-        "dependencies": Object {
-          "foo": "file:once",
-          "once": "file:once",
-        },
-        "name": "nested-thingies",
-        "version": "1.2.3",
-      },
-      "../node_modules/foo": Object {
-        "link": true,
-        "resolved": "../once",
-      },
-      "../node_modules/once": Object {
-        "link": true,
-        "resolved": "../once",
-      },
-      "../once": Object {
-        "dependencies": Object {
-          "wrappy": "1",
-        },
-        "devDependencies": Object {
-          "tap": "^7.0.1",
-        },
-        "license": "ISC",
-        "version": "1.4.0",
-      },
-      "../once/node_modules/wrappy": Object {
-        "license": "ISC",
-        "version": "1.0.2",
-      },
-      "node_modules/bork": Object {
-        "link": true,
-        "resolved": "..",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
-  },
   "name": "root",
-  "realpath": "link-dep-nested/root",
-  "top": "link-dep-nested/root",
+  "path": "link-dep-nested/root",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP linkedroot > loaded tree 1`] = `
-Link {
+ArboristLink {
   "location": "../linkedroot",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
+  "name": "linkedroot",
+  "packageName": "root",
+  "path": "linkedroot",
+  "realpath": "root",
+  "resolved": "file:root",
+  "target": ArboristNode {
+    "children": Map {
+      "@scope/x" => ArboristNode {
+        "children": Map {
+          "glob" => ArboristNode {
+            "children": Map {
+              "graceful-fs" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "graceful-fs",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+                "name": "graceful-fs",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
                 "version": "3.0.2",
               },
-              "inherits": Object {
+              "inherits" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "inherits",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+                "name": "inherits",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
                 "version": "2.0.1",
               },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
+              "minimatch" => ArboristNode {
+                "children": Map {
+                  "lru-cache" => ArboristNode {
+                    "edgesIn": Set {
+                      EdgeIn {
+                        "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                        "name": "lru-cache",
+                        "spec": "*",
+                        "type": "prod",
+                      },
+                    },
+                    "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "name": "lru-cache",
+                    "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                     "version": "2.5.0",
                   },
-                  "sigmund": Object {
+                  "sigmund" => ArboristNode {
+                    "edgesIn": Set {
+                      EdgeIn {
+                        "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                        "name": "sigmund",
+                        "spec": "*",
+                        "type": "prod",
+                      },
+                    },
+                    "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "name": "sigmund",
+                    "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                     "version": "1.0.0",
                   },
                 },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "minimatch",
+                    "spec": "*",
+                    "type": "prod",
+                  },
                 },
+                "edgesOut": Map {
+                  "lru-cache" => EdgeOut {
+                    "name": "lru-cache",
+                    "spec": "*",
+                    "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "type": "prod",
+                  },
+                  "once" => EdgeOut {
+                    "name": "once",
+                    "spec": "*",
+                    "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+                    "type": "prod",
+                  },
+                  "sigmund" => EdgeOut {
+                    "name": "sigmund",
+                    "spec": "*",
+                    "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                "name": "minimatch",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                 "version": "1.0.0",
               },
-              "once": Object {
+              "once" => ArboristNode {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob",
+                    "name": "once",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                  EdgeIn {
+                    "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    "name": "once",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+                "name": "once",
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
                 "version": "1.3.0",
               },
             },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/@scope/x",
+                "name": "glob",
+                "spec": "4",
+                "type": "prod",
+              },
             },
+            "edgesOut": Map {
+              "graceful-fs" => EdgeOut {
+                "name": "graceful-fs",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+                "type": "prod",
+              },
+              "inherits" => EdgeOut {
+                "name": "inherits",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+                "type": "prod",
+              },
+              "minimatch" => EdgeOut {
+                "name": "minimatch",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                "type": "prod",
+              },
+              "once" => EdgeOut {
+                "name": "once",
+                "spec": "*",
+                "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/@scope/x/node_modules/glob",
+            "name": "glob",
+            "path": "root/node_modules/@scope/x/node_modules/glob",
             "version": "4.0.5",
           },
         },
-        "requires": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "peer": true,
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "@scope/x",
+            "spec": "1",
+            "type": "prod",
+          },
+          EdgeIn {
+            "from": "node_modules/@scope/x",
+            "name": "@scope/x",
+            "spec": "*",
+            "type": "peer",
+          },
+          EdgeIn {
+            "from": "node_modules/foo",
+            "name": "@scope/x",
+            "spec": "*",
+            "type": "optional",
           },
         },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
+        "edgesOut": Map {
+          "@scope/x" => EdgeOut {
+            "name": "@scope/x",
+            "spec": "*",
+            "to": "node_modules/@scope/x",
+            "type": "peer",
+          },
+          "@scope/y" => EdgeOut {
+            "name": "@scope/y",
+            "spec": "*",
+            "to": "node_modules/@scope/y",
+            "type": "optional",
+          },
+          "express" => EdgeOut {
+            "error": "MISSING",
+            "name": "express",
+            "spec": "420.69.0-nice",
+            "to": null,
+            "type": "peer",
+          },
+          "glob" => EdgeOut {
+            "name": "glob",
+            "spec": "4",
+            "to": "node_modules/@scope/x/node_modules/glob",
+            "type": "prod",
+          },
         },
+        "location": "node_modules/@scope/x",
+        "name": "@scope/x",
+        "path": "root/node_modules/@scope/x",
         "version": "1.2.3",
       },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
+      "@scope/y" => ArboristNode {
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "@scope/y",
+            "spec": ">0.99.0",
+            "type": "peer",
+          },
+          EdgeIn {
+            "from": "node_modules/@scope/x",
+            "name": "@scope/y",
+            "spec": "*",
+            "type": "optional",
+          },
         },
-        "devDependencies": Object {
-          "foo": "*",
+        "edgesOut": Map {
+          "foo" => EdgeOut {
+            "error": "INVALID",
+            "name": "foo",
+            "spec": "99.x",
+            "to": "node_modules/foo",
+            "type": "prod",
+          },
         },
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
-      "../root/node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "../root/node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
+        "location": "node_modules/@scope/y",
+        "name": "@scope/y",
+        "path": "root/node_modules/@scope/y",
         "peer": true,
         "version": "1.2.3",
       },
-      "../root/node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
+      "foo" => ArboristNode {
+        "children": Map {
+          "express" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/foo",
+                "name": "express",
+                "spec": "npm:abbrev@*",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/foo/node_modules/express",
+            "name": "express",
+            "packageName": "abbrev",
+            "path": "root/node_modules/foo/node_modules/express",
+            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+            "version": "1.1.1",
+          },
         },
-        "optionalDependencies": Object {
-          "@scope/x": "",
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "foo",
+            "spec": "*",
+            "type": "dev",
+          },
+          EdgeIn {
+            "error": "INVALID",
+            "from": "node_modules/@scope/y",
+            "name": "foo",
+            "spec": "99.x",
+            "type": "prod",
+          },
         },
+        "edgesOut": Map {
+          "@scope/x" => EdgeOut {
+            "name": "@scope/x",
+            "spec": "*",
+            "to": "node_modules/@scope/x",
+            "type": "optional",
+          },
+          "express" => EdgeOut {
+            "name": "express",
+            "spec": "npm:abbrev@*",
+            "to": "node_modules/foo/node_modules/express",
+            "type": "prod",
+          },
+        },
+        "location": "node_modules/foo",
+        "name": "foo",
+        "path": "root/node_modules/foo",
         "version": "1.2.3",
       },
-      "../root/node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
+    },
+    "edgesOut": Map {
+      "@scope/x" => EdgeOut {
+        "name": "@scope/x",
+        "spec": "1",
+        "to": "node_modules/@scope/x",
+        "type": "prod",
+      },
+      "@scope/y" => EdgeOut {
+        "name": "@scope/y",
+        "spec": ">0.99.0",
+        "to": "node_modules/@scope/y",
+        "type": "peer",
+      },
+      "foo" => EdgeOut {
+        "name": "foo",
+        "spec": "*",
+        "to": "node_modules/foo",
+        "type": "dev",
+      },
+      "notinstalledhere" => EdgeOut {
+        "name": "notinstalledhere",
+        "spec": "*",
+        "to": null,
+        "type": "optional",
       },
     },
-    "requires": true,
-    "version": "file:../root",
-  },
-  "name": "linkedroot",
-  "realpath": "root",
-  "target": Object {
+    "location": "",
     "name": "root",
+    "path": "root",
+    "version": "1.2.3",
   },
-  "top": "root",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP links-all-over > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "link-deep" => Link {
+    "link-deep" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "links-all-over",
+        EdgeIn {
+          "from": "",
           "name": "link-deep",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/link-deep",
       "name": "link-deep",
+      "packageName": "deep",
+      "path": "links-all-over/node_modules/link-deep",
       "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      "target": Object {
+      "resolved": "file:nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "target": ArboristNode {
+        "children": Map {
+          "deep-a" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                "name": "deep-a",
+                "spec": "*",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+            "name": "deep-a",
+            "path": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+            "version": "1.2.3",
+          },
+        },
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+            "name": "deep",
+            "spec": "*",
+            "type": "prod",
+          },
+        },
+        "edgesOut": Map {
+          "a" => EdgeOut {
+            "name": "a",
+            "spec": "*",
+            "to": "node_modules/nest/node_modules/a",
+            "type": "prod",
+          },
+          "deep-a" => EdgeOut {
+            "name": "deep-a",
+            "spec": "*",
+            "to": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
+            "type": "prod",
+          },
+        },
+        "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
         "name": "deep",
-        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+        "path": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+        "version": "1.2.3",
       },
-      "top": "links-all-over",
+      "version": "1.2.3",
     },
-    "link-link" => Link {
+    "link-link" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "links-all-over",
+        EdgeIn {
+          "from": "",
           "name": "link-link",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "links-all-over/real",
+        EdgeIn {
+          "from": "real",
           "name": "link-link",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/link-link",
       "name": "link-link",
+      "packageName": "deep",
+      "path": "links-all-over/node_modules/link-link",
       "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "resolved": "file:nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       "target": Object {
-        "name": "deep",
-        "parent": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+        "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       },
-      "top": "links-all-over",
+      "version": "1.2.3",
     },
-    "link-outside-nest" => Link {
+    "link-outside-nest" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "links-all-over",
+        EdgeIn {
+          "from": "",
           "name": "link-outside-nest",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/link-outside-nest",
       "name": "link-outside-nest",
+      "packageName": "real",
+      "path": "links-all-over/node_modules/link-outside-nest",
       "realpath": "links-all-over/real",
+      "resolved": "file:../real",
       "target": Object {
-        "fsParent": "links-all-over",
-        "name": "real",
+        "location": "real",
       },
-      "top": "links-all-over",
+      "version": "1.2.3",
     },
-    "nest" => Node {
+    "nest" => ArboristNode {
       "children": Map {
-        "a" => Node {
+        "a" => ArboristNode {
           "children": Map {
-            "b" => Node {
+            "b" => ArboristNode {
               "children": Map {
-                "c" => Node {
+                "c" => ArboristNode {
                   "children": Map {
-                    "d" => Node {
+                    "d" => ArboristNode {
                       "children": Map {
-                        "deep" => Node {
-                          "children": Map {
-                            "deep-a" => Node {
-                              "edgesIn": Set {
-                                Edge {
-                                  "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-                                  "name": "deep-a",
-                                  "spec": "",
-                                  "type": "prod",
-                                },
-                              },
-                              "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
-                              "name": "deep-a",
-                              "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
-                              "top": "links-all-over",
-                            },
-                          },
-                          "edgesIn": Set {
-                            Edge {
-                              "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
-                              "name": "deep",
-                              "spec": "",
-                              "type": "prod",
-                            },
-                          },
-                          "edgesOut": Map {
-                            "a" => Edge {
-                              "name": "a",
-                              "spec": "",
-                              "to": "links-all-over/node_modules/nest/node_modules/a",
-                              "type": "prod",
-                            },
-                            "deep-a" => Edge {
-                              "name": "deep-a",
-                              "spec": "",
-                              "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a",
-                              "type": "prod",
-                            },
-                          },
+                        "deep" => Object {
                           "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-                          "name": "deep",
-                          "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-                          "top": "links-all-over",
                         },
                       },
                       "edgesIn": Set {
-                        Edge {
-                          "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
+                        EdgeIn {
+                          "from": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
                           "name": "d",
-                          "spec": "",
+                          "spec": "*",
                           "type": "prod",
                         },
                       },
                       "edgesOut": Map {
-                        "deep" => Edge {
+                        "deep" => EdgeOut {
                           "name": "deep",
-                          "spec": "",
-                          "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+                          "spec": "*",
+                          "to": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
                           "type": "prod",
                         },
                       },
                       "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                       "name": "d",
-                      "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
-                      "top": "links-all-over",
+                      "path": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+                      "version": "1.2.3",
                     },
                   },
                   "edgesIn": Set {
-                    Edge {
-                      "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
+                    EdgeIn {
+                      "from": "node_modules/nest/node_modules/a/node_modules/b",
                       "name": "c",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "edgesOut": Map {
-                    "d" => Edge {
+                    "d" => EdgeOut {
                       "name": "d",
-                      "spec": "",
-                      "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
+                      "spec": "*",
+                      "to": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
                   "name": "c",
-                  "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
-                  "top": "links-all-over",
+                  "path": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
+                  "version": "1.2.3",
                 },
               },
               "edgesIn": Set {
-                Edge {
-                  "from": "links-all-over/node_modules/nest/node_modules/a",
+                EdgeIn {
+                  "from": "node_modules/nest/node_modules/a",
                   "name": "b",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "edgesOut": Map {
-                "c" => Edge {
+                "c" => EdgeOut {
                   "name": "c",
-                  "spec": "",
-                  "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
+                  "spec": "*",
+                  "to": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c",
                   "type": "prod",
                 },
               },
               "location": "node_modules/nest/node_modules/a/node_modules/b",
               "name": "b",
-              "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
-              "top": "links-all-over",
+              "path": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
+              "version": "1.2.3",
             },
           },
           "edgesIn": Set {
-            Edge {
-              "from": "links-all-over/node_modules/nest",
+            EdgeIn {
+              "from": "node_modules/nest",
               "name": "a",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
-            Edge {
-              "from": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+            EdgeIn {
+              "from": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
               "name": "a",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "b" => Edge {
+            "b" => EdgeOut {
               "name": "b",
-              "spec": "",
-              "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b",
+              "spec": "*",
+              "to": "node_modules/nest/node_modules/a/node_modules/b",
               "type": "prod",
             },
           },
           "location": "node_modules/nest/node_modules/a",
           "name": "a",
-          "realpath": "links-all-over/node_modules/nest/node_modules/a",
-          "top": "links-all-over",
+          "path": "links-all-over/node_modules/nest/node_modules/a",
+          "version": "1.2.3",
         },
-        "link-in-nest" => Link {
+        "link-in-nest" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "links-all-over/node_modules/nest",
+            EdgeIn {
+              "from": "node_modules/nest",
               "name": "link-in-nest",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "location": "node_modules/nest/node_modules/link-in-nest",
           "name": "link-in-nest",
+          "packageName": "real",
+          "path": "links-all-over/node_modules/nest/node_modules/link-in-nest",
           "realpath": "links-all-over/real",
+          "resolved": "file:../../../real",
           "target": Object {
-            "fsParent": "links-all-over",
-            "name": "real",
+            "location": "real",
           },
-          "top": "links-all-over",
+          "version": "1.2.3",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "links-all-over",
+        EdgeIn {
+          "from": "",
           "name": "nest",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "a" => Edge {
+        "a" => EdgeOut {
           "name": "a",
-          "spec": "",
-          "to": "links-all-over/node_modules/nest/node_modules/a",
+          "spec": "*",
+          "to": "node_modules/nest/node_modules/a",
           "type": "prod",
         },
-        "link-in-nest" => Edge {
+        "link-in-nest" => EdgeOut {
           "name": "link-in-nest",
-          "spec": "",
-          "to": "links-all-over/real",
+          "spec": "*",
+          "to": "node_modules/nest/node_modules/link-in-nest",
           "type": "prod",
         },
       },
       "location": "node_modules/nest",
       "name": "nest",
-      "realpath": "links-all-over/node_modules/nest",
-      "top": "links-all-over",
+      "path": "links-all-over/node_modules/nest",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "link-deep" => Edge {
+    "link-deep" => EdgeOut {
       "name": "link-deep",
-      "spec": "",
-      "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "spec": "*",
+      "to": "node_modules/link-deep",
       "type": "prod",
     },
-    "link-link" => Edge {
+    "link-link" => EdgeOut {
       "name": "link-link",
-      "spec": "",
-      "to": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
+      "spec": "*",
+      "to": "node_modules/link-link",
       "type": "prod",
     },
-    "link-outside-nest" => Edge {
+    "link-outside-nest" => EdgeOut {
       "name": "link-outside-nest",
-      "spec": "",
-      "to": "links-all-over/real",
+      "spec": "*",
+      "to": "node_modules/link-outside-nest",
       "type": "prod",
     },
-    "nest" => Edge {
+    "nest" => EdgeOut {
       "name": "nest",
-      "spec": "",
-      "to": "links-all-over/node_modules/nest",
+      "spec": "*",
+      "to": "node_modules/nest",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "real",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "link-deep": Object {
-        "dependencies": Object {
-          "deep-a": Object {
-            "version": "1.2.3",
-          },
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "link-link" => EdgeOut {
+          "name": "link-link",
+          "spec": "*",
+          "to": "node_modules/link-link",
+          "type": "prod",
         },
-        "requires": Object {
-          "a": "",
-          "deep-a": "",
-        },
-        "version": "file:node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       },
-      "link-link": Object {
-        "dependencies": Object {
-          "deep-a": Object {
-            "version": "1.2.3",
-          },
-        },
-        "requires": Object {
-          "a": "",
-          "deep-a": "",
-        },
-        "version": "file:node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      },
-      "link-outside-nest": Object {
-        "requires": Object {
-          "link-link": "",
-        },
-        "version": "file:real",
-      },
-      "nest": Object {
-        "dependencies": Object {
-          "a": Object {
-            "dependencies": Object {
-              "b": Object {
-                "dependencies": Object {
-                  "c": Object {
-                    "dependencies": Object {
-                      "d": Object {
-                        "dependencies": Object {
-                          "deep": Object {
-                            "dependencies": Object {
-                              "deep-a": Object {
-                                "version": "1.2.3",
-                              },
-                            },
-                            "requires": Object {
-                              "a": "",
-                              "deep-a": "",
-                            },
-                            "version": "1.2.3",
-                          },
-                        },
-                        "requires": Object {
-                          "deep": "",
-                        },
-                        "version": "1.2.3",
-                      },
-                    },
-                    "requires": Object {
-                      "d": "",
-                    },
-                    "version": "1.2.3",
-                  },
-                },
-                "requires": Object {
-                  "c": "",
-                },
-                "version": "1.2.3",
-              },
-            },
-            "requires": Object {
-              "b": "",
-            },
-            "version": "1.2.3",
-          },
-          "link-in-nest": Object {
-            "requires": Object {
-              "link-link": "",
-            },
-            "version": "file:real",
-          },
-        },
-        "requires": Object {
-          "a": "",
-          "link-in-nest": "",
-        },
-        "version": "1.2.3",
-      },
+      "location": "real",
+      "name": "real",
+      "path": "links-all-over/real",
+      "version": "1.2.3",
     },
-    "lockfileVersion": 2,
-    "name": "links-all-over",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "link-deep": "",
-          "link-link": "",
-          "link-outside-nest": "",
-          "nest": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/link-deep": Object {
-        "link": true,
-        "resolved": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      },
-      "node_modules/link-link": Object {
-        "link": true,
-        "resolved": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      },
-      "node_modules/link-outside-nest": Object {
-        "link": true,
-        "resolved": "real",
-      },
-      "node_modules/nest": Object {
-        "dependencies": Object {
-          "a": "",
-          "link-in-nest": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c": Object {
-        "dependencies": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d": Object {
-        "dependencies": Object {
-          "deep": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep": Object {
-        "dependencies": Object {
-          "a": "",
-          "deep-a": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep/node_modules/deep-a": Object {
-        "version": "1.2.3",
-      },
-      "node_modules/nest/node_modules/link-in-nest": Object {
-        "link": true,
-        "resolved": "real",
-      },
-      "real": Object {
-        "dependencies": Object {
-          "link-link": "",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
   },
+  "location": "",
   "name": "links-all-over",
-  "realpath": "links-all-over",
-  "top": "links-all-over",
+  "path": "links-all-over",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP load a global space > expect resolving Promise 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "rimraf" => Node {
+    "rimraf" => ArboristNode {
       "children": Map {
-        "balanced-match" => Node {
+        "balanced-match" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/brace-expansion",
               "name": "balanced-match",
               "spec": "^1.0.0",
               "type": "prod",
@@ -3747,41 +3069,41 @@ Node {
           },
           "location": "node_modules/rimraf/node_modules/balanced-match",
           "name": "balanced-match",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/balanced-match",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/balanced-match",
+          "version": "1.0.0",
         },
-        "brace-expansion" => Node {
+        "brace-expansion" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/minimatch",
               "name": "brace-expansion",
               "spec": "^1.1.7",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "balanced-match" => Edge {
+            "balanced-match" => EdgeOut {
               "name": "balanced-match",
               "spec": "^1.0.0",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/balanced-match",
+              "to": "node_modules/rimraf/node_modules/balanced-match",
               "type": "prod",
             },
-            "concat-map" => Edge {
+            "concat-map" => EdgeOut {
               "name": "concat-map",
               "spec": "0.0.1",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/concat-map",
+              "to": "node_modules/rimraf/node_modules/concat-map",
               "type": "prod",
             },
           },
           "location": "node_modules/rimraf/node_modules/brace-expansion",
           "name": "brace-expansion",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+          "version": "1.1.11",
         },
-        "concat-map" => Node {
+        "concat-map" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/brace-expansion",
               "name": "concat-map",
               "spec": "0.0.1",
               "type": "prod",
@@ -3789,13 +3111,13 @@ Node {
           },
           "location": "node_modules/rimraf/node_modules/concat-map",
           "name": "concat-map",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/concat-map",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/concat-map",
+          "version": "0.0.1",
         },
-        "fs.realpath" => Node {
+        "fs.realpath" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/glob",
               "name": "fs.realpath",
               "spec": "^1.0.0",
               "type": "prod",
@@ -3803,93 +3125,93 @@ Node {
           },
           "location": "node_modules/rimraf/node_modules/fs.realpath",
           "name": "fs.realpath",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/fs.realpath",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/fs.realpath",
+          "version": "1.0.0",
         },
-        "glob" => Node {
+        "glob" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf",
+            EdgeIn {
+              "from": "node_modules/rimraf",
               "name": "glob",
               "spec": "^7.1.3",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "fs.realpath" => Edge {
+            "fs.realpath" => EdgeOut {
               "name": "fs.realpath",
               "spec": "^1.0.0",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/fs.realpath",
+              "to": "node_modules/rimraf/node_modules/fs.realpath",
               "type": "prod",
             },
-            "inflight" => Edge {
+            "inflight" => EdgeOut {
               "name": "inflight",
               "spec": "^1.0.4",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+              "to": "node_modules/rimraf/node_modules/inflight",
               "type": "prod",
             },
-            "inherits" => Edge {
+            "inherits" => EdgeOut {
               "name": "inherits",
               "spec": "2",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/inherits",
+              "to": "node_modules/rimraf/node_modules/inherits",
               "type": "prod",
             },
-            "minimatch" => Edge {
+            "minimatch" => EdgeOut {
               "name": "minimatch",
               "spec": "^3.0.4",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+              "to": "node_modules/rimraf/node_modules/minimatch",
               "type": "prod",
             },
-            "once" => Edge {
+            "once" => EdgeOut {
               "name": "once",
               "spec": "^1.3.0",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/once",
+              "to": "node_modules/rimraf/node_modules/once",
               "type": "prod",
             },
-            "path-is-absolute" => Edge {
+            "path-is-absolute" => EdgeOut {
               "name": "path-is-absolute",
               "spec": "^1.0.0",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/path-is-absolute",
+              "to": "node_modules/rimraf/node_modules/path-is-absolute",
               "type": "prod",
             },
           },
           "location": "node_modules/rimraf/node_modules/glob",
           "name": "glob",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/glob",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/glob",
+          "version": "7.1.6",
         },
-        "inflight" => Node {
+        "inflight" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/glob",
               "name": "inflight",
               "spec": "^1.0.4",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "once" => Edge {
+            "once" => EdgeOut {
               "name": "once",
               "spec": "^1.3.0",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/once",
+              "to": "node_modules/rimraf/node_modules/once",
               "type": "prod",
             },
-            "wrappy" => Edge {
+            "wrappy" => EdgeOut {
               "name": "wrappy",
               "spec": "1",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+              "to": "node_modules/rimraf/node_modules/wrappy",
               "type": "prod",
             },
           },
           "location": "node_modules/rimraf/node_modules/inflight",
           "name": "inflight",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/inflight",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+          "version": "1.0.6",
         },
-        "inherits" => Node {
+        "inherits" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/glob",
               "name": "inherits",
               "spec": "2",
               "type": "prod",
@@ -3897,63 +3219,63 @@ Node {
           },
           "location": "node_modules/rimraf/node_modules/inherits",
           "name": "inherits",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/inherits",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/inherits",
+          "version": "2.0.4",
         },
-        "minimatch" => Node {
+        "minimatch" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/glob",
               "name": "minimatch",
               "spec": "^3.0.4",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "brace-expansion" => Edge {
+            "brace-expansion" => EdgeOut {
               "name": "brace-expansion",
               "spec": "^1.1.7",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+              "to": "node_modules/rimraf/node_modules/brace-expansion",
               "type": "prod",
             },
           },
           "location": "node_modules/rimraf/node_modules/minimatch",
           "name": "minimatch",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+          "version": "3.0.4",
         },
-        "once" => Node {
+        "once" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/glob",
               "name": "once",
               "spec": "^1.3.0",
               "type": "prod",
             },
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/inflight",
               "name": "once",
               "spec": "^1.3.0",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "wrappy" => Edge {
+            "wrappy" => EdgeOut {
               "name": "wrappy",
               "spec": "1",
-              "to": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+              "to": "node_modules/rimraf/node_modules/wrappy",
               "type": "prod",
             },
           },
           "location": "node_modules/rimraf/node_modules/once",
           "name": "once",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/once",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/once",
+          "version": "1.4.0",
         },
-        "path-is-absolute" => Node {
+        "path-is-absolute" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/glob",
               "name": "path-is-absolute",
               "spec": "^1.0.0",
               "type": "prod",
@@ -3961,19 +3283,19 @@ Node {
           },
           "location": "node_modules/rimraf/node_modules/path-is-absolute",
           "name": "path-is-absolute",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/path-is-absolute",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/path-is-absolute",
+          "version": "1.0.1",
         },
-        "wrappy" => Node {
+        "wrappy" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/inflight",
               "name": "wrappy",
               "spec": "1",
               "type": "prod",
             },
-            Edge {
-              "from": "global-style/lib/node_modules/rimraf/node_modules/once",
+            EdgeIn {
+              "from": "node_modules/rimraf/node_modules/once",
               "name": "wrappy",
               "spec": "1",
               "type": "prod",
@@ -3981,37 +3303,37 @@ Node {
           },
           "location": "node_modules/rimraf/node_modules/wrappy",
           "name": "wrappy",
-          "realpath": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+          "version": "1.0.2",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "global-style/lib",
+        EdgeIn {
+          "from": "",
           "name": "rimraf",
           "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "^7.1.3",
-          "to": "global-style/lib/node_modules/rimraf/node_modules/glob",
+          "to": "node_modules/rimraf/node_modules/glob",
           "type": "prod",
         },
       },
       "location": "node_modules/rimraf",
       "name": "rimraf",
-      "realpath": "global-style/lib/node_modules/rimraf",
-      "top": "global-style/lib",
+      "path": "global-style/lib/node_modules/rimraf",
+      "version": "3.0.2",
     },
-    "which" => Node {
+    "which" => ArboristNode {
       "children": Map {
-        "isexe" => Node {
+        "isexe" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "global-style/lib/node_modules/which",
+            EdgeIn {
+              "from": "node_modules/which",
               "name": "isexe",
               "spec": "^2.0.0",
               "type": "prod",
@@ -4019,81 +3341,408 @@ Node {
           },
           "location": "node_modules/which/node_modules/isexe",
           "name": "isexe",
-          "realpath": "global-style/lib/node_modules/which/node_modules/isexe",
-          "top": "global-style/lib",
+          "path": "global-style/lib/node_modules/which/node_modules/isexe",
+          "version": "2.0.0",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "global-style/lib",
+        EdgeIn {
+          "from": "",
           "name": "which",
           "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "isexe" => Edge {
+        "isexe" => EdgeOut {
           "name": "isexe",
           "spec": "^2.0.0",
-          "to": "global-style/lib/node_modules/which/node_modules/isexe",
+          "to": "node_modules/which/node_modules/isexe",
           "type": "prod",
         },
       },
       "location": "node_modules/which",
       "name": "which",
-      "realpath": "global-style/lib/node_modules/which",
-      "top": "global-style/lib",
+      "path": "global-style/lib/node_modules/which",
+      "version": "2.0.2",
     },
   },
   "edgesOut": Map {
-    "rimraf" => Edge {
+    "rimraf" => EdgeOut {
       "name": "rimraf",
       "spec": "*",
-      "to": "global-style/lib/node_modules/rimraf",
+      "to": "node_modules/rimraf",
       "type": "prod",
     },
-    "which" => Edge {
+    "which" => EdgeOut {
       "name": "which",
       "spec": "*",
-      "to": "global-style/lib/node_modules/which",
+      "to": "node_modules/which",
       "type": "prod",
     },
   },
   "location": "",
   "name": "lib",
-  "realpath": "global-style/lib",
-  "top": "global-style/lib",
+  "path": "global-style/lib",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP load a global space symlink > expect resolving Promise 1`] = `
-Link {
+ArboristLink {
   "location": "../lib-link",
   "name": "lib-link",
+  "path": "global-style/lib-link",
   "realpath": "global-style/lib",
-  "target": Object {
+  "resolved": "file:lib",
+  "target": ArboristNode {
+    "children": Map {
+      "rimraf" => ArboristNode {
+        "children": Map {
+          "balanced-match" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/brace-expansion",
+                "name": "balanced-match",
+                "spec": "^1.0.0",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/balanced-match",
+            "name": "balanced-match",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/balanced-match",
+            "version": "1.0.0",
+          },
+          "brace-expansion" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/minimatch",
+                "name": "brace-expansion",
+                "spec": "^1.1.7",
+                "type": "prod",
+              },
+            },
+            "edgesOut": Map {
+              "balanced-match" => EdgeOut {
+                "name": "balanced-match",
+                "spec": "^1.0.0",
+                "to": "node_modules/rimraf/node_modules/balanced-match",
+                "type": "prod",
+              },
+              "concat-map" => EdgeOut {
+                "name": "concat-map",
+                "spec": "0.0.1",
+                "to": "node_modules/rimraf/node_modules/concat-map",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/brace-expansion",
+            "name": "brace-expansion",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/brace-expansion",
+            "version": "1.1.11",
+          },
+          "concat-map" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/brace-expansion",
+                "name": "concat-map",
+                "spec": "0.0.1",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/concat-map",
+            "name": "concat-map",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/concat-map",
+            "version": "0.0.1",
+          },
+          "fs.realpath" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/glob",
+                "name": "fs.realpath",
+                "spec": "^1.0.0",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/fs.realpath",
+            "name": "fs.realpath",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/fs.realpath",
+            "version": "1.0.0",
+          },
+          "glob" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf",
+                "name": "glob",
+                "spec": "^7.1.3",
+                "type": "prod",
+              },
+            },
+            "edgesOut": Map {
+              "fs.realpath" => EdgeOut {
+                "name": "fs.realpath",
+                "spec": "^1.0.0",
+                "to": "node_modules/rimraf/node_modules/fs.realpath",
+                "type": "prod",
+              },
+              "inflight" => EdgeOut {
+                "name": "inflight",
+                "spec": "^1.0.4",
+                "to": "node_modules/rimraf/node_modules/inflight",
+                "type": "prod",
+              },
+              "inherits" => EdgeOut {
+                "name": "inherits",
+                "spec": "2",
+                "to": "node_modules/rimraf/node_modules/inherits",
+                "type": "prod",
+              },
+              "minimatch" => EdgeOut {
+                "name": "minimatch",
+                "spec": "^3.0.4",
+                "to": "node_modules/rimraf/node_modules/minimatch",
+                "type": "prod",
+              },
+              "once" => EdgeOut {
+                "name": "once",
+                "spec": "^1.3.0",
+                "to": "node_modules/rimraf/node_modules/once",
+                "type": "prod",
+              },
+              "path-is-absolute" => EdgeOut {
+                "name": "path-is-absolute",
+                "spec": "^1.0.0",
+                "to": "node_modules/rimraf/node_modules/path-is-absolute",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/glob",
+            "name": "glob",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/glob",
+            "version": "7.1.6",
+          },
+          "inflight" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/glob",
+                "name": "inflight",
+                "spec": "^1.0.4",
+                "type": "prod",
+              },
+            },
+            "edgesOut": Map {
+              "once" => EdgeOut {
+                "name": "once",
+                "spec": "^1.3.0",
+                "to": "node_modules/rimraf/node_modules/once",
+                "type": "prod",
+              },
+              "wrappy" => EdgeOut {
+                "name": "wrappy",
+                "spec": "1",
+                "to": "node_modules/rimraf/node_modules/wrappy",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/inflight",
+            "name": "inflight",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/inflight",
+            "version": "1.0.6",
+          },
+          "inherits" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/glob",
+                "name": "inherits",
+                "spec": "2",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/inherits",
+            "name": "inherits",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/inherits",
+            "version": "2.0.4",
+          },
+          "minimatch" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/glob",
+                "name": "minimatch",
+                "spec": "^3.0.4",
+                "type": "prod",
+              },
+            },
+            "edgesOut": Map {
+              "brace-expansion" => EdgeOut {
+                "name": "brace-expansion",
+                "spec": "^1.1.7",
+                "to": "node_modules/rimraf/node_modules/brace-expansion",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/minimatch",
+            "name": "minimatch",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/minimatch",
+            "version": "3.0.4",
+          },
+          "once" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/glob",
+                "name": "once",
+                "spec": "^1.3.0",
+                "type": "prod",
+              },
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/inflight",
+                "name": "once",
+                "spec": "^1.3.0",
+                "type": "prod",
+              },
+            },
+            "edgesOut": Map {
+              "wrappy" => EdgeOut {
+                "name": "wrappy",
+                "spec": "1",
+                "to": "node_modules/rimraf/node_modules/wrappy",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/once",
+            "name": "once",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/once",
+            "version": "1.4.0",
+          },
+          "path-is-absolute" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/glob",
+                "name": "path-is-absolute",
+                "spec": "^1.0.0",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/path-is-absolute",
+            "name": "path-is-absolute",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/path-is-absolute",
+            "version": "1.0.1",
+          },
+          "wrappy" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/inflight",
+                "name": "wrappy",
+                "spec": "1",
+                "type": "prod",
+              },
+              EdgeIn {
+                "from": "node_modules/rimraf/node_modules/once",
+                "name": "wrappy",
+                "spec": "1",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/rimraf/node_modules/wrappy",
+            "name": "wrappy",
+            "path": "global-style/lib/node_modules/rimraf/node_modules/wrappy",
+            "version": "1.0.2",
+          },
+        },
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "rimraf",
+            "spec": "*",
+            "type": "prod",
+          },
+        },
+        "edgesOut": Map {
+          "glob" => EdgeOut {
+            "name": "glob",
+            "spec": "^7.1.3",
+            "to": "node_modules/rimraf/node_modules/glob",
+            "type": "prod",
+          },
+        },
+        "location": "node_modules/rimraf",
+        "name": "rimraf",
+        "path": "global-style/lib/node_modules/rimraf",
+        "version": "3.0.2",
+      },
+      "which" => ArboristNode {
+        "children": Map {
+          "isexe" => ArboristNode {
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/which",
+                "name": "isexe",
+                "spec": "^2.0.0",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/which/node_modules/isexe",
+            "name": "isexe",
+            "path": "global-style/lib/node_modules/which/node_modules/isexe",
+            "version": "2.0.0",
+          },
+        },
+        "edgesIn": Set {
+          EdgeIn {
+            "from": "",
+            "name": "which",
+            "spec": "*",
+            "type": "prod",
+          },
+        },
+        "edgesOut": Map {
+          "isexe" => EdgeOut {
+            "name": "isexe",
+            "spec": "^2.0.0",
+            "to": "node_modules/which/node_modules/isexe",
+            "type": "prod",
+          },
+        },
+        "location": "node_modules/which",
+        "name": "which",
+        "path": "global-style/lib/node_modules/which",
+        "version": "2.0.2",
+      },
+    },
+    "edgesOut": Map {
+      "rimraf" => EdgeOut {
+        "name": "rimraf",
+        "spec": "*",
+        "to": "node_modules/rimraf",
+        "type": "prod",
+      },
+      "which" => EdgeOut {
+        "name": "which",
+        "spec": "*",
+        "to": "node_modules/which",
+        "type": "prod",
+      },
+    },
+    "location": "",
     "name": "lib",
+    "path": "global-style/lib",
   },
-  "top": "global-style/lib",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP load a global space with a filter > expect resolving Promise 1`] = `
-Node {
+ArboristNode {
   "location": "",
   "name": "lib",
-  "realpath": "global-style/lib",
-  "top": "global-style/lib",
+  "path": "global-style/lib",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP load from a hidden lockfile > expect resolving Promise 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "abbrev" => Node {
+    "abbrev" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "hidden-lockfile",
+        EdgeIn {
+          "from": "",
           "name": "abbrev",
           "spec": "^1.1.1",
           "type": "prod",
@@ -4101,76 +3750,50 @@ Node {
       },
       "location": "node_modules/abbrev",
       "name": "abbrev",
-      "realpath": "hidden-lockfile/node_modules/abbrev",
-      "top": "hidden-lockfile",
+      "path": "hidden-lockfile/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
     },
   },
   "edgesOut": Map {
-    "abbrev" => Edge {
+    "abbrev" => EdgeOut {
       "name": "abbrev",
       "spec": "^1.1.1",
-      "to": "hidden-lockfile/node_modules/abbrev",
+      "to": "node_modules/abbrev",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "lockfileVersion": 2,
-    "name": "hidden-lockfile",
-    "packages": Object {
-      "node_modules/abbrev": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-    },
-    "requires": true,
-  },
   "name": "hidden-lockfile",
-  "realpath": "hidden-lockfile",
-  "top": "hidden-lockfile",
+  "path": "hidden-lockfile",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP look for missing deps by default external-dep/root > "dep" should have missing deps, "link" should not 1`] = `
-Node {
+ArboristNode {
   "edgesOut": Map {
-    "dep" => Edge {
+    "dep" => EdgeOut {
       "error": "MISSING",
       "name": "dep",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "dep": "",
-        },
-        "version": "1.0.0",
-      },
-    },
-    "requires": true,
-    "version": "1.0.0",
-  },
   "name": "root",
-  "realpath": "external-dep/root",
-  "top": "external-dep/root",
+  "path": "external-dep/root",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP look for missing deps by default external-link/root > "dep" should have missing deps, "link" should not 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "j" => Link {
+    "j" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "j",
           "spec": "file:../i/j",
           "type": "prod",
@@ -4178,17 +3801,29 @@ Node {
       },
       "location": "node_modules/j",
       "name": "j",
+      "path": "external-link/root/node_modules/j",
       "realpath": "external-link/i/j",
-      "target": Object {
-        "fsParent": "external-link/i",
+      "resolved": "file:../../i/j",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "k" => EdgeOut {
+            "name": "k",
+            "spec": "*",
+            "to": "../i/node_modules/k",
+            "type": "prod",
+          },
+        },
+        "location": "../i/j",
         "name": "j",
+        "path": "external-link/i/j",
+        "version": "1.0.0",
       },
-      "top": "external-link/root",
+      "version": "1.0.0",
     },
-    "o" => Link {
+    "o" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "o",
           "spec": "file:../m/node_modules/n/o",
           "type": "prod",
@@ -4196,17 +3831,29 @@ Node {
       },
       "location": "node_modules/o",
       "name": "o",
+      "path": "external-link/root/node_modules/o",
       "realpath": "external-link/m/node_modules/n/o",
-      "target": Object {
-        "fsParent": "external-link/m",
+      "resolved": "file:../../m/node_modules/n/o",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "p" => EdgeOut {
+            "name": "p",
+            "spec": "*",
+            "to": "../m/node_modules/p",
+            "type": "prod",
+          },
+        },
+        "location": "../m/node_modules/n/o",
         "name": "o",
+        "path": "external-link/m/node_modules/n/o",
+        "version": "1.0.0",
       },
-      "top": "external-link/root",
+      "version": "1.0.0",
     },
-    "o2" => Link {
+    "o2" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "o2",
           "spec": "file:../m/node_modules/n/o2",
           "type": "prod",
@@ -4214,19 +3861,31 @@ Node {
       },
       "location": "node_modules/o2",
       "name": "o2",
+      "path": "external-link/root/node_modules/o2",
       "realpath": "external-link/m/node_modules/n/o2",
-      "target": Object {
-        "fsParent": "external-link/m",
+      "resolved": "file:../../m/node_modules/n/o2",
+      "target": ArboristNode {
+        "edgesOut": Map {
+          "p" => EdgeOut {
+            "name": "p",
+            "spec": "*",
+            "to": "../m/node_modules/p",
+            "type": "prod",
+          },
+        },
+        "location": "../m/node_modules/n/o2",
         "name": "o2",
+        "path": "external-link/m/node_modules/n/o2",
+        "version": "1.0.0",
       },
-      "top": "external-link/root",
+      "version": "1.0.0",
     },
-    "x" => Node {
+    "x" => ArboristNode {
       "children": Map {
-        "b" => Link {
+        "b" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "external-link/root/node_modules/x",
+            EdgeIn {
+              "from": "node_modules/x",
               "name": "b",
               "spec": "file:../../../a/node_modules/b",
               "type": "prod",
@@ -4234,425 +3893,328 @@ Node {
           },
           "location": "node_modules/x/node_modules/b",
           "name": "b",
+          "path": "external-link/root/node_modules/x/node_modules/b",
           "realpath": "external-link/a/node_modules/b",
-          "target": Object {
+          "resolved": "file:../../../../a/node_modules/b",
+          "target": ArboristNode {
+            "edgesOut": Map {
+              "c" => EdgeOut {
+                "name": "c",
+                "spec": "*",
+                "to": "../a/node_modules/c",
+                "type": "prod",
+              },
+            },
+            "location": "../a/node_modules/b",
             "name": "b",
-            "parent": "external-link/a",
+            "path": "external-link/a/node_modules/b",
+            "version": "1.0.0",
           },
-          "top": "external-link/root",
+          "version": "1.0.0",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "external-link/root",
+        EdgeIn {
+          "from": "",
           "name": "x",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
           "spec": "file:../../../a/node_modules/b",
-          "to": "external-link/a/node_modules/b",
+          "to": "node_modules/x/node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/x",
       "name": "x",
-      "realpath": "external-link/root/node_modules/x",
-      "top": "external-link/root",
+      "path": "external-link/root/node_modules/x",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "j" => Edge {
+    "j" => EdgeOut {
       "name": "j",
       "spec": "file:../i/j",
-      "to": "external-link/i/j",
+      "to": "node_modules/j",
       "type": "prod",
     },
-    "o" => Edge {
+    "o" => EdgeOut {
       "name": "o",
       "spec": "file:../m/node_modules/n/o",
-      "to": "external-link/m/node_modules/n/o",
+      "to": "node_modules/o",
       "type": "prod",
     },
-    "o2" => Edge {
+    "o2" => EdgeOut {
       "name": "o2",
       "spec": "file:../m/node_modules/n/o2",
-      "to": "external-link/m/node_modules/n/o2",
+      "to": "node_modules/o2",
       "type": "prod",
     },
-    "x" => Edge {
+    "x" => EdgeOut {
       "name": "x",
-      "spec": "",
-      "to": "external-link/root/node_modules/x",
+      "spec": "*",
+      "to": "node_modules/x",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "j": Object {
-        "requires": Object {
-          "k": "",
-        },
-        "version": "file:../i/j",
-      },
-      "o": Object {
-        "requires": Object {
-          "p": "",
-        },
-        "version": "file:../m/node_modules/n/o",
-      },
-      "o2": Object {
-        "requires": Object {
-          "p": "",
-        },
-        "version": "file:../m/node_modules/n/o2",
-      },
-      "x": Object {
-        "dependencies": Object {
-          "b": Object {
-            "requires": Object {
-              "c": "",
-            },
-            "version": "file:../a/node_modules/b",
-          },
-        },
-        "requires": Object {
-          "b": "file:../../../a/node_modules/b",
-        },
-        "version": "1.0.0",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "j": "file:../i/j",
-          "o": "file:../m/node_modules/n/o",
-          "o2": "file:../m/node_modules/n/o2",
-          "x": "",
-        },
-        "version": "1.0.0",
-      },
-      "../a": Object {},
-      "../a/node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "version": "1.0.0",
-      },
-      "../a/node_modules/c": Object {
-        "version": "1.0.0",
-      },
-      "../i": Object {},
-      "../i/j": Object {
-        "dependencies": Object {
-          "k": "",
-        },
-        "version": "1.0.0",
-      },
-      "../i/node_modules/k": Object {
-        "version": "1.0.0",
-      },
-      "../m": Object {},
-      "../m/node_modules/n/o": Object {
-        "dependencies": Object {
-          "p": "",
-        },
-        "version": "1.0.0",
-      },
-      "../m/node_modules/n/o2": Object {
-        "dependencies": Object {
-          "p": "",
-        },
-        "version": "1.0.0",
-      },
-      "../m/node_modules/p": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/j": Object {
-        "link": true,
-        "resolved": "../i/j",
-      },
-      "node_modules/o": Object {
-        "link": true,
-        "resolved": "../m/node_modules/n/o",
-      },
-      "node_modules/o2": Object {
-        "link": true,
-        "resolved": "../m/node_modules/n/o2",
-      },
-      "node_modules/x": Object {
-        "dependencies": Object {
-          "b": "file:../../../a/node_modules/b",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/x/node_modules/b": Object {
-        "link": true,
-        "resolved": "../a/node_modules/b",
-      },
-    },
-    "requires": true,
-    "version": "1.0.0",
-  },
   "name": "root",
-  "realpath": "external-link/root",
-  "top": "external-link/root",
+  "path": "external-link/root",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP looking outside of cwd > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@scope/x" => Node {
+    "@scope/x" => ArboristNode {
       "children": Map {
-        "glob" => Node {
+        "glob" => ArboristNode {
           "children": Map {
-            "graceful-fs" => Node {
+            "graceful-fs" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "graceful-fs",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "name": "graceful-fs",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "version": "3.0.2",
             },
-            "inherits" => Node {
+            "inherits" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "inherits",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "name": "inherits",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "version": "2.0.1",
             },
-            "minimatch" => Node {
+            "minimatch" => ArboristNode {
               "children": Map {
-                "lru-cache" => Node {
+                "lru-cache" => ArboristNode {
                   "edgesIn": Set {
-                    Edge {
-                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    EdgeIn {
+                      "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                       "name": "lru-cache",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "name": "lru-cache",
-                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "top": "root",
+                  "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "version": "2.5.0",
                 },
-                "sigmund" => Node {
+                "sigmund" => ArboristNode {
                   "edgesIn": Set {
-                    Edge {
-                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    EdgeIn {
+                      "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                       "name": "sigmund",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "name": "sigmund",
-                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "top": "root",
+                  "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "version": "1.0.0",
                 },
               },
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "minimatch",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "edgesOut": Map {
-                "lru-cache" => Edge {
+                "lru-cache" => EdgeOut {
                   "name": "lru-cache",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "type": "prod",
                 },
-                "once" => Edge {
+                "once" => EdgeOut {
                   "name": "once",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
                   "type": "prod",
                 },
-                "sigmund" => Edge {
+                "sigmund" => EdgeOut {
                   "name": "sigmund",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "name": "minimatch",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "version": "1.0.0",
             },
-            "once" => Node {
+            "once" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "once",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                   "name": "once",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
               "name": "once",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "version": "1.3.0",
             },
           },
           "edgesIn": Set {
-            Edge {
-              "from": "root/node_modules/@scope/x",
+            EdgeIn {
+              "from": "node_modules/@scope/x",
               "name": "glob",
               "spec": "4",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "graceful-fs" => Edge {
+            "graceful-fs" => EdgeOut {
               "name": "graceful-fs",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "type": "prod",
             },
-            "inherits" => Edge {
+            "inherits" => EdgeOut {
               "name": "inherits",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "type": "prod",
             },
-            "minimatch" => Edge {
+            "minimatch" => EdgeOut {
               "name": "minimatch",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "type": "prod",
             },
-            "once" => Edge {
+            "once" => EdgeOut {
               "name": "once",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
               "type": "prod",
             },
           },
           "location": "node_modules/@scope/x/node_modules/glob",
           "name": "glob",
-          "realpath": "root/node_modules/@scope/x/node_modules/glob",
-          "top": "root",
+          "path": "root/node_modules/@scope/x/node_modules/glob",
+          "version": "4.0.5",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "@scope/x",
           "spec": "1",
           "type": "prod",
         },
-        Edge {
-          "from": "root/node_modules/@scope/x",
+        EdgeIn {
+          "from": "node_modules/@scope/x",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "peer",
         },
-        Edge {
-          "from": "root/node_modules/foo",
+        EdgeIn {
+          "from": "node_modules/foo",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "@scope/x" => Edge {
+        "@scope/x" => EdgeOut {
           "name": "@scope/x",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "spec": "*",
+          "to": "node_modules/@scope/x",
           "type": "peer",
         },
-        "@scope/y" => Edge {
+        "@scope/y" => EdgeOut {
           "name": "@scope/y",
-          "spec": "",
-          "to": "root/node_modules/@scope/y",
+          "spec": "*",
+          "to": "node_modules/@scope/y",
           "type": "optional",
         },
-        "express" => Edge {
+        "express" => EdgeOut {
           "error": "MISSING",
           "name": "express",
           "spec": "420.69.0-nice",
           "to": null,
           "type": "peer",
         },
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "root/node_modules/@scope/x/node_modules/glob",
+          "to": "node_modules/@scope/x/node_modules/glob",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
-      "realpath": "root/node_modules/@scope/x",
-      "top": "root",
+      "path": "root/node_modules/@scope/x",
+      "version": "1.2.3",
     },
-    "@scope/y" => Node {
+    "@scope/y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "@scope/y",
           "spec": ">0.99.0",
           "type": "peer",
         },
-        Edge {
-          "from": "root/node_modules/@scope/x",
+        EdgeIn {
+          "from": "node_modules/@scope/x",
           "name": "@scope/y",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "foo" => Edge {
+        "foo" => EdgeOut {
           "error": "INVALID",
           "name": "foo",
           "spec": "99.x",
-          "to": "root/node_modules/foo",
+          "to": "node_modules/foo",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/y",
       "name": "@scope/y",
-      "realpath": "root/node_modules/@scope/y",
-      "top": "root",
+      "path": "root/node_modules/@scope/y",
+      "version": "1.2.3",
     },
-    "foo" => Node {
+    "foo" => ArboristNode {
       "children": Map {
-        "express" => Node {
+        "express" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "root/node_modules/foo",
+            EdgeIn {
+              "from": "node_modules/foo",
               "name": "express",
               "spec": "npm:abbrev@*",
               "type": "prod",
@@ -4660,1997 +4222,1636 @@ Node {
           },
           "location": "node_modules/foo/node_modules/express",
           "name": "express",
-          "realpath": "root/node_modules/foo/node_modules/express",
-          "top": "root",
+          "packageName": "abbrev",
+          "path": "root/node_modules/foo/node_modules/express",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "version": "1.1.1",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "foo",
           "spec": "*",
           "type": "dev",
         },
-        Edge {
+        EdgeIn {
           "error": "INVALID",
-          "from": "root/node_modules/@scope/y",
+          "from": "node_modules/@scope/y",
           "name": "foo",
           "spec": "99.x",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "@scope/x" => Edge {
+        "@scope/x" => EdgeOut {
           "name": "@scope/x",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "spec": "*",
+          "to": "node_modules/@scope/x",
           "type": "optional",
         },
-        "express" => Edge {
+        "express" => EdgeOut {
           "name": "express",
           "spec": "npm:abbrev@*",
-          "to": "root/node_modules/foo/node_modules/express",
+          "to": "node_modules/foo/node_modules/express",
           "type": "prod",
         },
       },
       "location": "node_modules/foo",
       "name": "foo",
-      "realpath": "root/node_modules/foo",
-      "top": "root",
+      "path": "root/node_modules/foo",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "@scope/x" => Edge {
+    "@scope/x" => EdgeOut {
       "name": "@scope/x",
       "spec": "1",
-      "to": "root/node_modules/@scope/x",
+      "to": "node_modules/@scope/x",
       "type": "prod",
     },
-    "@scope/y" => Edge {
+    "@scope/y" => EdgeOut {
       "name": "@scope/y",
       "spec": ">0.99.0",
-      "to": "root/node_modules/@scope/y",
+      "to": "node_modules/@scope/y",
       "type": "peer",
     },
-    "foo" => Edge {
+    "foo" => EdgeOut {
       "name": "foo",
       "spec": "*",
-      "to": "root/node_modules/foo",
+      "to": "node_modules/foo",
       "type": "dev",
     },
-    "notinstalledhere" => Edge {
+    "notinstalledhere" => EdgeOut {
       "name": "notinstalledhere",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "optional",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "version": "1.0.0",
-                  },
-                },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
-                },
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "version": "1.3.0",
-              },
-            },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
-        },
-        "devDependencies": Object {
-          "foo": "*",
-        },
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "optionalDependencies": Object {
-          "@scope/x": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
-  },
   "name": "root",
-  "realpath": "root",
-  "top": "root",
+  "path": "root",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP mixedloop > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Node {
+    "a" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedloop",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "mixedloop/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
       "optional": true,
-      "realpath": "mixedloop/node_modules/a",
-      "top": "mixedloop",
+      "path": "mixedloop/node_modules/a",
+      "version": "1.1.1",
     },
-    "b" => Node {
+    "b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedloop/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "c" => Edge {
+        "c" => EdgeOut {
           "name": "c",
-          "spec": "",
-          "to": "mixedloop/node_modules/c",
+          "spec": "*",
+          "to": "node_modules/c",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
       "optional": true,
-      "realpath": "mixedloop/node_modules/b",
-      "top": "mixedloop",
+      "path": "mixedloop/node_modules/b",
+      "version": "1.2.3",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "devOptional": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedloop",
+        EdgeIn {
+          "from": "",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "dev",
         },
-        Edge {
-          "from": "mixedloop/node_modules/b",
+        EdgeIn {
+          "from": "node_modules/b",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "mixedloop/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
-      "realpath": "mixedloop/node_modules/c",
-      "top": "mixedloop",
+      "path": "mixedloop/node_modules/c",
+      "version": "1.2.3",
     },
-    "d" => Node {
+    "d" => ArboristNode {
       "devOptional": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedloop/node_modules/c",
+        EdgeIn {
+          "from": "node_modules/c",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "e" => Edge {
+        "e" => EdgeOut {
           "name": "e",
-          "spec": "",
-          "to": "mixedloop/node_modules/e",
+          "spec": "*",
+          "to": "node_modules/e",
           "type": "prod",
         },
       },
       "location": "node_modules/d",
       "name": "d",
-      "realpath": "mixedloop/node_modules/d",
-      "top": "mixedloop",
+      "path": "mixedloop/node_modules/d",
+      "version": "1.2.3",
     },
-    "e" => Node {
+    "e" => ArboristNode {
       "devOptional": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedloop/node_modules/d",
+        EdgeIn {
+          "from": "node_modules/d",
           "name": "e",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/e",
       "name": "e",
-      "realpath": "mixedloop/node_modules/e",
-      "top": "mixedloop",
+      "path": "mixedloop/node_modules/e",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "mixedloop/node_modules/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "optional",
     },
-    "c" => Edge {
+    "c" => EdgeOut {
       "name": "c",
-      "spec": "",
-      "to": "mixedloop/node_modules/c",
+      "spec": "*",
+      "to": "node_modules/c",
       "type": "dev",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "optional": true,
-        "requires": Object {
-          "b": "",
-        },
-        "version": "1.1.1",
-      },
-      "b": Object {
-        "optional": true,
-        "requires": Object {
-          "c": "",
-        },
-        "version": "1.2.3",
-      },
-      "c": Object {
-        "devOptional": true,
-        "requires": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "d": Object {
-        "devOptional": true,
-        "requires": Object {
-          "e": "",
-        },
-        "version": "1.2.3",
-      },
-      "e": Object {
-        "devOptional": true,
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "a": "",
-        },
-        "devDependencies": Object {
-          "c": "",
-        },
-        "name": "root",
-        "optionalDependencies": Object {
-          "a": "",
-        },
-      },
-      "node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "optional": true,
-        "version": "1.1.1",
-      },
-      "node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/c": Object {
-        "dependencies": Object {
-          "d": "",
-        },
-        "devOptional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/d": Object {
-        "dependencies": Object {
-          "e": "",
-        },
-        "devOptional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/e": Object {
-        "devOptional": true,
-        "version": "1.2.3",
-      },
-    },
-    "requires": true,
-  },
   "name": "mixedloop",
-  "realpath": "mixedloop",
-  "top": "mixedloop",
+  "packageName": "root",
+  "path": "mixedloop",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP mixedmidway > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Node {
+    "a" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "mixedmidway/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
       "optional": true,
-      "realpath": "mixedmidway/node_modules/a",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/a",
+      "version": "1.2.3",
     },
-    "b" => Node {
+    "b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/n",
+        EdgeIn {
+          "from": "node_modules/n",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "c" => Edge {
+        "c" => EdgeOut {
           "name": "c",
-          "spec": "",
-          "to": "mixedmidway/node_modules/c",
+          "spec": "*",
+          "to": "node_modules/c",
           "type": "prod",
         },
-        "j" => Edge {
+        "j" => EdgeOut {
           "name": "j",
-          "spec": "",
-          "to": "mixedmidway/node_modules/j",
+          "spec": "*",
+          "to": "node_modules/j",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
       "optional": true,
-      "realpath": "mixedmidway/node_modules/b",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/b",
+      "version": "1.2.3",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "devOptional": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/b",
+        EdgeIn {
+          "from": "node_modules/b",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/k",
+        EdgeIn {
+          "from": "node_modules/k",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
-      "realpath": "mixedmidway/node_modules/c",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/c",
+      "version": "1.2.3",
     },
-    "i" => Node {
+    "i" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "i",
-          "spec": "",
+          "spec": "*",
           "type": "dev",
         },
       },
       "edgesOut": Map {
-        "j" => Edge {
+        "j" => EdgeOut {
           "name": "j",
-          "spec": "",
-          "to": "mixedmidway/node_modules/j",
+          "spec": "*",
+          "to": "node_modules/j",
           "type": "prod",
         },
       },
       "location": "node_modules/i",
       "name": "i",
-      "realpath": "mixedmidway/node_modules/i",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/i",
     },
-    "j" => Node {
+    "j" => ArboristNode {
       "devOptional": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway/node_modules/b",
+        EdgeIn {
+          "from": "node_modules/b",
           "name": "j",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/i",
+        EdgeIn {
+          "from": "node_modules/i",
           "name": "j",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/n",
+        EdgeIn {
+          "from": "node_modules/n",
           "name": "j",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "k" => Edge {
+        "k" => EdgeOut {
           "name": "k",
-          "spec": "",
-          "to": "mixedmidway/node_modules/k",
+          "spec": "*",
+          "to": "node_modules/k",
           "type": "prod",
         },
       },
       "location": "node_modules/j",
       "name": "j",
-      "realpath": "mixedmidway/node_modules/j",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/j",
     },
-    "k" => Node {
+    "k" => ArboristNode {
       "devOptional": true,
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "k",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/j",
+        EdgeIn {
+          "from": "node_modules/j",
           "name": "k",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "c" => Edge {
+        "c" => EdgeOut {
           "name": "c",
-          "spec": "",
-          "to": "mixedmidway/node_modules/c",
+          "spec": "*",
+          "to": "node_modules/c",
           "type": "prod",
         },
       },
       "location": "node_modules/k",
       "name": "k",
-      "realpath": "mixedmidway/node_modules/k",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/k",
     },
-    "l" => Node {
+    "l" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "l",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/z",
+        EdgeIn {
+          "from": "node_modules/z",
           "name": "l",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "m" => Edge {
+        "m" => EdgeOut {
           "name": "m",
-          "spec": "",
-          "to": "mixedmidway/node_modules/m",
+          "spec": "*",
+          "to": "node_modules/m",
           "type": "prod",
         },
       },
       "location": "node_modules/l",
       "name": "l",
-      "realpath": "mixedmidway/node_modules/l",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/l",
     },
-    "m" => Node {
+    "m" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "m",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/l",
+        EdgeIn {
+          "from": "node_modules/l",
           "name": "m",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/m",
       "name": "m",
-      "realpath": "mixedmidway/node_modules/m",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/m",
     },
-    "n" => Node {
+    "n" => ArboristNode {
+      "dev": true,
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "mixedmidway/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
-        "j" => Edge {
+        "j" => EdgeOut {
           "name": "j",
-          "spec": "",
-          "to": "mixedmidway/node_modules/j",
+          "spec": "*",
+          "to": "node_modules/j",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/n",
       "name": "n",
-      "realpath": "mixedmidway/node_modules/n",
-      "top": "mixedmidway",
+      "optional": true,
+      "path": "mixedmidway/node_modules/n",
+      "peer": true,
     },
-    "x" => Node {
+    "x" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "x",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "y" => Edge {
+        "y" => EdgeOut {
           "name": "y",
-          "spec": "",
-          "to": "mixedmidway/node_modules/y",
+          "spec": "*",
+          "to": "node_modules/y",
           "type": "prod",
         },
       },
       "location": "node_modules/x",
       "name": "x",
-      "realpath": "mixedmidway/node_modules/x",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/x",
     },
-    "y" => Node {
+    "y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway",
+        EdgeIn {
+          "from": "",
           "name": "y",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
-        Edge {
-          "from": "mixedmidway/node_modules/x",
+        EdgeIn {
+          "from": "node_modules/x",
           "name": "y",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "z" => Edge {
+        "z" => EdgeOut {
           "name": "z",
-          "spec": "",
-          "to": "mixedmidway/node_modules/z",
+          "spec": "*",
+          "to": "node_modules/z",
           "type": "prod",
         },
       },
       "location": "node_modules/y",
       "name": "y",
-      "realpath": "mixedmidway/node_modules/y",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/y",
     },
-    "z" => Node {
+    "z" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "mixedmidway/node_modules/y",
+        EdgeIn {
+          "from": "node_modules/y",
           "name": "z",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "l" => Edge {
+        "l" => EdgeOut {
           "name": "l",
-          "spec": "",
-          "to": "mixedmidway/node_modules/l",
+          "spec": "*",
+          "to": "node_modules/l",
           "type": "prod",
         },
       },
       "location": "node_modules/z",
       "name": "z",
-      "realpath": "mixedmidway/node_modules/z",
-      "top": "mixedmidway",
+      "path": "mixedmidway/node_modules/z",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "mixedmidway/node_modules/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "optional",
     },
-    "b" => Edge {
+    "b" => EdgeOut {
       "name": "b",
-      "spec": "",
-      "to": "mixedmidway/node_modules/b",
+      "spec": "*",
+      "to": "node_modules/b",
       "type": "optional",
     },
-    "c" => Edge {
+    "c" => EdgeOut {
       "name": "c",
-      "spec": "",
-      "to": "mixedmidway/node_modules/c",
+      "spec": "*",
+      "to": "node_modules/c",
       "type": "optional",
     },
-    "i" => Edge {
+    "i" => EdgeOut {
       "name": "i",
-      "spec": "",
-      "to": "mixedmidway/node_modules/i",
+      "spec": "*",
+      "to": "node_modules/i",
       "type": "dev",
     },
-    "k" => Edge {
+    "k" => EdgeOut {
       "name": "k",
-      "spec": "",
-      "to": "mixedmidway/node_modules/k",
+      "spec": "*",
+      "to": "node_modules/k",
       "type": "optional",
     },
-    "l" => Edge {
+    "l" => EdgeOut {
       "name": "l",
-      "spec": "",
-      "to": "mixedmidway/node_modules/l",
+      "spec": "*",
+      "to": "node_modules/l",
       "type": "optional",
     },
-    "m" => Edge {
+    "m" => EdgeOut {
       "name": "m",
-      "spec": "",
-      "to": "mixedmidway/node_modules/m",
+      "spec": "*",
+      "to": "node_modules/m",
       "type": "optional",
     },
-    "x" => Edge {
+    "x" => EdgeOut {
       "name": "x",
-      "spec": "",
-      "to": "mixedmidway/node_modules/x",
+      "spec": "*",
+      "to": "node_modules/x",
       "type": "prod",
     },
-    "y" => Edge {
+    "y" => EdgeOut {
       "name": "y",
-      "spec": "",
-      "to": "mixedmidway/node_modules/y",
+      "spec": "*",
+      "to": "node_modules/y",
       "type": "optional",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "optional": true,
-        "requires": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-      "b": Object {
-        "optional": true,
-        "requires": Object {
-          "c": "",
-          "j": "",
-        },
-        "version": "1.2.3",
-      },
-      "c": Object {
-        "devOptional": true,
-        "version": "1.2.3",
-      },
-      "i": Object {
-        "dev": true,
-        "requires": Object {
-          "j": "",
-        },
-      },
-      "j": Object {
-        "devOptional": true,
-        "requires": Object {
-          "k": "",
-        },
-      },
-      "k": Object {
-        "devOptional": true,
-        "requires": Object {
-          "c": "",
-        },
-      },
-      "l": Object {
-        "requires": Object {
-          "m": "",
-        },
-      },
-      "m": Object {},
-      "n": Object {
-        "extraneous": true,
-        "requires": Object {
-          "b": "",
-          "j": "",
-        },
-      },
-      "x": Object {
-        "requires": Object {
-          "y": "",
-        },
-      },
-      "y": Object {
-        "requires": Object {
-          "z": "",
-        },
-      },
-      "z": Object {
-        "requires": Object {
-          "l": "",
-        },
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "a": "",
-          "b": "",
-          "c": "",
-          "k": "",
-          "l": "",
-          "m": "",
-          "x": "",
-          "y": "",
-        },
-        "devDependencies": Object {
-          "i": "",
-        },
-        "name": "root",
-        "optionalDependencies": Object {
-          "a": "",
-          "b": "",
-          "c": "",
-          "k": "",
-          "l": "",
-          "m": "",
-          "y": "",
-        },
-      },
-      "node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-          "j": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/c": Object {
-        "devOptional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/i": Object {
-        "dependencies": Object {
-          "j": "",
-        },
-        "dev": true,
-      },
-      "node_modules/j": Object {
-        "dependencies": Object {
-          "k": "",
-        },
-        "devOptional": true,
-      },
-      "node_modules/k": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "devOptional": true,
-      },
-      "node_modules/l": Object {
-        "dependencies": Object {
-          "m": "",
-        },
-      },
-      "node_modules/m": Object {},
-      "node_modules/n": Object {
-        "dependencies": Object {
-          "b": "",
-          "j": "",
-        },
-        "extraneous": true,
-      },
-      "node_modules/x": Object {
-        "dependencies": Object {
-          "y": "",
-        },
-      },
-      "node_modules/y": Object {
-        "dependencies": Object {
-          "z": "",
-        },
-      },
-      "node_modules/z": Object {
-        "dependencies": Object {
-          "l": "",
-        },
-      },
-    },
-    "requires": true,
-  },
   "name": "mixedmidway",
-  "realpath": "mixedmidway",
-  "top": "mixedmidway",
+  "packageName": "root",
+  "path": "mixedmidway",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP noname > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "foo" => Node {
+    "foo" => ArboristNode {
+      "dev": true,
       "errors": Array [
         Object {
           "code": "ENOENT",
-          "path": "../fixtures/noname/node_modules/foo/package.json",
+          "path": "noname/node_modules/foo/package.json",
         },
       ],
       "extraneous": true,
       "location": "node_modules/foo",
       "name": "foo",
-      "realpath": "noname/node_modules/foo",
-      "top": "noname",
+      "optional": true,
+      "path": "noname/node_modules/foo",
+      "peer": true,
     },
   },
   "errors": Array [
     Object {
       "code": "ENOENT",
-      "path": "../fixtures/noname/package.json",
+      "path": "noname/package.json",
     },
   ],
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "foo": Object {
-        "extraneous": true,
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "noname",
-    "packages": Object {
-      "node_modules/foo": Object {
-        "extraneous": true,
-      },
-    },
-    "requires": true,
-  },
   "name": "noname",
-  "realpath": "noname",
-  "top": "noname",
+  "path": "noname",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP optionalloop > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Node {
+    "a" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "optionalloop",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "optionalloop/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "optionalloop/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
       "optional": true,
-      "realpath": "optionalloop/node_modules/a",
-      "top": "optionalloop",
+      "path": "optionalloop/node_modules/a",
+      "version": "1.2.3",
     },
-    "b" => Node {
+    "b" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "optionalloop/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "optionalloop/node_modules/d",
+        EdgeIn {
+          "from": "node_modules/d",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
-      "realpath": "optionalloop/node_modules/b",
-      "top": "optionalloop",
+      "path": "optionalloop/node_modules/b",
+      "version": "1.2.3",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "optionalloop",
+        EdgeIn {
+          "from": "",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "optionalloop/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
-      "realpath": "optionalloop/node_modules/c",
-      "top": "optionalloop",
+      "path": "optionalloop/node_modules/c",
+      "version": "1.2.3",
     },
-    "d" => Node {
+    "d" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "optionalloop/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "optionalloop/node_modules/c",
+        EdgeIn {
+          "from": "node_modules/c",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "optionalloop/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "prod",
         },
       },
       "location": "node_modules/d",
       "name": "d",
-      "realpath": "optionalloop/node_modules/d",
-      "top": "optionalloop",
+      "path": "optionalloop/node_modules/d",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "optionalloop/node_modules/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "optional",
     },
-    "c" => Edge {
+    "c" => EdgeOut {
       "name": "c",
-      "spec": "",
-      "to": "optionalloop/node_modules/c",
+      "spec": "*",
+      "to": "node_modules/c",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "optional": true,
-        "requires": Object {
-          "b": "",
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "b": Object {
-        "version": "1.2.3",
-      },
-      "c": Object {
-        "requires": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "d": Object {
-        "requires": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "optionalloop",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "a": "",
-          "c": "",
-        },
-        "optionalDependencies": Object {
-          "a": "",
-        },
-      },
-      "node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-          "d": "",
-        },
-        "optional": true,
-        "version": "1.2.3",
-      },
-      "node_modules/b": Object {
-        "version": "1.2.3",
-      },
-      "node_modules/c": Object {
-        "dependencies": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/d": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "requires": true,
-  },
   "name": "optionalloop",
-  "realpath": "optionalloop",
-  "top": "optionalloop",
+  "path": "optionalloop",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP optofdev > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Node {
+    "a" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "optofdev",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "dev",
         },
       },
       "edgesOut": Map {
-        "b" => Edge {
+        "b" => EdgeOut {
           "name": "b",
-          "spec": "",
-          "to": "optofdev/node_modules/b",
+          "spec": "*",
+          "to": "node_modules/b",
           "type": "optional",
         },
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "optofdev/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
-      "realpath": "optofdev/node_modules/a",
-      "top": "optofdev",
+      "path": "optofdev/node_modules/a",
     },
-    "b" => Node {
+    "b" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "optofdev/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "c" => Edge {
+        "c" => EdgeOut {
           "name": "c",
-          "spec": "",
-          "to": "optofdev/node_modules/c",
+          "spec": "*",
+          "to": "node_modules/c",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
       "optional": true,
-      "realpath": "optofdev/node_modules/b",
-      "top": "optofdev",
+      "path": "optofdev/node_modules/b",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "optofdev/node_modules/b",
+        EdgeIn {
+          "from": "node_modules/b",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "e" => Edge {
+        "e" => EdgeOut {
           "name": "e",
-          "spec": "",
-          "to": "optofdev/node_modules/e",
+          "spec": "*",
+          "to": "node_modules/e",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
       "optional": true,
-      "realpath": "optofdev/node_modules/c",
-      "top": "optofdev",
+      "path": "optofdev/node_modules/c",
     },
-    "d" => Node {
+    "d" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "optofdev/node_modules/a",
+        EdgeIn {
+          "from": "node_modules/a",
           "name": "d",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "e" => Edge {
+        "e" => EdgeOut {
           "name": "e",
-          "spec": "",
-          "to": "optofdev/node_modules/e",
+          "spec": "*",
+          "to": "node_modules/e",
           "type": "prod",
         },
       },
       "location": "node_modules/d",
       "name": "d",
-      "realpath": "optofdev/node_modules/d",
-      "top": "optofdev",
+      "path": "optofdev/node_modules/d",
     },
-    "e" => Node {
+    "e" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "optofdev/node_modules/c",
+        EdgeIn {
+          "from": "node_modules/c",
           "name": "e",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "optofdev/node_modules/d",
+        EdgeIn {
+          "from": "node_modules/d",
           "name": "e",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/e",
       "name": "e",
-      "realpath": "optofdev/node_modules/e",
-      "top": "optofdev",
+      "path": "optofdev/node_modules/e",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "optofdev/node_modules/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "dev",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "dev": true,
-        "requires": Object {
-          "b": "",
-          "d": "",
-        },
-      },
-      "b": Object {
-        "dev": true,
-        "optional": true,
-        "requires": Object {
-          "c": "",
-        },
-      },
-      "c": Object {
-        "dev": true,
-        "optional": true,
-        "requires": Object {
-          "e": "",
-        },
-      },
-      "d": Object {
-        "dev": true,
-        "requires": Object {
-          "e": "",
-        },
-      },
-      "e": Object {
-        "dev": true,
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "optofdev",
-    "packages": Object {
-      "": Object {
-        "devDependencies": Object {
-          "a": "",
-        },
-      },
-      "node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-          "d": "",
-        },
-        "dev": true,
-        "optionalDependencies": Object {
-          "b": "",
-        },
-      },
-      "node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "dev": true,
-        "optional": true,
-      },
-      "node_modules/c": Object {
-        "dependencies": Object {
-          "e": "",
-        },
-        "dev": true,
-        "optional": true,
-      },
-      "node_modules/d": Object {
-        "dependencies": Object {
-          "e": "",
-        },
-        "dev": true,
-      },
-      "node_modules/e": Object {
-        "dev": true,
-      },
-    },
-    "requires": true,
-  },
   "name": "optofdev",
-  "realpath": "optofdev",
-  "top": "optofdev",
+  "path": "optofdev",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP other > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "glob" => Link {
+    "glob" => ArboristLink {
+      "dev": true,
       "extraneous": true,
       "location": "node_modules/glob",
       "name": "glob",
+      "optional": true,
+      "path": "other/node_modules/glob",
+      "peer": true,
       "realpath": "root/node_modules/@scope/x/node_modules/glob",
-      "target": Object {
+      "resolved": "file:../../root/node_modules/@scope/x/node_modules/glob",
+      "target": ArboristNode {
+        "children": Map {
+          "graceful-fs" => ArboristNode {
+            "dev": true,
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "../root/node_modules/@scope/x/node_modules/glob",
+                "name": "graceful-fs",
+                "spec": "*",
+                "type": "prod",
+              },
+            },
+            "extraneous": true,
+            "location": "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+            "name": "graceful-fs",
+            "optional": true,
+            "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+            "peer": true,
+            "version": "3.0.2",
+          },
+          "inherits" => ArboristNode {
+            "dev": true,
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "../root/node_modules/@scope/x/node_modules/glob",
+                "name": "inherits",
+                "spec": "*",
+                "type": "prod",
+              },
+            },
+            "extraneous": true,
+            "location": "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+            "name": "inherits",
+            "optional": true,
+            "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+            "peer": true,
+            "version": "2.0.1",
+          },
+          "minimatch" => ArboristNode {
+            "children": Map {
+              "lru-cache" => ArboristNode {
+                "dev": true,
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    "name": "lru-cache",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "extraneous": true,
+                "location": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                "name": "lru-cache",
+                "optional": true,
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                "peer": true,
+                "version": "2.5.0",
+              },
+              "sigmund" => ArboristNode {
+                "dev": true,
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    "name": "sigmund",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "extraneous": true,
+                "location": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                "name": "sigmund",
+                "optional": true,
+                "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                "peer": true,
+                "version": "1.0.0",
+              },
+            },
+            "dev": true,
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "../root/node_modules/@scope/x/node_modules/glob",
+                "name": "minimatch",
+                "spec": "*",
+                "type": "prod",
+              },
+            },
+            "edgesOut": Map {
+              "lru-cache" => EdgeOut {
+                "name": "lru-cache",
+                "spec": "*",
+                "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                "type": "prod",
+              },
+              "once" => EdgeOut {
+                "name": "once",
+                "spec": "*",
+                "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+                "type": "prod",
+              },
+              "sigmund" => EdgeOut {
+                "name": "sigmund",
+                "spec": "*",
+                "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                "type": "prod",
+              },
+            },
+            "extraneous": true,
+            "location": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+            "name": "minimatch",
+            "optional": true,
+            "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+            "peer": true,
+            "version": "1.0.0",
+          },
+          "once" => ArboristNode {
+            "dev": true,
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "../root/node_modules/@scope/x/node_modules/glob",
+                "name": "once",
+                "spec": "*",
+                "type": "prod",
+              },
+              EdgeIn {
+                "from": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                "name": "once",
+                "spec": "*",
+                "type": "prod",
+              },
+            },
+            "extraneous": true,
+            "location": "../root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+            "name": "once",
+            "optional": true,
+            "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+            "peer": true,
+            "version": "1.3.0",
+          },
+        },
+        "dev": true,
+        "edgesOut": Map {
+          "graceful-fs" => EdgeOut {
+            "name": "graceful-fs",
+            "spec": "*",
+            "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+            "type": "prod",
+          },
+          "inherits" => EdgeOut {
+            "name": "inherits",
+            "spec": "*",
+            "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+            "type": "prod",
+          },
+          "minimatch" => EdgeOut {
+            "name": "minimatch",
+            "spec": "*",
+            "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+            "type": "prod",
+          },
+          "once" => EdgeOut {
+            "name": "once",
+            "spec": "*",
+            "to": "../root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+            "type": "prod",
+          },
+        },
+        "extraneous": true,
+        "location": "../root/node_modules/@scope/x/node_modules/glob",
         "name": "glob",
+        "optional": true,
+        "path": "root/node_modules/@scope/x/node_modules/glob",
+        "peer": true,
+        "version": "4.0.5",
       },
-      "top": "other",
+      "version": "4.0.5",
     },
   },
   "errors": Array [
     Object {
       "code": "ENOENT",
-      "path": "../fixtures/other/package.json",
+      "path": "other/package.json",
     },
   ],
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "glob": Object {
-        "dependencies": Object {
-          "graceful-fs": Object {
-            "extraneous": true,
-            "version": "3.0.2",
-          },
-          "inherits": Object {
-            "extraneous": true,
-            "version": "2.0.1",
-          },
-          "minimatch": Object {
-            "dependencies": Object {
-              "lru-cache": Object {
-                "extraneous": true,
-                "version": "2.5.0",
-              },
-              "sigmund": Object {
-                "extraneous": true,
-                "version": "1.0.0",
-              },
-            },
-            "extraneous": true,
-            "requires": Object {
-              "lru-cache": "",
-              "once": "",
-              "sigmund": "",
-            },
-            "version": "1.0.0",
-          },
-          "once": Object {
-            "extraneous": true,
-            "version": "1.3.0",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "file:../root/node_modules/@scope/x/node_modules/glob",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "other",
-    "packages": Object {
-      "../root/node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "extraneous": true,
-        "version": "4.0.5",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "extraneous": true,
-        "version": "3.0.2",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "extraneous": true,
-        "version": "2.0.1",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "extraneous": true,
-        "version": "2.5.0",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "../root/node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "extraneous": true,
-        "version": "1.3.0",
-      },
-      "node_modules/glob": Object {
-        "link": true,
-        "resolved": "../root/node_modules/@scope/x/node_modules/glob",
-      },
-    },
-    "requires": true,
-  },
   "name": "other",
-  "realpath": "other",
-  "top": "other",
+  "path": "other",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP pnpm > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@scope/x" => Link {
+    "@scope/x" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "pnpm",
+        EdgeIn {
+          "from": "",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
+      "path": "pnpm/node_modules/@scope/x",
       "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      "resolved": "file:../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "target": Object {
-        "name": "@scope/x",
-        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
+        "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       },
-      "top": "pnpm",
+      "version": "1.0.0",
     },
-    "a" => Link {
+    "a" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "pnpm",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
+      "path": "pnpm/node_modules/a",
       "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+      "resolved": "file:.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "target": Object {
-        "name": "a",
-        "parent": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
+        "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       },
-      "top": "pnpm",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "@scope/x" => Edge {
+    "@scope/x" => EdgeOut {
       "name": "@scope/x",
-      "spec": "",
-      "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+      "spec": "*",
+      "to": "node_modules/@scope/x",
       "type": "prod",
     },
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
-    "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
-    "node_modules/.pnpm/registry.npmjs.org/b/1.0.0",
-    "node_modules/.pnpm/registry.npmjs.org/c/1.0.0",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "requires": Object {
-          "a": "",
-          "b": "",
-          "c": "",
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "@scope/x" => ArboristNode {
+          "edgesOut": Map {
+            "a" => EdgeOut {
+              "name": "a",
+              "spec": "*",
+              "to": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a",
+              "type": "prod",
+            },
+            "b" => EdgeOut {
+              "name": "b",
+              "spec": "*",
+              "to": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b",
+              "type": "prod",
+            },
+            "c" => EdgeOut {
+              "name": "c",
+              "spec": "*",
+              "to": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+          "name": "@scope/x",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+          "version": "1.0.0",
         },
-        "version": "file:node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-      },
-      "a": Object {
-        "requires": Object {
-          "b": "",
-          "c": "",
+        "a" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+              "name": "a",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a",
+          "name": "a",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+          "resolved": "file:../../../../a/1.0.0/node_modules/a",
+          "target": ArboristNode {
+            "edgesOut": Map {
+              "b" => EdgeOut {
+                "name": "b",
+                "spec": "*",
+                "to": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b",
+                "type": "prod",
+              },
+              "c" => EdgeOut {
+                "name": "c",
+                "spec": "*",
+                "to": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+            "name": "a",
+            "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+            "version": "1.0.0",
+          },
+          "version": "1.0.0",
         },
-        "version": "file:node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+        "b" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+              "name": "b",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b",
+          "name": "b",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+          "resolved": "file:../../../../b/1.0.0/node_modules/b",
+          "target": ArboristNode {
+            "edgesOut": Map {
+              "c" => EdgeOut {
+                "name": "c",
+                "spec": "*",
+                "to": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+            "name": "b",
+            "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+            "version": "1.0.0",
+          },
+          "version": "1.0.0",
+        },
+        "c" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+              "name": "c",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c",
+          "name": "c",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          "resolved": "file:../../../../c/1.0.0/node_modules/c",
+          "target": ArboristNode {
+            "edgesOut": Map {
+              "@scope/x" => EdgeOut {
+                "name": "@scope/x",
+                "spec": "*",
+                "to": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+            "name": "c",
+            "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+            "version": "1.0.0",
+          },
+          "version": "1.0.0",
+        },
       },
+      "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
+      "name": "1.0.0",
+      "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0",
     },
-    "lockfileVersion": 2,
-    "name": "pnpm-root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "a": "",
+    ArboristNode {
+      "children": Map {
+        "a" => Object {
+          "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
         },
-        "name": "pnpm-root",
-        "version": "1.0.0",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0": Object {},
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "a": "",
-          "b": "",
-          "c": "",
+        "b" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+              "name": "b",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b",
+          "name": "b",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+          "resolved": "file:../../../b/1.0.0/node_modules/b",
+          "target": Object {
+            "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+          },
+          "version": "1.0.0",
         },
-        "version": "1.0.0",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0": Object {},
-      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a": Object {
-        "dependencies": Object {
-          "b": "",
-          "c": "",
+        "c" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
+              "name": "c",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c",
+          "name": "c",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          "resolved": "file:../../../c/1.0.0/node_modules/c",
+          "target": Object {
+            "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          },
+          "version": "1.0.0",
         },
-        "version": "1.0.0",
       },
-      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0": Object {},
-      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b": Object {
-        "dependencies": Object {
-          "c": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0": Object {},
-      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-      },
-      "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-      },
-      "node_modules/a": Object {
-        "link": true,
-        "resolved": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
-      },
+      "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
+      "name": "1.0.0",
+      "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0",
     },
-    "requires": true,
-    "version": "1.0.0",
+    ArboristNode {
+      "children": Map {
+        "b" => Object {
+          "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+        },
+        "c" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
+              "name": "c",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c",
+          "name": "c",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          "resolved": "file:../../../c/1.0.0/node_modules/c",
+          "target": Object {
+            "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+          },
+          "version": "1.0.0",
+        },
+      },
+      "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0",
+      "name": "1.0.0",
+      "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0",
+    },
+    ArboristNode {
+      "children": Map {
+        "@scope/x" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+              "name": "@scope/x",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x",
+          "name": "@scope/x",
+          "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x",
+          "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+          "resolved": "file:../../../../@scope/x/1.0.0/node_modules/@scope/x",
+          "target": Object {
+            "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
+          },
+          "version": "1.0.0",
+        },
+        "c" => Object {
+          "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
+        },
+      },
+      "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0",
+      "name": "1.0.0",
+      "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0",
+    },
   },
+  "location": "",
   "name": "pnpm",
-  "realpath": "pnpm",
-  "top": "pnpm",
+  "packageName": "pnpm-root",
+  "path": "pnpm",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP root > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@scope/x" => Node {
+    "@scope/x" => ArboristNode {
       "children": Map {
-        "glob" => Node {
+        "glob" => ArboristNode {
           "children": Map {
-            "graceful-fs" => Node {
+            "graceful-fs" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "graceful-fs",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "name": "graceful-fs",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "version": "3.0.2",
             },
-            "inherits" => Node {
+            "inherits" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "inherits",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "name": "inherits",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "version": "2.0.1",
             },
-            "minimatch" => Node {
+            "minimatch" => ArboristNode {
               "children": Map {
-                "lru-cache" => Node {
+                "lru-cache" => ArboristNode {
                   "edgesIn": Set {
-                    Edge {
-                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    EdgeIn {
+                      "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                       "name": "lru-cache",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "name": "lru-cache",
-                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "top": "root",
+                  "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "version": "2.5.0",
                 },
-                "sigmund" => Node {
+                "sigmund" => ArboristNode {
                   "edgesIn": Set {
-                    Edge {
-                      "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                    EdgeIn {
+                      "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                       "name": "sigmund",
-                      "spec": "",
+                      "spec": "*",
                       "type": "prod",
                     },
                   },
                   "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "name": "sigmund",
-                  "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "top": "root",
+                  "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "version": "1.0.0",
                 },
               },
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "minimatch",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "edgesOut": Map {
-                "lru-cache" => Edge {
+                "lru-cache" => EdgeOut {
                   "name": "lru-cache",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
                   "type": "prod",
                 },
-                "once" => Edge {
+                "once" => EdgeOut {
                   "name": "once",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
                   "type": "prod",
                 },
-                "sigmund" => Edge {
+                "sigmund" => EdgeOut {
                   "name": "sigmund",
-                  "spec": "",
-                  "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                  "spec": "*",
+                  "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "name": "minimatch",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "version": "1.0.0",
             },
-            "once" => Node {
+            "once" => ArboristNode {
               "edgesIn": Set {
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob",
                   "name": "once",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
-                Edge {
-                  "from": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+                EdgeIn {
+                  "from": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
                   "name": "once",
-                  "spec": "",
+                  "spec": "*",
                   "type": "prod",
                 },
               },
               "location": "node_modules/@scope/x/node_modules/glob/node_modules/once",
               "name": "once",
-              "realpath": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
-              "top": "root",
+              "path": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "version": "1.3.0",
             },
           },
           "edgesIn": Set {
-            Edge {
-              "from": "root/node_modules/@scope/x",
+            EdgeIn {
+              "from": "node_modules/@scope/x",
               "name": "glob",
               "spec": "4",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "graceful-fs" => Edge {
+            "graceful-fs" => EdgeOut {
               "name": "graceful-fs",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs",
               "type": "prod",
             },
-            "inherits" => Edge {
+            "inherits" => EdgeOut {
               "name": "inherits",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/inherits",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/inherits",
               "type": "prod",
             },
-            "minimatch" => Edge {
+            "minimatch" => EdgeOut {
               "name": "minimatch",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/minimatch",
               "type": "prod",
             },
-            "once" => Edge {
+            "once" => EdgeOut {
               "name": "once",
-              "spec": "",
-              "to": "root/node_modules/@scope/x/node_modules/glob/node_modules/once",
+              "spec": "*",
+              "to": "node_modules/@scope/x/node_modules/glob/node_modules/once",
               "type": "prod",
             },
           },
           "location": "node_modules/@scope/x/node_modules/glob",
           "name": "glob",
-          "realpath": "root/node_modules/@scope/x/node_modules/glob",
-          "top": "root",
+          "path": "root/node_modules/@scope/x/node_modules/glob",
+          "version": "4.0.5",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "@scope/x",
           "spec": "1",
           "type": "prod",
         },
-        Edge {
-          "from": "root/node_modules/@scope/x",
+        EdgeIn {
+          "from": "node_modules/@scope/x",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "peer",
         },
-        Edge {
-          "from": "root/node_modules/foo",
+        EdgeIn {
+          "from": "node_modules/foo",
           "name": "@scope/x",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "@scope/x" => Edge {
+        "@scope/x" => EdgeOut {
           "name": "@scope/x",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "spec": "*",
+          "to": "node_modules/@scope/x",
           "type": "peer",
         },
-        "@scope/y" => Edge {
+        "@scope/y" => EdgeOut {
           "name": "@scope/y",
-          "spec": "",
-          "to": "root/node_modules/@scope/y",
+          "spec": "*",
+          "to": "node_modules/@scope/y",
           "type": "optional",
         },
-        "express" => Edge {
+        "express" => EdgeOut {
           "error": "MISSING",
           "name": "express",
           "spec": "420.69.0-nice",
           "to": null,
           "type": "peer",
         },
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "root/node_modules/@scope/x/node_modules/glob",
+          "to": "node_modules/@scope/x/node_modules/glob",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/x",
       "name": "@scope/x",
-      "realpath": "root/node_modules/@scope/x",
-      "top": "root",
+      "path": "root/node_modules/@scope/x",
+      "version": "1.2.3",
     },
-    "@scope/y" => Node {
+    "@scope/y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "@scope/y",
           "spec": ">0.99.0",
           "type": "peer",
         },
-        Edge {
-          "from": "root/node_modules/@scope/x",
+        EdgeIn {
+          "from": "node_modules/@scope/x",
           "name": "@scope/y",
-          "spec": "",
+          "spec": "*",
           "type": "optional",
         },
       },
       "edgesOut": Map {
-        "foo" => Edge {
+        "foo" => EdgeOut {
           "error": "INVALID",
           "name": "foo",
           "spec": "99.x",
-          "to": "root/node_modules/foo",
+          "to": "node_modules/foo",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/y",
       "name": "@scope/y",
-      "realpath": "root/node_modules/@scope/y",
-      "top": "root",
+      "path": "root/node_modules/@scope/y",
+      "version": "1.2.3",
     },
-    "foo" => Node {
+    "foo" => ArboristNode {
       "children": Map {
-        "express" => Node {
+        "express" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "root/node_modules/foo",
+            EdgeIn {
+              "from": "node_modules/foo",
               "name": "express",
               "spec": "npm:abbrev@*",
               "type": "prod",
@@ -6658,269 +5859,112 @@ Node {
           },
           "location": "node_modules/foo/node_modules/express",
           "name": "express",
-          "realpath": "root/node_modules/foo/node_modules/express",
-          "top": "root",
+          "packageName": "abbrev",
+          "path": "root/node_modules/foo/node_modules/express",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+          "version": "1.1.1",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "root",
+        EdgeIn {
+          "from": "",
           "name": "foo",
           "spec": "*",
           "type": "dev",
         },
-        Edge {
+        EdgeIn {
           "error": "INVALID",
-          "from": "root/node_modules/@scope/y",
+          "from": "node_modules/@scope/y",
           "name": "foo",
           "spec": "99.x",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "@scope/x" => Edge {
+        "@scope/x" => EdgeOut {
           "name": "@scope/x",
-          "spec": "",
-          "to": "root/node_modules/@scope/x",
+          "spec": "*",
+          "to": "node_modules/@scope/x",
           "type": "optional",
         },
-        "express" => Edge {
+        "express" => EdgeOut {
           "name": "express",
           "spec": "npm:abbrev@*",
-          "to": "root/node_modules/foo/node_modules/express",
+          "to": "node_modules/foo/node_modules/express",
           "type": "prod",
         },
       },
       "location": "node_modules/foo",
       "name": "foo",
-      "realpath": "root/node_modules/foo",
-      "top": "root",
+      "path": "root/node_modules/foo",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "@scope/x" => Edge {
+    "@scope/x" => EdgeOut {
       "name": "@scope/x",
       "spec": "1",
-      "to": "root/node_modules/@scope/x",
+      "to": "node_modules/@scope/x",
       "type": "prod",
     },
-    "@scope/y" => Edge {
+    "@scope/y" => EdgeOut {
       "name": "@scope/y",
       "spec": ">0.99.0",
-      "to": "root/node_modules/@scope/y",
+      "to": "node_modules/@scope/y",
       "type": "peer",
     },
-    "foo" => Edge {
+    "foo" => EdgeOut {
       "name": "foo",
       "spec": "*",
-      "to": "root/node_modules/foo",
+      "to": "node_modules/foo",
       "type": "dev",
     },
-    "notinstalledhere" => Edge {
+    "notinstalledhere" => EdgeOut {
       "name": "notinstalledhere",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "optional",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/x": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "version": "1.0.0",
-                  },
-                },
-                "requires": Object {
-                  "lru-cache": "",
-                  "once": "",
-                  "sigmund": "",
-                },
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "version": "1.3.0",
-              },
-            },
-            "requires": Object {
-              "graceful-fs": "",
-              "inherits": "",
-              "minimatch": "",
-              "once": "",
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/y": Object {
-        "requires": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "express": Object {
-            "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-            "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-            "version": "npm:abbrev@1.1.1",
-          },
-        },
-        "requires": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "root",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "1",
-          "notinstalledhere": "",
-        },
-        "devDependencies": Object {
-          "foo": "*",
-        },
-        "optionalDependencies": Object {
-          "notinstalledhere": "",
-        },
-        "peerDependencies": Object {
-          "@scope/y": ">0.99.0",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x": Object {
-        "dependencies": Object {
-          "@scope/y": "",
-          "glob": "4",
-        },
-        "optionalDependencies": Object {
-          "@scope/y": "",
-        },
-        "peerDependencies": Object {
-          "@scope/x": "",
-          "express": "420.69.0-nice",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/x/node_modules/glob": Object {
-        "dependencies": Object {
-          "graceful-fs": "",
-          "inherits": "",
-          "minimatch": "",
-          "once": "",
-        },
-        "version": "4.0.5",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/graceful-fs": Object {
-        "version": "3.0.2",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/inherits": Object {
-        "version": "2.0.1",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch": Object {
-        "dependencies": Object {
-          "lru-cache": "",
-          "once": "",
-          "sigmund": "",
-        },
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "version": "2.5.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/@scope/x/node_modules/glob/node_modules/once": Object {
-        "version": "1.3.0",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "99.x",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "express": "npm:abbrev@*",
-        },
-        "optionalDependencies": Object {
-          "@scope/x": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/express": Object {
-        "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==",
-        "license": "ISC",
-        "name": "abbrev",
-        "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
-        "version": "1.1.1",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
-  },
   "name": "root",
-  "realpath": "root",
-  "top": "root",
+  "path": "root",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP selflink > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@scope/y" => Node {
+    "@scope/y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "selflink",
+        EdgeIn {
+          "from": "",
           "name": "@scope/y",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "foo" => Edge {
+        "foo" => EdgeOut {
           "name": "foo",
           "spec": "*",
-          "to": "selflink/node_modules/foo",
+          "to": "node_modules/foo",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/y",
       "name": "@scope/y",
-      "realpath": "selflink/node_modules/@scope/y",
-      "top": "selflink",
+      "path": "selflink/node_modules/@scope/y",
+      "version": "1.2.3",
     },
-    "@scope/z" => Node {
+    "@scope/z" => ArboristNode {
       "children": Map {
-        "glob" => Link {
+        "glob" => ArboristLink {
+          "dev": true,
           "edgesIn": Set {
-            Edge {
-              "from": "selflink/node_modules/@scope/z",
+            EdgeIn {
+              "from": "node_modules/@scope/z",
               "name": "glob",
               "spec": "4",
               "type": "prod",
@@ -6929,94 +5973,118 @@ Node {
           "extraneous": true,
           "location": "node_modules/@scope/z/node_modules/glob",
           "name": "glob",
+          "optional": true,
+          "path": "selflink/node_modules/@scope/z/node_modules/glob",
+          "peer": true,
           "realpath": "selflink/node_modules/foo/node_modules/glob",
-          "target": Object {
+          "resolved": "file:../../../foo/node_modules/glob",
+          "target": ArboristNode {
+            "children": Map {
+              "graceful-fs" => ArboristNode {
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+                "name": "graceful-fs",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+                "peer": true,
+                "version": "3.0.2",
+              },
+              "inherits" => ArboristNode {
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
+                "name": "inherits",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
+                "peer": true,
+                "version": "2.0.1",
+              },
+              "minimatch" => ArboristNode {
+                "children": Map {
+                  "lru-cache" => ArboristNode {
+                    "dev": true,
+                    "extraneous": true,
+                    "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "name": "lru-cache",
+                    "optional": true,
+                    "path": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "peer": true,
+                    "version": "2.5.0",
+                  },
+                  "sigmund" => ArboristNode {
+                    "dev": true,
+                    "extraneous": true,
+                    "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "name": "sigmund",
+                    "optional": true,
+                    "path": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "peer": true,
+                    "version": "1.0.0",
+                  },
+                },
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
+                "name": "minimatch",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
+                "peer": true,
+                "version": "1.0.0",
+              },
+              "once" => ArboristNode {
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/once",
+                "name": "once",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
+                "peer": true,
+                "version": "1.3.0",
+              },
+            },
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/foo",
+                "name": "glob",
+                "spec": "4",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/foo/node_modules/glob",
             "name": "glob",
-            "parent": "selflink/node_modules/foo",
+            "path": "selflink/node_modules/foo/node_modules/glob",
+            "version": "4.0.5",
           },
-          "top": "selflink",
+          "version": "4.0.5",
         },
       },
+      "dev": true,
       "edgesOut": Map {
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "selflink/node_modules/foo/node_modules/glob",
+          "to": "node_modules/@scope/z/node_modules/glob",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/@scope/z",
       "name": "@scope/z",
-      "realpath": "selflink/node_modules/@scope/z",
-      "top": "selflink",
+      "optional": true,
+      "path": "selflink/node_modules/@scope/z",
+      "peer": true,
+      "version": "1.2.3",
     },
-    "foo" => Node {
+    "foo" => ArboristNode {
       "children": Map {
-        "glob" => Node {
-          "children": Map {
-            "graceful-fs" => Node {
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "name": "graceful-fs",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "top": "selflink",
-            },
-            "inherits" => Node {
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
-              "name": "inherits",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
-              "top": "selflink",
-            },
-            "minimatch" => Node {
-              "children": Map {
-                "lru-cache" => Node {
-                  "extraneous": true,
-                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "name": "lru-cache",
-                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "top": "selflink",
-                },
-                "sigmund" => Node {
-                  "extraneous": true,
-                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "name": "sigmund",
-                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "top": "selflink",
-                },
-              },
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
-              "name": "minimatch",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
-              "top": "selflink",
-            },
-            "once" => Node {
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/once",
-              "name": "once",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
-              "top": "selflink",
-            },
-          },
-          "edgesIn": Set {
-            Edge {
-              "from": "selflink/node_modules/foo",
-              "name": "glob",
-              "spec": "4",
-              "type": "prod",
-            },
-          },
+        "glob" => Object {
           "location": "node_modules/foo/node_modules/glob",
-          "name": "glob",
-          "realpath": "selflink/node_modules/foo/node_modules/glob",
-          "top": "selflink",
         },
-        "selflink" => Link {
+        "selflink" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "selflink/node_modules/foo",
+            EdgeIn {
+              "from": "node_modules/foo",
               "name": "selflink",
               "spec": "*",
               "type": "prod",
@@ -7024,266 +6092,109 @@ Node {
           },
           "location": "node_modules/foo/node_modules/selflink",
           "name": "selflink",
+          "path": "selflink/node_modules/foo/node_modules/selflink",
           "realpath": "selflink",
+          "resolved": "file:../../..",
           "target": Object {
-            "name": "selflink",
+            "location": "",
           },
-          "top": "selflink",
+          "version": "1.2.3",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "selflink",
+        EdgeIn {
+          "from": "",
           "name": "foo",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "selflink/node_modules/@scope/y",
+        EdgeIn {
+          "from": "node_modules/@scope/y",
           "name": "foo",
           "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "selflink/node_modules/foo/node_modules/glob",
+          "to": "node_modules/foo/node_modules/glob",
           "type": "prod",
         },
-        "selflink" => Edge {
+        "selflink" => EdgeOut {
           "name": "selflink",
           "spec": "*",
-          "to": "selflink",
+          "to": "node_modules/foo/node_modules/selflink",
           "type": "prod",
         },
       },
       "location": "node_modules/foo",
       "name": "foo",
-      "realpath": "selflink/node_modules/foo",
-      "top": "selflink",
+      "path": "selflink/node_modules/foo",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "@scope/x" => Edge {
+    "@scope/x" => EdgeOut {
       "error": "MISSING",
       "name": "@scope/x",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "prod",
     },
-    "@scope/y" => Edge {
+    "@scope/y" => EdgeOut {
       "name": "@scope/y",
-      "spec": "",
-      "to": "selflink/node_modules/@scope/y",
+      "spec": "*",
+      "to": "node_modules/@scope/y",
       "type": "prod",
     },
-    "foo" => Edge {
+    "foo" => EdgeOut {
       "name": "foo",
-      "spec": "",
-      "to": "selflink/node_modules/foo",
+      "spec": "*",
+      "to": "node_modules/foo",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/y": Object {
-        "requires": Object {
-          "foo": "*",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/z": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "extraneous": true,
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "extraneous": true,
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "extraneous": true,
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "extraneous": true,
-                    "version": "1.0.0",
-                  },
-                },
-                "extraneous": true,
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "extraneous": true,
-                "version": "1.3.0",
-              },
-            },
-            "extraneous": true,
-            "version": "file:node_modules/foo/node_modules/glob",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "extraneous": true,
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "extraneous": true,
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "extraneous": true,
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "extraneous": true,
-                    "version": "1.0.0",
-                  },
-                },
-                "extraneous": true,
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "extraneous": true,
-                "version": "1.3.0",
-              },
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "glob": "4",
-          "selflink": "*",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "selflink",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "@scope/y": "",
-          "foo": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "*",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/z": Object {
-        "dependencies": Object {
-          "glob": "4",
-        },
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/z/node_modules/glob": Object {
-        "link": true,
-        "resolved": "node_modules/foo/node_modules/glob",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "glob": "4",
-          "selflink": "*",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/glob": Object {
-        "version": "4.0.5",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
-        "extraneous": true,
-        "version": "3.0.2",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
-        "extraneous": true,
-        "version": "2.0.1",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "extraneous": true,
-        "version": "2.5.0",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/once": Object {
-        "extraneous": true,
-        "version": "1.3.0",
-      },
-      "node_modules/foo/node_modules/selflink": Object {
-        "link": true,
-        "resolved": "",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
-  },
   "name": "selflink",
-  "realpath": "selflink",
-  "top": "selflink",
+  "path": "selflink",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP shake out Link target timing issue > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "@scope/y" => Node {
+    "@scope/y" => ArboristNode {
       "edgesIn": Set {
-        Edge {
-          "from": "selflink",
+        EdgeIn {
+          "from": "",
           "name": "@scope/y",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "foo" => Edge {
+        "foo" => EdgeOut {
           "name": "foo",
           "spec": "*",
-          "to": "selflink/node_modules/foo",
+          "to": "node_modules/foo",
           "type": "prod",
         },
       },
       "location": "node_modules/@scope/y",
       "name": "@scope/y",
-      "realpath": "selflink/node_modules/@scope/y",
-      "top": "selflink",
+      "path": "selflink/node_modules/@scope/y",
+      "version": "1.2.3",
     },
-    "@scope/z" => Node {
+    "@scope/z" => ArboristNode {
       "children": Map {
-        "glob" => Link {
+        "glob" => ArboristLink {
+          "dev": true,
           "edgesIn": Set {
-            Edge {
-              "from": "selflink/node_modules/@scope/z",
+            EdgeIn {
+              "from": "node_modules/@scope/z",
               "name": "glob",
               "spec": "4",
               "type": "prod",
@@ -7292,94 +6203,118 @@ Node {
           "extraneous": true,
           "location": "node_modules/@scope/z/node_modules/glob",
           "name": "glob",
+          "optional": true,
+          "path": "selflink/node_modules/@scope/z/node_modules/glob",
+          "peer": true,
           "realpath": "selflink/node_modules/foo/node_modules/glob",
-          "target": Object {
+          "resolved": "file:../../../foo/node_modules/glob",
+          "target": ArboristNode {
+            "children": Map {
+              "graceful-fs" => ArboristNode {
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+                "name": "graceful-fs",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
+                "peer": true,
+                "version": "3.0.2",
+              },
+              "inherits" => ArboristNode {
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
+                "name": "inherits",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
+                "peer": true,
+                "version": "2.0.1",
+              },
+              "minimatch" => ArboristNode {
+                "children": Map {
+                  "lru-cache" => ArboristNode {
+                    "dev": true,
+                    "extraneous": true,
+                    "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "name": "lru-cache",
+                    "optional": true,
+                    "path": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
+                    "peer": true,
+                    "version": "2.5.0",
+                  },
+                  "sigmund" => ArboristNode {
+                    "dev": true,
+                    "extraneous": true,
+                    "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "name": "sigmund",
+                    "optional": true,
+                    "path": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
+                    "peer": true,
+                    "version": "1.0.0",
+                  },
+                },
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
+                "name": "minimatch",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
+                "peer": true,
+                "version": "1.0.0",
+              },
+              "once" => ArboristNode {
+                "dev": true,
+                "extraneous": true,
+                "location": "node_modules/foo/node_modules/glob/node_modules/once",
+                "name": "once",
+                "optional": true,
+                "path": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
+                "peer": true,
+                "version": "1.3.0",
+              },
+            },
+            "edgesIn": Set {
+              EdgeIn {
+                "from": "node_modules/foo",
+                "name": "glob",
+                "spec": "4",
+                "type": "prod",
+              },
+            },
+            "location": "node_modules/foo/node_modules/glob",
             "name": "glob",
-            "parent": "selflink/node_modules/foo",
+            "path": "selflink/node_modules/foo/node_modules/glob",
+            "version": "4.0.5",
           },
-          "top": "selflink",
+          "version": "4.0.5",
         },
       },
+      "dev": true,
       "edgesOut": Map {
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "selflink/node_modules/foo/node_modules/glob",
+          "to": "node_modules/@scope/z/node_modules/glob",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/@scope/z",
       "name": "@scope/z",
-      "realpath": "selflink/node_modules/@scope/z",
-      "top": "selflink",
+      "optional": true,
+      "path": "selflink/node_modules/@scope/z",
+      "peer": true,
+      "version": "1.2.3",
     },
-    "foo" => Node {
+    "foo" => ArboristNode {
       "children": Map {
-        "glob" => Node {
-          "children": Map {
-            "graceful-fs" => Node {
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "name": "graceful-fs",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/graceful-fs",
-              "top": "selflink",
-            },
-            "inherits" => Node {
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/inherits",
-              "name": "inherits",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/inherits",
-              "top": "selflink",
-            },
-            "minimatch" => Node {
-              "children": Map {
-                "lru-cache" => Node {
-                  "extraneous": true,
-                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "name": "lru-cache",
-                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache",
-                  "top": "selflink",
-                },
-                "sigmund" => Node {
-                  "extraneous": true,
-                  "location": "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "name": "sigmund",
-                  "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund",
-                  "top": "selflink",
-                },
-              },
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/minimatch",
-              "name": "minimatch",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/minimatch",
-              "top": "selflink",
-            },
-            "once" => Node {
-              "extraneous": true,
-              "location": "node_modules/foo/node_modules/glob/node_modules/once",
-              "name": "once",
-              "realpath": "selflink/node_modules/foo/node_modules/glob/node_modules/once",
-              "top": "selflink",
-            },
-          },
-          "edgesIn": Set {
-            Edge {
-              "from": "selflink/node_modules/foo",
-              "name": "glob",
-              "spec": "4",
-              "type": "prod",
-            },
-          },
+        "glob" => Object {
           "location": "node_modules/foo/node_modules/glob",
-          "name": "glob",
-          "realpath": "selflink/node_modules/foo/node_modules/glob",
-          "top": "selflink",
         },
-        "selflink" => Link {
+        "selflink" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "selflink/node_modules/foo",
+            EdgeIn {
+              "from": "node_modules/foo",
               "name": "selflink",
               "spec": "*",
               "type": "prod",
@@ -7387,1091 +6322,902 @@ Node {
           },
           "location": "node_modules/foo/node_modules/selflink",
           "name": "selflink",
+          "path": "selflink/node_modules/foo/node_modules/selflink",
           "realpath": "selflink",
+          "resolved": "file:../../..",
           "target": Object {
-            "name": "selflink",
+            "location": "",
           },
-          "top": "selflink",
+          "version": "1.2.3",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "selflink",
+        EdgeIn {
+          "from": "",
           "name": "foo",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "selflink/node_modules/@scope/y",
+        EdgeIn {
+          "from": "node_modules/@scope/y",
           "name": "foo",
           "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "glob" => Edge {
+        "glob" => EdgeOut {
           "name": "glob",
           "spec": "4",
-          "to": "selflink/node_modules/foo/node_modules/glob",
+          "to": "node_modules/foo/node_modules/glob",
           "type": "prod",
         },
-        "selflink" => Edge {
+        "selflink" => EdgeOut {
           "name": "selflink",
           "spec": "*",
-          "to": "selflink",
+          "to": "node_modules/foo/node_modules/selflink",
           "type": "prod",
         },
       },
       "location": "node_modules/foo",
       "name": "foo",
-      "realpath": "selflink/node_modules/foo",
-      "top": "selflink",
+      "path": "selflink/node_modules/foo",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "@scope/x" => Edge {
+    "@scope/x" => EdgeOut {
       "error": "MISSING",
       "name": "@scope/x",
-      "spec": "",
+      "spec": "*",
       "to": null,
       "type": "prod",
     },
-    "@scope/y" => Edge {
+    "@scope/y" => EdgeOut {
       "name": "@scope/y",
-      "spec": "",
-      "to": "selflink/node_modules/@scope/y",
+      "spec": "*",
+      "to": "node_modules/@scope/y",
       "type": "prod",
     },
-    "foo" => Edge {
+    "foo" => EdgeOut {
       "name": "foo",
-      "spec": "",
-      "to": "selflink/node_modules/foo",
+      "spec": "*",
+      "to": "node_modules/foo",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "@scope/y": Object {
-        "requires": Object {
-          "foo": "*",
-        },
-        "version": "1.2.3",
-      },
-      "@scope/z": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "extraneous": true,
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "extraneous": true,
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "extraneous": true,
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "extraneous": true,
-                    "version": "1.0.0",
-                  },
-                },
-                "extraneous": true,
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "extraneous": true,
-                "version": "1.3.0",
-              },
-            },
-            "extraneous": true,
-            "version": "file:node_modules/foo/node_modules/glob",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "glob": "4",
-        },
-        "version": "1.2.3",
-      },
-      "foo": Object {
-        "dependencies": Object {
-          "glob": Object {
-            "dependencies": Object {
-              "graceful-fs": Object {
-                "extraneous": true,
-                "version": "3.0.2",
-              },
-              "inherits": Object {
-                "extraneous": true,
-                "version": "2.0.1",
-              },
-              "minimatch": Object {
-                "dependencies": Object {
-                  "lru-cache": Object {
-                    "extraneous": true,
-                    "version": "2.5.0",
-                  },
-                  "sigmund": Object {
-                    "extraneous": true,
-                    "version": "1.0.0",
-                  },
-                },
-                "extraneous": true,
-                "version": "1.0.0",
-              },
-              "once": Object {
-                "extraneous": true,
-                "version": "1.3.0",
-              },
-            },
-            "version": "4.0.5",
-          },
-        },
-        "requires": Object {
-          "glob": "4",
-          "selflink": "*",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "selflink",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "@scope/x": "",
-          "@scope/y": "",
-          "foo": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/y": Object {
-        "dependencies": Object {
-          "foo": "*",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/z": Object {
-        "dependencies": Object {
-          "glob": "4",
-        },
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "node_modules/@scope/z/node_modules/glob": Object {
-        "link": true,
-        "resolved": "node_modules/foo/node_modules/glob",
-      },
-      "node_modules/foo": Object {
-        "dependencies": Object {
-          "glob": "4",
-          "selflink": "*",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/foo/node_modules/glob": Object {
-        "version": "4.0.5",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/graceful-fs": Object {
-        "extraneous": true,
-        "version": "3.0.2",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/inherits": Object {
-        "extraneous": true,
-        "version": "2.0.1",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/minimatch": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/lru-cache": Object {
-        "extraneous": true,
-        "version": "2.5.0",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/minimatch/node_modules/sigmund": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "node_modules/foo/node_modules/glob/node_modules/once": Object {
-        "extraneous": true,
-        "version": "1.3.0",
-      },
-      "node_modules/foo/node_modules/selflink": Object {
-        "link": true,
-        "resolved": "",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
-  },
   "name": "selflink",
-  "realpath": "selflink",
-  "top": "selflink",
+  "path": "selflink",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP symlinked-node-modules/example > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "bar" => Link {
+    "bar" => ArboristLink {
+      "dev": true,
       "extraneous": true,
       "location": "node_modules/bar",
       "name": "bar",
+      "optional": true,
+      "path": "symlinked-node-modules/example/node_modules/bar",
+      "peer": true,
       "realpath": "symlinked-node-modules/bar",
-      "target": Object {
+      "resolved": "file:../../bar",
+      "target": ArboristNode {
+        "dev": true,
+        "extraneous": true,
+        "location": "../bar",
         "name": "bar",
+        "optional": true,
+        "path": "symlinked-node-modules/bar",
+        "peer": true,
+        "version": "1.0.0",
       },
-      "top": "symlinked-node-modules/example",
+      "version": "1.0.0",
     },
-    "foo" => Link {
+    "foo" => ArboristLink {
+      "dev": true,
       "extraneous": true,
       "location": "node_modules/foo",
       "name": "foo",
+      "optional": true,
+      "path": "symlinked-node-modules/example/node_modules/foo",
+      "peer": true,
       "realpath": "symlinked-node-modules/linked-node-modules/foo",
-      "target": Object {
+      "resolved": "file:../../linked-node-modules/foo",
+      "target": ArboristNode {
+        "dev": true,
+        "extraneous": true,
+        "location": "../linked-node-modules/foo",
         "name": "foo",
+        "optional": true,
+        "path": "symlinked-node-modules/linked-node-modules/foo",
+        "peer": true,
+        "version": "1.0.0",
       },
-      "top": "symlinked-node-modules/example",
+      "version": "1.0.0",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "bar": Object {
-        "extraneous": true,
-        "version": "file:../bar",
-      },
-      "foo": Object {
-        "extraneous": true,
-        "version": "file:../linked-node-modules/foo",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "example",
-    "packages": Object {
-      "": Object {
-        "version": "1.0.0",
-      },
-      "../bar": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "../linked-node-modules/foo": Object {
-        "extraneous": true,
-        "version": "1.0.0",
-      },
-      "node_modules/bar": Object {
-        "link": true,
-        "resolved": "../bar",
-      },
-      "node_modules/foo": Object {
-        "link": true,
-        "resolved": "../linked-node-modules/foo",
-      },
-    },
-    "requires": true,
-    "version": "1.0.0",
-  },
   "name": "example",
-  "realpath": "symlinked-node-modules/example",
-  "top": "symlinked-node-modules/example",
+  "path": "symlinked-node-modules/example",
+  "version": "1.0.0",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP workspace > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Link {
+    "a" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspace",
+        EdgeIn {
+          "from": "",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/a",
       "name": "a",
+      "path": "workspace/node_modules/a",
       "realpath": "workspace/packages/a",
+      "resolved": "file:../packages/a",
       "target": Object {
-        "fsParent": "workspace",
-        "name": "a",
+        "location": "packages/a",
       },
-      "top": "workspace",
     },
-    "b" => Link {
+    "b" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspace",
+        EdgeIn {
+          "from": "",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
+      "path": "workspace/node_modules/b",
       "realpath": "workspace/packages/b",
+      "resolved": "file:../packages/b",
       "target": Object {
-        "fsParent": "workspace",
-        "name": "b",
+        "location": "packages/b",
       },
-      "top": "workspace",
     },
-    "c" => Link {
+    "c" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspace",
+        EdgeIn {
+          "from": "",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
+      "path": "workspace/node_modules/c",
       "realpath": "workspace/packages/c",
+      "resolved": "file:../packages/c",
       "target": Object {
-        "fsParent": "workspace",
-        "name": "c",
+        "location": "packages/c",
       },
-      "top": "workspace",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
-      "spec": "",
-      "to": "workspace/packages/a",
+      "spec": "*",
+      "to": "node_modules/a",
       "type": "prod",
     },
-    "b" => Edge {
+    "b" => EdgeOut {
       "name": "b",
-      "spec": "",
-      "to": "workspace/packages/b",
+      "spec": "*",
+      "to": "node_modules/b",
       "type": "prod",
     },
-    "c" => Edge {
+    "c" => EdgeOut {
       "name": "c",
-      "spec": "",
-      "to": "workspace/packages/c",
+      "spec": "*",
+      "to": "node_modules/c",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "packages/a",
-    "packages/b",
-    "packages/c",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "dependencies": Object {
-          "b": Object {
-            "dependencies": Object {
-              "c": Object {
-                "requires": Object {
-                  "a": "",
-                  "b": "",
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "b" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/a",
+              "name": "b",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/b",
+          "name": "b",
+          "path": "workspace/packages/a/node_modules/b",
+          "realpath": "workspace/packages/b",
+          "resolved": "file:../../b",
+          "target": ArboristNode {
+            "children": Map {
+              "a" => ArboristLink {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "packages/b",
+                    "name": "a",
+                    "spec": "*",
+                    "type": "prod",
+                  },
                 },
-                "version": "file:packages/c",
+                "location": "packages/b/node_modules/a",
+                "name": "a",
+                "path": "workspace/packages/b/node_modules/a",
+                "realpath": "workspace/packages/a",
+                "resolved": "file:../../a",
+                "target": Object {
+                  "location": "packages/a",
+                },
+              },
+              "c" => ArboristLink {
+                "edgesIn": Set {
+                  EdgeIn {
+                    "from": "packages/b",
+                    "name": "c",
+                    "spec": "*",
+                    "type": "prod",
+                  },
+                },
+                "location": "packages/b/node_modules/c",
+                "name": "c",
+                "path": "workspace/packages/b/node_modules/c",
+                "realpath": "workspace/packages/c",
+                "resolved": "file:../../c",
+                "target": ArboristNode {
+                  "children": Map {
+                    "a" => ArboristLink {
+                      "edgesIn": Set {
+                        EdgeIn {
+                          "from": "packages/c",
+                          "name": "a",
+                          "spec": "*",
+                          "type": "prod",
+                        },
+                      },
+                      "location": "packages/c/node_modules/a",
+                      "name": "a",
+                      "path": "workspace/packages/c/node_modules/a",
+                      "realpath": "workspace/packages/a",
+                      "resolved": "file:../../a",
+                      "target": Object {
+                        "location": "packages/a",
+                      },
+                    },
+                    "b" => ArboristLink {
+                      "edgesIn": Set {
+                        EdgeIn {
+                          "from": "packages/c",
+                          "name": "b",
+                          "spec": "*",
+                          "type": "prod",
+                        },
+                      },
+                      "location": "packages/c/node_modules/b",
+                      "name": "b",
+                      "path": "workspace/packages/c/node_modules/b",
+                      "realpath": "workspace/packages/b",
+                      "resolved": "file:../../b",
+                      "target": Object {
+                        "location": "packages/b",
+                      },
+                    },
+                  },
+                  "edgesOut": Map {
+                    "a" => EdgeOut {
+                      "name": "a",
+                      "spec": "*",
+                      "to": "packages/c/node_modules/a",
+                      "type": "prod",
+                    },
+                    "b" => EdgeOut {
+                      "name": "b",
+                      "spec": "*",
+                      "to": "packages/c/node_modules/b",
+                      "type": "prod",
+                    },
+                  },
+                  "location": "packages/c",
+                  "name": "c",
+                  "path": "workspace/packages/c",
+                },
               },
             },
-            "requires": Object {
-              "a": "",
-              "c": "",
-            },
-            "version": "file:packages/b",
-          },
-          "c": Object {
-            "dependencies": Object {
-              "b": Object {
-                "requires": Object {
-                  "a": "",
-                  "c": "",
-                },
-                "version": "file:packages/b",
+            "edgesOut": Map {
+              "a" => EdgeOut {
+                "name": "a",
+                "spec": "*",
+                "to": "packages/b/node_modules/a",
+                "type": "prod",
+              },
+              "c" => EdgeOut {
+                "name": "c",
+                "spec": "*",
+                "to": "packages/b/node_modules/c",
+                "type": "prod",
               },
             },
-            "requires": Object {
-              "a": "",
-              "b": "",
-            },
-            "version": "file:packages/c",
+            "location": "packages/b",
+            "name": "b",
+            "path": "workspace/packages/b",
           },
         },
-        "requires": Object {
-          "b": "",
-          "c": "",
+        "c" => ArboristLink {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/a",
+              "name": "c",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/c",
+          "name": "c",
+          "path": "workspace/packages/a/node_modules/c",
+          "realpath": "workspace/packages/c",
+          "resolved": "file:../../c",
+          "target": Object {
+            "location": "packages/c",
+          },
         },
-        "version": "file:packages/a",
       },
-      "b": Object {
-        "dependencies": Object {
-          "a": Object {
-            "dependencies": Object {
-              "c": Object {
-                "requires": Object {
-                  "a": "",
-                  "b": "",
-                },
-                "version": "file:packages/c",
-              },
-            },
-            "requires": Object {
-              "b": "",
-              "c": "",
-            },
-            "version": "file:packages/a",
-          },
-          "c": Object {
-            "dependencies": Object {
-              "a": Object {
-                "requires": Object {
-                  "b": "",
-                  "c": "",
-                },
-                "version": "file:packages/a",
-              },
-            },
-            "requires": Object {
-              "a": "",
-              "b": "",
-            },
-            "version": "file:packages/c",
-          },
+      "edgesOut": Map {
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "*",
+          "to": "packages/a/node_modules/b",
+          "type": "prod",
         },
-        "requires": Object {
-          "a": "",
-          "c": "",
+        "c" => EdgeOut {
+          "name": "c",
+          "spec": "*",
+          "to": "packages/a/node_modules/c",
+          "type": "prod",
         },
-        "version": "file:packages/b",
       },
-      "c": Object {
-        "dependencies": Object {
-          "a": Object {
-            "dependencies": Object {
-              "b": Object {
-                "requires": Object {
-                  "a": "",
-                  "c": "",
-                },
-                "version": "file:packages/b",
-              },
-            },
-            "requires": Object {
-              "b": "",
-              "c": "",
-            },
-            "version": "file:packages/a",
-          },
-          "b": Object {
-            "dependencies": Object {
-              "a": Object {
-                "requires": Object {
-                  "b": "",
-                  "c": "",
-                },
-                "version": "file:packages/a",
-              },
-            },
-            "requires": Object {
-              "a": "",
-              "c": "",
-            },
-            "version": "file:packages/b",
-          },
-        },
-        "requires": Object {
-          "a": "",
-          "b": "",
-        },
-        "version": "file:packages/c",
-      },
+      "location": "packages/a",
+      "name": "a",
+      "path": "workspace/packages/a",
     },
-    "lockfileVersion": 2,
-    "name": "workspace",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "a": "",
-          "b": "",
-          "c": "",
-        },
-      },
-      "node_modules/a": Object {
-        "link": true,
-        "resolved": "packages/a",
-      },
-      "node_modules/b": Object {
-        "link": true,
-        "resolved": "packages/b",
-      },
-      "node_modules/c": Object {
-        "link": true,
-        "resolved": "packages/c",
-      },
-      "packages/a": Object {
-        "dependencies": Object {
-          "b": "",
-          "c": "",
-        },
-      },
-      "packages/a/node_modules/b": Object {
-        "link": true,
-        "resolved": "packages/b",
-      },
-      "packages/a/node_modules/c": Object {
-        "link": true,
-        "resolved": "packages/c",
-      },
-      "packages/b": Object {
-        "dependencies": Object {
-          "a": "",
-          "c": "",
-        },
-      },
-      "packages/b/node_modules/a": Object {
-        "link": true,
-        "resolved": "packages/a",
-      },
-      "packages/b/node_modules/c": Object {
-        "link": true,
-        "resolved": "packages/c",
-      },
-      "packages/c": Object {
-        "dependencies": Object {
-          "a": "",
-          "b": "",
-        },
-      },
-      "packages/c/node_modules/a": Object {
-        "link": true,
-        "resolved": "packages/a",
-      },
-      "packages/c/node_modules/b": Object {
-        "link": true,
-        "resolved": "packages/b",
-      },
+    Object {
+      "location": "packages/b",
     },
-    "requires": true,
+    Object {
+      "location": "packages/c",
+    },
   },
+  "location": "",
   "name": "workspace",
-  "realpath": "workspace",
-  "top": "workspace",
+  "path": "workspace",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP workspace2 > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "b" => Node {
+    "b" => ArboristNode {
       "children": Map {
-        "d" => Node {
+        "d" => ArboristNode {
           "edgesIn": Set {
-            Edge {
-              "from": "workspace2/node_modules/b",
+            EdgeIn {
+              "from": "node_modules/b",
               "name": "d",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "edgesOut": Map {
-            "b" => Edge {
+            "b" => EdgeOut {
               "name": "b",
-              "spec": "",
-              "to": "workspace2/node_modules/b",
+              "spec": "*",
+              "to": "node_modules/b",
               "type": "prod",
             },
           },
           "location": "node_modules/b/node_modules/d",
           "name": "d",
-          "realpath": "workspace2/node_modules/b/node_modules/d",
-          "top": "workspace2",
+          "path": "workspace2/node_modules/b/node_modules/d",
+          "version": "1.2.3",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "workspace2",
+        EdgeIn {
+          "from": "",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace2/node_modules/b/node_modules/d",
+        EdgeIn {
+          "from": "node_modules/b/node_modules/d",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace2/x",
+        EdgeIn {
+          "from": "x",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "workspace2/node_modules/b/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/b/node_modules/d",
           "type": "prod",
         },
       },
       "location": "node_modules/b",
       "name": "b",
-      "realpath": "workspace2/node_modules/b",
-      "top": "workspace2",
+      "path": "workspace2/node_modules/b",
+      "version": "1.2.3",
     },
-    "c" => Node {
+    "c" => ArboristNode {
       "children": Map {
-        "d" => Link {
+        "d" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "workspace2/node_modules/c",
+            EdgeIn {
+              "from": "node_modules/c",
               "name": "d",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "location": "node_modules/c/node_modules/d",
           "name": "d",
+          "path": "workspace2/node_modules/c/node_modules/d",
           "realpath": "workspace2/node_modules/b/node_modules/d",
+          "resolved": "file:../../b/node_modules/d",
           "target": Object {
-            "name": "d",
-            "parent": "workspace2/node_modules/b",
+            "location": "node_modules/b/node_modules/d",
           },
-          "top": "workspace2",
+          "version": "1.2.3",
         },
-        "x" => Link {
+        "x" => ArboristLink {
           "edgesIn": Set {
-            Edge {
-              "from": "workspace2/node_modules/c",
+            EdgeIn {
+              "from": "node_modules/c",
               "name": "x",
-              "spec": "",
+              "spec": "*",
               "type": "prod",
             },
           },
           "location": "node_modules/c/node_modules/x",
           "name": "x",
+          "path": "workspace2/node_modules/c/node_modules/x",
           "realpath": "workspace2/x",
+          "resolved": "file:../../../x",
           "target": Object {
-            "fsParent": "workspace2",
-            "name": "x",
+            "location": "x",
           },
-          "top": "workspace2",
+          "version": "1.2.3",
         },
       },
       "edgesIn": Set {
-        Edge {
-          "from": "workspace2",
+        EdgeIn {
+          "from": "",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "edgesOut": Map {
-        "d" => Edge {
+        "d" => EdgeOut {
           "name": "d",
-          "spec": "",
-          "to": "workspace2/node_modules/b/node_modules/d",
+          "spec": "*",
+          "to": "node_modules/c/node_modules/d",
           "type": "prod",
         },
-        "x" => Edge {
+        "x" => EdgeOut {
           "name": "x",
-          "spec": "",
-          "to": "workspace2/x",
+          "spec": "*",
+          "to": "node_modules/c/node_modules/x",
           "type": "prod",
         },
       },
       "location": "node_modules/c",
       "name": "c",
-      "realpath": "workspace2/node_modules/c",
-      "top": "workspace2",
+      "path": "workspace2/node_modules/c",
+      "version": "1.2.3",
     },
   },
   "edgesOut": Map {
-    "b" => Edge {
+    "b" => EdgeOut {
       "name": "b",
-      "spec": "",
-      "to": "workspace2/node_modules/b",
+      "spec": "*",
+      "to": "node_modules/b",
       "type": "prod",
     },
-    "c" => Edge {
+    "c" => EdgeOut {
       "name": "c",
-      "spec": "",
-      "to": "workspace2/node_modules/c",
+      "spec": "*",
+      "to": "node_modules/c",
       "type": "prod",
     },
   },
-  "fsChildren": Array [
-    "x",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "b": Object {
-        "dependencies": Object {
-          "d": Object {
-            "requires": Object {
-              "b": "",
-            },
-            "version": "1.2.3",
-          },
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "*",
+          "to": "node_modules/b",
+          "type": "prod",
         },
-        "requires": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
       },
-      "c": Object {
-        "dependencies": Object {
-          "d": Object {
-            "requires": Object {
-              "b": "",
-            },
-            "version": "file:node_modules/b/node_modules/d",
-          },
-          "x": Object {
-            "requires": Object {
-              "b": "",
-            },
-            "version": "file:x",
-          },
-        },
-        "requires": Object {
-          "d": "",
-          "x": "",
-        },
-        "version": "1.2.3",
-      },
+      "location": "x",
+      "name": "x",
+      "path": "workspace2/x",
+      "version": "1.2.3",
     },
-    "lockfileVersion": 2,
-    "name": "a",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "b": "",
-          "c": "",
-        },
-        "name": "a",
-        "version": "1.2.3",
-      },
-      "node_modules/b": Object {
-        "dependencies": Object {
-          "d": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/b/node_modules/d": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/c": Object {
-        "dependencies": Object {
-          "d": "",
-          "x": "",
-        },
-        "version": "1.2.3",
-      },
-      "node_modules/c/node_modules/d": Object {
-        "link": true,
-        "resolved": "node_modules/b/node_modules/d",
-      },
-      "node_modules/c/node_modules/x": Object {
-        "link": true,
-        "resolved": "x",
-      },
-      "x": Object {
-        "dependencies": Object {
-          "b": "",
-        },
-        "version": "1.2.3",
-      },
-    },
-    "requires": true,
-    "version": "1.2.3",
   },
+  "location": "",
   "name": "workspace2",
-  "realpath": "workspace2",
-  "top": "workspace2",
+  "packageName": "a",
+  "path": "workspace2",
+  "version": "1.2.3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP workspace3 > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Link {
+    "a" => ArboristLink {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "workspace3/app",
+        EdgeIn {
+          "from": "app",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace3/packages/b",
+        EdgeIn {
+          "from": "packages/b",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace3/packages/c",
+        EdgeIn {
+          "from": "packages/c",
           "name": "a",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/a",
       "name": "a",
+      "optional": true,
+      "path": "workspace3/node_modules/a",
+      "peer": true,
       "realpath": "workspace3/packages/a",
+      "resolved": "file:../packages/a",
       "target": Object {
-        "fsParent": "workspace3",
-        "name": "a",
+        "location": "packages/a",
       },
-      "top": "workspace3",
+      "version": "1.2.3",
     },
-    "app" => Link {
+    "app" => ArboristLink {
+      "dev": true,
       "extraneous": true,
       "location": "node_modules/app",
       "name": "app",
+      "optional": true,
+      "path": "workspace3/node_modules/app",
+      "peer": true,
       "realpath": "workspace3/app",
+      "resolved": "file:../app",
       "target": Object {
-        "fsParent": "workspace3",
-        "name": "app",
+        "location": "app",
       },
-      "top": "workspace3",
+      "version": "1.2.3",
     },
-    "b" => Link {
+    "b" => ArboristLink {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "workspace3/app",
+        EdgeIn {
+          "from": "app",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace3/packages/a",
+        EdgeIn {
+          "from": "packages/a",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace3/packages/c",
+        EdgeIn {
+          "from": "packages/c",
           "name": "b",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/b",
       "name": "b",
+      "optional": true,
+      "path": "workspace3/node_modules/b",
+      "peer": true,
       "realpath": "workspace3/packages/b",
+      "resolved": "file:../packages/b",
       "target": Object {
-        "fsParent": "workspace3",
-        "name": "b",
+        "location": "packages/b",
       },
-      "top": "workspace3",
+      "version": "1.2.3",
     },
-    "c" => Link {
+    "c" => ArboristLink {
+      "dev": true,
       "edgesIn": Set {
-        Edge {
-          "from": "workspace3/app",
+        EdgeIn {
+          "from": "app",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace3/packages/a",
+        EdgeIn {
+          "from": "packages/a",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
-        Edge {
-          "from": "workspace3/packages/b",
+        EdgeIn {
+          "from": "packages/b",
           "name": "c",
-          "spec": "",
+          "spec": "*",
           "type": "prod",
         },
       },
       "extraneous": true,
       "location": "node_modules/c",
       "name": "c",
+      "optional": true,
+      "path": "workspace3/node_modules/c",
+      "peer": true,
       "realpath": "workspace3/packages/c",
+      "resolved": "file:../packages/c",
       "target": Object {
-        "fsParent": "workspace3",
-        "name": "c",
+        "location": "packages/c",
       },
-      "top": "workspace3",
+      "version": "1.2.3",
     },
   },
-  "fsChildren": Array [
-    "app",
-    "packages/a",
-    "packages/b",
-    "packages/c",
-  ],
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "i" => ArboristNode {
+          "dev": true,
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "app",
+              "name": "i",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "app/node_modules/i",
+          "name": "i",
+          "optional": true,
+          "path": "workspace3/app/node_modules/i",
+          "peer": true,
+          "version": "1.2.3",
+        },
+      },
+      "dev": true,
+      "edgesOut": Map {
+        "a" => EdgeOut {
+          "name": "a",
+          "spec": "*",
+          "to": "node_modules/a",
+          "type": "prod",
+        },
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "*",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+        "c" => EdgeOut {
+          "name": "c",
+          "spec": "*",
+          "to": "node_modules/c",
+          "type": "prod",
+        },
+        "i" => EdgeOut {
+          "name": "i",
+          "spec": "*",
+          "to": "app/node_modules/i",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "app",
+      "name": "app",
+      "optional": true,
+      "path": "workspace3/app",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "children": Map {
+        "x" => ArboristNode {
+          "dev": true,
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/a",
+              "name": "x",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "packages/a/node_modules/x",
+          "name": "x",
+          "optional": true,
+          "path": "workspace3/packages/a/node_modules/x",
+          "peer": true,
+          "version": "1.2.3",
+        },
+      },
+      "dev": true,
+      "edgesOut": Map {
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "*",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+        "c" => EdgeOut {
+          "name": "c",
+          "spec": "*",
+          "to": "node_modules/c",
+          "type": "prod",
+        },
+        "x" => EdgeOut {
+          "name": "x",
+          "spec": "*",
+          "to": "packages/a/node_modules/x",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "packages/a",
+      "name": "a",
+      "optional": true,
+      "path": "workspace3/packages/a",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "children": Map {
+        "y" => ArboristNode {
+          "dev": true,
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/b",
+              "name": "y",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "packages/b/node_modules/y",
+          "name": "y",
+          "optional": true,
+          "path": "workspace3/packages/b/node_modules/y",
+          "peer": true,
+          "version": "1.2.3",
+        },
+      },
+      "dev": true,
+      "edgesOut": Map {
+        "a" => EdgeOut {
+          "name": "a",
+          "spec": "*",
+          "to": "node_modules/a",
+          "type": "prod",
+        },
+        "c" => EdgeOut {
+          "name": "c",
+          "spec": "*",
+          "to": "node_modules/c",
+          "type": "prod",
+        },
+        "y" => EdgeOut {
+          "name": "y",
+          "spec": "*",
+          "to": "packages/b/node_modules/y",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "packages/b",
+      "name": "b",
+      "optional": true,
+      "path": "workspace3/packages/b",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "children": Map {
+        "z" => ArboristNode {
+          "dev": true,
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/c",
+              "name": "z",
+              "spec": "*",
+              "type": "prod",
+            },
+          },
+          "extraneous": true,
+          "location": "packages/c/node_modules/z",
+          "name": "z",
+          "optional": true,
+          "path": "workspace3/packages/c/node_modules/z",
+          "peer": true,
+          "version": "1.2.3",
+        },
+      },
+      "dev": true,
+      "edgesOut": Map {
+        "a" => EdgeOut {
+          "name": "a",
+          "spec": "*",
+          "to": "node_modules/a",
+          "type": "prod",
+        },
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "*",
+          "to": "node_modules/b",
+          "type": "prod",
+        },
+        "z" => EdgeOut {
+          "name": "z",
+          "spec": "*",
+          "to": "packages/c/node_modules/z",
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "packages/c",
+      "name": "c",
+      "optional": true,
+      "path": "workspace3/packages/c",
+      "peer": true,
+      "version": "1.2.3",
+    },
+  },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "dependencies": Object {
-          "x": Object {
-            "extraneous": true,
-            "version": "1.2.3",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "b": "",
-          "c": "",
-          "x": "",
-        },
-        "version": "file:packages/a",
-      },
-      "app": Object {
-        "dependencies": Object {
-          "i": Object {
-            "extraneous": true,
-            "version": "1.2.3",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "a": "",
-          "b": "",
-          "c": "",
-          "i": "",
-        },
-        "version": "file:app",
-      },
-      "b": Object {
-        "dependencies": Object {
-          "y": Object {
-            "extraneous": true,
-            "version": "1.2.3",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "a": "",
-          "c": "",
-          "y": "",
-        },
-        "version": "file:packages/b",
-      },
-      "c": Object {
-        "dependencies": Object {
-          "z": Object {
-            "extraneous": true,
-            "version": "1.2.3",
-          },
-        },
-        "extraneous": true,
-        "requires": Object {
-          "a": "",
-          "b": "",
-          "z": "",
-        },
-        "version": "file:packages/c",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "workspace3",
-    "packages": Object {
-      "app": Object {
-        "dependencies": Object {
-          "a": "",
-          "b": "",
-          "c": "",
-          "i": "",
-        },
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "app/node_modules/i": Object {
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "node_modules/a": Object {
-        "link": true,
-        "resolved": "packages/a",
-      },
-      "node_modules/app": Object {
-        "link": true,
-        "resolved": "app",
-      },
-      "node_modules/b": Object {
-        "link": true,
-        "resolved": "packages/b",
-      },
-      "node_modules/c": Object {
-        "link": true,
-        "resolved": "packages/c",
-      },
-      "packages/a": Object {
-        "dependencies": Object {
-          "b": "",
-          "c": "",
-          "x": "",
-        },
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "packages/a/node_modules/x": Object {
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "packages/b": Object {
-        "dependencies": Object {
-          "a": "",
-          "c": "",
-          "y": "",
-        },
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "packages/b/node_modules/y": Object {
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "packages/c": Object {
-        "dependencies": Object {
-          "a": "",
-          "b": "",
-          "z": "",
-        },
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-      "packages/c/node_modules/z": Object {
-        "extraneous": true,
-        "version": "1.2.3",
-      },
-    },
-    "requires": true,
-  },
   "name": "workspace3",
-  "realpath": "workspace3",
-  "top": "workspace3",
+  "path": "workspace3",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP workspaces load a simple install tree containing workspaces > expect resolving Promise 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Link {
+    "a" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspaces-simple",
+        EdgeIn {
+          "from": "",
           "name": "a",
           "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
           "type": "workspace",
@@ -8479,23 +7225,24 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "path": "workspaces-simple/node_modules/a",
       "realpath": "workspaces-simple/a",
+      "resolved": "file:../a",
       "target": Object {
-        "fsParent": "workspaces-simple",
-        "name": "a",
+        "location": "a",
       },
-      "top": "workspaces-simple",
+      "version": "1.0.0",
     },
-    "b" => Link {
+    "b" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspaces-simple",
+        EdgeIn {
+          "from": "",
           "name": "b",
           "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
           "type": "workspace",
         },
-        Edge {
-          "from": "workspaces-simple/a",
+        EdgeIn {
+          "from": "a",
           "name": "b",
           "spec": "^1.0.0",
           "type": "prod",
@@ -8503,88 +7250,65 @@ Node {
       },
       "location": "node_modules/b",
       "name": "b",
+      "path": "workspaces-simple/node_modules/b",
       "realpath": "workspaces-simple/b",
+      "resolved": "file:../b",
       "target": Object {
-        "fsParent": "workspaces-simple",
-        "name": "b",
+        "location": "b",
       },
-      "top": "workspaces-simple",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
       "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
-      "to": "workspaces-simple/a",
+      "to": "node_modules/a",
       "type": "workspace",
     },
-    "b" => Edge {
+    "b" => EdgeOut {
       "name": "b",
       "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
-      "to": "workspaces-simple/b",
+      "to": "node_modules/b",
       "type": "workspace",
     },
   },
-  "fsChildren": Array [
-    "a",
-    "b",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "requires": Object {
-          "b": "^1.0.0",
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "^1.0.0",
+          "to": "node_modules/b",
+          "type": "prod",
         },
-        "version": "file:a",
       },
-      "b": Object {
-        "version": "file:b",
-      },
+      "location": "a",
+      "name": "a",
+      "path": "workspaces-simple/a",
+      "version": "1.0.0",
     },
-    "lockfileVersion": 2,
-    "name": "workspace-simple",
-    "packages": Object {
-      "": Object {
-        "name": "workspace-simple",
-        "workspaces": Array [
-          "a",
-          "b",
-        ],
-      },
-      "a": Object {
-        "dependencies": Object {
-          "b": "^1.0.0",
-        },
-        "version": "1.0.0",
-      },
-      "b": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/a": Object {
-        "link": true,
-        "resolved": "a",
-      },
-      "node_modules/b": Object {
-        "link": true,
-        "resolved": "b",
-      },
+    ArboristNode {
+      "location": "b",
+      "name": "b",
+      "path": "workspaces-simple/b",
+      "version": "1.0.0",
     },
-    "requires": true,
   },
+  "location": "",
   "name": "workspaces-simple",
-  "realpath": "workspaces-simple",
-  "top": "workspaces-simple",
+  "packageName": "workspace-simple",
+  "path": "workspaces-simple",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP workspaces-simple > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "a" => Link {
+    "a" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspaces-simple",
+        EdgeIn {
+          "from": "",
           "name": "a",
           "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
           "type": "workspace",
@@ -8592,23 +7316,24 @@ Node {
       },
       "location": "node_modules/a",
       "name": "a",
+      "path": "workspaces-simple/node_modules/a",
       "realpath": "workspaces-simple/a",
+      "resolved": "file:../a",
       "target": Object {
-        "fsParent": "workspaces-simple",
-        "name": "a",
+        "location": "a",
       },
-      "top": "workspaces-simple",
+      "version": "1.0.0",
     },
-    "b" => Link {
+    "b" => ArboristLink {
       "edgesIn": Set {
-        Edge {
-          "from": "workspaces-simple",
+        EdgeIn {
+          "from": "",
           "name": "b",
           "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
           "type": "workspace",
         },
-        Edge {
-          "from": "workspaces-simple/a",
+        EdgeIn {
+          "from": "a",
           "name": "b",
           "spec": "^1.0.0",
           "type": "prod",
@@ -8616,89 +7341,66 @@ Node {
       },
       "location": "node_modules/b",
       "name": "b",
+      "path": "workspaces-simple/node_modules/b",
       "realpath": "workspaces-simple/b",
+      "resolved": "file:../b",
       "target": Object {
-        "fsParent": "workspaces-simple",
-        "name": "b",
+        "location": "b",
       },
-      "top": "workspaces-simple",
+      "version": "1.0.0",
     },
   },
   "edgesOut": Map {
-    "a" => Edge {
+    "a" => EdgeOut {
       "name": "a",
       "spec": "file:{CWD}/test/fixtures/workspaces-simple/a",
-      "to": "workspaces-simple/a",
+      "to": "node_modules/a",
       "type": "workspace",
     },
-    "b" => Edge {
+    "b" => EdgeOut {
       "name": "b",
       "spec": "file:{CWD}/test/fixtures/workspaces-simple/b",
-      "to": "workspaces-simple/b",
+      "to": "node_modules/b",
       "type": "workspace",
     },
   },
-  "fsChildren": Array [
-    "a",
-    "b",
-  ],
-  "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "a": Object {
-        "requires": Object {
-          "b": "^1.0.0",
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "b" => EdgeOut {
+          "name": "b",
+          "spec": "^1.0.0",
+          "to": "node_modules/b",
+          "type": "prod",
         },
-        "version": "file:a",
       },
-      "b": Object {
-        "version": "file:b",
-      },
+      "location": "a",
+      "name": "a",
+      "path": "workspaces-simple/a",
+      "version": "1.0.0",
     },
-    "lockfileVersion": 2,
-    "name": "workspace-simple",
-    "packages": Object {
-      "": Object {
-        "name": "workspace-simple",
-        "workspaces": Array [
-          "a",
-          "b",
-        ],
-      },
-      "a": Object {
-        "dependencies": Object {
-          "b": "^1.0.0",
-        },
-        "version": "1.0.0",
-      },
-      "b": Object {
-        "version": "1.0.0",
-      },
-      "node_modules/a": Object {
-        "link": true,
-        "resolved": "a",
-      },
-      "node_modules/b": Object {
-        "link": true,
-        "resolved": "b",
-      },
+    ArboristNode {
+      "location": "b",
+      "name": "b",
+      "path": "workspaces-simple/b",
+      "version": "1.0.0",
     },
-    "requires": true,
   },
+  "location": "",
   "name": "workspaces-simple",
-  "realpath": "workspaces-simple",
-  "top": "workspaces-simple",
+  "packageName": "workspace-simple",
+  "path": "workspaces-simple",
 }
 `
 
 exports[`test/arborist/load-actual.js TAP yarn-lock-mkdirp-file-dep > loaded tree 1`] = `
-Node {
+ArboristNode {
   "children": Map {
-    "mkdirp" => Node {
+    "mkdirp" => ArboristNode {
       "edgesIn": Set {
-        Edge {
+        EdgeIn {
           "error": "INVALID",
-          "from": "yarn-lock-mkdirp-file-dep",
+          "from": "",
           "name": "mkdirp",
           "spec": "file:mkdirp",
           "type": "prod",
@@ -8706,49 +7408,21 @@ Node {
       },
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
-      "realpath": "yarn-lock-mkdirp-file-dep/node_modules/mkdirp",
-      "top": "yarn-lock-mkdirp-file-dep",
+      "path": "yarn-lock-mkdirp-file-dep/node_modules/mkdirp",
+      "version": "1.0.2",
     },
   },
   "edgesOut": Map {
-    "mkdirp" => Edge {
+    "mkdirp" => EdgeOut {
       "error": "INVALID",
       "name": "mkdirp",
       "spec": "file:mkdirp",
-      "to": "yarn-lock-mkdirp-file-dep/node_modules/mkdirp",
+      "to": "node_modules/mkdirp",
       "type": "prod",
     },
   },
   "location": "",
-  "meta": Object {
-    "dependencies": Object {
-      "mkdirp": Object {
-        "version": "1.0.2",
-      },
-    },
-    "lockfileVersion": 2,
-    "name": "yarn-lock-mkdirp-file-dep",
-    "packages": Object {
-      "": Object {
-        "dependencies": Object {
-          "mkdirp": "file:mkdirp",
-        },
-      },
-      "node_modules/mkdirp": Object {
-        "bin": Object {
-          "mkdirp": "bin/cmd.js",
-        },
-        "engines": Object {
-          "node": ">=10",
-        },
-        "license": "MIT",
-        "version": "1.0.2",
-      },
-    },
-    "requires": true,
-  },
   "name": "yarn-lock-mkdirp-file-dep",
-  "realpath": "yarn-lock-mkdirp-file-dep",
-  "top": "yarn-lock-mkdirp-file-dep",
+  "path": "yarn-lock-mkdirp-file-dep",
 }
 `

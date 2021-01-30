@@ -78,7 +78,7 @@ const cases = {
     '/root/path/node_modules/cb',
     '/root/path/node_modules/cc',
     '/root/path/node_modules/cd',
-  ]
+  ],
 }
 
 for (const [node, expect] of Object.entries(cases)) {

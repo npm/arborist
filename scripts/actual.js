@@ -1,27 +1,11 @@
 const Arborist = require('../')
 const {format} = require('tcompare')
 
-const print = tree => console.log(format(printTree(tree), { style: 'js' }))
-const printEdge = require('./lib/print-edge.js')
-const printTree = require('./lib/print-tree.js')
+require('./lib/timers.js')
+const print = tree => console.log(format(tree.toJSON()))
 
 const path = process.argv[2] || '.'
-
-const options = {path}
-for (let i = 2; i < process.argv.length; i++) {
-  const arg = process.argv[i]
-  if (arg === '--save')
-    options.save = true
-  else if (arg === '--quiet')
-    options.quiet = true
-  else if (/^--[^=]+=/.test(arg)) {
-    const [key, ...v] = arg.replace(/^--/, '').split('=')
-    const val = v.join('=')
-    options[key] = val === 'false' ? false : val === 'true' ? true : val
-  } else if (/^--.+/.test(arg)) {
-    options[arg.replace(/^--/, '')] = true
-  }
-}
+const options = require('./lib/options.js')
 
 const start = process.hrtime()
 new Arborist(options).loadActual(options).then(tree => {

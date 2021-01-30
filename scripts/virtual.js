@@ -1,9 +1,7 @@
 const Arborist = require('../')
 const {format} = require('tcompare')
 
-const print = tree => console.log(format(printTree(tree), { style: 'js' }))
-const printEdge = require('./lib/print-edge.js')
-const printTree = require('./lib/print-tree.js')
+const print = tree => console.log(format(tree.toJSON()))
 
 const path = process.argv[2] || '.'
 

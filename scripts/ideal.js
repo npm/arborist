@@ -1,34 +1,10 @@
 const Arborist = require('../')
 const path = process.argv[2] || '.'
 
-const ms = require('ms')
-const timers = {}
-process.on('time', name => {
-  if (timers[name]) {
-    throw new Error('conflicting timer! ' + name)
-  }
-  timers[name] = process.hrtime()
-})
-process.on('timeEnd', name => {
-  if (!timers[name]) {
-    throw new Error('timer not started! ' + name)
-  }
-  const res = process.hrtime(timers[name])
-  delete timers[name]
-  if (options.quiet)
-    return
-
-  console.error(name, res[0] * 1e3 + res[1] / 1e6)
-})
-process.on('exit', () => {
-  for (const name of Object.keys(timers)) {
-    console.error('Dangling timer: ', name)
-    process.exitCode = 1
-  }
-})
+require('./lib/timers.js')
 
 const {format} = require('tcompare')
-const print = tree => console.log(format(printTree(tree), { style: 'js' }))
+const print = tree => console.log(format(tree.toJSON()))
 const { inspect, format: fmt } = require('util')
 process.on('log', (level, ...msg) => {
   if (options.quiet)
@@ -45,43 +21,8 @@ process.on('log', (level, ...msg) => {
     console.error(level, ...msg)
   }
 })
-const printEdge = require('./lib/print-edge.js')
-const printTree = require('./lib/print-tree.js')
 
-const options = {path}
-const npa = require('npm-package-arg')
-for (let i = 2; i < process.argv.length; i++) {
-  const arg = process.argv[i]
-  if (/^--add=/.test(arg)) {
-    options.add = options.add || []
-    options.add.push(arg.substr('--add='.length))
-  } else if (/^--rm=/.test(arg)) {
-    options.rm = options.rm || []
-    options.rm.push(arg.substr('--rm='.length))
-  } else if (arg === '--prefer-dedupe')
-    options.preferDedupe = true
-  else if (arg === '--save')
-    options.save = true
-  else if (arg === '--quiet')
-    options.quiet = true
-  else if (arg === '--update-all') {
-    options.update = options.update || {}
-    options.update.all = true
-  } else if (/^--update-depth=/.test(arg)) {
-    options.update = options.update || {}
-    options.update.depth = +(arg.substr('--update-depth='.length))
-  } else if (/^--update=/.test(arg)) {
-    options.update = options.update || {}
-    options.update.names = options.update.names || []
-    options.update.names.push(arg.substr('--update='.length))
-  } else if (/^--[^=]+=/.test(arg)) {
-    const [key, ...v] = arg.replace(/^--/, '').split('=')
-    const val = v.join('=')
-    options[key] = val === 'false' ? false : val === 'true' ? true : val
-  } else if (/^--.+/.test(arg)) {
-    options[arg.replace(/^--/, '')] = true
-  }
-}
+const options = require('./lib/options.js')
 
 console.error(options)
 

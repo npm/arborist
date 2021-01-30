@@ -12,7 +12,8 @@ const {
 } = require('../fixtures/index.js')
 
 // strip the fixtures path off of the trees in snapshots
-const pp = path => path && normalizePath(path.substr(fixtures.length + 1))
+const pp = path => path &&
+  normalizePath(path).substr(normalizePath(fixtures).length + 1)
 const defixture = obj => {
   if (obj instanceof Set)
     return new Set([...obj].map(defixture))

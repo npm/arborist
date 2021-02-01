@@ -605,9 +605,19 @@ t.test('rollbacks', { buffered: false }, t => {
   })
 
   t.test('fail rolling back from creating sparse tree', t => {
+    failMkdir = null
+    failRimraf = null
     const path = fixture(t, 'testing-bundledeps-3')
     const a = newArb({ path, legacyBundling: true })
+
     const kCreateST = Symbol.for('createSparseTree')
+    const kRetireShallowNodes = Symbol.for('retireShallowNodes')
+    const retireShallowNodes = a[kRetireShallowNodes]
+    a[kRetireShallowNodes] = async () => {
+      a[kRetireShallowNodes] = retireShallowNodes
+      await a[kRetireShallowNodes]()
+      failRimraf = true
+    }
     const createSparseTree = a[kCreateST]
     t.teardown(() => failMkdir = null)
     a[kCreateST] = () => {
@@ -624,7 +634,6 @@ t.test('rollbacks', { buffered: false }, t => {
     }
 
     const check = warningTracker()
-    failRimraf = true
     return t.rejects(a.reify({
       update: ['@isaacs/testing-bundledeps-parent'],
     }).then(tree => 'it worked'), new Error('poop'))

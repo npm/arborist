@@ -610,3 +610,34 @@ t.test('workspaces', async t => {
     )
   })
 })
+
+t.test('put bins in the right place for linked-global top pkgs', async t => {
+  const path = t.testdir({
+    lib: t.fixture('symlink', 'target'),
+    target: {
+      node_modules: {
+        foo: {
+          'package.json': JSON.stringify({
+            name: 'foo',
+            version: '1.2.3',
+            bin: 'foo',
+          }),
+          foo: 'the bin script',
+        },
+      },
+    },
+  })
+  const binpath = resolve(path, isWindows ? 'lib' : 'bin')
+  const arb = new Arborist({ path: path + '/lib', registry, global: true })
+  await arb.rebuild()
+  const expect = isWindows ? [
+    'foo',
+    'foo.cmd',
+    'foo.ps1',
+  ] : ['foo']
+  const test = isWindows ? 'isFile' : 'isSymbolicLink'
+  for (const f of expect) {
+    const p = resolve(binpath, f)
+    t.equal(fs.lstatSync(p)[test](), true, `${test} ${binpath}/${f}`)
+  }
+})

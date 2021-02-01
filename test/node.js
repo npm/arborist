@@ -2163,3 +2163,21 @@ t.test('virtual references to root node has devDep edges', async t => {
   })
   t.equal(virtualRoot.edgesOut.get('a').type, 'dev')
 })
+
+t.test('globaTop set for children of global link root target', async t => {
+  const root = new Link({
+    path: '/usr/local/lib',
+    realpath: '/data/lib',
+    global: true,
+  })
+  root.target = new Node({
+    path: '/data/lib',
+    global: true,
+    root,
+  })
+  const gtop = new Node({
+    parent: root.target,
+    pkg: { name: 'foo', version: '1.2.3' },
+  })
+  t.equal(gtop.globalTop, true)
+})

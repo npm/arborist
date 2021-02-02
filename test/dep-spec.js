@@ -1,5 +1,5 @@
 const t = require('tap')
-const { orderDeps, updateDepSpec } = require('../lib/dep-spec.js')
+const { updateDeps, updateDepSpec } = require('../lib/dep-spec.js')
 
 t.test('updates existing record if found', t => {
   t.strictSame(updateDepSpec({
@@ -38,7 +38,7 @@ t.test('adds to pkg.dependencies if not', t => {
 })
 
 t.test('reorder deps properly', (t) => {
-  t.strictSame(orderDeps({
+  t.strictSame(updateDeps({
     dependencies: { b: '1.0.0', a: '1.0.0', d: '1.0.0', c: '1.0.0' },
   }), {
     dependencies: { a: '1.0.0', b: '1.0.0', c: '1.0.0', d: '1.0.0' },
@@ -47,7 +47,24 @@ t.test('reorder deps properly', (t) => {
 })
 
 t.test('reorder deps with no values', (t) => {
-  t.strictSame(orderDeps({}), {})
-  t.strictSame(orderDeps(), undefined)
+  t.strictSame(updateDeps({}), {})
+  t.strictSame(updateDeps(), undefined)
+  t.end()
+})
+
+t.test('items in both dependencies and optional deps lists', (t) => {
+  t.strictSame(updateDeps({
+    dependencies: {
+      a: '1.0.0',
+    },
+    optionalDependencies: {
+      a: '1.0.0',
+    },
+  }), {
+    dependencies: {},
+    optionalDependencies: {
+      a: '1.0.0',
+    },
+  }, 'should removes item from deps if already listed in optional deps')
   t.end()
 })

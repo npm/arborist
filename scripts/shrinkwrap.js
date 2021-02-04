@@ -1,5 +1,8 @@
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 const options = require('./lib/options.js')
+require('./lib/logging.js')
+require('./lib/timers.js')
+
 const { quiet } = options
 Shrinkwrap.load(options)
   .then(s => quiet || console.log(JSON.stringify(s.data, 0, 2)))

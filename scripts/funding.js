@@ -1,7 +1,10 @@
+const options = require('./lib/options.js')
+require('./lib/logging.js')
+require('./lib/timers.js')
+
 const Arborist = require('../')
-const path = process.argv[2] || '.'
-const a = new Arborist({ path })
-const query = process.argv[3]
+const a = new Arborist(options)
+const query = options._.shift()
 const start = process.hrtime()
 a.loadVirtual().then(tree => {
   // only load the actual tree if the virtual one doesn't have modern metadata
@@ -25,5 +28,5 @@ a.loadVirtual().then(tree => {
         console.log(node.name, node.location, node.package.funding)
     }
   }
-  console.error(`read ${tree.inventory.size} deps in ${end[0]*1000 + end[1] / 1e6}ms`)
+  console.error(`read ${tree.inventory.size} deps in ${end[0] * 1000 + end[1] / 1e6}ms`)
 })

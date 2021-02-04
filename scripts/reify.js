@@ -1,12 +1,9 @@
 const Arborist = require('../')
-const path = process.argv[2] || '.'
-
-require('./lib/timers.js')
-
-const {format} = require('tcompare')
-const print = tree => console.log(format(tree.toJSON()))
 
 const options = require('./lib/options.js')
+const print = require('./lib/print-tree.js')
+require('./lib/logging.js')
+require('./lib/timers.js')
 
 const printDiff = diff => {
   const {depth} = require('treeverse')
@@ -34,24 +31,13 @@ const printDiff = diff => {
   })
 }
 
-console.error(options)
-process.on('log', (level, ...args) => {
-  if (level === 'warn' && args[0] === 'ERESOLVE') {
-    args[2] = require('util').inspect(args[2], { depth: Infinity })
-  }
-  if (options.quiet)
-    return
-  return console.error(level, ...args)
-})
-
 const start = process.hrtime()
 process.emit('time', 'install')
 const arb = new Arborist(options)
 arb.reify(options).then(tree => {
   process.emit('timeEnd', 'install')
   const end = process.hrtime(start)
-  if (!options.quiet)
-    print(tree)
+  print(tree)
   if (options.dryRun)
     printDiff(arb.diff)
   console.error(`resolved ${tree.inventory.size} deps in ${end[0] + end[1] / 1e9}s`)

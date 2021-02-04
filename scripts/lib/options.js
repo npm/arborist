@@ -1,29 +1,22 @@
-const path = process.argv[2] || '.'
-
-const options = {
-  path,
+const options = module.exports = {
+  path: undefined,
   cache: `${process.env.HOME}/.npm/_cacache`,
+  _: [],
 }
-for (let i = 2; i < process.argv.length; i++) {
-  const arg = process.argv[i]
+
+for (const arg of process.argv.slice(2)) {
   if (/^--add=/.test(arg)) {
     options.add = options.add || []
     options.add.push(arg.substr('--add='.length))
   } else if (/^--rm=/.test(arg)) {
     options.rm = options.rm || []
     options.rm.push(arg.substr('--rm='.length))
-  } else if (arg === '--global') {
+  } else if (arg === '--global')
     options.global = true
-  } else if (arg === '--global-style') {
+  else if (arg === '--global-style')
     options.globalStyle = true
-  } else if (arg === '--prefer-dedupe')
+  else if (arg === '--prefer-dedupe')
     options.preferDedupe = true
-  else if (arg === '--fix')
-    options.fix = true
-  else if (arg === '--save')
-    options.save = true
-  else if (arg === '--quiet')
-    options.quiet = true
   else if (arg === '--legacy-peer-deps')
     options.legacyPeerDeps = true
   else if (arg === '--force')
@@ -42,9 +35,15 @@ for (let i = 2; i < process.argv.length; i++) {
     const [key, ...v] = arg.replace(/^--/, '').split('=')
     const val = v.join('=')
     options[key] = val === 'false' ? false : val === 'true' ? true : val
-  } else if (/^--.+/.test(arg)) {
+  } else if (/^--.+/.test(arg))
     options[arg.replace(/^--/, '')] = true
-  }
+  else if (options.path === undefined)
+    options.path = arg
+  else
+    options._.push(arg)
 }
 
-module.exports = options
+if (options.path === undefined)
+  options.path = '.'
+
+console.error(options)

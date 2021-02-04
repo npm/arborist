@@ -1,6 +1,5 @@
 process.env.ARBORIST_DEBUG = '0'
 const {Suite} = require('benchmark')
-const Arborist = require('../')
 const { relative, resolve } = require('path')
 const rimraf = require('rimraf')
 const { execSync } = require('child_process')
@@ -24,7 +23,7 @@ const options = {
   // node scripts/benchmark.js --previous=without-foobles --save=with-foobles
   save: String(execSync('git branch --show-current'))
     .trim()
-    .replace(/\.|\//, '-') + (dirty ? '-dirty' : '')
+    .replace(/\.|\//, '-') + (dirty ? '-dirty' : ''),
 }
 
 const allSuites = readdirSync(resolve(__dirname, 'benchmark'))
@@ -168,7 +167,7 @@ const suite = new Suite({
       registryServer.stop(),
       new Promise((res, rej) => {
         rimraf(this.cache, er => er ? rej(er) : res())
-      })
+      }),
     ]))
   },
 })

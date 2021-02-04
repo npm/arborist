@@ -1,4 +1,4 @@
-const timers = {}
+const timers = Object.create(null)
 
 process.on('time', name => {
   if (timers[name])

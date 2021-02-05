@@ -15,7 +15,6 @@ Array [
       "_id": "devdep@1.0.0",
       "dependencies": Object {
         "devopt": "",
-        "opt-and-dev": "",
       },
       "name": "devdep",
       "optionalDependencies": Object {

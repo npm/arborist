@@ -372,7 +372,6 @@ Object {
         "a": "",
         "link": "",
         "link2": "",
-        "optin": "",
       },
       "devDependencies": Object {
         "d": "",
@@ -641,7 +640,6 @@ Object {
     "a": "",
     "link": "",
     "link2": "",
-    "optin": "",
   },
   "devDependencies": Object {
     "d": "",
@@ -664,7 +662,6 @@ Object {
     "a": "",
     "link": "",
     "link2": "",
-    "optin": "",
   },
   "devDependencies": Object {
     "d": "",
@@ -1177,7 +1174,6 @@ Object {
   "packages": Object {
     "": Object {
       "dependencies": Object {
-        "inflight": "^1.0.6",
         "once": "^1.4.0",
       },
       "license": "ISC",
@@ -1391,9 +1387,6 @@ Object {
       },
     },
     "node_modules/z": Object {
-      "dependencies": Object {
-        "a": "",
-      },
       "optionalDependencies": Object {
         "a": "",
       },
@@ -1479,7 +1472,6 @@ Object {
     "": Object {
       "dependencies": Object {
         "@scope/x": "1",
-        "notinstalledhere": "",
       },
       "devDependencies": Object {
         "foo": "*",
@@ -1494,7 +1486,6 @@ Object {
     },
     "../../root/node_modules/@scope/x": Object {
       "dependencies": Object {
-        "@scope/y": "",
         "glob": "4",
       },
       "optionalDependencies": Object {
@@ -1547,7 +1538,6 @@ Object {
     },
     "../../root/node_modules/foo": Object {
       "dependencies": Object {
-        "@scope/x": "",
         "express": "npm:abbrev@*",
       },
       "optionalDependencies": Object {
@@ -2226,9 +2216,6 @@ Object {
       "bin": Object {
         "rimraf": "bin.js",
       },
-      "dependencies": Object {
-        "glob": "^7.1.3",
-      },
       "extraneous": true,
       "integrity": "sha512-hKCr1HweNbIu6JN4K8WYBwikeg2ISRHU2D7OTX0fivTb+2dOM7mITni0cAjgWCsNGUQDFI+4BTNeGBVp/WbBow==",
       "license": "ISC",
@@ -2563,7 +2550,6 @@ Object {
     "": Object {
       "dependencies": Object {
         "@scope/x": "1",
-        "notinstalledhere": "",
       },
       "devDependencies": Object {
         "foo": "*",
@@ -2578,7 +2564,6 @@ Object {
     },
     "../root/node_modules/@scope/x": Object {
       "dependencies": Object {
-        "@scope/y": "",
         "glob": "4",
       },
       "optionalDependencies": Object {
@@ -2631,7 +2616,6 @@ Object {
     },
     "../root/node_modules/foo": Object {
       "dependencies": Object {
-        "@scope/x": "",
         "express": "npm:abbrev@*",
       },
       "optionalDependencies": Object {
@@ -2866,9 +2850,6 @@ Object {
   "name": "root",
   "packages": Object {
     "": Object {
-      "dependencies": Object {
-        "a": "",
-      },
       "devDependencies": Object {
         "c": "",
       },
@@ -2988,14 +2969,7 @@ Object {
   "packages": Object {
     "": Object {
       "dependencies": Object {
-        "a": "",
-        "b": "",
-        "c": "",
-        "k": "",
-        "l": "",
-        "m": "",
         "x": "",
-        "y": "",
       },
       "devDependencies": Object {
         "i": "",
@@ -3131,7 +3105,6 @@ Object {
   "packages": Object {
     "": Object {
       "dependencies": Object {
-        "a": "",
         "c": "",
       },
       "optionalDependencies": Object {
@@ -3210,7 +3183,6 @@ Object {
     },
     "node_modules/a": Object {
       "dependencies": Object {
-        "b": "",
         "d": "",
       },
       "dev": true,
@@ -3522,7 +3494,6 @@ Object {
     "": Object {
       "dependencies": Object {
         "@scope/x": "1",
-        "notinstalledhere": "",
       },
       "devDependencies": Object {
         "foo": "*",
@@ -3537,7 +3508,6 @@ Object {
     },
     "node_modules/@scope/x": Object {
       "dependencies": Object {
-        "@scope/y": "",
         "glob": "4",
       },
       "optionalDependencies": Object {
@@ -3589,7 +3559,6 @@ Object {
     },
     "node_modules/foo": Object {
       "dependencies": Object {
-        "@scope/x": "",
         "express": "npm:abbrev@*",
       },
       "optionalDependencies": Object {
@@ -7744,7 +7713,6 @@ Object {
       "dependencies": Object {
         "anymatch": "~3.1.1",
         "braces": "~3.0.2",
-        "fsevents": "~2.1.1",
         "glob-parent": "~5.1.0",
         "is-binary-path": "~2.1.0",
         "is-glob": "~4.0.1",
@@ -8535,7 +8503,6 @@ Object {
         "neo-async": "^2.6.0",
         "optimist": "^0.6.1",
         "source-map": "^0.6.1",
-        "uglify-js": "^3.1.4",
       },
       "engines": Object {
         "node": ">=0.4.7",
@@ -10452,7 +10419,6 @@ Object {
         "diff": "^1.3.2",
         "escape-string-regexp": "^1.0.3",
         "glob": "^7.0.5",
-        "readable-stream": "^2.1.5",
         "tap-parser": "^10.0.0",
         "tap-yaml": "^1.0.0",
         "unicode-length": "^1.0.0",
@@ -11587,7 +11553,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
   dependencies:
     "anymatch" "~3.1.1"
     "braces" "~3.0.2"
-    "fsevents" "~2.1.1"
     "glob-parent" "~5.1.0"
     "is-binary-path" "~2.1.0"
     "is-glob" "~4.0.1"
@@ -12049,7 +12014,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "neo-async" "^2.6.0"
     "optimist" "^0.6.1"
     "source-map" "^0.6.1"
-    "uglify-js" "^3.1.4"
   optionalDependencies:
     "uglify-js" "^3.1.4"
 
@@ -13356,7 +13320,6 @@ exports[`test/shrinkwrap.js TAP loadActual tests tap-with-yarn-lock > yarn.lock 
     "diff" "^1.3.2"
     "escape-string-regexp" "^1.0.3"
     "glob" "^7.0.5"
-    "readable-stream" "^2.1.5"
     "tap-parser" "^10.0.0"
     "tap-yaml" "^1.0.0"
     "unicode-length" "^1.0.0"

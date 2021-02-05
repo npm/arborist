@@ -1274,6 +1274,37 @@ t.test('add symlink that points to a symlink', t => {
   )
 })
 
+t.test('update global space single dep', t => {
+  const fixt = t.testdir({
+    'global-prefix': {
+      lib: {
+        node_modules: {
+          abbrev: {
+            'package.json': JSON.stringify({
+              name: 'abbrev',
+              version: '1.0.0',
+            }),
+          },
+        },
+      },
+    },
+  })
+  const path = resolve(fixt, 'global-prefix/lib')
+  const opts = {
+    path,
+    global: true,
+    update: true,
+    ...OPT,
+  }
+  const arb = new Arborist(opts)
+  return arb.buildIdealTree(opts).then(tree =>
+    t.matchSnapshot(
+      printTree(tree),
+      'should update global dependencies'
+    )
+  )
+})
+
 // if we get this wrong, it'll spin forever and use up all the memory
 t.test('pathologically nested dependency cycle', t =>
   t.resolveMatchSnapshot(printIdeal(

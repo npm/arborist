@@ -2480,3 +2480,17 @@ t.test('shrinkwrapped dev/optional deps should not clobber flags', t => {
 
   t.end()
 })
+
+t.test('do not ERESOLVE on peerOptionals that are ignored anyway', t => {
+  // this simulates three cases where a conflict occurs during the peerSet
+  // generation phase, but will not manifest in the tree building phase.
+  const base = resolve(fixtures, 'peer-optional-eresolve')
+  const cases = ['a', 'b', 'c']
+  t.plan(cases.length)
+  for (const c of cases) {
+    t.test(`case ${c}`, async t => {
+      const path = resolve(base, c)
+      t.matchSnapshot(await printIdeal(path))
+    })
+  }
+})

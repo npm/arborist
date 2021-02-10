@@ -2294,6 +2294,20 @@ t.test('update global', async t => {
     'update all the deps')
 })
 
+t.test('update global when nothing in global', async t => {
+  const path = t.testdir({
+    no_nm: {},
+    empty_nm: {
+      node_modules: {},
+    },
+  })
+  const opts = { global: true, update: true }
+  t.matchSnapshot(await printIdeal(path + '/no_nm', opts),
+    'update without node_modules')
+  t.matchSnapshot(await printIdeal(path + '/empty_nm', opts),
+    'update with empty node_modules')
+})
+
 t.test('peer dep that needs to be replaced', async t => {
   // this verifies that the webpack 5 that gets placed by default for
   // the initial dep will be successfully replaced by webpack 4 that
@@ -2417,4 +2431,52 @@ t.test('set the current on ERESOLVE triggered by devDeps', async t => {
       location: 'node_modules/eslint',
     },
   })
+})
+
+t.test('shrinkwrapped dev/optional deps should not clobber flags', t => {
+  t.test('optional', async t => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'project',
+        version: '1.2.3',
+        optionalDependencies: {
+          '@isaacs/test-package-with-shrinkwrap': '^1.0.0',
+        },
+      }),
+    })
+    const tree = await buildIdeal(path, { complete: true })
+    const swName = '@isaacs/test-package-with-shrinkwrap'
+    const swDep = tree.children.get(swName)
+    const metaDep = swDep.children.get('abbrev')
+    t.equal(swDep.optional, true, 'shrinkwrapped dep is optional')
+    t.equal(metaDep.optional, true, 'shrinkwrapped metadep optional')
+
+    // make sure we're not just somehow leaving ALL flags true
+    t.equal(swDep.dev, false, 'sw dep is not dev')
+    t.equal(metaDep.dev, false, 'meta dep is not dev')
+  })
+
+  t.test('dev', async t => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'project',
+        version: '1.2.3',
+        devDependencies: {
+          '@isaacs/test-package-with-shrinkwrap': '^1.0.0',
+        },
+      }),
+    })
+    const tree = await buildIdeal(path, { complete: true })
+    const swName = '@isaacs/test-package-with-shrinkwrap'
+    const swDep = tree.children.get(swName)
+    const metaDep = swDep.children.get('abbrev')
+    t.equal(swDep.dev, true, 'shrinkwrapped dep is dev')
+    t.equal(metaDep.dev, true, 'shrinkwrapped metadep dev')
+
+    // make sure we're not just somehow leaving ALL flags true
+    t.equal(swDep.optional, false, 'sw dep is not optional')
+    t.equal(metaDep.optional, false, 'meta dep is not optional')
+  })
+
+  t.end()
 })

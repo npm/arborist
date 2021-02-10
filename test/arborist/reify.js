@@ -1361,3 +1361,56 @@ t.test('rollback if process is terminated during reify process', async t => {
     })
   }
 })
+
+t.test('warn and correct if damaged data in lockfile', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        abbrev: '',
+      },
+    }),
+    'package-lock.json': JSON.stringify({
+      name: 'garbage-in-reify-tree',
+      lockfileVersion: 2,
+      requires: true,
+      packages: {
+        '': {
+          dependencies: {
+            abbrev: '',
+          },
+        },
+        'node_modules/abbrev': {
+          integrity: 'sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==',
+        },
+      },
+      dependencies: {
+        abbrev: {
+          integrity: 'sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==',
+        },
+      },
+    }),
+  })
+
+  t.test('first pass logs', async t => {
+    const getLogs = warningTracker()
+    await reify(path)
+    t.strictSame(getLogs(), [
+      [
+        'warn',
+        'reify',
+        'invalid or damaged lockfile detected\n' +
+        'please re-try this operation once it completes\n' +
+        'so that the damage can be corrected, or perform\n' +
+        'a fresh install with no lockfile if the problem persists.',
+      ],
+    ], 'got warnings')
+    t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'), '"fixed" lockfile')
+  })
+
+  t.test('second pass just does the right thing', async t => {
+    const getLogs = warningTracker()
+    await reify(path)
+    t.strictSame(getLogs(), [], 'no warnings this time')
+    t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'), 'actually fixed lockfile')
+  })
+})

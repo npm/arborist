@@ -24,7 +24,7 @@ const {
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-const loadVirtual = (path, opts = {}) => new Arborist({path, ...opts}).loadVirtual()
+const loadVirtual = (path, opts) => new Arborist({path, ...(opts || {})}).loadVirtual(opts)
 
 t.test('load from fixture', t =>
   loadVirtual(fixture).then(virtualTree => {
@@ -204,4 +204,21 @@ t.test('workspaces', t => {
       t.matchSnapshot(printTree(tree), 'virtual tree ignoring nested node_modules')))
 
   t.end()
+})
+
+t.test('do not reset flags on supplied root option', async t => {
+  const path = resolve(__dirname, '../fixtures/test-package-with-shrinkwrap')
+  const root = new Node({
+    path,
+    pkg: require(path + '/package.json'),
+    dev: true,
+    optional: false,
+    peer: false,
+    devOptional: true,
+  })
+  const tree = await loadVirtual(path, { root })
+  t.equal(tree.dev, true, 'tree is still dev')
+  t.equal(tree.devOptional, true, 'tree is still devOptional')
+  t.equal(tree.optional, false, 'tree is not optional')
+  t.equal(tree.peer, false, 'tree is not peer')
 })

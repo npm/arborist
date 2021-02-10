@@ -29604,6 +29604,7 @@ ArboristNode {
       "location": "node_modules/@isaacs/testing-peer-deps-b",
       "name": "@isaacs/testing-peer-deps-b",
       "path": "{CWD}/test/arborist/reify-testing-peer-deps-nested/node_modules/@isaacs/testing-peer-deps-b",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-1.2.4.tgz",
       "version": "1.2.4",
     },
@@ -29619,6 +29620,7 @@ ArboristNode {
       "location": "node_modules/@isaacs/testing-peer-deps-c",
       "name": "@isaacs/testing-peer-deps-c",
       "path": "{CWD}/test/arborist/reify-testing-peer-deps-nested/node_modules/@isaacs/testing-peer-deps-c",
+      "peer": true,
       "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-1.2.3.tgz",
       "version": "1.2.3",
     },
@@ -29667,6 +29669,7 @@ ArboristNode {
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
           "name": "@isaacs/testing-peer-deps-b",
           "path": "{CWD}/test/arborist/reify-testing-peer-deps-nested/node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-b",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-b/-/testing-peer-deps-b-2.0.1.tgz",
           "version": "2.0.1",
         },
@@ -29682,6 +29685,7 @@ ArboristNode {
           "location": "node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
           "name": "@isaacs/testing-peer-deps-c",
           "path": "{CWD}/test/arborist/reify-testing-peer-deps-nested/node_modules/@isaacs/testing-peer-deps-d/node_modules/@isaacs/testing-peer-deps-c",
+          "peer": true,
           "resolved": "https://registry.npmjs.org/@isaacs/testing-peer-deps-c/-/testing-peer-deps-c-2.0.0.tgz",
           "version": "2.0.0",
         },
@@ -42957,6 +42961,50 @@ exports[`test/arborist/reify.js TAP update a yarn.lock file > updated yarn lock 
   "integrity" "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA=="
   "resolved" "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz"
   "version" "1.0.2"
+
+`
+
+exports[`test/arborist/reify.js TAP warn and correct if damaged data in lockfile first pass logs > "fixed" lockfile 1`] = `
+{
+  "name": "reify-warn-and-correct-if-damaged-data-in-lockfile",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "abbrev": ""
+      }
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP warn and correct if damaged data in lockfile second pass just does the right thing > actually fixed lockfile 1`] = `
+{
+  "name": "reify-warn-and-correct-if-damaged-data-in-lockfile",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "dependencies": {
+        "abbrev": ""
+      }
+    },
+    "node_modules/abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  },
+  "dependencies": {
+    "abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  }
+}
 
 `
 

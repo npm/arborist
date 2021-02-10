@@ -1,4 +1,4 @@
-const {basename, resolve} = require('path')
+const {basename, resolve, relative} = require('path')
 const t = require('tap')
 const Arborist = require('../..')
 const fixtures = resolve(__dirname, '../fixtures')
@@ -1234,6 +1234,32 @@ t.test('workspaces', t => {
   })
 
   t.end()
+})
+
+t.test('adding tarball to global prefix that is a symlink at a different path depth', async t => {
+  const fixt = t.testdir({
+    'real-root': {},
+    'another-path': {
+      'global-root': t.fixture('symlink', '../real-root'),
+    },
+  })
+  const path = resolve(fixt, 'another-path/global-root')
+  const arb = new Arborist({
+    path,
+    global: true,
+    ...OPT,
+  })
+
+  const tarballpath = resolve(__dirname, '../fixtures/registry-mocks/content/mkdirp/-/mkdirp-1.0.2.tgz')
+  const tree = await arb.buildIdealTree({
+    path,
+    global: true,
+    add: [
+      // this will be a relative path to the tarball above
+      relative(process.cwd(), tarballpath),
+    ],
+  })
+  t.matchSnapshot(printTree(tree))
 })
 
 t.test('add symlink that points to a symlink', t => {

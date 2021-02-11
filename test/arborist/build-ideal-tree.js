@@ -1571,6 +1571,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
     },
+
     'prod dep directly on conflicted peer, older': {
       pkg: {
         dependencies: {
@@ -1580,6 +1581,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
     },
+
     'prod dep directly on conflicted peer, full peer set, newer': {
       pkg: {
         dependencies: {
@@ -1592,6 +1594,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
     },
+
     'prod dep directly on conflicted peer, full peer set, older': {
       pkg: {
         dependencies: {
@@ -1604,6 +1607,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
     },
+
     'prod dep directly on conflicted peer, meta peer set, older': {
       pkg: {
         dependencies: {
@@ -1615,6 +1619,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
     },
+
     'dep indirectly on conflicted peer': {
       pkg: {
         dependencies: {
@@ -1624,6 +1629,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
     },
+
     'collision forcing duplication, order 1': {
       pkg: {
         dependencies: {
@@ -1634,6 +1640,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'collision forcing duplication, order 2': {
       pkg: {
         dependencies: {
@@ -1644,6 +1651,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'collision forcing duplication via add, order 1': {
       pkg: {
         dependencies: {
@@ -1654,6 +1662,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'collision forcing duplication via add, order 2': {
       pkg: {
         dependencies: {
@@ -1664,6 +1673,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'collision forcing metadep duplication, order 1': {
       pkg: {
         dependencies: {
@@ -1674,6 +1684,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'collision forcing metadep duplication, order 2': {
       pkg: {
         dependencies: {
@@ -1684,6 +1695,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'direct collision forcing metadep duplication, order 1': {
       pkg: {
         dependencies: {
@@ -1694,6 +1706,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'direct collision forcing metadep duplication, order 2': {
       pkg: {
         dependencies: {
@@ -1704,6 +1717,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: true,
     },
+
     'dep with conflicting peers': {
       pkg: {
         dependencies: {
@@ -1714,6 +1728,7 @@ t.test('more peer dep conflicts', t => {
       // but it is a conflict in a peerSet that the root is sourcing.
       error: true,
     },
+
     'metadeps with conflicting peers': {
       pkg: {
         dependencies: {
@@ -1722,6 +1737,7 @@ t.test('more peer dep conflicts', t => {
       },
       error: false,
     },
+
     'metadep conflict that warns because source is target': {
       pkg: {
         dependencies: {
@@ -1732,6 +1748,7 @@ t.test('more peer dep conflicts', t => {
       error: false,
       resolvable: false,
     },
+
     'metadep conflict triggering the peerConflict code path': {
       pkg: {
         dependencies: {
@@ -1743,6 +1760,7 @@ t.test('more peer dep conflicts', t => {
       resolvable: false,
     },
   })
+
   t.jobs = cases.length
   t.plan(cases.length)
 
@@ -2493,4 +2511,91 @@ t.test('do not ERESOLVE on peerOptionals that are ignored anyway', t => {
       t.matchSnapshot(await printIdeal(path))
     })
   }
+})
+
+t.test('allow ERESOLVE to be forced when not in the source', async t => {
+  const types = [
+    'peerDependencies',
+    'optionalDependencies',
+    'devDependencies',
+    'dependencies',
+  ]
+
+  // in these tests, the deps are both of the same type.  b has a peerOptional
+  // dep on peer, and peer is a direct dependency of the root.
+  t.test('both direct and peer of the same type', t => {
+    t.plan(types.length)
+    const pj = type => ({
+      name: '@isaacs/conflicted-peer-optional-from-dev-dep',
+      version: '1.2.3',
+      [type]: {
+        '@isaacs/conflicted-peer-optional-from-dev-dep-peer': '1',
+        '@isaacs/conflicted-peer-optional-from-dev-dep-b': '',
+      },
+    })
+
+    for (const type of types) {
+      t.test(type, async t => {
+        const path = t.testdir({
+          'package.json': JSON.stringify(pj(type)),
+        })
+        t.matchSnapshot(await printIdeal(path, { force: true }), 'use the force')
+        t.rejects(printIdeal(path), { code: 'ERESOLVE' }, 'no force')
+      })
+    }
+  })
+
+  // in these, the peer is a peer dep of the root, and b is a different type
+  t.test('peer is peer, b is some other type', t => {
+    t.plan(types.length - 1)
+    const pj = type => ({
+      name: '@isaacs/conflicted-peer-optional-from-dev-dep',
+      version: '1.2.3',
+      peerDependencies: {
+        '@isaacs/conflicted-peer-optional-from-dev-dep-b': '',
+      },
+      [type]: {
+        '@isaacs/conflicted-peer-optional-from-dev-dep-peer': '1',
+      },
+    })
+    for (const type of types) {
+      if (type === 'peerDependencies')
+        continue
+      t.test(type, async t => {
+        const path = t.testdir({
+          'package.json': JSON.stringify(pj(type)),
+        })
+        t.matchSnapshot(await printIdeal(path, { force: true }), 'use the force')
+        t.rejects(printIdeal(path), { code: 'ERESOLVE' }, 'no force')
+      })
+    }
+  })
+
+  // in these, b is a peer dep, and peer is some other type
+  t.test('peer is peer, b is some other type', t => {
+    t.plan(types.length - 1)
+    const pj = type => ({
+      name: '@isaacs/conflicted-peer-optional-from-dev-dep',
+      version: '1.2.3',
+      peerDependencies: {
+        '@isaacs/conflicted-peer-optional-from-dev-dep-peer': '1',
+      },
+      [type]: {
+        '@isaacs/conflicted-peer-optional-from-dev-dep-b': '',
+      },
+    })
+    for (const type of types) {
+      if (type === 'peerDependencies')
+        continue
+      t.test(type, async t => {
+        const path = t.testdir({
+          'package.json': JSON.stringify(pj(type)),
+        })
+        t.matchSnapshot(await printIdeal(path, { force: true }), 'use the force')
+        t.rejects(printIdeal(path), { code: 'ERESOLVE' }, 'no force')
+      })
+    }
+  })
+
+  t.end()
 })

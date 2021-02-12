@@ -863,7 +863,6 @@ ArboristLink {
         "location": "node_modules/@scope/y",
         "name": "@scope/y",
         "path": "root/node_modules/@scope/y",
-        "peer": true,
         "version": "1.2.3",
       },
       "foo" => ArboristNode {
@@ -2646,7 +2645,6 @@ ArboristLink {
         "location": "node_modules/@scope/y",
         "name": "@scope/y",
         "path": "root/node_modules/@scope/y",
-        "peer": true,
         "version": "1.2.3",
       },
       "foo" => ArboristNode {

@@ -1445,7 +1445,6 @@ Object {
       "version": "1.2.3",
     },
     "@scope/y": Object {
-      "peer": true,
       "requires": Object {
         "foo": "99.x",
       },
@@ -1533,7 +1532,6 @@ Object {
       "dependencies": Object {
         "foo": "99.x",
       },
-      "peer": true,
       "version": "1.2.3",
     },
     "../../root/node_modules/foo": Object {
@@ -2523,7 +2521,6 @@ Object {
       "version": "1.2.3",
     },
     "@scope/y": Object {
-      "peer": true,
       "requires": Object {
         "foo": "99.x",
       },
@@ -2611,7 +2608,6 @@ Object {
       "dependencies": Object {
         "foo": "99.x",
       },
-      "peer": true,
       "version": "1.2.3",
     },
     "../root/node_modules/foo": Object {

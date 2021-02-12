@@ -174,6 +174,11 @@ t.test('bad shrinkwrap file', t => {
   return t.resolveMatchSnapshot(printIdeal(path), 'bad shrinkwrap')
 })
 
+t.test('a direct link dep has a dep with optional dependencies', t => {
+  const path = resolve(fixtures, 'link-dep-has-dep-with-optional-dep')
+  return t.resolveMatchSnapshot(printIdeal(path), 'should not mark children of the optional dep as extraneous')
+})
+
 t.test('cyclical peer deps', t => {
   const paths = [
     resolve(fixtures, 'peer-dep-cycle'),

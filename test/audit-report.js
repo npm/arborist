@@ -365,3 +365,40 @@ t.test('audit when bulk report doenst have anything in it', async t => {
   const { report } = await auditReport.run()
   t.strictSame(report, null)
 })
+
+t.test('default severity=high, vulnerable_versions=*', async t => {
+  const audit = {
+    actions: [],
+    advisories: {
+      755: {
+        findings: [
+          {
+            version: '1.2.3',
+            paths: [
+              'something',
+            ],
+          },
+        ],
+        id: 755,
+        title: 'no severity or vulnerable versions',
+        module_name: 'something',
+        overview: 'should default severity=high, vulnerable_versions=*',
+        recommendation: "don't use this thing",
+        url: 'https://npmjs.com/advisories/755',
+      },
+    },
+    muted: [],
+    metadata: {
+      vulnerabilities: {},
+      dependencies: 1,
+      devDependencies: 0,
+      optionalDependencies: 0,
+      totalDependencies: 1,
+    },
+    runId: 'just-some-unique-identifier',
+  }
+
+  const bulk = auditToBulk(audit)
+  t.match(bulk, { something: [{ severity: 'high', vulnerable_versions: '*' }] })
+  t.end()
+})

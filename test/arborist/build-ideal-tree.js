@@ -83,7 +83,7 @@ t.test('warn on mismatched engine when engineStrict is false', t => {
   ]))
 })
 
-t.test('fail on mismatched platform', { skip: process.platform === 'win32' && '*nix specific test' }, async t => {
+t.test('fail on mismatched platform', async t => {
   const path = resolve(fixtures, 'platform-specification')
   t.rejects(buildIdeal(path, {
     ...OPT,
@@ -95,11 +95,12 @@ t.test('fail on mismatched platform', { skip: process.platform === 'win32' && '*
 
 t.test('ignore mismatched platform for optional dependencies', async t => {
   const path = resolve(fixtures, 'optional-platform-specification')
-  await buildIdeal(path, {
+  const tree = await buildIdeal(path, {
     ...OPT,
     nodeVersion: '12.18.4',
     engineStrict: true,
   })
+  t.equal(tree.children.get('platform-specifying-test-package').package.version, '1.0.0', 'added the optional dep to the ideal tree')
 })
 
 t.test('no options', t => {

@@ -10,7 +10,8 @@ Types of failure:
 2. Optional dependency tgz download failure `optional-dep-tgz-missing`
 3. Optional dependency version not satisfiable `optional-dep-enotarget`
 4. Optional dependency build failure `optional-dep-postinstall-fail`
-5. Optional dependency depends on any failure above
+5. Optional dependency specifies unsupported engine or platform `optional-platform-specification`
+6. Optional dependency depends on any failure above
       1. `optional-metadep-missing`
       2. `optional-metadep-tgz-missing`
       3. `optional-metadep-enotarget`
@@ -20,7 +21,7 @@ These failures can occur in one of three places:
 
 1. buildIdealTree (unresolveable or failed metadata optional dep/meta-dep)
 
-2. reifyNode (failure to download/unpack tgz)
+2. reifyNode (failure to download/unpack tgz, engine/platform unsupported)
 
 3. lifecycle scripts
 

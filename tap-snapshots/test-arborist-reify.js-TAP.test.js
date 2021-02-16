@@ -1018,6 +1018,24 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP do not install optional deps with mismatched platform specifications > expect resolving Promise 1`] = `
+ArboristNode {
+  "edgesOut": Map {
+    "platform-specifying-test-package" => EdgeOut {
+      "name": "platform-specifying-test-package",
+      "spec": "1.0.0",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-do-not-install-optional-deps-with-mismatched-platform-specifications",
+  "packageName": "platform-test",
+  "path": "{CWD}/test/arborist/reify-do-not-install-optional-deps-with-mismatched-platform-specifications",
+  "version": "1.0.0",
+}
+`
+
 exports[`test/arborist/reify.js TAP do not update shrinkwrapped deps > expect resolving Promise 1`] = `
 ArboristNode {
   "children": Map {
@@ -29408,6 +29426,24 @@ Object {
 
 exports[`test/arborist/reify.js TAP scoped registries > should preserve original resolved value 1`] = `
 @ruyadorno/theoretically-private-pkg@https://npm.pkg.github.com/@ruyadorno/theoretically-private-pkg/-/theoretically-private-pkg-1.2.3.tgz
+`
+
+exports[`test/arborist/reify.js TAP still do not install optional deps with mismatched platform specifications even when forced > expect resolving Promise 1`] = `
+ArboristNode {
+  "edgesOut": Map {
+    "platform-specifying-test-package" => EdgeOut {
+      "name": "platform-specifying-test-package",
+      "spec": "1.0.0",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "location": "",
+  "name": "reify-still-do-not-install-optional-deps-with-mismatched-platform-specifications-even-when-forced",
+  "packageName": "platform-test",
+  "path": "{CWD}/test/arborist/reify-still-do-not-install-optional-deps-with-mismatched-platform-specifications-even-when-forced",
+  "version": "1.0.0",
+}
 `
 
 exports[`test/arborist/reify.js TAP store files with a custom indenting > must match snapshot 1`] = `

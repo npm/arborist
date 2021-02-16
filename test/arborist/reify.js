@@ -363,6 +363,17 @@ t.test('do not update shrinkwrapped deps', t =>
     fixture(t, 'shrinkwrapped-dep-with-lock'),
     { update: { names: ['abbrev']}})))
 
+t.test('do not install optional deps with mismatched platform specifications', t =>
+  t.resolveMatchSnapshot(printReified(
+    fixture(t, 'optional-platform-specification'))))
+
+t.test('still do not install optional deps with mismatched platform specifications even when forced', t =>
+  t.resolveMatchSnapshot(printReified(
+    fixture(t, 'optional-platform-specification'), { force: true })))
+
+t.test('fail to install deps with mismatched platform specifications', t =>
+  t.rejects(printReified(fixture(t, 'platform-specification')), { code: 'EBADPLATFORM' }))
+
 t.test('dry run, do not get anything wet', async t => {
   const cases = [
     'shrinkwrapped-dep-with-lock-empty',

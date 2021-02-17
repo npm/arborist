@@ -1,4 +1,5 @@
 const {resolve} = require('path')
+const {statSync} = require('fs')
 
 const t = require('tap')
 
@@ -20,6 +21,33 @@ t.test('missing package.json', async t => {
     require(resolve(path, 'package.json')),
     {
       name: 'missing-package-json-test',
+      version: '1.0.0',
+      dependencies: {
+        abbrev: '^1.0.0',
+      },
+    },
+    'should write new package.json with tree data'
+  )
+})
+
+t.test('invalid package.json', async t => {
+  const path = t.testdir({
+    'package.json': 'this! is! not! json!',
+  })
+  await updateRootPackageJson({
+    path: path,
+    package: {
+      name: 'invalid-package-json-test',
+      version: '1.0.0',
+      dependencies: {
+        abbrev: '^1.0.0',
+      },
+    },
+  })
+  t.match(
+    require(resolve(path, 'package.json')),
+    {
+      name: 'invalid-package-json-test',
       version: '1.0.0',
       dependencies: {
         abbrev: '^1.0.0',
@@ -60,6 +88,48 @@ t.test('existing package.json', async t => {
     },
     'should write new package.json with tree data'
   )
+})
+
+t.test('unchanged package.json', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'existing-package-json-test',
+      version: '1.0.0',
+      bin: './file.js',
+      funding: 'http://example.com',
+      dependencies: {
+        abbrev: '^1.0.0',
+      },
+    }, null, 2) + '\n',
+  })
+  const { mtime } = statSync(path + '/package.json')
+  await updateRootPackageJson({
+    path: path,
+    package: {
+      name: 'existing-package-json-test',
+      version: '1.0.0',
+      bin: './file.js',
+      funding: 'http://example.com',
+      dependencies: {
+        abbrev: '^1.0.0',
+      },
+    },
+  })
+  t.match(
+    require(resolve(path, 'package.json')),
+    {
+      name: 'existing-package-json-test',
+      version: '1.0.0',
+      bin: './file.js',
+      funding: 'http://example.com',
+      dependencies: {
+        abbrev: '^1.0.0',
+      },
+    },
+    'should write new package.json with tree data'
+  )
+  const { mtime: newMtime } = statSync(path + '/package.json')
+  t.equal(newMtime.toISOString(), mtime.toISOString(), 'mtime not changed')
 })
 
 t.test('existing package.json with optionalDependencies', async t => {

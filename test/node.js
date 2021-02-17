@@ -2181,3 +2181,90 @@ t.test('globaTop set for children of global link root target', async t => {
   })
   t.equal(gtop.globalTop, true)
 })
+
+t.test('duplicated dependencies', t => {
+  // the specific logic here is justifiable at all steps, but gets weird
+  // in the "specified in all three" case, even though that's the logical
+  // outcome of the other rules.  at least we have a test showing what
+  // actually happens.
+
+  t.test('prefer peer over prod', async t => {
+    const n = new Node({
+      path: '/path/to/project',
+      pkg: {
+        dependencies: {
+          foo: '1.x',
+        },
+        peerDependencies: {
+          foo: '>=1',
+        },
+      },
+    })
+    t.match(n.edgesOut.get('foo'), { type: 'peer', spec: '>=1' })
+  })
+
+  t.test('prefer dev over peer', async t => {
+    const n = new Node({
+      path: '/path/to/project',
+      pkg: {
+        devDependencies: {
+          foo: '1.x',
+        },
+        peerDependencies: {
+          foo: '>=1',
+        },
+      },
+    })
+    t.match(n.edgesOut.get('foo'), { type: 'dev', spec: '1.x' })
+  })
+
+  t.test('prefer prod over dev', async t => {
+    const n = new Node({
+      path: '/path/to/project',
+      pkg: {
+        devDependencies: {
+          foo: '1.x',
+        },
+        dependencies: {
+          foo: '>=1',
+        },
+      },
+    })
+    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '>=1' })
+  })
+
+  t.test('prefer prod over dev', async t => {
+    const n = new Node({
+      path: '/path/to/project',
+      pkg: {
+        devDependencies: {
+          foo: '1.x',
+        },
+        dependencies: {
+          foo: '>=1',
+        },
+      },
+    })
+    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '>=1' })
+  })
+
+  t.test('if in all three, use prod', async t => {
+    const n = new Node({
+      path: '/path/to/project',
+      pkg: {
+        devDependencies: {
+          foo: '1.x',
+        },
+        dependencies: {
+          foo: '2',
+        },
+        peerDependencies: {
+          foo: '>=1',
+        },
+      },
+    })
+    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '2' })
+  })
+
+  t.end()
+})

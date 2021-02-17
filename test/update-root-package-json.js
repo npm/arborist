@@ -8,7 +8,7 @@ const updateRootPackageJson = require('../lib/update-root-package-json.js')
 t.test('missing package.json', async t => {
   const path = t.testdir({})
   await updateRootPackageJson({
-    path: path,
+    path,
     package: {
       name: 'missing-package-json-test',
       version: '1.0.0',
@@ -35,7 +35,7 @@ t.test('invalid package.json', async t => {
     'package.json': 'this! is! not! json!',
   })
   await updateRootPackageJson({
-    path: path,
+    path,
     package: {
       name: 'invalid-package-json-test',
       version: '1.0.0',
@@ -70,7 +70,7 @@ t.test('existing package.json', async t => {
     }),
   })
   await updateRootPackageJson({
-    path: path,
+    path,
     package: {
       name: 'missing-package-json-test',
       version: '1.0.0',
@@ -104,7 +104,7 @@ t.test('unchanged package.json', async t => {
   })
   const { mtime } = statSync(path + '/package.json')
   await updateRootPackageJson({
-    path: path,
+    path,
     package: {
       name: 'existing-package-json-test',
       version: '1.0.0',
@@ -143,7 +143,7 @@ t.test('existing package.json with optionalDependencies', async t => {
     }),
   })
   await updateRootPackageJson({
-    path: path,
+    path,
     package: {
       name: 'missing-package-json-optional-test',
       version: '1.0.0',
@@ -179,7 +179,7 @@ t.test('custom formatting', async t => {
     }),
   })
   await updateRootPackageJson({
-    path: path,
+    path,
     package: {
       name: 'custom-formatting-test',
       version: '1.0.0',
@@ -195,4 +195,72 @@ t.test('custom formatting', async t => {
     },
     'should write new package.json with tree data'
   )
+})
+
+t.test('preserve deps duplicated in peer and prod', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'duplicated-peer',
+      version: '1.0.0',
+      dependencies: {
+        foo: '1.2.3', // being weirdly tricky
+      },
+      peerDependencies: {
+        foo: '1.x',
+      },
+    }),
+  })
+  await updateRootPackageJson({
+    path,
+    package: {
+      name: 'duplicated-peer',
+      version: '1.0.0',
+      peerDependencies: {
+        foo: '2.x',
+      },
+    },
+  })
+  t.match(require(path + '/package.json'), {
+    name: 'duplicated-peer',
+    version: '1.0.0',
+    peerDependencies: {
+      foo: '2.x', // now they match.
+    },
+    dependencies: {
+      foo: '2.x',
+    },
+  }, 'peer/prod duplication preserved')
+})
+
+t.test('remove peer/prod dupes from both if removed from peer', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'duplicated-peer',
+      version: '1.0.0',
+      dependencies: {
+        foo: '1.2.3', // being weirdly tricky
+      },
+      peerDependencies: {
+        foo: '1.x',
+      },
+    }),
+  })
+  await updateRootPackageJson({
+    path,
+    package: {
+      name: 'duplicated-peer',
+      version: '1.0.0',
+      peerDependencies: {
+        bar: '1.x',
+      },
+    },
+  })
+  t.strictSame(require(path + '/package.json'), {
+    name: 'duplicated-peer',
+    version: '1.0.0',
+    // no dupe
+    peerDependencies: {
+      bar: '1.x',
+    },
+  }, 'peer/prod duplication preserved')
 })

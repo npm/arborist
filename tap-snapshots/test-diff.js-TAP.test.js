@@ -19,6 +19,7 @@ Diff {
     "integrity": "sha512-aaa",
   },
   "leaves": Array [
+    "/path/to/root/node_modules/b",
     "/path/to/root/node_modules/b/node_modules/c",
     "/path/to/root/node_modules/b/node_modules/d/node_modules/e",
     "/path/to/root/node_modules/x/node_modules/y",
@@ -26,6 +27,7 @@ Diff {
     "/path/to/root/node_modules/bundler/node_modules/not-bundled",
     "/path/to/root/node_modules/should-have-bins",
     "/path/to/root/foo/node_modules/baz",
+    "/path/to/root/node_modules/i",
     "/path/to/root/node_modules/i/node_modules/j",
     "/path/to/root/foo/node_modules/boo",
   ],
@@ -91,6 +93,7 @@ Diff {
         "integrity": "sha512-BBB",
       },
       "leaves": Array [
+        "/path/to/root/node_modules/b",
         "/path/to/root/node_modules/b/node_modules/c",
         "/path/to/root/node_modules/b/node_modules/d/node_modules/e",
       ],
@@ -168,6 +171,7 @@ Diff {
         "integrity": "sha512-III",
       },
       "leaves": Array [
+        "/path/to/root/node_modules/i",
         "/path/to/root/node_modules/i/node_modules/j",
       ],
       "unchanged": Array [],

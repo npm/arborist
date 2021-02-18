@@ -28686,7 +28686,7 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-no-lock > expect resolving Promise 1`] = `
+exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-no-lock > must match snapshot 1`] = `
 ArboristNode {
   "children": Map {
     "@isaacs/shrinkwrapped-dependency" => ArboristNode {
@@ -28730,7 +28730,7 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-no-lock-empty > expect resolving Promise 1`] = `
+exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-no-lock-empty > must match snapshot 1`] = `
 ArboristNode {
   "children": Map {
     "@isaacs/shrinkwrapped-dependency" => ArboristNode {
@@ -28790,7 +28790,7 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-with-lock > expect resolving Promise 1`] = `
+exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-with-lock > must match snapshot 1`] = `
 ArboristNode {
   "children": Map {
     "@isaacs/shrinkwrapped-dependency" => ArboristNode {
@@ -28850,7 +28850,7 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-with-lock-empty > expect resolving Promise 1`] = `
+exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-dep-with-lock-empty > must match snapshot 1`] = `
 ArboristNode {
   "children": Map {
     "@isaacs/shrinkwrapped-dependency" => ArboristNode {

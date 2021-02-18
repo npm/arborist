@@ -400,13 +400,20 @@ t.test('reifying with shronk warp dep', t => {
     'shrinkwrapped-dep-no-lock-empty',
   ]
   t.plan(cases.length)
-  cases.forEach(c => t.test(c, t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, c), {
-      // set update so that we don't start the idealTree
-      // with the actualTree, and can see that the deps
-      // are indeed getting set up from the shrink wrap
-      update: /no-lock/.test(c),
-    }))))
+  for (const c of cases) {
+    t.test(c, async t => {
+      const path = fixture(t, c)
+      const tree = await printReified(path, {
+        // set update so that we don't start the idealTree
+        // with the actualTree, and can see that the deps
+        // are indeed getting set up from the shrink wrap
+        update: /no-lock/.test(c),
+      })
+      t.matchSnapshot(tree)
+      const dep = `${path}/node_modules/@isaacs/shrinkwrapped-dependency`
+      t.equal(fs.statSync(`${dep}/package.json`).isFile(), true, 'has package.json')
+    })
+  }
 })
 
 t.test('link deps already in place', t =>

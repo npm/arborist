@@ -440,3 +440,67 @@ t.match(
   },
   'should return a minimal human-readable representation of the edge obj'
 )
+
+const bundleChild = {
+  name: 'bundle-child',
+  edgesOut: new Map(),
+  edgesIn: new Set(),
+  explain: () => 'bundleChild explanation',
+  package: { name: 'bundle-child', version: '1.2.3' },
+  get version () {
+    return this.package.version
+  },
+  isTop: false,
+  parent: top,
+  resolve (n) {
+    return this.parent.resolve(n)
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
+}
+
+const bundleParent = {
+  name: 'bundle-parent',
+  edgesOut: new Map(),
+  edgesIn: new Set(),
+  explain: () => 'bundleParent explanation',
+  package: { name: 'bundle-parent', version: '5.6.7', bundleDependencies: ['bundle-child'] },
+  get version () {
+    return this.package.version
+  },
+  isTop: false,
+  parent: top,
+  resolve (n) {
+    return n === 'bundle-child' ? bundleChild : undefined
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
+}
+
+const bundledEdge = new Edge({
+  from: bundleParent,
+  type: 'prod',
+  name: 'bundle-child',
+  spec: '1.2.3',
+})
+
+t.ok(bundledEdge.satisfiedBy(bundleChild), 'bundled dependency')
+const fromBundleDependencies = bundledEdge.from && bundledEdge.from.package.bundleDependencies
+t.deepEqual(fromBundleDependencies, ['bundle-child'], 'edge.from bundledDependencies as expected')
+t.deepEqual(bundledEdge.name, 'bundle-child', 'edge name as expected')
+t.equal(bundledEdge.bundled, true, 'bundled prop is true')
+t.deepEqual(bundledEdge.explain(), {
+  type: 'prod',
+  name: 'bundle-child',
+  spec: '1.2.3',
+  bundled: true,
+  from: bundleParent.explain(),
+}, 'bundled edge.explain as expected')

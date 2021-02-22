@@ -1601,7 +1601,7 @@ t.test('explain yourself', t => {
     name: 'x',
     version: '1.2.3',
     location: 'node_modules/x',
-    dependents: [{ name: 'x', type: 'prod', spec: '1', from: n.explain() }],
+    dependents: [{ name: 'x', type: 'prod', spec: '1', bundled: false, from: n.explain() }],
   })
 
   const virtual = new Node({
@@ -1634,6 +1634,7 @@ t.test('explain yourself', t => {
         type: 'prod',
         name: 'y',
         spec: '2',
+        bundled: false,
         from: n.explain(),
       },
     ],
@@ -1648,6 +1649,7 @@ t.test('explain yourself', t => {
         type: 'prod',
         name: 'z',
         spec: '3',
+        bundled: false,
         from: y.explain(),
       },
     ],
@@ -1662,6 +1664,7 @@ t.test('explain yourself', t => {
         type: 'prod',
         name: 'a',
         spec: '4',
+        bundled: false,
         from: z.explain(),
       },
     ],
@@ -1704,7 +1707,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
-    dependents: [{ type: 'prod', name: 'b', spec: '1.2.3', error: 'INVALID', from: n.explain() }],
+    dependents: [{ type: 'prod', name: 'b', spec: '1.2.3', error: 'INVALID', bundled: false, from: n.explain() }],
   })
 
   // explain with a given edge
@@ -1731,6 +1734,7 @@ t.test('explain yourself', t => {
         type: 'prod',
         name: 'b',
         spec: '9',
+        bundled: false,
         from: { location: '/virtual-root' },
       },
     ],
@@ -1756,6 +1760,7 @@ t.test('explain yourself', t => {
         type: 'prod',
         name: 'b',
         spec: '1',
+        bundled: false,
         from: {
           name: 'a',
           version: '1.1.1',
@@ -1765,6 +1770,7 @@ t.test('explain yourself', t => {
               type: 'prod',
               name: 'a',
               spec: '1',
+              bundled: false,
               from: {
                 name: 'b',
                 version: '1.1.1',
@@ -1775,6 +1781,7 @@ t.test('explain yourself', t => {
               type: 'prod',
               name: 'a',
               spec: '1',
+              bundled: false,
               from: {
                 name: 'c',
                 version: '1.1.1',
@@ -1784,6 +1791,7 @@ t.test('explain yourself', t => {
                     type: 'prod',
                     name: 'c',
                     spec: '1',
+                    bundled: false,
                     from: {
                       location: '/cy/cle',
                     },
@@ -1832,6 +1840,7 @@ t.test('explain yourself', t => {
           type: 'prod',
           name: 'd',
           spec: '1',
+          bundled: false,
           from: {
             name: 'c',
             version: '1.2.3',
@@ -1846,6 +1855,7 @@ t.test('explain yourself', t => {
                 type: 'prod',
                 name: 'c',
                 spec: '1',
+                bundled: false,
                 from: {
                   name: 'b',
                   version: '1.2.3',
@@ -1855,6 +1865,7 @@ t.test('explain yourself', t => {
                       type: 'prod',
                       name: 'b',
                       spec: '1',
+                      bundled: false,
                       from: {
                         name: 'a',
                         version: '1.2.3',
@@ -1864,6 +1875,7 @@ t.test('explain yourself', t => {
                             type: 'prod',
                             name: 'a',
                             spec: '1',
+                            bundled: false,
                             from: {
                               location: '/project',
                             },

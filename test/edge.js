@@ -45,6 +45,9 @@ const top = {
   },
   isTop: true,
   parent: null,
+  getBundler () {
+    return null
+  },
   resolve (n) {
     return n === 'a' ? a : n === 'b' ? b : null
   },
@@ -66,6 +69,9 @@ const a = {
   },
   isTop: false,
   parent: top,
+  getBundler () {
+    return null
+  },
   resolve (n) {
     return n === 'aa' ? aa : this.parent.resolve(n)
   },
@@ -87,6 +93,9 @@ const b = {
   },
   isTop: false,
   parent: top,
+  getBundler () {
+    return null
+  },
   resolve (n) {
     return n === 'aa' ? aa : this.parent.resolve(n)
   },
@@ -108,6 +117,9 @@ const bb = {
   },
   isTop: false,
   parent: b,
+  getBundler () {
+    return null
+  },
   resolve (n) {
     return this.parent.resolve(n)
   },
@@ -129,6 +141,9 @@ const aa = {
   },
   isTop: false,
   parent: a,
+  getBundler () {
+    return null
+  },
   resolve (n) {
     return this.parent.resolve(n)
   },
@@ -150,6 +165,9 @@ const c = {
   },
   isTop: false,
   parent: top,
+  getBundler () {
+    return null
+  },
   resolve (n) {
     return this.parent.resolve(n)
   },

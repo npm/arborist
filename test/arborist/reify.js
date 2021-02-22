@@ -1432,3 +1432,21 @@ t.test('warn and correct if damaged data in lockfile', async t => {
     t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'), 'actually fixed lockfile')
   })
 })
+
+t.test('properly update one module when multiple are present', async t => {
+  const path = t.testdir({})
+  const abbrevpj = resolve(path, 'node_modules/abbrev/package.json')
+  const oncepj = resolve(path, 'node_modules/once/package.json')
+
+  await newArb({ path, global: true }).reify({ add: ['abbrev@1.0.4'] })
+  t.equal(JSON.parse(fs.readFileSync(abbrevpj, 'utf8')).version, '1.0.4')
+  t.throws(() => fs.readFileSync(oncepj, 'utf8'), 'once should not be yet')
+
+  await newArb({ path, global: true }).reify({ add: ['once'] })
+  t.equal(JSON.parse(fs.readFileSync(abbrevpj, 'utf8')).version, '1.0.4')
+  t.equal(JSON.parse(fs.readFileSync(oncepj, 'utf8')).version, '1.4.0')
+
+  await newArb({ path, global: true }).reify({ update: ['abbrev'] })
+  t.equal(JSON.parse(fs.readFileSync(abbrevpj, 'utf8')).version, '1.1.1')
+  t.equal(JSON.parse(fs.readFileSync(oncepj, 'utf8')).version, '1.4.0')
+})

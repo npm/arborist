@@ -779,7 +779,7 @@ t.test('a yarn.lock entry with integrity mismatch', async t => {
 mkdirp@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.2.tgz#5ccd93437619ca7050b538573fc918327eba98fb"
-  integrity "um, nope, not even close buddy"
+  integrity "sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA=="
 `,
     'package.json': JSON.stringify({
       name: 'root',
@@ -793,7 +793,7 @@ mkdirp@^1.0.2:
           version: '1.0.2',
           _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.2.tgz',
           // integrity mismatch
-          _integrity: 'sha512-N2REVrJ/X/jGPfit2d7zea2J1pf7EAR5chIUcfHffAZ7gmlam5U65sAm76+o4ntQbSRdTjYf7qZz3chuHlwXEA==',
+          _integrity: 'um, nope, not even close buddy',
         }),
       },
     },
@@ -1281,7 +1281,7 @@ t.test('metadata that only has one of resolved/integrity', t => {
 t.test('load an ancient lockfile', async t =>
   t.match(await Shrinkwrap.load({ path: saxFixture }), { ancientLockfile: true }))
 
-t.only('shrinkwrap where root is a link node', async t => {
+t.test('shrinkwrap where root is a link node', async t => {
   const meta = await Shrinkwrap.reset({ path: '/actual/project/path' })
   const root = new Link({
     path: '/some/link/path',

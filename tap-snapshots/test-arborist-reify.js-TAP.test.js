@@ -1378,7 +1378,6 @@ ArboristNode {
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
           "name": "@isaacs/testing-bundledeps-a",
           "path": "{CWD}/test/arborist/reify-dry-run-do-not-get-anything-wet-testing-bundledeps-empty/node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
           "version": "1.0.0",
         },
         "@isaacs/testing-bundledeps-b" => ArboristNode {
@@ -1394,7 +1393,6 @@ ArboristNode {
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
           "name": "@isaacs/testing-bundledeps-b",
           "path": "{CWD}/test/arborist/reify-dry-run-do-not-get-anything-wet-testing-bundledeps-empty/node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
           "version": "1.0.0",
         },
       },
@@ -2563,7 +2561,6 @@ ArboristNode {
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
           "name": "@isaacs/testing-bundledeps-a",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-a/-/testing-bundledeps-a-1.0.0.tgz",
           "version": "1.0.0",
         },
         "@isaacs/testing-bundledeps-b" => ArboristNode {
@@ -2579,7 +2576,6 @@ ArboristNode {
           "location": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
           "name": "@isaacs/testing-bundledeps-b",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-b",
-          "resolved": "https://registry.npmjs.org/@isaacs/testing-bundledeps-b/-/testing-bundledeps-b-1.0.0.tgz",
           "version": "1.0.0",
         },
       },
@@ -8617,7 +8613,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/code-frame",
           "name": "@babel/code-frame",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/code-frame",
-          "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.5.5.tgz",
           "version": "7.5.5",
         },
         "@babel/core" => ArboristNode {
@@ -8637,7 +8632,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/core/node_modules/source-map",
               "name": "source-map",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/core/node_modules/source-map",
-              "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz",
               "version": "0.5.7",
             },
           },
@@ -8769,7 +8763,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/core",
           "name": "@babel/core",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/core",
-          "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.5.tgz",
           "version": "7.7.5",
         },
         "@babel/generator" => ArboristNode {
@@ -8789,7 +8782,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/generator/node_modules/source-map",
               "name": "source-map",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/generator/node_modules/source-map",
-              "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz",
               "version": "0.5.7",
             },
           },
@@ -8837,7 +8829,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/generator",
           "name": "@babel/generator",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/generator",
-          "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-builder-react-jsx" => ArboristNode {
@@ -8868,7 +8859,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
           "name": "@babel/helper-builder-react-jsx",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
-          "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-function-name" => ArboristNode {
@@ -8905,7 +8895,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-function-name",
           "name": "@babel/helper-function-name",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/helper-function-name",
-          "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-get-function-arity" => ArboristNode {
@@ -8930,7 +8919,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-get-function-arity",
           "name": "@babel/helper-get-function-arity",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/helper-get-function-arity",
-          "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-plugin-utils" => ArboristNode {
@@ -8971,7 +8959,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-plugin-utils",
           "name": "@babel/helper-plugin-utils",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/helper-plugin-utils",
-          "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz",
           "version": "7.0.0",
         },
         "@babel/helper-split-export-declaration" => ArboristNode {
@@ -8996,7 +8983,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-split-export-declaration",
           "name": "@babel/helper-split-export-declaration",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/helper-split-export-declaration",
-          "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helpers" => ArboristNode {
@@ -9033,7 +9019,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helpers",
           "name": "@babel/helpers",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/helpers",
-          "resolved": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/highlight" => ArboristNode {
@@ -9073,7 +9058,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
               "name": "chalk",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
-              "resolved": "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz",
               "version": "2.4.2",
             },
             "supports-color" => ArboristNode {
@@ -9098,7 +9082,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
               "name": "supports-color",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
-              "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz",
               "version": "5.5.0",
             },
           },
@@ -9134,7 +9117,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/highlight",
           "name": "@babel/highlight",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/highlight",
-          "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.5.0.tgz",
           "version": "7.5.0",
         },
         "@babel/parser" => ArboristNode {
@@ -9163,7 +9145,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/parser",
           "name": "@babel/parser",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/parser",
-          "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.5.tgz",
           "version": "7.7.5",
         },
         "@babel/plugin-proposal-object-rest-spread" => ArboristNode {
@@ -9200,7 +9181,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/plugin-proposal-object-rest-spread",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-syntax-jsx" => ArboristNode {
@@ -9231,7 +9211,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-jsx",
           "name": "@babel/plugin-syntax-jsx",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/plugin-syntax-jsx",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-syntax-object-rest-spread" => ArboristNode {
@@ -9262,7 +9241,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-object-rest-spread",
           "name": "@babel/plugin-syntax-object-rest-spread",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/plugin-syntax-object-rest-spread",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-transform-destructuring" => ArboristNode {
@@ -9293,7 +9271,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-destructuring",
           "name": "@babel/plugin-transform-destructuring",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/plugin-transform-destructuring",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-transform-react-jsx" => ArboristNode {
@@ -9336,7 +9313,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/plugin-transform-react-jsx",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/runtime" => ArboristNode {
@@ -9361,7 +9337,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/runtime",
           "name": "@babel/runtime",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/runtime",
-          "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.6.tgz",
           "version": "7.7.6",
         },
         "@babel/template" => ArboristNode {
@@ -9410,7 +9385,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/template",
           "name": "@babel/template",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/template",
-          "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/traverse" => ArboristNode {
@@ -9489,7 +9463,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/traverse",
           "name": "@babel/traverse",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/traverse",
-          "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/types" => ArboristNode {
@@ -9574,7 +9547,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/types",
           "name": "@babel/types",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@babel/types",
-          "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@types/color-name" => ArboristNode {
@@ -9603,7 +9575,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@types/color-name",
           "name": "@types/color-name",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@types/color-name",
-          "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
           "version": "1.1.1",
         },
         "@types/prop-types" => ArboristNode {
@@ -9620,7 +9591,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@types/prop-types",
           "name": "@types/prop-types",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@types/prop-types",
-          "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
           "version": "15.7.3",
         },
         "@types/react" => ArboristNode {
@@ -9663,7 +9633,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@types/react",
           "name": "@types/react",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/@types/react",
-          "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.16.tgz",
           "version": "16.9.16",
         },
         "ansi-escapes" => ArboristNode {
@@ -9688,7 +9657,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansi-escapes",
           "name": "ansi-escapes",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ansi-escapes",
-          "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.0.tgz",
           "version": "4.3.0",
         },
         "ansi-regex" => ArboristNode {
@@ -9705,7 +9673,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansi-regex",
           "name": "ansi-regex",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ansi-regex",
-          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
           "version": "5.0.0",
         },
         "ansi-styles" => ArboristNode {
@@ -9736,7 +9703,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansi-styles",
           "name": "ansi-styles",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ansi-styles",
-          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
           "version": "3.2.1",
         },
         "ansicolors" => ArboristNode {
@@ -9753,7 +9719,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansicolors",
           "name": "ansicolors",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ansicolors",
-          "resolved": "https://registry.npmjs.org/ansicolors/-/ansicolors-0.3.2.tgz",
           "version": "0.3.2",
         },
         "arrify" => ArboristNode {
@@ -9770,7 +9735,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/arrify",
           "name": "arrify",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/arrify",
-          "resolved": "https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz",
           "version": "2.0.1",
         },
         "astral-regex" => ArboristNode {
@@ -9787,7 +9751,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/astral-regex",
           "name": "astral-regex",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/astral-regex",
-          "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz",
           "version": "2.0.0",
         },
         "auto-bind" => ArboristNode {
@@ -9812,7 +9775,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/auto-bind",
           "name": "auto-bind",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/auto-bind",
-          "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-3.0.0.tgz",
           "version": "3.0.0",
         },
         "caller-callsite" => ArboristNode {
@@ -9837,7 +9799,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/caller-callsite",
           "name": "caller-callsite",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/caller-callsite",
-          "resolved": "https://registry.npmjs.org/caller-callsite/-/caller-callsite-2.0.0.tgz",
           "version": "2.0.0",
         },
         "caller-path" => ArboristNode {
@@ -9862,7 +9823,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/caller-path",
           "name": "caller-path",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/caller-path",
-          "resolved": "https://registry.npmjs.org/caller-path/-/caller-path-2.0.0.tgz",
           "version": "2.0.0",
         },
         "callsites" => ArboristNode {
@@ -9879,7 +9839,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/callsites",
           "name": "callsites",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/callsites",
-          "resolved": "https://registry.npmjs.org/callsites/-/callsites-2.0.0.tgz",
           "version": "2.0.0",
         },
         "cardinal" => ArboristNode {
@@ -9910,7 +9869,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/cardinal",
           "name": "cardinal",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/cardinal",
-          "resolved": "https://registry.npmjs.org/cardinal/-/cardinal-2.1.1.tgz",
           "version": "2.1.1",
         },
         "chalk" => ArboristNode {
@@ -9944,7 +9902,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
               "version": "4.2.0",
             },
             "color-convert" => ArboristNode {
@@ -9969,7 +9926,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-convert",
               "name": "color-convert",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/chalk/node_modules/color-convert",
-              "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
               "version": "2.0.1",
             },
             "color-name" => ArboristNode {
@@ -9986,7 +9942,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-name",
               "name": "color-name",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/chalk/node_modules/color-name",
-              "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
               "version": "1.1.4",
             },
           },
@@ -10022,7 +9977,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/chalk",
           "name": "chalk",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/chalk",
-          "resolved": "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz",
           "version": "3.0.0",
         },
         "ci-info" => ArboristNode {
@@ -10039,7 +9993,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ci-info",
           "name": "ci-info",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ci-info",
-          "resolved": "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz",
           "version": "2.0.0",
         },
         "cli-cursor" => ArboristNode {
@@ -10064,7 +10017,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/cli-cursor",
           "name": "cli-cursor",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/cli-cursor",
-          "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz",
           "version": "3.1.0",
         },
         "cli-truncate" => ArboristNode {
@@ -10095,7 +10047,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/cli-truncate",
           "name": "cli-truncate",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/cli-truncate",
-          "resolved": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz",
           "version": "2.1.0",
         },
         "color-convert" => ArboristNode {
@@ -10120,7 +10071,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/color-convert",
           "name": "color-convert",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/color-convert",
-          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
           "version": "1.9.3",
         },
         "color-name" => ArboristNode {
@@ -10137,7 +10087,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/color-name",
           "name": "color-name",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/color-name",
-          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
           "version": "1.1.3",
         },
         "convert-source-map" => ArboristNode {
@@ -10157,7 +10106,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/convert-source-map/node_modules/safe-buffer",
               "name": "safe-buffer",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/convert-source-map/node_modules/safe-buffer",
-              "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
               "version": "5.1.2",
             },
           },
@@ -10181,7 +10129,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/convert-source-map",
           "name": "convert-source-map",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/convert-source-map",
-          "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.7.0.tgz",
           "version": "1.7.0",
         },
         "csstype" => ArboristNode {
@@ -10198,7 +10145,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/csstype",
           "name": "csstype",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/csstype",
-          "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
           "version": "2.6.8",
         },
         "debug" => ArboristNode {
@@ -10229,7 +10175,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/debug",
           "name": "debug",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/debug",
-          "resolved": "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz",
           "version": "4.1.1",
         },
         "emoji-regex" => ArboristNode {
@@ -10246,7 +10191,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/emoji-regex",
           "name": "emoji-regex",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/emoji-regex",
-          "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
           "version": "8.0.0",
         },
         "escape-string-regexp" => ArboristNode {
@@ -10263,7 +10207,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/escape-string-regexp",
           "name": "escape-string-regexp",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/escape-string-regexp",
-          "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
           "version": "1.0.5",
         },
         "esprima" => ArboristNode {
@@ -10280,7 +10223,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/esprima",
           "name": "esprima",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/esprima",
-          "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
           "version": "4.0.1",
         },
         "esutils" => ArboristNode {
@@ -10309,7 +10251,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/esutils",
           "name": "esutils",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/esutils",
-          "resolved": "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz",
           "version": "2.0.3",
         },
         "events-to-array" => ArboristNode {
@@ -10326,7 +10267,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/events-to-array",
           "name": "events-to-array",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/events-to-array",
-          "resolved": "https://registry.npmjs.org/events-to-array/-/events-to-array-1.1.2.tgz",
           "version": "1.1.2",
         },
         "globals" => ArboristNode {
@@ -10343,7 +10283,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/globals",
           "name": "globals",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/globals",
-          "resolved": "https://registry.npmjs.org/globals/-/globals-11.12.0.tgz",
           "version": "11.12.0",
         },
         "has-flag" => ArboristNode {
@@ -10360,7 +10299,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/has-flag",
           "name": "has-flag",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/has-flag",
-          "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz",
           "version": "3.0.0",
         },
         "import-jsx" => ArboristNode {
@@ -10421,7 +10359,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/import-jsx",
           "name": "import-jsx",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/import-jsx",
-          "resolved": "https://registry.npmjs.org/import-jsx/-/import-jsx-3.0.0.tgz",
           "version": "3.0.0",
         },
         "ink" => ArboristNode {
@@ -10566,7 +10503,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ink",
           "name": "ink",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ink",
-          "resolved": "https://registry.npmjs.org/ink/-/ink-2.6.0.tgz",
           "version": "2.6.0",
         },
         "is-ci" => ArboristNode {
@@ -10591,7 +10527,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/is-ci",
           "name": "is-ci",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/is-ci",
-          "resolved": "https://registry.npmjs.org/is-ci/-/is-ci-2.0.0.tgz",
           "version": "2.0.0",
         },
         "is-fullwidth-code-point" => ArboristNode {
@@ -10614,7 +10549,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/is-fullwidth-code-point",
-          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
           "version": "3.0.0",
         },
         "js-tokens" => ArboristNode {
@@ -10637,7 +10571,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/js-tokens",
           "name": "js-tokens",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/js-tokens",
-          "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
           "version": "4.0.0",
         },
         "jsesc" => ArboristNode {
@@ -10654,7 +10587,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/jsesc",
           "name": "jsesc",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/jsesc",
-          "resolved": "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz",
           "version": "2.5.2",
         },
         "json5" => ArboristNode {
@@ -10679,7 +10611,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/json5",
           "name": "json5",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/json5",
-          "resolved": "https://registry.npmjs.org/json5/-/json5-2.1.1.tgz",
           "version": "2.1.1",
         },
         "lodash" => ArboristNode {
@@ -10714,7 +10645,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/lodash",
           "name": "lodash",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/lodash",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
           "version": "4.17.15",
         },
         "lodash.throttle" => ArboristNode {
@@ -10731,7 +10661,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/lodash.throttle",
           "name": "lodash.throttle",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/lodash.throttle",
-          "resolved": "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz",
           "version": "4.1.1",
         },
         "log-update" => ArboristNode {
@@ -10751,7 +10680,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-escapes",
               "name": "ansi-escapes",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/ansi-escapes",
-              "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-3.2.0.tgz",
               "version": "3.2.0",
             },
             "ansi-regex" => ArboristNode {
@@ -10768,7 +10696,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
               "version": "4.1.0",
             },
             "cli-cursor" => ArboristNode {
@@ -10793,7 +10720,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
               "name": "cli-cursor",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
-              "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-2.1.0.tgz",
               "version": "2.1.0",
             },
             "emoji-regex" => ArboristNode {
@@ -10810,7 +10736,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/emoji-regex",
               "name": "emoji-regex",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/emoji-regex",
-              "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
               "version": "7.0.3",
             },
             "is-fullwidth-code-point" => ArboristNode {
@@ -10827,7 +10752,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/is-fullwidth-code-point",
               "name": "is-fullwidth-code-point",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/is-fullwidth-code-point",
-              "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
               "version": "2.0.0",
             },
             "mimic-fn" => ArboristNode {
@@ -10844,7 +10768,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/mimic-fn",
               "name": "mimic-fn",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/mimic-fn",
-              "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.2.0.tgz",
               "version": "1.2.0",
             },
             "onetime" => ArboristNode {
@@ -10869,7 +10792,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/onetime",
               "name": "onetime",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/onetime",
-              "resolved": "https://registry.npmjs.org/onetime/-/onetime-2.0.1.tgz",
               "version": "2.0.1",
             },
             "restore-cursor" => ArboristNode {
@@ -10900,7 +10822,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
               "name": "restore-cursor",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
-              "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz",
               "version": "2.0.0",
             },
             "string-width" => ArboristNode {
@@ -10937,7 +10858,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/string-width",
               "name": "string-width",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/string-width",
-              "resolved": "https://registry.npmjs.org/string-width/-/string-width-3.1.0.tgz",
               "version": "3.1.0",
             },
             "strip-ansi" => ArboristNode {
@@ -10968,7 +10888,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
               "version": "5.2.0",
             },
             "wrap-ansi" => ArboristNode {
@@ -11005,7 +10924,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
               "name": "wrap-ansi",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
-              "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-5.1.0.tgz",
               "version": "5.1.0",
             },
           },
@@ -11041,7 +10959,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/log-update",
           "name": "log-update",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/log-update",
-          "resolved": "https://registry.npmjs.org/log-update/-/log-update-3.3.0.tgz",
           "version": "3.3.0",
         },
         "loose-envify" => ArboristNode {
@@ -11078,7 +10995,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/loose-envify",
           "name": "loose-envify",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/loose-envify",
-          "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
           "version": "1.4.0",
         },
         "mimic-fn" => ArboristNode {
@@ -11095,7 +11011,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/mimic-fn",
           "name": "mimic-fn",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/mimic-fn",
-          "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz",
           "version": "2.1.0",
         },
         "minimist" => ArboristNode {
@@ -11112,7 +11027,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/minimist",
           "name": "minimist",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
           "version": "1.2.0",
         },
         "minipass" => ArboristNode {
@@ -11132,7 +11046,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/minipass/node_modules/yallist",
               "name": "yallist",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/minipass/node_modules/yallist",
-              "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
               "version": "4.0.0",
             },
           },
@@ -11162,7 +11075,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/minipass",
           "name": "minipass",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/minipass",
-          "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.1.1.tgz",
           "version": "3.1.1",
         },
         "ms" => ArboristNode {
@@ -11185,7 +11097,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ms",
           "name": "ms",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/ms",
-          "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
           "version": "2.1.2",
         },
         "object-assign" => ArboristNode {
@@ -11214,7 +11125,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/object-assign",
           "name": "object-assign",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/object-assign",
-          "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
           "version": "4.1.1",
         },
         "onetime" => ArboristNode {
@@ -11239,7 +11149,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/onetime",
           "name": "onetime",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/onetime",
-          "resolved": "https://registry.npmjs.org/onetime/-/onetime-5.1.0.tgz",
           "version": "5.1.0",
         },
         "path-parse" => ArboristNode {
@@ -11256,7 +11165,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/path-parse",
           "name": "path-parse",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/path-parse",
-          "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz",
           "version": "1.0.6",
         },
         "prop-types" => ArboristNode {
@@ -11299,7 +11207,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/prop-types",
           "name": "prop-types",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/prop-types",
-          "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",
           "version": "15.7.2",
         },
         "punycode" => ArboristNode {
@@ -11316,7 +11223,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/punycode",
           "name": "punycode",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/punycode",
-          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
           "version": "2.1.1",
         },
         "react-is" => ArboristNode {
@@ -11333,7 +11239,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/react-is",
           "name": "react-is",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/react-is",
-          "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.12.0.tgz",
           "version": "16.12.0",
         },
         "react-reconciler" => ArboristNode {
@@ -11382,7 +11287,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/react-reconciler",
           "name": "react-reconciler",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/react-reconciler",
-          "resolved": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.24.0.tgz",
           "version": "0.24.0",
         },
         "redeyed" => ArboristNode {
@@ -11407,7 +11311,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/redeyed",
           "name": "redeyed",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/redeyed",
-          "resolved": "https://registry.npmjs.org/redeyed/-/redeyed-2.1.1.tgz",
           "version": "2.1.1",
         },
         "regenerator-runtime" => ArboristNode {
@@ -11424,7 +11327,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/regenerator-runtime",
           "name": "regenerator-runtime",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/regenerator-runtime",
-          "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz",
           "version": "0.13.3",
         },
         "resolve" => ArboristNode {
@@ -11449,7 +11351,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/resolve",
           "name": "resolve",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/resolve",
-          "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.13.1.tgz",
           "version": "1.13.1",
         },
         "resolve-from" => ArboristNode {
@@ -11466,7 +11367,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/resolve-from",
           "name": "resolve-from",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/resolve-from",
-          "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-3.0.0.tgz",
           "version": "3.0.0",
         },
         "restore-cursor" => ArboristNode {
@@ -11497,7 +11397,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/restore-cursor",
           "name": "restore-cursor",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/restore-cursor",
-          "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-3.1.0.tgz",
           "version": "3.1.0",
         },
         "scheduler" => ArboristNode {
@@ -11534,7 +11433,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/scheduler",
           "name": "scheduler",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/scheduler",
-          "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.18.0.tgz",
           "version": "0.18.0",
         },
         "semver" => ArboristNode {
@@ -11551,7 +11449,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/semver",
           "name": "semver",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/semver",
-          "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",
           "version": "5.7.1",
         },
         "signal-exit" => ArboristNode {
@@ -11586,7 +11483,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/signal-exit",
           "name": "signal-exit",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/signal-exit",
-          "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz",
           "version": "3.0.2",
         },
         "slice-ansi" => ArboristNode {
@@ -11620,7 +11516,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
               "version": "4.2.0",
             },
             "color-convert" => ArboristNode {
@@ -11645,7 +11540,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
               "name": "color-convert",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
-              "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
               "version": "2.0.1",
             },
             "color-name" => ArboristNode {
@@ -11662,7 +11556,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-name",
               "name": "color-name",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/slice-ansi/node_modules/color-name",
-              "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
               "version": "1.1.4",
             },
           },
@@ -11704,7 +11597,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/slice-ansi",
           "name": "slice-ansi",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/slice-ansi",
-          "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-3.0.0.tgz",
           "version": "3.0.0",
         },
         "string-length" => ArboristNode {
@@ -11724,7 +11616,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/string-length/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/string-length/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
               "version": "4.1.0",
             },
             "astral-regex" => ArboristNode {
@@ -11741,7 +11632,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/string-length/node_modules/astral-regex",
               "name": "astral-regex",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/string-length/node_modules/astral-regex",
-              "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz",
               "version": "1.0.0",
             },
             "strip-ansi" => ArboristNode {
@@ -11766,7 +11656,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
               "version": "5.2.0",
             },
           },
@@ -11802,7 +11691,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/string-length",
           "name": "string-length",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/string-length",
-          "resolved": "https://registry.npmjs.org/string-length/-/string-length-3.1.0.tgz",
           "version": "3.1.0",
         },
         "string-width" => ArboristNode {
@@ -11851,7 +11739,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/string-width",
           "name": "string-width",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/string-width",
-          "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.0.tgz",
           "version": "4.2.0",
         },
         "strip-ansi" => ArboristNode {
@@ -11882,7 +11769,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/strip-ansi",
           "name": "strip-ansi",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/strip-ansi",
-          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
           "version": "6.0.0",
         },
         "supports-color" => ArboristNode {
@@ -11902,7 +11788,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/supports-color/node_modules/has-flag",
               "name": "has-flag",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/supports-color/node_modules/has-flag",
-              "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
               "version": "4.0.0",
             },
           },
@@ -11926,7 +11811,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/supports-color",
           "name": "supports-color",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/supports-color",
-          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.1.0.tgz",
           "version": "7.1.0",
         },
         "tap-parser" => ArboristNode {
@@ -11969,7 +11853,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/tap-parser",
           "name": "tap-parser",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/tap-parser",
-          "resolved": "https://registry.npmjs.org/tap-parser/-/tap-parser-10.0.1.tgz",
           "version": "10.0.1",
         },
         "tap-yaml" => ArboristNode {
@@ -12000,7 +11883,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/tap-yaml",
           "name": "tap-yaml",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/tap-yaml",
-          "resolved": "https://registry.npmjs.org/tap-yaml/-/tap-yaml-1.0.0.tgz",
           "version": "1.0.0",
         },
         "to-fast-properties" => ArboristNode {
@@ -12017,7 +11899,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/to-fast-properties",
           "name": "to-fast-properties",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/to-fast-properties",
-          "resolved": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz",
           "version": "2.0.0",
         },
         "treport" => ArboristNode {
@@ -12037,7 +11918,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/treport/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/treport/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
               "version": "2.1.1",
             },
             "strip-ansi" => ArboristNode {
@@ -12062,7 +11942,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/treport/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/treport/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
               "version": "3.0.1",
             },
             "unicode-length" => ArboristNode {
@@ -12093,7 +11972,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
               "name": "unicode-length",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/treport/node_modules/unicode-length",
-              "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-2.0.2.tgz",
               "version": "2.0.2",
             },
           },
@@ -12165,7 +12043,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/treport",
           "name": "treport",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/treport",
-          "resolved": "https://registry.npmjs.org/treport/-/treport-1.0.1.tgz",
           "version": "1.0.1",
         },
         "type-fest" => ArboristNode {
@@ -12182,7 +12059,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/type-fest",
           "name": "type-fest",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/type-fest",
-          "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz",
           "version": "0.8.1",
         },
         "widest-line" => ArboristNode {
@@ -12207,7 +12083,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/widest-line",
           "name": "widest-line",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/widest-line",
-          "resolved": "https://registry.npmjs.org/widest-line/-/widest-line-3.1.0.tgz",
           "version": "3.1.0",
         },
         "wrap-ansi" => ArboristNode {
@@ -12241,7 +12116,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
               "version": "4.2.0",
             },
             "color-convert" => ArboristNode {
@@ -12266,7 +12140,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
               "name": "color-convert",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
-              "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
               "version": "2.0.1",
             },
             "color-name" => ArboristNode {
@@ -12283,7 +12156,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-name",
               "name": "color-name",
               "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/wrap-ansi/node_modules/color-name",
-              "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
               "version": "1.1.4",
             },
           },
@@ -12319,7 +12191,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/wrap-ansi",
           "name": "wrap-ansi",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/wrap-ansi",
-          "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz",
           "version": "6.2.0",
         },
         "yaml" => ArboristNode {
@@ -12350,7 +12221,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/yaml",
           "name": "yaml",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/yaml",
-          "resolved": "https://registry.npmjs.org/yaml/-/yaml-1.7.2.tgz",
           "version": "1.7.2",
         },
         "yoga-layout-prebuilt" => ArboristNode {
@@ -12367,7 +12237,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/yoga-layout-prebuilt",
           "name": "yoga-layout-prebuilt",
           "path": "{CWD}/test/arborist/reify-multiple-bundles-at-the-same-level/node_modules/tap/node_modules/yoga-layout-prebuilt",
-          "resolved": "https://registry.npmjs.org/yoga-layout-prebuilt/-/yoga-layout-prebuilt-1.9.3.tgz",
           "version": "1.9.3",
         },
       },
@@ -21778,7 +21647,6 @@ ArboristNode {
               "name": "align-text",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/align-text",
-              "resolved": "https://registry.npmjs.org/align-text/-/align-text-0.1.4.tgz",
               "version": "0.1.4",
             },
             "amdefine" => ArboristNode {
@@ -21795,7 +21663,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/amdefine",
               "name": "amdefine",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/amdefine",
-              "resolved": "https://registry.npmjs.org/amdefine/-/amdefine-1.0.1.tgz",
               "version": "1.0.1",
             },
             "ansi-regex" => ArboristNode {
@@ -21818,7 +21685,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
               "version": "2.1.1",
             },
             "ansi-styles" => ArboristNode {
@@ -21835,7 +21701,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz",
               "version": "2.2.1",
             },
             "append-transform" => ArboristNode {
@@ -21860,7 +21725,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/append-transform",
               "name": "append-transform",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/append-transform",
-              "resolved": "https://registry.npmjs.org/append-transform/-/append-transform-0.4.0.tgz",
               "version": "0.4.0",
             },
             "archy" => ArboristNode {
@@ -21877,7 +21741,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/archy",
               "name": "archy",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/archy",
-              "resolved": "https://registry.npmjs.org/archy/-/archy-1.0.0.tgz",
               "version": "1.0.0",
             },
             "arr-diff" => ArboristNode {
@@ -21902,7 +21765,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/arr-diff",
               "name": "arr-diff",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/arr-diff",
-              "resolved": "https://registry.npmjs.org/arr-diff/-/arr-diff-2.0.0.tgz",
               "version": "2.0.0",
             },
             "arr-flatten" => ArboristNode {
@@ -21919,7 +21781,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/arr-flatten",
               "name": "arr-flatten",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/arr-flatten",
-              "resolved": "https://registry.npmjs.org/arr-flatten/-/arr-flatten-1.0.3.tgz",
               "version": "1.0.3",
             },
             "array-unique" => ArboristNode {
@@ -21936,7 +21797,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/array-unique",
               "name": "array-unique",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/array-unique",
-              "resolved": "https://registry.npmjs.org/array-unique/-/array-unique-0.2.1.tgz",
               "version": "0.2.1",
             },
             "arrify" => ArboristNode {
@@ -21959,7 +21819,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/arrify",
               "name": "arrify",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/arrify",
-              "resolved": "https://registry.npmjs.org/arrify/-/arrify-1.0.1.tgz",
               "version": "1.0.1",
             },
             "async" => ArboristNode {
@@ -21976,7 +21835,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/async",
               "name": "async",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/async",
-              "resolved": "https://registry.npmjs.org/async/-/async-1.5.2.tgz",
               "version": "1.5.2",
             },
             "babel-code-frame" => ArboristNode {
@@ -22013,7 +21871,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-code-frame",
               "name": "babel-code-frame",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-code-frame",
-              "resolved": "https://registry.npmjs.org/babel-code-frame/-/babel-code-frame-6.22.0.tgz",
               "version": "6.22.0",
             },
             "babel-generator" => ArboristNode {
@@ -22080,7 +21937,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-generator",
               "name": "babel-generator",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-generator",
-              "resolved": "https://registry.npmjs.org/babel-generator/-/babel-generator-6.24.1.tgz",
               "version": "6.24.1",
             },
             "babel-messages" => ArboristNode {
@@ -22111,7 +21967,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-messages",
               "name": "babel-messages",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-messages",
-              "resolved": "https://registry.npmjs.org/babel-messages/-/babel-messages-6.23.0.tgz",
               "version": "6.23.0",
             },
             "babel-runtime" => ArboristNode {
@@ -22166,7 +22021,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-runtime",
               "name": "babel-runtime",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-runtime",
-              "resolved": "https://registry.npmjs.org/babel-runtime/-/babel-runtime-6.23.0.tgz",
               "version": "6.23.0",
             },
             "babel-template" => ArboristNode {
@@ -22215,7 +22069,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-template",
               "name": "babel-template",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-template",
-              "resolved": "https://registry.npmjs.org/babel-template/-/babel-template-6.24.1.tgz",
               "version": "6.24.1",
             },
             "babel-traverse" => ArboristNode {
@@ -22294,7 +22147,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-traverse",
               "name": "babel-traverse",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-traverse",
-              "resolved": "https://registry.npmjs.org/babel-traverse/-/babel-traverse-6.24.1.tgz",
               "version": "6.24.1",
             },
             "babel-types" => ArboristNode {
@@ -22355,7 +22207,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babel-types",
               "name": "babel-types",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babel-types",
-              "resolved": "https://registry.npmjs.org/babel-types/-/babel-types-6.24.1.tgz",
               "version": "6.24.1",
             },
             "babylon" => ArboristNode {
@@ -22384,7 +22235,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/babylon",
               "name": "babylon",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/babylon",
-              "resolved": "https://registry.npmjs.org/babylon/-/babylon-6.17.2.tgz",
               "version": "6.17.2",
             },
             "balanced-match" => ArboristNode {
@@ -22401,7 +22251,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/balanced-match",
               "name": "balanced-match",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/balanced-match",
-              "resolved": "https://registry.npmjs.org/balanced-match/-/balanced-match-0.4.2.tgz",
               "version": "0.4.2",
             },
             "brace-expansion" => ArboristNode {
@@ -22432,7 +22281,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/brace-expansion",
               "name": "brace-expansion",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/brace-expansion",
-              "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.7.tgz",
               "version": "1.1.7",
             },
             "braces" => ArboristNode {
@@ -22469,7 +22317,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/braces",
               "name": "braces",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/braces",
-              "resolved": "https://registry.npmjs.org/braces/-/braces-1.8.5.tgz",
               "version": "1.8.5",
             },
             "builtin-modules" => ArboristNode {
@@ -22486,7 +22333,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/builtin-modules",
               "name": "builtin-modules",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/builtin-modules",
-              "resolved": "https://registry.npmjs.org/builtin-modules/-/builtin-modules-1.1.1.tgz",
               "version": "1.1.1",
             },
             "caching-transform" => ArboristNode {
@@ -22523,7 +22369,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/caching-transform",
               "name": "caching-transform",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/caching-transform",
-              "resolved": "https://registry.npmjs.org/caching-transform/-/caching-transform-1.0.1.tgz",
               "version": "1.0.1",
             },
             "center-align" => ArboristNode {
@@ -22555,7 +22400,6 @@ ArboristNode {
               "name": "center-align",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/center-align",
-              "resolved": "https://registry.npmjs.org/center-align/-/center-align-0.1.3.tgz",
               "version": "0.1.3",
             },
             "chalk" => ArboristNode {
@@ -22604,7 +22448,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/chalk",
               "name": "chalk",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/chalk",
-              "resolved": "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz",
               "version": "1.1.3",
             },
             "cliui" => ArboristNode {
@@ -22625,7 +22468,6 @@ ArboristNode {
                   "name": "wordwrap",
                   "optional": true,
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/cliui/node_modules/wordwrap",
-                  "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz",
                   "version": "0.0.2",
                 },
               },
@@ -22662,7 +22504,6 @@ ArboristNode {
               "name": "cliui",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/cliui",
-              "resolved": "https://registry.npmjs.org/cliui/-/cliui-2.1.0.tgz",
               "version": "2.1.0",
             },
             "code-point-at" => ArboristNode {
@@ -22685,7 +22526,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/code-point-at",
               "name": "code-point-at",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/code-point-at",
-              "resolved": "https://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz",
               "version": "1.1.0",
             },
             "commondir" => ArboristNode {
@@ -22702,7 +22542,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/commondir",
               "name": "commondir",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/commondir",
-              "resolved": "https://registry.npmjs.org/commondir/-/commondir-1.0.1.tgz",
               "version": "1.0.1",
             },
             "concat-map" => ArboristNode {
@@ -22719,7 +22558,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/concat-map",
               "name": "concat-map",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/concat-map",
-              "resolved": "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz",
               "version": "0.0.1",
             },
             "convert-source-map" => ArboristNode {
@@ -22736,7 +22574,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/convert-source-map",
               "name": "convert-source-map",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/convert-source-map",
-              "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.5.0.tgz",
               "version": "1.5.0",
             },
             "core-js" => ArboristNode {
@@ -22753,7 +22590,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/core-js",
               "name": "core-js",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/core-js",
-              "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.4.1.tgz",
               "version": "2.4.1",
             },
             "cross-spawn" => ArboristNode {
@@ -22790,7 +22626,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/cross-spawn",
               "name": "cross-spawn",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/cross-spawn",
-              "resolved": "https://registry.npmjs.org/cross-spawn/-/cross-spawn-4.0.2.tgz",
               "version": "4.0.2",
             },
             "debug" => ArboristNode {
@@ -22821,7 +22656,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/debug",
               "name": "debug",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/debug",
-              "resolved": "https://registry.npmjs.org/debug/-/debug-2.6.8.tgz",
               "version": "2.6.8",
             },
             "debug-log" => ArboristNode {
@@ -22838,7 +22672,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/debug-log",
               "name": "debug-log",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/debug-log",
-              "resolved": "https://registry.npmjs.org/debug-log/-/debug-log-1.0.1.tgz",
               "version": "1.0.1",
             },
             "decamelize" => ArboristNode {
@@ -22861,7 +22694,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/decamelize",
               "name": "decamelize",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/decamelize",
-              "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz",
               "version": "1.2.0",
             },
             "default-require-extensions" => ArboristNode {
@@ -22892,7 +22724,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/default-require-extensions",
               "name": "default-require-extensions",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/default-require-extensions",
-              "resolved": "https://registry.npmjs.org/default-require-extensions/-/default-require-extensions-1.0.0.tgz",
               "version": "1.0.0",
             },
             "detect-indent" => ArboristNode {
@@ -22917,7 +22748,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/detect-indent",
               "name": "detect-indent",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/detect-indent",
-              "resolved": "https://registry.npmjs.org/detect-indent/-/detect-indent-4.0.0.tgz",
               "version": "4.0.0",
             },
             "error-ex" => ArboristNode {
@@ -22942,7 +22772,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/error-ex",
               "name": "error-ex",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/error-ex",
-              "resolved": "https://registry.npmjs.org/error-ex/-/error-ex-1.3.1.tgz",
               "version": "1.3.1",
             },
             "escape-string-regexp" => ArboristNode {
@@ -22959,7 +22788,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/escape-string-regexp",
               "name": "escape-string-regexp",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/escape-string-regexp",
-              "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
               "version": "1.0.5",
             },
             "esutils" => ArboristNode {
@@ -22982,7 +22810,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/esutils",
               "name": "esutils",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/esutils",
-              "resolved": "https://registry.npmjs.org/esutils/-/esutils-2.0.2.tgz",
               "version": "2.0.2",
             },
             "execa" => ArboristNode {
@@ -23043,7 +22870,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/execa",
               "name": "execa",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/execa",
-              "resolved": "https://registry.npmjs.org/execa/-/execa-0.5.1.tgz",
               "version": "0.5.1",
             },
             "expand-brackets" => ArboristNode {
@@ -23068,7 +22894,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/expand-brackets",
               "name": "expand-brackets",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/expand-brackets",
-              "resolved": "https://registry.npmjs.org/expand-brackets/-/expand-brackets-0.1.5.tgz",
               "version": "0.1.5",
             },
             "expand-range" => ArboristNode {
@@ -23093,7 +22918,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/expand-range",
               "name": "expand-range",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/expand-range",
-              "resolved": "https://registry.npmjs.org/expand-range/-/expand-range-1.8.2.tgz",
               "version": "1.8.2",
             },
             "extglob" => ArboristNode {
@@ -23118,7 +22942,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/extglob",
               "name": "extglob",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/extglob",
-              "resolved": "https://registry.npmjs.org/extglob/-/extglob-0.3.2.tgz",
               "version": "0.3.2",
             },
             "filename-regex" => ArboristNode {
@@ -23135,7 +22958,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/filename-regex",
               "name": "filename-regex",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/filename-regex",
-              "resolved": "https://registry.npmjs.org/filename-regex/-/filename-regex-2.0.1.tgz",
               "version": "2.0.1",
             },
             "fill-range" => ArboristNode {
@@ -23184,7 +23006,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/fill-range",
               "name": "fill-range",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/fill-range",
-              "resolved": "https://registry.npmjs.org/fill-range/-/fill-range-2.2.3.tgz",
               "version": "2.2.3",
             },
             "find-cache-dir" => ArboristNode {
@@ -23221,7 +23042,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/find-cache-dir",
               "name": "find-cache-dir",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/find-cache-dir",
-              "resolved": "https://registry.npmjs.org/find-cache-dir/-/find-cache-dir-0.1.1.tgz",
               "version": "0.1.1",
             },
             "find-up" => ArboristNode {
@@ -23252,7 +23072,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/find-up",
               "name": "find-up",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/find-up",
-              "resolved": "https://registry.npmjs.org/find-up/-/find-up-2.1.0.tgz",
               "version": "2.1.0",
             },
             "for-in" => ArboristNode {
@@ -23269,7 +23088,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/for-in",
               "name": "for-in",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/for-in",
-              "resolved": "https://registry.npmjs.org/for-in/-/for-in-1.0.2.tgz",
               "version": "1.0.2",
             },
             "for-own" => ArboristNode {
@@ -23294,7 +23112,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/for-own",
               "name": "for-own",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/for-own",
-              "resolved": "https://registry.npmjs.org/for-own/-/for-own-0.1.5.tgz",
               "version": "0.1.5",
             },
             "foreground-child" => ArboristNode {
@@ -23331,7 +23148,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/foreground-child",
               "name": "foreground-child",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/foreground-child",
-              "resolved": "https://registry.npmjs.org/foreground-child/-/foreground-child-1.5.6.tgz",
               "version": "1.5.6",
             },
             "fs.realpath" => ArboristNode {
@@ -23348,7 +23164,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/fs.realpath",
               "name": "fs.realpath",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/fs.realpath",
-              "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
               "version": "1.0.0",
             },
             "get-caller-file" => ArboristNode {
@@ -23365,7 +23180,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/get-caller-file",
               "name": "get-caller-file",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/get-caller-file",
-              "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-1.0.2.tgz",
               "version": "1.0.2",
             },
             "get-stream" => ArboristNode {
@@ -23396,7 +23210,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/get-stream",
               "name": "get-stream",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/get-stream",
-              "resolved": "https://registry.npmjs.org/get-stream/-/get-stream-2.3.1.tgz",
               "version": "2.3.1",
             },
             "glob" => ArboristNode {
@@ -23457,7 +23270,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/glob",
               "name": "glob",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/glob",
-              "resolved": "https://registry.npmjs.org/glob/-/glob-7.1.2.tgz",
               "version": "7.1.2",
             },
             "glob-base" => ArboristNode {
@@ -23488,7 +23300,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/glob-base",
               "name": "glob-base",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/glob-base",
-              "resolved": "https://registry.npmjs.org/glob-base/-/glob-base-0.3.0.tgz",
               "version": "0.3.0",
             },
             "glob-parent" => ArboristNode {
@@ -23513,7 +23324,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/glob-parent",
               "name": "glob-parent",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/glob-parent",
-              "resolved": "https://registry.npmjs.org/glob-parent/-/glob-parent-2.0.0.tgz",
               "version": "2.0.0",
             },
             "globals" => ArboristNode {
@@ -23530,7 +23340,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/globals",
               "name": "globals",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/globals",
-              "resolved": "https://registry.npmjs.org/globals/-/globals-9.17.0.tgz",
               "version": "9.17.0",
             },
             "graceful-fs" => ArboristNode {
@@ -23565,7 +23374,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/graceful-fs",
               "name": "graceful-fs",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/graceful-fs",
-              "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.11.tgz",
               "version": "4.1.11",
             },
             "handlebars" => ArboristNode {
@@ -23593,7 +23401,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/handlebars/node_modules/source-map",
                   "name": "source-map",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/handlebars/node_modules/source-map",
-                  "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.4.4.tgz",
                   "version": "0.4.4",
                 },
               },
@@ -23635,7 +23442,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/handlebars",
               "name": "handlebars",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/handlebars",
-              "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.0.10.tgz",
               "version": "4.0.10",
             },
             "has-ansi" => ArboristNode {
@@ -23660,7 +23466,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/has-ansi",
               "name": "has-ansi",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/has-ansi",
-              "resolved": "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz",
               "version": "2.0.0",
             },
             "has-flag" => ArboristNode {
@@ -23677,7 +23482,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/has-flag",
               "name": "has-flag",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/has-flag",
-              "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-1.0.0.tgz",
               "version": "1.0.0",
             },
             "hosted-git-info" => ArboristNode {
@@ -23694,7 +23498,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/hosted-git-info",
               "name": "hosted-git-info",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/hosted-git-info",
-              "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.4.2.tgz",
               "version": "2.4.2",
             },
             "imurmurhash" => ArboristNode {
@@ -23711,7 +23514,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/imurmurhash",
               "name": "imurmurhash",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/imurmurhash",
-              "resolved": "https://registry.npmjs.org/imurmurhash/-/imurmurhash-0.1.4.tgz",
               "version": "0.1.4",
             },
             "inflight" => ArboristNode {
@@ -23742,7 +23544,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/inflight",
               "name": "inflight",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/inflight",
-              "resolved": "https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz",
               "version": "1.0.6",
             },
             "inherits" => ArboristNode {
@@ -23759,7 +23560,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/inherits",
               "name": "inherits",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/inherits",
-              "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz",
               "version": "2.0.3",
             },
             "invariant" => ArboristNode {
@@ -23784,7 +23584,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/invariant",
               "name": "invariant",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/invariant",
-              "resolved": "https://registry.npmjs.org/invariant/-/invariant-2.2.2.tgz",
               "version": "2.2.2",
             },
             "invert-kv" => ArboristNode {
@@ -23801,7 +23600,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/invert-kv",
               "name": "invert-kv",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/invert-kv",
-              "resolved": "https://registry.npmjs.org/invert-kv/-/invert-kv-1.0.0.tgz",
               "version": "1.0.0",
             },
             "is-arrayish" => ArboristNode {
@@ -23818,7 +23616,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-arrayish",
               "name": "is-arrayish",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-arrayish",
-              "resolved": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
               "version": "0.2.1",
             },
             "is-buffer" => ArboristNode {
@@ -23835,7 +23632,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-buffer",
               "name": "is-buffer",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-buffer",
-              "resolved": "https://registry.npmjs.org/is-buffer/-/is-buffer-1.1.5.tgz",
               "version": "1.1.5",
             },
             "is-builtin-module" => ArboristNode {
@@ -23860,7 +23656,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-builtin-module",
               "name": "is-builtin-module",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-builtin-module",
-              "resolved": "https://registry.npmjs.org/is-builtin-module/-/is-builtin-module-1.0.0.tgz",
               "version": "1.0.0",
             },
             "is-dotfile" => ArboristNode {
@@ -23877,7 +23672,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-dotfile",
               "name": "is-dotfile",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-dotfile",
-              "resolved": "https://registry.npmjs.org/is-dotfile/-/is-dotfile-1.0.3.tgz",
               "version": "1.0.3",
             },
             "is-equal-shallow" => ArboristNode {
@@ -23902,7 +23696,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-equal-shallow",
               "name": "is-equal-shallow",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-equal-shallow",
-              "resolved": "https://registry.npmjs.org/is-equal-shallow/-/is-equal-shallow-0.1.3.tgz",
               "version": "0.1.3",
             },
             "is-extendable" => ArboristNode {
@@ -23919,7 +23712,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-extendable",
               "name": "is-extendable",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-extendable",
-              "resolved": "https://registry.npmjs.org/is-extendable/-/is-extendable-0.1.1.tgz",
               "version": "0.1.1",
             },
             "is-extglob" => ArboristNode {
@@ -23954,7 +23746,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-extglob",
               "name": "is-extglob",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-extglob",
-              "resolved": "https://registry.npmjs.org/is-extglob/-/is-extglob-1.0.0.tgz",
               "version": "1.0.0",
             },
             "is-finite" => ArboristNode {
@@ -23979,7 +23770,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-finite",
               "name": "is-finite",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-finite",
-              "resolved": "https://registry.npmjs.org/is-finite/-/is-finite-1.0.2.tgz",
               "version": "1.0.2",
             },
             "is-fullwidth-code-point" => ArboristNode {
@@ -24010,7 +23800,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-fullwidth-code-point",
               "name": "is-fullwidth-code-point",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-fullwidth-code-point",
-              "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz",
               "version": "1.0.0",
             },
             "is-glob" => ArboristNode {
@@ -24053,7 +23842,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-glob",
               "name": "is-glob",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-glob",
-              "resolved": "https://registry.npmjs.org/is-glob/-/is-glob-2.0.1.tgz",
               "version": "2.0.1",
             },
             "is-number" => ArboristNode {
@@ -24084,7 +23872,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-number",
               "name": "is-number",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-number",
-              "resolved": "https://registry.npmjs.org/is-number/-/is-number-2.1.0.tgz",
               "version": "2.1.0",
             },
             "is-posix-bracket" => ArboristNode {
@@ -24101,7 +23888,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-posix-bracket",
               "name": "is-posix-bracket",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-posix-bracket",
-              "resolved": "https://registry.npmjs.org/is-posix-bracket/-/is-posix-bracket-0.1.1.tgz",
               "version": "0.1.1",
             },
             "is-primitive" => ArboristNode {
@@ -24124,7 +23910,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-primitive",
               "name": "is-primitive",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-primitive",
-              "resolved": "https://registry.npmjs.org/is-primitive/-/is-primitive-2.0.0.tgz",
               "version": "2.0.0",
             },
             "is-stream" => ArboristNode {
@@ -24141,7 +23926,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-stream",
               "name": "is-stream",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-stream",
-              "resolved": "https://registry.npmjs.org/is-stream/-/is-stream-1.1.0.tgz",
               "version": "1.1.0",
             },
             "is-utf8" => ArboristNode {
@@ -24158,7 +23942,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/is-utf8",
               "name": "is-utf8",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/is-utf8",
-              "resolved": "https://registry.npmjs.org/is-utf8/-/is-utf8-0.2.1.tgz",
               "version": "0.2.1",
             },
             "isarray" => ArboristNode {
@@ -24175,7 +23958,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/isarray",
               "name": "isarray",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/isarray",
-              "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
               "version": "1.0.0",
             },
             "isexe" => ArboristNode {
@@ -24192,7 +23974,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/isexe",
               "name": "isexe",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/isexe",
-              "resolved": "https://registry.npmjs.org/isexe/-/isexe-2.0.0.tgz",
               "version": "2.0.0",
             },
             "isobject" => ArboristNode {
@@ -24217,7 +23998,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/isobject",
               "name": "isobject",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/isobject",
-              "resolved": "https://registry.npmjs.org/isobject/-/isobject-2.1.0.tgz",
               "version": "2.1.0",
             },
             "istanbul-lib-coverage" => ArboristNode {
@@ -24252,7 +24032,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-coverage",
               "name": "istanbul-lib-coverage",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-coverage",
-              "resolved": "https://registry.npmjs.org/istanbul-lib-coverage/-/istanbul-lib-coverage-1.1.1.tgz",
               "version": "1.1.1",
             },
             "istanbul-lib-hook" => ArboristNode {
@@ -24277,7 +24056,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-hook",
               "name": "istanbul-lib-hook",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-hook",
-              "resolved": "https://registry.npmjs.org/istanbul-lib-hook/-/istanbul-lib-hook-1.0.7.tgz",
               "version": "1.0.7",
             },
             "istanbul-lib-instrument" => ArboristNode {
@@ -24338,7 +24116,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-instrument",
               "name": "istanbul-lib-instrument",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-instrument",
-              "resolved": "https://registry.npmjs.org/istanbul-lib-instrument/-/istanbul-lib-instrument-1.7.2.tgz",
               "version": "1.7.2",
             },
             "istanbul-lib-report" => ArboristNode {
@@ -24366,7 +24143,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-report/node_modules/supports-color",
                   "name": "supports-color",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-report/node_modules/supports-color",
-                  "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-3.2.3.tgz",
                   "version": "3.2.3",
                 },
               },
@@ -24408,7 +24184,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-report",
               "name": "istanbul-lib-report",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-report",
-              "resolved": "https://registry.npmjs.org/istanbul-lib-report/-/istanbul-lib-report-1.1.1.tgz",
               "version": "1.1.1",
             },
             "istanbul-lib-source-maps" => ArboristNode {
@@ -24457,7 +24232,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-source-maps",
               "name": "istanbul-lib-source-maps",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-lib-source-maps",
-              "resolved": "https://registry.npmjs.org/istanbul-lib-source-maps/-/istanbul-lib-source-maps-1.2.1.tgz",
               "version": "1.2.1",
             },
             "istanbul-reports" => ArboristNode {
@@ -24482,7 +24256,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/istanbul-reports",
               "name": "istanbul-reports",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/istanbul-reports",
-              "resolved": "https://registry.npmjs.org/istanbul-reports/-/istanbul-reports-1.1.1.tgz",
               "version": "1.1.1",
             },
             "js-tokens" => ArboristNode {
@@ -24505,7 +24278,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/js-tokens",
               "name": "js-tokens",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/js-tokens",
-              "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-3.0.1.tgz",
               "version": "3.0.1",
             },
             "jsesc" => ArboristNode {
@@ -24522,7 +24294,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/jsesc",
               "name": "jsesc",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/jsesc",
-              "resolved": "https://registry.npmjs.org/jsesc/-/jsesc-1.3.0.tgz",
               "version": "1.3.0",
             },
             "kind-of" => ArboristNode {
@@ -24565,7 +24336,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/kind-of",
               "name": "kind-of",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/kind-of",
-              "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-3.2.2.tgz",
               "version": "3.2.2",
             },
             "lazy-cache" => ArboristNode {
@@ -24583,7 +24353,6 @@ ArboristNode {
               "name": "lazy-cache",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/lazy-cache",
-              "resolved": "https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz",
               "version": "1.0.4",
             },
             "lcid" => ArboristNode {
@@ -24608,7 +24377,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/lcid",
               "name": "lcid",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/lcid",
-              "resolved": "https://registry.npmjs.org/lcid/-/lcid-1.0.0.tgz",
               "version": "1.0.0",
             },
             "load-json-file" => ArboristNode {
@@ -24657,7 +24425,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/load-json-file",
               "name": "load-json-file",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/load-json-file",
-              "resolved": "https://registry.npmjs.org/load-json-file/-/load-json-file-1.1.0.tgz",
               "version": "1.1.0",
             },
             "locate-path" => ArboristNode {
@@ -24677,7 +24444,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/locate-path/node_modules/path-exists",
                   "name": "path-exists",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/locate-path/node_modules/path-exists",
-                  "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-3.0.0.tgz",
                   "version": "3.0.0",
                 },
               },
@@ -24707,7 +24473,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/locate-path",
               "name": "locate-path",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/locate-path",
-              "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-2.0.0.tgz",
               "version": "2.0.0",
             },
             "lodash" => ArboristNode {
@@ -24742,7 +24507,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/lodash",
               "name": "lodash",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/lodash",
-              "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.4.tgz",
               "version": "4.17.4",
             },
             "longest" => ArboristNode {
@@ -24760,7 +24524,6 @@ ArboristNode {
               "name": "longest",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/longest",
-              "resolved": "https://registry.npmjs.org/longest/-/longest-1.0.1.tgz",
               "version": "1.0.1",
             },
             "loose-envify" => ArboristNode {
@@ -24785,7 +24548,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/loose-envify",
               "name": "loose-envify",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/loose-envify",
-              "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.3.1.tgz",
               "version": "1.3.1",
             },
             "lru-cache" => ArboristNode {
@@ -24816,7 +24578,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/lru-cache",
               "name": "lru-cache",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/lru-cache",
-              "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-4.0.2.tgz",
               "version": "4.0.2",
             },
             "md5-hex" => ArboristNode {
@@ -24847,7 +24608,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/md5-hex",
               "name": "md5-hex",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/md5-hex",
-              "resolved": "https://registry.npmjs.org/md5-hex/-/md5-hex-1.3.0.tgz",
               "version": "1.3.0",
             },
             "md5-o-matic" => ArboristNode {
@@ -24864,7 +24624,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/md5-o-matic",
               "name": "md5-o-matic",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/md5-o-matic",
-              "resolved": "https://registry.npmjs.org/md5-o-matic/-/md5-o-matic-0.1.1.tgz",
               "version": "0.1.1",
             },
             "mem" => ArboristNode {
@@ -24889,7 +24648,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/mem",
               "name": "mem",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/mem",
-              "resolved": "https://registry.npmjs.org/mem/-/mem-1.1.0.tgz",
               "version": "1.1.0",
             },
             "merge-source-map" => ArboristNode {
@@ -24914,7 +24672,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/merge-source-map",
               "name": "merge-source-map",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/merge-source-map",
-              "resolved": "https://registry.npmjs.org/merge-source-map/-/merge-source-map-1.0.3.tgz",
               "version": "1.0.3",
             },
             "micromatch" => ArboristNode {
@@ -25017,7 +24774,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/micromatch",
               "name": "micromatch",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/micromatch",
-              "resolved": "https://registry.npmjs.org/micromatch/-/micromatch-2.3.11.tgz",
               "version": "2.3.11",
             },
             "mimic-fn" => ArboristNode {
@@ -25034,7 +24790,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/mimic-fn",
               "name": "mimic-fn",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/mimic-fn",
-              "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.1.0.tgz",
               "version": "1.1.0",
             },
             "minimatch" => ArboristNode {
@@ -25059,7 +24814,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/minimatch",
               "name": "minimatch",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/minimatch",
-              "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz",
               "version": "3.0.4",
             },
             "minimist" => ArboristNode {
@@ -25082,7 +24836,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/minimist",
               "name": "minimist",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/minimist",
-              "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
               "version": "0.0.8",
             },
             "mkdirp" => ArboristNode {
@@ -25137,7 +24890,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/mkdirp",
               "name": "mkdirp",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/mkdirp",
-              "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
               "version": "0.5.1",
             },
             "ms" => ArboristNode {
@@ -25154,7 +24906,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/ms",
               "name": "ms",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/ms",
-              "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
               "version": "2.0.0",
             },
             "normalize-package-data" => ArboristNode {
@@ -25203,7 +24954,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/normalize-package-data",
               "name": "normalize-package-data",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/normalize-package-data",
-              "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.3.8.tgz",
               "version": "2.3.8",
             },
             "normalize-path" => ArboristNode {
@@ -25228,7 +24978,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/normalize-path",
               "name": "normalize-path",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/normalize-path",
-              "resolved": "https://registry.npmjs.org/normalize-path/-/normalize-path-2.1.1.tgz",
               "version": "2.1.1",
             },
             "npm-run-path" => ArboristNode {
@@ -25253,7 +25002,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/npm-run-path",
               "name": "npm-run-path",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/npm-run-path",
-              "resolved": "https://registry.npmjs.org/npm-run-path/-/npm-run-path-2.0.2.tgz",
               "version": "2.0.2",
             },
             "number-is-nan" => ArboristNode {
@@ -25276,7 +25024,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/number-is-nan",
               "name": "number-is-nan",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/number-is-nan",
-              "resolved": "https://registry.npmjs.org/number-is-nan/-/number-is-nan-1.0.1.tgz",
               "version": "1.0.1",
             },
             "object-assign" => ArboristNode {
@@ -25299,7 +25046,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/object-assign",
               "name": "object-assign",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/object-assign",
-              "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
               "version": "4.1.1",
             },
             "object.omit" => ArboristNode {
@@ -25330,7 +25076,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/object.omit",
               "name": "object.omit",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/object.omit",
-              "resolved": "https://registry.npmjs.org/object.omit/-/object.omit-2.0.1.tgz",
               "version": "2.0.1",
             },
             "once" => ArboristNode {
@@ -25361,7 +25106,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/once",
               "name": "once",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/once",
-              "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
               "version": "1.4.0",
             },
             "optimist" => ArboristNode {
@@ -25392,7 +25136,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/optimist",
               "name": "optimist",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/optimist",
-              "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.6.1.tgz",
               "version": "0.6.1",
             },
             "os-homedir" => ArboristNode {
@@ -25409,7 +25152,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/os-homedir",
               "name": "os-homedir",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/os-homedir",
-              "resolved": "https://registry.npmjs.org/os-homedir/-/os-homedir-1.0.2.tgz",
               "version": "1.0.2",
             },
             "os-locale" => ArboristNode {
@@ -25446,7 +25188,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/os-locale",
               "name": "os-locale",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/os-locale",
-              "resolved": "https://registry.npmjs.org/os-locale/-/os-locale-2.0.0.tgz",
               "version": "2.0.0",
             },
             "p-finally" => ArboristNode {
@@ -25463,7 +25204,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/p-finally",
               "name": "p-finally",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/p-finally",
-              "resolved": "https://registry.npmjs.org/p-finally/-/p-finally-1.0.0.tgz",
               "version": "1.0.0",
             },
             "p-limit" => ArboristNode {
@@ -25480,7 +25220,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/p-limit",
               "name": "p-limit",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/p-limit",
-              "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-1.1.0.tgz",
               "version": "1.1.0",
             },
             "p-locate" => ArboristNode {
@@ -25505,7 +25244,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/p-locate",
               "name": "p-locate",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/p-locate",
-              "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-2.0.0.tgz",
               "version": "2.0.0",
             },
             "parse-glob" => ArboristNode {
@@ -25548,7 +25286,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/parse-glob",
               "name": "parse-glob",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/parse-glob",
-              "resolved": "https://registry.npmjs.org/parse-glob/-/parse-glob-3.0.4.tgz",
               "version": "3.0.4",
             },
             "parse-json" => ArboristNode {
@@ -25579,7 +25316,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/parse-json",
               "name": "parse-json",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/parse-json",
-              "resolved": "https://registry.npmjs.org/parse-json/-/parse-json-2.2.0.tgz",
               "version": "2.2.0",
             },
             "path-exists" => ArboristNode {
@@ -25610,7 +25346,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/path-exists",
               "name": "path-exists",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/path-exists",
-              "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-2.1.0.tgz",
               "version": "2.1.0",
             },
             "path-is-absolute" => ArboristNode {
@@ -25627,7 +25362,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/path-is-absolute",
               "name": "path-is-absolute",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/path-is-absolute",
-              "resolved": "https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz",
               "version": "1.0.1",
             },
             "path-key" => ArboristNode {
@@ -25644,7 +25378,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/path-key",
               "name": "path-key",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/path-key",
-              "resolved": "https://registry.npmjs.org/path-key/-/path-key-2.0.1.tgz",
               "version": "2.0.1",
             },
             "path-parse" => ArboristNode {
@@ -25661,7 +25394,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/path-parse",
               "name": "path-parse",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/path-parse",
-              "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.5.tgz",
               "version": "1.0.5",
             },
             "path-type" => ArboristNode {
@@ -25698,7 +25430,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/path-type",
               "name": "path-type",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/path-type",
-              "resolved": "https://registry.npmjs.org/path-type/-/path-type-1.1.0.tgz",
               "version": "1.1.0",
             },
             "pify" => ArboristNode {
@@ -25733,7 +25464,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/pify",
               "name": "pify",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/pify",
-              "resolved": "https://registry.npmjs.org/pify/-/pify-2.3.0.tgz",
               "version": "2.3.0",
             },
             "pinkie" => ArboristNode {
@@ -25750,7 +25480,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/pinkie",
               "name": "pinkie",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/pinkie",
-              "resolved": "https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz",
               "version": "2.0.4",
             },
             "pinkie-promise" => ArboristNode {
@@ -25805,7 +25534,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/pinkie-promise",
               "name": "pinkie-promise",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/pinkie-promise",
-              "resolved": "https://registry.npmjs.org/pinkie-promise/-/pinkie-promise-2.0.1.tgz",
               "version": "2.0.1",
             },
             "pkg-dir" => ArboristNode {
@@ -25839,7 +25567,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/pkg-dir/node_modules/find-up",
                   "name": "find-up",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/pkg-dir/node_modules/find-up",
-                  "resolved": "https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz",
                   "version": "1.1.2",
                 },
               },
@@ -25863,7 +25590,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/pkg-dir",
               "name": "pkg-dir",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/pkg-dir",
-              "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-1.0.0.tgz",
               "version": "1.0.0",
             },
             "preserve" => ArboristNode {
@@ -25880,7 +25606,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/preserve",
               "name": "preserve",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/preserve",
-              "resolved": "https://registry.npmjs.org/preserve/-/preserve-0.2.0.tgz",
               "version": "0.2.0",
             },
             "pseudomap" => ArboristNode {
@@ -25897,7 +25622,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/pseudomap",
               "name": "pseudomap",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/pseudomap",
-              "resolved": "https://registry.npmjs.org/pseudomap/-/pseudomap-1.0.2.tgz",
               "version": "1.0.2",
             },
             "randomatic" => ArboristNode {
@@ -25928,7 +25652,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/randomatic",
               "name": "randomatic",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/randomatic",
-              "resolved": "https://registry.npmjs.org/randomatic/-/randomatic-1.1.6.tgz",
               "version": "1.1.6",
             },
             "read-pkg" => ArboristNode {
@@ -25965,7 +25688,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/read-pkg",
               "name": "read-pkg",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/read-pkg",
-              "resolved": "https://registry.npmjs.org/read-pkg/-/read-pkg-1.1.0.tgz",
               "version": "1.1.0",
             },
             "read-pkg-up" => ArboristNode {
@@ -25999,7 +25721,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/read-pkg-up/node_modules/find-up",
                   "name": "find-up",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/read-pkg-up/node_modules/find-up",
-                  "resolved": "https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz",
                   "version": "1.1.2",
                 },
               },
@@ -26029,7 +25750,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/read-pkg-up",
               "name": "read-pkg-up",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/read-pkg-up",
-              "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz",
               "version": "1.0.1",
             },
             "regenerator-runtime" => ArboristNode {
@@ -26046,7 +25766,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/regenerator-runtime",
               "name": "regenerator-runtime",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/regenerator-runtime",
-              "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz",
               "version": "0.10.5",
             },
             "regex-cache" => ArboristNode {
@@ -26077,7 +25796,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/regex-cache",
               "name": "regex-cache",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/regex-cache",
-              "resolved": "https://registry.npmjs.org/regex-cache/-/regex-cache-0.4.3.tgz",
               "version": "0.4.3",
             },
             "remove-trailing-separator" => ArboristNode {
@@ -26094,7 +25812,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/remove-trailing-separator",
               "name": "remove-trailing-separator",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/remove-trailing-separator",
-              "resolved": "https://registry.npmjs.org/remove-trailing-separator/-/remove-trailing-separator-1.0.1.tgz",
               "version": "1.0.1",
             },
             "repeat-element" => ArboristNode {
@@ -26117,7 +25834,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/repeat-element",
               "name": "repeat-element",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/repeat-element",
-              "resolved": "https://registry.npmjs.org/repeat-element/-/repeat-element-1.1.2.tgz",
               "version": "1.1.2",
             },
             "repeat-string" => ArboristNode {
@@ -26140,7 +25856,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/repeat-string",
               "name": "repeat-string",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/repeat-string",
-              "resolved": "https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz",
               "version": "1.6.1",
             },
             "repeating" => ArboristNode {
@@ -26165,7 +25880,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/repeating",
               "name": "repeating",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/repeating",
-              "resolved": "https://registry.npmjs.org/repeating/-/repeating-2.0.1.tgz",
               "version": "2.0.1",
             },
             "require-directory" => ArboristNode {
@@ -26182,7 +25896,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/require-directory",
               "name": "require-directory",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/require-directory",
-              "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
               "version": "2.1.1",
             },
             "require-main-filename" => ArboristNode {
@@ -26205,7 +25918,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/require-main-filename",
               "name": "require-main-filename",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/require-main-filename",
-              "resolved": "https://registry.npmjs.org/require-main-filename/-/require-main-filename-1.0.1.tgz",
               "version": "1.0.1",
             },
             "resolve-from" => ArboristNode {
@@ -26222,7 +25934,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/resolve-from",
               "name": "resolve-from",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/resolve-from",
-              "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-2.0.0.tgz",
               "version": "2.0.0",
             },
             "right-align" => ArboristNode {
@@ -26248,7 +25959,6 @@ ArboristNode {
               "name": "right-align",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/right-align",
-              "resolved": "https://registry.npmjs.org/right-align/-/right-align-0.1.3.tgz",
               "version": "0.1.3",
             },
             "rimraf" => ArboristNode {
@@ -26285,7 +25995,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/rimraf",
               "name": "rimraf",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/rimraf",
-              "resolved": "https://registry.npmjs.org/rimraf/-/rimraf-2.6.1.tgz",
               "version": "2.6.1",
             },
             "semver" => ArboristNode {
@@ -26308,7 +26017,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/semver",
               "name": "semver",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/semver",
-              "resolved": "https://registry.npmjs.org/semver/-/semver-5.3.0.tgz",
               "version": "5.3.0",
             },
             "set-blocking" => ArboristNode {
@@ -26325,7 +26033,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/set-blocking",
               "name": "set-blocking",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/set-blocking",
-              "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
               "version": "2.0.0",
             },
             "signal-exit" => ArboristNode {
@@ -26360,7 +26067,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/signal-exit",
               "name": "signal-exit",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/signal-exit",
-              "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz",
               "version": "3.0.2",
             },
             "slide" => ArboristNode {
@@ -26377,7 +26083,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/slide",
               "name": "slide",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/slide",
-              "resolved": "https://registry.npmjs.org/slide/-/slide-1.1.6.tgz",
               "version": "1.1.6",
             },
             "source-map" => ArboristNode {
@@ -26412,7 +26117,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/source-map",
               "name": "source-map",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/source-map",
-              "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz",
               "version": "0.5.6",
             },
             "spawn-wrap" => ArboristNode {
@@ -26467,7 +26171,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/spawn-wrap",
               "name": "spawn-wrap",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/spawn-wrap",
-              "resolved": "https://registry.npmjs.org/spawn-wrap/-/spawn-wrap-1.3.6.tgz",
               "version": "1.3.6",
             },
             "spdx-correct" => ArboristNode {
@@ -26492,7 +26195,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/spdx-correct",
               "name": "spdx-correct",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/spdx-correct",
-              "resolved": "https://registry.npmjs.org/spdx-correct/-/spdx-correct-1.0.2.tgz",
               "version": "1.0.2",
             },
             "spdx-expression-parse" => ArboristNode {
@@ -26509,7 +26211,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/spdx-expression-parse",
               "name": "spdx-expression-parse",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/spdx-expression-parse",
-              "resolved": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-1.0.4.tgz",
               "version": "1.0.4",
             },
             "spdx-license-ids" => ArboristNode {
@@ -26526,7 +26227,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/spdx-license-ids",
               "name": "spdx-license-ids",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/spdx-license-ids",
-              "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-1.2.2.tgz",
               "version": "1.2.2",
             },
             "string-width" => ArboristNode {
@@ -26546,7 +26246,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/string-width/node_modules/is-fullwidth-code-point",
                   "name": "is-fullwidth-code-point",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/string-width/node_modules/is-fullwidth-code-point",
-                  "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
                   "version": "2.0.0",
                 },
               },
@@ -26576,7 +26275,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/string-width",
               "name": "string-width",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/string-width",
-              "resolved": "https://registry.npmjs.org/string-width/-/string-width-2.0.0.tgz",
               "version": "2.0.0",
             },
             "strip-ansi" => ArboristNode {
@@ -26631,7 +26329,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
               "version": "3.0.1",
             },
             "strip-bom" => ArboristNode {
@@ -26662,7 +26359,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/strip-bom",
               "name": "strip-bom",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/strip-bom",
-              "resolved": "https://registry.npmjs.org/strip-bom/-/strip-bom-2.0.0.tgz",
               "version": "2.0.0",
             },
             "strip-eof" => ArboristNode {
@@ -26679,7 +26375,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/strip-eof",
               "name": "strip-eof",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/strip-eof",
-              "resolved": "https://registry.npmjs.org/strip-eof/-/strip-eof-1.0.0.tgz",
               "version": "1.0.0",
             },
             "supports-color" => ArboristNode {
@@ -26696,7 +26391,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/supports-color",
               "name": "supports-color",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/supports-color",
-              "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz",
               "version": "2.0.0",
             },
             "test-exclude" => ArboristNode {
@@ -26745,7 +26439,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/test-exclude",
               "name": "test-exclude",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/test-exclude",
-              "resolved": "https://registry.npmjs.org/test-exclude/-/test-exclude-4.1.1.tgz",
               "version": "4.1.1",
             },
             "to-fast-properties" => ArboristNode {
@@ -26762,7 +26455,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/to-fast-properties",
               "name": "to-fast-properties",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/to-fast-properties",
-              "resolved": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-1.0.3.tgz",
               "version": "1.0.3",
             },
             "trim-right" => ArboristNode {
@@ -26779,7 +26471,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/trim-right",
               "name": "trim-right",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/trim-right",
-              "resolved": "https://registry.npmjs.org/trim-right/-/trim-right-1.0.1.tgz",
               "version": "1.0.1",
             },
             "uglify-js" => ArboristNode {
@@ -26800,7 +26491,6 @@ ArboristNode {
                   "name": "camelcase",
                   "optional": true,
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/uglify-js/node_modules/camelcase",
-                  "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-1.2.1.tgz",
                   "version": "1.2.1",
                 },
                 "yargs" => ArboristNode {
@@ -26844,7 +26534,6 @@ ArboristNode {
                   "name": "yargs",
                   "optional": true,
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/uglify-js/node_modules/yargs",
-                  "resolved": "https://registry.npmjs.org/yargs/-/yargs-3.10.0.tgz",
                   "version": "3.10.0",
                 },
               },
@@ -26881,7 +26570,6 @@ ArboristNode {
               "name": "uglify-js",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/uglify-js",
-              "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-2.8.27.tgz",
               "version": "2.8.27",
             },
             "uglify-to-browserify" => ArboristNode {
@@ -26899,7 +26587,6 @@ ArboristNode {
               "name": "uglify-to-browserify",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/uglify-to-browserify",
-              "resolved": "https://registry.npmjs.org/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz",
               "version": "1.0.2",
             },
             "validate-npm-package-license" => ArboristNode {
@@ -26930,7 +26617,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/validate-npm-package-license",
               "name": "validate-npm-package-license",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/validate-npm-package-license",
-              "resolved": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz",
               "version": "3.0.1",
             },
             "which" => ArboristNode {
@@ -26961,7 +26647,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/which",
               "name": "which",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/which",
-              "resolved": "https://registry.npmjs.org/which/-/which-1.2.14.tgz",
               "version": "1.2.14",
             },
             "which-module" => ArboristNode {
@@ -26978,7 +26663,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/which-module",
               "name": "which-module",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/which-module",
-              "resolved": "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz",
               "version": "2.0.0",
             },
             "window-size" => ArboristNode {
@@ -26996,7 +26680,6 @@ ArboristNode {
               "name": "window-size",
               "optional": true,
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/window-size",
-              "resolved": "https://registry.npmjs.org/window-size/-/window-size-0.1.0.tgz",
               "version": "0.1.0",
             },
             "wordwrap" => ArboristNode {
@@ -27013,7 +26696,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/wordwrap",
               "name": "wordwrap",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/wordwrap",
-              "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz",
               "version": "0.0.3",
             },
             "wrap-ansi" => ArboristNode {
@@ -27053,7 +26735,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/wrap-ansi/node_modules/string-width",
                   "name": "string-width",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/wrap-ansi/node_modules/string-width",
-                  "resolved": "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz",
                   "version": "1.0.2",
                 },
               },
@@ -27083,7 +26764,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/wrap-ansi",
               "name": "wrap-ansi",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/wrap-ansi",
-              "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-2.1.0.tgz",
               "version": "2.1.0",
             },
             "wrappy" => ArboristNode {
@@ -27106,7 +26786,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/wrappy",
               "name": "wrappy",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/wrappy",
-              "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
               "version": "1.0.2",
             },
             "write-file-atomic" => ArboristNode {
@@ -27143,7 +26822,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/write-file-atomic",
               "name": "write-file-atomic",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/write-file-atomic",
-              "resolved": "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-1.3.4.tgz",
               "version": "1.3.4",
             },
             "y18n" => ArboristNode {
@@ -27160,7 +26838,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/y18n",
               "name": "y18n",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/y18n",
-              "resolved": "https://registry.npmjs.org/y18n/-/y18n-3.2.1.tgz",
               "version": "3.2.1",
             },
             "yallist" => ArboristNode {
@@ -27177,7 +26854,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/yallist",
               "name": "yallist",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yallist",
-              "resolved": "https://registry.npmjs.org/yallist/-/yallist-2.1.2.tgz",
               "version": "2.1.2",
             },
             "yargs" => ArboristNode {
@@ -27203,7 +26879,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/camelcase",
                   "name": "camelcase",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/camelcase",
-                  "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-4.1.0.tgz",
                   "version": "4.1.0",
                 },
                 "cliui" => ArboristNode {
@@ -27243,7 +26918,6 @@ ArboristNode {
                       "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/cliui/node_modules/string-width",
                       "name": "string-width",
                       "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/cliui/node_modules/string-width",
-                      "resolved": "https://registry.npmjs.org/string-width/-/string-width-1.0.2.tgz",
                       "version": "1.0.2",
                     },
                   },
@@ -27279,7 +26953,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/cliui",
                   "name": "cliui",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/cliui",
-                  "resolved": "https://registry.npmjs.org/cliui/-/cliui-3.2.0.tgz",
                   "version": "3.2.0",
                 },
                 "load-json-file" => ArboristNode {
@@ -27322,7 +26995,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/load-json-file",
                   "name": "load-json-file",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/load-json-file",
-                  "resolved": "https://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz",
                   "version": "2.0.0",
                 },
                 "path-type" => ArboristNode {
@@ -27347,7 +27019,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/path-type",
                   "name": "path-type",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/path-type",
-                  "resolved": "https://registry.npmjs.org/path-type/-/path-type-2.0.0.tgz",
                   "version": "2.0.0",
                 },
                 "read-pkg" => ArboristNode {
@@ -27384,7 +27055,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/read-pkg",
                   "name": "read-pkg",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/read-pkg",
-                  "resolved": "https://registry.npmjs.org/read-pkg/-/read-pkg-2.0.0.tgz",
                   "version": "2.0.0",
                 },
                 "read-pkg-up" => ArboristNode {
@@ -27415,7 +27085,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/read-pkg-up",
                   "name": "read-pkg-up",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/read-pkg-up",
-                  "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-2.0.0.tgz",
                   "version": "2.0.0",
                 },
                 "strip-bom" => ArboristNode {
@@ -27432,7 +27101,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/strip-bom",
                   "name": "strip-bom",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/strip-bom",
-                  "resolved": "https://registry.npmjs.org/strip-bom/-/strip-bom-3.0.0.tgz",
                   "version": "3.0.0",
                 },
                 "yargs-parser" => ArboristNode {
@@ -27457,7 +27125,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
                   "name": "yargs-parser",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs/node_modules/yargs-parser",
-                  "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-7.0.0.tgz",
                   "version": "7.0.0",
                 },
               },
@@ -27553,7 +27220,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/yargs",
               "name": "yargs",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs",
-              "resolved": "https://registry.npmjs.org/yargs/-/yargs-8.0.1.tgz",
               "version": "8.0.1",
             },
             "yargs-parser" => ArboristNode {
@@ -27573,7 +27239,6 @@ ArboristNode {
                   "location": "node_modules/tap/node_modules/nyc/node_modules/yargs-parser/node_modules/camelcase",
                   "name": "camelcase",
                   "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs-parser/node_modules/camelcase",
-                  "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-3.0.0.tgz",
                   "version": "3.0.0",
                 },
               },
@@ -27597,7 +27262,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/nyc/node_modules/yargs-parser",
               "name": "yargs-parser",
               "path": "{CWD}/test/arborist/reify-reify-properly-with-all-deps-when-lockfile-is-ancient/node_modules/tap/node_modules/nyc/node_modules/yargs-parser",
-              "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-5.0.0.tgz",
               "version": "5.0.0",
             },
           },
@@ -37155,7 +36819,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/code-frame",
           "name": "@babel/code-frame",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/code-frame",
-          "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.5.5.tgz",
           "version": "7.5.5",
         },
         "@babel/core" => ArboristNode {
@@ -37175,7 +36838,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/core/node_modules/source-map",
               "name": "source-map",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/core/node_modules/source-map",
-              "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz",
               "version": "0.5.7",
             },
           },
@@ -37307,7 +36969,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/core",
           "name": "@babel/core",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/core",
-          "resolved": "https://registry.npmjs.org/@babel/core/-/core-7.7.5.tgz",
           "version": "7.7.5",
         },
         "@babel/generator" => ArboristNode {
@@ -37327,7 +36988,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/generator/node_modules/source-map",
               "name": "source-map",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/generator/node_modules/source-map",
-              "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz",
               "version": "0.5.7",
             },
           },
@@ -37375,7 +37035,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/generator",
           "name": "@babel/generator",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/generator",
-          "resolved": "https://registry.npmjs.org/@babel/generator/-/generator-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-builder-react-jsx" => ArboristNode {
@@ -37406,7 +37065,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
           "name": "@babel/helper-builder-react-jsx",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/helper-builder-react-jsx",
-          "resolved": "https://registry.npmjs.org/@babel/helper-builder-react-jsx/-/helper-builder-react-jsx-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-function-name" => ArboristNode {
@@ -37443,7 +37101,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-function-name",
           "name": "@babel/helper-function-name",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/helper-function-name",
-          "resolved": "https://registry.npmjs.org/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-get-function-arity" => ArboristNode {
@@ -37468,7 +37125,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-get-function-arity",
           "name": "@babel/helper-get-function-arity",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/helper-get-function-arity",
-          "resolved": "https://registry.npmjs.org/@babel/helper-get-function-arity/-/helper-get-function-arity-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helper-plugin-utils" => ArboristNode {
@@ -37509,7 +37165,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-plugin-utils",
           "name": "@babel/helper-plugin-utils",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/helper-plugin-utils",
-          "resolved": "https://registry.npmjs.org/@babel/helper-plugin-utils/-/helper-plugin-utils-7.0.0.tgz",
           "version": "7.0.0",
         },
         "@babel/helper-split-export-declaration" => ArboristNode {
@@ -37534,7 +37189,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helper-split-export-declaration",
           "name": "@babel/helper-split-export-declaration",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/helper-split-export-declaration",
-          "resolved": "https://registry.npmjs.org/@babel/helper-split-export-declaration/-/helper-split-export-declaration-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/helpers" => ArboristNode {
@@ -37571,7 +37225,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/helpers",
           "name": "@babel/helpers",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/helpers",
-          "resolved": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/highlight" => ArboristNode {
@@ -37611,7 +37264,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
               "name": "chalk",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/highlight/node_modules/chalk",
-              "resolved": "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz",
               "version": "2.4.2",
             },
             "supports-color" => ArboristNode {
@@ -37636,7 +37288,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
               "name": "supports-color",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/highlight/node_modules/supports-color",
-              "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz",
               "version": "5.5.0",
             },
           },
@@ -37672,7 +37323,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/highlight",
           "name": "@babel/highlight",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/highlight",
-          "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.5.0.tgz",
           "version": "7.5.0",
         },
         "@babel/parser" => ArboristNode {
@@ -37701,7 +37351,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/parser",
           "name": "@babel/parser",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/parser",
-          "resolved": "https://registry.npmjs.org/@babel/parser/-/parser-7.7.5.tgz",
           "version": "7.7.5",
         },
         "@babel/plugin-proposal-object-rest-spread" => ArboristNode {
@@ -37738,7 +37387,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
           "name": "@babel/plugin-proposal-object-rest-spread",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/plugin-proposal-object-rest-spread",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-syntax-jsx" => ArboristNode {
@@ -37769,7 +37417,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-jsx",
           "name": "@babel/plugin-syntax-jsx",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/plugin-syntax-jsx",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-syntax-object-rest-spread" => ArboristNode {
@@ -37800,7 +37447,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-syntax-object-rest-spread",
           "name": "@babel/plugin-syntax-object-rest-spread",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/plugin-syntax-object-rest-spread",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-transform-destructuring" => ArboristNode {
@@ -37831,7 +37477,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-destructuring",
           "name": "@babel/plugin-transform-destructuring",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/plugin-transform-destructuring",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/plugin-transform-react-jsx" => ArboristNode {
@@ -37874,7 +37519,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
           "name": "@babel/plugin-transform-react-jsx",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/plugin-transform-react-jsx",
-          "resolved": "https://registry.npmjs.org/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/runtime" => ArboristNode {
@@ -37899,7 +37543,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/runtime",
           "name": "@babel/runtime",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/runtime",
-          "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.7.6.tgz",
           "version": "7.7.6",
         },
         "@babel/template" => ArboristNode {
@@ -37948,7 +37591,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/template",
           "name": "@babel/template",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/template",
-          "resolved": "https://registry.npmjs.org/@babel/template/-/template-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/traverse" => ArboristNode {
@@ -38027,7 +37669,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/traverse",
           "name": "@babel/traverse",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/traverse",
-          "resolved": "https://registry.npmjs.org/@babel/traverse/-/traverse-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@babel/types" => ArboristNode {
@@ -38112,7 +37753,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@babel/types",
           "name": "@babel/types",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@babel/types",
-          "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
           "version": "7.7.4",
         },
         "@types/color-name" => ArboristNode {
@@ -38141,7 +37781,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@types/color-name",
           "name": "@types/color-name",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@types/color-name",
-          "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
           "version": "1.1.1",
         },
         "@types/prop-types" => ArboristNode {
@@ -38158,7 +37797,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@types/prop-types",
           "name": "@types/prop-types",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@types/prop-types",
-          "resolved": "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.3.tgz",
           "version": "15.7.3",
         },
         "@types/react" => ArboristNode {
@@ -38201,7 +37839,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/@types/react",
           "name": "@types/react",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/@types/react",
-          "resolved": "https://registry.npmjs.org/@types/react/-/react-16.9.16.tgz",
           "version": "16.9.16",
         },
         "ansi-escapes" => ArboristNode {
@@ -38226,7 +37863,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansi-escapes",
           "name": "ansi-escapes",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ansi-escapes",
-          "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.0.tgz",
           "version": "4.3.0",
         },
         "ansi-regex" => ArboristNode {
@@ -38243,7 +37879,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansi-regex",
           "name": "ansi-regex",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ansi-regex",
-          "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
           "version": "5.0.0",
         },
         "ansi-styles" => ArboristNode {
@@ -38274,7 +37909,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansi-styles",
           "name": "ansi-styles",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ansi-styles",
-          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
           "version": "3.2.1",
         },
         "ansicolors" => ArboristNode {
@@ -38291,7 +37925,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ansicolors",
           "name": "ansicolors",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ansicolors",
-          "resolved": "https://registry.npmjs.org/ansicolors/-/ansicolors-0.3.2.tgz",
           "version": "0.3.2",
         },
         "arrify" => ArboristNode {
@@ -38308,7 +37941,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/arrify",
           "name": "arrify",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/arrify",
-          "resolved": "https://registry.npmjs.org/arrify/-/arrify-2.0.1.tgz",
           "version": "2.0.1",
         },
         "astral-regex" => ArboristNode {
@@ -38325,7 +37957,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/astral-regex",
           "name": "astral-regex",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/astral-regex",
-          "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-2.0.0.tgz",
           "version": "2.0.0",
         },
         "auto-bind" => ArboristNode {
@@ -38350,7 +37981,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/auto-bind",
           "name": "auto-bind",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/auto-bind",
-          "resolved": "https://registry.npmjs.org/auto-bind/-/auto-bind-3.0.0.tgz",
           "version": "3.0.0",
         },
         "caller-callsite" => ArboristNode {
@@ -38375,7 +38005,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/caller-callsite",
           "name": "caller-callsite",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/caller-callsite",
-          "resolved": "https://registry.npmjs.org/caller-callsite/-/caller-callsite-2.0.0.tgz",
           "version": "2.0.0",
         },
         "caller-path" => ArboristNode {
@@ -38400,7 +38029,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/caller-path",
           "name": "caller-path",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/caller-path",
-          "resolved": "https://registry.npmjs.org/caller-path/-/caller-path-2.0.0.tgz",
           "version": "2.0.0",
         },
         "callsites" => ArboristNode {
@@ -38417,7 +38045,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/callsites",
           "name": "callsites",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/callsites",
-          "resolved": "https://registry.npmjs.org/callsites/-/callsites-2.0.0.tgz",
           "version": "2.0.0",
         },
         "cardinal" => ArboristNode {
@@ -38448,7 +38075,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/cardinal",
           "name": "cardinal",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/cardinal",
-          "resolved": "https://registry.npmjs.org/cardinal/-/cardinal-2.1.1.tgz",
           "version": "2.1.1",
         },
         "chalk" => ArboristNode {
@@ -38482,7 +38108,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/chalk/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
               "version": "4.2.0",
             },
             "color-convert" => ArboristNode {
@@ -38507,7 +38132,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-convert",
               "name": "color-convert",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/chalk/node_modules/color-convert",
-              "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
               "version": "2.0.1",
             },
             "color-name" => ArboristNode {
@@ -38524,7 +38148,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/chalk/node_modules/color-name",
               "name": "color-name",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/chalk/node_modules/color-name",
-              "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
               "version": "1.1.4",
             },
           },
@@ -38560,7 +38183,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/chalk",
           "name": "chalk",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/chalk",
-          "resolved": "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz",
           "version": "3.0.0",
         },
         "ci-info" => ArboristNode {
@@ -38577,7 +38199,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ci-info",
           "name": "ci-info",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ci-info",
-          "resolved": "https://registry.npmjs.org/ci-info/-/ci-info-2.0.0.tgz",
           "version": "2.0.0",
         },
         "cli-cursor" => ArboristNode {
@@ -38602,7 +38223,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/cli-cursor",
           "name": "cli-cursor",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/cli-cursor",
-          "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-3.1.0.tgz",
           "version": "3.1.0",
         },
         "cli-truncate" => ArboristNode {
@@ -38633,7 +38253,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/cli-truncate",
           "name": "cli-truncate",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/cli-truncate",
-          "resolved": "https://registry.npmjs.org/cli-truncate/-/cli-truncate-2.1.0.tgz",
           "version": "2.1.0",
         },
         "color-convert" => ArboristNode {
@@ -38658,7 +38277,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/color-convert",
           "name": "color-convert",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/color-convert",
-          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
           "version": "1.9.3",
         },
         "color-name" => ArboristNode {
@@ -38675,7 +38293,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/color-name",
           "name": "color-name",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/color-name",
-          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
           "version": "1.1.3",
         },
         "convert-source-map" => ArboristNode {
@@ -38695,7 +38312,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/convert-source-map/node_modules/safe-buffer",
               "name": "safe-buffer",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/convert-source-map/node_modules/safe-buffer",
-              "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
               "version": "5.1.2",
             },
           },
@@ -38719,7 +38335,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/convert-source-map",
           "name": "convert-source-map",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/convert-source-map",
-          "resolved": "https://registry.npmjs.org/convert-source-map/-/convert-source-map-1.7.0.tgz",
           "version": "1.7.0",
         },
         "csstype" => ArboristNode {
@@ -38736,7 +38351,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/csstype",
           "name": "csstype",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/csstype",
-          "resolved": "https://registry.npmjs.org/csstype/-/csstype-2.6.8.tgz",
           "version": "2.6.8",
         },
         "debug" => ArboristNode {
@@ -38767,7 +38381,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/debug",
           "name": "debug",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/debug",
-          "resolved": "https://registry.npmjs.org/debug/-/debug-4.1.1.tgz",
           "version": "4.1.1",
         },
         "emoji-regex" => ArboristNode {
@@ -38784,7 +38397,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/emoji-regex",
           "name": "emoji-regex",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/emoji-regex",
-          "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
           "version": "8.0.0",
         },
         "escape-string-regexp" => ArboristNode {
@@ -38801,7 +38413,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/escape-string-regexp",
           "name": "escape-string-regexp",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/escape-string-regexp",
-          "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
           "version": "1.0.5",
         },
         "esprima" => ArboristNode {
@@ -38818,7 +38429,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/esprima",
           "name": "esprima",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/esprima",
-          "resolved": "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz",
           "version": "4.0.1",
         },
         "esutils" => ArboristNode {
@@ -38847,7 +38457,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/esutils",
           "name": "esutils",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/esutils",
-          "resolved": "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz",
           "version": "2.0.3",
         },
         "events-to-array" => ArboristNode {
@@ -38864,7 +38473,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/events-to-array",
           "name": "events-to-array",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/events-to-array",
-          "resolved": "https://registry.npmjs.org/events-to-array/-/events-to-array-1.1.2.tgz",
           "version": "1.1.2",
         },
         "globals" => ArboristNode {
@@ -38881,7 +38489,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/globals",
           "name": "globals",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/globals",
-          "resolved": "https://registry.npmjs.org/globals/-/globals-11.12.0.tgz",
           "version": "11.12.0",
         },
         "has-flag" => ArboristNode {
@@ -38898,7 +38505,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/has-flag",
           "name": "has-flag",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/has-flag",
-          "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz",
           "version": "3.0.0",
         },
         "import-jsx" => ArboristNode {
@@ -38959,7 +38565,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/import-jsx",
           "name": "import-jsx",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/import-jsx",
-          "resolved": "https://registry.npmjs.org/import-jsx/-/import-jsx-3.0.0.tgz",
           "version": "3.0.0",
         },
         "ink" => ArboristNode {
@@ -39104,7 +38709,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ink",
           "name": "ink",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ink",
-          "resolved": "https://registry.npmjs.org/ink/-/ink-2.6.0.tgz",
           "version": "2.6.0",
         },
         "is-ci" => ArboristNode {
@@ -39129,7 +38733,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/is-ci",
           "name": "is-ci",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/is-ci",
-          "resolved": "https://registry.npmjs.org/is-ci/-/is-ci-2.0.0.tgz",
           "version": "2.0.0",
         },
         "is-fullwidth-code-point" => ArboristNode {
@@ -39152,7 +38755,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/is-fullwidth-code-point",
           "name": "is-fullwidth-code-point",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/is-fullwidth-code-point",
-          "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
           "version": "3.0.0",
         },
         "js-tokens" => ArboristNode {
@@ -39175,7 +38777,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/js-tokens",
           "name": "js-tokens",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/js-tokens",
-          "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
           "version": "4.0.0",
         },
         "jsesc" => ArboristNode {
@@ -39192,7 +38793,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/jsesc",
           "name": "jsesc",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/jsesc",
-          "resolved": "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz",
           "version": "2.5.2",
         },
         "json5" => ArboristNode {
@@ -39217,7 +38817,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/json5",
           "name": "json5",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/json5",
-          "resolved": "https://registry.npmjs.org/json5/-/json5-2.1.1.tgz",
           "version": "2.1.1",
         },
         "lodash" => ArboristNode {
@@ -39252,7 +38851,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/lodash",
           "name": "lodash",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/lodash",
-          "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz",
           "version": "4.17.15",
         },
         "lodash.throttle" => ArboristNode {
@@ -39269,7 +38867,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/lodash.throttle",
           "name": "lodash.throttle",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/lodash.throttle",
-          "resolved": "https://registry.npmjs.org/lodash.throttle/-/lodash.throttle-4.1.1.tgz",
           "version": "4.1.1",
         },
         "log-update" => ArboristNode {
@@ -39289,7 +38886,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-escapes",
               "name": "ansi-escapes",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/ansi-escapes",
-              "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-3.2.0.tgz",
               "version": "3.2.0",
             },
             "ansi-regex" => ArboristNode {
@@ -39306,7 +38902,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
               "version": "4.1.0",
             },
             "cli-cursor" => ArboristNode {
@@ -39331,7 +38926,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
               "name": "cli-cursor",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/cli-cursor",
-              "resolved": "https://registry.npmjs.org/cli-cursor/-/cli-cursor-2.1.0.tgz",
               "version": "2.1.0",
             },
             "emoji-regex" => ArboristNode {
@@ -39348,7 +38942,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/emoji-regex",
               "name": "emoji-regex",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/emoji-regex",
-              "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz",
               "version": "7.0.3",
             },
             "is-fullwidth-code-point" => ArboristNode {
@@ -39365,7 +38958,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/is-fullwidth-code-point",
               "name": "is-fullwidth-code-point",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/is-fullwidth-code-point",
-              "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-2.0.0.tgz",
               "version": "2.0.0",
             },
             "mimic-fn" => ArboristNode {
@@ -39382,7 +38974,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/mimic-fn",
               "name": "mimic-fn",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/mimic-fn",
-              "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-1.2.0.tgz",
               "version": "1.2.0",
             },
             "onetime" => ArboristNode {
@@ -39407,7 +38998,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/onetime",
               "name": "onetime",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/onetime",
-              "resolved": "https://registry.npmjs.org/onetime/-/onetime-2.0.1.tgz",
               "version": "2.0.1",
             },
             "restore-cursor" => ArboristNode {
@@ -39438,7 +39028,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
               "name": "restore-cursor",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/restore-cursor",
-              "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-2.0.0.tgz",
               "version": "2.0.0",
             },
             "string-width" => ArboristNode {
@@ -39475,7 +39064,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/string-width",
               "name": "string-width",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/string-width",
-              "resolved": "https://registry.npmjs.org/string-width/-/string-width-3.1.0.tgz",
               "version": "3.1.0",
             },
             "strip-ansi" => ArboristNode {
@@ -39506,7 +39094,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
               "version": "5.2.0",
             },
             "wrap-ansi" => ArboristNode {
@@ -39543,7 +39130,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
               "name": "wrap-ansi",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update/node_modules/wrap-ansi",
-              "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-5.1.0.tgz",
               "version": "5.1.0",
             },
           },
@@ -39579,7 +39165,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/log-update",
           "name": "log-update",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/log-update",
-          "resolved": "https://registry.npmjs.org/log-update/-/log-update-3.3.0.tgz",
           "version": "3.3.0",
         },
         "loose-envify" => ArboristNode {
@@ -39622,7 +39207,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/loose-envify",
           "name": "loose-envify",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/loose-envify",
-          "resolved": "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz",
           "version": "1.4.0",
         },
         "mimic-fn" => ArboristNode {
@@ -39639,7 +39223,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/mimic-fn",
           "name": "mimic-fn",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/mimic-fn",
-          "resolved": "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz",
           "version": "2.1.0",
         },
         "minimist" => ArboristNode {
@@ -39656,7 +39239,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/minimist",
           "name": "minimist",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/minimist",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz",
           "version": "1.2.0",
         },
         "minipass" => ArboristNode {
@@ -39676,7 +39258,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/minipass/node_modules/yallist",
               "name": "yallist",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/minipass/node_modules/yallist",
-              "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
               "version": "4.0.0",
             },
           },
@@ -39706,7 +39287,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/minipass",
           "name": "minipass",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/minipass",
-          "resolved": "https://registry.npmjs.org/minipass/-/minipass-3.1.1.tgz",
           "version": "3.1.1",
         },
         "ms" => ArboristNode {
@@ -39729,7 +39309,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/ms",
           "name": "ms",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/ms",
-          "resolved": "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz",
           "version": "2.1.2",
         },
         "object-assign" => ArboristNode {
@@ -39764,7 +39343,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/object-assign",
           "name": "object-assign",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/object-assign",
-          "resolved": "https://registry.npmjs.org/object-assign/-/object-assign-4.1.1.tgz",
           "version": "4.1.1",
         },
         "onetime" => ArboristNode {
@@ -39789,7 +39367,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/onetime",
           "name": "onetime",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/onetime",
-          "resolved": "https://registry.npmjs.org/onetime/-/onetime-5.1.0.tgz",
           "version": "5.1.0",
         },
         "path-parse" => ArboristNode {
@@ -39806,7 +39383,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/path-parse",
           "name": "path-parse",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/path-parse",
-          "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz",
           "version": "1.0.6",
         },
         "prop-types" => ArboristNode {
@@ -39855,7 +39431,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/prop-types",
           "name": "prop-types",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/prop-types",
-          "resolved": "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz",
           "version": "15.7.2",
         },
         "punycode" => ArboristNode {
@@ -39872,7 +39447,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/punycode",
           "name": "punycode",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/punycode",
-          "resolved": "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz",
           "version": "2.1.1",
         },
         "react" => ArboristNode {
@@ -39944,7 +39518,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/react-is",
           "name": "react-is",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/react-is",
-          "resolved": "https://registry.npmjs.org/react-is/-/react-is-16.12.0.tgz",
           "version": "16.12.0",
         },
         "react-reconciler" => ArboristNode {
@@ -39993,7 +39566,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/react-reconciler",
           "name": "react-reconciler",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/react-reconciler",
-          "resolved": "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.24.0.tgz",
           "version": "0.24.0",
         },
         "redeyed" => ArboristNode {
@@ -40018,7 +39590,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/redeyed",
           "name": "redeyed",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/redeyed",
-          "resolved": "https://registry.npmjs.org/redeyed/-/redeyed-2.1.1.tgz",
           "version": "2.1.1",
         },
         "regenerator-runtime" => ArboristNode {
@@ -40035,7 +39606,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/regenerator-runtime",
           "name": "regenerator-runtime",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/regenerator-runtime",
-          "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz",
           "version": "0.13.3",
         },
         "resolve" => ArboristNode {
@@ -40060,7 +39630,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/resolve",
           "name": "resolve",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/resolve",
-          "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.13.1.tgz",
           "version": "1.13.1",
         },
         "resolve-from" => ArboristNode {
@@ -40077,7 +39646,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/resolve-from",
           "name": "resolve-from",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/resolve-from",
-          "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-3.0.0.tgz",
           "version": "3.0.0",
         },
         "restore-cursor" => ArboristNode {
@@ -40108,7 +39676,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/restore-cursor",
           "name": "restore-cursor",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/restore-cursor",
-          "resolved": "https://registry.npmjs.org/restore-cursor/-/restore-cursor-3.1.0.tgz",
           "version": "3.1.0",
         },
         "scheduler" => ArboristNode {
@@ -40145,7 +39712,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/scheduler",
           "name": "scheduler",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/scheduler",
-          "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.18.0.tgz",
           "version": "0.18.0",
         },
         "semver" => ArboristNode {
@@ -40162,7 +39728,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/semver",
           "name": "semver",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/semver",
-          "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",
           "version": "5.7.1",
         },
         "signal-exit" => ArboristNode {
@@ -40197,7 +39762,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/signal-exit",
           "name": "signal-exit",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/signal-exit",
-          "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz",
           "version": "3.0.2",
         },
         "slice-ansi" => ArboristNode {
@@ -40231,7 +39795,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/slice-ansi/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
               "version": "4.2.0",
             },
             "color-convert" => ArboristNode {
@@ -40256,7 +39819,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
               "name": "color-convert",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/slice-ansi/node_modules/color-convert",
-              "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
               "version": "2.0.1",
             },
             "color-name" => ArboristNode {
@@ -40273,7 +39835,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/slice-ansi/node_modules/color-name",
               "name": "color-name",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/slice-ansi/node_modules/color-name",
-              "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
               "version": "1.1.4",
             },
           },
@@ -40315,7 +39876,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/slice-ansi",
           "name": "slice-ansi",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/slice-ansi",
-          "resolved": "https://registry.npmjs.org/slice-ansi/-/slice-ansi-3.0.0.tgz",
           "version": "3.0.0",
         },
         "string-length" => ArboristNode {
@@ -40335,7 +39895,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/string-length/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/string-length/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz",
               "version": "4.1.0",
             },
             "astral-regex" => ArboristNode {
@@ -40352,7 +39911,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/string-length/node_modules/astral-regex",
               "name": "astral-regex",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/string-length/node_modules/astral-regex",
-              "resolved": "https://registry.npmjs.org/astral-regex/-/astral-regex-1.0.0.tgz",
               "version": "1.0.0",
             },
             "strip-ansi" => ArboristNode {
@@ -40377,7 +39935,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/string-length/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-5.2.0.tgz",
               "version": "5.2.0",
             },
           },
@@ -40413,7 +39970,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/string-length",
           "name": "string-length",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/string-length",
-          "resolved": "https://registry.npmjs.org/string-length/-/string-length-3.1.0.tgz",
           "version": "3.1.0",
         },
         "string-width" => ArboristNode {
@@ -40462,7 +40018,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/string-width",
           "name": "string-width",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/string-width",
-          "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.0.tgz",
           "version": "4.2.0",
         },
         "strip-ansi" => ArboristNode {
@@ -40493,7 +40048,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/strip-ansi",
           "name": "strip-ansi",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/strip-ansi",
-          "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
           "version": "6.0.0",
         },
         "supports-color" => ArboristNode {
@@ -40513,7 +40067,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/supports-color/node_modules/has-flag",
               "name": "has-flag",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/supports-color/node_modules/has-flag",
-              "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
               "version": "4.0.0",
             },
           },
@@ -40537,7 +40090,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/supports-color",
           "name": "supports-color",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/supports-color",
-          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.1.0.tgz",
           "version": "7.1.0",
         },
         "tap-parser" => ArboristNode {
@@ -40580,7 +40132,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/tap-parser",
           "name": "tap-parser",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/tap-parser",
-          "resolved": "https://registry.npmjs.org/tap-parser/-/tap-parser-10.0.1.tgz",
           "version": "10.0.1",
         },
         "tap-yaml" => ArboristNode {
@@ -40611,7 +40162,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/tap-yaml",
           "name": "tap-yaml",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/tap-yaml",
-          "resolved": "https://registry.npmjs.org/tap-yaml/-/tap-yaml-1.0.0.tgz",
           "version": "1.0.0",
         },
         "to-fast-properties" => ArboristNode {
@@ -40628,7 +40178,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/to-fast-properties",
           "name": "to-fast-properties",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/to-fast-properties",
-          "resolved": "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz",
           "version": "2.0.0",
         },
         "treport" => ArboristNode {
@@ -40648,7 +40197,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/treport/node_modules/ansi-regex",
               "name": "ansi-regex",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/treport/node_modules/ansi-regex",
-              "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz",
               "version": "2.1.1",
             },
             "strip-ansi" => ArboristNode {
@@ -40673,7 +40221,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/treport/node_modules/strip-ansi",
               "name": "strip-ansi",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/treport/node_modules/strip-ansi",
-              "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz",
               "version": "3.0.1",
             },
             "unicode-length" => ArboristNode {
@@ -40704,7 +40251,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/treport/node_modules/unicode-length",
               "name": "unicode-length",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/treport/node_modules/unicode-length",
-              "resolved": "https://registry.npmjs.org/unicode-length/-/unicode-length-2.0.2.tgz",
               "version": "2.0.2",
             },
           },
@@ -40776,7 +40322,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/treport",
           "name": "treport",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/treport",
-          "resolved": "https://registry.npmjs.org/treport/-/treport-1.0.1.tgz",
           "version": "1.0.1",
         },
         "type-fest" => ArboristNode {
@@ -40793,7 +40338,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/type-fest",
           "name": "type-fest",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/type-fest",
-          "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz",
           "version": "0.8.1",
         },
         "widest-line" => ArboristNode {
@@ -40818,7 +40362,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/widest-line",
           "name": "widest-line",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/widest-line",
-          "resolved": "https://registry.npmjs.org/widest-line/-/widest-line-3.1.0.tgz",
           "version": "3.1.0",
         },
         "wrap-ansi" => ArboristNode {
@@ -40852,7 +40395,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
               "name": "ansi-styles",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/wrap-ansi/node_modules/ansi-styles",
-              "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.2.0.tgz",
               "version": "4.2.0",
             },
             "color-convert" => ArboristNode {
@@ -40877,7 +40419,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
               "name": "color-convert",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/wrap-ansi/node_modules/color-convert",
-              "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
               "version": "2.0.1",
             },
             "color-name" => ArboristNode {
@@ -40894,7 +40435,6 @@ ArboristNode {
               "location": "node_modules/tap/node_modules/wrap-ansi/node_modules/color-name",
               "name": "color-name",
               "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/wrap-ansi/node_modules/color-name",
-              "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
               "version": "1.1.4",
             },
           },
@@ -40930,7 +40470,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/wrap-ansi",
           "name": "wrap-ansi",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/wrap-ansi",
-          "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz",
           "version": "6.2.0",
         },
         "yaml" => ArboristNode {
@@ -40961,7 +40500,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/yaml",
           "name": "yaml",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/yaml",
-          "resolved": "https://registry.npmjs.org/yaml/-/yaml-1.7.2.tgz",
           "version": "1.7.2",
         },
         "yoga-layout-prebuilt" => ArboristNode {
@@ -40978,7 +40516,6 @@ ArboristNode {
           "location": "node_modules/tap/node_modules/yoga-layout-prebuilt",
           "name": "yoga-layout-prebuilt",
           "path": "{CWD}/test/arborist/reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/tap/node_modules/yoga-layout-prebuilt",
-          "resolved": "https://registry.npmjs.org/yoga-layout-prebuilt/-/yoga-layout-prebuilt-1.9.3.tgz",
           "version": "1.9.3",
         },
       },

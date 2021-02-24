@@ -3,7 +3,7 @@
   "version": "2.2.4",
   "description": "Manage node_modules trees",
   "dependencies": {
-    "@npmcli/installed-package-contents": "^1.0.6",
+    "@npmcli/installed-package-contents": "^1.0.7",
     "@npmcli/map-workspaces": "^1.0.2",
     "@npmcli/metavuln-calculator": "^1.1.0",
     "@npmcli/move-file": "^1.1.0",

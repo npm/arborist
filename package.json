@@ -79,8 +79,12 @@
     "after": "test/fixtures/cleanup.js",
     "coverage-map": "map.js",
     "esm": false,
+    "test-env": [
+      "NODE_OPTIONS=--no-warnings"
+    ],
     "node-arg": [
-      "--no-warnings"
+      "--no-warnings",
+      "--no-deprecation"
     ],
     "timeout": "120"
   }

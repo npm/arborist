@@ -39,6 +39,8 @@ jobs:
       - name: Run Tap Tests
         if: matrix.platform.os != 'ubuntu-latest' || matrix.node-version != '14.x'
         run: npm test -- -c -t0
+        env:
+          NODE_OPTIONS: --no-warnings
 
       # Push coverage for specific environment
       - name: Run Tap Tests (push coverage results)

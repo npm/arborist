@@ -79,6 +79,9 @@
     "after": "test/fixtures/cleanup.js",
     "coverage-map": "map.js",
     "esm": false,
+    "node-arg": [
+      "--no-warnings"
+    ],
     "timeout": "120"
   }
 }

@@ -22,6 +22,7 @@ t.cleanSnapshot = str => str
   .replace(/:\n *Set/g, ':Set')
   .replace(/ArboristNode /g, '')
   .replace(/Edge /g, '')
+  .replace(/ *([[\]{}]) */g, '$1')
 
 t.test('printable Node', t => {
   t.test('extraneous tree', t => {

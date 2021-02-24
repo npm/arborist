@@ -45,13 +45,13 @@ extraneous:true,
 dev:true,
 optional:true,
 peer:true,
-error:{ code:'ERR', path:'/' },
-edgesOut:Map {
-'b' => { prod b@* -> node_modules/b },
-'missing' => { prod missing@* MISSING },
-'prod' => { prod prod@1.x -> node_modules/prod } },
-children:Map {
-'b' => {
+error:{code:'ERR', path:'/'},
+edgesOut:Map{
+'b' =>{prod b@* -> node_modules/b},
+'missing' =>{prod missing@* MISSING},
+'prod' =>{prod prod@1.x -> node_modules/prod}},
+children:Map{
+'b' =>{
 name:'b',
 version:'1.2.3',
 location:'node_modules/b',
@@ -61,8 +61,8 @@ extraneous:true,
 dev:true,
 optional:true,
 peer:true,
-edgesIn:Set { { "" prod b@* }, { node_modules/prod prod b@* } } },
-'c' => {
+edgesIn:Set{{"" prod b@*},{node_modules/prod prod b@*}}},
+'c' =>{
 name:'c',
 location:'node_modules/c',
 path:'/home/user/projects/root/node_modules/c',
@@ -70,8 +70,8 @@ resolved:'c',
 extraneous:true,
 dev:true,
 optional:true,
-peer:true },
-'prod' => {
+peer:true},
+'prod' =>{
 name:'prod',
 version:'1.2.3',
 location:'node_modules/prod',
@@ -81,12 +81,12 @@ extraneous:true,
 dev:true,
 optional:true,
 peer:true,
-edgesOut:Map {
-'b' => { prod b@* -> node_modules/b },
-'meta' => { prod meta@* MISSING },
-'peer' => { peer peer@* MISSING } },
-edgesIn:Set { { "" prod prod@1.x } },
-fsChildren:Set {
+edgesOut:Map{
+'b' =>{prod b@* -> node_modules/b},
+'meta' =>{prod meta@* MISSING},
+'peer' =>{peer peer@* MISSING}},
+edgesIn:Set{{"" prod prod@1.x}},
+fsChildren:Set{
 {
 name:'bar',
 version:'1.0.0',
@@ -95,7 +95,7 @@ path:'/home/user/projects/root/node_modules/prod/bar',
 extraneous:true,
 dev:true,
 optional:true,
-peer:true },
+peer:true},
 {
 name:'foo',
 version:'1.2.3',
@@ -105,7 +105,7 @@ extraneous:true,
 dev:true,
 optional:true,
 peer:true,
-edgesOut:Map { 'meta' => { prod meta@* MISSING } } } } } } }
+edgesOut:Map{'meta' =>{prod meta@* MISSING}}}}}}}
 `
 
 exports[`test/node.js TAP printable Node variations > should match non-extraneous tree representation 1`] = `
@@ -117,11 +117,11 @@ path:'/home/user/projects/root',
 dev:true,
 optional:true,
 peer:true,
-error:{ code:'ERR' },
-edgesOut:Map {
-'a' => { prod a@^1.0.0 -> node_modules/a },
-'b' => { prod b@^1.0.0 -> node_modules/b } },
-fsChildren:Set {
+error:{code:'ERR'},
+edgesOut:Map{
+'a' =>{prod a@^1.0.0 -> node_modules/a},
+'b' =>{prod b@^1.0.0 -> node_modules/b}},
+fsChildren:Set{
 {
 name:'c',
 version:'1.0.0',
@@ -130,9 +130,9 @@ path:'/home/user/projects/root/c',
 extraneous:true,
 dev:true,
 optional:true,
-peer:true } },
-children:Map {
-'a' => {
+peer:true}},
+children:Map{
+'a' =>{
 name:'a',
 version:'1.1.1',
 location:'node_modules/a',
@@ -141,9 +141,9 @@ dev:true,
 optional:true,
 peer:true,
 bundled:true,
-errors:[ { code:'ERR' } ],
-edgesIn:Set { { "" prod a@^1.0.0 } } },
-'b' => ArboristLink {
+errors:[{code:'ERR'}],
+edgesIn:Set{{"" prod a@^1.0.0}}},
+'b' => ArboristLink{
 name:'b',
 packageName:'c',
 version:'1.0.0',
@@ -152,11 +152,11 @@ path:'/home/user/projects/root/node_modules/b',
 realpath:'/home/user/projects/root/c',
 resolved:'file:../c',
 devOptional:true,
-errors:[ { code:'ERR',
-path:'/home/users/projects/root/node_modules/b' } ],
-edgesIn:Set { { "" prod b@^1.0.0 } },
-target:{ location:'c' } },
-'d' => ArboristLink {
+errors:[{code:'ERR',
+path:'/home/users/projects/root/node_modules/b'}],
+edgesIn:Set{{"" prod b@^1.0.0}},
+target:{location:'c'}},
+'d' => ArboristLink{
 name:'d',
 packageName:'c',
 version:'1.0.0',
@@ -168,7 +168,7 @@ extraneous:true,
 dev:true,
 optional:true,
 peer:true,
-target:{ location:'c' } } } }
+target:{location:'c'}}}}
 `
 
 exports[`test/node.js TAP set workspaces > should setup edges out for each workspace 1`] = `

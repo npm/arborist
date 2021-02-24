@@ -2008,6 +2008,7 @@ t.test('printable Node', t => {
     .replace(/:\n *Set/g, ':Set')
     .replace(/ArboristNode /g, '')
     .replace(/Edge /g, '')
+    .replace(/ *([[\]{}]) */g, '$1')
 
   t.test('extraneous tree', t => {
     const tree = new Node({

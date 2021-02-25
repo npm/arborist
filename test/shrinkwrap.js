@@ -24,7 +24,8 @@ const hidden = 'node_modules/.package-lock.json'
 const saxFixture = resolve(__dirname, 'fixtures/sax')
 
 // start out with the file being fresh
-fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(), new Date())
+const later = Date.now() + 10000
+fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(later), new Date(later))
 
 t.test('shrinkwrap key order', async t => t.matchSnapshot(Shrinkwrap.keyOrder))
 
@@ -703,8 +704,9 @@ t.test('hidden lockfile only used if up to date', async t => {
     'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' }}),
   })
   // ensure that the lockfile is fresh to start
-  fs.utimesSync(resolve(path, hidden), new Date(), new Date())
   {
+    const later = Date.now() + 10000
+    fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, true, 'loading from fresh lockfile')
   }
@@ -720,7 +722,8 @@ t.test('hidden lockfile only used if up to date', async t => {
   }
   // make the lockfile newer, but that new entry is still a problem
   {
-    fs.utimesSync(resolve(path, hidden), new Date(), new Date())
+    const later = Date.now() + 10000
+    fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, false, 'did not load, new entry')
     t.equal(s.loadingError, 'missing from lockfile: node_modules/xyz')
@@ -729,7 +732,8 @@ t.test('hidden lockfile only used if up to date', async t => {
   {
     rimraf.sync(resolve(path, 'node_modules/abbrev'))
     rimraf.sync(resolve(path, 'node_modules/xyz'))
-    fs.utimesSync(resolve(path, hidden), new Date(), new Date())
+    const later = Date.now() + 10000
+    fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, false, 'did not load, missing entry')
     t.equal(s.loadingError, 'missing from node_modules: node_modules/abbrev')

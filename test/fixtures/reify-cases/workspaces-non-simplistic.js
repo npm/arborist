@@ -320,7 +320,7 @@ function lexSort (a, b) {
   })
 })
   const {utimesSync} = require('fs')
-  const n = Date.now()
+  const n = Date.now() + 10000
   const {resolve} = require('path')
   
   utimesSync(resolve(path, "node_modules/.package-lock.json"), new Date(n), new Date(n))

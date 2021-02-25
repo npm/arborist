@@ -117,7 +117,7 @@ output = `t.testdir(${output})`
 if (hiddenLocks.length) {
   output += `
   const {utimesSync} = require('fs')
-  const n = Date.now()
+  const n = Date.now() + 10000
   const {resolve} = require('path')
   `
   for (const hiddenLock of hiddenLocks) {

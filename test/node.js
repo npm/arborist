@@ -1996,18 +1996,19 @@ t.test('printable Node', t => {
     .replace(/[A-Z]:/g, '')
     .replace(/\\+/g, '/')
     // FIXME: once we drop support to node10 we can remove some of this
-    .replace(/:\n +Map/g, ': Map')
-    .replace(/:\n +Set/g, ': Set')
     .replace(/:\n? +/g, ':')
     .replace(/\n +/g, '\n')
     .replace(/\n\}/g, ' }')
-    .replace(/\n\]/g, ' ]')
-    .replace(/\n\[/g, ' [')
+    .replace(/\n\]/g, ']')
+    .replace(/\n\[/g, '[')
     .replace(/\n\{\n/g, ' { ')
     .replace(/Map\([0-9]\)/g, 'Map')
     .replace(/Set\([0-9]\)/g, 'Set')
+    .replace(/:\n *Map/g, ':Map')
+    .replace(/:\n *Set/g, ':Set')
     .replace(/ArboristNode /g, '')
     .replace(/Edge /g, '')
+    .replace(/ *([[\]{}]) */g, '$1')
 
   t.test('extraneous tree', t => {
     const tree = new Node({

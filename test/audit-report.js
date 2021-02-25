@@ -194,12 +194,14 @@ t.test('audit outdated nyc and mkdirp with before: option', async t => {
 
 t.test('audit returns an error', async t => {
   const path = resolve(fixtures, 'audit-nyc-mkdirp')
-  const auditFile = resolve(path, 'audit.json')
-  t.teardown(auditResponse(auditFile))
   t.teardown(failAudit())
 
   const logs = []
-  const onlog = (...msg) => logs.push(msg)
+  const onlog = (...msg) => {
+    if (msg[0] === 'http')
+      return
+    logs.push(msg)
+  }
   process.on('log', onlog)
   t.teardown(() => process.removeListener('log', onlog))
 

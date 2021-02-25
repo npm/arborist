@@ -41,6 +41,8 @@ const fsMock = {
       realRename(...args)
   },
 }
+// need this to be injected so that it doesn't pull from main cache
+const mkdirp = requireInject('mkdirp', { fs: fsMock })
 
 // track the warnings that are emitted.  returns a function that removes
 // the listener and provides the list of what it saw.
@@ -1353,7 +1355,7 @@ t.test('rollback if process is terminated during reify process', async t => {
         // ensure that we end up with the same thing we started with,
         // if it was something other than we're installing
         const a = resolve(path, 'node_modules/abbrev')
-        fs.mkdirSync(a, { recursive: true })
+        mkdirp.sync(a)
         const pj = resolve(a, 'package.json')
         fs.writeFileSync(pj, JSON.stringify({
           name: 'abbrev',

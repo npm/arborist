@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [10.1.x, 10.x, 12.0.x, 12.x, 14.0.x, 14.x, 15.x]
         platform:
         - os: ubuntu-latest
           shell: bash
@@ -36,12 +36,14 @@ jobs:
         run: npm install
 
       # Run for all environments
-      - name: Run Tap Tests
+      - name: Run Tap Tests (no pre/post scripts)
         if: matrix.platform.os != 'ubuntu-latest' || matrix.node-version != '14.x'
-        run: npm test -- -c -t0
+        run: npm run test-only -- -c -t0
+        env:
+          NODE_OPTIONS: --no-warnings
 
       # Push coverage for specific environment
-      - name: Run Tap Tests (push coverage results)
+      - name: Run Tap Tests (push coverage results, verify linting)
         if: matrix.platform.os == 'ubuntu-latest' && matrix.node-version == '14.x'
         run: npm test -- -c -t0
         env:

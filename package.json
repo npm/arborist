@@ -46,7 +46,7 @@
     "tcompare": "^3.0.4"
   },
   "scripts": {
-    "test": "tap",
+    "test": "npm run test-only --",
     "test-only": "tap",
     "posttest": "npm run lint",
     "snap": "tap",

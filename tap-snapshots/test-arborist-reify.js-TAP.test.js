@@ -29025,6 +29025,10 @@ Object {
       "from": "f@git+https://user:pass@github.com/baz/quux.git#asdf",
       "version": "git+https://user:pass@github.com/baz/quux#71f3ccfefba85d2048484569dba8c1829f6f41d7",
     },
+    "g": Object {
+      "extraneous": true,
+      "resolved": "https://registry.npmjs.org/g/-/g-1.2.3.tgz",
+    },
   },
   "lockfileVersion": 2,
   "name": "reify-saving-the-ideal-tree-save-some-stuff",
@@ -29039,8 +29043,9 @@ Object {
         "a": "github:foo/bar#baz",
         "b": "^1.2.3",
         "d": "npm:c@1.x <1.9.9",
-        "e": "*",
+        "e": "file:e",
         "f": "git+https://user:pass@github.com/baz/quux.git#asdf",
+        "g": "*",
       },
       "devDependencies": Object {
         "c": "git+ssh://git@githost.com:a/b/c.git#master",
@@ -29082,6 +29087,10 @@ Object {
       "extraneous": true,
       "resolved": "git+https://user:pass@github.com/baz/quux.git#71f3ccfefba85d2048484569dba8c1829f6f41d7",
       "version": "1.2.3",
+    },
+    "node_modules/g": Object {
+      "extraneous": true,
+      "resolved": "https://registry.npmjs.org/g/-/g-1.2.3.tgz",
     },
   },
   "requires": true,

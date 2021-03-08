@@ -809,8 +809,10 @@ t.test('saving the ideal tree', t => {
         a: 'git+ssh://git@github.com:foo/bar#baz',
         b: '',
         d: 'd@npm:c@1.x <1.9.9',
+        // XXX: should we remove dependencies that are also workspaces?
         e: 'file:e',
         f: 'git+https://user:pass@github.com/baz/quux#asdf',
+        g: '',
       },
       devDependencies: {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
@@ -881,6 +883,14 @@ t.test('saving the ideal tree', t => {
         },
         parent: tree,
       })
+      new Node({
+        name: 'g',
+        resolved: 'https://registry.npmjs.org/g/-/g-1.2.3.tgz',
+        pkg: {
+          name: 'g', // no version, somehow
+        },
+        parent: tree,
+      })
       const target = new Node({
         name: 'e',
         pkg: {
@@ -906,7 +916,10 @@ t.test('saving the ideal tree', t => {
         npa('c@git+ssh://git@githost.com:a/b/c.git#master'),
         npa('e'),
         npa('f@git+https://user:pass@github.com/baz/quux#asdf'),
+        npa('g'),
       ]
+      // NB: these are all going to be marked as extraneous, because we're
+      // skipping the actual buildIdealTree step that flags them properly
       return a[kSaveIdealTree]({
         savePrefix: '~',
       })
@@ -918,8 +931,9 @@ t.test('saving the ideal tree', t => {
           a: 'github:foo/bar#baz',
           b: '^1.2.3',
           d: 'npm:c@1.x <1.9.9',
-          e: '*',
+          e: 'file:e',
           f: 'git+https://user:pass@github.com/baz/quux.git#asdf',
+          g: '*',
         },
         workspaces: [
           'e',
@@ -1451,4 +1465,30 @@ t.test('properly update one module when multiple are present', async t => {
   await newArb({ path, global: true }).reify({ update: ['abbrev'] })
   t.equal(JSON.parse(fs.readFileSync(abbrevpj, 'utf8')).version, '1.1.1')
   t.equal(JSON.parse(fs.readFileSync(oncepj, 'utf8')).version, '1.4.0')
+})
+
+t.test('saving should not replace file: dep with version', async t => {
+  // need to run in the path, as if the user typed `npm i file:abbrev`
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  const path = t.testdir({
+    abbrev: {
+      'package.json': JSON.stringify({
+        name: 'abbrev',
+        version: '1.1.1',
+      }),
+    },
+    'package.json': JSON.stringify({}),
+  })
+  process.chdir(path)
+
+  const pj = resolve(path, 'package.json')
+  await newArb({ path, save: true }).reify({ add: ['file:abbrev'] })
+  const pj1 = fs.readFileSync(pj, 'utf8')
+  t.equal(JSON.parse(pj1).dependencies.abbrev, 'file:abbrev',
+    'saved as file: spec after file: install')
+  await newArb({ path, save: true }).reify({ add: ['abbrev'] })
+  const pj2 = fs.readFileSync(pj, 'utf8')
+  t.equal(JSON.parse(pj2).dependencies.abbrev, 'file:abbrev',
+    'still a file: spec after a bare name install')
 })

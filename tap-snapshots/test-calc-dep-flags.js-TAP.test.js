@@ -64,7 +64,7 @@ ArboristNode {
           "path": "/x/node_modules/devdep/node_modules/linky",
           "realpath": "/x/y/z",
           "resolved": "file:../../../y/z",
-          "target": Object {
+          "target": ArboristNode {
             "location": "y/z",
           },
           "version": "1.2.3",

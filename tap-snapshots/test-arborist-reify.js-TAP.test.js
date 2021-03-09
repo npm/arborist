@@ -28,7 +28,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-a-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/bar",
       "realpath": "{CWD}/test/arborist/reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/bar",
       "resolved": "file:../packages/bar",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/bar",
       },
       "version": "1.2.3",
@@ -47,7 +47,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-a-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/foo",
       "realpath": "{CWD}/test/arborist/reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo",
       "resolved": "file:../packages/foo",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/foo",
       },
       "version": "1.2.3",
@@ -417,7 +417,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-create-link-deps/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/reify-create-link-deps/target",
       "resolved": "file:../target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "target",
       },
       "version": "1.2.3",
@@ -1114,7 +1114,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-dry-run-do-not-get-anything-wet-link-dep-empty/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/reify-dry-run-do-not-get-anything-wet-link-dep-empty/target",
       "resolved": "file:../target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "target",
       },
       "version": "1.2.3",
@@ -1207,7 +1207,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-dry-run-do-not-get-anything-wet-link-meta-deps-empty/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/reify-dry-run-do-not-get-anything-wet-link-meta-deps-empty/node_modules/@isaacs/testing-link-dep/target",
       "resolved": "file:@isaacs/testing-link-dep/target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/@isaacs/testing-link-dep/target",
       },
     },
@@ -1713,7 +1713,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-link-deps-already-in-place/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/reify-link-deps-already-in-place/target",
       "resolved": "file:../target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "target",
       },
       "version": "1.2.3",
@@ -1806,7 +1806,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-link-meta-deps-fresh-install/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/reify-link-meta-deps-fresh-install/node_modules/@isaacs/testing-link-dep/target",
       "resolved": "file:@isaacs/testing-link-dep/target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/@isaacs/testing-link-dep/target",
       },
     },
@@ -1850,7 +1850,7 @@ ArboristNode {
           "path": "{CWD}/test/arborist/reify-link-meta-deps-update/node_modules/@isaacs/testing-link-dep/node_modules/linked-dep",
           "realpath": "{CWD}/test/arborist/reify-link-meta-deps-update/node_modules/@isaacs/testing-link-dep/target",
           "resolved": "file:../target",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/@isaacs/testing-link-dep/target",
           },
           "version": "1.2.3",
@@ -1940,7 +1940,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-link-metadep-cli-750/node_modules/app",
       "realpath": "{CWD}/test/arborist/reify-link-metadep-cli-750/app",
       "resolved": "file:../app",
-      "target": Object {
+      "target": ArboristNode {
         "location": "app",
       },
     },
@@ -1958,7 +1958,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-link-metadep-cli-750/node_modules/lib",
       "realpath": "{CWD}/test/arborist/reify-link-metadep-cli-750/lib",
       "resolved": "file:../lib",
-      "target": Object {
+      "target": ArboristNode {
         "location": "lib",
       },
     },
@@ -2015,7 +2015,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-link-metadep-cli-750-fresh/node_modules/app",
       "realpath": "{CWD}/test/arborist/reify-link-metadep-cli-750-fresh/app",
       "resolved": "file:../app",
-      "target": Object {
+      "target": ArboristNode {
         "location": "app",
       },
     },
@@ -2033,7 +2033,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-link-metadep-cli-750-fresh/node_modules/lib",
       "realpath": "{CWD}/test/arborist/reify-link-metadep-cli-750-fresh/lib",
       "resolved": "file:../lib",
-      "target": Object {
+      "target": ArboristNode {
         "location": "lib",
       },
     },
@@ -29765,7 +29765,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-no-lockfile/node_modules/a",
       "realpath": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-no-lockfile/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -29784,7 +29784,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-no-lockfile/node_modules/b",
       "realpath": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-no-lockfile/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -29876,7 +29876,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-with-lockfile/node_modules/a",
       "realpath": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-with-lockfile/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -29895,7 +29895,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-with-lockfile/node_modules/b",
       "realpath": "{CWD}/test/arborist/reify-transitive-deps-containing-asymmetrical-bin-with-lockfile/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -49019,7 +49019,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-workspaces-reify-from-an-actual-loaded-workspace-env/node_modules/pkg-a",
       "realpath": "{CWD}/test/arborist/reify-workspaces-reify-from-an-actual-loaded-workspace-env/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
     },
@@ -49078,7 +49078,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/node_modules/a",
       "realpath": "{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -49103,7 +49103,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/node_modules/b",
       "realpath": "{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -49169,7 +49169,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/node_modules/a",
       "realpath": "{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -49188,7 +49188,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/node_modules/b",
       "realpath": "{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files/packages/b",
       "resolved": "file:../packages/b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/b",
       },
       "version": "1.0.0",

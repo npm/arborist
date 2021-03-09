@@ -703,6 +703,7 @@ t.test('hidden lockfile only used if up to date', async t => {
     },
     'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' }}),
   })
+
   // ensure that the lockfile is fresh to start
   {
     const later = Date.now() + 10000
@@ -710,6 +711,7 @@ t.test('hidden lockfile only used if up to date', async t => {
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, true, 'loading from fresh lockfile')
   }
+
   // make the node_modules dir have a newer mtime by adding an entry
   // and setting the hidden lockfile back in time
   {
@@ -720,6 +722,7 @@ t.test('hidden lockfile only used if up to date', async t => {
     t.equal(s.loadedFromDisk, false, 'did not load from disk, updated nm')
     t.equal(s.loadingError, 'out of date, updated: node_modules')
   }
+
   // make the lockfile newer, but that new entry is still a problem
   {
     const later = Date.now() + 10000
@@ -728,6 +731,7 @@ t.test('hidden lockfile only used if up to date', async t => {
     t.equal(s.loadedFromDisk, false, 'did not load, new entry')
     t.equal(s.loadingError, 'missing from lockfile: node_modules/xyz')
   }
+
   // make the lockfile newer, but missing a folder from node_modules
   {
     rimraf.sync(resolve(path, 'node_modules/abbrev'))
@@ -737,6 +741,77 @@ t.test('hidden lockfile only used if up to date', async t => {
     const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
     t.equal(s.loadedFromDisk, false, 'did not load, missing entry')
     t.equal(s.loadingError, 'missing from node_modules: node_modules/abbrev')
+  }
+})
+
+t.test('hidden lockfile understands symlinks', async t => {
+  const path = t.testdir({
+    node_modules: {
+      '.package-lock.json': JSON.stringify({
+        name: 'hidden-lockfile-with-symlink',
+        lockfileVersion: 2,
+        requires: true,
+        packages: {
+          abbrev: {
+            version: '1.1.1',
+          },
+          'node_modules/abbrev': {
+            resolved: 'abbrev',
+            link: true,
+          },
+        },
+      }),
+      abbrev: t.fixture('symlink', '../abbrev'),
+
+      // a symlink missing a target is not relevant
+      missing: t.fixture('symlink', '../missing'),
+    },
+    abbrev: {
+      'package.json': JSON.stringify({
+        name: 'abbrev',
+        version: '1.1.1',
+      }),
+    },
+    'package.json': JSON.stringify({
+      dependencies: {
+        abbrev: 'file:abbrev',
+      },
+    }),
+  })
+
+  // respect it if not newer, and the target included in shrinkwrap
+  {
+    const later = Date.now() + 10000
+    fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, true, 'loaded from disk')
+    t.equal(s.filename, resolve(path, hidden))
+  }
+
+  // don't respect if the target is newer than hidden shrinkwrap
+  {
+    const later = Date.now() + 20000
+    fs.utimesSync(resolve(path, 'abbrev/package.json'), new Date(later), new Date(later))
+    fs.utimesSync(resolve(path, 'abbrev'), new Date(later), new Date(later))
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, false, 'not loaded from disk')
+    t.equal(s.filename, resolve(path, hidden))
+  }
+
+  // don't respect it if the target is not in hidden shrinkwrap
+  {
+    fs.mkdirSync(resolve(path, 'missing'))
+    fs.writeFileSync(resolve(path, 'missing/package.json'), JSON.stringify({
+      name: 'missing',
+      version: '1.2.3',
+    }))
+    // even though it's newer, the 'missing' is not found in the lock
+    const later = Date.now() + 30000
+    fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))
+
+    const s = await Shrinkwrap.load({ path, hiddenLockfile: true })
+    t.equal(s.loadedFromDisk, false, 'not loaded from disk')
+    t.equal(s.filename, resolve(path, hidden))
   }
 })
 

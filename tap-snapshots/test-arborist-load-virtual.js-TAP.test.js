@@ -651,7 +651,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/edit-package-json/workspaces-changed/node_modules/a",
       "realpath": "{CWD}/test/fixtures/edit-package-json/workspaces-changed/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -670,7 +670,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/edit-package-json/workspaces-changed/node_modules/b",
       "realpath": "{CWD}/test/fixtures/edit-package-json/workspaces-changed/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -737,7 +737,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-simple-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-simple-virtual/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -762,7 +762,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-simple-virtual/node_modules/b",
       "realpath": "{CWD}/test/fixtures/workspaces-simple-virtual/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -12795,7 +12795,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/pnpm/node_modules/@scope/x",
       "realpath": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "resolved": "file:../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       },
       "version": "1.0.0",
@@ -12814,7 +12814,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/pnpm/node_modules/a",
       "realpath": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "resolved": "file:.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       },
       "version": "1.0.0",
@@ -12966,7 +12966,7 @@ ArboristNode {
     },
     ArboristNode {
       "children": Map {
-        "a" => Object {
+        "a" => ArboristNode {
           "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
         },
         "b" => ArboristLink {
@@ -12983,7 +12983,7 @@ ArboristNode {
           "path": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b",
           "realpath": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
           "resolved": "file:../../../b/1.0.0/node_modules/b",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
           },
           "version": "1.0.0",
@@ -13002,7 +13002,7 @@ ArboristNode {
           "path": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c",
           "realpath": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           "resolved": "file:../../../c/1.0.0/node_modules/c",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
           "version": "1.0.0",
@@ -13014,7 +13014,7 @@ ArboristNode {
     },
     ArboristNode {
       "children": Map {
-        "b" => Object {
+        "b" => ArboristNode {
           "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
         },
         "c" => ArboristLink {
@@ -13031,7 +13031,7 @@ ArboristNode {
           "path": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c",
           "realpath": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           "resolved": "file:../../../c/1.0.0/node_modules/c",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
           "version": "1.0.0",
@@ -13057,12 +13057,12 @@ ArboristNode {
           "path": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x",
           "realpath": "{CWD}/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
           "resolved": "file:../../../../@scope/x/1.0.0/node_modules/@scope/x",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
           },
           "version": "1.0.0",
         },
-        "c" => Object {
+        "c" => ArboristNode {
           "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
         },
       },
@@ -13606,7 +13606,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/install-types/node_modules/symlink",
       "realpath": "{CWD}/test/fixtures/install-types/abbrev-link-target",
       "resolved": "file:../abbrev-link-target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "abbrev-link-target",
       },
       "version": "1.1.1",
@@ -13618,7 +13618,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/install-types/node_modules/symlink-in-tree",
       "realpath": "{CWD}/test/fixtures/install-types/node_modules/abbrev",
       "resolved": "file:abbrev",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/abbrev",
       },
       "version": "1.1.1",
@@ -14288,7 +14288,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/install-types/node_modules/symlink",
       "realpath": "{CWD}/test/fixtures/install-types/abbrev-link-target",
       "resolved": "file:../abbrev-link-target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "abbrev-link-target",
       },
       "version": "1.1.1",
@@ -14300,7 +14300,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/install-types/node_modules/symlink-in-tree",
       "realpath": "{CWD}/test/fixtures/install-types/node_modules/abbrev",
       "resolved": "file:abbrev",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/abbrev",
       },
       "version": "1.1.1",
@@ -14970,7 +14970,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/node_modules/symlink",
       "realpath": "{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/abbrev-link-target",
       "resolved": "file:../abbrev-link-target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "abbrev-link-target",
       },
     },
@@ -14981,7 +14981,7 @@ ArboristNode {
       "path": "{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/node_modules/symlink-in-tree",
       "realpath": "{CWD}/test/arborist/load-virtual-load-from-npm-shrinkwrap-json/node_modules/abbrev",
       "resolved": "file:abbrev",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/abbrev",
       },
       "version": "1.1.1",
@@ -15568,7 +15568,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/install-types-sw-only/node_modules/symlink",
       "realpath": "{CWD}/test/fixtures/install-types-sw-only/abbrev-link-target",
       "resolved": "file:../abbrev-link-target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "abbrev-link-target",
       },
     },
@@ -15579,7 +15579,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/install-types-sw-only/node_modules/symlink-in-tree",
       "realpath": "{CWD}/test/fixtures/install-types-sw-only/node_modules/abbrev",
       "resolved": "file:abbrev",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/abbrev",
       },
       "version": "1.1.1",
@@ -15658,7 +15658,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/cli-750/node_modules/app",
       "realpath": "{CWD}/test/fixtures/cli-750/app",
       "resolved": "file:../app",
-      "target": Object {
+      "target": ArboristNode {
         "location": "app",
       },
     },
@@ -15676,7 +15676,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/cli-750/node_modules/lib",
       "realpath": "{CWD}/test/fixtures/cli-750/lib",
       "resolved": "file:../lib",
-      "target": Object {
+      "target": ArboristNode {
         "location": "lib",
       },
     },
@@ -15733,7 +15733,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-simple-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-simple-virtual/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -15758,7 +15758,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-simple-virtual/node_modules/b",
       "realpath": "{CWD}/test/fixtures/workspaces-simple-virtual/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -15824,7 +15824,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -15858,7 +15858,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/node_modules/b",
       "realpath": "{CWD}/test/fixtures/workspaces-conflicting-versions-virtual/packages/b",
       "resolved": "file:../packages/b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/b",
       },
       "version": "1.0.0",
@@ -15973,7 +15973,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -15992,7 +15992,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/node_modules/abbrev",
       "realpath": "{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual/packages/abbrev",
       "resolved": "file:../packages/abbrev",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/abbrev",
       },
       "version": "2.0.0",
@@ -16076,7 +16076,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-ignore-nm-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-ignore-nm-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -16122,7 +16122,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-transitive-deps-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-transitive-deps-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -16217,7 +16217,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-top-level-link-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-top-level-link-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -16264,7 +16264,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-prefer-linking-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-prefer-linking-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -16289,7 +16289,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-prefer-linking-virtual/node_modules/abbrev",
       "realpath": "{CWD}/test/fixtures/workspaces-prefer-linking-virtual/packages/abbrev",
       "resolved": "file:../packages/abbrev",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/abbrev",
       },
       "version": "2.0.0",
@@ -16356,7 +16356,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/node_modules/a",
       "realpath": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.0.0",
@@ -16396,7 +16396,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/node_modules/b",
       "realpath": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/b",
       "resolved": "file:../packages/b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/b",
       },
       "version": "1.0.0",
@@ -16415,7 +16415,7 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/node_modules/c",
       "realpath": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/c",
       "resolved": "file:../packages/c",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/c",
       },
       "version": "1.0.0",

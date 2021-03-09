@@ -213,3 +213,16 @@ t.test('printable Node', t => {
   })
   t.end()
 })
+
+t.test('virtual roots are shown with their sourceReference', t => {
+  const node = new Node({
+    path: '/foo/bar/baz',
+    pkg: {
+      name: 'baz',
+      version: '1.2.3',
+    },
+  })
+  const virtual = new Node({ sourceReference: node })
+  t.matchSnapshot(printable(virtual))
+  t.end()
+})

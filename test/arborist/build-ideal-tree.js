@@ -7,6 +7,7 @@ require(fixtures)
 const registryServer = require('../fixtures/registry-mocks/server.js')
 const {registry, auditResponse} = registryServer
 const npa = require('npm-package-arg')
+const fs = require('fs')
 
 t.test('setup server', { bail: true }, registryServer)
 
@@ -2604,4 +2605,40 @@ t.test('allow ERESOLVE to be forced when not in the source', async t => {
   })
 
   t.end()
+})
+
+t.test('allow a link dep to satisfy a peer dep', async t => {
+  const path = t.testdir({
+    v2: {
+      'package.json': JSON.stringify({
+        name: '@isaacs/testing-peer-dep-conflict-chain-v',
+        version: '2.0.0',
+      }),
+    },
+    main: {
+      'package.json': JSON.stringify({
+        name: 'main',
+        version: '1.0.0',
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-v': 'file:../v2',
+          '@isaacs/testing-peer-dep-conflict-chain-a': '1',
+        },
+      }),
+      node_modules: {
+        '@isaacs': {}, // needed for when we create the link
+      },
+    },
+  })
+
+  const add = ['@isaacs/testing-peer-dep-conflict-chain-vv@2']
+
+  // avoids if the link dep is unmet
+  t.matchSnapshot(await printIdeal(path + '/main', { add }), 'unmet link avoids conflict')
+
+  // also avoid the conflict if the link is present
+  const link = resolve(path, 'main/node_modules/@isaacs/testing-peer-dep-conflict-chain-v')
+  fs.symlinkSync(resolve(path, 'v2'), link, 'junction')
+
+  // avoids if the link dep is unmet
+  t.matchSnapshot(await printIdeal(path + '/main', { add }), 'reified link avoids conflict')
 })

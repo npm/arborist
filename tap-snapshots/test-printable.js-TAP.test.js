@@ -194,3 +194,24 @@ optional:true,
 peer:true,
 target:{location:'c'}}}}
 `
+
+exports[`test/printable.js TAP virtual roots are shown with their sourceReference > must match snapshot 1`] = `
+ArboristVirtualNode{
+"dev":true,
+"extraneous":true,
+"location":undefined,
+"name":"baz",
+"optional":true,
+"path":null,
+"peer":true,
+"sourceReference":{
+"dev":true,
+"extraneous":true,
+"location":"",
+"name":"baz",
+"optional":true,
+"path":"/foo/bar/baz",
+"peer":true,
+"version":"1.2.3",},
+"version":"1.2.3",}
+`

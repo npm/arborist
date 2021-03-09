@@ -1893,7 +1893,7 @@ ArboristNode {
       "path": "install-types/node_modules/symlink",
       "realpath": "install-types/abbrev-link-target",
       "resolved": "file:../abbrev-link-target",
-      "target": Object {
+      "target": ArboristNode {
         "location": "abbrev-link-target",
       },
       "version": "1.1.1",
@@ -2045,7 +2045,7 @@ ArboristNode {
       "path": "link-dep-cycle/node_modules/a",
       "realpath": "link-dep-cycle/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
     },
@@ -2063,7 +2063,7 @@ ArboristNode {
       "path": "link-dep-cycle/node_modules/b",
       "realpath": "link-dep-cycle/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
     },
@@ -2115,7 +2115,7 @@ ArboristNode {
                 "path": "link-dep-cycle/b/node_modules/a",
                 "realpath": "link-dep-cycle/a",
                 "resolved": "file:../../a",
-                "target": Object {
+                "target": ArboristNode {
                   "location": "a",
                 },
               },
@@ -2146,7 +2146,7 @@ ArboristNode {
       "name": "a",
       "path": "link-dep-cycle/a",
     },
-    Object {
+    ArboristNode {
       "location": "b",
     },
   },
@@ -2174,7 +2174,7 @@ ArboristNode {
       "path": "link-dep-nested/node_modules/foo",
       "realpath": "link-dep-nested/once",
       "resolved": "file:../once",
-      "target": Object {
+      "target": ArboristNode {
         "location": "once",
       },
       "version": "1.4.0",
@@ -2193,7 +2193,7 @@ ArboristNode {
       "path": "link-dep-nested/node_modules/once",
       "realpath": "link-dep-nested/once",
       "resolved": "file:../once",
-      "target": Object {
+      "target": ArboristNode {
         "location": "once",
       },
       "version": "1.4.0",
@@ -2295,7 +2295,7 @@ ArboristNode {
             "path": "link-dep-nested/node_modules/foo",
             "realpath": "link-dep-nested/once",
             "resolved": "file:../once",
-            "target": Object {
+            "target": ArboristNode {
               "location": "../once",
             },
             "version": "1.4.0",
@@ -2314,7 +2314,7 @@ ArboristNode {
             "path": "link-dep-nested/node_modules/once",
             "realpath": "link-dep-nested/once",
             "resolved": "file:../once",
-            "target": Object {
+            "target": ArboristNode {
               "location": "../once",
             },
             "version": "1.4.0",
@@ -2818,7 +2818,7 @@ ArboristNode {
       "path": "links-all-over/node_modules/link-link",
       "realpath": "links-all-over/node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       "resolved": "file:nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
       },
       "version": "1.2.3",
@@ -2838,7 +2838,7 @@ ArboristNode {
       "path": "links-all-over/node_modules/link-outside-nest",
       "realpath": "links-all-over/real",
       "resolved": "file:../real",
-      "target": Object {
+      "target": ArboristNode {
         "location": "real",
       },
       "version": "1.2.3",
@@ -2853,7 +2853,7 @@ ArboristNode {
                   "children": Map {
                     "d" => ArboristNode {
                       "children": Map {
-                        "deep" => Object {
+                        "deep" => ArboristNode {
                           "location": "node_modules/nest/node_modules/a/node_modules/b/node_modules/c/node_modules/d/node_modules/deep",
                         },
                       },
@@ -2965,7 +2965,7 @@ ArboristNode {
           "path": "links-all-over/node_modules/nest/node_modules/link-in-nest",
           "realpath": "links-all-over/real",
           "resolved": "file:../../../real",
-          "target": Object {
+          "target": ArboristNode {
             "location": "real",
           },
           "version": "1.2.3",
@@ -5315,7 +5315,7 @@ ArboristNode {
       "path": "pnpm/node_modules/@scope/x",
       "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       "resolved": "file:../.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
       },
       "version": "1.0.0",
@@ -5334,7 +5334,7 @@ ArboristNode {
       "path": "pnpm/node_modules/a",
       "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       "resolved": "file:.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
       },
       "version": "1.0.0",
@@ -5486,7 +5486,7 @@ ArboristNode {
     },
     ArboristNode {
       "children": Map {
-        "a" => Object {
+        "a" => ArboristNode {
           "location": "node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/a",
         },
         "b" => ArboristLink {
@@ -5503,7 +5503,7 @@ ArboristNode {
           "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b",
           "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
           "resolved": "file:../../../b/1.0.0/node_modules/b",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
           },
           "version": "1.0.0",
@@ -5522,7 +5522,7 @@ ArboristNode {
           "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c",
           "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           "resolved": "file:../../../c/1.0.0/node_modules/c",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
           "version": "1.0.0",
@@ -5534,7 +5534,7 @@ ArboristNode {
     },
     ArboristNode {
       "children": Map {
-        "b" => Object {
+        "b" => ArboristNode {
           "location": "node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/b",
         },
         "c" => ArboristLink {
@@ -5551,7 +5551,7 @@ ArboristNode {
           "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c",
           "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           "resolved": "file:../../../c/1.0.0/node_modules/c",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
           },
           "version": "1.0.0",
@@ -5577,12 +5577,12 @@ ArboristNode {
           "path": "pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x",
           "realpath": "pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
           "resolved": "file:../../../../@scope/x/1.0.0/node_modules/@scope/x",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/@scope/x",
           },
           "version": "1.0.0",
         },
-        "c" => Object {
+        "c" => ArboristNode {
           "location": "node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/c",
         },
       },
@@ -6071,7 +6071,7 @@ ArboristNode {
     },
     "foo" => ArboristNode {
       "children": Map {
-        "glob" => Object {
+        "glob" => ArboristNode {
           "location": "node_modules/foo/node_modules/glob",
         },
         "selflink" => ArboristLink {
@@ -6088,7 +6088,7 @@ ArboristNode {
           "path": "selflink/node_modules/foo/node_modules/selflink",
           "realpath": "selflink",
           "resolved": "file:../../..",
-          "target": Object {
+          "target": ArboristNode {
             "location": "",
           },
           "version": "1.2.3",
@@ -6301,7 +6301,7 @@ ArboristNode {
     },
     "foo" => ArboristNode {
       "children": Map {
-        "glob" => Object {
+        "glob" => ArboristNode {
           "location": "node_modules/foo/node_modules/glob",
         },
         "selflink" => ArboristLink {
@@ -6318,7 +6318,7 @@ ArboristNode {
           "path": "selflink/node_modules/foo/node_modules/selflink",
           "realpath": "selflink",
           "resolved": "file:../../..",
-          "target": Object {
+          "target": ArboristNode {
             "location": "",
           },
           "version": "1.2.3",
@@ -6458,7 +6458,7 @@ ArboristNode {
       "path": "workspace/node_modules/a",
       "realpath": "workspace/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
     },
@@ -6476,7 +6476,7 @@ ArboristNode {
       "path": "workspace/node_modules/b",
       "realpath": "workspace/packages/b",
       "resolved": "file:../packages/b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/b",
       },
     },
@@ -6494,7 +6494,7 @@ ArboristNode {
       "path": "workspace/node_modules/c",
       "realpath": "workspace/packages/c",
       "resolved": "file:../packages/c",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/c",
       },
     },
@@ -6552,7 +6552,7 @@ ArboristNode {
                 "path": "workspace/packages/b/node_modules/a",
                 "realpath": "workspace/packages/a",
                 "resolved": "file:../../a",
-                "target": Object {
+                "target": ArboristNode {
                   "location": "packages/a",
                 },
               },
@@ -6586,7 +6586,7 @@ ArboristNode {
                       "path": "workspace/packages/c/node_modules/a",
                       "realpath": "workspace/packages/a",
                       "resolved": "file:../../a",
-                      "target": Object {
+                      "target": ArboristNode {
                         "location": "packages/a",
                       },
                     },
@@ -6604,7 +6604,7 @@ ArboristNode {
                       "path": "workspace/packages/c/node_modules/b",
                       "realpath": "workspace/packages/b",
                       "resolved": "file:../../b",
-                      "target": Object {
+                      "target": ArboristNode {
                         "location": "packages/b",
                       },
                     },
@@ -6662,7 +6662,7 @@ ArboristNode {
           "path": "workspace/packages/a/node_modules/c",
           "realpath": "workspace/packages/c",
           "resolved": "file:../../c",
-          "target": Object {
+          "target": ArboristNode {
             "location": "packages/c",
           },
         },
@@ -6685,10 +6685,10 @@ ArboristNode {
       "name": "a",
       "path": "workspace/packages/a",
     },
-    Object {
+    ArboristNode {
       "location": "packages/b",
     },
-    Object {
+    ArboristNode {
       "location": "packages/c",
     },
   },
@@ -6775,7 +6775,7 @@ ArboristNode {
           "path": "workspace2/node_modules/c/node_modules/d",
           "realpath": "workspace2/node_modules/b/node_modules/d",
           "resolved": "file:../../b/node_modules/d",
-          "target": Object {
+          "target": ArboristNode {
             "location": "node_modules/b/node_modules/d",
           },
           "version": "1.2.3",
@@ -6794,7 +6794,7 @@ ArboristNode {
           "path": "workspace2/node_modules/c/node_modules/x",
           "realpath": "workspace2/x",
           "resolved": "file:../../../x",
-          "target": Object {
+          "target": ArboristNode {
             "location": "x",
           },
           "version": "1.2.3",
@@ -6899,7 +6899,7 @@ ArboristNode {
       "peer": true,
       "realpath": "workspace3/packages/a",
       "resolved": "file:../packages/a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/a",
       },
       "version": "1.2.3",
@@ -6914,7 +6914,7 @@ ArboristNode {
       "peer": true,
       "realpath": "workspace3/app",
       "resolved": "file:../app",
-      "target": Object {
+      "target": ArboristNode {
         "location": "app",
       },
       "version": "1.2.3",
@@ -6949,7 +6949,7 @@ ArboristNode {
       "peer": true,
       "realpath": "workspace3/packages/b",
       "resolved": "file:../packages/b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/b",
       },
       "version": "1.2.3",
@@ -6984,7 +6984,7 @@ ArboristNode {
       "peer": true,
       "realpath": "workspace3/packages/c",
       "resolved": "file:../packages/c",
-      "target": Object {
+      "target": ArboristNode {
         "location": "packages/c",
       },
       "version": "1.2.3",
@@ -7221,7 +7221,7 @@ ArboristNode {
       "path": "workspaces-simple/node_modules/a",
       "realpath": "workspaces-simple/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -7246,7 +7246,7 @@ ArboristNode {
       "path": "workspaces-simple/node_modules/b",
       "realpath": "workspaces-simple/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",
@@ -7312,7 +7312,7 @@ ArboristNode {
       "path": "workspaces-simple/node_modules/a",
       "realpath": "workspaces-simple/a",
       "resolved": "file:../a",
-      "target": Object {
+      "target": ArboristNode {
         "location": "a",
       },
       "version": "1.0.0",
@@ -7337,7 +7337,7 @@ ArboristNode {
       "path": "workspaces-simple/node_modules/b",
       "realpath": "workspaces-simple/b",
       "resolved": "file:../b",
-      "target": Object {
+      "target": ArboristNode {
         "location": "b",
       },
       "version": "1.0.0",

@@ -808,11 +808,12 @@ t.test('saving the ideal tree', t => {
       dependencies: {
         a: 'git+ssh://git@github.com:foo/bar#baz',
         b: '',
-        d: 'd@npm:c@1.x <1.9.9',
+        d: 'npm:c@1.x <1.9.9',
         // XXX: should we remove dependencies that are also workspaces?
         e: 'file:e',
         f: 'git+https://user:pass@github.com/baz/quux#asdf',
         g: '',
+        h: '~1.2.3',
       },
       devDependencies: {
         c: `git+ssh://git@githost.com:a/b/c.git#master`,
@@ -891,6 +892,16 @@ t.test('saving the ideal tree', t => {
         },
         parent: tree,
       })
+      new Node({
+        name: 'h',
+        resolved: 'https://registry.npmjs.org/h/-/h-1.2.3.tgz',
+        pkg: {
+          name: 'h',
+          version: '1.2.3',
+        },
+        parent: tree,
+      })
+
       const target = new Node({
         name: 'e',
         pkg: {
@@ -917,12 +928,11 @@ t.test('saving the ideal tree', t => {
         npa('e'),
         npa('f@git+https://user:pass@github.com/baz/quux#asdf'),
         npa('g'),
+        npa('h@~1.2.3'),
       ]
       // NB: these are all going to be marked as extraneous, because we're
       // skipping the actual buildIdealTree step that flags them properly
-      return a[kSaveIdealTree]({
-        savePrefix: '~',
-      })
+      return a[kSaveIdealTree]({})
     }).then(() => {
       t.matchSnapshot(require(path + '/package-lock.json'), 'lock after save')
       t.strictSame(require(path + '/package.json'), {
@@ -934,6 +944,7 @@ t.test('saving the ideal tree', t => {
           e: 'file:e',
           f: 'git+https://user:pass@github.com/baz/quux.git#asdf',
           g: '*',
+          h: '~1.2.3',
         },
         workspaces: [
           'e',

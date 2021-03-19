@@ -39,6 +39,36 @@ t.test('add', t => {
   }, 'move to bundle deps, foo to deps, leave bar version unchanged')
 
   t.strictSame(add({
+    pkg: {
+      dependencies: { bar: '1' },
+      devDependencies: { foo: '2' },
+    },
+    add: [foo1, bar],
+    saveBundle: true,
+    saveType: 'peer',
+  }), {
+    devDependencies: { foo: '1' },
+    peerDependencies: { foo: '1', bar: '*' },
+  }, 'never bundle peerDeps')
+
+  t.strictSame(add({
+    pkg: {
+      dependencies: { bar: '1' },
+      devDependencies: { foo: '2' },
+    },
+    add: [foo1, bar],
+    saveBundle: true,
+    saveType: 'peerOptional',
+  }), {
+    devDependencies: { foo: '1' },
+    peerDependencies: { foo: '1', bar: '*' },
+    peerDependenciesMeta: {
+      foo: { optional: true },
+      bar: { optional: true },
+    },
+  }, 'never bundle peerDeps')
+
+  t.strictSame(add({
     pkg: {},
     add: [foo1, bar],
     saveBundle: true,

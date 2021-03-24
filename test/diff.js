@@ -221,3 +221,128 @@ t.test('when a global root is a link, traverse the target children', async (t) =
   t.matchSnapshot(diff, 'correctly removes the child node')
   t.equal(diff.removed.length, 1, 'identifies the need to remove the child')
 })
+
+t.test('filtered diff', async t => {
+  const ideal = new Node({
+    path: '/project/path',
+    pkg: {
+      name: 'root',
+      dependencies: { a: 'file:a', c: '' },
+    },
+  })
+
+  new Link({
+    parent: ideal,
+    pkg: {},
+    realpath: '/project/path/a',
+  })
+  const a = new Node({
+    fsParent: ideal,
+    path: '/project/path/a',
+    pkg: {
+      name: 'a',
+      dependencies: {
+        b: '',
+      },
+    },
+  })
+  new Node({
+    parent: ideal,
+    pkg: {
+      name: 'b',
+      version: '1.2.3',
+    },
+  })
+  new Node({
+    parent: ideal,
+    pkg: {
+      name: 'c',
+      version: '1.2.3',
+    },
+  })
+
+  const actual = new Node({
+    path: '/project/path',
+    pkg: {
+      name: 'root',
+      dependencies: { a: 'file:a', c: '' },
+    },
+  })
+
+  const cExcludedABPresent = Diff.calculate({actual, ideal, filterNodes: [a]})
+  t.matchSnapshot(cExcludedABPresent, 'c excluded, a and b present')
+
+  // make sure that *removing* something that *would* be depended on
+  // by the actual node in the filter set is also removed properly.
+  new Link({
+    parent: actual,
+    pkg: {},
+    realpath: '/project/path/a',
+  })
+  new Node({
+    fsParent: actual,
+    path: '/project/path/a',
+    pkg: {
+      name: 'a',
+      dependencies: {
+        b: '',
+        d: '',
+      },
+    },
+  })
+  new Node({
+    parent: actual,
+    pkg: {
+      name: 'b',
+      version: '1.2.3',
+    },
+  })
+  new Node({
+    parent: actual,
+    pkg: {
+      name: 'd',
+      version: '1.2.3',
+    },
+  })
+
+  const removeD = Diff.calculate({actual, ideal, filterNodes: [a]})
+  t.matchSnapshot(removeD, 'd is removed')
+
+  // removing a dependency, like we would with `npm rm -g foo`
+  actual.package = {
+    ...actual.package,
+    dependencies: {
+      ...actual.package.dependencies,
+      e: '*',
+    },
+  }
+  const e = new Node({
+    parent: actual,
+    pkg: {
+      name: 'e',
+      version: '1.2.3',
+    },
+  })
+  const eRemoved = Diff.calculate({actual, ideal, filterNodes: [e]})
+  t.matchSnapshot(eRemoved, 'e is removed')
+
+  // can't filter based on something that isn't there
+  t.throws(() => Diff.calculate({
+    actual,
+    ideal,
+    filterNodes: [
+      new Node({
+        path: '/project/path/node_modules/x',
+        pkg: {name: 'x'},
+      }),
+    ],
+  }), {
+    message: 'invalid filterNode: outside idealTree/actualTree',
+  })
+
+  // filtering an extraneous node is ok though
+  delete actual.package.dependencies.e
+  actual.package = { ...actual.package }
+  const eRemovedExtraneous = Diff.calculate({actual, ideal, filterNodes: [e]})
+  t.matchSnapshot(eRemovedExtraneous, 'e is removed (extraneous)')
+})

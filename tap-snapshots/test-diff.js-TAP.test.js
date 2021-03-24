@@ -267,6 +267,183 @@ Diff {
 }
 `
 
+exports[`test/diff.js TAP filtered diff > c excluded, a and b present 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "/project/path/node_modules/a",
+    "/project/path/node_modules/b",
+  ],
+  "unchanged": Array [],
+  "removed": Array [],
+  "children": Array [
+    Diff {
+      "action": "ADD",
+      "actual": undefined,
+      "ideal": Link {
+        "name": "a",
+        "path": "/project/path/node_modules/a",
+        "integrity": null,
+      },
+      "leaves": Array [
+        "/project/path/node_modules/a",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+    Diff {
+      "action": "ADD",
+      "actual": undefined,
+      "ideal": Node {
+        "name": "b",
+        "path": "/project/path/node_modules/b",
+        "integrity": null,
+      },
+      "leaves": Array [
+        "/project/path/node_modules/b",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
+exports[`test/diff.js TAP filtered diff > d is removed 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "/project/path/node_modules/d",
+  ],
+  "unchanged": Array [
+    "/project/path/node_modules/a",
+    "/project/path/node_modules/b",
+  ],
+  "removed": Array [
+    "/project/path/node_modules/d",
+  ],
+  "children": Array [
+    Diff {
+      "action": "REMOVE",
+      "actual": Node {
+        "name": "d",
+        "path": "/project/path/node_modules/d",
+        "integrity": null,
+      },
+      "ideal": undefined,
+      "leaves": Array [
+        "/project/path/node_modules/d",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
+exports[`test/diff.js TAP filtered diff > e is removed (extraneous) 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "/project/path/node_modules/e",
+  ],
+  "unchanged": Array [],
+  "removed": Array [
+    "/project/path/node_modules/e",
+  ],
+  "children": Array [
+    Diff {
+      "action": "REMOVE",
+      "actual": Node {
+        "name": "e",
+        "path": "/project/path/node_modules/e",
+        "integrity": null,
+      },
+      "ideal": undefined,
+      "leaves": Array [
+        "/project/path/node_modules/e",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
+exports[`test/diff.js TAP filtered diff > e is removed 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "path",
+    "path": "/project/path",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "/project/path/node_modules/e",
+  ],
+  "unchanged": Array [],
+  "removed": Array [
+    "/project/path/node_modules/e",
+  ],
+  "children": Array [
+    Diff {
+      "action": "REMOVE",
+      "actual": Node {
+        "name": "e",
+        "path": "/project/path/node_modules/e",
+        "integrity": null,
+      },
+      "ideal": undefined,
+      "leaves": Array [
+        "/project/path/node_modules/e",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
 exports[`test/diff.js TAP when a global root is a link, traverse the target children > correctly removes the child node 1`] = `
 Diff {
   "action": null,

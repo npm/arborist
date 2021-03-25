@@ -1503,3 +1503,60 @@ t.test('saving should not replace file: dep with version', async t => {
   t.equal(JSON.parse(pj2).dependencies.abbrev, 'file:abbrev',
     'still a file: spec after a bare name install')
 })
+
+t.test('filtered reification in workspaces', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: [
+        'packages/*',
+      ],
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            once: '',
+            wrappy: '1.0.2',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+          dependencies: {
+            abbrev: '',
+          },
+        }),
+      },
+      c: {
+        'package.json': JSON.stringify({
+          name: 'c',
+          version: '1.2.3',
+          dependencies: {
+            wrappy: '1.0.0',
+          },
+        }),
+      },
+    },
+  })
+
+  t.matchSnapshot(await printReified(path, { workspaces: ['c'] }),
+    'reify the c workspace from empty actual')
+
+  t.matchSnapshot(await printReified(path, { workspaces: ['a'] }),
+    'reify the a workspace after reifying c')
+
+  // now remove the a workspace
+  fs.writeFileSync(`${path}/package.json`, JSON.stringify({
+    workspaces: [
+      'packages/b',
+      'packages/c',
+    ],
+  }))
+
+  t.matchSnapshot(await printReified(path, { workspaces: ['a', 'c'] }),
+    'reify the workspaces, removing a and leaving c in place')
+})

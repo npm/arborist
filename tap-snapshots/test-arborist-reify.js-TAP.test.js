@@ -1619,6 +1619,186 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden lockfile - c 1`] = `
+{
+  "name": "reify-filtered-reification-in-workspaces",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "node_modules/c": {
+      "resolved": "packages/c",
+      "link": true
+    },
+    "packages/c": {
+      "version": "1.2.3",
+      "dependencies": {
+        "wrappy": "1.0.0"
+      }
+    },
+    "packages/c/node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden lockfile - c, old x, removed a 1`] = `
+{
+  "name": "reify-filtered-reification-in-workspaces",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "apps/x": {
+      "version": "1.2.3"
+    },
+    "node_modules/c": {
+      "resolved": "packages/c",
+      "link": true
+    },
+    "node_modules/x": {
+      "resolved": "apps/x",
+      "link": true
+    },
+    "packages/c": {
+      "version": "1.2.3",
+      "dependencies": {
+        "wrappy": "1.0.0"
+      }
+    },
+    "packages/c/node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden lockfile - c, x 1`] = `
+{
+  "name": "reify-filtered-reification-in-workspaces",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "apps/x": {
+      "version": "1.2.3"
+    },
+    "node_modules/c": {
+      "resolved": "packages/c",
+      "link": true
+    },
+    "node_modules/x": {
+      "resolved": "apps/x",
+      "link": true
+    },
+    "packages/c": {
+      "version": "1.2.3",
+      "dependencies": {
+        "wrappy": "1.0.0"
+      }
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden lockfile - c, x, a 1`] = `
+{
+  "name": "reify-filtered-reification-in-workspaces",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "apps/x": {
+      "version": "1.2.3"
+    },
+    "node_modules/a": {
+      "resolved": "packages/a",
+      "link": true
+    },
+    "node_modules/c": {
+      "resolved": "packages/c",
+      "link": true
+    },
+    "node_modules/once": {
+      "version": "1.4.0",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+      "integrity": "sha1-WDsap3WWHUsROsF9nFC6753Xa9E=",
+      "dependencies": {
+        "wrappy": "1"
+      }
+    },
+    "node_modules/wrappy": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
+    },
+    "node_modules/x": {
+      "resolved": "apps/x",
+      "link": true
+    },
+    "packages/a": {
+      "version": "1.2.3",
+      "dependencies": {
+        "wrappy": "1.0.2",
+        "once": ""
+      }
+    },
+    "packages/c": {
+      "version": "1.2.3",
+      "dependencies": {
+        "wrappy": "1.0.0"
+      }
+    }
+  }
+}
+
+`
+
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden lockfile - foo/x linked, c, old x, removed a 1`] = `
+{
+  "name": "reify-filtered-reification-in-workspaces",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "apps/x": {
+      "version": "1.2.3"
+    },
+    "foo/x": {
+      "version": "1.2.3",
+      "extraneous": true
+    },
+    "node_modules/c": {
+      "resolved": "packages/c",
+      "link": true
+    },
+    "node_modules/foox": {
+      "resolved": "foo/x",
+      "link": true
+    },
+    "node_modules/x": {
+      "resolved": "apps/x",
+      "link": true
+    },
+    "packages/c": {
+      "version": "1.2.3",
+      "dependencies": {
+        "wrappy": "1.0.0"
+      }
+    },
+    "packages/c/node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
+    }
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the a workspace after reifying c 1`] = `
 ArboristNode {
   "children": Map {
@@ -1711,6 +1891,25 @@ ArboristNode {
       "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
       "version": "1.0.2",
     },
+    "x" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "x",
+          "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/x",
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "resolved": "file:../apps/x",
+      "target": ArboristNode {
+        "location": "apps/x",
+      },
+      "version": "1.2.3",
+    },
   },
   "edgesOut": Map {
     "a" => EdgeOut {
@@ -1732,8 +1931,20 @@ ArboristNode {
       "to": "node_modules/c",
       "type": "workspace",
     },
+    "x" => EdgeOut {
+      "name": "x",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "to": "node_modules/x",
+      "type": "workspace",
+    },
   },
   "fsChildren": Set {
+    ArboristNode {
+      "location": "apps/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "version": "1.2.3",
+    },
     ArboristNode {
       "edgesOut": Map {
         "once" => EdgeOut {
@@ -1776,7 +1987,7 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the c workspace from empty actual 1`] = `
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the c workspace only 1`] = `
 ArboristNode {
   "children": Map {
     "c" => ArboristLink {
@@ -1820,6 +2031,13 @@ ArboristNode {
       "to": "node_modules/c",
       "type": "workspace",
     },
+    "x" => EdgeOut {
+      "error": "MISSING",
+      "name": "x",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "to": null,
+      "type": "workspace",
+    },
   },
   "fsChildren": Set {
     ArboristNode {
@@ -1860,7 +2078,7 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the workspaces, removing a and leaving c in place 1`] = `
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the workspaces, foo/x linked, c, old x, removed a 1`] = `
 ArboristNode {
   "children": Map {
     "c" => ArboristLink {
@@ -1882,6 +2100,42 @@ ArboristNode {
       },
       "version": "1.2.3",
     },
+    "foox" => ArboristLink {
+      "dev": true,
+      "extraneous": true,
+      "location": "node_modules/foox",
+      "name": "foox",
+      "optional": true,
+      "packageName": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/foox",
+      "peer": true,
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/foo/x",
+      "resolved": "file:../foo/x",
+      "target": ArboristNode {
+        "location": "foo/x",
+      },
+      "version": "1.2.3",
+    },
+    "x" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "error": "INVALID",
+          "from": "",
+          "name": "x",
+          "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/foo/x",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/x",
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "resolved": "file:../apps/x",
+      "target": ArboristNode {
+        "location": "apps/x",
+      },
+      "version": "1.2.3",
+    },
   },
   "edgesOut": Map {
     "b" => EdgeOut {
@@ -1897,31 +2151,28 @@ ArboristNode {
       "to": "node_modules/c",
       "type": "workspace",
     },
+    "x" => EdgeOut {
+      "error": "INVALID",
+      "name": "x",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/foo/x",
+      "to": "node_modules/x",
+      "type": "workspace",
+    },
   },
   "fsChildren": Set {
     ArboristNode {
+      "location": "apps/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "version": "1.2.3",
+    },
+    ArboristNode {
       "dev": true,
-      "edgesOut": Map {
-        "once" => EdgeOut {
-          "error": "MISSING",
-          "name": "once",
-          "spec": "*",
-          "to": null,
-          "type": "prod",
-        },
-        "wrappy" => EdgeOut {
-          "error": "MISSING",
-          "name": "wrappy",
-          "spec": "1.0.2",
-          "to": null,
-          "type": "prod",
-        },
-      },
       "extraneous": true,
-      "location": "packages/a",
-      "name": "a",
+      "location": "foo/x",
+      "name": "x",
       "optional": true,
-      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/a",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/foo/x",
       "peer": true,
       "version": "1.2.3",
     },
@@ -1948,6 +2199,215 @@ ArboristNode {
           "name": "wrappy",
           "spec": "1.0.0",
           "to": "packages/c/node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "packages/c",
+      "name": "c",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "reify-filtered-reification-in-workspaces",
+  "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+}
+`
+
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the workspaces, removing a and leaving c and old x in place 1`] = `
+ArboristNode {
+  "children": Map {
+    "c" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "c",
+          "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/c",
+      "name": "c",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/c",
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+      "resolved": "file:../packages/c",
+      "target": ArboristNode {
+        "location": "packages/c",
+      },
+      "version": "1.2.3",
+    },
+    "x" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "error": "INVALID",
+          "from": "",
+          "name": "x",
+          "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/foo/x",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/x",
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "resolved": "file:../apps/x",
+      "target": ArboristNode {
+        "location": "apps/x",
+      },
+      "version": "1.2.3",
+    },
+  },
+  "edgesOut": Map {
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "c" => EdgeOut {
+      "name": "c",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+      "to": "node_modules/c",
+      "type": "workspace",
+    },
+    "x" => EdgeOut {
+      "error": "INVALID",
+      "name": "x",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/foo/x",
+      "to": "node_modules/x",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "location": "apps/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "children": Map {
+        "wrappy" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/c",
+              "name": "wrappy",
+              "spec": "1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "packages/c/node_modules/wrappy",
+          "name": "wrappy",
+          "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c/node_modules/wrappy",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+          "version": "1.0.0",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => EdgeOut {
+          "name": "wrappy",
+          "spec": "1.0.0",
+          "to": "packages/c/node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "packages/c",
+      "name": "c",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "reify-filtered-reification-in-workspaces",
+  "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+}
+`
+
+exports[`test/arborist/reify.js TAP filtered reification in workspaces > reify the x workspace after reifying c 1`] = `
+ArboristNode {
+  "children": Map {
+    "c" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "c",
+          "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/c",
+      "name": "c",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/c",
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+      "resolved": "file:../packages/c",
+      "target": ArboristNode {
+        "location": "packages/c",
+      },
+      "version": "1.2.3",
+    },
+    "x" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "x",
+          "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/node_modules/x",
+      "realpath": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "resolved": "file:../apps/x",
+      "target": ArboristNode {
+        "location": "apps/x",
+      },
+      "version": "1.2.3",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "error": "MISSING",
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/a",
+      "to": null,
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "c" => EdgeOut {
+      "name": "c",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/c",
+      "to": "node_modules/c",
+      "type": "workspace",
+    },
+    "x" => EdgeOut {
+      "name": "x",
+      "spec": "file:{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "to": "node_modules/x",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "location": "apps/x",
+      "name": "x",
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/apps/x",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "edgesOut": Map {
+        "wrappy" => EdgeOut {
+          "error": "MISSING",
+          "name": "wrappy",
+          "spec": "1.0.0",
+          "to": null,
           "type": "prod",
         },
       },

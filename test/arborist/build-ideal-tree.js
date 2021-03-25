@@ -2642,3 +2642,74 @@ t.test('allow a link dep to satisfy a peer dep', async t => {
   // avoids if the link dep is unmet
   t.matchSnapshot(await printIdeal(path + '/main', { add }), 'reified link avoids conflict')
 })
+
+t.test('replace a link with a matching link when the current one is wrong', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        // testing what happens when a user hand-edits the
+        // package.json to point to a different target with
+        // a matching package.
+        x: 'file:correct/x',
+        y: 'file:correct/x',
+      },
+    }),
+    correct: {
+      x: {
+        'package.json': JSON.stringify({
+          name: 'x',
+          version: '1.2.3',
+        }),
+      },
+    },
+    incorrect: {
+      x: {
+        'package.json': JSON.stringify({
+          name: 'x',
+          version: '1.2.3',
+        }),
+      },
+    },
+    node_modules: {
+      x: t.fixture('symlink', '../incorrect/x'),
+      y: t.fixture('symlink', '../correct/x'),
+    },
+    'package-lock.json': JSON.stringify({
+      lockfileVersion: 2,
+      requires: true,
+      packages: {
+        '': {
+          dependencies: {
+            x: 'file:incorrect/x',
+            y: 'file:correct/x',
+          },
+        },
+        'incorrect/x': {
+          version: '1.2.3',
+          name: 'x',
+        },
+        'node_modules/y': {
+          resolved: 'correct/x',
+          link: true,
+        },
+        'correct/x': {
+          version: '1.2.3',
+          name: 'x',
+        },
+        'node_modules/x': {
+          resolved: 'incorrect/x',
+          link: true,
+        },
+      },
+      dependencies: {
+        y: {
+          version: 'file:correct/x',
+        },
+        x: {
+          version: 'file:incorrect/x',
+        },
+      },
+    }),
+  })
+  t.matchSnapshot(await printIdeal(path), 'replace incorrect with correct')
+})

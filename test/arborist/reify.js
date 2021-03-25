@@ -1508,9 +1508,31 @@ t.test('filtered reification in workspaces', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({
       workspaces: [
+        'apps/*',
         'packages/*',
       ],
     }),
+    // 'apps' comes ahead of 'node_modules' alphabetically,
+    // included in the test so that we ensure that the copy
+    // over works properly in both directions.
+    apps: {
+      x: {
+        'package.json': JSON.stringify({
+          name: 'x',
+          version: '1.2.3',
+        }),
+      },
+    },
+    // this is going to be a workspace that we switch to in the ideal
+    // tree, but the actual tree will still be lagging behind.
+    foo: {
+      x: {
+        'package.json': JSON.stringify({
+          name: 'x',
+          version: '1.2.3',
+        }),
+      },
+    },
     packages: {
       a: {
         'package.json': JSON.stringify({
@@ -1543,20 +1565,70 @@ t.test('filtered reification in workspaces', async t => {
     },
   })
 
+  const hiddenLock = resolve(path, 'node_modules/.package-lock.json')
+
   t.matchSnapshot(await printReified(path, { workspaces: ['c'] }),
-    'reify the c workspace from empty actual')
+    'reify the c workspace only')
+
+  t.matchSnapshot(fs.readFileSync(hiddenLock, 'utf8'),
+    'hidden lockfile - c')
+
+  t.matchSnapshot(await printReified(path, { workspaces: ['x'] }),
+    'reify the x workspace after reifying c')
+
+  t.matchSnapshot(fs.readFileSync(hiddenLock, 'utf8'),
+    'hidden lockfile - c, x')
 
   t.matchSnapshot(await printReified(path, { workspaces: ['a'] }),
     'reify the a workspace after reifying c')
 
-  // now remove the a workspace
+  t.matchSnapshot(fs.readFileSync(hiddenLock, 'utf8'),
+    'hidden lockfile - c, x, a')
+
+  // now remove the a workspace, and move x to a new target location,
+  // but we will not reify the apps->foo change.
   fs.writeFileSync(`${path}/package.json`, JSON.stringify({
     workspaces: [
+      'foo/*',
       'packages/b',
       'packages/c',
     ],
   }))
 
   t.matchSnapshot(await printReified(path, { workspaces: ['a', 'c'] }),
-    'reify the workspaces, removing a and leaving c in place')
+    'reify the workspaces, removing a and leaving c and old x in place')
+
+  t.matchSnapshot(fs.readFileSync(hiddenLock, 'utf8'),
+    'hidden lockfile - c, old x, removed a')
+
+  // Same thing, BUT, we now have a reason to already have the foo/x
+  // in fsChildren.  fully reify with this package.json, then change
+  // the root package.json back to the test above.  This exercises an
+  // edge case where the actual and ideal trees are somewhat out of sync,
+  // by virtue of the actualTree being generated with a package.json
+  // which has changed, but where only PART of the idealTree is reified
+  // over it.
+  fs.writeFileSync(`${path}/package.json`, JSON.stringify({
+    dependencies: {
+      foox: 'file:foo/x',
+    },
+    workspaces: [
+      'apps/x',
+      'packages/a',
+      'packages/c',
+    ],
+  }))
+  await reify(path)
+  fs.writeFileSync(`${path}/package.json`, JSON.stringify({
+    workspaces: [
+      'foo/*',
+      'packages/b',
+      'packages/c',
+    ],
+  }))
+  t.matchSnapshot(await printReified(path, { workspaces: ['a', 'c'] }),
+    'reify the workspaces, foo/x linked, c, old x, removed a')
+
+  t.matchSnapshot(fs.readFileSync(hiddenLock, 'utf8'),
+    'hidden lockfile - foo/x linked, c, old x, removed a')
 })

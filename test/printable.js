@@ -226,3 +226,20 @@ t.test('virtual roots are shown with their sourceReference', t => {
   t.matchSnapshot(printable(virtual))
   t.end()
 })
+
+t.test('broken links dont break the printing', t => {
+  const tree = new Node({
+    path: '/home/user/projects/root',
+  })
+
+  // a link with no target
+  const brokenLink = new Link({
+    name: 'devnull',
+    realpath: '/home/user/projects/root/no/thing/here',
+    parent: tree,
+  })
+  brokenLink.target.root = null
+
+  t.matchSnapshot(printable(tree))
+  t.end()
+})

@@ -5,6 +5,29 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
+exports[`test/printable.js TAP broken links dont break the printing > must match snapshot 1`] = `
+{
+"children":Map{
+"devnull" => ArboristLink{
+"dev":true,
+"extraneous":true,
+"location":"node_modules/devnull",
+"name":"devnull",
+"optional":true,
+"path":"/home/user/projects/root/node_modules/devnull",
+"peer":true,
+"realpath":"/home/user/projects/root/no/thing/here",
+"resolved":"file:../no/thing/here",
+"target":null,},},
+"dev":true,
+"extraneous":true,
+"location":"",
+"name":"root",
+"optional":true,
+"path":"/home/user/projects/root",
+"peer":true,}
+`
+
 exports[`test/printable.js TAP printable Node do not recurse forever > must match snapshot 1`] = `
 {
 name:'recursive',

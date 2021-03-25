@@ -591,8 +591,9 @@ t.test('load with a virtual filesystem parent', t => {
   t.equal(link.root, link, 'removed from parent, removed from root')
   t.equal(root.inventory.get(linkLoc), undefined, 'removed from root inventory')
   t.equal(link.inventory.has(link), true, 'link added to own inventory')
-  t.equal(link.target, linkTarget, 'target taken along for the ride')
-  t.equal(linkTarget.root, link, 'target rooted on link')
+  t.equal(link.target, null, 'target left behind when setting root to null')
+  linkTarget.root = link
+  t.equal(link.target, linkTarget, 'target set once roots match')
   t.equal(link.inventory.get(''), linkTarget)
   t.equal(root.edgesOut.get('link').error, 'MISSING')
 

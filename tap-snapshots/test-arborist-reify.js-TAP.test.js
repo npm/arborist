@@ -1900,6 +1900,32 @@ ArboristNode {
   },
   "fsChildren": Set {
     ArboristNode {
+      "dev": true,
+      "edgesOut": Map {
+        "once" => EdgeOut {
+          "error": "MISSING",
+          "name": "once",
+          "spec": "*",
+          "to": null,
+          "type": "prod",
+        },
+        "wrappy" => EdgeOut {
+          "error": "MISSING",
+          "name": "wrappy",
+          "spec": "1.0.2",
+          "to": null,
+          "type": "prod",
+        },
+      },
+      "extraneous": true,
+      "location": "packages/a",
+      "name": "a",
+      "optional": true,
+      "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces/packages/a",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
       "children": Map {
         "wrappy" => ArboristNode {
           "edgesIn": Set {

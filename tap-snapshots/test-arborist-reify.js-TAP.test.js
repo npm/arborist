@@ -1743,8 +1743,8 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
     "packages/a": {
       "version": "1.2.3",
       "dependencies": {
-        "wrappy": "1.0.2",
-        "once": ""
+        "once": "",
+        "wrappy": "1.0.2"
       }
     },
     "packages/c": {

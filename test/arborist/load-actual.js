@@ -40,7 +40,7 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 t.formatSnapshot = tree => format(defixture(printTree(tree)), { sort: true })
 
-const loadActual = (path, opts) => new Arborist({path}).loadActual(opts)
+const loadActual = (path, opts) => new Arborist({path, ...opts}).loadActual(opts)
 
 roots.forEach(path => {
   const dir = resolve(fixtures, path)
@@ -217,4 +217,81 @@ t.test('workspaces', t => {
     ))
 
   t.end()
+})
+
+t.test('load workspace targets, even if links not present', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+      dependencies: {
+        wrappy: '1.0.0',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+      c: {
+        'package.json': JSON.stringify({
+          name: 'c',
+          version: '1.2.3',
+        }),
+      },
+    },
+  })
+  t.matchSnapshot(await loadActual(path))
+})
+
+t.test('transplant workspace targets, even if links not present', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+      dependencies: {
+        wrappy: '1.0.0',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+      c: {
+        'package.json': JSON.stringify({
+          name: 'c',
+          version: '1.2.3',
+        }),
+      },
+    },
+  })
+  const root = new Node({
+    path,
+    pkg: {
+      workspaces: ['packages/*'],
+      dependencies: {
+        wrappy: '1.0.0',
+      },
+    },
+  })
+  t.matchSnapshot(await loadActual(path, { root }), 'transplant everything')
+  t.matchSnapshot(await loadActual(path, {
+    root,
+    transplantFilter: node => node.name !== 'a',
+  }), 'do not transplant node named "a"')
 })

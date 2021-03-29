@@ -3764,6 +3764,76 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/load-actual.js TAP load workspace targets, even if links not present > must match snapshot 1`] = `
+ArboristNode {
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "error": "MISSING",
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/load-actual-load-workspace-targets-even-if-links-not-present/packages/a",
+      "to": null,
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/load-actual-load-workspace-targets-even-if-links-not-present/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "c" => EdgeOut {
+      "error": "MISSING",
+      "name": "c",
+      "spec": "file:{CWD}/test/arborist/load-actual-load-workspace-targets-even-if-links-not-present/packages/c",
+      "to": null,
+      "type": "workspace",
+    },
+    "wrappy" => EdgeOut {
+      "error": "MISSING",
+      "name": "wrappy",
+      "spec": "1.0.0",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/a",
+      "name": "a",
+      "optional": true,
+      "path": "load-actual-load-workspace-targets-even-if-links-not-present/packages/a",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/b",
+      "name": "b",
+      "optional": true,
+      "path": "load-actual-load-workspace-targets-even-if-links-not-present/packages/b",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/c",
+      "name": "c",
+      "optional": true,
+      "path": "load-actual-load-workspace-targets-even-if-links-not-present/packages/c",
+      "peer": true,
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "load-actual-load-workspace-targets-even-if-links-not-present",
+  "path": "load-actual-load-workspace-targets-even-if-links-not-present",
+}
+`
+
 exports[`test/arborist/load-actual.js TAP look for missing deps by default external-dep/root > "dep" should have missing deps, "link" should not 1`] = `
 ArboristNode {
   "edgesOut": Map {
@@ -6438,6 +6508,110 @@ ArboristNode {
   "name": "example",
   "path": "symlinked-node-modules/example",
   "version": "1.0.0",
+}
+`
+
+exports[`test/arborist/load-actual.js TAP transplant workspace targets, even if links not present > do not transplant node named "a" 1`] = `
+ArboristNode {
+  "dev": true,
+  "edgesOut": Map {
+    "wrappy" => EdgeOut {
+      "error": "MISSING",
+      "name": "wrappy",
+      "spec": "1.0.0",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/a",
+      "name": "a",
+      "optional": true,
+      "path": "load-actual-transplant-workspace-targets-even-if-links-not-present/packages/a",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/b",
+      "name": "b",
+      "optional": true,
+      "path": "load-actual-transplant-workspace-targets-even-if-links-not-present/packages/b",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/c",
+      "name": "c",
+      "optional": true,
+      "path": "load-actual-transplant-workspace-targets-even-if-links-not-present/packages/c",
+      "peer": true,
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "load-actual-transplant-workspace-targets-even-if-links-not-present",
+  "optional": true,
+  "path": "load-actual-transplant-workspace-targets-even-if-links-not-present",
+  "peer": true,
+}
+`
+
+exports[`test/arborist/load-actual.js TAP transplant workspace targets, even if links not present > transplant everything 1`] = `
+ArboristNode {
+  "dev": true,
+  "edgesOut": Map {
+    "wrappy" => EdgeOut {
+      "error": "MISSING",
+      "name": "wrappy",
+      "spec": "1.0.0",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/a",
+      "name": "a",
+      "optional": true,
+      "path": "load-actual-transplant-workspace-targets-even-if-links-not-present/packages/a",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/b",
+      "name": "b",
+      "optional": true,
+      "path": "load-actual-transplant-workspace-targets-even-if-links-not-present/packages/b",
+      "peer": true,
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "packages/c",
+      "name": "c",
+      "optional": true,
+      "path": "load-actual-transplant-workspace-targets-even-if-links-not-present/packages/c",
+      "peer": true,
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "load-actual-transplant-workspace-targets-even-if-links-not-present",
+  "optional": true,
+  "path": "load-actual-transplant-workspace-targets-even-if-links-not-present",
+  "peer": true,
 }
 `
 

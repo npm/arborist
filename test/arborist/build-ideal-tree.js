@@ -114,9 +114,9 @@ t.test('no options', t => {
   t.end()
 })
 
-t.test('a workspace with a conflicted nested duplicated dep', t =>
-  t.resolveMatchSnapshot(printIdeal(
-    resolve(fixtures, 'workspace4'))))
+t.test('a workspace with a conflicted nested duplicated dep', async t => {
+  t.matchSnapshot(await printIdeal(resolve(fixtures, 'workspace4')))
+})
 
 t.test('a tree with an outdated dep, missing dep, no lockfile', async t => {
   const path = resolve(fixtures, 'outdated-no-lockfile')
@@ -293,9 +293,8 @@ t.test('expose explicitRequest', async t => {
   const path = resolve(fixtures, 'simple')
   const arb = new Arborist({...OPT, path})
   await arb.buildIdealTree({ add: ['abbrev'] })
-  t.ok(arb.explicitRequests, 'exposes the explicit request')
-  t.strictSame(arb.explicitRequests, new Set(['abbrev']))
-  t.ok(arb.explicitRequests.has('abbrev'), 'should contain explicit item')
+  t.match(arb.explicitRequests, Set, 'exposes the explicit request Set')
+  t.strictSame([...arb.explicitRequests].map(e => e.name), ['abbrev'])
   t.end()
 })
 
@@ -2159,9 +2158,11 @@ t.test('carbonium eslint conflicts', async t => {
 
 t.test('peerOptionals that are devDeps or explicit request', async t => {
   const path = resolve(fixtures, 'peer-optional-installs')
-  t.matchSnapshot(await printIdeal(path, {
-    add: ['abbrev'],
-  }), 'should install the abbrev dep')
+  const arb = new Arborist({ path, ...OPT })
+  const tree = await arb.buildIdealTree({ add: ['abbrev'] })
+  t.matchSnapshot(printTree(tree), 'should install the abbrev dep')
+  t.ok(tree.children.get('abbrev'), 'should install abbrev dep')
+
   t.matchSnapshot(await printIdeal(path, {
     add: ['wrappy'],
     saveType: 'dev',
@@ -2711,5 +2712,59 @@ t.test('replace a link with a matching link when the current one is wrong', asyn
       },
     }),
   })
-  t.matchSnapshot(await printIdeal(path), 'replace incorrect with correct')
+  t.matchSnapshot(await printIdeal(path, {
+    workspaces: null, // also test that a null workspaces is ignored.
+  }), 'replace incorrect with correct')
+})
+
+t.test('cannot do workspaces in global mode', t => {
+  t.throws(() => printIdeal(t.testdir(), {
+    workspaces: ['a', 'b', 'c'],
+    global: true,
+  }), { message: 'Cannot operate on workspaces in global mode' })
+  t.end()
+})
+
+t.todo('add packages to workspaces, not root', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+      dependencies: {
+        wrappy: '1.0.0',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+      c: {
+        'package.json': JSON.stringify({
+          name: 'c',
+          version: '1.2.3',
+        }),
+      },
+    },
+  })
+
+  const tree = await buildIdeal(path, {
+    add: ['wrappy@1.0.1'],
+    workspaces: ['a', 'c'],
+  })
+  t.match(tree.edgesOut.get('wrappy'), { spec: '1.0.0' })
+  const a = tree.children.get('a').target
+  const b = tree.children.get('b').target
+  const c = tree.children.get('c').target
+  t.match(a.edgesOut.get('wrappy'), { spec: '1.0.1' })
+  t.equal(b.edgesOut.get('wrappy'), undefined)
+  t.match(c.edgesOut.get('wrappy'), { spec: '1.0.1' })
+  t.matchSnapshot(printTree(tree))
 })

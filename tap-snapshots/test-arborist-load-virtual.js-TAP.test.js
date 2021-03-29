@@ -717,6 +717,10 @@ ArboristNode {
   "name": "workspaces-changed",
   "packageName": "workspace-simple",
   "path": "{CWD}/test/fixtures/edit-package-json/workspaces-changed",
+  "workspaces": Map {
+    "a" => "a",
+    "c" => "c",
+  },
 }
 `
 
@@ -808,6 +812,10 @@ ArboristNode {
   "name": "workspaces-simple-virtual",
   "packageName": "workspace-simple",
   "path": "{CWD}/test/fixtures/workspaces-simple-virtual",
+  "workspaces": Map {
+    "a" => "a",
+    "b" => "b",
+  },
 }
 `
 
@@ -15804,6 +15812,10 @@ ArboristNode {
   "name": "workspaces-simple-virtual",
   "packageName": "workspace-simple",
   "path": "{CWD}/test/fixtures/workspaces-simple-virtual",
+  "workspaces": Map {
+    "a" => "a",
+    "b" => "b",
+  },
 }
 `
 
@@ -15953,6 +15965,10 @@ ArboristNode {
   "packageName": "workspaces-conflicting-deps",
   "path": "{CWD}/test/fixtures/workspaces-conflicting-versions-virtual",
   "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
 }
 `
 
@@ -16056,6 +16072,10 @@ ArboristNode {
   "packageName": "workspaces-version-unsatisfied",
   "path": "{CWD}/test/fixtures/workspaces-version-unsatisfied-virtual",
   "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "abbrev" => "packages/abbrev",
+  },
 }
 `
 
@@ -16102,6 +16122,9 @@ ArboristNode {
   "name": "workspaces-ignore-nm-virtual",
   "packageName": "workspace-ignore-nm",
   "path": "{CWD}/test/fixtures/workspaces-ignore-nm-virtual",
+  "workspaces": Map {
+    "a" => "packages/a",
+  },
 }
 `
 
@@ -16197,6 +16220,9 @@ ArboristNode {
   "packageName": "workspaces-transitive-deps",
   "path": "{CWD}/test/fixtures/workspaces-transitive-deps-virtual",
   "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+  },
 }
 `
 
@@ -16244,6 +16270,9 @@ ArboristNode {
   "packageName": "workspaces-top-level-link",
   "path": "{CWD}/test/fixtures/workspaces-top-level-link-virtual",
   "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+  },
 }
 `
 
@@ -16336,6 +16365,10 @@ ArboristNode {
   "packageName": "workspaces-prefer-linking",
   "path": "{CWD}/test/fixtures/workspaces-prefer-linking-virtual",
   "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "abbrev" => "packages/abbrev",
+  },
 }
 `
 
@@ -16505,5 +16538,10 @@ ArboristNode {
   "packageName": "workspaces-shared-deps",
   "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual",
   "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `

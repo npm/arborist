@@ -1984,6 +1984,12 @@ ArboristNode {
   "location": "",
   "name": "reify-filtered-reification-in-workspaces",
   "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+  "workspaces": Map {
+    "x" => "apps/x",
+    "a" => "packages/a",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `
 
@@ -2075,6 +2081,12 @@ ArboristNode {
   "location": "",
   "name": "reify-filtered-reification-in-workspaces",
   "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+  "workspaces": Map {
+    "x" => "apps/x",
+    "a" => "packages/a",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `
 
@@ -2211,6 +2223,11 @@ ArboristNode {
   "location": "",
   "name": "reify-filtered-reification-in-workspaces",
   "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+  "workspaces": Map {
+    "x" => "foo/x",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `
 
@@ -2321,6 +2338,11 @@ ArboristNode {
   "location": "",
   "name": "reify-filtered-reification-in-workspaces",
   "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+  "workspaces": Map {
+    "x" => "foo/x",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `
 
@@ -2420,6 +2442,12 @@ ArboristNode {
   "location": "",
   "name": "reify-filtered-reification-in-workspaces",
   "path": "{CWD}/test/arborist/reify-filtered-reification-in-workspaces",
+  "workspaces": Map {
+    "x" => "apps/x",
+    "a" => "packages/a",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `
 
@@ -49873,6 +49901,9 @@ ArboristNode {
   "name": "reify-workspaces-reify-from-an-actual-loaded-workspace-env",
   "packageName": "workspaces-non-simplistic",
   "path": "{CWD}/test/arborist/reify-workspaces-reify-from-an-actual-loaded-workspace-env",
+  "workspaces": Map {
+    "pkg-a" => "a",
+  },
 }
 `
 
@@ -49964,6 +49995,10 @@ ArboristNode {
   "name": "reify-workspaces-reify-simple-workspaces",
   "packageName": "workspace-simple",
   "path": "{CWD}/test/arborist/reify-workspaces-reify-simple-workspaces",
+  "workspaces": Map {
+    "a" => "a",
+    "b" => "b",
+  },
 }
 `
 
@@ -50041,6 +50076,10 @@ ArboristNode {
   "name": "reify-workspaces-reify-workspaces-bin-files",
   "packageName": "workspace-duplicate",
   "path": "{CWD}/test/arborist/reify-workspaces-reify-workspaces-bin-files",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
 }
 `
 

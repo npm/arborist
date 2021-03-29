@@ -1,6 +1,7 @@
 const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
+const Edge = require('../lib/edge.js')
 const printable = require('../lib/printable.js')
 const util = require('util')
 
@@ -239,6 +240,50 @@ t.test('broken links dont break the printing', t => {
     parent: tree,
   })
   brokenLink.target.root = null
+
+  t.matchSnapshot(printable(tree))
+  t.end()
+})
+
+t.test('show workspaces in printable node output', t => {
+  const tree = new Node({
+    path: '/home/user/projects/root',
+    pkg: {
+      workspaces: ['packages/*'],
+    },
+  })
+  new Edge({
+    from: tree,
+    type: 'workspace',
+    name: 'a',
+    spec: 'file:/home/user/projects/root/packages/a',
+  })
+  new Edge({
+    from: tree,
+    type: 'workspace',
+    name: 'b',
+    spec: 'file:/home/user/projects/root/packages/b',
+  })
+  new Link({
+    pkg: {
+      name: 'a',
+      version: '1.2.3',
+    },
+    realpath: '/home/user/projects/root/packages/a',
+    parent: tree,
+  })
+  new Link({
+    pkg: {
+      name: 'b',
+      version: '1.2.3',
+    },
+    realpath: '/home/user/projects/root/packages/b',
+    parent: tree,
+  })
+  tree.workspaces = new Map([
+    ['a', tree.children.get('a').realpath],
+    ['b', tree.children.get('b').realpath],
+  ])
 
   t.matchSnapshot(printable(tree))
   t.end()

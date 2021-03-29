@@ -218,6 +218,89 @@ peer:true,
 target:{location:'c'}}}}
 `
 
+exports[`test/printable.js TAP show workspaces in printable node output > must match snapshot 1`] = `
+{
+"children":Map{
+"a" => ArboristLink{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"a",
+"spec":"file:/home/user/projects/root/packages/a",
+"type":"workspace",},},
+"extraneous":true,
+"location":"node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/home/user/projects/root/node_modules/a",
+"peer":true,
+"realpath":"/home/user/projects/root/packages/a",
+"resolved":"file:../packages/a",
+"target":{
+"location":"packages/a",},
+"version":"1.2.3",},
+"b" => ArboristLink{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"b",
+"spec":"file:/home/user/projects/root/packages/b",
+"type":"workspace",},},
+"extraneous":true,
+"location":"node_modules/b",
+"name":"b",
+"optional":true,
+"path":"/home/user/projects/root/node_modules/b",
+"peer":true,
+"realpath":"/home/user/projects/root/packages/b",
+"resolved":"file:../packages/b",
+"target":{
+"location":"packages/b",},
+"version":"1.2.3",},},
+"dev":true,
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"file:/home/user/projects/root/packages/a",
+"to":"node_modules/a",
+"type":"workspace",},
+"b" => EdgeOut{
+"name":"b",
+"spec":"file:/home/user/projects/root/packages/b",
+"to":"node_modules/b",
+"type":"workspace",},},
+"extraneous":true,
+"fsChildren":Set{
+{
+"dev":true,
+"extraneous":true,
+"location":"packages/a",
+"name":"a",
+"optional":true,
+"path":"/home/user/projects/root/packages/a",
+"peer":true,
+"version":"1.2.3",},
+{
+"dev":true,
+"extraneous":true,
+"location":"packages/b",
+"name":"b",
+"optional":true,
+"path":"/home/user/projects/root/packages/b",
+"peer":true,
+"version":"1.2.3",},},
+"location":"",
+"name":"root",
+"optional":true,
+"path":"/home/user/projects/root",
+"peer":true,
+"workspaces":Map{
+"a" => "packages/a",
+"b" => "packages/b",},}
+`
+
 exports[`test/printable.js TAP virtual roots are shown with their sourceReference > must match snapshot 1`] = `
 ArboristVirtualNode{
 "dev":true,

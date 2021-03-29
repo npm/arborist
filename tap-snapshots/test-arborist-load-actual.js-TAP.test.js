@@ -3831,6 +3831,11 @@ ArboristNode {
   "location": "",
   "name": "load-actual-load-workspace-targets-even-if-links-not-present",
   "path": "load-actual-load-workspace-targets-even-if-links-not-present",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+    "c" => "packages/c",
+  },
 }
 `
 
@@ -3907,6 +3912,10 @@ ArboristNode {
   "location": "",
   "name": "load-actual-load-workspaces-when-loading-from-hidding-lockfile",
   "path": "load-actual-load-workspaces-when-loading-from-hidding-lockfile",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
 }
 `
 
@@ -7542,6 +7551,10 @@ ArboristNode {
   "name": "workspaces-simple",
   "packageName": "workspace-simple",
   "path": "workspaces-simple",
+  "workspaces": Map {
+    "a" => "a",
+    "b" => "b",
+  },
 }
 `
 
@@ -7633,6 +7646,10 @@ ArboristNode {
   "name": "workspaces-simple",
   "packageName": "workspace-simple",
   "path": "workspaces-simple",
+  "workspaces": Map {
+    "a" => "a",
+    "b" => "b",
+  },
 }
 `
 

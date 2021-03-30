@@ -3834,6 +3834,82 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/load-actual.js TAP load workspaces when loading from hidding lockfile > actual tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "load-actual-load-workspaces-when-loading-from-hidding-lockfile/node_modules/a",
+      "realpath": "load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "load-actual-load-workspaces-when-loading-from-hidding-lockfile/node_modules/b",
+      "realpath": "load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
+      "version": "1.2.3",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "location": "packages/a",
+      "name": "a",
+      "path": "load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/a",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "location": "packages/b",
+      "name": "b",
+      "path": "load-actual-load-workspaces-when-loading-from-hidding-lockfile/packages/b",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "load-actual-load-workspaces-when-loading-from-hidding-lockfile",
+  "path": "load-actual-load-workspaces-when-loading-from-hidding-lockfile",
+}
+`
+
 exports[`test/arborist/load-actual.js TAP look for missing deps by default external-dep/root > "dep" should have missing deps, "link" should not 1`] = `
 ArboristNode {
   "edgesOut": Map {

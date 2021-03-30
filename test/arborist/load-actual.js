@@ -5,6 +5,7 @@ const Arborist = require('../../lib/arborist')
 const { resolve } = require('path')
 const Node = require('../../lib/node.js')
 const Shrinkwrap = require('../../lib/shrinkwrap.js')
+const fs = require('fs')
 
 const {
   fixtures,
@@ -294,4 +295,66 @@ t.test('transplant workspace targets, even if links not present', async t => {
     root,
     transplantFilter: node => node.name !== 'a',
   }), 'do not transplant node named "a"')
+})
+
+t.test('load workspaces when loading from hidding lockfile', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+    }),
+    node_modules: {
+      a: t.fixture('symlink', '../packages/a'),
+      b: t.fixture('symlink', '../packages/b'),
+      '.package-lock.json': JSON.stringify({
+        name: 'workspace-abc',
+        lockfileVersion: 2,
+        requires: true,
+        packages: {
+          'node_modules/a': {
+            resolved: 'packages/a',
+            link: true,
+          },
+          'node_modules/b': {
+            resolved: 'packages/b',
+            link: true,
+          },
+          'packages/a': {
+            version: '1.0.0',
+          },
+          'packages/b': {
+            version: '1.2.3',
+          },
+        },
+      }),
+    },
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          // note: version changed since reifying
+          version: '1.2.3',
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+    },
+  })
+  const hidden = resolve(path, 'node_modules/.package-lock.json')
+  const then = Date.now() + 10000
+  fs.utimesSync(hidden, new Date(then), new Date(then))
+  const tree = await loadActual(path)
+  const aLink = tree.children.get('a')
+  const bLink = tree.children.get('b')
+  t.notOk(aLink.extraneous, 'a link not be extraneous')
+  t.notOk(bLink.extraneous, 'b link not be extraneous')
+  const aTarget = aLink.target
+  const bTarget = bLink.target
+  t.notOk(aTarget.extraneous, 'a target not be extraneous')
+  t.notOk(bTarget.extraneous, 'b target not be extraneous')
+  t.equal(aTarget.version, '1.2.3', 'updated a target version')
+  t.matchSnapshot(tree, 'actual tree')
 })

@@ -2725,12 +2725,13 @@ t.test('cannot do workspaces in global mode', t => {
   t.end()
 })
 
-t.todo('add packages to workspaces, not root', async t => {
+t.test('add packages to workspaces, not root', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({
       workspaces: ['packages/*'],
       dependencies: {
         wrappy: '1.0.0',
+        abbrev: '',
       },
     }),
     packages: {
@@ -2744,27 +2745,103 @@ t.todo('add packages to workspaces, not root', async t => {
         'package.json': JSON.stringify({
           name: 'b',
           version: '1.2.3',
+          dependencies: {
+            abbrev: '',
+          },
         }),
       },
       c: {
         'package.json': JSON.stringify({
           name: 'c',
           version: '1.2.3',
+          dependencies: {
+            abbrev: '',
+          },
         }),
       },
     },
   })
 
-  const tree = await buildIdeal(path, {
+  const addTree = await buildIdeal(path, {
     add: ['wrappy@1.0.1'],
     workspaces: ['a', 'c'],
   })
-  t.match(tree.edgesOut.get('wrappy'), { spec: '1.0.0' })
-  const a = tree.children.get('a').target
-  const b = tree.children.get('b').target
-  const c = tree.children.get('c').target
+  t.match(addTree.edgesOut.get('wrappy'), { spec: '1.0.0' })
+  const a = addTree.children.get('a').target
+  const b = addTree.children.get('b').target
+  const c = addTree.children.get('c').target
   t.match(a.edgesOut.get('wrappy'), { spec: '1.0.1' })
   t.equal(b.edgesOut.get('wrappy'), undefined)
   t.match(c.edgesOut.get('wrappy'), { spec: '1.0.1' })
-  t.matchSnapshot(printTree(tree))
+  t.matchSnapshot(printTree(addTree), 'tree with wrappy added to a and c')
+
+  const rmTree = await buildIdeal(path, {
+    rm: ['abbrev'],
+    workspaces: ['a', 'b'],
+  })
+  t.match(rmTree.edgesOut.get('abbrev'), { spec: '' })
+  t.equal(rmTree.children.get('a').target.edgesOut.get('abbrev'), undefined)
+  t.equal(rmTree.children.get('b').target.edgesOut.get('abbrev'), undefined)
+  t.match(rmTree.children.get('c').target.edgesOut.get('abbrev'), { spec: '' })
+  t.matchSnapshot(printTree(rmTree), 'tree with abbrev removed from a and b')
+})
+
+t.test('workspace error handling', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+      dependencies: {
+        wrappy: '1.0.0',
+        abbrev: '',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+          dependencies: {
+            abbrev: '',
+          },
+        }),
+      },
+      c: {
+        'package.json': JSON.stringify({
+          name: 'c',
+          version: '1.2.3',
+          dependencies: {
+            abbrev: '',
+          },
+        }),
+      },
+    },
+  })
+  t.test('set filter, but no workspaces present', async t => {
+    const logs = warningTracker()
+    await buildIdeal(resolve(path, 'packages/a'), {
+      workspaces: ['a'],
+    })
+    t.strictSame(logs(), [[
+      'warn',
+      'idealTree',
+      'Workspace filter set, but no workspaces present',
+    ]], 'got warning')
+  })
+  t.test('set filter for workspace that is not present', async t => {
+    const logs = warningTracker()
+    await buildIdeal(path, {
+      workspaces: ['not-here'],
+    })
+    t.strictSame(logs(), [[
+      'warn',
+      'idealTree',
+      'Workspace not-here in filter set, but not in workspaces',
+    ]], 'got warning')
+  })
 })

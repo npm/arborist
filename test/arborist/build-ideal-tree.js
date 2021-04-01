@@ -1765,6 +1765,31 @@ t.test('more peer dep conflicts', t => {
       error: true,
       resolvable: false,
     },
+
+    'conflict on root edge, order 1': {
+      pkg: {
+        name: '@isaacs/testing-peer-dep-conflict-chain-a',
+        version: '2.3.4',
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': 'file:.',
+          '@isaacs/testing-peer-dep-conflict-chain-d': '1',
+        },
+      },
+      error: true,
+      resolvable: false,
+    },
+    'conflict on root edge, order 2': {
+      pkg: {
+        name: '@isaacs/testing-peer-dep-conflict-chain-d',
+        version: '2.3.4',
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-a': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-d': 'file:.',
+        },
+      },
+      error: true,
+      resolvable: false,
+    },
   })
 
   t.jobs = cases.length

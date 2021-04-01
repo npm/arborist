@@ -69,6 +69,7 @@ t.test('break some stuff', t => {
     realpath: resolve('/some/path/node_modules/disowned'),
     location: '',
     name: 'Error',
+    log: Array,
   })
 
   Map.prototype.delete.call(tree.inventory, 'xyz')
@@ -78,6 +79,7 @@ t.test('break some stuff', t => {
     message: 'not in inventory',
     node: resolve('/some/path/node_modules/disowned'),
     name: 'Error',
+    log: Array,
   })
 
   disowned.root = null
@@ -88,6 +90,7 @@ t.test('break some stuff', t => {
     realpath: resolve('/some/path/node_modules/disowned'),
     tree: tree.path,
     name: 'Error',
+    log: Array,
   })
 
   const otherTree = new Node({
@@ -101,6 +104,7 @@ t.test('break some stuff', t => {
     realpath: resolve('/some/path/node_modules/disowned/node_modules/other'),
     tree: tree.path,
     name: 'Error',
+    log: Array,
   })
 
   tree.children.delete('wtf')
@@ -111,6 +115,7 @@ t.test('break some stuff', t => {
     tree: otherTree.path,
     inventory: [[disowned.path, disowned.location]],
     name: 'Error',
+    log: Array,
   })
   Map.prototype.delete.call(tree.inventory, 'othertree')
 
@@ -160,6 +165,53 @@ t.test('tree with dev edges on a nested dep node', t => {
     via: tree.path,
     viaType: 'children',
     devEdges: [['dev', 'x', '', 'MISSING']],
+    log: Array,
+  })
+  t.end()
+})
+
+t.test('node with same path as root', t => {
+  const root = new Node({
+    path: '/path/to/root',
+    pkg: {
+      dependencies: {
+        foo: '1',
+      },
+    },
+  })
+  const tree = new Node({
+    parent: root,
+    pkg: {
+      name: 'foo',
+      version: '1.2.3',
+    },
+  })
+  const child = new Node({
+    parent: tree,
+    pkg: {
+      name: 'not-root',
+      version: '1.2.3',
+    },
+  })
+  child.path = root.path
+  t.throws(() => treeCheck(tree), {
+    message: 'node with same path as root',
+    node: child.path,
+    tree: tree.path,
+    root: root.path,
+    via: tree.path,
+    viaType: 'children',
+    log: Array,
+  })
+  child.path = root.path + '/some/where/else'
+  t.throws(() => treeCheck(tree), {
+    message: 'non-link with mismatched path/realpath',
+    node: child.path,
+    tree: tree.path,
+    root: root.path,
+    via: tree.path,
+    viaType: 'children',
+    log: Array,
   })
   t.end()
 })

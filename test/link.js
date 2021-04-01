@@ -220,3 +220,22 @@ t.test('link gets version from target', t => {
   t.equal(link.version, '1.2.3')
   t.end()
 })
+
+t.test('link to root path gets root as target', t => {
+  const root = new Node({
+    path: '/project/root',
+    pkg: {
+      name: 'root',
+      dependencies: {
+        root: 'file:.',
+      },
+    },
+  })
+  const link = new Link({
+    parent: root,
+    realpath: root.path,
+    pkg: { ...root.package },
+  })
+  t.equal(link.target, root)
+  t.end()
+})

@@ -14,3 +14,6 @@ t.match(a, {
 })
 // make sure we don't mess up the class name with the mixin stack trick
 t.equal(Arborist.name, 'Arborist')
+const packumentCache = new Map()
+const c = new Arborist({ packumentCache })
+t.equal(c.options.packumentCache, packumentCache, 'passed in a packument cache')

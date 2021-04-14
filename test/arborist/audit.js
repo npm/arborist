@@ -7,9 +7,11 @@ const fixtures = resolve(__dirname, '../fixtures')
 
 const fixture = (t, p) => require(fixtures + '/reify-cases/' + p)(t)
 
-const registryServer = require('../fixtures/registry-mocks/server.js')
-const {registry, auditResponse} = registryServer
+const {start, stop, registry, auditResponse} = require('../fixtures/registry-mocks/server.js')
 const cache = t.testdir()
+
+t.before(start)
+t.teardown(stop)
 
 const {
   normalizePath,
@@ -19,8 +21,6 @@ const {
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
   .split(registry).join('https://registry.npmjs.org/')
-
-t.test('setup server', { bail: true, buffered: false }, registryServer)
 
 t.test('audit finds the bad deps', async t => {
   const path = resolve(fixtures, 'deprecated-dep')

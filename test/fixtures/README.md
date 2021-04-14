@@ -76,13 +76,15 @@ exported method, passing in a `tap` test object, and using the exported
 `registry` property as the registry config for all its business.
 
 ```js
-const registryServer = require('../fixtures/registry-mocks/server.js')
-const {registry} = registryServer
-t.test('setup server', { bail: true, buffered: false }, registryServer)
-```
+const {start, stop, registry} = require('../fixtures/registry-mocks/server.js')
+t.before(start)
+t.teardown(stop)
 
-This automatically sets up the appropriate teardown on the parent test
-object provided, and ends the test when the server is up and running.
+t.test('something', async t => {
+  // set the registry config to the server we spun up
+  const arb = new Arborist({ ...options, registry })
+})
+```
 
 ### Updating Contents
 

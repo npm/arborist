@@ -1,5 +1,5 @@
 const {join, dirname} = require('path')
-const {existsSync, readFileSync, createWriteStream, writeFileSync} = require('fs')
+const {existsSync, readFileSync, writeFileSync} = require('fs')
 const PORT = 12345 + (+process.env.TAP_CHILD_ID || 0)
 const http = require('http')
 const https = require('https')
@@ -14,8 +14,8 @@ let advisoryBulkResponse = null
 let failAdvisoryBulk = false
 let auditResponse = null
 let failAudit = false
-const startServer = cb => {
-  const server = module.exports.server = http.createServer((req, res) => {
+const startServer = () => new Promise((res, rej) => {
+  const server = exports.server = http.createServer((req, res) => {
     res.setHeader('connection', 'close')
 
     if (req.url === '/-/npm/v1/security/advisories/bulk') {
@@ -54,7 +54,7 @@ const startServer = cb => {
               host: 'registry.npmjs.org',
               connection: 'close',
               'if-none-match': '',
-            }
+            },
           }
           const handleUpstream = upstream => {
             res.statusCode = upstream.statusCode
@@ -85,9 +85,8 @@ const startServer = cb => {
               https.request(opts)
                 .on('response', upstream => handleUpstream(upstream))
                 .end(Buffer.concat(body))
-            } else {
+            } else
               handleUpstream(upstream)
-            }
           }).end(Buffer.concat(body))
         } else {
           res.setHeader('content-encoding', 'gzip')
@@ -141,7 +140,6 @@ const startServer = cb => {
             })
             upstream.on('data', c => data.push(c))
           }).end(Buffer.concat(body))
-
         } else {
           res.setHeader('content-encoding', 'gzip')
           res.end(gzipSync(readFileSync(auditResponse)))
@@ -167,7 +165,6 @@ const startServer = cb => {
         : 'application/octet-stream')
       res.end(body)
     } catch (er) {
-
       // testing things going missing from the registry somehow
       if (missing.test(req.url)) {
         res.statusCode = 404
@@ -188,10 +185,12 @@ const startServer = cb => {
             'if-none-match': '',
           },
         }).on('response', upstream => {
-          const errorStatus = upstream.statusCode >= 300 || upstream.statusCode < 200
-          if (errorStatus) {
+          const errorStatus =
+            upstream.statusCode >= 300 || upstream.statusCode < 200
+
+          if (errorStatus)
             console.error('UPSTREAM ERROR', upstream.statusCode)
-          }
+
           const ct = upstream.headers['content-type']
           const isJson = ct.includes('application/json')
           const file = isJson ? f + '.json' : f
@@ -227,49 +226,46 @@ const startServer = cb => {
       res.end(er.stack)
     }
   })
-  server.listen(PORT, cb)
-}
-
-module.exports = t => startServer(() => {
-  t.parent.teardown(() => module.exports.server.close())
-  t.end()
+  server.listen(PORT, res)
 })
 
-module.exports.auditResponse = value => {
-  if (auditResponse && auditResponse !== value)
+exports.auditResponse = value => {
+  if (auditResponse && auditResponse !== value) {
     throw new Error('setting audit response, but already set\n' +
       '(did you forget to call the returned function on teardown?)')
+  }
   auditResponse = value
   return () => auditResponse = null
 }
-module.exports.failAudit = () => {
+exports.failAudit = () => {
   failAudit = true
   return () => failAudit = false
 }
 
-module.exports.advisoryBulkResponse = value => {
-  if (advisoryBulkResponse && advisoryBulkResponse !== value)
+exports.advisoryBulkResponse = value => {
+  if (advisoryBulkResponse && advisoryBulkResponse !== value) {
     throw new Error('setting advisory bulk response, but already set\n' +
       '(did you forget to call the returned function on teardown?)')
+  }
   advisoryBulkResponse = value
   return () => advisoryBulkResponse = null
 }
-module.exports.failAdvisoryBulk = () => {
+exports.failAdvisoryBulk = () => {
   failAdvisoryBulk = true
   return () => failAdvisoryBulk = false
 }
 
-module.exports.registry = `http://localhost:${PORT}/`
+exports.registry = `http://localhost:${PORT}/`
 
-module.exports.start = startServer
-module.exports.stop = () => module.exports.server.close()
+exports.start = startServer
+exports.stop = () => exports.server.close()
 
 if (require.main === module) {
-  startServer(() => {
+  startServer().then(() => {
     console.log(`Mock registry live at:
-  ${module.exports.registry}
+  ${exports.registry}
 Press ^D to close gracefully.`)
   })
   process.openStdin()
-  process.stdin.on('end', () => module.exports.server.close())
+  process.stdin.on('end', () => exports.stop())
 }

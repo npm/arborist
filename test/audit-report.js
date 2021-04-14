@@ -3,8 +3,18 @@ const AuditReport = require('../lib/audit-report.js')
 const {auditToBulk} = AuditReport
 const Node = require('../lib/node.js')
 const Arborist = require('../')
-const registryServer = require('./fixtures/registry-mocks/server.js')
-const {registry, auditResponse, failAudit, advisoryBulkResponse} = registryServer
+
+const {
+  start,
+  stop,
+  registry,
+  auditResponse,
+  failAudit,
+  advisoryBulkResponse,
+} = require('./fixtures/registry-mocks/server.js')
+t.before(start)
+t.teardown(stop)
+
 const {resolve} = require('path')
 const fixtures = resolve(__dirname, 'fixtures')
 
@@ -28,8 +38,6 @@ const sortReport = report => {
     return set
   }, {})
 }
-
-t.test('setup server', { bail: true }, registryServer)
 
 t.test('all severity levels', async t => {
   const path = resolve(fixtures, 'audit-all-severities')

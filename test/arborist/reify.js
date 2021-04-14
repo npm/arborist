@@ -75,12 +75,11 @@ const Arborist = requireInject('../../lib/arborist', {
   '../../lib/signal-handling.js': require('../../lib/signal-handling.js'),
 })
 
-const registryServer = require('../fixtures/registry-mocks/server.js')
-const {registry} = registryServer
+const {start, stop, registry} = require('../fixtures/registry-mocks/server.js')
+t.before(start)
+t.teardown(stop)
 
 const cache = t.testdir()
-
-t.test('setup server', { bail: true, buffered: false }, registryServer)
 
 const {
   normalizePath,

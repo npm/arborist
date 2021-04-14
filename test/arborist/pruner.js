@@ -3,8 +3,10 @@ const { resolve } = require('path')
 const t = require('tap')
 const Arborist = require('../../lib/arborist/index.js')
 
-const registryServer = require('../fixtures/registry-mocks/server.js')
-const { registry } = registryServer
+const { start, stop, registry } = require('../fixtures/registry-mocks/server.js')
+
+t.before(start)
+t.teardown(stop)
 
 const {
   normalizePath,
@@ -14,8 +16,6 @@ const {
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
   .split(registry).join('https://registry.npmjs.org/')
-
-t.test('setup server', { bail: true, buffered: false }, registryServer)
 
 const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
 

@@ -65,18 +65,13 @@ const warningTracker = () => {
   }
 }
 
-const Node = t.mock('../../lib/node.js', mocks)
-mocks['../../lib/node.js'] = Node
-const Link = t.mock('../../lib/link.js', mocks)
-mocks['../../lib/link.js'] = Link
-const Shrinkwrap = t.mock('../../lib/shrinkwrap.js', mocks)
-mocks['../../lib/shrinkwrap.js'] = Shrinkwrap
-
-const Arborist = t.mock('../../lib/arborist', {
+const Arborist = t.mock('../../lib/index.js', {
   ...mocks,
   // need to not mock this one, so we still can swap the process object
   '../../lib/signal-handling.js': require('../../lib/signal-handling.js'),
 })
+
+const { Node, Link, Shrinkwrap } = Arborist
 
 const {start, stop, registry} = require('../fixtures/registry-mocks/server.js')
 t.before(start)

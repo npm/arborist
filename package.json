@@ -42,7 +42,7 @@
     "minify-registry-metadata": "^2.1.0",
     "mutate-fs": "^2.1.1",
     "require-inject": "^1.4.4",
-    "tap": "^14.11.0",
+    "tap": "^15.0.2",
     "tcompare": "^3.0.4"
   },
   "scripts": {
@@ -76,10 +76,8 @@
     "arborist": "bin/index.js"
   },
   "tap": {
-    "100": true,
     "after": "test/fixtures/cleanup.js",
     "coverage-map": "map.js",
-    "esm": false,
     "test-env": [
       "NODE_OPTIONS=--no-warnings"
     ],

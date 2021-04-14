@@ -4,10 +4,16 @@ const cwd = process.cwd()
 const dirname = require('path').dirname(cwd)
 
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
+const isHGIFn = (key, val) =>
+  typeof val === 'function' &&
+  (/template$/.test(key) || ['extract', 'hashformat'].includes(key))
+
 const normalizePaths = obj => {
   for (const key in obj) {
     if (['where', 'fetchSpec', 'saveSpec'].includes(key) && obj[key])
       obj[key] = normalizePath(obj[key])
+    else if (isHGIFn(key, obj[key]))
+      obj[key] = `function ${key}`
     else if (typeof obj[key] === 'object' && obj[key] !== null)
       obj[key] = normalizePaths(obj[key])
   }

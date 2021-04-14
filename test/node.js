@@ -246,7 +246,7 @@ t.test('testing with dep tree', t => {
     newMeta.parent = root
 
     t.equal(meta.parent, null, 'old meta parent removed')
-    t.notEqual(root.children.get('meta'), meta,
+    t.not(root.children.get('meta'), meta,
       'root.children no longer has old meta')
     t.matchSnapshot(root, 'move new meta to top level')
 
@@ -621,7 +621,7 @@ t.test('load with a virtual filesystem parent', t => {
   t.equal(root.inventory.get(aLoc), aLink)
   t.equal(a.root, a)
   for (const node of underA)
-    t.notEqual(node.root, root, `${node.path} still under old root`)
+    t.not(node.root, root, `${node.path} still under old root`)
 
   // create a new fsChild several steps below the root, then shove
   // a link in the way of it, removing it.
@@ -639,7 +639,7 @@ t.test('load with a virtual filesystem parent', t => {
     }),
     root,
   })
-  t.notEqual(fsD.root, root, 'fsD removed from root')
+  t.not(fsD.root, root, 'fsD removed from root')
 
   // add a node completely outside the root folder, as a link
   // target, then add a new node that takes over as its parent,

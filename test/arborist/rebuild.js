@@ -352,7 +352,7 @@ t.test('force overwrite the conflicting globalTop bin', async t => {
   await arb.rebuild()
   const isCorrect = isWindows ? 'isFile' : 'isSymbolicLink'
   t.equal(fs.lstatSync(file)[isCorrect](), true, 'bin was linked')
-  t.notEqual(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
+  t.not(fs.readFileSync(file, 'utf8'), 'this is not the linked bin')
 })
 
 t.test('checkBins is fine if no bins', async t => {

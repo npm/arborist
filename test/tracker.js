@@ -12,10 +12,10 @@ const npmlog = {
 
 t.test('no npmlog', t => {
   const tr = new Tracker()
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     tr.addTracker('testTracker')
   })
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     tr.finishTracker('testTracker')
   })
 
@@ -23,22 +23,22 @@ t.test('no npmlog', t => {
 })
 
 t.test('adds tracker', t => {
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
   })
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker')
   })
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker')
     tr.addTracker('testTracker', 'subTracker')
   })
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker.name', 'subTracker.key')
@@ -69,19 +69,19 @@ t.test('adds tracker', t => {
 })
 
 t.test('finishes tracker', t => {
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.finishTracker('testTracker')
   })
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker')
     tr.finishTracker('testTracker', 'subTracker')
     tr.finishTracker('testTracker')
   })
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('testTracker')
     tr.addTracker('testTracker', 'subTracker.name', 'subTracker.key')
@@ -89,7 +89,7 @@ t.test('finishes tracker', t => {
     tr.finishTracker('testTracker')
   })
 
-  t.notThrow(() => {
+  t.doesNotThrow(() => {
     const tr = new Tracker({ log: npmlog })
     tr.addTracker('firstTracker')
     tr.addTracker('secondTracker')

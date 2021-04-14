@@ -1390,7 +1390,7 @@ t.test('rollback if process is terminated during reify process', async t => {
         // if it fails while removing trash well... it's already over.
         // we can't actually roll back at that point, because "trash" is gone
         if (method !== Symbol.for('removeTrash')) {
-          t.deepEqual(JSON.parse(fs.readFileSync(pj, 'utf8')), {
+          t.same(JSON.parse(fs.readFileSync(pj, 'utf8')), {
             name: 'abbrev',
             version: '0.0.0',
           })

@@ -106,9 +106,9 @@ t.test('load a tree rooted on a different node', async t => {
   t.equal(transp.children.get('a').path, resolve(other, 'node_modules/a'))
   t.equal(transp.children.get('b').path, resolve(other, 'node_modules/b'))
   t.equal(transp.children.get('c').path, resolve(other, 'node_modules/c'))
-  t.notEqual(transp.children.get('a').target, null, 'did not break link')
-  t.notEqual(transp.children.get('b').target, null, 'did not break link')
-  t.notEqual(transp.children.get('c').target, null, 'did not break link')
+  t.not(transp.children.get('a').target, null, 'did not break link')
+  t.not(transp.children.get('b').target, null, 'did not break link')
+  t.not(transp.children.get('c').target, null, 'did not break link')
   t.equal(transp.children.get('a').realpath, resolve(other, 'packages/a'))
   t.equal(transp.children.get('b').realpath, resolve(other, 'packages/b'))
   t.equal(transp.children.get('c').realpath, resolve(other, 'packages/c'))
@@ -187,7 +187,7 @@ t.test('missing folder', t =>
 
 t.test('missing symlinks', t =>
   loadActual(resolve(fixtures, 'badlink')).then(d => {
-    t.is(d.children.size, 2, 'both broken children are included')
+    t.equal(d.children.size, 2, 'both broken children are included')
     t.match(d.children.get('foo'), { errors: [{ code: 'ELOOP' }] },
       'foo has error')
     t.match(d.children.get('bar'), { errors: [{ code: 'ENOENT' }] },

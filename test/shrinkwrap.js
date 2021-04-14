@@ -509,8 +509,8 @@ t.test('load shrinkwrap if no package-lock.json present', t => {
 
 t.test('load yarn.lock file if present', t =>
   Shrinkwrap.load({ path: yarnFixture }).then(s => {
-    t.isa(s.yarnLock, YarnLock, 'loaded a yarn lock file')
-    t.notEqual(s.yarnLock.entries.size, 0, 'got some entries')
+    t.type(s.yarnLock, YarnLock, 'loaded a yarn lock file')
+    t.not(s.yarnLock.entries.size, 0, 'got some entries')
   }))
 
 t.test('save yarn lock if loaded', t =>
@@ -527,7 +527,7 @@ t.test('ignore yarn lock file parse errors', t => {
     'yarn.lock': 'this is not a yarn lock file!',
   })
   return Shrinkwrap.load({ path: dir }).then(s => {
-    t.isa(s.yarnLock, YarnLock, 'got a yarn lock object because a yarn lock exists')
+    t.type(s.yarnLock, YarnLock, 'got a yarn lock object because a yarn lock exists')
     t.equal(s.yarnLock.entries.size, 0, 'did not get any entries out of it')
   })
 })

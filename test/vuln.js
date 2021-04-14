@@ -84,7 +84,7 @@ t.test('basic vulnerability object tests', async t => {
   })
 
   const v = new Vuln({ name: 'name', advisory: crit })
-  t.isa(v, Vuln)
+  t.type(v, Vuln)
   t.equal(v.testSpec('github:foo/bar'), true)
   t.equal(v.testSpec('0.x'), false)
   t.equal(v.testSpec('>4.x'), true)

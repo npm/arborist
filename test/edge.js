@@ -264,7 +264,7 @@ t.matchSnapshot(moving, 'old location, missing dep')
 bb.parent = a
 moving.reload()
 const explAfterMove = moving.explain()
-t.notEqual(explBeforeMove, explAfterMove, 'moving reloads the explanation')
+t.not(explBeforeMove, explAfterMove, 'moving reloads the explanation')
 t.matchSnapshot(moving, 'new location, found dep')
 bb.parent = top
 moving.reload()
@@ -384,7 +384,7 @@ t.test('convenience type getter flags', async t => {
   t.equal(explainEdge.explain(), expl)
   t.matchSnapshot(expl, 'explanation')
   explainEdge.detach()
-  t.notEqual(explainEdge.explain(), expl)
+  t.not(explainEdge.explain(), expl)
 })
 
 // FIXME: once we drop support to node10 we can remove this
@@ -494,10 +494,10 @@ const bundledEdge = new Edge({
 
 t.ok(bundledEdge.satisfiedBy(bundleChild), 'bundled dependency')
 const fromBundleDependencies = bundledEdge.from && bundledEdge.from.package.bundleDependencies
-t.deepEqual(fromBundleDependencies, ['bundle-child'], 'edge.from bundledDependencies as expected')
-t.deepEqual(bundledEdge.name, 'bundle-child', 'edge name as expected')
+t.same(fromBundleDependencies, ['bundle-child'], 'edge.from bundledDependencies as expected')
+t.same(bundledEdge.name, 'bundle-child', 'edge name as expected')
 t.equal(bundledEdge.bundled, true, 'bundled prop is true')
-t.deepEqual(bundledEdge.explain(), {
+t.same(bundledEdge.explain(), {
   type: 'prod',
   name: 'bundle-child',
   spec: '1.2.3',

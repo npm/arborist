@@ -75,7 +75,7 @@ bar@foo:
 })
 
 t.test('exports YarnLockEntry class', t => {
-  t.isa(YarnLock.Entry, 'function')
+  t.type(YarnLock.Entry, 'function')
   t.end()
 })
 

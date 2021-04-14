@@ -1,6 +1,5 @@
 const Inventory = require('../lib/inventory.js')
 const t = require('tap')
-const requireInject = require('require-inject')
 
 t.test('basic operations', t => {
   const i = new Inventory()
@@ -107,7 +106,7 @@ t.test('dont allow external nodes to be added to inventory', t => {
 })
 
 t.test('adding external nodes is no-op outside debug mode', t => {
-  const Inventory = requireInject('../lib/inventory.js', {
+  const Inventory = t.mock('../lib/inventory.js', {
     '../lib/debug.js': () => {},
   })
   const i = new Inventory()

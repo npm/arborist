@@ -1,10 +1,10 @@
+const t = require('tap')
+
 // turn on debug mode, or this does nothing
-const requireInject = require('require-inject')
-const treeCheck = requireInject('../lib/tree-check.js', {
+const treeCheck = t.mock('../lib/tree-check.js', {
   '../lib/debug.js': fn => fn(),
 })
 
-const t = require('tap')
 const { resolve } = require('path')
 
 const Node = require('../lib/node.js')
@@ -123,7 +123,7 @@ t.test('break some stuff', t => {
 })
 
 t.test('just return the tree if not in debug mode', t => {
-  const treeCheck = requireInject('../lib/tree-check.js', {
+  const treeCheck = t.mock('../lib/tree-check.js', {
     '../lib/debug.js': () => {},
   })
   const tree = new Node({

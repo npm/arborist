@@ -1,5 +1,4 @@
 const t = require('tap')
-const requireInject = require('require-inject')
 const { resolve } = require('path')
 
 // start from clean slate
@@ -13,7 +12,7 @@ console.error = (...msg) => LOGS.push(msg)
 
 t.test('debug does nothing when ARBORIST_DEBUG explicitly 0', t => {
   process.env.ARBORIST_DEBUG = '0'
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   debug(() => {
     throw new Error('this should not happen')
   })
@@ -28,7 +27,7 @@ t.test('debug does nothing outside arborist folder', t => {
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))
   process.chdir(dir)
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   debug.log('hello')
   t.strictSame(LOGS, [])
   debug(() => {
@@ -42,7 +41,7 @@ t.test('debug runs when cwd is arborist folder', t => {
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))
   process.chdir(dir)
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   t.plan(2)
   debug(() => {
     t.pass('called debug function')
@@ -57,7 +56,7 @@ t.test('debug runs when NODE_DEBUG contains "arborist"', t => {
     delete process.env.NODE_DEBUG
   })
   process.env.NODE_DEBUG = 'fooo, bar, arborist, etc'
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   t.plan(1)
   debug(() => {
     t.pass('called debug function')
@@ -69,7 +68,7 @@ t.test('debug runs when ARBORIST_DEBUG=1', t => {
     delete process.env.ARBORIST_DEBUG
   })
   process.env.ARBORIST_DEBUG = '1'
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   t.plan(1)
   debug(() => {
     t.pass('called debug function')
@@ -83,7 +82,7 @@ t.test('debug runs when testing arborist', t => {
   })
   process.env.npm_lifecycle_event = 'test'
   process.env.npm_package_name = '@npmcli/arborist'
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   t.plan(1)
   debug(() => {
     t.pass('called debug function')
@@ -97,7 +96,7 @@ t.test('debug runs when generating snapshots', t => {
   })
   process.env.npm_lifecycle_event = 'snap'
   process.env.npm_package_name = '@npmcli/arborist'
-  const debug = requireInject('../lib/debug.js', {})
+  const debug = t.mock('../lib/debug.js')
   t.plan(1)
   debug(() => {
     t.pass('called debug function')

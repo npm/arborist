@@ -1,10 +1,9 @@
 const t = require('tap')
-const requireInject = require('require-inject')
 
 const runTest = platform => async t => {
   global.__ARBORIST_FAKE_PLATFORM__ = process.platform === platform ? null
     : platform
-  t.matchSnapshot(requireInject('../lib/signals.js'))
+  t.matchSnapshot(t.mock('../lib/signals.js'))
 }
 
 t.test('signals on darwin', runTest('darwin'))

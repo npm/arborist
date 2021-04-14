@@ -1,10 +1,10 @@
 const t = require('tap')
 const _trashList = Symbol.for('trashList')
-const requireInject = require('require-inject')
-const Arborist = requireInject('../../lib/arborist/index.js')
+const Arborist = require('../../lib/arborist/index.js')
 const {resolve, dirname} = require('path')
 const fs = require('fs')
 const fixtures = resolve(__dirname, '../fixtures')
+const relpath = require('../../lib/relpath.js')
 
 const fixture = (t, p) => require(`${fixtures}/reify-cases/${p}`)(t)
 
@@ -207,7 +207,7 @@ t.test('run scripts in foreground if foregroundScripts set', async t => {
   const path = fixture(t, 'rebuild-foreground-scripts')
   const RUNS = []
   let tick = 0
-  const Arborist = requireInject('../../lib/arborist/index.js', {
+  const Arborist = t.mock('../../lib/arborist/index.js', {
     '@npmcli/run-script': async opts => {
       // ensure that they don't get parallelized
       const run = tick++
@@ -384,7 +384,7 @@ t.test('checkBins is fine if no bins', async t => {
 t.test('rebuild node-gyp dependencies lacking both preinstall and install scripts', async t => {
   // use require-inject so we don't need an actual massive binary dep fixture
   const RUNS = []
-  const Arborist = requireInject('../../lib/arborist/index.js', {
+  const Arborist = t.mock('../../lib/arborist/index.js', {
     '@npmcli/run-script': async opts => {
       RUNS.push(opts)
       return {code: 0, signal: null}
@@ -431,7 +431,7 @@ t.test('rebuild node-gyp dependencies lacking both preinstall and install script
 
 t.test('do not rebuild node-gyp dependencies with gypfile:false', async t => {
   // use require-inject so we don't need an actual massive binary dep fixture
-  const Arborist = requireInject('../../lib/arborist/index.js', {
+  const Arborist = t.mock('../../lib/arborist/index.js', {
     '@npmcli/run-script': async opts => {
       throw new Error('should not run any scripts')
     },
@@ -487,7 +487,7 @@ t.test('workspaces', async t => {
   })
 
   const RUNS = []
-  const Arborist = requireInject('../../lib/arborist/index.js', {
+  const Arborist = t.mock('../../lib/arborist/index.js', {
     '@npmcli/run-script': opts => {
       RUNS.push(opts)
       return require('@npmcli/run-script')(opts)
@@ -536,7 +536,7 @@ t.test('workspaces', async t => {
     })
 
     const RUNS = []
-    const Arborist = requireInject('../../lib/arborist/index.js', {
+    const Arborist = t.mock('../../lib/arborist/index.js', {
       '@npmcli/run-script': async opts => {
         RUNS.push(opts)
         return {code: 0, signal: null}
@@ -584,7 +584,7 @@ t.test('workspaces', async t => {
     })
 
     const RUNS = []
-    const Arborist = requireInject('../../lib/arborist/index.js', {
+    const Arborist = t.mock('../../lib/arborist/index.js', {
       '@npmcli/run-script': async opts => {
         RUNS.push(opts)
         return {code: 0, signal: null}
@@ -638,6 +638,7 @@ t.test('put bins in the right place for linked-global top pkgs', async t => {
   const test = isWindows ? 'isFile' : 'isSymbolicLink'
   for (const f of expect) {
     const p = resolve(binpath, f)
-    t.equal(fs.lstatSync(p)[test](), true, `${test} ${binpath}/${f}`)
+    const rel = relpath(t.testdirName, p)
+    t.equal(fs.lstatSync(p)[test](), true, `${test} ${rel}`)
   }
 })

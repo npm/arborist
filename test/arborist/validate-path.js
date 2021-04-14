@@ -4,7 +4,6 @@
 // This test has to club a lot of stuff, and provides no coverage,
 // so it is separated from the arborist/reify.js tests.
 
-const requireInject = require('require-inject')
 const t = require('tap')
 
 const chownr = Object.assign((path, uid, gid, cb) => {
@@ -19,7 +18,7 @@ process.getgid = () => 0
 // make it fail on windows if it tries, as well
 process.env.__TESTING_MKDIRP_INFER_OWNER_PLATFORM__ = 'posix'
 
-const Arborist = requireInject('../../lib/arborist/index.js', { chownr })
+const Arborist = t.mock('../../lib/arborist/index.js', { chownr })
 
 const { resolve } = require('path')
 t.test('reify a folder that does not exist', async t => {

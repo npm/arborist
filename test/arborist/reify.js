@@ -1,6 +1,5 @@
 const {resolve} = require('path')
 const t = require('tap')
-const requireInject = require('require-inject')
 
 // mock rimraf so we can make it fail in rollback tests
 const realRimraf = require('rimraf')
@@ -41,8 +40,18 @@ const fsMock = {
       realRename(...args)
   },
 }
+const mocks = {
+  fs: fsMock,
+  rimraf: rimrafMock,
+}
+
 // need this to be injected so that it doesn't pull from main cache
-const mkdirp = requireInject('mkdirp', { fs: fsMock })
+const moveFile = t.mock('@npmcli/move-file', { fs: fsMock })
+mocks['@npmcli/move-file'] = moveFile
+const mkdirp = t.mock('mkdirp', mocks)
+mocks.mkdirp = mkdirp
+const mkdirpInferOwner = t.mock('mkdirp-infer-owner', mocks)
+mocks['mkdirp-infer-owner'] = mkdirpInferOwner
 
 // track the warnings that are emitted.  returns a function that removes
 // the listener and provides the list of what it saw.
@@ -56,21 +65,15 @@ const warningTracker = () => {
   }
 }
 
-const Node = requireInject('../../lib/node.js', { fs: fsMock })
-const Link = requireInject('../../lib/link.js', {
-  fs: fsMock,
-  '../../lib/node.js': Node,
-})
-const Shrinkwrap = requireInject('../../lib/shrinkwrap.js', {
-  fs: fsMock,
-  '../../lib/node.js': Node,
-  '../../lib/link.js': Link,
-})
-const Arborist = requireInject('../../lib/arborist', {
-  rimraf: rimrafMock,
-  fs: fsMock,
-  '../../lib/node.js': Node,
-  '../../lib/link.js': Link,
+const Node = t.mock('../../lib/node.js', mocks)
+mocks['../../lib/node.js'] = Node
+const Link = t.mock('../../lib/link.js', mocks)
+mocks['../../lib/link.js'] = Link
+const Shrinkwrap = t.mock('../../lib/shrinkwrap.js', mocks)
+mocks['../../lib/shrinkwrap.js'] = Shrinkwrap
+
+const Arborist = t.mock('../../lib/arborist', {
+  ...mocks,
   // need to not mock this one, so we still can swap the process object
   '../../lib/signal-handling.js': require('../../lib/signal-handling.js'),
 })
@@ -976,10 +979,8 @@ t.test('scoped registries', t => {
       return true
     },
   }
-  const ArboristMock = requireInject('../../lib/arborist', {
-    rimraf: rimrafMock,
-    fs: fsMock,
-    '../../lib/node.js': Node,
+  const ArboristMock = t.mock('../../lib/arborist', {
+    ...mocks,
     pacote,
   })
   const a = new ArboristMock({

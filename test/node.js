@@ -1,7 +1,6 @@
 const util = require('util')
 const t = require('tap')
 const Node = require('../lib/node.js')
-const requireInject = require('require-inject')
 const Link = require('../lib/link.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 const { resolve } = require('path')
@@ -426,10 +425,10 @@ t.test('load from system-root path', t => {
 })
 
 t.test('load with a virtual filesystem parent', t => {
-  const Node = requireInject('../lib/node.js', {
+  const Node = t.mock('../lib/node.js', {
     '../lib/debug.js': a => a(),
   })
-  const Link = requireInject('../lib/link.js', {
+  const Link = t.mock('../lib/link.js', {
     '../lib/node.js': Node,
   })
   const root = new Node({
@@ -740,7 +739,7 @@ t.test('changing root', t => {
 
 t.test('attempt to assign parent to self on root node', t => {
   // turn off debugging for this one so we don't throw
-  const Node = requireInject('../lib/node.js', {
+  const Node = t.mock('../lib/node.js', {
     '../lib/debug.js': () => {},
   })
   const root = new Node({

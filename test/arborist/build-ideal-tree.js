@@ -135,6 +135,13 @@ t.test('tarball deps with transitive tarball deps', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'tarball-dependencies'))))
 
+t.test('testing-peer-deps-overlap package', t => {
+  const path = resolve(fixtures, 'testing-peer-deps-overlap')
+  return buildIdeal(path).then(idealTree => new Arborist({ path, idealTree, ...OPT })
+    .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
+    .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with overlapping peer dep ranges')))
+})
+
 t.test('testing-peer-deps package', t => {
   const path = resolve(fixtures, 'testing-peer-deps')
   return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, ...OPT})

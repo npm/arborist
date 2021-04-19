@@ -7,6 +7,13 @@ delete process.env.NODE_DEBUG
 delete process.env.npm_lifecycle_event
 delete process.env.npm_package_name
 
+let isTTY = false
+Object.defineProperty(process.stderr, 'isTTY', {
+  get: () => isTTY,
+  configurable: true,
+  enumerable: true,
+})
+
 const LOGS = []
 console.error = (...msg) => LOGS.push(msg)
 
@@ -36,18 +43,35 @@ t.test('debug does nothing outside arborist folder', t => {
   t.end()
 })
 
-t.test('debug runs when cwd is arborist folder', t => {
+t.test('debug runs when cwd is arborist folder, no TTY coloring', t => {
   const dir = resolve(__dirname, '..')
   const cwd = process.cwd()
   t.teardown(() => process.chdir(cwd))
   process.chdir(dir)
+  const debug = t.mock('../lib/debug.js')
+  isTTY = false
+  t.plan(2)
+  debug(() => {
+    t.pass('called debug function')
+  })
+  debug.log('hello')
+  t.strictSame(LOGS, [[process.pid + ' hello']])
+  LOGS.length = 0
+})
+
+t.test('debug runs when cwd is arborist folder, no TTY coloring', t => {
+  const dir = resolve(__dirname, '..')
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  process.chdir(dir)
+  isTTY = true
   const debug = t.mock('../lib/debug.js')
   t.plan(2)
   debug(() => {
     t.pass('called debug function')
   })
   debug.log('hello')
-  t.strictSame(LOGS, [['hello']])
+  t.strictSame(LOGS, [[process.pid + ' \u001b[31mhello\u001b[39m']])
   LOGS.length = 0
 })
 

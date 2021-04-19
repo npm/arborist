@@ -1,5 +1,6 @@
 const {resolve} = require('path')
 const t = require('tap')
+const runScript = require('@npmcli/run-script')
 
 // mock rimraf so we can make it fail in rollback tests
 const realRimraf = require('rimraf')
@@ -1649,4 +1650,42 @@ t.test('filtered reification in workspaces', async t => {
 
   t.matchSnapshot(fs.readFileSync(hiddenLock, 'utf8'),
     'hidden lockfile - foo/x linked, c, old x, removed a')
+})
+
+t.test('project with bundled deps and a link dep on itself', async t => {
+  const pkg = {
+    name: '@isaacs/testing-bundle-self-link',
+    version: '1.0.0',
+    bin: {
+      'testing-bundle-self-link': 'bin.js',
+    },
+    scripts: {
+      test: 'testing-bundle-self-link',
+      postinstall: 'testing-bundle-self-link',
+    },
+    bundleDependencies: [
+      'abbrev',
+    ],
+    dependencies: {
+      '@isaacs/testing-bundle-self-link': 'file:.',
+      abbrev: '',
+    },
+  }
+  const path = t.testdir({
+    'package.json': JSON.stringify(pkg),
+    'bin.js': `#!/usr/bin/env node
+console.log('TAP version 13')
+console.log('1..1')
+console.log('ok 1 - this is fine')
+`,
+  })
+
+  t.matchSnapshot(await printReified(path), 'result')
+  t.resolves(runScript({
+    event: 'test',
+    path,
+    pkg,
+    stdioString: true,
+    stdio: 'pipe',
+  }), 'test result')
 })

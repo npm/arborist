@@ -15137,6 +15137,67 @@ exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match sn
 
 `
 
+exports[`test/arborist/reify.js TAP project with bundled deps and a link dep on itself > result 1`] = `
+ArboristNode {
+  "children": Map {
+    "@isaacs/testing-bundle-self-link" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "@isaacs/testing-bundle-self-link",
+          "spec": "file:.",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@isaacs/testing-bundle-self-link",
+      "name": "@isaacs/testing-bundle-self-link",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-project-with-bundled-deps-and-a-link-dep-on-itself/node_modules/@isaacs/testing-bundle-self-link",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-project-with-bundled-deps-and-a-link-dep-on-itself",
+      "resolved": "file:../..",
+      "target": ArboristNode {
+        "location": "",
+      },
+      "version": "1.0.0",
+    },
+    "abbrev" => ArboristNode {
+      "bundled": true,
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "abbrev",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-project-with-bundled-deps-and-a-link-dep-on-itself/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+  },
+  "edgesOut": Map {
+    "@isaacs/testing-bundle-self-link" => EdgeOut {
+      "name": "@isaacs/testing-bundle-self-link",
+      "spec": "file:.",
+      "to": "node_modules/@isaacs/testing-bundle-self-link",
+      "type": "prod",
+    },
+    "abbrev" => EdgeOut {
+      "name": "abbrev",
+      "spec": "*",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-project-with-bundled-deps-and-a-link-dep-on-itself",
+  "packageName": "@isaacs/testing-bundle-self-link",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-project-with-bundled-deps-and-a-link-dep-on-itself",
+  "version": "1.0.0",
+}
+`
+
 exports[`test/arborist/reify.js TAP reify from old package-lock with bins > should add bins entry to package-lock packages entry 1`] = `
 Object {
   "dependencies": Object {

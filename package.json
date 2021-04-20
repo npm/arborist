@@ -41,7 +41,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "minify-registry-metadata": "^2.1.0",
     "mutate-fs": "^2.1.1",
-    "tap": "^15.0.2",
+    "tap": "^15.0.4",
     "tcompare": "^3.0.4"
   },
   "scripts": {

@@ -313,7 +313,7 @@ t.test('do not build if theres a conflicting globalTop bin', async t => {
     version: '1.2.3',
     scripts: {
       // try to get clever...
-      preinstall: `node -e 'require("fs").unlinkSync(${JSON.stringify(file)})'`,
+      preinstall: `node -e "require('fs').unlinkSync(process.argv[1])" ${JSON.stringify(file)}`,
     },
   }))
 

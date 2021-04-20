@@ -22,9 +22,9 @@ module.exports = t => {
         "name": "a",
         "version": "1.2.3",
         "scripts": {
-          "preinstall": "node -e 'console.log(\"a preinstall\")'",
-          "postinstall": "node -e 'console.log(\"a postinstall\")'",
-          "install": "node -e 'console.log(\"a install\")'"
+          "preinstall": "node -e \"console.log('a preinstall')\"",
+          "postinstall": "node -e \"console.log('a postinstall')\"",
+          "install": "node -e \"console.log('a install')\""
         }
       })
     },
@@ -33,9 +33,9 @@ module.exports = t => {
         "name": "b",
         "version": "1.2.3",
         "scripts": {
-          "preinstall": "node -e 'console.log(\"b preinstall\")'",
-          "postinstall": "node -e 'console.log(\"b postinstall\")'",
-          "install": "node -e 'console.log(\"b install\")'"
+          "preinstall": "node -e \"console.log('b preinstall')\"",
+          "postinstall": "node -e \"console.log('b postinstall')\"",
+          "install": "node -e \"console.log('b install')\""
         }
       })
     }

@@ -267,6 +267,52 @@ Diff {
 }
 `
 
+exports[`test/diff.js TAP diff doesnt break unchanged shrinkwrapped deps > made no changes 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "a",
+    "path": "/path/to/actual",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "a",
+    "path": "/path/to/actual",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "/path/to/actual/node_modules/shrinkwrapped-dep",
+  ],
+  "unchanged": Array [
+    "/path/to/actual/node_modules/regular-dep",
+    "/path/to/actual/node_modules/regular-dep/node_modules/shrinkwrapped-inner",
+    "/path/to/actual/node_modules/regular-dep/node_modules/shrinkwrapped-inner/node_modules/shrinkwrap-inner-c",
+  ],
+  "removed": Array [],
+  "children": Array [
+    Diff {
+      "action": null,
+      "actual": Node {
+        "name": "shrinkwrapped-dep",
+        "path": "/path/to/actual/node_modules/shrinkwrapped-dep",
+        "integrity": "sha512-ddd",
+      },
+      "ideal": Node {
+        "name": "shrinkwrapped-dep",
+        "path": "/path/to/actual/node_modules/shrinkwrapped-dep",
+        "integrity": "sha512-ddd",
+      },
+      "leaves": Array [
+        "/path/to/actual/node_modules/shrinkwrapped-dep",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
 exports[`test/diff.js TAP filtered diff > c excluded, a and b present 1`] = `
 Diff {
   "action": null,

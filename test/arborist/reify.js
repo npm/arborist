@@ -362,6 +362,29 @@ t.test('do not update shrinkwrapped deps', t =>
     fixture(t, 'shrinkwrapped-dep-with-lock'),
     { update: { names: ['abbrev']}})))
 
+t.test('tracks changes of shrinkwrapped dep correctly', async t => {
+  const path = t.testdir({
+    'package.json': '{}',
+  })
+
+  const install1 = await printReified(path, { add: ['@nlf/shrinkwrapped-dep-updates-a@1.0.0'] })
+  t.matchSnapshot(install1, 'install added the correct tree')
+
+  const update1 = await printReified(path, { update: true })
+  t.match(install1, update1, 'update maintains the same correct tree')
+
+  const install2 = await printReified(path, { add: ['@nlf/shrinkwrapped-dep-updates-a@2.0.0'] })
+  t.matchSnapshot(install2, 'installing new version brings in the correct children')
+
+  const update2 = await printReified(path, { update: true })
+  t.match(install2, update2, 'update maintains the same correct tree')
+
+  // delete a dependency that was installed as part of the shrinkwrap
+  realRimraf.sync(resolve(path, 'node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b'))
+  const repair = await printReified(path)
+  t.match(repair, install2, 'tree got repaired')
+})
+
 t.test('do not install optional deps with mismatched platform specifications', t =>
   t.resolveMatchSnapshot(printReified(
     fixture(t, 'optional-platform-specification'))))

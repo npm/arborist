@@ -662,6 +662,23 @@ exports[`test/arborist/reify.js TAP do not add shrinkwrapped deps > expect resol
 ArboristNode {
   "children": Map {
     "@isaacs/shrinkwrapped-dependency" => ArboristNode {
+      "children": Map {
+        "abbrev" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@isaacs/shrinkwrapped-dependency",
+              "name": "abbrev",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "name": "abbrev",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-do-not-add-shrinkwrapped-deps/node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+          "version": "1.0.4",
+        },
+      },
       "edgesIn": Set {
         EdgeIn {
           "from": "",
@@ -672,10 +689,9 @@ ArboristNode {
       },
       "edgesOut": Map {
         "abbrev" => EdgeOut {
-          "error": "MISSING",
           "name": "abbrev",
           "spec": "^1.0.4",
-          "to": null,
+          "to": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
           "type": "prod",
         },
       },
@@ -29186,6 +29202,23 @@ exports[`test/arborist/reify.js TAP reifying with shronk warp dep shrinkwrapped-
 ArboristNode {
   "children": Map {
     "@isaacs/shrinkwrapped-dependency" => ArboristNode {
+      "children": Map {
+        "abbrev" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@isaacs/shrinkwrapped-dependency",
+              "name": "abbrev",
+              "spec": "^1.0.4",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "name": "abbrev",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-reifying-with-shronk-warp-dep-shrinkwrapped-dep-no-lock/node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
+          "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.0.4.tgz",
+          "version": "1.0.4",
+        },
+      },
       "edgesIn": Set {
         EdgeIn {
           "from": "",
@@ -29196,10 +29229,9 @@ ArboristNode {
       },
       "edgesOut": Map {
         "abbrev" => EdgeOut {
-          "error": "MISSING",
           "name": "abbrev",
           "spec": "^1.0.4",
-          "to": null,
+          "to": "node_modules/@isaacs/shrinkwrapped-dependency/node_modules/abbrev",
           "type": "prod",
         },
       },
@@ -30573,6 +30605,206 @@ ArboristNode {
   "packageName": "@isaacs/testing-peer-deps",
   "path": "{CWD}/test/arborist/tap-testdir-reify-testing-peer-deps-package",
   "version": "2.0.0",
+}
+`
+
+exports[`test/arborist/reify.js TAP tracks changes of shrinkwrapped dep correctly > install added the correct tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "@nlf/shrinkwrapped-dep-updates-a" => ArboristNode {
+      "children": Map {
+        "@nlf/shrinkwrapped-dep-updates-b" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+              "name": "@nlf/shrinkwrapped-dep-updates-b",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b",
+          "name": "@nlf/shrinkwrapped-dep-updates-b",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b",
+          "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-b/-/shrinkwrapped-dep-updates-b-1.0.0.tgz",
+          "version": "1.0.0",
+        },
+        "@nlf/shrinkwrapped-dep-updates-c" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+              "name": "@nlf/shrinkwrapped-dep-updates-c",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-c",
+          "name": "@nlf/shrinkwrapped-dep-updates-c",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-c",
+          "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-c/-/shrinkwrapped-dep-updates-c-1.0.0.tgz",
+          "version": "1.0.0",
+        },
+        "@nlf/shrinkwrapped-dep-updates-d" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+              "name": "@nlf/shrinkwrapped-dep-updates-d",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-d",
+          "name": "@nlf/shrinkwrapped-dep-updates-d",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-d",
+          "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-d/-/shrinkwrapped-dep-updates-d-1.0.0.tgz",
+          "version": "1.0.0",
+        },
+      },
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "@nlf/shrinkwrapped-dep-updates-a",
+          "spec": "^1.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@nlf/shrinkwrapped-dep-updates-b" => EdgeOut {
+          "name": "@nlf/shrinkwrapped-dep-updates-b",
+          "spec": "^1.0.0",
+          "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b",
+          "type": "prod",
+        },
+        "@nlf/shrinkwrapped-dep-updates-c" => EdgeOut {
+          "name": "@nlf/shrinkwrapped-dep-updates-c",
+          "spec": "^1.0.0",
+          "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-c",
+          "type": "prod",
+        },
+        "@nlf/shrinkwrapped-dep-updates-d" => EdgeOut {
+          "name": "@nlf/shrinkwrapped-dep-updates-d",
+          "spec": "^1.0.0",
+          "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-d",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+      "name": "@nlf/shrinkwrapped-dep-updates-a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a",
+      "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-a/-/shrinkwrapped-dep-updates-a-1.0.0.tgz",
+      "version": "1.0.0",
+    },
+  },
+  "edgesOut": Map {
+    "@nlf/shrinkwrapped-dep-updates-a" => EdgeOut {
+      "name": "@nlf/shrinkwrapped-dep-updates-a",
+      "spec": "^1.0.0",
+      "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly",
+}
+`
+
+exports[`test/arborist/reify.js TAP tracks changes of shrinkwrapped dep correctly > installing new version brings in the correct children 1`] = `
+ArboristNode {
+  "children": Map {
+    "@nlf/shrinkwrapped-dep-updates-a" => ArboristNode {
+      "children": Map {
+        "@nlf/shrinkwrapped-dep-updates-b" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+              "name": "@nlf/shrinkwrapped-dep-updates-b",
+              "spec": "^2.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b",
+          "name": "@nlf/shrinkwrapped-dep-updates-b",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b",
+          "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-b/-/shrinkwrapped-dep-updates-b-2.0.0.tgz",
+          "version": "2.0.0",
+        },
+        "@nlf/shrinkwrapped-dep-updates-c" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+              "name": "@nlf/shrinkwrapped-dep-updates-c",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-c",
+          "name": "@nlf/shrinkwrapped-dep-updates-c",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-c",
+          "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-c/-/shrinkwrapped-dep-updates-c-1.0.0.tgz",
+          "version": "1.0.0",
+        },
+        "@nlf/shrinkwrapped-dep-updates-e" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+              "name": "@nlf/shrinkwrapped-dep-updates-e",
+              "spec": "^1.0.0",
+              "type": "prod",
+            },
+          },
+          "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-e",
+          "name": "@nlf/shrinkwrapped-dep-updates-e",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-e",
+          "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-e/-/shrinkwrapped-dep-updates-e-1.0.0.tgz",
+          "version": "1.0.0",
+        },
+      },
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "@nlf/shrinkwrapped-dep-updates-a",
+          "spec": "^2.0.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "@nlf/shrinkwrapped-dep-updates-b" => EdgeOut {
+          "name": "@nlf/shrinkwrapped-dep-updates-b",
+          "spec": "^2.0.0",
+          "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-b",
+          "type": "prod",
+        },
+        "@nlf/shrinkwrapped-dep-updates-c" => EdgeOut {
+          "name": "@nlf/shrinkwrapped-dep-updates-c",
+          "spec": "^1.0.0",
+          "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-c",
+          "type": "prod",
+        },
+        "@nlf/shrinkwrapped-dep-updates-e" => EdgeOut {
+          "name": "@nlf/shrinkwrapped-dep-updates-e",
+          "spec": "^1.0.0",
+          "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a/node_modules/@nlf/shrinkwrapped-dep-updates-e",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+      "name": "@nlf/shrinkwrapped-dep-updates-a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly/node_modules/@nlf/shrinkwrapped-dep-updates-a",
+      "resolved": "https://registry.npmjs.org/@nlf/shrinkwrapped-dep-updates-a/-/shrinkwrapped-dep-updates-a-2.0.0.tgz",
+      "version": "2.0.0",
+    },
+  },
+  "edgesOut": Map {
+    "@nlf/shrinkwrapped-dep-updates-a" => EdgeOut {
+      "name": "@nlf/shrinkwrapped-dep-updates-a",
+      "spec": "^2.0.0",
+      "to": "node_modules/@nlf/shrinkwrapped-dep-updates-a",
+      "type": "prod",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-tracks-changes-of-shrinkwrapped-dep-correctly",
 }
 `
 

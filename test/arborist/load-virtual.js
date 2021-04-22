@@ -222,3 +222,19 @@ t.test('do not reset flags on supplied root option', async t => {
   t.equal(tree.optional, false, 'tree is not optional')
   t.equal(tree.peer, false, 'tree is not peer')
 })
+
+t.test('do not bundle the entire universe', async t => {
+  const path = resolve(__dirname, '../fixtures/tap-old-lockfile')
+  const tree = await loadVirtual(path)
+  t.same(tree.children.get('tap').package.bundleDependencies.sort(), [
+    'ink',
+    'treport',
+    '@types/react',
+    'import-jsx',
+    'minipass',
+    'signal-exit',
+    'tap-parser',
+    'tap-yaml',
+    'yaml',
+  ].sort())
+})

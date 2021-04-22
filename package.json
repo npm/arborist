@@ -84,6 +84,6 @@
       "--no-warnings",
       "--no-deprecation"
     ],
-    "timeout": "120"
+    "timeout": "240"
   }
 }

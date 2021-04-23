@@ -1497,6 +1497,12 @@ t.test('properly update one module when multiple are present', async t => {
   t.equal(JSON.parse(fs.readFileSync(oncepj, 'utf8')).version, '1.4.0')
 })
 
+t.test('package-lock contents when generated from actual tree with no hidden lockfile or package-lock', async t => {
+  const path = fixture(t, 'package-lock-from-actual')
+  await reify(path)
+  t.matchSnapshot(fs.readFileSync(path + '/package-lock.json', 'utf8'), 'should result in package-lock with integrity and resolved values')
+})
+
 t.test('saving should not replace file: dep with version', async t => {
   // need to run in the path, as if the user typed `npm i file:abbrev`
   const cwd = process.cwd()

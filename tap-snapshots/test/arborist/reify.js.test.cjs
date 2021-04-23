@@ -15100,6 +15100,36 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP package-lock contents when generated from actual tree with no hidden lockfile or package-lock > should result in package-lock with integrity and resolved values 1`] = `
+{
+  "name": "package-lock-from-actual",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {
+    "": {
+      "version": "1.0.0",
+      "dependencies": {
+        "abbrev": "^1.1.1"
+      }
+    },
+    "node_modules/abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  },
+  "dependencies": {
+    "abbrev": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "integrity": "sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q=="
+    }
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP packageLockOnly can add deps > must match snapshot 1`] = `
 {
   "dependencies": {

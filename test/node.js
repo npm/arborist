@@ -2269,3 +2269,150 @@ t.test('duplicated dependencies', t => {
 
   t.end()
 })
+
+t.test('canDedupe()', t => {
+  /*
+  root
+  +-- a@1.2.3
+  +-- b@2.3.4
+  |   +-- a@1.9.9 (removable only if preferDedupe)
+  |   +-- c@2.3.4
+  |   |   +-- a 2.3.99
+  |   |       +-- e 2.0.1 (removable, older version)
+  |   +-- d 3.4.5
+  |   |   +-- a 3.4.5
+  |   +-- e 2.3.4
+  +-- bundler 1.2.3
+  |   +-- a 1.2.3 (not removable, in bundle)
+  +-- c 3.4.5
+  |   +-- a 1.2.3 (removable, matches)
+  +-- extraneous 1.2.3
+  +-- wrapper
+      +-- a 1.2.3 (not removable, in shrinkwrap)
+  */
+
+  const root = new Node({
+    path: '/path/to/root',
+    pkg: {
+      name: 'root',
+      version: '1.2.3',
+      dependencies: {
+        bundler: '',
+        wrapper: '',
+        a: '1',
+        b: '2',
+        c: '3',
+      },
+    },
+    children: [
+      {
+        pkg: {
+          name: 'bundler',
+          version: '1.2.3',
+          bundleDependencies: ['a'],
+          dependencies: {
+            a: '1',
+          },
+        },
+        children: [
+          {
+            pkg: {name: 'a', version: '1.2.3'},
+            integrity: 'a123',
+          },
+        ],
+      },
+      {
+        pkg: {
+          name: 'wrapper',
+          version: '1.2.3',
+          dependencies: {
+            a: '1',
+          },
+          _hasShrinkwrap: true,
+        },
+        hasShrinkwrap: true,
+        children: [
+          {
+            pkg: {name: 'a', version: '1.2.3'},
+            integrity: 'a123',
+          },
+        ],
+      },
+      {
+        pkg: {name: 'a', version: '1.2.3'},
+        integrity: 'a123',
+      },
+      {
+        pkg: { name: 'c', version: '3.4.5', dependencies: { a: '1' }},
+        children: [
+          {
+            pkg: {name: 'a', version: '1.2.3'},
+            integrity: 'a123',
+          },
+        ],
+      },
+      {
+        pkg: {
+          name: 'b',
+          version: '2.3.4',
+          dependencies: {
+            a: '1',
+            c: '2',
+            d: '3',
+          },
+        },
+        children: [
+          { pkg: { name: 'a', version: '1.9.99' }},
+          { pkg: { name: 'e', version: '2.3.4' }, integrity: 'y'},
+          {
+            pkg: {
+              name: 'c',
+              version: '2.3.4',
+              dependencies: { a: '2' },
+            },
+            children: [
+              {
+                pkg: {
+                  name: 'a',
+                  version: '2.3.99',
+                  dependencies: { e: '2' },
+                },
+                integrity: 'a2399',
+                children: [
+                  { pkg: { name: 'e', version: '2.0.1'}, integrity: 'x'},
+                ],
+              },
+            ],
+          },
+          {
+            pkg: {
+              name: 'd',
+              version: '3.4.5',
+              dependencies: {
+                a: '3',
+              },
+            },
+            children: [{pkg: {name: 'a', version: '3.4.5'}}],
+          },
+        ],
+      },
+      { pkg: { name: 'extraneous', version: '1.2.3' }},
+    ],
+  })
+
+  t.match([...root.inventory.filter(n => n.canDedupe())].map(n => n.location), [
+    'node_modules/c/node_modules/a',
+    'node_modules/b/node_modules/e',
+    'node_modules/b/node_modules/c/node_modules/a/node_modules/e',
+  ], 'preferDedupe=false')
+
+  t.match([...root.inventory.filter(n => n.canDedupe(true))].map(n => n.location), [
+    'node_modules/c/node_modules/a',
+    // this is the one that's only deduped if we preferDedupe
+    'node_modules/b/node_modules/a',
+    'node_modules/b/node_modules/e',
+    'node_modules/b/node_modules/c/node_modules/a/node_modules/e',
+  ], 'preferDedupe=true')
+
+  t.end()
+})

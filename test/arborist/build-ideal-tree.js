@@ -1775,6 +1775,17 @@ t.test('more peer dep conflicts', t => {
       resolvable: false,
     },
 
+    'metadep conflict triggering the peerConflict code path, order 2': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-v': '2',
+          '@isaacs/testing-peer-dep-conflict-chain-y': '1',
+        },
+      },
+      error: true,
+      resolvable: false,
+    },
+
     'conflict on root edge, order 1': {
       pkg: {
         name: '@isaacs/testing-peer-dep-conflict-chain-a',
@@ -1798,6 +1809,27 @@ t.test('more peer dep conflicts', t => {
       },
       error: true,
       resolvable: false,
+    },
+
+    'metadep without conflicts, partly overlapping peerSets, resolvable': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-v': '4',
+          '@isaacs/testing-peer-dep-conflict-chain-y': '1',
+        },
+      },
+      error: false,
+      resolvable: true,
+    },
+    'metadep without conflicts, partly overlapping peerSets, resolvable order 2': {
+      pkg: {
+        dependencies: {
+          '@isaacs/testing-peer-dep-conflict-chain-v': '1',
+          '@isaacs/testing-peer-dep-conflict-chain-y': '4',
+        },
+      },
+      error: false,
+      resolvable: true,
     },
   })
 
@@ -2999,4 +3031,37 @@ t.test('avoid dedupe when a dep is bundled', async t => {
     })
     check(t, tree)
   })
+})
+
+t.test('upgrade a partly overlapping peer set', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        '@isaacs/testing-peer-dep-conflict-chain-b': '2',
+        '@isaacs/testing-peer-dep-conflict-chain-m': '2',
+      },
+    }),
+  })
+  const tree = await buildIdeal(path)
+  await tree.meta.save()
+  t.matchSnapshot(await printIdeal(path, {
+    add: ['@isaacs/testing-peer-dep-conflict-chain-b@3'],
+  }), 'should be able to upgrade dep, nesting the conflict')
+})
+
+t.test('fail to upgrade a partly overlapping peer set', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        '@isaacs/testing-peer-dep-conflict-chain-v': '2',
+        '@isaacs/testing-peer-dep-conflict-chain-y': '2',
+        '@isaacs/testing-peer-dep-conflict-chain-m': '2',
+      },
+    }),
+  })
+  const tree = await buildIdeal(path)
+  await tree.meta.save()
+  t.rejects(printIdeal(path, {
+    add: ['@isaacs/testing-peer-dep-conflict-chain-y@3'],
+  }), { code: 'ERESOLVE' }, 'should not be able to upgrade dep')
 })

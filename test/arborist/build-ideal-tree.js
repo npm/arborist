@@ -330,18 +330,18 @@ t.test('bundle deps example 1, full', t => {
     }), 'add stuff, no missing deps'))
 })
 
-t.test('bundle deps example 1, complete:true', t => {
+t.test('bundle deps example 1, complete:true', async t => {
   // When complete:true is set, we extract into a temp dir to read
   // the bundled deps, so they ARE included, just like during reify()
   const path = resolve(fixtures, 'testing-bundledeps-empty')
-  return t.resolveMatchSnapshot(printIdeal(path, {
+  t.matchSnapshot(await printIdeal(path, {
     complete: true,
   }), 'no missing deps, because complete: true')
-    .then(() => t.resolveMatchSnapshot(printIdeal(path, {
-      saveBundle: true,
-      add: ['@isaacs/testing-bundledeps'],
-      complete: true,
-    }), 'no missing deps, because complete:true'))
+  t.matchSnapshot(await printIdeal(path, {
+    saveBundle: true,
+    add: ['@isaacs/testing-bundledeps'],
+    complete: true,
+  }), 'no missing deps, because complete: true, add dep, save bundled')
 })
 
 t.test('bundle deps example 2', t => {
@@ -2877,5 +2877,126 @@ t.test('workspace error handling', async t => {
       'idealTree',
       'Workspace not-here in filter set, but not in workspaces',
     ]], 'got warning')
+  })
+})
+
+t.test('avoid dedupe when a dep is bundled', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      bundleDependencies: [
+        '@isaacs/testing-bundle-dupes-a',
+        '@isaacs/testing-bundle-dupes-b',
+      ],
+      dependencies: {
+        '@isaacs/testing-bundle-dupes-a': '2',
+        '@isaacs/testing-bundle-dupes-b': '1',
+      },
+    }),
+  })
+
+  // do our install, prior to the publishing of b@2.1.0
+  const startTree = await buildIdeal(path, {
+    // date between publish times of b@2.0.0 and b@2.1.0
+    // so we get a b@2.0.0 nested
+    before: new Date('2021-04-23T16:24:00Z'),
+  })
+  // this causes it to get the package tree:
+  // root
+  // +-- b@1
+  // +-- a@2
+  //     +-- b@2.0
+  await startTree.meta.save()
+  let b200
+  t.test('initial tree state', t => {
+    const a = startTree.children.get('@isaacs/testing-bundle-dupes-a')
+    const b = startTree.children.get('@isaacs/testing-bundle-dupes-b')
+    const bNested = a.children.get('@isaacs/testing-bundle-dupes-b')
+    t.equal(b.version, '1.0.0')
+    t.equal(a.version, '2.0.0')
+    t.equal(bNested.version, '2.0.0')
+    // save this to synthetically create the dupe later, so we can fix it
+    b200 = bNested
+    t.end()
+  })
+
+  // Now ensure that adding b@2 will install b@2.1.0 AND
+  // dedupe the nested b@2.0.0 dep.
+  const add = ['@isaacs/testing-bundle-dupes-b@2']
+  const newTree = await buildIdeal(path, { add })
+  t.test('did not create dupe', t => {
+    const a = newTree.children.get('@isaacs/testing-bundle-dupes-a')
+    const b = newTree.children.get('@isaacs/testing-bundle-dupes-b')
+    const bNested = a.children.get('@isaacs/testing-bundle-dupes-b')
+    t.equal(b.version, '2.1.0')
+    t.equal(a.version, '2.0.0')
+    t.notOk(bNested, 'should not have a nested b')
+    t.end()
+  })
+
+  // now, synthetically create the bug we just verified no longer happens,
+  // so that we can ensure that we can fix it when encountered.
+  b200.parent = newTree.children.get('@isaacs/testing-bundle-dupes-a')
+  await newTree.meta.save()
+  fs.writeFileSync(`${path}/package.json`, JSON.stringify({
+    bundleDependencies: [
+      '@isaacs/testing-bundle-dupes-a',
+      '@isaacs/testing-bundle-dupes-b',
+    ],
+    dependencies: {
+      '@isaacs/testing-bundle-dupes-a': '2',
+      '@isaacs/testing-bundle-dupes-b': '2',
+    },
+  }))
+
+  // gut check that we have reproduced the error condition
+  t.test('gut check that dupe synthetically created', t => {
+    const a = newTree.children.get('@isaacs/testing-bundle-dupes-a')
+    const b = newTree.children.get('@isaacs/testing-bundle-dupes-b')
+    const bNested = a.children.get('@isaacs/testing-bundle-dupes-b')
+    t.equal(b.version, '2.1.0')
+    t.equal(a.version, '2.0.0')
+    t.equal(bNested.version, '2.0.0')
+    t.end()
+  })
+
+  // now we're in the "oh no, a duplicate" mode.  make sure that we can
+  // dedupe out of it through any of these reasonable approaches.
+  const check = (t, tree) => {
+    const a = tree.children.get('@isaacs/testing-bundle-dupes-a')
+    const b = tree.children.get('@isaacs/testing-bundle-dupes-b')
+    const bNested = a.children.get('@isaacs/testing-bundle-dupes-b')
+    t.equal(b.version, '2.1.0')
+    t.equal(a.version, '2.0.0')
+    t.notOk(bNested, 'should not have a nested b')
+  }
+
+  t.test('dedupe to remove dupe', async t => {
+    check(t, await buildIdeal(path, {
+      update: ['@isaacs/testing-bundle-dupes-b'],
+      preferDedupe: true,
+    }))
+  })
+
+  t.test('update b to remove dupe', async t => {
+    check(t, await buildIdeal(path, {
+      update: ['@isaacs/testing-bundle-dupes-b'],
+    }))
+  })
+
+  t.test('update all to remove dupe', async t => {
+    check(t, await buildIdeal(path, { update: true }))
+  })
+
+  t.test('reinstall a to remove dupe', async t => {
+    check(t, await buildIdeal(path, {
+      add: ['@isaacs/testing-bundle-dupes-a@2'],
+    }))
+  })
+
+  t.test('reinstall b to remove dupe', async t => {
+    const tree = await buildIdeal(path, {
+      add: ['@isaacs/testing-bundle-dupes-b@2'],
+    })
+    check(t, tree)
   })
 })

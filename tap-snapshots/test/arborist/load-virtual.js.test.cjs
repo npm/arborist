@@ -1277,9 +1277,13 @@ ArboristNode {
       "version": "7.7.4",
     },
     "@isaacs/testing-bundledeps" => ArboristNode {
+      "bundleDependencies": Array [
+        "@isaacs/testing-bundledeps-a",
+      ],
       "children": Map {
         "@isaacs/testing-bundledeps-a" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/@isaacs/testing-bundledeps",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/@isaacs/testing-bundledeps",
@@ -1303,6 +1307,7 @@ ArboristNode {
         },
         "@isaacs/testing-bundledeps-b" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/@isaacs/testing-bundledeps",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",
@@ -7298,9 +7303,21 @@ ArboristNode {
       "version": "5.5.0",
     },
     "tap" => ArboristNode {
+      "bundleDependencies": Array [
+        "@types/react",
+        "import-jsx",
+        "ink",
+        "minipass",
+        "signal-exit",
+        "tap-parser",
+        "tap-yaml",
+        "treport",
+        "yaml",
+      ],
       "children": Map {
         "@babel/code-frame" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7337,9 +7354,14 @@ ArboristNode {
         },
         "@babel/core" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "source-map",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "source-map" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -7457,9 +7479,14 @@ ArboristNode {
         },
         "@babel/generator" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "source-map",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "source-map" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -7523,6 +7550,7 @@ ArboristNode {
         },
         "@babel/helper-builder-react-jsx" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7553,6 +7581,7 @@ ArboristNode {
         },
         "@babel/helper-function-name" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7589,6 +7618,7 @@ ArboristNode {
         },
         "@babel/helper-get-function-arity" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7613,6 +7643,7 @@ ArboristNode {
         },
         "@babel/helper-plugin-utils" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7653,6 +7684,7 @@ ArboristNode {
         },
         "@babel/helper-split-export-declaration" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7677,6 +7709,7 @@ ArboristNode {
         },
         "@babel/helpers" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7713,9 +7746,14 @@ ArboristNode {
         },
         "@babel/highlight" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "chalk",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "chalk" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -7752,6 +7790,7 @@ ArboristNode {
             },
             "supports-color" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -7811,6 +7850,7 @@ ArboristNode {
         },
         "@babel/parser" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7839,6 +7879,7 @@ ArboristNode {
         },
         "@babel/plugin-proposal-object-rest-spread" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7869,6 +7910,7 @@ ArboristNode {
         },
         "@babel/plugin-syntax-jsx" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7893,6 +7935,7 @@ ArboristNode {
         },
         "@babel/plugin-syntax-object-rest-spread" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7917,6 +7960,7 @@ ArboristNode {
         },
         "@babel/plugin-transform-destructuring" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7941,6 +7985,7 @@ ArboristNode {
         },
         "@babel/plugin-transform-react-jsx" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -7977,6 +8022,7 @@ ArboristNode {
         },
         "@babel/runtime" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8001,6 +8047,7 @@ ArboristNode {
         },
         "@babel/template" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8049,6 +8096,7 @@ ArboristNode {
         },
         "@babel/traverse" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8127,6 +8175,7 @@ ArboristNode {
         },
         "@babel/types" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8211,6 +8260,7 @@ ArboristNode {
         },
         "@types/color-name" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8239,6 +8289,7 @@ ArboristNode {
         },
         "@types/prop-types" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8255,6 +8306,7 @@ ArboristNode {
         },
         "@types/react" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8285,6 +8337,7 @@ ArboristNode {
         },
         "ansi-escapes" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8309,6 +8362,7 @@ ArboristNode {
         },
         "ansi-regex" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8325,6 +8379,7 @@ ArboristNode {
         },
         "ansi-styles" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8355,6 +8410,7 @@ ArboristNode {
         },
         "ansicolors" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8371,6 +8427,7 @@ ArboristNode {
         },
         "arrify" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8387,6 +8444,7 @@ ArboristNode {
         },
         "astral-regex" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8403,6 +8461,7 @@ ArboristNode {
         },
         "auto-bind" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8419,6 +8478,7 @@ ArboristNode {
         },
         "caller-callsite" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8443,6 +8503,7 @@ ArboristNode {
         },
         "caller-path" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8467,6 +8528,7 @@ ArboristNode {
         },
         "callsites" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8483,6 +8545,7 @@ ArboristNode {
         },
         "cardinal" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8513,9 +8576,14 @@ ArboristNode {
         },
         "chalk" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "ansi-styles",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "ansi-styles" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -8546,6 +8614,7 @@ ArboristNode {
             },
             "color-convert" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -8570,6 +8639,7 @@ ArboristNode {
             },
             "color-name" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -8621,6 +8691,7 @@ ArboristNode {
         },
         "ci-info" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8637,6 +8708,7 @@ ArboristNode {
         },
         "cli-cursor" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8661,6 +8733,7 @@ ArboristNode {
         },
         "cli-truncate" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8691,6 +8764,7 @@ ArboristNode {
         },
         "color-convert" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8715,6 +8789,7 @@ ArboristNode {
         },
         "color-name" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8731,9 +8806,14 @@ ArboristNode {
         },
         "convert-source-map" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "safe-buffer",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "safe-buffer" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -8773,6 +8853,7 @@ ArboristNode {
         },
         "csstype" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8789,6 +8870,7 @@ ArboristNode {
         },
         "debug" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8819,6 +8901,7 @@ ArboristNode {
         },
         "emoji-regex" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8835,6 +8918,7 @@ ArboristNode {
         },
         "escape-string-regexp" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8851,6 +8935,7 @@ ArboristNode {
         },
         "esprima" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8867,6 +8952,7 @@ ArboristNode {
         },
         "esutils" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8895,6 +8981,7 @@ ArboristNode {
         },
         "events-to-array" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8911,6 +8998,7 @@ ArboristNode {
         },
         "globals" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8927,6 +9015,7 @@ ArboristNode {
         },
         "has-flag" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -8943,6 +9032,7 @@ ArboristNode {
         },
         "import-jsx" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9003,6 +9093,7 @@ ArboristNode {
         },
         "ink" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9135,6 +9226,7 @@ ArboristNode {
         },
         "is-ci" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9159,6 +9251,7 @@ ArboristNode {
         },
         "is-fullwidth-code-point" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9181,6 +9274,7 @@ ArboristNode {
         },
         "js-tokens" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9203,6 +9297,7 @@ ArboristNode {
         },
         "jsesc" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9219,6 +9314,7 @@ ArboristNode {
         },
         "json5" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9243,6 +9339,7 @@ ArboristNode {
         },
         "lodash" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9277,6 +9374,7 @@ ArboristNode {
         },
         "lodash.throttle" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9293,9 +9391,16 @@ ArboristNode {
         },
         "log-update" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "ansi-escapes",
+            "cli-cursor",
+            "wrap-ansi",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "ansi-escapes" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9312,6 +9417,7 @@ ArboristNode {
             },
             "ansi-regex" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9328,6 +9434,7 @@ ArboristNode {
             },
             "cli-cursor" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9352,6 +9459,7 @@ ArboristNode {
             },
             "emoji-regex" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9368,6 +9476,7 @@ ArboristNode {
             },
             "is-fullwidth-code-point" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9384,6 +9493,7 @@ ArboristNode {
             },
             "mimic-fn" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9400,6 +9510,7 @@ ArboristNode {
             },
             "onetime" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9424,6 +9535,7 @@ ArboristNode {
             },
             "restore-cursor" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9454,6 +9566,7 @@ ArboristNode {
             },
             "string-width" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9490,6 +9603,7 @@ ArboristNode {
             },
             "strip-ansi" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9520,6 +9634,7 @@ ArboristNode {
             },
             "wrap-ansi" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9591,6 +9706,7 @@ ArboristNode {
         },
         "loose-envify" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9627,6 +9743,7 @@ ArboristNode {
         },
         "mimic-fn" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9643,6 +9760,7 @@ ArboristNode {
         },
         "minimist" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9659,9 +9777,14 @@ ArboristNode {
         },
         "minipass" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "yallist",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "yallist" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -9707,6 +9830,7 @@ ArboristNode {
         },
         "ms" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9729,6 +9853,7 @@ ArboristNode {
         },
         "object-assign" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9757,6 +9882,7 @@ ArboristNode {
         },
         "onetime" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9781,6 +9907,7 @@ ArboristNode {
         },
         "path-parse" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9797,6 +9924,7 @@ ArboristNode {
         },
         "prop-types" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9839,6 +9967,7 @@ ArboristNode {
         },
         "punycode" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9855,6 +9984,7 @@ ArboristNode {
         },
         "react-is" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9871,6 +10001,7 @@ ArboristNode {
         },
         "react-reconciler" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9913,6 +10044,7 @@ ArboristNode {
         },
         "redeyed" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9937,6 +10069,7 @@ ArboristNode {
         },
         "regenerator-runtime" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9953,6 +10086,7 @@ ArboristNode {
         },
         "resolve" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9977,6 +10111,7 @@ ArboristNode {
         },
         "resolve-from" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -9993,6 +10128,7 @@ ArboristNode {
         },
         "restore-cursor" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10023,6 +10159,7 @@ ArboristNode {
         },
         "scheduler" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10059,6 +10196,7 @@ ArboristNode {
         },
         "semver" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10075,6 +10213,7 @@ ArboristNode {
         },
         "signal-exit" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10109,9 +10248,14 @@ ArboristNode {
         },
         "slice-ansi" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "ansi-styles",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "ansi-styles" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10142,6 +10286,7 @@ ArboristNode {
             },
             "color-convert" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10166,6 +10311,7 @@ ArboristNode {
             },
             "color-name" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10223,9 +10369,15 @@ ArboristNode {
         },
         "string-length" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "astral-regex",
+            "strip-ansi",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "ansi-regex" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10242,6 +10394,7 @@ ArboristNode {
             },
             "astral-regex" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10258,6 +10411,7 @@ ArboristNode {
             },
             "strip-ansi" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10317,6 +10471,7 @@ ArboristNode {
         },
         "string-width" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10365,6 +10520,7 @@ ArboristNode {
         },
         "strip-ansi" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10395,9 +10551,14 @@ ArboristNode {
         },
         "supports-color" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "has-flag",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "has-flag" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10437,6 +10598,7 @@ ArboristNode {
         },
         "tap-parser" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10479,6 +10641,7 @@ ArboristNode {
         },
         "tap-yaml" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10509,6 +10672,7 @@ ArboristNode {
         },
         "to-fast-properties" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10525,9 +10689,14 @@ ArboristNode {
         },
         "treport" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "unicode-length",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "ansi-regex" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10544,6 +10713,7 @@ ArboristNode {
             },
             "strip-ansi" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10568,6 +10738,7 @@ ArboristNode {
             },
             "unicode-length" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10663,6 +10834,7 @@ ArboristNode {
         },
         "type-fest" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10679,6 +10851,7 @@ ArboristNode {
         },
         "widest-line" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10703,9 +10876,14 @@ ArboristNode {
         },
         "wrap-ansi" => ArboristNode {
           "bundled": true,
+          "bundleDependencies": Array [
+            "ansi-styles",
+          ],
+          "bundler": "node_modules/tap",
           "children": Map {
             "ansi-styles" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10736,6 +10914,7 @@ ArboristNode {
             },
             "color-convert" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10760,6 +10939,7 @@ ArboristNode {
             },
             "color-name" => ArboristNode {
               "bundled": true,
+              "bundler": "node_modules/tap",
               "dev": true,
               "edgesIn": Set {
                 EdgeIn {
@@ -10811,6 +10991,7 @@ ArboristNode {
         },
         "yaml" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -10841,6 +11022,7 @@ ArboristNode {
         },
         "yoga-layout-prebuilt" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/tap",
           "dev": true,
           "edgesIn": Set {
             EdgeIn {
@@ -13192,9 +13374,13 @@ ArboristNode {
       "version": "1.1.11",
     },
     "bundler" => ArboristNode {
+      "bundleDependencies": Array [
+        "a",
+      ],
       "children": Map {
         "a" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler",
@@ -13219,6 +13405,7 @@ ArboristNode {
         },
         "b" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/a",
@@ -13243,6 +13430,7 @@ ArboristNode {
         },
         "c" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/b",
@@ -13874,9 +14062,13 @@ ArboristNode {
       "version": "1.1.11",
     },
     "bundler" => ArboristNode {
+      "bundleDependencies": Array [
+        "a",
+      ],
       "children": Map {
         "a" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler",
@@ -13901,6 +14093,7 @@ ArboristNode {
         },
         "b" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/a",
@@ -13925,6 +14118,7 @@ ArboristNode {
         },
         "c" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/b",
@@ -14556,9 +14750,13 @@ ArboristNode {
       "version": "1.1.11",
     },
     "bundler" => ArboristNode {
+      "bundleDependencies": Array [
+        "a",
+      ],
       "children": Map {
         "a" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler",
@@ -14583,6 +14781,7 @@ ArboristNode {
         },
         "b" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/a",
@@ -14607,6 +14806,7 @@ ArboristNode {
         },
         "c" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/b",
@@ -15218,9 +15418,13 @@ ArboristNode {
       "version": "1.1.11",
     },
     "bundler" => ArboristNode {
+      "bundleDependencies": Array [
+        "a",
+      ],
       "children": Map {
         "a" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler",
@@ -15245,6 +15449,7 @@ ArboristNode {
         },
         "b" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/a",
@@ -15269,6 +15474,7 @@ ArboristNode {
         },
         "c" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/b",

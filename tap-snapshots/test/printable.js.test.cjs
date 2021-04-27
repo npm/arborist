@@ -188,6 +188,7 @@ dev:true,
 optional:true,
 peer:true,
 bundled:true,
+bundler:undefined,
 errors:[{code:'ERR'}],
 edgesIn:Set{{"" prod a@^1.0.0}}},
 'b' => ArboristLink{
@@ -216,6 +217,338 @@ dev:true,
 optional:true,
 peer:true,
 target:{location:'c'}}}}
+`
+
+exports[`test/printable.js TAP show bundle/shrinkwrap info > must match snapshot 1`] = `
+{
+"children":Map{
+"a" =>{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"a",
+"spec":"1",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/a",
+"peer":true,
+"version":"1.2.3",},
+"b" =>{
+"children":Map{
+"a" =>{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/b",
+"name":"a",
+"spec":"1",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b/node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/a",
+"peer":true,
+"version":"1.9.99",},
+"c" =>{
+"children":Map{
+"a" =>{
+"children":Map{
+"e" =>{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/b/node_modules/c/node_modules/a",
+"name":"e",
+"spec":"2",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b/node_modules/c/node_modules/a/node_modules/e",
+"name":"e",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/c/node_modules/a/node_modules/e",
+"peer":true,
+"version":"2.0.1",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/b/node_modules/c",
+"name":"a",
+"spec":"2",
+"type":"prod",},},
+"edgesOut":Map{
+"e" => EdgeOut{
+"name":"e",
+"spec":"2",
+"to":"node_modules/b/node_modules/c/node_modules/a/node_modules/e",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b/node_modules/c/node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/c/node_modules/a",
+"peer":true,
+"version":"2.3.99",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/b",
+"name":"c",
+"spec":"2",
+"type":"prod",},},
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"2",
+"to":"node_modules/b/node_modules/c/node_modules/a",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b/node_modules/c",
+"name":"c",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/c",
+"peer":true,
+"version":"2.3.4",},
+"d" =>{
+"children":Map{
+"a" =>{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/b/node_modules/d",
+"name":"a",
+"spec":"3",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b/node_modules/d/node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/d/node_modules/a",
+"peer":true,
+"version":"3.4.5",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/b",
+"name":"d",
+"spec":"3",
+"type":"prod",},},
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"3",
+"to":"node_modules/b/node_modules/d/node_modules/a",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b/node_modules/d",
+"name":"d",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/d",
+"peer":true,
+"version":"3.4.5",},
+"e" =>{
+"dev":true,
+"extraneous":true,
+"location":"node_modules/b/node_modules/e",
+"name":"e",
+"optional":true,
+"path":"/path/to/root/node_modules/b/node_modules/e",
+"peer":true,
+"version":"2.3.4",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"b",
+"spec":"2",
+"type":"prod",},},
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"1",
+"to":"node_modules/b/node_modules/a",
+"type":"prod",},
+"c" => EdgeOut{
+"name":"c",
+"spec":"2",
+"to":"node_modules/b/node_modules/c",
+"type":"prod",},
+"d" => EdgeOut{
+"name":"d",
+"spec":"3",
+"to":"node_modules/b/node_modules/d",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/b",
+"name":"b",
+"optional":true,
+"path":"/path/to/root/node_modules/b",
+"peer":true,
+"version":"2.3.4",},
+"bundler" =>{
+"bundleDependencies":Array[
+"a",],
+"children":Map{
+"a" =>{
+"bundled":true,
+"bundler":"node_modules/bundler",
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/bundler",
+"name":"a",
+"spec":"1",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/bundler/node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/bundler/node_modules/a",
+"peer":true,
+"version":"1.2.3",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"bundler",
+"spec":"*",
+"type":"prod",},},
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"1",
+"to":"node_modules/bundler/node_modules/a",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/bundler",
+"name":"bundler",
+"optional":true,
+"path":"/path/to/root/node_modules/bundler",
+"peer":true,
+"version":"1.2.3",},
+"c" =>{
+"children":Map{
+"a" =>{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/c",
+"name":"a",
+"spec":"1",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/c/node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/c/node_modules/a",
+"peer":true,
+"version":"1.2.3",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"c",
+"spec":"3",
+"type":"prod",},},
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"1",
+"to":"node_modules/c/node_modules/a",
+"type":"prod",},},
+"extraneous":true,
+"location":"node_modules/c",
+"name":"c",
+"optional":true,
+"path":"/path/to/root/node_modules/c",
+"peer":true,
+"version":"3.4.5",},
+"extraneous" =>{
+"dev":true,
+"extraneous":true,
+"location":"node_modules/extraneous",
+"name":"extraneous",
+"optional":true,
+"path":"/path/to/root/node_modules/extraneous",
+"peer":true,
+"version":"1.2.3",},
+"wrapper" =>{
+"children":Map{
+"a" =>{
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"node_modules/wrapper",
+"name":"a",
+"spec":"1",
+"type":"prod",},},
+"extraneous":true,
+"inShrinkwrap":true,
+"location":"node_modules/wrapper/node_modules/a",
+"name":"a",
+"optional":true,
+"path":"/path/to/root/node_modules/wrapper/node_modules/a",
+"peer":true,
+"version":"1.2.3",},},
+"dev":true,
+"edgesIn":Set{
+EdgeIn{
+"from":"",
+"name":"wrapper",
+"spec":"*",
+"type":"prod",},},
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"1",
+"to":"node_modules/wrapper/node_modules/a",
+"type":"prod",},},
+"extraneous":true,
+"hasShrinkwrap":true,
+"location":"node_modules/wrapper",
+"name":"wrapper",
+"optional":true,
+"path":"/path/to/root/node_modules/wrapper",
+"peer":true,
+"version":"1.2.3",},},
+"dev":true,
+"edgesOut":Map{
+"a" => EdgeOut{
+"name":"a",
+"spec":"1",
+"to":"node_modules/a",
+"type":"prod",},
+"b" => EdgeOut{
+"name":"b",
+"spec":"2",
+"to":"node_modules/b",
+"type":"prod",},
+"bundler" => EdgeOut{
+"name":"bundler",
+"spec":"*",
+"to":"node_modules/bundler",
+"type":"prod",},
+"c" => EdgeOut{
+"name":"c",
+"spec":"3",
+"to":"node_modules/c",
+"type":"prod",},
+"wrapper" => EdgeOut{
+"name":"wrapper",
+"spec":"*",
+"to":"node_modules/wrapper",
+"type":"prod",},},
+"extraneous":true,
+"location":"",
+"name":"root",
+"optional":true,
+"path":"/path/to/root",
+"peer":true,
+"version":"1.2.3",}
 `
 
 exports[`test/printable.js TAP show workspaces in printable node output > must match snapshot 1`] = `

@@ -7,6 +7,9 @@
 'use strict'
 exports[`test/arborist/load-actual.js TAP bundle > loaded tree 1`] = `
 ArboristNode {
+  "bundleDependencies": Array [
+    "dep",
+  ],
   "children": Map {
     "dep" => ArboristNode {
       "bundled": true,
@@ -1437,9 +1440,13 @@ ArboristNode {
       "version": "1.1.11",
     },
     "bundler" => ArboristNode {
+      "bundleDependencies": Array [
+        "a",
+      ],
       "children": Map {
         "a" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler",
@@ -1464,6 +1471,7 @@ ArboristNode {
         },
         "b" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/a",
@@ -1488,6 +1496,7 @@ ArboristNode {
         },
         "c" => ArboristNode {
           "bundled": true,
+          "bundler": "node_modules/bundler",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/bundler/node_modules/b",

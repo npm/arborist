@@ -288,3 +288,117 @@ t.test('show workspaces in printable node output', t => {
   t.matchSnapshot(printable(tree))
   t.end()
 })
+
+t.test('show bundle/shrinkwrap info', t => {
+  const tree = new Node({
+    path: '/path/to/root',
+    pkg: {
+      name: 'root',
+      version: '1.2.3',
+      dependencies: {
+        bundler: '',
+        wrapper: '',
+        a: '1',
+        b: '2',
+        c: '3',
+      },
+    },
+    children: [
+      {
+        pkg: {
+          name: 'bundler',
+          version: '1.2.3',
+          bundleDependencies: ['a'],
+          dependencies: {
+            a: '1',
+          },
+        },
+        children: [
+          {
+            pkg: {name: 'a', version: '1.2.3'},
+            integrity: 'a123',
+          },
+        ],
+      },
+      {
+        pkg: {
+          name: 'wrapper',
+          version: '1.2.3',
+          dependencies: {
+            a: '1',
+          },
+          _hasShrinkwrap: true,
+        },
+        hasShrinkwrap: true,
+        children: [
+          {
+            pkg: {name: 'a', version: '1.2.3'},
+            integrity: 'a123',
+          },
+        ],
+      },
+      {
+        pkg: {name: 'a', version: '1.2.3'},
+        integrity: 'a123',
+      },
+      {
+        pkg: { name: 'c', version: '3.4.5', dependencies: { a: '1' }},
+        children: [
+          {
+            pkg: {name: 'a', version: '1.2.3'},
+            integrity: 'a123',
+          },
+        ],
+      },
+      {
+        pkg: {
+          name: 'b',
+          version: '2.3.4',
+          dependencies: {
+            a: '1',
+            c: '2',
+            d: '3',
+          },
+        },
+        children: [
+          { pkg: { name: 'a', version: '1.9.99' }},
+          { pkg: { name: 'e', version: '2.3.4' }, integrity: 'y'},
+          {
+            pkg: {
+              name: 'c',
+              version: '2.3.4',
+              dependencies: { a: '2' },
+            },
+            children: [
+              {
+                pkg: {
+                  name: 'a',
+                  version: '2.3.99',
+                  dependencies: { e: '2' },
+                },
+                integrity: 'a2399',
+                children: [
+                  { pkg: { name: 'e', version: '2.0.1'}, integrity: 'x'},
+                ],
+              },
+            ],
+          },
+          {
+            pkg: {
+              name: 'd',
+              version: '3.4.5',
+              dependencies: {
+                a: '3',
+              },
+            },
+            children: [{pkg: {name: 'a', version: '3.4.5'}}],
+          },
+        ],
+      },
+      { pkg: { name: 'extraneous', version: '1.2.3' }},
+    ],
+  })
+
+  t.matchSnapshot(printable(tree))
+  t.end()
+})

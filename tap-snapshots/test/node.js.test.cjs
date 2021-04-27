@@ -141,6 +141,7 @@ dev:true,
 optional:true,
 peer:true,
 bundled:true,
+bundler:undefined,
 errors:[{code:'ERR'}],
 edgesIn:Set{{"" prod a@^1.0.0}}},
 'b' => ArboristLink{

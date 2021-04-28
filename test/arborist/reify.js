@@ -97,6 +97,8 @@ const newArb = opt => new Arborist({
   audit: false,
   cache,
   registry,
+  // give it a very long timeout so CI doesn't crash as easily
+  timeout: 30 * 60 * 1000,
   ...opt,
 })
 

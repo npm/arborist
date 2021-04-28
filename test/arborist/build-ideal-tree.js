@@ -37,7 +37,9 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 
-const OPT = { cache, registry }
+// give it a very long timeout so CI doesn't crash as easily
+const OPT = { cache, registry, timeout: 30 * 60 * 1000 }
+
 const buildIdeal = (path, opt) =>
   new Arborist({ ...OPT, path, ...(opt || {}) }).buildIdealTree(opt)
 

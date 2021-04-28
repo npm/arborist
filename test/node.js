@@ -2189,7 +2189,7 @@ t.test('duplicated dependencies', t => {
   // outcome of the other rules.  at least we have a test showing what
   // actually happens.
 
-  t.test('prefer peer over prod', async t => {
+  t.test('prefer prod over peer', async t => {
     const n = new Node({
       path: '/path/to/project',
       pkg: {
@@ -2201,7 +2201,7 @@ t.test('duplicated dependencies', t => {
         },
       },
     })
-    t.match(n.edgesOut.get('foo'), { type: 'peer', spec: '>=1' })
+    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '1.x' })
   })
 
   t.test('prefer dev over peer', async t => {
@@ -2231,25 +2231,10 @@ t.test('duplicated dependencies', t => {
         },
       },
     })
-    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '>=1' })
+    t.match(n.edgesOut.get('foo'), { type: 'dev', spec: '1.x' })
   })
 
-  t.test('prefer prod over dev', async t => {
-    const n = new Node({
-      path: '/path/to/project',
-      pkg: {
-        devDependencies: {
-          foo: '1.x',
-        },
-        dependencies: {
-          foo: '>=1',
-        },
-      },
-    })
-    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '>=1' })
-  })
-
-  t.test('if in all three, use prod', async t => {
+  t.test('if in all three, use dev', async t => {
     const n = new Node({
       path: '/path/to/project',
       pkg: {
@@ -2264,7 +2249,22 @@ t.test('duplicated dependencies', t => {
         },
       },
     })
-    t.match(n.edgesOut.get('foo'), { type: 'prod', spec: '2' })
+    t.match(n.edgesOut.get('foo'), { type: 'dev', spec: '1.x' })
+  })
+
+  t.test('prefer workspace version', async t => {
+    const root = new Node({
+      pkg: { name: 'workspaces_root' },
+      path: '/home/user/projects/workspaces_root',
+      realpath: '/home/user/projects/workspaces_root',
+    })
+
+    root.workspaces = new Map([
+      ['foo', '/home/user/projects/workspaces_root/foo'],
+    ])
+
+    root.package = { name: 'bar', version: '1.2.3', dependencies: { foo: '2.3.4' } }
+    t.equal(root.edgesOut.get('foo').type, 'workspace', 'keeps workspace edge')
   })
 
   t.end()

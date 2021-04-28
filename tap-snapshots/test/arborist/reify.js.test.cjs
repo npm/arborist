@@ -14958,6 +14958,34 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP no saveType: dev w/ compatible optional > must match snapshot 1`] = `
+{"optionalDependencies":{"abbrev":"*"},"devDependencies":{"abbrev":"^1.1.1"}}
+`
+
+exports[`test/arborist/reify.js TAP no saveType: dev w/ compatible peer > must match snapshot 1`] = `
+{"peerDependencies":{"abbrev":"*"},"devDependencies":{"abbrev":"^1.1.1"}}
+`
+
+exports[`test/arborist/reify.js TAP no saveType: dev w/ incompatible optional > must match snapshot 1`] = `
+{"optionalDependencies":{"abbrev":"^1.1.1"},"devDependencies":{"abbrev":"^1.1.1"}}
+`
+
+exports[`test/arborist/reify.js TAP no saveType: dev w/ incompatible peer > must match snapshot 1`] = `
+{"peerDependencies":{"abbrev":"^1.1.1"},"devDependencies":{"abbrev":"^1.1.1"}}
+`
+
+exports[`test/arborist/reify.js TAP no saveType: optional only > must match snapshot 1`] = `
+{"optionalDependencies":{"abbrev":"^1.1.1"}}
+`
+
+exports[`test/arborist/reify.js TAP no saveType: peer only > must match snapshot 1`] = `
+{"peerDependencies":{"abbrev":"^1.1.1"}}
+`
+
+exports[`test/arborist/reify.js TAP no saveType: prod w/ peer > must match snapshot 1`] = `
+{"dependencies":{"abbrev":"^1.1.1"}}
+`
+
 exports[`test/arborist/reify.js TAP omit peer deps > finished timers 1`] = `
 Array [
   "arborist:ctor",
@@ -30337,6 +30365,10 @@ exports[`test/arborist/reify.js TAP save proper lockfile with bins when upgradin
   }
 }
 
+`
+
+exports[`test/arborist/reify.js TAP save-prod, with optional > must match snapshot 1`] = `
+{"optionalDependencies":{},"dependencies":{"abbrev":"^1.1.1"}}
 `
 
 exports[`test/arborist/reify.js TAP saving the ideal tree save some stuff > lock after save 1`] = `

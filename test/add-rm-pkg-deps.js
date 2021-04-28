@@ -9,7 +9,14 @@ t.test('add', t => {
   const bar = npa('bar')
   const file = npa('file@file:/some/path/foo.tgz', '/')
 
+  const logs = []
+  const log = {
+    warn: function (...args) {
+      logs.push(args)
+    },
+  }
   t.strictSame(add({
+    log,
     pkg: {
       dependencies: { bar: '1' },
       devDependencies: { foo: '2' },
@@ -24,6 +31,7 @@ t.test('add', t => {
   }), {
     dependencies: { foo: '1', bar: '1', file: 'file:/some/path/foo.tgz' },
   }, 'move foo to prod, leave bar as-is')
+  t.strictSame(logs, [['idealTree', 'Removing devDependencies.foo in favor of dependencies.foo']])
 
   t.strictSame(add({
     pkg: {
@@ -86,7 +94,8 @@ t.test('add', t => {
     saveType: 'optional',
   }), {
     optionalDependencies: { foo: '1' },
-  }, 'move from peerOptional to optional')
+    dependencies: { foo: '1' },
+  }, 'move from peerOptional to optional, and adds to dependencies')
 
   t.strictSame(add({
     pkg: {
@@ -110,6 +119,30 @@ t.test('add', t => {
     peerDependencies: { foo: '1' },
     peerDependenciesMeta: { foo: { optional: false }},
   }, 'move from peerOptional to peer')
+
+  t.strictSame(add({
+    pkg: {
+      peerDependencies: { foo: '1', bar: '2' },
+      peerDependenciesMeta: { foo: { optional: true }, bar: { optional: true }},
+    },
+    add: [foo1],
+    saveType: 'prod',
+  }), {
+    dependencies: { foo: '1' },
+    peerDependencies: { bar: '2' },
+    peerDependenciesMeta: { bar: { optional: true }},
+  }, 'move from peerOptional to prod, remnants in peerDependencies')
+
+  t.strictSame(add({
+    pkg: {
+      peerDependencies: { foo: '1' },
+      peerDependenciesMeta: { foo: { optional: true }},
+    },
+    add: [foo1],
+    saveType: 'prod',
+  }), {
+    dependencies: { foo: '1' },
+  }, 'move from peerOptional to prod, empty peerDependencies')
 
   t.strictSame(add({
     pkg: {
@@ -138,7 +171,8 @@ t.test('add', t => {
     add: [foo2],
   }), {
     optionalDependencies: { foo: '2' },
-  }, 'update optional')
+    dependencies: { foo: '2' },
+  }, 'update optional, adding to dependencies')
 
   t.strictSame(add({
     pkg: {
@@ -157,8 +191,8 @@ t.test('add', t => {
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
-    peerDependencies: { foo: '2' },
-  }, 'update dev and peer together')
+    peerDependencies: { foo: '1' },
+  }, 'update dev (peer is updated during reify)')
 
   t.strictSame(add({
     pkg: {
@@ -169,9 +203,9 @@ t.test('add', t => {
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
-    peerDependencies: { foo: '2' },
+    peerDependencies: { foo: '1' },
     peerDependenciesMeta: { foo: { optional: true }},
-  }, 'update dev and peerOptional together')
+  }, 'update dev (peer is updated during reify)')
 
   t.strictSame(add({
     pkg: {
@@ -182,9 +216,9 @@ t.test('add', t => {
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
-    peerDependencies: { foo: '2' },
+    peerDependencies: { foo: '1' },
     peerDependenciesMeta: { foo: { optional: true }},
-  }, 'update dev and peerOptional together')
+  }, 'update dev (peer is updated during reify)')
 
   t.strictSame(add({
     pkg: {
@@ -195,9 +229,9 @@ t.test('add', t => {
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
-    peerDependencies: { foo: '2' },
+    peerDependencies: { foo: '*' },
     peerDependenciesMeta: { foo: { optional: true }},
-  }, 'update dev and peerOptional together')
+  }, 'update dev (peer is updated during reify)')
 
   t.end()
 })

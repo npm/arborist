@@ -1691,3 +1691,97 @@ console.log('ok 1 - this is fine')
     stdio: 'pipe',
   }), 'test result')
 })
+
+t.test('save-prod, with optional', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      devDependencies: { abbrev: '*' },
+      optionalDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'], saveType: 'prod' })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: dev w/ compatible peer', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      peerDependencies: { abbrev: '*' },
+      devDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: dev w/ incompatible peer', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      peerDependencies: { abbrev: '0.0.0' },
+      devDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: dev w/ compatible optional', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      optionalDependencies: { abbrev: '*' },
+      devDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: dev w/ incompatible optional', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      optionalDependencies: { abbrev: '0.0.0' },
+      devDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: prod w/ peer', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      peerDependencies: { abbrev: '*' },
+      dependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: peer only', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      peerDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('no saveType: optional only', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      optionalDependencies: { abbrev: '*' },
+    }),
+  })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['abbrev'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})

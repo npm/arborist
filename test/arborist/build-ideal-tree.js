@@ -2792,41 +2792,7 @@ t.test('cannot do workspaces in global mode', t => {
 })
 
 t.test('add packages to workspaces, not root', async t => {
-  const path = t.testdir({
-    'package.json': JSON.stringify({
-      workspaces: ['packages/*'],
-      dependencies: {
-        wrappy: '1.0.0',
-        abbrev: '',
-      },
-    }),
-    packages: {
-      a: {
-        'package.json': JSON.stringify({
-          name: 'a',
-          version: '1.2.3',
-        }),
-      },
-      b: {
-        'package.json': JSON.stringify({
-          name: 'b',
-          version: '1.2.3',
-          dependencies: {
-            abbrev: '',
-          },
-        }),
-      },
-      c: {
-        'package.json': JSON.stringify({
-          name: 'c',
-          version: '1.2.3',
-          dependencies: {
-            abbrev: '',
-          },
-        }),
-      },
-    },
-  })
+  const path = resolve(__dirname, '../fixtures/workspaces-not-root')
 
   const addTree = await buildIdeal(path, {
     add: ['wrappy@1.0.1'],

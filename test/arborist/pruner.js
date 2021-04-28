@@ -110,11 +110,3 @@ t.test('prune omit dev with bins', async t => {
   else
     t.throws(() => fs.lstatSync(bin).isSymbolicLink(), /ENOENT/, 'should not have symlink')
 })
-
-t.test('prune do not omit duplicated dependecy in prod and dev', async t => {
-  const path = fixture(t, 'prune-dev-dep-duplicate')
-  const tree = await pruneTree(path, { omit: ['dev'] })
-
-  const dep = tree.children.get('once')
-  t.ok(dep, 'dep should exist')
-})

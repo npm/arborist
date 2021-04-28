@@ -264,3 +264,34 @@ t.test('remove peer/prod dupes from both if removed from peer', async t => {
     },
   }, 'peer/prod duplication preserved')
 })
+
+t.test('deps are alphabetized', async t => {
+  const path = t.testdir({})
+  await updateRootPackageJson({
+    path,
+    package: {
+      name: 'unordered-deps',
+      version: '1.0.0',
+      dependencies: {
+        b: '1.0.0',
+        a: '1.0.0',
+        d: '1.0.0',
+        c: '1.0.0',
+      },
+    },
+  })
+  t.strictSame(
+    require(resolve(path, 'package.json')),
+    {
+      name: 'unordered-deps',
+      version: '1.0.0',
+      dependencies: {
+        a: '1.0.0',
+        b: '1.0.0',
+        d: '1.0.0',
+        c: '1.0.0',
+      },
+    },
+    'should write new package.json with ordered deps'
+  )
+})

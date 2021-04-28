@@ -17,3 +17,6 @@ t.equal(Arborist.name, 'Arborist')
 const packumentCache = new Map()
 const c = new Arborist({ packumentCache })
 t.equal(c.options.packumentCache, packumentCache, 'passed in a packument cache')
+t.throws(() => {
+  new Arborist({ saveType: 'something' })
+}, /saveType/, 'rejects invalid saveType')

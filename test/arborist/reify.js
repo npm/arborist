@@ -1785,3 +1785,52 @@ t.test('no saveType: optional only', async t => {
   await arb.reify({ add: ['abbrev'] })
   t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
 })
+
+t.test('do not delete linked targets when link omitted', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      devDependencies: {
+        foo: 'file:foo',
+      },
+      dependencies: {
+        abbrev: '',
+      },
+    }),
+    node_modules: {
+      foo: t.fixture('symlink', '../foo'),
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.2.3',
+        }),
+      },
+    },
+    foo: {
+      'package.json': JSON.stringify({
+        name: 'foo',
+        version: '1.2.3',
+        dependencies: {
+          bar: '1.2.3',
+        },
+      }),
+      'index.js': 'console.log("hello from foo")',
+      node_modules: {
+        bar: {
+          'package.json': JSON.stringify({
+            name: 'bar',
+            version: '1.2.3',
+          }),
+        },
+      },
+    },
+  })
+  const barpj = resolve(path, 'foo/node_modules/bar/package.json')
+  const fooindex = resolve(path, 'foo/index.js')
+  t.equal(fs.existsSync(barpj), true, 'bar package.json present')
+  t.equal(fs.existsSync(fooindex), true, 'foo index.js present')
+  const tree = await reify(path, { omit: ['dev'] })
+  t.equal(fs.existsSync(barpj), true, 'bar package.json still present')
+  t.equal(fs.existsSync(fooindex), true, 'foo index.js still present')
+  t.notOk(tree.children.get('foo'), 'does not have foo child any more')
+  t.equal(tree.fsChildren.size, 1, 'still has foo fschild')
+})

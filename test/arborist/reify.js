@@ -1834,3 +1834,10 @@ t.test('do not delete linked targets when link omitted', async t => {
   t.notOk(tree.children.get('foo'), 'does not have foo child any more')
   t.equal(tree.fsChildren.size, 1, 'still has foo fschild')
 })
+
+t.test('add spec * with semver prefix range gets updated', async t => {
+  const path = t.testdir({ 'package.json': '{}' })
+  const arb = newArb({ path })
+  await arb.reify({ add: ['latest-is-prerelease'] })
+  t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})

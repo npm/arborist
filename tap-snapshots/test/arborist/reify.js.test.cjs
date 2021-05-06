@@ -246,6 +246,15 @@ exports[`test/arborist/reify.js TAP add multiple pkgs in a specific order > shou
 {"name":"multiple-pkgs","dependencies":{"abbrev":"^1.1.1","once":"^1.4.0","wrappy":"^1.0.2"}}
 `
 
+exports[`test/arborist/reify.js TAP add spec * with semver prefix range gets updated > must match snapshot 1`] = `
+{
+  "dependencies": {
+    "latest-is-prerelease": "^1.0.0-beta-rc.3"
+  }
+}
+
+`
+
 exports[`test/arborist/reify.js TAP bad shrinkwrap file > expect resolving Promise 1`] = `
 ArboristNode {
   "children": Map {

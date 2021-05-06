@@ -23,14 +23,14 @@ const newArb = (path, opts = {}) => new Arborist({path, registry, cache, ...opts
 
 const sortReport = report => {
   const entries = Object.entries(report.vulnerabilities)
-  const vulns = entries.sort(([a], [b]) => a.localeCompare(b))
+  const vulns = entries.sort(([a], [b]) => a.localeCompare(b, 'en'))
     .map(([name, vuln]) => [
       name,
       {
         ...vuln,
         via: (vuln.via || []).sort((a, b) =>
-          String(a.source || a).localeCompare(String(b.source || b))),
-        effects: (vuln.effects || []).sort((a, b) => a.localeCompare(b)),
+          String(a.source || a).localeCompare(String(b.source || b, 'en'))),
+        effects: (vuln.effects || []).sort((a, b) => a.localeCompare(b, 'en')),
       },
     ])
   report.vulnerabilities = vulns.reduce((set, [k, v]) => {

@@ -81,7 +81,7 @@ const tree = new Node({
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 
 const printSet = set => [...set]
-  .sort((a, b) => a.name.localeCompare(b.name))
+  .sort((a, b) => a.name.localeCompare(b.name, 'en'))
   .map(n => n.location)
 
 const cwd = normalizePath(process.cwd())

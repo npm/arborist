@@ -167,7 +167,7 @@ const setup = () => {
       `### BEGIN IGNORED SYMLINKS ###
 ### this list is generated automatically, do not edit directly
 ### update it by running \`node test/fixtures/index.js\`
-${links.sort((a,b) => a.localeCompare(b)).join('\n')}
+${links.sort((a,b) => a.localeCompare(b, 'en')).join('\n')}
 ### END IGNORED SYMLINKS ###`)
     writeFileSync(gifile, gitignore)
   }

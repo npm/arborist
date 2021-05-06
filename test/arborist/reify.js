@@ -204,7 +204,7 @@ t.test('omit peer deps', t => {
     .then(() => {
       process.removeListener('time', onTime)
       process.removeListener('timeEnd', onTimeEnd)
-      finishedTimers.sort((a, b) => a.localeCompare(b))
+      finishedTimers.sort((a, b) => a.localeCompare(b, 'en'))
       t.matchSnapshot(finishedTimers, 'finished timers')
       t.strictSame(timers, {}, 'should have no timers in progress now')
     })

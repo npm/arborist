@@ -88,6 +88,7 @@ t.test('basic vulnerability object tests', async t => {
   t.equal(v.testSpec('github:foo/bar'), true)
   t.equal(v.testSpec('0.x'), false)
   t.equal(v.testSpec('>4.x'), true)
+  t.equal(v.testSpec('npm:name@>4.x'), true)
   t.strictSame([...v.advisories], [crit])
   t.equal(v.severity, 'critical')
   v.addAdvisory(low)

@@ -2416,3 +2416,13 @@ t.test('canDedupe()', t => {
 
   t.end()
 })
+
+t.test('packageName getter', t => {
+  const node = new Node({
+    pkg: { name: 'foo' },
+    path: '/path/to/bar',
+  })
+  t.equal(node.name, 'bar')
+  t.equal(node.packageName, 'foo')
+  t.end()
+})

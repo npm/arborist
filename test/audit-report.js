@@ -221,6 +221,16 @@ t.test('audit returns an error', async t => {
   t.equal(report.size, 0, 'did not find any vulnerabilities')
   t.match(logs, [
     [
+      'silly',
+      'audit',
+      'bulk request',
+    ],
+    [
+      'silly',
+      'audit',
+      'bulk request failed',
+    ],
+    [
       'verbose',
       'audit error',
       report.error,
@@ -411,4 +421,47 @@ t.test('default severity=high, vulnerable_versions=*', async t => {
   const bulk = auditToBulk(audit)
   t.match(bulk, { something: [{ severity: 'high', vulnerable_versions: '*' }] })
   t.end()
+})
+
+t.test('audit supports alias deps', async t => {
+  const path = resolve(fixtures, 'audit-nyc-mkdirp')
+  const auditFile = resolve(path, 'advisory-bulk.json')
+  t.teardown(advisoryBulkResponse(auditFile))
+  const tree = new Node({
+    path,
+    pkg: {
+      name: 'mkdirp',
+      version: '0.5.0',
+      dependencies: {
+        novulnshereiswear: 'npm:mkdirp@*',
+        mkdirp: 'npm:mkdirp@0.5.1',
+      },
+    },
+    children: [
+      {
+        name: 'novulnshereiswear',
+        pkg: {
+          name: 'mkdirp',
+          version: '0.5.1',
+          dependencies: {
+            minimist: '0.0.8',
+          },
+        },
+      },
+      {
+        pkg: {
+          name: 'mkdirp',
+          version: '0.5.1',
+          dependencies: {
+            minimist: '0.0.8',
+          },
+        },
+      },
+      { pkg: { name: 'minimist', version: '0.0.8' }},
+    ],
+  })
+
+  const report = await AuditReport.load(tree, {path, registry, cache})
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+  t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
 })

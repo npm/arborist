@@ -4,7 +4,7 @@ const t = require('tap')
 t.test('basic operations', t => {
   const i = new Inventory()
   t.equal(i.primaryKey, 'location')
-  t.same(i.indexes, ['name', 'license', 'funding', 'realpath'])
+  t.same(i.indexes, ['name', 'license', 'funding', 'realpath', 'packageName'])
 
   i.add({ location: 'x', name: 'x', package: { license: 'MIT', funding: 'foo' }})
   i.add({ location: 'y', name: 'x', package: { license: 'ISC', funding: { url: 'foo' } }})

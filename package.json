@@ -42,7 +42,7 @@
     "minify-registry-metadata": "^2.1.0",
     "mutate-fs": "^2.1.1",
     "tap": "^15.0.9",
-    "tcompare": "^3.0.4"
+    "tcompare": "^5.0.6"
   },
   "scripts": {
     "test": "npm run test-only --",

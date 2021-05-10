@@ -40,7 +40,6 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "minify-registry-metadata": "^2.1.0",
-    "mutate-fs": "^2.1.1",
     "tap": "^15.0.9",
     "tcompare": "^5.0.6"
   },

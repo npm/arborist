@@ -1673,16 +1673,16 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
       "resolved": "packages/c",
       "link": true
     },
+    "node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
+    },
     "packages/c": {
       "version": "1.2.3",
       "dependencies": {
         "wrappy": "1.0.0"
       }
-    },
-    "packages/c/node_modules/wrappy": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
-      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
     }
   }
 }
@@ -1702,6 +1702,11 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
       "resolved": "packages/c",
       "link": true
     },
+    "node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
+    },
     "node_modules/x": {
       "resolved": "apps/x",
       "link": true
@@ -1711,11 +1716,6 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
       "dependencies": {
         "wrappy": "1.0.0"
       }
-    },
-    "packages/c/node_modules/wrappy": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
-      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
     }
   }
 }
@@ -1734,6 +1734,11 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
     "node_modules/c": {
       "resolved": "packages/c",
       "link": true
+    },
+    "node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
     },
     "node_modules/x": {
       "resolved": "apps/x",
@@ -1776,9 +1781,9 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
       }
     },
     "node_modules/wrappy": {
-      "version": "1.0.2",
-      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
-      "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
     },
     "node_modules/x": {
       "resolved": "apps/x",
@@ -1790,6 +1795,11 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
         "once": "",
         "wrappy": "1.0.2"
       }
+    },
+    "packages/a/node_modules/wrappy": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
     },
     "packages/c": {
       "version": "1.2.3",
@@ -1823,6 +1833,11 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
       "resolved": "foo/x",
       "link": true
     },
+    "node_modules/wrappy": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
+    },
     "node_modules/x": {
       "resolved": "apps/x",
       "link": true
@@ -1832,11 +1847,6 @@ exports[`test/arborist/reify.js TAP filtered reification in workspaces > hidden 
       "dependencies": {
         "wrappy": "1.0.0"
       }
-    },
-    "packages/c/node_modules/wrappy": {
-      "version": "1.0.0",
-      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
-      "integrity": "sha1-iq5PxrTNa+MqRVOYW88ys+4THk4="
     }
   }
 }
@@ -1916,13 +1926,6 @@ ArboristNode {
           "type": "prod",
         },
         EdgeIn {
-          "from": "packages/a",
-          "name": "wrappy",
-          "spec": "1.0.2",
-          "type": "prod",
-        },
-        EdgeIn {
-          "error": "INVALID",
           "from": "packages/c",
           "name": "wrappy",
           "spec": "1.0.0",
@@ -1932,8 +1935,8 @@ ArboristNode {
       "location": "node_modules/wrappy",
       "name": "wrappy",
       "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/node_modules/wrappy",
-      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
-      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "version": "1.0.0",
     },
     "x" => ArboristLink {
       "edgesIn": Set {
@@ -1990,6 +1993,23 @@ ArboristNode {
       "version": "1.2.3",
     },
     ArboristNode {
+      "children": Map {
+        "wrappy" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/a",
+              "name": "wrappy",
+              "spec": "1.0.2",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/wrappy",
+          "name": "wrappy",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/packages/a/node_modules/wrappy",
+          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+          "version": "1.0.2",
+        },
+      },
       "edgesOut": Map {
         "once" => EdgeOut {
           "name": "once",
@@ -2000,7 +2020,7 @@ ArboristNode {
         "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "1.0.2",
-          "to": "node_modules/wrappy",
+          "to": "packages/a/node_modules/wrappy",
           "type": "prod",
         },
       },
@@ -2012,7 +2032,6 @@ ArboristNode {
     ArboristNode {
       "edgesOut": Map {
         "wrappy" => EdgeOut {
-          "error": "INVALID",
           "name": "wrappy",
           "spec": "1.0.0",
           "to": "node_modules/wrappy",
@@ -2059,6 +2078,21 @@ ArboristNode {
       },
       "version": "1.2.3",
     },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/c",
+          "name": "wrappy",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "version": "1.0.0",
+    },
   },
   "edgesOut": Map {
     "a" => EdgeOut {
@@ -2091,28 +2125,11 @@ ArboristNode {
   },
   "fsChildren": Set {
     ArboristNode {
-      "children": Map {
-        "wrappy" => ArboristNode {
-          "edgesIn": Set {
-            EdgeIn {
-              "from": "packages/c",
-              "name": "wrappy",
-              "spec": "1.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "packages/c/node_modules/wrappy",
-          "name": "wrappy",
-          "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/packages/c/node_modules/wrappy",
-          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
-          "version": "1.0.0",
-        },
-      },
       "edgesOut": Map {
         "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "1.0.0",
-          "to": "packages/c/node_modules/wrappy",
+          "to": "node_modules/wrappy",
           "type": "prod",
         },
       },
@@ -2171,6 +2188,21 @@ ArboristNode {
         "location": "foo/x",
       },
       "version": "1.2.3",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/c",
+          "name": "wrappy",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "version": "1.0.0",
     },
     "x" => ArboristLink {
       "edgesIn": Set {
@@ -2233,28 +2265,11 @@ ArboristNode {
       "version": "1.2.3",
     },
     ArboristNode {
-      "children": Map {
-        "wrappy" => ArboristNode {
-          "edgesIn": Set {
-            EdgeIn {
-              "from": "packages/c",
-              "name": "wrappy",
-              "spec": "1.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "packages/c/node_modules/wrappy",
-          "name": "wrappy",
-          "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/packages/c/node_modules/wrappy",
-          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
-          "version": "1.0.0",
-        },
-      },
       "edgesOut": Map {
         "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "1.0.0",
-          "to": "packages/c/node_modules/wrappy",
+          "to": "node_modules/wrappy",
           "type": "prod",
         },
       },
@@ -2296,6 +2311,21 @@ ArboristNode {
         "location": "packages/c",
       },
       "version": "1.2.3",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/c",
+          "name": "wrappy",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "version": "1.0.0",
     },
     "x" => ArboristLink {
       "edgesIn": Set {
@@ -2348,28 +2378,11 @@ ArboristNode {
       "version": "1.2.3",
     },
     ArboristNode {
-      "children": Map {
-        "wrappy" => ArboristNode {
-          "edgesIn": Set {
-            EdgeIn {
-              "from": "packages/c",
-              "name": "wrappy",
-              "spec": "1.0.0",
-              "type": "prod",
-            },
-          },
-          "location": "packages/c/node_modules/wrappy",
-          "name": "wrappy",
-          "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/packages/c/node_modules/wrappy",
-          "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
-          "version": "1.0.0",
-        },
-      },
       "edgesOut": Map {
         "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "1.0.0",
-          "to": "packages/c/node_modules/wrappy",
+          "to": "node_modules/wrappy",
           "type": "prod",
         },
       },
@@ -2411,6 +2424,21 @@ ArboristNode {
         "location": "packages/c",
       },
       "version": "1.2.3",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/c",
+          "name": "wrappy",
+          "spec": "1.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-filtered-reification-in-workspaces/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.0.tgz",
+      "version": "1.0.0",
     },
     "x" => ArboristLink {
       "edgesIn": Set {
@@ -2470,10 +2498,9 @@ ArboristNode {
     ArboristNode {
       "edgesOut": Map {
         "wrappy" => EdgeOut {
-          "error": "MISSING",
           "name": "wrappy",
           "spec": "1.0.0",
-          "to": null,
+          "to": "node_modules/wrappy",
           "type": "prod",
         },
       },

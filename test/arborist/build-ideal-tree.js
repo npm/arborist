@@ -40,8 +40,8 @@ const printIdeal = (path, opt) => buildIdeal(path, opt).then(printTree)
 // give it a very long timeout so CI doesn't crash as easily
 const OPT = { cache, registry, timeout: 30 * 60 * 1000 }
 
-const buildIdeal = (path, opt) =>
-  new Arborist({ ...OPT, path, ...(opt || {}) }).buildIdealTree(opt)
+const newArb = (path, opt = {}) => new Arborist({ ...OPT, path, ...opt })
+const buildIdeal = (path, opt) => newArb(path, opt).buildIdealTree(opt)
 
 t.test('fail on mismatched engine when engineStrict is set', async t => {
   const path = resolve(fixtures, 'engine-specification')
@@ -2861,8 +2861,8 @@ t.test('workspace error handling', async t => {
     })
     t.strictSame(logs(), [[
       'warn',
-      'idealTree',
-      'Workspace filter set, but no workspaces present',
+      'workspaces',
+      'filter set, but no workspaces present',
     ]], 'got warning')
   })
   t.test('set filter for workspace that is not present', async t => {
@@ -2872,8 +2872,8 @@ t.test('workspace error handling', async t => {
     })
     t.strictSame(logs(), [[
       'warn',
-      'idealTree',
-      'Workspace not-here in filter set, but not in workspaces',
+      'workspaces',
+      'not-here in filter set, but not in workspaces',
     ]], 'got warning')
   })
 })
@@ -3030,4 +3030,82 @@ t.test('fail to upgrade a partly overlapping peer set', async t => {
   t.rejects(printIdeal(path, {
     add: ['@isaacs/testing-peer-dep-conflict-chain-y@3'],
   }), { code: 'ERESOLVE' }, 'should not be able to upgrade dep')
+})
+
+t.test('add deps to workspaces', async t => {
+  const fixtureDef = {
+    'package.json': JSON.stringify({
+      workspaces: [
+        'packages/*',
+      ],
+      dependencies: {
+        mkdirp: '^1.0.4',
+        minimist: '1',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            mkdirp: '^0.5.0',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+    },
+  }
+  const path = t.testdir(fixtureDef)
+
+  t.test('no args', async t => {
+    const tree = await buildIdeal(path)
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp').version, '0.5.5')
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree))
+  })
+
+  t.test('add mkdirp 0.5.0 to b', async t => {
+    const tree = await buildIdeal(path, { workspaces: ['b'], add: ['mkdirp@0.5.0'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp').version, '0.5.5')
+    t.equal(tree.children.get('b').target.children.get('mkdirp').version, '0.5.0')
+    t.matchSnapshot(printTree(tree))
+  })
+
+  t.test('remove mkdirp from a', async t => {
+    const tree = await buildIdeal(path, { workspaces: ['a'], rm: ['mkdirp'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree))
+  })
+
+  t.test('upgrade mkdirp in a, dedupe on root', async t => {
+    const tree = await buildIdeal(path, { workspaces: ['a'], add: ['mkdirp@1'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.edgesOut.get('mkdirp').spec, '1')
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree))
+  })
+
+  t.test('KEEP in the root, prune out unnecessary dupe', async t => {
+    const path = t.testdir(fixtureDef)
+    const arb = newArb(path)
+    // reify first so that the other mkdirp is present in the tree
+    await arb.reify()
+    const tree = await buildIdeal(path, { workspaces: ['a'], add: ['mkdirp@1'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.edgesOut.get('mkdirp').spec, '1')
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree))
+  })
 })

@@ -1780,6 +1780,68 @@ exports[`test/audit-report.js TAP audit supports alias deps > json version 1`] =
 }
 `
 
+exports[`test/audit-report.js TAP audit with filterSet limiting to only mkdirp and minimist > json version 1`] = `
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "minimist": {
+      "name": "minimist",
+      "severity": "low",
+      "via": [
+        {
+          "source": 1179,
+          "name": "minimist",
+          "dependency": "minimist",
+          "title": "Prototype Pollution",
+          "url": "https://npmjs.com/advisories/1179",
+          "severity": "low",
+          "range": "<0.2.1 || >=1.0.0 <1.2.3"
+        }
+      ],
+      "effects": [
+        "mkdirp"
+      ],
+      "range": "<0.2.1 || >=1.0.0 <1.2.3",
+      "nodes": [
+        "node_modules/minimist"
+      ],
+      "fixAvailable": true
+    },
+    "mkdirp": {
+      "name": "mkdirp",
+      "severity": "low",
+      "via": [
+        "minimist"
+      ],
+      "effects": [],
+      "range": "0.4.1 - 0.5.1",
+      "nodes": [
+        "node_modules/mkdirp"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 2,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 318,
+      "dev": 0,
+      "optional": 12,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 329
+    }
+  }
+}
+`
+
 exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at all > json version 1`] = `
 {
   "auditReportVersion": 2,

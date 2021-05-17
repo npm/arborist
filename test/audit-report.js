@@ -465,3 +465,24 @@ t.test('audit supports alias deps', async t => {
   t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
   t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
 })
+
+t.test('audit with filterSet limiting to only mkdirp and minimist', async t => {
+  const path = resolve(fixtures, 'audit-nyc-mkdirp')
+  const auditFile = resolve(path, 'advisory-bulk.json')
+  t.teardown(advisoryBulkResponse(auditFile))
+
+  const arb = newArb(path)
+
+  const tree = await arb.loadVirtual()
+  const filterSet = new Set([
+    tree.children.get('mkdirp'),
+    tree.children.get('minimist'),
+  ])
+  const options = { ...arb.options, filterSet }
+  const report = await AuditReport.load(tree, options)
+  t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
+
+  t.equal(report.topVulns.size, 0, 'no top nodes reported')
+  t.equal(report.get('nyc'), undefined, 'no nyc vuln reported')
+  t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1', 'mkdirp vuln reported')
+})

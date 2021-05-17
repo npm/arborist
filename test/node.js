@@ -2478,6 +2478,24 @@ t.test('canDedupe()', t => {
     'node_modules/b/node_modules/c/node_modules/a/node_modules/e',
   ], 'preferDedupe=true')
 
+  // canDedupe also handles fsChildren properly
+  const top = new Node({
+    fsParent: root,
+    path: root.path + '/packages/top',
+    pkg: {
+      name: 'top',
+      version: '1.2.3',
+      dependencies: {
+        a: '1',
+      },
+    },
+    children: [
+      { pkg: { name: 'a', version: '1.0.0' } },
+    ],
+  })
+
+  t.equal(top.children.get('a').canDedupe(), true)
+
   t.end()
 })
 

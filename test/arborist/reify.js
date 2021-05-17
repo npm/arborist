@@ -815,14 +815,13 @@ t.test('rollbacks', { buffered: false }, t => {
 
 t.test('saving the ideal tree', t => {
   const kSaveIdealTree = Symbol.for('saveIdealTree')
-  t.test('save=false', t => {
+  t.test('save=false', async t => {
     // doesn't actually do anything, just for coverage.
     // if it wasn't an early exit, it'd blow up and throw
     // an error though.
     const path = t.testdir()
     const a = newArb({ path })
-    t.notOk(a[kSaveIdealTree]({ save: false }))
-    t.end()
+    t.notOk(await a[kSaveIdealTree]({ save: false }))
   })
 
   t.test('save some stuff', t => {
@@ -863,7 +862,7 @@ t.test('saving the ideal tree', t => {
       tree.meta = meta
       meta.add(tree)
       return tree
-    })).then(tree => {
+    })).then(async tree => {
       // saving swaps the ideal tree onto the actual tree
       a.idealTree = tree
 
@@ -952,11 +951,13 @@ t.test('saving the ideal tree', t => {
         npa('f@git+https://user:pass@github.com/baz/quux#asdf'),
         npa('g'),
         npa('h@~1.2.3'),
-      ]
+      ].map(spec => Object.assign(spec, { tree }))
+
       // NB: these are all going to be marked as extraneous, because we're
       // skipping the actual buildIdealTree step that flags them properly
       return a[kSaveIdealTree]({})
-    }).then(() => {
+    }).then(saved => {
+      t.ok(saved, 'true, because it was saved')
       t.matchSnapshot(require(path + '/package-lock.json'), 'lock after save')
       t.strictSame(require(path + '/package.json'), {
         bundleDependencies: ['a', 'b', 'c'],
@@ -1840,4 +1841,117 @@ t.test('add spec * with semver prefix range gets updated', async t => {
   const arb = newArb({ path })
   await arb.reify({ add: ['latest-is-prerelease'] })
   t.matchSnapshot(fs.readFileSync(path + '/package.json', 'utf8'))
+})
+
+t.test('add deps to workspaces', async t => {
+  const fixture = {
+    'package.json': JSON.stringify({
+      workspaces: [
+        'packages/*',
+      ],
+      dependencies: {
+        mkdirp: '^1.0.4',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            mkdirp: '^0.5.0',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+    },
+  }
+
+  t.test('no args', async t => {
+    const path = t.testdir(fixture)
+    const tree = await reify(path)
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp').version, '0.5.5')
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
+
+  t.test('add mkdirp 0.5.0 to b', async t => {
+    const path = t.testdir(fixture)
+    await reify(path)
+    const tree = await reify(path, { workspaces: ['b'], add: ['mkdirp@0.5.0'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp').version, '0.5.5')
+    t.equal(tree.children.get('b').target.children.get('mkdirp').version, '0.5.0')
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/packages/b/package.json'), 'package.json b')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
+
+  t.test('remove mkdirp from a', async t => {
+    const path = t.testdir(fixture)
+    await reify(path)
+    const tree = await reify(path, { workspaces: ['a'], rm: ['mkdirp'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.edgesOut.get('mkdirp'), undefined)
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/packages/a/package.json'), 'package.json a')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
+
+  t.test('upgrade mkdirp in a, dedupe on root', async t => {
+    const path = t.testdir(fixture)
+    await reify(path)
+    const tree = await reify(path, { workspaces: ['a'], add: ['mkdirp@1'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.edgesOut.get('mkdirp').spec, '^1.0.4')
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/packages/a/package.json'), 'package.json a')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
+
+  t.test('add mkdirp 0.5.0 to b, empty start', async t => {
+    const path = t.testdir(fixture)
+    const tree = await reify(path, { workspaces: ['b'], add: ['mkdirp@0.5.0'] })
+    t.equal(tree.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a'), undefined, 'did not even link workspace "a"')
+    t.equal(tree.children.get('b').target.children.get('mkdirp').version, '0.5.0')
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/packages/b/package.json'), 'package.json b')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
+
+  t.test('remove mkdirp from a, empty start', async t => {
+    const path = t.testdir(fixture)
+    const tree = await reify(path, { workspaces: ['a'], rm: ['mkdirp'] })
+    t.equal(tree.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.edgesOut.get('mkdirp'), undefined)
+    t.equal(tree.children.get('b'), undefined, 'did not link workspace "b"')
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/packages/a/package.json'), 'package.json a')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
+
+  t.test('upgrade mkdirp in a, dedupe on root, empty start', async t => {
+    const path = t.testdir(fixture)
+    const tree = await reify(path, { workspaces: ['a'], add: ['mkdirp@1'] })
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp'), undefined)
+    t.equal(tree.children.get('a').target.edgesOut.get('mkdirp').spec, '^1.0.4')
+    t.equal(tree.children.get('b'), undefined, 'did not link "b" workspace')
+    t.matchSnapshot(printTree(tree), 'returned tree')
+    t.matchSnapshot(require(path + '/packages/a/package.json'), 'package.json a')
+    t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
+  })
 })

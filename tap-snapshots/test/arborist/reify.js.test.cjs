@@ -238,6 +238,1478 @@ exports[`test/arborist/reify.js TAP add a new pkg to a prefix that needs to be m
 
 `
 
+exports[`test/arborist/reify.js TAP add deps to workspaces add mkdirp 0.5.0 to b > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "dependencies": Object {
+        "mkdirp": Object {
+          "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+          "requires": Object {
+            "minimist": "^1.2.5",
+          },
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+          "version": "0.5.5",
+        },
+      },
+      "requires": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "dependencies": Object {
+        "minimist": Object {
+          "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+          "version": "0.0.8",
+        },
+        "mkdirp": Object {
+          "integrity": "sha1-HXMHam35hs2TROFecfzAWkyavxI=",
+          "requires": Object {
+            "minimist": "0.0.8",
+          },
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+          "version": "0.5.0",
+        },
+      },
+      "requires": Object {
+        "mkdirp": "0.5.0",
+      },
+      "version": "file:packages/b",
+    },
+    "minimist": Object {
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/minimist": Object {
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "dependencies": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "1.2.3",
+    },
+    "packages/a/node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "dependencies": Object {
+        "minimist": "^1.2.5",
+      },
+      "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+      "version": "0.5.5",
+    },
+    "packages/b": Object {
+      "dependencies": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "1.2.3",
+    },
+    "packages/b/node_modules/minimist": Object {
+      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+      "version": "0.0.8",
+    },
+    "packages/b/node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "dependencies": Object {
+        "minimist": "0.0.8",
+      },
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)",
+      "integrity": "sha1-HXMHam35hs2TROFecfzAWkyavxI=",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+      "version": "0.5.0",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces add mkdirp 0.5.0 to b > package.json b 1`] = `
+Object {
+  "dependencies": Object {
+    "mkdirp": "^0.5.0",
+  },
+  "name": "b",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces add mkdirp 0.5.0 to b > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/node_modules/b",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
+      "version": "1.2.3",
+    },
+    "minimist" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/a/node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "^1.2.5",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/minimist",
+      "name": "minimist",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/node_modules/minimist",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "mkdirp" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "mkdirp" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/a",
+              "name": "mkdirp",
+              "spec": "^0.5.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "minimist" => EdgeOut {
+              "name": "minimist",
+              "spec": "^1.2.5",
+              "to": "node_modules/minimist",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/mkdirp",
+          "name": "mkdirp",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/a/node_modules/mkdirp",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+          "version": "0.5.5",
+        },
+      },
+      "edgesOut": Map {
+        "mkdirp" => EdgeOut {
+          "name": "mkdirp",
+          "spec": "^0.5.0",
+          "to": "packages/a/node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/a",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "children": Map {
+        "minimist" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/b/node_modules/mkdirp",
+              "name": "minimist",
+              "spec": "0.0.8",
+              "type": "prod",
+            },
+          },
+          "location": "packages/b/node_modules/minimist",
+          "name": "minimist",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/b/node_modules/minimist",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+          "version": "0.0.8",
+        },
+        "mkdirp" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/b",
+              "name": "mkdirp",
+              "spec": "^0.5.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "minimist" => EdgeOut {
+              "name": "minimist",
+              "spec": "0.0.8",
+              "to": "packages/b/node_modules/minimist",
+              "type": "prod",
+            },
+          },
+          "location": "packages/b/node_modules/mkdirp",
+          "name": "mkdirp",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/b/node_modules/mkdirp",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+          "version": "0.5.0",
+        },
+      },
+      "edgesOut": Map {
+        "mkdirp" => EdgeOut {
+          "name": "mkdirp",
+          "spec": "^0.5.0",
+          "to": "packages/b/node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b/packages/b",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces add mkdirp 0.5.0 to b, empty start > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "dependencies": Object {
+        "minimist": Object {
+          "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+          "version": "1.2.5",
+        },
+        "mkdirp": Object {
+          "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+          "requires": Object {
+            "minimist": "^1.2.5",
+          },
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+          "version": "0.5.5",
+        },
+      },
+      "requires": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "dependencies": Object {
+        "mkdirp": Object {
+          "integrity": "sha1-HXMHam35hs2TROFecfzAWkyavxI=",
+          "requires": Object {
+            "minimist": "0.0.8",
+          },
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+          "version": "0.5.0",
+        },
+      },
+      "requires": Object {
+        "mkdirp": "0.5.0",
+      },
+      "version": "file:packages/b",
+    },
+    "minimist": Object {
+      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+      "version": "0.0.8",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/minimist": Object {
+      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+      "version": "0.0.8",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "dependencies": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "1.2.3",
+    },
+    "packages/a/node_modules/minimist": Object {
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "packages/a/node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "dependencies": Object {
+        "minimist": "^1.2.5",
+      },
+      "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+      "version": "0.5.5",
+    },
+    "packages/b": Object {
+      "dependencies": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "1.2.3",
+    },
+    "packages/b/node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "dependencies": Object {
+        "minimist": "0.0.8",
+      },
+      "deprecated": "Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)",
+      "integrity": "sha1-HXMHam35hs2TROFecfzAWkyavxI=",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+      "version": "0.5.0",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces add mkdirp 0.5.0 to b, empty start > package.json b 1`] = `
+Object {
+  "dependencies": Object {
+    "mkdirp": "^0.5.0",
+  },
+  "name": "b",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces add mkdirp 0.5.0 to b, empty start > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/node_modules/b",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
+      "version": "1.2.3",
+    },
+    "minimist" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/b/node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "0.0.8",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/minimist",
+      "name": "minimist",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/node_modules/minimist",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+      "version": "0.0.8",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "error": "MISSING",
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/a",
+      "to": null,
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "error": "MISSING",
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "mkdirp" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/b",
+              "name": "mkdirp",
+              "spec": "^0.5.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "minimist" => EdgeOut {
+              "name": "minimist",
+              "spec": "0.0.8",
+              "to": "node_modules/minimist",
+              "type": "prod",
+            },
+          },
+          "location": "packages/b/node_modules/mkdirp",
+          "name": "mkdirp",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/b/node_modules/mkdirp",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.0.tgz",
+          "version": "0.5.0",
+        },
+      },
+      "edgesOut": Map {
+        "mkdirp" => EdgeOut {
+          "name": "mkdirp",
+          "spec": "^0.5.0",
+          "to": "packages/b/node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/b",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces no args > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "dependencies": Object {
+        "mkdirp": Object {
+          "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+          "requires": Object {
+            "minimist": "^1.2.5",
+          },
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+          "version": "0.5.5",
+        },
+      },
+      "requires": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "version": "file:packages/b",
+    },
+    "minimist": Object {
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-no-args",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/minimist": Object {
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "dependencies": Object {
+        "mkdirp": "^0.5.0",
+      },
+      "version": "1.2.3",
+    },
+    "packages/a/node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "dependencies": Object {
+        "minimist": "^1.2.5",
+      },
+      "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+      "version": "0.5.5",
+    },
+    "packages/b": Object {
+      "version": "1.2.3",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces no args > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/node_modules/b",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
+      "version": "1.2.3",
+    },
+    "minimist" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/a/node_modules/mkdirp",
+          "name": "minimist",
+          "spec": "^1.2.5",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/minimist",
+      "name": "minimist",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/node_modules/minimist",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
+    },
+    "mkdirp" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "children": Map {
+        "mkdirp" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/a",
+              "name": "mkdirp",
+              "spec": "^0.5.0",
+              "type": "prod",
+            },
+          },
+          "edgesOut": Map {
+            "minimist" => EdgeOut {
+              "name": "minimist",
+              "spec": "^1.2.5",
+              "to": "node_modules/minimist",
+              "type": "prod",
+            },
+          },
+          "location": "packages/a/node_modules/mkdirp",
+          "name": "mkdirp",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/a/node_modules/mkdirp",
+          "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
+          "version": "0.5.5",
+        },
+      },
+      "edgesOut": Map {
+        "mkdirp" => EdgeOut {
+          "name": "mkdirp",
+          "spec": "^0.5.0",
+          "to": "packages/a/node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/a",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "location": "packages/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args/packages/b",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-no-args",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-no-args",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces remove mkdirp from a > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "version": "file:packages/b",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "version": "1.2.3",
+    },
+    "packages/b": Object {
+      "version": "1.2.3",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces remove mkdirp from a > package.json a 1`] = `
+Object {
+  "name": "a",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces remove mkdirp from a > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/node_modules/b",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
+      "version": "1.2.3",
+    },
+    "mkdirp" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/a",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "location": "packages/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a/packages/b",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces remove mkdirp from a, empty start > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "version": "file:packages/b",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "version": "1.2.3",
+    },
+    "packages/b": Object {
+      "version": "1.2.3",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces remove mkdirp from a, empty start > package.json a 1`] = `
+Object {
+  "name": "a",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces remove mkdirp from a, empty start > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "error": "MISSING",
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": null,
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start/packages/a",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-remove-mkdirp-from-a-empty-start",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces upgrade mkdirp in a, dedupe on root > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "requires": Object {
+        "mkdirp": "1",
+      },
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "version": "file:packages/b",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "version": "1.2.3",
+    },
+    "packages/b": Object {
+      "version": "1.2.3",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces upgrade mkdirp in a, dedupe on root > package.json a 1`] = `
+Object {
+  "dependencies": Object {
+    "mkdirp": "^1.0.4",
+  },
+  "name": "a",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces upgrade mkdirp in a, dedupe on root > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/b",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/node_modules/b",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
+      "version": "1.2.3",
+    },
+    "mkdirp" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+        EdgeIn {
+          "from": "packages/a",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "mkdirp" => EdgeOut {
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "to": "node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/a",
+      "version": "1.2.3",
+    },
+    ArboristNode {
+      "location": "packages/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root/packages/b",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces upgrade mkdirp in a, dedupe on root, empty start > lockfile 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "requires": Object {
+        "mkdirp": "1",
+      },
+      "version": "file:packages/a",
+    },
+    "b": Object {
+      "version": "file:packages/b",
+    },
+    "mkdirp": Object {
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start",
+  "packages": Object {
+    "": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "workspaces": Array [
+        "packages/*",
+      ],
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "packages/a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "packages/b",
+    },
+    "node_modules/mkdirp": Object {
+      "bin": Object {
+        "mkdirp": "bin/cmd.js",
+      },
+      "engines": Object {
+        "node": ">=10",
+      },
+      "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+    "packages/a": Object {
+      "dependencies": Object {
+        "mkdirp": "^1.0.4",
+      },
+      "version": "1.2.3",
+    },
+    "packages/b": Object {
+      "version": "1.2.3",
+    },
+  },
+  "requires": true,
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces upgrade mkdirp in a, dedupe on root, empty start > package.json a 1`] = `
+Object {
+  "dependencies": Object {
+    "mkdirp": "^1.0.4",
+  },
+  "name": "a",
+  "version": "1.2.3",
+}
+`
+
+exports[`test/arborist/reify.js TAP add deps to workspaces upgrade mkdirp in a, dedupe on root, empty start > returned tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "mkdirp" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+        EdgeIn {
+          "from": "packages/a",
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/mkdirp",
+      "name": "mkdirp",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/node_modules/mkdirp",
+      "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
+      "version": "1.0.4",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "mkdirp" => EdgeOut {
+      "name": "mkdirp",
+      "spec": "^1.0.4",
+      "to": "node_modules/mkdirp",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "mkdirp" => EdgeOut {
+          "name": "mkdirp",
+          "spec": "^1.0.4",
+          "to": "node_modules/mkdirp",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start/packages/a",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-upgrade-mkdirp-in-a-dedupe-on-root-empty-start",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
 exports[`test/arborist/reify.js TAP add multiple pkgs in a specific order > should alphabetically sort dependencies 1`] = `
 {"name":"multiple-pkgs","dependencies":{"abbrev":"^1.1.1","wrappy":"^1.0.2"}}
 `
@@ -30412,7 +31884,7 @@ Object {
   "dependencies": Object {
     "a": Object {
       "extraneous": true,
-      "from": "a@github:foo/bar#baz",
+      "from": "a@git+ssh://git@github.com:foo/bar#baz",
       "version": "git+ssh://git@github.com:foo/bar#71f3ccfefba85d2048484569dba8c1829f6f41d7",
     },
     "b": Object {
@@ -30435,7 +31907,7 @@ Object {
     },
     "f": Object {
       "extraneous": true,
-      "from": "f@git+https://user:pass@github.com/baz/quux.git#asdf",
+      "from": "f@git+https://user:pass@github.com/baz/quux#asdf",
       "version": "git+https://user:pass@github.com/baz/quux#71f3ccfefba85d2048484569dba8c1829f6f41d7",
     },
     "g": Object {

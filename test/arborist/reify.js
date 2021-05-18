@@ -74,7 +74,13 @@ const Arborist = t.mock('../../lib/index.js', {
 
 const { Node, Link, Shrinkwrap } = Arborist
 
-const {start, stop, registry} = require('../fixtures/registry-mocks/server.js')
+const {
+  start,
+  stop,
+  registry,
+  advisoryBulkResponse,
+} = require('../fixtures/registry-mocks/server.js')
+
 t.before(start)
 t.teardown(stop)
 
@@ -1954,4 +1960,59 @@ t.test('add deps to workspaces', async t => {
     t.matchSnapshot(require(path + '/packages/a/package.json'), 'package.json a')
     t.matchSnapshot(require(path + '/package-lock.json'), 'lockfile')
   })
+})
+
+t.test('reify audit only workspace deps when reifying workspace', async t => {
+  const auditFile = resolve(__dirname, '../fixtures/audit-nyc-mkdirp/advisory-bulk.json')
+  t.teardown(advisoryBulkResponse(auditFile))
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            'kind-of': '6.0.0',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+          dependencies: {
+            minimist: '0.0.8',
+          },
+        }),
+      },
+    },
+  })
+  const arb = newArb({ path, audit: true, workspaces: ['a'] })
+  const tree = await arb.reify()
+  const report = arb.auditReport.toJSON()
+  t.equal(report.vulnerabilities.minimist, undefined, 'minimist not audited')
+  t.match(report.vulnerabilities['kind-of'], {
+    name: 'kind-of',
+    severity: 'low',
+    range: '6.0.0 - 6.0.2',
+    nodes: ['node_modules/kind-of'],
+    fixAvailable: {
+      name: 'kind-of',
+      version: '6.0.3',
+      isSemVerMajor: false,
+    },
+    via: [{
+      source: 1490,
+      name: 'kind-of',
+      dependency: 'kind-of',
+      title: 'Validation Bypass',
+      url: 'https://npmjs.com/advisories/1490',
+      severity: 'low',
+      range: '>=6.0.0 <6.0.3',
+    }],
+  }, 'kind-of audited')
+  t.matchSnapshot(printTree(tree), 'resulting tree')
 })

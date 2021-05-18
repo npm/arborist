@@ -16902,6 +16902,85 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP reify audit only workspace deps when reifying workspace > resulting tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/packages/a",
+          "type": "workspace",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.2.3",
+    },
+    "kind-of" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/a",
+          "name": "kind-of",
+          "spec": "6.0.0",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/kind-of",
+      "name": "kind-of",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/node_modules/kind-of",
+      "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-6.0.0.tgz",
+      "version": "6.0.0",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "kind-of" => EdgeOut {
+          "name": "kind-of",
+          "spec": "6.0.0",
+          "to": "node_modules/kind-of",
+          "type": "prod",
+        },
+      },
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace/packages/a",
+      "version": "1.2.3",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-reify-audit-only-workspace-deps-when-reifying-workspace",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
 exports[`test/arborist/reify.js TAP reify from old package-lock with bins > should add bins entry to package-lock packages entry 1`] = `
 Object {
   "dependencies": Object {

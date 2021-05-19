@@ -1,6 +1,7 @@
 const t = require('tap')
 
 const Edge = require('../../lib/edge.js')
+const Node = require('../../lib/node.js')
 const Link = require('../../lib/link.js')
 
 const Arborist = require('../../lib/arborist/index.js')
@@ -61,6 +62,45 @@ t.test('workspace nodes and deps', async t => {
     const wsDepSet = arb.workspaceDependencySet(tree, ['b'])
     t.equal(wsDepSet.size, 3)
     t.equal(wsDepSet.has(tree.children.get('b').target), true)
+    t.equal(wsDepSet.has(tree.children.get('abbrev')), true)
+    t.equal(wsDepSet.has(tree.children.get('abbrev').target), true)
+  }
+
+  new Node({
+    name: 'extra',
+    pkg: {
+      name: 'extra',
+      version: '1.2.3',
+    },
+    parent: tree.children.get('b').target,
+  })
+  new Edge({
+    from: tree.children.get('b').target,
+    spec: '1.2.3',
+    name: 'foobarbaz',
+    type: 'prod',
+  })
+  new Node({
+    name: 'foobarbaz',
+    pkg: {
+      name: 'foobarbaz',
+      version: '1.2.3',
+    },
+    extraneous: false,
+    dev: false,
+    optional: false,
+    devOptional: false,
+    peer: false,
+    parent: tree.children.get('b').target,
+  })
+  {
+    // verify that the extraneous dep is in the set
+    const wsDepSet = arb.workspaceDependencySet(tree, ['b'])
+    t.equal(wsDepSet.size, 5)
+    const b = tree.children.get('b').target
+    t.equal(wsDepSet.has(b), true)
+    t.equal(wsDepSet.has(b.children.get('extra')), true)
+    t.equal(wsDepSet.has(b.children.get('foobarbaz')), true)
     t.equal(wsDepSet.has(tree.children.get('abbrev')), true)
     t.equal(wsDepSet.has(tree.children.get('abbrev').target), true)
   }

@@ -2,21 +2,24 @@ const Diff = require('../lib/diff.js')
 const t = require('tap')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
+const Arborist = require('../lib/arborist/index.js')
 
 // don't print the full node objects because we don't need to track that
 // for this test and it makes the snapshot unnecessarily noisy.
 
 const normalizePath = path => path.replace(/^\w:/, '').replace(/\\/g, '/')
+const normalizedCWD = normalizePath(process.cwd())
 const formatNode = node =>
   node && Object.assign(Object.create(node.constructor.prototype), {
     name: node.name,
-    path: normalizePath(node.path),
+    path: normalizePath(node.path).split(normalizedCWD).join('{CWD}'),
     integrity: node.integrity,
   })
 
 const {format} = require('tcompare')
 
 const path = diff => normalizePath((diff.actual || diff.ideal).path)
+  .split(normalizedCWD).join('{CWD}')
 
 const formatDiff = obj =>
   Object.assign(Object.create(obj.constructor.prototype), {
@@ -24,8 +27,8 @@ const formatDiff = obj =>
     actual: formatNode(obj.actual),
     ideal: formatNode(obj.ideal),
     leaves: obj.leaves.map(d => path(d)),
-    unchanged: obj.unchanged.map(d => normalizePath(d.path)),
-    removed: obj.removed.map(d => normalizePath(d.path)),
+    unchanged: obj.unchanged.map(d => normalizePath(d.path).split(normalizedCWD).join('{CWD}')),
+    removed: obj.removed.map(d => normalizePath(d.path).split(normalizedCWD).join('{CWD}')),
     children: [...obj.children]
       .map(formatDiff)
       .sort((a, b) => path(a).localeCompare(path(b, 'en'))),
@@ -409,4 +412,78 @@ t.test('diff doesnt break unchanged shrinkwrapped deps', async t => {
   t.equal(diff.leaves.length, 1, 'diff has exactly one leaf')
   t.match(diff.leaves[0], { action: null, ideal: { name: 'shrinkwrapped-dep' } },
     'the shrinkwrapped dep is in the leaves with a null action')
+})
+
+t.test('extraneous pruning in workspaces', async t => {
+  // just load the virtual tree here twice,
+  // and then remove the extraneous ones from the 'ideal'
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: [
+        'packages/*',
+      ],
+    }),
+    'package-lock.json': JSON.stringify({
+      lockfileVersion: 3,
+      packages: {
+        'node_modules/a': {
+          resolved: 'packages/a',
+          link: true,
+        },
+        'node_modules/b': {
+          resolved: 'packages/b',
+          link: true,
+        },
+        'node_modules/wrappy': {
+          version: '1.0.2',
+          extraneous: true,
+        },
+        'packages/a': {
+          version: '1.2.3',
+        },
+        'packages/a/node_modules/once': {
+          version: '1.4.0',
+          extraneous: true,
+          dependencies: {
+            wrappy: '1',
+          },
+        },
+        'packages/b': {
+          version: '1.2.3',
+          dependencies: {
+            once: '*',
+          },
+        },
+        'packages/b/node_modules/abbrev': {
+          version: '1.1.1',
+          extraneous: true,
+        },
+        'packages/b/node_modules/once': {
+          version: '1.4.0',
+          dependencies: {
+            wrappy: '1',
+          },
+        },
+        'packages/b/node_modules/wrappy': {
+          version: '1.0.2',
+        },
+      },
+    }),
+  })
+
+  const actual = await new Arborist({path}).loadVirtual()
+  const ideal = await new Arborist({path}).loadVirtual()
+  for (const node of ideal.inventory.values()) {
+    if (node.extraneous)
+      node.root = null
+  }
+  const idealA = ideal.children.get('a').target
+  const actualA = actual.children.get('a').target
+  const pruneWsA = Diff.calculate({actual, ideal, filterNodes: [idealA, actualA]})
+  t.matchSnapshot(pruneWsA, 'prune in workspace A')
+
+  const idealB = ideal.children.get('b').target
+  const actualB = actual.children.get('b').target
+  const pruneWsB = Diff.calculate({actual, ideal, filterNodes: [idealB, actualB]})
+  t.matchSnapshot(pruneWsB, 'prune in workspace B')
 })

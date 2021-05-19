@@ -313,6 +313,89 @@ Diff {
 }
 `
 
+exports[`test/diff.js TAP extraneous pruning in workspaces > prune in workspace A 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "path": "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "path": "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/a/node_modules/once",
+  ],
+  "unchanged": Array [],
+  "removed": Array [
+    "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/a/node_modules/once",
+  ],
+  "children": Array [
+    Diff {
+      "action": "REMOVE",
+      "actual": Node {
+        "name": "once",
+        "path": "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/a/node_modules/once",
+        "integrity": null,
+      },
+      "ideal": undefined,
+      "leaves": Array [
+        "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/a/node_modules/once",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
+exports[`test/diff.js TAP extraneous pruning in workspaces > prune in workspace B 1`] = `
+Diff {
+  "action": null,
+  "actual": Node {
+    "name": "tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "path": "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "integrity": null,
+  },
+  "ideal": Node {
+    "name": "tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "path": "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces",
+    "integrity": null,
+  },
+  "leaves": Array [
+    "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/b/node_modules/abbrev",
+  ],
+  "unchanged": Array [
+    "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/b/node_modules/once",
+    "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/b/node_modules/wrappy",
+  ],
+  "removed": Array [
+    "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/b/node_modules/abbrev",
+  ],
+  "children": Array [
+    Diff {
+      "action": "REMOVE",
+      "actual": Node {
+        "name": "abbrev",
+        "path": "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/b/node_modules/abbrev",
+        "integrity": null,
+      },
+      "ideal": undefined,
+      "leaves": Array [
+        "{CWD}/test/tap-testdir-diff-extraneous-pruning-in-workspaces/packages/b/node_modules/abbrev",
+      ],
+      "unchanged": Array [],
+      "removed": Array [],
+      "children": Array [],
+    },
+  ],
+}
+`
+
 exports[`test/diff.js TAP filtered diff > c excluded, a and b present 1`] = `
 Diff {
   "action": null,

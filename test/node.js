@@ -1601,6 +1601,7 @@ t.test('explain yourself', t => {
     name: 'x',
     version: '1.2.3',
     location: 'node_modules/x',
+    isWorkspace: false,
     dependents: [{ name: 'x', type: 'prod', spec: '1', from: n.explain() }],
   })
 
@@ -1629,6 +1630,7 @@ t.test('explain yourself', t => {
     name: 'y',
     version: '2.3.4',
     location: 'node_modules/y',
+    isWorkspace: false,
     dependents: [
       {
         type: 'prod',
@@ -1643,6 +1645,7 @@ t.test('explain yourself', t => {
     name: 'z',
     version: '3.4.5',
     location: 'node_modules/y/node_modules/z',
+    isWorkspace: false,
     dependents: [
       {
         type: 'prod',
@@ -1657,6 +1660,7 @@ t.test('explain yourself', t => {
     name: 'a',
     version: '4.5.6',
     location: 'node_modules/y/node_modules/z/node_modules/a',
+    isWorkspace: false,
     dependents: [
       {
         type: 'prod',
@@ -1690,6 +1694,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
+    isWorkspace: false,
     dependents: [],
   })
   b.package = { ...b.package }
@@ -1704,6 +1709,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
+    isWorkspace: false,
     dependents: [{ type: 'prod', name: 'b', spec: '1.2.3', error: 'INVALID', from: n.explain() }],
   })
 
@@ -1726,6 +1732,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '9.9.9',
     location: 'node_modules/b',
+    isWorkspace: false,
     dependents: [
       {
         type: 'prod',
@@ -1751,6 +1758,7 @@ t.test('explain yourself', t => {
     name: 'b',
     version: '1.1.1',
     location: 'node_modules/b',
+    isWorkspace: false,
     dependents: [
       {
         type: 'prod',
@@ -1760,6 +1768,7 @@ t.test('explain yourself', t => {
           name: 'a',
           version: '1.1.1',
           location: 'node_modules/a',
+          isWorkspace: false,
           dependents: [
             {
               type: 'prod',
@@ -1779,6 +1788,7 @@ t.test('explain yourself', t => {
                 name: 'c',
                 version: '1.1.1',
                 location: 'node_modules/c',
+                isWorkspace: false,
                 dependents: [
                   {
                     type: 'prod',
@@ -1827,6 +1837,7 @@ t.test('explain yourself', t => {
         path: '/project/node_modules/b',
       },
       location: 'node_modules/d',
+      isWorkspace: false,
       dependents: [
         {
           type: 'prod',
@@ -1841,6 +1852,7 @@ t.test('explain yourself', t => {
               path: '/project/node_modules/b',
             },
             location: 'node_modules/c',
+            isWorkspace: false,
             dependents: [
               {
                 type: 'prod',
@@ -1850,6 +1862,7 @@ t.test('explain yourself', t => {
                   name: 'b',
                   version: '1.2.3',
                   location: 'node_modules/b',
+                  isWorkspace: false,
                   dependents: [
                     {
                       type: 'prod',
@@ -1859,6 +1872,7 @@ t.test('explain yourself', t => {
                         name: 'a',
                         version: '1.2.3',
                         location: 'node_modules/a',
+                        isWorkspace: false,
                         dependents: [
                           {
                             type: 'prod',
@@ -1904,6 +1918,56 @@ t.test('explain yourself', t => {
     package: { noname: 'bad', noversion: 'node' },
   })
 
+  // workspaces
+  const workspacesRoot = new Node({
+    path: '/some/path',
+    pkg: {
+      name: 'project-root',
+      version: '1.0.0',
+      workspaces: ['a'],
+    },
+  })
+  const workspacesMap = new Map(
+    [['a', '/some/path/a']]
+  )
+  const ws = new Node({
+    root: workspacesRoot,
+    path: '/some/path/a',
+    pkg: { name: 'a', version: '1.0.0' },
+  })
+  new Link({
+    name: 'a',
+    parent: workspacesRoot,
+    target: ws,
+  })
+  workspacesRoot.workspaces = workspacesMap
+  t.strictSame(
+    normalizePaths(ws.explain()),
+    {
+      name: 'a',
+      version: '1.0.0',
+      location: 'a',
+      isWorkspace: true,
+      dependents: [],
+      linksIn: [
+        {
+          name: 'a',
+          version: '1.0.0',
+          location: 'node_modules/a',
+          isWorkspace: true,
+          dependents: [
+            {
+              type: 'workspace',
+              name: 'a',
+              spec: 'file:/some/path/a',
+              from: { location: '/some/path' },
+            },
+          ],
+        },
+      ],
+    },
+    'should have workspaces properly set up'
+  )
   t.end()
 })
 

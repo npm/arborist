@@ -10,16 +10,16 @@ const fixture = (t, p) => require(`${fixtures}/reify-cases/${p}`)(t)
 
 const isWindows = process.platform === 'win32'
 const PORT = 12345 + (+process.env.TAP_CHILD_ID || 0)
-t.test('setup explosive server', t => {
-  // nothing in this should ever hit the server
-  const server = require('http').createServer(() => {
-    throw new Error('rebuild should not hit the registry')
-  })
-  server.listen(PORT, () => {
-    t.parent.teardown(() => server.close())
-    t.end()
-  })
+
+const server = require('http').createServer(() => {
+  throw new Error('rebuild should not hit the registry')
 })
+t.before(() => new Promise(res => {
+  server.listen(PORT, () => {
+    t.teardown(() => server.close())
+    res()
+  })
+}))
 
 const registry = `http://localhost:${PORT}`
 const newArb = opt => new Arborist({...opt, registry})
@@ -218,7 +218,7 @@ t.test('run scripts in foreground if foregroundScripts set', async t => {
     },
   })
 
-  const arb = new Arborist({path, foregroundScripts: true})
+  const arb = new Arborist({path, registry, foregroundScripts: true})
   await arb.rebuild()
   // add a sentinel to make sure we didn't get too many entries, since
   // t.match() will allow trailing/extra values in the test object.
@@ -257,7 +257,7 @@ t.test('log failed exit codes as well, even if we dont crash', async t => {
       },
     },
   })
-  const arb = new Arborist({path})
+  const arb = newArb({path})
   const checkLogs = logTracker()
   await arb.rebuild({ handleOptionalFailure: true })
   t.strictSame(checkLogs(), [
@@ -628,7 +628,7 @@ t.test('put bins in the right place for linked-global top pkgs', async t => {
     },
   })
   const binpath = resolve(path, isWindows ? 'lib' : 'bin')
-  const arb = new Arborist({ path: path + '/lib', registry, global: true })
+  const arb = newArb({ path: path + '/lib', global: true })
   await arb.rebuild()
   const expect = isWindows ? [
     'foo',
@@ -641,4 +641,75 @@ t.test('put bins in the right place for linked-global top pkgs', async t => {
     const rel = relpath(t.testdirName, p)
     t.equal(fs.lstatSync(p)[test](), true, `${test} ${rel}`)
   }
+})
+
+t.test('only rebuild for workspace', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+      dependencies: {
+        inroot: '*',
+      },
+    }),
+    node_modules: {
+      a: t.fixture('symlink', '../packages/a'),
+      b: t.fixture('symlink', '../packages/b'),
+      inroot: {
+        'package.json': JSON.stringify({
+          name: 'inroot',
+          version: '1.2.3',
+          scripts: {
+            install: 'exit 1',
+          },
+        }),
+      },
+      adep: {
+        'package.json': JSON.stringify({
+          name: 'adep',
+          version: '1.2.3',
+          scripts: {
+            install: 'node adep.js',
+          },
+        }),
+        'adep.js': `require('fs').writeFileSync('adep.txt', 'adep')`,
+      },
+      bdep: {
+        'package.json': JSON.stringify({
+          name: 'bdep',
+          version: '1.2.3',
+          scripts: {
+            install: 'node bdep.js',
+          },
+        }),
+        'bdep.js': `require('fs').writeFileSync('bdep.txt', 'bdep')`,
+      },
+    },
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            adep: '*',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+          dependencies: {
+            bdep: '*',
+          },
+        }),
+      },
+    },
+  })
+
+  const arb = newArb({ path, workspaces: ['a'] })
+  await arb.rebuild()
+  const adepTxt = resolve(path, 'node_modules/adep/adep.txt')
+  const bdepTxt = resolve(path, 'node_modules/bdep/bdep.txt')
+  t.equal(fs.readFileSync(adepTxt, 'utf8'), 'adep', 'adep rebuilt')
+  t.throws(() => fs.readFileSync(bdepTxt, 'utf8'), { code: 'ENOENT' }, 'bdep not rebuilt')
 })

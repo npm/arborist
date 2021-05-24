@@ -487,3 +487,49 @@ t.test('extraneous pruning in workspaces', async t => {
   const pruneWsB = Diff.calculate({actual, ideal, filterNodes: [idealB, actualB]})
   t.matchSnapshot(pruneWsB, 'prune in workspace B')
 })
+
+t.test('check versions (even if all other metadata is missing)', t => {
+  const actual = new Node({
+    path: '/some/path',
+    pkg: {
+      dependencies: {
+        foo: '',
+      },
+    },
+    children: [
+      { name: 'foo', pkg: { name: 'foo', version: '1.0.0' }},
+    ],
+  })
+
+  const ideal = new Node({
+    path: '/some/path',
+    pkg: {
+      dependencies: {
+        foo: '',
+      },
+    },
+    children: [
+      { name: 'foo', pkg: { name: 'foo', version: '1.2.3' }},
+    ],
+  })
+
+  const diff = Diff.calculate({actual, ideal})
+  t.match(diff.children, [
+    {
+      actual: actual.children.get('foo'),
+      ideal: ideal.children.get('foo'),
+      action: 'CHANGE',
+    },
+  ])
+  t.equal(diff.children.length, 1)
+
+  t.match(diff.leaves, [
+    {
+      actual: actual.children.get('foo'),
+      ideal: ideal.children.get('foo'),
+      action: 'CHANGE',
+    },
+  ])
+  t.equal(diff.leaves.length, 1)
+  t.end()
+})

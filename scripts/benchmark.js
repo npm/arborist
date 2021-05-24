@@ -175,8 +175,7 @@ const suite = new Suite({
 const teardowns = []
 const main = async () => {
   console.log('starting mock server')
-  await new Promise((res, rej) =>
-    registryServer.start(er => er ? rej(er) : res()))
+  await registryServer.start()
 
   options.registry = registryServer.registry
   options.registryServer = registryServer

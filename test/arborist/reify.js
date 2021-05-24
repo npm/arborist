@@ -2066,3 +2066,30 @@ t.test('update a dep when the lockfile is lying about it', async t => {
   t.equal(abbrev.version, '1.1.1')
   t.equal(require(abbrev.path + '/package.json').version, '1.1.1')
 })
+
+t.test('shrinkwrap which lacks metadata updates deps', async t => {
+  const path = t.testdir({
+    'package.json': '{}',
+  })
+
+  const first = await reify(path, {
+    add: ['@isaacs/testing-shrinkwrap-abbrev@1.2.0'],
+  })
+  const firstAbbrev = first.children.get('@isaacs/testing-shrinkwrap-abbrev')
+    .children.get('abbrev')
+  t.equal(firstAbbrev.version, '1.1.0')
+
+  const abbrevPath = firstAbbrev.path
+  const abbrevpj = () =>
+    JSON.parse(fs.readFileSync(abbrevPath + '/package.json', 'utf8'))
+
+  t.equal(abbrevpj().version, firstAbbrev.version)
+
+  const second = await reify(path, {
+    add: ['@isaacs/testing-shrinkwrap-abbrev@1.2.1'],
+  })
+  const secondAbbrev = second.children.get('@isaacs/testing-shrinkwrap-abbrev')
+    .children.get('abbrev')
+  t.equal(secondAbbrev.version, '1.1.1')
+  t.equal(abbrevpj().version, secondAbbrev.version)
+})

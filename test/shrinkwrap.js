@@ -1418,3 +1418,48 @@ t.test('prioritize npm-shrinkwrap.json over package-lock.json', async t => {
   const sw = await Shrinkwrap.load({path})
   t.equal(sw.type, 'npm-shrinkwrap.json')
 })
+
+t.test('do not add metadata if versions mismatch', async t => {
+  const meta = new Shrinkwrap({ path: '/home/user/projects/root' })
+  // fake load
+  meta.data = {
+    lockfileVersion: 2,
+    requires: true,
+    dependencies: {},
+    packages: {},
+  }
+
+  const root = new Node({
+    path: '/home/usr/projects/root',
+    meta,
+    pkg: {
+      name: 'root',
+      version: '1.2.3',
+      dependencies: {
+        foo: '1',
+      },
+    },
+    children: [
+      {
+        name: 'foo',
+        pkg: {
+          name: 'foo',
+          version: '1.0.0',
+        },
+        resolved: 'https://registry.npmjs.org/foo-1.0.0.tgz',
+        integrity: 'sha512-this is no sha of mine',
+      },
+    ],
+  })
+  const oldFoo = root.children.get('foo')
+  const newFoo = new Node({
+    path: oldFoo.path,
+    root,
+    pkg: {
+      name: 'foo',
+      version: '1.2.3',
+    },
+  })
+  t.equal(newFoo.resolved, null)
+  t.equal(newFoo.integrity, null)
+})

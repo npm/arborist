@@ -2016,3 +2016,53 @@ t.test('reify audit only workspace deps when reifying workspace', async t => {
   }, 'kind-of audited')
   t.matchSnapshot(printTree(tree), 'resulting tree')
 })
+
+t.test('update a dep when the lockfile is lying about it', async t => {
+  // lockfile and pj have new version, but old version is in nm
+  // no hidden lockfile to provide metadata
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        abbrev: '1.1.1',
+      },
+    }),
+    'package-lock.json': JSON.stringify({
+      lockfileVersion: 2,
+      requires: true,
+      packages: {
+        '': {
+          devDependencies: {
+            abbrev: '1.1.1',
+          },
+        },
+        'node_modules/abbrev': {
+          version: '1.1.1',
+          resolved: 'https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz',
+          integrity: 'sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==',
+          dev: true,
+        },
+      },
+      dependencies: {
+        abbrev: {
+          version: '1.1.1',
+          resolved: 'https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz',
+          integrity: 'sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==',
+          dev: true,
+        },
+      },
+    }),
+    node_modules: {
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.1.0',
+        }),
+      },
+    },
+  })
+
+  const tree = await reify(path)
+  const abbrev = tree.children.get('abbrev')
+  t.equal(abbrev.version, '1.1.1')
+  t.equal(require(abbrev.path + '/package.json').version, '1.1.1')
+})

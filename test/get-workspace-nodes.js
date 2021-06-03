@@ -4,7 +4,7 @@ const Arborist = require('../lib/arborist/index.js')
 const { resolve } = require('path')
 const path = resolve(__dirname, './fixtures/workspaces-shared-deps-virtual')
 
-const log = require('../lib/proc-log.js')
+const log = require('proc-log')
 
 const warningTracker = () => {
   const list = []

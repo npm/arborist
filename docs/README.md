@@ -1,6 +1,6 @@
 # @npmcli/arborist Documentation
 
-* Classes
+* [Classes](./classes)
   * [Node](./classes/node.md)
   * [Link](./classes/link.md)
   * [Edge](./classes/node.md)

@@ -6,8 +6,10 @@ t.test('basic operations', t => {
   t.equal(i.primaryKey, 'location')
   t.same(i.indexes, ['name', 'license', 'funding', 'realpath', 'packageName'])
 
-  i.add({ location: 'x', name: 'x', package: { license: 'MIT', funding: 'foo' }})
-  i.add({ location: 'y', name: 'x', package: { license: 'ISC', funding: { url: 'foo' } }})
+  // uk spelling
+  i.add({ location: 'x', name: 'x', package: { licence: 'MIT', funding: 'foo' }})
+  // old-style multi-license array
+  i.add({ location: 'y', name: 'x', package: { licenses: [{ type: 'ISC' }], funding: { url: 'foo' } }})
   i.add({ location: 'z', name: 'z', package: { license: { type: 'MIT' }, funding: 'bar' }})
   i.add({ location: 'a', name: 'a', package: {}})
 
@@ -19,29 +21,29 @@ t.test('basic operations', t => {
   t.same([...i.query('license')].sort((a, b) => String(a).localeCompare(String(b, 'en'))),
     ['ISC', 'MIT', undefined])
   t.same([...i.query('license', 'MIT')], [
-    { location: 'x', name: 'x', package: { license: 'MIT', funding: 'foo' }},
+    { location: 'x', name: 'x', package: { licence: 'MIT', funding: 'foo' }},
     { location: 'z', name: 'z', package: { license: { type: 'MIT' }, funding: 'bar'}},
   ], 'can query by license')
   t.same(i.query('license', 'blerg'), new Set(),
     'empty query returns empty set')
   t.same([...i.query('name', 'x')], [
-    { location: 'x', name: 'x', package: { license: 'MIT', funding: 'foo'}},
-    { location: 'y', name: 'x', package: { license: 'ISC', funding: { url: 'foo' } }},
+    { location: 'x', name: 'x', package: { licence: 'MIT', funding: 'foo'}},
+    { location: 'y', name: 'x', package: { licenses: [{ type: 'ISC' }], funding: { url: 'foo' } }},
   ], 'can query by name')
   t.same([...i.query('funding')].sort((a, b) => String(a).localeCompare(String(b, 'en'))),
     ['bar', 'foo', undefined])
   t.same([...i.query('funding', 'foo')], [
-    { location: 'x', name: 'x', package: { license: 'MIT', funding: 'foo' } },
-    { location: 'y', name: 'x', package: { license: 'ISC', funding: { url: 'foo' } }},
+    { location: 'x', name: 'x', package: { licence: 'MIT', funding: 'foo' } },
+    { location: 'y', name: 'x', package: { licenses: [{ type: 'ISC' }], funding: { url: 'foo' } }},
   ], 'can query by funding url')
 
   const x = i.get('x')
-  t.same(x, { location: 'x', name: 'x', package: { license: 'MIT', funding: 'foo' }}, 'get by location')
+  t.same(x, { location: 'x', name: 'x', package: { licence: 'MIT', funding: 'foo' }}, 'get by location')
   i.add(x)
   t.same(i.get('x'), x, 'adding a second time has no effect')
   t.equal(i.has(x), true, 'has a node')
-  i.add({ location: 'x', name: 'a', package: { license: 'ABC' }})
-  t.same(i.get('x'), { location: 'x', name: 'a', package: { license: 'ABC' }},
+  i.add({ location: 'x', name: 'a', package: { licences: [{ type: 'ABC' }] }})
+  t.same(i.get('x'), { location: 'x', name: 'a', package: { licences: [{ type: 'ABC' }] }},
     'new node at same location overwrites')
   t.equal(i.has(x), false, 'node has been overwritten')
 
@@ -88,6 +90,20 @@ t.test('basic operations', t => {
         license: null,
       },
     }), 'doesnt throw on falsy license info')
+
+  // inherited properties and getters are allowed
+  const n = Object.assign(Object.create({
+    location: 'n',
+    get packageName () {
+      return this.package.name
+    },
+    get package () {
+      return this._pkg
+    }
+  }), { _pkg: { name: 'n' }})
+  i.add(n)
+  t.equal(i.get('n'), n, 'found by inherited location')
+  t.same([...i.query('packageName', 'n')], [n], 'found by packageName query')
 
   t.end()
 })

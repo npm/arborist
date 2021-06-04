@@ -46,6 +46,17 @@ const mocks = {
   rimraf: rimrafMock,
 }
 
+const oldLockfileWarning = [
+  'warn',
+  'old lockfile',
+  `
+The package-lock.json file was created with an old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
+]
+
 // need this to be injected so that it doesn't pull from main cache
 const moveFile = t.mock('@npmcli/move-file', { fs: fsMock })
 mocks['@npmcli/move-file'] = moveFile
@@ -535,7 +546,14 @@ t.test('warn on reifying deprecated dependency', t => {
   })
   const check = warningTracker()
   return a.reify({ update: true }).then(() => t.match(check(), [
-    ['warn', 'deprecated', 'mkdirp@0.5.3: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)'],
+    oldLockfileWarning,
+    [
+      'warn',
+      'deprecated',
+      'mkdirp@0.5.3: Legacy versions of mkdirp are no longer supported. ' +
+      'Please update to mkdirp 1.x. (Note that the API surface has changed ' +
+      'to use Promises in 1.x.)',
+    ],
   ]))
 })
 
@@ -688,13 +706,16 @@ t.test('rollbacks', { buffered: false }, t => {
     }).then(tree => 'it worked'), new Error('poop'))
       .then(() => {
         const warnings = check()
-        t.equal(warnings.length, 1)
-        t.match(warnings, [[
-          'warn',
-          'cleanup',
-          'Failed to remove some directories',
-          [[String, new Error('rimraf fail')]],
-        ]])
+        t.equal(warnings.length, 2)
+        t.match(warnings, [
+          oldLockfileWarning,
+          [
+            'warn',
+            'cleanup',
+            'Failed to remove some directories',
+            [[String, new Error('rimraf fail')]],
+          ],
+        ])
       })
       .then(() => failRimraf = false)
   })
@@ -805,13 +826,16 @@ t.test('rollbacks', { buffered: false }, t => {
       update: ['@isaacs/testing-bundledeps-parent'],
     }).then(tree => printTree(tree))).then(() => {
       const warnings = check()
-      t.equal(warnings.length, 1)
-      t.match(warnings, [[
-        'warn',
-        'cleanup',
-        'Failed to remove some directories',
-        [[String, new Error('rimraf fail')]],
-      ]])
+      t.equal(warnings.length, 2)
+      t.match(warnings, [
+        oldLockfileWarning,
+        [
+          'warn',
+          'cleanup',
+          'Failed to remove some directories',
+          [[String, new Error('rimraf fail')]],
+        ],
+      ])
     })
       .then(() => failRimraf = false)
   })

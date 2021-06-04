@@ -20,7 +20,14 @@ Object {
   "dependencies": Object {
     "once": Object {
       "dev": true,
+      "requires": Object {
+        "wrappy": "1",
+      },
       "version": "1.4.0",
+    },
+    "wrappy": Object {
+      "dev": true,
+      "version": "1.0.2",
     },
   },
   "lockfileVersion": 2,
@@ -34,8 +41,17 @@ Object {
       "version": "1.0.0",
     },
     "node_modules/once": Object {
+      "dependencies": Object {
+        "wrappy": "1",
+      },
       "dev": true,
+      "integrity": "sha1-WDsap3WWHUsROsF9nFC6753Xa9E=",
       "version": "1.4.0",
+    },
+    "node_modules/wrappy": Object {
+      "dev": true,
+      "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
+      "version": "1.0.2",
     },
   },
   "requires": true,

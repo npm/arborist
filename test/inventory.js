@@ -99,7 +99,7 @@ t.test('basic operations', t => {
     },
     get package () {
       return this._pkg
-    }
+    },
   }), { _pkg: { name: 'n' }})
   i.add(n)
   t.equal(i.get('n'), n, 'found by inherited location')

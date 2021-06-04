@@ -1894,7 +1894,6 @@ ArboristNode {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "packageName": "target",
       "path": "{CWD}/test/arborist/tap-testdir-reify-create-link-deps/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/tap-testdir-reify-create-link-deps/target",
       "resolved": "file:../target",
@@ -2617,7 +2616,6 @@ ArboristNode {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "packageName": "target",
       "path": "{CWD}/test/arborist/tap-testdir-reify-dry-run-do-not-get-anything-wet-link-dep-empty/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/tap-testdir-reify-dry-run-do-not-get-anything-wet-link-dep-empty/target",
       "resolved": "file:../target",
@@ -4084,7 +4082,6 @@ ArboristNode {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "packageName": "target",
       "path": "{CWD}/test/arborist/tap-testdir-reify-link-deps-already-in-place/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/tap-testdir-reify-link-deps-already-in-place/target",
       "resolved": "file:../target",
@@ -44520,6 +44517,12 @@ ArboristNode {
           "to": "node_modules/source-map-support",
           "type": "prod",
         },
+        "typescript" => EdgeOut {
+          "name": "typescript",
+          "spec": ">=2.0",
+          "to": "node_modules/typescript",
+          "type": "peer",
+        },
         "yn" => EdgeOut {
           "name": "yn",
           "spec": "^3.0.0",
@@ -44611,6 +44614,12 @@ ArboristNode {
           "name": "typescript",
           "spec": "^3.7.2",
           "type": "prod",
+        },
+        EdgeIn {
+          "from": "node_modules/ts-node",
+          "name": "typescript",
+          "spec": ">=2.0",
+          "type": "peer",
         },
       },
       "location": "node_modules/typescript",
@@ -45474,8 +45483,13 @@ exports[`test/arborist/reify.js TAP update a child of a node with bundled deps >
 ArboristNode {
   "children": Map {
     "@isaacs/testing-bundledeps" => ArboristNode {
+      "bundleDependencies": Array [
+        "@isaacs/testing-bundledeps-a",
+      ],
       "children": Map {
         "@isaacs/testing-bundledeps-a" => ArboristNode {
+          "bundled": true,
+          "bundler": "node_modules/@isaacs/testing-bundledeps",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/@isaacs/testing-bundledeps",
@@ -45499,6 +45513,8 @@ ArboristNode {
           "version": "1.0.0",
         },
         "@isaacs/testing-bundledeps-b" => ArboristNode {
+          "bundled": true,
+          "bundler": "node_modules/@isaacs/testing-bundledeps",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",

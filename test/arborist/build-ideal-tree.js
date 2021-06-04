@@ -31,6 +31,17 @@ const {
   printTree,
 } = require('../utils.js')
 
+const oldLockfileWarning = [
+  'warn',
+  'old lockfile',
+  `
+The package-lock.json file was created with an old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
+]
+
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
   .split(registry).join('https://registry.npmjs.org/')
@@ -1154,14 +1165,7 @@ t.test('no fix available', async t => {
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
   t.equal(arb.idealTree.children.get('mkdirp').package.version, '0.5.1')
   t.match(checkLogs(), [
-    [
-      'warn',
-      'old lockfile',
-      '\nThe package-lock.json file was created with an old version of npm,\n' +
-       'so supplemental metadata must be fetched from the registry.\n' +
-       '\n' +
-       'This is a one-time fix-up, please be patient...\n',
-    ],
+    oldLockfileWarning,
     ['warn', 'audit', 'No fix available for mkdirp@*'],
   ])
 })
@@ -1180,14 +1184,7 @@ t.test('no fix available, linked top package', async t => {
   await arb.audit()
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
   t.strictSame(checkLogs(), [
-    [
-      'warn',
-      'old lockfile',
-      '\nThe package-lock.json file was created with an old version of npm,\n' +
-      'so supplemental metadata must be fetched from the registry.\n' +
-      '\n' +
-      'This is a one-time fix-up, please be patient...\n',
-    ],
+    oldLockfileWarning,
     ['warn', 'audit',
       'Manual fix required in linked project at ./mkdirp-unfixable for mkdirp@*.\n' +
     "'cd ./mkdirp-unfixable' and run 'npm audit' for details.",
@@ -1486,16 +1483,7 @@ t.test('complete build for project with old lockfile', async t => {
   const tree = await arb.buildIdealTree({ complete: true })
   t.matchSnapshot(printTree(tree))
   t.match(checkLogs(), [
-    [
-      'warn',
-      'old lockfile',
-      `
-The package-lock.json file was created with an old version of npm,
-so supplemental metadata must be fetched from the registry.
-
-This is a one-time fix-up, please be patient...
-`,
-    ],
+    oldLockfileWarning,
   ])
 })
 

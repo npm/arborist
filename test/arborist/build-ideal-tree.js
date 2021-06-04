@@ -31,6 +31,17 @@ const {
   printTree,
 } = require('../utils.js')
 
+const oldLockfileWarning = [
+  'warn',
+  'old lockfile',
+  `
+The package-lock.json file was created with an old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
+]
+
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
   .split(registry).join('https://registry.npmjs.org/')
@@ -1153,7 +1164,10 @@ t.test('no fix available', async t => {
   await arb.audit()
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
   t.equal(arb.idealTree.children.get('mkdirp').package.version, '0.5.1')
-  t.match(checkLogs(), [['warn', 'audit', 'No fix available for mkdirp@*']])
+  t.match(checkLogs(), [
+    oldLockfileWarning,
+    ['warn', 'audit', 'No fix available for mkdirp@*'],
+  ])
 })
 
 t.test('no fix available, linked top package', async t => {
@@ -1169,10 +1183,12 @@ t.test('no fix available, linked top package', async t => {
 
   await arb.audit()
   t.matchSnapshot(printTree(await arb.buildIdealTree()))
-  t.strictSame(checkLogs(), [['warn', 'audit',
-    'Manual fix required in linked project at ./mkdirp-unfixable for mkdirp@*.\n' +
+  t.strictSame(checkLogs(), [
+    oldLockfileWarning,
+    ['warn', 'audit',
+      'Manual fix required in linked project at ./mkdirp-unfixable for mkdirp@*.\n' +
     "'cd ./mkdirp-unfixable' and run 'npm audit' for details.",
-  ]])
+    ]])
 })
 
 t.test('workspaces', t => {
@@ -1467,16 +1483,7 @@ t.test('complete build for project with old lockfile', async t => {
   const tree = await arb.buildIdealTree({ complete: true })
   t.matchSnapshot(printTree(tree))
   t.match(checkLogs(), [
-    [
-      'warn',
-      'old lockfile',
-      `
-The package-lock.json file was created with an old version of npm,
-so supplemental metadata must be fetched from the registry.
-
-This is a one-time fix-up, please be patient...
-`,
-    ],
+    oldLockfileWarning,
   ])
 })
 
@@ -3108,4 +3115,42 @@ t.test('add deps to workspaces', async t => {
     t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
     t.matchSnapshot(printTree(tree))
   })
+})
+
+t.test('inflates old lockfile with hasInstallScript', async t => {
+  const path = t.testdir({
+    'package-lock.json': JSON.stringify({
+      requires: true,
+      lockfileVersion: 1,
+      dependencies: {
+        esbuild: {
+          version: '0.11.10',
+          resolved: 'https://registry.npmjs.org/esbuild/-/esbuild-0.11.10.tgz',
+          integrity: 'sha512-XvGbf+UreVFA24Tlk6sNOqNcvF2z49XAZt4E7A4H80+yqn944QOLTTxaU0lkdYNtZKFiITNea+VxmtrfjvnLPA==',
+        },
+      },
+    }),
+    'package.json': JSON.stringify({
+      dependencies: {
+        esbuild: '^0.11.10',
+      },
+    }),
+    node_modules: {
+      esbuild: {
+        'package.json': JSON.stringify({
+          name: 'esbuild',
+          scripts: {
+            postinstall: 'node install.js',
+          },
+          version: '0.11.10',
+        }),
+      },
+    },
+  })
+
+  const tree = await buildIdeal(path, {
+    add: ['esbuild@0.11.10'],
+  })
+
+  t.equal(tree.children.get('esbuild').hasInstallScript, true)
 })

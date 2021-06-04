@@ -1894,7 +1894,6 @@ ArboristNode {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "packageName": "target",
       "path": "{CWD}/test/arborist/tap-testdir-reify-create-link-deps/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/tap-testdir-reify-create-link-deps/target",
       "resolved": "file:../target",
@@ -2617,7 +2616,6 @@ ArboristNode {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "packageName": "target",
       "path": "{CWD}/test/arborist/tap-testdir-reify-dry-run-do-not-get-anything-wet-link-dep-empty/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/tap-testdir-reify-dry-run-do-not-get-anything-wet-link-dep-empty/target",
       "resolved": "file:../target",
@@ -4084,7 +4082,6 @@ ArboristNode {
       },
       "location": "node_modules/linked-dep",
       "name": "linked-dep",
-      "packageName": "target",
       "path": "{CWD}/test/arborist/tap-testdir-reify-link-deps-already-in-place/node_modules/linked-dep",
       "realpath": "{CWD}/test/arborist/tap-testdir-reify-link-deps-already-in-place/target",
       "resolved": "file:../target",
@@ -34322,7 +34319,7 @@ ArboristNode {
         "fsevents" => EdgeOut {
           "name": "fsevents",
           "spec": "~2.1.2",
-          "to": "node_modules/fsevents",
+          "to": null,
           "type": "optional",
         },
         "glob-parent" => EdgeOut {
@@ -34738,23 +34735,6 @@ ArboristNode {
       "resolved": "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz",
       "version": "1.0.8",
     },
-    "commander" => ArboristNode {
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/uglify-js",
-          "name": "commander",
-          "spec": "~2.20.3",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/commander",
-      "name": "commander",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/commander",
-      "resolved": "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz",
-      "version": "2.20.3",
-    },
     "commondir" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
@@ -34847,12 +34827,6 @@ ArboristNode {
     "core-util-is" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/readable-stream",
-          "name": "core-util-is",
-          "spec": "~1.0.0",
-          "type": "prod",
-        },
         EdgeIn {
           "from": "node_modules/verror",
           "name": "core-util-is",
@@ -35817,23 +35791,6 @@ ArboristNode {
       "resolved": "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz",
       "version": "1.0.0",
     },
-    "fsevents" => ArboristNode {
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/chokidar",
-          "name": "fsevents",
-          "spec": "~2.1.2",
-          "type": "optional",
-        },
-      },
-      "location": "node_modules/fsevents",
-      "name": "fsevents",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/fsevents",
-      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.1.2.tgz",
-      "version": "2.1.2",
-    },
     "function-loop" => ArboristNode {
       "dev": true,
       "edgesIn": Set {
@@ -36074,7 +36031,7 @@ ArboristNode {
         "uglify-js" => EdgeOut {
           "name": "uglify-js",
           "spec": "^3.1.4",
-          "to": "node_modules/uglify-js",
+          "to": null,
           "type": "optional",
         },
       },
@@ -36318,12 +36275,6 @@ ArboristNode {
           "spec": "2",
           "type": "prod",
         },
-        EdgeIn {
-          "from": "node_modules/readable-stream",
-          "name": "inherits",
-          "spec": "~2.0.3",
-          "type": "prod",
-        },
       },
       "location": "node_modules/inherits",
       "name": "inherits",
@@ -36480,23 +36431,6 @@ ArboristNode {
       "name": "is-typedarray",
       "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/is-typedarray",
       "resolved": "https://registry.npmjs.org/is-typedarray/-/is-typedarray-1.0.0.tgz",
-      "version": "1.0.0",
-    },
-    "isarray" => ArboristNode {
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/readable-stream",
-          "name": "isarray",
-          "spec": "~1.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/isarray",
-      "name": "isarray",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/isarray",
-      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
       "version": "1.0.0",
     },
     "isexe" => ArboristNode {
@@ -38656,23 +38590,6 @@ ArboristNode {
       "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-3.0.0.tgz",
       "version": "3.0.0",
     },
-    "process-nextick-args" => ArboristNode {
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/readable-stream",
-          "name": "process-nextick-args",
-          "spec": "~2.0.0",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/process-nextick-args",
-      "name": "process-nextick-args",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/process-nextick-args",
-      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
-      "version": "2.0.1",
-    },
     "promise" => ArboristNode {
       "edgesIn": Set {
         EdgeIn {
@@ -38922,86 +38839,6 @@ ArboristNode {
       "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/read-pkg-up",
       "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-4.0.0.tgz",
       "version": "4.0.0",
-    },
-    "readable-stream" => ArboristNode {
-      "children": Map {
-        "safe-buffer" => ArboristNode {
-          "dev": true,
-          "edgesIn": Set {
-            EdgeIn {
-              "from": "node_modules/readable-stream",
-              "name": "safe-buffer",
-              "spec": "~5.1.1",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/readable-stream/node_modules/safe-buffer",
-          "name": "safe-buffer",
-          "optional": true,
-          "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/readable-stream/node_modules/safe-buffer",
-          "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
-          "version": "5.1.2",
-        },
-      },
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/tap-mocha-reporter",
-          "name": "readable-stream",
-          "spec": "^2.1.5",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "core-util-is" => EdgeOut {
-          "name": "core-util-is",
-          "spec": "~1.0.0",
-          "to": "node_modules/core-util-is",
-          "type": "prod",
-        },
-        "inherits" => EdgeOut {
-          "name": "inherits",
-          "spec": "~2.0.3",
-          "to": "node_modules/inherits",
-          "type": "prod",
-        },
-        "isarray" => EdgeOut {
-          "name": "isarray",
-          "spec": "~1.0.0",
-          "to": "node_modules/isarray",
-          "type": "prod",
-        },
-        "process-nextick-args" => EdgeOut {
-          "name": "process-nextick-args",
-          "spec": "~2.0.0",
-          "to": "node_modules/process-nextick-args",
-          "type": "prod",
-        },
-        "safe-buffer" => EdgeOut {
-          "name": "safe-buffer",
-          "spec": "~5.1.1",
-          "to": "node_modules/readable-stream/node_modules/safe-buffer",
-          "type": "prod",
-        },
-        "string_decoder" => EdgeOut {
-          "name": "string_decoder",
-          "spec": "~1.1.1",
-          "to": "node_modules/string_decoder",
-          "type": "prod",
-        },
-        "util-deprecate" => EdgeOut {
-          "name": "util-deprecate",
-          "spec": "~1.0.1",
-          "to": "node_modules/util-deprecate",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/readable-stream",
-      "name": "readable-stream",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/readable-stream",
-      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz",
-      "version": "2.3.6",
     },
     "readdirp" => ArboristNode {
       "dev": true,
@@ -39542,12 +39379,6 @@ ArboristNode {
           "spec": "^0.6.0",
           "type": "prod",
         },
-        EdgeIn {
-          "from": "node_modules/uglify-js",
-          "name": "source-map",
-          "spec": "~0.6.1",
-          "type": "prod",
-        },
       },
       "location": "node_modules/source-map",
       "name": "source-map",
@@ -39884,50 +39715,6 @@ ArboristNode {
       "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/stack-utils",
       "resolved": "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.2.tgz",
       "version": "1.0.2",
-    },
-    "string_decoder" => ArboristNode {
-      "children": Map {
-        "safe-buffer" => ArboristNode {
-          "dev": true,
-          "edgesIn": Set {
-            EdgeIn {
-              "from": "node_modules/string_decoder",
-              "name": "safe-buffer",
-              "spec": "~5.1.0",
-              "type": "prod",
-            },
-          },
-          "location": "node_modules/string_decoder/node_modules/safe-buffer",
-          "name": "safe-buffer",
-          "optional": true,
-          "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/string_decoder/node_modules/safe-buffer",
-          "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
-          "version": "5.1.2",
-        },
-      },
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/readable-stream",
-          "name": "string_decoder",
-          "spec": "~1.1.1",
-          "type": "prod",
-        },
-      },
-      "edgesOut": Map {
-        "safe-buffer" => EdgeOut {
-          "name": "safe-buffer",
-          "spec": "~5.1.0",
-          "to": "node_modules/string_decoder/node_modules/safe-buffer",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/string_decoder",
-      "name": "string_decoder",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/string_decoder",
-      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
-      "version": "1.1.1",
     },
     "strip-bom" => ArboristNode {
       "dev": true,
@@ -44221,7 +44008,7 @@ ArboristNode {
         "readable-stream" => EdgeOut {
           "name": "readable-stream",
           "spec": "^2.1.5",
-          "to": "node_modules/readable-stream",
+          "to": null,
           "type": "optional",
         },
         "tap-parser" => EdgeOut {
@@ -44520,6 +44307,12 @@ ArboristNode {
           "to": "node_modules/source-map-support",
           "type": "prod",
         },
+        "typescript" => EdgeOut {
+          "name": "typescript",
+          "spec": ">=2.0",
+          "to": "node_modules/typescript",
+          "type": "peer",
+        },
         "yn" => EdgeOut {
           "name": "yn",
           "spec": "^3.0.0",
@@ -44612,6 +44405,12 @@ ArboristNode {
           "spec": "^3.7.2",
           "type": "prod",
         },
+        EdgeIn {
+          "from": "node_modules/ts-node",
+          "name": "typescript",
+          "spec": ">=2.0",
+          "type": "peer",
+        },
       },
       "location": "node_modules/typescript",
       "name": "typescript",
@@ -44633,37 +44432,6 @@ ArboristNode {
       "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/ua-parser-js",
       "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.20.tgz",
       "version": "0.7.20",
-    },
-    "uglify-js" => ArboristNode {
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/handlebars",
-          "name": "uglify-js",
-          "spec": "^3.1.4",
-          "type": "optional",
-        },
-      },
-      "edgesOut": Map {
-        "commander" => EdgeOut {
-          "name": "commander",
-          "spec": "~2.20.3",
-          "to": "node_modules/commander",
-          "type": "prod",
-        },
-        "source-map" => EdgeOut {
-          "name": "source-map",
-          "spec": "~0.6.1",
-          "to": "node_modules/source-map",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/uglify-js",
-      "name": "uglify-js",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/uglify-js",
-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.3.tgz",
-      "version": "3.7.3",
     },
     "unicode-length" => ArboristNode {
       "children": Map {
@@ -44776,23 +44544,6 @@ ArboristNode {
       "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/uri-js",
       "resolved": "https://registry.npmjs.org/uri-js/-/uri-js-4.2.2.tgz",
       "version": "4.2.2",
-    },
-    "util-deprecate" => ArboristNode {
-      "dev": true,
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "node_modules/readable-stream",
-          "name": "util-deprecate",
-          "spec": "~1.0.1",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/util-deprecate",
-      "name": "util-deprecate",
-      "optional": true,
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/util-deprecate",
-      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
-      "version": "1.0.2",
     },
     "uuid" => ArboristNode {
       "dev": true,
@@ -45474,8 +45225,13 @@ exports[`test/arborist/reify.js TAP update a child of a node with bundled deps >
 ArboristNode {
   "children": Map {
     "@isaacs/testing-bundledeps" => ArboristNode {
+      "bundleDependencies": Array [
+        "@isaacs/testing-bundledeps-a",
+      ],
       "children": Map {
         "@isaacs/testing-bundledeps-a" => ArboristNode {
+          "bundled": true,
+          "bundler": "node_modules/@isaacs/testing-bundledeps",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/@isaacs/testing-bundledeps",
@@ -45499,6 +45255,8 @@ ArboristNode {
           "version": "1.0.0",
         },
         "@isaacs/testing-bundledeps-b" => ArboristNode {
+          "bundled": true,
+          "bundler": "node_modules/@isaacs/testing-bundledeps",
           "edgesIn": Set {
             EdgeIn {
               "from": "node_modules/@isaacs/testing-bundledeps/node_modules/@isaacs/testing-bundledeps-a",

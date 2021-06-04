@@ -255,6 +255,7 @@ t.test('update a bundling node without updating all of its deps', t => {
   return t.resolveMatchSnapshot(printReified(path, {
     saveType: 'dev',
     add: ['tap@14.10.5'],
+    omit: ['optional'],
   }))
     .then(checkBin)
     .then(checkPackageLock)

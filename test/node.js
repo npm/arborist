@@ -2508,3 +2508,14 @@ t.test('packageName getter', t => {
   t.equal(node.packageName, 'foo')
   t.end()
 })
+
+t.test('node at / should not have fsParent', t => {
+  const root = new Node({ path: '/some/path' })
+  const link = new Link({
+    parent: root,
+    name: 'link',
+    realpath: '/',
+  })
+  t.equal(link.target.fsParent, null)
+  t.end()
+})

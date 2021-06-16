@@ -1723,6 +1723,14 @@ console.log('ok 1 - this is fine')
   }), 'test result')
 })
 
+t.test('running lifecycle scripts of unchanged link nodes on reify', async t => {
+  const path = fixture(t, 'link-dep-lifecycle-scripts')
+  t.matchSnapshot(await printReified(path), 'result')
+
+  t.ok(fs.lstatSync(resolve(path, 'a/a-prepare')).isFile(),
+    'should run prepare lifecycle scripts for links directly linked to the tree')
+})
+
 t.test('save-prod, with optional', async t => {
   const path = t.testdir({
     'package.json': JSON.stringify({

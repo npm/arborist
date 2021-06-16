@@ -31821,6 +31821,53 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP running lifecycle scripts of unchanged link nodes on reify > result 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:./a",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/a",
+      "resolved": "file:../a",
+      "target": ArboristNode {
+        "location": "a",
+      },
+      "version": "1.0.0",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:./a",
+      "to": "node_modules/a",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "location": "a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/a",
+      "version": "1.0.0",
+    },
+  },
+  "location": "",
+  "name": "tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify",
+  "packageName": "link-dep-lifecycle-scripts",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify",
+  "version": "1.0.0",
+}
+`
+
 exports[`test/arborist/reify.js TAP save complete lockfile on update-all > should have abbrev 1.0.4 1`] = `
 {
   "name": "save-package-lock-after-update-test",

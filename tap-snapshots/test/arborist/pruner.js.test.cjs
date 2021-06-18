@@ -7,6 +7,7 @@
 'use strict'
 exports[`test/arborist/pruner.js TAP prune with actual tree > must match snapshot 1`] = `
 ArboristNode {
+  "isProjectRoot": true,
   "location": "",
   "name": "tap-testdir-pruner-prune-with-actual-tree",
   "packageName": "prune-actual",
@@ -70,6 +71,7 @@ ArboristNode {
       "type": "dev",
     },
   },
+  "isProjectRoot": true,
   "location": "",
   "name": "tap-testdir-pruner-prune-with-actual-tree-omit-dev",
   "packageName": "prune-actual",
@@ -80,6 +82,7 @@ ArboristNode {
 
 exports[`test/arborist/pruner.js TAP prune with lockfile > must match snapshot 1`] = `
 ArboristNode {
+  "isProjectRoot": true,
   "location": "",
   "name": "tap-testdir-pruner-prune-with-lockfile",
   "packageName": "prune-actual",
@@ -127,6 +130,7 @@ ArboristNode {
       "type": "dev",
     },
   },
+  "isProjectRoot": true,
   "location": "",
   "name": "tap-testdir-pruner-prune-with-lockfile-omit-dev",
   "packageName": "prune-actual",

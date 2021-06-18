@@ -547,7 +547,6 @@ t.test('warn on reifying deprecated dependency', t => {
   })
   const check = warningTracker()
   return a.reify({ update: true }).then(() => t.match(check(), [
-    oldLockfileWarning,
     [
       'warn',
       'deprecated',

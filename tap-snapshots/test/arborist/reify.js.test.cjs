@@ -31952,7 +31952,7 @@ exports[`test/arborist/reify.js TAP save proper lockfile with bins when upgradin
 `
 
 exports[`test/arborist/reify.js TAP save-prod, with optional > must match snapshot 1`] = `
-{"optionalDependencies":{},"dependencies":{"abbrev":"^1.1.1"}}
+{"dependencies":{"abbrev":"^1.1.1"}}
 `
 
 exports[`test/arborist/reify.js TAP saving the ideal tree save some stuff > lock after save 1`] = `

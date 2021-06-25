@@ -2496,6 +2496,12 @@ t.test('canDedupe()', t => {
 
   t.equal(top.children.get('a').canDedupe(), true)
 
+  // check fsTop and isDescendantOf
+  t.equal(top.isDescendantOf(root), true)
+  t.equal(top.isFsTop, false)
+  t.equal(top.fsTop, root)
+  t.equal(top.children.get('a').isFsTop, true)
+
   t.end()
 })
 

@@ -101,7 +101,7 @@ t.test('audit in a workspace', async t => {
   t.equal(auditReport.get('mkdirp').nodes.size, 1)
   t.strictSame(auditReport.toJSON().vulnerabilities.mkdirp.nodes, ['packages/a/node_modules/mkdirp'])
   t.equal(auditReport.get('minimist').nodes.size, 1)
-  t.strictSame(auditReport.toJSON().vulnerabilities.minimist.nodes, ['packages/a/node_modules/minimist'])
+  t.strictSame(auditReport.toJSON().vulnerabilities.minimist.nodes, ['node_modules/minimist'])
 
   const fixed = await newArb(path, { workspaces: ['b'] }).audit({ fix: true })
   t.equal(fixed.children.get('a').target.children.get('mkdirp').version, '0.5.0', 'did not fix a')

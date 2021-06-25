@@ -1,4 +1,5 @@
 const {basename, resolve, relative} = require('path')
+const pacote = require('pacote')
 const t = require('tap')
 const Arborist = require('../..')
 const fixtures = resolve(__dirname, '../fixtures')
@@ -345,6 +346,23 @@ t.test('bundle deps example 1, complete:true', async t => {
   // When complete:true is set, we extract into a temp dir to read
   // the bundled deps, so they ARE included, just like during reify()
   const path = resolve(fixtures, 'testing-bundledeps-empty')
+
+  // wrap pacote.extract in a spy so we can be sure the integrity and resolved
+  // options both made it through
+  const _extract = pacote.extract
+  // restore in a teardown, just in case
+  t.teardown(() => {
+    pacote.extract = _extract
+  })
+  pacote.extract = (uri, dir, opts) => {
+    t.ok(uri.endsWith('testing-bundledeps-1.0.0.tgz'))
+    t.equal(uri, opts.resolved, 'passed resolved')
+    t.ok(opts.integrity, 'passed integrity')
+    const res = _extract(uri, dir, opts)
+    pacote.extract = _extract
+    return res
+  }
+
   t.matchSnapshot(await printIdeal(path, {
     complete: true,
   }), 'no missing deps, because complete: true')

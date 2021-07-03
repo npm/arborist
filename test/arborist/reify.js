@@ -1729,6 +1729,11 @@ t.test('running lifecycle scripts of unchanged link nodes on reify', async t => 
 
   t.ok(fs.lstatSync(resolve(path, 'a/a-prepare')).isFile(),
     'should run prepare lifecycle scripts for links directly linked to the tree')
+
+  const expectedPrepareGeneratedFile =
+     'node_modules/@ruyadorno/dep-with-a-link/linked-dep/linked-dep-prepare'
+  t.ok(fs.lstatSync(resolve(path, expectedPrepareGeneratedFile)).isFile(),
+    'should run prepare lifecycle scripts for bundled link deps of a package')
 })
 
 t.test('save-prod, with optional', async t => {

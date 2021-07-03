@@ -2,6 +2,7 @@
   "name": "link-dep-lifecycle-scripts",
   "version": "1.0.0",
   "dependencies": {
-    "a": "file:./a"
+    "a": "file:./a",
+    "@ruyadorno/dep-with-a-link": "^1.1.0"
   }
 }

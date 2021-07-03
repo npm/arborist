@@ -31824,6 +31824,36 @@ ArboristNode {
 exports[`test/arborist/reify.js TAP running lifecycle scripts of unchanged link nodes on reify > result 1`] = `
 ArboristNode {
   "children": Map {
+    "@ruyadorno/dep-with-a-link" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "@ruyadorno/dep-with-a-link",
+          "spec": "^1.1.0",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "linked-dep" => EdgeOut {
+          "name": "linked-dep",
+          "spec": "file:linked-dep",
+          "to": "node_modules/linked-dep",
+          "type": "prod",
+        },
+      },
+      "fsChildren": Set {
+        ArboristNode {
+          "location": "node_modules/@ruyadorno/dep-with-a-link/linked-dep",
+          "name": "linked-dep",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/node_modules/@ruyadorno/dep-with-a-link/linked-dep",
+        },
+      },
+      "location": "node_modules/@ruyadorno/dep-with-a-link",
+      "name": "@ruyadorno/dep-with-a-link",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/node_modules/@ruyadorno/dep-with-a-link",
+      "resolved": "https://registry.npmjs.org/@ruyadorno/dep-with-a-link/-/dep-with-a-link-1.1.0.tgz",
+      "version": "1.1.0",
+    },
     "a" => ArboristLink {
       "edgesIn": Set {
         EdgeIn {
@@ -31843,8 +31873,32 @@ ArboristNode {
       },
       "version": "1.0.0",
     },
+    "linked-dep" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "node_modules/@ruyadorno/dep-with-a-link",
+          "name": "linked-dep",
+          "spec": "file:linked-dep",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/linked-dep",
+      "name": "linked-dep",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/node_modules/linked-dep",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify/node_modules/@ruyadorno/dep-with-a-link/linked-dep",
+      "resolved": "file:@ruyadorno/dep-with-a-link/linked-dep",
+      "target": ArboristNode {
+        "location": "node_modules/@ruyadorno/dep-with-a-link/linked-dep",
+      },
+    },
   },
   "edgesOut": Map {
+    "@ruyadorno/dep-with-a-link" => EdgeOut {
+      "name": "@ruyadorno/dep-with-a-link",
+      "spec": "^1.1.0",
+      "to": "node_modules/@ruyadorno/dep-with-a-link",
+      "type": "prod",
+    },
     "a" => EdgeOut {
       "name": "a",
       "spec": "file:./a",

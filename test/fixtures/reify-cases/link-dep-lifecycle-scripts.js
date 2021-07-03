@@ -10,24 +10,6 @@ module.exports = t => {
       }
     })
   },
-  "node_modules": {
-    ".package-lock.json": JSON.stringify({
-      "name": "link-dep-lifecycle-scripts",
-      "version": "1.0.0",
-      "lockfileVersion": 2,
-      "requires": true,
-      "packages": {
-        "a": {
-          "version": "1.0.0"
-        },
-        "node_modules/a": {
-          "resolved": "a",
-          "link": true
-        }
-      }
-    }),
-    "a": t.fixture('symlink', "../a")
-  },
   "package-lock.json": JSON.stringify({
     "name": "link-dep-lifecycle-scripts",
     "version": "1.0.0",
@@ -37,20 +19,45 @@ module.exports = t => {
       "": {
         "version": "1.0.0",
         "dependencies": {
+          "@ruyadorno/dep-with-a-link": "^1.1.0",
           "a": "file:./a"
         }
       },
       "a": {
         "version": "1.0.0"
       },
+      "node_modules/@ruyadorno/dep-with-a-link": {
+        "version": "1.1.0",
+        "resolved": "https://registry.npmjs.org/@ruyadorno/dep-with-a-link/-/dep-with-a-link-1.1.0.tgz",
+        "integrity": "sha512-lMNI/+zSaSlNZ3m9JILIysu/A51qSfAtgBs36A4nLyuIBEWLvpuN6XOnWW5kKERjO55t9Z759wC1qKnW3IL1mg==",
+        "dependencies": {
+          "linked-dep": "file:linked-dep"
+        }
+      },
+      "node_modules/@ruyadorno/dep-with-a-link/linked-dep": {},
       "node_modules/a": {
         "resolved": "a",
+        "link": true
+      },
+      "node_modules/linked-dep": {
+        "resolved": "node_modules/@ruyadorno/dep-with-a-link/linked-dep",
         "link": true
       }
     },
     "dependencies": {
+      "@ruyadorno/dep-with-a-link": {
+        "version": "1.1.0",
+        "resolved": "https://registry.npmjs.org/@ruyadorno/dep-with-a-link/-/dep-with-a-link-1.1.0.tgz",
+        "integrity": "sha512-lMNI/+zSaSlNZ3m9JILIysu/A51qSfAtgBs36A4nLyuIBEWLvpuN6XOnWW5kKERjO55t9Z759wC1qKnW3IL1mg==",
+        "requires": {
+          "linked-dep": "file:linked-dep"
+        }
+      },
       "a": {
         "version": "file:a"
+      },
+      "linked-dep": {
+        "version": "file:node_modules/@ruyadorno/dep-with-a-link/linked-dep"
       }
     }
   }),
@@ -58,14 +65,10 @@ module.exports = t => {
     "name": "link-dep-lifecycle-scripts",
     "version": "1.0.0",
     "dependencies": {
-      "a": "file:./a"
+      "a": "file:./a",
+      "@ruyadorno/dep-with-a-link": "^1.1.0"
     }
   })
 })
-  const {utimesSync} = require('fs')
-  const n = Date.now() + 10000
-  const {resolve} = require('path')
-  
-  utimesSync(resolve(path, "node_modules/.package-lock.json"), new Date(n), new Date(n))
   return path
 }

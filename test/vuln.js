@@ -1,6 +1,9 @@
 const t = require('tap')
 const Vuln = require('../lib/vuln.js')
 const Node = require('../lib/node.js')
+const Link = require('../lib/link.js')
+const Edge = require('../lib/edge.js')
+const { resolve } = require('path')
 
 const semver = require('semver')
 const semverOpt = { includePrerelease: true, loose: true }
@@ -151,6 +154,62 @@ t.test('basic vulnerability object tests', async t => {
   t.equal(v2.simpleRange, '1.0.0 - 2.0.1')
   t.equal(v2.range, v2.simpleRange)
 
+  const root = new Node({
+    path: '/path/to',
+    pkg: {
+      dependencies: { thing: '1.2.1' },
+      workspaces: [
+        'packages/foo',
+      ],
+    },
+  })
+
+  // a workspace with one direct vuln and one indirect vuln
+  const ws = new Node({
+    pkg: { name: 'foo', version: '1.2.3', dependencies: { bar: '' }},
+    path: resolve(root.path, 'packages/foo'),
+    root,
+    children: [
+      { pkg: { name: 'bar', version: '1.2.3', dependencies: { baz: '' }}},
+      { pkg: { name: 'baz', version: '1.2.3' }},
+    ],
+  })
+
+  // manually connect the workspace
+  new Link({
+    name: 'foo',
+    parent: root,
+    target: ws,
+  })
+  new Edge({
+    type: 'workspace',
+    name: 'foo',
+    spec: 'file:packages/foo',
+    from: root,
+  })
+
+  const directWsVuln = new Vuln({
+    name: 'bar',
+    advisory: new MockAdvisory({
+      name: 'bar',
+      versions: ['1.2.2', '1.2.3', '1.2.4'],
+      range: '<=1.2.3',
+    }),
+  })
+  const indirectWsVuln = new Vuln({
+    name: 'baz',
+    advisory: new MockAdvisory({
+      name: 'baz',
+      versions: ['1.2.2', '1.2.3', '1.2.4'],
+      range: '<=1.2.3',
+    }),
+  })
+  // workspace dep vulns are direct vulnerabilities as well
+  t.equal(directWsVuln.isVulnerable(ws.children.get('bar')), true)
+  t.equal(directWsVuln.isDirect, true)
+  t.equal(indirectWsVuln.isVulnerable(ws.children.get('baz')), true)
+  t.equal(indirectWsVuln.isDirect, false)
+
   const node = new Node({
     path: '/path/to/node_modules/thing',
     name: 'thing',
@@ -158,11 +217,13 @@ t.test('basic vulnerability object tests', async t => {
       name: 'name',
       version: '1.2.1',
     },
+    parent: root,
   })
 
   // check twice to hit memoizing code path
   t.equal(v.isVulnerable(node), true)
   t.equal(v.isVulnerable(node), true)
+  t.equal(v.isDirect, true)
   t.match(v.nodes, new Set([node]))
 
   // make sure we don't infinitely loop when setting it to true

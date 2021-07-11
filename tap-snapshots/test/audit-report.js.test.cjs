@@ -12,6 +12,10 @@ exports[`test/audit-report.js TAP a dep vuln that also has its own advisory agai
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -35,6 +39,10 @@ exports[`test/audit-report.js TAP a dep vuln that also has its own advisory agai
     "mkdirp": {
       "name": "mkdirp",
       "severity": "high",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 42069,
@@ -83,6 +91,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "handlebars": {
       "name": "handlebars",
       "severity": "critical",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1164,
@@ -141,6 +153,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "kind-of": {
       "name": "kind-of",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1490,
@@ -169,6 +185,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "lodash": {
       "name": "lodash",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1065,
@@ -199,6 +219,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "mem": {
       "name": "mem",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1084,
@@ -226,6 +250,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -255,6 +283,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "mixin-deep": {
       "name": "mixin-deep",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1013,
@@ -276,6 +308,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -296,6 +332,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "node-weakauras-parser": {
       "name": "node-weakauras-parser",
       "severity": "moderate",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1504,
@@ -317,6 +357,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "nyc": {
       "name": "nyc",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mkdirp",
         "yargs"
@@ -335,6 +379,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "optimist": {
       "name": "optimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -350,6 +398,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "os-locale": {
       "name": "os-locale",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mem"
       ],
@@ -369,6 +421,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "sapper": {
       "name": "sapper",
       "severity": "critical",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1494,
@@ -390,6 +446,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "set-value": {
       "name": "set-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1012,
@@ -414,6 +474,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "subtext": {
       "name": "subtext",
       "severity": "high",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1168,
@@ -444,6 +508,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "union-value": {
       "name": "union-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "set-value"
       ],
@@ -457,6 +525,10 @@ exports[`test/audit-report.js TAP all severity levels > json version 1`] = `
     "yargs": {
       "name": "yargs",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "os-locale"
       ],
@@ -502,6 +574,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "handlebars": {
       "name": "handlebars",
       "severity": "critical",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1164,
@@ -560,6 +636,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "kind-of": {
       "name": "kind-of",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1490,
@@ -588,6 +668,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "lodash": {
       "name": "lodash",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1065,
@@ -618,6 +702,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "mem": {
       "name": "mem",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1084,
@@ -645,6 +733,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -674,6 +766,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "mixin-deep": {
       "name": "mixin-deep",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1013,
@@ -695,6 +791,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -715,6 +815,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "nyc": {
       "name": "nyc",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mkdirp",
         "yargs"
@@ -733,6 +837,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "optimist": {
       "name": "optimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -748,6 +856,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "os-locale": {
       "name": "os-locale",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mem"
       ],
@@ -767,6 +879,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "set-value": {
       "name": "set-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1012,
@@ -791,6 +907,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "union-value": {
       "name": "union-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "set-value"
       ],
@@ -804,6 +924,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp > json version 1
     "yargs": {
       "name": "yargs",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "os-locale"
       ],
@@ -849,6 +973,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "handlebars": {
       "name": "handlebars",
       "severity": "critical",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1164,
@@ -907,6 +1035,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "kind-of": {
       "name": "kind-of",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1490,
@@ -935,6 +1067,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "lodash": {
       "name": "lodash",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1065,
@@ -965,6 +1101,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "mem": {
       "name": "mem",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1084,
@@ -992,6 +1132,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -1021,6 +1165,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "mixin-deep": {
       "name": "mixin-deep",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1013,
@@ -1042,6 +1190,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -1062,6 +1214,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "nyc": {
       "name": "nyc",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mkdirp",
         "yargs"
@@ -1080,6 +1236,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "optimist": {
       "name": "optimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -1095,6 +1255,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "os-locale": {
       "name": "os-locale",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mem"
       ],
@@ -1114,6 +1278,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "set-value": {
       "name": "set-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1012,
@@ -1138,6 +1306,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "union-value": {
       "name": "union-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "set-value"
       ],
@@ -1151,6 +1323,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with before: opt
     "yargs": {
       "name": "yargs",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "os-locale"
       ],
@@ -1196,6 +1372,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "handlebars": {
       "name": "handlebars",
       "severity": "critical",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1164,
@@ -1254,6 +1434,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "kind-of": {
       "name": "kind-of",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1490,
@@ -1282,6 +1466,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "lodash": {
       "name": "lodash",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1065,
@@ -1312,6 +1500,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "mem": {
       "name": "mem",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1084,
@@ -1339,6 +1531,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -1368,6 +1564,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "mixin-deep": {
       "name": "mixin-deep",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1013,
@@ -1389,6 +1589,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -1409,6 +1613,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "nyc": {
       "name": "nyc",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mkdirp",
         "yargs"
@@ -1427,6 +1635,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "optimist": {
       "name": "optimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -1442,6 +1654,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "os-locale": {
       "name": "os-locale",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "mem"
       ],
@@ -1461,6 +1677,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "set-value": {
       "name": "set-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1012,
@@ -1485,6 +1705,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "union-value": {
       "name": "union-value",
       "severity": "high",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "set-value"
       ],
@@ -1498,6 +1722,10 @@ exports[`test/audit-report.js TAP audit outdated nyc and mkdirp with newer endpo
     "yargs": {
       "name": "yargs",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         "os-locale"
       ],
@@ -1561,12 +1789,16 @@ Object {
     "acorn": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "acorn",
       "nodes": Array [
         "node_modules/acorn",
       ],
       "range": "5.5.0 - 5.7.3 || 6.0.0 - 6.4.0 || 7.0.0 - 7.1.0",
       "severity": "moderate",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "acorn",
@@ -1585,12 +1817,16 @@ Object {
     "js-yaml": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "js-yaml",
       "nodes": Array [
         "node_modules/js-yaml",
       ],
       "range": "<=3.13.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "js-yaml",
@@ -1621,12 +1857,16 @@ Object {
     "lodash": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "lodash",
       "nodes": Array [
         "node_modules/lodash",
       ],
       "range": "<=4.17.18",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "lodash",
@@ -1671,12 +1911,16 @@ Object {
         "mkdirp",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/minimist",
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -1695,12 +1939,16 @@ Object {
     "mkdirp": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "mkdirp",
       "nodes": Array [
         "node_modules/mkdirp",
       ],
       "range": "0.4.1 - 0.5.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -1716,6 +1964,10 @@ exports[`test/audit-report.js TAP audit supports alias deps > json version 1`] =
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -1743,6 +1995,10 @@ exports[`test/audit-report.js TAP audit supports alias deps > json version 1`] =
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -1787,6 +2043,10 @@ exports[`test/audit-report.js TAP audit with filterSet limiting to only mkdirp a
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -1810,6 +2070,10 @@ exports[`test/audit-report.js TAP audit with filterSet limiting to only mkdirp a
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -1849,6 +2113,10 @@ exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at
     "@isaacs/this-does-not-exist-at-all": {
       "name": "@isaacs/this-does-not-exist-at-all",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "optional"
+      ],
       "via": [
         "minimist"
       ],
@@ -1862,6 +2130,10 @@ exports[`test/audit-report.js TAP metavuln where a dep is not on the registry at
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -1911,6 +2183,10 @@ exports[`test/audit-report.js TAP metavuln where dep is not a registry dep > jso
     "@isaacs/minimist-git-dep": {
       "name": "@isaacs/minimist-git-dep",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "dev"
+      ],
       "via": [
         "minimist"
       ],
@@ -1924,6 +2200,10 @@ exports[`test/audit-report.js TAP metavuln where dep is not a registry dep > jso
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -1995,6 +2275,7 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": true,
       "name": "handlebars",
       "nodes": Array [
         "node_modules/handlebars",
@@ -2002,6 +2283,10 @@ Object {
       ],
       "range": "<=4.7.3",
       "severity": "critical",
+      "types": Array [
+        "peer",
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "handlebars",
@@ -2069,6 +2354,7 @@ Object {
     "kind-of": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "kind-of",
       "nodes": Array [
         "node_modules/nyc/node_modules/base/node_modules/kind-of",
@@ -2082,6 +2368,9 @@ Object {
       ],
       "range": "6.0.0 - 6.0.2",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "kind-of",
@@ -2100,12 +2389,16 @@ Object {
     "lodash": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "lodash",
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
       "range": "<=4.17.18",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "lodash",
@@ -2154,12 +2447,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mem",
       "nodes": Array [
         "node_modules/nyc/node_modules/mem",
       ],
       "range": "<4.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mem",
@@ -2185,6 +2482,7 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/minimist",
@@ -2192,6 +2490,9 @@ Object {
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -2210,12 +2511,16 @@ Object {
     "mixin-deep": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "mixin-deep",
       "nodes": Array [
         "node_modules/nyc/node_modules/mixin-deep",
       ],
       "range": "<=1.3.1 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mixin-deep",
@@ -2240,12 +2545,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mkdirp",
       "nodes": Array [
         "node_modules/nyc/node_modules/mkdirp",
       ],
       "range": "0.4.1 - 0.5.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -2257,12 +2566,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": true,
       "name": "nyc",
       "nodes": Array [
         "node_modules/nyc",
       ],
       "range": "6.0.0 - 13.3.0",
       "severity": "low",
+      "types": Array [
+        "optional",
+      ],
       "via": Array [
         "mkdirp",
         "yargs",
@@ -2278,6 +2591,7 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": false,
       "name": "optimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/optimist",
@@ -2285,6 +2599,9 @@ Object {
       ],
       "range": ">=0.6.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -2298,12 +2615,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "os-locale",
       "nodes": Array [
         "node_modules/nyc/node_modules/os-locale",
       ],
       "range": "2.0.0 - 3.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "mem",
       ],
@@ -2313,6 +2634,7 @@ Object {
         "union-value",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "set-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/set-value",
@@ -2320,6 +2642,9 @@ Object {
       ],
       "range": "<=2.0.0 || 3.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "set-value",
@@ -2338,12 +2663,16 @@ Object {
     "union-value": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "union-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/union-value",
       ],
       "range": "<=1.0.0 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "set-value",
       ],
@@ -2357,12 +2686,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
       "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "os-locale",
         "yargs-parser",
@@ -2378,6 +2711,7 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs-parser",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs-parser",
@@ -2385,6 +2719,9 @@ Object {
       ],
       "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "yargs-parser",
@@ -2433,12 +2770,16 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": true,
       "name": "handlebars",
       "nodes": Array [
         "node_modules/handlebars",
       ],
       "range": "<=4.7.3",
       "severity": "critical",
+      "types": Array [
+        "peer",
+      ],
       "via": Array [
         Object {
           "dependency": "handlebars",
@@ -2512,12 +2853,16 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/optimist/node_modules/minimist",
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -2542,12 +2887,16 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": false,
       "name": "optimist",
       "nodes": Array [
         "node_modules/optimist",
       ],
       "range": ">=0.6.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -2585,6 +2934,7 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": true,
       "name": "handlebars",
       "nodes": Array [
         "node_modules/handlebars",
@@ -2592,6 +2942,10 @@ Object {
       ],
       "range": "<=4.7.3",
       "severity": "critical",
+      "types": Array [
+        "peer",
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "handlebars",
@@ -2659,6 +3013,7 @@ Object {
     "kind-of": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "kind-of",
       "nodes": Array [
         "node_modules/nyc/node_modules/base/node_modules/kind-of",
@@ -2672,6 +3027,9 @@ Object {
       ],
       "range": "6.0.0 - 6.0.2",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "kind-of",
@@ -2690,12 +3048,16 @@ Object {
     "lodash": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "lodash",
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
       "range": "<=4.17.18",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "lodash",
@@ -2744,12 +3106,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mem",
       "nodes": Array [
         "node_modules/nyc/node_modules/mem",
       ],
       "range": "<4.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mem",
@@ -2775,6 +3141,7 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/minimist",
@@ -2782,6 +3149,9 @@ Object {
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -2800,12 +3170,16 @@ Object {
     "mixin-deep": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "mixin-deep",
       "nodes": Array [
         "node_modules/nyc/node_modules/mixin-deep",
       ],
       "range": "<=1.3.1 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mixin-deep",
@@ -2830,12 +3204,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mkdirp",
       "nodes": Array [
         "node_modules/nyc/node_modules/mkdirp",
       ],
       "range": "0.4.1 - 0.5.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -2847,12 +3225,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": true,
       "name": "nyc",
       "nodes": Array [
         "node_modules/nyc",
       ],
       "range": "6.0.0 - 13.3.0",
       "severity": "low",
+      "types": Array [
+        "optional",
+      ],
       "via": Array [
         "mkdirp",
         "yargs",
@@ -2868,6 +3250,7 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": false,
       "name": "optimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/optimist",
@@ -2875,6 +3258,9 @@ Object {
       ],
       "range": ">=0.6.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -2888,12 +3274,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "os-locale",
       "nodes": Array [
         "node_modules/nyc/node_modules/os-locale",
       ],
       "range": "2.0.0 - 3.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "mem",
       ],
@@ -2903,6 +3293,7 @@ Object {
         "union-value",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "set-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/set-value",
@@ -2910,6 +3301,9 @@ Object {
       ],
       "range": "<=2.0.0 || 3.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "set-value",
@@ -2928,12 +3322,16 @@ Object {
     "union-value": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "union-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/union-value",
       ],
       "range": "<=1.0.0 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "set-value",
       ],
@@ -2947,12 +3345,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
       "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "os-locale",
         "yargs-parser",
@@ -2968,6 +3370,7 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs-parser",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs-parser",
@@ -2975,6 +3378,9 @@ Object {
       ],
       "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "yargs-parser",
@@ -3023,12 +3429,16 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": true,
       "name": "handlebars",
       "nodes": Array [
         "node_modules/handlebars",
       ],
       "range": "<=4.7.3",
       "severity": "critical",
+      "types": Array [
+        "peer",
+      ],
       "via": Array [
         Object {
           "dependency": "handlebars",
@@ -3102,12 +3512,16 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/optimist/node_modules/minimist",
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -3132,12 +3546,16 @@ Object {
         "name": "handlebars",
         "version": "4.7.6",
       },
+      "isDirect": false,
       "name": "optimist",
       "nodes": Array [
         "node_modules/optimist",
       ],
       "range": ">=0.6.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -3196,12 +3614,16 @@ Object {
     "handlebars": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "handlebars",
       "nodes": Array [
         "node_modules/nyc/node_modules/handlebars",
       ],
       "range": "<=4.7.3",
       "severity": "critical",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "handlebars",
@@ -3269,6 +3691,7 @@ Object {
     "kind-of": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "kind-of",
       "nodes": Array [
         "node_modules/nyc/node_modules/base/node_modules/kind-of",
@@ -3282,6 +3705,9 @@ Object {
       ],
       "range": "6.0.0 - 6.0.2",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "kind-of",
@@ -3300,12 +3726,16 @@ Object {
     "lodash": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "lodash",
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
       "range": "<=4.17.18",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "lodash",
@@ -3354,12 +3784,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mem",
       "nodes": Array [
         "node_modules/nyc/node_modules/mem",
       ],
       "range": "<4.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mem",
@@ -3385,12 +3819,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/minimist",
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -3409,12 +3847,16 @@ Object {
     "mixin-deep": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "mixin-deep",
       "nodes": Array [
         "node_modules/nyc/node_modules/mixin-deep",
       ],
       "range": "<=1.3.1 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mixin-deep",
@@ -3439,12 +3881,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mkdirp",
       "nodes": Array [
         "node_modules/nyc/node_modules/mkdirp",
       ],
       "range": "0.4.1 - 0.5.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -3456,12 +3902,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": true,
       "name": "nyc",
       "nodes": Array [
         "node_modules/nyc",
       ],
       "range": "6.0.0 - 13.3.0",
       "severity": "low",
+      "types": Array [
+        "optional",
+      ],
       "via": Array [
         "mkdirp",
         "yargs",
@@ -3473,12 +3923,16 @@ Object {
         "handlebars",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "optimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/optimist",
       ],
       "range": ">=0.6.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -3492,12 +3946,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "os-locale",
       "nodes": Array [
         "node_modules/nyc/node_modules/os-locale",
       ],
       "range": "2.0.0 - 3.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "mem",
       ],
@@ -3507,6 +3965,7 @@ Object {
         "union-value",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "set-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/set-value",
@@ -3514,6 +3973,9 @@ Object {
       ],
       "range": "<=2.0.0 || 3.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "set-value",
@@ -3532,12 +3994,16 @@ Object {
     "union-value": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "union-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/union-value",
       ],
       "range": "<=1.0.0 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "set-value",
       ],
@@ -3551,12 +4017,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
       "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "os-locale",
         "yargs-parser",
@@ -3572,6 +4042,7 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs-parser",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs-parser",
@@ -3579,6 +4050,9 @@ Object {
       ],
       "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "yargs-parser",
@@ -3623,12 +4097,16 @@ Object {
     "handlebars": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "handlebars",
       "nodes": Array [
         "node_modules/nyc/node_modules/handlebars",
       ],
       "range": "<=4.7.3",
       "severity": "critical",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "handlebars",
@@ -3696,6 +4174,7 @@ Object {
     "kind-of": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "kind-of",
       "nodes": Array [
         "node_modules/nyc/node_modules/base/node_modules/kind-of",
@@ -3709,6 +4188,9 @@ Object {
       ],
       "range": "6.0.0 - 6.0.2",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "kind-of",
@@ -3727,12 +4209,16 @@ Object {
     "lodash": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "lodash",
       "nodes": Array [
         "node_modules/nyc/node_modules/lodash",
       ],
       "range": "<=4.17.18",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "lodash",
@@ -3781,12 +4267,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mem",
       "nodes": Array [
         "node_modules/nyc/node_modules/mem",
       ],
       "range": "<4.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mem",
@@ -3812,12 +4302,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "minimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/minimist",
       ],
       "range": "<0.2.1 || >=1.0.0 <1.2.3",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "minimist",
@@ -3836,12 +4330,16 @@ Object {
     "mixin-deep": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "mixin-deep",
       "nodes": Array [
         "node_modules/nyc/node_modules/mixin-deep",
       ],
       "range": "<=1.3.1 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "mixin-deep",
@@ -3866,12 +4364,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "mkdirp",
       "nodes": Array [
         "node_modules/nyc/node_modules/mkdirp",
       ],
       "range": "0.4.1 - 0.5.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -3883,12 +4385,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": true,
       "name": "nyc",
       "nodes": Array [
         "node_modules/nyc",
       ],
       "range": "6.0.0 - 13.3.0",
       "severity": "low",
+      "types": Array [
+        "optional",
+      ],
       "via": Array [
         "mkdirp",
         "yargs",
@@ -3900,12 +4406,16 @@ Object {
         "handlebars",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "optimist",
       "nodes": Array [
         "node_modules/nyc/node_modules/optimist",
       ],
       "range": ">=0.6.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "minimist",
       ],
@@ -3919,12 +4429,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "os-locale",
       "nodes": Array [
         "node_modules/nyc/node_modules/os-locale",
       ],
       "range": "2.0.0 - 3.0.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "mem",
       ],
@@ -3934,6 +4448,7 @@ Object {
         "union-value",
       ],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "set-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/set-value",
@@ -3941,6 +4456,9 @@ Object {
       ],
       "range": "<=2.0.0 || 3.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "set-value",
@@ -3959,12 +4477,16 @@ Object {
     "union-value": Object {
       "effects": Array [],
       "fixAvailable": true,
+      "isDirect": false,
       "name": "union-value",
       "nodes": Array [
         "node_modules/nyc/node_modules/union-value",
       ],
       "range": "<=1.0.0 || 2.0.0",
       "severity": "high",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "set-value",
       ],
@@ -3978,12 +4500,16 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs",
       ],
       "range": "4.0.0-alpha1 - 12.0.5 || 14.1.0 || 15.0.0 - 15.2.0",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         "os-locale",
         "yargs-parser",
@@ -3999,6 +4525,7 @@ Object {
         "name": "nyc",
         "version": "15.1.0",
       },
+      "isDirect": false,
       "name": "yargs-parser",
       "nodes": Array [
         "node_modules/nyc/node_modules/yargs-parser",
@@ -4006,6 +4533,9 @@ Object {
       ],
       "range": "<=13.1.1 || 14.0.0 - 15.0.0 || 16.0.0 - 18.1.1",
       "severity": "low",
+      "types": Array [
+        "prod",
+      ],
       "via": Array [
         Object {
           "dependency": "yargs-parser",
@@ -4032,6 +4562,10 @@ exports[`test/audit-report.js TAP one vulnerability > json version 1`] = `
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -4079,6 +4613,10 @@ exports[`test/audit-report.js TAP unfixable, but not a semver major forced fix >
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": false,
+      "types": [
+        "prod"
+      ],
       "via": [
         {
           "source": 1179,
@@ -4106,6 +4644,10 @@ exports[`test/audit-report.js TAP unfixable, but not a semver major forced fix >
     "mkdirp": {
       "name": "mkdirp",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "prod"
+      ],
       "via": [
         "minimist"
       ],
@@ -4149,6 +4691,10 @@ exports[`test/audit-report.js TAP vulnerable dep not from registry > json versio
     "minimist": {
       "name": "minimist",
       "severity": "low",
+      "isDirect": true,
+      "types": [
+        "peer"
+      ],
       "via": [
         {
           "source": 1179,

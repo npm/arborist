@@ -6,13 +6,15 @@
  */
 'use strict'
 exports[`test/vuln.js TAP basic vulnerability object tests > json after adding effect 1`] = `
-{"name":"name","severity":"critical","via":[{"type":"advisory","source":420,"title":"borgsafalamash","name":"name","dependency":"name","severity":"critical","range":"1.x < 1.3"},{"type":"advisory","source":69,"title":"flerbygurrf","name":"name","dependency":"name","severity":"low","range":"2.x < 2.3.2 || 3.x <3.0.1"}],"effects":["another"],"range":"1.0.0 - 3.0.0","nodes":[],"fixAvailable":true}
+{"name":"name","severity":"critical","isDirect":false,"types":[],"via":[{"type":"advisory","source":420,"title":"borgsafalamash","name":"name","dependency":"name","severity":"critical","range":"1.x < 1.3"},{"type":"advisory","source":69,"title":"flerbygurrf","name":"name","dependency":"name","severity":"low","range":"2.x < 2.3.2 || 3.x <3.0.1"}],"effects":["another"],"range":"1.0.0 - 3.0.0","nodes":[],"fixAvailable":true}
 `
 
 exports[`test/vuln.js TAP basic vulnerability object tests > json formatted 1`] = `
 {
   "name": "name",
   "severity": "critical",
+  "isDirect": false,
+  "types": [],
   "via": [
     {
       "type": "advisory",
@@ -44,6 +46,8 @@ exports[`test/vuln.js TAP basic vulnerability object tests > json formatted afte
 {
   "name": "name",
   "severity": "critical",
+  "isDirect": false,
+  "types": [],
   "via": [
     {
       "type": "advisory",
@@ -79,6 +83,8 @@ exports[`test/vuln.js TAP basic vulnerability object tests > json formatted meta
 {
   "name": "another",
   "severity": "critical",
+  "isDirect": false,
+  "types": [],
   "via": [
     "name",
     "name"

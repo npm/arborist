@@ -162,14 +162,12 @@ t.test('basic placement check tests', t => {
   runTest('replace an existing dep that could dedupe, explicit request', {
     tree: new Node({
       path,
-      pkg: {
-        name: 'project',
+      pkg: { name: 'project',
         version: '1.2.3',
         dependencies: {
           a: '*',
           b: '1.2.3',
-        },
-      },
+        }},
       children: [
         {pkg: {name: 'a', version: '1.2.3'}},
         {pkg: {name: 'b', version: '1.2.3', dependencies: {a: '1.2.3'}}},
@@ -184,14 +182,12 @@ t.test('basic placement check tests', t => {
   runTest('keep an existing dep that could dedupe, explicit request, preferDedupe', {
     tree: new Node({
       path,
-      pkg: {
-        name: 'project',
+      pkg: { name: 'project',
         version: '1.2.3',
         dependencies: {
           a: '*',
           b: '1.2.3',
-        },
-      },
+        }},
       children: [
         {pkg: {name: 'a', version: '1.2.3'}},
         {pkg: {name: 'b', version: '1.2.3', dependencies: {a: '1.2.3'}}},

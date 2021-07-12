@@ -31963,6 +31963,7 @@ ArboristNode {
       "version": "1.0.0",
     },
   },
+  "isProjectRoot": true,
   "location": "",
   "name": "tap-testdir-reify-running-lifecycle-scripts-of-unchanged-link-nodes-on-reify",
   "packageName": "link-dep-lifecycle-scripts",

@@ -67,6 +67,12 @@ t.test('basic placement check tests', t => {
       if (expectSelf)
         t.equal(cpd.canPlaceSelf, expectSelf, msg)
       t.equal(cpd.description, cpd.canPlace.description || cpd.canPlace)
+      t.matchSnapshot([...cpd.conflictChildren].map(c => ({
+        dep: [c.dep.name, c.dep.version],
+        edge: [c.edge.from.location, c.edge.type, c.edge.name, c.edge.spec],
+        canPlace: c.canPlace,
+        canPlaceSelf: c.canPlaceSelf,
+      })), 'conflict children')
       t.end()
     })
   }
@@ -118,10 +124,22 @@ t.test('basic placement check tests', t => {
       path,
       pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
       children: [
-        {pkg: {name: 'a', version: '1.0.0'}},
-        {
-          pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2.x' }},
-        },
+        { pkg: { name: 'a', version: '1.0.0' }},
+        { pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' }}},
+      ],
+    }),
+    targetLoc: '',
+    nodeLoc: 'node_modules/b',
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' }}),
+    expect: CONFLICT,
+  })
+
+  runTest('conflict in root for nested dep, no current', {
+    tree: new Node({
+      path,
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      children: [
+        { pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' }}},
       ],
     }),
     targetLoc: '',
@@ -303,6 +321,72 @@ t.test('basic placement check tests', t => {
     expect: CONFLICT,
   })
 
+  // root -> (x)
+  // x -> (a, b@1)
+  // a -> (b@2)
+  // b@1 -> (c@1)
+  // b@2 -> (c@2)
+  //
+  // root
+  // +-- c@1
+  // +-- x
+  //     +-- a
+  //     |   +-- b@2
+  //     +-- b@1
+  // place c@2 in x, CONFLICT due to shadowing
+  runTest('invalid shadowing', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { x: '1' }},
+      children: [
+        { pkg: { name: 'c', version: '1.0.0' }},
+        {
+          pkg: { name: 'x', version: '1.0.0', dependencies: { a: '1', b: '1' }},
+          children: [
+            {
+              pkg: { name: 'a', version: '1.0.0', dependencies: { b: '2' }},
+              children: [
+                { pkg: { name: 'b', version: '2.0.0', dependencies: { c: '2' }}},
+              ],
+            },
+            { pkg: { name: 'b', version: '1.0.0', dependencies: { c: '1' }}},
+          ],
+        },
+      ],
+    }),
+    targetLoc: 'node_modules/x',
+    nodeLoc: 'node_modules/x/node_modules/a/node_modules/b',
+    dep: new Node({ pkg: { name: 'c', version: '2.0.0' }}),
+    expect: CONFLICT,
+  })
+
+  runTest('totally valid shadowing', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { x: '1' }},
+      children: [
+        { pkg: { name: 'c', version: '1.0.0' }},
+        {
+          pkg: { name: 'x', version: '1.0.0', dependencies: { a: '1', b: '1' }},
+          children: [
+            {
+              pkg: { name: 'a', version: '1.0.0', dependencies: { b: '2' }},
+              children: [
+                { pkg: { name: 'b', version: '2.0.0', dependencies: { c: '2' }}},
+              ],
+            },
+            // difference right here on the c@1||2 line
+            { pkg: { name: 'b', version: '1.0.0', dependencies: { c: '1||2' }}},
+          ],
+        },
+      ],
+    }),
+    targetLoc: 'node_modules/x',
+    nodeLoc: 'node_modules/x/node_modules/a/node_modules/b',
+    dep: new Node({ pkg: { name: 'c', version: '2.0.0' }}),
+    expect: OK,
+  })
+
   // peer dep shenanigans
   runTest('basic placement with peers', {
     tree: new Node({
@@ -334,6 +418,41 @@ t.test('basic placement check tests', t => {
     peerSet: [
       {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
       {pkg: {name: 'c', version: '1.2.3'}},
+    ],
+  })
+
+  runTest('cycle of peers', {
+    tree: new Node({
+      path,
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+    }),
+    targetLoc: '',
+    nodeLoc: '',
+    dep: new Node({
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+    }),
+    expect: OK,
+    peerSet: [
+      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
+      {pkg: {name: 'c', version: '1.2.3', peerDependencies: { a: '1' }}},
+    ],
+  })
+
+  runTest('cycle of peers hanging off entry node', {
+    tree: new Node({
+      path,
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+    }),
+    targetLoc: '',
+    nodeLoc: '',
+    dep: new Node({
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+    }),
+    expect: OK,
+    peerSet: [
+      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
+      {pkg: {name: 'c', version: '1.2.3', peerDependencies: { d: '1' }}},
+      {pkg: {name: 'd', version: '1.2.3', peerDependencies: { b: '1' }}},
     ],
   })
 
@@ -485,7 +604,7 @@ t.test('basic placement check tests', t => {
   // +-- c@1.0.1
   // +-- d@1.0.1
   // PLACE(d@1.2.2<b@2.2.2, c@2.2.2>)
-  runTest('xyz existing peer set which can be pushed deeper, with valid current', {
+  runTest('existing peer set which can be pushed deeper, with valid current', {
     tree: new Node({
       path,
       pkg: {
@@ -704,7 +823,7 @@ t.test('basic placement check tests', t => {
   //      dd->(cc): not a peer edge
   //    >> can replace
 
-  runTest('existing peer set cannot be pushed deeper, neither can new set, conflict on deep peer xyz', {
+  runTest('existing peer set cannot be pushed deeper, neither can new set, conflict on deep peer', {
     tree: new Node({
       path,
       pkg: {
@@ -833,6 +952,122 @@ t.test('basic placement check tests', t => {
     targetLoc: 'node_modules/b/node_modules/c',
     expect: CONFLICT,
     expectSelf: OK,
+  })
+
+  // root -> (a@1, b@2)
+  // a@1 -> PEER(b@1)
+  // b@1 -> PEER(c@1)
+  // c@1 -> PEER(d@1)
+  // d@1 -> PEER(e@1)
+  // e@1 -> PEER(a@1)
+  // a@2 -> PEER(b@2)
+  // b@2 -> PEER(c@2)
+  // c@2 -> PEER(d@2)
+  // d@2 -> PEER(e@2)
+  // e@2 -> PEER(a@2)
+  // root
+  // +-- a@1
+  // +-- b@1
+  // +-- c@1
+  // +-- d@1
+  // +-- e@1
+  // place b@2, peerSet (c@2, d@2, e@2, a@2)
+  runTest('prod dep directly on conflicted peer, newer', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { a: '1', b: '2' }},
+      children: [
+        { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+        { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
+        { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
+        { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
+        { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
+      { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
+      { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
+      { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: CONFLICT,
+    expectSelf: REPLACE,
+  })
+
+  runTest('prod dep directly on conflicted peer, newer', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { a: '2', b: '1' }},
+      children: [
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
+      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: CONFLICT,
+    expectSelf: REPLACE,
+  })
+
+  // root -> (c@1||2, a@2)
+  // a@1 -> PEER(b@1)
+  // a@2 -> PEER(b@2)
+  // b@1 -> PEER(c@1)
+  // b@2 -> PEER(c@2)
+  // c@1 -> PEER(d@1)
+  // c@2 -> PEER(d@2)
+  //
+  // root
+  // +-- a@1
+  // +-- b@1
+  // +-- c@1
+  // +-- d@1
+  //
+  // place a@2 peerSet(b@2, c@2, d@2)
+  //
+  // peer group (c@1, d@1) can be replaced, because the entry node c has a
+  // valid replacement.
+
+  runTest('have replacement for conflicted entry node', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { a: '2', c: '1||2' }},
+      children: [
+        { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+        { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
+        { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
+        { pkg: { name: 'd', version: '1.0.0' }},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
+      { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
+      { pkg: { name: 'd', version: '2.0.0' }},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: REPLACE,
+    expectSelf: REPLACE,
   })
 
   t.end()

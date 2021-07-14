@@ -713,3 +713,112 @@ t.test('only rebuild for workspace', async t => {
   t.equal(fs.readFileSync(adepTxt, 'utf8'), 'adep', 'adep rebuilt')
   t.throws(() => fs.readFileSync(bdepTxt, 'utf8'), { code: 'ENOENT' }, 'bdep not rebuilt')
 })
+
+t.test('scripts dependencies between Link nodes', async t => {
+  // this scenario is laid out as such: the `prepare` script of each linked
+  // pkg needs the resulting files of its dependency `prepare` script:
+  //
+  // prepare: b -> a -> c
+  // postinstall: e -> a `prepare`
+  //
+  // in order to make sure concurrency is handled properly, the `prepare`
+  // script of "c" takes at least 20ms to complete, while "a" takes at
+  // least 10ms and the "b" script expects to run synchronously
+
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        a: 'file:./packages/a',
+        b: 'file:./packages/b',
+        c: 'file:./packages/c',
+        d: 'file:./packages/d',
+      },
+    }),
+    node_modules: {
+      a: t.fixture('symlink', '../packages/a'),
+      b: t.fixture('symlink', '../packages/b'),
+      c: t.fixture('symlink', '../packages/c'),
+      d: t.fixture('symlink', '../packages/d'),
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.1.1',
+        }),
+      },
+    },
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.0.0',
+          scripts: {
+            // on prepare script writes a `index.js` file containing:
+            // module.exports = require("c")
+            // this is a slow script though that sleeps for
+            // at least 10ms prior to writing that file
+            prepare: "node -e \"setTimeout(() => { require('fs').writeFileSync(require('path').resolve('index.js'), 'module.exports = require(function c(){}.name);') }, 10)\"",
+          },
+          dependencies: {
+            c: '^1.0.0',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.0.0',
+          scripts: {
+            // on prepare script requires `./node_modules/a/index.js` which
+            // is a dependency of this workspace but with the caveat that this
+            // file is only build during the `prepare` script of "a"
+            prepare: "node -p \"require('a')\"",
+          },
+          dependencies: {
+            a: '^1.0.0',
+            abbrev: '^1.0.0',
+          },
+        }),
+      },
+      c: {
+        'package.json': JSON.stringify({
+          name: 'c',
+          version: '1.0.0',
+          scripts: {
+            // on prepare script writes a `index.js` file containing:
+            // module.exports = "HELLO"
+            // this is an even slower slower script that sleeps for
+            // at least 20ms prior to writing that file
+            prepare: "node -e \"setTimeout(() => { require('fs').writeFileSync(require('path').resolve('index.js'), 'module.exports = function HELLO() {}.name;') }, 20)\"",
+          },
+        }),
+      },
+      d: {
+        'package.json': JSON.stringify({
+          name: 'd',
+          version: '1.0.0',
+        }),
+      },
+      e: {
+        'package.json': JSON.stringify({
+          name: 'd',
+          version: '1.0.0',
+          scripts: {
+            // on postinstall script requires `./node_modules/a/index.js` which
+            // is a dependency of this workspace but with the caveat that this
+            // file is only build during the `prepare` script of "a"
+            // although different lifecycle scripts do not hold refs to
+            // depending on each other, all `prepare` scripts should already
+            // have been resolved by the time we run `postinstall` scripts
+            postinstall: "node -p \"require('a')\"",
+          },
+          dependencies: {
+            a: '^1.0.0',
+          },
+        }),
+      },
+    },
+  })
+
+  const arb = newArb({ path })
+  await arb.rebuild()
+})

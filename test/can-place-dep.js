@@ -27,6 +27,8 @@ t.test('basic placement check tests', t => {
     const target = tree.inventory.get(targetLoc)
     const node = tree.inventory.get(nodeLoc)
     const edge = node.edgesOut.get(dep.name)
+    if (!dep.satisfies(edge))
+      edge.overridden = true
     const vr = new Node({
       sourceReference: node,
       path: node.path,
@@ -162,6 +164,37 @@ t.test('basic placement check tests', t => {
     expect: KEEP,
   })
 
+  runTest('do not keep existing dep that matches, but does not satisfy', {
+    tree: new Node({
+      path,
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: 'foo/bar' }},
+      children: [
+        {pkg: {name: 'a', version: '1.2.3'}},
+      ],
+    }),
+    targetLoc: '',
+    nodeLoc: '',
+    dep: new Node({
+      pkg: { name: 'a', version: '1.2.3' },
+      resolved: 'git+ssh://github.com/foo/bar',
+    }),
+    expect: REPLACE,
+  })
+
+  runTest('keep existing dep that matches, does not satisfy, but overridden', {
+    tree: new Node({
+      path,
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '2.3.4' }},
+      children: [
+        {pkg: {name: 'a', version: '1.2.3'}},
+      ],
+    }),
+    targetLoc: '',
+    nodeLoc: '',
+    dep: new Node({ pkg: { name: 'a', version: '1.2.3' }}),
+    expect: KEEP,
+  })
+
   // https://github.com/npm/cli/issues/3411
   runTest('replace an existing dep that matches, explicit request', {
     tree: new Node({
@@ -177,6 +210,7 @@ t.test('basic placement check tests', t => {
     expect: REPLACE,
     explicitRequest: true,
   })
+
   runTest('replace an existing dep that could dedupe, explicit request', {
     tree: new Node({
       path,
@@ -197,6 +231,7 @@ t.test('basic placement check tests', t => {
     expect: REPLACE,
     explicitRequest: true,
   })
+
   runTest('keep an existing dep that could dedupe, explicit request, preferDedupe', {
     tree: new Node({
       path,
@@ -249,6 +284,28 @@ t.test('basic placement check tests', t => {
     nodeLoc: 'node_modules/c',
     dep: new Node({pkg: { name: 'b', version: '2.0.0' }}),
     expect: REPLACE,
+    preferDedupe: true,
+  })
+
+  runTest('conflict an existing dep that is newer, preferDedupe peerConflict', {
+    tree: new Node({
+      path,
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' }},
+      children: [
+        {pkg: {name: 'b', version: '2.3.4'}},
+        {pkg: {name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' }}},
+        {pkg: {name: 'a', version: '1.2.3', dependencies: { b: '2' }}},
+      ],
+    }),
+    targetLoc: '',
+    nodeLoc: 'node_modules/c',
+    dep: new Node({
+      pkg: { name: 'b', version: '2.0.0', peerDependencies: { a: '3' }},
+    }),
+    peerSet: [
+      {pkg: {name: 'a', version: '3.0.0' }},
+    ],
+    expect: CONFLICT,
     preferDedupe: true,
   })
 
@@ -1068,6 +1125,219 @@ t.test('basic placement check tests', t => {
     targetLoc: '',
     expect: REPLACE,
     expectSelf: REPLACE,
+  })
+
+  // v@4 -> PEER(a@1||2)
+  // y@1 -> PEER(d@1)
+  // a@1 -> PEER(b@1)
+  // b@1 -> PEER(c@1)
+  // c@1 -> PEER(d@1)
+  // d@1 -> PEER(e@1)
+  // e@1 -> PEER(a@1)
+  // a@2 -> PEER(b@2)
+  // b@2 -> PEER(c@2)
+  // c@2 -> PEER(d@2)
+  // d@2 -> PEER(e@2)
+  // e@2 -> PEER(a@2)
+  //
+  // root
+  // +-- v@4
+  // +-- a@2
+  // +-- b@2
+  // +-- c@2
+  // +-- d@2
+  // +-- e@2
+  //
+  // place y@1 (a@1, b@1, c@1, d@1, e@1), OK, because all peers replaced
+  runTest('replacing overlapping peer sets', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { v: '4', y: '1' }},
+      children: [
+        {
+          pkg: {
+            name: 'v',
+            version: '4.0.0',
+            peerDependencies: { a: '1||2', x: '2' },
+            peerDependenciesMeta: { x: { optional: true }},
+          },
+        },
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
+      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: OK,
+  })
+
+  // same as above, but the new peer set only overlaps _part_ of the existing
+  // v@4 -> PEER(a@1||2)
+  // y@1 -> PEER(d@1)
+  // a@1 -> PEER(c@1)
+  // c@1 -> PEER(e@1)
+  // e@1 -> PEER(a@1)
+  // a@2 -> PEER(b@2)
+  // b@2 -> PEER(c@2)
+  // c@2 -> PEER(d@2)
+  // d@2 -> PEER(e@2)
+  // e@2 -> PEER(a@2)
+  //
+  // root
+  // +-- v@4
+  // +-- a@2
+  // +-- b@2
+  // +-- c@2
+  // +-- d@2
+  // +-- e@2
+  //
+  // place y@1 (a@1, c@1, e@1), OK, because all peers replaced
+  runTest('replacing partially overlapping peer sets, subset', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { v: '4', y: '1' }},
+      children: [
+        {
+          pkg: {
+            name: 'v',
+            version: '4.0.0',
+            peerDependencies: { a: '1||2', x: '2' },
+            peerDependenciesMeta: { x: { optional: true }},
+          },
+        },
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { c: '1' }}},
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { e: '1' }}},
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: OK,
+  })
+
+  // same as above, but now the existing one has 3, replacment has 5
+  // v@4 -> PEER(a@1||2)
+  // y@1 -> PEER(d@1)
+  // a@1 -> PEER(b@1)
+  // b@1 -> PEER(c@1)
+  // c@1 -> PEER(d@1)
+  // d@1 -> PEER(e@1)
+  // e@1 -> PEER(a@1)
+  // a@2 -> PEER(c@2)
+  // c@2 -> PEER(e@2)
+  // e@2 -> PEER(a@2)
+  //
+  // root
+  // +-- v@4
+  // +-- a@2
+  // +-- c@2
+  // +-- e@2
+  //
+  // place y@1 (a@1, b@1, c@1, d@1, e@1), OK, because all peers replaced
+  runTest('replacing partially overlapping peer sets, superset', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { v: '4', y: '1' }},
+      children: [
+        {
+          pkg: {
+            name: 'v',
+            version: '4.0.0',
+            peerDependencies: { a: '1||2', x: '2' },
+            peerDependenciesMeta: { x: { optional: true }},
+          },
+        },
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { c: '2' }}},
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { e: '2' }}},
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
+      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: OK,
+  })
+
+  // partly overlapping peer sets that diverge
+  // v -> PEER(a@1||2, x@1)
+  // a@1 -> PEER(c@1, d@1)
+  // a@2 -> PEER(c@2, e@1)
+  // x@1 -> PEER(y@1)
+  // y@1 -> PEER(a@1||2)
+  // w -> PEER(a@1, j@1)
+  // j@1 -> PEER(y@1)
+  // root
+  // +-- v
+  // +-- a@2
+  // +-- c@2
+  // +-- e@1
+  // +-- x@1
+  // +-- y@1
+  // place w(a@1, j@1, y@1, c@1, d@1), OK
+  runTest('replacing partially overlapping divergent peer sets', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { v: '', w: '' }},
+      children: [
+        {
+          pkg: {
+            name: 'v',
+            version: '1.0.0',
+            peerDependencies: { a: '1||2', x: '1' },
+          },
+        },
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { c: '2', e: '1' }}},
+        { pkg: { name: 'c', version: '2.0.0' }},
+        { pkg: { name: 'e', version: '1.0.0' }},
+        { pkg: { name: 'x', version: '1.0.0', peerDependencies: { y: '1' }}},
+        { pkg: { name: 'y', version: '1.0.0', peerDependencies: { a: '1||2' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'w', version: '1.0.0', peerDependencies: { a: '1', j: '1' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { c: '1', d: '1' }}},
+      { pkg: { name: 'j', version: '1.0.0', peerDependencies: { y: '1' }}},
+      { pkg: { name: 'y', version: '1.0.0', peerDependencies: { a: '1||2' }}},
+      { pkg: { name: 'c', version: '1.0.0' }},
+      { pkg: { name: 'd', version: '1.0.0' }},
+    ],
+    nodeLoc: '',
+    targetLoc: '',
+    expect: OK,
   })
 
   t.end()

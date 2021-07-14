@@ -21,6 +21,25 @@ exports[`test/can-place-dep.js TAP basic placement check tests conflict an exist
 Array []
 `
 
+exports[`test/can-place-dep.js TAP basic placement check tests conflict an existing dep that is newer, preferDedupe peerConflict > conflict children 1`] = `
+Array [
+  Object {
+    "canPlace": Symbol(CONFLICT),
+    "canPlaceSelf": Symbol(CONFLICT),
+    "dep": Array [
+      "a",
+      "3.0.0",
+    ],
+    "edge": Array [
+      "node_modules/b",
+      "peer",
+      "a",
+      "3",
+    ],
+  },
+]
+`
+
 exports[`test/can-place-dep.js TAP basic placement check tests conflict in root for nested dep > conflict children 1`] = `
 Array []
 `
@@ -34,6 +53,10 @@ Array []
 `
 
 exports[`test/can-place-dep.js TAP basic placement check tests cycle of peers hanging off entry node > conflict children 1`] = `
+Array []
+`
+
+exports[`test/can-place-dep.js TAP basic placement check tests do not keep existing dep that matches, but does not satisfy > conflict children 1`] = `
 Array []
 `
 
@@ -151,6 +174,10 @@ exports[`test/can-place-dep.js TAP basic placement check tests keep an existing 
 Array []
 `
 
+exports[`test/can-place-dep.js TAP basic placement check tests keep existing dep that matches, does not satisfy, but overridden > conflict children 1`] = `
+Array []
+`
+
 exports[`test/can-place-dep.js TAP basic placement check tests nest peer set under dependent node > conflict children 1`] = `
 Array []
 `
@@ -245,6 +272,22 @@ Array []
 `
 
 exports[`test/can-place-dep.js TAP basic placement check tests replacing existing peer set > conflict children 1`] = `
+Array []
+`
+
+exports[`test/can-place-dep.js TAP basic placement check tests replacing overlapping peer sets > conflict children 1`] = `
+Array []
+`
+
+exports[`test/can-place-dep.js TAP basic placement check tests replacing partially overlapping divergent peer sets > conflict children 1`] = `
+Array []
+`
+
+exports[`test/can-place-dep.js TAP basic placement check tests replacing partially overlapping peer sets, subset > conflict children 1`] = `
+Array []
+`
+
+exports[`test/can-place-dep.js TAP basic placement check tests replacing partially overlapping peer sets, superset > conflict children 1`] = `
 Array []
 `
 

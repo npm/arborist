@@ -1,3 +1,4 @@
+process.env.ARBORIST_DEBUG = '1'
 const Inventory = require('../lib/inventory.js')
 const t = require('tap')
 

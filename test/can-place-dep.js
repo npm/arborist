@@ -1,3 +1,4 @@
+process.env.ARBORIST_DEBUG = '1'
 const t = require('tap')
 const CanPlaceDep = require('../lib/can-place-dep.js')
 const {

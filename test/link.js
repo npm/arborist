@@ -1,3 +1,4 @@
+process.env.ARBORIST_DEBUG = '1'
 const t = require('tap')
 const Link = require('../lib/link.js')
 const Node = require('../lib/node.js')

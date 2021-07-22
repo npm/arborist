@@ -1,6 +1,8 @@
 const t = require('tap')
 const depValid = require('../lib/dep-valid.js')
 const npa = require('npm-package-arg')
+const { normalizePaths } = require('./utils.js')
+const { resolve } = require('path')
 
 t.ok(depValid({}, '', null, {}), '* is always ok')
 
@@ -25,7 +27,7 @@ t.ok(depValid({
 t.ok(depValid({
   isLink: true,
   realpath: '/some/path',
-}, npa('file:/some/path'), null, {}), 'links must point at intended target')
+}, normalizePaths(npa('file:/some/path')), null, {}), 'links must point at intended target')
 
 t.notOk(depValid({
   isLink: true,
@@ -90,8 +92,8 @@ t.notOk(depValid({
 }, 'git+ssh://git@github.com/bar/foo.git', null, {}), 'missing repo')
 
 t.ok(depValid({
-  resolved: 'file:/path/to/tarball.tgz',
-}, '/path/to/tarball.tgz', null, {}), 'same tarball')
+  resolved: `file:${resolve('/path/to/tarball.tgz')}`,
+}, resolve('/path/to/tarball.tgz'), null, {}), 'same tarball')
 
 t.notOk(depValid({
   resolved: 'file:/path/to/other/tarball.tgz',

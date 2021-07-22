@@ -1317,11 +1317,20 @@ t.test('more peer dep conflicts', t => {
       const force = new Arborist({ ...OPT, path, force: true })
       const def = new Arborist({ ...OPT, path, log })
 
-      const [strictRes, forceRes, defRes] = await Promise.all([
+      // cannot do this in parallel on Windows machines, or it
+      // crashes in CI with an EBUSY error when it tries to read
+      // from the registry mock contents.
+      const results = process.platform !== 'win32' ? await Promise.all([
         strict.buildIdealTree({ add }).catch(er => er),
         force.buildIdealTree({ add }).catch(er => er),
         def.buildIdealTree({ add }).catch(er => er),
-      ])
+      ]) : [
+        await strict.buildIdealTree({ add }).catch(er => er),
+        await force.buildIdealTree({ add }).catch(er => er),
+        await def.buildIdealTree({ add }).catch(er => er),
+      ]
+
+      const [strictRes, forceRes, defRes] = results
 
       if (!resolvable) {
         if (!(strictRes instanceof Error))

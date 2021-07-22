@@ -6,16 +6,7 @@ const Shrinkwrap = require('../lib/shrinkwrap.js')
 const { resolve } = require('path')
 const treeCheck = require('../lib/tree-check.js')
 
-const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
-const normalizePaths = obj => {
-  for (const key in obj) {
-    if (['path', 'location'].includes(key))
-      obj[key] = normalizePath(obj[key])
-    else if (typeof obj[key] === 'object' && obj[key] !== null)
-      obj[key] = normalizePaths(obj[key])
-  }
-  return obj
-}
+const { normalizePath, normalizePaths } = require('./utils.js')
 
 t.cleanSnapshot = str =>
   str.split(process.cwd()).join('{CWD}')
@@ -1327,7 +1318,7 @@ t.test('dont rely on legacy _resolved for file: nodes', async t => {
     },
     path: '/some/completely/different/path',
   })
-  t.equal(notOld.resolved, 'file:/x/y/z/blorg.tgz')
+  t.equal(normalizePath(notOld.resolved), 'file:/x/y/z/blorg.tgz')
 })
 
 t.test('reparenting keeps children in root inventory', async t => {

@@ -2598,3 +2598,24 @@ t.test('canReplaceWith is always false when packageName does not match', t => {
     'can replace alias with a different alias to same thing')
   t.end()
 })
+
+t.test('canReplace while ignoring certain peer deps', t => {
+  const tree = new Node({
+    path: '/some/path',
+    pkg: { dependencies: { a: '1||2', b: '' }},
+    children: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { a: '1' }}},
+    ],
+  })
+  const current = tree.children.get('a')
+  const rep = new Node({
+    path: current.path,
+    pkg: { name: 'a', version: '2.0.0' },
+  })
+  t.equal(rep.canReplace(current), false, 'cannot replace because peer dep')
+  t.equal(rep.canReplace(current, ['b']), true,
+    'can replace if ignoring the `b` peer')
+
+  t.end()
+})

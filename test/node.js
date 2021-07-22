@@ -2561,3 +2561,40 @@ t.test('node.ancestry iterator', t => {
   t.strictSame(ancestry, ['g', 'f', 'e', 'd', 'c', 'b', 'a', 'root'])
   t.end()
 })
+
+t.test('canReplaceWith is always false when packageName does not match', t => {
+  const root = new Node({
+    path: '/some/path',
+    pkg: {
+      dependencies: {
+        foo: '1.2.3',
+        alias: 'npm:bar@1.2.3',
+      },
+    },
+    children: [
+      { pkg: { name: 'foo', version: '1.2.3' }},
+      { name: 'alias', pkg: { name: 'bar', version: '1.2.3' }},
+    ],
+  })
+  const rep = new Node({
+    path: '/some/path/node_modules/foo',
+    name: 'foo',
+    pkg: {
+      name: 'bar',
+      version: '1.2.3',
+    },
+  })
+  t.equal(rep.canReplace(root.children.get('foo')), false,
+    'cannot replace actual node with an alias')
+  const alias = new Node({
+    path: '/some/path/node_modules/alias',
+    name: 'alias',
+    pkg: {
+      name: 'bar',
+      version: '1.2.3',
+    },
+  })
+  t.equal(alias.canReplace(root.children.get('alias')), true,
+    'can replace alias with a different alias to same thing')
+  t.end()
+})

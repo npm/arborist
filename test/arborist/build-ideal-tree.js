@@ -1,3 +1,8 @@
+// the tree-checking is too abusively slow on Windows, and
+// can make the test time out unnecessarily.
+if (process.platform === 'win32')
+  process.env.ARBORIST_DEBUG = 0
+
 const {basename, resolve, relative} = require('path')
 const pacote = require('pacote')
 const t = require('tap')
@@ -226,7 +231,7 @@ t.test('cyclical peer deps', t => {
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         add: ['@isaacs/peer-dep-cycle-b@2.x'],
         legacyPeerDeps: true,
-      })))
+      }), 'add b@2.x with legacy peer deps'))
       .then(() => t.resolveMatchSnapshot(printIdeal(path, {
         // use @latest rather than @2.x to exercise the 'explicit tag' path
         add: ['@isaacs/peer-dep-cycle-b@latest'],
@@ -499,7 +504,7 @@ t.test('respect the yarn.lock file version, if lacking resolved', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'yarn-lock-mkdirp-no-resolved'))))
 
-t.test('optional dependency failures', t => {
+t.test('optional dependency failures', async t => {
   const cases = [
     'optional-ok',
     'optional-dep-enotarget',
@@ -508,8 +513,10 @@ t.test('optional dependency failures', t => {
     'optional-metadep-missing',
   ]
   t.plan(cases.length)
-  cases.forEach(c => t.resolveMatchSnapshot(printIdeal(
-    resolve(fixtures, c)), c))
+  for (const c of cases) {
+    const tree = await printIdeal(resolve(fixtures, c))
+    t.matchSnapshot(tree, c)
+  }
 })
 
 t.test('prod dependency failures', t => {
@@ -538,576 +545,6 @@ t.test('link dep within node_modules and outside root', t => {
     t.resolveMatchSnapshot(printIdeal(path, { follow: true }), 'linky deps followed'),
     t.resolveMatchSnapshot(printIdeal(path, { update: true, follow: true }), 'linky deps followed without lockfile'),
   ])
-})
-
-// some cases that are hard to hit without very elaborate dep trees
-// and precise race conditions, so we just create some contrived
-// examples here.
-t.test('contrived dep placement tests', t => {
-  const kCanPlaceDep = Symbol.for('canPlaceDep')
-  const kPlaceDep = Symbol.for('placeDep')
-  const kUpdateNames = Symbol.for('updateNames')
-  const kPeerSetSource = Symbol.for('peerSetSource')
-
-  const Node = require('../../lib/node.js')
-  const Link = require('../../lib/link.js')
-  t.test('keep existing dep', t => {
-    const root = new Node({
-      path: '/x/y/z',
-      realpath: '/x/y/z',
-      pkg: {
-        dependencies: {
-          foo: '1.2.x',
-          bar: '1.3.x',
-        },
-      },
-    })
-    new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.2.3',
-      },
-      integrity: 'sha512-foofoofoo',
-      parent: root,
-    })
-    const existingBar = new Node({
-      name: 'bar',
-      pkg: {
-        name: 'bar',
-        version: '1.3.4',
-        dependencies: {
-          foo: '1.x', // more lax than the root dep
-        },
-      },
-      integrity: 'sha512-barbarbar',
-      parent: root,
-    })
-
-    const sameFoo = new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.2.3',
-      },
-      integrity: 'sha512-foofoofoo',
-      parent: new Node({
-        name: 'virtual-root',
-        path: '/virtual-root',
-        pkg: { ...root.package },
-      }),
-    })
-    const a = new Arborist({ ...OPT })
-    a[kPeerSetSource].set(sameFoo, root)
-    t.match(a[kCanPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
-      Symbol('KEEP'), 'same integrity, keep the one we have')
-
-    t.strictSame(a[kPlaceDep](sameFoo, root, root.edgesOut.get('foo')),
-      [], 'nothing placed, keep whats already there')
-
-    const tooNew = new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.3.9',
-      },
-      integrity: 'sha512-oofoofoof',
-      parent: new Node({
-        name: 'virtual-root',
-        path: '/virtual-root',
-        pkg: { ...root.package },
-      }),
-    })
-    a[kPeerSetSource].set(tooNew, root)
-    t.match(a[kCanPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
-      Symbol('KEEP'), 'keep existing, satisfies the dep anyway')
-    t.strictSame(a[kPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
-      [], 'nothing placed, keep whats already there')
-
-    const newFoo = new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.2.4',
-      },
-      integrity: 'sha512-forforfor',
-      parent: new Node({
-        name: 'virtual-root',
-        path: '/virtual-root',
-        pkg: { ...root.package },
-      }),
-    })
-    // note: it'll actually not bother replacing in this case, because
-    // the original edge is not an error, but the canPlace result is still
-    // REPLACE because it's newer.
-    a[kPeerSetSource].set(newFoo, root)
-    t.match(a[kCanPlaceDep](newFoo, root, existingBar.edgesOut.get('foo')),
-      Symbol('REPLACE'), 'replace with newer dependency if allowed')
-    t.end()
-  })
-
-  t.test('replace nodes with newer nodes', t => {
-    const root = new Node({
-      path: '/x/y/z',
-      realpath: '/x/y/z',
-      pkg: {
-        dependencies: {
-          foo: '1.2.x',
-          bar: '1.3.x',
-        },
-      },
-    })
-    new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.2.3',
-      },
-      integrity: 'sha512-foofoofoo',
-      parent: root,
-    })
-    const existingBar = new Node({
-      name: 'bar',
-      pkg: {
-        name: 'bar',
-        version: '1.3.4',
-        dependencies: {
-          foo: '^1.2.4', // 1.2.3 is not ok!
-        },
-      },
-      integrity: 'sha512-barbarbar',
-      parent: root,
-    })
-
-    const a = new Arborist({ ...OPT })
-
-    const newFoo = new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.2.99',
-      },
-      integrity: 'sha512-oofoofoof',
-      parent: new Node({
-        name: 'virtual-root',
-        path: '/virtual-root',
-        pkg: { ...root.package },
-      }),
-    })
-    a[kPeerSetSource].set(newFoo, root)
-
-    t.match(a[kCanPlaceDep](newFoo, root, existingBar.edgesOut.get('foo')),
-      Symbol('REPLACE'), 'replace with newer node')
-    const placed = a[kPlaceDep](newFoo, existingBar, existingBar.edgesOut.get('foo'))
-    t.equal(placed.length, 1, 'placed one node')
-    t.strictSame(placed[0].package, newFoo.package, 'placed newFoo copy node')
-    t.equal(placed[0].parent, root, 'placed in root')
-
-    // remove it so we can test a conflict
-    placed[0].parent = null
-    const tooNew = new Node({
-      name: 'foo',
-      pkg: {
-        name: 'foo',
-        version: '1.3.9',
-      },
-      integrity: 'sha512-oofoofoof',
-      parent: new Node({
-        name: 'virtual-root',
-        path: '/virtual-root',
-        pkg: { ...root.package },
-      }),
-    })
-    t.match(a[kCanPlaceDep](tooNew, root, existingBar.edgesOut.get('foo')),
-      Symbol('CONFLICT'), 'conflicts with root dependency')
-
-    t.test('shadow conflict', t => {
-      const a = new Arborist({ ...OPT })
-      // test the case where we're trying to place a dep somewhere that will
-      // cause a conflict deeper in the tree.  The tree looks like this:
-      // root
-      // +-- b <-- conflict to place d@2 here on behalf of e
-      // |   +-- c (dep: d@1)
-      // |   +-- e (dep: d@2)
-      // +-- d@1
-      // If we place d@2 at b, then it'll shadow the d@1 that c is getting.
-      // In real life scenarios, the tree may be much more convoluted.
-      const shadowConflict = new Node({
-        path: '/path/to/project',
-        name: 'root',
-        pkg: {
-          name: 'root',
-          version: '1.0.0',
-          dependencies: { a: '' },
-        },
-        children: [
-          {
-            name: 'b',
-            pkg: { name: 'b', version: '1.0.0', dependencies: {c: ''}},
-            children: [
-              // gets its d1 dep from a's child node
-              {
-                name: 'c',
-                pkg: { name: 'c', version: '1.0.0', dependencies: {d: '1'}},
-              },
-              // trying to place a d2 on behalf of this one
-              {
-                name: 'e',
-                pkg: { name: 'e', version: '1.0.0', dependencies: {d: '2'}},
-              },
-            ],
-          },
-          // the dep being shadowed
-          {
-            name: 'd',
-            pkg: {name: 'd', version: '1.0.0'},
-          },
-        ],
-      })
-
-      const b = shadowConflict.children.get('b')
-      const e = b.children.get('e')
-      const edge = e.edgesOut.get('d')
-      // gut check
-      t.match(edge, {
-        valid: false,
-        name: 'd',
-        spec: '2',
-        type: 'prod',
-      }, 'gut check')
-      const d2 = new Node({
-        name: 'd',
-        pkg: {name: 'd', version: '2.0.0'},
-        parent: new Node({ path: '/virtual-root' }),
-      })
-      a[kPeerSetSource].set(d2, e)
-
-      t.match(a[kCanPlaceDep](d2, b, edge, null), Symbol('CONFLICT'),
-        'cannot place dep where it shadows a dependency creating a conflict')
-
-      t.end()
-    })
-
-    t.test('shadow no conflict', t => {
-      const a = new Arborist({ ...OPT })
-      // just like the shadow conflict test above, except it is ok to place
-      // root
-      // +-- b <-- ok place d@2 here on behalf of e
-      // |   +-- c (dep: d@1||2)
-      // |   +-- e (dep: d@2)
-      // +-- d@1
-      const shadowConflict = new Node({
-        path: '/path/to/project',
-        name: 'root',
-        pkg: {
-          name: 'root',
-          version: '1.0.0',
-          dependencies: { b: '' },
-        },
-        children: [
-          {
-            name: 'b',
-            pkg: { name: 'b', version: '1.0.0', dependencies: {c: ''}},
-            children: [
-              // gets its d1 dep from a's child node
-              {
-                name: 'c',
-                pkg: { name: 'c', version: '1.0.0', dependencies: {d: '1||2'}},
-              },
-              // trying to place a d2 on behalf of this one
-              {
-                name: 'e',
-                pkg: { name: 'e', version: '1.0.0', dependencies: {d: '2'}},
-              },
-            ],
-          },
-          // the dep being shadowed
-          {
-            name: 'd',
-            pkg: {name: 'd', version: '1.0.0'},
-          },
-        ],
-      })
-
-      const b = shadowConflict.children.get('b')
-      const e = b.children.get('e')
-      const edge = e.edgesOut.get('d')
-      // gut check
-      t.match(edge, {
-        valid: false,
-        name: 'd',
-        spec: '2',
-        type: 'prod',
-      }, 'gut check')
-      const d2 = new Node({
-        name: 'd',
-        pkg: {name: 'd', version: '2.0.0'},
-        parent: new Node({ path: '/virtual-root' }),
-      })
-
-      a[kPeerSetSource].set(d2, e)
-      t.match(a[kCanPlaceDep](d2, b, edge, null), Symbol('OK'),
-        'can place dep where it shadows a dependency creating no conflict')
-
-      t.end()
-    })
-
-    t.test('update replacing with a better node, dedupe existing', t => {
-      const a = new Arborist({ ...OPT })
-      // given a tree like this:
-      // root
-      // +-- b
-      //     +-- c@1
-      // and updating c to 1.1 by adding it at root, we should end up with
-      // a tree like this:
-      // root
-      // +-- b
-      // +-- c@1.1
-      // where c has been deduped, rather than leaving it in place:
-      // root
-      // +-- b
-      // |   +-- c@1
-      // +-- c@1.1
-      // when we place the c@1.1 dep on behalf of b and end up in root.
-      const dedupeUpdate = a.idealTree = new Node({
-        name: 'root',
-        path: '/some/path',
-        pkg: { name: 'root', dependencies: { b: '' } },
-        children: [
-          {
-            name: 'b',
-            pkg: { name: 'b', version: '1.2.3', dependencies: { c: '1' } },
-            children: [{ name: 'c', pkg: { name: 'c', version: '1.0.0' } }],
-          },
-        ],
-      })
-      const c11 = new Node({
-        name: 'c',
-        pkg: { name: 'c', version: '1.1.0' },
-        parent: new Node({ path: '/virtual/root' }),
-      })
-      const b = dedupeUpdate.children.get('b')
-      const c1 = b.children.get('c')
-      const edge = b.edgesOut.get('c')
-      t.equal(edge.to, c1, 'gut check')
-      a[kUpdateNames] = ['c']
-      a[kPeerSetSource].set(c11, dedupeUpdate)
-      const [placedc11] = a[kPlaceDep](c11, b, edge)
-      t.equal(c1.root, c1, 'c 1.0 removed from tree')
-      t.equal(placedc11.parent, dedupeUpdate, 'c 1.1 placed in root node_modules')
-      t.equal(edge.to, placedc11, 'b is resolved by c 1.1')
-      t.equal(edge.valid, true, 'b is happy about this')
-      t.equal(b.children.size, 0, 'b has no direct children now')
-      t.end()
-    })
-
-    t.test('update replacing with better node, keep needed dupe', t => {
-      const a = new Arborist({ ...OPT })
-      // root (a, d, d*)
-      // +-- a (b, c2)
-      // |   +-- b (c2) <-- place c2 for b, lands at root
-      // +-- d (e)
-      //     +-- e (c1, d)
-      //         +-- c1
-      //         +-- f (c2)
-      //             +-- c2 <-- pruning this would be bad
-      const root = a.idealTree = new Node({
-        name: 'root',
-        path: '/some/path',
-        pkg: {
-          name: 'root',
-          dependencies: {
-            a: '',
-            d: '',
-          },
-        },
-        children: [
-          {
-            name: 'a',
-            pkg: {
-              name: 'a',
-              version: '1.2.3',
-              dependencies: { b: '', c: '2' },
-            },
-            children: [
-              {
-                name: 'b',
-                pkg: {
-                  name: 'b',
-                  version: '1.2.3',
-                  dependencies: { c: '2' },
-                },
-              },
-            ],
-          },
-          {
-            name: 'd',
-            pkg: {
-              name: 'd',
-              version: '1.2.3',
-              dependencies: { e: '' },
-            },
-            children: [
-              {
-                name: 'e',
-                pkg: { name: 'e',
-                  dependencies: {
-                    c: '1',
-                    f: '',
-                  }},
-                children: [
-                  { name: 'c', pkg: { name: 'c', version: '1.2.3' } },
-                  {
-                    name: 'f',
-                    pkg: {
-                      name: 'f',
-                      dependencies: { c: '2' },
-                    },
-                    children: [
-                      {
-                        name: 'c',
-                        pkg: {
-                          name: 'c',
-                          version: '2.3.4',
-                        },
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      })
-
-      const c2 = new Node({
-        name: 'c',
-        pkg: { name: 'c', version: '2.3.4' },
-        parent: new Node({ path: '/virtual/root' }),
-      })
-
-      const d = root.children.get('d')
-      t.ok(d, 'have d node')
-
-      const e = d.children.get('e')
-      t.ok(e, 'have e node')
-
-      const oldc = e.children.get('c')
-      const f = e.children.get('f')
-      const dupe = f.children.get('c')
-      const b = root.children.get('a').children.get('b')
-      const edge = b.edgesOut.get('c')
-      a[kPeerSetSource].set(c2, b)
-      const [placedc2] = a[kPlaceDep](c2, b, edge)
-      t.equal(placedc2.parent, root, 'new node landed at the root')
-      t.equal(oldc.parent, e, 'old c still in the tree')
-      t.equal(dupe.parent, f, 'dupe still in tree')
-      t.end()
-    })
-
-    t.test('update, but already up to date and fine', t => {
-      // this hits the canPlace === KEEP branch in _placeDep,
-      // given a tree like this:
-      // root (b@1||2)
-      // +-- a (b@2)
-      // +-- b@2
-      // attempting to place b@2 at root on behalf of a is a no-op, because
-      // it's already there and fine.
-      const root = new Node({
-        pkg: { dependencies: {a: '', b: '2'}},
-        path: '/root',
-        children: [
-          { pkg: { name: 'a', version: '1.2.3', dependencies: {b: '2'}}},
-          { pkg: { name: 'b', version: '2.3.4'}},
-        ],
-      })
-      const newb = new Node({
-        path: '/virtual-root/b',
-        pkg: { name: 'b', version: '2.3.3' },
-        parent: new Node({
-          name: 'virtual-root',
-          path: '/virtual-root',
-          pkg: { ...root.package },
-        }),
-      })
-      const anode = root.children.get('a')
-      const edge = anode.edgesOut.get('b')
-      const arb = new Arborist({ path: root.path, ...OPT })
-      arb[kUpdateNames] = ['b']
-      arb.idealTree = root
-      const placed = arb[kPlaceDep](newb, anode, edge)
-      t.strictSame(placed, [])
-      t.end()
-    })
-
-    t.end()
-  })
-
-  t.test('linked tops get their peer deps local if no other option', t => {
-    const a = new Arborist({ ...OPT })
-    const root = new Node({
-      path: '/some/path',
-      pkg: { name: 'root', dependencies: { foo: '*' }},
-    })
-    const target = new Node({
-      path: '/some/other/path',
-      pkg: { name: 'foo', version: '1.2.3', peerDependencies: { bar: '' }},
-      root,
-    })
-    new Link({
-      parent: root,
-      pkg: target.package,
-      realpath: target.path,
-      target,
-    })
-    const bar = new Node({
-      name: 'bar',
-      pkg: { name: 'bar', version: '1.2.3' },
-      parent: new Node({ path: '/virtual-root' }),
-    })
-    const edge = target.edgesOut.get('bar')
-    t.equal(edge.valid, false, 'gut check')
-    a[kPeerSetSource].set(bar, root)
-    const [placedbar] = a[kPlaceDep](bar, target, edge)
-    t.equal(edge.valid, true, 'resolved')
-    t.equal(placedbar.parent, target, 'installed peer locally in target top node')
-    t.end()
-  })
-
-  t.test('linked tops use fsParent if possible', t => {
-    const a = new Arborist({ ...OPT })
-    const root = new Node({
-      path: '/some/path',
-      realpath: '/some/path',
-      pkg: { name: 'root', dependencies: { foo: '*' }},
-    })
-    const target = new Node({
-      path: '/some/path/to/packages',
-      pkg: { name: 'foo', version: '1.2.3', peerDependencies: { bar: '' }},
-      fsParent: root,
-      root,
-    })
-    new Link({
-      parent: root,
-      pkg: target.package,
-      realpath: target.path,
-      target,
-    })
-    const bar = new Node({
-      name: 'bar',
-      pkg: { name: 'bar', version: '1.2.3' },
-      parent: new Node({ path: '/virtual-root' }),
-    })
-    const edge = target.edgesOut.get('bar')
-    t.equal(edge.valid, false, 'gut check')
-    a[kPeerSetSource].set(bar, root)
-    const [placedbar] = a[kPlaceDep](bar, target, edge)
-    t.equal(edge.valid, true, edge.error)
-    t.equal(placedbar.parent, root, 'installed peer in fsParent node')
-    t.end()
-  })
-
-  t.end()
 })
 
 t.test('global style', t => t.resolveMatchSnapshot(printIdeal(t.testdir(), {
@@ -1858,7 +1295,8 @@ t.test('more peer dep conflicts', t => {
     },
   })
 
-  t.jobs = cases.length
+  if (process.platform !== 'win32')
+    t.jobs = cases.length
   t.plan(cases.length)
 
   for (const [name, {pkg, error, resolvable, add}] of cases) {
@@ -1890,12 +1328,12 @@ t.test('more peer dep conflicts', t => {
           console.error(printTree(strictRes))
         t.match(strictRes, { code: 'ERESOLVE' })
       } else if (strictRes instanceof Error)
-        t.fail('should not get error in strict mode', strictRes)
+        t.fail('should not get error in strict mode', { error: strictRes })
       else
         t.matchSnapshot(printTree(strictRes), 'strict result')
 
       if (forceRes instanceof Error)
-        t.fail('should not get error when forced', forceRes)
+        t.fail('should not get error when forced', { error: forceRes })
       else
         t.matchSnapshot(printTree(forceRes), 'force result')
 
@@ -1904,7 +1342,7 @@ t.test('more peer dep conflicts', t => {
           console.error(printTree(defRes))
         t.match(defRes, { code: 'ERESOLVE' })
       } else if (defRes instanceof Error)
-        t.fail('should not get error in default mode', defRes)
+        t.fail('should not get error in default mode', { error: defRes })
       else {
         if (resolvable)
           t.strictSame(warnings, [])
@@ -2441,19 +1879,22 @@ t.test('peer dep that needs to be replaced', async t => {
   t.matchSnapshot(await printIdeal(path))
 })
 
-t.test('peer dep override with dep sets being replaced', async t => {
-  // in this case, because our root depends on webpack 5, and on something
-  // that has a peer dependency on webpack 4, it overrides but otherwise fails.
+t.test('transitive conflicted peer dependency', async t => {
+  // see test/fixtures/testing-transitive-conflicted-peer/README.md
+  // for a thorough explanation.
   const path = t.testdir({
     'package.json': JSON.stringify({
-      devDependencies: {
-        webpack: '5.0.0',
-        'webpack-dev-server': '3.11.0',
+      dependencies: {
+        '@isaacs/testing-transitive-conflicted-peer-a': '1',
+        '@isaacs/testing-transitive-conflicted-peer-b': '2',
       },
     }),
   })
-  await t.rejects(printIdeal(path), { code: 'ERESOLVE' })
-  t.matchSnapshot(await printIdeal(path, { force: true }))
+  const strict = { strictPeerDeps: true }
+  const force = { force: true }
+  t.matchSnapshot(await printIdeal(path))
+  t.matchSnapshot(await printIdeal(path, force))
+  await t.rejects(printIdeal(path, strict), { code: 'ERESOLVE' })
 })
 
 t.test('remove deps when initializing tree from actual tree', async t => {

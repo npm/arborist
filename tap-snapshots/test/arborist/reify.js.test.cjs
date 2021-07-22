@@ -588,11 +588,6 @@ Object {
   "dependencies": Object {
     "a": Object {
       "dependencies": Object {
-        "minimist": Object {
-          "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
-          "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
-          "version": "1.2.5",
-        },
         "mkdirp": Object {
           "integrity": "sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==",
           "requires": Object {
@@ -609,6 +604,11 @@ Object {
     },
     "b": Object {
       "dependencies": Object {
+        "minimist": Object {
+          "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+          "version": "0.0.8",
+        },
         "mkdirp": Object {
           "integrity": "sha1-HXMHam35hs2TROFecfzAWkyavxI=",
           "requires": Object {
@@ -624,9 +624,9 @@ Object {
       "version": "file:packages/b",
     },
     "minimist": Object {
-      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-      "version": "0.0.8",
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
     },
     "mkdirp": Object {
       "integrity": "sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==",
@@ -654,9 +654,9 @@ Object {
       "resolved": "packages/b",
     },
     "node_modules/minimist": Object {
-      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-      "version": "0.0.8",
+      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
+      "version": "1.2.5",
     },
     "node_modules/mkdirp": Object {
       "bin": Object {
@@ -675,11 +675,6 @@ Object {
       },
       "version": "1.2.3",
     },
-    "packages/a/node_modules/minimist": Object {
-      "integrity": "sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
-      "version": "1.2.5",
-    },
     "packages/a/node_modules/mkdirp": Object {
       "bin": Object {
         "mkdirp": "bin/cmd.js",
@@ -696,6 +691,11 @@ Object {
         "mkdirp": "^0.5.0",
       },
       "version": "1.2.3",
+    },
+    "packages/b/node_modules/minimist": Object {
+      "integrity": "sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=",
+      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+      "version": "0.0.8",
     },
     "packages/b/node_modules/mkdirp": Object {
       "bin": Object {
@@ -747,21 +747,6 @@ ArboristNode {
       },
       "version": "1.2.3",
     },
-    "minimist" => ArboristNode {
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "packages/b/node_modules/mkdirp",
-          "name": "minimist",
-          "spec": "0.0.8",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/minimist",
-      "name": "minimist",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/node_modules/minimist",
-      "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
-      "version": "0.0.8",
-    },
   },
   "edgesOut": Map {
     "a" => EdgeOut {
@@ -788,6 +773,21 @@ ArboristNode {
   "fsChildren": Set {
     ArboristNode {
       "children": Map {
+        "minimist" => ArboristNode {
+          "edgesIn": Set {
+            EdgeIn {
+              "from": "packages/b/node_modules/mkdirp",
+              "name": "minimist",
+              "spec": "0.0.8",
+              "type": "prod",
+            },
+          },
+          "location": "packages/b/node_modules/minimist",
+          "name": "minimist",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-add-deps-to-workspaces-add-mkdirp-0.5.0-to-b-empty-start/packages/b/node_modules/minimist",
+          "resolved": "https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz",
+          "version": "0.0.8",
+        },
         "mkdirp" => ArboristNode {
           "edgesIn": Set {
             EdgeIn {
@@ -801,7 +801,7 @@ ArboristNode {
             "minimist" => EdgeOut {
               "name": "minimist",
               "spec": "0.0.8",
-              "to": "node_modules/minimist",
+              "to": "packages/b/node_modules/minimist",
               "type": "prod",
             },
           },
@@ -33793,14 +33793,6 @@ ArboristNode {
       "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/@babel/types",
       "resolved": "https://registry.npmjs.org/@babel/types/-/types-7.7.4.tgz",
       "version": "7.7.4",
-    },
-    "@types/color-name" => ArboristNode {
-      "dev": true,
-      "location": "node_modules/@types/color-name",
-      "name": "@types/color-name",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-update-a-bundling-node-without-updating-all-of-its-deps/node_modules/@types/color-name",
-      "resolved": "https://registry.npmjs.org/@types/color-name/-/color-name-1.1.1.tgz",
-      "version": "1.1.1",
     },
     "ajv" => ArboristNode {
       "dev": true,

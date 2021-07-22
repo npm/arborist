@@ -53,7 +53,7 @@
     "test-only": "tap",
     "posttest": "npm run lint",
     "snap": "tap",
-    "postsnap": "npm run lint",
+    "postsnap": "npm run lintfix",
     "test-proxy": "ARBORIST_TEST_PROXY=1 tap --snapshot",
     "preversion": "npm test",
     "postversion": "npm publish",

@@ -568,6 +568,7 @@ EdgeIn{
 "spec":"file:/home/user/projects/root/packages/a",
 "type":"workspace",},},
 "extraneous":true,
+"isWorkspace":true,
 "location":"node_modules/a",
 "name":"a",
 "optional":true,
@@ -587,6 +588,7 @@ EdgeIn{
 "spec":"file:/home/user/projects/root/packages/b",
 "type":"workspace",},},
 "extraneous":true,
+"isWorkspace":true,
 "location":"node_modules/b",
 "name":"b",
 "optional":true,
@@ -614,6 +616,7 @@ EdgeIn{
 {
 "dev":true,
 "extraneous":true,
+"isWorkspace":true,
 "location":"packages/a",
 "name":"a",
 "optional":true,
@@ -623,6 +626,7 @@ EdgeIn{
 {
 "dev":true,
 "extraneous":true,
+"isWorkspace":true,
 "location":"packages/b",
 "name":"b",
 "optional":true,

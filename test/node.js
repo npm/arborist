@@ -2525,3 +2525,39 @@ t.test('node at / should not have fsParent', t => {
   t.equal(link.target.fsParent, null)
   t.end()
 })
+
+t.test('node.ancestry iterator', t => {
+  const root = new Node({
+    path: '/some/path',
+    pkg: { name: 'root', version: '1.2.3' },
+    children: [{
+      pkg: { name: 'a', version: '1.2.3' },
+      children: [{
+        pkg: { name: 'b', version: '1.2.3' },
+        children: [{
+          pkg: { name: 'c', version: '1.2.3' },
+        }],
+      }],
+    }],
+  })
+  const c = root.children.get('a').children.get('b').children.get('c')
+  const d = new Node({
+    root,
+    path: c.path + '/d',
+    pkg: { name: 'd', version: '1.2.3' },
+    children: [{
+      pkg: { name: 'e', version: '1.2.3' },
+      children: [{
+        pkg: { name: 'f', version: '1.2.3' },
+        children: [{
+          pkg: { name: 'g', version: '1.2.3' },
+        }],
+      }],
+    }],
+  })
+  const g = d.children.get('e').children.get('f').children.get('g')
+
+  const ancestry = [...g.ancestry()].map(n => n.packageName)
+  t.strictSame(ancestry, ['g', 'f', 'e', 'd', 'c', 'b', 'a', 'root'])
+  t.end()
+})

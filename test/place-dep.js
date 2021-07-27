@@ -53,14 +53,6 @@ t.test('placement tests', t => {
       }
     }
 
-    const msg = `place ${
-      dep.package._id
-    } for { ${
-      edge.from.location || 'ROOT'
-    } ${
-      edge.type + ' ' + edge.name + '@' + edge.spec
-    } }`
-
     const place = () => {
       return new PlaceDep({
         edge,
@@ -89,8 +81,22 @@ t.test('placement tests', t => {
         t.end()
 
         // any time we have an error, we should NOT get that error
-        // when run in force mode.
-        runTest(msg + ', force', { ...options, error: false, force: true })
+        // when run in force or legacyPeerDeps mode
+        runTest(desc + ', force', {
+          ...options,
+          error: false,
+          force: true,
+          legacyPeerDeps: false,
+        })
+        if (!edge.peer && !legacyPeerDeps) {
+          runTest(desc + ', legacyPeerDeps', {
+            ...options,
+            error: false,
+            force: false,
+            legacyPeerDeps: true,
+            peerSet: [],
+          })
+        }
         return
       }
 

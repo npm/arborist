@@ -1,3 +1,5 @@
+// this test depends on debug stuff, so force it on, even if the test env
+// does not enable it.
 process.env.ARBORIST_DEBUG = '1'
 const Inventory = require('../lib/inventory.js')
 const t = require('tap')

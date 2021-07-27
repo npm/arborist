@@ -45,6 +45,7 @@ extraneous:true,
 dev:true,
 optional:true,
 peer:true,
+isProjectRoot:true,
 error:{code:'ERR', path:'/'},
 edgesOut:Map{
 'b' =>{prod b@* -> node_modules/b},
@@ -117,6 +118,7 @@ path:'/home/user/projects/root',
 dev:true,
 optional:true,
 peer:true,
+isProjectRoot:true,
 error:{code:'ERR'},
 edgesOut:Map{
 'a' =>{prod a@^1.0.0 -> node_modules/a},
@@ -180,7 +182,9 @@ exports[`test/node.js TAP set workspaces > should setup edges out for each works
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -229,8 +233,12 @@ exports[`test/node.js TAP set workspaces > should setup edges out for each works
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "foo" => Edge {},
-    "bar" => Edge {},
+    "foo" => Edge {
+      "overridden": false,
+    },
+    "bar" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -255,7 +263,9 @@ exports[`test/node.js TAP set workspaces > should setup edges out for each works
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {},
           "errors": Array [],
@@ -345,7 +355,9 @@ exports[`test/node.js TAP set workspaces > should setup edges out for each works
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -385,7 +397,9 @@ exports[`test/node.js TAP set workspaces > should setup edges out for each works
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {},
           "errors": Array [],
@@ -520,7 +534,9 @@ exports[`test/node.js TAP set workspaces > should setup edges out for each works
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {},
           "errors": Array [],
@@ -639,11 +655,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "asdf" => Edge {},
+            "asdf" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -668,11 +690,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -684,7 +712,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -726,11 +756,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -756,7 +792,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -783,7 +821,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -810,7 +850,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -862,10 +904,14 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -915,13 +961,27 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -962,11 +1022,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "asdf" => Edge {},
+            "asdf" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -991,11 +1057,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1007,7 +1079,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -1050,7 +1124,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1076,11 +1152,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1106,7 +1188,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1133,7 +1217,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1160,7 +1246,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1212,10 +1300,14 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1289,11 +1381,17 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1355,7 +1453,9 @@ exports[`test/node.js TAP testing with dep tree with meta > add new meta under p
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1390,11 +1490,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "bundled" => Edge {},
+            "bundled" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -1419,11 +1525,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1435,7 +1547,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -1477,11 +1591,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1507,7 +1627,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1534,7 +1656,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1561,7 +1685,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1613,13 +1739,27 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -1636,11 +1776,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "bundled" => Edge {},
+            "bundled" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -1665,11 +1811,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1681,7 +1833,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -1724,7 +1878,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1750,11 +1906,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1780,11 +1942,17 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1810,7 +1978,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1837,7 +2007,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1864,7 +2036,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -1929,7 +2103,9 @@ exports[`test/node.js TAP testing with dep tree with meta > initial load with so
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1962,11 +2138,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -1978,7 +2160,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -2020,11 +2204,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2050,7 +2240,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2077,7 +2269,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2104,7 +2298,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2156,12 +2352,20 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2187,13 +2391,27 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -2208,11 +2426,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2224,7 +2448,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -2267,7 +2493,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2293,11 +2521,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2323,7 +2557,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2350,7 +2586,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2377,7 +2615,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2429,12 +2669,20 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2473,7 +2721,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move meta to top lev
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2506,11 +2756,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2522,7 +2778,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -2564,10 +2822,14 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2593,7 +2855,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2620,7 +2884,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2647,7 +2913,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2723,12 +2991,20 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2778,13 +3054,27 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -2799,11 +3089,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2815,7 +3111,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -2858,7 +3156,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2884,10 +3184,14 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -2913,7 +3217,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2940,7 +3246,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -2967,7 +3275,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3066,12 +3376,20 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3134,7 +3452,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3167,11 +3487,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3183,7 +3509,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -3225,10 +3553,14 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3254,7 +3586,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3281,7 +3615,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3308,7 +3644,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3384,12 +3722,20 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3439,13 +3785,27 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -3460,11 +3820,17 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3476,7 +3842,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -3519,7 +3887,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3545,10 +3915,14 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3574,7 +3948,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3601,7 +3977,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3628,7 +4006,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3727,12 +4107,20 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3795,7 +4183,9 @@ exports[`test/node.js TAP testing with dep tree with meta > move new meta to top
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3854,11 +4244,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "asdf" => Edge {},
+            "asdf" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -3883,11 +4279,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3899,7 +4301,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -3941,11 +4345,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -3971,7 +4381,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -3998,7 +4410,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4025,7 +4439,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4077,10 +4493,14 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4130,13 +4550,27 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -4177,11 +4611,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "asdf" => Edge {},
+            "asdf" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -4206,11 +4646,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4222,7 +4668,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -4265,7 +4713,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4291,11 +4741,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4321,7 +4777,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4348,7 +4806,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4375,7 +4835,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4427,10 +4889,14 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4504,11 +4970,17 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4570,7 +5042,9 @@ exports[`test/node.js TAP testing with dep tree without meta > add new meta unde
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4605,11 +5079,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "bundled" => Edge {},
+            "bundled" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -4634,11 +5114,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4650,7 +5136,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -4692,11 +5180,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4722,7 +5216,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4749,7 +5245,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4776,7 +5274,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -4828,13 +5328,27 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -4851,11 +5365,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
           "devOptional": true,
           "dummy": false,
           "edgesIn": Set {
-            Edge {},
-            Edge {},
+            Edge {
+              "overridden": false,
+            },
+            Edge {
+              "overridden": false,
+            },
           },
           "edgesOut": Map {
-            "bundled" => Edge {},
+            "bundled" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -4880,11 +5400,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4896,7 +5422,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -4939,7 +5467,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4965,11 +5495,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -4995,11 +5531,17 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5025,7 +5567,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5052,7 +5596,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5079,7 +5625,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5144,7 +5692,9 @@ exports[`test/node.js TAP testing with dep tree without meta > initial load with
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5177,11 +5727,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5193,7 +5749,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -5235,11 +5793,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5265,7 +5829,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5292,7 +5858,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5319,7 +5887,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5371,12 +5941,20 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5402,13 +5980,27 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -5423,11 +6015,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5439,7 +6037,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -5482,7 +6082,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5508,11 +6110,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5538,7 +6146,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5565,7 +6175,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5592,7 +6204,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5644,12 +6258,20 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "bundled" => Edge {},
+        "bundled" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5688,7 +6310,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move meta to top 
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5721,11 +6345,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5737,7 +6367,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -5779,10 +6411,14 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5808,7 +6444,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5835,7 +6473,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5862,7 +6502,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -5938,12 +6580,20 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -5993,13 +6643,27 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -6014,11 +6678,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6030,7 +6700,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -6073,7 +6745,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6099,10 +6773,14 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6128,7 +6806,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6155,7 +6835,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6182,7 +6864,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6281,12 +6965,20 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6349,7 +7041,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6382,11 +7076,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6398,7 +7098,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -6440,10 +7142,14 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6469,7 +7175,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6496,7 +7204,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6523,7 +7233,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6599,12 +7311,20 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6654,13 +7374,27 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
   "dummy": false,
   "edgesIn": Set {},
   "edgesOut": Map {
-    "prod" => Edge {},
-    "bundled" => Edge {},
-    "missing" => Edge {},
-    "optional" => Edge {},
-    "optMissing" => Edge {},
-    "dev" => Edge {},
-    "overlap" => Edge {},
+    "prod" => Edge {
+      "overridden": false,
+    },
+    "bundled" => Edge {
+      "overridden": false,
+    },
+    "missing" => Edge {
+      "overridden": false,
+    },
+    "optional" => Edge {
+      "overridden": false,
+    },
+    "optMissing" => Edge {
+      "overridden": false,
+    },
+    "dev" => Edge {
+      "overridden": false,
+    },
+    "overlap" => Edge {
+      "overridden": false,
+    },
   },
   "errors": Array [],
   "extraneous": true,
@@ -6675,11 +7409,17 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "peer" => Edge {},
-        "meta" => Edge {},
+        "peer" => Edge {
+          "overridden": false,
+        },
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6691,7 +7431,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
           "dummy": false,
           "edgesIn": Set {},
           "edgesOut": Map {
-            "meta" => Edge {},
+            "meta" => Edge {
+              "overridden": false,
+            },
           },
           "errors": Array [],
           "extraneous": true,
@@ -6734,7 +7476,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6760,10 +7504,14 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -6789,7 +7537,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6816,7 +7566,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6843,7 +7595,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "errors": Array [],
@@ -6942,12 +7696,20 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "devOptional": true,
       "dummy": false,
       "edgesIn": Set {
-        Edge {},
-        Edge {},
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {
-        "asdf" => Edge {},
+        "asdf" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,
@@ -7010,7 +7772,9 @@ exports[`test/node.js TAP testing with dep tree without meta > move new meta to 
       "dummy": false,
       "edgesIn": Set {},
       "edgesOut": Map {
-        "meta" => Edge {},
+        "meta" => Edge {
+          "overridden": false,
+        },
       },
       "errors": Array [],
       "extraneous": true,

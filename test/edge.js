@@ -417,6 +417,13 @@ t.matchSnapshot(
   ),
   'should return a human-readable representation of the edge obj'
 )
+printable.overridden = true
+t.matchSnapshot(
+  normalizeNode10compatSnapshots(
+    util.inspect(printable)
+  ),
+  'return a human-readable representation of the edge obj, overridden=true'
+)
 
 const minimalPrintableFrom = {
   ...a,

@@ -6,16 +6,7 @@ const Shrinkwrap = require('../lib/shrinkwrap.js')
 const { resolve } = require('path')
 const treeCheck = require('../lib/tree-check.js')
 
-const normalizePath = path => path.replace(/^[A-Z]:/, '').replace(/\\/g, '/')
-const normalizePaths = obj => {
-  for (const key in obj) {
-    if (['path', 'location'].includes(key))
-      obj[key] = normalizePath(obj[key])
-    else if (typeof obj[key] === 'object' && obj[key] !== null)
-      obj[key] = normalizePaths(obj[key])
-  }
-  return obj
-}
+const { normalizePath, normalizePaths } = require('./utils.js')
 
 t.cleanSnapshot = str =>
   str.split(process.cwd()).join('{CWD}')
@@ -1327,7 +1318,7 @@ t.test('dont rely on legacy _resolved for file: nodes', async t => {
     },
     path: '/some/completely/different/path',
   })
-  t.equal(notOld.resolved, 'file:/x/y/z/blorg.tgz')
+  t.equal(normalizePath(notOld.resolved), 'file:/x/y/z/blorg.tgz')
 })
 
 t.test('reparenting keeps children in root inventory', async t => {
@@ -2523,5 +2514,99 @@ t.test('node at / should not have fsParent', t => {
     realpath: '/',
   })
   t.equal(link.target.fsParent, null)
+  t.end()
+})
+
+t.test('node.ancestry iterator', t => {
+  const root = new Node({
+    path: '/some/path',
+    pkg: { name: 'root', version: '1.2.3' },
+    children: [{
+      pkg: { name: 'a', version: '1.2.3' },
+      children: [{
+        pkg: { name: 'b', version: '1.2.3' },
+        children: [{
+          pkg: { name: 'c', version: '1.2.3' },
+        }],
+      }],
+    }],
+  })
+  const c = root.children.get('a').children.get('b').children.get('c')
+  const d = new Node({
+    root,
+    path: c.path + '/d',
+    pkg: { name: 'd', version: '1.2.3' },
+    children: [{
+      pkg: { name: 'e', version: '1.2.3' },
+      children: [{
+        pkg: { name: 'f', version: '1.2.3' },
+        children: [{
+          pkg: { name: 'g', version: '1.2.3' },
+        }],
+      }],
+    }],
+  })
+  const g = d.children.get('e').children.get('f').children.get('g')
+
+  const ancestry = [...g.ancestry()].map(n => n.packageName)
+  t.strictSame(ancestry, ['g', 'f', 'e', 'd', 'c', 'b', 'a', 'root'])
+  t.end()
+})
+
+t.test('canReplaceWith is always false when packageName does not match', t => {
+  const root = new Node({
+    path: '/some/path',
+    pkg: {
+      dependencies: {
+        foo: '1.2.3',
+        alias: 'npm:bar@1.2.3',
+      },
+    },
+    children: [
+      { pkg: { name: 'foo', version: '1.2.3' }},
+      { name: 'alias', pkg: { name: 'bar', version: '1.2.3' }},
+    ],
+  })
+  const rep = new Node({
+    path: '/some/path/node_modules/foo',
+    name: 'foo',
+    pkg: {
+      name: 'bar',
+      version: '1.2.3',
+    },
+  })
+  t.equal(rep.canReplace(root.children.get('foo')), false,
+    'cannot replace actual node with an alias')
+  const alias = new Node({
+    path: '/some/path/node_modules/alias',
+    name: 'alias',
+    pkg: {
+      name: 'bar',
+      version: '1.2.3',
+    },
+  })
+  t.equal(alias.canReplace(root.children.get('alias')), true,
+    'can replace alias with a different alias to same thing')
+  t.end()
+})
+
+t.test('canReplace while ignoring certain peer deps', t => {
+  const tree = new Node({
+    path: '/some/path',
+    pkg: { dependencies: { a: '1||2', b: '' }},
+    children: [
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
+      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { a: '1' }}},
+    ],
+  })
+  const current = tree.children.get('a')
+  const rep = new Node({
+    path: current.path,
+    pkg: { name: 'a', version: '2.0.0' },
+  })
+  t.equal(rep.canReplace(current), false, 'cannot replace because peer dep')
+  t.equal(rep.canReplace(current, ['b']), true,
+    'can replace if ignoring the `b` peer')
+
   t.end()
 })

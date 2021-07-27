@@ -14,6 +14,7 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "",
@@ -33,6 +34,7 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": false,
+  "overridden": false,
   "peer": true,
   "peerLocal": false,
   "spec": "1.2.3",
@@ -52,8 +54,12 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "c" => Edge {},
-      "b" => Edge {},
+      "c" => Edge {
+        "overridden": false,
+      },
+      "b" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -66,7 +72,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -85,6 +93,7 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": false,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "*",
@@ -92,7 +101,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -106,7 +117,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -136,7 +149,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "b" => Edge {},
+      "b" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -149,7 +164,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -168,6 +185,7 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": true,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "1.69.420-nice",
@@ -175,7 +193,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -189,7 +209,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -219,7 +241,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "missing" => Edge {},
+      "missing" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": true,
@@ -235,6 +259,7 @@ Edge {
   "missing": false,
   "name": "missing",
   "optional": true,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "",
@@ -254,7 +279,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "aa" => Edge {},
+      "aa" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -267,7 +294,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "b" => Edge {},
+        "b" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": false,
@@ -280,7 +309,9 @@ Edge {
         "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
-          "missing" => Edge {},
+          "missing" => Edge {
+            "overridden": false,
+          },
         },
         "explain": Function explain(),
         "isTop": true,
@@ -302,6 +333,7 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "",
@@ -309,7 +341,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -323,7 +357,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "b" => Edge {},
+        "b" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": false,
@@ -336,7 +372,9 @@ Edge {
         "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
-          "missing" => Edge {},
+          "missing" => Edge {
+            "overridden": false,
+          },
         },
         "explain": Function explain(),
         "isTop": true,
@@ -369,7 +407,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "aa" => Edge {},
+      "aa" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -382,7 +422,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -401,6 +443,7 @@ Edge {
   "missing": true,
   "name": "aa",
   "optional": false,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "",
@@ -420,7 +463,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "aa" => Edge {},
+      "aa" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -432,7 +477,9 @@ Edge {
       "addEdgeIn": Function addEdgeIn(edge),
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {
-        Edge {},
+        Edge {
+          "overridden": false,
+        },
       },
       "edgesOut": Map {},
       "explain": Function explain(),
@@ -446,7 +493,9 @@ Edge {
         "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
-          "missing" => Edge {},
+          "missing" => Edge {
+            "overridden": false,
+          },
         },
         "explain": Function explain(),
         "isTop": true,
@@ -468,6 +517,7 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
+  "overridden": false,
   "peer": false,
   "peerLocal": false,
   "spec": "",
@@ -475,7 +525,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -489,7 +541,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "b" => Edge {},
+        "b" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": false,
@@ -502,7 +556,9 @@ Edge {
         "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
-          "missing" => Edge {},
+          "missing" => Edge {
+            "overridden": false,
+          },
         },
         "explain": Function explain(),
         "isTop": true,
@@ -535,7 +591,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "a" => Edge {},
+      "a" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": true,
@@ -551,6 +609,7 @@ Edge {
   "missing": false,
   "name": "a",
   "optional": false,
+  "overridden": false,
   "peer": true,
   "peerLocal": false,
   "spec": "1.2.3",
@@ -558,7 +617,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -572,7 +633,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "a" => Edge {},
+        "a" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -602,7 +665,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "aa" => Edge {},
+      "aa" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -615,7 +680,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -634,6 +701,7 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
+  "overridden": false,
   "peer": true,
   "peerLocal": true,
   "spec": "1.2.3",
@@ -641,7 +709,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -655,7 +725,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "aa" => Edge {},
+        "aa" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": false,
@@ -668,7 +740,9 @@ Edge {
         "addEdgeOut": Function addEdgeOut(edge),
         "edgesIn": Set {},
         "edgesOut": Map {
-          "missing" => Edge {},
+          "missing" => Edge {
+            "overridden": false,
+          },
         },
         "explain": Function explain(),
         "isTop": true,
@@ -701,7 +775,9 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "b" => Edge {},
+      "b" => Edge {
+        "overridden": false,
+      },
     },
     "explain": Function explain(),
     "isTop": false,
@@ -714,7 +790,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -733,6 +811,7 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": false,
+  "overridden": false,
   "peer": true,
   "peerLocal": false,
   "spec": "1.2.3",
@@ -740,7 +819,9 @@ Edge {
     "addEdgeIn": Function addEdgeIn(edge),
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
-      Edge {},
+      Edge {
+        "overridden": false,
+      },
     },
     "edgesOut": Map {},
     "explain": Function explain(),
@@ -754,7 +835,9 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {},
       "edgesOut": Map {
-        "missing" => Edge {},
+        "missing" => Edge {
+          "overridden": false,
+        },
       },
       "explain": Function explain(),
       "isTop": true,
@@ -773,6 +856,16 @@ Edge {
   "valid": true,
   "workspace": false,
 }
+`
+
+exports[`test/edge.js TAP > return a human-readable representation of the edge obj, overridden=true 1`] = `
+{
+name: 'b',
+spec: '1.2.3',
+type: 'prod',
+from: '',
+to: '/node_modules/b',
+overridden: true }
 `
 
 exports[`test/edge.js TAP > should return a human-readable representation of the edge obj 1`] = `

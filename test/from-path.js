@@ -1,5 +1,7 @@
 const t = require('tap')
-const fromPath = require('../lib/from-path.js')
+const { normalizePath } = require('./utils.js')
+const fp = require('../lib/from-path.js')
+const fromPath = obj => normalizePath(fp(obj))
 
 t.equal(fromPath({
   realpath: '/some/path',

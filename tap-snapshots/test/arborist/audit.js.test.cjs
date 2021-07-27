@@ -55,6 +55,7 @@ ArboristNode {
       "type": "prod",
     },
   },
+  "isProjectRoot": true,
   "location": "",
   "name": "tap-testdir-audit-audit-fix-reifies-out-the-bad-deps",
   "path": "{CWD}/test/arborist/tap-testdir-audit-audit-fix-reifies-out-the-bad-deps",

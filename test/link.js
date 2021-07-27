@@ -1,3 +1,6 @@
+// this test depends on debug stuff, so force it on, even if the test env
+// does not enable it.
+process.env.ARBORIST_DEBUG = '1'
 const t = require('tap')
 const Link = require('../lib/link.js')
 const Node = require('../lib/node.js')

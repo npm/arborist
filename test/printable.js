@@ -72,6 +72,7 @@ t.test('printable Node', t => {
       }],
     })
     tree.error = { code: 'ERR', path: '/' }
+    tree.edgesOut.get('prod').overridden = true
     t.matchSnapshot(util.inspect(tree, { depth: 6 }),
       'should print human readable representation of node tree')
     t.end()

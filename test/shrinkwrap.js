@@ -764,7 +764,10 @@ t.test('hidden lockfile understands symlinks', async t => {
       abbrev: t.fixture('symlink', '../abbrev'),
 
       // a symlink missing a target is not relevant
-      missing: t.fixture('symlink', '../missing'),
+      // windows cannot handle missing symlink targets, though
+      ...(process.platform === 'win32' ? {} : {
+        missing: t.fixture('symlink', '../missing'),
+      }),
     },
     abbrev: {
       'package.json': JSON.stringify({
@@ -805,6 +808,8 @@ t.test('hidden lockfile understands symlinks', async t => {
       name: 'missing',
       version: '1.2.3',
     }))
+    if (process.platform === 'win32')
+      fs.symlinkSync(resolve(path, 'missing'), resolve(path, 'node_modules/missing'), 'junction')
     // even though it's newer, the 'missing' is not found in the lock
     const later = Date.now() + 30000
     fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))

@@ -15,14 +15,23 @@ t.test('basic placement check tests', t => {
 
   // boilerplate so we can define a bunch of test cases declaratively
   const runTest = (desc, {
+    // the tree we're asking to add something into
     tree,
+    // the target we're asking to add it in
     targetLoc,
+    // the location of the node with the dependency
     nodeLoc,
+    // the dep being added
     dep,
+    // the expected overall result for the dep and its peers
     expect,
+    // the expected result for the dep itself, ignoring peers
     expectSelf,
+    // --prefer-dedupe set?
     preferDedupe,
+    // array of nodes representing the dep's peer group
     peerSet,
+    // is this dep the thing the user is explicitly installing?
     explicitRequest,
   }) => {
     const target = tree.inventory.get(targetLoc)

@@ -16,20 +16,35 @@ t.test('placement tests', t => {
   // boilerplate so we can define a bunch of test cases declaratively
   const runTest = (desc, options) => {
     const {
+      // the tree we're placing a dep within
       tree,
+      // the location of the node with the dependency
       nodeLoc,
+      // the dep being added
       dep,
+      // array of nodes representing the dep's peer group
       peerSet,
+      // an extra function for running assertions after placement
       test,
+      // do we expect this to fail with ERESOLVE?
       error = false,
+      // --prefer-dedupe set?
       preferDedupe = false,
+      // --force set?
       force = false,
+      // is this the thing the user is explicitly installing?
       explicitRequest,
+      // the names passed to `npm update foo bar baz` for example.
       updateNames = [],
+      // an audit report, telling us which nodes are vulnerable
       auditReport = null,
+      // --legacy-bundling set?
       legacyBundling = false,
+      // --strict-peer-deps set?
       strictPeerDeps = false,
+      // --legacy-peer-deps set?
       legacyPeerDeps = false,
+      // installing with --global or --global-style?
       globalStyle = false,
     } = options
 

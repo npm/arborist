@@ -230,8 +230,14 @@ t.test('omit peer deps', t => {
 t.test('testing-peer-deps nested', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-nested'))))
 
-t.test('a workspace with a duplicated nested conflicted dep', t =>
-  t.resolveMatchSnapshot(printReified(fixture(t, 'workspace4'))))
+t.test('a pseudo-workspace with a duplicated nested conflicted dep', async t => {
+  const path = fixture(t, 'workspace4')
+  const tree = await printReified(path)
+  t.matchSnapshot(tree)
+  // no wsroot files created unless they're actual workspaces
+  t.throws(() => fs.statSync(`${path}/packages/foo/.npmrc`))
+  t.throws(() => fs.statSync(`${path}/packages/bar/.npmrc`))
+})
 
 t.test('testing-peer-deps nested with update', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'testing-peer-deps-nested'), {
@@ -1118,18 +1124,18 @@ t.test('global', t => {
 })
 
 t.test('workspaces', t => {
-  t.test('reify simple-workspaces', t =>
-    t.resolveMatchSnapshot(printReified(fixture(t, 'workspaces-simple')), 'should reify simple workspaces'))
-
-  t.test('reify workspaces lockfile', t => {
+  t.test('reify simple-workspaces', async t => {
     const path = fixture(t, 'workspaces-simple')
-    reify(path).then(() => {
-      t.matchSnapshot(require(path + '/package-lock.json'), 'should lock workspaces config')
-      t.end()
-    })
+    const tree = await printReified(path)
+    const wsRootConf = 'workspace-root = ..\n'
+    t.matchSnapshot(tree, 'should reify simple workspaces')
+    t.equal(fs.readFileSync(`${path}/a/.npmrc`, 'utf8'), wsRootConf)
+    t.equal(fs.readFileSync(`${path}/b/.npmrc`, 'utf8'), wsRootConf)
+    const lock = require(path + '/package-lock.json')
+    t.matchSnapshot(lock, 'should lock workspaces config')
   })
 
-  t.test('reify workspaces bin files', t => {
+  t.test('reify workspaces bin files', async t => {
     const path = fixture(t, 'workspaces-link-bin')
 
     const bins = [
@@ -1145,6 +1151,12 @@ t.test('workspaces', t => {
           t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
       }
     }
+
+    const tree = await printReified(path, { saveWorkspaceRoot: false })
+    t.matchSnapshot(tree)
+    checkBin()
+    t.throws(() => fs.statSync(`${path}/packages/a/.npmrc`), 'no wsroot in a')
+    t.throws(() => fs.statSync(`${path}/packages/b/.npmrc`), 'no wsroot in b')
 
     return t.resolveMatchSnapshot(printReified(path, {}))
       .then(checkBin)

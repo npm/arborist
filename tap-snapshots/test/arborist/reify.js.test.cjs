@@ -5,7 +5,7 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/arborist/reify.js TAP a workspace with a duplicated nested conflicted dep > expect resolving Promise 1`] = `
+exports[`test/arborist/reify.js TAP a pseudo-workspace with a duplicated nested conflicted dep > must match snapshot 1`] = `
 ArboristNode {
   "children": Map {
     "bar" => ArboristLink {
@@ -25,8 +25,8 @@ ArboristNode {
       },
       "location": "node_modules/bar",
       "name": "bar",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/bar",
-      "realpath": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/bar",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/bar",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/packages/bar",
       "resolved": "file:../packages/bar",
       "target": ArboristNode {
         "location": "packages/bar",
@@ -44,8 +44,8 @@ ArboristNode {
       },
       "location": "node_modules/foo",
       "name": "foo",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/foo",
-      "realpath": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/foo",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo",
       "resolved": "file:../packages/foo",
       "target": ArboristNode {
         "location": "packages/foo",
@@ -63,7 +63,7 @@ ArboristNode {
       },
       "location": "node_modules/minimist",
       "name": "minimist",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/minimist",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/minimist",
       "resolved": "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz",
       "version": "1.2.5",
     },
@@ -86,7 +86,7 @@ ArboristNode {
       },
       "location": "node_modules/mkdirp",
       "name": "mkdirp",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/mkdirp",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/node_modules/mkdirp",
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz",
       "version": "0.5.5",
     },
@@ -117,7 +117,7 @@ ArboristNode {
       },
       "location": "packages/bar",
       "name": "bar",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/bar",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/packages/bar",
       "version": "1.2.3",
     },
     ArboristNode {
@@ -133,7 +133,7 @@ ArboristNode {
           },
           "location": "packages/foo/node_modules/mkdirp",
           "name": "mkdirp",
-          "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo/node_modules/mkdirp",
+          "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo/node_modules/mkdirp",
           "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz",
           "version": "1.0.4",
         },
@@ -154,14 +154,14 @@ ArboristNode {
       },
       "location": "packages/foo",
       "name": "foo",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep/packages/foo",
       "version": "1.2.3",
     },
   },
   "isProjectRoot": true,
   "location": "",
-  "name": "tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep",
-  "path": "{CWD}/test/arborist/tap-testdir-reify-a-workspace-with-a-duplicated-nested-conflicted-dep",
+  "name": "tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-a-pseudo-workspace-with-a-duplicated-nested-conflicted-dep",
 }
 `
 
@@ -52303,6 +52303,51 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP workspaces reify simple-workspaces > should lock workspaces config 1`] = `
+Object {
+  "dependencies": Object {
+    "a": Object {
+      "requires": Object {
+        "b": "^1.0.0",
+      },
+      "version": "file:a",
+    },
+    "b": Object {
+      "version": "file:b",
+    },
+  },
+  "lockfileVersion": 2,
+  "name": "workspace-simple",
+  "packages": Object {
+    "": Object {
+      "name": "workspace-simple",
+      "workspaces": Array [
+        "a",
+        "b",
+      ],
+    },
+    "a": Object {
+      "dependencies": Object {
+        "b": "^1.0.0",
+      },
+      "version": "1.0.0",
+    },
+    "b": Object {
+      "version": "1.0.0",
+    },
+    "node_modules/a": Object {
+      "link": true,
+      "resolved": "a",
+    },
+    "node_modules/b": Object {
+      "link": true,
+      "resolved": "b",
+    },
+  },
+  "requires": true,
+}
+`
+
 exports[`test/arborist/reify.js TAP workspaces reify simple-workspaces > should reify simple workspaces 1`] = `
 ArboristNode {
   "children": Map {
@@ -52489,48 +52534,89 @@ ArboristNode {
 }
 `
 
-exports[`test/arborist/reify.js TAP workspaces reify workspaces lockfile > should lock workspaces config 1`] = `
-Object {
-  "dependencies": Object {
-    "a": Object {
-      "requires": Object {
-        "b": "^1.0.0",
+exports[`test/arborist/reify.js TAP workspaces reify workspaces bin files > must match snapshot 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/a",
+          "type": "workspace",
+        },
       },
-      "version": "file:a",
-    },
-    "b": Object {
-      "version": "file:b",
-    },
-  },
-  "lockfileVersion": 2,
-  "name": "workspace-simple",
-  "packages": Object {
-    "": Object {
-      "name": "workspace-simple",
-      "workspaces": Array [
-        "a",
-        "b",
-      ],
-    },
-    "a": Object {
-      "dependencies": Object {
-        "b": "^1.0.0",
+      "isWorkspace": true,
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
       },
       "version": "1.0.0",
     },
-    "b": Object {
+    "b" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/b",
+          "type": "workspace",
+        },
+      },
+      "isWorkspace": true,
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/node_modules/b",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/b",
+      "resolved": "file:../packages/b",
+      "target": ArboristNode {
+        "location": "packages/b",
+      },
       "version": "1.0.0",
     },
-    "node_modules/a": Object {
-      "link": true,
-      "resolved": "a",
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
     },
-    "node_modules/b": Object {
-      "link": true,
-      "resolved": "b",
+    "b" => EdgeOut {
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
     },
   },
-  "requires": true,
+  "fsChildren": Set {
+    ArboristNode {
+      "isWorkspace": true,
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/a",
+      "version": "1.0.0",
+    },
+    ArboristNode {
+      "isWorkspace": true,
+      "location": "packages/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files/packages/b",
+      "version": "1.0.0",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-reify-workspaces-reify-workspaces-bin-files",
+  "packageName": "workspace-duplicate",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-workspaces-reify-workspaces-bin-files",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
 }
 `
 

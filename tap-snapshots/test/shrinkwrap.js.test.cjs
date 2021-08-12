@@ -373,6 +373,7 @@ Object {
         "e": "https://foo.com/e.tgz",
       },
       "hasInstallScript": true,
+      "name": "root",
       "optionalDependencies": Object {
         "optin": "",
       },
@@ -641,6 +642,7 @@ Object {
     "e": "https://foo.com/e.tgz",
   },
   "hasInstallScript": true,
+  "name": "root",
   "optionalDependencies": Object {
     "optin": "",
   },
@@ -663,6 +665,7 @@ Object {
     "e": "https://foo.com/e.tgz",
   },
   "hasInstallScript": true,
+  "name": "root",
   "optionalDependencies": Object {
     "optin": "",
   },
@@ -1236,6 +1239,7 @@ Object {
       "dependencies": Object {
         "dep": "",
       },
+      "name": "bundle",
     },
     "node_modules/dep": Object {
       "inBundle": true,
@@ -1583,6 +1587,7 @@ Object {
       "devDependencies": Object {
         "a": "",
       },
+      "name": "devloop",
     },
     "node_modules/a": Object {
       "dependencies": Object {
@@ -1621,6 +1626,7 @@ Object {
       "dependencies": Object {
         "dep": "",
       },
+      "name": "root",
       "version": "1.0.0",
     },
   },
@@ -1653,6 +1659,7 @@ Object {
         "x": "",
         "z": "",
       },
+      "name": "root",
     },
     "../a": Object {},
     "../a/node_modules/b": Object {
@@ -1735,6 +1742,7 @@ Object {
         "o2": "file:../m/node_modules/n/o2",
         "x": "",
       },
+      "name": "root",
       "version": "1.0.0",
     },
     "../a": Object {},
@@ -2420,6 +2428,7 @@ Object {
       "dependencies": Object {
         "bork": "file:..",
       },
+      "name": "root",
       "version": "1.2.3",
     },
     "..": Object {
@@ -2721,6 +2730,7 @@ Object {
         "link-outside-nest": "",
         "nest": "",
       },
+      "name": "links-all-over",
       "version": "1.2.3",
     },
     "node_modules/link-deep": Object {
@@ -3089,6 +3099,7 @@ Object {
       "dependencies": Object {
         "c": "",
       },
+      "name": "optionalloop",
       "optionalDependencies": Object {
         "a": "",
       },
@@ -3162,6 +3173,7 @@ Object {
       "devDependencies": Object {
         "a": "",
       },
+      "name": "optofdev",
     },
     "node_modules/a": Object {
       "dependencies": Object {
@@ -3478,6 +3490,7 @@ Object {
       "devDependencies": Object {
         "foo": "*",
       },
+      "name": "root",
       "optionalDependencies": Object {
         "notinstalledhere": "",
       },
@@ -3657,6 +3670,7 @@ Object {
         "@scope/y": "",
         "foo": "",
       },
+      "name": "selflink",
       "version": "1.2.3",
     },
     "node_modules/@scope/y": Object {
@@ -3736,6 +3750,7 @@ Object {
   "name": "example",
   "packages": Object {
     "": Object {
+      "name": "example",
       "version": "1.0.0",
     },
     "../bar": Object {
@@ -13762,6 +13777,7 @@ Object {
         "b": "",
         "c": "",
       },
+      "name": "workspace",
     },
     "node_modules/a": Object {
       "link": true,
@@ -13979,6 +13995,9 @@ Object {
   "lockfileVersion": 2,
   "name": "workspace3",
   "packages": Object {
+    "": Object {
+      "name": "workspace3",
+    },
     "app": Object {
       "dependencies": Object {
         "a": "",

@@ -605,6 +605,34 @@ t.test('placement tests', t => {
     },
   })
 
+  // pathologically nested dep cycle
+  // a1 -> b1 -> a2 -> b2 -> a1
+  runTest('pathologically nested dependency cycle', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { a: '1' }},
+      children: [
+        { pkg: { name: 'a', version: '1.0.0', dependencies: { b: '1' }}},
+        {
+          pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' }},
+          children: [
+            { pkg: { name: 'a', version: '2.0.0', dependencies: { b: '2' }}},
+            {
+              pkg: { name: 'b', version: '2.0.0', dependencies: { a: '1' }},
+              children: [
+                { pkg: { name: 'a', version: '1.0.0', dependencies: { b: '1' }}},
+              ],
+            },
+          ],
+        },
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' }},
+    }),
+    nodeLoc: 'node_modules/b/node_modules/b/node_modules/a',
+  })
+
   // peer dep shenanigans
   runTest('basic placement of a production dep with peer deps', {
     tree: new Node({

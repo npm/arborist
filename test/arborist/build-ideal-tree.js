@@ -818,9 +818,10 @@ t.test('update global space single dep', t => {
 })
 
 // if we get this wrong, it'll spin forever and use up all the memory
-t.test('pathologically nested dependency cycle', t =>
-  t.resolveMatchSnapshot(printIdeal(
-    resolve(fixtures, 'pathological-dep-nesting-cycle'))))
+t.test('pathologically nested dependency cycle', async t => {
+  t.matchSnapshot(await printIdeal(
+    resolve(fixtures, 'pathological-dep-nesting-cycle')))
+})
 
 t.test('resolve file deps from cwd', t => {
   const cwd = process.cwd()

@@ -4369,6 +4369,96 @@ exports[`test/place-dep.js TAP placement tests nest peer set under dependent nod
 Array []
 `
 
+exports[`test/place-dep.js TAP placement tests pathologically nested dependency cycle > changes to tree 1`] = `
+--- expected
++++ actual
+@@ -118,13 +118,6 @@
+               "spec": "2",
+               "from": "node_modules/b/node_modules/a",
+             },
+-            EdgeIn {
+-              "type": "prod",
+-              "name": "b",
+-              "spec": "1",
+-              "error": "INVALID",
+-              "from": "node_modules/b/node_modules/b/node_modules/a",
+-            },
+           },
+           "children": Map {
+             "a" => ArboristNode {
+@@ -141,8 +134,7 @@
+                   "type": "prod",
+                   "name": "b",
+                   "spec": "1",
+-                  "to": "node_modules/b/node_modules/b",
+-                  "error": "INVALID",
++                  "to": "node_modules/b/node_modules/b/node_modules/b",
+                 },
+               },
+               "edgesIn": Set {
+@@ -154,6 +146,29 @@
+                 },
+               },
+             },
++            "b" => ArboristLink {
++              "name": "b",
++              "version": "1.0.0",
++              "location": "node_modules/b/node_modules/b/node_modules/b",
++              "path": "/some/path/node_modules/b/node_modules/b/node_modules/b",
++              "realpath": "/some/path/node_modules/b",
++              "resolved": "file:../../..",
++              "extraneous": true,
++              "dev": true,
++              "optional": true,
++              "peer": true,
++              "edgesIn": Set {
++                EdgeIn {
++                  "type": "prod",
++                  "name": "b",
++                  "spec": "1",
++                  "from": "node_modules/b/node_modules/b/node_modules/a",
++                },
++              },
++              "target": ArboristNode {
++                "location": "node_modules/b",
++              },
++            },
+           },
+         },
+       },
+
+`
+
+exports[`test/place-dep.js TAP placement tests pathologically nested dependency cycle > placements 1`] = `
+Array [
+  Object {
+    "canPlace": Symbol(OK),
+    "canPlaceSelf": Symbol(OK),
+    "checks": Map {
+      "node_modules/b/node_modules/b/node_modules/a" => Array [
+        Symbol(OK),
+        Symbol(OK),
+      ],
+      "node_modules/b/node_modules/b" => Array [
+        Symbol(OK),
+        Symbol(OK),
+      ],
+      "node_modules/b" => Array [
+        Symbol(CONFLICT),
+        Symbol(CONFLICT),
+      ],
+    },
+    "dep": "b@1.0.0",
+    "edge": "{ node_modules/b/node_modules/b/node_modules/a prod b@1 }",
+    "placed": "node_modules/b/node_modules/b/node_modules/b",
+  },
+]
+`
+
+exports[`test/place-dep.js TAP placement tests pathologically nested dependency cycle > warnings 1`] = `
+Array []
+`
+
 exports[`test/place-dep.js TAP placement tests peer all the way down, conflict but not ours > changes to tree 1`] = `
 --- expected
 +++ actual

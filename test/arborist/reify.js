@@ -2125,3 +2125,34 @@ t.test('shrinkwrap which lacks metadata updates deps', async t => {
   t.equal(secondAbbrev.version, '1.1.1')
   t.equal(abbrevpj().version, secondAbbrev.version)
 })
+
+t.test('move aside symlink clutter', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        ABBREV: 'file:target',
+        abbrev: '1',
+      },
+    }),
+    target: {
+      file: 'do not delete me please',
+      'package.json': JSON.stringify({ name: 'ABBREV', version: '1.0.0' }),
+    },
+    node_modules: {
+      ABBREV: t.fixture('symlink', '../target'),
+    },
+  })
+  // check to see if we're on a case-insensitive fs
+  try {
+    const st = fs.lstatSync(path + '/node_modules/abbrev')
+    t.equal(st.isSymbolicLink(), true)
+  } catch (er) {
+    t.plan(0, 'case sensitive file system, test not relevant')
+    return
+  }
+  const tree = await printReified(path)
+  const st = fs.lstatSync(path + '/node_modules/abbrev')
+  t.equal(st.isSymbolicLink(), false)
+  t.equal(st.isDirectory(), true)
+  t.matchSnapshot(tree)
+})

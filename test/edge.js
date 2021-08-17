@@ -36,6 +36,8 @@ const reset = node => {
 
 // mock nodes
 const top = {
+  name: 'top',
+  packageName: 'top',
   edgesOut: new Map(),
   edgesIn: new Set(),
   explain: () => 'top node explanation',
@@ -57,6 +59,8 @@ const top = {
 }
 
 const a = {
+  name: 'a',
+  packageName: 'a',
   edgesOut: new Map(),
   edgesIn: new Set(),
   explain: () => 'a explanation',
@@ -78,6 +82,8 @@ const a = {
 }
 
 const b = {
+  name: 'b',
+  packageName: 'b',
   edgesOut: new Map(),
   edgesIn: new Set(),
   explain: () => 'b explanation',
@@ -99,6 +105,8 @@ const b = {
 }
 
 const bb = {
+  name: 'b',
+  packageName: 'bb',
   edgesOut: new Map(),
   edgesIn: new Set(),
   explain: () => 'bb explanation',
@@ -120,6 +128,8 @@ const bb = {
 }
 
 const aa = {
+  name: 'aa',
+  packageName: 'aa',
   edgesOut: new Map(),
   edgesIn: new Set(),
   explain: () => 'aa explanation',
@@ -141,6 +151,8 @@ const aa = {
 }
 
 const c = {
+  name: 'c',
+  packageName: 'c',
   edgesOut: new Map(),
   edgesIn: new Set(),
   explain: () => 'c explanation',

@@ -2610,3 +2610,31 @@ t.test('canReplace while ignoring certain peer deps', t => {
 
   t.end()
 })
+
+t.test('children are unicode-normalizing and case-insensitive', t => {
+  const cafe1 = Buffer.from([0x63, 0x61, 0x66, 0x65, 0xcc, 0x81]).toString()
+  const cafe2 = Buffer.from([0x63, 0x61, 0x66, 0xc3, 0xa9]).toString()
+  const tree = new Node({
+    path: '/some/path',
+    children: [
+      { pkg: { name: 'A', version: '1.0.0' }},
+      { pkg: { name: 'a', version: '2.0.0' }},
+      { pkg: { name: cafe1, version: '1.0.0' }},
+      { pkg: { name: cafe2, version: '2.0.0' }},
+    ],
+  })
+  t.equal(tree.children.size, 2)
+  t.equal(tree.children.get('A'), tree.children.get('a'))
+  t.match(tree.children.get('a'), {
+    version: '2.0.0',
+    packageName: 'a',
+    name: 'a',
+  })
+  t.equal(tree.children.get(cafe1), tree.children.get(cafe2))
+  t.match(tree.children.get(cafe1), {
+    version: '2.0.0',
+    packageName: cafe2,
+    name: cafe2,
+  })
+  t.end()
+})

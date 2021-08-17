@@ -1912,6 +1912,100 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP collide case-variant dep names > tree 1 1`] = `
+ArboristNode {
+  "children": Map {
+    "abbrev" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "abbrev",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-collide-case-variant-dep-names/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => EdgeOut {
+      "name": "abbrev",
+      "spec": "1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "target",
+      "name": "target",
+      "optional": true,
+      "packageName": "ABBREV",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-collide-case-variant-dep-names/target",
+      "peer": true,
+      "version": "1.0.0",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-reify-collide-case-variant-dep-names",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-collide-case-variant-dep-names",
+}
+`
+
+exports[`test/arborist/reify.js TAP collide case-variant dep names > tree 2 1`] = `
+ArboristNode {
+  "children": Map {
+    "abbrev" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "abbrev",
+          "spec": "^1.1.1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-collide-case-variant-dep-names/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => EdgeOut {
+      "name": "abbrev",
+      "spec": "^1.1.1",
+      "to": "node_modules/abbrev",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "dev": true,
+      "extraneous": true,
+      "location": "target",
+      "name": "target",
+      "optional": true,
+      "packageName": "ABBREV",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-collide-case-variant-dep-names/target",
+      "peer": true,
+      "version": "1.0.0",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-reify-collide-case-variant-dep-names",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-collide-case-variant-dep-names",
+}
+`
+
 exports[`test/arborist/reify.js TAP create link deps > expect resolving Promise 1`] = `
 ArboristNode {
   "children": Map {
@@ -4540,7 +4634,7 @@ ArboristNode {
         EdgeIn {
           "from": "",
           "name": "abbrev",
-          "spec": "1",
+          "spec": "latest",
           "type": "prod",
         },
       },
@@ -4550,47 +4644,13 @@ ArboristNode {
       "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
       "version": "1.1.1",
     },
-    "ABBREV" => ArboristLink {
-      "edgesIn": Set {
-        EdgeIn {
-          "from": "",
-          "name": "ABBREV",
-          "spec": "file:target",
-          "type": "prod",
-        },
-      },
-      "location": "node_modules/ABBREV",
-      "name": "ABBREV",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-move-aside-symlink-clutter/node_modules/ABBREV",
-      "realpath": "{CWD}/test/arborist/tap-testdir-reify-move-aside-symlink-clutter/target",
-      "resolved": "file:../target",
-      "target": ArboristNode {
-        "location": "target",
-      },
-      "version": "1.0.0",
-    },
   },
   "edgesOut": Map {
     "abbrev" => EdgeOut {
       "name": "abbrev",
-      "spec": "1",
+      "spec": "latest",
       "to": "node_modules/abbrev",
       "type": "prod",
-    },
-    "ABBREV" => EdgeOut {
-      "name": "ABBREV",
-      "spec": "file:target",
-      "to": "node_modules/ABBREV",
-      "type": "prod",
-    },
-  },
-  "fsChildren": Set {
-    ArboristNode {
-      "location": "target",
-      "name": "target",
-      "packageName": "ABBREV",
-      "path": "{CWD}/test/arborist/tap-testdir-reify-move-aside-symlink-clutter/target",
-      "version": "1.0.0",
     },
   },
   "isProjectRoot": true,

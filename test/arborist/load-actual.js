@@ -390,3 +390,30 @@ t.test('recalc dep flags for virtual load actual', async t => {
   const abbrev = tree.children.get('abbrev')
   t.equal(abbrev.extraneous, true, 'abbrev is extraneous')
 })
+
+t.test('load global space with link deps', async t => {
+  const path = t.testdir({
+    target: {
+      'package.json': JSON.stringify({
+        name: 'foo',
+        version: '1.2.3',
+      }),
+    },
+    node_modules: {
+      foo: t.fixture('symlink', '../target'),
+      bar: {
+        'package.json': JSON.stringify({
+          name: 'bar',
+          version: '2.3.4',
+        }),
+      },
+    },
+  })
+  const tree = await loadActual(path, { global: true })
+  t.strictSame(tree.package, {
+    dependencies: {
+      foo: `file:${resolve(path, 'target')}`,
+      bar: '*',
+    },
+  })
+})

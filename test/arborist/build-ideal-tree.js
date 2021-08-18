@@ -2623,3 +2623,26 @@ t.test('inflates old lockfile with hasInstallScript', async t => {
 
   t.equal(tree.children.get('esbuild').hasInstallScript, true)
 })
+
+t.test('update a global space that contains a link', async t => {
+  const path = t.testdir({
+    target: {
+      'package.json': JSON.stringify({
+        name: 'once',
+        version: '1.0.0-foo',
+      }),
+    },
+    node_modules: {
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.0.0',
+        }),
+      },
+      once: t.fixture('symlink', '../target'),
+    },
+  })
+  const tree = await buildIdeal(path, { update: true, global: true })
+  t.matchSnapshot(printTree(tree))
+  t.equal(tree.children.get('once').isLink, true)
+})

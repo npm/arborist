@@ -18,6 +18,8 @@ rimrafMock.sync = (...args) => {
     throw new Error('rimraf fail')
 }
 const fs = require('fs')
+const { promisify } = require('util')
+const symlink = promisify(fs.symlink)
 let failRename = null
 let failRenameOnce = null
 let failMkdir = null
@@ -77,10 +79,23 @@ const warningTracker = () => {
   }
 }
 
+const debugLogTracker = () => {
+  const list = []
+  mockDebug.log = (...msg) => list.push(msg)
+  return () => {
+    mockDebug.log = () => {}
+    return list
+  }
+}
+const mockDebug = Object.assign(fn => fn(), { log: () => {} })
+
 const Arborist = t.mock('../../lib/index.js', {
   ...mocks,
   // need to not mock this one, so we still can swap the process object
   '../../lib/signal-handling.js': require('../../lib/signal-handling.js'),
+
+  // mock the debug so we can test these even when not enabled
+  '../../lib/debug.js': mockDebug,
 })
 
 const { Node, Link, Shrinkwrap } = Arborist
@@ -2303,4 +2318,41 @@ t.test('node_modules may not be a symlink', async t => {
   const tree = await printReified(path)
   t.matchSnapshot(tree)
   t.matchSnapshot(warnings())
+})
+
+t.test('never unpack into anything other than a real directory', async t => {
+  const kUnpack = Symbol.for('unpackNewModules')
+  const unpackNewModules = Arborist.prototype[kUnpack]
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        once: '',
+        wrappy: 'file:target',
+      },
+    }),
+    target: {
+      donotdeleteme: 'please do not delete this',
+      'package.json': JSON.stringify({
+        name: 'donotclobberme',
+        version: '1.2.3-please-do-not-clobber',
+      }),
+    },
+  })
+  const arb = newArb({ path })
+  const logs = debugLogTracker()
+  const wrappy = resolve(path, 'node_modules/once/node_modules/wrappy')
+  arb[kUnpack] = async () => {
+    // will have already created it
+    realRimraf.sync(wrappy)
+    const target = resolve(path, 'target')
+    await symlink(target, wrappy, 'junction')
+    arb[kUnpack] = unpackNewModules
+    return arb[kUnpack]()
+  }
+  await t.rejects(arb.reify({ path }), {
+    message: 'ENOTDIR: not a directory',
+    code: 'ENOTDIR',
+    path: wrappy,
+  })
+  t.match(logs(), [['unpacking into a non-directory', { path: wrappy }]])
 })

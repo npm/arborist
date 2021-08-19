@@ -6,7 +6,7 @@ const Shrinkwrap = require('../lib/shrinkwrap.js')
 const { resolve } = require('path')
 const treeCheck = require('../lib/tree-check.js')
 
-const { normalizePath, normalizePaths } = require('./utils.js')
+const { normalizePath, normalizePaths } = require('./fixtures/utils.js')
 
 t.cleanSnapshot = str =>
   str.split(process.cwd()).join('{CWD}')

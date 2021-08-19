@@ -22,7 +22,7 @@ t.teardown(stop)
 const {
   normalizePath,
   printTree,
-} = require('../utils.js')
+} = require('../fixtures/utils.js')
 
 const newArb = (path, options = {}) =>
   new Arborist({ path, cache, registry, ...options })

@@ -1,4 +1,4 @@
-// some utils that we use in a bunch of tests and scripts
+// some utils that we use in a bunch of tests
 
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
@@ -30,7 +30,3 @@ module.exports = {
   normalizePaths,
   printTree,
 }
-
-// this isn't an actual test, don't log a skip
-if (module === require.main)
-  require('tap').pass('not a real test, just a utility')

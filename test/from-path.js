@@ -1,5 +1,5 @@
 const t = require('tap')
-const { normalizePath } = require('./utils.js')
+const { normalizePath } = require('./fixtures/utils.js')
 const fp = require('../lib/from-path.js')
 const fromPath = obj => normalizePath(fp(obj))
 

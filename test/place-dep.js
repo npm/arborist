@@ -5,7 +5,7 @@ const { KEEP } = require('../lib/can-place-dep.js')
 // for diffing trees when we place something
 const { strict } = require('tcompare')
 
-const { normalizePaths } = require('./utils.js')
+const { normalizePaths } = require('./fixtures/utils.js')
 
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')

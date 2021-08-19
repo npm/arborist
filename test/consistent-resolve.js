@@ -1,5 +1,5 @@
 const t = require('tap')
-const { normalizePath } = require('./utils.js')
+const { normalizePath } = require('./fixtures/utils.js')
 const consistentResolve = require('../lib/consistent-resolve.js')
 const cr = (...args) => {
   const r = consistentResolve(...args)

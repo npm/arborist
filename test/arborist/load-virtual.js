@@ -19,7 +19,7 @@ const Node = require('../../lib/node.js')
 const {
   normalizePath,
   printTree,
-} = require('../utils.js')
+} = require('../fixtures/utils.js')
 
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')

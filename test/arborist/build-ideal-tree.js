@@ -35,7 +35,7 @@ const {
   normalizePath,
   normalizePaths,
   printTree,
-} = require('../utils.js')
+} = require('../fixtures/utils.js')
 
 const oldLockfileWarning = [
   'warn',

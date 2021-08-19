@@ -1,7 +1,7 @@
 const t = require('tap')
 const depValid = require('../lib/dep-valid.js')
 const npa = require('npm-package-arg')
-const { normalizePaths } = require('./utils.js')
+const { normalizePaths } = require('./fixtures/utils.js')
 const { resolve } = require('path')
 
 t.ok(depValid({}, '', null, {}), '* is always ok')

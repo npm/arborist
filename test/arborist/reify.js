@@ -18,7 +18,6 @@ rimrafMock.sync = (...args) => {
     throw new Error('rimraf fail')
 }
 const fs = require('fs')
-const { promisify } = require('util')
 let failRename = null
 let failRenameOnce = null
 let failMkdir = null

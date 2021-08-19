@@ -2638,3 +2638,23 @@ t.test('children are unicode-normalizing and case-insensitive', t => {
   })
   t.end()
 })
+
+t.test('children of the global root are considered tops', t => {
+  const tree = new Node({
+    path: '/usr/local/lib',
+    global: true,
+    children: [
+      {
+        pkg: { name: 'foo', version: '1.2.3' },
+        children: [{ pkg: { name: 'bar', version: '1.2.3' }}],
+      },
+    ],
+  })
+  const foo = tree.children.get('foo')
+  const bar = foo.children.get('bar')
+  t.equal(foo.isTop, true)
+  t.equal(foo.top, foo)
+  t.equal(bar.top, foo)
+  t.end()
+  t.equal(foo.isTop, true)
+})

@@ -8,6 +8,9 @@ const normalizePaths = obj => {
   if (Array.isArray(obj))
     return obj.map(normalizePaths)
 
+  if (typeof obj === 'string')
+    return normalizePath(obj)
+
   if (obj instanceof Map)
     return new Map([...obj].map(([name, val]) => [name, normalizePaths(val)]))
 

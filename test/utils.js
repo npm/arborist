@@ -3,7 +3,10 @@
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 const normalizePaths = obj => {
   if (obj instanceof Set)
-    return new Set([...obj].map(normalizePaths))
+    return new Set(normalizePaths([...obj]))
+
+  if (Array.isArray(obj))
+    return obj.map(normalizePaths)
 
   if (obj instanceof Map)
     return new Map([...obj].map(([name, val]) => [name, normalizePaths(val)]))

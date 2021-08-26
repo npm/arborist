@@ -1758,6 +1758,23 @@ exports[`test/arborist/reify.js TAP add spec * with semver prefix range gets upd
 
 `
 
+exports[`test/arborist/reify.js TAP adding an unresolvable optional dep is OK > must match snapshot 1`] = `
+ArboristNode {
+  "edgesOut": Map {
+    "abbrev" => EdgeOut {
+      "name": "abbrev",
+      "spec": "999999",
+      "to": null,
+      "type": "optional",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-reify-adding-an-unresolvable-optional-dep-is-OK",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-adding-an-unresolvable-optional-dep-is-OK",
+}
+`
+
 exports[`test/arborist/reify.js TAP bad shrinkwrap file > expect resolving Promise 1`] = `
 ArboristNode {
   "children": Map {

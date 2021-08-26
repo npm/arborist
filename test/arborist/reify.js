@@ -2311,3 +2311,16 @@ t.test('never unpack into anything other than a real directory', async t => {
   })
   t.match(logs(), [['unpacking into a non-directory', { path: wrappy }]])
 })
+
+t.test('adding an unresolvable optional dep is OK', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      optionalDependencies: {
+        abbrev: '999999',
+      },
+    }),
+  })
+  const tree = await reify(path, { add: ['abbrev'] })
+  t.strictSame([...tree.children.values()], [], 'nothing actually added')
+  t.matchSnapshot(printTree(tree))
+})

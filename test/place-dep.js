@@ -50,8 +50,9 @@ t.test('placement tests', t => {
 
     const node = tree.inventory.get(nodeLoc)
     const edge = node.edgesOut.get(dep.name)
-    if (!dep.satisfies(edge))
+    if (!dep.satisfies(edge)) {
       edge.overridden = true
+    }
     const vr = new Node({
       sourceReference: node,
       path: node.path,
@@ -63,8 +64,9 @@ t.test('placement tests', t => {
     // mark any invalid edges in the virtual root as overridden
     for (const child of vr.children.values()) {
       for (const edgeIn of child.edgesIn) {
-        if (edgeIn.invalid)
+        if (edgeIn.invalid) {
           edgeIn.overridden = true
+        }
       }
     }
 
@@ -117,8 +119,9 @@ t.test('placement tests', t => {
 
       const warnings = []
       const onwarn = (level, ...msg) => {
-        if (level === 'warn')
+        if (level === 'warn') {
           warnings.push(msg)
+        }
       }
 
       process.on('log', onwarn)
@@ -131,8 +134,9 @@ t.test('placement tests', t => {
       }
       process.removeListener('log', onwarn)
 
-      if (test)
+      if (test) {
         test(t, tree)
+      }
 
       const after = normalizePaths(tree.toJSON())
       const { diff } = strict(after, before)
@@ -140,8 +144,9 @@ t.test('placement tests', t => {
       t.matchSnapshot(diff, 'changes to tree')
       t.matchSnapshot(normalizePaths(warnings), 'warnings')
       t.matchSnapshot([pd, ...pd.allChildren].map(c => {
-        if (c.canPlace && c.canPlace.canPlace === KEEP)
+        if (c.canPlace && c.canPlace.canPlace === KEEP) {
           t.equal(c.placed, null, 'should not place if result is KEEP')
+        }
         return normalizePaths({
           ...(c.parent ? { parent: c.parent.name } : {}),
           edge: `{ ${

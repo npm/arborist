@@ -16,17 +16,20 @@ const {
 const pp = path => path &&
   normalizePath(path).substr(normalizePath(fixtures).length + 1)
 const defixture = obj => {
-  if (obj instanceof Set)
+  if (obj instanceof Set) {
     return new Set([...obj].map(defixture))
+  }
 
-  if (obj instanceof Map)
+  if (obj instanceof Map) {
     return new Map([...obj].map(([name, val]) => [name, defixture(val)]))
+  }
 
   for (const key in obj) {
-    if (['path', 'realpath'].includes(key))
+    if (['path', 'realpath'].includes(key)) {
       obj[key] = pp(obj[key])
-    else if (typeof obj[key] === 'object' && obj[key] !== null)
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
       obj[key] = defixture(obj[key])
+    }
   }
   return obj
 }
@@ -41,7 +44,8 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 t.formatSnapshot = tree => format(defixture(printTree(tree)), { sort: true })
 
-const loadActual = (path, opts) => new Arborist({path, ...opts}).loadActual(opts)
+const loadActual = (path, opts) =>
+  new Arborist({path, ...opts}).loadActual(opts)
 
 roots.forEach(path => {
   const dir = resolve(fixtures, path)
@@ -77,8 +81,9 @@ t.test('already loading', t => {
   // the end of the process and the promise resolves
   const promise = arb.loadActual()
   const int = setInterval(() => {
-    if (arb.actualTree)
+    if (arb.actualTree) {
       t.fail('set public arb.actualTree before promise resolved')
+    }
     arb.loadActual()
   })
   return promise.then(() => clearInterval(int))

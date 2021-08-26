@@ -19,7 +19,8 @@ const {resolve} = require('path')
 const fixtures = resolve(__dirname, 'fixtures')
 
 const cache = t.testdir()
-const newArb = (path, opts = {}) => new Arborist({path, registry, cache, ...opts})
+const newArb = (path, opts = {}) =>
+  new Arborist({path, registry, cache, ...opts})
 
 const sortReport = report => {
   const entries = Object.entries(report.vulnerabilities)
@@ -206,8 +207,9 @@ t.test('audit returns an error', async t => {
 
   const logs = []
   const onlog = (...msg) => {
-    if (msg[0] === 'http')
+    if (msg[0] === 'http') {
       return
+    }
     logs.push(msg)
   }
   process.on('log', onlog)
@@ -347,11 +349,13 @@ t.test('omit options', async t => {
       const s = omit.map(o => `-omit${o}`).join('')
       const bulk = resolve(path, `bulk${s}.json`)
       const rmBulk = advisoryBulkResponse(bulk)
-      const r1 = (await AuditReport.load(tree, { ...arb.options, omit })).toJSON()
+      const r1 = (await AuditReport.load(tree, { ...arb.options, omit }))
+        .toJSON()
       sortReport(r1)
       rmBulk()
       t.matchSnapshot(r1, 'bulk')
-      const r2 = (await AuditReport.load(tree, { ...arb.options, omit })).toJSON()
+      const r2 = (await AuditReport.load(tree, { ...arb.options, omit }))
+        .toJSON()
       sortReport(r2)
       t.strictSame(r1, r2, 'same results')
       t.end()

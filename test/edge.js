@@ -512,7 +512,8 @@ const bundledEdge = new Edge({
 })
 
 t.ok(bundledEdge.satisfiedBy(bundleChild), 'bundled dependency')
-const fromBundleDependencies = bundledEdge.from && bundledEdge.from.package.bundleDependencies
+const fromBundleDependencies = bundledEdge.from &&
+  bundledEdge.from.package.bundleDependencies
 t.same(fromBundleDependencies, ['bundle-child'], 'edge.from bundledDependencies as expected')
 t.same(bundledEdge.name, 'bundle-child', 'edge name as expected')
 t.equal(bundledEdge.bundled, true, 'bundled prop is true')

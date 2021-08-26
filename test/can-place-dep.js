@@ -39,8 +39,9 @@ t.test('basic placement check tests', t => {
     const target = tree.inventory.get(targetLoc)
     const node = tree.inventory.get(nodeLoc)
     const edge = node.edgesOut.get(dep.name)
-    if (!dep.satisfies(edge))
+    if (!dep.satisfies(edge)) {
       edge.overridden = true
+    }
     const vr = new Node({
       sourceReference: node,
       path: node.path,
@@ -52,8 +53,9 @@ t.test('basic placement check tests', t => {
     // mark any invalid edges in the virtual root as overridden
     for (const child of vr.children.values()) {
       for (const edgeIn of child.edgesIn) {
-        if (edgeIn.invalid)
+        if (edgeIn.invalid) {
           edgeIn.overridden = true
+        }
       }
     }
 
@@ -76,10 +78,12 @@ t.test('basic placement check tests', t => {
       // dump a comment if the assertion fails.
       // would put it in the diags, but yaml stringifies Set objects
       // super awkwardly, and Node objects have a lot of those.
-      if (!t.equal(cpd.canPlace, expect, msg))
+      if (!t.equal(cpd.canPlace, expect, msg)) {
         t.comment(cpd)
-      if (expectSelf)
+      }
+      if (expectSelf) {
         t.equal(cpd.canPlaceSelf, expectSelf, msg)
+      }
       t.equal(cpd.description, cpd.canPlace.description || cpd.canPlace)
       t.matchSnapshot([...cpd.conflictChildren].map(c => ({
         dep: [c.dep.name, c.dep.version],

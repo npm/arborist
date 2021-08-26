@@ -1,7 +1,8 @@
 // the tree-checking is too abusively slow on Windows, and
 // can make the test time out unnecessarily.
-if (process.platform === 'win32')
+if (process.platform === 'win32') {
   process.env.ARBORIST_DEBUG = 0
+}
 
 const {basename, resolve, relative} = require('path')
 const pacote = require('pacote')
@@ -144,8 +145,9 @@ t.test('a tree with an outdated dep, missing dep, no lockfile', async t => {
     once: '1.3.3',
     wrappy: '1.0.1',
   }
-  for (const [name, version] of Object.entries(expected))
+  for (const [name, version] of Object.entries(expected)) {
     t.equal(tree.children.get(name).package.version, version, `expect ${name}@${version}`)
+  }
 
   t.matchSnapshot(printTree(tree), 'should not update all')
 })
@@ -154,18 +156,22 @@ t.test('tarball deps with transitive tarball deps', t =>
   t.resolveMatchSnapshot(printIdeal(
     resolve(fixtures, 'tarball-dependencies'))))
 
-t.test('testing-peer-deps-overlap package', t => {
+t.test('testing-peer-deps-overlap package', async t => {
   const path = resolve(fixtures, 'testing-peer-deps-overlap')
-  return buildIdeal(path).then(idealTree => new Arborist({ path, idealTree, ...OPT })
-    .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
-    .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with overlapping peer dep ranges')))
+  const idealTree = await buildIdeal(path)
+  const arb = new Arborist({ path, idealTree, ...OPT })
+  const tree2 = await arb.buildIdealTree()
+  t.equal(tree2, idealTree)
+  t.matchSnapshot(printTree(idealTree), 'build ideal tree with overlapping peer dep ranges')
 })
 
-t.test('testing-peer-deps package', t => {
+t.test('testing-peer-deps package', async t => {
   const path = resolve(fixtures, 'testing-peer-deps')
-  return buildIdeal(path).then(idealTree => new Arborist({path, idealTree, ...OPT})
-    .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
-    .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')))
+  const idealTree = await buildIdeal(path)
+  const arb = new Arborist({path, idealTree, ...OPT})
+  const tree2 = await arb.buildIdealTree()
+  t.equal(tree2, idealTree)
+  t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')
 })
 
 t.test('testing-peer-deps package with symlinked root', t => {
@@ -1296,8 +1302,9 @@ t.test('more peer dep conflicts', t => {
     },
   })
 
-  if (process.platform !== 'win32')
+  if (process.platform !== 'win32') {
     t.jobs = cases.length
+  }
   t.plan(cases.length)
 
   for (const [name, {pkg, error, resolvable, add}] of cases) {
@@ -1334,30 +1341,35 @@ t.test('more peer dep conflicts', t => {
       const [strictRes, forceRes, defRes] = results
 
       if (!resolvable) {
-        if (!(strictRes instanceof Error))
+        if (!(strictRes instanceof Error)) {
           console.error(printTree(strictRes))
+        }
         t.match(strictRes, { code: 'ERESOLVE' })
-      } else if (strictRes instanceof Error)
+      } else if (strictRes instanceof Error) {
         t.fail('should not get error in strict mode', { error: strictRes })
-      else
+      } else {
         t.matchSnapshot(printTree(strictRes), 'strict result')
+      }
 
-      if (forceRes instanceof Error)
+      if (forceRes instanceof Error) {
         t.fail('should not get error when forced', { error: forceRes })
-      else
+      } else {
         t.matchSnapshot(printTree(forceRes), 'force result')
+      }
 
       if (error) {
-        if (!(defRes instanceof Error))
+        if (!(defRes instanceof Error)) {
           console.error(printTree(defRes))
+        }
         t.match(defRes, { code: 'ERESOLVE' })
-      } else if (defRes instanceof Error)
+      } else if (defRes instanceof Error) {
         t.fail('should not get error in default mode', { error: defRes })
-      else {
-        if (resolvable)
+      } else {
+        if (resolvable) {
           t.strictSame(warnings, [])
-        else
+        } else {
           t.matchSnapshot(warnings, 'warnings')
+        }
         warnings.length = 0
         t.matchSnapshot(printTree(defRes), 'default result')
       }
@@ -1789,10 +1801,11 @@ t.test('properly assign fsParent when paths have .. in them', async t => {
   }
   for (const node of tree.inventory.filter(n => n.isLink)) {
     const { target } = node
-    if (target.location === '../..')
+    if (target.location === '../..') {
       t.equal(target.fsParent, null, '../.. has no fsParent')
-    else
+    } else {
       t.equal(tree.inventory.has(target.fsParent), true, 'other targets have fsParent')
+    }
   }
 })
 
@@ -2109,8 +2122,9 @@ t.test('allow ERESOLVE to be forced when not in the source', async t => {
       },
     })
     for (const type of types) {
-      if (type === 'peerDependencies')
+      if (type === 'peerDependencies') {
         continue
+      }
       t.test(type, async t => {
         const path = t.testdir({
           'package.json': JSON.stringify(pj(type)),
@@ -2135,8 +2149,9 @@ t.test('allow ERESOLVE to be forced when not in the source', async t => {
       },
     })
     for (const type of types) {
-      if (type === 'peerDependencies')
+      if (type === 'peerDependencies') {
         continue
+      }
       t.test(type, async t => {
         const path = t.testdir({
           'package.json': JSON.stringify(pj(type)),

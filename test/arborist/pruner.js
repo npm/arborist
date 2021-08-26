@@ -87,10 +87,11 @@ t.test('prune omit dev with bins', async t => {
 
   // should have bin files
   const reifiedBin = resolve(path, 'node_modules/.bin/yes')
-  if (process.platform === 'win32')
+  if (process.platform === 'win32') {
     t.ok(fs.statSync(reifiedBin + '.cmd').isFile(), 'should have shim')
-  else
+  } else {
     t.ok(fs.lstatSync(reifiedBin).isSymbolicLink(), 'should have symlink')
+  }
 
   // PRUNE things
   const tree = await pruneTree(path, { prefix: path, omit: ['dev'] })
@@ -105,8 +106,9 @@ t.test('prune omit dev with bins', async t => {
 
   // should also remove ./bin/* files
   const bin = resolve(path, 'node_modules/.bin/yes')
-  if (process.platform === 'win32')
+  if (process.platform === 'win32') {
     t.throws(() => fs.statSync(bin + '.cmd').isFile(), /ENOENT/, 'should not have shim')
-  else
+  } else {
     t.throws(() => fs.lstatSync(bin).isSymbolicLink(), /ENOENT/, 'should not have symlink')
+  }
 })

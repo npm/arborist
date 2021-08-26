@@ -6,16 +6,18 @@ const runScript = require('@npmcli/run-script')
 const realRimraf = require('rimraf')
 let failRimraf = false
 const rimrafMock = (...args) => {
-  if (!failRimraf)
+  if (!failRimraf) {
     return realRimraf(...args)
-  else
+  } else {
     return args.pop()(new Error('rimraf fail'))
+  }
 }
 rimrafMock.sync = (...args) => {
-  if (!failRimraf)
+  if (!failRimraf) {
     return realRimraf.sync(...args)
-  else
+  } else {
     throw new Error('rimraf fail')
+  }
 }
 const fs = require('fs')
 let failRename = null
@@ -25,20 +27,22 @@ const {rename: realRename, mkdir: realMkdir} = fs
 const fsMock = {
   ...fs,
   mkdir (...args) {
-    if (failMkdir)
+    if (failMkdir) {
       process.nextTick(() => args.pop()(failMkdir))
+    }
 
     realMkdir(...args)
   },
   rename (...args) {
-    if (failRename)
+    if (failRename) {
       process.nextTick(() => args.pop()(failRename))
-    else if (failRenameOnce) {
+    } else if (failRenameOnce) {
       const er = failRenameOnce
       failRenameOnce = null
       process.nextTick(() => args.pop()(er))
-    } else
+    } else {
       realRename(...args)
+    }
   },
 }
 const mocks = {
@@ -221,15 +225,17 @@ t.test('omit peer deps', t => {
 
   return reify(path, { omit: ['peer'] })
     .then(tree => {
-      for (const node of tree.inventory.values())
+      for (const node of tree.inventory.values()) {
         t.equal(node.peer, false, 'did not reify any peer nodes')
+      }
 
       const lock = require(tree.path + '/package-lock.json')
       for (const [loc, meta] of Object.entries(lock.packages)) {
-        if (meta.peer)
+        if (meta.peer) {
           t.throws(() => fs.statSync(resolve(path, loc)), 'peer not reified')
-        else
+        } else {
           t.equal(fs.statSync(resolve(path, loc)).isDirectory(), true)
+        }
       }
     })
     .then(() => {
@@ -369,9 +375,9 @@ t.test('multiple bundles at the same level', t => {
     const p = printTree(tree)
     // just fail on the failures, we don't need a zillion tap lines here
     for (const n of tree.inventory.values()) {
-      if (n.root !== root)
+      if (n.root !== root) {
         t.equal(n.root, root, 'in same tree')
-      else {
+      } else {
         for (const e of n.edgesIn) {
           if (e.from.root !== root) {
             t.equal(e.from.root, root,
@@ -1157,10 +1163,11 @@ t.test('workspaces', t => {
 
     const checkBin = () => {
       for (const bin of bins) {
-        if (process.platform === 'win32')
+        if (process.platform === 'win32') {
           t.ok(fs.statSync(bin + '.cmd').isFile(), 'created shim')
-        else
+        } else {
           t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+        }
       }
     }
 
@@ -1203,10 +1210,11 @@ t.test('reify from old package-lock with bins', async t => {
   )
 
   const bin = resolve(path, 'node_modules/.bin/ruy')
-  if (process.platform === 'win32')
+  if (process.platform === 'win32') {
     t.ok(fs.statSync(`${bin}.cmd`).isFile(), 'created shim')
-  else
+  } else {
     t.ok(fs.lstatSync(bin).isSymbolicLink(), 'created symlink')
+  }
 })
 
 t.test('fail early if bins will conflict', async t => {
@@ -1389,8 +1397,9 @@ t.test('rollback if process is terminated during reify process', async t => {
 
     // ignore the beforeExit handler, since we won't actually let that happen
     once (ev, ...args) {
-      if (ev !== 'beforeExit')
+      if (ev !== 'beforeExit') {
         return super.once(ev, ...args)
+      }
     }
 
     kill (pid, signal) {
@@ -1442,8 +1451,9 @@ t.test('rollback if process is terminated during reify process', async t => {
         })
         // if it fails while removing trash well... it's already over.
         // we can't actually roll back at that point, because "trash" is gone
-        if (method !== Symbol.for('removeTrash'))
+        if (method !== Symbol.for('removeTrash')) {
           t.throws(() => fs.statSync(path + '/node_modules'), { code: 'ENOENT' })
+        }
       })
 
       t.test('upgrade install', async t => {

@@ -115,10 +115,12 @@ t.test('no max listener warning', t => {
   }))
 
   const unloads = []
-  for (let i = 0; i < 1000; i++)
+  for (let i = 0; i < 1000; i++) {
     unloads.push(onExit(() => {}))
-  for (const unload of unloads)
+  }
+  for (const unload of unloads) {
     unload()
+  }
 
   t.pass('if no throw, then it worked')
 })

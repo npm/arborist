@@ -24,7 +24,8 @@ const {
 const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
-const loadVirtual = (path, opts) => new Arborist({path, ...(opts || {})}).loadVirtual(opts)
+const loadVirtual = (path, opts) =>
+  new Arborist({path, ...(opts || {})}).loadVirtual(opts)
 
 t.test('load from fixture', t =>
   loadVirtual(fixture).then(virtualTree => {

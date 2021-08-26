@@ -25,7 +25,11 @@ const saxFixture = resolve(__dirname, 'fixtures/sax')
 
 // start out with the file being fresh
 const later = Date.now() + 10000
-fs.utimesSync(resolve(hiddenLockfileFixture, hidden), new Date(later), new Date(later))
+fs.utimesSync(
+  resolve(hiddenLockfileFixture, hidden),
+  new Date(later),
+  new Date(later)
+)
 
 t.test('shrinkwrap key order', async t => t.matchSnapshot(Shrinkwrap.keyOrder))
 
@@ -95,7 +99,11 @@ t.test('loading in empty dir gets empty lockfile', t =>
       path: emptyFixture,
       realpath: emptyFixture,
     })
-    root.peer = root.dev = root.devOptional = root.optional = root.extraneous = false
+    root.peer = false
+    root.dev = false
+    root.devOptional = false
+    root.optional = false
+    root.extraneous = false
     sw.add(root)
     t.strictSame(sw.commit(), {
       name: 'empty',
@@ -808,8 +816,9 @@ t.test('hidden lockfile understands symlinks', async t => {
       name: 'missing',
       version: '1.2.3',
     }))
-    if (process.platform === 'win32')
+    if (process.platform === 'win32') {
       fs.symlinkSync(resolve(path, 'missing'), resolve(path, 'node_modules/missing'), 'junction')
+    }
     // even though it's newer, the 'missing' is not found in the lock
     const later = Date.now() + 30000
     fs.utimesSync(resolve(path, hidden), new Date(later), new Date(later))
@@ -1363,7 +1372,9 @@ t.test('metadata that only has one of resolved/integrity', t => {
 })
 
 t.test('load an ancient lockfile', async t =>
-  t.match(await Shrinkwrap.load({ path: saxFixture }), { ancientLockfile: true }))
+  t.match(await Shrinkwrap.load({ path: saxFixture }), {
+    ancientLockfile: true,
+  }))
 
 t.test('shrinkwrap where root is a link node', async t => {
   const meta = await Shrinkwrap.reset({ path: '/actual/project/path' })

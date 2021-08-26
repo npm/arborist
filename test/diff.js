@@ -411,7 +411,11 @@ t.test('diff doesnt break unchanged shrinkwrapped deps', async t => {
   // marked as unchanged.
   const shrinkwrappedInner = ideal.children.get('regular-dep')
     .children.get('shrinkwrapped-inner')
-  const diff = Diff.calculate({ actual, ideal, shrinkwrapInflated: new Set([shrinkwrappedInner]) })
+  const diff = Diff.calculate({
+    actual,
+    ideal,
+    shrinkwrapInflated: new Set([shrinkwrappedInner]),
+  })
   t.matchSnapshot(diff, 'made no changes')
 
   t.equal(diff.leaves.length, 1, 'diff has exactly one leaf')
@@ -479,17 +483,26 @@ t.test('extraneous pruning in workspaces', async t => {
   const actual = await new Arborist({path}).loadVirtual()
   const ideal = await new Arborist({path}).loadVirtual()
   for (const node of ideal.inventory.values()) {
-    if (node.extraneous)
+    if (node.extraneous) {
       node.root = null
+    }
   }
   const idealA = ideal.children.get('a').target
   const actualA = actual.children.get('a').target
-  const pruneWsA = Diff.calculate({actual, ideal, filterNodes: [idealA, actualA]})
+  const pruneWsA = Diff.calculate({
+    actual,
+    ideal,
+    filterNodes: [idealA, actualA],
+  })
   t.matchSnapshot(pruneWsA, 'prune in workspace A')
 
   const idealB = ideal.children.get('b').target
   const actualB = actual.children.get('b').target
-  const pruneWsB = Diff.calculate({actual, ideal, filterNodes: [idealB, actualB]})
+  const pruneWsB = Diff.calculate({
+    actual,
+    ideal,
+    filterNodes: [idealB, actualB],
+  })
   t.matchSnapshot(pruneWsB, 'prune in workspace B')
 })
 

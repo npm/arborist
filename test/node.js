@@ -264,8 +264,8 @@ t.test('testing with dep tree', t => {
       t.equal(prod.children.size, 0, 'kids moved to newProd')
       t.equal(prod.root, prod, 'prod excised from tree')
       t.equal(newProd.root, root, 'newProd in the tree')
-      // XXX seems like these should be flipped, taking over fsChildren is weird?
-      t.equal(newProd.fsChildren.size, 0, 'fsChildren replaced by replacement node')
+      // XXX seems wrong, taking over fsChildren is weird?
+      t.equal(newProd.fsChildren.size, 0, 'fsChildren replaced')
       t.equal(prod.fsChildren.size, 1, 'fsChildren go along with fsParent')
       t.equal([...prod.fsChildren][0], foo, 'foo still in old prod fsChildren set')
       t.equal(foo.fsParent, prod, 'prod is still foos fsParent')
@@ -611,8 +611,9 @@ t.test('load with a virtual filesystem parent', t => {
   aLink.root = root
   t.equal(root.inventory.get(aLoc), aLink)
   t.equal(a.root, a)
-  for (const node of underA)
+  for (const node of underA) {
     t.not(node.root, root, `${node.path} still under old root`)
+  }
 
   // create a new fsChild several steps below the root, then shove
   // a link in the way of it, removing it.
@@ -1440,8 +1441,9 @@ t.test('reloading named edges should refresh edgesIn', t => {
 t.test('detect that two nodes are the same thing', async t => {
   const check = (a, b, expect, message) => {
     t.equal(a.matches(b), expect, message)
-    if (a !== b)
+    if (a !== b) {
       t.equal(b.matches(a), expect, message)
+    }
   }
 
   {
@@ -2455,13 +2457,17 @@ t.test('canDedupe()', t => {
     ],
   })
 
-  t.match([...root.inventory.filter(n => n.canDedupe())].map(n => n.location), [
+  const canDedupeLocs = [...root.inventory.filter(n => n.canDedupe())]
+    .map(n => n.location)
+  t.match(canDedupeLocs, [
     'node_modules/c/node_modules/a',
     'node_modules/b/node_modules/e',
     'node_modules/b/node_modules/c/node_modules/a/node_modules/e',
   ], 'preferDedupe=false')
 
-  t.match([...root.inventory.filter(n => n.canDedupe(true))].map(n => n.location), [
+  const canDedupeTrueLocs = [...root.inventory.filter(n => n.canDedupe(true))]
+    .map(n => n.location)
+  t.match(canDedupeTrueLocs, [
     'node_modules/c/node_modules/a',
     // this is the one that's only deduped if we preferDedupe
     'node_modules/b/node_modules/a',
@@ -2656,5 +2662,4 @@ t.test('children of the global root are considered tops', t => {
   t.equal(foo.top, foo)
   t.equal(bar.top, foo)
   t.end()
-  t.equal(foo.isTop, true)
 })

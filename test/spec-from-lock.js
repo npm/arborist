@@ -10,12 +10,13 @@ const isHGIFn = (key, val) =>
 
 const normalizePaths = obj => {
   for (const key in obj) {
-    if (['where', 'fetchSpec', 'saveSpec'].includes(key) && obj[key])
+    if (['where', 'fetchSpec', 'saveSpec'].includes(key) && obj[key]) {
       obj[key] = normalizePath(obj[key])
-    else if (isHGIFn(key, obj[key]))
+    } else if (isHGIFn(key, obj[key])) {
       obj[key] = `function ${key}`
-    else if (typeof obj[key] === 'object' && obj[key] !== null)
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
       obj[key] = normalizePaths(obj[key])
+    }
   }
   return obj
 }

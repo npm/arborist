@@ -1741,6 +1741,49 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP add local dep with existing dev + peer/optional > tree 1`] = `
+ArboristNode {
+  "children": Map {
+    "abbrev" => ArboristLink {
+      "dev": true,
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "abbrev",
+          "spec": "file:../dep",
+          "type": "dev",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-add-local-dep-with-existing-dev-peer-optional/project/node_modules/abbrev",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-add-local-dep-with-existing-dev-peer-optional/dep",
+      "resolved": "file:../../dep",
+      "target": ArboristNode {
+        "dev": true,
+        "location": "../dep",
+        "name": "abbrev",
+        "path": "{CWD}/test/arborist/tap-testdir-reify-add-local-dep-with-existing-dev-peer-optional/dep",
+        "version": "1.0.0",
+      },
+      "version": "1.0.0",
+    },
+  },
+  "edgesOut": Map {
+    "abbrev" => EdgeOut {
+      "name": "abbrev",
+      "spec": "file:../dep",
+      "to": "node_modules/abbrev",
+      "type": "dev",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "project",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-add-local-dep-with-existing-dev-peer-optional/project",
+}
+`
+
 exports[`test/arborist/reify.js TAP add multiple pkgs in a specific order > should alphabetically sort dependencies 1`] = `
 {"name":"multiple-pkgs","dependencies":{"abbrev":"^1.1.1","wrappy":"^1.0.2"}}
 `

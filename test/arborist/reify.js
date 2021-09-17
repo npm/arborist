@@ -2397,3 +2397,38 @@ t.test('no workspace', async t => {
   t.equal(tree.inventory.query('name', 'abbrev').size, 0)
   t.equal(tree.inventory.query('name', 'once').size, 1)
 })
+
+t.test('add local dep with existing dev + peer/optional', async t => {
+  const path = t.testdir({
+    project: {
+      'package.json': JSON.stringify({
+        devDependencies: {
+          abbrev: '^1.0.0',
+        },
+        peerDependencies: {
+          abbrev: '^1.0.0',
+        },
+        optionalDependencies: {
+          abbrev: '^1.0.0',
+        },
+      }),
+    },
+    dep: {
+      'package.json': JSON.stringify({
+        name: 'abbrev',
+        version: '1.0.0',
+      }),
+    },
+  })
+
+  const project = resolve(path, 'project')
+  const cwd = process.cwd()
+  t.teardown(() => process.chdir(cwd))
+  process.chdir(project)
+
+  const tree = await reify(project, { add: ['../dep'] })
+
+  t.matchSnapshot(printTree(tree), 'tree')
+  t.equal(tree.children.get('abbrev').resolved, 'file:../../dep', 'resolved')
+  t.equal(tree.children.size, 1, 'children')
+})

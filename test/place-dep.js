@@ -135,12 +135,16 @@ t.test('placement tests', t => {
       process.removeListener('log', onwarn)
 
       if (test) {
-        test(t, tree)
+        test(t, tree, pd)
       }
 
       const after = normalizePaths(tree.toJSON())
       const { diff } = strict(after, before)
 
+      if (pd.needEvaluation.size) {
+        t.matchSnapshot([...pd.needEvaluation]
+          .map(n => `${n.location} ${n.version}`))
+      }
       t.matchSnapshot(diff, 'changes to tree')
       t.matchSnapshot(normalizePaths(warnings), 'warnings')
       t.matchSnapshot([pd, ...pd.allChildren].map(c => {
@@ -1893,8 +1897,6 @@ t.test('placement tests', t => {
       ],
     }),
     dep: new Node({ pkg: { name: 'y', version: '2.0.0' }}),
-    peerSet: [
-    ],
     nodeLoc: 'node_modules/k/node_modules/x',
     test: (t, tree) => {
       const k = tree.children.get('k')
@@ -1942,6 +1944,66 @@ t.test('placement tests', t => {
       pkg: { name: 'x', version: '1.2.3' },
     }),
     nodeLoc: '',
+  })
+
+  // https://github.com/npm/arborist/issues/325
+  runTest('prune competing peerSet that can be nested, 1', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { a: '' }},
+      children: [
+        {
+          pkg: {
+            name: 'a',
+            version: '1.0.0',
+            dependencies: {
+              j: '1',
+              x: '',
+              y: '',
+            },
+          },
+        },
+        { pkg: { name: 'j', version: '1.0.0' }},
+        { pkg: { name: 'x', version: '1.0.0', peerDependencies: { j: '1' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { j: '2' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'j', version: '2.0.0' }},
+    ],
+    nodeLoc: 'node_modules/a',
+  })
+
+  runTest('prune competing peerSet that can be nested, 2', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { a: '' }},
+      children: [
+        {
+          pkg: {
+            name: 'a',
+            version: '1.0.0',
+            dependencies: {
+              j: '1',
+              x: '',
+              y: '',
+            },
+          },
+        },
+        { pkg: { name: 'j', version: '1.0.0' }},
+        { pkg: { name: 'x', version: '1.0.0', peerDependencies: { j: '1' }}},
+        { pkg: { name: 'y', version: '1.0.0', peerDependencies: { j: '2' }}},
+      ],
+    }),
+    dep: new Node({ pkg: { name: 'j', version: '2.0.0' }}),
+    nodeLoc: 'node_modules/y',
+    test: (t, tree, pd) => {
+      t.equal(tree.children.get('x'), undefined)
+      t.equal(tree.children.get('j').version, '2.0.0')
+      t.equal([...pd.needEvaluation][0], tree.children.get('a'))
+    },
   })
 
   t.end()

@@ -2661,3 +2661,116 @@ t.test('update a global space that contains a link', async t => {
   t.matchSnapshot(printTree(tree))
   t.equal(tree.children.get('once').isLink, true)
 })
+
+t.test('peer conflicts between peer sets in transitive deps', t => {
+  t.plan(4)
+
+  // caused an infinite loop in https://github.com/npm/arborist/issues/325,
+  // which is the reason for the package name.
+  t.test('y and j@2 at root, x and j@1 underneath a', async t => {
+    const path = t.testdir({
+      'package.json': '{}',
+    })
+    const warnings = warningTracker()
+    const tree = await buildIdeal(path, {
+      add: ['@isaacs/peer-dep-conflict-infinite-loop-a@1'],
+    })
+    t.strictSame(warnings(), [])
+    const a = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-a')
+    const j = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const x = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const y = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    const aj = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const ax = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const ay = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    t.equal(a.version, '1.0.0')
+    t.equal(y.version, '1.0.0')
+    t.equal(j.version, '2.0.0')
+    t.notOk(x)
+    t.equal(ax.version, '1.0.0')
+    t.equal(aj.version, '1.0.0')
+    t.notOk(ay)
+  })
+
+  t.test('x and j@1 at root, y and j@2 underneath a', async t => {
+    const path = t.testdir({
+      'package.json': '{}',
+    })
+    const warnings = warningTracker()
+    const tree = await buildIdeal(path, {
+      add: ['@isaacs/peer-dep-conflict-infinite-loop-a@2'],
+    })
+    t.strictSame(warnings(), [])
+    const a = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-a')
+    const j = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const x = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const y = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    const aj = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const ax = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const ay = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    t.equal(a.version, '2.0.0')
+    t.equal(x.version, '1.0.0')
+    t.equal(j.version, '1.0.0')
+    t.notOk(y)
+    t.equal(ay.version, '1.0.0')
+    t.equal(aj.version, '2.0.0')
+    t.notOk(ax)
+  })
+
+  t.test('get warning, x and j@1 in root, put y and j@3 in a', async t => {
+    const path = t.testdir({
+      'package.json': '{}',
+    })
+    const warnings = warningTracker()
+    const tree = await buildIdeal(path, {
+      add: ['@isaacs/peer-dep-conflict-infinite-loop-a@3'],
+    })
+    const w = warnings()
+    t.match(w, [['warn', 'ERESOLVE', 'overriding peer dependency', {
+      code: 'ERESOLVE',
+    }]], 'warning is an ERESOLVE')
+    t.equal(w.length, 1, 'one warning')
+    t.matchSnapshot(normalizePaths(w[0][3]), 'ERESOLVE explanation')
+    const a = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-a')
+    const j = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const x = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const y = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    const aj = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const ax = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const ay = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    t.equal(a.version, '3.0.0')
+    t.equal(x.version, '1.0.0')
+    t.equal(j.version, '1.0.0')
+    t.notOk(y)
+    t.equal(ay.version, '1.0.0')
+    t.equal(aj.version, '3.0.0')
+    t.notOk(ax)
+  })
+  t.test('x and j@1 at root, y and j@2 underneath a (no a->j dep)', async t => {
+    const path = t.testdir({
+      'package.json': '{}',
+    })
+    const warnings = warningTracker()
+    const tree = await buildIdeal(path, {
+      add: ['@isaacs/peer-dep-conflict-infinite-loop-a@4'],
+    })
+    t.strictSame(warnings(), [], 'no warnings')
+
+    const a = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-a')
+    const j = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const x = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const y = tree.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    const aj = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-j')
+    const ax = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-x')
+    const ay = a.children.get('@isaacs/peer-dep-conflict-infinite-loop-y')
+    t.equal(a.version, '4.0.0')
+    t.equal(x.version, '1.0.0')
+    t.equal(j.version, '1.0.0')
+    t.notOk(y)
+    t.equal(ay.version, '1.0.0')
+    t.equal(aj.version, '2.0.0')
+    t.notOk(ax)
+  })
+
+  t.end()
+})

@@ -16714,6 +16714,29 @@ ArboristNode {
       },
       "version": "1.0.0",
     },
+    "once" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "once",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => EdgeOut {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/node_modules/once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+      "version": "1.4.0",
+    },
     "uuid" => ArboristNode {
       "edgesIn": Set {
         EdgeIn {
@@ -16728,6 +16751,21 @@ ArboristNode {
       "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/node_modules/uuid",
       "resolved": "https://registry.npmjs.org/uuid/-/uuid-3.3.3.tgz",
       "version": "3.3.3",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/fixtures/workspaces-shared-deps-virtual/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "version": "1.0.2",
     },
   },
   "edgesOut": Map {
@@ -16748,6 +16786,12 @@ ArboristNode {
       "spec": "file:{CWD}/test/fixtures/workspaces-shared-deps-virtual/packages/c",
       "to": "node_modules/c",
       "type": "workspace",
+    },
+    "once" => EdgeOut {
+      "name": "once",
+      "spec": "*",
+      "to": "node_modules/once",
+      "type": "prod",
     },
   },
   "fsChildren": Set {

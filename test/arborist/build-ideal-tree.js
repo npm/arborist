@@ -2601,6 +2601,54 @@ t.test('add deps to workspaces', async t => {
   })
 })
 
+t.test('add deps and include workspace-root', async t => {
+  const fixtureDef = {
+    'package.json': JSON.stringify({
+      workspaces: [
+        'packages/*',
+      ],
+      dependencies: {
+        mkdirp: '^1.0.4',
+        minimist: '1',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            mkdirp: '^0.5.0',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+    },
+  }
+  const path = t.testdir(fixtureDef)
+
+  t.test('no args', async t => {
+    const tree = await buildIdeal(path)
+    t.equal(tree.children.get('mkdirp').version, '1.0.4')
+    t.equal(tree.children.get('a').target.children.get('mkdirp').version, '0.5.5')
+    t.equal(tree.children.get('b').target.children.get('mkdirp'), undefined)
+    t.ok(tree.edgesOut.has('mkdirp'))
+    t.matchSnapshot(printTree(tree))
+  })
+
+  t.test('add mkdirp 0.5.0 to b', async t => {
+    const tree = await buildIdeal(path, { workspaces: ['b'], add: ['mkdirp@0.5.0'], includeWorkspaceRoot: true })
+    t.equal(tree.children.get('mkdirp').version, '0.5.0')
+    t.ok(tree.edgesOut.has('mkdirp'))
+    t.matchSnapshot(printTree(tree))
+  })
+})
+
 t.test('inflates old lockfile with hasInstallScript', async t => {
   const path = t.testdir({
     'package-lock.json': JSON.stringify({

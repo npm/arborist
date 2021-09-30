@@ -42,6 +42,24 @@ t.test('workspace nodes and deps', async t => {
     t.equal(wsDepSet.has(tree.children.get('abbrev')), true)
   }
 
+  {
+    const wsDepSet = arb.workspaceDependencySet(tree, ['b'], true)
+    t.equal(wsDepSet.size, 4)
+    t.equal(wsDepSet.has(tree.children.get('b').target), true)
+    t.equal(wsDepSet.has(tree.children.get('abbrev')), true)
+    t.equal(wsDepSet.has(tree.children.get('once')), true)
+    t.equal(wsDepSet.has(tree.children.get('wrappy')), true)
+  }
+
+  {
+    const wsDepSet = arb.excludeWorkspacesDependencySet(tree)
+    t.equal(wsDepSet.size, 2)
+    t.equal(wsDepSet.has(tree.children.get('b').target), false)
+    t.equal(wsDepSet.has(tree.children.get('abbrev')), false)
+    t.equal(wsDepSet.has(tree.children.get('once')), true)
+    t.equal(wsDepSet.has(tree.children.get('wrappy')), true)
+  }
+
   const wsNode = wsNodes[0]
   new Edge({
     from: wsNode,
@@ -104,4 +122,100 @@ t.test('workspace nodes and deps', async t => {
     t.equal(wsDepSet.has(tree.children.get('abbrev')), true)
     t.equal(wsDepSet.has(tree.children.get('abbrev').target), true)
   }
+})
+
+t.test('excludeSet includes nonworkspace metadeps', async t => {
+  const tree = new Node({
+    path: '/hi',
+    pkg: {
+      workspaces: ['pkgs/*'],
+      dependencies: {
+        foo: '',
+      },
+    },
+    children: [
+      {
+        pkg: {
+          name: 'foo',
+          version: '0.1.1',
+          dependencies: {
+            bar: '',
+            asdf: '',
+          },
+        },
+      },
+      {
+        pkg: {
+          name: 'bar',
+          version: '0.2.0',
+        },
+      },
+      {
+        pkg: {
+          name: 'baz',
+          version: '9.2.0',
+        },
+      },
+      {
+        pkg: {
+          name: 'fritzy',
+          version: '2.2.9',
+          optionalDependencies: {
+            isaacs: '',
+          },
+        },
+      },
+    ],
+  })
+  const pkgA = new Node({
+    path: tree.path + '/pkgs/a',
+    pkg: {
+      name: 'a',
+      version: '1.0.0',
+      dependencies: {
+        baz: '',
+      },
+    },
+    root: tree,
+  })
+  new Link({
+    name: 'a',
+    parent: tree,
+    target: pkgA,
+  })
+  new Edge({
+    type: 'workspace',
+    from: tree,
+    name: 'a',
+    spec: 'file:pkgs/a',
+  })
+  const pkgB = new Node({
+    path: tree.path + '/pkgs/b',
+    pkg: {
+      name: 'b',
+      version: '1.0.0',
+      dependencies: {
+        fritzy: '',
+      },
+    },
+    root: tree,
+  })
+  new Link({
+    name: 'b',
+    parent: tree,
+    target: pkgB,
+  })
+  new Edge({
+    type: 'workspace',
+    from: tree,
+    name: 'b',
+    spec: 'file:pkgs/b',
+  })
+
+  const arb = new Arborist()
+  const filter = arb.excludeWorkspacesDependencySet(tree)
+
+  t.equal(filter.size, 2)
+  t.equal(filter.has(tree.children.get('foo')), true)
+  t.equal(filter.has(tree.children.get('bar')), true)
 })

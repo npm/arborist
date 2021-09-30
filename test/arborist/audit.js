@@ -107,3 +107,48 @@ t.test('audit in a workspace', async t => {
   t.equal(fixed.children.get('a').target.children.get('mkdirp').version, '0.5.0', 'did not fix a')
   t.equal(fixed.children.get('b').target.children.get('mkdirp').version, '0.5.5', 'did fix b')
 })
+
+t.test('audit with workspaces disabled', async t => {
+  const src = resolve(fixtures, 'audit-nyc-mkdirp')
+  const auditFile = resolve(src, 'advisory-bulk.json')
+  t.teardown(advisoryBulkResponse(auditFile))
+
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      workspaces: ['packages/*'],
+      dependencies: {
+        mkdirp: '1',
+      },
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {
+            mkdirp: '0',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+          dependencies: {
+            mkdirp: '0',
+          },
+        }),
+      },
+    },
+  })
+
+  // reify it without auditing so that we can put the "bad" versions
+  // in place and save a lockfile reflecting this.
+  await newArb(path, { audit: false }).reify()
+  const bad = 'mkdirp@0.5.0'
+  await newArb(path, { audit: false, workspaces: ['a'] }).reify({ add: [bad] })
+  await newArb(path, { audit: false, workspaces: ['b'] }).reify({ add: [bad] })
+
+  const auditReport = await newArb(path, { workspacesEnabled: false }).audit()
+  t.notOk(auditReport.get('mkdirp'))
+})

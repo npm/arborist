@@ -4177,6 +4177,132 @@ ArboristNode {
 }
 `
 
+exports[`test/arborist/reify.js TAP includeWorkspaceRoot in addition to workspace > must match snapshot 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristLink {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/packages/a",
+          "type": "workspace",
+        },
+      },
+      "isWorkspace": true,
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/node_modules/a",
+      "realpath": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/packages/a",
+      "resolved": "file:../packages/a",
+      "target": ArboristNode {
+        "location": "packages/a",
+      },
+      "version": "1.0.1",
+    },
+    "abbrev" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "packages/a",
+          "name": "abbrev",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/abbrev",
+      "name": "abbrev",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/node_modules/abbrev",
+      "resolved": "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz",
+      "version": "1.1.1",
+    },
+    "once" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "once",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => EdgeOut {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/node_modules/once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+      "version": "1.4.0",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "version": "1.0.2",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "once" => EdgeOut {
+      "name": "once",
+      "spec": "*",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "fsChildren": Set {
+    ArboristNode {
+      "edgesOut": Map {
+        "abbrev" => EdgeOut {
+          "name": "abbrev",
+          "spec": "*",
+          "to": "node_modules/abbrev",
+          "type": "prod",
+        },
+      },
+      "isWorkspace": true,
+      "location": "packages/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace/packages/a",
+      "version": "1.0.1",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-includeWorkspaceRoot-in-addition-to-workspace",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
 exports[`test/arborist/reify.js TAP just the shrinkwrap cli-750-fresh > must match snapshot 1`] = `
 {
   "name": "monorepo",

@@ -38,6 +38,22 @@ t.test('path defaults to .', async t => {
   t.equal(sw.path, process.cwd())
 })
 
+t.test('load and change lockfileVersion', async t => {
+  const vDefault = await Shrinkwrap.load({ path: fixture })
+  const v1 = await Shrinkwrap.load({ path: fixture, lockfileVersion: 1 })
+  const v2 = await Shrinkwrap.load({ path: fixture, lockfileVersion: 2 })
+  const v3 = await Shrinkwrap.load({ path: fixture, lockfileVersion: 3 })
+
+  t.strictSame(vDefault, v2, 'default is same as version 2')
+  const v1Data = await v1.commit()
+  const v2Data = await v2.commit()
+  const v3Data = await v3.commit()
+  t.strictSame(v2Data, { ...v1Data, ...v3Data, lockfileVersion: 2 },
+    'v2 is superset of v1 and v3')
+  t.equal(v1Data.packages, undefined, 'v1 data does not have packages')
+  t.equal(v3Data.dependencies, undefined, 'v3 data does not have dependencies')
+})
+
 t.test('load and then reset gets empty lockfile', t =>
   Shrinkwrap.load({ path: fixture }).then(sw => {
     sw.reset()
@@ -680,9 +696,9 @@ t.test('load a hidden lockfile', t => {
       },
     }))
     t.strictSame(s.data.dependencies, {}, 'did not add to legacy data')
-    s.commit()
-    t.equal(s.data.packages[''], undefined, 'no root entry')
-    t.equal(s.data.dependencies, undefined, 'deleted legacy metadata')
+    const data = s.commit()
+    t.equal(data.packages[''], undefined, 'no root entry')
+    t.equal(data.dependencies, undefined, 'deleted legacy metadata')
   })
 })
 
@@ -691,7 +707,7 @@ t.test('load a fresh hidden lockfile', t => Shrinkwrap.reset({
   hiddenLockfile: true,
 }).then(sw => {
   t.strictSame(sw.data, {
-    lockfileVersion: 2,
+    lockfileVersion: 3,
     requires: true,
     dependencies: {},
     packages: {},

@@ -692,7 +692,8 @@ Object {
 
 exports[`test/shrinkwrap.js TAP load a hidden lockfile > must match snapshot 1`] = `
 Object {
-  "lockfileVersion": 2,
+  "dependencies": Object {},
+  "lockfileVersion": 3,
   "name": "hidden-lockfile",
   "packages": Object {
     "": Object {

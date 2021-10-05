@@ -77,6 +77,7 @@
   },
   "//": "sk test-env locale to catch locale-specific sorting",
   "tap": {
+    "color": true,
     "after": "test/fixtures/cleanup.js",
     "coverage-map": "map.js",
     "test-env": [
@@ -90,6 +91,6 @@
     "timeout": "240"
   },
   "engines": {
-    "node": ">= 10"
+    "node": "^12.13.0 || ^14.15.0 || >=16"
   }
 }

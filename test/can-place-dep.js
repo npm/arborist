@@ -40,7 +40,7 @@ t.test('basic placement check tests', t => {
     const node = tree.inventory.get(nodeLoc)
     const edge = node.edgesOut.get(dep.name)
     if (!dep.satisfies(edge)) {
-      edge.overridden = true
+      edge.peerConflicted = true
     }
     const vr = new Node({
       sourceReference: node,
@@ -50,11 +50,11 @@ t.test('basic placement check tests', t => {
     })
     dep.parent = vr
 
-    // mark any invalid edges in the virtual root as overridden
+    // mark any invalid edges in the virtual root as peerConflicted
     for (const child of vr.children.values()) {
       for (const edgeIn of child.edgesIn) {
         if (edgeIn.invalid) {
-          edgeIn.overridden = true
+          edgeIn.peerConflicted = true
         }
       }
     }
@@ -197,7 +197,7 @@ t.test('basic placement check tests', t => {
     expect: REPLACE,
   })
 
-  runTest('keep existing dep that matches, does not satisfy, but overridden', {
+  runTest('keep existing dep that matches, does not satisfy, but peerConflicted', {
     tree: new Node({
       path,
       pkg: { name: 'project', version: '1.2.3', dependencies: { a: '2.3.4' }},
@@ -529,7 +529,7 @@ t.test('basic placement check tests', t => {
     ],
   })
 
-  runTest('peers with overridden edges in peerSet', {
+  runTest('peers with peerConflicted edges in peerSet', {
     tree: new Node({
       path,
       pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
@@ -546,7 +546,7 @@ t.test('basic placement check tests', t => {
     ],
   })
 
-  runTest('peers with overridden edges in peerSet from dependent', {
+  runTest('peers with peerConflicted edges in peerSet from dependent', {
     tree: new Node({
       path,
       pkg: {

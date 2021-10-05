@@ -99,7 +99,7 @@ error:{code:'ERR', path:'/'},
 edgesOut:Map{
 'b' =>{prod b@* -> node_modules/b},
 'missing' =>{prod missing@* MISSING},
-'prod' =>{prod prod@1.x -> node_modules/prod overridden}},
+'prod' =>{prod prod@1.x -> node_modules/prod peerConflicted}},
 children:Map{
 'b' =>{
 name:'b',
@@ -135,7 +135,7 @@ edgesOut:Map{
 'b' =>{prod b@* -> node_modules/b},
 'meta' =>{prod meta@* MISSING},
 'peer' =>{peer peer@* MISSING}},
-edgesIn:Set{{"" prod prod@1.x overridden}},
+edgesIn:Set{{"" prod prod@1.x peerConflicted}},
 fsChildren:Set{
 {
 name:'bar',

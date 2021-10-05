@@ -1211,7 +1211,7 @@ exports[`test/place-dep.js TAP placement tests dep with load error > changes to 
        "spec": "1",
 -      "error": "MISSING",
 +      "error": "INVALID",
-       "overridden": true,
+       "peerConflicted": true,
 -      "to": null,
 +      "to": "node_modules/foo",
      },
@@ -1236,7 +1236,7 @@ exports[`test/place-dep.js TAP placement tests dep with load error > changes to 
 +          "name": "foo",
 +          "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "",
 +        },
 +      },
@@ -2324,7 +2324,7 @@ exports[`test/place-dep.js TAP placement tests existing peer set cannot be pushe
            "name": "b",
            "spec": "1",
            "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/b",
          },
        },
@@ -2336,7 +2336,7 @@ exports[`test/place-dep.js TAP placement tests existing peer set cannot be pushe
 -          "from": "node_modules/d",
 +          "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/a",
          },
          EdgeIn {
@@ -4581,7 +4581,7 @@ exports[`test/place-dep.js TAP placement tests peer all the way down, conflict b
 +                  "name": "p",
 +                  "spec": "1",
 +                  "error": "INVALID",
-+                  "overridden": true,
++                  "peerConflicted": true,
 +                  "to": "node_modules/p",
 +                },
 +              },
@@ -4618,7 +4618,7 @@ exports[`test/place-dep.js TAP placement tests peer all the way down, conflict b
            "name": "p",
 +          "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/b/node_modules/c/node_modules/d",
 +        },
 +        EdgeIn {
@@ -5088,7 +5088,7 @@ exports[`test/place-dep.js TAP placement tests peer with peers > warnings 1`] = 
 Array []
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet > changes to tree 1`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet > changes to tree 1`] = `
 --- expected
 +++ actual
 @@ -14,8 +14,109 @@
@@ -5206,7 +5206,7 @@ exports[`test/place-dep.js TAP placement tests peers with overridden edges in pe
 
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet > placements 1`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet > placements 1`] = `
 Array [
   Object {
     "canPlace": Symbol(OK),
@@ -5252,11 +5252,11 @@ Array [
 ]
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet > warnings 1`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet > warnings 1`] = `
 Array []
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet from dependent > changes to tree 1`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet from dependent > changes to tree 1`] = `
 --- expected
 +++ actual
 @@ -14,8 +14,7 @@
@@ -5380,7 +5380,7 @@ exports[`test/place-dep.js TAP placement tests peers with overridden edges in pe
 
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet from dependent > changes to tree 2`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet from dependent > changes to tree 2`] = `
 --- expected
 +++ actual
 @@ -14,8 +14,7 @@
@@ -5504,7 +5504,7 @@ exports[`test/place-dep.js TAP placement tests peers with overridden edges in pe
 
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet from dependent > placements 1`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet from dependent > placements 1`] = `
 Array [
   Object {
     "canPlace": Symbol(OK),
@@ -5536,7 +5536,7 @@ Array [
 ]
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet from dependent > placements 2`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet from dependent > placements 2`] = `
 Array [
   Object {
     "canPlace": Symbol(OK),
@@ -5568,11 +5568,11 @@ Array [
 ]
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet from dependent > warnings 1`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet from dependent > warnings 1`] = `
 Array []
 `
 
-exports[`test/place-dep.js TAP placement tests peers with overridden edges in peerSet from dependent > warnings 2`] = `
+exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges in peerSet from dependent > warnings 2`] = `
 Array []
 `
 
@@ -5720,7 +5720,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "a",
            "spec": "2",
            "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "from": "node_modules/e",
          },
        },
@@ -5728,7 +5728,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "a",
            "spec": "2",
            "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/a",
          },
        },
@@ -6213,7 +6213,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "b",
            "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/b",
          },
        },
@@ -6260,7 +6260,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "b",
            "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "from": "node_modules/a",
          },
        },
@@ -6783,7 +6783,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "b",
            "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/b",
          },
        },
@@ -6830,7 +6830,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "b",
            "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "from": "node_modules/a",
          },
        },
@@ -6934,7 +6934,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "b",
            "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/b",
          },
        },
@@ -6945,7 +6945,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
 -          "spec": "2",
 +          "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "from": "node_modules/e",
          },
        },
@@ -6978,7 +6978,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
            "name": "b",
            "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "from": "node_modules/a",
          },
        },
@@ -7049,7 +7049,7 @@ exports[`test/place-dep.js TAP placement tests prod dep directly on conflicted p
 -          "spec": "2",
 +          "spec": "1",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/a",
          },
        },
@@ -8121,7 +8121,7 @@ exports[`test/place-dep.js TAP placement tests prune competing peerSet that can 
 +              "name": "j",
 +              "spec": "2",
 +              "error": "INVALID",
-+              "overridden": true,
++              "peerConflicted": true,
 +              "to": "node_modules/j",
 +            },
 +          },
@@ -8144,7 +8144,7 @@ exports[`test/place-dep.js TAP placement tests prune competing peerSet that can 
            "name": "j",
 +          "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/a/node_modules/y",
 +        },
 +        EdgeIn {
@@ -8977,7 +8977,7 @@ exports[`test/place-dep.js TAP placement tests replacing existing peer set > cha
            "name": "a",
            "spec": "2",
            "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "from": "node_modules/c",
          },
        },
@@ -8985,7 +8985,7 @@ exports[`test/place-dep.js TAP placement tests replacing existing peer set > cha
            "name": "a",
            "spec": "2",
            "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/a",
          },
          "b" => EdgeOut {
@@ -10638,7 +10638,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on deep peer dep > 
 +              "name": "y",
 +              "spec": "2",
 +              "error": "INVALID",
-+              "overridden": true,
++              "peerConflicted": true,
 +              "to": "node_modules/y",
 +            },
 +          },
@@ -10661,7 +10661,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on deep peer dep > 
            "name": "y",
 +          "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/v/node_modules/k",
 +        },
 +        EdgeIn {
@@ -10962,7 +10962,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on deep peer dep, s
            "name": "y",
            "spec": "2",
            "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
            "to": "node_modules/y",
          },
        },
@@ -10972,7 +10972,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on deep peer dep, s
            "name": "y",
 +          "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/k",
 +        },
 +        EdgeIn {
@@ -11588,7 +11588,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on deep peer dep, s
            "spec": "2",
 -          "error": "MISSING",
 +          "error": "INVALID",
-           "overridden": true,
+           "peerConflicted": true,
 -          "to": null,
 +          "to": "node_modules/y",
          },
@@ -11633,7 +11633,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on deep peer dep, s
 +          "name": "y",
 +          "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/k",
 +        },
 +        EdgeIn {
@@ -11986,7 +11986,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on less deep peer d
            "spec": "2",
 -          "error": "MISSING",
 +          "error": "INVALID",
-           "overridden": true,
+           "peerConflicted": true,
 -          "to": null,
 +          "to": "node_modules/y",
          },
@@ -12037,7 +12037,7 @@ exports[`test/place-dep.js TAP placement tests warn ERESOLVE on less deep peer d
 +          "name": "y",
 +          "spec": "2",
 +          "error": "INVALID",
-+          "overridden": true,
++          "peerConflicted": true,
 +          "from": "node_modules/k",
 +        },
 +        EdgeIn {

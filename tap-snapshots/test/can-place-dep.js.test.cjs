@@ -174,7 +174,7 @@ exports[`test/can-place-dep.js TAP basic placement check tests keep an existing 
 Array []
 `
 
-exports[`test/can-place-dep.js TAP basic placement check tests keep existing dep that matches, does not satisfy, but overridden > conflict children 1`] = `
+exports[`test/can-place-dep.js TAP basic placement check tests keep existing dep that matches, does not satisfy, but peerConflicted > conflict children 1`] = `
 Array []
 `
 
@@ -205,11 +205,11 @@ exports[`test/can-place-dep.js TAP basic placement check tests peer with peers >
 Array []
 `
 
-exports[`test/can-place-dep.js TAP basic placement check tests peers with overridden edges in peerSet > conflict children 1`] = `
+exports[`test/can-place-dep.js TAP basic placement check tests peers with peerConflicted edges in peerSet > conflict children 1`] = `
 Array []
 `
 
-exports[`test/can-place-dep.js TAP basic placement check tests peers with overridden edges in peerSet from dependent > conflict children 1`] = `
+exports[`test/can-place-dep.js TAP basic placement check tests peers with peerConflicted edges in peerSet from dependent > conflict children 1`] = `
 Array []
 `
 

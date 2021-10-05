@@ -14,8 +14,8 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "",
   "to": null,
@@ -34,8 +34,8 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": false,
-  "overridden": false,
   "peer": true,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "1.2.3",
   "to": null,
@@ -55,10 +55,10 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "c" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
       "b" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -75,7 +75,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -97,8 +97,8 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": false,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "*",
   "to": Object {
@@ -106,7 +106,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -124,7 +124,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -158,7 +158,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "b" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -175,7 +175,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -197,8 +197,8 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": true,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "1.69.420-nice",
   "to": Object {
@@ -206,7 +206,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -224,7 +224,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -258,7 +258,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "missing" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -277,8 +277,8 @@ Edge {
   "missing": false,
   "name": "missing",
   "optional": true,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "",
   "to": null,
@@ -298,7 +298,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -315,7 +315,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "b" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -332,7 +332,7 @@ Edge {
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {
-            "overridden": false,
+            "peerConflicted": false,
           },
         },
         "explain": Function explain(),
@@ -357,8 +357,8 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "",
   "to": Object {
@@ -366,7 +366,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -384,7 +384,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "b" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -401,7 +401,7 @@ Edge {
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {
-            "overridden": false,
+            "peerConflicted": false,
           },
         },
         "explain": Function explain(),
@@ -438,7 +438,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -455,7 +455,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -477,8 +477,8 @@ Edge {
   "missing": true,
   "name": "aa",
   "optional": false,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "",
   "to": null,
@@ -498,7 +498,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -514,7 +514,7 @@ Edge {
       "addEdgeOut": Function addEdgeOut(edge),
       "edgesIn": Set {
         Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "edgesOut": Map {},
@@ -532,7 +532,7 @@ Edge {
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {
-            "overridden": false,
+            "peerConflicted": false,
           },
         },
         "explain": Function explain(),
@@ -557,8 +557,8 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
-  "overridden": false,
   "peer": false,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "",
   "to": Object {
@@ -566,7 +566,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -584,7 +584,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "b" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -601,7 +601,7 @@ Edge {
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {
-            "overridden": false,
+            "peerConflicted": false,
           },
         },
         "explain": Function explain(),
@@ -638,7 +638,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "a" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -657,8 +657,8 @@ Edge {
   "missing": false,
   "name": "a",
   "optional": false,
-  "overridden": false,
   "peer": true,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "1.2.3",
   "to": Object {
@@ -666,7 +666,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -684,7 +684,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "a" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -718,7 +718,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "aa" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -735,7 +735,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -757,8 +757,8 @@ Edge {
   "missing": false,
   "name": "aa",
   "optional": false,
-  "overridden": false,
   "peer": true,
+  "peerConflicted": false,
   "peerLocal": true,
   "spec": "1.2.3",
   "to": Object {
@@ -766,7 +766,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -784,7 +784,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "aa" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -801,7 +801,7 @@ Edge {
         "edgesIn": Set {},
         "edgesOut": Map {
           "missing" => Edge {
-            "overridden": false,
+            "peerConflicted": false,
           },
         },
         "explain": Function explain(),
@@ -838,7 +838,7 @@ Edge {
     "edgesIn": Set {},
     "edgesOut": Map {
       "b" => Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "explain": Function explain(),
@@ -855,7 +855,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -877,8 +877,8 @@ Edge {
   "missing": false,
   "name": "b",
   "optional": false,
-  "overridden": false,
   "peer": true,
+  "peerConflicted": false,
   "peerLocal": false,
   "spec": "1.2.3",
   "to": Object {
@@ -886,7 +886,7 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {
       Edge {
-        "overridden": false,
+        "peerConflicted": false,
       },
     },
     "edgesOut": Map {},
@@ -904,7 +904,7 @@ Edge {
       "edgesIn": Set {},
       "edgesOut": Map {
         "missing" => Edge {
-          "overridden": false,
+          "peerConflicted": false,
         },
       },
       "explain": Function explain(),
@@ -928,14 +928,14 @@ Edge {
 }
 `
 
-exports[`test/edge.js TAP > return a human-readable representation of the edge obj, overridden=true 1`] = `
+exports[`test/edge.js TAP > return a human-readable representation of the edge obj, peerConflicted=true 1`] = `
 {
 name: 'b',
 spec: '1.2.3',
 type: 'prod',
 from: '',
 to: '/node_modules/b',
-overridden: true }
+peerConflicted: true }
 `
 
 exports[`test/edge.js TAP > should return a human-readable representation of the edge obj 1`] = `

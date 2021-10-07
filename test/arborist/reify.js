@@ -2360,3 +2360,39 @@ t.test('includeWorkspaceRoot in addition to workspace', async t => {
   t.equal(tree.inventory.query('name', 'abbrev').size, 1)
   t.equal(tree.inventory.query('name', 'once').size, 1)
 })
+
+t.test('no workspace', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      dependencies: {
+        once: '',
+      },
+      workspaces: ['packages/*'],
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.0.1',
+          dependencies: {
+            abbrev: '',
+          },
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '9.8.1',
+          dependencies: {
+            semver: '',
+          },
+        }),
+      },
+    },
+  })
+  const tree = await reify(path, { workspacesEnabled: false, workspaces: ['a', 'b'] })
+  t.matchSnapshot(printTree(tree))
+  t.equal(tree.inventory.query('name', 'semver').size, 0)
+  t.equal(tree.inventory.query('name', 'abbrev').size, 0)
+  t.equal(tree.inventory.query('name', 'once').size, 1)
+})

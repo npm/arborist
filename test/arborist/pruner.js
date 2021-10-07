@@ -112,3 +112,87 @@ t.test('prune omit dev with bins', async t => {
     t.throws(() => fs.lstatSync(bin).isSymbolicLink(), /ENOENT/, 'should not have symlink')
   }
 })
+
+t.test('prune workspaces', async t => {
+  const fs = require('fs')
+  const { join } = require('path')
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'prune-workspaces',
+      version: '1.0.0',
+      description: '',
+      main: 'index.js',
+      dependencies: {
+        qs: '',
+      },
+      scripts: {
+        test: 'echo "Error: no test specified" && exit 1',
+      },
+      keywords: [],
+      author: '',
+      license: 'ISC',
+      workspaces: [
+        'packages/a',
+        'packages/b',
+      ],
+    }),
+    packages: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {once: ''},
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+    },
+    node_modules: {
+      a: {
+        'package.json': JSON.stringify({
+          name: 'a',
+          version: '1.2.3',
+          dependencies: {once: ''},
+        }),
+      },
+      b: {
+        'package.json': JSON.stringify({
+          name: 'b',
+          version: '1.2.3',
+        }),
+      },
+      once: {
+        'package.json': JSON.stringify({
+          name: 'once',
+          version: '1.2.3',
+          dependencies: {
+            wrappy: '',
+          },
+        }),
+      },
+      wrappy: {
+        'package.json': JSON.stringify({
+          name: 'wrappy',
+          version: '1.2.3',
+        }),
+      },
+      qs: {
+        'package.json': JSON.stringify({
+          name: 'qs',
+          version: '1.2.3',
+        }),
+      },
+    },
+  })
+  const tree = await pruneTree(path, { workspacesEnabled: false })
+  t.ok(fs.existsSync(join(path, 'node_modules', 'qs')), 'qs was not pruned from tree')
+  t.notOk(fs.existsSync(join(path, 'node_modules', 'once')), 'once was pruned from tree')
+  t.notOk(fs.existsSync(join(path, 'node_modules', 'wrappy')), 'wrappy was pruned from tree')
+  t.notOk(fs.existsSync(join(path, 'node_modules', 'a')), 'a was pruned from tree')
+  t.notOk(fs.existsSync(join(path, 'node_modules', 'b')), 'b was pruned from tree')
+  t.matchSnapshot(printTree(tree))
+})

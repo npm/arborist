@@ -713,3 +713,56 @@ t.test('only rebuild for workspace', async t => {
   t.equal(fs.readFileSync(adepTxt, 'utf8'), 'adep', 'adep rebuilt')
   t.throws(() => fs.readFileSync(bdepTxt, 'utf8'), { code: 'ENOENT' }, 'bdep not rebuilt')
 })
+
+t.test('no workspaces', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'no-workspaces-powered-project',
+      workspaces: ['a', 'b'],
+      bin: './foo',
+      scripts: { install: `exit 0` },
+    }),
+    node_modules: {
+      a: t.fixture('symlink', '../a'),
+      b: t.fixture('symlink', '../b'),
+    },
+    a: {
+      'package.json': JSON.stringify({
+        name: 'a',
+        version: '1.0.0',
+        bin: './foo',
+        scripts: {
+          prepare: `node -e "require('fs').writeFileSync('foo', '')"`,
+        },
+      }),
+    },
+    b: {
+      'package.json': JSON.stringify({
+        name: 'b',
+        scripts: { prepare: 'exit 0' },
+      }),
+    },
+  })
+
+  const RUNS = []
+  const Arborist = t.mock('../../lib/arborist/index.js', {
+    '@npmcli/run-script': opts => {
+      RUNS.push(opts)
+      return require('@npmcli/run-script')(opts)
+    },
+  })
+  const arb = new Arborist({
+    path,
+    registry,
+    workspacesEnabled: false,
+  })
+
+  await arb.rebuild()
+  t.equal(RUNS.length, 1, 'should run only root')
+  t.match(RUNS, [
+    {
+      event: 'install',
+      pkg: { name: 'no-workspaces-powered-project' },
+    },
+  ])
+})

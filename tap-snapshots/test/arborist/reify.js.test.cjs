@@ -16842,6 +16842,81 @@ exports[`test/arborist/reify.js TAP no saveType: prod w/ peer > must match snaps
 {"dependencies":{"abbrev":"^1.1.1"}}
 `
 
+exports[`test/arborist/reify.js TAP no workspace > must match snapshot 1`] = `
+ArboristNode {
+  "children": Map {
+    "once" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "once",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => EdgeOut {
+          "name": "wrappy",
+          "spec": "1",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-no-workspace/node_modules/once",
+      "resolved": "https://registry.npmjs.org/once/-/once-1.4.0.tgz",
+      "version": "1.4.0",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "1",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-reify-no-workspace/node_modules/wrappy",
+      "resolved": "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz",
+      "version": "1.0.2",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "error": "MISSING",
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-no-workspace/packages/a",
+      "to": null,
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "MISSING",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-reify-no-workspace/packages/b",
+      "to": null,
+      "type": "workspace",
+    },
+    "once" => EdgeOut {
+      "name": "once",
+      "spec": "*",
+      "to": "node_modules/once",
+      "type": "prod",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-reify-no-workspace",
+  "path": "{CWD}/test/arborist/tap-testdir-reify-no-workspace",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`
+
 exports[`test/arborist/reify.js TAP node_modules may not be a symlink > must match snapshot 1`] = `
 ArboristNode {
   "children": Map {

@@ -138,3 +138,132 @@ ArboristNode {
   "version": "1.0.0",
 }
 `
+
+exports[`test/arborist/pruner.js TAP prune workspaces > must match snapshot 1`] = `
+ArboristNode {
+  "children": Map {
+    "a" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "error": "INVALID",
+          "from": "",
+          "name": "a",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/packages/a",
+          "type": "workspace",
+        },
+      },
+      "edgesOut": Map {
+        "once" => EdgeOut {
+          "name": "once",
+          "spec": "*",
+          "to": "node_modules/once",
+          "type": "prod",
+        },
+      },
+      "isWorkspace": true,
+      "location": "node_modules/a",
+      "name": "a",
+      "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/a",
+      "version": "1.2.3",
+    },
+    "b" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "error": "INVALID",
+          "from": "",
+          "name": "b",
+          "spec": "file:{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/packages/b",
+          "type": "workspace",
+        },
+      },
+      "isWorkspace": true,
+      "location": "node_modules/b",
+      "name": "b",
+      "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/b",
+      "version": "1.2.3",
+    },
+    "once" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "node_modules/a",
+          "name": "once",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "edgesOut": Map {
+        "wrappy" => EdgeOut {
+          "name": "wrappy",
+          "spec": "*",
+          "to": "node_modules/wrappy",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/once",
+      "name": "once",
+      "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/once",
+      "version": "1.2.3",
+    },
+    "qs" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "qs",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/qs",
+      "name": "qs",
+      "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/qs",
+      "version": "1.2.3",
+    },
+    "wrappy" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "node_modules/once",
+          "name": "wrappy",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/wrappy",
+      "name": "wrappy",
+      "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/wrappy",
+      "version": "1.2.3",
+    },
+  },
+  "edgesOut": Map {
+    "a" => EdgeOut {
+      "error": "INVALID",
+      "name": "a",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/packages/a",
+      "to": "node_modules/a",
+      "type": "workspace",
+    },
+    "b" => EdgeOut {
+      "error": "INVALID",
+      "name": "b",
+      "spec": "file:{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/packages/b",
+      "to": "node_modules/b",
+      "type": "workspace",
+    },
+    "qs" => EdgeOut {
+      "name": "qs",
+      "spec": "*",
+      "to": "node_modules/qs",
+      "type": "prod",
+    },
+  },
+  "isProjectRoot": true,
+  "location": "",
+  "name": "tap-testdir-pruner-prune-workspaces",
+  "packageName": "prune-workspaces",
+  "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces",
+  "version": "1.0.0",
+  "workspaces": Map {
+    "a" => "packages/a",
+    "b" => "packages/b",
+  },
+}
+`

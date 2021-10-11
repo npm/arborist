@@ -912,6 +912,35 @@ This is a one-time fix-up, please be patient...
   ])
 })
 
+t.test('warn for ancient lockfile, even if we use v1', async t => {
+  const checkLogs = warningTracker()
+  const path = resolve(fixtures, 'sax')
+  const arb = new Arborist({ path, lockfileVersion: 1, ...OPT })
+  const tree = await arb.buildIdealTree()
+  t.matchSnapshot(printTree(tree))
+  t.strictSame(checkLogs(), [
+    [
+      'warn',
+      'ancient lockfile',
+      `
+The package-lock.json file was created with an old version of npm,
+so supplemental metadata must be fetched from the registry.
+
+This is a one-time fix-up, please be patient...
+`,
+    ],
+  ])
+})
+
+t.test('no old lockfile warning if we write back v1', async t => {
+  const checkLogs = warningTracker()
+  const path = resolve(fixtures, 'old-package-lock')
+  const arb = new Arborist({ path, lockfileVersion: 1, ...OPT })
+  const tree = await arb.buildIdealTree()
+  t.matchSnapshot(printTree(tree))
+  t.strictSame(checkLogs(), [])
+})
+
 t.test('inflate an ancient lockfile with a dep gone missing', async t => {
   const checkLogs = warningTracker()
   const path = resolve(fixtures, 'ancient-lockfile-invalid')

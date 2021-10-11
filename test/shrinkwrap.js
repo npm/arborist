@@ -1495,3 +1495,51 @@ t.test('do not add metadata if versions mismatch', async t => {
   t.equal(newFoo.resolved, null)
   t.equal(newFoo.integrity, null)
 })
+
+t.test('setting lockfileVersion from the file contents', async t => {
+  const path = t.testdir({
+    v1: {
+      'package-lock.json': JSON.stringify({ lockfileVersion: 1 }),
+    },
+    v2: {
+      'package-lock.json': JSON.stringify({ lockfileVersion: 2 }),
+    },
+    v3: {
+      'package-lock.json': JSON.stringify({ lockfileVersion: 3 }),
+    },
+  })
+  t.test('default setting', async t => {
+    const s1 = await Shrinkwrap.load({ path: `${path}/v1` })
+    t.equal(s1.lockfileVersion, 2, 'will upgrade old lockfile')
+    const s2 = await Shrinkwrap.load({ path: `${path}/v2` })
+    t.equal(s2.lockfileVersion, 2, 'will keep v2 as v2')
+    const s3 = await Shrinkwrap.load({ path: `${path}/v3` })
+    t.equal(s3.lockfileVersion, 3, 'will keep v3 as v3')
+  })
+  t.test('v1', async t => {
+    const s1 = await Shrinkwrap.load({ path: `${path}/v1`, lockfileVersion: 1 })
+    t.equal(s1.lockfileVersion, 1, 'keep explicit v1 setting')
+    const s2 = await Shrinkwrap.load({ path: `${path}/v2`, lockfileVersion: 1 })
+    t.equal(s2.lockfileVersion, 1, 'downgrade explicitly')
+    const s3 = await Shrinkwrap.load({ path: `${path}/v3`, lockfileVersion: 1 })
+    t.equal(s3.lockfileVersion, 1, 'downgrade explicitly')
+  })
+  t.test('v2', async t => {
+    const s1 = await Shrinkwrap.load({ path: `${path}/v1`, lockfileVersion: 2 })
+    t.equal(s1.lockfileVersion, 2, 'upgrade explicitly')
+    const s2 = await Shrinkwrap.load({ path: `${path}/v2`, lockfileVersion: 2 })
+    t.equal(s2.lockfileVersion, 2, 'keep v2 setting')
+    const s3 = await Shrinkwrap.load({ path: `${path}/v3`, lockfileVersion: 2 })
+    t.equal(s3.lockfileVersion, 2, 'downgrade explicitly')
+  })
+  t.test('v3', async t => {
+    const s1 = await Shrinkwrap.load({ path: `${path}/v1`, lockfileVersion: 3 })
+    t.equal(s1.lockfileVersion, 3, 'upgrade explicitly')
+    const s2 = await Shrinkwrap.load({ path: `${path}/v2`, lockfileVersion: 3 })
+    t.equal(s2.lockfileVersion, 3, 'upgrade explicitly')
+    const s3 = await Shrinkwrap.load({ path: `${path}/v3`, lockfileVersion: 3 })
+    t.equal(s3.lockfileVersion, 3, 'keep v3 setting')
+  })
+
+  t.equal(Shrinkwrap.defaultLockfileVersion, 2, 'default is 2')
+})

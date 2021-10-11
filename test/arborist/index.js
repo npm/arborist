@@ -219,3 +219,17 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
   t.equal(filter.has(tree.children.get('foo')), true)
   t.equal(filter.has(tree.children.get('bar')), true)
 })
+
+t.test('lockfileVersion config validation', async t => {
+  t.equal(new Arborist({ lockfileVersion: 1 }).options.lockfileVersion, 1)
+  t.equal(new Arborist({ lockfileVersion: 2 }).options.lockfileVersion, 2)
+  t.equal(new Arborist({ lockfileVersion: 3 }).options.lockfileVersion, 3)
+  t.equal(new Arborist().options.lockfileVersion, null)
+  t.equal(new Arborist({ lockfileVersion: null }).options.lockfileVersion, null)
+  t.throws(() => new Arborist({ lockfileVersion: 1.2 }), {
+    message: 'Invalid lockfileVersion config: 1.2',
+  })
+  t.throws(() => new Arborist({ lockfileVersion: 'banana' }), {
+    message: 'Invalid lockfileVersion config: banana',
+  })
+})

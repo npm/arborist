@@ -46,12 +46,10 @@ Object {
         "wrappy": "1",
       },
       "dev": true,
-      "integrity": "sha1-WDsap3WWHUsROsF9nFC6753Xa9E=",
       "version": "1.4.0",
     },
     "node_modules/wrappy": Object {
       "dev": true,
-      "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=",
       "version": "1.0.2",
     },
   },

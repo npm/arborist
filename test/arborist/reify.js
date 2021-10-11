@@ -564,6 +564,7 @@ t.test('link metadep', t => {
 t.test('warn on reifying deprecated dependency', t => {
   const a = newArb({
     path: fixture(t, 'deprecated-dep'),
+    lockfileVersion: 1,
   })
   const check = warningTracker()
   return a.reify({ update: true }).then(() => t.match(check(), [

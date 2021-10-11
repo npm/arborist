@@ -684,6 +684,7 @@ Object {
       "resolved": "http://foo.com",
     },
   },
+  "lockfileVersion": 2,
   "packages": Object {
     "node_modules/foo": Object {},
   },

@@ -11,7 +11,10 @@ module.exports = t => {
     "once": {
       "package.json": JSON.stringify({
         "name": "once",
-        "version": "1.4.0"
+        "version": "1.4.0",
+        "dependencies": {
+          "wrappy": "1"
+        }
       })
     },
     "wrappy": {

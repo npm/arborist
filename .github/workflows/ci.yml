@@ -48,10 +48,5 @@ jobs:
           cache: npm
       - run: npm i --prefer-online -g npm@latest
       - run: npm ci
-        # TODO -t0 will need to go into npm test when we standardize on template-oss
-      - run: npm test --ignore-scripts -t0
+      - run: npm test --ignore-scripts
       - run: npm ls -a
-        # TODO these will need to go into npm test when we standardize on template-oss
-        env:
-          ARBORIST_DEBUG: '0'
-          NODE_OPTIONS: --no-warnings

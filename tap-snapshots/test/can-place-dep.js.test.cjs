@@ -13,6 +13,10 @@ exports[`test/can-place-dep.js TAP basic placement check tests basic placement w
 Array []
 `
 
+exports[`test/can-place-dep.js TAP basic placement check tests can dedupe, cannot place peer > conflict children 1`] = `
+Array []
+`
+
 exports[`test/can-place-dep.js TAP basic placement check tests cannot place peer inside of dependent > conflict children 1`] = `
 Array []
 `

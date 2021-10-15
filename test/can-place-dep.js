@@ -1356,6 +1356,36 @@ t.test('basic placement check tests', t => {
     expect: OK,
   })
 
+  // root -> (k, y@1)
+  // k -> (x)
+  // x -> PEER(y@1||2)
+  //
+  // root
+  // +-- y@1
+  // +-- k@1
+  //
+  // place x in root with y@2 in peerset
+  // https://github.com/npm/cli/issues/3881
+  runTest('can dedupe, cannot place peer', {
+    tree: new Node({
+      path,
+      pkg: { dependencies: { k: '1', y: '1' }},
+      children: [
+        { pkg: { name: 'y', version: '1.0.0' }},
+        { pkg: { name: 'k', version: '1.0.0', dependencies: { x: '' }}},
+      ],
+    }),
+    dep: new Node({
+      pkg: { name: 'x', version: '1.0.0', peerDependencies: { y: '1||2' }},
+    }),
+    peerSet: [
+      { pkg: { name: 'y', version: '2.0.0' }},
+    ],
+    targetLoc: '',
+    nodeLoc: 'node_modules/k',
+    expect: OK,
+  })
+
   t.end()
 })
 

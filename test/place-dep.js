@@ -9,6 +9,7 @@ const { normalizePaths } = require('./fixtures/utils.js')
 
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
+const OverrideSet = require('../lib/override-set.js')
 
 t.test('placement tests', t => {
   const path = '/some/path'
@@ -1942,6 +1943,25 @@ t.test('placement tests', t => {
     dep: new Link({
       realpath: `${path}/x`,
       pkg: { name: 'x', version: '1.2.3' },
+    }),
+    nodeLoc: '',
+  })
+
+  const overrides = new OverrideSet({
+    overrides: { bar: '2' },
+  })
+  runTest('place a dep with an override', {
+    tree: new Node({
+      path,
+      pkg: {
+        dependencies: { foo: '1' },
+        overrides: { bar: '2' },
+      },
+      overrides,
+    }),
+    dep: new Node({
+      pkg: { name: 'foo', version: '1.0.0' },
+      overrides,
     }),
     nodeLoc: '',
   })

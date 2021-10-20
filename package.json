@@ -41,6 +41,7 @@
     "benchmark": "^2.1.4",
     "chalk": "^4.1.0",
     "minify-registry-metadata": "^2.1.0",
+    "nock": "^13.2.0",
     "tap": "^15.1.2",
     "tcompare": "^5.0.6"
   },

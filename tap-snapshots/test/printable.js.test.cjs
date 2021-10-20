@@ -556,6 +556,35 @@ EdgeIn{
 "version":"1.2.3",}
 `
 
+exports[`test/printable.js TAP show overrides > must match snapshot 1`] = `
+{
+name:'path',
+packageName:'root',
+version:'1.0.0',
+location:'',
+path:'/some/path',
+isProjectRoot:true,
+overrides:Map{'foo@1' => '2.0.0', 'bar' => '2.0.0'},
+edgesOut:Map{
+'bar' =>{prod bar@^1.0.0 overridden:2.0.0 -> node_modules/bar},
+'foo' =>{prod foo@^1.0.0 overridden:2.0.0 -> node_modules/foo}},
+children:Map{
+'bar' =>{
+name:'bar',
+version:'2.0.0',
+location:'node_modules/bar',
+path:'/some/path/node_modules/bar',
+overrides:Map{'bar' => '2.0.0', 'foo@1' => '2.0.0'},
+edgesIn:Set{{"" prod bar@^1.0.0}}},
+'foo' =>{
+name:'foo',
+version:'2.0.0',
+location:'node_modules/foo',
+path:'/some/path/node_modules/foo',
+overrides:Map{'foo@1' => '2.0.0', 'bar' => '2.0.0'},
+edgesIn:Set{{"" prod foo@^1.0.0}}}}}
+`
+
 exports[`test/printable.js TAP show workspaces in printable node output > must match snapshot 1`] = `
 {
 "children":Map{

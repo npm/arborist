@@ -5576,6 +5576,67 @@ exports[`test/place-dep.js TAP placement tests peers with peerConflicted edges i
 Array []
 `
 
+exports[`test/place-dep.js TAP placement tests place a dep with an override > changes to tree 1`] = `
+--- expected
++++ actual
+@@ -15,8 +15,30 @@
+       "type": "prod",
+       "name": "foo",
+       "spec": "1",
+-      "to": null,
+-      "error": "MISSING",
++      "to": "node_modules/foo",
+     },
+   },
++  "children": Map {
++    "foo" => ArboristNode {
++      "name": "foo",
++      "version": "1.0.0",
++      "location": "node_modules/foo",
++      "path": "/some/path/node_modules/foo",
++      "extraneous": true,
++      "dev": true,
++      "optional": true,
++      "peer": true,
++      "overrides": Map {
++        "bar" => "2",
++      },
++      "edgesIn": Set {
++        EdgeIn {
++          "type": "prod",
++          "name": "foo",
++          "spec": "1",
++          "from": "",
++        },
++      },
++    },
++  },
+ }
+
+`
+
+exports[`test/place-dep.js TAP placement tests place a dep with an override > placements 1`] = `
+Array [
+  Object {
+    "canPlace": Symbol(OK),
+    "canPlaceSelf": Symbol(OK),
+    "checks": Map {
+      "" => Array [
+        Symbol(OK),
+        Symbol(OK),
+      ],
+    },
+    "dep": "foo@1.0.0",
+    "edge": "{ ROOT prod foo@1 }",
+    "placed": "node_modules/foo",
+  },
+]
+`
+
+exports[`test/place-dep.js TAP placement tests place a dep with an override > warnings 1`] = `
+Array []
+`
+
 exports[`test/place-dep.js TAP placement tests place a link dep > changes to tree 1`] = `
 --- expected
 +++ actual

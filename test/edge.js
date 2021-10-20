@@ -1,5 +1,6 @@
 const util = require('util')
 const Edge = require('../lib/edge.js')
+const OverrideSet = require('../lib/override-set.js')
 const t = require('tap')
 
 // slight hack to snapshot the getters
@@ -224,6 +225,7 @@ t.ok(new Edge({
   spec: '1.x',
   accept: '2.x',
 }).satisfiedBy(c), 'c@2 satisfies spec:1.x, accept:2.x')
+reset(a)
 
 t.ok(new Edge({
   from: a,
@@ -232,6 +234,139 @@ t.ok(new Edge({
   spec: '1.x',
   accept: '',
 }).satisfiedBy(c), 'c@2 satisfies spec:1.x, accept:*')
+reset(a)
+
+t.not(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '1.x',
+}).satisfiedBy(b), 'b does not satisfy edge for c')
+reset(a)
+
+t.matchSnapshot(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '1.x',
+  overrides: new OverrideSet({
+    overrides: {
+      c: '2.x',
+    },
+  }).getEdgeRule({ name: 'c', spec: '1.x' }),
+}).toJSON(), 'printableEdge shows overrides')
+reset(a)
+
+const overriddenExplanation = new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '1.x',
+  overrides: new OverrideSet({
+    overrides: {
+      c: '2.x',
+    },
+  }).getEdgeRule({ name: 'c', spec: '1.x' }),
+}).explain()
+t.equal(overriddenExplanation.rawSpec, '1.x', 'rawSpec has original spec')
+t.equal(overriddenExplanation.spec, '2.x', 'spec has override spec')
+t.equal(overriddenExplanation.overridden, true, 'overridden is set to true')
+reset(a)
+
+t.ok(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '1.x',
+  overrides: new OverrideSet({
+    overrides: {
+      c: '2.x',
+    },
+  }).getEdgeRule({ name: 'c', spec: '1.x' }),
+}).satisfiedBy(c), 'c@2 satisfies spec:1.x, override:2.x')
+reset(a)
+
+t.matchSnapshot(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '2.x',
+  overrides: new OverrideSet({
+    overrides: {
+      b: '1.x',
+    },
+  }).getEdgeRule({ name: 'c', spec: '2.x' }),
+}).toJSON(), 'printableEdge does not show non-applicable override')
+
+t.ok(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '2.x',
+  overrides: new OverrideSet({
+    overrides: {
+      b: '1.x',
+    },
+  }).getEdgeRule({ name: 'c', spec: '2.x' }),
+}).satisfiedBy(c), 'c@2 satisfies spec:1.x, no matching override')
+reset(a)
+
+const badOverride = {
+  name: 'c',
+  packageName: 'c',
+  edgesOut: new Map(),
+  edgesIn: new Set(),
+  explain: () => 'c explanation',
+  package: { name: 'c', version: '2.3.4' },
+  get version () {
+    return this.package.version
+  },
+  isTop: false,
+  parent: top,
+  resolve (n) {
+    return this.parent.resolve(n)
+  },
+  addEdgeOut (edge) {
+    this.edgesOut.set(edge.name, edge)
+  },
+  addEdgeIn (edge) {
+    this.edgesIn.add(edge)
+  },
+  overrides: new OverrideSet({
+    overrides: {
+      b: '1.x',
+    },
+  }),
+}
+
+t.not(new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '2.x',
+  overrides: new OverrideSet({
+    overrides: {
+      b: '1.x',
+    },
+  }),
+}).satisfiedBy(badOverride), 'node with different override fails')
+reset(a)
+
+const overrides = new OverrideSet({
+  overrides: {
+    c: '1.x',
+  },
+})
+const overriddenEdge = new Edge({
+  from: a,
+  type: 'prod',
+  name: 'c',
+  spec: '2.x',
+  overrides: overrides.getEdgeRule({ name: 'c', spec: '2.x' }),
+})
+t.equal(overriddenEdge.spec, '1.x', 'override spec takes priority')
+t.equal(overriddenEdge.rawSpec, '2.x', 'rawSpec holds original spec')
+reset(a)
 
 const old = new Edge({
   from: a,

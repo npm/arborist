@@ -14,6 +14,8 @@ require(fixtures)
 const { start, stop, registry, auditResponse } = require('../fixtures/registry-mocks/server.js')
 const npa = require('npm-package-arg')
 const fs = require('fs')
+const nock = require('nock')
+const semver = require('semver')
 
 t.before(start)
 t.teardown(stop)
@@ -60,6 +62,57 @@ const OPT = { cache, registry, timeout: 30 * 60 * 1000 }
 
 const newArb = (path, opt = {}) => new Arborist({ ...OPT, path, ...opt })
 const buildIdeal = (path, opt) => newArb(path, opt).buildIdealTree(opt)
+
+const generateNocks = (t, spec) => {
+  nock.disableNetConnect()
+
+  const getDeps = (version, deps) =>
+    (deps || []).reduce((result, dep) => {
+      if (typeof dep === 'string') {
+        return {
+          ...result,
+          [dep]: version,
+        }
+      } else {
+        return {
+          ...result,
+          ...(version in dep ? { [dep[version]]: version } : {}),
+        }
+      }
+    }, {})
+
+  for (const name in spec) {
+    const pkg = spec[name]
+
+    const packument = {
+      name,
+      'dist-tags': {
+        latest: pkg.latest || semver.maxSatisfying(pkg.versions, '*'),
+      },
+      versions: pkg.versions.reduce((versions, version) => {
+        return {
+          ...versions,
+          [version]: {
+            name,
+            version,
+            dependencies: getDeps(version, pkg.dependencies),
+            peerDependencies: getDeps(version, pkg.peerDependencies),
+          },
+        }
+      }, {}),
+    }
+
+    nock(registry)
+      .persist()
+      .get(`/${name}`)
+      .reply(200, packument)
+  }
+
+  t.teardown(async () => {
+    nock.enableNetConnect()
+    nock.cleanAll()
+  })
+}
 
 t.test('fail on mismatched engine when engineStrict is set', async t => {
   const path = resolve(fixtures, 'engine-specification')
@@ -3106,6 +3159,441 @@ t.test('competing peerSets resolve in both root and workspace', t => {
     t.matchSnapshot(normalizePaths(wsWarnings[3]), 'workspace warnings')
     t.matchSnapshot(printTree(rootTree), 'root tree')
     t.matchSnapshot(printTree(wsTree), 'workspace tree')
+  })
+
+  t.end()
+})
+
+t.test('overrides', t => {
+  t.test('throws when override conflicts with dependencies', async (t) => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          abbrev: '1.0.3',
+        },
+        overrides: {
+          abbrev: '1.1.1',
+        },
+      }),
+    })
+
+    await t.rejects(buildIdeal(path), { code: 'EOVERRIDE' }, 'throws EOVERRIDE')
+  })
+
+  t.test('throws when override conflicts with devDependencies', async (t) => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        devDependencies: {
+          abbrev: '1.0.3',
+        },
+        overrides: {
+          abbrev: '1.1.1',
+        },
+      }),
+    })
+
+    await t.rejects(buildIdeal(path), { code: 'EOVERRIDE' }, 'throws EOVERRIDE')
+  })
+
+  t.test('throws when override conflicts with peerDependencies', async (t) => {
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        peerDependencies: {
+          abbrev: '1.0.3',
+        },
+        overrides: {
+          abbrev: '1.1.1',
+        },
+      }),
+    })
+
+    await t.rejects(buildIdeal(path), { code: 'EOVERRIDE' }, 'throws EOVERRIDE')
+  })
+
+  t.test('overrides a nested dependency', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '1.0.1',
+        },
+        overrides: {
+          bar: '2.0.0',
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true)
+
+    const fooBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(fooBarEdge.valid, true)
+    t.equal(fooBarEdge.to.version, '2.0.0')
+  })
+
+  t.test('overrides a nested dependency with a more specific override', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '1.0.1',
+          bar: '2.0.0',
+        },
+        overrides: {
+          foo: {
+            bar: '2.0.0',
+          },
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true)
+
+    const fooBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(fooBarEdge.valid, true)
+    t.equal(fooBarEdge.to.version, '2.0.0')
+
+    const barEdge = tree.edgesOut.get('bar')
+    t.equal(barEdge.valid, true)
+    t.equal(barEdge.to.version, '2.0.0')
+  })
+
+  t.test('does not override a nested dependency when parent spec does not match', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '1.0.1',
+          bar: '2.0.0',
+        },
+        overrides: {
+          'foo@2': {
+            bar: '2.0.0',
+          },
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true)
+
+    const fooBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(fooBarEdge.valid, true)
+    t.equal(fooBarEdge.to.version, '1.0.1')
+
+    const barEdge = tree.edgesOut.get('bar')
+    t.equal(barEdge.valid, true)
+    t.equal(barEdge.to.version, '2.0.0')
+  })
+
+  t.test('overrides a nested dependency that also exists as a direct dependency', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '2.0.0',
+          bar: '1.0.1',
+        },
+        overrides: {
+          foo: {
+            bar: '1.0.1',
+          },
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '2.0.0')
+
+    const barEdge = tree.edgesOut.get('bar')
+    t.equal(barEdge.valid, true, 'top level bar is valid')
+    t.equal(barEdge.to.version, '1.0.1')
+
+    const nestedBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(nestedBarEdge.valid, true, 'nested bar is valid')
+    t.equal(nestedBarEdge.to.version, '1.0.1', 'nested bar version was overridden')
+
+    t.equal(barEdge.to, nestedBarEdge.to, 'deduplicated tree correctly')
+  })
+
+  t.test('overrides a nested dependency that also exists as a direct dependency without a top level specifier', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '2.0.0',
+          bar: '1.0.1',
+        },
+        overrides: {
+          bar: '1.0.1', // this override is allowed because the spec matches the dep
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '2.0.0')
+
+    const barEdge = tree.edgesOut.get('bar')
+    t.equal(barEdge.valid, true, 'top level bar is valid')
+    t.equal(barEdge.to.version, '1.0.1')
+
+    const nestedBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(nestedBarEdge.valid, true, 'nested bar is valid')
+    t.equal(nestedBarEdge.to.version, '1.0.1', 'nested bar version was overridden')
+
+    t.equal(barEdge.to, nestedBarEdge.to, 'deduplicated tree correctly')
+  })
+
+  t.test('overrides a peerDependency', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        peerDependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '1.0.1',
+        },
+        overrides: {
+          foo: {
+            bar: '2.0.0',
+          },
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '1.0.1')
+
+    const nestedBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(nestedBarEdge.valid, true, 'peer bar is valid')
+    t.equal(nestedBarEdge.to.version, '2.0.0', 'peer bar version was overridden')
+  })
+
+  t.test('overrides a peerDependency without top level specifier', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        peerDependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    // this again with no foo
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '1.0.1',
+        },
+        overrides: {
+          bar: '2.0.0',
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '1.0.1')
+
+    const nestedBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(nestedBarEdge.valid, true, 'peer bar is valid')
+    t.equal(nestedBarEdge.to.version, '2.0.0', 'peer bar version was overridden')
+  })
+
+  t.test('can override inside a cyclical dep chain', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['baz'],
+      },
+      baz: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['foo'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '1.0.1',
+        },
+        overrides: {
+          foo: {
+            foo: '2.0.0',
+          },
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '1.0.1')
+
+    const barEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(barEdge.valid, true, 'bar is valid')
+    t.equal(barEdge.to.version, '1.0.1', 'bar version is correct')
+
+    const bazEdge = barEdge.to.edgesOut.get('baz')
+    t.equal(bazEdge.valid, true, 'baz is valid')
+    t.equal(bazEdge.to.version, '1.0.1', 'baz version is correct')
+
+    const fooBazEdge = bazEdge.to.edgesOut.get('foo')
+    t.equal(fooBazEdge.valid, true, 'cyclical foo is valid')
+    t.equal(fooBazEdge.to.version, '2.0.0', 'override broke the cycle')
+  })
+
+  t.test('can fix an ERESOLVE with overrides', async (t) => {
+    // this tree creates an ERESOLVE due to a@1 having a peer on b@1
+    // and d@2 having a peer on b@2, to fix it we override the a@1 peer
+    // to be b@2
+    generateNocks(t, {
+      a: {
+        versions: ['1.0.0'],
+        peerDependencies: ['b'],
+      },
+      b: {
+        versions: ['1.0.0', '2.0.0'],
+        peerDependencies: [{ '2.0.0': 'c' }],
+      },
+      c: {
+        versions: ['2.0.0'],
+      },
+      d: {
+        versions: ['2.0.0'],
+        peerDependencies: ['b'],
+      },
+    })
+
+    const pkg = {
+      name: 'root',
+      dependencies: {
+        a: '1.x',
+        d: '2.x',
+      },
+    }
+
+    // start off with no overrides, prove we get an ERESOLVE
+    const path = t.testdir({
+      'package.json': JSON.stringify(pkg),
+    })
+
+    await t.rejects(buildIdeal(path), { code: 'ERESOLVE' }, 'prove we have an ERESOLVE')
+
+    // add the override and overwrite the existing package.json
+    pkg.overrides = { a: { b: '2' } }
+    fs.writeFileSync(resolve(path, 'package.json'), JSON.stringify(pkg))
+
+    const tree = await buildIdeal(path)
+
+    const aEdge = tree.edgesOut.get('a')
+    t.equal(aEdge.valid, true, 'a is valid')
+    t.equal(aEdge.to.version, '1.0.0', 'a is 1.0.0')
+
+    const abEdge = aEdge.to.edgesOut.get('b')
+    t.equal(abEdge.valid, true, 'a->b is valid')
+    t.equal(abEdge.to.version, '2.0.0', 'a->b was overridden to 2.0.0')
+
+    const dEdge = tree.edgesOut.get('d')
+    t.equal(dEdge.valid, true, 'd is valid')
+    t.equal(dEdge.to.version, '2.0.0', 'd is 2.0.0')
+
+    const dbEdge = dEdge.to.edgesOut.get('b')
+    t.equal(dbEdge.valid, true, 'd->b is valid')
+    t.equal(dbEdge.to.version, '2.0.0', 'd->b is 2.0.0')
+
+    t.equal(abEdge.to, dbEdge.to, 'a->b and d->b point to same node')
+
+    const bcEdge = abEdge.to.edgesOut.get('c')
+    t.equal(bcEdge.valid, true, 'b->c is valid')
+    t.equal(bcEdge.to.version, '2.0.0', 'b->c is 2.0.0')
   })
 
   t.end()

@@ -1,6 +1,7 @@
 const util = require('util')
 const t = require('tap')
 const Node = require('../lib/node.js')
+const OverrideSet = require('../lib/override-set.js')
 const Link = require('../lib/link.js')
 const Shrinkwrap = require('../lib/shrinkwrap.js')
 const { resolve } = require('path')
@@ -14,15 +15,20 @@ t.cleanSnapshot = str =>
     .replace(/\\\\?/g, '/')
 
 t.test('basic instantiation', t => {
+  const overrides = new OverrideSet({
+    overrides: { foo: '1' },
+  })
   const root = new Node({
     pkg: { name: 'root' },
     path: '/home/user/projects/root',
     realpath: '/home/user/projects/root',
+    overrides,
   })
 
   t.equal(root.depth, 0, 'root is depth 0')
   t.equal(root.isTop, true, 'root is top')
   t.equal(root.isLink, false, 'root is not a link')
+  t.equal(root.overrides, overrides, 'constructor copied provided overrides')
 
   t.test('dep flags all set true', t => {
     t.equal(root.dummy, false)
@@ -2661,5 +2667,180 @@ t.test('children of the global root are considered tops', t => {
   t.equal(foo.isTop, true)
   t.equal(foo.top, foo)
   t.equal(bar.top, foo)
+  t.end()
+})
+
+t.test('overrides', (t) => {
+  t.test('skips loading when no overrides are provided', (t) => {
+    const tree = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+      },
+    })
+    t.equal(tree.overrides, undefined, 'overrides is undefined')
+    t.end()
+  })
+
+  t.test('skips loading when overrides are empty', (t) => {
+    const tree = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        overrides: {},
+      },
+    })
+    t.equal(tree.overrides, undefined, 'overrides is undefined')
+    t.end()
+  })
+
+  t.test('loads overrides', (t) => {
+    const tree = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '^1',
+        },
+        overrides: {
+          bar: { '.': '2.0.0' },
+        },
+      },
+    })
+    t.ok(tree.overrides, 'overrides is defined')
+    t.end()
+  })
+
+  t.test('assertRootOverrides throws when a dependency and override conflict', async (t) => {
+    const conflictingTree = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '1.x',
+        },
+        overrides: {
+          bar: '2.x',
+        },
+      },
+      children: [
+        { pkg: { name: 'bar', version: '1.x' } },
+      ],
+    })
+
+    t.throws(() => conflictingTree.assertRootOverrides(), { code: 'EOVERRIDE' }, 'throws EOVERRIDE')
+
+    const conflictingChild = conflictingTree.children.get('bar')
+    t.doesNotThrow(() => conflictingChild.assertRootOverrides(), 'child does not throw')
+
+    const safeTree = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '1.x',
+        },
+        overrides: {
+          baz: '2.x',
+        },
+      },
+      children: [
+        { pkg: { name: 'bar', version: '1.x' } },
+      ],
+    })
+
+    t.doesNotThrow(() => safeTree.assertRootOverrides(), 'non conflicting tree does not throw')
+  })
+
+  t.test('overrides propagate to children and edges', (t) => {
+    const tree = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '^1',
+        },
+        overrides: {
+          bar: { '.': '2.0.0' },
+        },
+      },
+      children: [
+        { pkg: { name: 'bar', version: '1.0.0' } },
+      ],
+    })
+
+    t.ok(tree.overrides, 'overrides is defined on root')
+    t.ok(tree.edgesOut.get('bar').overrides, 'overrides is defined on edgeOut')
+    t.ok(tree.children.get('bar').overrides, 'overrides is defined on child')
+    t.end()
+  })
+
+  t.test('canReplaceWith requires the same overrides', async (t) => {
+    const original = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '^1',
+        },
+        overrides: {
+          bar: { '.': '2.0.0' },
+        },
+      },
+      children: [
+        { pkg: { name: 'bar', version: '1.0.0' } },
+      ],
+    })
+
+    const badReplacement = new Node({
+      loadOverrides: true,
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '^1',
+        },
+        overrides: {
+          bar: { '.': '2.0.0' },
+        },
+      },
+      children: [
+        { pkg: { name: 'bar', version: '1.0.0' } },
+      ],
+    })
+
+    t.equal(original.canReplaceWith(badReplacement), false, 'different overrides fails')
+
+    const goodReplacement = new Node({
+      path: '/some/path',
+      pkg: {
+        name: 'foo',
+        dependencies: {
+          bar: '^1',
+        },
+        overrides: {
+          bar: { '.': '2.0.0' },
+        },
+      },
+      children: [
+        { pkg: { name: 'bar', version: '1.0.0' } },
+      ],
+    })
+
+    t.equal(original.canReplaceWith(goodReplacement), false, 'no overrides fails')
+
+    goodReplacement.overrides = original.overrides
+    t.equal(original.canReplaceWith(goodReplacement), true, 'same overrides passes')
+  })
+
+  // XXX write negative tests too
+
   t.end()
 })

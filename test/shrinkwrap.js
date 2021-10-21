@@ -75,6 +75,7 @@ t.test('starting out with a reset lockfile is an empty lockfile', t =>
       dependencies: {},
       packages: {},
     })
+    t.equal(sw.originalLockfileVersion, 2)
     t.equal(sw.loadedFromDisk, true)
     t.equal(sw.filename, resolve(fixture, 'package-lock.json'))
   }))

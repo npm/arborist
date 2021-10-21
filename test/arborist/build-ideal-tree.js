@@ -611,6 +611,33 @@ t.test('force a new mkdirp (but not semver major)', async t => {
   t.equal(arb.idealTree.children.get('minimist').package.version, '1.2.5')
 })
 
+t.test('empty update should not trigger old lockfile', async t => {
+  const path = t.testdir({
+    'package.json': JSON.stringify({
+      name: 'empty-update',
+      version: '1.0.0',
+    }),
+    'package-lock.json': JSON.stringify({
+      name: 'empty-update',
+      version: '1.0.0',
+      lockfileVersion: 2,
+      requires: true,
+      packages: {
+        '': {
+          name: 'empty-update',
+          version: '1.0.0',
+        },
+      },
+    }),
+  })
+  const checkLogs = warningTracker()
+
+  const arb = newArb(path)
+  await arb.reify({ update: true })
+
+  t.strictSame(checkLogs(), [])
+})
+
 t.test('no fix available', async t => {
   const path = resolve(fixtures, 'audit-mkdirp/mkdirp-unfixable')
   const checkLogs = warningTracker()

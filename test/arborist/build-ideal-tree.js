@@ -638,6 +638,34 @@ t.test('empty update should not trigger old lockfile', async t => {
   t.strictSame(checkLogs(), [])
 })
 
+t.test('update v3 doesnt downgrade lockfile', async t => {
+  const fixt = t.testdir({
+    'package-lock.json': JSON.stringify({
+      name: 'empty-update-v3',
+      version: '1.0.0',
+      lockfileVersion: 3,
+      requires: true,
+      packages: {
+        '': {
+          name: 'empty-update-v3',
+          version: '1.0.0',
+        },
+      },
+    }),
+    'package.json': JSON.stringify({
+      name: 'empty-update-v3',
+      version: '1.0.0',
+    }),
+  })
+
+  const arb = newArb(fixt)
+  await arb.reify({ update: true })
+
+  const { lockfileVersion } = require(resolve(fixt, 'package-lock.json'))
+
+  t.strictSame(lockfileVersion, 3)
+})
+
 t.test('no fix available', async t => {
   const path = resolve(fixtures, 'audit-mkdirp/mkdirp-unfixable')
   const checkLogs = warningTracker()

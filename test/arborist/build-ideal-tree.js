@@ -1033,6 +1033,53 @@ t.test('complete build for project with old lockfile', async t => {
   ])
 })
 
+t.test('no old lockfile warning with no package-lock', async t => {
+  const fixt = t.testdir({
+    node_modules: {
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.1.1',
+        }),
+      },
+    },
+    'package.json': JSON.stringify({
+      name: 'no-package-lock',
+      dependencies: {
+        abbrev: '1',
+      },
+    }),
+  })
+  const checkLogs = warningTracker()
+  await newArb(fixt).reify()
+  t.strictSame(checkLogs(), [])
+})
+
+t.test('no old lockfile warning with a conflict package-lock', async t => {
+  const fixt = t.testdir({
+    node_modules: {
+      abbrev: {
+        'package.json': JSON.stringify({
+          name: 'abbrev',
+          version: '1.1.1',
+        }),
+      },
+    },
+    'package.json': JSON.stringify({
+      name: 'conflict-package-lock',
+      dependencies: {
+        abbrev: '1',
+      },
+    }),
+    'package-lock.json': fs.readFileSync(
+      resolve(fixtures, 'conflict-package-lock/package-lock.json')
+    ),
+  })
+  const checkLogs = warningTracker()
+  await newArb(fixt).reify()
+  t.strictSame(checkLogs(), [])
+})
+
 t.test('override a conflict with the root dep (with force)', async t => {
   const path = resolve(fixtures, 'testing-peer-dep-conflict-chain/override')
   // note: fails because this is the root dep, unless --force used

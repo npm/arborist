@@ -2925,6 +2925,7 @@ t.test('peer conflicts between peer sets in transitive deps', t => {
     t.equal(aj.version, '3.0.0')
     t.notOk(ax)
   })
+
   t.test('x and j@1 at root, y and j@2 underneath a (no a->j dep)', async t => {
     const path = t.testdir({
       'package.json': '{}',
@@ -2949,6 +2950,162 @@ t.test('peer conflicts between peer sets in transitive deps', t => {
     t.equal(ay.version, '1.0.0')
     t.equal(aj.version, '2.0.0')
     t.notOk(ax)
+  })
+
+  t.end()
+})
+
+t.test('competing peerSets resolve in both root and workspace', t => {
+  // The following trees caused an infinite loop in a workspace
+  // https://github.com/npm/cli/issues/3933
+  t.plan(2)
+
+  const rootAndWs = async dependencies => {
+    const fixt = t.testdir({
+      root: {
+        'package.json': JSON.stringify({
+          name: 'root',
+          version: '1.0.0',
+          dependencies,
+        }),
+      },
+      ws: {
+        'package.json': JSON.stringify({
+          name: 'workspace',
+          version: '1.0.0',
+          workspaces: ['a'],
+        }),
+        a: {
+          'package.json': JSON.stringify({
+            name: 'a',
+            version: '1.0.0',
+            dependencies,
+          }),
+        },
+      },
+    })
+    return [
+      await buildIdeal(resolve(fixt, 'root')),
+      await buildIdeal(resolve(fixt, 'ws')),
+    ]
+  }
+
+  t.test('overlapping peerSets dont warn', async t => {
+    // This should not cause a warning because replacing `c@2` and `d@2`
+    // with `c@1` and `d@1` is still valid.
+    //
+    // ```
+    // project -> (a@1)
+    // a@1 -> (b), PEER(c@1||2), PEER(d@1||2)
+    // b -> PEER(c@1), PEER(d@1)
+    // c -> ()
+    // d@1 -> PEER(c@1)
+    // d@2 -> PEER(c@2)
+    // ```
+
+    const warnings = warningTracker()
+    const [rootTree, wsTree] = await rootAndWs({
+      '@lukekarrys/workspace-peer-dep-infinite-loop-a': '1',
+    })
+
+    const rootA = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-a')
+    const rootB = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-b')
+    const rootC = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-c')
+    const rootD = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-d')
+
+    const wsA = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-a')
+    const wsB = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-b')
+    const wsC = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-c')
+    const wsD = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-d')
+
+    t.equal(rootA.version, '1.0.0', 'root a version')
+    t.equal(rootB.version, '1.0.0', 'root b version')
+    t.equal(rootC.version, '1.0.0', 'root c version')
+    t.equal(rootD.version, '1.0.0', 'root d version')
+    t.equal(wsA.version, '1.0.0', 'workspace a version')
+    t.equal(wsB.version, '1.0.0', 'workspace b version')
+    t.equal(wsC.version, '1.0.0', 'workspace c version')
+    t.equal(wsD.version, '1.0.0', 'workspace d version')
+
+    const [rootWarnings = [], wsWarnings = []] = warnings()
+    // TODO: these warn for now but shouldnt
+    // https://github.com/npm/arborist/issues/347
+    t.comment('FIXME')
+    t.match(rootWarnings, ['warn', 'ERESOLVE', 'overriding peer dependency', {
+      code: 'ERESOLVE',
+    }], 'root warning is an ERESOLVE')
+    t.match(wsWarnings, ['warn', 'ERESOLVE', 'overriding peer dependency', {
+      code: 'ERESOLVE',
+    }], 'workspace warning is an ERESOLVE')
+
+    t.matchSnapshot(normalizePaths(rootWarnings[3]), 'root warnings')
+    t.matchSnapshot(normalizePaths(wsWarnings[3]), 'workspace warnings')
+    t.matchSnapshot(printTree(rootTree), 'root tree')
+    t.matchSnapshot(printTree(wsTree), 'workspace tree')
+  })
+
+  t.test('conflicting peerSets do warn', async t => {
+    // ```
+    // project -> (a@2)
+    // a@2 -> (b), PEER(c@2), PEER(d@2)
+    // b -> PEER(c@1), PEER(d@1)
+    // c -> ()
+    // d@1 -> PEER(c@1)
+    // d@2 -> PEER(c@2)
+    // ```
+
+    const warnings = warningTracker()
+    const [rootTree, wsTree] = await rootAndWs({
+      // It's 2.0.1 because I messed up publishing 2.0.0
+      '@lukekarrys/workspace-peer-dep-infinite-loop-a': '2.0.1',
+    })
+
+    const rootA = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-a')
+    const rootB = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-b')
+    const rootC = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-c')
+    const rootD = rootTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-d')
+
+    const wsA = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-a')
+    const wsB = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-b')
+    const wsC = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-c')
+    const wsD = wsTree.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-d')
+
+    const wsTarget = wsTree.children.get('a').target
+
+    const wsTargetC = wsTarget.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-c')
+    const wsTargetD = wsTarget.children.get('@lukekarrys/workspace-peer-dep-infinite-loop-d')
+
+    t.equal(rootA.version, '2.0.1', 'root a version')
+    t.equal(rootB.version, '1.0.0', 'root b version')
+    t.equal(rootC.version, '2.0.0', 'root c version')
+    t.equal(rootD.version, '2.0.0', 'root d version')
+
+    t.equal(wsA.version, '2.0.1', 'workspace a version')
+    t.equal(wsB.version, '1.0.0', 'workspace b version')
+
+    // TODO: these should be 2.0.0 also?
+    t.comment('FIXME')
+    t.equal(wsC.version, '1.0.0', 'workspace c version')
+    t.equal(wsD.version, '1.0.0', 'workspace d version')
+
+    // TODO: these should not be undefined
+    // https://github.com/npm/arborist/issues/348
+    t.comment('FIXME')
+    t.equal((wsTargetC || {}).version, undefined, 'workspace target c version')
+    t.equal((wsTargetD || {}).version, undefined, 'workspace target d version')
+
+    const [rootWarnings, wsWarnings] = warnings()
+    t.match(rootWarnings, ['warn', 'ERESOLVE', 'overriding peer dependency', {
+      code: 'ERESOLVE',
+    }], 'root warning is an ERESOLVE')
+    t.match(wsWarnings, ['warn', 'ERESOLVE', 'overriding peer dependency', {
+      code: 'ERESOLVE',
+    }], 'workspace warning is an ERESOLVE')
+
+    t.matchSnapshot(normalizePaths(rootWarnings[3]), 'root warnings')
+    t.matchSnapshot(normalizePaths(wsWarnings[3]), 'workspace warnings')
+    t.matchSnapshot(printTree(rootTree), 'root tree')
+    t.matchSnapshot(printTree(wsTree), 'workspace tree')
   })
 
   t.end()

@@ -134,7 +134,7 @@ t.notOk(depValid({}, 'latest', null, {}),
 
 t.test('unsupported dependency type', t => {
   const requestor = { errors: [] }
-  const child = {name: 'kid'}
+  const child = { name: 'kid' }
   const request = { type: 'not a type' }
   t.notOk(depValid(child, request, null, requestor))
   t.match(requestor, {

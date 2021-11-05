@@ -18,5 +18,5 @@ t.test('blow up and catch error if Node ctor blows up', t => {
   // in the Node constructor, because it's (by design) extremely hard
   // to make the ctor throw.
   const path = resolve(fixtures, 'root')
-  return t.rejects(new Arborist({path}).loadActual(), { message: 'boom' })
+  return t.rejects(new Arborist({ path }).loadActual(), { message: 'boom' })
 })

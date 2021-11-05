@@ -21,7 +21,7 @@ const fixture = (t, p) => require('../fixtures/reify-cases/' + p)(t)
 
 const cache = t.testdir()
 const pruneTree = (path, opt) =>
-  new Arborist({registry, path, cache, ...(opt || {})}).prune(opt)
+  new Arborist({ registry, path, cache, ...(opt || {}) }).prune(opt)
 
 t.test('prune with actual tree', async t => {
   const path = fixture(t, 'prune-actual')
@@ -141,7 +141,7 @@ t.test('prune workspaces', async t => {
         'package.json': JSON.stringify({
           name: 'a',
           version: '1.2.3',
-          dependencies: {once: ''},
+          dependencies: { once: '' },
         }),
       },
       b: {
@@ -156,7 +156,7 @@ t.test('prune workspaces', async t => {
         'package.json': JSON.stringify({
           name: 'a',
           version: '1.2.3',
-          dependencies: {once: ''},
+          dependencies: { once: '' },
         }),
       },
       b: {

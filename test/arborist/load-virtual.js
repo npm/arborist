@@ -1,6 +1,6 @@
 const Arborist = require('../../lib/arborist')
 const t = require('tap')
-const {resolve} = require('path')
+const { resolve } = require('path')
 const fixture = resolve(__dirname, '../fixtures/install-types')
 const swonlyfixture = resolve(__dirname, '../fixtures/install-types-sw-only')
 const badfixture = resolve(__dirname, '../fixtures/root')
@@ -25,12 +25,12 @@ const cwd = normalizePath(process.cwd())
 t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 
 const loadVirtual = (path, opts) =>
-  new Arborist({path, ...(opts || {})}).loadVirtual(opts)
+  new Arborist({ path, ...(opts || {}) }).loadVirtual(opts)
 
 t.test('load from fixture', t =>
   loadVirtual(fixture).then(virtualTree => {
     t.matchSnapshot(printTree(virtualTree), 'loaded virtual tree from fixture')
-    return new Arborist({ path: fixture, virtualTree}).loadVirtual()
+    return new Arborist({ path: fixture, virtualTree }).loadVirtual()
       .then(tree2 => t.equal(tree2, virtualTree, 'same tree reused'))
   }))
 
@@ -39,7 +39,7 @@ t.test('load from fixture using filesystem root path', t => {
     path: '/',
     pkg: require(fixture + '/package.json'),
   })
-  return new Arborist({path: '/'}).loadVirtual({root})
+  return new Arborist({ path: '/' }).loadVirtual({ root })
     .then(virtualTree => t.equal(virtualTree, root))
 })
 
@@ -50,7 +50,7 @@ t.test('load from root that already has shrinkwrap', t =>
       pkg: require(tapAndFlow + '/package.json'),
       meta,
     })
-    return new Arborist({path: tapAndFlow}).loadVirtual({root})
+    return new Arborist({ path: tapAndFlow }).loadVirtual({ root })
       .then(virtualTree => t.equal(virtualTree, root))
   }))
 

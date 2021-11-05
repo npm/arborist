@@ -94,7 +94,11 @@
   "engines": {
     "node": "^12.13.0 || ^14.15.0 || >=16"
   },
+<<<<<<< HEAD
   "templateVersion": "2.3.0",
+=======
+  "templateVersion": "2.2.0",
+>>>>>>> dbcced1f (chore: lint without max-len for now)
   "eslintIgnore": [
     "test/fixtures/",
     "!test/fixtures/*.js"

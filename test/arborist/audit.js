@@ -46,7 +46,7 @@ t.test('audit fix reifies out the bad deps', async t => {
   const path = fixture(t, 'deprecated-dep')
   t.teardown(auditResponse(resolve(fixtures, 'audit-nyc-mkdirp/audit.json')))
   const arb = newArb(path)
-  const tree = printTree(await arb.audit({fix: true}))
+  const tree = printTree(await arb.audit({ fix: true }))
   t.matchSnapshot(tree, 'reified out the bad mkdirp and minimist')
 })
 

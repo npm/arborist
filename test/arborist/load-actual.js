@@ -45,7 +45,7 @@ t.cleanSnapshot = s => s.split(cwd).join('{CWD}')
 t.formatSnapshot = tree => format(defixture(printTree(tree)), { sort: true })
 
 const loadActual = (path, opts) =>
-  new Arborist({path, ...opts}).loadActual(opts)
+  new Arborist({ path, ...opts }).loadActual(opts)
 
 roots.forEach(path => {
   const dir = resolve(fixtures, path)
@@ -59,7 +59,7 @@ t.test('look for missing deps by default', t => {
   for (const p of paths) {
     t.test(p, async t => {
       const path = resolve(__dirname, '../fixtures', p)
-      const arb = new Arborist({path})
+      const arb = new Arborist({ path })
       const tree = await arb.loadActual()
       t.matchSnapshot(tree, '"dep" should have missing deps, "link" should not')
     })
@@ -93,7 +93,7 @@ t.test('load a tree rooted on a different node', async t => {
   const path = resolve(fixtures, 'workspace')
   const other = resolve(fixtures.replace(/[a-z]/gi, 'X'), 'workspace')
   const root = new Node({
-    meta: await Shrinkwrap.reset({path: other}),
+    meta: await Shrinkwrap.reset({ path: other }),
     path: other,
     realpath: other,
     pkg: require(path + '/package.json'),
@@ -104,8 +104,8 @@ t.test('load a tree rooted on a different node', async t => {
   root.optional = false
   root.peer = false
 
-  const actual = await (new Arborist({path}).loadActual())
-  const transp = await (new Arborist({path}).loadActual({ root }))
+  const actual = await (new Arborist({ path }).loadActual())
+  const transp = await (new Arborist({ path }).loadActual({ root }))
 
   // verify that the transp nodes have the right paths
   t.equal(transp.children.get('a').path, resolve(other, 'node_modules/a'))
@@ -123,7 +123,7 @@ t.test('load a tree rooted on a different node', async t => {
 
   // now try with a transplant filter that keeps out the 'a' module
   const rootFiltered = new Node({
-    meta: await Shrinkwrap.reset({path: other}),
+    meta: await Shrinkwrap.reset({ path: other }),
     path: other,
     realpath: other,
     pkg: require(path + '/package.json'),
@@ -133,7 +133,7 @@ t.test('load a tree rooted on a different node', async t => {
   rootFiltered.devOptional = false
   rootFiltered.optional = false
   rootFiltered.peer = false
-  const transpFilter = await new Arborist({path}).loadActual({
+  const transpFilter = await new Arborist({ path }).loadActual({
     root: rootFiltered,
     transplantFilter: n => n.name !== 'a',
   })

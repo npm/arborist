@@ -1,6 +1,6 @@
 const t = require('tap')
 const AuditReport = require('../lib/audit-report.js')
-const {auditToBulk} = AuditReport
+const { auditToBulk } = AuditReport
 const Node = require('../lib/node.js')
 const Arborist = require('../')
 
@@ -15,12 +15,12 @@ const {
 t.before(start)
 t.teardown(stop)
 
-const {resolve} = require('path')
+const { resolve } = require('path')
 const fixtures = resolve(__dirname, 'fixtures')
 
 const cache = t.testdir()
 const newArb = (path, opts = {}) =>
-  new Arborist({path, registry, cache, ...opts})
+  new Arborist({ path, registry, cache, ...opts })
 
 const sortReport = report => {
   const entries = Object.entries(report.vulnerabilities)
@@ -112,7 +112,7 @@ t.test('get advisory about node not in tree', async t => {
   })
   tree.package = { dependencies: {
     fooo: '',
-  }}
+  } }
 
   const report = await AuditReport.load(tree, arb.options)
   // just a gut-check that the registry server is actually doing stuff
@@ -294,7 +294,7 @@ t.test('get default opts when loaded without opts', async t => {
 
 t.test('error on audit response with no advisories object', async t => {
   const dir = t.testdir({
-    'audit.json': JSON.stringify({no: 'advisories', at: 'all'}),
+    'audit.json': JSON.stringify({ no: 'advisories', at: 'all' }),
   })
   const path = resolve(fixtures, 'audit-nyc-mkdirp')
   const auditFile = resolve(dir, 'audit.json')
@@ -306,7 +306,7 @@ t.test('error on audit response with no advisories object', async t => {
   const report = await AuditReport.load(tree, arb.options)
   t.match(report.error, {
     message: 'Invalid advisory report',
-    body: JSON.stringify({no: 'advisories', at: 'all'}),
+    body: JSON.stringify({ no: 'advisories', at: 'all' }),
   })
 })
 
@@ -461,11 +461,11 @@ t.test('audit supports alias deps', async t => {
           },
         },
       },
-      { pkg: { name: 'minimist', version: '0.0.8' }},
+      { pkg: { name: 'minimist', version: '0.0.8' } },
     ],
   })
 
-  const report = await AuditReport.load(tree, {path, registry, cache})
+  const report = await AuditReport.load(tree, { path, registry, cache })
   t.matchSnapshot(JSON.stringify(report, 0, 2), 'json version')
   t.equal(report.get('mkdirp').simpleRange, '0.4.1 - 0.5.1')
 })

@@ -166,12 +166,12 @@ t.test('basic vulnerability object tests', async t => {
 
   // a workspace with one direct vuln and one indirect vuln
   const ws = new Node({
-    pkg: { name: 'foo', version: '1.2.3', dependencies: { bar: '' }},
+    pkg: { name: 'foo', version: '1.2.3', dependencies: { bar: '' } },
     path: resolve(root.path, 'packages/foo'),
     root,
     children: [
-      { pkg: { name: 'bar', version: '1.2.3', dependencies: { baz: '' }}},
-      { pkg: { name: 'baz', version: '1.2.3' }},
+      { pkg: { name: 'bar', version: '1.2.3', dependencies: { baz: '' } } },
+      { pkg: { name: 'baz', version: '1.2.3' } },
     ],
   })
 

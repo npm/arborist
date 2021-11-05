@@ -1,5 +1,5 @@
 process.env.ARBORIST_DEBUG = '0'
-const {Suite} = require('benchmark')
+const { Suite } = require('benchmark')
 const { relative, resolve } = require('path')
 const rimraf = require('rimraf')
 const { execSync } = require('child_process')
@@ -62,30 +62,33 @@ Options:
 
 for (let i = 2; i < process.argv.length; i++) {
   const arg = process.argv[i]
-  if (/^--previous=/.test(arg))
+  if (/^--previous=/.test(arg)) {
     options.previous = arg.substr('--previous='.length)
-  else if (/^--warn-range=[0-9]+/.test(arg))
+  } else if (/^--warn-range=[0-9]+/.test(arg)) {
     options.warnRange = +arg.substr('--warn-range='.length)
-  else if (/^--cache=/.test(arg))
+  } else if (/^--cache=/.test(arg)) {
     options.cache = resolve(arg.substr('--cache='.length))
-  else if (/^--save=/.test(arg)) {
+  } else if (/^--save=/.test(arg)) {
     const save = arg.substr('--save='.length)
-    if (/[/\\]|^\.\.?$/.test(save))
+    if (/[/\\]|^\.\.?$/.test(save)) {
       throw new Error('save cannot have slashes or be . or ..')
+    }
     options.save = save
-  } else if (/^-h/.test(arg) || /^--help/.test(arg))
+  } else if (/^-h/.test(arg) || /^--help/.test(arg)) {
     usage()
-  else if (/^--/.test(arg))
+  } else if (/^--/.test(arg)) {
     throw new Error('Unknown option: ' + arg)
-  else {
-    if (!allSuites.includes(arg))
+  } else {
+    if (!allSuites.includes(arg)) {
       throw new Error('Unknown benchmark suite: ' + arg)
+    }
     suites.add(arg)
   }
 }
 
-if (suites.size === 0)
+if (suites.size === 0) {
   allSuites.forEach(s => suites.add(s))
+}
 
 const suiteName = suite => {
   const name = suite.saveName ? ` (${suite.saveName})` : ''
@@ -98,8 +101,9 @@ const suite = new Suite({
       const prevName = options.previous || 'last-benchmark'
       const prev = `./benchmark/saved/${prevName}.json`
       this.previous = require(prev)
-      if (!this.previous.saveName)
+      if (!this.previous.saveName) {
         this.previous.saveName = prevName
+      }
     } catch (e) {
       this.previous = null
     }
@@ -112,8 +116,9 @@ const suite = new Suite({
     console.log('')
     console.log('ARBORIST BENCHMARKS')
     console.log(msg)
-    if (prev)
+    if (prev) {
       console.log(prev)
+    }
   },
 
   onCycle (event) {
@@ -130,9 +135,9 @@ const suite = new Suite({
     }±${bench.stats.rme.toFixed(2)}%)`
     console.log('')
     console.log(bench.name)
-    if (bench.error)
+    if (bench.error) {
       console.log('Error:', bench.error.message || bench.error)
-    else {
+    } else {
       console.log(
         `  ${bench.hz.toFixed(bench.hz < 100 ? 2 : 0)} ops/s @ ~${(
           bench.stats.mean * 1000
@@ -185,8 +190,9 @@ const main = async () => {
   const promises = []
   for (const s of suites) {
     const fn = require(`./benchmark/${s}.js`)
-    if (typeof fn.teardown === 'function')
+    if (typeof fn.teardown === 'function') {
       teardowns.push(fn.teardown)
+    }
     promises.push(fn(suite, options))
   }
   await Promise.all(promises)

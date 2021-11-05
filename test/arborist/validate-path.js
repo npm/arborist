@@ -10,7 +10,7 @@ const chownr = Object.assign((path, uid, gid, cb) => {
   process.nextTick(() => cb(new Error('should not chown')))
 }, { sync: () => {
   throw new Error('should not chown')
-}})
+} })
 
 process.getuid = () => 0
 process.getgid = () => 0

@@ -98,7 +98,7 @@ t.test('basic placement check tests', t => {
   runTest('basic placement of a dep, no conflicts or issues', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
     }),
     targetLoc: '',
     nodeLoc: '',
@@ -111,81 +111,81 @@ t.test('basic placement check tests', t => {
   runTest('replace an existing dep', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
-      children: [{pkg: {name: 'a', version: '1.0.0'}}],
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
+      children: [{ pkg: { name: 'a', version: '1.0.0' } }],
     }),
     targetLoc: '',
     nodeLoc: '',
-    dep: new Node({ pkg: { name: 'a', version: '1.2.3' }}),
+    dep: new Node({ pkg: { name: 'a', version: '1.2.3' } }),
     expect: REPLACE,
   })
 
   runTest('place nested', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
       children: [
-        {pkg: {name: 'a', version: '1.0.0'}},
+        { pkg: { name: 'a', version: '1.0.0' } },
         {
-          pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2.x' }},
+          pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2.x' } },
         },
       ],
     }),
     targetLoc: 'node_modules/b',
     nodeLoc: 'node_modules/b',
-    dep: new Node({ pkg: { name: 'a', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' } }),
     expect: OK,
   })
 
   runTest('conflict in root for nested dep', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
       children: [
-        { pkg: { name: 'a', version: '1.0.0' }},
-        { pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' }}},
+        { pkg: { name: 'a', version: '1.0.0' } },
+        { pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/b',
-    dep: new Node({ pkg: { name: 'a', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' } }),
     expect: CONFLICT,
   })
 
   runTest('conflict in root for nested dep, no current', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
       children: [
-        { pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' }}},
+        { pkg: { name: 'b', version: '1.0.0', dependencies: { a: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/b',
-    dep: new Node({ pkg: { name: 'a', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' } }),
     expect: CONFLICT,
   })
 
   runTest('keep an existing dep that matches', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1' } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
+        { pkg: { name: 'a', version: '1.2.3' } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
-    dep: new Node({pkg: { name: 'a', version: '1.2.3' }}),
+    dep: new Node({ pkg: { name: 'a', version: '1.2.3' } }),
     expect: KEEP,
   })
 
   runTest('do not keep existing dep that matches, but does not satisfy', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: 'foo/bar' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: 'foo/bar' } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
+        { pkg: { name: 'a', version: '1.2.3' } },
       ],
     }),
     targetLoc: '',
@@ -200,14 +200,14 @@ t.test('basic placement check tests', t => {
   runTest('keep existing dep that matches, does not satisfy, but peerConflicted', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '2.3.4' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '2.3.4' } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
+        { pkg: { name: 'a', version: '1.2.3' } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
-    dep: new Node({ pkg: { name: 'a', version: '1.2.3' }}),
+    dep: new Node({ pkg: { name: 'a', version: '1.2.3' } }),
     expect: KEEP,
   })
 
@@ -215,14 +215,14 @@ t.test('basic placement check tests', t => {
   runTest('replace an existing dep that matches, explicit request', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1' } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
+        { pkg: { name: 'a', version: '1.2.3' } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
-    dep: new Node({pkg: { name: 'a', version: '1.2.3' }}),
+    dep: new Node({ pkg: { name: 'a', version: '1.2.3' } }),
     expect: REPLACE,
     explicitRequest: true,
   })
@@ -235,15 +235,15 @@ t.test('basic placement check tests', t => {
         dependencies: {
           a: '*',
           b: '1.2.3',
-        }},
+        } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
-        {pkg: {name: 'b', version: '1.2.3', dependencies: {a: '1.2.3'}}},
+        { pkg: { name: 'a', version: '1.2.3' } },
+        { pkg: { name: 'b', version: '1.2.3', dependencies: { a: '1.2.3' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
-    dep: new Node({pkg: { name: 'a', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' } }),
     expect: REPLACE,
     explicitRequest: true,
   })
@@ -256,15 +256,15 @@ t.test('basic placement check tests', t => {
         dependencies: {
           a: '*',
           b: '1.2.3',
-        }},
+        } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
-        {pkg: {name: 'b', version: '1.2.3', dependencies: {a: '1.2.3'}}},
+        { pkg: { name: 'a', version: '1.2.3' } },
+        { pkg: { name: 'b', version: '1.2.3', dependencies: { a: '1.2.3' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
-    dep: new Node({pkg: { name: 'a', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' } }),
     expect: KEEP,
     preferDedupe: true,
     explicitRequest: true,
@@ -273,32 +273,32 @@ t.test('basic placement check tests', t => {
   runTest('keep an existing dep that is older, but also works', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' } },
       children: [
-        {pkg: {name: 'b', version: '2.0.0'}},
-        {pkg: {name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' }}},
-        {pkg: {name: 'a', version: '1.2.3', dependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.0.0' } },
+        { pkg: { name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' } } },
+        { pkg: { name: 'a', version: '1.2.3', dependencies: { b: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/a',
-    dep: new Node({pkg: { name: 'b', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'b', version: '2.3.4' } }),
     expect: KEEP,
   })
 
   runTest('replace an existing dep that is newer, because preferDedupe', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' } },
       children: [
-        {pkg: {name: 'b', version: '2.3.4'}},
-        {pkg: {name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' }}},
-        {pkg: {name: 'a', version: '1.2.3', dependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.3.4' } },
+        { pkg: { name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' } } },
+        { pkg: { name: 'a', version: '1.2.3', dependencies: { b: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/c',
-    dep: new Node({pkg: { name: 'b', version: '2.0.0' }}),
+    dep: new Node({ pkg: { name: 'b', version: '2.0.0' } }),
     expect: REPLACE,
     preferDedupe: true,
   })
@@ -306,20 +306,20 @@ t.test('basic placement check tests', t => {
   runTest('conflict an existing dep that is newer, preferDedupe peerConflict', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' } },
       children: [
-        {pkg: {name: 'b', version: '2.3.4'}},
-        {pkg: {name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' }}},
-        {pkg: {name: 'a', version: '1.2.3', dependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.3.4' } },
+        { pkg: { name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' } } },
+        { pkg: { name: 'a', version: '1.2.3', dependencies: { b: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/c',
     dep: new Node({
-      pkg: { name: 'b', version: '2.0.0', peerDependencies: { a: '3' }},
+      pkg: { name: 'b', version: '2.0.0', peerDependencies: { a: '3' } },
     }),
     peerSet: [
-      {pkg: {name: 'a', version: '3.0.0' }},
+      { pkg: { name: 'a', version: '3.0.0' } },
     ],
     expect: CONFLICT,
     preferDedupe: true,
@@ -328,16 +328,16 @@ t.test('basic placement check tests', t => {
   runTest('conflict an existing dep that is newer, because no preferDedupe', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1', c: '2.0.0' } },
       children: [
-        {pkg: {name: 'b', version: '2.3.4'}},
-        {pkg: {name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' }}},
-        {pkg: {name: 'a', version: '1.2.3', dependencies: { b: '2' }}},
+        { pkg: { name: 'b', version: '2.3.4' } },
+        { pkg: { name: 'c', version: '2.0.0', dependencies: { b: '2.0.0' } } },
+        { pkg: { name: 'a', version: '1.2.3', dependencies: { b: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/c',
-    dep: new Node({pkg: { name: 'b', version: '2.0.0' }}),
+    dep: new Node({ pkg: { name: 'b', version: '2.0.0' } }),
     expect: CONFLICT,
     preferDedupe: false,
   })
@@ -346,9 +346,9 @@ t.test('basic placement check tests', t => {
   runTest('return REPLACE because node had errors', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1' } },
       children: [
-        {pkg: {name: 'a', version: '1.2.3'}},
+        { pkg: { name: 'a', version: '1.2.3' } },
       ],
     }),
     targetLoc: '',
@@ -362,10 +362,10 @@ t.test('basic placement check tests', t => {
   runTest('return OK because node had errors', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
       children: [
         {
-          pkg: { name: 'b', version: '1.0.0', peerDependencies: { a: '2.x' }},
+          pkg: { name: 'b', version: '1.0.0', peerDependencies: { a: '2.x' } },
         },
       ],
     }),
@@ -381,16 +381,16 @@ t.test('basic placement check tests', t => {
   runTest('cannot place peer inside of dependent', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { b: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { b: '1.x' } },
       children: [
         {
-          pkg: { name: 'b', version: '1.0.0', peerDependencies: { a: '2.x' }},
+          pkg: { name: 'b', version: '1.0.0', peerDependencies: { a: '2.x' } },
         },
       ],
     }),
     targetLoc: 'node_modules/b',
     nodeLoc: 'node_modules/b',
-    dep: new Node({ pkg: { name: 'a', version: '2.3.4' }}),
+    dep: new Node({ pkg: { name: 'a', version: '2.3.4' } }),
     expect: CONFLICT,
   })
 
@@ -410,53 +410,53 @@ t.test('basic placement check tests', t => {
   runTest('invalid shadowing', {
     tree: new Node({
       path,
-      pkg: { dependencies: { x: '1' }},
+      pkg: { dependencies: { x: '1' } },
       children: [
-        { pkg: { name: 'c', version: '1.0.0' }},
+        { pkg: { name: 'c', version: '1.0.0' } },
         {
-          pkg: { name: 'x', version: '1.0.0', dependencies: { a: '1', b: '1' }},
+          pkg: { name: 'x', version: '1.0.0', dependencies: { a: '1', b: '1' } },
           children: [
             {
-              pkg: { name: 'a', version: '1.0.0', dependencies: { b: '2' }},
+              pkg: { name: 'a', version: '1.0.0', dependencies: { b: '2' } },
               children: [
-                { pkg: { name: 'b', version: '2.0.0', dependencies: { c: '2' }}},
+                { pkg: { name: 'b', version: '2.0.0', dependencies: { c: '2' } } },
               ],
             },
-            { pkg: { name: 'b', version: '1.0.0', dependencies: { c: '1' }}},
+            { pkg: { name: 'b', version: '1.0.0', dependencies: { c: '1' } } },
           ],
         },
       ],
     }),
     targetLoc: 'node_modules/x',
     nodeLoc: 'node_modules/x/node_modules/a/node_modules/b',
-    dep: new Node({ pkg: { name: 'c', version: '2.0.0' }}),
+    dep: new Node({ pkg: { name: 'c', version: '2.0.0' } }),
     expect: CONFLICT,
   })
 
   runTest('totally valid shadowing', {
     tree: new Node({
       path,
-      pkg: { dependencies: { x: '1' }},
+      pkg: { dependencies: { x: '1' } },
       children: [
-        { pkg: { name: 'c', version: '1.0.0' }},
+        { pkg: { name: 'c', version: '1.0.0' } },
         {
-          pkg: { name: 'x', version: '1.0.0', dependencies: { a: '1', b: '1' }},
+          pkg: { name: 'x', version: '1.0.0', dependencies: { a: '1', b: '1' } },
           children: [
             {
-              pkg: { name: 'a', version: '1.0.0', dependencies: { b: '2' }},
+              pkg: { name: 'a', version: '1.0.0', dependencies: { b: '2' } },
               children: [
-                { pkg: { name: 'b', version: '2.0.0', dependencies: { c: '2' }}},
+                { pkg: { name: 'b', version: '2.0.0', dependencies: { c: '2' } } },
               ],
             },
             // difference right here on the c@1||2 line
-            { pkg: { name: 'b', version: '1.0.0', dependencies: { c: '1||2' }}},
+            { pkg: { name: 'b', version: '1.0.0', dependencies: { c: '1||2' } } },
           ],
         },
       ],
     }),
     targetLoc: 'node_modules/x',
     nodeLoc: 'node_modules/x/node_modules/a/node_modules/b',
-    dep: new Node({ pkg: { name: 'c', version: '2.0.0' }}),
+    dep: new Node({ pkg: { name: 'c', version: '2.0.0' } }),
     expect: OK,
   })
 
@@ -464,85 +464,85 @@ t.test('basic placement check tests', t => {
   runTest('basic placement with peers', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3' }},
+      { pkg: { name: 'b', version: '1.2.3' } },
     ],
   })
 
   runTest('peer with peers', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '1.2.3'}},
+      { pkg: { name: 'b', version: '1.2.3', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.2.3' } },
     ],
   })
 
   runTest('cycle of peers', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '1.2.3', peerDependencies: { a: '1' }}},
+      { pkg: { name: 'b', version: '1.2.3', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.2.3', peerDependencies: { a: '1' } } },
     ],
   })
 
   runTest('cycle of peers hanging off entry node', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '1.2.3', peerDependencies: { d: '1' }}},
-      {pkg: {name: 'd', version: '1.2.3', peerDependencies: { b: '1' }}},
+      { pkg: { name: 'b', version: '1.2.3', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.2.3', peerDependencies: { d: '1' } } },
+      { pkg: { name: 'd', version: '1.2.3', peerDependencies: { b: '1' } } },
     ],
   })
 
   runTest('peers with peerConflicted edges in peerSet', {
     tree: new Node({
       path,
-      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' }},
+      pkg: { name: 'project', version: '1.2.3', dependencies: { a: '1.x' } },
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '1.2.3', peerDependencies: { b: '2', a: '2' }}},
+      { pkg: { name: 'b', version: '1.2.3', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.2.3', peerDependencies: { b: '2', a: '2' } } },
     ],
   })
 
@@ -558,18 +558,18 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'c', version: '2.0.1', peerDependencies: { b: '2', a: '2' }}},
+        { pkg: { name: 'c', version: '2.0.1', peerDependencies: { b: '2', a: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '2.2.3', peerDependencies: { b: '2', a: '2' }}},
+      { pkg: { name: 'b', version: '1.2.3', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '2.2.3', peerDependencies: { b: '2', a: '2' } } },
     ],
   })
 
@@ -585,20 +585,20 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', peerDependencies: { b: '1' }}},
-        {pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '2.0.1', peerDependencies: { b: '2', a: '2' }}},
+        { pkg: { name: 'a', version: '1.0.1', peerDependencies: { b: '1' } } },
+        { pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '2.0.1', peerDependencies: { b: '2', a: '2' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' }},
+      pkg: { name: 'a', version: '1.2.3', peerDependencies: { b: '1' } },
     }),
     expect: REPLACE,
     peerSet: [
-      {pkg: {name: 'b', version: '1.2.3', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '2.2.3', peerDependencies: { b: '2', a: '2' }}},
+      { pkg: { name: 'b', version: '1.2.3', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '2.2.3', peerDependencies: { b: '2', a: '2' } } },
     ],
     explicitRequest: true,
   })
@@ -615,20 +615,20 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { b: '1' }}},
-        {pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { b: '1' } } },
+        { pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-      {pkg: {name: 'c', version: '2.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -645,21 +645,21 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { b: '1' }}},
-        {pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
-        {pkg: {name: 'd', version: '1.1.1', peerDependencies: { b: '1' }}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { b: '1' } } },
+        { pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
+        { pkg: { name: 'd', version: '1.1.1', peerDependencies: { b: '1' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' } },
     }),
     expect: REPLACE,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-      {pkg: {name: 'c', version: '2.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -689,21 +689,21 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { b: '1' }}},
-        {pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
-        {pkg: {name: 'd', version: '1.1.1', peerDependencies: { b: '1' }}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { b: '1' } } },
+        { pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
+        { pkg: { name: 'd', version: '1.1.1', peerDependencies: { b: '1' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' } },
     }),
     expect: REPLACE,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-      {pkg: {name: 'c', version: '2.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -720,21 +720,21 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { bb: '1' }}},
-        {pkg: {name: 'bb', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
-        {pkg: {name: 'd', version: '1.1.1', peerDependencies: { c: '1' }}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { bb: '1' } } },
+        { pkg: { name: 'bb', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
+        { pkg: { name: 'd', version: '1.1.1', peerDependencies: { c: '1' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' } },
     }),
     expect: REPLACE,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-      {pkg: {name: 'c', version: '2.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -751,20 +751,20 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { b: '1' }}},
-        {pkg: {name: 'd', version: '2.2.2', peerDependencies: { b: '2' }}},
-        {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-        {pkg: {name: 'c', version: '2.2.2'}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { b: '1' } } },
+        { pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' } } },
+        { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.2.2' } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/a',
     dep: new Node({
-      pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }},
+      pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } },
     }),
     expect: CONFLICT,
     peerSet: [
-      {pkg: {name: 'c', version: '1.0.1'}},
+      { pkg: { name: 'c', version: '1.0.1' } },
     ],
     explicitRequest: true,
   })
@@ -781,20 +781,20 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { b: '1' }}},
-        {pkg: {name: 'd', version: '2.2.2', peerDependencies: { b: '2' }}},
-        {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-        {pkg: {name: 'c', version: '2.2.2'}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { b: '1' } } },
+        { pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' } } },
+        { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.2.2' } },
       ],
     }),
     targetLoc: 'node_modules/a',
     nodeLoc: 'node_modules/a',
     dep: new Node({
-      pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }},
+      pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } },
     }),
     expect: OK,
     peerSet: [
-      {pkg: {name: 'c', version: '1.0.1'}},
+      { pkg: { name: 'c', version: '1.0.1' } },
     ],
     explicitRequest: true,
   })
@@ -811,20 +811,20 @@ t.test('basic placement check tests', t => {
         },
       },
       children: [
-        {pkg: {name: 'a', version: '1.0.1', peerDependencies: { b: '1' }}},
-        {pkg: {name: 'd', version: '2.2.2', peerDependencies: { b: '2' }}},
-        {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-        {pkg: {name: 'c', version: '2.2.2'}},
+        { pkg: { name: 'a', version: '1.0.1', peerDependencies: { b: '1' } } },
+        { pkg: { name: 'd', version: '2.2.2', peerDependencies: { b: '2' } } },
+        { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.2.2' } },
       ],
     }),
     targetLoc: '',
     nodeLoc: 'node_modules/a',
     dep: new Node({
-      pkg: {name: 'b', version: '1.0.1', peerDependencies: { c: '1' }},
+      pkg: { name: 'b', version: '1.0.1', peerDependencies: { c: '1' } },
     }),
     expect: CONFLICT,
     peerSet: [
-      {pkg: {name: 'c', version: '1.0.1'}},
+      { pkg: { name: 'c', version: '1.0.1' } },
     ],
     explicitRequest: true,
   })
@@ -843,21 +843,21 @@ t.test('basic placement check tests', t => {
       children: [
         // the bb dep could be nested, but it has a peerDep on c, and
         // a would be fine with the c@2, but can't nest its c@1 dep
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { bb: '1' }, peerDependencies: { c: '*' }}},
-        {pkg: {name: 'bb', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
-        {pkg: {name: 'd', version: '1.1.1', peerDependencies: { c: '1' }}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { bb: '1' }, peerDependencies: { c: '*' } } },
+        { pkg: { name: 'bb', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
+        { pkg: { name: 'd', version: '1.1.1', peerDependencies: { c: '1' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' } },
     }),
     expect: CONFLICT,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-      {pkg: {name: 'c', version: '2.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -910,23 +910,23 @@ t.test('basic placement check tests', t => {
       children: [
         // the bb dep could be nested, but it has a peerDep on c, and
         // a would be fine with the c@2, but can't nest its c@1 dep
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { bb: '1' }, peerDependencies: { c: '*' }}},
-        {pkg: {name: 'bb', version: '1.0.1', dependencies: { cc: '1' }, peerDependencies: { c: '*' }}},
-        {pkg: {name: 'cc', version: '1.0.1', peerDependencies: { dd: '1' }}},
-        {pkg: {name: 'dd', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
-        {pkg: {name: 'd', version: '1.1.1', peerDependencies: { c: '1' }}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { bb: '1' }, peerDependencies: { c: '*' } } },
+        { pkg: { name: 'bb', version: '1.0.1', dependencies: { cc: '1' }, peerDependencies: { c: '*' } } },
+        { pkg: { name: 'cc', version: '1.0.1', peerDependencies: { dd: '1' } } },
+        { pkg: { name: 'dd', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
+        { pkg: { name: 'd', version: '1.1.1', peerDependencies: { c: '1' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' } },
     }),
     expect: CONFLICT,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '2' }}},
-      {pkg: {name: 'c', version: '2.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -945,23 +945,23 @@ t.test('basic placement check tests', t => {
       children: [
         // the bb dep could be nested, but it has a peerDep on c, and
         // a would be fine with the c@2, but can't nest its c@1 dep
-        {pkg: {name: 'a', version: '1.0.1', dependencies: { bb: '1' }, peerDependencies: { c: '*' }}},
-        {pkg: {name: 'bb', version: '1.0.1', dependencies: { cc: '1' }, peerDependencies: { c: '*' }}},
-        {pkg: {name: 'cc', version: '1.0.1', dependencies: { dd: '1' }, peerDependencies: { c: '*' }}},
-        {pkg: {name: 'dd', version: '1.0.1', peerDependencies: { c: '1' }}},
-        {pkg: {name: 'c', version: '1.0.1'}},
-        {pkg: {name: 'd', version: '1.1.1', peerDependencies: { c: '1' }}},
+        { pkg: { name: 'a', version: '1.0.1', dependencies: { bb: '1' }, peerDependencies: { c: '*' } } },
+        { pkg: { name: 'bb', version: '1.0.1', dependencies: { cc: '1' }, peerDependencies: { c: '*' } } },
+        { pkg: { name: 'cc', version: '1.0.1', dependencies: { dd: '1' }, peerDependencies: { c: '*' } } },
+        { pkg: { name: 'dd', version: '1.0.1', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.1' } },
+        { pkg: { name: 'd', version: '1.1.1', peerDependencies: { c: '1' } } },
       ],
     }),
     targetLoc: '',
     nodeLoc: '',
     dep: new Node({
-      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' }},
+      pkg: { name: 'd', version: '1.2.2', peerDependencies: { b: '2' } },
     }),
     expect: REPLACE,
     peerSet: [
-      {pkg: {name: 'b', version: '2.2.2', peerDependencies: { c: '1' }}},
-      {pkg: {name: 'c', version: '1.2.2'}},
+      { pkg: { name: 'b', version: '2.2.2', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.2.2' } },
     ],
     explicitRequest: true,
   })
@@ -984,7 +984,7 @@ t.test('basic placement check tests', t => {
   runTest('peer all the way down, conflict but not ours', {
     tree: new Node({
       path,
-      pkg: { dependencies: { a: '' }},
+      pkg: { dependencies: { a: '' } },
       children: [
         {
           pkg: {
@@ -1013,14 +1013,14 @@ t.test('basic placement check tests', t => {
           ],
         },
         { pkg: { name: 'p', version: '2.0.0' } },
-        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { p: '' }}},
-        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { p: '2' }}},
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { p: '' } } },
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { p: '2' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'd', version: '1.0.0', peerDependencies: { p: '1' }},
+      pkg: { name: 'd', version: '1.0.0', peerDependencies: { p: '1' } },
     }),
-    peerSet: [{ pkg: { name: 'p', version: '1.0.0' }}],
+    peerSet: [{ pkg: { name: 'p', version: '1.0.0' } }],
     nodeLoc: 'node_modules/b/node_modules/c',
     targetLoc: 'node_modules/b/node_modules/c',
     expect: CONFLICT,
@@ -1048,23 +1048,23 @@ t.test('basic placement check tests', t => {
   runTest('prod dep directly on conflicted peer, newer', {
     tree: new Node({
       path,
-      pkg: { dependencies: { a: '1', b: '2' }},
+      pkg: { dependencies: { a: '1', b: '2' } },
       children: [
-        { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
-        { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
-        { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
-        { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
-        { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+        { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' } } },
+        { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' } } },
+        { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' } } },
+        { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }},
+      pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' } },
     }),
     peerSet: [
-      { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
-      { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
-      { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
-      { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+      { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' } } },
+      { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' } } },
+      { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' } } },
+      { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' } } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1075,23 +1075,23 @@ t.test('basic placement check tests', t => {
   runTest('prod dep directly on conflicted peer, older', {
     tree: new Node({
       path,
-      pkg: { dependencies: { a: '2', b: '1' }},
+      pkg: { dependencies: { a: '2', b: '1' } },
       children: [
-        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
-        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
-        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
-        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
-        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' } } },
+        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' } } },
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' } } },
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }},
+      pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' } },
     }),
     peerSet: [
-      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
-      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
-      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
-      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' } } },
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' } } },
+      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' } } },
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' } } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1121,21 +1121,21 @@ t.test('basic placement check tests', t => {
   runTest('have replacement for conflicted entry node', {
     tree: new Node({
       path,
-      pkg: { dependencies: { a: '2', c: '1||2' }},
+      pkg: { dependencies: { a: '2', c: '1||2' } },
       children: [
-        { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
-        { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
-        { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
-        { pkg: { name: 'd', version: '1.0.0' }},
+        { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' } } },
+        { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' } } },
+        { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' } } },
+        { pkg: { name: 'd', version: '1.0.0' } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }},
+      pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' } },
     }),
     peerSet: [
-      { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
-      { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
-      { pkg: { name: 'd', version: '2.0.0' }},
+      { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' } } },
+      { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' } } },
+      { pkg: { name: 'd', version: '2.0.0' } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1168,32 +1168,32 @@ t.test('basic placement check tests', t => {
   runTest('replacing overlapping peer sets', {
     tree: new Node({
       path,
-      pkg: { dependencies: { v: '4', y: '1' }},
+      pkg: { dependencies: { v: '4', y: '1' } },
       children: [
         {
           pkg: {
             name: 'v',
             version: '4.0.0',
             peerDependencies: { a: '1||2', x: '2' },
-            peerDependenciesMeta: { x: { optional: true }},
+            peerDependenciesMeta: { x: { optional: true } },
           },
         },
-        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
-        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
-        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
-        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
-        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' } } },
+        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' } } },
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' } } },
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' }},
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' } },
     }),
     peerSet: [
-      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
-      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
-      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
-      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
-      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' } } },
+      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' } } },
+      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' } } },
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' } } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1224,30 +1224,30 @@ t.test('basic placement check tests', t => {
   runTest('replacing partially overlapping peer sets, subset', {
     tree: new Node({
       path,
-      pkg: { dependencies: { v: '4', y: '1' }},
+      pkg: { dependencies: { v: '4', y: '1' } },
       children: [
         {
           pkg: {
             name: 'v',
             version: '4.0.0',
             peerDependencies: { a: '1||2', x: '2' },
-            peerDependenciesMeta: { x: { optional: true }},
+            peerDependenciesMeta: { x: { optional: true } },
           },
         },
-        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' }}},
-        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' }}},
-        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' }}},
-        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' }}},
-        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { b: '2' } } },
+        { pkg: { name: 'b', version: '2.0.0', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { d: '2' } } },
+        { pkg: { name: 'd', version: '2.0.0', peerDependencies: { e: '2' } } },
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' }},
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' } },
     }),
     peerSet: [
-      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { c: '1' }}},
-      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { e: '1' }}},
-      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { e: '1' } } },
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' } } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1276,30 +1276,30 @@ t.test('basic placement check tests', t => {
   runTest('replacing partially overlapping peer sets, superset', {
     tree: new Node({
       path,
-      pkg: { dependencies: { v: '4', y: '1' }},
+      pkg: { dependencies: { v: '4', y: '1' } },
       children: [
         {
           pkg: {
             name: 'v',
             version: '4.0.0',
             peerDependencies: { a: '1||2', x: '2' },
-            peerDependenciesMeta: { x: { optional: true }},
+            peerDependenciesMeta: { x: { optional: true } },
           },
         },
-        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { c: '2' }}},
-        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { e: '2' }}},
-        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' }}},
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { c: '2' } } },
+        { pkg: { name: 'c', version: '2.0.0', peerDependencies: { e: '2' } } },
+        { pkg: { name: 'e', version: '2.0.0', peerDependencies: { a: '2' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' }},
+      pkg: { name: 'y', version: '1.0.0', peerDependencies: { d: '1' } },
     }),
     peerSet: [
-      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' }}},
-      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' }}},
-      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' }}},
-      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' }}},
-      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' }}},
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { b: '1' } } },
+      { pkg: { name: 'b', version: '1.0.0', peerDependencies: { c: '1' } } },
+      { pkg: { name: 'c', version: '1.0.0', peerDependencies: { d: '1' } } },
+      { pkg: { name: 'd', version: '1.0.0', peerDependencies: { e: '1' } } },
+      { pkg: { name: 'e', version: '1.0.0', peerDependencies: { a: '1' } } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1325,7 +1325,7 @@ t.test('basic placement check tests', t => {
   runTest('replacing partially overlapping divergent peer sets', {
     tree: new Node({
       path,
-      pkg: { dependencies: { v: '', w: '' }},
+      pkg: { dependencies: { v: '', w: '' } },
       children: [
         {
           pkg: {
@@ -1334,22 +1334,22 @@ t.test('basic placement check tests', t => {
             peerDependencies: { a: '1||2', x: '1' },
           },
         },
-        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { c: '2', e: '1' }}},
-        { pkg: { name: 'c', version: '2.0.0' }},
-        { pkg: { name: 'e', version: '1.0.0' }},
-        { pkg: { name: 'x', version: '1.0.0', peerDependencies: { y: '1' }}},
-        { pkg: { name: 'y', version: '1.0.0', peerDependencies: { a: '1||2' }}},
+        { pkg: { name: 'a', version: '2.0.0', peerDependencies: { c: '2', e: '1' } } },
+        { pkg: { name: 'c', version: '2.0.0' } },
+        { pkg: { name: 'e', version: '1.0.0' } },
+        { pkg: { name: 'x', version: '1.0.0', peerDependencies: { y: '1' } } },
+        { pkg: { name: 'y', version: '1.0.0', peerDependencies: { a: '1||2' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'w', version: '1.0.0', peerDependencies: { a: '1', j: '1' }},
+      pkg: { name: 'w', version: '1.0.0', peerDependencies: { a: '1', j: '1' } },
     }),
     peerSet: [
-      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { c: '1', d: '1' }}},
-      { pkg: { name: 'j', version: '1.0.0', peerDependencies: { y: '1' }}},
-      { pkg: { name: 'y', version: '1.0.0', peerDependencies: { a: '1||2' }}},
-      { pkg: { name: 'c', version: '1.0.0' }},
-      { pkg: { name: 'd', version: '1.0.0' }},
+      { pkg: { name: 'a', version: '1.0.0', peerDependencies: { c: '1', d: '1' } } },
+      { pkg: { name: 'j', version: '1.0.0', peerDependencies: { y: '1' } } },
+      { pkg: { name: 'y', version: '1.0.0', peerDependencies: { a: '1||2' } } },
+      { pkg: { name: 'c', version: '1.0.0' } },
+      { pkg: { name: 'd', version: '1.0.0' } },
     ],
     nodeLoc: '',
     targetLoc: '',
@@ -1369,17 +1369,17 @@ t.test('basic placement check tests', t => {
   runTest('can dedupe, cannot place peer', {
     tree: new Node({
       path,
-      pkg: { dependencies: { k: '1', y: '1' }},
+      pkg: { dependencies: { k: '1', y: '1' } },
       children: [
-        { pkg: { name: 'y', version: '1.0.0' }},
-        { pkg: { name: 'k', version: '1.0.0', dependencies: { x: '' }}},
+        { pkg: { name: 'y', version: '1.0.0' } },
+        { pkg: { name: 'k', version: '1.0.0', dependencies: { x: '' } } },
       ],
     }),
     dep: new Node({
-      pkg: { name: 'x', version: '1.0.0', peerDependencies: { y: '1||2' }},
+      pkg: { name: 'x', version: '1.0.0', peerDependencies: { y: '1||2' } },
     }),
     peerSet: [
-      { pkg: { name: 'y', version: '2.0.0' }},
+      { pkg: { name: 'y', version: '2.0.0' } },
     ],
     targetLoc: '',
     nodeLoc: 'node_modules/k',
@@ -1395,13 +1395,13 @@ t.test('constructor debug throws', t => {
   })
 
   t.throws(() => new CanPlaceDep({
-    dep: new Node({pkg: {name: 'x', version: '1.2.3'}}),
+    dep: new Node({ pkg: { name: 'x', version: '1.2.3' } }),
   }), {
     message: 'no target provided to CanPlaceDep',
   })
 
   t.throws(() => new CanPlaceDep({
-    dep: new Node({pkg: {name: 'x', version: '1.2.3'}}),
+    dep: new Node({ pkg: { name: 'x', version: '1.2.3' } }),
     target: new Node({ path: '/some/path' }),
   }), {
     message: 'no edge provided to CanPlaceDep',

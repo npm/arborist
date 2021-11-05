@@ -47,12 +47,12 @@ t.test('printable Node', t => {
           realpath: '/home/user/projects/root/node_modules/prod/foo',
           path: '/home/user/projects/root/node_modules/prod/foo',
           name: 'foo',
-          pkg: { name: 'foo', version: '1.2.3', dependencies: {meta: ''}},
+          pkg: { name: 'foo', version: '1.2.3', dependencies: { meta: '' } },
         }, {
           realpath: '/home/user/projects/root/node_modules/prod/bar',
           path: '/home/user/projects/root/node_modules/prod/bar',
           name: 'bar',
-          pkg: { name: 'bar', version: '1.0.0'},
+          pkg: { name: 'bar', version: '1.0.0' },
         }],
         resolved: 'prod',
         integrity: 'prod',
@@ -316,7 +316,7 @@ t.test('show bundle/shrinkwrap info', t => {
         },
         children: [
           {
-            pkg: {name: 'a', version: '1.2.3'},
+            pkg: { name: 'a', version: '1.2.3' },
             integrity: 'a123',
           },
         ],
@@ -333,20 +333,20 @@ t.test('show bundle/shrinkwrap info', t => {
         hasShrinkwrap: true,
         children: [
           {
-            pkg: {name: 'a', version: '1.2.3'},
+            pkg: { name: 'a', version: '1.2.3' },
             integrity: 'a123',
           },
         ],
       },
       {
-        pkg: {name: 'a', version: '1.2.3'},
+        pkg: { name: 'a', version: '1.2.3' },
         integrity: 'a123',
       },
       {
-        pkg: { name: 'c', version: '3.4.5', dependencies: { a: '1' }},
+        pkg: { name: 'c', version: '3.4.5', dependencies: { a: '1' } },
         children: [
           {
-            pkg: {name: 'a', version: '1.2.3'},
+            pkg: { name: 'a', version: '1.2.3' },
             integrity: 'a123',
           },
         ],
@@ -362,8 +362,8 @@ t.test('show bundle/shrinkwrap info', t => {
           },
         },
         children: [
-          { pkg: { name: 'a', version: '1.9.99' }},
-          { pkg: { name: 'e', version: '2.3.4' }, integrity: 'y'},
+          { pkg: { name: 'a', version: '1.9.99' } },
+          { pkg: { name: 'e', version: '2.3.4' }, integrity: 'y' },
           {
             pkg: {
               name: 'c',
@@ -379,7 +379,7 @@ t.test('show bundle/shrinkwrap info', t => {
                 },
                 integrity: 'a2399',
                 children: [
-                  { pkg: { name: 'e', version: '2.0.1'}, integrity: 'x'},
+                  { pkg: { name: 'e', version: '2.0.1' }, integrity: 'x' },
                 ],
               },
             ],
@@ -392,11 +392,11 @@ t.test('show bundle/shrinkwrap info', t => {
                 a: '3',
               },
             },
-            children: [{pkg: {name: 'a', version: '3.4.5'}}],
+            children: [{ pkg: { name: 'a', version: '3.4.5' } }],
           },
         ],
       },
-      { pkg: { name: 'extraneous', version: '1.2.3' }},
+      { pkg: { name: 'extraneous', version: '1.2.3' } },
     ],
   })
 

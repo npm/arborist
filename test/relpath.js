@@ -2,7 +2,7 @@ const t = require('tap')
 
 // verify that we get \ converted to / by forcing win32 path mode
 const path = require('path')
-const {win32} = path
+const { win32 } = path
 path.relative = win32.relative
 
 const relpath = require('../lib/relpath.js')

@@ -162,7 +162,7 @@ t.test('no reset', async t => {
       dependencies: { foo: '' },
     },
   })
-  const foo = new Node({parent: root, pkg: { name: 'foo', version: '1.2.3' }})
+  const foo = new Node({ parent: root, pkg: { name: 'foo', version: '1.2.3' } })
 
   root.optional = false
   root.dev = true

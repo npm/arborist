@@ -1,4 +1,4 @@
-const {resolve, basename} = require('path')
+const { resolve, basename } = require('path')
 const t = require('tap')
 const runScript = require('@npmcli/run-script')
 
@@ -23,7 +23,7 @@ const fs = require('fs')
 let failRename = null
 let failRenameOnce = null
 let failMkdir = null
-const {rename: realRename, mkdir: realMkdir} = fs
+const { rename: realRename, mkdir: realMkdir } = fs
 const fsMock = {
   ...fs,
   mkdir (...args) {
@@ -137,7 +137,7 @@ const newArb = (opt) => new Arborist({
   ...opt,
 })
 
-const reify = (path, opt) => newArb({path, ...(opt || {})}).reify(opt)
+const reify = (path, opt) => newArb({ path, ...(opt || {}) }).reify(opt)
 
 t.test('tarball deps with transitive tarball deps', t =>
   t.resolveMatchSnapshot(printReified(fixture(t, 'tarball-dependencies'))))
@@ -401,7 +401,7 @@ t.test('do not add shrinkwrapped deps', t =>
 t.test('do not update shrinkwrapped deps', t =>
   t.resolveMatchSnapshot(printReified(
     fixture(t, 'shrinkwrapped-dep-with-lock'),
-    { update: { names: ['abbrev']}})))
+    { update: { names: ['abbrev'] } })))
 
 t.test('tracks changes of shrinkwrapped dep correctly', async t => {
   const path = t.testdir({
@@ -448,7 +448,7 @@ t.test('dry run, do not get anything wet', async t => {
   t.plan(cases.length)
   cases.forEach(c => t.test(c, async t => {
     const path = fixture(t, c)
-    const arb = newArb({path, dryRun: true})
+    const arb = newArb({ path, dryRun: true })
     t.matchSnapshot(printTree(await arb.reify()))
     t.throws(() => fs.statSync(resolve(path, 'node_modules')))
     t.ok(arb.diff)
@@ -901,7 +901,7 @@ t.test('saving the ideal tree', t => {
     const path = t.testdir({
       'package.json': JSON.stringify(pkg),
       e: {
-        'package.json': JSON.stringify({name: 'e'}),
+        'package.json': JSON.stringify({ name: 'e' }),
       },
       node_modules: {
         e: t.fixture('symlink', '../e'),
@@ -909,7 +909,7 @@ t.test('saving the ideal tree', t => {
     })
     const a = newArb({ path })
     const hash = '71f3ccfefba85d2048484569dba8c1829f6f41d7'
-    return a.loadActual().then(tree => Shrinkwrap.load({path}).then(meta => {
+    return a.loadActual().then(tree => Shrinkwrap.load({ path }).then(meta => {
       tree.meta = meta
       meta.add(tree)
       return tree
@@ -1082,7 +1082,7 @@ t.test('bin links adding and removing', t => {
     'package.json': JSON.stringify({}),
   })
   const rbin = resolve(path, 'node_modules/.bin/rimraf')
-  return reify(path, { add: ['rimraf@2.7.1']})
+  return reify(path, { add: ['rimraf@2.7.1'] })
     .then(() => fs.statSync(rbin)) // should be there
     .then(() => reify(path, { rm: ['rimraf'] }))
     .then(() => t.throws(() => fs.statSync(rbin))) // should be gone
@@ -1094,7 +1094,7 @@ t.test('global style', t => {
   const rbinPart = '.bin/rimraf' +
     (process.platform === 'win32' ? '.cmd' : '')
   const rbin = resolve(nm, rbinPart)
-  return reify(path, { add: ['rimraf@2'], globalStyle: true})
+  return reify(path, { add: ['rimraf@2'], globalStyle: true })
     .then(() => fs.statSync(rbin))
     .then(() => t.strictSame(fs.readdirSync(nm).sort(), ['.bin', '.package-lock.json', 'rimraf']))
 })
@@ -1111,30 +1111,30 @@ t.test('global', t => {
   const semverBin = resolve(binTarget, isWindows ? 'semver.cmd' : 'semver')
 
   t.test('add rimraf', t =>
-    reify(lib, { add: ['rimraf@2'], global: true})
+    reify(lib, { add: ['rimraf@2'], global: true })
       .then(() => fs.statSync(rimrafBin))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
 
   t.test('add semver', t =>
-    reify(lib, { add: ['semver@6.3.0'], global: true})
+    reify(lib, { add: ['semver@6.3.0'], global: true })
       .then(() => fs.statSync(rimrafBin))
       .then(() => fs.statSync(semverBin))
       .then(() => t.strictSame(fs.readdirSync(nm).sort(), ['rimraf', 'semver'])))
 
   t.test('remove semver', t =>
-    reify(lib, { rm: ['semver'], global: true})
+    reify(lib, { rm: ['semver'], global: true })
       .then(() => fs.statSync(rimrafBin))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
 
   t.test('remove rimraf', t =>
-    reify(lib, { rm: ['rimraf'], global: true})
+    reify(lib, { rm: ['rimraf'], global: true })
       .then(() => t.throws(() => fs.statSync(rimrafBin)))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), [])))
 
   t.test('add without bin links', t =>
-    reify(lib, { add: ['rimraf@2'], global: true, binLinks: false})
+    reify(lib, { add: ['rimraf@2'], global: true, binLinks: false })
       .then(() => t.throws(() => fs.statSync(rimrafBin)))
       .then(() => t.throws(() => fs.statSync(semverBin)))
       .then(() => t.strictSame(fs.readdirSync(nm), ['rimraf'])))
@@ -1440,7 +1440,7 @@ t.test('rollback if process is terminated during reify process', async t => {
           proc.kill(process.pid, 'SIGINT'))
       }
       const path = t.testdir({
-        'package.json': JSON.stringify({ dependencies: { abbrev: '' }}),
+        'package.json': JSON.stringify({ dependencies: { abbrev: '' } }),
       })
 
       t.test('clean install', async t => {
@@ -1467,7 +1467,7 @@ t.test('rollback if process is terminated during reify process', async t => {
           name: 'abbrev',
           version: '0.0.0',
         }))
-        const arb = newArb({path})
+        const arb = newArb({ path })
         await t.rejects(arb.reify({ add: ['abbrev@1.1.1'] }), {
           message: 'process terminated',
           signal: 'SIGINT',

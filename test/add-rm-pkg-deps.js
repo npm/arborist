@@ -2,7 +2,7 @@ const t = require('tap')
 const addRm = require('../lib/add-rm-pkg-deps.js')
 
 t.test('add', t => {
-  const {add} = addRm
+  const { add } = addRm
   const npa = require('npm-package-arg')
   const foo1 = npa('foo@1')
   const foo2 = npa('foo@2')
@@ -88,7 +88,7 @@ t.test('add', t => {
   t.strictSame(add({
     pkg: {
       peerDependencies: { foo: '1' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo1],
     saveType: 'optional',
@@ -105,38 +105,38 @@ t.test('add', t => {
     saveType: 'peerOptional',
   }), {
     peerDependencies: { foo: '1' },
-    peerDependenciesMeta: { foo: { optional: true }},
+    peerDependenciesMeta: { foo: { optional: true } },
   }, 'move from optional to peerOptional')
 
   t.strictSame(add({
     pkg: {
       peerDependencies: { foo: '1' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo1],
     saveType: 'peer',
   }), {
     peerDependencies: { foo: '1' },
-    peerDependenciesMeta: { foo: { optional: false }},
+    peerDependenciesMeta: { foo: { optional: false } },
   }, 'move from peerOptional to peer')
 
   t.strictSame(add({
     pkg: {
       peerDependencies: { foo: '1', bar: '2' },
-      peerDependenciesMeta: { foo: { optional: true }, bar: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true }, bar: { optional: true } },
     },
     add: [foo1],
     saveType: 'prod',
   }), {
     dependencies: { foo: '1' },
     peerDependencies: { bar: '2' },
-    peerDependenciesMeta: { bar: { optional: true }},
+    peerDependenciesMeta: { bar: { optional: true } },
   }, 'move from peerOptional to prod, remnants in peerDependencies')
 
   t.strictSame(add({
     pkg: {
       peerDependencies: { foo: '1' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo1],
     saveType: 'prod',
@@ -147,12 +147,12 @@ t.test('add', t => {
   t.strictSame(add({
     pkg: {
       peerDependencies: { foo: '1' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo2],
   }), {
     peerDependencies: { foo: '2' },
-    peerDependenciesMeta: { foo: { optional: true }},
+    peerDependenciesMeta: { foo: { optional: true } },
   }, 'update peerOptional')
 
   t.strictSame(add({
@@ -198,46 +198,46 @@ t.test('add', t => {
     pkg: {
       devDependencies: { foo: '1' },
       peerDependencies: { foo: '1' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
     peerDependencies: { foo: '1' },
-    peerDependenciesMeta: { foo: { optional: true }},
+    peerDependenciesMeta: { foo: { optional: true } },
   }, 'update dev (peer is updated during reify)')
 
   t.strictSame(add({
     pkg: {
       devDependencies: { foo: '*' },
       peerDependencies: { foo: '1' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
     peerDependencies: { foo: '1' },
-    peerDependenciesMeta: { foo: { optional: true }},
+    peerDependenciesMeta: { foo: { optional: true } },
   }, 'update dev (peer is updated during reify)')
 
   t.strictSame(add({
     pkg: {
       devDependencies: { foo: '1' },
       peerDependencies: { foo: '*' },
-      peerDependenciesMeta: { foo: { optional: true }},
+      peerDependenciesMeta: { foo: { optional: true } },
     },
     add: [foo2],
   }), {
     devDependencies: { foo: '2' },
     peerDependencies: { foo: '*' },
-    peerDependenciesMeta: { foo: { optional: true }},
+    peerDependenciesMeta: { foo: { optional: true } },
   }, 'update dev (peer is updated during reify)')
 
   t.end()
 })
 
 t.test('rm', t => {
-  const {rm} = addRm
+  const { rm } = addRm
   t.strictSame(rm({
     dependencies: { bar: '1' },
     devDependencies: { foo: '2' },

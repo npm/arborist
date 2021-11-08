@@ -1,8 +1,20 @@
-const options = require('./options.js')
-const { quiet = false } = options
-const { loglevel = quiet ? 'warn' : 'silly' } = options
+const log = require('proc-log')
+const mkdirp = require('mkdirp')
+const fs = require('fs')
+const { resolve, dirname } = require('path')
+const os = require('os')
+const { inspect, format } = require('util')
 
-const levels = [
+const {
+  cmd,
+  path,
+  quiet = false,
+  logfile = null,
+  colors: useColors = !!process.stdout.isTTY,
+  loglevel: useLevel = quiet ? 'warn' : 'silly',
+} = require('./options.js')
+
+const levels = new Map([
   'silly',
   'verbose',
   'info',
@@ -12,31 +24,44 @@ const levels = [
   'warn',
   'error',
   'silent',
-]
+].map((level, index) => [level, index]))
 
-const levelMap = new Map(levels.reduce((set, level, index) => {
-  set.push([level, index], [index, level])
-  return set
-}, []))
+const initStream = (write, { eol = os.EOL, colors = false, loglevel: showLevel = 'silly' } = {}) => {
+  const magenta = m => colors ? `\x1B[35m${m}\x1B[39m` : m
+  const dim = m => colors ? `\x1B[2m${m}\x1B[22m` : m
+  const red = m => colors ? `\x1B[31m${m}\x1B[39m` : m
 
-const { inspect, format } = require('util')
-const colors = process.stderr.isTTY
-const magenta = colors ? msg => `\x1B[35m${msg}\x1B[39m` : m => m
-if (loglevel !== 'silent') {
-  process.on('log', (level, ...args) => {
-    if (levelMap.get(level) < levelMap.get(loglevel)) {
-      return
+  const formatter = (level, ...args) => {
+    const depth = level === 'error' && args[0] && args[0].code === 'ERESOLVE' ? Infinity : 10
+
+    if (level === 'info' && args[0] === 'timeEnd') {
+      args[1] = dim(args[1])
+    } else if (level === 'error' && args[0] === 'timeError') {
+      args[1] = red(args[1])
     }
+
+    const messages = args.map(a => typeof a === 'string' ? a : inspect(a, { depth, colors }))
     const pref = `${process.pid} ${magenta(level)} `
-    if (level === 'warn' && args[0] === 'ERESOLVE') {
-      args[2] = inspect(args[2], { depth: 10, colors })
-    } else {
-      args = args.map(a => {
-        return typeof a === 'string' ? a
-          : inspect(a, { depth: 10, colors })
-      })
-    }
-    const msg = pref + format(...args).trim().split('\n').join(`\n${pref}`)
-    console.error(msg)
+
+    return pref + format(...messages).trim().split('\n').join(`${eol}${pref}`) + eol
+  }
+
+  const showMessage = (level) => levels.get(showLevel) >= levels.get(level)
+
+  process.on('log', (level, ...args) => {
+    showMessage(level) && write(formatter(level, ...args))
   })
 }
+
+if (useLevel !== 'silent') {
+  initStream((str) => process.stderr.write(str), { eol: '\n', colors: useColors, loglevel: useLevel })
+}
+
+if (logfile) {
+  const filename = resolve(path, typeof logfile === 'string' ? logfile : `_log-${cmd}-${Date.now()}.log`)
+  mkdirp.sync(dirname(filename))
+  const fd = fs.openSync(filename, 'a')
+  initStream((str) => fs.writeSync(fd, str))
+}
+
+module.exports = log

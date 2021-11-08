@@ -1,7 +1,10 @@
+const [cmd] = process.argv.splice(2, 1)
+
 const options = module.exports = {
   path: undefined,
   cache: `${process.env.HOME}/.npm/_cacache`,
   _: [],
+  cmd,
 }
 
 for (const arg of process.argv.slice(2)) {
@@ -55,5 +58,3 @@ for (const arg of process.argv.slice(2)) {
 if (options.path === undefined) {
   options.path = '.'
 }
-
-console.error(options)

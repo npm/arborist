@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-const [cmd] = process.argv.splice(2, 1)
 
 const usage = () => `Arborist - the npm tree doctor
 
@@ -31,6 +30,7 @@ example, instead of '--dry-run', use '--dryRun'.
 Additionally:
 
 * --quiet will supppress the printing of package trees
+* --logfile <file> will output logs to a file
 * Instead of 'npm install <pkg>', use 'arborist reify --add=<pkg>'.
   The '--add=<pkg>' option can be specified multiple times.
 * Instead of 'npm rm <pkg>', use 'arborist reify --rm=<pkg>'.
@@ -39,43 +39,61 @@ Additionally:
 * 'npm audit fix' is 'arborist audit --fix'
 `
 
-const help = () => console.log(usage())
+require('./lib/timers')
+const { cmd, ...options } = require('./lib/options')
+const log = require('./lib/logging')
+log.info(cmd, options)
+let task = null
 
 switch (cmd) {
   case 'actual':
-    require('./actual.js')
-    break
-  case 'virtual':
-    require('./virtual.js')
-    break
-  case 'ideal':
-    require('./ideal.js')
-    break
-  case 'prune':
-    require('./prune.js')
-    break
-  case 'reify':
-    require('./reify.js')
-    break
   case 'audit':
-    require('./audit.js')
-    break
   case 'funding':
-    require('./funding.js')
-    break
+  case 'ideal':
   case 'license':
-    require('./license.js')
-    break
+  case 'prune':
+  case 'reify':
   case 'shrinkwrap':
-    require('./shrinkwrap.js')
+  case 'virtual':
+    task = require(`./${cmd}.js`)
     break
   case 'help':
   case '-h':
   case '--help':
-    help()
+    console.log(usage())
     break
   default:
     process.exitCode = 1
     console.error(usage())
     break
+}
+
+if (task) {
+  const start = process.hrtime.bigint()
+  process.emit('time', 'init')
+  process.emit('time', `${cmd} script`)
+  task(options, (result) => {
+    process.emit('timeEnd', `${cmd} script`)
+    const elapsed = Number(process.hrtime.bigint() - start)
+    const ms = elapsed / 1000000
+    const s = elapsed / 1000000000
+    return {
+      timing: {
+        seconds: `${s}s`,
+        ms: `${ms}ms`,
+      },
+      result,
+    }
+  })
+    .then((result) => {
+      log.info(result)
+      process.emit('timeEnd', 'init')
+      console.log('Result:', result)
+    })
+    .catch((err) => {
+      process.exitCode = 1
+      log.error(err)
+      process.emit('timeEnd', 'init')
+      console.error('Result:', err)
+    })
 }

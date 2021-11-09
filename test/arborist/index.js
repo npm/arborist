@@ -131,6 +131,7 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
       workspaces: ['pkgs/*'],
       dependencies: {
         foo: '',
+        nope: '',
       },
     },
     children: [
@@ -165,6 +166,12 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
           },
         },
       },
+      {
+        pkg: {
+          name: 'nope',
+          version: '0.90.0',
+        },
+      },
     ],
   })
   const pkgA = new Node({
@@ -196,6 +203,7 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
       version: '1.0.0',
       dependencies: {
         fritzy: '',
+        nope: '',
       },
     },
     root: tree,
@@ -215,7 +223,7 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
   const arb = new Arborist()
   const filter = arb.excludeWorkspacesDependencySet(tree)
 
-  t.equal(filter.size, 2)
+  t.equal(filter.size, 3)
   t.equal(filter.has(tree.children.get('foo')), true)
   t.equal(filter.has(tree.children.get('bar')), true)
 })

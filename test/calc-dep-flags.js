@@ -3,6 +3,7 @@ const t = require('tap')
 const calcDepFlags = require('../lib/calc-dep-flags.js')
 const Node = require('../lib/node.js')
 const Link = require('../lib/link.js')
+const Edge = require('../lib/edge.js')
 
 const {
   normalizePath,
@@ -262,5 +263,122 @@ t.test('set parents to not extraneous when visiting', t => {
   t.equal(foo.devOptional, false, 'foo not devOptional')
   t.equal(fooLink.devOptional, false, 'foolink not devOptional')
   t.equal(bazLink.devOptional, false, 'bazlink not devOptional')
+  t.end()
+})
+
+t.test('workspace depenedencies', t => {
+  const tree = new Node({
+    path: '/hi',
+    pkg: {
+      workspaces: ['pkgs/*'],
+      dependencies: {
+        foo: '',
+        nope: '',
+      },
+    },
+    children: [
+      {
+        pkg: {
+          name: 'foo',
+          version: '0.1.1',
+          dependencies: {
+            bar: '',
+            asdf: '',
+          },
+        },
+      },
+      {
+        pkg: {
+          name: 'bar',
+          version: '0.2.0',
+        },
+      },
+      {
+        pkg: {
+          name: 'baz',
+          version: '9.2.0',
+        },
+      },
+      {
+        pkg: {
+          name: 'fritzy',
+          version: '2.2.9',
+          optionalDependencies: {
+            isaacs: '',
+            bar: '',
+          },
+        },
+      },
+      {
+        pkg: {
+          name: 'nope',
+          version: '0.90.0',
+        },
+      },
+    ],
+  })
+  const pkgA = new Node({
+    path: tree.path + '/pkgs/a',
+    pkg: {
+      name: 'a',
+      version: '1.0.0',
+      dependencies: {
+        baz: '',
+      },
+    },
+    root: tree,
+  })
+  new Link({
+    name: 'a',
+    parent: tree,
+    target: pkgA,
+  })
+  new Edge({
+    type: 'workspace',
+    from: tree,
+    name: 'a',
+    spec: 'file:pkgs/a',
+  })
+  const pkgB = new Node({
+    path: tree.path + '/pkgs/b',
+    pkg: {
+      name: 'b',
+      version: '1.0.0',
+      dependencies: {
+        fritzy: '',
+        nope: '',
+      },
+    },
+    root: tree,
+  })
+  new Link({
+    name: 'b',
+    parent: tree,
+    target: pkgB,
+  })
+  new Edge({
+    type: 'workspace',
+    from: tree,
+    name: 'b',
+    spec: 'file:pkgs/b',
+  })
+  calcDepFlags(tree, true)
+  {
+    const nope = tree.children.get('nope').target
+    const fritzy = tree.children.get('fritzy').target
+    const bar = tree.children.get('bar').target
+    const baz = tree.children.get('baz').target
+    const foo = tree.children.get('foo').target
+    t.equal(nope.rootDep, true, 'nope is rootDep')
+    t.equal(nope.workspaceDep, true, 'nope is workspaceDep')
+    t.equal(fritzy.rootDep, false, 'fritzy is rootDep')
+    t.equal(fritzy.workspaceDep, true, 'fritzy is workspaceDep')
+    t.equal(bar.rootDep, true, 'bar is rootDep')
+    t.equal(bar.workspaceDep, true, 'bar is workspaceDep')
+    t.equal(baz.rootDep, false, 'baz is rootDep')
+    t.equal(baz.workspaceDep, true, 'baz is workspaceDep')
+    t.equal(foo.rootDep, true, 'foo is rootDep')
+    t.equal(foo.workspaceDep, false, 'foo is workspaceDep')
+  }
   t.end()
 })

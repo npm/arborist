@@ -122,6 +122,33 @@ t.test('workspace nodes and deps', async t => {
     t.equal(wsDepSet.has(tree.children.get('abbrev')), true)
     t.equal(wsDepSet.has(tree.children.get('abbrev').target), true)
   }
+  new Node({
+    name: 'cookiemonster',
+    pkg: {
+      name: 'cookiemonster',
+      version: '6.2.12',
+    },
+    parent: tree.children.get('wrappy').target,
+  })
+  new Edge({
+    from: tree.children.get('wrappy').target,
+    spec: '4.3.2',
+    name: 'flutebaritone',
+    type: 'prod',
+  })
+  new Node({
+    name: 'flutebaritone',
+    pkg: {
+      name: 'flutebaritone',
+      version: '4.3.2',
+    },
+    extraneous: false,
+    dev: false,
+    optional: false,
+    devOptional: false,
+    peer: false,
+    parent: tree.children.get('wrappy').target,
+  })
 })
 
 t.test('excludeSet includes nonworkspace metadeps', async t => {

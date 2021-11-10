@@ -160,7 +160,6 @@ const setup = () => {
       didSomething = true
     } catch (_) {}
   })
-  console.log(didSomething)
   if (didSomething) {
     const gifile = resolve(__dirname, './.gitignore')
     const gitignore = readFileSync(gifile, 'utf8')

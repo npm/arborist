@@ -180,6 +180,26 @@ ArboristNode {
       "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/b",
       "version": "1.2.3",
     },
+    "derp" => ArboristNode {
+      "edgesIn": Set {
+        EdgeIn {
+          "from": "",
+          "name": "derp",
+          "spec": "*",
+          "type": "prod",
+        },
+        EdgeIn {
+          "from": "node_modules/once",
+          "name": "derp",
+          "spec": "*",
+          "type": "prod",
+        },
+      },
+      "location": "node_modules/derp",
+      "name": "derp",
+      "path": "{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/node_modules/derp",
+      "version": "90.2.11",
+    },
     "once" => ArboristNode {
       "edgesIn": Set {
         EdgeIn {
@@ -190,6 +210,12 @@ ArboristNode {
         },
       },
       "edgesOut": Map {
+        "derp" => EdgeOut {
+          "name": "derp",
+          "spec": "*",
+          "to": "node_modules/derp",
+          "type": "prod",
+        },
         "wrappy" => EdgeOut {
           "name": "wrappy",
           "spec": "*",
@@ -245,6 +271,12 @@ ArboristNode {
       "spec": "file:{CWD}/test/arborist/tap-testdir-pruner-prune-workspaces/packages/b",
       "to": "node_modules/b",
       "type": "workspace",
+    },
+    "derp" => EdgeOut {
+      "name": "derp",
+      "spec": "*",
+      "to": "node_modules/derp",
+      "type": "prod",
     },
     "qs" => EdgeOut {
       "name": "qs",

@@ -131,6 +131,7 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
       workspaces: ['pkgs/*'],
       dependencies: {
         foo: '',
+        fritzy: '',
       },
     },
     children: [
@@ -215,9 +216,11 @@ t.test('excludeSet includes nonworkspace metadeps', async t => {
   const arb = new Arborist()
   const filter = arb.excludeWorkspacesDependencySet(tree)
 
-  t.equal(filter.size, 2)
+  t.equal(filter.size, 3)
   t.equal(filter.has(tree.children.get('foo')), true)
   t.equal(filter.has(tree.children.get('bar')), true)
+  t.equal(filter.has(tree.children.get('baz')), false)
+  t.equal(filter.has(tree.children.get('fritzy')), true)
 })
 
 t.test('lockfileVersion config validation', async t => {

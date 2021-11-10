@@ -124,6 +124,7 @@ t.test('prune workspaces', async t => {
       main: 'index.js',
       dependencies: {
         qs: '',
+        derp: '',
       },
       scripts: {
         test: 'echo "Error: no test specified" && exit 1',
@@ -171,6 +172,7 @@ t.test('prune workspaces', async t => {
           version: '1.2.3',
           dependencies: {
             wrappy: '',
+            derp: '',
           },
         }),
       },
@@ -186,6 +188,12 @@ t.test('prune workspaces', async t => {
           version: '1.2.3',
         }),
       },
+      derp: {
+        'package.json': JSON.stringify({
+          name: 'derp',
+          version: '90.2.11',
+        }),
+      },
     },
   })
   const tree = await pruneTree(path, { workspacesEnabled: false })
@@ -194,5 +202,6 @@ t.test('prune workspaces', async t => {
   t.notOk(fs.existsSync(join(path, 'node_modules', 'wrappy')), 'wrappy was pruned from tree')
   t.notOk(fs.existsSync(join(path, 'node_modules', 'a')), 'a was pruned from tree')
   t.notOk(fs.existsSync(join(path, 'node_modules', 'b')), 'b was pruned from tree')
+  t.ok(fs.existsSync(join(path, 'node_modules', 'derp')), 'derp was not pruned from tree')
   t.matchSnapshot(printTree(tree))
 })

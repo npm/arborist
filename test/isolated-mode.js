@@ -69,19 +69,19 @@ tap.test('simple peer dependencies scenarios', async t => {
   t.doesNotThrow(() => require.resolve('ws', { paths: [ wsPath ] }), 'ws should be able to require itself')
   t.throws(() => require.resolve('node-gyp-build', { paths: [ wsPath ] }), 'ws should not be able to require transitive dependency to node-gyp-build')
 
-  // bufferutil can resolve its deps and only that
+  // bufferutil can resolve its deps and dependencies of the root
   const bufferutilPath = path.dirname(require.resolve('bufferutil', { paths: [ wsPath ] }))
   t.doesNotThrow(() => require.resolve('node-gyp-build', { paths: [ bufferutilPath ] }), 'bufferutil should be able to require its own dependency to node-gyp-build')
   t.doesNotThrow(() => require.resolve('bufferutil', { paths: [ bufferutilPath ] }), 'bufferutil should be able to require itself')
-  t.throws(() => require.resolve('ws', { paths: [ bufferutilPath ] }), 'bufferutil should not be able to require its parent')
+  t.doesNotThrow(() => require.resolve('ws', { paths: [ bufferutilPath ] }), 'bufferutil should be able to require its parent because it is a root dependency')
   t.throws(() => require.resolve('utf-8-validate', { paths: [ bufferutilPath ] }), 'bufferutil should not be able to require its sibling')
 
-  // utf-8-validate can resolve its deps and only that
+  // utf-8-validate can resolve its deps and dependencies of the root
   const utf8validatePaty = path.dirname(require.resolve('utf-8-validate', { paths: [ wsPath ] }))
   t.doesNotThrow(() => require.resolve('node-gyp-build', { paths: [ utf8validatePaty ] }), 'utf-8-validate should be able to require its own dependency to node-gyp-build')
   t.doesNotThrow(() => require.resolve('utf-8-validate', { paths: [ utf8validatePaty ] }), 'utf-8-validate should be able to require itself')
-  t.throws(() => require.resolve('ws', { paths: [ utf8validatePaty ] }), 'utf-8-validate should not be able to require its parent')
-  t.throws(() => require.resolve('bufferutil', { paths: [ utf8validatePaty ] }), 'utf-8-validate should not be able to require its sibling')
+  t.doesNotThrow(() => require.resolve('ws', { paths: [ utf8validatePaty ] }), 'utf-8-validate should be able to require ws because it is a root dependency')
+  t.doesNotThrow(() => require.resolve('bufferutil', { paths: [ utf8validatePaty ] }), 'utf-8-validate should be able to require bufferutil because it is a root dependency')
 
   // foo and ws share the same instance of bufferutil (due to it being a peer dependency)
   t.same(require.resolve('bufferutil', { paths: [ cwd ] }), require.resolve('bufferutil', { paths: [ wsPath ] }), 'peer dependencies are correctly shared with the parents')

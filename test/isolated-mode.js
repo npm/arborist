@@ -4,7 +4,7 @@ const path = require('path')
 const Arborist = require('../lib/arborist')
 
 tap.test('most simple happy scenario', async t => {
-  const package = { name: 'foo', dependencies: { 'which': '*' } }
+  const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
   const cwd = t.testdir({
     'package.json': JSON.stringify(package)

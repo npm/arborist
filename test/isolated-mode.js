@@ -86,3 +86,24 @@ tap.test('simple peer dependencies scenarios', async t => {
   // foo and ws share the same instance of bufferutil (due to it being a peer dependency)
   t.same(require.resolve('bufferutil', { paths: [ cwd ] }), require.resolve('bufferutil', { paths: [ wsPath ] }), 'peer dependencies are correctly shared with the parents')
 })
+
+
+/*
+  * TO TEST:
+  * - chain of peer dependencies
+  * - dependency graph with two different versions
+  * - failed optional dependency
+  * - workspaces
+  * - shinkwrapped dependency
+  * - bundled dependencies
+  * - deduplication that happen in isolated mode but not in hoisted
+  * - circular dependencies
+  * - circular peer dependencies
+  * - peer dependencies on the parent
+  * - maybe some more convoluted cases copied from other existing tests
+  * - case that result in a ERESOLVE error
+  * - repos that are already partially installed (the case of `npm install --save-dev react`)
+  * - the lock file is the same in hoisting and isolated mode
+  * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
+  *
+  */

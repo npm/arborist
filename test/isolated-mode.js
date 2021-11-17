@@ -255,10 +255,6 @@ function setupRequire(cwd) {
 }
 
 /*
-  t.doesNotThrow(() => require.resolve('ws', { paths: [ bufferutilPath ] }), 'bufferutil should be able to require its parent because it is a root dependency')
-  t.throws(() => require.resolve('utf-8-validate', { paths: [ bufferutilPath ] }), 'bufferutil should not be able to require its sibling')
-*/
-/*
   * TO TEST:
   * - chain of peer dependencies
   * - dependency graph with two different versions

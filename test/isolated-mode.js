@@ -120,6 +120,7 @@ tap.test('basic workspaces setup', async t => {
       }
     }),
     bar: {
+      'index.js': 'console.log(\'okay\')',
       'package.json': JSON.stringify({
         name: 'bar',
         dependencies: {
@@ -128,6 +129,7 @@ tap.test('basic workspaces setup', async t => {
       })
     },
     baz: {
+      'index.js': 'console.log(\'okay\')',
       'package.json': JSON.stringify({
         name: 'baz',
         dependencies: {
@@ -137,6 +139,7 @@ tap.test('basic workspaces setup', async t => {
       }),
     },
     cat: {
+      'index.js': 'console.log(\'okay\')',
       'package.json': JSON.stringify({
         name: 'cat',
         dependencies: {
@@ -145,6 +148,7 @@ tap.test('basic workspaces setup', async t => {
       })
     },
     fish: {
+      'index.js': 'console.log(\'okay\')',
       'package.json': JSON.stringify({
         name: 'fish',
         dependencies: {
@@ -154,6 +158,7 @@ tap.test('basic workspaces setup', async t => {
       })
     },
     catfish: {
+      'index.js': 'console.log(\'okay\')',
       'package.json': JSON.stringify({
         name: 'catfish'
       })
@@ -231,7 +236,7 @@ tap.test('basic workspaces setup', async t => {
   // versions of which are correctly shared
   t.same(requireChain('bar', 'which'), requireChainFromBaz('which'), 'bar and baz resolve to the same instance of which')
   t.same(requireChainFromCat('which'), requireChainFromFish('which'), 'cat and fish resolve to the same instance of which')
-  t.noSame(requireChain('bar', 'which'), requireChainFromFish('which'), 'bar and fish resolve to the a different instance of which')
+  t.notSame(requireChain('bar', 'which'), requireChainFromFish('which'), 'bar and fish resolve to the a different instance of which')
 
   // both versions of which can require isexe
   t.ok(requireChain('bar', 'which', 'isexe'),'bar\'s version of which can require its dependency isexe')

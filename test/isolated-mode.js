@@ -88,6 +88,31 @@ tap.test('simple peer dependencies scenarios', async t => {
 })
 
 
+tap.test('lock file is same in hoisted and in isolatedMode', async t => {
+  const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
+
+  const hoistedModeDir = t.testdir({
+    'package.json': JSON.stringify(package)
+  })
+  const isolatedModeDir = t.testdir({
+    'package.json': JSON.stringify(package)
+  })
+  const arboristHoisted = new Arborist({ path: hoistedModeDir })
+  const arboristIsolated = new Arborist({ path: isolatedModeDir })
+
+  await Promise.all([
+    arboristHoisted.reify({ isolated: false }),
+    arboristIsolated.reify({ isolated: true }),
+  ])
+
+  const [hoistedModeLockFile, isolatedModeLockFile] = await Promise.all([
+    fs.promises.readFile(path.join(hoistedModeDir, 'package-lock.json'), { encoding: 'utf8' }),
+    fs.promises.readFile(path.join(isolatedModeDir, 'package-lock.json'), { encoding: 'utf8' }),
+  ])
+
+  t.same(hoistedModeLockFile, isolatedModeLockFile, 'hoited mode and isolated mode produce the same lockfile')
+})
+
 /*
   * TO TEST:
   * - chain of peer dependencies
@@ -103,7 +128,6 @@ tap.test('simple peer dependencies scenarios', async t => {
   * - maybe some more convoluted cases copied from other existing tests
   * - case that result in a ERESOLVE error
   * - repos that are already partially installed (the case of `npm install --save-dev react`)
-  * - the lock file is the same in hoisting and isolated mode
   * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
   *
   */

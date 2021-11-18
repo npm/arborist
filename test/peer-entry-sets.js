@@ -16,17 +16,17 @@ t.test('basic test', t => {
   const path = '/some/path'
   const a = new Node({
     path,
-    pkg: { name: 'a', version, dependencies: { b: '', c: '', d: '' }},
+    pkg: { name: 'a', version, dependencies: { b: '', c: '', d: '' } },
     children: [
-      { pkg: { name: 'b', version, peerDependencies: { d: '' }}},
-      { pkg: { name: 'c', version, peerDependencies: { f: '', h: '' }}},
-      { pkg: { name: 'd', version, peerDependencies: { e: '' }}},
-      { pkg: { name: 'e', version, peerDependencies: { f: '' }}},
-      { pkg: { name: 'f', version, peerDependencies: { g: '' }}},
+      { pkg: { name: 'b', version, peerDependencies: { d: '' } } },
+      { pkg: { name: 'c', version, peerDependencies: { f: '', h: '' } } },
+      { pkg: { name: 'd', version, peerDependencies: { e: '' } } },
+      { pkg: { name: 'e', version, peerDependencies: { f: '' } } },
+      { pkg: { name: 'f', version, peerDependencies: { g: '' } } },
       // g has an invalid dep on c, skip that one
-      { pkg: { name: 'g', version, dependencies: { c: '2' }, peerDependencies: { f: '' }}},
+      { pkg: { name: 'g', version, dependencies: { c: '2' }, peerDependencies: { f: '' } } },
       // h has an invalid peer dep on d, skip that one
-      { pkg: { name: 'h', version, peerDependencies: { g: '', d: '2' }}},
+      { pkg: { name: 'h', version, peerDependencies: { g: '', d: '2' } } },
     ],
   })
   const b = a.children.get('b')

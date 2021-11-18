@@ -16,7 +16,7 @@ const formatNode = node =>
     integrity: node.integrity,
   })
 
-const {format} = require('tcompare')
+const { format } = require('tcompare')
 
 const path = diff => normalizePath((diff.actual || diff.ideal).path)
   .split(normalizedCWD).join('{CWD}')
@@ -59,7 +59,7 @@ const actual = new Node({
         { name: 'c', integrity: 'sha512-ccc' },
         { name: 'd',
           integrity: 'sha512-ddd',
-          children: [{ name: 'e', integrity: 'sha512-eee'}],
+          children: [{ name: 'e', integrity: 'sha512-eee' }],
         },
         { name: 'f', integrity: 'sha512-fff' },
       ],
@@ -72,13 +72,13 @@ const actual = new Node({
           integrity: 'sha512-yyy',
           children: [
             { name: 'z', integrity: null, resolved: 'foobarbaz' },
-          ]},
+          ] },
       ],
     },
     {
       name: 'p',
       integrity: 'sha512-ppp',
-      children: [{name: 'q', integrity: 'sha512-qqq'}],
+      children: [{ name: 'q', integrity: 'sha512-qqq' }],
     },
     {
       name: 'bundler',
@@ -142,7 +142,7 @@ const ideal = new Node({
         { name: 'c', integrity: 'sha512-CCC' },
         { name: 'd',
           integrity: 'sha512-ddd',
-          children: [{ name: 'e', integrity: 'sha512-EEE'}],
+          children: [{ name: 'e', integrity: 'sha512-EEE' }],
         },
         { name: 'f', integrity: 'sha512-fff' },
       ],
@@ -155,13 +155,13 @@ const ideal = new Node({
           integrity: 'sha512-YYY',
           children: [
             { name: 'z', integrity: null, resolved: 'foobarbaz' },
-          ]},
+          ] },
       ],
     },
     {
       name: 'i',
       integrity: 'sha512-III',
-      children: [{name: 'j', integrity: 'sha512-JJJ'}],
+      children: [{ name: 'j', integrity: 'sha512-JJJ' }],
     },
     {
       name: 'bundler',
@@ -188,7 +188,7 @@ const ideal = new Node({
   ],
 })
 
-const d = Diff.calculate({actual, ideal})
+const d = Diff.calculate({ actual, ideal })
 t.matchSnapshot(d, 'diff two trees')
 t.equal(d.parent, null, 'root has no parent')
 t.equal([...d.children][0].parent, d, 'parent of root child is root')
@@ -277,7 +277,7 @@ t.test('filtered diff', async t => {
     },
   })
 
-  const cExcludedABPresent = Diff.calculate({actual, ideal, filterNodes: [a]})
+  const cExcludedABPresent = Diff.calculate({ actual, ideal, filterNodes: [a] })
   t.matchSnapshot(cExcludedABPresent, 'c excluded, a and b present')
 
   // make sure that *removing* something that *would* be depended on
@@ -313,7 +313,7 @@ t.test('filtered diff', async t => {
     },
   })
 
-  const removeD = Diff.calculate({actual, ideal, filterNodes: [a]})
+  const removeD = Diff.calculate({ actual, ideal, filterNodes: [a] })
   t.matchSnapshot(removeD, 'd is removed')
 
   // removing a dependency, like we would with `npm rm -g foo`
@@ -331,7 +331,7 @@ t.test('filtered diff', async t => {
       version: '1.2.3',
     },
   })
-  const eRemoved = Diff.calculate({actual, ideal, filterNodes: [e]})
+  const eRemoved = Diff.calculate({ actual, ideal, filterNodes: [e] })
   t.matchSnapshot(eRemoved, 'e is removed')
 
   // can't filter based on something that isn't there
@@ -341,7 +341,7 @@ t.test('filtered diff', async t => {
     filterNodes: [
       new Node({
         path: '/project/path/node_modules/x',
-        pkg: {name: 'x'},
+        pkg: { name: 'x' },
       }),
     ],
   }), {
@@ -351,7 +351,7 @@ t.test('filtered diff', async t => {
   // filtering an extraneous node is ok though
   delete actual.package.dependencies.e
   actual.package = { ...actual.package }
-  const eRemovedExtraneous = Diff.calculate({actual, ideal, filterNodes: [e]})
+  const eRemovedExtraneous = Diff.calculate({ actual, ideal, filterNodes: [e] })
   t.matchSnapshot(eRemovedExtraneous, 'e is removed (extraneous)')
 })
 
@@ -480,8 +480,8 @@ t.test('extraneous pruning in workspaces', async t => {
     }),
   })
 
-  const actual = await new Arborist({path}).loadVirtual()
-  const ideal = await new Arborist({path}).loadVirtual()
+  const actual = await new Arborist({ path }).loadVirtual()
+  const ideal = await new Arborist({ path }).loadVirtual()
   for (const node of ideal.inventory.values()) {
     if (node.extraneous) {
       node.root = null
@@ -515,7 +515,7 @@ t.test('check versions (even if all other metadata is missing)', t => {
       },
     },
     children: [
-      { name: 'foo', pkg: { name: 'foo', version: '1.0.0' }},
+      { name: 'foo', pkg: { name: 'foo', version: '1.0.0' } },
     ],
   })
 
@@ -527,11 +527,11 @@ t.test('check versions (even if all other metadata is missing)', t => {
       },
     },
     children: [
-      { name: 'foo', pkg: { name: 'foo', version: '1.2.3' }},
+      { name: 'foo', pkg: { name: 'foo', version: '1.2.3' } },
     ],
   })
 
-  const diff = Diff.calculate({actual, ideal})
+  const diff = Diff.calculate({ actual, ideal })
   t.match(diff.children, [
     {
       actual: actual.children.get('foo'),

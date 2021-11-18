@@ -11,7 +11,7 @@ const t = require('tap')
 const normalizePath = path => path.replace(/[A-Z]:/, '').replace(/\\/g, '/')
 t.cleanSnapshot = s => s.split(process.cwd()).join('{CWD}')
 
-const {resolve} = require('path')
+const { resolve } = require('path')
 const fixture = resolve(__dirname, 'fixtures/install-types')
 const swonlyFixture = resolve(__dirname, 'fixtures/install-types-sw-only')
 const YarnLock = require('../lib/yarn-lock.js')
@@ -208,11 +208,11 @@ t.test('look up from locks and such', t =>
   }))
 
 t.test('load a shrinkwrap with some dev and optional flags', t =>
-  Shrinkwrap.load({path: depTypesFixture}).then(m =>
+  Shrinkwrap.load({ path: depTypesFixture }).then(m =>
     t.matchSnapshot(m.data, 'got expected dependency types')))
 
 t.test('load a legacy shrinkwrap without a package.json', t =>
-  Shrinkwrap.load({path: swonlyFixture}).then(m =>
+  Shrinkwrap.load({ path: swonlyFixture }).then(m =>
     t.matchSnapshot(m.data, 'did our best with what we had')))
 
 t.test('throws when attempting to access data before loading', t => {
@@ -675,7 +675,7 @@ regalias@xyz:
     s.loadedFromDisk = false
   }
   {
-    const {yarnLock} = s
+    const { yarnLock } = s
     s.yarnLock = null
     const opt = {}
     t.equal(s.checkYarnLock('regalias@xyz', opt).raw, 'regalias@xyz')
@@ -755,7 +755,7 @@ t.test('hidden lockfile only used if up to date', async t => {
         'package.json': JSON.stringify({ name: 'abbrev', version: '1.1.1' }),
       },
     },
-    'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' }}),
+    'package.json': JSON.stringify({ dependencies: { abbrev: '1.1.1' } }),
   })
 
   // ensure that the lockfile is fresh to start
@@ -902,7 +902,7 @@ mkdirp@^1.0.2:
     },
   })
 
-  const arb = new Arborist({path})
+  const arb = new Arborist({ path })
   const tree = await arb.loadActual()
   tree.meta.commit()
   t.matchSnapshot(tree.meta.data, 'lockfile')
@@ -938,7 +938,7 @@ mkdirp@^1.0.2:
     },
   })
 
-  const arb = new Arborist({path})
+  const arb = new Arborist({ path })
   const tree = await arb.loadActual()
   tree.meta.commit()
   t.matchSnapshot(tree.meta.data, 'lockfile')
@@ -970,7 +970,7 @@ mkdirp@^1.0.2:
     },
   })
 
-  const arb = new Arborist({path})
+  const arb = new Arborist({ path })
   const tree = await arb.loadActual()
   tree.meta.commit()
   t.matchSnapshot(tree.meta.data, 'lockfile')
@@ -1003,7 +1003,7 @@ mkdirp@file:mkdirp:
     },
   })
 
-  const arb = new Arborist({path})
+  const arb = new Arborist({ path })
   const tree = await arb.loadActual()
   tree.meta.commit()
   t.matchSnapshot(tree.meta.data, 'lockfile')
@@ -1035,7 +1035,7 @@ mkdirp@^1.0.2:
     },
   })
 
-  const arb = new Arborist({path})
+  const arb = new Arborist({ path })
   const tree = await arb.loadActual()
   tree.meta.commit()
   t.matchSnapshot(tree.meta.data, 'lockfile')
@@ -1064,7 +1064,7 @@ t.test('a yarn.lock with no entries', async t => {
     },
   })
 
-  const arb = new Arborist({path})
+  const arb = new Arborist({ path })
   const tree = await arb.loadActual()
   tree.meta.commit()
   t.matchSnapshot(tree.meta.data, 'lockfile')
@@ -1084,7 +1084,7 @@ t.test('loadActual tests', t => {
   t.plan(roots.length)
   roots.forEach(root => {
     const path = resolve(fixtures, root)
-    t.test(root, t => new Arborist({path}).loadActual().then(tree => {
+    t.test(root, t => new Arborist({ path }).loadActual().then(tree => {
       const shrinkwrap = tree.meta.commit()
       t.matchSnapshot(shrinkwrap, 'shrinkwrap data')
       if (tree.meta.yarnLock) {
@@ -1439,7 +1439,7 @@ t.test('shrinkwrap where root is a link node', async t => {
       dependencies: { kid: '' },
     },
     children: [
-      {pkg: {name: 'kid', version: '1.2.3'}},
+      { pkg: { name: 'kid', version: '1.2.3' } },
     ],
   })
 
@@ -1477,7 +1477,7 @@ t.test('prioritize npm-shrinkwrap.json over package-lock.json', async t => {
     'package-lock.json': '{}',
     'package.json': '{}',
   })
-  const sw = await Shrinkwrap.load({path})
+  const sw = await Shrinkwrap.load({ path })
   t.equal(sw.type, 'npm-shrinkwrap.json')
 })
 

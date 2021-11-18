@@ -211,7 +211,7 @@ t.test('link gets version from target', t => {
   const link = new Link({ realpath: '/some/real/path', path: '/other/path' })
   t.equal(link.version, '')
   link.target = null
-  link.package = {name: 'bar', version: '2.3.4' }
+  link.package = { name: 'bar', version: '2.3.4' }
   t.equal(link.version, '2.3.4')
   link.package = {}
   t.equal(link.version, '')

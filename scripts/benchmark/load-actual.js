@@ -14,7 +14,7 @@ const suite = async (suite, { registry, cache }) => {
     'flow-parser': '0.114.0',
     'flow-remove-types': '2.114.0',
     ink: '2.6.0',
-    tap: '14.10.5'
+    tap: '14.10.5',
   }
 
   const promises = []
@@ -53,7 +53,9 @@ const suite = async (suite, { registry, cache }) => {
       registry,
       cache,
       path: resolve(dir, 'with-hidden-lockfile'),
-    }).loadActual().then(() => d.resolve(), er => { throw er })
+    }).loadActual().then(() => d.resolve(), er => {
+      throw er
+    }),
   })
 
   suite.add('loadActual without hidden lockfile', {
@@ -62,7 +64,9 @@ const suite = async (suite, { registry, cache }) => {
       registry,
       cache,
       path: resolve(dir, 'no-hidden-lockfile'),
-    }).loadActual().then(() => d.resolve(), er => { throw er })
+    }).loadActual().then(() => d.resolve(), er => {
+      throw er
+    }),
   })
 }
 

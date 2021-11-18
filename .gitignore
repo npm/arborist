@@ -1,81 +1,22 @@
-/node_modules
-/.nyc_output/
-/coverage/
+# This file is automatically added by @npmcli/template-oss. Do not edit.
 
-.editorconfig
-/*.js
-!map.js
+# ignore everything in the root
+/*
 
-scripts/benchmark/*/
-
-### BEGIN IGNORED SYMLINKS ###
-### this list is generated automatically, do not edit directly
-### update it by running `node test/fixtures/index.js`
-/test/fixtures/badlink/node_modules/bar
-/test/fixtures/badlink/node_modules/foo
-/test/fixtures/cli-750/node_modules/app
-/test/fixtures/cli-750/node_modules/lib
-/test/fixtures/deep/root
-/test/fixtures/deeproot
-/test/fixtures/external-link-cached-dummy-dep/root/node_modules/x
-/test/fixtures/external-link-cached-dummy-dep/root/node_modules/z
-/test/fixtures/external-link/root/node_modules/j
-/test/fixtures/external-link/root/node_modules/o
-/test/fixtures/external-link/root/node_modules/o2
-/test/fixtures/external-link/root/node_modules/x/node_modules/b
-/test/fixtures/global-style/lib-link
-/test/fixtures/install-types/node_modules/symlink
-/test/fixtures/link-dep-cycle/a/node_modules/b
-/test/fixtures/link-dep-cycle/b/node_modules/a
-/test/fixtures/link-dep-cycle/node_modules/a
-/test/fixtures/link-dep-cycle/node_modules/b
-/test/fixtures/link-dep-nested/node_modules/foo
-/test/fixtures/link-dep-nested/node_modules/once
-/test/fixtures/link-dep-nested/root/node_modules/bork
-/test/fixtures/link-dep/node_modules/linked-dep
-/test/fixtures/link-dev-dep/node_modules/linked-dev-dep
-/test/fixtures/link-meta-deps/node_modules/@isaacs/testing-link-dep/node_modules/linked-dep
-/test/fixtures/linkedroot
-/test/fixtures/links-all-over/node_modules/link-deep
-/test/fixtures/links-all-over/node_modules/link-link
-/test/fixtures/links-all-over/node_modules/link-outside-nest
-/test/fixtures/links-all-over/node_modules/nest/node_modules/link-in-nest
-/test/fixtures/old-package-lock-with-bins/node_modules/.bin/ruy
-/test/fixtures/other/node_modules/glob
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/a
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/b
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/@scope/x/1.0.0/node_modules/c
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/b
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/a/1.0.0/node_modules/c
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/b/1.0.0/node_modules/c
-/test/fixtures/pnpm/node_modules/.pnpm/registry.npmjs.org/c/1.0.0/node_modules/@scope/x
-/test/fixtures/pnpm/node_modules/@scope/x
-/test/fixtures/pnpm/node_modules/a
-/test/fixtures/prune-dev-bins/node_modules/.bin/yes
-/test/fixtures/selflink/node_modules/@scope/z/node_modules/glob
-/test/fixtures/selflink/node_modules/foo/node_modules/selflink
-/test/fixtures/symlinked-node-modules/example/node_modules
-/test/fixtures/symlinked-node-modules/linked-node-modules/bar
-/test/fixtures/testing-bundledeps-link
-/test/fixtures/testing-peer-deps-link
-/test/fixtures/workspace/node_modules/a
-/test/fixtures/workspace/node_modules/b
-/test/fixtures/workspace/node_modules/c
-/test/fixtures/workspace/packages/a/node_modules/b
-/test/fixtures/workspace/packages/a/node_modules/c
-/test/fixtures/workspace/packages/b/node_modules/a
-/test/fixtures/workspace/packages/b/node_modules/c
-/test/fixtures/workspace/packages/c/node_modules/a
-/test/fixtures/workspace/packages/c/node_modules/b
-/test/fixtures/workspace2/node_modules/c/node_modules/d
-/test/fixtures/workspace2/node_modules/c/node_modules/x
-/test/fixtures/workspace3/node_modules/a
-/test/fixtures/workspace3/node_modules/app
-/test/fixtures/workspace3/node_modules/b
-/test/fixtures/workspace3/node_modules/c
-/test/fixtures/workspaces-add-new-dep/node_modules/a
-/test/fixtures/workspaces-add-new-dep/node_modules/pkg-a
-/test/fixtures/workspaces-non-simplistic/node_modules/pkg-a
-/test/fixtures/workspaces-simple/node_modules/a
-/test/fixtures/workspaces-simple/node_modules/b
-### END IGNORED SYMLINKS ###
+# keep these
+!/.eslintrc*
+!/.github
+!**/.gitignore
+!/package.json
+!/package-lock.json
+!/docs
+!/bin
+!/lib
+!/map.js
+!/tap-snapshots
+!/test
+!/scripts
+!/README*
+!/LICENSE*
+!/SECURITY*
+!/CHANGELOG*

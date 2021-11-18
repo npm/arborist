@@ -21,7 +21,7 @@ const tree = new Node({
       a: '',
       b: '',
       link: 'file:target',
-    }},
+    } },
   fsChildren: [
     {
       path: '/some/path/target',
@@ -43,9 +43,9 @@ const tree = new Node({
             dependencies: { x: '' },
             peerDependencies: { p: '' },
           },
-          children: [{ pkg: { name: 'x', version: '1.2.3' }}],
+          children: [{ pkg: { name: 'x', version: '1.2.3' } }],
         },
-        { pkg: { name: 'b', version: '1.2.3', peerDependencies: { p: '' }}},
+        { pkg: { name: 'b', version: '1.2.3', peerDependencies: { p: '' } } },
       ],
     },
   ],
@@ -57,9 +57,9 @@ const tree = new Node({
         dependencies: { x: '' },
         peerDependencies: { p: '' },
       },
-      children: [{ pkg: { name: 'x', version: '1.2.3' }}],
+      children: [{ pkg: { name: 'x', version: '1.2.3' } }],
     },
-    { pkg: { name: 'b', version: '1.2.3', peerDependencies: { p: '' }}},
+    { pkg: { name: 'b', version: '1.2.3', peerDependencies: { p: '' } } },
   ],
 })
 
@@ -96,9 +96,9 @@ const outer = new Node({
         dependencies: { x: '' },
         peerDependencies: { p: '' },
       },
-      children: [{ pkg: { name: 'x', version: '1.2.3' }}],
+      children: [{ pkg: { name: 'x', version: '1.2.3' } }],
     },
-    { pkg: { name: 'b', version: '1.2.3', peerDependencies: { p: '' }}},
+    { pkg: { name: 'b', version: '1.2.3', peerDependencies: { p: '' } } },
   ],
 })
 const outerA = outer.children.get('a')

@@ -150,7 +150,7 @@ const setup = () => {
   Object.keys(symlinks).forEach(s => {
     const p = resolve(__dirname, s)
     mkdirp(dirname(p))
-    const rel = relative(resolve(__dirname, '../..'), p)
+    const rel = relative(resolve(__dirname), p)
     links.push('/' + rel.replace(/\\/g, '/'))
 
     // it's fine for this to throw, since it typically means
@@ -161,7 +161,7 @@ const setup = () => {
     } catch (_) {}
   })
   if (didSomething) {
-    const gifile = resolve(__dirname, '../../.gitignore')
+    const gifile = resolve(__dirname, './.gitignore')
     const gitignore = readFileSync(gifile, 'utf8')
       .replace(/### BEGIN IGNORED SYMLINKS ###[\s\S]*### END IGNORED SYMLINKS ###/,
       `### BEGIN IGNORED SYMLINKS ###

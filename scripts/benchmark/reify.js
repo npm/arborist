@@ -25,7 +25,7 @@ const suite = async (suite, { registry, cache }) => {
     'flow-parser': '0.114.0',
     'flow-remove-types': '2.114.0',
     ink: '2.6.0',
-    tap: '14.10.5'
+    tap: '14.10.5',
   }
 
   let packageLock = null
@@ -58,8 +58,9 @@ const suite = async (suite, { registry, cache }) => {
   // just reify them all fast.  we'll remove the bits we don't want later.
   for (const path of folders) {
     // already did this one
-    if (path === resolve(dir, 'full'))
+    if (path === resolve(dir, 'full')) {
       continue
+    }
     const arb = new Arborist({
       registry,
       cache,
@@ -71,10 +72,11 @@ const suite = async (suite, { registry, cache }) => {
       dependencies,
     }))
     writeFileSync(resolve(path, 'package-lock.json'), JSON.stringify(packageLock))
-    if (!/empty/.test(path))
+    if (!/empty/.test(path)) {
       promises.push(arb.reify().then(() => process.stderr.write(' ' + basename(path))))
-    else
+    } else {
       process.stderr.write(' ' + basename(path))
+    }
   }
 
   await Promise.all(promises)
@@ -84,19 +86,24 @@ const suite = async (suite, { registry, cache }) => {
     suite.add('reify ' + basename(path), {
       defer: true,
       setup () {
-        if (/no-lockfile/.test(path))
+        if (/no-lockfile/.test(path)) {
           rimraf.sync(resolve(path, 'package-lock.json'))
-        if (/empty/.test(path))
+        }
+        if (/empty/.test(path)) {
           rimraf.sync(resolve(path, 'node_modules'))
-        if (/no-cache/.test(path))
+        }
+        if (/no-cache/.test(path)) {
           rimraf.sync(resolve(path, 'cache'))
+        }
       },
       fn (d) {
         new Arborist({
           path,
           registry,
           cache: /no-cache/.test(path) ? resolve(path, 'cache') : cache,
-        }).reify().then(() => d.resolve(), er => { throw er })
+        }).reify().then(() => d.resolve(), er => {
+          throw er
+        })
       },
     })
   }

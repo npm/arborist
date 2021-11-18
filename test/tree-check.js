@@ -147,7 +147,7 @@ t.test('tree with dev edges on a nested dep node', t => {
     path: '/some/path',
     pkg: {},
     children: [
-      { pkg: { name: 'foo', version: '1.2.3', devDependencies: { x: '' }}},
+      { pkg: { name: 'foo', version: '1.2.3', devDependencies: { x: '' } } },
     ],
   })
   // ensure it actually gets added

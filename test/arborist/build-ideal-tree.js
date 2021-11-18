@@ -4,14 +4,14 @@ if (process.platform === 'win32') {
   process.env.ARBORIST_DEBUG = 0
 }
 
-const {basename, resolve, relative} = require('path')
+const { basename, resolve, relative } = require('path')
 const pacote = require('pacote')
 const t = require('tap')
 const Arborist = require('../..')
 const fixtures = resolve(__dirname, '../fixtures')
 // load the symbolic links that we depend on
 require(fixtures)
-const {start, stop, registry, auditResponse} = require('../fixtures/registry-mocks/server.js')
+const { start, stop, registry, auditResponse } = require('../fixtures/registry-mocks/server.js')
 const npa = require('npm-package-arg')
 const fs = require('fs')
 
@@ -168,7 +168,7 @@ t.test('testing-peer-deps-overlap package', async t => {
 t.test('testing-peer-deps package', async t => {
   const path = resolve(fixtures, 'testing-peer-deps')
   const idealTree = await buildIdeal(path)
-  const arb = new Arborist({path, idealTree, ...OPT})
+  const arb = new Arborist({ path, idealTree, ...OPT })
   const tree2 = await arb.buildIdealTree()
   t.equal(tree2, idealTree)
   t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps')
@@ -178,7 +178,7 @@ t.test('testing-peer-deps package with symlinked root', t => {
   const path = resolve(fixtures, 'testing-peer-deps-link')
   return buildIdeal(path).then(idealTree => {
     t.ok(idealTree.isLink, 'ideal tree is rooted on a Link')
-    return new Arborist({path, idealTree, ...OPT})
+    return new Arborist({ path, idealTree, ...OPT })
       .buildIdealTree().then(tree2 => t.equal(tree2, idealTree))
       .then(() => t.matchSnapshot(printTree(idealTree), 'build ideal tree with peer deps'))
   })
@@ -323,7 +323,7 @@ t.test('dedupe example - deduped', t => {
 
 t.test('expose explicitRequest', async t => {
   const path = resolve(fixtures, 'simple')
-  const arb = new Arborist({...OPT, path})
+  const arb = new Arborist({ ...OPT, path })
   await arb.buildIdealTree({ add: ['abbrev'] })
   t.match(arb.explicitRequests, Set, 'exposes the explicit request Set')
   t.strictSame([...arb.explicitRequests].map(e => e.name), ['abbrev'])
@@ -435,19 +435,19 @@ t.test('do add shrinkwrapped deps when complete:true is set', t => {
 t.test('do not update shrinkwrapped deps', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,
-    { update: { names: ['abbrev']}}))
+    { update: { names: ['abbrev'] } }))
 })
 
 t.test('do not update shrinkwrapped deps, ignore lockfile', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,
-    { packageLock: false, update: { names: ['abbrev']}}))
+    { packageLock: false, update: { names: ['abbrev'] } }))
 })
 
 t.test('do not update shrinkwrapped deps when complete:true is set', t => {
   const path = resolve(fixtures, 'shrinkwrapped-dep-with-lock')
   return t.resolveMatchSnapshot(printIdeal(path,
-    { update: { names: ['abbrev']}, complete: true }))
+    { update: { names: ['abbrev'] }, complete: true }))
 })
 
 t.test('deduped transitive deps with asymmetrical bin declaration', t => {
@@ -715,7 +715,7 @@ t.test('workspaces', t => {
 
   t.test('should update a simple example', t => {
     const path = resolve(__dirname, '../fixtures/workspaces-simple')
-    return t.resolveMatchSnapshot(printIdeal(path, { update: { all: true }}))
+    return t.resolveMatchSnapshot(printIdeal(path, { update: { all: true } }))
   })
 
   t.test('should install a simple scoped pkg example', t => {
@@ -1134,10 +1134,10 @@ t.test('do not continually re-resolve deps that failed to load', async t => {
       },
     }),
   })
-  const arb = new Arborist({...OPT, path })
+  const arb = new Arborist({ ...OPT, path })
   t.rejects(() => arb.buildIdealTree({ add: [
     '@isaacs/this-does-not-exist-actually@2.x',
-  ]}), { code: 'E404' })
+  ] }), { code: 'E404' })
 })
 
 t.test('update a node if its bundled by the root project', async t => {
@@ -1438,7 +1438,7 @@ t.test('more peer dep conflicts', t => {
   }
   t.plan(cases.length)
 
-  for (const [name, {pkg, error, resolvable, add}] of cases) {
+  for (const [name, { pkg, error, resolvable, add }] of cases) {
     t.test(name, { buffer: true }, async t => {
       const path = t.testdir({
         'package.json': JSON.stringify(pkg),

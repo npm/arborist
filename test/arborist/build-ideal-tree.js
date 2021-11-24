@@ -3410,6 +3410,90 @@ t.test('overrides', t => {
     t.equal(barEdge.to, nestedBarEdge.to, 'deduplicated tree correctly')
   })
 
+  t.test('overrides a nested dependency with a reference to a direct dependency', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '2.0.0',
+          bar: '1.0.1',
+        },
+        overrides: {
+          foo: {
+            bar: '$bar',
+          },
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '2.0.0')
+
+    const barEdge = tree.edgesOut.get('bar')
+    t.equal(barEdge.valid, true, 'top level bar is valid')
+    t.equal(barEdge.to.version, '1.0.1')
+
+    const nestedBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(nestedBarEdge.valid, true, 'nested bar is valid')
+    t.equal(nestedBarEdge.to.version, '1.0.1', 'nested bar version was overridden')
+
+    t.equal(barEdge.to, nestedBarEdge.to, 'deduplicated tree correctly')
+  })
+
+  t.test('overrides a nested dependency with a reference to a direct dependency without a top level identifier', async (t) => {
+    generateNocks(t, {
+      foo: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+        dependencies: ['bar'],
+      },
+      bar: {
+        versions: ['1.0.0', '1.0.1', '2.0.0'],
+      },
+    })
+
+    const path = t.testdir({
+      'package.json': JSON.stringify({
+        name: 'root',
+        dependencies: {
+          foo: '2.0.0',
+          bar: '1.0.1',
+        },
+        overrides: {
+          bar: '$bar',
+        },
+      }),
+    })
+
+    const tree = await buildIdeal(path)
+
+    const fooEdge = tree.edgesOut.get('foo')
+    t.equal(fooEdge.valid, true, 'foo is valid')
+    t.equal(fooEdge.to.version, '2.0.0')
+
+    const barEdge = tree.edgesOut.get('bar')
+    t.equal(barEdge.valid, true, 'top level bar is valid')
+    t.equal(barEdge.to.version, '1.0.1')
+
+    const nestedBarEdge = fooEdge.to.edgesOut.get('bar')
+    t.equal(nestedBarEdge.valid, true, 'nested bar is valid')
+    t.equal(nestedBarEdge.to.version, '1.0.1', 'nested bar version was overridden')
+
+    t.equal(barEdge.to, nestedBarEdge.to, 'deduplicated tree correctly')
+  })
+
   t.test('overrides a peerDependency', async (t) => {
     generateNocks(t, {
       foo: {

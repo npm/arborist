@@ -2840,7 +2840,5 @@ t.test('overrides', (t) => {
     t.equal(original.canReplaceWith(goodReplacement), true, 'same overrides passes')
   })
 
-  // XXX write negative tests too
-
   t.end()
 })

@@ -51,4 +51,3 @@ jobs:
       - run: npm i --prefer-online -g npm@latest
       - run: npm ci
       - run: npm test --ignore-scripts
-      - run: npm ls -a

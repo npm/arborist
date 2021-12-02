@@ -403,3 +403,38 @@ t.test('show bundle/shrinkwrap info', t => {
   t.matchSnapshot(printable(tree))
   t.end()
 })
+
+t.test('show overrides', (t) => {
+  const flags = {
+    extraneous: false,
+    dev: false,
+    peer: false,
+    optional: false,
+    devOptional: false,
+  }
+
+  const tree = new Node({
+    path: '/some/path',
+    loadOverrides: true,
+    pkg: {
+      name: 'root',
+      version: '1.0.0',
+      dependencies: {
+        foo: '^1.0.0',
+        bar: '^1.0.0',
+      },
+      overrides: {
+        'foo@1': '2.0.0',
+        bar: '2.0.0',
+      },
+    },
+    children: [
+      { pkg: { name: 'foo', version: '2.0.0' }, ...flags },
+      { pkg: { name: 'bar', version: '2.0.0' }, ...flags },
+    ],
+    ...flags,
+  })
+
+  t.matchSnapshot(util.inspect(printable(tree), { depth: 5 }))
+  t.end()
+})

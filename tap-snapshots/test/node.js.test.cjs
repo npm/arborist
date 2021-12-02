@@ -26,6 +26,19 @@ exports[`test/node.js TAP basic instantiation > just a lone root node 1`] = `
   "location": "",
   "name": "root",
   "optional": true,
+  "overrides": &ref_2 OverrideSet {
+    "children": Map {
+      "foo" => OverrideSet {
+        "children": Map {},
+        "key": "foo",
+        "keySpec": "",
+        "name": "foo",
+        "parent": <*ref_2>,
+        "value": "1",
+      },
+    },
+    "parent": undefined,
+  },
   "path": "/home/user/projects/root",
   "peer": true,
   "realpath": "/home/user/projects/root",

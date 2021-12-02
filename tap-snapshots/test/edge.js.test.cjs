@@ -54,9 +54,6 @@ Edge {
     "addEdgeOut": Function addEdgeOut(edge),
     "edgesIn": Set {},
     "edgesOut": Map {
-      "c" => Edge {
-        "peerConflicted": false,
-      },
       "b" => Edge {
         "peerConflicted": false,
       },
@@ -925,6 +922,25 @@ Edge {
   "type": "peer",
   "valid": true,
   "workspace": false,
+}
+`
+
+exports[`test/edge.js TAP > printableEdge does not show non-applicable override 1`] = `
+ArboristEdge {
+  "error": "MISSING",
+  "name": "c",
+  "spec": "2.x",
+  "type": "prod",
+}
+`
+
+exports[`test/edge.js TAP > printableEdge shows overrides 1`] = `
+ArboristEdge {
+  "error": "MISSING",
+  "name": "c",
+  "overridden": "2.x",
+  "spec": "2.x",
+  "type": "prod",
 }
 `
 

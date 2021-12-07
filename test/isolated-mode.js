@@ -52,46 +52,47 @@ tap.test('most simple happy scenario', async t => {
 })
 
 tap.test('simple peer dependencies scenarios', async t => {
-  const package = { name: 'foo', dependencies: { 'tsutils': '3.21.0', 'typescript': '4.4.4' } }
-
   /*
     * Dependencies:
     *
     * foo -> tsutils
     *        tsutils -> typescript (peer dep)
-    *        tsutils -> tslib
     * foo -> typescript
     *
     */
 
-  const cwd = t.testdir({
-    'package.json': JSON.stringify(package)
-  })
+  const graph = {
+    registry: [
+        { name: 'tsutils', version: '1.0.0', dependencies: {}, peerDependencies: { typescript: "*" } },
+        { name: 'typescript', version: '1.0.0' },
+      ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { tsutils: '1.0.0', typescript: '1.0.0' }
+    }
+  }
 
-  const arborist = new Arborist({ path: cwd })
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+
   await arborist.reify({ isolated: true })
 
-  const requireChain = setupRequire(cwd)
+  const requireChain = setupRequire(dir)
 
   // Only direct dependencies are accessible by the node-module resolution algorithm
   t.ok(requireChain('typescript'), 'repo should be able to require direct dependency to typescript')
   t.ok(requireChain('tsutils'), 'repo should be able to require direct dependency to tsutils')
-  t.notOk(requireChain('tslib'), 'repo should not be able to require transitive dependency to tslib')
 
   // typescript can only require its direct dependencies and root dependencies
   t.ok(requireChain('typescript', 'typescript'), 'typescript can require itself')
   t.ok(requireChain('typescript', 'tsutils'), 'typescript should be able to require tsutils because it is a root dependency')
-  t.notOk(requireChain('typescript', 'tslib'), 'typescript should not be able to require tslib because it is neither a dependency of itself or of the root')
 
   // tsutils can resolve its deps and dependencies of the root
   t.ok(requireChain('tsutils', 'typescript'), 'tsutils should be able to resolve its peer dependency to typescript')
-  t.ok(requireChain('tsutils', 'tslib'), 'tsutils should be able to resolve its dependency to tslib')
   t.ok(requireChain('tsutils', 'tsutils'), 'tsutils should be able to resolve itself')
-
-  // tslib can resolve its deps and dependencies of the root
-  t.ok(requireChain('tsutils', 'tslib', 'tslib'), 'tslib can require itself')
-  t.ok(requireChain('tsutils', 'tslib', 'typescript'), 'tslib can resolve typescript because it is a root dependency')
-  t.ok(requireChain('tsutils', 'tslib', 'tsutils'), 'tslib should be able to resolve tsutils because it is a root dependency')
 
   // The typescript used by the root and by tsutils is the same because it is a peer dependency
   t.same(requireChain('typescript'), requireChain('tsutils', 'typescript'), 'typescript used by the root and by tsutils should be the same because it is a peer dependency')

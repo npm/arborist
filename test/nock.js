@@ -26,12 +26,13 @@ class StreamToBuffer extends Stream.Writable {
  * packPackageToStream
  * Uses 'tar-stream' to create the tar stream without touching the file system.
  */
-function packPackageToStream (name, version, dependencies) {
+function packPackageToStream (name, version, dependencies, peerDependencies) {
   const pack = tar.pack()
   const manifest = JSON.stringify({
     name,
     version,
-    dependencies
+    dependencies,
+    peerDependencies
   })
   const index = `console.log('Hello from ${name}@${version}!')`
 
@@ -48,8 +49,8 @@ function packPackageToStream (name, version, dependencies) {
  * Pack a package for publish.
  * Returns a buffer containing a tarball of the package.
  */
-async function packPackage (name, version, dependencies) {
-  const packStream = packPackageToStream(name, version, dependencies)
+async function packPackage (name, version, dependencies, peerDependencies) {
+  const packStream = packPackageToStream(name, version, dependencies, peerDependencies)
 
   const tarBuffer = packStream.pipe(new StreamToBuffer())
 
@@ -64,7 +65,7 @@ async function packPackage (name, version, dependencies) {
 /**
  * Publish the given package to the given registry.
  */
-async function publishPackage (registry, name, version, dependencies) {
+async function publishPackage (registry, name, version, dependencies, peerDependencies) {
   const packument = {
     name,
     'dist-tags': {
@@ -75,6 +76,7 @@ async function publishPackage (registry, name, version, dependencies) {
         name,
         version,
         dependencies,
+        peerDependencies,
         dist: {
           tarball: `${registry}/${name}/${version}.tar`
         }
@@ -82,7 +84,7 @@ async function publishPackage (registry, name, version, dependencies) {
     }
   }
 
-  const tarball = await packPackage(name, version, dependencies)
+  const tarball = await packPackage(name, version, dependencies, peerDependencies)
 
   nock(registry)
     .get(`/${name}`)
@@ -123,7 +125,7 @@ async function getRepo (graph) {
   
   // Publish all the registery packages
   await Promise.all(graph.registry.map(o => 
-    publishPackage(registry, o.name, o.version, o.dependencies)))
+    publishPackage(registry, o.name, o.version, o.dependencies, o.peerDependencies)))
 
   // Generate the root of the graph on disk
   const root = graph.root

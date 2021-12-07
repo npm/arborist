@@ -43,6 +43,7 @@
     "minify-registry-metadata": "^2.1.0",
     "nock": "^13.2.0",
     "tap": "^15.1.2",
+    "tar-stream": "^2.2.0",
     "tcompare": "^5.0.6"
   },
   "scripts": {

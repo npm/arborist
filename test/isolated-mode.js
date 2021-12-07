@@ -2,6 +2,8 @@ const tap = require('tap')
 const fs = require('fs')
 const path = require('path')
 const Arborist = require('../lib/arborist')
+const os = require('os')
+const { getRepo } = require('./nock')
 
 tap.test('most simple happy scenario', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
@@ -14,14 +16,25 @@ tap.test('most simple happy scenario', async t => {
     *
     */
 
-  const cwd = t.testdir({
-    'package.json': JSON.stringify(package)
-  })
+  const graph = {
+    registry: [
+        { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+        { name: 'isexe', version: '1.0.0' }
+      ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
+    }
+  }
 
-  const arborist = new Arborist({ path: cwd })
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
   await arborist.reify({ isolated: true })
 
-  const requireChain = setupRequire(cwd)
+  const requireChain = setupRequire(dir)
 
   // Only direct dependencies are accessible by the node-module resolution algorithm
   t.ok(requireChain('which'), 'repo should be able to require direct dependencies')

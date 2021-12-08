@@ -24,34 +24,11 @@ const { getRepo } = require('./nock')
   *
   **/
 
-function getAllPackages(resolvedGraph) {
-  return [resolvedGraph, ...(resolvedGraph.dependencies?.map(d => getAllPackages(d)) || []).reduce((a,n) => ([...a, ...n]), [])]
-}
-
-function withRequireChain(resolvedGraph) {
-  return {
-    ...resolvedGraph,
-    chain: [],
-    dependencies: resolvedGraph.dependencies?.map(d => 
-      withRequireChainRecursive(d, []))
-  } 
-}
-function withRequireChainRecursive(resolvedGraph, chain) {
-  const newChain = [...chain, resolvedGraph.name]
-  return {
-    ...resolvedGraph,
-    chain: newChain,
-    dependencies: resolvedGraph.dependencies?.map(d => 
-      withRequireChainRecursive(d, newChain))
-  } 
-}
-
-
 
 const rule1 = {
   description: 'Any package (except local packages) should be able to require itself.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph.root))
     allPackages.filter(p => p.chain.length !== 0).forEach(p => {
       const resolveChain = [...p.chain, p.name]
       const key = resolveChain.join(' => ')
@@ -67,7 +44,7 @@ const rule1 = {
 const rule2 = {
   description: 'Packages can require their resolved dependencies.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph.root))
     allPackages.forEach(p => {
       (p.dependencies || []).map(d => d.name).forEach(n => {
         const resolveChain = [...p.chain, n]
@@ -84,8 +61,8 @@ const rule2 = {
 const rule3 = {
   description: 'Any package can require a package installed at the root.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const rootDependencies = resolvedGraph.dependencies.map(o => o.name)
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const rootDependencies = resolvedGraph.root.dependencies.map(o => o.name)
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph.root))
 
 
     allPackages.forEach(p => {
@@ -104,9 +81,9 @@ const rule3 = {
 const rule4 = {
   description: 'Packages cannot require packages that are not in their dependencies, not root dependencies or not themselves.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph.root))
     const allPackageNames = allPackages.filter(p => p.chain.length !== 0).map(p => p.name)
-    const rootDependenciesNames = resolvedGraph.dependencies.map(o => o.name)
+    const rootDependenciesNames = resolvedGraph.root.dependencies.map(o => o.name)
     allPackages.forEach(p => {
       const resolvedDependencyNames = (p.dependencies || []).map(d => d.name)
       allPackageNames.filter(n => !rootDependenciesNames.includes(n))
@@ -138,7 +115,7 @@ const rule5 = {
   }
 }
 
-tap.test('most simple happy scenario', async t => {
+tap.only('most simple happy scenario', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
   /*
@@ -162,18 +139,20 @@ tap.test('most simple happy scenario', async t => {
 
   // expected output
   const resolved = {
-    name: 'foo',
-    version: '1.2.3',
-    dependencies: [
-      {
-        name: 'which',
-        version: '1.0.0',
-        dependencies: [{
+    root: {
+      name: 'foo',
+      version: '1.2.3',
+      dependencies: [
+        {
+          name: 'which',
+          version: '1.0.0',
+          dependencies: [{
             name: 'isexe',
             version: '1.0.0'
           }]
-      }
-    ]
+        }
+      ]
+    }
   }
   
   const { dir, registry } = await getRepo(graph)
@@ -214,31 +193,34 @@ tap.only('simple peer dependencies scenarios', async t => {
   }
 
   const resolved = {
-    name: 'foo',
-    version: '1.2.3',
-    dependencies: [
-      {
-        name: 'tsutils',
-        version: '1.0.0',
-        dependencies: [{
+    root: 
+    {
+      name: 'foo',
+      version: '1.2.3',
+      dependencies: [
+        {
+          name: 'tsutils',
+          version: '1.0.0',
+          dependencies: [{
+            name: 'typescript',
+            version: '1.0.0',
+            peer: true,
+            dependencies: [{
+              name: 'baz',
+              version: '2.0.0',
+            }]
+          }]
+        },
+        {
           name: 'typescript',
           version: '1.0.0',
-          peer: true,
           dependencies: [{
             name: 'baz',
             version: '2.0.0',
           }]
-        }]
-      },
-      {
-        name: 'typescript',
-        version: '1.0.0',
-        dependencies: [{
-          name: 'baz',
-          version: '2.0.0',
-        }]
-      }
-    ]
+        }
+      ]
+    }
   }
 
   const { dir, registry } = await getRepo(graph)
@@ -246,7 +228,6 @@ tap.only('simple peer dependencies scenarios', async t => {
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
   const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
-
   await arborist.reify({ isolated: true })
 
   const asserted = new Set()
@@ -258,7 +239,7 @@ tap.only('simple peer dependencies scenarios', async t => {
 })
 
 
-tap.test('lock file is same in hoisted and in isolatedMode', async t => {
+tap.only('Lock file is same in hoisted and in isolated mode', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
   const hoistedModeDir = t.testdir({
@@ -283,68 +264,105 @@ tap.test('lock file is same in hoisted and in isolatedMode', async t => {
   t.same(hoistedModeLockFile, isolatedModeLockFile, 'hoited mode and isolated mode produce the same lockfile')
 })
 
-tap.test('basic workspaces setup', async t => {
-  const projectDir = t.testdir({
-    'package.json': JSON.stringify({
-      name: 'foo',
-      workspaces: ['bar', 'baz', 'cat', 'fish', 'catfish'],
-      dependencies: {
-        'bar': '*'
-      }
-    }),
-    bar: {
-      'index.js': 'console.log(\'okay\')',
-      'package.json': JSON.stringify({
-        name: 'bar',
-        dependencies: {
-          which: '2.0.2'
-        }
-      })
+tap.test('Basic workspaces setup', async t => {
+  const graph = {
+    registry: [
+        { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+        { name: 'which', version: '2.0.0', dependencies: { isexe: '^1.0.0' } },
+        { name: 'isexe', version: '1.0.0' }
+      ] ,
+    root: {
+      name: 'dog', version: '1.2.3', dependencies: { bar: '*' }
     },
-    baz: {
-      'index.js': 'console.log(\'okay\')',
-      'package.json': JSON.stringify({
-        name: 'baz',
-        dependencies: {
-          bar: '*',
-          which: '2.0.2'
-        }
-      }),
-    },
-    cat: {
-      'index.js': 'console.log(\'okay\')',
-      'package.json': JSON.stringify({
-        name: 'cat',
-        dependencies: {
-          which: '2.0.1'
-        }
-      })
-    },
-    fish: {
-      'index.js': 'console.log(\'okay\')',
-      'package.json': JSON.stringify({
-        name: 'fish',
-        dependencies: {
-          cat: '*',
-          which: '2.0.1'
-        }
-      })
-    },
-    catfish: {
-      'index.js': 'console.log(\'okay\')',
-      'package.json': JSON.stringify({
-        name: 'catfish'
-      })
-    }
-  })
+    // todo: make getrepo support workspaced
+    workspaces: [
+      { name: 'bar', version: '1.0.0', dependencies: { which: '2.0.0' } },
+      { name: 'baz', version: '1.0.0', dependencies: { which: '2.0.0', bar: "*" } },
+      { name: 'cat', version: '1.0.0', dependencies: { which: '1.0.0' } },
+      { name: 'fish', version: '1.0.0', dependencies: { which: '1.0.0', cat: "*" } },
+      { name: 'catfish', version: '1.0.0' },
+    ]
+  }
 
-  const arborist = new Arborist({ path: projectDir })
+  // todo: make rules understand workspaces
+  // todo: the resolved graph is verbose, maybe we have a simpler textual representation, maybe we could generate these as snapshots
+  const resolved = {
+    root: {
+      name: 'dog',
+      version: '1.2.3',
+      dependencies: [{
+        name: 'bar',
+        version: '1.0.0',
+        workspace: true,
+        dependencies: [{
+          name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+        }]
+      }]
+    },
+    workspaces: [{
+      name: 'bar',
+      version: '1.0.0',
+      workspace: true,
+      dependencies: [{
+        name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+      }]
+    },{
+      name: 'baz',
+      version: '1.0.0',
+      workspace: true,
+      dependencies: [{
+        name: 'bar',
+        version: '1.0.0',
+        workspace: true,
+        dependencies: [{
+          name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+        }]
+      },{
+        name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+      }]
+    },{
+      name: 'cat',
+      version: '1.0.0',
+      workspace: true,
+      dependencies: [{
+        name: 'which', version: '1.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+      }]
+    },{
+      name: 'fish',
+      version: '1.0.0',
+      workspace: true,
+      dependencies: [{
+        name: 'cat',
+        version: '1.0.0',
+        workspace: true,
+        dependencies: [{
+          name: 'which', version: '1.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+        }]
+      },{
+        name: 'which', version: '1.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
+      }]
+    },{
+      name: 'catfish',
+      version: '1.0.0',
+      workspace: true
+    }]
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
   await arborist.reify({ isolated: true })
 
-  const requireChain = setupRequire(projectDir)
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
 
-  // TODO: maybe come up with a less verbose / more generic way to specific the assert matrix
 
+  /*
   // Only the declared workspace relationships are resolvable
   // TODO: are workspaces considered declared dependencies of the root? For now we will assume that the answser is no.
   t.ok(requireChain('bar'), 'repo should be able to require direct dependency to workspace bar')
@@ -431,6 +449,30 @@ function setupRequire(cwd) {
     }, cwd)
   }
 }
+
+function getAllPackages(resolvedGraph) {
+  return [resolvedGraph, ...(resolvedGraph.dependencies?.map(d => getAllPackages(d)) || []).reduce((a,n) => ([...a, ...n]), [])]
+}
+
+function withRequireChain(resolvedGraph) {
+  return {
+    ...resolvedGraph,
+    chain: [],
+    dependencies: resolvedGraph.dependencies?.map(d => 
+      withRequireChainRecursive(d, []))
+  } 
+}
+function withRequireChainRecursive(resolvedGraph, chain) {
+  const newChain = [...chain, resolvedGraph.name]
+  return {
+    ...resolvedGraph,
+    chain: newChain,
+    dependencies: resolvedGraph.dependencies?.map(d => 
+      withRequireChainRecursive(d, newChain))
+  } 
+}
+
+
 
 /*
   * TO TEST:

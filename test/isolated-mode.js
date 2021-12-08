@@ -264,7 +264,7 @@ tap.only('Lock file is same in hoisted and in isolated mode', async t => {
   t.same(hoistedModeLockFile, isolatedModeLockFile, 'hoited mode and isolated mode produce the same lockfile')
 })
 
-tap.test('Basic workspaces setup', async t => {
+tap.only('Basic workspaces setup', async t => {
   const graph = {
     registry: [
         { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
@@ -433,6 +433,7 @@ tap.test('Basic workspaces setup', async t => {
   t.ok(requireChain('bar', 'which', 'isexe'),'bar\'s version of which can require its dependency isexe')
   t.ok(requireChainFromCat('which', 'isexe'),'cat\'s version of which can require its dependency isexe')
   t.same(requireChain('bar', 'which', 'isexe'), requireChainFromCat('which', 'isexe'), 'both versions of which share the same instance of their dependency isexe')
+    */
 })
 
 function setupRequire(cwd) {

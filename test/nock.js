@@ -26,9 +26,16 @@ class StreamToBuffer extends Stream.Writable {
  * packPackageToStream
  * Uses 'tar-stream' to create the tar stream without touching the file system.
  */
-function packPackageToStream (name, version, dependencies, peerDependencies) {
+function packPackageToStream (manifest) {
+  const {
+    name,
+    version,
+    dependencies,
+    peerDependencies
+  } = manifest
+
   const pack = tar.pack()
-  const manifest = JSON.stringify({
+  const manifestString = JSON.stringify({
     name,
     version,
     dependencies,
@@ -37,7 +44,7 @@ function packPackageToStream (name, version, dependencies, peerDependencies) {
   const index = `console.log('Hello from ${name}@${version}!')`
 
   pack.entry({ name, type: 'directory' })
-  pack.entry({ name: `${name}/package.json` }, manifest)
+  pack.entry({ name: `${name}/package.json` }, manifestString)
   pack.entry({ name: `${name}/index.js` }, index)
 
   pack.finalize()
@@ -49,8 +56,8 @@ function packPackageToStream (name, version, dependencies, peerDependencies) {
  * Pack a package for publish.
  * Returns a buffer containing a tarball of the package.
  */
-async function packPackage (name, version, dependencies, peerDependencies) {
-  const packStream = packPackageToStream(name, version, dependencies, peerDependencies)
+async function packPackage (manifest) {
+  const packStream = packPackageToStream(manifest)
 
   const tarBuffer = packStream.pipe(new StreamToBuffer())
 
@@ -65,30 +72,49 @@ async function packPackage (name, version, dependencies, peerDependencies) {
 /**
  * Publish the given package to the given registry.
  */
-async function publishPackage (registry, name, version, dependencies, peerDependencies) {
-  const packument = {
+async function publishPackage (registry, manifest, packuments) {
+  const {
     name,
-    'dist-tags': {
-      latest: version
-    },
-    versions: {
-      [version]: {
-        name,
-        version,
-        dependencies,
-        peerDependencies,
-        dist: {
-          tarball: `${registry}/${name}/${version}.tar`
-        }
+    version,
+    dependencies,
+    peerDependencies
+  } = manifest
+
+  if (packuments.has(name)) {
+    packuments.get(name).versions[version] = {
+      name,
+      version,
+      dependencies,
+      peerDependencies,
+      dist: {
+        tarball: `${registry}/${name}/${version}.tar`
       }
     }
+  } else {
+    packuments.set(name, {
+      name,
+      'dist-tags': {
+        latest: version
+      },
+      versions: {
+        [version]: {
+          name,
+          version,
+          dependencies,
+          peerDependencies,
+          dist: {
+            tarball: `${registry}/${name}/${version}.tar`
+          }
+        }
+      }
+    })
   }
 
-  const tarball = await packPackage(name, version, dependencies, peerDependencies)
+
+  const tarball = await packPackage(manifest)
 
   nock(registry)
-    .get(`/${name}`)
-    .reply(200, packument)
+    .persist()
     .get(`/${name}/${version}.tar`)
     .reply(200, tarball)
 }
@@ -123,19 +149,40 @@ async function getRepo (graph) {
   // Generate a new random registry every time to prevent interference between tests
   const registry = `https://${Math.random().toString(36).substring(2)}.test`
   
+  const packuments = new Map()
   // Publish all the registery packages
   await Promise.all(graph.registry.map(o => 
-    publishPackage(registry, o.name, o.version, o.dependencies, o.peerDependencies)))
+    publishPackage(registry, o, packuments)))
+
+  packuments.forEach((packument, name) => {
+    nock(registry)
+      .get(`/${name}`)
+      .reply(200, packument)
+  })
+
 
   // Generate the root of the graph on disk
   const root = graph.root
-  const dir = tap.testdir({
+  const workspaces = graph.workspaces || []
+  const repo = {
     'package.json': JSON.stringify({
+      workspaces: workspaces.length !== 0 ? ["packages/*"] : undefined,
       name: root.name,
       version: root.version,
       dependencies: root.dependencies
-    })
+    }),
+    'packages': {}
+  }
+  workspaces.forEach(wp => {
+    repo.packages[wp.name] = { 
+      'package.json': JSON.stringify({
+        name: wp.name,
+        version: wp.version,
+        dependencies: wp.dependencies
+      }),
+    }
   })
+  const dir = tap.testdir(repo)
   return { dir, registry }
 }
 

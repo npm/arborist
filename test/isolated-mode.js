@@ -5,6 +5,25 @@ const Arborist = require('../lib/arborist')
 const os = require('os')
 const { getRepo } = require('./nock')
 
+/**
+  * The testing framework here is work in progress, in particular it does not have nice ergonomics.
+  * The syntactic suggar for this framework will be introduced over time as we add more features.
+  *
+  * The framework has two parts:
+  * - Mocking: The tool generates a test repo based on a declarative list of packages.
+  * - Asserting: Some generic rules are defined which assert a particular contract of a resolved dependency graph.
+  *     For each test we declaratively define the expected resolved dependency graph and apply all the rules to it.
+  *     This validates that arborist produced the expected dependency graph and respect all the contracts set by the rules.
+  *
+  * The automatic assertions aims to make new tests easy.
+  * A rule needs to be written only once and can be asserted against many graphs cheaply.
+  * The only part that needs to be produced by hand is the conversion from the list of packages to a resolved dependency graph.
+  * Automating this part would mean reimplementing the full resolution algorithm for the tests, this would be error prone.
+  * Manually defining declaratively the input and the output of arborist is what gives us confidence that the tests do what
+  * we want.
+  *
+  **/
+
 function getAllPackages(resolvedGraph) {
   return [resolvedGraph, ...(resolvedGraph.dependencies?.map(d => getAllPackages(d)) || []).reduce((a,n) => ([...a, ...n]), [])]
 }
@@ -105,7 +124,21 @@ const rule4 = {
   }
 }
 
-tap.only('most simple happy scenario', async t => {
+const rule5 = {
+  description: 'Peer dependencies should be resolved to same instance as parents',
+  apply: (t, dir, resolvedGraph, alreadyAsserted) => {
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    allPackages.filter(p => p.peer)
+      .forEach(p => {
+        const chain = p.chain
+        const parentChain = chain.slice(0, -2).concat([p.name])
+        t.same(setupRequire(dir)(...parentChain), setupRequire(dir)(...chain),
+          `Rule 5: Package "${chain.slice(0, -1).join(' => ')}" should get the same instance of "${p.name}" as its parent`)
+      })
+  }
+}
+
+tap.test('most simple happy scenario', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
   /*
@@ -116,6 +149,7 @@ tap.only('most simple happy scenario', async t => {
     *
     */
 
+  // Input of arborist
   const graph = {
     registry: [
       { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
@@ -126,6 +160,7 @@ tap.only('most simple happy scenario', async t => {
     }
   }
 
+  // expected output
   const resolved = {
     name: 'foo',
     version: '1.2.3',
@@ -161,7 +196,9 @@ tap.only('simple peer dependencies scenarios', async t => {
     *
     * foo -> tsutils
     *        tsutils -> typescript (peer dep)
+    *                   typescript -> baz
     * foo -> typescript
+    *        typescript -> baz
     *
     */
 
@@ -186,6 +223,7 @@ tap.only('simple peer dependencies scenarios', async t => {
         dependencies: [{
           name: 'typescript',
           version: '1.0.0',
+          peer: true,
           dependencies: [{
             name: 'baz',
             version: '2.0.0',
@@ -216,24 +254,7 @@ tap.only('simple peer dependencies scenarios', async t => {
   rule2.apply(t, dir, resolved, asserted)
   rule3.apply(t, dir, resolved, asserted)
   rule4.apply(t, dir, resolved, asserted)
-  const requireChain = setupRequire(dir)
-
-  /*
-  // Only direct dependencies are accessible by the node-module resolution algorithm
-  t.ok(requireChain('typescript'), 'repo should be able to require direct dependency to typescript')
-  t.ok(requireChain('tsutils'), 'repo should be able to require direct dependency to tsutils')
-
-  // typescript can only require its direct dependencies and root dependencies
-  t.ok(requireChain('typescript', 'typescript'), 'typescript can require itself')
-  t.ok(requireChain('typescript', 'tsutils'), 'typescript should be able to require tsutils because it is a root dependency')
-
-  // tsutils can resolve its deps and dependencies of the root
-  t.ok(requireChain('tsutils', 'typescript'), 'tsutils should be able to resolve its peer dependency to typescript')
-  t.ok(requireChain('tsutils', 'tsutils'), 'tsutils should be able to resolve itself')
-
-  // The typescript used by the root and by tsutils is the same because it is a peer dependency
-  t.same(requireChain('typescript'), requireChain('tsutils', 'typescript'), 'typescript used by the root and by tsutils should be the same because it is a peer dependency')
-  */
+  rule5.apply(t, dir, resolved, asserted)
 })
 
 

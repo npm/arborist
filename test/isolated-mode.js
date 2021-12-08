@@ -5,7 +5,40 @@ const Arborist = require('../lib/arborist')
 const os = require('os')
 const { getRepo } = require('./nock')
 
-tap.test('most simple happy scenario', async t => {
+function getAllPackages(resolvedGraph) {
+  return [resolvedGraph, ...(resolvedGraph.dependences?.map(d => getAllPackages(d)) || [])]
+}
+
+function withRequireChain(resolvedGraph) {
+  return {
+    ...resolvedGraph,
+    chain: [],
+    dependencies: resolvedGraph.dependencies?.map(d => 
+      withRequireChainRecursive(d, []))
+  } 
+}
+function withRequireChainRecursive(resolvedGraph, chain) {
+  const newChain = [...chain, resolvedGraph.name]
+  return {
+    ...resolvedGraph,
+    chain: newChain,
+    dependencies: resolvedGraph.dependencies?.map(d => 
+      withRequireChainRecursive(d, newChain))
+  } 
+}
+
+
+
+const rule1 = {
+  description: 'Any package can require a package installed at the root',
+  apply: (resolvedGraph) => {
+    const rootDependencies = resolvedGraph.dependencies
+    const allPackages = getAllPackages(resolvedGraph)
+
+  }
+}
+
+tap.only('most simple happy scenario', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
   /*
@@ -16,17 +49,33 @@ tap.test('most simple happy scenario', async t => {
     *
     */
 
-  const graph = {
-    registry: [
-        { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
-        { name: 'isexe', version: '1.0.0' }
-      ] ,
-    root: {
-      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
-    }
+const graph = {
+  registry: [
+    { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+    { name: 'isexe', version: '1.0.0' }
+  ] ,
+  root: {
+    name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
   }
+}
 
-
+  const resolved = {
+    name: 'foo',
+    version: '1.2.3',
+    dependencies: [
+      {
+        name: 'which',
+        version: '1.0.0',
+        dependencies: [{
+            name: 'isexe',
+            version: '1.0.0'
+          }]
+      }
+    ]
+  }
+  console.log(JSON.stringify(getAllPackages(withRequireChain(resolved)), null, 2))
+  process.exit(0)
+  
   const { dir, registry } = await getRepo(graph)
 
   // Note that we override this cache to prevent interference from other tests

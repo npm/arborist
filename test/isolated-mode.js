@@ -6,7 +6,7 @@ const os = require('os')
 const { getRepo } = require('./nock')
 
 function getAllPackages(resolvedGraph) {
-  return [resolvedGraph, ...(resolvedGraph.dependences?.map(d => getAllPackages(d)) || [])]
+  return [resolvedGraph, ...(resolvedGraph.dependencies?.map(d => getAllPackages(d)) || []).reduce((a,n) => ([...a, ...n]), [])]
 }
 
 function withRequireChain(resolvedGraph) {
@@ -30,11 +30,78 @@ function withRequireChainRecursive(resolvedGraph, chain) {
 
 
 const rule1 = {
-  description: 'Any package can require a package installed at the root',
-  apply: (resolvedGraph) => {
-    const rootDependencies = resolvedGraph.dependencies
-    const allPackages = getAllPackages(resolvedGraph)
+  description: 'Any package (except local packages) should be able to require itself.',
+  apply: (t, dir, resolvedGraph, alreadyAsserted) => {
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    allPackages.filter(p => p.chain.length !== 0).forEach(p => {
+      const resolveChain = [...p.chain, p.name]
+      const key = resolveChain.join(' => ')
+      if (alreadyAsserted.has(key)) { return }
+      alreadyAsserted.add(key)
+      t.ok(setupRequire(dir)(...resolveChain),
+        `Rule 1: Package "${p.chain.join(" => ")}" should have access to itself using its own name.`)
 
+    })
+  }
+}
+
+const rule2 = {
+  description: 'Packages can require their resolved dependencies.',
+  apply: (t, dir, resolvedGraph, alreadyAsserted) => {
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    allPackages.forEach(p => {
+      (p.dependencies || []).map(d => d.name).forEach(n => {
+        const resolveChain = [...p.chain, n]
+        const key = resolveChain.join(' => ')
+        if (alreadyAsserted.has(key)) { return }
+        alreadyAsserted.add(key)
+        t.ok(setupRequire(dir)(...resolveChain),
+          `Rule 2: ${p.chain.length === 0 ? "The root" : `Package "${p.chain.join(" => ")}"`} should have access to "${n}" because it has it as a resolved dependency.`)
+      })
+    })
+  }
+}
+
+const rule3 = {
+  description: 'Any package can require a package installed at the root.',
+  apply: (t, dir, resolvedGraph, alreadyAsserted) => {
+    const rootDependencies = resolvedGraph.dependencies.map(o => o.name)
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+
+
+    allPackages.forEach(p => {
+      rootDependencies.forEach(d => {
+        const resolveChain = [...p.chain, d]
+        const key = resolveChain.join(' => ')
+        if (alreadyAsserted.has(key)) { return }
+        alreadyAsserted.add(key)
+        t.ok(setupRequire(dir)(...resolveChain),
+          `Rule 3: ${p.chain.length === 0 ? "The root" : `Package "${p.chain.join(" => ")}"`} should have access to "${d}" because it is a root dependency.`)
+      })
+    })
+  }
+}
+
+const rule4 = {
+  description: 'Packages cannot require packages that are not in their dependencies, not root dependencies or not themselves.',
+  apply: (t, dir, resolvedGraph, alreadyAsserted) => {
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const allPackageNames = allPackages.filter(p => p.chain.length !== 0).map(p => p.name)
+    const rootDependenciesNames = resolvedGraph.dependencies.map(o => o.name)
+    allPackages.forEach(p => {
+      const resolvedDependencyNames = (p.dependencies || []).map(d => d.name)
+      allPackageNames.filter(n => !rootDependenciesNames.includes(n))
+        .filter(n => !resolvedDependencyNames.includes(n))
+        .filter(n => n !== p.name)
+        .forEach(n => {
+          const resolveChain = [...p.chain, n]
+          const key = resolveChain.join(' => ')
+          if (alreadyAsserted.has(key)) { return }
+          alreadyAsserted.add(key)
+          t.notOk(setupRequire(dir)(...resolveChain),
+            `Rule 4: ${p.chain.length === 0 ? "The root" : `Package "${p.chain.join(" => ")}"`} should not have access to "${n}" because it not a root dependency, not in its resolved dependencies and not itself.`)
+        })
+    })
   }
 }
 
@@ -49,15 +116,15 @@ tap.only('most simple happy scenario', async t => {
     *
     */
 
-const graph = {
-  registry: [
-    { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
-    { name: 'isexe', version: '1.0.0' }
-  ] ,
-  root: {
-    name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+      { name: 'isexe', version: '1.0.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
+    }
   }
-}
 
   const resolved = {
     name: 'foo',
@@ -73,8 +140,6 @@ const graph = {
       }
     ]
   }
-  console.log(JSON.stringify(getAllPackages(withRequireChain(resolved)), null, 2))
-  process.exit(0)
   
   const { dir, registry } = await getRepo(graph)
 
@@ -83,24 +148,14 @@ const graph = {
   const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
   await arborist.reify({ isolated: true })
 
-  const requireChain = setupRequire(dir)
-
-  // Only direct dependencies are accessible by the node-module resolution algorithm
-  t.ok(requireChain('which'), 'repo should be able to require direct dependencies')
-  t.notOk(requireChain('isexe'), 'repo should not be able to require transitive dependencies')
-
-  // Transitive dependencies are accessible from their parents
-  t.ok(requireChain('which', 'isexe'), 'external dependencies should be able to require their own dependencies')
-
-  // Dependencies cannot require their parents
-  t.notOk(requireChain('which', 'isexe', 'which'), 'dependencies are not able to require their parents')
-
-  // Depencies can require themselves
-  t.ok(requireChain('which', 'which'), 'which can require itself')
-  t.ok(requireChain('which', 'isexe', 'isexe'), 'isexe can require itself')
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
 })
 
-tap.test('simple peer dependencies scenarios', async t => {
+tap.only('simple peer dependencies scenarios', async t => {
   /*
     * Dependencies:
     *
@@ -113,13 +168,40 @@ tap.test('simple peer dependencies scenarios', async t => {
   const graph = {
     registry: [
         { name: 'tsutils', version: '1.0.0', dependencies: {}, peerDependencies: { typescript: "*" } },
-        { name: 'typescript', version: '1.0.0' },
+        { name: 'typescript', version: '1.0.0', dependencies: { baz: "*" } },
+        { name: 'baz', version: '2.0.0'},
       ] ,
     root: {
       name: 'foo', version: '1.2.3', dependencies: { tsutils: '1.0.0', typescript: '1.0.0' }
     }
   }
 
+  const resolved = {
+    name: 'foo',
+    version: '1.2.3',
+    dependencies: [
+      {
+        name: 'tsutils',
+        version: '1.0.0',
+        dependencies: [{
+          name: 'typescript',
+          version: '1.0.0',
+          dependencies: [{
+            name: 'baz',
+            version: '2.0.0',
+          }]
+        }]
+      },
+      {
+        name: 'typescript',
+        version: '1.0.0',
+        dependencies: [{
+          name: 'baz',
+          version: '2.0.0',
+        }]
+      }
+    ]
+  }
 
   const { dir, registry } = await getRepo(graph)
 
@@ -129,8 +211,14 @@ tap.test('simple peer dependencies scenarios', async t => {
 
   await arborist.reify({ isolated: true })
 
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
   const requireChain = setupRequire(dir)
 
+  /*
   // Only direct dependencies are accessible by the node-module resolution algorithm
   t.ok(requireChain('typescript'), 'repo should be able to require direct dependency to typescript')
   t.ok(requireChain('tsutils'), 'repo should be able to require direct dependency to tsutils')
@@ -145,6 +233,7 @@ tap.test('simple peer dependencies scenarios', async t => {
 
   // The typescript used by the root and by tsutils is the same because it is a peer dependency
   t.same(requireChain('typescript'), requireChain('tsutils', 'typescript'), 'typescript used by the root and by tsutils should be the same because it is a peer dependency')
+  */
 })
 
 

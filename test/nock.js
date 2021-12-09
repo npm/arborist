@@ -180,6 +180,7 @@ async function getRepo (graph) {
         version: wp.version,
         dependencies: wp.dependencies
       }),
+      'index.js': `console.log('Hello from workspace ${wp.name}')`
     }
   })
   const dir = tap.testdir(repo)

@@ -82,7 +82,7 @@ const rule4 = {
   description: 'Packages cannot require packages that are not in their dependencies, not root dependencies or not themselves.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
     const allPackages = getAllPackages(withRequireChain(resolvedGraph))
-    const allPackageNames = allPackages.filter(p => p.chain.length !== 0).map(p => p.name)
+    const allPackageNames = allPackages.filter(p => p.chain.length !== 0 || p.initialDir !== '.').map(p => p.name)
     const rootDependenciesNames = resolvedGraph.root.dependencies.map(o => o.name)
     allPackages.forEach(p => {
       const resolvedDependencyNames = (p.dependencies || []).map(d => d.name)
@@ -95,7 +95,7 @@ const rule4 = {
           if (alreadyAsserted.has(key)) { return }
           alreadyAsserted.add(key)
           t.notOk(path.join(dir, p.initialDir),
-            `Rule 4: ${p.chain.length === 0 && p.initialDir === '.' ? "The root" : `Package "${[p.initialDir, ...p.chain].join(" => ")}"`} should not have access to "${n}" because it not a root dependency, not in its resolved dependencies and not itself.`)
+            `Rule 4: ${p.chain.length === 0 && p.initialDir === '.' ? "The root" : `Package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} should not have access to "${n}" because it not a root dependency, not in its resolved dependencies and not itself.`)
         })
     })
   }
@@ -110,7 +110,7 @@ const rule5 = {
         const chain = p.chain
         const parentChain = chain.slice(0, -2).concat([p.name])
         t.same(setupRequire(path.join(dir, p.initialDir))(...parentChain), setupRequire(path.join(dir, p.initialDir))(...chain),
-          `Rule 5: Package "${chain.slice(0, -1).join(' => ')}" should get the same instance of "${p.name}" as its parent`)
+          `Rule 5: Package "${[p.initialDir.replace('packages/',''), ...chain.slice(0, -1)].join(' => ')}" should get the same instance of "${p.name}" as its parent`)
       })
   }
 }
@@ -359,7 +359,7 @@ tap.only('Basic workspaces setup', async t => {
   rule1.apply(t, dir, resolved, asserted)
   rule2.apply(t, dir, resolved, asserted)
   rule3.apply(t, dir, resolved, asserted)
-//  rule4.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
 
 
   /*

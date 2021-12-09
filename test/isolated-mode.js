@@ -115,6 +115,28 @@ const rule5 = {
   }
 }
 
+const rule6 = {
+  description: 'Packages with the same name and same version are installed at the same place on disk',
+  apply: (t, dir, resolvedGraph) => {
+    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const byNameAndVersion = new Map()
+    allPackages.forEach(p => {
+      const key = `${p.name}@${p.version}`
+      if (!byNameAndVersion.has(key)) {
+        byNameAndVersion.set(key, [])
+      }
+      byNameAndVersion.get(key).push(setupRequire(path.join(dir, p.initialDir))(...p.chain))
+    })
+    byNameAndVersion.forEach((value, key) => {
+      if (value.length === 1) {
+        return
+      }
+      const same = value.every(l => l === value[0])
+      t.ok(same, `Rule 6: Even though it is referanced multiple times, package "${key}" should be installed only once`)
+    })
+  }
+}
+
 tap.only('most simple happy scenario', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
@@ -360,66 +382,11 @@ tap.only('Basic workspaces setup', async t => {
   rule2.apply(t, dir, resolved, asserted)
   rule3.apply(t, dir, resolved, asserted)
   rule4.apply(t, dir, resolved, asserted)
-
+  rule6.apply(t, dir, resolved, asserted)
 
   /*
-  // Only the declared workspace relationships are resolvable
-  // TODO: are workspaces considered declared dependencies of the root? For now we will assume that the answser is no.
-  t.notOk(requireChain('baz'), 'repo should not be able to require workspace baz because it has no declared dependency on it')
-  t.notOk(requireChain('cat'), 'repo should not be able to require workspace cat because it has no declared dependency on it')
-  t.notOk(requireChain('fish'), 'repo should not be able to require workspace fish because it has no declared dependency on it')
-  t.notOk(requireChain('catfish'), 'repo should not be able to require workspace catfish because it has no declared dependency on it')
-  t.notOk(requireChain('which'), 'repo should not be able to require which because it has no declared dependency on it')
-  t.notOk(requireChain('isexe'), 'repo should not be able to require isexe because it has no declared dependency on it')
-
-  // workspace bar dependencies
-  // TODO: should workspaces always be able to resolve themselves or only when they are dependencies of the root? For now will will assume that the answer is the latter.
-  t.notOk(requireChain('bar', 'cat'), 'workspace bar cannot require workspace cat because neither bar nor the root has a dependency on it')
-  t.notOk(requireChain('bar', 'fish'), 'workspace bar cannot require workspace fish because neither bar nor the root has a dependency on it')
-  t.notOk(requireChain('bar', 'catfish'), 'workspace bar cannot require workspace fish because neither bar nor the root has a dependency on it')
-  t.notOk(requireChain('bar', 'isexe'), 'workspace bar cannot require isexe because it only has a transitive dependency on it')
-
-  // workspace baz dependencies
-  // TODO: should workspaces always be able to resolve themselves or only when they are dependencies of the root? For now will will assume that the answer is the latter.
-  const requireChainFromBaz = setupRequire(path.join(projectDir, 'baz'))
-  t.notOk(requireChainFromBaz('baz'), 'workspace bar cannot require itself because it is not a root dependency')
-  t.notOk(requireChainFromBaz('cat'), 'workspace baz cannot require workspace cat because neither baz nor the root has a dependency on it')
-  t.notOk(requireChainFromBaz('fish'), 'workspace baz cannot require workspace fish because neither baz nor the root has a dependency on it')
-  t.notOk(requireChainFromBaz('catfish'), 'workspace baz cannot require workspace fish because neither baz nor the root has a dependency on it')
-  t.notOk(requireChainFromBaz('isexe'), 'workspace baz cannot require isexe because it only has a transitive dependency on it')
-
-  // workspace cat dependencies
-  const requireChainFromCat = setupRequire(path.join(projectDir, 'cat'))
-  t.notOk(requireChainFromCat('baz'), 'workspace bar cannot require workspace baz because neither cat nor the root has a dependency on it')
-  t.notOk(requireChainFromCat('cat'), 'workspace cat cannot require itself because it is not a root dependency')
-  t.notOk(requireChainFromCat('fish'), 'workspace cat cannot require workspace fish because neither cat nor the root has a dependency on it')
-  t.notOk(requireChainFromCat('catfish'), 'workspace cat cannot require workspace fish because neither cat nor the root has a dependency on it')
-  t.notOk(requireChainFromCat('isexe'), 'workspace cat cannot require isexe because it only has a transitive dependency on it')
-
-  // workspace fish dependencies
-  const requireChainFromFish = setupRequire(path.join(projectDir, 'fish'))
-  t.notOk(requireChainFromFish('baz'), 'workspace fish cannot require workspace baz because neither fish nor the root has a dependency on it')
-  t.notOk(requireChainFromFish('cat'), 'workspace fish cannot require workspace cat because neither fish nor the root has a dependency on it')
-  t.notOk(requireChainFromFish('fish'), 'workspace fish cannot require itself because it is not a root dependency')
-  t.notOk(requireChainFromFish('catfish'), 'workspace fish cannot require workspace fish because neither fish nor the root has a dependency on it')
-  t.notOk(requireChainFromFish('isexe'), 'workspace fish cannot require isexe because it only has a transitive dependency on it')
-
-  // workspace catfish dependencies
-  const requireChainFromCatfish = setupRequire(path.join(projectDir, 'catfish'))
-  t.notOk(requireChainFromCatfish('baz'), 'workspace catfish cannot require workspace baz because neither catfish nor the root has a dependency on it')
-  t.notOk(requireChainFromCatfish('cat'), 'workspace catfish cannot require workspace cat because neither catfish nor the root has a dependency on it')
-  t.notOk(requireChainFromCatfish('fish'), 'workspace catfish cannot require itself because neither catfish nor the root has a dependency on it')
-  t.notOk(requireChainFromCatfish('catfish'), 'workspace catfish cannot require itself because it is not a root dependency')
-  t.notOk(requireChainFromCatfish('which'), 'workspace catfish cannot require which because it does not have a dependency on it')
-  t.notOk(requireChainFromCatfish('isexe'), 'workspace catfish cannot require isexe because it only has a transitive dependency on it')
-
   // versions of which are correctly shared
-  t.same(requireChain('bar', 'which'), requireChainFromBaz('which'), 'bar and baz resolve to the same instance of which')
-  t.same(requireChainFromCat('which'), requireChainFromFish('which'), 'cat and fish resolve to the same instance of which')
   t.notSame(requireChain('bar', 'which'), requireChainFromFish('which'), 'bar and fish resolve to the a different instance of which')
-
-  // both versions of which can require isexe
-  t.same(requireChain('bar', 'which', 'isexe'), requireChainFromCat('which', 'isexe'), 'both versions of which share the same instance of their dependency isexe')
     */
 })
 
@@ -430,7 +397,7 @@ function setupRequire(cwd) {
         return undefined
       }
       try {
-        return require.resolve(name, { paths: [ path ] })
+        return require('path').dirname(require.resolve(name, { paths: [ path ] }))
       } catch (_) {
         return undefined
       }

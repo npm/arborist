@@ -136,9 +136,6 @@ async function publishPackage (registry, manifest, packuments) {
  * - registry is the url of the registry which has the necessary packages
  *
  * Only simple graphs are currenly supported, the following features will come in further iterations:
- * - workspaces
- * - dev and peer dependencies
- * - multiple versions of the same package
  * - lockfile
  * - shinkwrap
  * - bundled dependencies

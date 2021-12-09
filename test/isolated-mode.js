@@ -138,8 +138,6 @@ const rule6 = {
 }
 
 tap.only('most simple happy scenario', async t => {
-  const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
-
   /*
     *
     * Dependency graph:
@@ -382,6 +380,7 @@ tap.only('Basic workspaces setup', async t => {
   rule2.apply(t, dir, resolved, asserted)
   rule3.apply(t, dir, resolved, asserted)
   rule4.apply(t, dir, resolved, asserted)
+  rule5.apply(t, dir, resolved, asserted)
   rule6.apply(t, dir, resolved, asserted)
 
   /*
@@ -455,13 +454,13 @@ function withRequireChainRecursive(resolvedGraph, chain, initialDir) {
   * - failed optional dependency
   * - shinkwrapped dependency
   * - bundled dependencies
-  * - deduplication that happen in isolated mode but not in hoisted
   * - circular dependencies
   * - circular peer dependencies
   * - peer dependencies on the parent
   * - maybe some more convoluted cases copied from other existing tests
   * - case that result in a ERESOLVE error
   * - repos that are already partially installed (the case of `npm install --save-dev react`)
+  * - scoped installs
   * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
   *
   */

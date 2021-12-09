@@ -72,7 +72,7 @@ const rule3 = {
         if (alreadyAsserted.has(key)) { return }
         alreadyAsserted.add(key)
         t.ok(path.join(dir, p.initialDir),
-          `Rule 3: ${p.chain.length === 0 && p.initialDir === '.' ? "The root" : `Package "${[p.initialDir, ...p.chain].join(" => ")}"`} should have access to "${d}" because it is a root dependency.`)
+          `Rule 3: ${p.chain.length === 0 && p.initialDir === '.' ? "The root" : `Package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} should have access to "${d}" because it is a root dependency.`)
       })
     })
   }
@@ -358,7 +358,7 @@ tap.only('Basic workspaces setup', async t => {
   const asserted = new Set()
   rule1.apply(t, dir, resolved, asserted)
   rule2.apply(t, dir, resolved, asserted)
-//  rule3.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
 //  rule4.apply(t, dir, resolved, asserted)
 
 
@@ -374,7 +374,6 @@ tap.only('Basic workspaces setup', async t => {
 
   // workspace bar dependencies
   // TODO: should workspaces always be able to resolve themselves or only when they are dependencies of the root? For now will will assume that the answer is the latter.
-  t.ok(requireChain('bar', 'bar'), 'workspace bar can require itself because it is a root dependency')
   t.notOk(requireChain('bar', 'cat'), 'workspace bar cannot require workspace cat because neither bar nor the root has a dependency on it')
   t.notOk(requireChain('bar', 'fish'), 'workspace bar cannot require workspace fish because neither bar nor the root has a dependency on it')
   t.notOk(requireChain('bar', 'catfish'), 'workspace bar cannot require workspace fish because neither bar nor the root has a dependency on it')
@@ -383,7 +382,6 @@ tap.only('Basic workspaces setup', async t => {
   // workspace baz dependencies
   // TODO: should workspaces always be able to resolve themselves or only when they are dependencies of the root? For now will will assume that the answer is the latter.
   const requireChainFromBaz = setupRequire(path.join(projectDir, 'baz'))
-  t.ok(requireChainFromBaz('bar'), 'workspace baz can require workspace bar because it is a root dependency')
   t.notOk(requireChainFromBaz('baz'), 'workspace bar cannot require itself because it is not a root dependency')
   t.notOk(requireChainFromBaz('cat'), 'workspace baz cannot require workspace cat because neither baz nor the root has a dependency on it')
   t.notOk(requireChainFromBaz('fish'), 'workspace baz cannot require workspace fish because neither baz nor the root has a dependency on it')
@@ -392,7 +390,6 @@ tap.only('Basic workspaces setup', async t => {
 
   // workspace cat dependencies
   const requireChainFromCat = setupRequire(path.join(projectDir, 'cat'))
-  t.ok(requireChainFromCat('bar'), 'workspace cat can require workspace bar because it is a root dependency')
   t.notOk(requireChainFromCat('baz'), 'workspace bar cannot require workspace baz because neither cat nor the root has a dependency on it')
   t.notOk(requireChainFromCat('cat'), 'workspace cat cannot require itself because it is not a root dependency')
   t.notOk(requireChainFromCat('fish'), 'workspace cat cannot require workspace fish because neither cat nor the root has a dependency on it')
@@ -401,7 +398,6 @@ tap.only('Basic workspaces setup', async t => {
 
   // workspace fish dependencies
   const requireChainFromFish = setupRequire(path.join(projectDir, 'fish'))
-  t.ok(requireChainFromFish('bar'), 'workspace fish can require workspace bar because it is a root dependency')
   t.notOk(requireChainFromFish('baz'), 'workspace fish cannot require workspace baz because neither fish nor the root has a dependency on it')
   t.notOk(requireChainFromFish('cat'), 'workspace fish cannot require workspace cat because neither fish nor the root has a dependency on it')
   t.notOk(requireChainFromFish('fish'), 'workspace fish cannot require itself because it is not a root dependency')
@@ -410,7 +406,6 @@ tap.only('Basic workspaces setup', async t => {
 
   // workspace catfish dependencies
   const requireChainFromCatfish = setupRequire(path.join(projectDir, 'catfish'))
-  t.ok(requireChainFromCatfish('bar'), 'workspace catfish can require workspace bar because it is a root dependency')
   t.notOk(requireChainFromCatfish('baz'), 'workspace catfish cannot require workspace baz because neither catfish nor the root has a dependency on it')
   t.notOk(requireChainFromCatfish('cat'), 'workspace catfish cannot require workspace cat because neither catfish nor the root has a dependency on it')
   t.notOk(requireChainFromCatfish('fish'), 'workspace catfish cannot require itself because neither catfish nor the root has a dependency on it')

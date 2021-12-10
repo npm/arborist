@@ -142,7 +142,7 @@ async function publishPackage (registry, manifest, packuments) {
  *
  * The API of this function is not stable and is likely to evolve as we add more features.  
  */
-async function getRepo (graph) {
+async function getRepo (t, graph) {
   // Generate a new random registry every time to prevent interference between tests
   const registry = `https://${Math.random().toString(36).substring(2)}.test`
   
@@ -180,7 +180,7 @@ async function getRepo (graph) {
       'index.js': `console.log('Hello from workspace ${wp.name}')`
     }
   })
-  const dir = tap.testdir(repo)
+  const dir = t.testdir(repo)
   return { dir, registry }
 }
 

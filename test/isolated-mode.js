@@ -1,8 +1,10 @@
 const tap = require('tap')
 const fs = require('fs')
 const path = require('path')
-const Arborist = require('../lib/arborist')
 const os = require('os')
+const semver = require('semver')
+
+const Arborist = require('../lib/arborist')
 const { getRepo } = require('./nock')
 
 /**
@@ -30,7 +32,7 @@ const rule1 = {
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
     const graph = parseGraph(resolvedGraph)
     const allPackages = getAllPackages(withRequireChain(graph))
-    allPackages.filter(p => p.chain.length !== 0 && !p.workspace).forEach(p => {
+    allPackages.filter(p => p.chain.length !== 0).forEach(p => {
       const resolveChain = [...p.chain, p.name]
       const key = p.initialDir + ' => ' + resolveChain.join(' => ')
       if (alreadyAsserted.has(key)) { return }
@@ -66,8 +68,6 @@ const rule3 = {
     const graph = parseGraph(resolvedGraph)
     const rootDependencies = graph.root.dependencies.map(o => o.name)
     const allPackages = getAllPackages(withRequireChain(graph))
-
-
     allPackages.forEach(p => {
       rootDependencies.forEach(d => {
         const resolveChain = [...p.chain, d]
@@ -138,12 +138,30 @@ const rule6 = {
         return
       }
       const same = value.every(l => l === value[0])
-      t.ok(same, `Rule 6: Even though it is referanced multiple times, package "${key}" should be installed only once`)
+      t.ok(same, `Rule 6: Even though it is referenced multiple times, package "${key}" should be installed only once`)
     })
   }
 }
 
-tap.only('most simple happy scenario', async t => {
+const rule7 = {
+  description: 'The version of the dependency asked matches the spec',
+  apply: (t, dir, resolvedGraph) => {
+    const graph = parseGraph(resolvedGraph)
+    const allPackages = getAllPackages(withRequireChain(graph))
+    allPackages.forEach(p => {
+      const ppath = setupRequire(path.join(dir, p.initialDir))(...p.chain) 
+      const manifest = require(require.resolve('./package.json', { paths: [ ppath ] }))
+      p.dependencies.forEach(d => {
+        const dname = d.name
+        const dversion = require(require.resolve(`${dname}/package.json`, { paths: [ ppath ] })).version
+        const spec = (manifest.dependencies && manifest.dependencies[dname]) || manifest.peerDependencies[dname]
+        t.ok(semver.satisfies(dversion, spec), `Rule 7: The version of ${dname} (${dversion}) should fulfill the spec defined by ${p.chain.length === 0 && p.initialDir === '.' ? "the root" : `package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} ("${spec}")`)
+      })
+    })
+  }
+}
+
+tap.test('most simple happy scenario', async t => {
   /*
     *
     * Dependency graph:
@@ -172,7 +190,7 @@ tap.only('most simple happy scenario', async t => {
     }
   }
 
-  const { dir, registry } = await getRepo(graph)
+  const { dir, registry } = await getRepo(t, graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -184,9 +202,10 @@ tap.only('most simple happy scenario', async t => {
   rule2.apply(t, dir, resolved, asserted)
   rule3.apply(t, dir, resolved, asserted)
   rule4.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
 })
 
-tap.only('simple peer dependencies scenarios', async t => {
+tap.test('simple peer dependencies scenarios', async t => {
   /*
     * Dependencies:
     *
@@ -223,7 +242,7 @@ tap.only('simple peer dependencies scenarios', async t => {
   }
 
 
-  const { dir, registry } = await getRepo(graph)
+  const { dir, registry } = await getRepo(t, graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -236,10 +255,11 @@ tap.only('simple peer dependencies scenarios', async t => {
   rule3.apply(t, dir, resolved, asserted)
   rule4.apply(t, dir, resolved, asserted)
   rule5.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
 })
 
 
-tap.only('Lock file is same in hoisted and in isolated mode', async t => {
+tap.test('Lock file is same in hoisted and in isolated mode', async t => {
   const package = { name: 'foo', dependencies: { 'which': '2.0.2' } }
 
   const hoistedModeDir = t.testdir({
@@ -264,7 +284,7 @@ tap.only('Lock file is same in hoisted and in isolated mode', async t => {
   t.same(hoistedModeLockFile, isolatedModeLockFile, 'hoited mode and isolated mode produce the same lockfile')
 })
 
-tap.only('Basic workspaces setup', async t => {
+tap.test('Basic workspaces setup', async t => {
   const graph = {
     registry: [
         { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
@@ -325,7 +345,7 @@ tap.only('Basic workspaces setup', async t => {
     'catfish@1.0.0': {}
   }
 
-  const { dir, registry } = await getRepo(graph)
+  const { dir, registry } = await getRepo(t, graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -339,11 +359,55 @@ tap.only('Basic workspaces setup', async t => {
   rule4.apply(t, dir, resolved, asserted)
   rule5.apply(t, dir, resolved, asserted)
   rule6.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
 
   /*
   // versions of which are correctly shared
   t.notSame(requireChain('bar', 'which'), requireChainFromFish('which'), 'bar and fish resolve to the a different instance of which')
     */
+})
+
+tap.only('peer dependency chain', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'bar', version: '1.0.0', dependencies: { baz: '^1.0.0' }, peerDependencies: { boat : '*' } },
+      { name: 'baz', version: '1.0.0', peerDependencies: { boat : '*' } },
+      { name: 'boat', version: '3.0.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { bar: '1.0.0', boat: '^3.0.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'bar@1.0.0': {
+        'baz@1.0.0': {
+          'boat@3.0.0 (peer)': {}
+        },
+        'boat@3.0.0 (peer)': {}
+      },
+      'boat@3.0.0': {}
+    }
+  }
+
+  const { dir, registry } = await getRepo(t, graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule5.apply(t, dir, resolved, asserted)
+  rule6.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
 })
 
 function setupRequire(cwd) {
@@ -353,7 +417,7 @@ function setupRequire(cwd) {
         return undefined
       }
       try {
-        return require('path').dirname(require.resolve(name, { paths: [ path ] }))
+        return require('path').dirname(require.resolve(`${name}/package.json`, { paths: [ path ] }))
       } catch (_) {
         return undefined
       }
@@ -425,7 +489,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - chain of peer dependencies
   * - dependency graph with two different versions
   * - failed optional dependency
   * - shinkwrapped dependency

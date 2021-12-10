@@ -28,7 +28,8 @@ const { getRepo } = require('./nock')
 const rule1 = {
   description: 'Any package (except root package and workspace) should be able to require itself.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const graph = parseGraph(resolvedGraph)
+    const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.filter(p => p.chain.length !== 0 && !p.workspace).forEach(p => {
       const resolveChain = [...p.chain, p.name]
       const key = p.initialDir + ' => ' + resolveChain.join(' => ')
@@ -44,7 +45,8 @@ const rule1 = {
 const rule2 = {
   description: 'Packages can require their resolved dependencies.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const graph = parseGraph(resolvedGraph)
+    const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.forEach(p => {
       (p.dependencies || []).map(d => d.name).forEach(n => {
         const resolveChain = [...p.chain, n]
@@ -61,8 +63,9 @@ const rule2 = {
 const rule3 = {
   description: 'Any package can require a package installed at the root.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const rootDependencies = resolvedGraph.root.dependencies.map(o => o.name)
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const graph = parseGraph(resolvedGraph)
+    const rootDependencies = graph.root.dependencies.map(o => o.name)
+    const allPackages = getAllPackages(withRequireChain(graph))
 
 
     allPackages.forEach(p => {
@@ -81,9 +84,10 @@ const rule3 = {
 const rule4 = {
   description: 'Packages cannot require packages that are not in their dependencies, not root dependencies or not themselves.',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const graph = parseGraph(resolvedGraph)
+    const allPackages = getAllPackages(withRequireChain(graph))
     const allPackageNames = allPackages.filter(p => p.chain.length !== 0 || p.initialDir !== '.').map(p => p.name)
-    const rootDependenciesNames = resolvedGraph.root.dependencies.map(o => o.name)
+    const rootDependenciesNames = graph.root.dependencies.map(o => o.name)
     allPackages.forEach(p => {
       const resolvedDependencyNames = (p.dependencies || []).map(d => d.name)
       allPackageNames.filter(n => !rootDependenciesNames.includes(n))
@@ -104,7 +108,8 @@ const rule4 = {
 const rule5 = {
   description: 'Peer dependencies should be resolved to same instance as parents',
   apply: (t, dir, resolvedGraph, alreadyAsserted) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const graph = parseGraph(resolvedGraph)
+    const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.filter(p => p.peer)
       .forEach(p => {
         const chain = p.chain
@@ -118,7 +123,8 @@ const rule5 = {
 const rule6 = {
   description: 'Packages with the same name and same version are installed at the same place on disk',
   apply: (t, dir, resolvedGraph) => {
-    const allPackages = getAllPackages(withRequireChain(resolvedGraph))
+    const graph = parseGraph(resolvedGraph)
+    const allPackages = getAllPackages(withRequireChain(graph))
     const byNameAndVersion = new Map()
     allPackages.forEach(p => {
       const key = `${p.name}@${p.version}`
@@ -159,22 +165,13 @@ tap.only('most simple happy scenario', async t => {
 
   // expected output
   const resolved = {
-    root: {
-      name: 'foo',
-      version: '1.2.3',
-      dependencies: [
-        {
-          name: 'which',
-          version: '1.0.0',
-          dependencies: [{
-            name: 'isexe',
-            version: '1.0.0'
-          }]
-        }
-      ]
+    'foo@1.2.3 (root)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      }
     }
   }
-  
+
   const { dir, registry } = await getRepo(graph)
 
   // Note that we override this cache to prevent interference from other tests
@@ -211,37 +208,20 @@ tap.only('simple peer dependencies scenarios', async t => {
       name: 'foo', version: '1.2.3', dependencies: { tsutils: '1.0.0', typescript: '1.0.0' }
     }
   }
-
+  
   const resolved = {
-    root: 
-    {
-      name: 'foo',
-      version: '1.2.3',
-      dependencies: [
-        {
-          name: 'tsutils',
-          version: '1.0.0',
-          dependencies: [{
-            name: 'typescript',
-            version: '1.0.0',
-            peer: true,
-            dependencies: [{
-              name: 'baz',
-              version: '2.0.0',
-            }]
-          }]
-        },
-        {
-          name: 'typescript',
-          version: '1.0.0',
-          dependencies: [{
-            name: 'baz',
-            version: '2.0.0',
-          }]
+    'foo@1.2.3 (root)': {
+      'tsutils@1.0.0': {
+        'typescript@1.0.0 (peer)': {
+          'baz@2.0.0': {}
         }
-      ]
+      },
+      'typescript@1.0.0': {
+        'baz@2.0.0': {}
+      }
     }
   }
+
 
   const { dir, registry } = await getRepo(graph)
 
@@ -294,7 +274,6 @@ tap.only('Basic workspaces setup', async t => {
     root: {
       name: 'dog', version: '1.2.3', dependencies: { bar: '*' }
     },
-    // todo: make getrepo support workspaced
     workspaces: [
       { name: 'bar', version: '1.0.0', dependencies: { which: '2.0.0' } },
       { name: 'baz', version: '1.0.0', dependencies: { which: '2.0.0', bar: "*" } },
@@ -304,68 +283,46 @@ tap.only('Basic workspaces setup', async t => {
     ]
   }
 
-  // todo: make rules understand workspaces
-  // todo: the resolved graph is verbose, maybe we have a simpler textual representation, maybe we could generate these as snapshots
+
   const resolved = {
-    root: {
-      name: 'dog',
-      version: '1.2.3',
-      dependencies: [{
-        name: 'bar',
-        version: '1.0.0',
-        workspace: true,
-        dependencies: [{
-          name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-        }]
-      }]
+    'dog@1.2.3 (root)': {
+      'bar@1.0.0 (workspace)': {
+        'which@2.0.0': {
+          'isexe@1.0.0': {}
+        }
+      }
     },
-    workspaces: [{
-      name: 'bar',
-      version: '1.0.0',
-      workspace: true,
-      dependencies: [{
-        name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-      }]
-    },{
-      name: 'baz',
-      version: '1.0.0',
-      workspace: true,
-      dependencies: [{
-        name: 'bar',
-        version: '1.0.0',
-        workspace: true,
-        dependencies: [{
-          name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-        }]
-      },{
-        name: 'which', version: '2.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-      }]
-    },{
-      name: 'cat',
-      version: '1.0.0',
-      workspace: true,
-      dependencies: [{
-        name: 'which', version: '1.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-      }]
-    },{
-      name: 'fish',
-      version: '1.0.0',
-      workspace: true,
-      dependencies: [{
-        name: 'cat',
-        version: '1.0.0',
-        workspace: true,
-        dependencies: [{
-          name: 'which', version: '1.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-        }]
-      },{
-        name: 'which', version: '1.0.0', dependencies: [{ name: 'isexe', version: '1.0.0' }]
-      }]
-    },{
-      name: 'catfish',
-      version: '1.0.0',
-      workspace: true
-    }]
+    'bar@1.0.0 (workspace)': {
+      'which@2.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'baz@1.0.0 (workspace)': {
+      'bar@1.0.0 (workspace)': {
+        'which@2.0.0': {
+          'isexe@1.0.0': {}
+        }
+      },
+      'which@2.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'cat@1.0.0 (workspace)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'fish@1.0.0 (workspace)': {
+      'cat@1.0.0 (workspace)': {
+        'which@1.0.0': {
+          'isexe@1.0.0': {}
+        }
+      },
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'catfish@1.0.0': {}
   }
 
   const { dir, registry } = await getRepo(graph)
@@ -445,6 +402,25 @@ function withRequireChainRecursive(resolvedGraph, chain, initialDir) {
   } 
 }
 
+function parseGraph(graph) {
+  const root = Object.entries(graph).find(([key, value]) => key.includes('(root)'))
+  const result = { root: parseGraphRecursive(...root), workspaces: [] }
+
+  Object.entries(graph).filter(([key, value]) => key.includes('(workspace)'))
+    .forEach(([key, value]) => {
+      result.workspaces.push(parseGraphRecursive(key, value))
+  })
+  return result
+}
+
+function parseGraphRecursive(key, deps) {
+  const name = /^(.[^@]*)@/.exec(key)[1]
+  const version = /^.[^@]*@([^ ]*)/.exec(key)[1]
+  const workspace = / \(workspace\)/.test(key)
+  const peer = / \(peer\)/.test(key)
+  const dependencies = Object.entries(deps).map(([key, value]) => parseGraphRecursive(key, value))
+  return { name, version, workspace, peer, dependencies }
+  }
 
 
 /*

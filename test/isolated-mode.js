@@ -2,7 +2,6 @@ const tap = require('tap')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
-const semver = require('semver')
 
 const Arborist = require('../lib/arborist')
 const { getRepo } = require('./nock')
@@ -154,8 +153,8 @@ const rule7 = {
       p.dependencies.forEach(d => {
         const dname = d.name
         const dversion = require(require.resolve(`${dname}/package.json`, { paths: [ ppath ] })).version
-        const spec = (manifest.dependencies && manifest.dependencies[dname]) || manifest.peerDependencies[dname]
-        t.ok(semver.satisfies(dversion, spec), `Rule 7: The version of ${dname} (${dversion}) should fulfill the spec defined by ${p.chain.length === 0 && p.initialDir === '.' ? "the root" : `package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} ("${spec}")`)
+
+        t.ok(dversion === d.version, `Rule 7: The version of ${dname} (${dversion}) provided to ${p.chain.length === 0 && p.initialDir === '.' ? "the root" : `package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} should be "${d.version}"`)
       })
     })
   }
@@ -452,6 +451,84 @@ tap.test('Optional deps are installed when possible', async t => {
   t.ok(setupRequire(dir)('which'), 'Optional deps should be installed when possible')
 })
 
+tap.only('shrinkwrap', async t => {
+  const shrinkwrap = JSON.stringify({
+    "name": "foo",
+    "version": "1.2.3",
+    "lockfileVersion": 2,
+    "requires": true,
+    "packages": {
+      "": {
+        "name": "foo",
+        "version": "1.2.3",
+        "dependencies": {
+          "which": "1.0.0"
+        }
+      },
+      "node_modules/isexe": {
+        "version": "1.0.0",
+        "resolved": "##REG##/isexe/1.0.0.tar"
+      },
+      "node_modules/which": {
+        "version": "1.0.0",
+        "resolved": "##REG##/which/1.0.0.tar",
+        "dependencies": {
+          "isexe": "^1.0.0"
+        }
+      }
+    },
+    "dependencies": {
+      "isexe": {
+        "version": "1.0.0",
+        "resolved": "##REG##/isexe/1.0.0.tar"
+      },
+      "which": {
+        "version": "1.0.0",
+        "resolved": "##REG##/which/1.0.0.tar",
+        "requires": {
+          "isexe": "^1.0.0"
+        }
+      }
+    }
+  })
+
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' }, shrinkwrap, _hasShrinkwrap: true },
+      { name: 'isexe', version: '1.0.0' },
+      { name: 'isexe', version: '1.1.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0', isexe: '1.1.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      },
+      'isexe@1.1.0': {}
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+})
+
 function setupRequire(cwd) {
   return function requireChain(...chain) {
     return chain.reduce((path, name) => {
@@ -531,7 +608,7 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - shinkwrapped dependency
+  * - optional peer dependency
   * - bundled dependencies
   * - circular dependencies
   * - circular peer dependencies

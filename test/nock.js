@@ -28,21 +28,25 @@ class StreamToBuffer extends Stream.Writable {
  * packPackageToStream
  * Uses 'tar-stream' to create the tar stream without touching the file system.
  */
-function packPackageToStream (manifest) {
+function packPackageToStream (manifest, reg) {
   const {
     name,
     version
   } = manifest
+  const { shrinkwrap, ...rest } = manifest
 
   const pack = tar.pack()
   const manifestString = JSON.stringify({
-    ...manifest
+    ...rest
   })
   const index = `console.log('Hello from ${name}@${version}!')`
 
   pack.entry({ name, type: 'directory' })
   pack.entry({ name: `${name}/package.json` }, manifestString)
   pack.entry({ name: `${name}/index.js` }, index)
+  if (shrinkwrap) {
+    pack.entry({ name: `${name}/npm-shrinkwrap.json` }, shrinkwrap.replace(/##REG##/g, reg))
+  }
 
   pack.finalize()
   return pack
@@ -53,8 +57,8 @@ function packPackageToStream (manifest) {
  * Pack a package for publish.
  * Returns a buffer containing a tarball of the package.
  */
-async function packPackage (manifest) {
-  const packStream = packPackageToStream(manifest)
+async function packPackage (manifest, reg) {
+  const packStream = packPackageToStream(manifest, reg)
 
   const tarBuffer = packStream.pipe(new StreamToBuffer())
 
@@ -72,21 +76,13 @@ async function packPackage (manifest) {
 async function publishPackage (registry, manifest, packuments) {
   const {
     name,
-    version,
-    dependencies,
-    peerDependencies,
-    optionalDependencies,
-    os
+    version
   } = manifest
+  const { shrinkwrap, ...rest } = manifest
 
   if (packuments.has(name)) {
     packuments.get(name).versions[version] = {
-      name,
-      version,
-      dependencies,
-      peerDependencies,
-      optionalDependencies,
-      os,
+      ...rest,
       dist: {
         tarball: `${registry}/${name}/${version}.tar`
       }
@@ -99,12 +95,7 @@ async function publishPackage (registry, manifest, packuments) {
       },
       versions: {
         [version]: {
-          name,
-          version,
-          dependencies,
-          peerDependencies,
-          optionalDependencies,
-          os,
+          ...rest,
           dist: {
             tarball: `${registry}/${name}/${version}.tar`
           }
@@ -114,7 +105,7 @@ async function publishPackage (registry, manifest, packuments) {
   }
 
 
-  const tarball = await packPackage(manifest)
+  const tarball = await packPackage(manifest, registry)
 
   nock(registry)
     .persist()

@@ -3,6 +3,8 @@ const tar = require('tar-stream')
 const Stream = require('stream')
 const tap = require('tap')
 const fs = require('fs')
+const path = require('path')
+const os = require('os')
 
 /* Utility to extract a buffer out of a stream */
 class StreamToBuffer extends Stream.Writable {
@@ -29,17 +31,12 @@ class StreamToBuffer extends Stream.Writable {
 function packPackageToStream (manifest) {
   const {
     name,
-    version,
-    dependencies,
-    peerDependencies
+    version
   } = manifest
 
   const pack = tar.pack()
   const manifestString = JSON.stringify({
-    name,
-    version,
-    dependencies,
-    peerDependencies
+    ...manifest
   })
   const index = `console.log('Hello from ${name}@${version}!')`
 
@@ -77,7 +74,9 @@ async function publishPackage (registry, manifest, packuments) {
     name,
     version,
     dependencies,
-    peerDependencies
+    peerDependencies,
+    optionalDependencies,
+    os
   } = manifest
 
   if (packuments.has(name)) {
@@ -86,6 +85,8 @@ async function publishPackage (registry, manifest, packuments) {
       version,
       dependencies,
       peerDependencies,
+      optionalDependencies,
+      os,
       dist: {
         tarball: `${registry}/${name}/${version}.tar`
       }
@@ -102,6 +103,8 @@ async function publishPackage (registry, manifest, packuments) {
           version,
           dependencies,
           peerDependencies,
+          optionalDependencies,
+          os,
           dist: {
             tarball: `${registry}/${name}/${version}.tar`
           }
@@ -142,7 +145,7 @@ async function publishPackage (registry, manifest, packuments) {
  *
  * The API of this function is not stable and is likely to evolve as we add more features.  
  */
-async function getRepo (t, graph) {
+async function getRepo (graph) {
   // Generate a new random registry every time to prevent interference between tests
   const registry = `https://${Math.random().toString(36).substring(2)}.test`
   
@@ -164,9 +167,7 @@ async function getRepo (t, graph) {
   const repo = {
     'package.json': JSON.stringify({
       workspaces: workspaces.length !== 0 ? ["packages/*"] : undefined,
-      name: root.name,
-      version: root.version,
-      dependencies: root.dependencies
+      ...root
     }),
     'packages': {}
   }
@@ -180,8 +181,26 @@ async function getRepo (t, graph) {
       'index.js': `console.log('Hello from workspace ${wp.name}')`
     }
   })
-  const dir = t.testdir(repo)
+  const dir = testdir(repo)
   return { dir, registry }
+}
+
+function testdir(structure) {
+  const dir = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  createDir(dir, structure)
+  return dir
+}
+
+function createDir(dir, structure) {
+  Object.entries(structure).forEach(([key, value]) => {
+    if (typeof value === 'object') {
+      const newDir = path.join(dir, key)
+      fs.mkdirSync(newDir)
+      createDir(newDir, value)
+    } else {
+      fs.writeFileSync(path.join(dir, key), value)
+    }
+  })
 }
 
 exports.getRepo = getRepo

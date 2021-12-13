@@ -190,7 +190,7 @@ tap.test('most simple happy scenario', async t => {
     }
   }
 
-  const { dir, registry } = await getRepo(t, graph)
+  const { dir, registry } = await getRepo(graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -242,7 +242,7 @@ tap.test('simple peer dependencies scenarios', async t => {
   }
 
 
-  const { dir, registry } = await getRepo(t, graph)
+  const { dir, registry } = await getRepo(graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -345,7 +345,7 @@ tap.test('Basic workspaces setup', async t => {
     'catfish@1.0.0': {}
   }
 
-  const { dir, registry } = await getRepo(t, graph)
+  const { dir, registry } = await getRepo(graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -367,7 +367,7 @@ tap.test('Basic workspaces setup', async t => {
     */
 })
 
-tap.only('peer dependency chain', async t => {
+tap.test('peer dependency chain', async t => {
   // Input of arborist
   const graph = {
     registry: [
@@ -393,7 +393,7 @@ tap.only('peer dependency chain', async t => {
     }
   }
 
-  const { dir, registry } = await getRepo(t, graph)
+  const { dir, registry } = await getRepo(graph)
 
   // Note that we override this cache to prevent interference from other tests
   const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
@@ -408,6 +408,48 @@ tap.only('peer dependency chain', async t => {
   rule5.apply(t, dir, resolved, asserted)
   rule6.apply(t, dir, resolved, asserted)
   rule7.apply(t, dir, resolved, asserted)
+})
+
+tap.test('failing optional deps are not installed', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', os: [ 'npmOS' ] }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', optionalDependencies: { which: '1.0.0' }
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+  
+  t.notOk(setupRequire(dir)('which'), 'Failing optional deps should not be installed')
+})
+
+tap.test('Optional deps are installed when possible', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', optionalDependencies: { which: '1.0.0' }
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+  
+  t.ok(setupRequire(dir)('which'), 'Optional deps should be installed when possible')
 })
 
 function setupRequire(cwd) {
@@ -489,8 +531,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - dependency graph with two different versions
-  * - failed optional dependency
   * - shinkwrapped dependency
   * - bundled dependencies
   * - circular dependencies

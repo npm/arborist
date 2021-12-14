@@ -1,7 +1,6 @@
 const nock = require('nock')
 const tar = require('tar-stream')
 const Stream = require('stream')
-const tap = require('tap')
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
@@ -33,7 +32,7 @@ function packPackageToStream (manifest, reg) {
     name,
     version
   } = manifest
-  const { shrinkwrap, ...rest } = manifest
+  const { shrinkwrap, bundledDeps, ...rest } = manifest
 
   const pack = tar.pack()
   const manifestString = JSON.stringify({
@@ -46,6 +45,15 @@ function packPackageToStream (manifest, reg) {
   pack.entry({ name: `${name}/index.js` }, index)
   if (shrinkwrap) {
     pack.entry({ name: `${name}/npm-shrinkwrap.json` }, shrinkwrap.replace(/##REG##/g, reg))
+  }
+  if (bundledDeps) {
+    pack.entry({ name: `${name}/node_modules`, type: 'directory' })
+    bundledDeps.forEach(d => {
+      pack.entry({ name: `${name}/node_modules/${d.name}`, type: 'directory' })
+      pack.entry({ name: `${name}/node_modules/${d.name}/package.json` }, JSON.stringify(d))
+      pack.entry({ name: `${name}/node_modules/${d.name}/index.js` }, `console.log('Hello from ${d.name}@${d.version}!')`
+)
+    })
   }
 
   pack.finalize()
@@ -78,7 +86,7 @@ async function publishPackage (registry, manifest, packuments) {
     name,
     version
   } = manifest
-  const { shrinkwrap, ...rest } = manifest
+  const { shrinkwrap, bundledDeps, ...rest } = manifest
 
   if (packuments.has(name)) {
     packuments.get(name).versions[version] = {

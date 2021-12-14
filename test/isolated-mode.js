@@ -451,7 +451,7 @@ tap.test('Optional deps are installed when possible', async t => {
   t.ok(setupRequire(dir)('which'), 'Optional deps should be installed when possible')
 })
 
-tap.only('shrinkwrap', async t => {
+tap.test('shrinkwrap', async t => {
   const shrinkwrap = JSON.stringify({
     "name": "foo",
     "version": "1.2.3",
@@ -496,11 +496,11 @@ tap.only('shrinkwrap', async t => {
   const graph = {
     registry: [
       { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' }, shrinkwrap, _hasShrinkwrap: true },
-      { name: 'isexe', version: '1.0.0' },
-      { name: 'isexe', version: '1.1.0' }
+      { name: 'isexe', version: '1.1.0' },
+      { name: 'isexe', version: '1.0.0' }
     ] ,
     root: {
-      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0', isexe: '1.1.0' }
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0', isexe: '^1.0.0' }
     }
   }
 
@@ -511,6 +511,45 @@ tap.only('shrinkwrap', async t => {
         'isexe@1.0.0': {}
       },
       'isexe@1.1.0': {}
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+})
+
+tap.test('bundled dependencies', async t => {
+
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' }, bundleDependencies: [ 'isexe' ],
+        bundledDeps: [{ name: 'isexe', version: '1.0.0' }]
+      },
+      { name: 'isexe', version: '1.1.0' },
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      }
     }
   }
 
@@ -608,15 +647,14 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - optional peer dependency
-  * - bundled dependencies
+  * - repos that are already partially installed (the case of `npm install --save-dev react`)
+  * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
   * - circular dependencies
   * - circular peer dependencies
   * - peer dependencies on the parent
-  * - maybe some more convoluted cases copied from other existing tests
-  * - case that result in a ERESOLVE error
-  * - repos that are already partially installed (the case of `npm install --save-dev react`)
+  * - scoped packages
+  * - optional peer dependency
+  *   --------------------------------------
   * - scoped installs
-  * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
-  *
+  * - overrides?
   */

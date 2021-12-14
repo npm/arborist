@@ -568,6 +568,50 @@ tap.test('bundled dependencies', async t => {
   rule7.apply(t, dir, resolved, asserted)
 })
 
+tap.only('adding a dependency', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+      { name: 'isexe', version: '1.0.0' },
+      { name: 'bar', version: '2.2.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      },
+      'bar@2.2.0': {}
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  // Add a new dependency
+
+  const cache2 = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist2 = new Arborist({ path: dir, registry, packumentCache: new Map(), cache: cache2, add: [ 'bar@^2.0.0' ]  })
+  await arborist2.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+
+})
 function setupRequire(cwd) {
   return function requireChain(...chain) {
     return chain.reduce((path, name) => {

@@ -149,10 +149,10 @@ const rule7 = {
     const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.forEach(p => {
       const ppath = setupRequire(path.join(dir, p.initialDir))(...p.chain) 
-      const manifest = require(require.resolve('./package.json', { paths: [ ppath ] }))
+      const manifest = JSON.parse(fs.readFileSync(`${ppath}/package.json`).toString())
       p.dependencies.forEach(d => {
         const dname = d.name
-        const dversion = require(require.resolve(`${dname}/package.json`, { paths: [ ppath ] })).version
+        const dversion = JSON.parse(fs.readFileSync(`${resolvePackage(dname, ppath)}/package.json`).toString()).version
 
         t.ok(dversion === d.version, `Rule 7: The version of ${dname} (${dversion}) provided to ${p.chain.length === 0 && p.initialDir === '.' ? "the root" : `package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} should be "${d.version}"`)
       })
@@ -568,7 +568,7 @@ tap.test('bundled dependencies', async t => {
   rule7.apply(t, dir, resolved, asserted)
 })
 
-tap.only('adding a dependency', async t => {
+tap.test('adding a dependency', async t => {
   // Input of arborist
   const graph = {
     registry: [
@@ -599,11 +599,11 @@ tap.only('adding a dependency', async t => {
   await arborist.reify({ isolated: true })
 
   // Add a new dependency
-
   const cache2 = fs.mkdtempSync(`${os.tmpdir}/test-`)
   const arborist2 = new Arborist({ path: dir, registry, packumentCache: new Map(), cache: cache2, add: [ 'bar@^2.0.0' ]  })
   await arborist2.reify({ isolated: true })
 
+  // Note that the 'resolved' dependency graph contains 'bar'
   const asserted = new Set()
   rule1.apply(t, dir, resolved, asserted)
   rule2.apply(t, dir, resolved, asserted)
@@ -612,18 +612,68 @@ tap.only('adding a dependency', async t => {
   rule7.apply(t, dir, resolved, asserted)
 
 })
+
+tap.only('removing a dependency', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+      { name: 'isexe', version: '1.0.0' },
+      { name: 'bar', version: '2.2.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0', bar: '^2.0.0' }
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+  
+  // checking that bar is installed
+  t.ok(setupRequire(dir)('bar'), 'bar should be installed initially')
+
+  // Add a new dependency
+  const cache2 = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist2 = new Arborist({ path: dir, registry, packumentCache: new Map(), cache: cache2 })
+  await arborist2.buildIdealTree({ rm: ['bar'] })
+  await arborist2.reify({ isolated: true })
+  const m = module
+  debugger
+
+  t.notOk(setupRequire(dir)('bar'), 'bar should not be installed anymore')
+})
 function setupRequire(cwd) {
   return function requireChain(...chain) {
     return chain.reduce((path, name) => {
       if (path === undefined) {
         return undefined
       }
-      try {
-        return require('path').dirname(require.resolve(`${name}/package.json`, { paths: [ path ] }))
-      } catch (_) {
-        return undefined
-      }
+      return resolvePackage(name, path)
     }, cwd)
+  }
+}
+
+/**
+ * We reimplement a lightweight version of require.resolve because the
+ * one that is implemented in nodejs memoizes the resolution which
+ * asserts interfering with each others
+ **/
+function resolvePackage(name, from) {
+  try {
+    const loc = `${from}/node_modules/${name}`
+    fs.statSync(loc);
+    return fs.realpathSync(loc) 
+  } catch (_) {
+    const next = path.dirname(from)
+    if (next === from) {
+      return undefined
+    } else {
+      return resolvePackage(name, next)
+    }
   }
 }
 
@@ -691,7 +741,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - repos that are already partially installed (the case of `npm install --save-dev react`)
   * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
   * - circular dependencies
   * - circular peer dependencies

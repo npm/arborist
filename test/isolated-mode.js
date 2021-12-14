@@ -143,7 +143,7 @@ const rule6 = {
 }
 
 const rule7 = {
-  description: 'The version of the dependency asked matches the spec',
+  description: 'The version of the resolved dependencies is the one we expect',
   apply: (t, dir, resolvedGraph) => {
     const graph = parseGraph(resolvedGraph)
     const allPackages = getAllPackages(withRequireChain(graph))
@@ -359,11 +359,89 @@ tap.test('Basic workspaces setup', async t => {
   rule5.apply(t, dir, resolved, asserted)
   rule6.apply(t, dir, resolved, asserted)
   rule7.apply(t, dir, resolved, asserted)
+})
 
-  /*
-  // versions of which are correctly shared
-  t.notSame(requireChain('bar', 'which'), requireChainFromFish('which'), 'bar and fish resolve to the a different instance of which')
-    */
+tap.test('resolved versions are the same on isolated and in hoisted mode', async t => {
+  const graph = {
+    registry: [
+        { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+        { name: 'which', version: '2.0.0', dependencies: { isexe: '^1.0.0' } },
+        { name: 'isexe', version: '1.0.0' }
+      ] ,
+    root: {
+      name: 'dog', version: '1.2.3', dependencies: { bar: '*' }
+    },
+    workspaces: [
+      { name: 'bar', version: '1.0.0', dependencies: { which: '2.0.0' } },
+      { name: 'baz', version: '1.0.0', dependencies: { which: '2.0.0', bar: "*" } },
+      { name: 'cat', version: '1.0.0', dependencies: { which: '1.0.0' } },
+      { name: 'fish', version: '1.0.0', dependencies: { which: '1.0.0', cat: "*" } },
+      { name: 'catfish', version: '1.0.0' },
+    ]
+  }
+
+
+  const resolved = {
+    'dog@1.2.3 (root)': {
+      'bar@1.0.0 (workspace)': {
+        'which@2.0.0': {
+          'isexe@1.0.0': {}
+        }
+      }
+    },
+    'bar@1.0.0 (workspace)': {
+      'which@2.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'baz@1.0.0 (workspace)': {
+      'bar@1.0.0 (workspace)': {
+        'which@2.0.0': {
+          'isexe@1.0.0': {}
+        }
+      },
+      'which@2.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'cat@1.0.0 (workspace)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'fish@1.0.0 (workspace)': {
+      'cat@1.0.0 (workspace)': {
+        'which@1.0.0': {
+          'isexe@1.0.0': {}
+        }
+      },
+      'which@1.0.0': {
+        'isexe@1.0.0': {}
+      }
+    },
+    'catfish@1.0.0': {}
+  }
+
+  let { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  let cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  let arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  rule7.apply(t, dir, resolved, new Set())
+
+  const mock = await getRepo(graph)
+  dir = mock.dir
+  registry = mock.registry
+
+  // Note that we override this cache to prevent interference from other tests
+  cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: false })
+
+  // checking that the resolved graph is the same in hoisting and in isolated mode
+  rule7.apply(t, dir, resolved, new Set())
 })
 
 tap.test('peer dependency chain', async t => {
@@ -613,7 +691,7 @@ tap.test('adding a dependency', async t => {
 
 })
 
-tap.only('removing a dependency', async t => {
+tap.test('removing a dependency', async t => {
   // Input of arborist
   const graph = {
     registry: [
@@ -741,7 +819,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - the versions resolved in isolated mode are the same that would have been resolved in hoisting mode
   * - circular dependencies
   * - circular peer dependencies
   * - peer dependencies on the parent
@@ -750,4 +827,5 @@ function parseGraphRecursive(key, deps) {
   *   --------------------------------------
   * - scoped installs
   * - overrides?
+  * - changing repo from isolated to hoisted and from hoisted to isolated
   */

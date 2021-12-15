@@ -92,7 +92,7 @@ async function publishPackage (registry, manifest, packuments) {
     packuments.get(name).versions[version] = {
       ...rest,
       dist: {
-        tarball: `${registry}/${name}/${version}.tar`
+        tarball: `${registry}/${name.replace(/\//g,'-')}/${version}.tar`
       }
     }
   } else {
@@ -105,7 +105,7 @@ async function publishPackage (registry, manifest, packuments) {
         [version]: {
           ...rest,
           dist: {
-            tarball: `${registry}/${name}/${version}.tar`
+            tarball: `${registry}/${name.replace(/\//g,'-')}/${version}.tar`
           }
         }
       }
@@ -117,7 +117,7 @@ async function publishPackage (registry, manifest, packuments) {
 
   nock(registry)
     .persist()
-    .get(`/${name}/${version}.tar`)
+    .get(`/${name.replace(/\//g,'-')}/${version}.tar`)
     .reply(200, tarball)
 }
 
@@ -155,7 +155,7 @@ async function getRepo (graph) {
 
   packuments.forEach((packument, name) => {
     nock(registry)
-      .get(`/${name}`)
+      .get(`/${name.replace(/\//g,'%2f')}`)
       .reply(200, packument)
   })
 

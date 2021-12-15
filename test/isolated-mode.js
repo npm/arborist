@@ -875,6 +875,51 @@ tap.test('peer dependency on parent', async t => {
   rule6.apply(t, dir, resolved, asserted)
   rule7.apply(t, dir, resolved, asserted)
 })
+
+tap.test('scoped package', async t => {
+  /*
+    *
+    * Dependency graph:
+    * 
+    * foo -> which -> isexe
+    *
+    */
+
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { ['@foo/isexe']: '^1.0.0' } },
+      { name: '@foo/isexe', version: '1.0.0' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'which@1.0.0': {
+        '@foo/isexe@1.0.0': {}
+      }
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+})
+
 function setupRequire(cwd) {
   return function requireChain(...chain) {
     return chain.reduce((path, name) => {
@@ -992,7 +1037,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - scoped packages
   * - optional peer dependency
   * - virtual packages
   *   --------------------------------------

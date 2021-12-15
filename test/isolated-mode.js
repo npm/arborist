@@ -753,18 +753,8 @@ tap.test('removing a dependency', async t => {
 
   t.notOk(setupRequire(dir)('bar'), 'bar should not be installed anymore')
 })
-function setupRequire(cwd) {
-  return function requireChain(...chain) {
-    return chain.reduce((path, name) => {
-      if (path === undefined) {
-        return undefined
-      }
-      return resolvePackage(name, path)
-    }, cwd)
-  }
-}
 
-tap.only('circular dependencies', async t => {
+tap.test('circular dependencies', async t => {
 
   // Input of arborist
   const graph = {
@@ -804,6 +794,59 @@ tap.only('circular dependencies', async t => {
   rule6.apply(t, dir, resolved, asserted)
   rule7.apply(t, dir, resolved, asserted)
 })
+
+tap.only('circular peer dependencies', async t => {
+
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'cat', version: '1.0.0', peerDependencies: { bar: '*' } },
+      { name: 'bar', version: '1.0.0', peerDependencies: { cat: '*' } }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { cat: '1.0.0', bar: '1.0.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'cat@1.0.0': {
+        'bar@1.0.0': '(back 1)' 
+      },
+      'bar@1.0.0': {
+        'cat@1.0.0': '(back 1)'
+      }
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule5.apply(t, dir, resolved, asserted)
+  rule6.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+})
+
+function setupRequire(cwd) {
+  return function requireChain(...chain) {
+    return chain.reduce((path, name) => {
+      if (path === undefined) {
+        return undefined
+      }
+      return resolvePackage(name, path)
+    }, cwd)
+  }
+}
 
 /**
  * We reimplement a lightweight version of require.resolve because the
@@ -911,7 +954,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - circular peer dependencies
   * - peer dependencies on the parent
   * - scoped packages
   * - optional peer dependency

@@ -49,7 +49,20 @@ const rule2 = {
     const graph = parseGraph(resolvedGraph)
     const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.forEach(p => {
-      (p.dependencies || []).map(d => d.name).forEach(n => {
+      (p.dependencies || []).filter(d => !isLoopToken(d)).map(d => d.name).forEach(n => {
+        const resolveChain = [...p.chain, n]
+        const key = p.initialDir + ' => ' + resolveChain.join(' => ')
+        if (alreadyAsserted.has(key)) { return }
+        alreadyAsserted.add(key)
+        t.ok(path.join(dir, p.initialDir),
+          `Rule 2: ${p.chain.length === 0 && p.initialDir === '.' ? "The root" : `Package "${[p.initialDir.replace('packages/',''), ...p.chain].join(' => ')}"`} should have access to "${n}" because it has it as a resolved dependency.`)
+      })
+    })
+    // testing circular deps
+    allPackages.forEach(p => {
+      (p.dependencies || []).filter(d => isLoopToken(d)).forEach(token => {
+        const back = parseLoopToken(token)
+        const n = p.chain.slice(-1 - back)[0] // getting the name of the circular dep by going back in the chain
         const resolveChain = [...p.chain, n]
         const key = p.initialDir + ' => ' + resolveChain.join(' => ')
         if (alreadyAsserted.has(key)) { return }
@@ -88,7 +101,15 @@ const rule4 = {
     const allPackageNames = allPackages.filter(p => p.chain.length !== 0 || p.initialDir !== '.').map(p => p.name)
     const rootDependenciesNames = graph.root.dependencies.map(o => o.name)
     allPackages.forEach(p => {
-      const resolvedDependencyNames = (p.dependencies || []).map(d => d.name)
+      const resolvedDependencyNames = (p.dependencies || [])
+      .filter(d => !isLoopToken(d))
+      .map(d => d.name)
+      .concat((p.dependencies || [])
+        .filter(d => isLoopToken(d))
+        .map(t => {
+          const back = parseLoopToken(t)
+          return p.chain.slice(-1 - back)[0] // getting the name of the circular dep by going back in the chain
+        }))
       allPackageNames.filter(n => !rootDependenciesNames.includes(n))
         .filter(n => !resolvedDependencyNames.includes(n))
         .filter(n => n !== p.name)
@@ -106,7 +127,7 @@ const rule4 = {
 
 const rule5 = {
   description: 'Peer dependencies should be resolved to same instance as parents',
-  apply: (t, dir, resolvedGraph, alreadyAsserted) => {
+  apply: (t, dir, resolvedGraph) => {
     const graph = parseGraph(resolvedGraph)
     const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.filter(p => p.peer)
@@ -149,12 +170,20 @@ const rule7 = {
     const allPackages = getAllPackages(withRequireChain(graph))
     allPackages.forEach(p => {
       const ppath = setupRequire(path.join(dir, p.initialDir))(...p.chain) 
-      const manifest = JSON.parse(fs.readFileSync(`${ppath}/package.json`).toString())
-      p.dependencies.forEach(d => {
+      p.dependencies.filter(d => !isLoopToken(d)).forEach(d => {
         const dname = d.name
         const dversion = JSON.parse(fs.readFileSync(`${resolvePackage(dname, ppath)}/package.json`).toString()).version
 
         t.ok(dversion === d.version, `Rule 7: The version of ${dname} (${dversion}) provided to ${p.chain.length === 0 && p.initialDir === '.' ? "the root" : `package "${[p.initialDir.replace('packages/',''), ...p.chain].join(" => ")}"`} should be "${d.version}"`)
+      })
+      p.dependencies.filter(d => isLoopToken(d)).forEach(token => {
+        const back = parseLoopToken(token)
+        const name = p.chain.slice(-1 - back)[0] // getting the name of the circular dep by going back in the chain
+        const loopStartChain = p.chain.slice(0, -back)
+        const loopEndChain = [...p.chain, name]
+        t.same(setupRequire(path.join(dir, p.initialDir))(...loopStartChain),
+          setupRequire(path.join(dir, p.initialDir))(...loopEndChain),
+          `The two ends of this dependency loop should resolve to the same location: "${[p.initialDir.replace('packages/',''), ...loopEndChain].join(" => ")}"`)
       })
     })
   }
@@ -735,6 +764,47 @@ function setupRequire(cwd) {
   }
 }
 
+tap.only('circular dependencies', async t => {
+
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', dependencies: { isexe: '^1.0.0' } },
+      { name: 'isexe', version: '1.0.0', dependencies: { which: '1.0.0' } },
+      { name: 'bar', version: '1.2.6' }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', dependencies: { which: '1.0.0', bar: '1.2.6' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'foo@1.2.3 (root)': {
+      'which@1.0.0': {
+        'isexe@1.0.0': '(back 1)' 
+      },
+      'bar@1.2.6': {}
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule5.apply(t, dir, resolved, asserted)
+  rule6.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+})
+
 /**
  * We reimplement a lightweight version of require.resolve because the
  * one that is implemented in nodejs memoizes the resolution which
@@ -761,7 +831,13 @@ function getAllPackages(resolvedGraph) {
 }
 
 function getAllPackagesRecursive(resolvedGraph) {
-  return [resolvedGraph, ...(resolvedGraph.dependencies?.map(d => getAllPackagesRecursive(d)) || []).reduce((a,n) => ([...a, ...n]), [])]
+  return [
+    resolvedGraph,
+    ...(resolvedGraph.dependencies
+      ?.filter(d => !isLoopToken(d))
+      .map(d => getAllPackagesRecursive(d)) || [])
+    .reduce((a,n) => ([...a, ...n]), [])
+  ]
 }
 
 function withRequireChain(resolvedGraph) {
@@ -786,6 +862,10 @@ function withRequireChain(resolvedGraph) {
 }
 
 function withRequireChainRecursive(resolvedGraph, chain, initialDir) {
+  if ( isLoopToken(resolvedGraph)) {
+    return resolvedGraph
+  }
+
   const newChain = [...chain, resolvedGraph.name]
   return {
     ...resolvedGraph,
@@ -797,33 +877,45 @@ function withRequireChainRecursive(resolvedGraph, chain, initialDir) {
 }
 
 function parseGraph(graph) {
-  const root = Object.entries(graph).find(([key, value]) => key.includes('(root)'))
+  const root = Object.entries(graph).find(([key]) => key.includes('(root)'))
   const result = { root: parseGraphRecursive(...root), workspaces: [] }
 
-  Object.entries(graph).filter(([key, value]) => key.includes('(workspace)'))
+  Object.entries(graph).filter(([key]) => key.includes('(workspace)'))
     .forEach(([key, value]) => {
       result.workspaces.push(parseGraphRecursive(key, value))
   })
   return result
 }
 
+function isLoopToken(obj) {
+  return typeof obj === 'string' && /^\(back \d+\)$/.test(obj)
+}
+
+function parseLoopToken(t) {
+  return parseInt(/\d+/.exec(t)[0])
+}
+
 function parseGraphRecursive(key, deps) {
+  if (isLoopToken(key)) {
+    return key
+  }
   const name = /^(.[^@]*)@/.exec(key)[1]
   const version = /^.[^@]*@([^ ]*)/.exec(key)[1]
   const workspace = / \(workspace\)/.test(key)
   const peer = / \(peer\)/.test(key)
-  const dependencies = Object.entries(deps).map(([key, value]) => parseGraphRecursive(key, value))
+  const normalizedDeps = typeof deps === 'string' ? { [deps]: {} } : deps
+  const dependencies = Object.entries(normalizedDeps).map(([key, value]) => parseGraphRecursive(key, value))
   return { name, version, workspace, peer, dependencies }
   }
 
 
 /*
   * TO TEST:
-  * - circular dependencies
   * - circular peer dependencies
   * - peer dependencies on the parent
   * - scoped packages
   * - optional peer dependency
+  * - virtual packages
   *   --------------------------------------
   * - scoped installs
   * - overrides?

@@ -141,13 +141,14 @@ const rule5 = {
 }
 
 const rule6 = {
-  description: 'Packages with the same name and same version are installed at the same place on disk',
+  description: 'Packages with the same name, same version, and same peer deps are installed at the same place on disk',
   apply: (t, dir, resolvedGraph) => {
     const graph = parseGraph(resolvedGraph)
     const allPackages = getAllPackages(withRequireChain(graph))
     const byNameAndVersion = new Map()
     allPackages.forEach(p => {
-      const key = `${p.name}@${p.version}`
+      const peerDeps = p.dependencies.filter(d => d.peer).map(d => `${d.name}@${d.version}`).sort().join(' - ')
+      const key = `${p.name}@${p.version} - ${peerDeps}`
       if (!byNameAndVersion.has(key)) {
         byNameAndVersion.set(key, [])
       }
@@ -942,6 +943,61 @@ tap.test('failing optional peer deps are not installed', async t => {
   t.notOk(setupRequire(dir)('bar', 'which'), 'Failing optional peer deps should not be installed')
 })
 
+// Virtual packages are 2 packages that have the same version but are
+// duplicated on disk to solve peer-dependency conflict.
+tap.only('virtual packages', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'foo', version: '1.0.0' },
+      { name: 'foo', version: '2.0.0', peerDependencies: { cat: '*' } },
+      { name: 'cat', version: '1.0.0' },
+      { name: 'cat', version: '2.0.0' },
+      { name: 'bar', version: '1.0.0' , dependencies: { foo: '2.0.0', cat: '2.0.0' } },
+      { name: 'baz', version: '1.0.0' , dependencies: { foo: '2.0.0', cat: '1.0.0' } },
+    ] ,
+    root: {
+      name: 'toor', version: '1.2.3', dependencies: { foo: '1.0.0', bar: '*', baz: '*', cat: '1.0.0' }
+    }
+  }
+
+  // expected output
+  const resolved = {
+    'toor@1.2.3 (root)': {
+      'foo@1.0.0': {},
+      'bar@1.0.0': {
+        'foo@2.0.0': {
+          'cat@2.0.0 (peer)': {}
+        },
+        'cat@2.0.0': {}
+      },
+      'baz@1.0.0': {
+        'foo@2.0.0': {
+          'cat@1.0.0 (peer)': {}
+        },
+        'cat@1.0.0': {}
+      },
+      'cat@1.0.0': {}
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+  
+  const asserted = new Set()
+  rule1.apply(t, dir, resolved, asserted)
+  rule2.apply(t, dir, resolved, asserted)
+  rule3.apply(t, dir, resolved, asserted)
+  rule4.apply(t, dir, resolved, asserted)
+  rule5.apply(t, dir, resolved, asserted)
+  rule6.apply(t, dir, resolved, asserted)
+  rule7.apply(t, dir, resolved, asserted)
+})
+
 function setupRequire(cwd) {
   return function requireChain(...chain) {
     return chain.reduce((path, name) => {
@@ -1059,7 +1115,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - virtual packages
   *   --------------------------------------
   * - scoped installs
   * - overrides?

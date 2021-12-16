@@ -920,6 +920,28 @@ tap.test('scoped package', async t => {
   rule7.apply(t, dir, resolved, asserted)
 })
 
+tap.test('failing optional peer deps are not installed', async t => {
+  // Input of arborist
+  const graph = {
+    registry: [
+      { name: 'which', version: '1.0.0', os: [ 'npmOS' ] },
+      { name: 'bar', version: '1.0.0', peerDependencies: { which: "*" }, peerDependenciesMeta: { which: { optional: true } } }
+    ] ,
+    root: {
+      name: 'foo', version: '1.2.3', optionalDependencies: { which: '1.0.0', bar: '*' }
+    }
+  }
+
+  const { dir, registry } = await getRepo(graph)
+
+  // Note that we override this cache to prevent interference from other tests
+  const cache = fs.mkdtempSync(`${os.tmpdir}/test-`)
+  const arborist = new Arborist({ path: dir, registry, packumentCache: new Map(), cache  })
+  await arborist.reify({ isolated: true })
+  
+  t.notOk(setupRequire(dir)('bar', 'which'), 'Failing optional peer deps should not be installed')
+})
+
 function setupRequire(cwd) {
   return function requireChain(...chain) {
     return chain.reduce((path, name) => {
@@ -1037,7 +1059,6 @@ function parseGraphRecursive(key, deps) {
 
 /*
   * TO TEST:
-  * - optional peer dependency
   * - virtual packages
   *   --------------------------------------
   * - scoped installs

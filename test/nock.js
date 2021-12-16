@@ -39,19 +39,19 @@ function packPackageToStream (manifest, reg) {
     ...rest
   })
   const index = `console.log('Hello from ${name}@${version}!')`
-
-  pack.entry({ name, type: 'directory' })
-  pack.entry({ name: `${name}/package.json` }, manifestString)
-  pack.entry({ name: `${name}/index.js` }, index)
+  const unscopedName = name.replace(/^@[^\/]*\//,'')
+  pack.entry({ name: unscopedName, type: 'directory' })
+  pack.entry({ name: `${unscopedName}/package.json` }, manifestString)
+  pack.entry({ name: `${unscopedName}/index.js` }, index)
   if (shrinkwrap) {
-    pack.entry({ name: `${name}/npm-shrinkwrap.json` }, shrinkwrap.replace(/##REG##/g, reg))
+    pack.entry({ name: `${unscopedName}/npm-shrinkwrap.json` }, shrinkwrap.replace(/##REG##/g, reg))
   }
   if (bundledDeps) {
-    pack.entry({ name: `${name}/node_modules`, type: 'directory' })
+    pack.entry({ name: `${unscopedName}/node_modules`, type: 'directory' })
     bundledDeps.forEach(d => {
-      pack.entry({ name: `${name}/node_modules/${d.name}`, type: 'directory' })
-      pack.entry({ name: `${name}/node_modules/${d.name}/package.json` }, JSON.stringify(d))
-      pack.entry({ name: `${name}/node_modules/${d.name}/index.js` }, `console.log('Hello from ${d.name}@${d.version}!')`
+      pack.entry({ name: `${unscopedName}/node_modules/${d.name}`, type: 'directory' })
+      pack.entry({ name: `${unscopedName}/node_modules/${d.name}/package.json` }, JSON.stringify(d))
+      pack.entry({ name: `${unscopedName}/node_modules/${d.name}/index.js` }, `console.log('Hello from ${d.name}@${d.version}!')`
 )
     })
   }
